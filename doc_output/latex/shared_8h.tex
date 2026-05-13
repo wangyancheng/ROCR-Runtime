@@ -1,0 +1,43 @@
+\hypertarget{shared_8h}{}\doxysection{src/core/common/shared.h File Reference}
+\label{shared_8h}\index{src/core/common/shared.h@{src/core/common/shared.h}}
+{\ttfamily \#include $<$assert.\+h$>$}\newline
+{\ttfamily \#include $<$cstring$>$}\newline
+{\ttfamily \#include $<$functional$>$}\newline
+{\ttfamily \#include $<$memory$>$}\newline
+{\ttfamily \#include \char`\"{}core/util/utils.\+h\char`\"{}}\newline
+Include dependency graph for shared.\+h\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{shared_8h__incl}
+\end{center}
+\end{figure}
+This graph shows which files directly or indirectly include this file\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{shared_8h__dep__incl}
+\end{center}
+\end{figure}
+\doxysubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class \mbox{\hyperlink{classrocr_1_1core_1_1BaseShared}{rocr\+::core\+::\+Base\+Shared}}
+\begin{DoxyCompactList}\small\item\em Base class encapsulating the allocator and deallocator for shared shared object. As used this will allocate GPU visible host memory mapped to all GPUs. \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{classrocr_1_1core_1_1PageAllocator}{rocr\+::core\+::\+Page\+Allocator$<$ T $>$}}
+\begin{DoxyCompactList}\small\item\em Default Allocator for \mbox{\hyperlink{classrocr_1_1core_1_1Shared}{Shared}}. Ensures allocations are whole pages. \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{classrocr_1_1core_1_1Shared}{rocr\+::core\+::\+Shared$<$ T, Allocator $>$}}
+\begin{DoxyCompactList}\small\item\em Container for object located in GPU visible host memory. If a custom allocator is not given then data will be placed in dedicated pages. \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{classrocr_1_1core_1_1Shared_3_01T_00_01PageAllocator_3_01T_01_4_01_4}{rocr\+::core\+::\+Shared$<$ T, Page\+Allocator$<$ T $>$ $>$}}
+\item 
+class \mbox{\hyperlink{classrocr_1_1core_1_1SharedArray}{rocr\+::core\+::\+Shared\+Array$<$ T, Align $>$}}
+\begin{DoxyCompactList}\small\item\em Container for array located in GPU visible host memory. Alignment defaults to \+\_\+\+\_\+alignof(\+T) but may be increased. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Namespaces}
+\begin{DoxyCompactItemize}
+\item 
+ \mbox{\hyperlink{namespacerocr}{rocr}}
+\item 
+ \mbox{\hyperlink{namespacerocr_1_1core}{rocr\+::core}}
+\end{DoxyCompactItemize}

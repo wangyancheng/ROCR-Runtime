@@ -1,0 +1,97 @@
+\hypertarget{unionrocr_1_1__ADDR__CHANNEL__SETTING}{}\doxysection{rocr\+::\+\_\+\+ADDR\+\_\+\+CHANNEL\+\_\+\+SETTING Union Reference}
+\label{unionrocr_1_1__ADDR__CHANNEL__SETTING}\index{rocr::\_ADDR\_CHANNEL\_SETTING@{rocr::\_ADDR\_CHANNEL\_SETTING}}
+
+
+channel setting structure  
+
+
+
+
+{\ttfamily \#include $<$addrinterface.\+h$>$}
+
+\doxysubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\begin{tabbing}
+xx\=xx\=xx\=xx\=xx\=xx\=xx\=xx\=xx\=\kill
+struct \{\\
+\>\mbox{\hyperlink{addrtypes_8h_aecffebc452f5b7100c06c3e132297ac4}{UINT\_8}} \mbox{\hyperlink{unionrocr_1_1__ADDR__CHANNEL__SETTING_a7964e5d3c6f38b2ad4eba9b1e59f8a72}{valid}}: 1\\
+\>\>{\em Indicate whehter this channel setting is valid. }\\
+\>\mbox{\hyperlink{addrtypes_8h_aecffebc452f5b7100c06c3e132297ac4}{UINT\_8}} \mbox{\hyperlink{unionrocr_1_1__ADDR__CHANNEL__SETTING_a748aab25c8ef7015047b16c3dc2ec8cf}{channel}}: 2\\
+\>\>{\em 0 for x channel, 1 for y channel, 2 for z channel }\\
+\>\mbox{\hyperlink{addrtypes_8h_aecffebc452f5b7100c06c3e132297ac4}{UINT\_8}} \mbox{\hyperlink{unionrocr_1_1__ADDR__CHANNEL__SETTING_aaafb986c3e9a7a2b51f0eee4f8a52183}{index}}: 5\\
+\>\>{\em Channel index. }\\
+\}; \\
+
+\end{tabbing}\item 
+\mbox{\hyperlink{addrtypes_8h_aecffebc452f5b7100c06c3e132297ac4}{UINT\+\_\+8}} \mbox{\hyperlink{unionrocr_1_1__ADDR__CHANNEL__SETTING_af4e4db637064678f3a796a39851422d8}{value}}
+\begin{DoxyCompactList}\small\item\em Value. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+channel setting structure 
+
+///////////////////////////////////////////////////////////////////////////////////////////////// // Callback functions ///////////////////////////////////////////////////////////////////////////////////////////////// typedef VOID$\ast$ (ADDR\+\_\+\+API$\ast$ ADDR\+\_\+\+ALLOCSYSMEM)( const ADDR\+\_\+\+ALLOCSYSMEM\+\_\+\+INPUT$\ast$ p\+Input); typedef ADDR\+\_\+\+E\+\_\+\+RETURNCODE (ADDR\+\_\+\+API$\ast$ ADDR\+\_\+\+FREESYSMEM)( VOID$\ast$ p\+Virt\+Addr); typedef ADDR\+\_\+\+E\+\_\+\+RETURNCODE (ADDR\+\_\+\+API$\ast$ ADDR\+\_\+\+DEBUGPRINT)( const ADDR\+\_\+\+DEBUGPRINT\+\_\+\+INPUT$\ast$ p\+Input);
+
+///////////////////////////////////////////////////////////////////////////////////////////////// // Create/\+Destroy/\+Config functions ///////////////////////////////////////////////////////////////////////////////////////////////// \mbox{\hyperlink{namespacerocr_a2ea9aba46a657779c75948763925cfd5}{Addr\+Create()}} \mbox{\hyperlink{namespacerocr_a30991be09792482c1016296210ca71d3}{Addr\+Destroy()}}
+
+///////////////////////////////////////////////////////////////////////////////////////////////// // Surface functions ///////////////////////////////////////////////////////////////////////////////////////////////// \mbox{\hyperlink{namespacerocr_a5309c2e36a0cc98ea2eefbd89a2427fd}{Addr\+Compute\+Surface\+Info()}} \mbox{\hyperlink{namespacerocr_a5fc201c7133c190d71d5fca90aa0a2d4}{Addr\+Compute\+Surface\+Addr\+From\+Coord()}} \mbox{\hyperlink{namespacerocr_ae5cc1b63f76279232b10b48e74e22900}{Addr\+Compute\+Surface\+Coord\+From\+Addr()}}
+
+///////////////////////////////////////////////////////////////////////////////////////////////// // HTile functions ///////////////////////////////////////////////////////////////////////////////////////////////// \mbox{\hyperlink{namespacerocr_a1ad2713e173258e7bbbfcb1dc75517e2}{Addr\+Compute\+Htile\+Info()}} \mbox{\hyperlink{namespacerocr_a68b73df27d1974b573dd40f0ff17cbe1}{Addr\+Compute\+Htile\+Addr\+From\+Coord()}} \mbox{\hyperlink{namespacerocr_a37da9f5af4e140c3eadf9d43d236920c}{Addr\+Compute\+Htile\+Coord\+From\+Addr()}}
+
+///////////////////////////////////////////////////////////////////////////////////////////////// // C-\/mask functions ///////////////////////////////////////////////////////////////////////////////////////////////// \mbox{\hyperlink{namespacerocr_a3a8f91d7c5dc30023a736de05a3fd7fb}{Addr\+Compute\+Cmask\+Info()}} \mbox{\hyperlink{namespacerocr_a1575539fbf1b04e0ddfe7ba2b8cfed5c}{Addr\+Compute\+Cmask\+Addr\+From\+Coord()}} \mbox{\hyperlink{namespacerocr_a47da3b0b3ace731e73809fdc0b520de2}{Addr\+Compute\+Cmask\+Coord\+From\+Addr()}}
+
+///////////////////////////////////////////////////////////////////////////////////////////////// // F-\/mask functions ///////////////////////////////////////////////////////////////////////////////////////////////// \mbox{\hyperlink{namespacerocr_aebd89e543be139c434040f5375380236}{Addr\+Compute\+Fmask\+Info()}} \mbox{\hyperlink{namespacerocr_a91e730b61a682c173fe11beccf4b449a}{Addr\+Compute\+Fmask\+Addr\+From\+Coord()}} \mbox{\hyperlink{namespacerocr_a840e72635338c20cacf4066531309780}{Addr\+Compute\+Fmask\+Coord\+From\+Addr()}}
+
+///////////////////////////////////////////////////////////////////////////////////////////////// // Element/\+Utility functions ///////////////////////////////////////////////////////////////////////////////////////////////// \mbox{\hyperlink{namespacerocr_a68458642aa33a935c40fe207625b6482}{Elem\+Flt32\+To\+Depth\+Pixel()}} \mbox{\hyperlink{namespacerocr_aa973a11227ef97312f1ff7a0ec3bb874}{Elem\+Flt32\+To\+Color\+Pixel()}} \mbox{\hyperlink{namespacerocr_a6e0f55a1b8ab1f39176932b81cd1a6e3}{Addr\+Extract\+Bank\+Pipe\+Swizzle()}} \mbox{\hyperlink{namespacerocr_ad53cf72811c80ec494cb01a20ac2eb17}{Addr\+Combine\+Bank\+Pipe\+Swizzle()}} \mbox{\hyperlink{namespacerocr_aa869f17f2ed8d0ae9fa03ab0a3c88b6a}{Addr\+Compute\+Slice\+Swizzle()}} \mbox{\hyperlink{namespacerocr_ab1acc01212fe4f2c81f64c4c3b3922f3}{Addr\+Convert\+Tile\+Info\+To\+HW()}} \mbox{\hyperlink{namespacerocr_a3e61ba69947b4c9c010377eb880b43cb}{Addr\+Convert\+Tile\+Index()}} \mbox{\hyperlink{namespacerocr_a9b3a1eb2e4ed83426880b32c22c58dff}{Addr\+Convert\+Tile\+Index1()}} \mbox{\hyperlink{namespacerocr_a56842cfd889c0eb856d89adbe89b38dd}{Addr\+Get\+Tile\+Index()}} \mbox{\hyperlink{namespacerocr_acfbf6c9a5fb37fc2b7bc3f49f43d01d9}{Addr\+Compute\+Base\+Swizzle()}} \mbox{\hyperlink{namespacerocr_a0cac8d819b7b6cd9d257e8bb2df1dcc4}{Addr\+Use\+Tile\+Index()}} \mbox{\hyperlink{namespacerocr_a8562daf223667f0c2eafe9c2e176e587}{Addr\+Use\+Combined\+Swizzle()}} 
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{unionrocr_1_1__ADDR__CHANNEL__SETTING_a2117d8f805545e2abc5befa9508cbc9b}\label{unionrocr_1_1__ADDR__CHANNEL__SETTING_a2117d8f805545e2abc5befa9508cbc9b}} 
+\doxysubsubsection{\texorpdfstring{}{}}
+{\footnotesize\ttfamily struct \{ ... \} }
+
+\mbox{\Hypertarget{unionrocr_1_1__ADDR__CHANNEL__SETTING_a748aab25c8ef7015047b16c3dc2ec8cf}\label{unionrocr_1_1__ADDR__CHANNEL__SETTING_a748aab25c8ef7015047b16c3dc2ec8cf}} 
+\index{rocr::\_ADDR\_CHANNEL\_SETTING@{rocr::\_ADDR\_CHANNEL\_SETTING}!channel@{channel}}
+\index{channel@{channel}!rocr::\_ADDR\_CHANNEL\_SETTING@{rocr::\_ADDR\_CHANNEL\_SETTING}}
+\doxysubsubsection{\texorpdfstring{channel}{channel}}
+{\footnotesize\ttfamily \mbox{\hyperlink{addrtypes_8h_aecffebc452f5b7100c06c3e132297ac4}{UINT\+\_\+8}} rocr\+::\+\_\+\+ADDR\+\_\+\+CHANNEL\+\_\+\+SETTING\+::channel}
+
+
+
+0 for x channel, 1 for y channel, 2 for z channel 
+
+\mbox{\Hypertarget{unionrocr_1_1__ADDR__CHANNEL__SETTING_aaafb986c3e9a7a2b51f0eee4f8a52183}\label{unionrocr_1_1__ADDR__CHANNEL__SETTING_aaafb986c3e9a7a2b51f0eee4f8a52183}} 
+\index{rocr::\_ADDR\_CHANNEL\_SETTING@{rocr::\_ADDR\_CHANNEL\_SETTING}!index@{index}}
+\index{index@{index}!rocr::\_ADDR\_CHANNEL\_SETTING@{rocr::\_ADDR\_CHANNEL\_SETTING}}
+\doxysubsubsection{\texorpdfstring{index}{index}}
+{\footnotesize\ttfamily \mbox{\hyperlink{addrtypes_8h_aecffebc452f5b7100c06c3e132297ac4}{UINT\+\_\+8}} rocr\+::\+\_\+\+ADDR\+\_\+\+CHANNEL\+\_\+\+SETTING\+::index}
+
+
+
+Channel index. 
+
+\mbox{\Hypertarget{unionrocr_1_1__ADDR__CHANNEL__SETTING_a7964e5d3c6f38b2ad4eba9b1e59f8a72}\label{unionrocr_1_1__ADDR__CHANNEL__SETTING_a7964e5d3c6f38b2ad4eba9b1e59f8a72}} 
+\index{rocr::\_ADDR\_CHANNEL\_SETTING@{rocr::\_ADDR\_CHANNEL\_SETTING}!valid@{valid}}
+\index{valid@{valid}!rocr::\_ADDR\_CHANNEL\_SETTING@{rocr::\_ADDR\_CHANNEL\_SETTING}}
+\doxysubsubsection{\texorpdfstring{valid}{valid}}
+{\footnotesize\ttfamily \mbox{\hyperlink{addrtypes_8h_aecffebc452f5b7100c06c3e132297ac4}{UINT\+\_\+8}} rocr\+::\+\_\+\+ADDR\+\_\+\+CHANNEL\+\_\+\+SETTING\+::valid}
+
+
+
+Indicate whehter this channel setting is valid. 
+
+\mbox{\Hypertarget{unionrocr_1_1__ADDR__CHANNEL__SETTING_af4e4db637064678f3a796a39851422d8}\label{unionrocr_1_1__ADDR__CHANNEL__SETTING_af4e4db637064678f3a796a39851422d8}} 
+\index{rocr::\_ADDR\_CHANNEL\_SETTING@{rocr::\_ADDR\_CHANNEL\_SETTING}!value@{value}}
+\index{value@{value}!rocr::\_ADDR\_CHANNEL\_SETTING@{rocr::\_ADDR\_CHANNEL\_SETTING}}
+\doxysubsubsection{\texorpdfstring{value}{value}}
+{\footnotesize\ttfamily \mbox{\hyperlink{addrtypes_8h_aecffebc452f5b7100c06c3e132297ac4}{UINT\+\_\+8}} rocr\+::\+\_\+\+ADDR\+\_\+\+CHANNEL\+\_\+\+SETTING\+::value}
+
+
+
+Value. 
+
+
+
+The documentation for this union was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+src/image/addrlib/inc/\mbox{\hyperlink{addrinterface_8h}{addrinterface.\+h}}\end{DoxyCompactItemize}

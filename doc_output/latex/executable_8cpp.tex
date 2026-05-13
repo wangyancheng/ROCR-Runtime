@@ -1,0 +1,120 @@
+\hypertarget{executable_8cpp}{}\doxysection{src/loader/executable.cpp File Reference}
+\label{executable_8cpp}\index{src/loader/executable.cpp@{src/loader/executable.cpp}}
+{\ttfamily \#include \char`\"{}executable.\+hpp\char`\"{}}\newline
+{\ttfamily \#include $<$libelf.\+h$>$}\newline
+{\ttfamily \#include $<$limits.\+h$>$}\newline
+{\ttfamily \#include $<$link.\+h$>$}\newline
+{\ttfamily \#include $<$unistd.\+h$>$}\newline
+{\ttfamily \#include $<$algorithm$>$}\newline
+{\ttfamily \#include $<$cstddef$>$}\newline
+{\ttfamily \#include $<$cstring$>$}\newline
+{\ttfamily \#include $<$iomanip$>$}\newline
+{\ttfamily \#include $<$iostream$>$}\newline
+{\ttfamily \#include $<$atomic$>$}\newline
+{\ttfamily \#include $<$fstream$>$}\newline
+{\ttfamily \#include \char`\"{}inc/amd\+\_\+hsa\+\_\+elf.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}inc/amd\+\_\+hsa\+\_\+kernel\+\_\+code.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}core/inc/amd\+\_\+hsa\+\_\+code.\+hpp\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}amd\+\_\+hsa\+\_\+code\+\_\+util.\+hpp\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}amd\+\_\+options.\+hpp\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}core/util/utils.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}AMDHSAKernel\+Descriptor.\+h\char`\"{}}\newline
+Include dependency graph for executable.\+cpp\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{executable_8cpp__incl}
+\end{center}
+\end{figure}
+\doxysubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class \mbox{\hyperlink{classrocr_1_1amd_1_1hsa_1_1loader_1_1LoaderOptions}{rocr\+::amd\+::hsa\+::loader\+::\+Loader\+Options}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Namespaces}
+\begin{DoxyCompactItemize}
+\item 
+ \mbox{\hyperlink{namespacerocr}{rocr}}
+\item 
+ \mbox{\hyperlink{namespacerocr_1_1amd}{rocr\+::amd}}
+\item 
+ \mbox{\hyperlink{namespacerocr_1_1amd_1_1hsa}{rocr\+::amd\+::hsa}}
+\item 
+ \mbox{\hyperlink{namespacerocr_1_1amd_1_1hsa_1_1loader}{rocr\+::amd\+::hsa\+::loader}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \mbox{\hyperlink{executable_8cpp_a42ca046c0b3f1c041d74591865efca03}{HSAERRCHECK}}(hsc)
+\end{DoxyCompactItemize}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{executable_8cpp_aae8bd07bfa41355f9f2361ab6320a22e}{\+\_\+\+\_\+attribute\+\_\+\+\_\+}} ((noinline)) static void \+\_\+loader\+\_\+debug\+\_\+state()
+\item 
+static void \mbox{\hyperlink{namespacerocr_1_1amd_1_1hsa_1_1loader_a2b1323aa1366f249872c7b7d7be8cc40}{rocr\+::amd\+::hsa\+::loader\+::\+Add\+Code\+Object\+Info\+Into\+Debug\+Map}} (link\+\_\+map $\ast$map)
+\item 
+static void \mbox{\hyperlink{namespacerocr_1_1amd_1_1hsa_1_1loader_aed1fd6503890c15a703d794a4d84fa79}{rocr\+::amd\+::hsa\+::loader\+::\+Remove\+Code\+Object\+Info\+From\+Debug\+Map}} (link\+\_\+map $\ast$map)
+\item 
+static uint32\+\_\+t \mbox{\hyperlink{namespacerocr_1_1amd_1_1hsa_1_1loader_ab3c77fe4aa402b4e427b2d5a318b4d70}{rocr\+::amd\+::hsa\+::loader\+::\+Next\+Code\+Object\+Num}} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{inc_2hsa__ext__image_8h_a64216765b98b62ee87deb50fd2899836}{HSA\+\_\+\+API}} r\+\_\+debug \mbox{\hyperlink{executable_8cpp_aaae93ba44be4869449bb2ce365f1a429}{\+\_\+amdgpu\+\_\+r\+\_\+debug}}
+\item 
+static link\+\_\+map $\ast$ \mbox{\hyperlink{executable_8cpp_aca729aef9cdfe63336d39a4e7d5cad75}{r\+\_\+debug\+\_\+tail}} = nullptr
+\item 
+static const char $\ast$ \mbox{\hyperlink{namespacerocr_1_1amd_1_1hsa_1_1loader_a30caf3cae8b0d161afd9d12fd67523a9}{rocr\+::amd\+::hsa\+::loader\+::\+LOADER\+\_\+\+DUMP\+\_\+\+PREFIX}} = \char`\"{}amdcode\char`\"{}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Macro Definition Documentation}
+\mbox{\Hypertarget{executable_8cpp_a42ca046c0b3f1c041d74591865efca03}\label{executable_8cpp_a42ca046c0b3f1c041d74591865efca03}} 
+\index{executable.cpp@{executable.cpp}!HSAERRCHECK@{HSAERRCHECK}}
+\index{HSAERRCHECK@{HSAERRCHECK}!executable.cpp@{executable.cpp}}
+\doxysubsubsection{\texorpdfstring{HSAERRCHECK}{HSAERRCHECK}}
+{\footnotesize\ttfamily \#define HSAERRCHECK(\begin{DoxyParamCaption}\item[{}]{hsc }\end{DoxyParamCaption})}
+
+{\bfseries Value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{  \textcolor{keywordflow}{if} (hsc != \mbox{\hyperlink{group__status_ggad755322e7ff95456520e8abdbe90d225ae382ea0c9c05cce5a60d0317375159cc}{HSA\_STATUS\_SUCCESS}}) \{                                             \(\backslash\)}
+\DoxyCodeLine{    assert(\textcolor{keyword}{false});                                                             \(\backslash\)}
+\DoxyCodeLine{    return hsc;                                                                \(\backslash\)}
+\DoxyCodeLine{  \}                                                                            \(\backslash\)}
+
+\end{DoxyCode}
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{executable_8cpp_aae8bd07bfa41355f9f2361ab6320a22e}\label{executable_8cpp_aae8bd07bfa41355f9f2361ab6320a22e}} 
+\index{executable.cpp@{executable.cpp}!\_\_attribute\_\_@{\_\_attribute\_\_}}
+\index{\_\_attribute\_\_@{\_\_attribute\_\_}!executable.cpp@{executable.cpp}}
+\doxysubsubsection{\texorpdfstring{\_\_attribute\_\_()}{\_\_attribute\_\_()}}
+{\footnotesize\ttfamily \+\_\+\+\_\+attribute\+\_\+\+\_\+ (\begin{DoxyParamCaption}\item[{(noinline)}]{ }\end{DoxyParamCaption})}
+
+
+
+\doxysubsection{Variable Documentation}
+\mbox{\Hypertarget{executable_8cpp_aaae93ba44be4869449bb2ce365f1a429}\label{executable_8cpp_aaae93ba44be4869449bb2ce365f1a429}} 
+\index{executable.cpp@{executable.cpp}!\_amdgpu\_r\_debug@{\_amdgpu\_r\_debug}}
+\index{\_amdgpu\_r\_debug@{\_amdgpu\_r\_debug}!executable.cpp@{executable.cpp}}
+\doxysubsubsection{\texorpdfstring{\_amdgpu\_r\_debug}{\_amdgpu\_r\_debug}}
+{\footnotesize\ttfamily \mbox{\hyperlink{inc_2hsa__ext__image_8h_a64216765b98b62ee87deb50fd2899836}{HSA\+\_\+\+API}} r\+\_\+debug \+\_\+amdgpu\+\_\+r\+\_\+debug}
+
+{\bfseries Initial value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{= \{7,}
+\DoxyCodeLine{                           \textcolor{keyword}{nullptr},}
+\DoxyCodeLine{                           \textcolor{keyword}{reinterpret\_cast<}uintptr\_t\textcolor{keyword}{>}(\&\_loader\_debug\_state),}
+\DoxyCodeLine{                           r\_debug::RT\_CONSISTENT,}
+\DoxyCodeLine{                           0\}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{executable_8cpp_aca729aef9cdfe63336d39a4e7d5cad75}\label{executable_8cpp_aca729aef9cdfe63336d39a4e7d5cad75}} 
+\index{executable.cpp@{executable.cpp}!r\_debug\_tail@{r\_debug\_tail}}
+\index{r\_debug\_tail@{r\_debug\_tail}!executable.cpp@{executable.cpp}}
+\doxysubsubsection{\texorpdfstring{r\_debug\_tail}{r\_debug\_tail}}
+{\footnotesize\ttfamily link\+\_\+map$\ast$ r\+\_\+debug\+\_\+tail = nullptr\hspace{0.3cm}{\ttfamily [static]}}
+

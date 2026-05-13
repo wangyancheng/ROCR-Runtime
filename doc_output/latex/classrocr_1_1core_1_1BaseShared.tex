@@ -1,0 +1,74 @@
+\hypertarget{classrocr_1_1core_1_1BaseShared}{}\doxysection{rocr\+::core\+::Base\+Shared Class Reference}
+\label{classrocr_1_1core_1_1BaseShared}\index{rocr::core::BaseShared@{rocr::core::BaseShared}}
+
+
+Base class encapsulating the allocator and deallocator for shared shared object. As used this will allocate GPU visible host memory mapped to all GPUs.  
+
+
+
+
+{\ttfamily \#include $<$shared.\+h$>$}
+
+
+
+Inheritance diagram for rocr\+::core\+::Base\+Shared\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classrocr_1_1core_1_1BaseShared__inherit__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static void \mbox{\hyperlink{classrocr_1_1core_1_1BaseShared_ad573a2af74624da5b0a4aacad85e8d19}{Set\+Allocate\+And\+Free}} (const std\+::function$<$ void $\ast$(size\+\_\+t, size\+\_\+t, uint32\+\_\+t)$>$ \&allocate, const std\+::function$<$ void(void $\ast$)$>$ \&free)
+\end{DoxyCompactItemize}
+\doxysubsection*{Static Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+static std\+::function$<$ void $\ast$(size\+\_\+t, size\+\_\+t, uint32\+\_\+t)$>$ \mbox{\hyperlink{classrocr_1_1core_1_1BaseShared_a742a0177e6f6342eaa5ea2c523f318d3}{allocate\+\_\+}} = nullptr
+\item 
+static std\+::function$<$ void(void $\ast$)$>$ \mbox{\hyperlink{classrocr_1_1core_1_1BaseShared_ae8803c5d07cb86fbbb10094efe6d8a2e}{free\+\_\+}} = nullptr
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Base class encapsulating the allocator and deallocator for shared shared object. As used this will allocate GPU visible host memory mapped to all GPUs. 
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classrocr_1_1core_1_1BaseShared_ad573a2af74624da5b0a4aacad85e8d19}\label{classrocr_1_1core_1_1BaseShared_ad573a2af74624da5b0a4aacad85e8d19}} 
+\index{rocr::core::BaseShared@{rocr::core::BaseShared}!SetAllocateAndFree@{SetAllocateAndFree}}
+\index{SetAllocateAndFree@{SetAllocateAndFree}!rocr::core::BaseShared@{rocr::core::BaseShared}}
+\doxysubsubsection{\texorpdfstring{SetAllocateAndFree()}{SetAllocateAndFree()}}
+{\footnotesize\ttfamily static void rocr\+::core\+::\+Base\+Shared\+::\+Set\+Allocate\+And\+Free (\begin{DoxyParamCaption}\item[{const std\+::function$<$ void $\ast$(size\+\_\+t, size\+\_\+t, uint32\+\_\+t)$>$ \&}]{allocate,  }\item[{const std\+::function$<$ void(void $\ast$)$>$ \&}]{free }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classrocr_1_1core_1_1BaseShared_ad573a2af74624da5b0a4aacad85e8d19_icgraph}
+\end{center}
+\end{figure}
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{classrocr_1_1core_1_1BaseShared_a742a0177e6f6342eaa5ea2c523f318d3}\label{classrocr_1_1core_1_1BaseShared_a742a0177e6f6342eaa5ea2c523f318d3}} 
+\index{rocr::core::BaseShared@{rocr::core::BaseShared}!allocate\_@{allocate\_}}
+\index{allocate\_@{allocate\_}!rocr::core::BaseShared@{rocr::core::BaseShared}}
+\doxysubsubsection{\texorpdfstring{allocate\_}{allocate\_}}
+{\footnotesize\ttfamily std\+::function$<$ void $\ast$(size\+\_\+t, size\+\_\+t, uint32\+\_\+t)$>$ rocr\+::core\+::\+Base\+Shared\+::allocate\+\_\+ = nullptr\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [protected]}}
+
+\mbox{\Hypertarget{classrocr_1_1core_1_1BaseShared_ae8803c5d07cb86fbbb10094efe6d8a2e}\label{classrocr_1_1core_1_1BaseShared_ae8803c5d07cb86fbbb10094efe6d8a2e}} 
+\index{rocr::core::BaseShared@{rocr::core::BaseShared}!free\_@{free\_}}
+\index{free\_@{free\_}!rocr::core::BaseShared@{rocr::core::BaseShared}}
+\doxysubsubsection{\texorpdfstring{free\_}{free\_}}
+{\footnotesize\ttfamily std\+::function$<$ void(void $\ast$)$>$ rocr\+::core\+::\+Base\+Shared\+::free\+\_\+ = nullptr\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [protected]}}
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+src/core/common/\mbox{\hyperlink{shared_8h}{shared.\+h}}\item 
+src/core/common/\mbox{\hyperlink{shared_8cpp}{shared.\+cpp}}\end{DoxyCompactItemize}

@@ -1,0 +1,177 @@
+\hypertarget{unionrocr_1_1__ADDR__CREATE__FLAGS}{}\doxysection{rocr\+::\+\_\+\+ADDR\+\_\+\+CREATE\+\_\+\+FLAGS Union Reference}
+\label{unionrocr_1_1__ADDR__CREATE__FLAGS}\index{rocr::\_ADDR\_CREATE\_FLAGS@{rocr::\_ADDR\_CREATE\_FLAGS}}
+
+
+This structure is used to pass some setup in creation of Addr\+Lib.  
+
+
+
+
+{\ttfamily \#include $<$addrinterface.\+h$>$}
+
+\doxysubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\begin{tabbing}
+xx\=xx\=xx\=xx\=xx\=xx\=xx\=xx\=xx\=\kill
+struct \{\\
+\>\mbox{\hyperlink{addrtypes_8h_af5a2be58a28390f9a494538f34054637}{UINT\_32}} \mbox{\hyperlink{unionrocr_1_1__ADDR__CREATE__FLAGS_a1d2237cfda61477149545c0348a1a820}{noCubeMipSlicesPad}}: 1\\
+\>\>{\em Turn cubemap faces padding off. }\\
+\>\mbox{\hyperlink{addrtypes_8h_af5a2be58a28390f9a494538f34054637}{UINT\_32}} \mbox{\hyperlink{unionrocr_1_1__ADDR__CREATE__FLAGS_a0690e32655cf53637c08e448ce6bfcdd}{fillSizeFields}}: 1\\
+\>\mbox{\hyperlink{addrtypes_8h_af5a2be58a28390f9a494538f34054637}{UINT\_32}} \mbox{\hyperlink{unionrocr_1_1__ADDR__CREATE__FLAGS_ac20fe7222963e945cd3d50903a4e9f6c}{useTileIndex}}: 1\\
+\>\>{\em Make tileIndex field in input valid. }\\
+\>\mbox{\hyperlink{addrtypes_8h_af5a2be58a28390f9a494538f34054637}{UINT\_32}} \mbox{\hyperlink{unionrocr_1_1__ADDR__CREATE__FLAGS_a7c0a600dba3ddd87d9b95f3234e60587}{useCombinedSwizzle}}: 1\\
+\>\>{\em Use combined tile swizzle. }\\
+\>\mbox{\hyperlink{addrtypes_8h_af5a2be58a28390f9a494538f34054637}{UINT\_32}} \mbox{\hyperlink{unionrocr_1_1__ADDR__CREATE__FLAGS_aab10bdfbcc65ac383c84feb2093c87e1}{checkLast2DLevel}}: 1\\
+\>\>{\em Check the last 2D mip sub level. }\\
+\>\mbox{\hyperlink{addrtypes_8h_af5a2be58a28390f9a494538f34054637}{UINT\_32}} \mbox{\hyperlink{unionrocr_1_1__ADDR__CREATE__FLAGS_a876386b0be39cff9c9c438d33e30f648}{useHtileSliceAlign}}: 1\\
+\>\>{\em Do htile single slice alignment. }\\
+\>\mbox{\hyperlink{addrtypes_8h_af5a2be58a28390f9a494538f34054637}{UINT\_32}} \mbox{\hyperlink{unionrocr_1_1__ADDR__CREATE__FLAGS_a27cdd167259db2208a18265e06096be9}{allowLargeThickTile}}: 1\\
+\>\>{\em Allow 64$\ast$thickness$\ast$bytesPerPixel $>$ rowSize. }\\
+\>\mbox{\hyperlink{addrtypes_8h_af5a2be58a28390f9a494538f34054637}{UINT\_32}} \mbox{\hyperlink{unionrocr_1_1__ADDR__CREATE__FLAGS_add2debfc89d84ced8018e3a4d9ff640a}{forceDccAndTcCompat}}: 1\\
+\>\>{\em Force enable DCC and TC compatibility. }\\
+\>\mbox{\hyperlink{addrtypes_8h_af5a2be58a28390f9a494538f34054637}{UINT\_32}} \mbox{\hyperlink{unionrocr_1_1__ADDR__CREATE__FLAGS_adebaaf444623cd8026d604ce47d607d9}{nonPower2MemConfig}}: 1\\
+\>\>{\em Video memory bit width is not power of 2. }\\
+\>\mbox{\hyperlink{addrtypes_8h_af5a2be58a28390f9a494538f34054637}{UINT\_32}} \mbox{\hyperlink{unionrocr_1_1__ADDR__CREATE__FLAGS_a8803d8eeb6b0a7053a64b37ff9829ea2}{enableAltTiling}}: 1\\
+\>\>{\em Enable alt tile mode. }\\
+\>\mbox{\hyperlink{addrtypes_8h_af5a2be58a28390f9a494538f34054637}{UINT\_32}} \mbox{\hyperlink{unionrocr_1_1__ADDR__CREATE__FLAGS_a0b3a5d04be44ff6ce10b9ef3300a3719}{reserved}}: 22\\
+\>\>{\em Reserved bits for future use. }\\
+\}; \\
+
+\end{tabbing}\item 
+\mbox{\hyperlink{addrtypes_8h_af5a2be58a28390f9a494538f34054637}{UINT\+\_\+32}} \mbox{\hyperlink{unionrocr_1_1__ADDR__CREATE__FLAGS_ab415113a45a5e0d19fc510e8743a1e2c}{value}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+This structure is used to pass some setup in creation of Addr\+Lib. 
+
+ADDR\+\_\+\+CREATE\+\_\+\+FLAGS
+
+\begin{DoxyNote}{Note}
+
+\end{DoxyNote}
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{unionrocr_1_1__ADDR__CREATE__FLAGS_ac4c45dcde90f90806d44e8a5ca6c8098}\label{unionrocr_1_1__ADDR__CREATE__FLAGS_ac4c45dcde90f90806d44e8a5ca6c8098}} 
+\doxysubsubsection{\texorpdfstring{}{}}
+{\footnotesize\ttfamily struct \{ ... \} }
+
+\mbox{\Hypertarget{unionrocr_1_1__ADDR__CREATE__FLAGS_a27cdd167259db2208a18265e06096be9}\label{unionrocr_1_1__ADDR__CREATE__FLAGS_a27cdd167259db2208a18265e06096be9}} 
+\index{rocr::\_ADDR\_CREATE\_FLAGS@{rocr::\_ADDR\_CREATE\_FLAGS}!allowLargeThickTile@{allowLargeThickTile}}
+\index{allowLargeThickTile@{allowLargeThickTile}!rocr::\_ADDR\_CREATE\_FLAGS@{rocr::\_ADDR\_CREATE\_FLAGS}}
+\doxysubsubsection{\texorpdfstring{allowLargeThickTile}{allowLargeThickTile}}
+{\footnotesize\ttfamily \mbox{\hyperlink{addrtypes_8h_af5a2be58a28390f9a494538f34054637}{UINT\+\_\+32}} rocr\+::\+\_\+\+ADDR\+\_\+\+CREATE\+\_\+\+FLAGS\+::allow\+Large\+Thick\+Tile}
+
+
+
+Allow 64$\ast$thickness$\ast$bytes\+Per\+Pixel $>$ row\+Size. 
+
+\mbox{\Hypertarget{unionrocr_1_1__ADDR__CREATE__FLAGS_aab10bdfbcc65ac383c84feb2093c87e1}\label{unionrocr_1_1__ADDR__CREATE__FLAGS_aab10bdfbcc65ac383c84feb2093c87e1}} 
+\index{rocr::\_ADDR\_CREATE\_FLAGS@{rocr::\_ADDR\_CREATE\_FLAGS}!checkLast2DLevel@{checkLast2DLevel}}
+\index{checkLast2DLevel@{checkLast2DLevel}!rocr::\_ADDR\_CREATE\_FLAGS@{rocr::\_ADDR\_CREATE\_FLAGS}}
+\doxysubsubsection{\texorpdfstring{checkLast2DLevel}{checkLast2DLevel}}
+{\footnotesize\ttfamily \mbox{\hyperlink{addrtypes_8h_af5a2be58a28390f9a494538f34054637}{UINT\+\_\+32}} rocr\+::\+\_\+\+ADDR\+\_\+\+CREATE\+\_\+\+FLAGS\+::check\+Last2\+DLevel}
+
+
+
+Check the last 2D mip sub level. 
+
+\mbox{\Hypertarget{unionrocr_1_1__ADDR__CREATE__FLAGS_a8803d8eeb6b0a7053a64b37ff9829ea2}\label{unionrocr_1_1__ADDR__CREATE__FLAGS_a8803d8eeb6b0a7053a64b37ff9829ea2}} 
+\index{rocr::\_ADDR\_CREATE\_FLAGS@{rocr::\_ADDR\_CREATE\_FLAGS}!enableAltTiling@{enableAltTiling}}
+\index{enableAltTiling@{enableAltTiling}!rocr::\_ADDR\_CREATE\_FLAGS@{rocr::\_ADDR\_CREATE\_FLAGS}}
+\doxysubsubsection{\texorpdfstring{enableAltTiling}{enableAltTiling}}
+{\footnotesize\ttfamily \mbox{\hyperlink{addrtypes_8h_af5a2be58a28390f9a494538f34054637}{UINT\+\_\+32}} rocr\+::\+\_\+\+ADDR\+\_\+\+CREATE\+\_\+\+FLAGS\+::enable\+Alt\+Tiling}
+
+
+
+Enable alt tile mode. 
+
+\mbox{\Hypertarget{unionrocr_1_1__ADDR__CREATE__FLAGS_a0690e32655cf53637c08e448ce6bfcdd}\label{unionrocr_1_1__ADDR__CREATE__FLAGS_a0690e32655cf53637c08e448ce6bfcdd}} 
+\index{rocr::\_ADDR\_CREATE\_FLAGS@{rocr::\_ADDR\_CREATE\_FLAGS}!fillSizeFields@{fillSizeFields}}
+\index{fillSizeFields@{fillSizeFields}!rocr::\_ADDR\_CREATE\_FLAGS@{rocr::\_ADDR\_CREATE\_FLAGS}}
+\doxysubsubsection{\texorpdfstring{fillSizeFields}{fillSizeFields}}
+{\footnotesize\ttfamily \mbox{\hyperlink{addrtypes_8h_af5a2be58a28390f9a494538f34054637}{UINT\+\_\+32}} rocr\+::\+\_\+\+ADDR\+\_\+\+CREATE\+\_\+\+FLAGS\+::fill\+Size\+Fields}
+
+If clients fill size fields in all input and output structure \mbox{\Hypertarget{unionrocr_1_1__ADDR__CREATE__FLAGS_add2debfc89d84ced8018e3a4d9ff640a}\label{unionrocr_1_1__ADDR__CREATE__FLAGS_add2debfc89d84ced8018e3a4d9ff640a}} 
+\index{rocr::\_ADDR\_CREATE\_FLAGS@{rocr::\_ADDR\_CREATE\_FLAGS}!forceDccAndTcCompat@{forceDccAndTcCompat}}
+\index{forceDccAndTcCompat@{forceDccAndTcCompat}!rocr::\_ADDR\_CREATE\_FLAGS@{rocr::\_ADDR\_CREATE\_FLAGS}}
+\doxysubsubsection{\texorpdfstring{forceDccAndTcCompat}{forceDccAndTcCompat}}
+{\footnotesize\ttfamily \mbox{\hyperlink{addrtypes_8h_af5a2be58a28390f9a494538f34054637}{UINT\+\_\+32}} rocr\+::\+\_\+\+ADDR\+\_\+\+CREATE\+\_\+\+FLAGS\+::force\+Dcc\+And\+Tc\+Compat}
+
+
+
+Force enable DCC and TC compatibility. 
+
+\mbox{\Hypertarget{unionrocr_1_1__ADDR__CREATE__FLAGS_a1d2237cfda61477149545c0348a1a820}\label{unionrocr_1_1__ADDR__CREATE__FLAGS_a1d2237cfda61477149545c0348a1a820}} 
+\index{rocr::\_ADDR\_CREATE\_FLAGS@{rocr::\_ADDR\_CREATE\_FLAGS}!noCubeMipSlicesPad@{noCubeMipSlicesPad}}
+\index{noCubeMipSlicesPad@{noCubeMipSlicesPad}!rocr::\_ADDR\_CREATE\_FLAGS@{rocr::\_ADDR\_CREATE\_FLAGS}}
+\doxysubsubsection{\texorpdfstring{noCubeMipSlicesPad}{noCubeMipSlicesPad}}
+{\footnotesize\ttfamily \mbox{\hyperlink{addrtypes_8h_af5a2be58a28390f9a494538f34054637}{UINT\+\_\+32}} rocr\+::\+\_\+\+ADDR\+\_\+\+CREATE\+\_\+\+FLAGS\+::no\+Cube\+Mip\+Slices\+Pad}
+
+
+
+Turn cubemap faces padding off. 
+
+\mbox{\Hypertarget{unionrocr_1_1__ADDR__CREATE__FLAGS_adebaaf444623cd8026d604ce47d607d9}\label{unionrocr_1_1__ADDR__CREATE__FLAGS_adebaaf444623cd8026d604ce47d607d9}} 
+\index{rocr::\_ADDR\_CREATE\_FLAGS@{rocr::\_ADDR\_CREATE\_FLAGS}!nonPower2MemConfig@{nonPower2MemConfig}}
+\index{nonPower2MemConfig@{nonPower2MemConfig}!rocr::\_ADDR\_CREATE\_FLAGS@{rocr::\_ADDR\_CREATE\_FLAGS}}
+\doxysubsubsection{\texorpdfstring{nonPower2MemConfig}{nonPower2MemConfig}}
+{\footnotesize\ttfamily \mbox{\hyperlink{addrtypes_8h_af5a2be58a28390f9a494538f34054637}{UINT\+\_\+32}} rocr\+::\+\_\+\+ADDR\+\_\+\+CREATE\+\_\+\+FLAGS\+::non\+Power2\+Mem\+Config}
+
+
+
+Video memory bit width is not power of 2. 
+
+\mbox{\Hypertarget{unionrocr_1_1__ADDR__CREATE__FLAGS_a0b3a5d04be44ff6ce10b9ef3300a3719}\label{unionrocr_1_1__ADDR__CREATE__FLAGS_a0b3a5d04be44ff6ce10b9ef3300a3719}} 
+\index{rocr::\_ADDR\_CREATE\_FLAGS@{rocr::\_ADDR\_CREATE\_FLAGS}!reserved@{reserved}}
+\index{reserved@{reserved}!rocr::\_ADDR\_CREATE\_FLAGS@{rocr::\_ADDR\_CREATE\_FLAGS}}
+\doxysubsubsection{\texorpdfstring{reserved}{reserved}}
+{\footnotesize\ttfamily \mbox{\hyperlink{addrtypes_8h_af5a2be58a28390f9a494538f34054637}{UINT\+\_\+32}} rocr\+::\+\_\+\+ADDR\+\_\+\+CREATE\+\_\+\+FLAGS\+::reserved}
+
+
+
+Reserved bits for future use. 
+
+\mbox{\Hypertarget{unionrocr_1_1__ADDR__CREATE__FLAGS_a7c0a600dba3ddd87d9b95f3234e60587}\label{unionrocr_1_1__ADDR__CREATE__FLAGS_a7c0a600dba3ddd87d9b95f3234e60587}} 
+\index{rocr::\_ADDR\_CREATE\_FLAGS@{rocr::\_ADDR\_CREATE\_FLAGS}!useCombinedSwizzle@{useCombinedSwizzle}}
+\index{useCombinedSwizzle@{useCombinedSwizzle}!rocr::\_ADDR\_CREATE\_FLAGS@{rocr::\_ADDR\_CREATE\_FLAGS}}
+\doxysubsubsection{\texorpdfstring{useCombinedSwizzle}{useCombinedSwizzle}}
+{\footnotesize\ttfamily \mbox{\hyperlink{addrtypes_8h_af5a2be58a28390f9a494538f34054637}{UINT\+\_\+32}} rocr\+::\+\_\+\+ADDR\+\_\+\+CREATE\+\_\+\+FLAGS\+::use\+Combined\+Swizzle}
+
+
+
+Use combined tile swizzle. 
+
+\mbox{\Hypertarget{unionrocr_1_1__ADDR__CREATE__FLAGS_a876386b0be39cff9c9c438d33e30f648}\label{unionrocr_1_1__ADDR__CREATE__FLAGS_a876386b0be39cff9c9c438d33e30f648}} 
+\index{rocr::\_ADDR\_CREATE\_FLAGS@{rocr::\_ADDR\_CREATE\_FLAGS}!useHtileSliceAlign@{useHtileSliceAlign}}
+\index{useHtileSliceAlign@{useHtileSliceAlign}!rocr::\_ADDR\_CREATE\_FLAGS@{rocr::\_ADDR\_CREATE\_FLAGS}}
+\doxysubsubsection{\texorpdfstring{useHtileSliceAlign}{useHtileSliceAlign}}
+{\footnotesize\ttfamily \mbox{\hyperlink{addrtypes_8h_af5a2be58a28390f9a494538f34054637}{UINT\+\_\+32}} rocr\+::\+\_\+\+ADDR\+\_\+\+CREATE\+\_\+\+FLAGS\+::use\+Htile\+Slice\+Align}
+
+
+
+Do htile single slice alignment. 
+
+\mbox{\Hypertarget{unionrocr_1_1__ADDR__CREATE__FLAGS_ac20fe7222963e945cd3d50903a4e9f6c}\label{unionrocr_1_1__ADDR__CREATE__FLAGS_ac20fe7222963e945cd3d50903a4e9f6c}} 
+\index{rocr::\_ADDR\_CREATE\_FLAGS@{rocr::\_ADDR\_CREATE\_FLAGS}!useTileIndex@{useTileIndex}}
+\index{useTileIndex@{useTileIndex}!rocr::\_ADDR\_CREATE\_FLAGS@{rocr::\_ADDR\_CREATE\_FLAGS}}
+\doxysubsubsection{\texorpdfstring{useTileIndex}{useTileIndex}}
+{\footnotesize\ttfamily \mbox{\hyperlink{addrtypes_8h_af5a2be58a28390f9a494538f34054637}{UINT\+\_\+32}} rocr\+::\+\_\+\+ADDR\+\_\+\+CREATE\+\_\+\+FLAGS\+::use\+Tile\+Index}
+
+
+
+Make tile\+Index field in input valid. 
+
+\mbox{\Hypertarget{unionrocr_1_1__ADDR__CREATE__FLAGS_ab415113a45a5e0d19fc510e8743a1e2c}\label{unionrocr_1_1__ADDR__CREATE__FLAGS_ab415113a45a5e0d19fc510e8743a1e2c}} 
+\index{rocr::\_ADDR\_CREATE\_FLAGS@{rocr::\_ADDR\_CREATE\_FLAGS}!value@{value}}
+\index{value@{value}!rocr::\_ADDR\_CREATE\_FLAGS@{rocr::\_ADDR\_CREATE\_FLAGS}}
+\doxysubsubsection{\texorpdfstring{value}{value}}
+{\footnotesize\ttfamily \mbox{\hyperlink{addrtypes_8h_af5a2be58a28390f9a494538f34054637}{UINT\+\_\+32}} rocr\+::\+\_\+\+ADDR\+\_\+\+CREATE\+\_\+\+FLAGS\+::value}
+
+
+
+The documentation for this union was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+src/image/addrlib/inc/\mbox{\hyperlink{addrinterface_8h}{addrinterface.\+h}}\end{DoxyCompactItemize}

@@ -1,0 +1,871 @@
+\hypertarget{classrocr_1_1core_1_1BusyWaitSignal}{}\doxysection{rocr\+::core\+::Busy\+Wait\+Signal Class Reference}
+\label{classrocr_1_1core_1_1BusyWaitSignal}\index{rocr::core::BusyWaitSignal@{rocr::core::BusyWaitSignal}}
+
+
+Operations for a simple pure memory based signal.  
+
+
+
+
+{\ttfamily \#include $<$default\+\_\+signal.\+h$>$}
+
+
+
+Inheritance diagram for rocr\+::core\+::Busy\+Wait\+Signal\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=328pt]{classrocr_1_1core_1_1BusyWaitSignal__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for rocr\+::core\+::Busy\+Wait\+Signal\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classrocr_1_1core_1_1BusyWaitSignal__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classrocr_1_1core_1_1BusyWaitSignal_ae7ff520af536fd2f5507de47d83c40be}{Busy\+Wait\+Signal}} (\mbox{\hyperlink{structrocr_1_1core_1_1SharedSignal}{Shared\+Signal}} $\ast$abi\+\_\+block, bool enable\+IPC)
+\begin{DoxyCompactList}\small\item\em See base class \mbox{\hyperlink{classrocr_1_1core_1_1Signal}{Signal}}. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{group__signals_ga67ca2818879c9990e1b5f1b14ce7ed27}{hsa\+\_\+signal\+\_\+value\+\_\+t}} \mbox{\hyperlink{classrocr_1_1core_1_1BusyWaitSignal_a95201de214f6ecdb69306b0d1d26fa37}{Load\+Relaxed}} ()
+\item 
+\mbox{\hyperlink{group__signals_ga67ca2818879c9990e1b5f1b14ce7ed27}{hsa\+\_\+signal\+\_\+value\+\_\+t}} \mbox{\hyperlink{classrocr_1_1core_1_1BusyWaitSignal_a44dfcaa3a892adf7557c6a23a493810c}{Load\+Acquire}} ()
+\item 
+void \mbox{\hyperlink{classrocr_1_1core_1_1BusyWaitSignal_a7d6e8aedf1a2c43c5aec3b34e2854c4e}{Store\+Relaxed}} (\mbox{\hyperlink{group__signals_ga67ca2818879c9990e1b5f1b14ce7ed27}{hsa\+\_\+signal\+\_\+value\+\_\+t}} value)
+\item 
+void \mbox{\hyperlink{classrocr_1_1core_1_1BusyWaitSignal_a998e5af624f6519848e9ea2303bbfdeb}{Store\+Release}} (\mbox{\hyperlink{group__signals_ga67ca2818879c9990e1b5f1b14ce7ed27}{hsa\+\_\+signal\+\_\+value\+\_\+t}} value)
+\item 
+\mbox{\hyperlink{group__signals_ga67ca2818879c9990e1b5f1b14ce7ed27}{hsa\+\_\+signal\+\_\+value\+\_\+t}} \mbox{\hyperlink{classrocr_1_1core_1_1BusyWaitSignal_a7f64a9bb499be4c97299c4d00537993e}{Wait\+Relaxed}} (\mbox{\hyperlink{group__signals_gab7190fcff48c6dbeded341389ed17c8d}{hsa\+\_\+signal\+\_\+condition\+\_\+t}} condition, \mbox{\hyperlink{group__signals_ga67ca2818879c9990e1b5f1b14ce7ed27}{hsa\+\_\+signal\+\_\+value\+\_\+t}} compare\+\_\+value, uint64\+\_\+t timeout, \mbox{\hyperlink{group__signals_gac0d2ec14d7a58c6cccc259943a03c569}{hsa\+\_\+wait\+\_\+state\+\_\+t}} wait\+\_\+hint)
+\item 
+\mbox{\hyperlink{group__signals_ga67ca2818879c9990e1b5f1b14ce7ed27}{hsa\+\_\+signal\+\_\+value\+\_\+t}} \mbox{\hyperlink{classrocr_1_1core_1_1BusyWaitSignal_a8d94b6258a96df7a07f0f01831086d88}{Wait\+Acquire}} (\mbox{\hyperlink{group__signals_gab7190fcff48c6dbeded341389ed17c8d}{hsa\+\_\+signal\+\_\+condition\+\_\+t}} condition, \mbox{\hyperlink{group__signals_ga67ca2818879c9990e1b5f1b14ce7ed27}{hsa\+\_\+signal\+\_\+value\+\_\+t}} compare\+\_\+value, uint64\+\_\+t timeout, \mbox{\hyperlink{group__signals_gac0d2ec14d7a58c6cccc259943a03c569}{hsa\+\_\+wait\+\_\+state\+\_\+t}} wait\+\_\+hint)
+\item 
+void \mbox{\hyperlink{classrocr_1_1core_1_1BusyWaitSignal_a424204a494c856e49dbcdd6c142c5c97}{And\+Relaxed}} (\mbox{\hyperlink{group__signals_ga67ca2818879c9990e1b5f1b14ce7ed27}{hsa\+\_\+signal\+\_\+value\+\_\+t}} value)
+\item 
+void \mbox{\hyperlink{classrocr_1_1core_1_1BusyWaitSignal_ac48205a1e4b22a9d4edfc9cf44973f10}{And\+Acquire}} (\mbox{\hyperlink{group__signals_ga67ca2818879c9990e1b5f1b14ce7ed27}{hsa\+\_\+signal\+\_\+value\+\_\+t}} value)
+\item 
+void \mbox{\hyperlink{classrocr_1_1core_1_1BusyWaitSignal_acc8b1118a3e1e2b6b000cdc224e45134}{And\+Release}} (\mbox{\hyperlink{group__signals_ga67ca2818879c9990e1b5f1b14ce7ed27}{hsa\+\_\+signal\+\_\+value\+\_\+t}} value)
+\item 
+void \mbox{\hyperlink{classrocr_1_1core_1_1BusyWaitSignal_a16b93f334f086b2247bbe53bb03e7bf5}{And\+Acq\+Rel}} (\mbox{\hyperlink{group__signals_ga67ca2818879c9990e1b5f1b14ce7ed27}{hsa\+\_\+signal\+\_\+value\+\_\+t}} value)
+\item 
+void \mbox{\hyperlink{classrocr_1_1core_1_1BusyWaitSignal_ad8857b5de7b8c59b9488cb637efc2a10}{Or\+Relaxed}} (\mbox{\hyperlink{group__signals_ga67ca2818879c9990e1b5f1b14ce7ed27}{hsa\+\_\+signal\+\_\+value\+\_\+t}} value)
+\item 
+void \mbox{\hyperlink{classrocr_1_1core_1_1BusyWaitSignal_afb99d36d9b201de910a508f20ba68a04}{Or\+Acquire}} (\mbox{\hyperlink{group__signals_ga67ca2818879c9990e1b5f1b14ce7ed27}{hsa\+\_\+signal\+\_\+value\+\_\+t}} value)
+\item 
+void \mbox{\hyperlink{classrocr_1_1core_1_1BusyWaitSignal_a5ad7d4031ee28c4d8c4dc395e0410050}{Or\+Release}} (\mbox{\hyperlink{group__signals_ga67ca2818879c9990e1b5f1b14ce7ed27}{hsa\+\_\+signal\+\_\+value\+\_\+t}} value)
+\item 
+void \mbox{\hyperlink{classrocr_1_1core_1_1BusyWaitSignal_aa78a456f99e0daf6afbae343ac81ece8}{Or\+Acq\+Rel}} (\mbox{\hyperlink{group__signals_ga67ca2818879c9990e1b5f1b14ce7ed27}{hsa\+\_\+signal\+\_\+value\+\_\+t}} value)
+\item 
+void \mbox{\hyperlink{classrocr_1_1core_1_1BusyWaitSignal_a8543093ee8f028db71a4b80bb3ca1594}{Xor\+Relaxed}} (\mbox{\hyperlink{group__signals_ga67ca2818879c9990e1b5f1b14ce7ed27}{hsa\+\_\+signal\+\_\+value\+\_\+t}} value)
+\item 
+void \mbox{\hyperlink{classrocr_1_1core_1_1BusyWaitSignal_a0ac1b10bfc64b2f5642d49a4d133810e}{Xor\+Acquire}} (\mbox{\hyperlink{group__signals_ga67ca2818879c9990e1b5f1b14ce7ed27}{hsa\+\_\+signal\+\_\+value\+\_\+t}} value)
+\item 
+void \mbox{\hyperlink{classrocr_1_1core_1_1BusyWaitSignal_aeabeb953136fa7962ccd2dd6dd59f65a}{Xor\+Release}} (\mbox{\hyperlink{group__signals_ga67ca2818879c9990e1b5f1b14ce7ed27}{hsa\+\_\+signal\+\_\+value\+\_\+t}} value)
+\item 
+void \mbox{\hyperlink{classrocr_1_1core_1_1BusyWaitSignal_a8ef410c8a99d2aeeff2329484b6f28bf}{Xor\+Acq\+Rel}} (\mbox{\hyperlink{group__signals_ga67ca2818879c9990e1b5f1b14ce7ed27}{hsa\+\_\+signal\+\_\+value\+\_\+t}} value)
+\item 
+void \mbox{\hyperlink{classrocr_1_1core_1_1BusyWaitSignal_ac4bc04177df540688e601bcac30d2c3c}{Add\+Relaxed}} (\mbox{\hyperlink{group__signals_ga67ca2818879c9990e1b5f1b14ce7ed27}{hsa\+\_\+signal\+\_\+value\+\_\+t}} value)
+\item 
+void \mbox{\hyperlink{classrocr_1_1core_1_1BusyWaitSignal_ab49a4463295397ecb34ef86c271d7e94}{Add\+Acquire}} (\mbox{\hyperlink{group__signals_ga67ca2818879c9990e1b5f1b14ce7ed27}{hsa\+\_\+signal\+\_\+value\+\_\+t}} value)
+\item 
+void \mbox{\hyperlink{classrocr_1_1core_1_1BusyWaitSignal_ab354531e62109feecd6a1a5fd3e8423e}{Add\+Release}} (\mbox{\hyperlink{group__signals_ga67ca2818879c9990e1b5f1b14ce7ed27}{hsa\+\_\+signal\+\_\+value\+\_\+t}} value)
+\item 
+void \mbox{\hyperlink{classrocr_1_1core_1_1BusyWaitSignal_a64c4a74df3fb70c076a64c51bdf3c156}{Add\+Acq\+Rel}} (\mbox{\hyperlink{group__signals_ga67ca2818879c9990e1b5f1b14ce7ed27}{hsa\+\_\+signal\+\_\+value\+\_\+t}} value)
+\item 
+void \mbox{\hyperlink{classrocr_1_1core_1_1BusyWaitSignal_a518f5871f3ff931bf1d21bc32f52f82b}{Sub\+Relaxed}} (\mbox{\hyperlink{group__signals_ga67ca2818879c9990e1b5f1b14ce7ed27}{hsa\+\_\+signal\+\_\+value\+\_\+t}} value)
+\item 
+void \mbox{\hyperlink{classrocr_1_1core_1_1BusyWaitSignal_abe3a732a6a047873e18b678b9193be39}{Sub\+Acquire}} (\mbox{\hyperlink{group__signals_ga67ca2818879c9990e1b5f1b14ce7ed27}{hsa\+\_\+signal\+\_\+value\+\_\+t}} value)
+\item 
+void \mbox{\hyperlink{classrocr_1_1core_1_1BusyWaitSignal_ad5da75bd6e6382b776f166d7e66da492}{Sub\+Release}} (\mbox{\hyperlink{group__signals_ga67ca2818879c9990e1b5f1b14ce7ed27}{hsa\+\_\+signal\+\_\+value\+\_\+t}} value)
+\item 
+void \mbox{\hyperlink{classrocr_1_1core_1_1BusyWaitSignal_a313e02b186e7c3b61719f9197e2228f4}{Sub\+Acq\+Rel}} (\mbox{\hyperlink{group__signals_ga67ca2818879c9990e1b5f1b14ce7ed27}{hsa\+\_\+signal\+\_\+value\+\_\+t}} value)
+\item 
+\mbox{\hyperlink{group__signals_ga67ca2818879c9990e1b5f1b14ce7ed27}{hsa\+\_\+signal\+\_\+value\+\_\+t}} \mbox{\hyperlink{classrocr_1_1core_1_1BusyWaitSignal_ab06376d49c0ed3be71f3e8b06ef70bea}{Exch\+Relaxed}} (\mbox{\hyperlink{group__signals_ga67ca2818879c9990e1b5f1b14ce7ed27}{hsa\+\_\+signal\+\_\+value\+\_\+t}} value)
+\item 
+\mbox{\hyperlink{group__signals_ga67ca2818879c9990e1b5f1b14ce7ed27}{hsa\+\_\+signal\+\_\+value\+\_\+t}} \mbox{\hyperlink{classrocr_1_1core_1_1BusyWaitSignal_a16b55e1160fa2acdb18c438d0ccdd00b}{Exch\+Acquire}} (\mbox{\hyperlink{group__signals_ga67ca2818879c9990e1b5f1b14ce7ed27}{hsa\+\_\+signal\+\_\+value\+\_\+t}} value)
+\item 
+\mbox{\hyperlink{group__signals_ga67ca2818879c9990e1b5f1b14ce7ed27}{hsa\+\_\+signal\+\_\+value\+\_\+t}} \mbox{\hyperlink{classrocr_1_1core_1_1BusyWaitSignal_ac1ef139124a312c9df10591ee5eda5c8}{Exch\+Release}} (\mbox{\hyperlink{group__signals_ga67ca2818879c9990e1b5f1b14ce7ed27}{hsa\+\_\+signal\+\_\+value\+\_\+t}} value)
+\item 
+\mbox{\hyperlink{group__signals_ga67ca2818879c9990e1b5f1b14ce7ed27}{hsa\+\_\+signal\+\_\+value\+\_\+t}} \mbox{\hyperlink{classrocr_1_1core_1_1BusyWaitSignal_af9a52cf09b6e7653f69c0defb2dfa371}{Exch\+Acq\+Rel}} (\mbox{\hyperlink{group__signals_ga67ca2818879c9990e1b5f1b14ce7ed27}{hsa\+\_\+signal\+\_\+value\+\_\+t}} value)
+\item 
+\mbox{\hyperlink{group__signals_ga67ca2818879c9990e1b5f1b14ce7ed27}{hsa\+\_\+signal\+\_\+value\+\_\+t}} \mbox{\hyperlink{classrocr_1_1core_1_1BusyWaitSignal_a9ae6bde5ee5b33ca3be47113529de080}{Cas\+Relaxed}} (\mbox{\hyperlink{group__signals_ga67ca2818879c9990e1b5f1b14ce7ed27}{hsa\+\_\+signal\+\_\+value\+\_\+t}} expected, \mbox{\hyperlink{group__signals_ga67ca2818879c9990e1b5f1b14ce7ed27}{hsa\+\_\+signal\+\_\+value\+\_\+t}} value)
+\item 
+\mbox{\hyperlink{group__signals_ga67ca2818879c9990e1b5f1b14ce7ed27}{hsa\+\_\+signal\+\_\+value\+\_\+t}} \mbox{\hyperlink{classrocr_1_1core_1_1BusyWaitSignal_a109ff668633475c78e5a74b1b2daf6d1}{Cas\+Acquire}} (\mbox{\hyperlink{group__signals_ga67ca2818879c9990e1b5f1b14ce7ed27}{hsa\+\_\+signal\+\_\+value\+\_\+t}} expected, \mbox{\hyperlink{group__signals_ga67ca2818879c9990e1b5f1b14ce7ed27}{hsa\+\_\+signal\+\_\+value\+\_\+t}} value)
+\item 
+\mbox{\hyperlink{group__signals_ga67ca2818879c9990e1b5f1b14ce7ed27}{hsa\+\_\+signal\+\_\+value\+\_\+t}} \mbox{\hyperlink{classrocr_1_1core_1_1BusyWaitSignal_a3bcd7507ff80d457614b58daafbe8a97}{Cas\+Release}} (\mbox{\hyperlink{group__signals_ga67ca2818879c9990e1b5f1b14ce7ed27}{hsa\+\_\+signal\+\_\+value\+\_\+t}} expected, \mbox{\hyperlink{group__signals_ga67ca2818879c9990e1b5f1b14ce7ed27}{hsa\+\_\+signal\+\_\+value\+\_\+t}} value)
+\item 
+\mbox{\hyperlink{group__signals_ga67ca2818879c9990e1b5f1b14ce7ed27}{hsa\+\_\+signal\+\_\+value\+\_\+t}} \mbox{\hyperlink{classrocr_1_1core_1_1BusyWaitSignal_a9875b01ab2744708165cd6f1f4b46d4e}{Cas\+Acq\+Rel}} (\mbox{\hyperlink{group__signals_ga67ca2818879c9990e1b5f1b14ce7ed27}{hsa\+\_\+signal\+\_\+value\+\_\+t}} expected, \mbox{\hyperlink{group__signals_ga67ca2818879c9990e1b5f1b14ce7ed27}{hsa\+\_\+signal\+\_\+value\+\_\+t}} value)
+\item 
+\+\_\+\+\_\+forceinline \mbox{\hyperlink{group__signals_ga67ca2818879c9990e1b5f1b14ce7ed27}{hsa\+\_\+signal\+\_\+value\+\_\+t}} $\ast$ \mbox{\hyperlink{classrocr_1_1core_1_1BusyWaitSignal_a179c0dfe99c527d9b8ad5dcfdce92d4f}{Value\+Location}} () const
+\begin{DoxyCompactList}\small\item\em see the base class \mbox{\hyperlink{classrocr_1_1core_1_1Signal}{Signal}} \end{DoxyCompactList}\item 
+\+\_\+\+\_\+forceinline Hsa\+Event $\ast$ \mbox{\hyperlink{classrocr_1_1core_1_1BusyWaitSignal_a159f6ed0d59b443cc96da4987c3bec75}{Eop\+Event}} ()
+\begin{DoxyCompactList}\small\item\em see the base class \mbox{\hyperlink{classrocr_1_1core_1_1Signal}{Signal}} \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static \+\_\+\+\_\+forceinline bool \mbox{\hyperlink{classrocr_1_1core_1_1BusyWaitSignal_a43b368eec8a1759b5d7aecf41479e1bc}{Is\+Type}} (\mbox{\hyperlink{classrocr_1_1core_1_1Signal}{Signal}} $\ast$ptr)
+\begin{DoxyCompactList}\small\item\em Determines if a Signal$\ast$ can be safely converted to Busy\+Wait\+Signal$\ast$ via static\+\_\+cast. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+bool \mbox{\hyperlink{classrocr_1_1core_1_1BusyWaitSignal_a967b0e7476d16236ac54d5bf44cdb228}{\+\_\+\+IsA}} (\mbox{\hyperlink{classrocr_1_1core_1_1Signal_a72da3ee567e1cbb30a07292e8be69bc6}{rtti\+\_\+t}} id) const
+\begin{DoxyCompactList}\small\item\em Simple RTTI type checking helper Returns true if the object can be converted to the query type via static\+\_\+cast. Do not use directly. Use Is\+Type in the desired derived type instead. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classrocr_1_1core_1_1BusyWaitSignal_acf2d1b9362e37ce711aebea7352cd93f}{DISALLOW\+\_\+\+COPY\+\_\+\+AND\+\_\+\+ASSIGN}} (\mbox{\hyperlink{classrocr_1_1core_1_1BusyWaitSignal}{Busy\+Wait\+Signal}})
+\end{DoxyCompactItemize}
+\doxysubsection*{Static Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+static int \mbox{\hyperlink{classrocr_1_1core_1_1BusyWaitSignal_a2d12f00fda88829ed6e45126d88cef33}{rtti\+\_\+id\+\_\+}} = 0
+\end{DoxyCompactItemize}
+\doxysubsection*{Additional Inherited Members}
+
+
+\doxysubsection{Detailed Description}
+Operations for a simple pure memory based signal. 
+
+See base class \mbox{\hyperlink{classrocr_1_1core_1_1Signal}{Signal}}. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classrocr_1_1core_1_1BusyWaitSignal_ae7ff520af536fd2f5507de47d83c40be}\label{classrocr_1_1core_1_1BusyWaitSignal_ae7ff520af536fd2f5507de47d83c40be}} 
+\index{rocr::core::BusyWaitSignal@{rocr::core::BusyWaitSignal}!BusyWaitSignal@{BusyWaitSignal}}
+\index{BusyWaitSignal@{BusyWaitSignal}!rocr::core::BusyWaitSignal@{rocr::core::BusyWaitSignal}}
+\doxysubsubsection{\texorpdfstring{BusyWaitSignal()}{BusyWaitSignal()}}
+{\footnotesize\ttfamily rocr\+::core\+::\+Busy\+Wait\+Signal\+::\+Busy\+Wait\+Signal (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structrocr_1_1core_1_1SharedSignal}{Shared\+Signal}} $\ast$}]{abi\+\_\+block,  }\item[{bool}]{enable\+IPC }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [explicit]}}
+
+
+
+See base class \mbox{\hyperlink{classrocr_1_1core_1_1Signal}{Signal}}. 
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classrocr_1_1core_1_1BusyWaitSignal_a967b0e7476d16236ac54d5bf44cdb228}\label{classrocr_1_1core_1_1BusyWaitSignal_a967b0e7476d16236ac54d5bf44cdb228}} 
+\index{rocr::core::BusyWaitSignal@{rocr::core::BusyWaitSignal}!\_IsA@{\_IsA}}
+\index{\_IsA@{\_IsA}!rocr::core::BusyWaitSignal@{rocr::core::BusyWaitSignal}}
+\doxysubsubsection{\texorpdfstring{\_IsA()}{\_IsA()}}
+{\footnotesize\ttfamily bool rocr\+::core\+::\+Busy\+Wait\+Signal\+::\+\_\+\+IsA (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classrocr_1_1core_1_1Signal_a72da3ee567e1cbb30a07292e8be69bc6}{rtti\+\_\+t}}}]{id }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [protected]}, {\ttfamily [virtual]}}
+
+
+
+Simple RTTI type checking helper Returns true if the object can be converted to the query type via static\+\_\+cast. Do not use directly. Use Is\+Type in the desired derived type instead. 
+
+
+
+Implements \mbox{\hyperlink{classrocr_1_1core_1_1Signal_a6918573f0a2b353118566bdde8e096d7}{rocr\+::core\+::\+Signal}}.
+
+
+
+Reimplemented in \mbox{\hyperlink{classrocr_1_1core_1_1IPCSignal_a3a03678681394d7822375bd8dc17db38}{rocr\+::core\+::\+IPCSignal}}, and \mbox{\hyperlink{classrocr_1_1core_1_1DefaultSignal_aff60860826e2573ddcc9bcbe354fc1ea}{rocr\+::core\+::\+Default\+Signal}}.
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classrocr_1_1core_1_1BusyWaitSignal_a967b0e7476d16236ac54d5bf44cdb228_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classrocr_1_1core_1_1BusyWaitSignal_a64c4a74df3fb70c076a64c51bdf3c156}\label{classrocr_1_1core_1_1BusyWaitSignal_a64c4a74df3fb70c076a64c51bdf3c156}} 
+\index{rocr::core::BusyWaitSignal@{rocr::core::BusyWaitSignal}!AddAcqRel@{AddAcqRel}}
+\index{AddAcqRel@{AddAcqRel}!rocr::core::BusyWaitSignal@{rocr::core::BusyWaitSignal}}
+\doxysubsubsection{\texorpdfstring{AddAcqRel()}{AddAcqRel()}}
+{\footnotesize\ttfamily void rocr\+::core\+::\+Busy\+Wait\+Signal\+::\+Add\+Acq\+Rel (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{group__signals_ga67ca2818879c9990e1b5f1b14ce7ed27}{hsa\+\_\+signal\+\_\+value\+\_\+t}}}]{value }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Implements \mbox{\hyperlink{classrocr_1_1core_1_1Signal_ad134f4624cf1496c47e8641e99198cd8}{rocr\+::core\+::\+Signal}}.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classrocr_1_1core_1_1BusyWaitSignal_a64c4a74df3fb70c076a64c51bdf3c156_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classrocr_1_1core_1_1BusyWaitSignal_ab49a4463295397ecb34ef86c271d7e94}\label{classrocr_1_1core_1_1BusyWaitSignal_ab49a4463295397ecb34ef86c271d7e94}} 
+\index{rocr::core::BusyWaitSignal@{rocr::core::BusyWaitSignal}!AddAcquire@{AddAcquire}}
+\index{AddAcquire@{AddAcquire}!rocr::core::BusyWaitSignal@{rocr::core::BusyWaitSignal}}
+\doxysubsubsection{\texorpdfstring{AddAcquire()}{AddAcquire()}}
+{\footnotesize\ttfamily void rocr\+::core\+::\+Busy\+Wait\+Signal\+::\+Add\+Acquire (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{group__signals_ga67ca2818879c9990e1b5f1b14ce7ed27}{hsa\+\_\+signal\+\_\+value\+\_\+t}}}]{value }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Implements \mbox{\hyperlink{classrocr_1_1core_1_1Signal_a4632c0d225c11d90dfb8443810ffb373}{rocr\+::core\+::\+Signal}}.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classrocr_1_1core_1_1BusyWaitSignal_ab49a4463295397ecb34ef86c271d7e94_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classrocr_1_1core_1_1BusyWaitSignal_ac4bc04177df540688e601bcac30d2c3c}\label{classrocr_1_1core_1_1BusyWaitSignal_ac4bc04177df540688e601bcac30d2c3c}} 
+\index{rocr::core::BusyWaitSignal@{rocr::core::BusyWaitSignal}!AddRelaxed@{AddRelaxed}}
+\index{AddRelaxed@{AddRelaxed}!rocr::core::BusyWaitSignal@{rocr::core::BusyWaitSignal}}
+\doxysubsubsection{\texorpdfstring{AddRelaxed()}{AddRelaxed()}}
+{\footnotesize\ttfamily void rocr\+::core\+::\+Busy\+Wait\+Signal\+::\+Add\+Relaxed (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{group__signals_ga67ca2818879c9990e1b5f1b14ce7ed27}{hsa\+\_\+signal\+\_\+value\+\_\+t}}}]{value }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Implements \mbox{\hyperlink{classrocr_1_1core_1_1Signal_af6a56eff3893809502c8287fabba5e86}{rocr\+::core\+::\+Signal}}.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classrocr_1_1core_1_1BusyWaitSignal_ac4bc04177df540688e601bcac30d2c3c_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classrocr_1_1core_1_1BusyWaitSignal_ab354531e62109feecd6a1a5fd3e8423e}\label{classrocr_1_1core_1_1BusyWaitSignal_ab354531e62109feecd6a1a5fd3e8423e}} 
+\index{rocr::core::BusyWaitSignal@{rocr::core::BusyWaitSignal}!AddRelease@{AddRelease}}
+\index{AddRelease@{AddRelease}!rocr::core::BusyWaitSignal@{rocr::core::BusyWaitSignal}}
+\doxysubsubsection{\texorpdfstring{AddRelease()}{AddRelease()}}
+{\footnotesize\ttfamily void rocr\+::core\+::\+Busy\+Wait\+Signal\+::\+Add\+Release (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{group__signals_ga67ca2818879c9990e1b5f1b14ce7ed27}{hsa\+\_\+signal\+\_\+value\+\_\+t}}}]{value }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Implements \mbox{\hyperlink{classrocr_1_1core_1_1Signal_a6df797ecba2c0fb4dd2fb035ea0900c3}{rocr\+::core\+::\+Signal}}.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classrocr_1_1core_1_1BusyWaitSignal_ab354531e62109feecd6a1a5fd3e8423e_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classrocr_1_1core_1_1BusyWaitSignal_a16b93f334f086b2247bbe53bb03e7bf5}\label{classrocr_1_1core_1_1BusyWaitSignal_a16b93f334f086b2247bbe53bb03e7bf5}} 
+\index{rocr::core::BusyWaitSignal@{rocr::core::BusyWaitSignal}!AndAcqRel@{AndAcqRel}}
+\index{AndAcqRel@{AndAcqRel}!rocr::core::BusyWaitSignal@{rocr::core::BusyWaitSignal}}
+\doxysubsubsection{\texorpdfstring{AndAcqRel()}{AndAcqRel()}}
+{\footnotesize\ttfamily void rocr\+::core\+::\+Busy\+Wait\+Signal\+::\+And\+Acq\+Rel (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{group__signals_ga67ca2818879c9990e1b5f1b14ce7ed27}{hsa\+\_\+signal\+\_\+value\+\_\+t}}}]{value }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Implements \mbox{\hyperlink{classrocr_1_1core_1_1Signal_a33116394e16f356c52fc663e0e3ccbc2}{rocr\+::core\+::\+Signal}}.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classrocr_1_1core_1_1BusyWaitSignal_a16b93f334f086b2247bbe53bb03e7bf5_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classrocr_1_1core_1_1BusyWaitSignal_ac48205a1e4b22a9d4edfc9cf44973f10}\label{classrocr_1_1core_1_1BusyWaitSignal_ac48205a1e4b22a9d4edfc9cf44973f10}} 
+\index{rocr::core::BusyWaitSignal@{rocr::core::BusyWaitSignal}!AndAcquire@{AndAcquire}}
+\index{AndAcquire@{AndAcquire}!rocr::core::BusyWaitSignal@{rocr::core::BusyWaitSignal}}
+\doxysubsubsection{\texorpdfstring{AndAcquire()}{AndAcquire()}}
+{\footnotesize\ttfamily void rocr\+::core\+::\+Busy\+Wait\+Signal\+::\+And\+Acquire (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{group__signals_ga67ca2818879c9990e1b5f1b14ce7ed27}{hsa\+\_\+signal\+\_\+value\+\_\+t}}}]{value }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Implements \mbox{\hyperlink{classrocr_1_1core_1_1Signal_a14b32ed865887890f288cd1b1519758c}{rocr\+::core\+::\+Signal}}.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classrocr_1_1core_1_1BusyWaitSignal_ac48205a1e4b22a9d4edfc9cf44973f10_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classrocr_1_1core_1_1BusyWaitSignal_a424204a494c856e49dbcdd6c142c5c97}\label{classrocr_1_1core_1_1BusyWaitSignal_a424204a494c856e49dbcdd6c142c5c97}} 
+\index{rocr::core::BusyWaitSignal@{rocr::core::BusyWaitSignal}!AndRelaxed@{AndRelaxed}}
+\index{AndRelaxed@{AndRelaxed}!rocr::core::BusyWaitSignal@{rocr::core::BusyWaitSignal}}
+\doxysubsubsection{\texorpdfstring{AndRelaxed()}{AndRelaxed()}}
+{\footnotesize\ttfamily void rocr\+::core\+::\+Busy\+Wait\+Signal\+::\+And\+Relaxed (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{group__signals_ga67ca2818879c9990e1b5f1b14ce7ed27}{hsa\+\_\+signal\+\_\+value\+\_\+t}}}]{value }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Implements \mbox{\hyperlink{classrocr_1_1core_1_1Signal_a9f4e5fb92345424b30d911f5935e0d54}{rocr\+::core\+::\+Signal}}.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classrocr_1_1core_1_1BusyWaitSignal_a424204a494c856e49dbcdd6c142c5c97_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classrocr_1_1core_1_1BusyWaitSignal_acc8b1118a3e1e2b6b000cdc224e45134}\label{classrocr_1_1core_1_1BusyWaitSignal_acc8b1118a3e1e2b6b000cdc224e45134}} 
+\index{rocr::core::BusyWaitSignal@{rocr::core::BusyWaitSignal}!AndRelease@{AndRelease}}
+\index{AndRelease@{AndRelease}!rocr::core::BusyWaitSignal@{rocr::core::BusyWaitSignal}}
+\doxysubsubsection{\texorpdfstring{AndRelease()}{AndRelease()}}
+{\footnotesize\ttfamily void rocr\+::core\+::\+Busy\+Wait\+Signal\+::\+And\+Release (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{group__signals_ga67ca2818879c9990e1b5f1b14ce7ed27}{hsa\+\_\+signal\+\_\+value\+\_\+t}}}]{value }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Implements \mbox{\hyperlink{classrocr_1_1core_1_1Signal_aa13caac083cdebe94797834dfca15f73}{rocr\+::core\+::\+Signal}}.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classrocr_1_1core_1_1BusyWaitSignal_acc8b1118a3e1e2b6b000cdc224e45134_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classrocr_1_1core_1_1BusyWaitSignal_a9875b01ab2744708165cd6f1f4b46d4e}\label{classrocr_1_1core_1_1BusyWaitSignal_a9875b01ab2744708165cd6f1f4b46d4e}} 
+\index{rocr::core::BusyWaitSignal@{rocr::core::BusyWaitSignal}!CasAcqRel@{CasAcqRel}}
+\index{CasAcqRel@{CasAcqRel}!rocr::core::BusyWaitSignal@{rocr::core::BusyWaitSignal}}
+\doxysubsubsection{\texorpdfstring{CasAcqRel()}{CasAcqRel()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{group__signals_ga67ca2818879c9990e1b5f1b14ce7ed27}{hsa\+\_\+signal\+\_\+value\+\_\+t}} rocr\+::core\+::\+Busy\+Wait\+Signal\+::\+Cas\+Acq\+Rel (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{group__signals_ga67ca2818879c9990e1b5f1b14ce7ed27}{hsa\+\_\+signal\+\_\+value\+\_\+t}}}]{expected,  }\item[{\mbox{\hyperlink{group__signals_ga67ca2818879c9990e1b5f1b14ce7ed27}{hsa\+\_\+signal\+\_\+value\+\_\+t}}}]{value }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Implements \mbox{\hyperlink{classrocr_1_1core_1_1Signal_a256e73e076e538dcb1d5dc5a83172ae5}{rocr\+::core\+::\+Signal}}.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classrocr_1_1core_1_1BusyWaitSignal_a9875b01ab2744708165cd6f1f4b46d4e_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classrocr_1_1core_1_1BusyWaitSignal_a109ff668633475c78e5a74b1b2daf6d1}\label{classrocr_1_1core_1_1BusyWaitSignal_a109ff668633475c78e5a74b1b2daf6d1}} 
+\index{rocr::core::BusyWaitSignal@{rocr::core::BusyWaitSignal}!CasAcquire@{CasAcquire}}
+\index{CasAcquire@{CasAcquire}!rocr::core::BusyWaitSignal@{rocr::core::BusyWaitSignal}}
+\doxysubsubsection{\texorpdfstring{CasAcquire()}{CasAcquire()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{group__signals_ga67ca2818879c9990e1b5f1b14ce7ed27}{hsa\+\_\+signal\+\_\+value\+\_\+t}} rocr\+::core\+::\+Busy\+Wait\+Signal\+::\+Cas\+Acquire (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{group__signals_ga67ca2818879c9990e1b5f1b14ce7ed27}{hsa\+\_\+signal\+\_\+value\+\_\+t}}}]{expected,  }\item[{\mbox{\hyperlink{group__signals_ga67ca2818879c9990e1b5f1b14ce7ed27}{hsa\+\_\+signal\+\_\+value\+\_\+t}}}]{value }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Implements \mbox{\hyperlink{classrocr_1_1core_1_1Signal_a2aa2f44d0da2f76b0fbbf39be0ea985b}{rocr\+::core\+::\+Signal}}.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classrocr_1_1core_1_1BusyWaitSignal_a109ff668633475c78e5a74b1b2daf6d1_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classrocr_1_1core_1_1BusyWaitSignal_a9ae6bde5ee5b33ca3be47113529de080}\label{classrocr_1_1core_1_1BusyWaitSignal_a9ae6bde5ee5b33ca3be47113529de080}} 
+\index{rocr::core::BusyWaitSignal@{rocr::core::BusyWaitSignal}!CasRelaxed@{CasRelaxed}}
+\index{CasRelaxed@{CasRelaxed}!rocr::core::BusyWaitSignal@{rocr::core::BusyWaitSignal}}
+\doxysubsubsection{\texorpdfstring{CasRelaxed()}{CasRelaxed()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{group__signals_ga67ca2818879c9990e1b5f1b14ce7ed27}{hsa\+\_\+signal\+\_\+value\+\_\+t}} rocr\+::core\+::\+Busy\+Wait\+Signal\+::\+Cas\+Relaxed (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{group__signals_ga67ca2818879c9990e1b5f1b14ce7ed27}{hsa\+\_\+signal\+\_\+value\+\_\+t}}}]{expected,  }\item[{\mbox{\hyperlink{group__signals_ga67ca2818879c9990e1b5f1b14ce7ed27}{hsa\+\_\+signal\+\_\+value\+\_\+t}}}]{value }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Implements \mbox{\hyperlink{classrocr_1_1core_1_1Signal_ad84771824e206d0acffb1f80b5032206}{rocr\+::core\+::\+Signal}}.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classrocr_1_1core_1_1BusyWaitSignal_a9ae6bde5ee5b33ca3be47113529de080_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classrocr_1_1core_1_1BusyWaitSignal_a3bcd7507ff80d457614b58daafbe8a97}\label{classrocr_1_1core_1_1BusyWaitSignal_a3bcd7507ff80d457614b58daafbe8a97}} 
+\index{rocr::core::BusyWaitSignal@{rocr::core::BusyWaitSignal}!CasRelease@{CasRelease}}
+\index{CasRelease@{CasRelease}!rocr::core::BusyWaitSignal@{rocr::core::BusyWaitSignal}}
+\doxysubsubsection{\texorpdfstring{CasRelease()}{CasRelease()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{group__signals_ga67ca2818879c9990e1b5f1b14ce7ed27}{hsa\+\_\+signal\+\_\+value\+\_\+t}} rocr\+::core\+::\+Busy\+Wait\+Signal\+::\+Cas\+Release (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{group__signals_ga67ca2818879c9990e1b5f1b14ce7ed27}{hsa\+\_\+signal\+\_\+value\+\_\+t}}}]{expected,  }\item[{\mbox{\hyperlink{group__signals_ga67ca2818879c9990e1b5f1b14ce7ed27}{hsa\+\_\+signal\+\_\+value\+\_\+t}}}]{value }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Implements \mbox{\hyperlink{classrocr_1_1core_1_1Signal_af68025df1101edf66e2ee61fbebb098f}{rocr\+::core\+::\+Signal}}.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classrocr_1_1core_1_1BusyWaitSignal_a3bcd7507ff80d457614b58daafbe8a97_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classrocr_1_1core_1_1BusyWaitSignal_acf2d1b9362e37ce711aebea7352cd93f}\label{classrocr_1_1core_1_1BusyWaitSignal_acf2d1b9362e37ce711aebea7352cd93f}} 
+\index{rocr::core::BusyWaitSignal@{rocr::core::BusyWaitSignal}!DISALLOW\_COPY\_AND\_ASSIGN@{DISALLOW\_COPY\_AND\_ASSIGN}}
+\index{DISALLOW\_COPY\_AND\_ASSIGN@{DISALLOW\_COPY\_AND\_ASSIGN}!rocr::core::BusyWaitSignal@{rocr::core::BusyWaitSignal}}
+\doxysubsubsection{\texorpdfstring{DISALLOW\_COPY\_AND\_ASSIGN()}{DISALLOW\_COPY\_AND\_ASSIGN()}}
+{\footnotesize\ttfamily rocr\+::core\+::\+Busy\+Wait\+Signal\+::\+DISALLOW\+\_\+\+COPY\+\_\+\+AND\+\_\+\+ASSIGN (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classrocr_1_1core_1_1BusyWaitSignal}{Busy\+Wait\+Signal}}}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classrocr_1_1core_1_1BusyWaitSignal_a159f6ed0d59b443cc96da4987c3bec75}\label{classrocr_1_1core_1_1BusyWaitSignal_a159f6ed0d59b443cc96da4987c3bec75}} 
+\index{rocr::core::BusyWaitSignal@{rocr::core::BusyWaitSignal}!EopEvent@{EopEvent}}
+\index{EopEvent@{EopEvent}!rocr::core::BusyWaitSignal@{rocr::core::BusyWaitSignal}}
+\doxysubsubsection{\texorpdfstring{EopEvent()}{EopEvent()}}
+{\footnotesize\ttfamily \+\_\+\+\_\+forceinline Hsa\+Event$\ast$ rocr\+::core\+::\+Busy\+Wait\+Signal\+::\+Eop\+Event (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+see the base class \mbox{\hyperlink{classrocr_1_1core_1_1Signal}{Signal}} 
+
+
+
+Implements \mbox{\hyperlink{classrocr_1_1core_1_1Signal_a1b424f6c65ed443666cf3a66c9adf3d6}{rocr\+::core\+::\+Signal}}.
+
+\mbox{\Hypertarget{classrocr_1_1core_1_1BusyWaitSignal_af9a52cf09b6e7653f69c0defb2dfa371}\label{classrocr_1_1core_1_1BusyWaitSignal_af9a52cf09b6e7653f69c0defb2dfa371}} 
+\index{rocr::core::BusyWaitSignal@{rocr::core::BusyWaitSignal}!ExchAcqRel@{ExchAcqRel}}
+\index{ExchAcqRel@{ExchAcqRel}!rocr::core::BusyWaitSignal@{rocr::core::BusyWaitSignal}}
+\doxysubsubsection{\texorpdfstring{ExchAcqRel()}{ExchAcqRel()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{group__signals_ga67ca2818879c9990e1b5f1b14ce7ed27}{hsa\+\_\+signal\+\_\+value\+\_\+t}} rocr\+::core\+::\+Busy\+Wait\+Signal\+::\+Exch\+Acq\+Rel (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{group__signals_ga67ca2818879c9990e1b5f1b14ce7ed27}{hsa\+\_\+signal\+\_\+value\+\_\+t}}}]{value }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Implements \mbox{\hyperlink{classrocr_1_1core_1_1Signal_a4e5d6dc15235d431bce608ff2ce2207f}{rocr\+::core\+::\+Signal}}.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classrocr_1_1core_1_1BusyWaitSignal_af9a52cf09b6e7653f69c0defb2dfa371_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classrocr_1_1core_1_1BusyWaitSignal_a16b55e1160fa2acdb18c438d0ccdd00b}\label{classrocr_1_1core_1_1BusyWaitSignal_a16b55e1160fa2acdb18c438d0ccdd00b}} 
+\index{rocr::core::BusyWaitSignal@{rocr::core::BusyWaitSignal}!ExchAcquire@{ExchAcquire}}
+\index{ExchAcquire@{ExchAcquire}!rocr::core::BusyWaitSignal@{rocr::core::BusyWaitSignal}}
+\doxysubsubsection{\texorpdfstring{ExchAcquire()}{ExchAcquire()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{group__signals_ga67ca2818879c9990e1b5f1b14ce7ed27}{hsa\+\_\+signal\+\_\+value\+\_\+t}} rocr\+::core\+::\+Busy\+Wait\+Signal\+::\+Exch\+Acquire (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{group__signals_ga67ca2818879c9990e1b5f1b14ce7ed27}{hsa\+\_\+signal\+\_\+value\+\_\+t}}}]{value }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Implements \mbox{\hyperlink{classrocr_1_1core_1_1Signal_a874543a58ed0ec265cb868433e8045cc}{rocr\+::core\+::\+Signal}}.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classrocr_1_1core_1_1BusyWaitSignal_a16b55e1160fa2acdb18c438d0ccdd00b_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classrocr_1_1core_1_1BusyWaitSignal_ab06376d49c0ed3be71f3e8b06ef70bea}\label{classrocr_1_1core_1_1BusyWaitSignal_ab06376d49c0ed3be71f3e8b06ef70bea}} 
+\index{rocr::core::BusyWaitSignal@{rocr::core::BusyWaitSignal}!ExchRelaxed@{ExchRelaxed}}
+\index{ExchRelaxed@{ExchRelaxed}!rocr::core::BusyWaitSignal@{rocr::core::BusyWaitSignal}}
+\doxysubsubsection{\texorpdfstring{ExchRelaxed()}{ExchRelaxed()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{group__signals_ga67ca2818879c9990e1b5f1b14ce7ed27}{hsa\+\_\+signal\+\_\+value\+\_\+t}} rocr\+::core\+::\+Busy\+Wait\+Signal\+::\+Exch\+Relaxed (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{group__signals_ga67ca2818879c9990e1b5f1b14ce7ed27}{hsa\+\_\+signal\+\_\+value\+\_\+t}}}]{value }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Implements \mbox{\hyperlink{classrocr_1_1core_1_1Signal_a911686302b2f5b1c046623846d7516ce}{rocr\+::core\+::\+Signal}}.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classrocr_1_1core_1_1BusyWaitSignal_ab06376d49c0ed3be71f3e8b06ef70bea_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classrocr_1_1core_1_1BusyWaitSignal_ac1ef139124a312c9df10591ee5eda5c8}\label{classrocr_1_1core_1_1BusyWaitSignal_ac1ef139124a312c9df10591ee5eda5c8}} 
+\index{rocr::core::BusyWaitSignal@{rocr::core::BusyWaitSignal}!ExchRelease@{ExchRelease}}
+\index{ExchRelease@{ExchRelease}!rocr::core::BusyWaitSignal@{rocr::core::BusyWaitSignal}}
+\doxysubsubsection{\texorpdfstring{ExchRelease()}{ExchRelease()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{group__signals_ga67ca2818879c9990e1b5f1b14ce7ed27}{hsa\+\_\+signal\+\_\+value\+\_\+t}} rocr\+::core\+::\+Busy\+Wait\+Signal\+::\+Exch\+Release (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{group__signals_ga67ca2818879c9990e1b5f1b14ce7ed27}{hsa\+\_\+signal\+\_\+value\+\_\+t}}}]{value }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Implements \mbox{\hyperlink{classrocr_1_1core_1_1Signal_a02a1567d1d8e89823cc0f64895896da0}{rocr\+::core\+::\+Signal}}.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classrocr_1_1core_1_1BusyWaitSignal_ac1ef139124a312c9df10591ee5eda5c8_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classrocr_1_1core_1_1BusyWaitSignal_a43b368eec8a1759b5d7aecf41479e1bc}\label{classrocr_1_1core_1_1BusyWaitSignal_a43b368eec8a1759b5d7aecf41479e1bc}} 
+\index{rocr::core::BusyWaitSignal@{rocr::core::BusyWaitSignal}!IsType@{IsType}}
+\index{IsType@{IsType}!rocr::core::BusyWaitSignal@{rocr::core::BusyWaitSignal}}
+\doxysubsubsection{\texorpdfstring{IsType()}{IsType()}}
+{\footnotesize\ttfamily static \+\_\+\+\_\+forceinline bool rocr\+::core\+::\+Busy\+Wait\+Signal\+::\+Is\+Type (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classrocr_1_1core_1_1Signal}{Signal}} $\ast$}]{ptr }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+
+
+Determines if a Signal$\ast$ can be safely converted to Busy\+Wait\+Signal$\ast$ via static\+\_\+cast. 
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classrocr_1_1core_1_1BusyWaitSignal_a43b368eec8a1759b5d7aecf41479e1bc_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classrocr_1_1core_1_1BusyWaitSignal_a43b368eec8a1759b5d7aecf41479e1bc_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classrocr_1_1core_1_1BusyWaitSignal_a44dfcaa3a892adf7557c6a23a493810c}\label{classrocr_1_1core_1_1BusyWaitSignal_a44dfcaa3a892adf7557c6a23a493810c}} 
+\index{rocr::core::BusyWaitSignal@{rocr::core::BusyWaitSignal}!LoadAcquire@{LoadAcquire}}
+\index{LoadAcquire@{LoadAcquire}!rocr::core::BusyWaitSignal@{rocr::core::BusyWaitSignal}}
+\doxysubsubsection{\texorpdfstring{LoadAcquire()}{LoadAcquire()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{group__signals_ga67ca2818879c9990e1b5f1b14ce7ed27}{hsa\+\_\+signal\+\_\+value\+\_\+t}} rocr\+::core\+::\+Busy\+Wait\+Signal\+::\+Load\+Acquire (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Implements \mbox{\hyperlink{classrocr_1_1core_1_1Signal_a498995c67619426c5bf2320c5d465e94}{rocr\+::core\+::\+Signal}}.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classrocr_1_1core_1_1BusyWaitSignal_a44dfcaa3a892adf7557c6a23a493810c_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classrocr_1_1core_1_1BusyWaitSignal_a95201de214f6ecdb69306b0d1d26fa37}\label{classrocr_1_1core_1_1BusyWaitSignal_a95201de214f6ecdb69306b0d1d26fa37}} 
+\index{rocr::core::BusyWaitSignal@{rocr::core::BusyWaitSignal}!LoadRelaxed@{LoadRelaxed}}
+\index{LoadRelaxed@{LoadRelaxed}!rocr::core::BusyWaitSignal@{rocr::core::BusyWaitSignal}}
+\doxysubsubsection{\texorpdfstring{LoadRelaxed()}{LoadRelaxed()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{group__signals_ga67ca2818879c9990e1b5f1b14ce7ed27}{hsa\+\_\+signal\+\_\+value\+\_\+t}} rocr\+::core\+::\+Busy\+Wait\+Signal\+::\+Load\+Relaxed (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Implements \mbox{\hyperlink{classrocr_1_1core_1_1Signal_a33c337151057b04364054ed085e9791b}{rocr\+::core\+::\+Signal}}.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classrocr_1_1core_1_1BusyWaitSignal_a95201de214f6ecdb69306b0d1d26fa37_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classrocr_1_1core_1_1BusyWaitSignal_aa78a456f99e0daf6afbae343ac81ece8}\label{classrocr_1_1core_1_1BusyWaitSignal_aa78a456f99e0daf6afbae343ac81ece8}} 
+\index{rocr::core::BusyWaitSignal@{rocr::core::BusyWaitSignal}!OrAcqRel@{OrAcqRel}}
+\index{OrAcqRel@{OrAcqRel}!rocr::core::BusyWaitSignal@{rocr::core::BusyWaitSignal}}
+\doxysubsubsection{\texorpdfstring{OrAcqRel()}{OrAcqRel()}}
+{\footnotesize\ttfamily void rocr\+::core\+::\+Busy\+Wait\+Signal\+::\+Or\+Acq\+Rel (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{group__signals_ga67ca2818879c9990e1b5f1b14ce7ed27}{hsa\+\_\+signal\+\_\+value\+\_\+t}}}]{value }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Implements \mbox{\hyperlink{classrocr_1_1core_1_1Signal_aed897a6d874638c76eb390fc50dabfb1}{rocr\+::core\+::\+Signal}}.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classrocr_1_1core_1_1BusyWaitSignal_aa78a456f99e0daf6afbae343ac81ece8_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classrocr_1_1core_1_1BusyWaitSignal_afb99d36d9b201de910a508f20ba68a04}\label{classrocr_1_1core_1_1BusyWaitSignal_afb99d36d9b201de910a508f20ba68a04}} 
+\index{rocr::core::BusyWaitSignal@{rocr::core::BusyWaitSignal}!OrAcquire@{OrAcquire}}
+\index{OrAcquire@{OrAcquire}!rocr::core::BusyWaitSignal@{rocr::core::BusyWaitSignal}}
+\doxysubsubsection{\texorpdfstring{OrAcquire()}{OrAcquire()}}
+{\footnotesize\ttfamily void rocr\+::core\+::\+Busy\+Wait\+Signal\+::\+Or\+Acquire (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{group__signals_ga67ca2818879c9990e1b5f1b14ce7ed27}{hsa\+\_\+signal\+\_\+value\+\_\+t}}}]{value }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Implements \mbox{\hyperlink{classrocr_1_1core_1_1Signal_a331483464e18b975a72c26daae007cac}{rocr\+::core\+::\+Signal}}.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classrocr_1_1core_1_1BusyWaitSignal_afb99d36d9b201de910a508f20ba68a04_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classrocr_1_1core_1_1BusyWaitSignal_ad8857b5de7b8c59b9488cb637efc2a10}\label{classrocr_1_1core_1_1BusyWaitSignal_ad8857b5de7b8c59b9488cb637efc2a10}} 
+\index{rocr::core::BusyWaitSignal@{rocr::core::BusyWaitSignal}!OrRelaxed@{OrRelaxed}}
+\index{OrRelaxed@{OrRelaxed}!rocr::core::BusyWaitSignal@{rocr::core::BusyWaitSignal}}
+\doxysubsubsection{\texorpdfstring{OrRelaxed()}{OrRelaxed()}}
+{\footnotesize\ttfamily void rocr\+::core\+::\+Busy\+Wait\+Signal\+::\+Or\+Relaxed (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{group__signals_ga67ca2818879c9990e1b5f1b14ce7ed27}{hsa\+\_\+signal\+\_\+value\+\_\+t}}}]{value }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Implements \mbox{\hyperlink{classrocr_1_1core_1_1Signal_a5579f82c58948d6b6a6497df755e2ee0}{rocr\+::core\+::\+Signal}}.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classrocr_1_1core_1_1BusyWaitSignal_ad8857b5de7b8c59b9488cb637efc2a10_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classrocr_1_1core_1_1BusyWaitSignal_a5ad7d4031ee28c4d8c4dc395e0410050}\label{classrocr_1_1core_1_1BusyWaitSignal_a5ad7d4031ee28c4d8c4dc395e0410050}} 
+\index{rocr::core::BusyWaitSignal@{rocr::core::BusyWaitSignal}!OrRelease@{OrRelease}}
+\index{OrRelease@{OrRelease}!rocr::core::BusyWaitSignal@{rocr::core::BusyWaitSignal}}
+\doxysubsubsection{\texorpdfstring{OrRelease()}{OrRelease()}}
+{\footnotesize\ttfamily void rocr\+::core\+::\+Busy\+Wait\+Signal\+::\+Or\+Release (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{group__signals_ga67ca2818879c9990e1b5f1b14ce7ed27}{hsa\+\_\+signal\+\_\+value\+\_\+t}}}]{value }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Implements \mbox{\hyperlink{classrocr_1_1core_1_1Signal_a042d2fc7403eefc204d52d0dfd32f667}{rocr\+::core\+::\+Signal}}.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classrocr_1_1core_1_1BusyWaitSignal_a5ad7d4031ee28c4d8c4dc395e0410050_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classrocr_1_1core_1_1BusyWaitSignal_a7d6e8aedf1a2c43c5aec3b34e2854c4e}\label{classrocr_1_1core_1_1BusyWaitSignal_a7d6e8aedf1a2c43c5aec3b34e2854c4e}} 
+\index{rocr::core::BusyWaitSignal@{rocr::core::BusyWaitSignal}!StoreRelaxed@{StoreRelaxed}}
+\index{StoreRelaxed@{StoreRelaxed}!rocr::core::BusyWaitSignal@{rocr::core::BusyWaitSignal}}
+\doxysubsubsection{\texorpdfstring{StoreRelaxed()}{StoreRelaxed()}}
+{\footnotesize\ttfamily void rocr\+::core\+::\+Busy\+Wait\+Signal\+::\+Store\+Relaxed (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{group__signals_ga67ca2818879c9990e1b5f1b14ce7ed27}{hsa\+\_\+signal\+\_\+value\+\_\+t}}}]{value }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Implements \mbox{\hyperlink{classrocr_1_1core_1_1Signal_a9c6fc8df6ed40dc6838099a9ea11a33b}{rocr\+::core\+::\+Signal}}.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classrocr_1_1core_1_1BusyWaitSignal_a7d6e8aedf1a2c43c5aec3b34e2854c4e_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classrocr_1_1core_1_1BusyWaitSignal_a998e5af624f6519848e9ea2303bbfdeb}\label{classrocr_1_1core_1_1BusyWaitSignal_a998e5af624f6519848e9ea2303bbfdeb}} 
+\index{rocr::core::BusyWaitSignal@{rocr::core::BusyWaitSignal}!StoreRelease@{StoreRelease}}
+\index{StoreRelease@{StoreRelease}!rocr::core::BusyWaitSignal@{rocr::core::BusyWaitSignal}}
+\doxysubsubsection{\texorpdfstring{StoreRelease()}{StoreRelease()}}
+{\footnotesize\ttfamily void rocr\+::core\+::\+Busy\+Wait\+Signal\+::\+Store\+Release (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{group__signals_ga67ca2818879c9990e1b5f1b14ce7ed27}{hsa\+\_\+signal\+\_\+value\+\_\+t}}}]{value }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Implements \mbox{\hyperlink{classrocr_1_1core_1_1Signal_a90026d695f31e3e9f79bdbf0ecfb78f7}{rocr\+::core\+::\+Signal}}.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classrocr_1_1core_1_1BusyWaitSignal_a998e5af624f6519848e9ea2303bbfdeb_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classrocr_1_1core_1_1BusyWaitSignal_a313e02b186e7c3b61719f9197e2228f4}\label{classrocr_1_1core_1_1BusyWaitSignal_a313e02b186e7c3b61719f9197e2228f4}} 
+\index{rocr::core::BusyWaitSignal@{rocr::core::BusyWaitSignal}!SubAcqRel@{SubAcqRel}}
+\index{SubAcqRel@{SubAcqRel}!rocr::core::BusyWaitSignal@{rocr::core::BusyWaitSignal}}
+\doxysubsubsection{\texorpdfstring{SubAcqRel()}{SubAcqRel()}}
+{\footnotesize\ttfamily void rocr\+::core\+::\+Busy\+Wait\+Signal\+::\+Sub\+Acq\+Rel (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{group__signals_ga67ca2818879c9990e1b5f1b14ce7ed27}{hsa\+\_\+signal\+\_\+value\+\_\+t}}}]{value }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Implements \mbox{\hyperlink{classrocr_1_1core_1_1Signal_a30263b276c91563ca341aa2fdf486367}{rocr\+::core\+::\+Signal}}.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classrocr_1_1core_1_1BusyWaitSignal_a313e02b186e7c3b61719f9197e2228f4_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classrocr_1_1core_1_1BusyWaitSignal_abe3a732a6a047873e18b678b9193be39}\label{classrocr_1_1core_1_1BusyWaitSignal_abe3a732a6a047873e18b678b9193be39}} 
+\index{rocr::core::BusyWaitSignal@{rocr::core::BusyWaitSignal}!SubAcquire@{SubAcquire}}
+\index{SubAcquire@{SubAcquire}!rocr::core::BusyWaitSignal@{rocr::core::BusyWaitSignal}}
+\doxysubsubsection{\texorpdfstring{SubAcquire()}{SubAcquire()}}
+{\footnotesize\ttfamily void rocr\+::core\+::\+Busy\+Wait\+Signal\+::\+Sub\+Acquire (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{group__signals_ga67ca2818879c9990e1b5f1b14ce7ed27}{hsa\+\_\+signal\+\_\+value\+\_\+t}}}]{value }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Implements \mbox{\hyperlink{classrocr_1_1core_1_1Signal_acd01c804aea41704c49269bece05a778}{rocr\+::core\+::\+Signal}}.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classrocr_1_1core_1_1BusyWaitSignal_abe3a732a6a047873e18b678b9193be39_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classrocr_1_1core_1_1BusyWaitSignal_a518f5871f3ff931bf1d21bc32f52f82b}\label{classrocr_1_1core_1_1BusyWaitSignal_a518f5871f3ff931bf1d21bc32f52f82b}} 
+\index{rocr::core::BusyWaitSignal@{rocr::core::BusyWaitSignal}!SubRelaxed@{SubRelaxed}}
+\index{SubRelaxed@{SubRelaxed}!rocr::core::BusyWaitSignal@{rocr::core::BusyWaitSignal}}
+\doxysubsubsection{\texorpdfstring{SubRelaxed()}{SubRelaxed()}}
+{\footnotesize\ttfamily void rocr\+::core\+::\+Busy\+Wait\+Signal\+::\+Sub\+Relaxed (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{group__signals_ga67ca2818879c9990e1b5f1b14ce7ed27}{hsa\+\_\+signal\+\_\+value\+\_\+t}}}]{value }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Implements \mbox{\hyperlink{classrocr_1_1core_1_1Signal_ac31e1c7b834c9d4b840a25566f173d44}{rocr\+::core\+::\+Signal}}.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classrocr_1_1core_1_1BusyWaitSignal_a518f5871f3ff931bf1d21bc32f52f82b_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classrocr_1_1core_1_1BusyWaitSignal_ad5da75bd6e6382b776f166d7e66da492}\label{classrocr_1_1core_1_1BusyWaitSignal_ad5da75bd6e6382b776f166d7e66da492}} 
+\index{rocr::core::BusyWaitSignal@{rocr::core::BusyWaitSignal}!SubRelease@{SubRelease}}
+\index{SubRelease@{SubRelease}!rocr::core::BusyWaitSignal@{rocr::core::BusyWaitSignal}}
+\doxysubsubsection{\texorpdfstring{SubRelease()}{SubRelease()}}
+{\footnotesize\ttfamily void rocr\+::core\+::\+Busy\+Wait\+Signal\+::\+Sub\+Release (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{group__signals_ga67ca2818879c9990e1b5f1b14ce7ed27}{hsa\+\_\+signal\+\_\+value\+\_\+t}}}]{value }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Implements \mbox{\hyperlink{classrocr_1_1core_1_1Signal_a3dc38a6f48b0eb411798de513e181d20}{rocr\+::core\+::\+Signal}}.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classrocr_1_1core_1_1BusyWaitSignal_ad5da75bd6e6382b776f166d7e66da492_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classrocr_1_1core_1_1BusyWaitSignal_a179c0dfe99c527d9b8ad5dcfdce92d4f}\label{classrocr_1_1core_1_1BusyWaitSignal_a179c0dfe99c527d9b8ad5dcfdce92d4f}} 
+\index{rocr::core::BusyWaitSignal@{rocr::core::BusyWaitSignal}!ValueLocation@{ValueLocation}}
+\index{ValueLocation@{ValueLocation}!rocr::core::BusyWaitSignal@{rocr::core::BusyWaitSignal}}
+\doxysubsubsection{\texorpdfstring{ValueLocation()}{ValueLocation()}}
+{\footnotesize\ttfamily \+\_\+\+\_\+forceinline \mbox{\hyperlink{group__signals_ga67ca2818879c9990e1b5f1b14ce7ed27}{hsa\+\_\+signal\+\_\+value\+\_\+t}}$\ast$ rocr\+::core\+::\+Busy\+Wait\+Signal\+::\+Value\+Location (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+see the base class \mbox{\hyperlink{classrocr_1_1core_1_1Signal}{Signal}} 
+
+
+
+Implements \mbox{\hyperlink{classrocr_1_1core_1_1Signal_a51541931e51f917dec267bb53654ed94}{rocr\+::core\+::\+Signal}}.
+
+\mbox{\Hypertarget{classrocr_1_1core_1_1BusyWaitSignal_a8d94b6258a96df7a07f0f01831086d88}\label{classrocr_1_1core_1_1BusyWaitSignal_a8d94b6258a96df7a07f0f01831086d88}} 
+\index{rocr::core::BusyWaitSignal@{rocr::core::BusyWaitSignal}!WaitAcquire@{WaitAcquire}}
+\index{WaitAcquire@{WaitAcquire}!rocr::core::BusyWaitSignal@{rocr::core::BusyWaitSignal}}
+\doxysubsubsection{\texorpdfstring{WaitAcquire()}{WaitAcquire()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{group__signals_ga67ca2818879c9990e1b5f1b14ce7ed27}{hsa\+\_\+signal\+\_\+value\+\_\+t}} rocr\+::core\+::\+Busy\+Wait\+Signal\+::\+Wait\+Acquire (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{group__signals_gab7190fcff48c6dbeded341389ed17c8d}{hsa\+\_\+signal\+\_\+condition\+\_\+t}}}]{condition,  }\item[{\mbox{\hyperlink{group__signals_ga67ca2818879c9990e1b5f1b14ce7ed27}{hsa\+\_\+signal\+\_\+value\+\_\+t}}}]{compare\+\_\+value,  }\item[{uint64\+\_\+t}]{timeout,  }\item[{\mbox{\hyperlink{group__signals_gac0d2ec14d7a58c6cccc259943a03c569}{hsa\+\_\+wait\+\_\+state\+\_\+t}}}]{wait\+\_\+hint }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Implements \mbox{\hyperlink{classrocr_1_1core_1_1Signal_ac62c734fbabf57579773429e54c99ae1}{rocr\+::core\+::\+Signal}}.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classrocr_1_1core_1_1BusyWaitSignal_a8d94b6258a96df7a07f0f01831086d88_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classrocr_1_1core_1_1BusyWaitSignal_a7f64a9bb499be4c97299c4d00537993e}\label{classrocr_1_1core_1_1BusyWaitSignal_a7f64a9bb499be4c97299c4d00537993e}} 
+\index{rocr::core::BusyWaitSignal@{rocr::core::BusyWaitSignal}!WaitRelaxed@{WaitRelaxed}}
+\index{WaitRelaxed@{WaitRelaxed}!rocr::core::BusyWaitSignal@{rocr::core::BusyWaitSignal}}
+\doxysubsubsection{\texorpdfstring{WaitRelaxed()}{WaitRelaxed()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{group__signals_ga67ca2818879c9990e1b5f1b14ce7ed27}{hsa\+\_\+signal\+\_\+value\+\_\+t}} rocr\+::core\+::\+Busy\+Wait\+Signal\+::\+Wait\+Relaxed (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{group__signals_gab7190fcff48c6dbeded341389ed17c8d}{hsa\+\_\+signal\+\_\+condition\+\_\+t}}}]{condition,  }\item[{\mbox{\hyperlink{group__signals_ga67ca2818879c9990e1b5f1b14ce7ed27}{hsa\+\_\+signal\+\_\+value\+\_\+t}}}]{compare\+\_\+value,  }\item[{uint64\+\_\+t}]{timeout,  }\item[{\mbox{\hyperlink{group__signals_gac0d2ec14d7a58c6cccc259943a03c569}{hsa\+\_\+wait\+\_\+state\+\_\+t}}}]{wait\+\_\+hint }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Implements \mbox{\hyperlink{classrocr_1_1core_1_1Signal_aaea3cab59d6258988eae45b1e62ae232}{rocr\+::core\+::\+Signal}}.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classrocr_1_1core_1_1BusyWaitSignal_a7f64a9bb499be4c97299c4d00537993e_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classrocr_1_1core_1_1BusyWaitSignal_a7f64a9bb499be4c97299c4d00537993e_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classrocr_1_1core_1_1BusyWaitSignal_a8ef410c8a99d2aeeff2329484b6f28bf}\label{classrocr_1_1core_1_1BusyWaitSignal_a8ef410c8a99d2aeeff2329484b6f28bf}} 
+\index{rocr::core::BusyWaitSignal@{rocr::core::BusyWaitSignal}!XorAcqRel@{XorAcqRel}}
+\index{XorAcqRel@{XorAcqRel}!rocr::core::BusyWaitSignal@{rocr::core::BusyWaitSignal}}
+\doxysubsubsection{\texorpdfstring{XorAcqRel()}{XorAcqRel()}}
+{\footnotesize\ttfamily void rocr\+::core\+::\+Busy\+Wait\+Signal\+::\+Xor\+Acq\+Rel (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{group__signals_ga67ca2818879c9990e1b5f1b14ce7ed27}{hsa\+\_\+signal\+\_\+value\+\_\+t}}}]{value }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Implements \mbox{\hyperlink{classrocr_1_1core_1_1Signal_abcc1d4c5ec7bd1f39139198748af8265}{rocr\+::core\+::\+Signal}}.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classrocr_1_1core_1_1BusyWaitSignal_a8ef410c8a99d2aeeff2329484b6f28bf_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classrocr_1_1core_1_1BusyWaitSignal_a0ac1b10bfc64b2f5642d49a4d133810e}\label{classrocr_1_1core_1_1BusyWaitSignal_a0ac1b10bfc64b2f5642d49a4d133810e}} 
+\index{rocr::core::BusyWaitSignal@{rocr::core::BusyWaitSignal}!XorAcquire@{XorAcquire}}
+\index{XorAcquire@{XorAcquire}!rocr::core::BusyWaitSignal@{rocr::core::BusyWaitSignal}}
+\doxysubsubsection{\texorpdfstring{XorAcquire()}{XorAcquire()}}
+{\footnotesize\ttfamily void rocr\+::core\+::\+Busy\+Wait\+Signal\+::\+Xor\+Acquire (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{group__signals_ga67ca2818879c9990e1b5f1b14ce7ed27}{hsa\+\_\+signal\+\_\+value\+\_\+t}}}]{value }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Implements \mbox{\hyperlink{classrocr_1_1core_1_1Signal_a6842319df76837054d677028e067f0c8}{rocr\+::core\+::\+Signal}}.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classrocr_1_1core_1_1BusyWaitSignal_a0ac1b10bfc64b2f5642d49a4d133810e_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classrocr_1_1core_1_1BusyWaitSignal_a8543093ee8f028db71a4b80bb3ca1594}\label{classrocr_1_1core_1_1BusyWaitSignal_a8543093ee8f028db71a4b80bb3ca1594}} 
+\index{rocr::core::BusyWaitSignal@{rocr::core::BusyWaitSignal}!XorRelaxed@{XorRelaxed}}
+\index{XorRelaxed@{XorRelaxed}!rocr::core::BusyWaitSignal@{rocr::core::BusyWaitSignal}}
+\doxysubsubsection{\texorpdfstring{XorRelaxed()}{XorRelaxed()}}
+{\footnotesize\ttfamily void rocr\+::core\+::\+Busy\+Wait\+Signal\+::\+Xor\+Relaxed (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{group__signals_ga67ca2818879c9990e1b5f1b14ce7ed27}{hsa\+\_\+signal\+\_\+value\+\_\+t}}}]{value }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Implements \mbox{\hyperlink{classrocr_1_1core_1_1Signal_ab7cb8b7b60413d7c17f2d17f0fdf2a8a}{rocr\+::core\+::\+Signal}}.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classrocr_1_1core_1_1BusyWaitSignal_a8543093ee8f028db71a4b80bb3ca1594_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classrocr_1_1core_1_1BusyWaitSignal_aeabeb953136fa7962ccd2dd6dd59f65a}\label{classrocr_1_1core_1_1BusyWaitSignal_aeabeb953136fa7962ccd2dd6dd59f65a}} 
+\index{rocr::core::BusyWaitSignal@{rocr::core::BusyWaitSignal}!XorRelease@{XorRelease}}
+\index{XorRelease@{XorRelease}!rocr::core::BusyWaitSignal@{rocr::core::BusyWaitSignal}}
+\doxysubsubsection{\texorpdfstring{XorRelease()}{XorRelease()}}
+{\footnotesize\ttfamily void rocr\+::core\+::\+Busy\+Wait\+Signal\+::\+Xor\+Release (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{group__signals_ga67ca2818879c9990e1b5f1b14ce7ed27}{hsa\+\_\+signal\+\_\+value\+\_\+t}}}]{value }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Implements \mbox{\hyperlink{classrocr_1_1core_1_1Signal_ad383c21b7260a6c87bd402a5980cfa61}{rocr\+::core\+::\+Signal}}.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classrocr_1_1core_1_1BusyWaitSignal_aeabeb953136fa7962ccd2dd6dd59f65a_cgraph}
+\end{center}
+\end{figure}
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{classrocr_1_1core_1_1BusyWaitSignal_a2d12f00fda88829ed6e45126d88cef33}\label{classrocr_1_1core_1_1BusyWaitSignal_a2d12f00fda88829ed6e45126d88cef33}} 
+\index{rocr::core::BusyWaitSignal@{rocr::core::BusyWaitSignal}!rtti\_id\_@{rtti\_id\_}}
+\index{rtti\_id\_@{rtti\_id\_}!rocr::core::BusyWaitSignal@{rocr::core::BusyWaitSignal}}
+\doxysubsubsection{\texorpdfstring{rtti\_id\_}{rtti\_id\_}}
+{\footnotesize\ttfamily int rocr\+::core\+::\+Busy\+Wait\+Signal\+::rtti\+\_\+id\+\_\+ = 0\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [private]}}
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+src/core/inc/\mbox{\hyperlink{default__signal_8h}{default\+\_\+signal.\+h}}\item 
+src/core/runtime/\mbox{\hyperlink{default__signal_8cpp}{default\+\_\+signal.\+cpp}}\end{DoxyCompactItemize}

@@ -1,0 +1,102 @@
+\hypertarget{structrocr_1_1__ADDR__CONVERT__TILEINFOTOHW__INPUT}{}\doxysection{rocr\+::\+\_\+\+ADDR\+\_\+\+CONVERT\+\_\+\+TILEINFOTOHW\+\_\+\+INPUT Struct Reference}
+\label{structrocr_1_1__ADDR__CONVERT__TILEINFOTOHW__INPUT}\index{rocr::\_ADDR\_CONVERT\_TILEINFOTOHW\_INPUT@{rocr::\_ADDR\_CONVERT\_TILEINFOTOHW\_INPUT}}
+
+
+Input structure for Addr\+Convert\+Tile\+Info\+To\+HW.  
+
+
+
+
+{\ttfamily \#include $<$addrinterface.\+h$>$}
+
+
+
+Collaboration diagram for rocr\+::\+\_\+\+ADDR\+\_\+\+CONVERT\+\_\+\+TILEINFOTOHW\+\_\+\+INPUT\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=214pt]{structrocr_1_1__ADDR__CONVERT__TILEINFOTOHW__INPUT__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{addrtypes_8h_af5a2be58a28390f9a494538f34054637}{UINT\+\_\+32}} \mbox{\hyperlink{structrocr_1_1__ADDR__CONVERT__TILEINFOTOHW__INPUT_a20a48f2d1db124a9c819711f946007eb}{size}}
+\begin{DoxyCompactList}\small\item\em Size of this structure in bytes. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{addrtypes_8h_ac4225671b7e87c943146915461c9b2f4}{BOOL\+\_\+32}} \mbox{\hyperlink{structrocr_1_1__ADDR__CONVERT__TILEINFOTOHW__INPUT_a4025cf2afe0b86de640d7bc28989ff78}{reverse}}
+\item 
+\mbox{\hyperlink{namespacerocr_a22dcb0c31be418f31f99d0311c45522c}{ADDR\+\_\+\+TILEINFO}} $\ast$ \mbox{\hyperlink{structrocr_1_1__ADDR__CONVERT__TILEINFOTOHW__INPUT_a893732703f2fc294cf9e4c85db5f3caa}{p\+Tile\+Info}}
+\begin{DoxyCompactList}\small\item\em r800 and later HWL parameters \end{DoxyCompactList}\item 
+\mbox{\hyperlink{addrtypes_8h_adacc69c9db3b9adfc072b838ebf2bb0e}{INT\+\_\+32}} \mbox{\hyperlink{structrocr_1_1__ADDR__CONVERT__TILEINFOTOHW__INPUT_abbe0f004c56a6bf4bfabd26392ab7d2e}{tile\+Index}}
+\item 
+\mbox{\hyperlink{addrtypes_8h_adacc69c9db3b9adfc072b838ebf2bb0e}{INT\+\_\+32}} \mbox{\hyperlink{structrocr_1_1__ADDR__CONVERT__TILEINFOTOHW__INPUT_a5e8a02bbdd44aa44a94ab18c8b4cee4d}{macro\+Mode\+Index}}
+\item 
+\mbox{\hyperlink{addrtypes_8h_af5a2be58a28390f9a494538f34054637}{UINT\+\_\+32}} \mbox{\hyperlink{structrocr_1_1__ADDR__CONVERT__TILEINFOTOHW__INPUT_a57e1eddb11cfc8fb3775b9e2d78a8dcf}{bpp}}
+\begin{DoxyCompactList}\small\item\em Bits per pixel. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Input structure for Addr\+Convert\+Tile\+Info\+To\+HW. 
+
+ADDR\+\_\+\+CONVERT\+\_\+\+TILEINFOTOHW\+\_\+\+INPUT
+
+\begin{DoxyNote}{Note}
+When reverse is TRUE, indices are igonred 
+\end{DoxyNote}
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{structrocr_1_1__ADDR__CONVERT__TILEINFOTOHW__INPUT_a57e1eddb11cfc8fb3775b9e2d78a8dcf}\label{structrocr_1_1__ADDR__CONVERT__TILEINFOTOHW__INPUT_a57e1eddb11cfc8fb3775b9e2d78a8dcf}} 
+\index{rocr::\_ADDR\_CONVERT\_TILEINFOTOHW\_INPUT@{rocr::\_ADDR\_CONVERT\_TILEINFOTOHW\_INPUT}!bpp@{bpp}}
+\index{bpp@{bpp}!rocr::\_ADDR\_CONVERT\_TILEINFOTOHW\_INPUT@{rocr::\_ADDR\_CONVERT\_TILEINFOTOHW\_INPUT}}
+\doxysubsubsection{\texorpdfstring{bpp}{bpp}}
+{\footnotesize\ttfamily \mbox{\hyperlink{addrtypes_8h_af5a2be58a28390f9a494538f34054637}{UINT\+\_\+32}} rocr\+::\+\_\+\+ADDR\+\_\+\+CONVERT\+\_\+\+TILEINFOTOHW\+\_\+\+INPUT\+::bpp}
+
+
+
+Bits per pixel. 
+
+\mbox{\Hypertarget{structrocr_1_1__ADDR__CONVERT__TILEINFOTOHW__INPUT_a5e8a02bbdd44aa44a94ab18c8b4cee4d}\label{structrocr_1_1__ADDR__CONVERT__TILEINFOTOHW__INPUT_a5e8a02bbdd44aa44a94ab18c8b4cee4d}} 
+\index{rocr::\_ADDR\_CONVERT\_TILEINFOTOHW\_INPUT@{rocr::\_ADDR\_CONVERT\_TILEINFOTOHW\_INPUT}!macroModeIndex@{macroModeIndex}}
+\index{macroModeIndex@{macroModeIndex}!rocr::\_ADDR\_CONVERT\_TILEINFOTOHW\_INPUT@{rocr::\_ADDR\_CONVERT\_TILEINFOTOHW\_INPUT}}
+\doxysubsubsection{\texorpdfstring{macroModeIndex}{macroModeIndex}}
+{\footnotesize\ttfamily \mbox{\hyperlink{addrtypes_8h_adacc69c9db3b9adfc072b838ebf2bb0e}{INT\+\_\+32}} rocr\+::\+\_\+\+ADDR\+\_\+\+CONVERT\+\_\+\+TILEINFOTOHW\+\_\+\+INPUT\+::macro\+Mode\+Index}
+
+Index in macro tile mode table if there is one (CI) README\+: When tile\+Index is not -\/1, this must be valid \mbox{\Hypertarget{structrocr_1_1__ADDR__CONVERT__TILEINFOTOHW__INPUT_a893732703f2fc294cf9e4c85db5f3caa}\label{structrocr_1_1__ADDR__CONVERT__TILEINFOTOHW__INPUT_a893732703f2fc294cf9e4c85db5f3caa}} 
+\index{rocr::\_ADDR\_CONVERT\_TILEINFOTOHW\_INPUT@{rocr::\_ADDR\_CONVERT\_TILEINFOTOHW\_INPUT}!pTileInfo@{pTileInfo}}
+\index{pTileInfo@{pTileInfo}!rocr::\_ADDR\_CONVERT\_TILEINFOTOHW\_INPUT@{rocr::\_ADDR\_CONVERT\_TILEINFOTOHW\_INPUT}}
+\doxysubsubsection{\texorpdfstring{pTileInfo}{pTileInfo}}
+{\footnotesize\ttfamily \mbox{\hyperlink{namespacerocr_a22dcb0c31be418f31f99d0311c45522c}{ADDR\+\_\+\+TILEINFO}}$\ast$ rocr\+::\+\_\+\+ADDR\+\_\+\+CONVERT\+\_\+\+TILEINFOTOHW\+\_\+\+INPUT\+::p\+Tile\+Info}
+
+
+
+r800 and later HWL parameters 
+
+Tile parameters with real value \mbox{\Hypertarget{structrocr_1_1__ADDR__CONVERT__TILEINFOTOHW__INPUT_a4025cf2afe0b86de640d7bc28989ff78}\label{structrocr_1_1__ADDR__CONVERT__TILEINFOTOHW__INPUT_a4025cf2afe0b86de640d7bc28989ff78}} 
+\index{rocr::\_ADDR\_CONVERT\_TILEINFOTOHW\_INPUT@{rocr::\_ADDR\_CONVERT\_TILEINFOTOHW\_INPUT}!reverse@{reverse}}
+\index{reverse@{reverse}!rocr::\_ADDR\_CONVERT\_TILEINFOTOHW\_INPUT@{rocr::\_ADDR\_CONVERT\_TILEINFOTOHW\_INPUT}}
+\doxysubsubsection{\texorpdfstring{reverse}{reverse}}
+{\footnotesize\ttfamily \mbox{\hyperlink{addrtypes_8h_ac4225671b7e87c943146915461c9b2f4}{BOOL\+\_\+32}} rocr\+::\+\_\+\+ADDR\+\_\+\+CONVERT\+\_\+\+TILEINFOTOHW\+\_\+\+INPUT\+::reverse}
+
+Convert control flag. FALSE\+: convert from real value to HW value; TRUE\+: convert from HW value to real value. \mbox{\Hypertarget{structrocr_1_1__ADDR__CONVERT__TILEINFOTOHW__INPUT_a20a48f2d1db124a9c819711f946007eb}\label{structrocr_1_1__ADDR__CONVERT__TILEINFOTOHW__INPUT_a20a48f2d1db124a9c819711f946007eb}} 
+\index{rocr::\_ADDR\_CONVERT\_TILEINFOTOHW\_INPUT@{rocr::\_ADDR\_CONVERT\_TILEINFOTOHW\_INPUT}!size@{size}}
+\index{size@{size}!rocr::\_ADDR\_CONVERT\_TILEINFOTOHW\_INPUT@{rocr::\_ADDR\_CONVERT\_TILEINFOTOHW\_INPUT}}
+\doxysubsubsection{\texorpdfstring{size}{size}}
+{\footnotesize\ttfamily \mbox{\hyperlink{addrtypes_8h_af5a2be58a28390f9a494538f34054637}{UINT\+\_\+32}} rocr\+::\+\_\+\+ADDR\+\_\+\+CONVERT\+\_\+\+TILEINFOTOHW\+\_\+\+INPUT\+::size}
+
+
+
+Size of this structure in bytes. 
+
+\mbox{\Hypertarget{structrocr_1_1__ADDR__CONVERT__TILEINFOTOHW__INPUT_abbe0f004c56a6bf4bfabd26392ab7d2e}\label{structrocr_1_1__ADDR__CONVERT__TILEINFOTOHW__INPUT_abbe0f004c56a6bf4bfabd26392ab7d2e}} 
+\index{rocr::\_ADDR\_CONVERT\_TILEINFOTOHW\_INPUT@{rocr::\_ADDR\_CONVERT\_TILEINFOTOHW\_INPUT}!tileIndex@{tileIndex}}
+\index{tileIndex@{tileIndex}!rocr::\_ADDR\_CONVERT\_TILEINFOTOHW\_INPUT@{rocr::\_ADDR\_CONVERT\_TILEINFOTOHW\_INPUT}}
+\doxysubsubsection{\texorpdfstring{tileIndex}{tileIndex}}
+{\footnotesize\ttfamily \mbox{\hyperlink{addrtypes_8h_adacc69c9db3b9adfc072b838ebf2bb0e}{INT\+\_\+32}} rocr\+::\+\_\+\+ADDR\+\_\+\+CONVERT\+\_\+\+TILEINFOTOHW\+\_\+\+INPUT\+::tile\+Index}
+
+Tile index, MUST be -\/1 if you don\textquotesingle{}t want to use it while the global use\+Tile\+Index is set to 1 
+
+The documentation for this struct was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+src/image/addrlib/inc/\mbox{\hyperlink{addrinterface_8h}{addrinterface.\+h}}\end{DoxyCompactItemize}

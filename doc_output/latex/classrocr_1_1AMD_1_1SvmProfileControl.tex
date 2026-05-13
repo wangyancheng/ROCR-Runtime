@@ -1,0 +1,162 @@
+\hypertarget{classrocr_1_1AMD_1_1SvmProfileControl}{}\doxysection{rocr\+::AMD\+::Svm\+Profile\+Control Class Reference}
+\label{classrocr_1_1AMD_1_1SvmProfileControl}\index{rocr::AMD::SvmProfileControl@{rocr::AMD::SvmProfileControl}}
+
+
+{\ttfamily \#include $<$svm\+\_\+profiler.\+h$>$}
+
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classrocr_1_1AMD_1_1SvmProfileControl_aecbdc14b30039bd387e7446297ade267}{Svm\+Profile\+Control}} ()
+\item 
+\mbox{\hyperlink{classrocr_1_1AMD_1_1SvmProfileControl_a5c29edd4d6133bbd0ac587ffe67b9b17}{$\sim$\+Svm\+Profile\+Control}} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+{\footnotesize template$<$typename... Args$>$ }\\std\+::string \mbox{\hyperlink{classrocr_1_1AMD_1_1SvmProfileControl_ae6c01a38bec5441a689ed259dc63928e}{format}} (const char $\ast$format, Args... arg)
+\item 
+void \mbox{\hyperlink{classrocr_1_1AMD_1_1SvmProfileControl_abc217496ecf50f8634669fd44b875df5}{Poll\+Smi}} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Static Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static void \mbox{\hyperlink{classrocr_1_1AMD_1_1SvmProfileControl_a867899ed37692c9fcd22c40013f1e9ca}{Poll\+Smi\+Run}} (void $\ast$profile\+Control)
+\end{DoxyCompactItemize}
+\doxysubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+int \mbox{\hyperlink{classrocr_1_1AMD_1_1SvmProfileControl_a2bddea056009f86bef046c6320b16b74}{event}}
+\item 
+bool \mbox{\hyperlink{classrocr_1_1AMD_1_1SvmProfileControl_a3024e07b2ace43e1d2a4a8f430f9ea54}{exit}}
+\item 
+\mbox{\hyperlink{namespacerocr_1_1os_a64ca1a1bc204bebd23f2753be844a31c}{os\+::\+Thread}} \mbox{\hyperlink{classrocr_1_1AMD_1_1SvmProfileControl_aaf4cd8066790c396da2a638898b7027a}{poll\+\_\+smi\+\_\+thread\+\_\+}}
+\item 
+std\+::vector$<$ char $>$ \mbox{\hyperlink{classrocr_1_1AMD_1_1SvmProfileControl_a670f3ecc4b2144e442f3ee71056f6ca6}{format\+\_\+buffer}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classrocr_1_1AMD_1_1SvmProfileControl_aecbdc14b30039bd387e7446297ade267}\label{classrocr_1_1AMD_1_1SvmProfileControl_aecbdc14b30039bd387e7446297ade267}} 
+\index{rocr::AMD::SvmProfileControl@{rocr::AMD::SvmProfileControl}!SvmProfileControl@{SvmProfileControl}}
+\index{SvmProfileControl@{SvmProfileControl}!rocr::AMD::SvmProfileControl@{rocr::AMD::SvmProfileControl}}
+\doxysubsubsection{\texorpdfstring{SvmProfileControl()}{SvmProfileControl()}}
+{\footnotesize\ttfamily rocr\+::\+AMD\+::\+Svm\+Profile\+Control\+::\+Svm\+Profile\+Control (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classrocr_1_1AMD_1_1SvmProfileControl_aecbdc14b30039bd387e7446297ade267_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classrocr_1_1AMD_1_1SvmProfileControl_a5c29edd4d6133bbd0ac587ffe67b9b17}\label{classrocr_1_1AMD_1_1SvmProfileControl_a5c29edd4d6133bbd0ac587ffe67b9b17}} 
+\index{rocr::AMD::SvmProfileControl@{rocr::AMD::SvmProfileControl}!````~SvmProfileControl@{$\sim$SvmProfileControl}}
+\index{````~SvmProfileControl@{$\sim$SvmProfileControl}!rocr::AMD::SvmProfileControl@{rocr::AMD::SvmProfileControl}}
+\doxysubsubsection{\texorpdfstring{$\sim$SvmProfileControl()}{~SvmProfileControl()}}
+{\footnotesize\ttfamily rocr\+::\+AMD\+::\+Svm\+Profile\+Control\+::$\sim$\+Svm\+Profile\+Control (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classrocr_1_1AMD_1_1SvmProfileControl_a5c29edd4d6133bbd0ac587ffe67b9b17_cgraph}
+\end{center}
+\end{figure}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classrocr_1_1AMD_1_1SvmProfileControl_ae6c01a38bec5441a689ed259dc63928e}\label{classrocr_1_1AMD_1_1SvmProfileControl_ae6c01a38bec5441a689ed259dc63928e}} 
+\index{rocr::AMD::SvmProfileControl@{rocr::AMD::SvmProfileControl}!format@{format}}
+\index{format@{format}!rocr::AMD::SvmProfileControl@{rocr::AMD::SvmProfileControl}}
+\doxysubsubsection{\texorpdfstring{format()}{format()}}
+{\footnotesize\ttfamily template$<$typename... Args$>$ \\
+std\+::string rocr\+::\+AMD\+::\+Svm\+Profile\+Control\+::format (\begin{DoxyParamCaption}\item[{const char $\ast$}]{format,  }\item[{Args...}]{arg }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classrocr_1_1AMD_1_1SvmProfileControl_ae6c01a38bec5441a689ed259dc63928e_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classrocr_1_1AMD_1_1SvmProfileControl_abc217496ecf50f8634669fd44b875df5}\label{classrocr_1_1AMD_1_1SvmProfileControl_abc217496ecf50f8634669fd44b875df5}} 
+\index{rocr::AMD::SvmProfileControl@{rocr::AMD::SvmProfileControl}!PollSmi@{PollSmi}}
+\index{PollSmi@{PollSmi}!rocr::AMD::SvmProfileControl@{rocr::AMD::SvmProfileControl}}
+\doxysubsubsection{\texorpdfstring{PollSmi()}{PollSmi()}}
+{\footnotesize\ttfamily void rocr\+::\+AMD\+::\+Svm\+Profile\+Control\+::\+Poll\+Smi (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classrocr_1_1AMD_1_1SvmProfileControl_abc217496ecf50f8634669fd44b875df5_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classrocr_1_1AMD_1_1SvmProfileControl_abc217496ecf50f8634669fd44b875df5_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classrocr_1_1AMD_1_1SvmProfileControl_a867899ed37692c9fcd22c40013f1e9ca}\label{classrocr_1_1AMD_1_1SvmProfileControl_a867899ed37692c9fcd22c40013f1e9ca}} 
+\index{rocr::AMD::SvmProfileControl@{rocr::AMD::SvmProfileControl}!PollSmiRun@{PollSmiRun}}
+\index{PollSmiRun@{PollSmiRun}!rocr::AMD::SvmProfileControl@{rocr::AMD::SvmProfileControl}}
+\doxysubsubsection{\texorpdfstring{PollSmiRun()}{PollSmiRun()}}
+{\footnotesize\ttfamily void rocr\+::\+AMD\+::\+Svm\+Profile\+Control\+::\+Poll\+Smi\+Run (\begin{DoxyParamCaption}\item[{void $\ast$}]{profile\+Control }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [private]}}
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classrocr_1_1AMD_1_1SvmProfileControl_a867899ed37692c9fcd22c40013f1e9ca_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classrocr_1_1AMD_1_1SvmProfileControl_a867899ed37692c9fcd22c40013f1e9ca_icgraph}
+\end{center}
+\end{figure}
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{classrocr_1_1AMD_1_1SvmProfileControl_a2bddea056009f86bef046c6320b16b74}\label{classrocr_1_1AMD_1_1SvmProfileControl_a2bddea056009f86bef046c6320b16b74}} 
+\index{rocr::AMD::SvmProfileControl@{rocr::AMD::SvmProfileControl}!event@{event}}
+\index{event@{event}!rocr::AMD::SvmProfileControl@{rocr::AMD::SvmProfileControl}}
+\doxysubsubsection{\texorpdfstring{event}{event}}
+{\footnotesize\ttfamily int rocr\+::\+AMD\+::\+Svm\+Profile\+Control\+::event\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classrocr_1_1AMD_1_1SvmProfileControl_a3024e07b2ace43e1d2a4a8f430f9ea54}\label{classrocr_1_1AMD_1_1SvmProfileControl_a3024e07b2ace43e1d2a4a8f430f9ea54}} 
+\index{rocr::AMD::SvmProfileControl@{rocr::AMD::SvmProfileControl}!exit@{exit}}
+\index{exit@{exit}!rocr::AMD::SvmProfileControl@{rocr::AMD::SvmProfileControl}}
+\doxysubsubsection{\texorpdfstring{exit}{exit}}
+{\footnotesize\ttfamily bool rocr\+::\+AMD\+::\+Svm\+Profile\+Control\+::exit\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classrocr_1_1AMD_1_1SvmProfileControl_a670f3ecc4b2144e442f3ee71056f6ca6}\label{classrocr_1_1AMD_1_1SvmProfileControl_a670f3ecc4b2144e442f3ee71056f6ca6}} 
+\index{rocr::AMD::SvmProfileControl@{rocr::AMD::SvmProfileControl}!format\_buffer@{format\_buffer}}
+\index{format\_buffer@{format\_buffer}!rocr::AMD::SvmProfileControl@{rocr::AMD::SvmProfileControl}}
+\doxysubsubsection{\texorpdfstring{format\_buffer}{format\_buffer}}
+{\footnotesize\ttfamily std\+::vector$<$char$>$ rocr\+::\+AMD\+::\+Svm\+Profile\+Control\+::format\+\_\+buffer\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classrocr_1_1AMD_1_1SvmProfileControl_aaf4cd8066790c396da2a638898b7027a}\label{classrocr_1_1AMD_1_1SvmProfileControl_aaf4cd8066790c396da2a638898b7027a}} 
+\index{rocr::AMD::SvmProfileControl@{rocr::AMD::SvmProfileControl}!poll\_smi\_thread\_@{poll\_smi\_thread\_}}
+\index{poll\_smi\_thread\_@{poll\_smi\_thread\_}!rocr::AMD::SvmProfileControl@{rocr::AMD::SvmProfileControl}}
+\doxysubsubsection{\texorpdfstring{poll\_smi\_thread\_}{poll\_smi\_thread\_}}
+{\footnotesize\ttfamily \mbox{\hyperlink{namespacerocr_1_1os_a64ca1a1bc204bebd23f2753be844a31c}{os\+::\+Thread}} rocr\+::\+AMD\+::\+Svm\+Profile\+Control\+::poll\+\_\+smi\+\_\+thread\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+src/core/inc/\mbox{\hyperlink{svm__profiler_8h}{svm\+\_\+profiler.\+h}}\item 
+src/core/runtime/\mbox{\hyperlink{svm__profiler_8cpp}{svm\+\_\+profiler.\+cpp}}\end{DoxyCompactItemize}

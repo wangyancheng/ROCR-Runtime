@@ -1,0 +1,170 @@
+\hypertarget{amd__hsa__code__util_8hpp}{}\doxysection{src/libamdhsacode/amd\+\_\+hsa\+\_\+code\+\_\+util.hpp File Reference}
+\label{amd__hsa__code__util_8hpp}\index{src/libamdhsacode/amd\_hsa\_code\_util.hpp@{src/libamdhsacode/amd\_hsa\_code\_util.hpp}}
+{\ttfamily \#include $<$cassert$>$}\newline
+{\ttfamily \#include $<$string$>$}\newline
+{\ttfamily \#include $<$vector$>$}\newline
+{\ttfamily \#include $<$iostream$>$}\newline
+{\ttfamily \#include $<$cstdlib$>$}\newline
+{\ttfamily \#include \char`\"{}inc/amd\+\_\+hsa\+\_\+kernel\+\_\+code.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}inc/amd\+\_\+hsa\+\_\+elf.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}inc/hsa.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}inc/hsa\+\_\+ext\+\_\+finalize.\+h\char`\"{}}\newline
+Include dependency graph for amd\+\_\+hsa\+\_\+code\+\_\+util.\+hpp\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{amd__hsa__code__util_8hpp__incl}
+\end{center}
+\end{figure}
+This graph shows which files directly or indirectly include this file\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{amd__hsa__code__util_8hpp__dep__incl}
+\end{center}
+\end{figure}
+\doxysubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{structrocr_1_1amd_1_1hsa_1_1code__options_1_1control__directive}{rocr\+::amd\+::hsa\+::code\+\_\+options\+::control\+\_\+directive}}
+\item 
+struct \mbox{\hyperlink{structrocr_1_1amd_1_1hsa_1_1code__options_1_1exceptions__mask}{rocr\+::amd\+::hsa\+::code\+\_\+options\+::exceptions\+\_\+mask}}
+\item 
+struct \mbox{\hyperlink{structrocr_1_1amd_1_1hsa_1_1code__options_1_1control__directives}{rocr\+::amd\+::hsa\+::code\+\_\+options\+::control\+\_\+directives}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Namespaces}
+\begin{DoxyCompactItemize}
+\item 
+ \mbox{\hyperlink{namespacerocr}{rocr}}
+\item 
+ \mbox{\hyperlink{namespacerocr_1_1amd}{rocr\+::amd}}
+\item 
+ \mbox{\hyperlink{namespacerocr_1_1amd_1_1hsa}{rocr\+::amd\+::hsa}}
+\item 
+ \mbox{\hyperlink{namespacerocr_1_1amd_1_1hsa_1_1code__options}{rocr\+::amd\+::hsa\+::code\+\_\+options}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \mbox{\hyperlink{amd__hsa__code__util_8hpp_aefad15d1da6163d523ab2cbe50ea2e82}{hsa\+\_\+error}}(e)~static\+\_\+cast$<$\mbox{\hyperlink{group__status_gad755322e7ff95456520e8abdbe90d225}{hsa\+\_\+status\+\_\+t}}$>$(e)
+\item 
+\#define \mbox{\hyperlink{amd__hsa__code__util_8hpp_a4999dcdb087aee6f53fc5798bd64a9d8}{release\+\_\+assert}}(e)
+\end{DoxyCompactItemize}
+\doxysubsection*{Enumerations}
+\begin{DoxyCompactItemize}
+\item 
+enum \mbox{\hyperlink{namespacerocr_1_1amd_1_1hsa_ac50ad355964dc99eef6e563bf4e29cce}{rocr\+::amd\+::hsa\+::\+Dump\+Isa\+Comment\+Type}} \{ \mbox{\hyperlink{namespacerocr_1_1amd_1_1hsa_ac50ad355964dc99eef6e563bf4e29ccea1588a546b2f80d579962c029b7d426a4}{rocr\+::amd\+::hsa\+::\+COMMENT\+\_\+\+AMD\+\_\+\+KERNEL\+\_\+\+CODE\+\_\+\+T\+\_\+\+BEGIN}} = 1
+, \mbox{\hyperlink{namespacerocr_1_1amd_1_1hsa_ac50ad355964dc99eef6e563bf4e29cceaf224f0defb1ef7a8e94e4cb2bdc21ff9}{rocr\+::amd\+::hsa\+::\+COMMENT\+\_\+\+AMD\+\_\+\+KERNEL\+\_\+\+CODE\+\_\+\+T\+\_\+\+END}}
+, \mbox{\hyperlink{namespacerocr_1_1amd_1_1hsa_ac50ad355964dc99eef6e563bf4e29cceac8f5eb04af46ae22d5b523b095d4102a}{rocr\+::amd\+::hsa\+::\+COMMENT\+\_\+\+KERNEL\+\_\+\+ISA\+\_\+\+BEGIN}}
+ \}
+\end{DoxyCompactItemize}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+std\+::string \mbox{\hyperlink{namespacerocr_1_1amd_1_1hsa_ae3806cf3b95a751a091a128c9cf4552e}{rocr\+::amd\+::hsa\+::\+Hsa\+Symbol\+Kind\+To\+String}} (\mbox{\hyperlink{group__executable_ga530ca6dcd35807946cd1dfb8202ff4be}{hsa\+\_\+symbol\+\_\+kind\+\_\+t}} kind)
+\item 
+std\+::string \mbox{\hyperlink{namespacerocr_1_1amd_1_1hsa_a215f271d98545a07565dafb1e4067ca6}{rocr\+::amd\+::hsa\+::\+Hsa\+Symbol\+Linkage\+To\+String}} (\mbox{\hyperlink{group__executable_gaf2aba3b2a8dc8fe4faa91635520ca25c}{hsa\+\_\+symbol\+\_\+linkage\+\_\+t}} linkage)
+\item 
+std\+::string \mbox{\hyperlink{namespacerocr_1_1amd_1_1hsa_ad6ca168f38c56ed0ff2c03eb3a31fcb4}{rocr\+::amd\+::hsa\+::\+Hsa\+Variable\+Allocation\+To\+String}} (\mbox{\hyperlink{group__executable_ga0fdb971a44d3e02d1bd5ff889624461a}{hsa\+\_\+variable\+\_\+allocation\+\_\+t}} allocation)
+\item 
+std\+::string \mbox{\hyperlink{namespacerocr_1_1amd_1_1hsa_a7e38ab3b68a984337c2f1296bf84c72f}{rocr\+::amd\+::hsa\+::\+Hsa\+Variable\+Segment\+To\+String}} (\mbox{\hyperlink{group__executable_ga7fb2a9fe278f7ab892eb158277e2dd8c}{hsa\+\_\+variable\+\_\+segment\+\_\+t}} segment)
+\item 
+std\+::string \mbox{\hyperlink{namespacerocr_1_1amd_1_1hsa_a5b8bb9d930b0de9eaf7b5e701656ba89}{rocr\+::amd\+::hsa\+::\+Hsa\+Profile\+To\+String}} (\mbox{\hyperlink{group__agentinfo_gacafd4247e2a04cbe0ac0b3998c127532}{hsa\+\_\+profile\+\_\+t}} profile)
+\item 
+std\+::string \mbox{\hyperlink{namespacerocr_1_1amd_1_1hsa_a02c38b37308b9fd1567e9e26ce5d4996}{rocr\+::amd\+::hsa\+::\+Hsa\+Machine\+Model\+To\+String}} (\mbox{\hyperlink{group__agentinfo_ga4d45919fd6f6e8dbb8ae2f4030870e11}{hsa\+\_\+machine\+\_\+model\+\_\+t}} model)
+\item 
+std\+::string \mbox{\hyperlink{namespacerocr_1_1amd_1_1hsa_aa1c2472f3280e8f7390da3e3eaae6ade}{rocr\+::amd\+::hsa\+::\+Hsa\+Float\+Rounding\+Mode\+To\+String}} (\mbox{\hyperlink{group__agentinfo_gaac56321e4596fe10a90b5bb3fedc4b73}{hsa\+\_\+default\+\_\+float\+\_\+rounding\+\_\+mode\+\_\+t}} mode)
+\item 
+std\+::string \mbox{\hyperlink{namespacerocr_1_1amd_1_1hsa_af7ecf813a0540b03be72c4fd1f532c9b}{rocr\+::amd\+::hsa\+::\+Amd\+Machine\+Kind\+To\+String}} (\mbox{\hyperlink{inc_2amd__hsa__kernel__code_8h_a9ef9b8b0cbf9c68117c96e2fb8853484}{amd\+\_\+machine\+\_\+kind16\+\_\+t}} machine)
+\item 
+std\+::string \mbox{\hyperlink{namespacerocr_1_1amd_1_1hsa_a2223e90bf69f1de29ebafd45534d3eef}{rocr\+::amd\+::hsa\+::\+Amd\+Float\+Round\+Mode\+To\+String}} (\mbox{\hyperlink{inc_2amd__hsa__kernel__code_8h_a12269e07ed57d521dc77bd2ba23b196d}{amd\+\_\+float\+\_\+round\+\_\+mode\+\_\+t}} round\+\_\+mode)
+\item 
+std\+::string \mbox{\hyperlink{namespacerocr_1_1amd_1_1hsa_a7a029ab50e3738b6c45c174275d84368}{rocr\+::amd\+::hsa\+::\+Amd\+Float\+Denorm\+Mode\+To\+String}} (\mbox{\hyperlink{inc_2amd__hsa__kernel__code_8h_a0a04a2c12ba829f950ff2af4a64f54c4}{amd\+\_\+float\+\_\+denorm\+\_\+mode\+\_\+t}} denorm\+\_\+mode)
+\item 
+std\+::string \mbox{\hyperlink{namespacerocr_1_1amd_1_1hsa_ae134bb66df02b3c3687689dcf8808e9e}{rocr\+::amd\+::hsa\+::\+Amd\+System\+Vgpr\+Workitem\+Id\+To\+String}} (\mbox{\hyperlink{inc_2amd__hsa__kernel__code_8h_a83d9b6f1908dfd5b808780992d5222cd}{amd\+\_\+system\+\_\+vgpr\+\_\+workitem\+\_\+id\+\_\+t}} system\+\_\+vgpr\+\_\+workitem\+\_\+id)
+\item 
+std\+::string \mbox{\hyperlink{namespacerocr_1_1amd_1_1hsa_afb12350a20c2131fd91dc8919a689b54}{rocr\+::amd\+::hsa\+::\+Amd\+Element\+Byte\+Size\+To\+String}} (\mbox{\hyperlink{inc_2amd__hsa__kernel__code_8h_a270d9c0c715e4ee0049a0f0f8b8e4818}{amd\+\_\+element\+\_\+byte\+\_\+size\+\_\+t}} element\+\_\+byte\+\_\+size)
+\item 
+std\+::string \mbox{\hyperlink{namespacerocr_1_1amd_1_1hsa_a5095d88058a5d6a2e05fa093c79996b8}{rocr\+::amd\+::hsa\+::\+Amd\+Exception\+Kind\+To\+String}} (\mbox{\hyperlink{inc_2amd__hsa__kernel__code_8h_a2f32a22e6e29a3bea364b1335fddadef}{amd\+\_\+exception\+\_\+kind16\+\_\+t}} exceptions)
+\item 
+std\+::string \mbox{\hyperlink{namespacerocr_1_1amd_1_1hsa_a850bab2da4ec9cf46cfdad330623424f}{rocr\+::amd\+::hsa\+::\+Amd\+Power\+Two\+To\+String}} (\mbox{\hyperlink{inc_2amd__hsa__kernel__code_8h_a3eff030f24a2022e35b1a475ba48d1b0}{amd\+\_\+powertwo8\+\_\+t}} p)
+\item 
+\mbox{\hyperlink{inc_2amd__hsa__elf_8h_a87ff377bc9a49e89b52f1b08a4af1ce4}{amdgpu\+\_\+hsa\+\_\+elf\+\_\+segment\+\_\+t}} \mbox{\hyperlink{namespacerocr_1_1amd_1_1hsa_a32281c43c4d63938372aef55a067ed9d}{rocr\+::amd\+::hsa\+::\+Amd\+Hsa\+Elf\+Section\+Segment}} (\mbox{\hyperlink{inc_2amd__hsa__elf_8h_acb8989e806f00bcedf0e61ef2874a852}{amdgpu\+\_\+hsa\+\_\+elf\+\_\+section\+\_\+t}} sec)
+\item 
+bool \mbox{\hyperlink{namespacerocr_1_1amd_1_1hsa_a9ae55cf7c6449824552bf8aa4df5d67e}{rocr\+::amd\+::hsa\+::\+Is\+Amd\+Hsa\+Elf\+Section\+ROData}} (\mbox{\hyperlink{inc_2amd__hsa__elf_8h_acb8989e806f00bcedf0e61ef2874a852}{amdgpu\+\_\+hsa\+\_\+elf\+\_\+section\+\_\+t}} sec)
+\item 
+std\+::string \mbox{\hyperlink{namespacerocr_1_1amd_1_1hsa_aa35c6bebbce4d247bea97fd9a3f739e2}{rocr\+::amd\+::hsa\+::\+Amd\+Hsa\+Elf\+Segment\+To\+String}} (\mbox{\hyperlink{inc_2amd__hsa__elf_8h_a87ff377bc9a49e89b52f1b08a4af1ce4}{amdgpu\+\_\+hsa\+\_\+elf\+\_\+segment\+\_\+t}} seg)
+\item 
+std\+::string \mbox{\hyperlink{namespacerocr_1_1amd_1_1hsa_a2dfed70efabc1ce4e546e17e46773c9d}{rocr\+::amd\+::hsa\+::\+Amd\+PTLoad\+To\+String}} (uint64\+\_\+t type)
+\item 
+void \mbox{\hyperlink{namespacerocr_1_1amd_1_1hsa_a6babc520c18fc273ca25e6a9c9bd9e0f}{rocr\+::amd\+::hsa\+::\+Print\+Amd\+Kernel\+Code}} (std\+::ostream \&out, const \mbox{\hyperlink{inc_2amd__hsa__kernel__code_8h_ab6a9ac3a2bb96180e3282395e564391a}{amd\+\_\+kernel\+\_\+code\+\_\+t}} $\ast$akc)
+\item 
+void \mbox{\hyperlink{namespacerocr_1_1amd_1_1hsa_a59b08d27ee703cb474901b0cef2d63ae}{rocr\+::amd\+::hsa\+::\+Print\+Amd\+Compute\+Pgm\+Rsrc\+One}} (std\+::ostream \&out, \mbox{\hyperlink{inc_2amd__hsa__kernel__code_8h_a76980361efe7d87e512b3dc22b01d730}{amd\+\_\+compute\+\_\+pgm\+\_\+rsrc\+\_\+one32\+\_\+t}} compute\+\_\+pgm\+\_\+rsrc1)
+\item 
+void \mbox{\hyperlink{namespacerocr_1_1amd_1_1hsa_a53c76c52abe6b85844459e0bc3ed9912}{rocr\+::amd\+::hsa\+::\+Print\+Amd\+Compute\+Pgm\+Rsrc\+Two}} (std\+::ostream \&out, \mbox{\hyperlink{inc_2amd__hsa__kernel__code_8h_a5952fa5f3f310e8ac0de8eef6235c545}{amd\+\_\+compute\+\_\+pgm\+\_\+rsrc\+\_\+two32\+\_\+t}} compute\+\_\+pgm\+\_\+rsrc2)
+\item 
+void \mbox{\hyperlink{namespacerocr_1_1amd_1_1hsa_a0148c25e11dc0dbe969ab5f3cb35fccb}{rocr\+::amd\+::hsa\+::\+Print\+Amd\+Kernel\+Code\+Properties}} (std\+::ostream \&out, \mbox{\hyperlink{inc_2amd__hsa__kernel__code_8h_af7fcfef8839feb2765526892d0fab469}{amd\+\_\+kernel\+\_\+code\+\_\+properties32\+\_\+t}} kernel\+\_\+code\+\_\+properties)
+\item 
+void \mbox{\hyperlink{namespacerocr_1_1amd_1_1hsa_a6c9a6f673a08628b11f44ed2a91d87eb}{rocr\+::amd\+::hsa\+::\+Print\+Amd\+Control\+Directives}} (std\+::ostream \&out, const \mbox{\hyperlink{inc_2amd__hsa__kernel__code_8h_a4eb7f834ade3e309fc1c2d94a5a54db7}{amd\+\_\+control\+\_\+directives\+\_\+t}} \&control\+\_\+directives)
+\item 
+std\+::ostream \& \mbox{\hyperlink{namespacerocr_1_1amd_1_1hsa_1_1code__options_a7e0cb9fd7498660fc19fad10472f8762}{rocr\+::amd\+::hsa\+::code\+\_\+options\+::space}} (std\+::ostream \&out)
+\item 
+std\+::ostream \& \mbox{\hyperlink{namespacerocr_1_1amd_1_1hsa_1_1code__options_aef7ae42e123320a3c040cb79fa05400b}{rocr\+::amd\+::hsa\+::code\+\_\+options\+::operator$<$$<$}} (std\+::ostream \&out, const control\+\_\+directive \&d)
+\item 
+std\+::ostream \& \mbox{\hyperlink{namespacerocr_1_1amd_1_1hsa_1_1code__options_a54bf116a9a01932f11e429f7cf761e45}{rocr\+::amd\+::hsa\+::code\+\_\+options\+::operator$<$$<$}} (std\+::ostream \&out, const exceptions\+\_\+mask \&e)
+\item 
+std\+::ostream \& \mbox{\hyperlink{namespacerocr_1_1amd_1_1hsa_1_1code__options_a1e6c82de15087002b1ab24da76d92b30}{rocr\+::amd\+::hsa\+::code\+\_\+options\+::operator$<$$<$}} (std\+::ostream \&out, const control\+\_\+directives \&cd)
+\item 
+const char $\ast$ \mbox{\hyperlink{namespacerocr_1_1amd_1_1hsa_a251adaf1b2ddac67ff0a1268c3bffd58}{rocr\+::amd\+::hsa\+::hsaerr2str}} (\mbox{\hyperlink{group__status_gad755322e7ff95456520e8abdbe90d225}{hsa\+\_\+status\+\_\+t}} status)
+\item 
+bool \mbox{\hyperlink{namespacerocr_1_1amd_1_1hsa_a4024e3e5e7b2a20ea6393523919651e6}{rocr\+::amd\+::hsa\+::\+Read\+File\+Into\+Buffer}} (const std\+::string \&filename, std\+::vector$<$ char $>$ \&buffer)
+\item 
+int \mbox{\hyperlink{namespacerocr_1_1amd_1_1hsa_a55595b9357370dc3f8a297a98b16add6}{rocr\+::amd\+::hsa\+::\+Open\+Temp\+File}} (const char $\ast$prefix)
+\item 
+void \mbox{\hyperlink{namespacerocr_1_1amd_1_1hsa_acbaabd56aed620e02e61ea6b2ac91bd7}{rocr\+::amd\+::hsa\+::\+Close\+Temp\+File}} (int fd)
+\item 
+const char $\ast$ \mbox{\hyperlink{namespacerocr_1_1amd_1_1hsa_a41a49cfbe17da759a93f0b44ff861c9a}{rocr\+::amd\+::hsa\+::\+Comment\+Top\+Call\+Back}} (void $\ast$ctx, int type)
+\item 
+const char $\ast$ \mbox{\hyperlink{namespacerocr_1_1amd_1_1hsa_a00e427f55830289905bec7b655074731}{rocr\+::amd\+::hsa\+::\+Comment\+Right\+Call\+Back}} (void $\ast$ctx, int type)
+\item 
+uint32\+\_\+t \mbox{\hyperlink{namespacerocr_1_1amd_1_1hsa_ad57b31ab9b082c4133d81797dca11506}{rocr\+::amd\+::hsa\+::\+Parse\+Instruction\+Offset}} (const std\+::string \&instruction)
+\item 
+void \mbox{\hyperlink{namespacerocr_1_1amd_1_1hsa_a3a56b90afba4269e01d397c5b2553d24}{rocr\+::amd\+::hsa\+::ltrim}} (std\+::string \&str)
+\item 
+void $\ast$ \mbox{\hyperlink{namespacerocr_1_1amd_1_1hsa_a2f21cba78f62246d53d03b3b81390981}{rocr\+::amd\+::hsa\+::aligned\+Malloc}} (size\+\_\+t size, size\+\_\+t alignment)
+\item 
+void \mbox{\hyperlink{namespacerocr_1_1amd_1_1hsa_ad9a346c1b72c3bd2ee54ecbe72acaae4}{rocr\+::amd\+::hsa\+::aligned\+Free}} (void $\ast$ptr)
+\item 
+uint64\+\_\+t \mbox{\hyperlink{namespacerocr_1_1amd_1_1hsa_ab3b723b0208c4ad1f28b8bf17297c377}{rocr\+::amd\+::hsa\+::align\+Up}} (uint64\+\_\+t num, uint64\+\_\+t align)
+\item 
+uint32\+\_\+t \mbox{\hyperlink{namespacerocr_1_1amd_1_1hsa_ad33b769785d59db4a9b0b1b5c95f0717}{rocr\+::amd\+::hsa\+::align\+Up}} (uint32\+\_\+t num, uint32\+\_\+t align)
+\item 
+std\+::string \mbox{\hyperlink{namespacerocr_1_1amd_1_1hsa_a79f5522d80047df8192e6bf21be2e1ec}{rocr\+::amd\+::hsa\+::\+Dump\+File\+Name}} (const std\+::string \&dir, const char $\ast$prefix, const char $\ast$ext, unsigned n, unsigned i)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Macro Definition Documentation}
+\mbox{\Hypertarget{amd__hsa__code__util_8hpp_aefad15d1da6163d523ab2cbe50ea2e82}\label{amd__hsa__code__util_8hpp_aefad15d1da6163d523ab2cbe50ea2e82}} 
+\index{amd\_hsa\_code\_util.hpp@{amd\_hsa\_code\_util.hpp}!hsa\_error@{hsa\_error}}
+\index{hsa\_error@{hsa\_error}!amd\_hsa\_code\_util.hpp@{amd\_hsa\_code\_util.hpp}}
+\doxysubsubsection{\texorpdfstring{hsa\_error}{hsa\_error}}
+{\footnotesize\ttfamily \#define hsa\+\_\+error(\begin{DoxyParamCaption}\item[{}]{e }\end{DoxyParamCaption})~static\+\_\+cast$<$\mbox{\hyperlink{group__status_gad755322e7ff95456520e8abdbe90d225}{hsa\+\_\+status\+\_\+t}}$>$(e)}
+
+\mbox{\Hypertarget{amd__hsa__code__util_8hpp_a4999dcdb087aee6f53fc5798bd64a9d8}\label{amd__hsa__code__util_8hpp_a4999dcdb087aee6f53fc5798bd64a9d8}} 
+\index{amd\_hsa\_code\_util.hpp@{amd\_hsa\_code\_util.hpp}!release\_assert@{release\_assert}}
+\index{release\_assert@{release\_assert}!amd\_hsa\_code\_util.hpp@{amd\_hsa\_code\_util.hpp}}
+\doxysubsubsection{\texorpdfstring{release\_assert}{release\_assert}}
+{\footnotesize\ttfamily \#define release\+\_\+assert(\begin{DoxyParamCaption}\item[{}]{e }\end{DoxyParamCaption})}
+
+{\bfseries Value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{  \textcolor{keywordflow}{if} (!(e)) \{                                                                  \(\backslash\)}
+\DoxyCodeLine{    std::cerr << \_\_FILE\_\_ << \textcolor{stringliteral}{"{}:"{}};                                              \(\backslash\)}
+\DoxyCodeLine{    std::cerr << \_\_LINE\_\_ << \textcolor{stringliteral}{"{}:"{}};                                              \(\backslash\)}
+\DoxyCodeLine{    std::cerr << \textcolor{stringliteral}{"{} Assertion `"{}} << \#e << \textcolor{stringliteral}{"{}' failed."{}} << std::endl;             \(\backslash\)}
+\DoxyCodeLine{    std::abort();                                                              \(\backslash\)}
+\DoxyCodeLine{  \}                                                                            \(\backslash\)}
+
+\end{DoxyCode}

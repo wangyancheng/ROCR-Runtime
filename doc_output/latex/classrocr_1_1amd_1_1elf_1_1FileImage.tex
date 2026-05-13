@@ -1,0 +1,297 @@
+\hypertarget{classrocr_1_1amd_1_1elf_1_1FileImage}{}\doxysection{rocr\+::amd\+::elf\+::File\+Image Class Reference}
+\label{classrocr_1_1amd_1_1elf_1_1FileImage}\index{rocr::amd::elf::FileImage@{rocr::amd::elf::FileImage}}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classrocr_1_1amd_1_1elf_1_1FileImage_a0e9ddc8474a86ca888d13f01cd1a8636}{File\+Image}} ()
+\item 
+\mbox{\hyperlink{classrocr_1_1amd_1_1elf_1_1FileImage_a42cf7a4f492c36ad5f2601692cb8d771}{$\sim$\+File\+Image}} ()
+\item 
+bool \mbox{\hyperlink{classrocr_1_1amd_1_1elf_1_1FileImage_ab57270a2c4c27d6219519f8b610da7db}{create}} ()
+\item 
+bool \mbox{\hyperlink{classrocr_1_1amd_1_1elf_1_1FileImage_ae9fff3c8a20a2daabdbe21023d434c31}{read\+From}} (const std\+::string \&filename)
+\item 
+bool \mbox{\hyperlink{classrocr_1_1amd_1_1elf_1_1FileImage_a7fbc98a323e9d2f3b9fa9a7592e94f9c}{copy\+From}} (const void $\ast$data, size\+\_\+t size)
+\item 
+bool \mbox{\hyperlink{classrocr_1_1amd_1_1elf_1_1FileImage_a0454a734464c3074e33ea86dabfc0ed5}{write\+To}} (const std\+::string \&filename)
+\item 
+bool \mbox{\hyperlink{classrocr_1_1amd_1_1elf_1_1FileImage_ae8862c3f86d63b1575e042ae049812fc}{copy\+To}} (void $\ast$$\ast$buffer, size\+\_\+t $\ast$size=0)
+\item 
+bool \mbox{\hyperlink{classrocr_1_1amd_1_1elf_1_1FileImage_abb92559581b5920e35eef3e909f6400f}{copy\+To}} (void $\ast$buffer, size\+\_\+t size)
+\item 
+size\+\_\+t \mbox{\hyperlink{classrocr_1_1amd_1_1elf_1_1FileImage_a6187b87b1f9b6102d03d808d050a480e}{get\+Size}} ()
+\item 
+std\+::string \mbox{\hyperlink{classrocr_1_1amd_1_1elf_1_1FileImage_a6e2fc5f46415c9fbd241390698d721e1}{output}} ()
+\item 
+int \mbox{\hyperlink{classrocr_1_1amd_1_1elf_1_1FileImage_a0568503c4c481c4afc9db22599fb12fa}{fd}} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+bool \mbox{\hyperlink{classrocr_1_1amd_1_1elf_1_1FileImage_aee4caf701536fb3c64ac812ead95b58e}{error}} (const char $\ast$msg)
+\item 
+bool \mbox{\hyperlink{classrocr_1_1amd_1_1elf_1_1FileImage_a7ea6cc6f9f8303034a95fbf103caeee1}{perror}} (const char $\ast$msg)
+\item 
+std\+::string \mbox{\hyperlink{classrocr_1_1amd_1_1elf_1_1FileImage_a1f4e38981730fc0cab61de25eafe4628}{werror}} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+int \mbox{\hyperlink{classrocr_1_1amd_1_1elf_1_1FileImage_ade5a9df50be05c7b582433a1abeeb4db}{d}}
+\item 
+std\+::ostringstream \mbox{\hyperlink{classrocr_1_1amd_1_1elf_1_1FileImage_a22d98bb13cd9996494bd6bace4b57f7b}{out}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classrocr_1_1amd_1_1elf_1_1FileImage_a0e9ddc8474a86ca888d13f01cd1a8636}\label{classrocr_1_1amd_1_1elf_1_1FileImage_a0e9ddc8474a86ca888d13f01cd1a8636}} 
+\index{rocr::amd::elf::FileImage@{rocr::amd::elf::FileImage}!FileImage@{FileImage}}
+\index{FileImage@{FileImage}!rocr::amd::elf::FileImage@{rocr::amd::elf::FileImage}}
+\doxysubsubsection{\texorpdfstring{FileImage()}{FileImage()}}
+{\footnotesize\ttfamily rocr\+::amd\+::elf\+::\+File\+Image\+::\+File\+Image (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classrocr_1_1amd_1_1elf_1_1FileImage_a42cf7a4f492c36ad5f2601692cb8d771}\label{classrocr_1_1amd_1_1elf_1_1FileImage_a42cf7a4f492c36ad5f2601692cb8d771}} 
+\index{rocr::amd::elf::FileImage@{rocr::amd::elf::FileImage}!````~FileImage@{$\sim$FileImage}}
+\index{````~FileImage@{$\sim$FileImage}!rocr::amd::elf::FileImage@{rocr::amd::elf::FileImage}}
+\doxysubsubsection{\texorpdfstring{$\sim$FileImage()}{~FileImage()}}
+{\footnotesize\ttfamily rocr\+::amd\+::elf\+::\+File\+Image\+::$\sim$\+File\+Image (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classrocr_1_1amd_1_1elf_1_1FileImage_a7fbc98a323e9d2f3b9fa9a7592e94f9c}\label{classrocr_1_1amd_1_1elf_1_1FileImage_a7fbc98a323e9d2f3b9fa9a7592e94f9c}} 
+\index{rocr::amd::elf::FileImage@{rocr::amd::elf::FileImage}!copyFrom@{copyFrom}}
+\index{copyFrom@{copyFrom}!rocr::amd::elf::FileImage@{rocr::amd::elf::FileImage}}
+\doxysubsubsection{\texorpdfstring{copyFrom()}{copyFrom()}}
+{\footnotesize\ttfamily bool rocr\+::amd\+::elf\+::\+File\+Image\+::copy\+From (\begin{DoxyParamCaption}\item[{const void $\ast$}]{data,  }\item[{size\+\_\+t}]{size }\end{DoxyParamCaption})}
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classrocr_1_1amd_1_1elf_1_1FileImage_a7fbc98a323e9d2f3b9fa9a7592e94f9c_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classrocr_1_1amd_1_1elf_1_1FileImage_a7fbc98a323e9d2f3b9fa9a7592e94f9c_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classrocr_1_1amd_1_1elf_1_1FileImage_ae8862c3f86d63b1575e042ae049812fc}\label{classrocr_1_1amd_1_1elf_1_1FileImage_ae8862c3f86d63b1575e042ae049812fc}} 
+\index{rocr::amd::elf::FileImage@{rocr::amd::elf::FileImage}!copyTo@{copyTo}}
+\index{copyTo@{copyTo}!rocr::amd::elf::FileImage@{rocr::amd::elf::FileImage}}
+\doxysubsubsection{\texorpdfstring{copyTo()}{copyTo()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily bool rocr\+::amd\+::elf\+::\+File\+Image\+::copy\+To (\begin{DoxyParamCaption}\item[{void $\ast$$\ast$}]{buffer,  }\item[{size\+\_\+t $\ast$}]{size = {\ttfamily 0} }\end{DoxyParamCaption})}
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classrocr_1_1amd_1_1elf_1_1FileImage_ae8862c3f86d63b1575e042ae049812fc_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classrocr_1_1amd_1_1elf_1_1FileImage_ae8862c3f86d63b1575e042ae049812fc_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classrocr_1_1amd_1_1elf_1_1FileImage_abb92559581b5920e35eef3e909f6400f}\label{classrocr_1_1amd_1_1elf_1_1FileImage_abb92559581b5920e35eef3e909f6400f}} 
+\index{rocr::amd::elf::FileImage@{rocr::amd::elf::FileImage}!copyTo@{copyTo}}
+\index{copyTo@{copyTo}!rocr::amd::elf::FileImage@{rocr::amd::elf::FileImage}}
+\doxysubsubsection{\texorpdfstring{copyTo()}{copyTo()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily bool rocr\+::amd\+::elf\+::\+File\+Image\+::copy\+To (\begin{DoxyParamCaption}\item[{void $\ast$}]{buffer,  }\item[{size\+\_\+t}]{size }\end{DoxyParamCaption})}
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classrocr_1_1amd_1_1elf_1_1FileImage_abb92559581b5920e35eef3e909f6400f_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classrocr_1_1amd_1_1elf_1_1FileImage_ab57270a2c4c27d6219519f8b610da7db}\label{classrocr_1_1amd_1_1elf_1_1FileImage_ab57270a2c4c27d6219519f8b610da7db}} 
+\index{rocr::amd::elf::FileImage@{rocr::amd::elf::FileImage}!create@{create}}
+\index{create@{create}!rocr::amd::elf::FileImage@{rocr::amd::elf::FileImage}}
+\doxysubsubsection{\texorpdfstring{create()}{create()}}
+{\footnotesize\ttfamily bool rocr\+::amd\+::elf\+::\+File\+Image\+::create (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classrocr_1_1amd_1_1elf_1_1FileImage_ab57270a2c4c27d6219519f8b610da7db_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classrocr_1_1amd_1_1elf_1_1FileImage_ab57270a2c4c27d6219519f8b610da7db_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classrocr_1_1amd_1_1elf_1_1FileImage_aee4caf701536fb3c64ac812ead95b58e}\label{classrocr_1_1amd_1_1elf_1_1FileImage_aee4caf701536fb3c64ac812ead95b58e}} 
+\index{rocr::amd::elf::FileImage@{rocr::amd::elf::FileImage}!error@{error}}
+\index{error@{error}!rocr::amd::elf::FileImage@{rocr::amd::elf::FileImage}}
+\doxysubsubsection{\texorpdfstring{error()}{error()}}
+{\footnotesize\ttfamily bool rocr\+::amd\+::elf\+::\+File\+Image\+::error (\begin{DoxyParamCaption}\item[{const char $\ast$}]{msg }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classrocr_1_1amd_1_1elf_1_1FileImage_aee4caf701536fb3c64ac812ead95b58e_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classrocr_1_1amd_1_1elf_1_1FileImage_a0568503c4c481c4afc9db22599fb12fa}\label{classrocr_1_1amd_1_1elf_1_1FileImage_a0568503c4c481c4afc9db22599fb12fa}} 
+\index{rocr::amd::elf::FileImage@{rocr::amd::elf::FileImage}!fd@{fd}}
+\index{fd@{fd}!rocr::amd::elf::FileImage@{rocr::amd::elf::FileImage}}
+\doxysubsubsection{\texorpdfstring{fd()}{fd()}}
+{\footnotesize\ttfamily int rocr\+::amd\+::elf\+::\+File\+Image\+::fd (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classrocr_1_1amd_1_1elf_1_1FileImage_a0568503c4c481c4afc9db22599fb12fa_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classrocr_1_1amd_1_1elf_1_1FileImage_a6187b87b1f9b6102d03d808d050a480e}\label{classrocr_1_1amd_1_1elf_1_1FileImage_a6187b87b1f9b6102d03d808d050a480e}} 
+\index{rocr::amd::elf::FileImage@{rocr::amd::elf::FileImage}!getSize@{getSize}}
+\index{getSize@{getSize}!rocr::amd::elf::FileImage@{rocr::amd::elf::FileImage}}
+\doxysubsubsection{\texorpdfstring{getSize()}{getSize()}}
+{\footnotesize\ttfamily size\+\_\+t rocr\+::amd\+::elf\+::\+File\+Image\+::get\+Size (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classrocr_1_1amd_1_1elf_1_1FileImage_a6187b87b1f9b6102d03d808d050a480e_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classrocr_1_1amd_1_1elf_1_1FileImage_a6187b87b1f9b6102d03d808d050a480e_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classrocr_1_1amd_1_1elf_1_1FileImage_a6e2fc5f46415c9fbd241390698d721e1}\label{classrocr_1_1amd_1_1elf_1_1FileImage_a6e2fc5f46415c9fbd241390698d721e1}} 
+\index{rocr::amd::elf::FileImage@{rocr::amd::elf::FileImage}!output@{output}}
+\index{output@{output}!rocr::amd::elf::FileImage@{rocr::amd::elf::FileImage}}
+\doxysubsubsection{\texorpdfstring{output()}{output()}}
+{\footnotesize\ttfamily std\+::string rocr\+::amd\+::elf\+::\+File\+Image\+::output (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classrocr_1_1amd_1_1elf_1_1FileImage_a6e2fc5f46415c9fbd241390698d721e1_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classrocr_1_1amd_1_1elf_1_1FileImage_a7ea6cc6f9f8303034a95fbf103caeee1}\label{classrocr_1_1amd_1_1elf_1_1FileImage_a7ea6cc6f9f8303034a95fbf103caeee1}} 
+\index{rocr::amd::elf::FileImage@{rocr::amd::elf::FileImage}!perror@{perror}}
+\index{perror@{perror}!rocr::amd::elf::FileImage@{rocr::amd::elf::FileImage}}
+\doxysubsubsection{\texorpdfstring{perror()}{perror()}}
+{\footnotesize\ttfamily bool rocr\+::amd\+::elf\+::\+File\+Image\+::perror (\begin{DoxyParamCaption}\item[{const char $\ast$}]{msg }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classrocr_1_1amd_1_1elf_1_1FileImage_a7ea6cc6f9f8303034a95fbf103caeee1_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classrocr_1_1amd_1_1elf_1_1FileImage_ae9fff3c8a20a2daabdbe21023d434c31}\label{classrocr_1_1amd_1_1elf_1_1FileImage_ae9fff3c8a20a2daabdbe21023d434c31}} 
+\index{rocr::amd::elf::FileImage@{rocr::amd::elf::FileImage}!readFrom@{readFrom}}
+\index{readFrom@{readFrom}!rocr::amd::elf::FileImage@{rocr::amd::elf::FileImage}}
+\doxysubsubsection{\texorpdfstring{readFrom()}{readFrom()}}
+{\footnotesize\ttfamily bool rocr\+::amd\+::elf\+::\+File\+Image\+::read\+From (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{filename }\end{DoxyParamCaption})}
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classrocr_1_1amd_1_1elf_1_1FileImage_ae9fff3c8a20a2daabdbe21023d434c31_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classrocr_1_1amd_1_1elf_1_1FileImage_ae9fff3c8a20a2daabdbe21023d434c31_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classrocr_1_1amd_1_1elf_1_1FileImage_a1f4e38981730fc0cab61de25eafe4628}\label{classrocr_1_1amd_1_1elf_1_1FileImage_a1f4e38981730fc0cab61de25eafe4628}} 
+\index{rocr::amd::elf::FileImage@{rocr::amd::elf::FileImage}!werror@{werror}}
+\index{werror@{werror}!rocr::amd::elf::FileImage@{rocr::amd::elf::FileImage}}
+\doxysubsubsection{\texorpdfstring{werror()}{werror()}}
+{\footnotesize\ttfamily std\+::string rocr\+::amd\+::elf\+::\+File\+Image\+::werror (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classrocr_1_1amd_1_1elf_1_1FileImage_a1f4e38981730fc0cab61de25eafe4628_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classrocr_1_1amd_1_1elf_1_1FileImage_a0454a734464c3074e33ea86dabfc0ed5}\label{classrocr_1_1amd_1_1elf_1_1FileImage_a0454a734464c3074e33ea86dabfc0ed5}} 
+\index{rocr::amd::elf::FileImage@{rocr::amd::elf::FileImage}!writeTo@{writeTo}}
+\index{writeTo@{writeTo}!rocr::amd::elf::FileImage@{rocr::amd::elf::FileImage}}
+\doxysubsubsection{\texorpdfstring{writeTo()}{writeTo()}}
+{\footnotesize\ttfamily bool rocr\+::amd\+::elf\+::\+File\+Image\+::write\+To (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{filename }\end{DoxyParamCaption})}
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classrocr_1_1amd_1_1elf_1_1FileImage_a0454a734464c3074e33ea86dabfc0ed5_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classrocr_1_1amd_1_1elf_1_1FileImage_a0454a734464c3074e33ea86dabfc0ed5_icgraph}
+\end{center}
+\end{figure}
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{classrocr_1_1amd_1_1elf_1_1FileImage_ade5a9df50be05c7b582433a1abeeb4db}\label{classrocr_1_1amd_1_1elf_1_1FileImage_ade5a9df50be05c7b582433a1abeeb4db}} 
+\index{rocr::amd::elf::FileImage@{rocr::amd::elf::FileImage}!d@{d}}
+\index{d@{d}!rocr::amd::elf::FileImage@{rocr::amd::elf::FileImage}}
+\doxysubsubsection{\texorpdfstring{d}{d}}
+{\footnotesize\ttfamily int rocr\+::amd\+::elf\+::\+File\+Image\+::d\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classrocr_1_1amd_1_1elf_1_1FileImage_a22d98bb13cd9996494bd6bace4b57f7b}\label{classrocr_1_1amd_1_1elf_1_1FileImage_a22d98bb13cd9996494bd6bace4b57f7b}} 
+\index{rocr::amd::elf::FileImage@{rocr::amd::elf::FileImage}!out@{out}}
+\index{out@{out}!rocr::amd::elf::FileImage@{rocr::amd::elf::FileImage}}
+\doxysubsubsection{\texorpdfstring{out}{out}}
+{\footnotesize\ttfamily std\+::ostringstream rocr\+::amd\+::elf\+::\+File\+Image\+::out\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+src/libamdhsacode/\mbox{\hyperlink{amd__elf__image_8cpp}{amd\+\_\+elf\+\_\+image.\+cpp}}\end{DoxyCompactItemize}

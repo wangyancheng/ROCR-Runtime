@@ -1,0 +1,152 @@
+\hypertarget{classrocr_1_1amd_1_1hsa_1_1code_1_1KernelSymbol}{}\doxysection{rocr\+::amd\+::hsa\+::code\+::Kernel\+Symbol Class Reference}
+\label{classrocr_1_1amd_1_1hsa_1_1code_1_1KernelSymbol}\index{rocr::amd::hsa::code::KernelSymbol@{rocr::amd::hsa::code::KernelSymbol}}
+
+
+{\ttfamily \#include $<$amd\+\_\+hsa\+\_\+code.\+hpp$>$}
+
+
+
+Inheritance diagram for rocr\+::amd\+::hsa\+::code\+::Kernel\+Symbol\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=187pt]{classrocr_1_1amd_1_1hsa_1_1code_1_1KernelSymbol__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for rocr\+::amd\+::hsa\+::code\+::Kernel\+Symbol\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=193pt]{classrocr_1_1amd_1_1hsa_1_1code_1_1KernelSymbol__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classrocr_1_1amd_1_1hsa_1_1code_1_1KernelSymbol_a82ee72104e881c1b4964f55e92b721d6}{Kernel\+Symbol}} (\mbox{\hyperlink{classrocr_1_1amd_1_1elf_1_1Symbol}{amd\+::elf\+::\+Symbol}} $\ast$elfsym\+\_\+, const \mbox{\hyperlink{inc_2amd__hsa__kernel__code_8h_ab6a9ac3a2bb96180e3282395e564391a}{amd\+\_\+kernel\+\_\+code\+\_\+t}} $\ast$akc)
+\item 
+bool \mbox{\hyperlink{classrocr_1_1amd_1_1hsa_1_1code_1_1KernelSymbol_a76bcee5ce1f5366fd52b0328ee5c5cc5}{Is\+Kernel\+Symbol}} () const override
+\item 
+\mbox{\hyperlink{classrocr_1_1amd_1_1hsa_1_1code_1_1KernelSymbol}{Kernel\+Symbol}} $\ast$ \mbox{\hyperlink{classrocr_1_1amd_1_1hsa_1_1code_1_1KernelSymbol_a0bc5cc3ee333f416708857243b77d4d5}{As\+Kernel\+Symbol}} () override
+\item 
+\mbox{\hyperlink{group__executable_ga530ca6dcd35807946cd1dfb8202ff4be}{hsa\+\_\+symbol\+\_\+kind\+\_\+t}} \mbox{\hyperlink{classrocr_1_1amd_1_1hsa_1_1code_1_1KernelSymbol_a0d03f40c208fd25c7b54bf5511a0cd2e}{Kind}} () const override
+\item 
+\mbox{\hyperlink{group__status_gad755322e7ff95456520e8abdbe90d225}{hsa\+\_\+status\+\_\+t}} \mbox{\hyperlink{classrocr_1_1amd_1_1hsa_1_1code_1_1KernelSymbol_aa25f738597fc49e40f5e918963844e12}{Get\+Info}} (\mbox{\hyperlink{group__code-object_gaded99609f1225ba3ed62328c7e1a3694}{hsa\+\_\+code\+\_\+symbol\+\_\+info\+\_\+t}} attribute, void $\ast$value) override
+\end{DoxyCompactItemize}
+\doxysubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+uint32\+\_\+t \mbox{\hyperlink{classrocr_1_1amd_1_1hsa_1_1code_1_1KernelSymbol_a5eb7ded7c9a8e1ac856bc6a5276aeaea}{kernarg\+\_\+segment\+\_\+size}}
+\item 
+uint32\+\_\+t \mbox{\hyperlink{classrocr_1_1amd_1_1hsa_1_1code_1_1KernelSymbol_aee374759328c85bc3c8f304f378b0198}{kernarg\+\_\+segment\+\_\+alignment}}
+\item 
+uint32\+\_\+t \mbox{\hyperlink{classrocr_1_1amd_1_1hsa_1_1code_1_1KernelSymbol_a51927a6fa7329a8e54e2d4e043fae712}{group\+\_\+segment\+\_\+size}}
+\item 
+uint32\+\_\+t \mbox{\hyperlink{classrocr_1_1amd_1_1hsa_1_1code_1_1KernelSymbol_a5abc55023e438048810ea7cdcdc936ec}{private\+\_\+segment\+\_\+size}}
+\item 
+bool \mbox{\hyperlink{classrocr_1_1amd_1_1hsa_1_1code_1_1KernelSymbol_aeaa112012dfd4f1e2d29ac662337ba33}{is\+\_\+dynamic\+\_\+callstack}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Additional Inherited Members}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classrocr_1_1amd_1_1hsa_1_1code_1_1KernelSymbol_a82ee72104e881c1b4964f55e92b721d6}\label{classrocr_1_1amd_1_1hsa_1_1code_1_1KernelSymbol_a82ee72104e881c1b4964f55e92b721d6}} 
+\index{rocr::amd::hsa::code::KernelSymbol@{rocr::amd::hsa::code::KernelSymbol}!KernelSymbol@{KernelSymbol}}
+\index{KernelSymbol@{KernelSymbol}!rocr::amd::hsa::code::KernelSymbol@{rocr::amd::hsa::code::KernelSymbol}}
+\doxysubsubsection{\texorpdfstring{KernelSymbol()}{KernelSymbol()}}
+{\footnotesize\ttfamily rocr\+::amd\+::hsa\+::code\+::\+Kernel\+Symbol\+::\+Kernel\+Symbol (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classrocr_1_1amd_1_1elf_1_1Symbol}{amd\+::elf\+::\+Symbol}} $\ast$}]{elfsym\+\_\+,  }\item[{const \mbox{\hyperlink{inc_2amd__hsa__kernel__code_8h_ab6a9ac3a2bb96180e3282395e564391a}{amd\+\_\+kernel\+\_\+code\+\_\+t}} $\ast$}]{akc }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [explicit]}}
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classrocr_1_1amd_1_1hsa_1_1code_1_1KernelSymbol_a0bc5cc3ee333f416708857243b77d4d5}\label{classrocr_1_1amd_1_1hsa_1_1code_1_1KernelSymbol_a0bc5cc3ee333f416708857243b77d4d5}} 
+\index{rocr::amd::hsa::code::KernelSymbol@{rocr::amd::hsa::code::KernelSymbol}!AsKernelSymbol@{AsKernelSymbol}}
+\index{AsKernelSymbol@{AsKernelSymbol}!rocr::amd::hsa::code::KernelSymbol@{rocr::amd::hsa::code::KernelSymbol}}
+\doxysubsubsection{\texorpdfstring{AsKernelSymbol()}{AsKernelSymbol()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classrocr_1_1amd_1_1hsa_1_1code_1_1KernelSymbol}{Kernel\+Symbol}}$\ast$ rocr\+::amd\+::hsa\+::code\+::\+Kernel\+Symbol\+::\+As\+Kernel\+Symbol (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Reimplemented from \mbox{\hyperlink{classrocr_1_1amd_1_1hsa_1_1code_1_1Symbol_a34e00f9233ed18c45368956dc6c68a42}{rocr\+::amd\+::hsa\+::code\+::\+Symbol}}.
+
+\mbox{\Hypertarget{classrocr_1_1amd_1_1hsa_1_1code_1_1KernelSymbol_aa25f738597fc49e40f5e918963844e12}\label{classrocr_1_1amd_1_1hsa_1_1code_1_1KernelSymbol_aa25f738597fc49e40f5e918963844e12}} 
+\index{rocr::amd::hsa::code::KernelSymbol@{rocr::amd::hsa::code::KernelSymbol}!GetInfo@{GetInfo}}
+\index{GetInfo@{GetInfo}!rocr::amd::hsa::code::KernelSymbol@{rocr::amd::hsa::code::KernelSymbol}}
+\doxysubsubsection{\texorpdfstring{GetInfo()}{GetInfo()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{group__status_gad755322e7ff95456520e8abdbe90d225}{hsa\+\_\+status\+\_\+t}} rocr\+::amd\+::hsa\+::code\+::\+Kernel\+Symbol\+::\+Get\+Info (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{group__code-object_gaded99609f1225ba3ed62328c7e1a3694}{hsa\+\_\+code\+\_\+symbol\+\_\+info\+\_\+t}}}]{attribute,  }\item[{void $\ast$}]{value }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Reimplemented from \mbox{\hyperlink{classrocr_1_1amd_1_1hsa_1_1code_1_1Symbol_aa380165fc72ae8e02aef29f02984832a}{rocr\+::amd\+::hsa\+::code\+::\+Symbol}}.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classrocr_1_1amd_1_1hsa_1_1code_1_1KernelSymbol_aa25f738597fc49e40f5e918963844e12_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classrocr_1_1amd_1_1hsa_1_1code_1_1KernelSymbol_a76bcee5ce1f5366fd52b0328ee5c5cc5}\label{classrocr_1_1amd_1_1hsa_1_1code_1_1KernelSymbol_a76bcee5ce1f5366fd52b0328ee5c5cc5}} 
+\index{rocr::amd::hsa::code::KernelSymbol@{rocr::amd::hsa::code::KernelSymbol}!IsKernelSymbol@{IsKernelSymbol}}
+\index{IsKernelSymbol@{IsKernelSymbol}!rocr::amd::hsa::code::KernelSymbol@{rocr::amd::hsa::code::KernelSymbol}}
+\doxysubsubsection{\texorpdfstring{IsKernelSymbol()}{IsKernelSymbol()}}
+{\footnotesize\ttfamily bool rocr\+::amd\+::hsa\+::code\+::\+Kernel\+Symbol\+::\+Is\+Kernel\+Symbol (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Reimplemented from \mbox{\hyperlink{classrocr_1_1amd_1_1hsa_1_1code_1_1Symbol_a58d4727c4710adc814248d5da2b29af3}{rocr\+::amd\+::hsa\+::code\+::\+Symbol}}.
+
+\mbox{\Hypertarget{classrocr_1_1amd_1_1hsa_1_1code_1_1KernelSymbol_a0d03f40c208fd25c7b54bf5511a0cd2e}\label{classrocr_1_1amd_1_1hsa_1_1code_1_1KernelSymbol_a0d03f40c208fd25c7b54bf5511a0cd2e}} 
+\index{rocr::amd::hsa::code::KernelSymbol@{rocr::amd::hsa::code::KernelSymbol}!Kind@{Kind}}
+\index{Kind@{Kind}!rocr::amd::hsa::code::KernelSymbol@{rocr::amd::hsa::code::KernelSymbol}}
+\doxysubsubsection{\texorpdfstring{Kind()}{Kind()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{group__executable_ga530ca6dcd35807946cd1dfb8202ff4be}{hsa\+\_\+symbol\+\_\+kind\+\_\+t}} rocr\+::amd\+::hsa\+::code\+::\+Kernel\+Symbol\+::\+Kind (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Implements \mbox{\hyperlink{classrocr_1_1amd_1_1hsa_1_1code_1_1Symbol_a20776e4ec1e253769ffe231142c62e3c}{rocr\+::amd\+::hsa\+::code\+::\+Symbol}}.
+
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{classrocr_1_1amd_1_1hsa_1_1code_1_1KernelSymbol_a51927a6fa7329a8e54e2d4e043fae712}\label{classrocr_1_1amd_1_1hsa_1_1code_1_1KernelSymbol_a51927a6fa7329a8e54e2d4e043fae712}} 
+\index{rocr::amd::hsa::code::KernelSymbol@{rocr::amd::hsa::code::KernelSymbol}!group\_segment\_size@{group\_segment\_size}}
+\index{group\_segment\_size@{group\_segment\_size}!rocr::amd::hsa::code::KernelSymbol@{rocr::amd::hsa::code::KernelSymbol}}
+\doxysubsubsection{\texorpdfstring{group\_segment\_size}{group\_segment\_size}}
+{\footnotesize\ttfamily uint32\+\_\+t rocr\+::amd\+::hsa\+::code\+::\+Kernel\+Symbol\+::group\+\_\+segment\+\_\+size\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classrocr_1_1amd_1_1hsa_1_1code_1_1KernelSymbol_aeaa112012dfd4f1e2d29ac662337ba33}\label{classrocr_1_1amd_1_1hsa_1_1code_1_1KernelSymbol_aeaa112012dfd4f1e2d29ac662337ba33}} 
+\index{rocr::amd::hsa::code::KernelSymbol@{rocr::amd::hsa::code::KernelSymbol}!is\_dynamic\_callstack@{is\_dynamic\_callstack}}
+\index{is\_dynamic\_callstack@{is\_dynamic\_callstack}!rocr::amd::hsa::code::KernelSymbol@{rocr::amd::hsa::code::KernelSymbol}}
+\doxysubsubsection{\texorpdfstring{is\_dynamic\_callstack}{is\_dynamic\_callstack}}
+{\footnotesize\ttfamily bool rocr\+::amd\+::hsa\+::code\+::\+Kernel\+Symbol\+::is\+\_\+dynamic\+\_\+callstack\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classrocr_1_1amd_1_1hsa_1_1code_1_1KernelSymbol_aee374759328c85bc3c8f304f378b0198}\label{classrocr_1_1amd_1_1hsa_1_1code_1_1KernelSymbol_aee374759328c85bc3c8f304f378b0198}} 
+\index{rocr::amd::hsa::code::KernelSymbol@{rocr::amd::hsa::code::KernelSymbol}!kernarg\_segment\_alignment@{kernarg\_segment\_alignment}}
+\index{kernarg\_segment\_alignment@{kernarg\_segment\_alignment}!rocr::amd::hsa::code::KernelSymbol@{rocr::amd::hsa::code::KernelSymbol}}
+\doxysubsubsection{\texorpdfstring{kernarg\_segment\_alignment}{kernarg\_segment\_alignment}}
+{\footnotesize\ttfamily uint32\+\_\+t rocr\+::amd\+::hsa\+::code\+::\+Kernel\+Symbol\+::kernarg\+\_\+segment\+\_\+alignment\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classrocr_1_1amd_1_1hsa_1_1code_1_1KernelSymbol_a5eb7ded7c9a8e1ac856bc6a5276aeaea}\label{classrocr_1_1amd_1_1hsa_1_1code_1_1KernelSymbol_a5eb7ded7c9a8e1ac856bc6a5276aeaea}} 
+\index{rocr::amd::hsa::code::KernelSymbol@{rocr::amd::hsa::code::KernelSymbol}!kernarg\_segment\_size@{kernarg\_segment\_size}}
+\index{kernarg\_segment\_size@{kernarg\_segment\_size}!rocr::amd::hsa::code::KernelSymbol@{rocr::amd::hsa::code::KernelSymbol}}
+\doxysubsubsection{\texorpdfstring{kernarg\_segment\_size}{kernarg\_segment\_size}}
+{\footnotesize\ttfamily uint32\+\_\+t rocr\+::amd\+::hsa\+::code\+::\+Kernel\+Symbol\+::kernarg\+\_\+segment\+\_\+size\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classrocr_1_1amd_1_1hsa_1_1code_1_1KernelSymbol_a5abc55023e438048810ea7cdcdc936ec}\label{classrocr_1_1amd_1_1hsa_1_1code_1_1KernelSymbol_a5abc55023e438048810ea7cdcdc936ec}} 
+\index{rocr::amd::hsa::code::KernelSymbol@{rocr::amd::hsa::code::KernelSymbol}!private\_segment\_size@{private\_segment\_size}}
+\index{private\_segment\_size@{private\_segment\_size}!rocr::amd::hsa::code::KernelSymbol@{rocr::amd::hsa::code::KernelSymbol}}
+\doxysubsubsection{\texorpdfstring{private\_segment\_size}{private\_segment\_size}}
+{\footnotesize\ttfamily uint32\+\_\+t rocr\+::amd\+::hsa\+::code\+::\+Kernel\+Symbol\+::private\+\_\+segment\+\_\+size\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+src/core/inc/\mbox{\hyperlink{amd__hsa__code_8hpp}{amd\+\_\+hsa\+\_\+code.\+hpp}}\item 
+src/libamdhsacode/\mbox{\hyperlink{amd__hsa__code_8cpp}{amd\+\_\+hsa\+\_\+code.\+cpp}}\end{DoxyCompactItemize}

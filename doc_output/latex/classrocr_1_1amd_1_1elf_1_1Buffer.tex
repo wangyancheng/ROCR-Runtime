@@ -1,0 +1,541 @@
+\hypertarget{classrocr_1_1amd_1_1elf_1_1Buffer}{}\doxysection{rocr\+::amd\+::elf\+::Buffer Class Reference}
+\label{classrocr_1_1amd_1_1elf_1_1Buffer}\index{rocr::amd::elf::Buffer@{rocr::amd::elf::Buffer}}
+\doxysubsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+typedef unsigned char \mbox{\hyperlink{classrocr_1_1amd_1_1elf_1_1Buffer_a13832ab64f6808b603ca75948609f0e0}{byte\+\_\+type}}
+\item 
+typedef size\+\_\+t \mbox{\hyperlink{classrocr_1_1amd_1_1elf_1_1Buffer_a3fb69ed368b05def9d09c29324641109}{size\+\_\+type}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classrocr_1_1amd_1_1elf_1_1Buffer_a6926eee46c5febbf350337568d32e375}{Buffer}} ()
+\item 
+\mbox{\hyperlink{classrocr_1_1amd_1_1elf_1_1Buffer_a9474cd651898f083fe594ce70e750525}{Buffer}} (const \mbox{\hyperlink{classrocr_1_1amd_1_1elf_1_1Buffer_a13832ab64f6808b603ca75948609f0e0}{byte\+\_\+type}} $\ast$src, \mbox{\hyperlink{classrocr_1_1amd_1_1elf_1_1Buffer_a3fb69ed368b05def9d09c29324641109}{size\+\_\+type}} \mbox{\hyperlink{classrocr_1_1amd_1_1elf_1_1Buffer_aea6c5e5f5de9313e802665ff456db9f4}{size}}, \mbox{\hyperlink{classrocr_1_1amd_1_1elf_1_1Buffer_a3fb69ed368b05def9d09c29324641109}{size\+\_\+type}} \mbox{\hyperlink{classrocr_1_1amd_1_1elf_1_1Buffer_a1eb382c324610e2ae79385780d252aec}{align}}=0)
+\item 
+virtual \mbox{\hyperlink{classrocr_1_1amd_1_1elf_1_1Buffer_a3f62e1ac3820c67766f84a9866503830}{$\sim$\+Buffer}} ()
+\item 
+const \mbox{\hyperlink{classrocr_1_1amd_1_1elf_1_1Buffer_a13832ab64f6808b603ca75948609f0e0}{byte\+\_\+type}} $\ast$ \mbox{\hyperlink{classrocr_1_1amd_1_1elf_1_1Buffer_a32bde7b9f137700d4b626dc2b7545db7}{raw}} () const
+\item 
+\mbox{\hyperlink{classrocr_1_1amd_1_1elf_1_1Buffer_a3fb69ed368b05def9d09c29324641109}{size\+\_\+type}} \mbox{\hyperlink{classrocr_1_1amd_1_1elf_1_1Buffer_a1eb382c324610e2ae79385780d252aec}{align}} () const
+\item 
+\mbox{\hyperlink{classrocr_1_1amd_1_1elf_1_1Buffer_a3fb69ed368b05def9d09c29324641109}{size\+\_\+type}} \mbox{\hyperlink{classrocr_1_1amd_1_1elf_1_1Buffer_aea6c5e5f5de9313e802665ff456db9f4}{size}} () const
+\item 
+bool \mbox{\hyperlink{classrocr_1_1amd_1_1elf_1_1Buffer_ae4cfdabac745a062f86c544fc6faeaf6}{is\+Const}} () const
+\item 
+bool \mbox{\hyperlink{classrocr_1_1amd_1_1elf_1_1Buffer_a0b11361cac77213123f4afe2464c58cd}{is\+Empty}} ()
+\item 
+bool \mbox{\hyperlink{classrocr_1_1amd_1_1elf_1_1Buffer_ade6563b26fbb33e14893deb9d7b6f4a2}{has\+Raw}} (const \mbox{\hyperlink{classrocr_1_1amd_1_1elf_1_1Buffer_a13832ab64f6808b603ca75948609f0e0}{byte\+\_\+type}} $\ast$src) const
+\item 
+{\footnotesize template$<$typename T $>$ }\\bool \mbox{\hyperlink{classrocr_1_1amd_1_1elf_1_1Buffer_a3cd5e754a7217eb96779b881a0ffcd44}{has}} (const T $\ast$src) const
+\item 
+bool \mbox{\hyperlink{classrocr_1_1amd_1_1elf_1_1Buffer_af46995e8cba0c1d21ff9595862633ac7}{has}} (\mbox{\hyperlink{classrocr_1_1amd_1_1elf_1_1Buffer_a3fb69ed368b05def9d09c29324641109}{size\+\_\+type}} offset) const
+\item 
+{\footnotesize template$<$typename T $>$ }\\\mbox{\hyperlink{classrocr_1_1amd_1_1elf_1_1Buffer_a3fb69ed368b05def9d09c29324641109}{size\+\_\+type}} \mbox{\hyperlink{classrocr_1_1amd_1_1elf_1_1Buffer_a7436389e87faa675ec44ac4ff3bd96ab}{get\+Offset}} (const T $\ast$src) const
+\item 
+{\footnotesize template$<$typename T $>$ }\\T \mbox{\hyperlink{classrocr_1_1amd_1_1elf_1_1Buffer_a3ffc12bdfa06301afee0f6aba531907d}{get}} (\mbox{\hyperlink{classrocr_1_1amd_1_1elf_1_1Buffer_a3fb69ed368b05def9d09c29324641109}{size\+\_\+type}} offset) const
+\item 
+\mbox{\hyperlink{classrocr_1_1amd_1_1elf_1_1Buffer_a3fb69ed368b05def9d09c29324641109}{size\+\_\+type}} \mbox{\hyperlink{classrocr_1_1amd_1_1elf_1_1Buffer_ae635685e56974f4e9f0b1b5588e89ead}{add\+String}} (const std\+::string \&str, \mbox{\hyperlink{classrocr_1_1amd_1_1elf_1_1Buffer_a3fb69ed368b05def9d09c29324641109}{size\+\_\+type}} \mbox{\hyperlink{classrocr_1_1amd_1_1elf_1_1Buffer_a1eb382c324610e2ae79385780d252aec}{align}}=0)
+\item 
+\mbox{\hyperlink{classrocr_1_1amd_1_1elf_1_1Buffer_a3fb69ed368b05def9d09c29324641109}{size\+\_\+type}} \mbox{\hyperlink{classrocr_1_1amd_1_1elf_1_1Buffer_a83947dc45a65ff6f2a751960672f6b22}{add\+String\+Length}} (const std\+::string \&str, \mbox{\hyperlink{classrocr_1_1amd_1_1elf_1_1Buffer_a3fb69ed368b05def9d09c29324641109}{size\+\_\+type}} \mbox{\hyperlink{classrocr_1_1amd_1_1elf_1_1Buffer_a1eb382c324610e2ae79385780d252aec}{align}}=0)
+\item 
+\mbox{\hyperlink{classrocr_1_1amd_1_1elf_1_1Buffer_a3fb69ed368b05def9d09c29324641109}{size\+\_\+type}} \mbox{\hyperlink{classrocr_1_1amd_1_1elf_1_1Buffer_a5f7e11d63a6d8b2334ac9f5dc1f7fe9f}{next\+Offset}} (\mbox{\hyperlink{classrocr_1_1amd_1_1elf_1_1Buffer_a3fb69ed368b05def9d09c29324641109}{size\+\_\+type}} \mbox{\hyperlink{classrocr_1_1amd_1_1elf_1_1Buffer_a1eb382c324610e2ae79385780d252aec}{align}}) const
+\item 
+{\footnotesize template$<$typename T $>$ }\\\mbox{\hyperlink{classrocr_1_1amd_1_1elf_1_1Buffer_a3fb69ed368b05def9d09c29324641109}{size\+\_\+type}} \mbox{\hyperlink{classrocr_1_1amd_1_1elf_1_1Buffer_a0329131f94f178be105902b5b28e4ef3}{add}} (const T $\ast$src, \mbox{\hyperlink{classrocr_1_1amd_1_1elf_1_1Buffer_a3fb69ed368b05def9d09c29324641109}{size\+\_\+type}} \mbox{\hyperlink{classrocr_1_1amd_1_1elf_1_1Buffer_aea6c5e5f5de9313e802665ff456db9f4}{size}}, \mbox{\hyperlink{classrocr_1_1amd_1_1elf_1_1Buffer_a3fb69ed368b05def9d09c29324641109}{size\+\_\+type}} \mbox{\hyperlink{classrocr_1_1amd_1_1elf_1_1Buffer_a1eb382c324610e2ae79385780d252aec}{align}})
+\item 
+{\footnotesize template$<$typename T $>$ }\\\mbox{\hyperlink{classrocr_1_1amd_1_1elf_1_1Buffer_a3fb69ed368b05def9d09c29324641109}{size\+\_\+type}} \mbox{\hyperlink{classrocr_1_1amd_1_1elf_1_1Buffer_a7414fbdf58b88b8f8e428ac43de29a5c}{add}} (const T \&src, \mbox{\hyperlink{classrocr_1_1amd_1_1elf_1_1Buffer_a3fb69ed368b05def9d09c29324641109}{size\+\_\+type}} \mbox{\hyperlink{classrocr_1_1amd_1_1elf_1_1Buffer_a1eb382c324610e2ae79385780d252aec}{align}}=0)
+\item 
+\mbox{\hyperlink{classrocr_1_1amd_1_1elf_1_1Buffer_a3fb69ed368b05def9d09c29324641109}{size\+\_\+type}} \mbox{\hyperlink{classrocr_1_1amd_1_1elf_1_1Buffer_adeba5c5c1d5bae9d4e1a55c9ab24fca8}{align}} (\mbox{\hyperlink{classrocr_1_1amd_1_1elf_1_1Buffer_a3fb69ed368b05def9d09c29324641109}{size\+\_\+type}} align)
+\item 
+{\footnotesize template$<$typename T $>$ }\\\mbox{\hyperlink{classrocr_1_1amd_1_1elf_1_1Buffer_a3fb69ed368b05def9d09c29324641109}{size\+\_\+type}} \mbox{\hyperlink{classrocr_1_1amd_1_1elf_1_1Buffer_acc2fd2dd2e7fd61c2693c9301c54f0dc}{reserve}} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classrocr_1_1amd_1_1elf_1_1Buffer_a3fb69ed368b05def9d09c29324641109}{size\+\_\+type}} \mbox{\hyperlink{classrocr_1_1amd_1_1elf_1_1Buffer_a508cc045e228e44dece30f057bbadb09}{get\+Raw\+Offset}} (const \mbox{\hyperlink{classrocr_1_1amd_1_1elf_1_1Buffer_a13832ab64f6808b603ca75948609f0e0}{byte\+\_\+type}} $\ast$src) const
+\item 
+const \mbox{\hyperlink{classrocr_1_1amd_1_1elf_1_1Buffer_a13832ab64f6808b603ca75948609f0e0}{byte\+\_\+type}} $\ast$ \mbox{\hyperlink{classrocr_1_1amd_1_1elf_1_1Buffer_a4652f23a7c718aa70b706d194963748e}{get\+Raw}} (\mbox{\hyperlink{classrocr_1_1amd_1_1elf_1_1Buffer_a3fb69ed368b05def9d09c29324641109}{size\+\_\+type}} offset) const
+\item 
+\mbox{\hyperlink{classrocr_1_1amd_1_1elf_1_1Buffer_a3fb69ed368b05def9d09c29324641109}{size\+\_\+type}} \mbox{\hyperlink{classrocr_1_1amd_1_1elf_1_1Buffer_a1b65c6fcc69748c96ea4c3af57ffb49e}{add\+Raw}} (const \mbox{\hyperlink{classrocr_1_1amd_1_1elf_1_1Buffer_a13832ab64f6808b603ca75948609f0e0}{byte\+\_\+type}} $\ast$src, \mbox{\hyperlink{classrocr_1_1amd_1_1elf_1_1Buffer_a3fb69ed368b05def9d09c29324641109}{size\+\_\+type}} \mbox{\hyperlink{classrocr_1_1amd_1_1elf_1_1Buffer_aea6c5e5f5de9313e802665ff456db9f4}{size}}, \mbox{\hyperlink{classrocr_1_1amd_1_1elf_1_1Buffer_a3fb69ed368b05def9d09c29324641109}{size\+\_\+type}} \mbox{\hyperlink{classrocr_1_1amd_1_1elf_1_1Buffer_a1eb382c324610e2ae79385780d252aec}{align}})
+\end{DoxyCompactItemize}
+\doxysubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+std\+::vector$<$ \mbox{\hyperlink{classrocr_1_1amd_1_1elf_1_1Buffer_a13832ab64f6808b603ca75948609f0e0}{byte\+\_\+type}} $>$ \mbox{\hyperlink{classrocr_1_1amd_1_1elf_1_1Buffer_ab573145495be38c2a091995de00a4830}{data\+\_\+}}
+\item 
+const \mbox{\hyperlink{classrocr_1_1amd_1_1elf_1_1Buffer_a13832ab64f6808b603ca75948609f0e0}{byte\+\_\+type}} $\ast$ \mbox{\hyperlink{classrocr_1_1amd_1_1elf_1_1Buffer_a0b3d4eeb6a3af592e5e5c1db4b93db95}{ptr\+\_\+}}
+\item 
+\mbox{\hyperlink{classrocr_1_1amd_1_1elf_1_1Buffer_a3fb69ed368b05def9d09c29324641109}{size\+\_\+type}} \mbox{\hyperlink{classrocr_1_1amd_1_1elf_1_1Buffer_ace4442ea694612d5685e47347f417a4e}{size\+\_\+}}
+\item 
+\mbox{\hyperlink{classrocr_1_1amd_1_1elf_1_1Buffer_a3fb69ed368b05def9d09c29324641109}{size\+\_\+type}} \mbox{\hyperlink{classrocr_1_1amd_1_1elf_1_1Buffer_ad0ccf8a1872b10c15f0afe254f55258e}{align\+\_\+}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Member Typedef Documentation}
+\mbox{\Hypertarget{classrocr_1_1amd_1_1elf_1_1Buffer_a13832ab64f6808b603ca75948609f0e0}\label{classrocr_1_1amd_1_1elf_1_1Buffer_a13832ab64f6808b603ca75948609f0e0}} 
+\index{rocr::amd::elf::Buffer@{rocr::amd::elf::Buffer}!byte\_type@{byte\_type}}
+\index{byte\_type@{byte\_type}!rocr::amd::elf::Buffer@{rocr::amd::elf::Buffer}}
+\doxysubsubsection{\texorpdfstring{byte\_type}{byte\_type}}
+{\footnotesize\ttfamily typedef unsigned char \mbox{\hyperlink{classrocr_1_1amd_1_1elf_1_1Buffer_a13832ab64f6808b603ca75948609f0e0}{rocr\+::amd\+::elf\+::\+Buffer\+::byte\+\_\+type}}}
+
+\mbox{\Hypertarget{classrocr_1_1amd_1_1elf_1_1Buffer_a3fb69ed368b05def9d09c29324641109}\label{classrocr_1_1amd_1_1elf_1_1Buffer_a3fb69ed368b05def9d09c29324641109}} 
+\index{rocr::amd::elf::Buffer@{rocr::amd::elf::Buffer}!size\_type@{size\_type}}
+\index{size\_type@{size\_type}!rocr::amd::elf::Buffer@{rocr::amd::elf::Buffer}}
+\doxysubsubsection{\texorpdfstring{size\_type}{size\_type}}
+{\footnotesize\ttfamily typedef size\+\_\+t \mbox{\hyperlink{classrocr_1_1amd_1_1elf_1_1Buffer_a3fb69ed368b05def9d09c29324641109}{rocr\+::amd\+::elf\+::\+Buffer\+::size\+\_\+type}}}
+
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classrocr_1_1amd_1_1elf_1_1Buffer_a6926eee46c5febbf350337568d32e375}\label{classrocr_1_1amd_1_1elf_1_1Buffer_a6926eee46c5febbf350337568d32e375}} 
+\index{rocr::amd::elf::Buffer@{rocr::amd::elf::Buffer}!Buffer@{Buffer}}
+\index{Buffer@{Buffer}!rocr::amd::elf::Buffer@{rocr::amd::elf::Buffer}}
+\doxysubsubsection{\texorpdfstring{Buffer()}{Buffer()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily rocr\+::amd\+::elf\+::\+Buffer\+::\+Buffer (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classrocr_1_1amd_1_1elf_1_1Buffer_a9474cd651898f083fe594ce70e750525}\label{classrocr_1_1amd_1_1elf_1_1Buffer_a9474cd651898f083fe594ce70e750525}} 
+\index{rocr::amd::elf::Buffer@{rocr::amd::elf::Buffer}!Buffer@{Buffer}}
+\index{Buffer@{Buffer}!rocr::amd::elf::Buffer@{rocr::amd::elf::Buffer}}
+\doxysubsubsection{\texorpdfstring{Buffer()}{Buffer()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily rocr\+::amd\+::elf\+::\+Buffer\+::\+Buffer (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classrocr_1_1amd_1_1elf_1_1Buffer_a13832ab64f6808b603ca75948609f0e0}{byte\+\_\+type}} $\ast$}]{src,  }\item[{\mbox{\hyperlink{classrocr_1_1amd_1_1elf_1_1Buffer_a3fb69ed368b05def9d09c29324641109}{Buffer\+::size\+\_\+type}}}]{size,  }\item[{\mbox{\hyperlink{classrocr_1_1amd_1_1elf_1_1Buffer_a3fb69ed368b05def9d09c29324641109}{Buffer\+::size\+\_\+type}}}]{align = {\ttfamily 0} }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classrocr_1_1amd_1_1elf_1_1Buffer_a3f62e1ac3820c67766f84a9866503830}\label{classrocr_1_1amd_1_1elf_1_1Buffer_a3f62e1ac3820c67766f84a9866503830}} 
+\index{rocr::amd::elf::Buffer@{rocr::amd::elf::Buffer}!````~Buffer@{$\sim$Buffer}}
+\index{````~Buffer@{$\sim$Buffer}!rocr::amd::elf::Buffer@{rocr::amd::elf::Buffer}}
+\doxysubsubsection{\texorpdfstring{$\sim$Buffer()}{~Buffer()}}
+{\footnotesize\ttfamily rocr\+::amd\+::elf\+::\+Buffer\+::$\sim$\+Buffer (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classrocr_1_1amd_1_1elf_1_1Buffer_a7414fbdf58b88b8f8e428ac43de29a5c}\label{classrocr_1_1amd_1_1elf_1_1Buffer_a7414fbdf58b88b8f8e428ac43de29a5c}} 
+\index{rocr::amd::elf::Buffer@{rocr::amd::elf::Buffer}!add@{add}}
+\index{add@{add}!rocr::amd::elf::Buffer@{rocr::amd::elf::Buffer}}
+\doxysubsubsection{\texorpdfstring{add()}{add()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+\mbox{\hyperlink{classrocr_1_1amd_1_1elf_1_1Buffer_a3fb69ed368b05def9d09c29324641109}{size\+\_\+type}} rocr\+::amd\+::elf\+::\+Buffer\+::add (\begin{DoxyParamCaption}\item[{const T \&}]{src,  }\item[{\mbox{\hyperlink{classrocr_1_1amd_1_1elf_1_1Buffer_a3fb69ed368b05def9d09c29324641109}{size\+\_\+type}}}]{align = {\ttfamily 0} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classrocr_1_1amd_1_1elf_1_1Buffer_a7414fbdf58b88b8f8e428ac43de29a5c_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classrocr_1_1amd_1_1elf_1_1Buffer_a0329131f94f178be105902b5b28e4ef3}\label{classrocr_1_1amd_1_1elf_1_1Buffer_a0329131f94f178be105902b5b28e4ef3}} 
+\index{rocr::amd::elf::Buffer@{rocr::amd::elf::Buffer}!add@{add}}
+\index{add@{add}!rocr::amd::elf::Buffer@{rocr::amd::elf::Buffer}}
+\doxysubsubsection{\texorpdfstring{add()}{add()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+\mbox{\hyperlink{classrocr_1_1amd_1_1elf_1_1Buffer_a3fb69ed368b05def9d09c29324641109}{size\+\_\+type}} rocr\+::amd\+::elf\+::\+Buffer\+::add (\begin{DoxyParamCaption}\item[{const T $\ast$}]{src,  }\item[{\mbox{\hyperlink{classrocr_1_1amd_1_1elf_1_1Buffer_a3fb69ed368b05def9d09c29324641109}{size\+\_\+type}}}]{size,  }\item[{\mbox{\hyperlink{classrocr_1_1amd_1_1elf_1_1Buffer_a3fb69ed368b05def9d09c29324641109}{size\+\_\+type}}}]{align }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classrocr_1_1amd_1_1elf_1_1Buffer_a0329131f94f178be105902b5b28e4ef3_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classrocr_1_1amd_1_1elf_1_1Buffer_a0329131f94f178be105902b5b28e4ef3_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classrocr_1_1amd_1_1elf_1_1Buffer_a1b65c6fcc69748c96ea4c3af57ffb49e}\label{classrocr_1_1amd_1_1elf_1_1Buffer_a1b65c6fcc69748c96ea4c3af57ffb49e}} 
+\index{rocr::amd::elf::Buffer@{rocr::amd::elf::Buffer}!addRaw@{addRaw}}
+\index{addRaw@{addRaw}!rocr::amd::elf::Buffer@{rocr::amd::elf::Buffer}}
+\doxysubsubsection{\texorpdfstring{addRaw()}{addRaw()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classrocr_1_1amd_1_1elf_1_1Buffer_a3fb69ed368b05def9d09c29324641109}{Buffer\+::size\+\_\+type}} rocr\+::amd\+::elf\+::\+Buffer\+::add\+Raw (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classrocr_1_1amd_1_1elf_1_1Buffer_a13832ab64f6808b603ca75948609f0e0}{byte\+\_\+type}} $\ast$}]{src,  }\item[{\mbox{\hyperlink{classrocr_1_1amd_1_1elf_1_1Buffer_a3fb69ed368b05def9d09c29324641109}{Buffer\+::size\+\_\+type}}}]{size,  }\item[{\mbox{\hyperlink{classrocr_1_1amd_1_1elf_1_1Buffer_a3fb69ed368b05def9d09c29324641109}{Buffer\+::size\+\_\+type}}}]{align }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classrocr_1_1amd_1_1elf_1_1Buffer_a1b65c6fcc69748c96ea4c3af57ffb49e_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classrocr_1_1amd_1_1elf_1_1Buffer_a1b65c6fcc69748c96ea4c3af57ffb49e_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classrocr_1_1amd_1_1elf_1_1Buffer_ae635685e56974f4e9f0b1b5588e89ead}\label{classrocr_1_1amd_1_1elf_1_1Buffer_ae635685e56974f4e9f0b1b5588e89ead}} 
+\index{rocr::amd::elf::Buffer@{rocr::amd::elf::Buffer}!addString@{addString}}
+\index{addString@{addString}!rocr::amd::elf::Buffer@{rocr::amd::elf::Buffer}}
+\doxysubsubsection{\texorpdfstring{addString()}{addString()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classrocr_1_1amd_1_1elf_1_1Buffer_a3fb69ed368b05def9d09c29324641109}{Buffer\+::size\+\_\+type}} rocr\+::amd\+::elf\+::\+Buffer\+::add\+String (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{str,  }\item[{\mbox{\hyperlink{classrocr_1_1amd_1_1elf_1_1Buffer_a3fb69ed368b05def9d09c29324641109}{size\+\_\+type}}}]{align = {\ttfamily 0} }\end{DoxyParamCaption})}
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classrocr_1_1amd_1_1elf_1_1Buffer_ae635685e56974f4e9f0b1b5588e89ead_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classrocr_1_1amd_1_1elf_1_1Buffer_ae635685e56974f4e9f0b1b5588e89ead_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classrocr_1_1amd_1_1elf_1_1Buffer_a83947dc45a65ff6f2a751960672f6b22}\label{classrocr_1_1amd_1_1elf_1_1Buffer_a83947dc45a65ff6f2a751960672f6b22}} 
+\index{rocr::amd::elf::Buffer@{rocr::amd::elf::Buffer}!addStringLength@{addStringLength}}
+\index{addStringLength@{addStringLength}!rocr::amd::elf::Buffer@{rocr::amd::elf::Buffer}}
+\doxysubsubsection{\texorpdfstring{addStringLength()}{addStringLength()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classrocr_1_1amd_1_1elf_1_1Buffer_a3fb69ed368b05def9d09c29324641109}{Buffer\+::size\+\_\+type}} rocr\+::amd\+::elf\+::\+Buffer\+::add\+String\+Length (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{str,  }\item[{\mbox{\hyperlink{classrocr_1_1amd_1_1elf_1_1Buffer_a3fb69ed368b05def9d09c29324641109}{size\+\_\+type}}}]{align = {\ttfamily 0} }\end{DoxyParamCaption})}
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classrocr_1_1amd_1_1elf_1_1Buffer_a83947dc45a65ff6f2a751960672f6b22_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=344pt]{classrocr_1_1amd_1_1elf_1_1Buffer_a83947dc45a65ff6f2a751960672f6b22_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classrocr_1_1amd_1_1elf_1_1Buffer_a1eb382c324610e2ae79385780d252aec}\label{classrocr_1_1amd_1_1elf_1_1Buffer_a1eb382c324610e2ae79385780d252aec}} 
+\index{rocr::amd::elf::Buffer@{rocr::amd::elf::Buffer}!align@{align}}
+\index{align@{align}!rocr::amd::elf::Buffer@{rocr::amd::elf::Buffer}}
+\doxysubsubsection{\texorpdfstring{align()}{align()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classrocr_1_1amd_1_1elf_1_1Buffer_a3fb69ed368b05def9d09c29324641109}{size\+\_\+type}} rocr\+::amd\+::elf\+::\+Buffer\+::align (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classrocr_1_1amd_1_1elf_1_1Buffer_a1eb382c324610e2ae79385780d252aec_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classrocr_1_1amd_1_1elf_1_1Buffer_adeba5c5c1d5bae9d4e1a55c9ab24fca8}\label{classrocr_1_1amd_1_1elf_1_1Buffer_adeba5c5c1d5bae9d4e1a55c9ab24fca8}} 
+\index{rocr::amd::elf::Buffer@{rocr::amd::elf::Buffer}!align@{align}}
+\index{align@{align}!rocr::amd::elf::Buffer@{rocr::amd::elf::Buffer}}
+\doxysubsubsection{\texorpdfstring{align()}{align()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classrocr_1_1amd_1_1elf_1_1Buffer_a3fb69ed368b05def9d09c29324641109}{Buffer\+::size\+\_\+type}} rocr\+::amd\+::elf\+::\+Buffer\+::align (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classrocr_1_1amd_1_1elf_1_1Buffer_a3fb69ed368b05def9d09c29324641109}{Buffer\+::size\+\_\+type}}}]{align }\end{DoxyParamCaption})}
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classrocr_1_1amd_1_1elf_1_1Buffer_adeba5c5c1d5bae9d4e1a55c9ab24fca8_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classrocr_1_1amd_1_1elf_1_1Buffer_a3ffc12bdfa06301afee0f6aba531907d}\label{classrocr_1_1amd_1_1elf_1_1Buffer_a3ffc12bdfa06301afee0f6aba531907d}} 
+\index{rocr::amd::elf::Buffer@{rocr::amd::elf::Buffer}!get@{get}}
+\index{get@{get}!rocr::amd::elf::Buffer@{rocr::amd::elf::Buffer}}
+\doxysubsubsection{\texorpdfstring{get()}{get()}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+T rocr\+::amd\+::elf\+::\+Buffer\+::get (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classrocr_1_1amd_1_1elf_1_1Buffer_a3fb69ed368b05def9d09c29324641109}{size\+\_\+type}}}]{offset }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classrocr_1_1amd_1_1elf_1_1Buffer_a3ffc12bdfa06301afee0f6aba531907d_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classrocr_1_1amd_1_1elf_1_1Buffer_a3ffc12bdfa06301afee0f6aba531907d_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classrocr_1_1amd_1_1elf_1_1Buffer_a7436389e87faa675ec44ac4ff3bd96ab}\label{classrocr_1_1amd_1_1elf_1_1Buffer_a7436389e87faa675ec44ac4ff3bd96ab}} 
+\index{rocr::amd::elf::Buffer@{rocr::amd::elf::Buffer}!getOffset@{getOffset}}
+\index{getOffset@{getOffset}!rocr::amd::elf::Buffer@{rocr::amd::elf::Buffer}}
+\doxysubsubsection{\texorpdfstring{getOffset()}{getOffset()}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+\mbox{\hyperlink{classrocr_1_1amd_1_1elf_1_1Buffer_a3fb69ed368b05def9d09c29324641109}{size\+\_\+type}} rocr\+::amd\+::elf\+::\+Buffer\+::get\+Offset (\begin{DoxyParamCaption}\item[{const T $\ast$}]{src }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classrocr_1_1amd_1_1elf_1_1Buffer_a7436389e87faa675ec44ac4ff3bd96ab_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=348pt]{classrocr_1_1amd_1_1elf_1_1Buffer_a7436389e87faa675ec44ac4ff3bd96ab_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classrocr_1_1amd_1_1elf_1_1Buffer_a4652f23a7c718aa70b706d194963748e}\label{classrocr_1_1amd_1_1elf_1_1Buffer_a4652f23a7c718aa70b706d194963748e}} 
+\index{rocr::amd::elf::Buffer@{rocr::amd::elf::Buffer}!getRaw@{getRaw}}
+\index{getRaw@{getRaw}!rocr::amd::elf::Buffer@{rocr::amd::elf::Buffer}}
+\doxysubsubsection{\texorpdfstring{getRaw()}{getRaw()}}
+{\footnotesize\ttfamily const \mbox{\hyperlink{classrocr_1_1amd_1_1elf_1_1Buffer_a13832ab64f6808b603ca75948609f0e0}{Buffer\+::byte\+\_\+type}} $\ast$ rocr\+::amd\+::elf\+::\+Buffer\+::get\+Raw (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classrocr_1_1amd_1_1elf_1_1Buffer_a3fb69ed368b05def9d09c29324641109}{Buffer\+::size\+\_\+type}}}]{offset }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [private]}}
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classrocr_1_1amd_1_1elf_1_1Buffer_a4652f23a7c718aa70b706d194963748e_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classrocr_1_1amd_1_1elf_1_1Buffer_a4652f23a7c718aa70b706d194963748e_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classrocr_1_1amd_1_1elf_1_1Buffer_a508cc045e228e44dece30f057bbadb09}\label{classrocr_1_1amd_1_1elf_1_1Buffer_a508cc045e228e44dece30f057bbadb09}} 
+\index{rocr::amd::elf::Buffer@{rocr::amd::elf::Buffer}!getRawOffset@{getRawOffset}}
+\index{getRawOffset@{getRawOffset}!rocr::amd::elf::Buffer@{rocr::amd::elf::Buffer}}
+\doxysubsubsection{\texorpdfstring{getRawOffset()}{getRawOffset()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classrocr_1_1amd_1_1elf_1_1Buffer_a3fb69ed368b05def9d09c29324641109}{Buffer\+::size\+\_\+type}} rocr\+::amd\+::elf\+::\+Buffer\+::get\+Raw\+Offset (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classrocr_1_1amd_1_1elf_1_1Buffer_a13832ab64f6808b603ca75948609f0e0}{byte\+\_\+type}} $\ast$}]{src }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [private]}}
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classrocr_1_1amd_1_1elf_1_1Buffer_a508cc045e228e44dece30f057bbadb09_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classrocr_1_1amd_1_1elf_1_1Buffer_a508cc045e228e44dece30f057bbadb09_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classrocr_1_1amd_1_1elf_1_1Buffer_a3cd5e754a7217eb96779b881a0ffcd44}\label{classrocr_1_1amd_1_1elf_1_1Buffer_a3cd5e754a7217eb96779b881a0ffcd44}} 
+\index{rocr::amd::elf::Buffer@{rocr::amd::elf::Buffer}!has@{has}}
+\index{has@{has}!rocr::amd::elf::Buffer@{rocr::amd::elf::Buffer}}
+\doxysubsubsection{\texorpdfstring{has()}{has()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+bool rocr\+::amd\+::elf\+::\+Buffer\+::has (\begin{DoxyParamCaption}\item[{const T $\ast$}]{src }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classrocr_1_1amd_1_1elf_1_1Buffer_a3cd5e754a7217eb96779b881a0ffcd44_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classrocr_1_1amd_1_1elf_1_1Buffer_a3cd5e754a7217eb96779b881a0ffcd44_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classrocr_1_1amd_1_1elf_1_1Buffer_af46995e8cba0c1d21ff9595862633ac7}\label{classrocr_1_1amd_1_1elf_1_1Buffer_af46995e8cba0c1d21ff9595862633ac7}} 
+\index{rocr::amd::elf::Buffer@{rocr::amd::elf::Buffer}!has@{has}}
+\index{has@{has}!rocr::amd::elf::Buffer@{rocr::amd::elf::Buffer}}
+\doxysubsubsection{\texorpdfstring{has()}{has()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily bool rocr\+::amd\+::elf\+::\+Buffer\+::has (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classrocr_1_1amd_1_1elf_1_1Buffer_a3fb69ed368b05def9d09c29324641109}{size\+\_\+type}}}]{offset }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classrocr_1_1amd_1_1elf_1_1Buffer_af46995e8cba0c1d21ff9595862633ac7_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classrocr_1_1amd_1_1elf_1_1Buffer_ade6563b26fbb33e14893deb9d7b6f4a2}\label{classrocr_1_1amd_1_1elf_1_1Buffer_ade6563b26fbb33e14893deb9d7b6f4a2}} 
+\index{rocr::amd::elf::Buffer@{rocr::amd::elf::Buffer}!hasRaw@{hasRaw}}
+\index{hasRaw@{hasRaw}!rocr::amd::elf::Buffer@{rocr::amd::elf::Buffer}}
+\doxysubsubsection{\texorpdfstring{hasRaw()}{hasRaw()}}
+{\footnotesize\ttfamily bool rocr\+::amd\+::elf\+::\+Buffer\+::has\+Raw (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classrocr_1_1amd_1_1elf_1_1Buffer_a13832ab64f6808b603ca75948609f0e0}{byte\+\_\+type}} $\ast$}]{src }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classrocr_1_1amd_1_1elf_1_1Buffer_ade6563b26fbb33e14893deb9d7b6f4a2_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classrocr_1_1amd_1_1elf_1_1Buffer_ade6563b26fbb33e14893deb9d7b6f4a2_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classrocr_1_1amd_1_1elf_1_1Buffer_ae4cfdabac745a062f86c544fc6faeaf6}\label{classrocr_1_1amd_1_1elf_1_1Buffer_ae4cfdabac745a062f86c544fc6faeaf6}} 
+\index{rocr::amd::elf::Buffer@{rocr::amd::elf::Buffer}!isConst@{isConst}}
+\index{isConst@{isConst}!rocr::amd::elf::Buffer@{rocr::amd::elf::Buffer}}
+\doxysubsubsection{\texorpdfstring{isConst()}{isConst()}}
+{\footnotesize\ttfamily bool rocr\+::amd\+::elf\+::\+Buffer\+::is\+Const (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classrocr_1_1amd_1_1elf_1_1Buffer_ae4cfdabac745a062f86c544fc6faeaf6_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classrocr_1_1amd_1_1elf_1_1Buffer_a0b11361cac77213123f4afe2464c58cd}\label{classrocr_1_1amd_1_1elf_1_1Buffer_a0b11361cac77213123f4afe2464c58cd}} 
+\index{rocr::amd::elf::Buffer@{rocr::amd::elf::Buffer}!isEmpty@{isEmpty}}
+\index{isEmpty@{isEmpty}!rocr::amd::elf::Buffer@{rocr::amd::elf::Buffer}}
+\doxysubsubsection{\texorpdfstring{isEmpty()}{isEmpty()}}
+{\footnotesize\ttfamily bool rocr\+::amd\+::elf\+::\+Buffer\+::is\+Empty (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classrocr_1_1amd_1_1elf_1_1Buffer_a0b11361cac77213123f4afe2464c58cd_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classrocr_1_1amd_1_1elf_1_1Buffer_a5f7e11d63a6d8b2334ac9f5dc1f7fe9f}\label{classrocr_1_1amd_1_1elf_1_1Buffer_a5f7e11d63a6d8b2334ac9f5dc1f7fe9f}} 
+\index{rocr::amd::elf::Buffer@{rocr::amd::elf::Buffer}!nextOffset@{nextOffset}}
+\index{nextOffset@{nextOffset}!rocr::amd::elf::Buffer@{rocr::amd::elf::Buffer}}
+\doxysubsubsection{\texorpdfstring{nextOffset()}{nextOffset()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classrocr_1_1amd_1_1elf_1_1Buffer_a3fb69ed368b05def9d09c29324641109}{size\+\_\+type}} rocr\+::amd\+::elf\+::\+Buffer\+::next\+Offset (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classrocr_1_1amd_1_1elf_1_1Buffer_a3fb69ed368b05def9d09c29324641109}{size\+\_\+type}}}]{align }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classrocr_1_1amd_1_1elf_1_1Buffer_a5f7e11d63a6d8b2334ac9f5dc1f7fe9f_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classrocr_1_1amd_1_1elf_1_1Buffer_a5f7e11d63a6d8b2334ac9f5dc1f7fe9f_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classrocr_1_1amd_1_1elf_1_1Buffer_a32bde7b9f137700d4b626dc2b7545db7}\label{classrocr_1_1amd_1_1elf_1_1Buffer_a32bde7b9f137700d4b626dc2b7545db7}} 
+\index{rocr::amd::elf::Buffer@{rocr::amd::elf::Buffer}!raw@{raw}}
+\index{raw@{raw}!rocr::amd::elf::Buffer@{rocr::amd::elf::Buffer}}
+\doxysubsubsection{\texorpdfstring{raw()}{raw()}}
+{\footnotesize\ttfamily const \mbox{\hyperlink{classrocr_1_1amd_1_1elf_1_1Buffer_a13832ab64f6808b603ca75948609f0e0}{byte\+\_\+type}}$\ast$ rocr\+::amd\+::elf\+::\+Buffer\+::raw (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classrocr_1_1amd_1_1elf_1_1Buffer_a32bde7b9f137700d4b626dc2b7545db7_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classrocr_1_1amd_1_1elf_1_1Buffer_a32bde7b9f137700d4b626dc2b7545db7_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classrocr_1_1amd_1_1elf_1_1Buffer_acc2fd2dd2e7fd61c2693c9301c54f0dc}\label{classrocr_1_1amd_1_1elf_1_1Buffer_acc2fd2dd2e7fd61c2693c9301c54f0dc}} 
+\index{rocr::amd::elf::Buffer@{rocr::amd::elf::Buffer}!reserve@{reserve}}
+\index{reserve@{reserve}!rocr::amd::elf::Buffer@{rocr::amd::elf::Buffer}}
+\doxysubsubsection{\texorpdfstring{reserve()}{reserve()}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+\mbox{\hyperlink{classrocr_1_1amd_1_1elf_1_1Buffer_a3fb69ed368b05def9d09c29324641109}{size\+\_\+type}} rocr\+::amd\+::elf\+::\+Buffer\+::reserve (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=330pt]{classrocr_1_1amd_1_1elf_1_1Buffer_acc2fd2dd2e7fd61c2693c9301c54f0dc_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classrocr_1_1amd_1_1elf_1_1Buffer_acc2fd2dd2e7fd61c2693c9301c54f0dc_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classrocr_1_1amd_1_1elf_1_1Buffer_aea6c5e5f5de9313e802665ff456db9f4}\label{classrocr_1_1amd_1_1elf_1_1Buffer_aea6c5e5f5de9313e802665ff456db9f4}} 
+\index{rocr::amd::elf::Buffer@{rocr::amd::elf::Buffer}!size@{size}}
+\index{size@{size}!rocr::amd::elf::Buffer@{rocr::amd::elf::Buffer}}
+\doxysubsubsection{\texorpdfstring{size()}{size()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classrocr_1_1amd_1_1elf_1_1Buffer_a3fb69ed368b05def9d09c29324641109}{size\+\_\+type}} rocr\+::amd\+::elf\+::\+Buffer\+::size (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=330pt]{classrocr_1_1amd_1_1elf_1_1Buffer_aea6c5e5f5de9313e802665ff456db9f4_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classrocr_1_1amd_1_1elf_1_1Buffer_aea6c5e5f5de9313e802665ff456db9f4_icgraph}
+\end{center}
+\end{figure}
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{classrocr_1_1amd_1_1elf_1_1Buffer_ad0ccf8a1872b10c15f0afe254f55258e}\label{classrocr_1_1amd_1_1elf_1_1Buffer_ad0ccf8a1872b10c15f0afe254f55258e}} 
+\index{rocr::amd::elf::Buffer@{rocr::amd::elf::Buffer}!align\_@{align\_}}
+\index{align\_@{align\_}!rocr::amd::elf::Buffer@{rocr::amd::elf::Buffer}}
+\doxysubsubsection{\texorpdfstring{align\_}{align\_}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classrocr_1_1amd_1_1elf_1_1Buffer_a3fb69ed368b05def9d09c29324641109}{size\+\_\+type}} rocr\+::amd\+::elf\+::\+Buffer\+::align\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classrocr_1_1amd_1_1elf_1_1Buffer_ab573145495be38c2a091995de00a4830}\label{classrocr_1_1amd_1_1elf_1_1Buffer_ab573145495be38c2a091995de00a4830}} 
+\index{rocr::amd::elf::Buffer@{rocr::amd::elf::Buffer}!data\_@{data\_}}
+\index{data\_@{data\_}!rocr::amd::elf::Buffer@{rocr::amd::elf::Buffer}}
+\doxysubsubsection{\texorpdfstring{data\_}{data\_}}
+{\footnotesize\ttfamily std\+::vector$<$\mbox{\hyperlink{classrocr_1_1amd_1_1elf_1_1Buffer_a13832ab64f6808b603ca75948609f0e0}{byte\+\_\+type}}$>$ rocr\+::amd\+::elf\+::\+Buffer\+::data\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classrocr_1_1amd_1_1elf_1_1Buffer_a0b3d4eeb6a3af592e5e5c1db4b93db95}\label{classrocr_1_1amd_1_1elf_1_1Buffer_a0b3d4eeb6a3af592e5e5c1db4b93db95}} 
+\index{rocr::amd::elf::Buffer@{rocr::amd::elf::Buffer}!ptr\_@{ptr\_}}
+\index{ptr\_@{ptr\_}!rocr::amd::elf::Buffer@{rocr::amd::elf::Buffer}}
+\doxysubsubsection{\texorpdfstring{ptr\_}{ptr\_}}
+{\footnotesize\ttfamily const \mbox{\hyperlink{classrocr_1_1amd_1_1elf_1_1Buffer_a13832ab64f6808b603ca75948609f0e0}{byte\+\_\+type}}$\ast$ rocr\+::amd\+::elf\+::\+Buffer\+::ptr\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classrocr_1_1amd_1_1elf_1_1Buffer_ace4442ea694612d5685e47347f417a4e}\label{classrocr_1_1amd_1_1elf_1_1Buffer_ace4442ea694612d5685e47347f417a4e}} 
+\index{rocr::amd::elf::Buffer@{rocr::amd::elf::Buffer}!size\_@{size\_}}
+\index{size\_@{size\_}!rocr::amd::elf::Buffer@{rocr::amd::elf::Buffer}}
+\doxysubsubsection{\texorpdfstring{size\_}{size\_}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classrocr_1_1amd_1_1elf_1_1Buffer_a3fb69ed368b05def9d09c29324641109}{size\+\_\+type}} rocr\+::amd\+::elf\+::\+Buffer\+::size\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+src/libamdhsacode/\mbox{\hyperlink{amd__elf__image_8cpp}{amd\+\_\+elf\+\_\+image.\+cpp}}\end{DoxyCompactItemize}

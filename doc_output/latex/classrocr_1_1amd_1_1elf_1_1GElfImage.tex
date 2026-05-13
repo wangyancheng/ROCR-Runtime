@@ -1,0 +1,1168 @@
+\hypertarget{classrocr_1_1amd_1_1elf_1_1GElfImage}{}\doxysection{rocr\+::amd\+::elf\+::GElf\+Image Class Reference}
+\label{classrocr_1_1amd_1_1elf_1_1GElfImage}\index{rocr::amd::elf::GElfImage@{rocr::amd::elf::GElfImage}}
+
+
+Inheritance diagram for rocr\+::amd\+::elf\+::GElf\+Image\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=207pt]{classrocr_1_1amd_1_1elf_1_1GElfImage__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for rocr\+::amd\+::elf\+::GElf\+Image\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classrocr_1_1amd_1_1elf_1_1GElfImage__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classrocr_1_1amd_1_1elf_1_1GElfImage_a065f65886bb5b9ce8832d52bc8aa43d2}{GElf\+Image}} (int \mbox{\hyperlink{classrocr_1_1amd_1_1elf_1_1GElfImage_a09c41c5480f25e141c63af4081fda332}{elfclass}})
+\item 
+\mbox{\hyperlink{classrocr_1_1amd_1_1elf_1_1GElfImage_a21f8cd38105a1d933aa053fd1310b461}{$\sim$\+GElf\+Image}} ()
+\item 
+bool \mbox{\hyperlink{classrocr_1_1amd_1_1elf_1_1GElfImage_a65731230ea2ab73010704bdefab12409}{init\+New}} (uint16\+\_\+t \mbox{\hyperlink{classrocr_1_1amd_1_1elf_1_1GElfImage_aa614816125758853cf760f2e3e2447b4}{machine}}, uint16\+\_\+t type, uint8\+\_\+t os\+\_\+abi=0, uint8\+\_\+t abi\+\_\+version=0, uint32\+\_\+t e\+\_\+flags=0) override
+\item 
+bool \mbox{\hyperlink{classrocr_1_1amd_1_1elf_1_1GElfImage_a762dd9f44ec7038ad54b61a0b2a519c4}{load\+From\+File}} (const std\+::string \&filename) override
+\item 
+bool \mbox{\hyperlink{classrocr_1_1amd_1_1elf_1_1GElfImage_a2d6e5f23442e1c54b8ec2feca6abc4dd}{save\+To\+File}} (const std\+::string \&filename) override
+\item 
+bool \mbox{\hyperlink{classrocr_1_1amd_1_1elf_1_1GElfImage_ac6f48fa261953c3aa21f7ffc00409c28}{init\+From\+Buffer}} (const void $\ast$\mbox{\hyperlink{classrocr_1_1amd_1_1elf_1_1GElfImage_a73f9fdceb34f6f9610b59b152f2ad29d}{buffer}}, size\+\_\+t \mbox{\hyperlink{classrocr_1_1amd_1_1elf_1_1GElfImage_afd73f9e0fd31f9f2952491a277478b52}{size}}) override
+\item 
+bool \mbox{\hyperlink{classrocr_1_1amd_1_1elf_1_1GElfImage_a363cb8dd4771b70716fe962ad49f23c7}{init\+As\+Buffer}} (const void $\ast$\mbox{\hyperlink{classrocr_1_1amd_1_1elf_1_1GElfImage_a73f9fdceb34f6f9610b59b152f2ad29d}{buffer}}, size\+\_\+t \mbox{\hyperlink{classrocr_1_1amd_1_1elf_1_1GElfImage_afd73f9e0fd31f9f2952491a277478b52}{size}}) override
+\item 
+bool \mbox{\hyperlink{classrocr_1_1amd_1_1elf_1_1GElfImage_a6166add44fcced5205611b5f65cee899}{close}} ()
+\item 
+bool \mbox{\hyperlink{classrocr_1_1amd_1_1elf_1_1GElfImage_ac203cf8fd9920d588b427228082b43ce}{write\+To}} (const std\+::string \&filename) override
+\item 
+bool \mbox{\hyperlink{classrocr_1_1amd_1_1elf_1_1GElfImage_a33deb3e61a40a068e67c08ef4720656b}{copy\+To\+Buffer}} (void $\ast$$\ast$buf, size\+\_\+t $\ast$\mbox{\hyperlink{classrocr_1_1amd_1_1elf_1_1GElfImage_afd73f9e0fd31f9f2952491a277478b52}{size}}=0) override
+\item 
+bool \mbox{\hyperlink{classrocr_1_1amd_1_1elf_1_1GElfImage_a99587f2cd3bbd4f3d8b55e1fcf9f15e7}{copy\+To\+Buffer}} (void $\ast$buf, size\+\_\+t \mbox{\hyperlink{classrocr_1_1amd_1_1elf_1_1GElfImage_afd73f9e0fd31f9f2952491a277478b52}{size}}) override
+\item 
+const char $\ast$ \mbox{\hyperlink{classrocr_1_1amd_1_1elf_1_1GElfImage_ac49062ba6c8699b6711abca1b5e3fc55}{data}} () override
+\item 
+uint64\+\_\+t \mbox{\hyperlink{classrocr_1_1amd_1_1elf_1_1GElfImage_afd73f9e0fd31f9f2952491a277478b52}{size}} () override
+\item 
+bool \mbox{\hyperlink{classrocr_1_1amd_1_1elf_1_1GElfImage_afeb8b55171f4ee9ad1add533299cc7ba}{push}} ()
+\item 
+bool \mbox{\hyperlink{classrocr_1_1amd_1_1elf_1_1GElfImage_ad2022855c7522efc1355a9dc6e031bb8}{Freeze}} () override
+\item 
+bool \mbox{\hyperlink{classrocr_1_1amd_1_1elf_1_1GElfImage_a68c304c7c80346875efa908dd772d2ec}{Validate}} () override
+\item 
+uint16\+\_\+t \mbox{\hyperlink{classrocr_1_1amd_1_1elf_1_1GElfImage_ab19d82189abe1865f4e3c94b51a8ad0e}{Machine}} () override
+\item 
+uint16\+\_\+t \mbox{\hyperlink{classrocr_1_1amd_1_1elf_1_1GElfImage_a631c3551b541c3f182cefa5739920458}{Type}} () override
+\item 
+uint32\+\_\+t \mbox{\hyperlink{classrocr_1_1amd_1_1elf_1_1GElfImage_a370508255fdae8486e4e2ff44c31e36b}{EFlags}} () override
+\item 
+uint32\+\_\+t \mbox{\hyperlink{classrocr_1_1amd_1_1elf_1_1GElfImage_ac6fa13625e7ac4207ff18d9d74f21f1b}{ABIVersion}} () override
+\item 
+uint32\+\_\+t \mbox{\hyperlink{classrocr_1_1amd_1_1elf_1_1GElfImage_a2d7fc17178792f216dab1bb8de0491ad}{EClass}} () override
+\item 
+uint32\+\_\+t \mbox{\hyperlink{classrocr_1_1amd_1_1elf_1_1GElfImage_a82b20468f693e78d70678d7a3f57309f}{Os\+Abi}} () override
+\item 
+\mbox{\hyperlink{classrocr_1_1amd_1_1elf_1_1GElfStringTable}{GElf\+String\+Table}} $\ast$ \mbox{\hyperlink{classrocr_1_1amd_1_1elf_1_1GElfImage_a308dde7e9b3aa52feeaee464788380f4}{shstrtab}} () override
+\item 
+\mbox{\hyperlink{classrocr_1_1amd_1_1elf_1_1GElfStringTable}{GElf\+String\+Table}} $\ast$ \mbox{\hyperlink{classrocr_1_1amd_1_1elf_1_1GElfImage_af184fe7428e04f7d96d2c268ecf4665b}{strtab}} () override
+\item 
+\mbox{\hyperlink{classrocr_1_1amd_1_1elf_1_1GElfSymbolTable}{GElf\+Symbol\+Table}} $\ast$ \mbox{\hyperlink{classrocr_1_1amd_1_1elf_1_1GElfImage_a245a6df6a4a68c97c308248208f1641b}{get\+Symtab}} (uint16\+\_\+t index) override
+\item 
+\mbox{\hyperlink{classrocr_1_1amd_1_1elf_1_1GElfStringTable}{GElf\+String\+Table}} $\ast$ \mbox{\hyperlink{classrocr_1_1amd_1_1elf_1_1GElfImage_ac794cbf80571b868a597f4524dbbb3b4}{add\+String\+Table}} (const std\+::string \&name) override
+\item 
+\mbox{\hyperlink{classrocr_1_1amd_1_1elf_1_1GElfStringTable}{GElf\+String\+Table}} $\ast$ \mbox{\hyperlink{classrocr_1_1amd_1_1elf_1_1GElfImage_aefe2879b2a8310430508417927a61da7}{get\+String\+Table}} (uint16\+\_\+t index) override
+\item 
+\mbox{\hyperlink{classrocr_1_1amd_1_1elf_1_1GElfSymbolTable}{GElf\+Symbol\+Table}} $\ast$ \mbox{\hyperlink{classrocr_1_1amd_1_1elf_1_1GElfImage_aad8599039f778fd0f46431c2ec947d0b}{add\+Symbol\+Table}} (const std\+::string \&name, \mbox{\hyperlink{classrocr_1_1amd_1_1elf_1_1StringTable}{String\+Table}} $\ast$stab=0) override
+\item 
+\mbox{\hyperlink{classrocr_1_1amd_1_1elf_1_1GElfSymbolTable}{GElf\+Symbol\+Table}} $\ast$ \mbox{\hyperlink{classrocr_1_1amd_1_1elf_1_1GElfImage_a6c0df47c4346a936b61ce015b22568a1}{symtab}} () override
+\item 
+\mbox{\hyperlink{classrocr_1_1amd_1_1elf_1_1GElfSegment}{GElf\+Segment}} $\ast$ \mbox{\hyperlink{classrocr_1_1amd_1_1elf_1_1GElfImage_a9d9f60d4fed3e0ed5d7950122ba4a21a}{segment}} (size\+\_\+t i) override
+\item 
+\mbox{\hyperlink{classrocr_1_1amd_1_1elf_1_1Segment}{Segment}} $\ast$ \mbox{\hyperlink{classrocr_1_1amd_1_1elf_1_1GElfImage_a183d61d19b825c02e9ea06a95c262e9c}{segment\+By\+VAddr}} (uint64\+\_\+t vaddr) override
+\item 
+size\+\_\+t \mbox{\hyperlink{classrocr_1_1amd_1_1elf_1_1GElfImage_a56f66e38b911618e365ae83eae8ea4f8}{section\+Count}} () override
+\item 
+\mbox{\hyperlink{classrocr_1_1amd_1_1elf_1_1GElfSection}{GElf\+Section}} $\ast$ \mbox{\hyperlink{classrocr_1_1amd_1_1elf_1_1GElfImage_a254006468a49f726eeba49137b1aaf8c}{section}} (size\+\_\+t i) override
+\item 
+\mbox{\hyperlink{classrocr_1_1amd_1_1elf_1_1Section}{Section}} $\ast$ \mbox{\hyperlink{classrocr_1_1amd_1_1elf_1_1GElfImage_ae7e5b8a22731285b64ae6c5fca5bb1fd}{section\+By\+VAddr}} (uint64\+\_\+t vaddr) override
+\item 
+uint16\+\_\+t \mbox{\hyperlink{classrocr_1_1amd_1_1elf_1_1GElfImage_aa614816125758853cf760f2e3e2447b4}{machine}} () const
+\item 
+uint16\+\_\+t \mbox{\hyperlink{classrocr_1_1amd_1_1elf_1_1GElfImage_a467557972f18a3ff98deeb72fd550728}{etype}} () const
+\item 
+int \mbox{\hyperlink{classrocr_1_1amd_1_1elf_1_1GElfImage_acdf07fe5c3f440ce1a8cda6883833727}{eclass}} () const
+\item 
+bool \mbox{\hyperlink{classrocr_1_1amd_1_1elf_1_1GElfImage_afa0e8ed126d2b55a76c7e993337ee2a5}{elf\+Error}} (const char $\ast$msg)
+\item 
+\mbox{\hyperlink{classrocr_1_1amd_1_1elf_1_1GElfNoteSection}{GElf\+Note\+Section}} $\ast$ \mbox{\hyperlink{classrocr_1_1amd_1_1elf_1_1GElfImage_a7d10e761692481425f3f9adc05ba69c0}{note}} () override
+\item 
+\mbox{\hyperlink{classrocr_1_1amd_1_1elf_1_1GElfNoteSection}{GElf\+Note\+Section}} $\ast$ \mbox{\hyperlink{classrocr_1_1amd_1_1elf_1_1GElfImage_a495cfe13579b039f8fc4077a518ce4b2}{add\+Note\+Section}} (const std\+::string \&name) override
+\item 
+size\+\_\+t \mbox{\hyperlink{classrocr_1_1amd_1_1elf_1_1GElfImage_ac390d9c9770eebc4f200b303b7370dc0}{segment\+Count}} () override
+\item 
+\mbox{\hyperlink{classrocr_1_1amd_1_1elf_1_1Segment}{Segment}} $\ast$ \mbox{\hyperlink{classrocr_1_1amd_1_1elf_1_1GElfImage_a72419f3a0383ccfde1423bc874af9323}{init\+Segment}} (uint32\+\_\+t type, uint32\+\_\+t flags, uint64\+\_\+t paddr=0) override
+\item 
+bool \mbox{\hyperlink{classrocr_1_1amd_1_1elf_1_1GElfImage_a6c8f9d7a5a63e1d3c54ca5a7594c041a}{add\+Segments}} () override
+\item 
+\mbox{\hyperlink{classrocr_1_1amd_1_1elf_1_1Section}{Section}} $\ast$ \mbox{\hyperlink{classrocr_1_1amd_1_1elf_1_1GElfImage_a80f09bb9e4df6d0eab208b5b447170fd}{add\+Section}} (const std\+::string \&name, uint32\+\_\+t type, uint64\+\_\+t flags=0, uint64\+\_\+t entsize=0, \mbox{\hyperlink{classrocr_1_1amd_1_1elf_1_1Segment}{Segment}} $\ast$\mbox{\hyperlink{classrocr_1_1amd_1_1elf_1_1GElfImage_a9d9f60d4fed3e0ed5d7950122ba4a21a}{segment}}=0) override
+\item 
+\mbox{\hyperlink{classrocr_1_1amd_1_1elf_1_1RelocationSection}{Relocation\+Section}} $\ast$ \mbox{\hyperlink{classrocr_1_1amd_1_1elf_1_1GElfImage_ab6e1b27d2dd0a2d64f9c5bfc591e7f22}{add\+Relocation\+Section}} (\mbox{\hyperlink{classrocr_1_1amd_1_1elf_1_1Section}{Section}} $\ast$sec, \mbox{\hyperlink{classrocr_1_1amd_1_1elf_1_1SymbolTable}{Symbol\+Table}} $\ast$\mbox{\hyperlink{classrocr_1_1amd_1_1elf_1_1GElfImage_a6c0df47c4346a936b61ce015b22568a1}{symtab}})
+\item 
+\mbox{\hyperlink{classrocr_1_1amd_1_1elf_1_1RelocationSection}{Relocation\+Section}} $\ast$ \mbox{\hyperlink{classrocr_1_1amd_1_1elf_1_1GElfImage_a6d9e8ddd5f7016ef0bfbab9cdb50dcbc}{relocation\+Section}} (\mbox{\hyperlink{classrocr_1_1amd_1_1elf_1_1Section}{Section}} $\ast$sec, \mbox{\hyperlink{classrocr_1_1amd_1_1elf_1_1SymbolTable}{Symbol\+Table}} $\ast$\mbox{\hyperlink{classrocr_1_1amd_1_1elf_1_1GElfImage_a6c0df47c4346a936b61ce015b22568a1}{symtab}}=0) override
+\end{DoxyCompactItemize}
+\doxysubsection*{Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+bool \mbox{\hyperlink{classrocr_1_1amd_1_1elf_1_1GElfImage_a2be112f3dfc776934c07afcf83ebde55}{img\+Error}} ()
+\item 
+const char $\ast$ \mbox{\hyperlink{classrocr_1_1amd_1_1elf_1_1GElfImage_ae9478ad0ad72285b4276c4ba21c20cc3}{elf\+Error}} ()
+\item 
+bool \mbox{\hyperlink{classrocr_1_1amd_1_1elf_1_1GElfImage_af13fe3dbad94863a2e5b6d17c2509d36}{elf\+Begin}} (Elf\+\_\+\+Cmd cmd)
+\item 
+bool \mbox{\hyperlink{classrocr_1_1amd_1_1elf_1_1GElfImage_a41066d4606f8e3d4c6197d1e2e494847}{elf\+End}} ()
+\item 
+bool \mbox{\hyperlink{classrocr_1_1amd_1_1elf_1_1GElfImage_a3ddaf85c2b1db5f78c79aa9d58d14b34}{push0}} ()
+\item 
+bool \mbox{\hyperlink{classrocr_1_1amd_1_1elf_1_1GElfImage_a4ec12a8c7116250f2f87451f6b31d596}{pull\+Elf}} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+bool \mbox{\hyperlink{classrocr_1_1amd_1_1elf_1_1GElfImage_aa8b3eca96fd4f2ee1f1d301ab7a1e6e5}{frozen}}
+\item 
+int \mbox{\hyperlink{classrocr_1_1amd_1_1elf_1_1GElfImage_a09c41c5480f25e141c63af4081fda332}{elfclass}}
+\item 
+\mbox{\hyperlink{classrocr_1_1amd_1_1elf_1_1FileImage}{File\+Image}} \mbox{\hyperlink{classrocr_1_1amd_1_1elf_1_1GElfImage_ac32c78f0b78254dd3f84299644f7a3db}{img}}
+\item 
+const char $\ast$ \mbox{\hyperlink{classrocr_1_1amd_1_1elf_1_1GElfImage_a73f9fdceb34f6f9610b59b152f2ad29d}{buffer}}
+\item 
+size\+\_\+t \mbox{\hyperlink{classrocr_1_1amd_1_1elf_1_1GElfImage_a20fd148564ea6c540cb9085abe1d188d}{buffer\+Size}}
+\item 
+Elf $\ast$ \mbox{\hyperlink{classrocr_1_1amd_1_1elf_1_1GElfImage_a12de393df552c35af32ceef9882ea5b8}{e}}
+\item 
+GElf\+\_\+\+Ehdr \mbox{\hyperlink{classrocr_1_1amd_1_1elf_1_1GElfImage_a0ddedc8ff73ffcf5b24756e14b3d3534}{ehdr}}
+\item 
+\mbox{\hyperlink{classrocr_1_1amd_1_1elf_1_1GElfStringTable}{GElf\+String\+Table}} $\ast$ \mbox{\hyperlink{classrocr_1_1amd_1_1elf_1_1GElfImage_aa320f6ad92f1f778876d917058e6d774}{shstrtab\+Section}}
+\item 
+\mbox{\hyperlink{classrocr_1_1amd_1_1elf_1_1GElfStringTable}{GElf\+String\+Table}} $\ast$ \mbox{\hyperlink{classrocr_1_1amd_1_1elf_1_1GElfImage_a9ae928e3c035b05abcc73023120c26f3}{strtab\+Section}}
+\item 
+\mbox{\hyperlink{classrocr_1_1amd_1_1elf_1_1GElfSymbolTable}{GElf\+Symbol\+Table}} $\ast$ \mbox{\hyperlink{classrocr_1_1amd_1_1elf_1_1GElfImage_a40482fb568d7b067343c6ca8358d9bb0}{symtab\+Section}}
+\item 
+\mbox{\hyperlink{classrocr_1_1amd_1_1elf_1_1GElfNoteSection}{GElf\+Note\+Section}} $\ast$ \mbox{\hyperlink{classrocr_1_1amd_1_1elf_1_1GElfImage_acac60443d947a293e5f9211e94c40945}{note\+Section}}
+\item 
+std\+::vector$<$ std\+::unique\+\_\+ptr$<$ \mbox{\hyperlink{classrocr_1_1amd_1_1elf_1_1GElfSegment}{GElf\+Segment}} $>$ $>$ \mbox{\hyperlink{classrocr_1_1amd_1_1elf_1_1GElfImage_a0ab821402b29ca704897a33381edfda1}{segments}}
+\item 
+std\+::vector$<$ std\+::unique\+\_\+ptr$<$ \mbox{\hyperlink{classrocr_1_1amd_1_1elf_1_1GElfSection}{GElf\+Section}} $>$ $>$ \mbox{\hyperlink{classrocr_1_1amd_1_1elf_1_1GElfImage_aeaecab312c7bf5491da2c37d3290058d}{sections}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Friends}
+\begin{DoxyCompactItemize}
+\item 
+class \mbox{\hyperlink{classrocr_1_1amd_1_1elf_1_1GElfImage_a05fe3206fb81974277cdd4139d59339e}{GElf\+Section}}
+\item 
+class \mbox{\hyperlink{classrocr_1_1amd_1_1elf_1_1GElfImage_ac203427affc79e65d2abd63cadc37e3c}{GElf\+Symbol\+Table}}
+\item 
+class \mbox{\hyperlink{classrocr_1_1amd_1_1elf_1_1GElfImage_a5471e81b4b2401c5dd2ba5adecd12fce}{GElf\+Note\+Section}}
+\item 
+class \mbox{\hyperlink{classrocr_1_1amd_1_1elf_1_1GElfImage_a1a36a04e947009019588468a0946e018}{GElf\+Relocation\+Section}}
+\item 
+class \mbox{\hyperlink{classrocr_1_1amd_1_1elf_1_1GElfImage_a5b8578646983a69851bf3ee9a666f018}{GElf\+Segment}}
+\item 
+class \mbox{\hyperlink{classrocr_1_1amd_1_1elf_1_1GElfImage_a828257223368af71936ea464ae9a45d0}{GElf\+Symbol}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Additional Inherited Members}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classrocr_1_1amd_1_1elf_1_1GElfImage_a065f65886bb5b9ce8832d52bc8aa43d2}\label{classrocr_1_1amd_1_1elf_1_1GElfImage_a065f65886bb5b9ce8832d52bc8aa43d2}} 
+\index{rocr::amd::elf::GElfImage@{rocr::amd::elf::GElfImage}!GElfImage@{GElfImage}}
+\index{GElfImage@{GElfImage}!rocr::amd::elf::GElfImage@{rocr::amd::elf::GElfImage}}
+\doxysubsubsection{\texorpdfstring{GElfImage()}{GElfImage()}}
+{\footnotesize\ttfamily rocr\+::amd\+::elf\+::\+GElf\+Image\+::\+GElf\+Image (\begin{DoxyParamCaption}\item[{int}]{elfclass }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classrocr_1_1amd_1_1elf_1_1GElfImage_a21f8cd38105a1d933aa053fd1310b461}\label{classrocr_1_1amd_1_1elf_1_1GElfImage_a21f8cd38105a1d933aa053fd1310b461}} 
+\index{rocr::amd::elf::GElfImage@{rocr::amd::elf::GElfImage}!````~GElfImage@{$\sim$GElfImage}}
+\index{````~GElfImage@{$\sim$GElfImage}!rocr::amd::elf::GElfImage@{rocr::amd::elf::GElfImage}}
+\doxysubsubsection{\texorpdfstring{$\sim$GElfImage()}{~GElfImage()}}
+{\footnotesize\ttfamily rocr\+::amd\+::elf\+::\+GElf\+Image\+::$\sim$\+GElf\+Image (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classrocr_1_1amd_1_1elf_1_1GElfImage_ac6fa13625e7ac4207ff18d9d74f21f1b}\label{classrocr_1_1amd_1_1elf_1_1GElfImage_ac6fa13625e7ac4207ff18d9d74f21f1b}} 
+\index{rocr::amd::elf::GElfImage@{rocr::amd::elf::GElfImage}!ABIVersion@{ABIVersion}}
+\index{ABIVersion@{ABIVersion}!rocr::amd::elf::GElfImage@{rocr::amd::elf::GElfImage}}
+\doxysubsubsection{\texorpdfstring{ABIVersion()}{ABIVersion()}}
+{\footnotesize\ttfamily uint32\+\_\+t rocr\+::amd\+::elf\+::\+GElf\+Image\+::\+ABIVersion (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Implements \mbox{\hyperlink{classrocr_1_1amd_1_1elf_1_1Image_ab832310d306f54f22e9d022884fe5d35}{rocr\+::amd\+::elf\+::\+Image}}.
+
+\mbox{\Hypertarget{classrocr_1_1amd_1_1elf_1_1GElfImage_a495cfe13579b039f8fc4077a518ce4b2}\label{classrocr_1_1amd_1_1elf_1_1GElfImage_a495cfe13579b039f8fc4077a518ce4b2}} 
+\index{rocr::amd::elf::GElfImage@{rocr::amd::elf::GElfImage}!addNoteSection@{addNoteSection}}
+\index{addNoteSection@{addNoteSection}!rocr::amd::elf::GElfImage@{rocr::amd::elf::GElfImage}}
+\doxysubsubsection{\texorpdfstring{addNoteSection()}{addNoteSection()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classrocr_1_1amd_1_1elf_1_1GElfNoteSection}{GElf\+Note\+Section}} $\ast$ rocr\+::amd\+::elf\+::\+GElf\+Image\+::add\+Note\+Section (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{name }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Implements \mbox{\hyperlink{classrocr_1_1amd_1_1elf_1_1Image_afafbbc27482b16c3dd848b77317d049d}{rocr\+::amd\+::elf\+::\+Image}}.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classrocr_1_1amd_1_1elf_1_1GElfImage_a495cfe13579b039f8fc4077a518ce4b2_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classrocr_1_1amd_1_1elf_1_1GElfImage_a495cfe13579b039f8fc4077a518ce4b2_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classrocr_1_1amd_1_1elf_1_1GElfImage_ab6e1b27d2dd0a2d64f9c5bfc591e7f22}\label{classrocr_1_1amd_1_1elf_1_1GElfImage_ab6e1b27d2dd0a2d64f9c5bfc591e7f22}} 
+\index{rocr::amd::elf::GElfImage@{rocr::amd::elf::GElfImage}!addRelocationSection@{addRelocationSection}}
+\index{addRelocationSection@{addRelocationSection}!rocr::amd::elf::GElfImage@{rocr::amd::elf::GElfImage}}
+\doxysubsubsection{\texorpdfstring{addRelocationSection()}{addRelocationSection()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classrocr_1_1amd_1_1elf_1_1RelocationSection}{Relocation\+Section}} $\ast$ rocr\+::amd\+::elf\+::\+GElf\+Image\+::add\+Relocation\+Section (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classrocr_1_1amd_1_1elf_1_1Section}{Section}} $\ast$}]{sec,  }\item[{\mbox{\hyperlink{classrocr_1_1amd_1_1elf_1_1SymbolTable}{Symbol\+Table}} $\ast$}]{symtab }\end{DoxyParamCaption})}
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classrocr_1_1amd_1_1elf_1_1GElfImage_ab6e1b27d2dd0a2d64f9c5bfc591e7f22_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classrocr_1_1amd_1_1elf_1_1GElfImage_ab6e1b27d2dd0a2d64f9c5bfc591e7f22_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classrocr_1_1amd_1_1elf_1_1GElfImage_a80f09bb9e4df6d0eab208b5b447170fd}\label{classrocr_1_1amd_1_1elf_1_1GElfImage_a80f09bb9e4df6d0eab208b5b447170fd}} 
+\index{rocr::amd::elf::GElfImage@{rocr::amd::elf::GElfImage}!addSection@{addSection}}
+\index{addSection@{addSection}!rocr::amd::elf::GElfImage@{rocr::amd::elf::GElfImage}}
+\doxysubsubsection{\texorpdfstring{addSection()}{addSection()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classrocr_1_1amd_1_1elf_1_1Section}{Section}} $\ast$ rocr\+::amd\+::elf\+::\+GElf\+Image\+::add\+Section (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{name,  }\item[{uint32\+\_\+t}]{type,  }\item[{uint64\+\_\+t}]{flags = {\ttfamily 0},  }\item[{uint64\+\_\+t}]{entsize = {\ttfamily 0},  }\item[{\mbox{\hyperlink{classrocr_1_1amd_1_1elf_1_1Segment}{Segment}} $\ast$}]{segment = {\ttfamily 0} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Implements \mbox{\hyperlink{classrocr_1_1amd_1_1elf_1_1Image_a9aec71726a13ae4023b81486b8ab838c}{rocr\+::amd\+::elf\+::\+Image}}.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classrocr_1_1amd_1_1elf_1_1GElfImage_a80f09bb9e4df6d0eab208b5b447170fd_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classrocr_1_1amd_1_1elf_1_1GElfImage_a6c8f9d7a5a63e1d3c54ca5a7594c041a}\label{classrocr_1_1amd_1_1elf_1_1GElfImage_a6c8f9d7a5a63e1d3c54ca5a7594c041a}} 
+\index{rocr::amd::elf::GElfImage@{rocr::amd::elf::GElfImage}!addSegments@{addSegments}}
+\index{addSegments@{addSegments}!rocr::amd::elf::GElfImage@{rocr::amd::elf::GElfImage}}
+\doxysubsubsection{\texorpdfstring{addSegments()}{addSegments()}}
+{\footnotesize\ttfamily bool rocr\+::amd\+::elf\+::\+GElf\+Image\+::add\+Segments (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Implements \mbox{\hyperlink{classrocr_1_1amd_1_1elf_1_1Image_ae2dbfa6a4c01d06c89c6e69d10e42075}{rocr\+::amd\+::elf\+::\+Image}}.
+
+\mbox{\Hypertarget{classrocr_1_1amd_1_1elf_1_1GElfImage_ac794cbf80571b868a597f4524dbbb3b4}\label{classrocr_1_1amd_1_1elf_1_1GElfImage_ac794cbf80571b868a597f4524dbbb3b4}} 
+\index{rocr::amd::elf::GElfImage@{rocr::amd::elf::GElfImage}!addStringTable@{addStringTable}}
+\index{addStringTable@{addStringTable}!rocr::amd::elf::GElfImage@{rocr::amd::elf::GElfImage}}
+\doxysubsubsection{\texorpdfstring{addStringTable()}{addStringTable()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classrocr_1_1amd_1_1elf_1_1GElfStringTable}{GElf\+String\+Table}} $\ast$ rocr\+::amd\+::elf\+::\+GElf\+Image\+::add\+String\+Table (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{name }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Implements \mbox{\hyperlink{classrocr_1_1amd_1_1elf_1_1Image_a9c8d82184e9b4a2ae4900b68bc679d04}{rocr\+::amd\+::elf\+::\+Image}}.
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classrocr_1_1amd_1_1elf_1_1GElfImage_ac794cbf80571b868a597f4524dbbb3b4_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classrocr_1_1amd_1_1elf_1_1GElfImage_aad8599039f778fd0f46431c2ec947d0b}\label{classrocr_1_1amd_1_1elf_1_1GElfImage_aad8599039f778fd0f46431c2ec947d0b}} 
+\index{rocr::amd::elf::GElfImage@{rocr::amd::elf::GElfImage}!addSymbolTable@{addSymbolTable}}
+\index{addSymbolTable@{addSymbolTable}!rocr::amd::elf::GElfImage@{rocr::amd::elf::GElfImage}}
+\doxysubsubsection{\texorpdfstring{addSymbolTable()}{addSymbolTable()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classrocr_1_1amd_1_1elf_1_1GElfSymbolTable}{GElf\+Symbol\+Table}} $\ast$ rocr\+::amd\+::elf\+::\+GElf\+Image\+::add\+Symbol\+Table (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{name,  }\item[{\mbox{\hyperlink{classrocr_1_1amd_1_1elf_1_1StringTable}{String\+Table}} $\ast$}]{stab = {\ttfamily 0} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Implements \mbox{\hyperlink{classrocr_1_1amd_1_1elf_1_1Image_a58d8f4a8da4b0f951d6e4ff1f2c26674}{rocr\+::amd\+::elf\+::\+Image}}.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classrocr_1_1amd_1_1elf_1_1GElfImage_aad8599039f778fd0f46431c2ec947d0b_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classrocr_1_1amd_1_1elf_1_1GElfImage_aad8599039f778fd0f46431c2ec947d0b_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classrocr_1_1amd_1_1elf_1_1GElfImage_a6166add44fcced5205611b5f65cee899}\label{classrocr_1_1amd_1_1elf_1_1GElfImage_a6166add44fcced5205611b5f65cee899}} 
+\index{rocr::amd::elf::GElfImage@{rocr::amd::elf::GElfImage}!close@{close}}
+\index{close@{close}!rocr::amd::elf::GElfImage@{rocr::amd::elf::GElfImage}}
+\doxysubsubsection{\texorpdfstring{close()}{close()}}
+{\footnotesize\ttfamily bool rocr\+::amd\+::elf\+::\+GElf\+Image\+::close (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classrocr_1_1amd_1_1elf_1_1GElfImage_a33deb3e61a40a068e67c08ef4720656b}\label{classrocr_1_1amd_1_1elf_1_1GElfImage_a33deb3e61a40a068e67c08ef4720656b}} 
+\index{rocr::amd::elf::GElfImage@{rocr::amd::elf::GElfImage}!copyToBuffer@{copyToBuffer}}
+\index{copyToBuffer@{copyToBuffer}!rocr::amd::elf::GElfImage@{rocr::amd::elf::GElfImage}}
+\doxysubsubsection{\texorpdfstring{copyToBuffer()}{copyToBuffer()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily bool rocr\+::amd\+::elf\+::\+GElf\+Image\+::copy\+To\+Buffer (\begin{DoxyParamCaption}\item[{void $\ast$$\ast$}]{buf,  }\item[{size\+\_\+t $\ast$}]{size = {\ttfamily 0} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Implements \mbox{\hyperlink{classrocr_1_1amd_1_1elf_1_1Image_a7bace7ae74ecfbd81676c8e929f9fb29}{rocr\+::amd\+::elf\+::\+Image}}.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classrocr_1_1amd_1_1elf_1_1GElfImage_a33deb3e61a40a068e67c08ef4720656b_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classrocr_1_1amd_1_1elf_1_1GElfImage_a99587f2cd3bbd4f3d8b55e1fcf9f15e7}\label{classrocr_1_1amd_1_1elf_1_1GElfImage_a99587f2cd3bbd4f3d8b55e1fcf9f15e7}} 
+\index{rocr::amd::elf::GElfImage@{rocr::amd::elf::GElfImage}!copyToBuffer@{copyToBuffer}}
+\index{copyToBuffer@{copyToBuffer}!rocr::amd::elf::GElfImage@{rocr::amd::elf::GElfImage}}
+\doxysubsubsection{\texorpdfstring{copyToBuffer()}{copyToBuffer()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily bool rocr\+::amd\+::elf\+::\+GElf\+Image\+::copy\+To\+Buffer (\begin{DoxyParamCaption}\item[{void $\ast$}]{buf,  }\item[{size\+\_\+t}]{size }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Implements \mbox{\hyperlink{classrocr_1_1amd_1_1elf_1_1Image_ae9afe9661187699947a433ae2c242ef5}{rocr\+::amd\+::elf\+::\+Image}}.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classrocr_1_1amd_1_1elf_1_1GElfImage_a99587f2cd3bbd4f3d8b55e1fcf9f15e7_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classrocr_1_1amd_1_1elf_1_1GElfImage_ac49062ba6c8699b6711abca1b5e3fc55}\label{classrocr_1_1amd_1_1elf_1_1GElfImage_ac49062ba6c8699b6711abca1b5e3fc55}} 
+\index{rocr::amd::elf::GElfImage@{rocr::amd::elf::GElfImage}!data@{data}}
+\index{data@{data}!rocr::amd::elf::GElfImage@{rocr::amd::elf::GElfImage}}
+\doxysubsubsection{\texorpdfstring{data()}{data()}}
+{\footnotesize\ttfamily const char$\ast$ rocr\+::amd\+::elf\+::\+GElf\+Image\+::data (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Implements \mbox{\hyperlink{classrocr_1_1amd_1_1elf_1_1Image_ae5e531b08f6341397162f6c0a189b976}{rocr\+::amd\+::elf\+::\+Image}}.
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classrocr_1_1amd_1_1elf_1_1GElfImage_ac49062ba6c8699b6711abca1b5e3fc55_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classrocr_1_1amd_1_1elf_1_1GElfImage_acdf07fe5c3f440ce1a8cda6883833727}\label{classrocr_1_1amd_1_1elf_1_1GElfImage_acdf07fe5c3f440ce1a8cda6883833727}} 
+\index{rocr::amd::elf::GElfImage@{rocr::amd::elf::GElfImage}!eclass@{eclass}}
+\index{eclass@{eclass}!rocr::amd::elf::GElfImage@{rocr::amd::elf::GElfImage}}
+\doxysubsubsection{\texorpdfstring{eclass()}{eclass()}}
+{\footnotesize\ttfamily int rocr\+::amd\+::elf\+::\+GElf\+Image\+::eclass (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{classrocr_1_1amd_1_1elf_1_1GElfImage_a2d7fc17178792f216dab1bb8de0491ad}\label{classrocr_1_1amd_1_1elf_1_1GElfImage_a2d7fc17178792f216dab1bb8de0491ad}} 
+\index{rocr::amd::elf::GElfImage@{rocr::amd::elf::GElfImage}!EClass@{EClass}}
+\index{EClass@{EClass}!rocr::amd::elf::GElfImage@{rocr::amd::elf::GElfImage}}
+\doxysubsubsection{\texorpdfstring{EClass()}{EClass()}}
+{\footnotesize\ttfamily uint32\+\_\+t rocr\+::amd\+::elf\+::\+GElf\+Image\+::\+EClass (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Implements \mbox{\hyperlink{classrocr_1_1amd_1_1elf_1_1Image_a476deb0f4aae07e6ee457066664e129b}{rocr\+::amd\+::elf\+::\+Image}}.
+
+\mbox{\Hypertarget{classrocr_1_1amd_1_1elf_1_1GElfImage_a370508255fdae8486e4e2ff44c31e36b}\label{classrocr_1_1amd_1_1elf_1_1GElfImage_a370508255fdae8486e4e2ff44c31e36b}} 
+\index{rocr::amd::elf::GElfImage@{rocr::amd::elf::GElfImage}!EFlags@{EFlags}}
+\index{EFlags@{EFlags}!rocr::amd::elf::GElfImage@{rocr::amd::elf::GElfImage}}
+\doxysubsubsection{\texorpdfstring{EFlags()}{EFlags()}}
+{\footnotesize\ttfamily uint32\+\_\+t rocr\+::amd\+::elf\+::\+GElf\+Image\+::\+EFlags (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Implements \mbox{\hyperlink{classrocr_1_1amd_1_1elf_1_1Image_a00cd404125f93acebaa900ae0c35d4b2}{rocr\+::amd\+::elf\+::\+Image}}.
+
+\mbox{\Hypertarget{classrocr_1_1amd_1_1elf_1_1GElfImage_af13fe3dbad94863a2e5b6d17c2509d36}\label{classrocr_1_1amd_1_1elf_1_1GElfImage_af13fe3dbad94863a2e5b6d17c2509d36}} 
+\index{rocr::amd::elf::GElfImage@{rocr::amd::elf::GElfImage}!elfBegin@{elfBegin}}
+\index{elfBegin@{elfBegin}!rocr::amd::elf::GElfImage@{rocr::amd::elf::GElfImage}}
+\doxysubsubsection{\texorpdfstring{elfBegin()}{elfBegin()}}
+{\footnotesize\ttfamily bool rocr\+::amd\+::elf\+::\+GElf\+Image\+::elf\+Begin (\begin{DoxyParamCaption}\item[{Elf\+\_\+\+Cmd}]{cmd }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classrocr_1_1amd_1_1elf_1_1GElfImage_af13fe3dbad94863a2e5b6d17c2509d36_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classrocr_1_1amd_1_1elf_1_1GElfImage_af13fe3dbad94863a2e5b6d17c2509d36_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classrocr_1_1amd_1_1elf_1_1GElfImage_a41066d4606f8e3d4c6197d1e2e494847}\label{classrocr_1_1amd_1_1elf_1_1GElfImage_a41066d4606f8e3d4c6197d1e2e494847}} 
+\index{rocr::amd::elf::GElfImage@{rocr::amd::elf::GElfImage}!elfEnd@{elfEnd}}
+\index{elfEnd@{elfEnd}!rocr::amd::elf::GElfImage@{rocr::amd::elf::GElfImage}}
+\doxysubsubsection{\texorpdfstring{elfEnd()}{elfEnd()}}
+{\footnotesize\ttfamily bool rocr\+::amd\+::elf\+::\+GElf\+Image\+::elf\+End (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classrocr_1_1amd_1_1elf_1_1GElfImage_ae9478ad0ad72285b4276c4ba21c20cc3}\label{classrocr_1_1amd_1_1elf_1_1GElfImage_ae9478ad0ad72285b4276c4ba21c20cc3}} 
+\index{rocr::amd::elf::GElfImage@{rocr::amd::elf::GElfImage}!elfError@{elfError}}
+\index{elfError@{elfError}!rocr::amd::elf::GElfImage@{rocr::amd::elf::GElfImage}}
+\doxysubsubsection{\texorpdfstring{elfError()}{elfError()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily const char $\ast$ rocr\+::amd\+::elf\+::\+GElf\+Image\+::elf\+Error (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classrocr_1_1amd_1_1elf_1_1GElfImage_ae9478ad0ad72285b4276c4ba21c20cc3_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classrocr_1_1amd_1_1elf_1_1GElfImage_afa0e8ed126d2b55a76c7e993337ee2a5}\label{classrocr_1_1amd_1_1elf_1_1GElfImage_afa0e8ed126d2b55a76c7e993337ee2a5}} 
+\index{rocr::amd::elf::GElfImage@{rocr::amd::elf::GElfImage}!elfError@{elfError}}
+\index{elfError@{elfError}!rocr::amd::elf::GElfImage@{rocr::amd::elf::GElfImage}}
+\doxysubsubsection{\texorpdfstring{elfError()}{elfError()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily bool rocr\+::amd\+::elf\+::\+GElf\+Image\+::elf\+Error (\begin{DoxyParamCaption}\item[{const char $\ast$}]{msg }\end{DoxyParamCaption})}
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classrocr_1_1amd_1_1elf_1_1GElfImage_afa0e8ed126d2b55a76c7e993337ee2a5_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classrocr_1_1amd_1_1elf_1_1GElfImage_afa0e8ed126d2b55a76c7e993337ee2a5_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classrocr_1_1amd_1_1elf_1_1GElfImage_a467557972f18a3ff98deeb72fd550728}\label{classrocr_1_1amd_1_1elf_1_1GElfImage_a467557972f18a3ff98deeb72fd550728}} 
+\index{rocr::amd::elf::GElfImage@{rocr::amd::elf::GElfImage}!etype@{etype}}
+\index{etype@{etype}!rocr::amd::elf::GElfImage@{rocr::amd::elf::GElfImage}}
+\doxysubsubsection{\texorpdfstring{etype()}{etype()}}
+{\footnotesize\ttfamily uint16\+\_\+t rocr\+::amd\+::elf\+::\+GElf\+Image\+::etype (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+\mbox{\Hypertarget{classrocr_1_1amd_1_1elf_1_1GElfImage_ad2022855c7522efc1355a9dc6e031bb8}\label{classrocr_1_1amd_1_1elf_1_1GElfImage_ad2022855c7522efc1355a9dc6e031bb8}} 
+\index{rocr::amd::elf::GElfImage@{rocr::amd::elf::GElfImage}!Freeze@{Freeze}}
+\index{Freeze@{Freeze}!rocr::amd::elf::GElfImage@{rocr::amd::elf::GElfImage}}
+\doxysubsubsection{\texorpdfstring{Freeze()}{Freeze()}}
+{\footnotesize\ttfamily bool rocr\+::amd\+::elf\+::\+GElf\+Image\+::\+Freeze (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Implements \mbox{\hyperlink{classrocr_1_1amd_1_1elf_1_1Image_a8d45df60cf72526c54e0a20c6f1efa49}{rocr\+::amd\+::elf\+::\+Image}}.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classrocr_1_1amd_1_1elf_1_1GElfImage_ad2022855c7522efc1355a9dc6e031bb8_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classrocr_1_1amd_1_1elf_1_1GElfImage_aefe2879b2a8310430508417927a61da7}\label{classrocr_1_1amd_1_1elf_1_1GElfImage_aefe2879b2a8310430508417927a61da7}} 
+\index{rocr::amd::elf::GElfImage@{rocr::amd::elf::GElfImage}!getStringTable@{getStringTable}}
+\index{getStringTable@{getStringTable}!rocr::amd::elf::GElfImage@{rocr::amd::elf::GElfImage}}
+\doxysubsubsection{\texorpdfstring{getStringTable()}{getStringTable()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classrocr_1_1amd_1_1elf_1_1GElfStringTable}{GElf\+String\+Table}} $\ast$ rocr\+::amd\+::elf\+::\+GElf\+Image\+::get\+String\+Table (\begin{DoxyParamCaption}\item[{uint16\+\_\+t}]{index }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Implements \mbox{\hyperlink{classrocr_1_1amd_1_1elf_1_1Image_a3a35bac10b5f0253dc2535c107dcbf16}{rocr\+::amd\+::elf\+::\+Image}}.
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classrocr_1_1amd_1_1elf_1_1GElfImage_aefe2879b2a8310430508417927a61da7_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classrocr_1_1amd_1_1elf_1_1GElfImage_a245a6df6a4a68c97c308248208f1641b}\label{classrocr_1_1amd_1_1elf_1_1GElfImage_a245a6df6a4a68c97c308248208f1641b}} 
+\index{rocr::amd::elf::GElfImage@{rocr::amd::elf::GElfImage}!getSymtab@{getSymtab}}
+\index{getSymtab@{getSymtab}!rocr::amd::elf::GElfImage@{rocr::amd::elf::GElfImage}}
+\doxysubsubsection{\texorpdfstring{getSymtab()}{getSymtab()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classrocr_1_1amd_1_1elf_1_1GElfSymbolTable}{GElf\+Symbol\+Table}}$\ast$ rocr\+::amd\+::elf\+::\+GElf\+Image\+::get\+Symtab (\begin{DoxyParamCaption}\item[{uint16\+\_\+t}]{index }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Implements \mbox{\hyperlink{classrocr_1_1amd_1_1elf_1_1Image_a6a9de2074779c98cadb46e85b9b504d0}{rocr\+::amd\+::elf\+::\+Image}}.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classrocr_1_1amd_1_1elf_1_1GElfImage_a245a6df6a4a68c97c308248208f1641b_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classrocr_1_1amd_1_1elf_1_1GElfImage_a245a6df6a4a68c97c308248208f1641b_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classrocr_1_1amd_1_1elf_1_1GElfImage_a2be112f3dfc776934c07afcf83ebde55}\label{classrocr_1_1amd_1_1elf_1_1GElfImage_a2be112f3dfc776934c07afcf83ebde55}} 
+\index{rocr::amd::elf::GElfImage@{rocr::amd::elf::GElfImage}!imgError@{imgError}}
+\index{imgError@{imgError}!rocr::amd::elf::GElfImage@{rocr::amd::elf::GElfImage}}
+\doxysubsubsection{\texorpdfstring{imgError()}{imgError()}}
+{\footnotesize\ttfamily bool rocr\+::amd\+::elf\+::\+GElf\+Image\+::img\+Error (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classrocr_1_1amd_1_1elf_1_1GElfImage_a2be112f3dfc776934c07afcf83ebde55_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classrocr_1_1amd_1_1elf_1_1GElfImage_a2be112f3dfc776934c07afcf83ebde55_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classrocr_1_1amd_1_1elf_1_1GElfImage_a363cb8dd4771b70716fe962ad49f23c7}\label{classrocr_1_1amd_1_1elf_1_1GElfImage_a363cb8dd4771b70716fe962ad49f23c7}} 
+\index{rocr::amd::elf::GElfImage@{rocr::amd::elf::GElfImage}!initAsBuffer@{initAsBuffer}}
+\index{initAsBuffer@{initAsBuffer}!rocr::amd::elf::GElfImage@{rocr::amd::elf::GElfImage}}
+\doxysubsubsection{\texorpdfstring{initAsBuffer()}{initAsBuffer()}}
+{\footnotesize\ttfamily bool rocr\+::amd\+::elf\+::\+GElf\+Image\+::init\+As\+Buffer (\begin{DoxyParamCaption}\item[{const void $\ast$}]{buffer,  }\item[{size\+\_\+t}]{size }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Implements \mbox{\hyperlink{classrocr_1_1amd_1_1elf_1_1Image_aca772c64ce76b69fc870ac7ec47af644}{rocr\+::amd\+::elf\+::\+Image}}.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classrocr_1_1amd_1_1elf_1_1GElfImage_a363cb8dd4771b70716fe962ad49f23c7_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classrocr_1_1amd_1_1elf_1_1GElfImage_ac6f48fa261953c3aa21f7ffc00409c28}\label{classrocr_1_1amd_1_1elf_1_1GElfImage_ac6f48fa261953c3aa21f7ffc00409c28}} 
+\index{rocr::amd::elf::GElfImage@{rocr::amd::elf::GElfImage}!initFromBuffer@{initFromBuffer}}
+\index{initFromBuffer@{initFromBuffer}!rocr::amd::elf::GElfImage@{rocr::amd::elf::GElfImage}}
+\doxysubsubsection{\texorpdfstring{initFromBuffer()}{initFromBuffer()}}
+{\footnotesize\ttfamily bool rocr\+::amd\+::elf\+::\+GElf\+Image\+::init\+From\+Buffer (\begin{DoxyParamCaption}\item[{const void $\ast$}]{buffer,  }\item[{size\+\_\+t}]{size }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Implements \mbox{\hyperlink{classrocr_1_1amd_1_1elf_1_1Image_a4d6068e63e8db259cf4f08994c41c36a}{rocr\+::amd\+::elf\+::\+Image}}.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classrocr_1_1amd_1_1elf_1_1GElfImage_ac6f48fa261953c3aa21f7ffc00409c28_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classrocr_1_1amd_1_1elf_1_1GElfImage_a65731230ea2ab73010704bdefab12409}\label{classrocr_1_1amd_1_1elf_1_1GElfImage_a65731230ea2ab73010704bdefab12409}} 
+\index{rocr::amd::elf::GElfImage@{rocr::amd::elf::GElfImage}!initNew@{initNew}}
+\index{initNew@{initNew}!rocr::amd::elf::GElfImage@{rocr::amd::elf::GElfImage}}
+\doxysubsubsection{\texorpdfstring{initNew()}{initNew()}}
+{\footnotesize\ttfamily bool rocr\+::amd\+::elf\+::\+GElf\+Image\+::init\+New (\begin{DoxyParamCaption}\item[{uint16\+\_\+t}]{machine,  }\item[{uint16\+\_\+t}]{type,  }\item[{uint8\+\_\+t}]{os\+\_\+abi = {\ttfamily 0},  }\item[{uint8\+\_\+t}]{abi\+\_\+version = {\ttfamily 0},  }\item[{uint32\+\_\+t}]{e\+\_\+flags = {\ttfamily 0} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Implements \mbox{\hyperlink{classrocr_1_1amd_1_1elf_1_1Image_a8ef6098b08c8ff9313a6adfb741a25da}{rocr\+::amd\+::elf\+::\+Image}}.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classrocr_1_1amd_1_1elf_1_1GElfImage_a65731230ea2ab73010704bdefab12409_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classrocr_1_1amd_1_1elf_1_1GElfImage_a72419f3a0383ccfde1423bc874af9323}\label{classrocr_1_1amd_1_1elf_1_1GElfImage_a72419f3a0383ccfde1423bc874af9323}} 
+\index{rocr::amd::elf::GElfImage@{rocr::amd::elf::GElfImage}!initSegment@{initSegment}}
+\index{initSegment@{initSegment}!rocr::amd::elf::GElfImage@{rocr::amd::elf::GElfImage}}
+\doxysubsubsection{\texorpdfstring{initSegment()}{initSegment()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classrocr_1_1amd_1_1elf_1_1Segment}{Segment}} $\ast$ rocr\+::amd\+::elf\+::\+GElf\+Image\+::init\+Segment (\begin{DoxyParamCaption}\item[{uint32\+\_\+t}]{type,  }\item[{uint32\+\_\+t}]{flags,  }\item[{uint64\+\_\+t}]{paddr = {\ttfamily 0} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Implements \mbox{\hyperlink{classrocr_1_1amd_1_1elf_1_1Image_a23fdc11bd814bb42ef452b1adb62cfb0}{rocr\+::amd\+::elf\+::\+Image}}.
+
+\mbox{\Hypertarget{classrocr_1_1amd_1_1elf_1_1GElfImage_a762dd9f44ec7038ad54b61a0b2a519c4}\label{classrocr_1_1amd_1_1elf_1_1GElfImage_a762dd9f44ec7038ad54b61a0b2a519c4}} 
+\index{rocr::amd::elf::GElfImage@{rocr::amd::elf::GElfImage}!loadFromFile@{loadFromFile}}
+\index{loadFromFile@{loadFromFile}!rocr::amd::elf::GElfImage@{rocr::amd::elf::GElfImage}}
+\doxysubsubsection{\texorpdfstring{loadFromFile()}{loadFromFile()}}
+{\footnotesize\ttfamily bool rocr\+::amd\+::elf\+::\+GElf\+Image\+::load\+From\+File (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{filename }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Implements \mbox{\hyperlink{classrocr_1_1amd_1_1elf_1_1Image_a79f58067b2a2394e00f02fca7c1d85fe}{rocr\+::amd\+::elf\+::\+Image}}.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classrocr_1_1amd_1_1elf_1_1GElfImage_a762dd9f44ec7038ad54b61a0b2a519c4_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classrocr_1_1amd_1_1elf_1_1GElfImage_aa614816125758853cf760f2e3e2447b4}\label{classrocr_1_1amd_1_1elf_1_1GElfImage_aa614816125758853cf760f2e3e2447b4}} 
+\index{rocr::amd::elf::GElfImage@{rocr::amd::elf::GElfImage}!machine@{machine}}
+\index{machine@{machine}!rocr::amd::elf::GElfImage@{rocr::amd::elf::GElfImage}}
+\doxysubsubsection{\texorpdfstring{machine()}{machine()}}
+{\footnotesize\ttfamily uint16\+\_\+t rocr\+::amd\+::elf\+::\+GElf\+Image\+::machine (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classrocr_1_1amd_1_1elf_1_1GElfImage_aa614816125758853cf760f2e3e2447b4_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classrocr_1_1amd_1_1elf_1_1GElfImage_ab19d82189abe1865f4e3c94b51a8ad0e}\label{classrocr_1_1amd_1_1elf_1_1GElfImage_ab19d82189abe1865f4e3c94b51a8ad0e}} 
+\index{rocr::amd::elf::GElfImage@{rocr::amd::elf::GElfImage}!Machine@{Machine}}
+\index{Machine@{Machine}!rocr::amd::elf::GElfImage@{rocr::amd::elf::GElfImage}}
+\doxysubsubsection{\texorpdfstring{Machine()}{Machine()}}
+{\footnotesize\ttfamily uint16\+\_\+t rocr\+::amd\+::elf\+::\+GElf\+Image\+::\+Machine (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Implements \mbox{\hyperlink{classrocr_1_1amd_1_1elf_1_1Image_a4f43c7148402aaf15111118d174bc820}{rocr\+::amd\+::elf\+::\+Image}}.
+
+\mbox{\Hypertarget{classrocr_1_1amd_1_1elf_1_1GElfImage_a7d10e761692481425f3f9adc05ba69c0}\label{classrocr_1_1amd_1_1elf_1_1GElfImage_a7d10e761692481425f3f9adc05ba69c0}} 
+\index{rocr::amd::elf::GElfImage@{rocr::amd::elf::GElfImage}!note@{note}}
+\index{note@{note}!rocr::amd::elf::GElfImage@{rocr::amd::elf::GElfImage}}
+\doxysubsubsection{\texorpdfstring{note()}{note()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classrocr_1_1amd_1_1elf_1_1GElfNoteSection}{GElf\+Note\+Section}} $\ast$ rocr\+::amd\+::elf\+::\+GElf\+Image\+::note (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Implements \mbox{\hyperlink{classrocr_1_1amd_1_1elf_1_1Image_a6b293abb1464097ef7c2468614d205be}{rocr\+::amd\+::elf\+::\+Image}}.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classrocr_1_1amd_1_1elf_1_1GElfImage_a7d10e761692481425f3f9adc05ba69c0_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classrocr_1_1amd_1_1elf_1_1GElfImage_a7d10e761692481425f3f9adc05ba69c0_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classrocr_1_1amd_1_1elf_1_1GElfImage_a82b20468f693e78d70678d7a3f57309f}\label{classrocr_1_1amd_1_1elf_1_1GElfImage_a82b20468f693e78d70678d7a3f57309f}} 
+\index{rocr::amd::elf::GElfImage@{rocr::amd::elf::GElfImage}!OsAbi@{OsAbi}}
+\index{OsAbi@{OsAbi}!rocr::amd::elf::GElfImage@{rocr::amd::elf::GElfImage}}
+\doxysubsubsection{\texorpdfstring{OsAbi()}{OsAbi()}}
+{\footnotesize\ttfamily uint32\+\_\+t rocr\+::amd\+::elf\+::\+GElf\+Image\+::\+Os\+Abi (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Implements \mbox{\hyperlink{classrocr_1_1amd_1_1elf_1_1Image_a764eedec3fd54031f83d3ce03ecd8236}{rocr\+::amd\+::elf\+::\+Image}}.
+
+\mbox{\Hypertarget{classrocr_1_1amd_1_1elf_1_1GElfImage_a4ec12a8c7116250f2f87451f6b31d596}\label{classrocr_1_1amd_1_1elf_1_1GElfImage_a4ec12a8c7116250f2f87451f6b31d596}} 
+\index{rocr::amd::elf::GElfImage@{rocr::amd::elf::GElfImage}!pullElf@{pullElf}}
+\index{pullElf@{pullElf}!rocr::amd::elf::GElfImage@{rocr::amd::elf::GElfImage}}
+\doxysubsubsection{\texorpdfstring{pullElf()}{pullElf()}}
+{\footnotesize\ttfamily bool rocr\+::amd\+::elf\+::\+GElf\+Image\+::pull\+Elf (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classrocr_1_1amd_1_1elf_1_1GElfImage_a4ec12a8c7116250f2f87451f6b31d596_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classrocr_1_1amd_1_1elf_1_1GElfImage_a4ec12a8c7116250f2f87451f6b31d596_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classrocr_1_1amd_1_1elf_1_1GElfImage_afeb8b55171f4ee9ad1add533299cc7ba}\label{classrocr_1_1amd_1_1elf_1_1GElfImage_afeb8b55171f4ee9ad1add533299cc7ba}} 
+\index{rocr::amd::elf::GElfImage@{rocr::amd::elf::GElfImage}!push@{push}}
+\index{push@{push}!rocr::amd::elf::GElfImage@{rocr::amd::elf::GElfImage}}
+\doxysubsubsection{\texorpdfstring{push()}{push()}}
+{\footnotesize\ttfamily bool rocr\+::amd\+::elf\+::\+GElf\+Image\+::push (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classrocr_1_1amd_1_1elf_1_1GElfImage_afeb8b55171f4ee9ad1add533299cc7ba_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classrocr_1_1amd_1_1elf_1_1GElfImage_afeb8b55171f4ee9ad1add533299cc7ba_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classrocr_1_1amd_1_1elf_1_1GElfImage_a3ddaf85c2b1db5f78c79aa9d58d14b34}\label{classrocr_1_1amd_1_1elf_1_1GElfImage_a3ddaf85c2b1db5f78c79aa9d58d14b34}} 
+\index{rocr::amd::elf::GElfImage@{rocr::amd::elf::GElfImage}!push0@{push0}}
+\index{push0@{push0}!rocr::amd::elf::GElfImage@{rocr::amd::elf::GElfImage}}
+\doxysubsubsection{\texorpdfstring{push0()}{push0()}}
+{\footnotesize\ttfamily bool rocr\+::amd\+::elf\+::\+GElf\+Image\+::push0 (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classrocr_1_1amd_1_1elf_1_1GElfImage_a3ddaf85c2b1db5f78c79aa9d58d14b34_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classrocr_1_1amd_1_1elf_1_1GElfImage_a3ddaf85c2b1db5f78c79aa9d58d14b34_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classrocr_1_1amd_1_1elf_1_1GElfImage_a6d9e8ddd5f7016ef0bfbab9cdb50dcbc}\label{classrocr_1_1amd_1_1elf_1_1GElfImage_a6d9e8ddd5f7016ef0bfbab9cdb50dcbc}} 
+\index{rocr::amd::elf::GElfImage@{rocr::amd::elf::GElfImage}!relocationSection@{relocationSection}}
+\index{relocationSection@{relocationSection}!rocr::amd::elf::GElfImage@{rocr::amd::elf::GElfImage}}
+\doxysubsubsection{\texorpdfstring{relocationSection()}{relocationSection()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classrocr_1_1amd_1_1elf_1_1RelocationSection}{Relocation\+Section}} $\ast$ rocr\+::amd\+::elf\+::\+GElf\+Image\+::relocation\+Section (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classrocr_1_1amd_1_1elf_1_1Section}{Section}} $\ast$}]{sec,  }\item[{\mbox{\hyperlink{classrocr_1_1amd_1_1elf_1_1SymbolTable}{Symbol\+Table}} $\ast$}]{symtab = {\ttfamily 0} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Implements \mbox{\hyperlink{classrocr_1_1amd_1_1elf_1_1Image_ae2a373971df277a83b6be9593883f10c}{rocr\+::amd\+::elf\+::\+Image}}.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classrocr_1_1amd_1_1elf_1_1GElfImage_a6d9e8ddd5f7016ef0bfbab9cdb50dcbc_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classrocr_1_1amd_1_1elf_1_1GElfImage_a2d6e5f23442e1c54b8ec2feca6abc4dd}\label{classrocr_1_1amd_1_1elf_1_1GElfImage_a2d6e5f23442e1c54b8ec2feca6abc4dd}} 
+\index{rocr::amd::elf::GElfImage@{rocr::amd::elf::GElfImage}!saveToFile@{saveToFile}}
+\index{saveToFile@{saveToFile}!rocr::amd::elf::GElfImage@{rocr::amd::elf::GElfImage}}
+\doxysubsubsection{\texorpdfstring{saveToFile()}{saveToFile()}}
+{\footnotesize\ttfamily bool rocr\+::amd\+::elf\+::\+GElf\+Image\+::save\+To\+File (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{filename }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Implements \mbox{\hyperlink{classrocr_1_1amd_1_1elf_1_1Image_af929ce98454a01d1c98c1af788f27f84}{rocr\+::amd\+::elf\+::\+Image}}.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classrocr_1_1amd_1_1elf_1_1GElfImage_a2d6e5f23442e1c54b8ec2feca6abc4dd_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classrocr_1_1amd_1_1elf_1_1GElfImage_a254006468a49f726eeba49137b1aaf8c}\label{classrocr_1_1amd_1_1elf_1_1GElfImage_a254006468a49f726eeba49137b1aaf8c}} 
+\index{rocr::amd::elf::GElfImage@{rocr::amd::elf::GElfImage}!section@{section}}
+\index{section@{section}!rocr::amd::elf::GElfImage@{rocr::amd::elf::GElfImage}}
+\doxysubsubsection{\texorpdfstring{section()}{section()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classrocr_1_1amd_1_1elf_1_1GElfSection}{GElf\+Section}}$\ast$ rocr\+::amd\+::elf\+::\+GElf\+Image\+::section (\begin{DoxyParamCaption}\item[{size\+\_\+t}]{i }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Implements \mbox{\hyperlink{classrocr_1_1amd_1_1elf_1_1Image_ab217b89bd8b8ce9a408fc82182891323}{rocr\+::amd\+::elf\+::\+Image}}.
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classrocr_1_1amd_1_1elf_1_1GElfImage_a254006468a49f726eeba49137b1aaf8c_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classrocr_1_1amd_1_1elf_1_1GElfImage_ae7e5b8a22731285b64ae6c5fca5bb1fd}\label{classrocr_1_1amd_1_1elf_1_1GElfImage_ae7e5b8a22731285b64ae6c5fca5bb1fd}} 
+\index{rocr::amd::elf::GElfImage@{rocr::amd::elf::GElfImage}!sectionByVAddr@{sectionByVAddr}}
+\index{sectionByVAddr@{sectionByVAddr}!rocr::amd::elf::GElfImage@{rocr::amd::elf::GElfImage}}
+\doxysubsubsection{\texorpdfstring{sectionByVAddr()}{sectionByVAddr()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classrocr_1_1amd_1_1elf_1_1Section}{Section}} $\ast$ rocr\+::amd\+::elf\+::\+GElf\+Image\+::section\+By\+VAddr (\begin{DoxyParamCaption}\item[{uint64\+\_\+t}]{vaddr }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Implements \mbox{\hyperlink{classrocr_1_1amd_1_1elf_1_1Image_ab681fb44f29be592acefe123ce2f3e46}{rocr\+::amd\+::elf\+::\+Image}}.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classrocr_1_1amd_1_1elf_1_1GElfImage_ae7e5b8a22731285b64ae6c5fca5bb1fd_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classrocr_1_1amd_1_1elf_1_1GElfImage_a56f66e38b911618e365ae83eae8ea4f8}\label{classrocr_1_1amd_1_1elf_1_1GElfImage_a56f66e38b911618e365ae83eae8ea4f8}} 
+\index{rocr::amd::elf::GElfImage@{rocr::amd::elf::GElfImage}!sectionCount@{sectionCount}}
+\index{sectionCount@{sectionCount}!rocr::amd::elf::GElfImage@{rocr::amd::elf::GElfImage}}
+\doxysubsubsection{\texorpdfstring{sectionCount()}{sectionCount()}}
+{\footnotesize\ttfamily size\+\_\+t rocr\+::amd\+::elf\+::\+GElf\+Image\+::section\+Count (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Implements \mbox{\hyperlink{classrocr_1_1amd_1_1elf_1_1Image_a59130cf5a2438d0b0b39f210a8253fb9}{rocr\+::amd\+::elf\+::\+Image}}.
+
+\mbox{\Hypertarget{classrocr_1_1amd_1_1elf_1_1GElfImage_a9d9f60d4fed3e0ed5d7950122ba4a21a}\label{classrocr_1_1amd_1_1elf_1_1GElfImage_a9d9f60d4fed3e0ed5d7950122ba4a21a}} 
+\index{rocr::amd::elf::GElfImage@{rocr::amd::elf::GElfImage}!segment@{segment}}
+\index{segment@{segment}!rocr::amd::elf::GElfImage@{rocr::amd::elf::GElfImage}}
+\doxysubsubsection{\texorpdfstring{segment()}{segment()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classrocr_1_1amd_1_1elf_1_1GElfSegment}{GElf\+Segment}}$\ast$ rocr\+::amd\+::elf\+::\+GElf\+Image\+::segment (\begin{DoxyParamCaption}\item[{size\+\_\+t}]{i }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Implements \mbox{\hyperlink{classrocr_1_1amd_1_1elf_1_1Image_a42e2bbc9cc22dd365341bd2568df004a}{rocr\+::amd\+::elf\+::\+Image}}.
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classrocr_1_1amd_1_1elf_1_1GElfImage_a9d9f60d4fed3e0ed5d7950122ba4a21a_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classrocr_1_1amd_1_1elf_1_1GElfImage_a183d61d19b825c02e9ea06a95c262e9c}\label{classrocr_1_1amd_1_1elf_1_1GElfImage_a183d61d19b825c02e9ea06a95c262e9c}} 
+\index{rocr::amd::elf::GElfImage@{rocr::amd::elf::GElfImage}!segmentByVAddr@{segmentByVAddr}}
+\index{segmentByVAddr@{segmentByVAddr}!rocr::amd::elf::GElfImage@{rocr::amd::elf::GElfImage}}
+\doxysubsubsection{\texorpdfstring{segmentByVAddr()}{segmentByVAddr()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classrocr_1_1amd_1_1elf_1_1Segment}{Segment}} $\ast$ rocr\+::amd\+::elf\+::\+GElf\+Image\+::segment\+By\+VAddr (\begin{DoxyParamCaption}\item[{uint64\+\_\+t}]{vaddr }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Implements \mbox{\hyperlink{classrocr_1_1amd_1_1elf_1_1Image_a893bfff5748d0330f99a968b2a947de9}{rocr\+::amd\+::elf\+::\+Image}}.
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classrocr_1_1amd_1_1elf_1_1GElfImage_a183d61d19b825c02e9ea06a95c262e9c_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classrocr_1_1amd_1_1elf_1_1GElfImage_ac390d9c9770eebc4f200b303b7370dc0}\label{classrocr_1_1amd_1_1elf_1_1GElfImage_ac390d9c9770eebc4f200b303b7370dc0}} 
+\index{rocr::amd::elf::GElfImage@{rocr::amd::elf::GElfImage}!segmentCount@{segmentCount}}
+\index{segmentCount@{segmentCount}!rocr::amd::elf::GElfImage@{rocr::amd::elf::GElfImage}}
+\doxysubsubsection{\texorpdfstring{segmentCount()}{segmentCount()}}
+{\footnotesize\ttfamily size\+\_\+t rocr\+::amd\+::elf\+::\+GElf\+Image\+::segment\+Count (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Implements \mbox{\hyperlink{classrocr_1_1amd_1_1elf_1_1Image_ab7902ed246c2da7e65c513857577fc0b}{rocr\+::amd\+::elf\+::\+Image}}.
+
+\mbox{\Hypertarget{classrocr_1_1amd_1_1elf_1_1GElfImage_a308dde7e9b3aa52feeaee464788380f4}\label{classrocr_1_1amd_1_1elf_1_1GElfImage_a308dde7e9b3aa52feeaee464788380f4}} 
+\index{rocr::amd::elf::GElfImage@{rocr::amd::elf::GElfImage}!shstrtab@{shstrtab}}
+\index{shstrtab@{shstrtab}!rocr::amd::elf::GElfImage@{rocr::amd::elf::GElfImage}}
+\doxysubsubsection{\texorpdfstring{shstrtab()}{shstrtab()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classrocr_1_1amd_1_1elf_1_1GElfStringTable}{GElf\+String\+Table}} $\ast$ rocr\+::amd\+::elf\+::\+GElf\+Image\+::shstrtab (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Implements \mbox{\hyperlink{classrocr_1_1amd_1_1elf_1_1Image_aec996bbadf39257baee02c630d344e9a}{rocr\+::amd\+::elf\+::\+Image}}.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classrocr_1_1amd_1_1elf_1_1GElfImage_a308dde7e9b3aa52feeaee464788380f4_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classrocr_1_1amd_1_1elf_1_1GElfImage_a308dde7e9b3aa52feeaee464788380f4_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classrocr_1_1amd_1_1elf_1_1GElfImage_afd73f9e0fd31f9f2952491a277478b52}\label{classrocr_1_1amd_1_1elf_1_1GElfImage_afd73f9e0fd31f9f2952491a277478b52}} 
+\index{rocr::amd::elf::GElfImage@{rocr::amd::elf::GElfImage}!size@{size}}
+\index{size@{size}!rocr::amd::elf::GElfImage@{rocr::amd::elf::GElfImage}}
+\doxysubsubsection{\texorpdfstring{size()}{size()}}
+{\footnotesize\ttfamily uint64\+\_\+t rocr\+::amd\+::elf\+::\+GElf\+Image\+::size (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Implements \mbox{\hyperlink{classrocr_1_1amd_1_1elf_1_1Image_aa55911913057a6c292d271504001f042}{rocr\+::amd\+::elf\+::\+Image}}.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classrocr_1_1amd_1_1elf_1_1GElfImage_afd73f9e0fd31f9f2952491a277478b52_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classrocr_1_1amd_1_1elf_1_1GElfImage_afd73f9e0fd31f9f2952491a277478b52_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classrocr_1_1amd_1_1elf_1_1GElfImage_af184fe7428e04f7d96d2c268ecf4665b}\label{classrocr_1_1amd_1_1elf_1_1GElfImage_af184fe7428e04f7d96d2c268ecf4665b}} 
+\index{rocr::amd::elf::GElfImage@{rocr::amd::elf::GElfImage}!strtab@{strtab}}
+\index{strtab@{strtab}!rocr::amd::elf::GElfImage@{rocr::amd::elf::GElfImage}}
+\doxysubsubsection{\texorpdfstring{strtab()}{strtab()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classrocr_1_1amd_1_1elf_1_1GElfStringTable}{GElf\+String\+Table}} $\ast$ rocr\+::amd\+::elf\+::\+GElf\+Image\+::strtab (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Implements \mbox{\hyperlink{classrocr_1_1amd_1_1elf_1_1Image_ab4afce0c551efd5bff406e0b9a492831}{rocr\+::amd\+::elf\+::\+Image}}.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classrocr_1_1amd_1_1elf_1_1GElfImage_af184fe7428e04f7d96d2c268ecf4665b_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classrocr_1_1amd_1_1elf_1_1GElfImage_af184fe7428e04f7d96d2c268ecf4665b_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classrocr_1_1amd_1_1elf_1_1GElfImage_a6c0df47c4346a936b61ce015b22568a1}\label{classrocr_1_1amd_1_1elf_1_1GElfImage_a6c0df47c4346a936b61ce015b22568a1}} 
+\index{rocr::amd::elf::GElfImage@{rocr::amd::elf::GElfImage}!symtab@{symtab}}
+\index{symtab@{symtab}!rocr::amd::elf::GElfImage@{rocr::amd::elf::GElfImage}}
+\doxysubsubsection{\texorpdfstring{symtab()}{symtab()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classrocr_1_1amd_1_1elf_1_1GElfSymbolTable}{GElf\+Symbol\+Table}} $\ast$ rocr\+::amd\+::elf\+::\+GElf\+Image\+::symtab (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Implements \mbox{\hyperlink{classrocr_1_1amd_1_1elf_1_1Image_aba149019e7092f58169648126fa608a8}{rocr\+::amd\+::elf\+::\+Image}}.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classrocr_1_1amd_1_1elf_1_1GElfImage_a6c0df47c4346a936b61ce015b22568a1_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classrocr_1_1amd_1_1elf_1_1GElfImage_a6c0df47c4346a936b61ce015b22568a1_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classrocr_1_1amd_1_1elf_1_1GElfImage_a631c3551b541c3f182cefa5739920458}\label{classrocr_1_1amd_1_1elf_1_1GElfImage_a631c3551b541c3f182cefa5739920458}} 
+\index{rocr::amd::elf::GElfImage@{rocr::amd::elf::GElfImage}!Type@{Type}}
+\index{Type@{Type}!rocr::amd::elf::GElfImage@{rocr::amd::elf::GElfImage}}
+\doxysubsubsection{\texorpdfstring{Type()}{Type()}}
+{\footnotesize\ttfamily uint16\+\_\+t rocr\+::amd\+::elf\+::\+GElf\+Image\+::\+Type (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Implements \mbox{\hyperlink{classrocr_1_1amd_1_1elf_1_1Image_afe314de624f8e5d517c4a14930a081c7}{rocr\+::amd\+::elf\+::\+Image}}.
+
+\mbox{\Hypertarget{classrocr_1_1amd_1_1elf_1_1GElfImage_a68c304c7c80346875efa908dd772d2ec}\label{classrocr_1_1amd_1_1elf_1_1GElfImage_a68c304c7c80346875efa908dd772d2ec}} 
+\index{rocr::amd::elf::GElfImage@{rocr::amd::elf::GElfImage}!Validate@{Validate}}
+\index{Validate@{Validate}!rocr::amd::elf::GElfImage@{rocr::amd::elf::GElfImage}}
+\doxysubsubsection{\texorpdfstring{Validate()}{Validate()}}
+{\footnotesize\ttfamily bool rocr\+::amd\+::elf\+::\+GElf\+Image\+::\+Validate (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Implements \mbox{\hyperlink{classrocr_1_1amd_1_1elf_1_1Image_a1eea465e74c025d2410cd3de690eb848}{rocr\+::amd\+::elf\+::\+Image}}.
+
+\mbox{\Hypertarget{classrocr_1_1amd_1_1elf_1_1GElfImage_ac203cf8fd9920d588b427228082b43ce}\label{classrocr_1_1amd_1_1elf_1_1GElfImage_ac203cf8fd9920d588b427228082b43ce}} 
+\index{rocr::amd::elf::GElfImage@{rocr::amd::elf::GElfImage}!writeTo@{writeTo}}
+\index{writeTo@{writeTo}!rocr::amd::elf::GElfImage@{rocr::amd::elf::GElfImage}}
+\doxysubsubsection{\texorpdfstring{writeTo()}{writeTo()}}
+{\footnotesize\ttfamily bool rocr\+::amd\+::elf\+::\+GElf\+Image\+::write\+To (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{filename }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Implements \mbox{\hyperlink{classrocr_1_1amd_1_1elf_1_1Image_a76e7a0b28ba9d60266375f25e2754919}{rocr\+::amd\+::elf\+::\+Image}}.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classrocr_1_1amd_1_1elf_1_1GElfImage_ac203cf8fd9920d588b427228082b43ce_cgraph}
+\end{center}
+\end{figure}
+
+
+\doxysubsection{Friends And Related Function Documentation}
+\mbox{\Hypertarget{classrocr_1_1amd_1_1elf_1_1GElfImage_a5471e81b4b2401c5dd2ba5adecd12fce}\label{classrocr_1_1amd_1_1elf_1_1GElfImage_a5471e81b4b2401c5dd2ba5adecd12fce}} 
+\index{rocr::amd::elf::GElfImage@{rocr::amd::elf::GElfImage}!GElfNoteSection@{GElfNoteSection}}
+\index{GElfNoteSection@{GElfNoteSection}!rocr::amd::elf::GElfImage@{rocr::amd::elf::GElfImage}}
+\doxysubsubsection{\texorpdfstring{GElfNoteSection}{GElfNoteSection}}
+{\footnotesize\ttfamily friend class \mbox{\hyperlink{classrocr_1_1amd_1_1elf_1_1GElfNoteSection}{GElf\+Note\+Section}}\hspace{0.3cm}{\ttfamily [friend]}}
+
+\mbox{\Hypertarget{classrocr_1_1amd_1_1elf_1_1GElfImage_a1a36a04e947009019588468a0946e018}\label{classrocr_1_1amd_1_1elf_1_1GElfImage_a1a36a04e947009019588468a0946e018}} 
+\index{rocr::amd::elf::GElfImage@{rocr::amd::elf::GElfImage}!GElfRelocationSection@{GElfRelocationSection}}
+\index{GElfRelocationSection@{GElfRelocationSection}!rocr::amd::elf::GElfImage@{rocr::amd::elf::GElfImage}}
+\doxysubsubsection{\texorpdfstring{GElfRelocationSection}{GElfRelocationSection}}
+{\footnotesize\ttfamily friend class \mbox{\hyperlink{classrocr_1_1amd_1_1elf_1_1GElfRelocationSection}{GElf\+Relocation\+Section}}\hspace{0.3cm}{\ttfamily [friend]}}
+
+\mbox{\Hypertarget{classrocr_1_1amd_1_1elf_1_1GElfImage_a05fe3206fb81974277cdd4139d59339e}\label{classrocr_1_1amd_1_1elf_1_1GElfImage_a05fe3206fb81974277cdd4139d59339e}} 
+\index{rocr::amd::elf::GElfImage@{rocr::amd::elf::GElfImage}!GElfSection@{GElfSection}}
+\index{GElfSection@{GElfSection}!rocr::amd::elf::GElfImage@{rocr::amd::elf::GElfImage}}
+\doxysubsubsection{\texorpdfstring{GElfSection}{GElfSection}}
+{\footnotesize\ttfamily friend class \mbox{\hyperlink{classrocr_1_1amd_1_1elf_1_1GElfSection}{GElf\+Section}}\hspace{0.3cm}{\ttfamily [friend]}}
+
+\mbox{\Hypertarget{classrocr_1_1amd_1_1elf_1_1GElfImage_a5b8578646983a69851bf3ee9a666f018}\label{classrocr_1_1amd_1_1elf_1_1GElfImage_a5b8578646983a69851bf3ee9a666f018}} 
+\index{rocr::amd::elf::GElfImage@{rocr::amd::elf::GElfImage}!GElfSegment@{GElfSegment}}
+\index{GElfSegment@{GElfSegment}!rocr::amd::elf::GElfImage@{rocr::amd::elf::GElfImage}}
+\doxysubsubsection{\texorpdfstring{GElfSegment}{GElfSegment}}
+{\footnotesize\ttfamily friend class \mbox{\hyperlink{classrocr_1_1amd_1_1elf_1_1GElfSegment}{GElf\+Segment}}\hspace{0.3cm}{\ttfamily [friend]}}
+
+\mbox{\Hypertarget{classrocr_1_1amd_1_1elf_1_1GElfImage_a828257223368af71936ea464ae9a45d0}\label{classrocr_1_1amd_1_1elf_1_1GElfImage_a828257223368af71936ea464ae9a45d0}} 
+\index{rocr::amd::elf::GElfImage@{rocr::amd::elf::GElfImage}!GElfSymbol@{GElfSymbol}}
+\index{GElfSymbol@{GElfSymbol}!rocr::amd::elf::GElfImage@{rocr::amd::elf::GElfImage}}
+\doxysubsubsection{\texorpdfstring{GElfSymbol}{GElfSymbol}}
+{\footnotesize\ttfamily friend class \mbox{\hyperlink{classrocr_1_1amd_1_1elf_1_1GElfSymbol}{GElf\+Symbol}}\hspace{0.3cm}{\ttfamily [friend]}}
+
+\mbox{\Hypertarget{classrocr_1_1amd_1_1elf_1_1GElfImage_ac203427affc79e65d2abd63cadc37e3c}\label{classrocr_1_1amd_1_1elf_1_1GElfImage_ac203427affc79e65d2abd63cadc37e3c}} 
+\index{rocr::amd::elf::GElfImage@{rocr::amd::elf::GElfImage}!GElfSymbolTable@{GElfSymbolTable}}
+\index{GElfSymbolTable@{GElfSymbolTable}!rocr::amd::elf::GElfImage@{rocr::amd::elf::GElfImage}}
+\doxysubsubsection{\texorpdfstring{GElfSymbolTable}{GElfSymbolTable}}
+{\footnotesize\ttfamily friend class \mbox{\hyperlink{classrocr_1_1amd_1_1elf_1_1GElfSymbolTable}{GElf\+Symbol\+Table}}\hspace{0.3cm}{\ttfamily [friend]}}
+
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{classrocr_1_1amd_1_1elf_1_1GElfImage_a73f9fdceb34f6f9610b59b152f2ad29d}\label{classrocr_1_1amd_1_1elf_1_1GElfImage_a73f9fdceb34f6f9610b59b152f2ad29d}} 
+\index{rocr::amd::elf::GElfImage@{rocr::amd::elf::GElfImage}!buffer@{buffer}}
+\index{buffer@{buffer}!rocr::amd::elf::GElfImage@{rocr::amd::elf::GElfImage}}
+\doxysubsubsection{\texorpdfstring{buffer}{buffer}}
+{\footnotesize\ttfamily const char$\ast$ rocr\+::amd\+::elf\+::\+GElf\+Image\+::buffer\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classrocr_1_1amd_1_1elf_1_1GElfImage_a20fd148564ea6c540cb9085abe1d188d}\label{classrocr_1_1amd_1_1elf_1_1GElfImage_a20fd148564ea6c540cb9085abe1d188d}} 
+\index{rocr::amd::elf::GElfImage@{rocr::amd::elf::GElfImage}!bufferSize@{bufferSize}}
+\index{bufferSize@{bufferSize}!rocr::amd::elf::GElfImage@{rocr::amd::elf::GElfImage}}
+\doxysubsubsection{\texorpdfstring{bufferSize}{bufferSize}}
+{\footnotesize\ttfamily size\+\_\+t rocr\+::amd\+::elf\+::\+GElf\+Image\+::buffer\+Size\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classrocr_1_1amd_1_1elf_1_1GElfImage_a12de393df552c35af32ceef9882ea5b8}\label{classrocr_1_1amd_1_1elf_1_1GElfImage_a12de393df552c35af32ceef9882ea5b8}} 
+\index{rocr::amd::elf::GElfImage@{rocr::amd::elf::GElfImage}!e@{e}}
+\index{e@{e}!rocr::amd::elf::GElfImage@{rocr::amd::elf::GElfImage}}
+\doxysubsubsection{\texorpdfstring{e}{e}}
+{\footnotesize\ttfamily Elf$\ast$ rocr\+::amd\+::elf\+::\+GElf\+Image\+::e\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classrocr_1_1amd_1_1elf_1_1GElfImage_a0ddedc8ff73ffcf5b24756e14b3d3534}\label{classrocr_1_1amd_1_1elf_1_1GElfImage_a0ddedc8ff73ffcf5b24756e14b3d3534}} 
+\index{rocr::amd::elf::GElfImage@{rocr::amd::elf::GElfImage}!ehdr@{ehdr}}
+\index{ehdr@{ehdr}!rocr::amd::elf::GElfImage@{rocr::amd::elf::GElfImage}}
+\doxysubsubsection{\texorpdfstring{ehdr}{ehdr}}
+{\footnotesize\ttfamily GElf\+\_\+\+Ehdr rocr\+::amd\+::elf\+::\+GElf\+Image\+::ehdr\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classrocr_1_1amd_1_1elf_1_1GElfImage_a09c41c5480f25e141c63af4081fda332}\label{classrocr_1_1amd_1_1elf_1_1GElfImage_a09c41c5480f25e141c63af4081fda332}} 
+\index{rocr::amd::elf::GElfImage@{rocr::amd::elf::GElfImage}!elfclass@{elfclass}}
+\index{elfclass@{elfclass}!rocr::amd::elf::GElfImage@{rocr::amd::elf::GElfImage}}
+\doxysubsubsection{\texorpdfstring{elfclass}{elfclass}}
+{\footnotesize\ttfamily int rocr\+::amd\+::elf\+::\+GElf\+Image\+::elfclass\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classrocr_1_1amd_1_1elf_1_1GElfImage_aa8b3eca96fd4f2ee1f1d301ab7a1e6e5}\label{classrocr_1_1amd_1_1elf_1_1GElfImage_aa8b3eca96fd4f2ee1f1d301ab7a1e6e5}} 
+\index{rocr::amd::elf::GElfImage@{rocr::amd::elf::GElfImage}!frozen@{frozen}}
+\index{frozen@{frozen}!rocr::amd::elf::GElfImage@{rocr::amd::elf::GElfImage}}
+\doxysubsubsection{\texorpdfstring{frozen}{frozen}}
+{\footnotesize\ttfamily bool rocr\+::amd\+::elf\+::\+GElf\+Image\+::frozen\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classrocr_1_1amd_1_1elf_1_1GElfImage_ac32c78f0b78254dd3f84299644f7a3db}\label{classrocr_1_1amd_1_1elf_1_1GElfImage_ac32c78f0b78254dd3f84299644f7a3db}} 
+\index{rocr::amd::elf::GElfImage@{rocr::amd::elf::GElfImage}!img@{img}}
+\index{img@{img}!rocr::amd::elf::GElfImage@{rocr::amd::elf::GElfImage}}
+\doxysubsubsection{\texorpdfstring{img}{img}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classrocr_1_1amd_1_1elf_1_1FileImage}{File\+Image}} rocr\+::amd\+::elf\+::\+GElf\+Image\+::img\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classrocr_1_1amd_1_1elf_1_1GElfImage_acac60443d947a293e5f9211e94c40945}\label{classrocr_1_1amd_1_1elf_1_1GElfImage_acac60443d947a293e5f9211e94c40945}} 
+\index{rocr::amd::elf::GElfImage@{rocr::amd::elf::GElfImage}!noteSection@{noteSection}}
+\index{noteSection@{noteSection}!rocr::amd::elf::GElfImage@{rocr::amd::elf::GElfImage}}
+\doxysubsubsection{\texorpdfstring{noteSection}{noteSection}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classrocr_1_1amd_1_1elf_1_1GElfNoteSection}{GElf\+Note\+Section}}$\ast$ rocr\+::amd\+::elf\+::\+GElf\+Image\+::note\+Section\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classrocr_1_1amd_1_1elf_1_1GElfImage_aeaecab312c7bf5491da2c37d3290058d}\label{classrocr_1_1amd_1_1elf_1_1GElfImage_aeaecab312c7bf5491da2c37d3290058d}} 
+\index{rocr::amd::elf::GElfImage@{rocr::amd::elf::GElfImage}!sections@{sections}}
+\index{sections@{sections}!rocr::amd::elf::GElfImage@{rocr::amd::elf::GElfImage}}
+\doxysubsubsection{\texorpdfstring{sections}{sections}}
+{\footnotesize\ttfamily std\+::vector$<$std\+::unique\+\_\+ptr$<$\mbox{\hyperlink{classrocr_1_1amd_1_1elf_1_1GElfSection}{GElf\+Section}}$>$ $>$ rocr\+::amd\+::elf\+::\+GElf\+Image\+::sections\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classrocr_1_1amd_1_1elf_1_1GElfImage_a0ab821402b29ca704897a33381edfda1}\label{classrocr_1_1amd_1_1elf_1_1GElfImage_a0ab821402b29ca704897a33381edfda1}} 
+\index{rocr::amd::elf::GElfImage@{rocr::amd::elf::GElfImage}!segments@{segments}}
+\index{segments@{segments}!rocr::amd::elf::GElfImage@{rocr::amd::elf::GElfImage}}
+\doxysubsubsection{\texorpdfstring{segments}{segments}}
+{\footnotesize\ttfamily std\+::vector$<$std\+::unique\+\_\+ptr$<$\mbox{\hyperlink{classrocr_1_1amd_1_1elf_1_1GElfSegment}{GElf\+Segment}}$>$ $>$ rocr\+::amd\+::elf\+::\+GElf\+Image\+::segments\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classrocr_1_1amd_1_1elf_1_1GElfImage_aa320f6ad92f1f778876d917058e6d774}\label{classrocr_1_1amd_1_1elf_1_1GElfImage_aa320f6ad92f1f778876d917058e6d774}} 
+\index{rocr::amd::elf::GElfImage@{rocr::amd::elf::GElfImage}!shstrtabSection@{shstrtabSection}}
+\index{shstrtabSection@{shstrtabSection}!rocr::amd::elf::GElfImage@{rocr::amd::elf::GElfImage}}
+\doxysubsubsection{\texorpdfstring{shstrtabSection}{shstrtabSection}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classrocr_1_1amd_1_1elf_1_1GElfStringTable}{GElf\+String\+Table}}$\ast$ rocr\+::amd\+::elf\+::\+GElf\+Image\+::shstrtab\+Section\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classrocr_1_1amd_1_1elf_1_1GElfImage_a9ae928e3c035b05abcc73023120c26f3}\label{classrocr_1_1amd_1_1elf_1_1GElfImage_a9ae928e3c035b05abcc73023120c26f3}} 
+\index{rocr::amd::elf::GElfImage@{rocr::amd::elf::GElfImage}!strtabSection@{strtabSection}}
+\index{strtabSection@{strtabSection}!rocr::amd::elf::GElfImage@{rocr::amd::elf::GElfImage}}
+\doxysubsubsection{\texorpdfstring{strtabSection}{strtabSection}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classrocr_1_1amd_1_1elf_1_1GElfStringTable}{GElf\+String\+Table}}$\ast$ rocr\+::amd\+::elf\+::\+GElf\+Image\+::strtab\+Section\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classrocr_1_1amd_1_1elf_1_1GElfImage_a40482fb568d7b067343c6ca8358d9bb0}\label{classrocr_1_1amd_1_1elf_1_1GElfImage_a40482fb568d7b067343c6ca8358d9bb0}} 
+\index{rocr::amd::elf::GElfImage@{rocr::amd::elf::GElfImage}!symtabSection@{symtabSection}}
+\index{symtabSection@{symtabSection}!rocr::amd::elf::GElfImage@{rocr::amd::elf::GElfImage}}
+\doxysubsubsection{\texorpdfstring{symtabSection}{symtabSection}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classrocr_1_1amd_1_1elf_1_1GElfSymbolTable}{GElf\+Symbol\+Table}}$\ast$ rocr\+::amd\+::elf\+::\+GElf\+Image\+::symtab\+Section\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+src/libamdhsacode/\mbox{\hyperlink{amd__elf__image_8cpp}{amd\+\_\+elf\+\_\+image.\+cpp}}\end{DoxyCompactItemize}

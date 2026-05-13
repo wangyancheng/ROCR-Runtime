@@ -1,0 +1,64 @@
+\hypertarget{image__manager__nv_8cpp}{}\doxysection{src/image/image\+\_\+manager\+\_\+nv.cpp File Reference}
+\label{image__manager__nv_8cpp}\index{src/image/image\_manager\_nv.cpp@{src/image/image\_manager\_nv.cpp}}
+{\ttfamily \#include \char`\"{}image\+\_\+manager\+\_\+nv.\+h\char`\"{}}\newline
+{\ttfamily \#include $<$assert.\+h$>$}\newline
+{\ttfamily \#include $<$algorithm$>$}\newline
+{\ttfamily \#include $<$climits$>$}\newline
+{\ttfamily \#include \char`\"{}inc/hsa\+\_\+ext\+\_\+amd.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}core/inc/hsa\+\_\+internal.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}addrlib/src/core/addrlib.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}image\+\_\+runtime.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}resource.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}resource\+\_\+nv.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}util.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}device\+\_\+info.\+h\char`\"{}}\newline
+Include dependency graph for image\+\_\+manager\+\_\+nv.\+cpp\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{image__manager__nv_8cpp__incl}
+\end{center}
+\end{figure}
+\doxysubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{structrocr_1_1image_1_1formatconverstion__t}{rocr\+::image\+::formatconverstion\+\_\+t}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Namespaces}
+\begin{DoxyCompactItemize}
+\item 
+ \mbox{\hyperlink{namespacerocr}{rocr}}
+\item 
+ \mbox{\hyperlink{namespacerocr_1_1image}{rocr\+::image}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \mbox{\hyperlink{image__manager__nv_8cpp_a9f918755b601cf4bffca775992e6fb90}{NOMINMAX}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+static FORMAT \mbox{\hyperlink{namespacerocr_1_1image_adf8eca849d8360b8387b0474b38f1be5}{rocr\+::image\+::\+Get\+Combined\+Format}} (uint8\+\_\+t fmt, uint8\+\_\+t type)
+\item 
+static TEX\+\_\+\+BC\+\_\+\+SWIZZLE \mbox{\hyperlink{namespacerocr_1_1image_afe23ecb2b0793d7a579b6397bb9de99e}{rocr\+::image\+::\+Get\+Bc\+Swizzle}} (const Swizzle \&swizzle)
+\end{DoxyCompactItemize}
+\doxysubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+static const formatconverstion\+\_\+t \mbox{\hyperlink{namespacerocr_1_1image_a9d9f4862d9a912e1163503808ff1e9f5}{rocr\+::image\+::\+Format\+LUT}} \mbox{[}$\,$\mbox{]}
+\item 
+static const int \mbox{\hyperlink{namespacerocr_1_1image_a1606f5ef7eb1db75ee1e7ed412042bdb}{rocr\+::image\+::\+Format\+LUTSize}} = sizeof(Format\+LUT)/sizeof(formatconverstion\+\_\+t)
+\item 
+static const int \mbox{\hyperlink{namespacerocr_1_1image_a136fc65e2b4322df22d16031d5618efc}{rocr\+::image\+::\+Format\+Entry\+Point}} \mbox{[}$\,$\mbox{]}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Macro Definition Documentation}
+\mbox{\Hypertarget{image__manager__nv_8cpp_a9f918755b601cf4bffca775992e6fb90}\label{image__manager__nv_8cpp_a9f918755b601cf4bffca775992e6fb90}} 
+\index{image\_manager\_nv.cpp@{image\_manager\_nv.cpp}!NOMINMAX@{NOMINMAX}}
+\index{NOMINMAX@{NOMINMAX}!image\_manager\_nv.cpp@{image\_manager\_nv.cpp}}
+\doxysubsubsection{\texorpdfstring{NOMINMAX}{NOMINMAX}}
+{\footnotesize\ttfamily \#define NOMINMAX}
+

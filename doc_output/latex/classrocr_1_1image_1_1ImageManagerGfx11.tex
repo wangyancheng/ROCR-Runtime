@@ -1,0 +1,286 @@
+\hypertarget{classrocr_1_1image_1_1ImageManagerGfx11}{}\doxysection{rocr\+::image\+::Image\+Manager\+Gfx11 Class Reference}
+\label{classrocr_1_1image_1_1ImageManagerGfx11}\index{rocr::image::ImageManagerGfx11@{rocr::image::ImageManagerGfx11}}
+
+
+{\ttfamily \#include $<$image\+\_\+manager\+\_\+gfx11.\+h$>$}
+
+
+
+Inheritance diagram for rocr\+::image\+::Image\+Manager\+Gfx11\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=228pt]{classrocr_1_1image_1_1ImageManagerGfx11__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for rocr\+::image\+::Image\+Manager\+Gfx11\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classrocr_1_1image_1_1ImageManagerGfx11__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classrocr_1_1image_1_1ImageManagerGfx11_aba5b1df38f665ab39965d4444b887a47}{Image\+Manager\+Gfx11}} ()
+\item 
+virtual \mbox{\hyperlink{classrocr_1_1image_1_1ImageManagerGfx11_adea041b9373925f587a09381f52f07f8}{$\sim$\+Image\+Manager\+Gfx11}} ()
+\item 
+virtual \mbox{\hyperlink{group__status_gad755322e7ff95456520e8abdbe90d225}{hsa\+\_\+status\+\_\+t}} \mbox{\hyperlink{classrocr_1_1image_1_1ImageManagerGfx11_a471980633ec1261f617bd0e6563d77c9}{Calculate\+Image\+Size\+And\+Alignment}} (\mbox{\hyperlink{group__agentinfo_ga9ce217ef08e7d5e89c8e83ce7b6ef22b}{hsa\+\_\+agent\+\_\+t}} component, const \mbox{\hyperlink{group__ext-images_ga7ccf44400f9bbb459c8e52f54a3c5eb0}{hsa\+\_\+ext\+\_\+image\+\_\+descriptor\+\_\+t}} \&desc, \mbox{\hyperlink{group__ext-images_ga102222a1420a2434d9b50100350305e4}{hsa\+\_\+ext\+\_\+image\+\_\+data\+\_\+layout\+\_\+t}} image\+\_\+data\+\_\+layout, size\+\_\+t image\+\_\+data\+\_\+row\+\_\+pitch, size\+\_\+t image\+\_\+data\+\_\+slice\+\_\+pitch, \mbox{\hyperlink{group__ext-images_gada32050df34dc3f6c0b9124706d8984b}{hsa\+\_\+ext\+\_\+image\+\_\+data\+\_\+info\+\_\+t}} \&image\+\_\+info) const
+\begin{DoxyCompactList}\small\item\em Calculate the size and alignment of the backing storage of an image. \end{DoxyCompactList}\item 
+virtual \mbox{\hyperlink{group__status_gad755322e7ff95456520e8abdbe90d225}{hsa\+\_\+status\+\_\+t}} \mbox{\hyperlink{classrocr_1_1image_1_1ImageManagerGfx11_a728da89f210f4b13915977d9e0290142}{Populate\+Image\+Srd}} (\mbox{\hyperlink{structrocr_1_1image_1_1Image}{Image}} \&image) const
+\begin{DoxyCompactList}\small\item\em Fill image structure with device specific image object. \end{DoxyCompactList}\item 
+virtual \mbox{\hyperlink{group__status_gad755322e7ff95456520e8abdbe90d225}{hsa\+\_\+status\+\_\+t}} \mbox{\hyperlink{classrocr_1_1image_1_1ImageManagerGfx11_aed1e1386cf4749ea01276b7a94d3cbdc}{Populate\+Image\+Srd}} (\mbox{\hyperlink{structrocr_1_1image_1_1Image}{Image}} \&image, const \mbox{\hyperlink{namespacerocr_1_1image_ac638806459b7dc8cb5ebd2230c81bd60}{metadata\+\_\+amd\+\_\+t}} $\ast$desc) const
+\begin{DoxyCompactList}\small\item\em Fill image structure with device specific image object using the given format. \end{DoxyCompactList}\item 
+virtual \mbox{\hyperlink{group__status_gad755322e7ff95456520e8abdbe90d225}{hsa\+\_\+status\+\_\+t}} \mbox{\hyperlink{classrocr_1_1image_1_1ImageManagerGfx11_aceb84eea8b66b57ec24209e4caa373c8}{Modify\+Image\+Srd}} (\mbox{\hyperlink{structrocr_1_1image_1_1Image}{Image}} \&image, \mbox{\hyperlink{group__ext-images_ga37a5b98dd984766026174b4d6d486b29}{hsa\+\_\+ext\+\_\+image\+\_\+format\+\_\+t}} \&new\+\_\+format) const
+\begin{DoxyCompactList}\small\item\em Modify device specific image object according to the specified new format. \end{DoxyCompactList}\item 
+virtual \mbox{\hyperlink{group__status_gad755322e7ff95456520e8abdbe90d225}{hsa\+\_\+status\+\_\+t}} \mbox{\hyperlink{classrocr_1_1image_1_1ImageManagerGfx11_af76fe090d349e79229e56cda2b372c94}{Populate\+Sampler\+Srd}} (\mbox{\hyperlink{structrocr_1_1image_1_1Sampler}{Sampler}} \&sampler) const
+\begin{DoxyCompactList}\small\item\em Fill sampler structure with device specific sampler object. \end{DoxyCompactList}\item 
+virtual \mbox{\hyperlink{group__status_gad755322e7ff95456520e8abdbe90d225}{hsa\+\_\+status\+\_\+t}} \mbox{\hyperlink{classrocr_1_1image_1_1ImageManagerGfx11_a735420d27180f750df0bdfed86c91768}{Fill\+Image}} (const \mbox{\hyperlink{structrocr_1_1image_1_1Image}{Image}} \&image, const void $\ast$pattern, const \mbox{\hyperlink{group__ext-images_gaa407e3fb8aa43d59f8e8560294d1c702}{hsa\+\_\+ext\+\_\+image\+\_\+region\+\_\+t}} \&region)
+\begin{DoxyCompactList}\small\item\em Fill image backing storage using agent copy. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+uint32\+\_\+t \mbox{\hyperlink{classrocr_1_1image_1_1ImageManagerGfx11_a51d9e4fecbc2c17c3d66a5fdc0dd0426}{Get\+Addrlib\+Surface\+Info\+Nv}} (\mbox{\hyperlink{group__agentinfo_ga9ce217ef08e7d5e89c8e83ce7b6ef22b}{hsa\+\_\+agent\+\_\+t}} component, const \mbox{\hyperlink{group__ext-images_ga7ccf44400f9bbb459c8e52f54a3c5eb0}{hsa\+\_\+ext\+\_\+image\+\_\+descriptor\+\_\+t}} \&desc, \mbox{\hyperlink{structrocr_1_1image_1_1Image_a4f72acb4b024e33dbeaed942866dcaef}{Image\+::\+Tile\+Mode}} tile\+Mode, size\+\_\+t image\+\_\+data\+\_\+row\+\_\+pitch, size\+\_\+t image\+\_\+data\+\_\+slice\+\_\+pitch, \mbox{\hyperlink{namespacerocr_aa64211e3cee652bcca905fc7cfea8e7b}{ADDR2\+\_\+\+COMPUTE\+\_\+\+SURFACE\+\_\+\+INFO\+\_\+\+OUTPUT}} \&out) const
+\item 
+bool \mbox{\hyperlink{classrocr_1_1image_1_1ImageManagerGfx11_ae2529cf7688ddcd460616bb535f0e626}{Is\+Local\+Memory}} (const void $\ast$address) const
+\item 
+virtual const \mbox{\hyperlink{classrocr_1_1image_1_1ImageLutGfx11}{Image\+Lut\+Gfx11}} \& \mbox{\hyperlink{classrocr_1_1image_1_1ImageManagerGfx11_a6789b6ffd3954c4096b697105736f2d2}{Image\+Lut}} () const
+\end{DoxyCompactItemize}
+\doxysubsection*{Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classrocr_1_1image_1_1ImageManagerGfx11_a433eb2d44e4606884c82ae353146dc99}{DISALLOW\+\_\+\+COPY\+\_\+\+AND\+\_\+\+ASSIGN}} (\mbox{\hyperlink{classrocr_1_1image_1_1ImageManagerGfx11}{Image\+Manager\+Gfx11}})
+\end{DoxyCompactItemize}
+\doxysubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classrocr_1_1image_1_1ImageLutGfx11}{Image\+Lut\+Gfx11}} \mbox{\hyperlink{classrocr_1_1image_1_1ImageManagerGfx11_a92d4a69ee907a6ee3cb951930015e811}{image\+\_\+lut\+\_\+gfx11}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Additional Inherited Members}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classrocr_1_1image_1_1ImageManagerGfx11_aba5b1df38f665ab39965d4444b887a47}\label{classrocr_1_1image_1_1ImageManagerGfx11_aba5b1df38f665ab39965d4444b887a47}} 
+\index{rocr::image::ImageManagerGfx11@{rocr::image::ImageManagerGfx11}!ImageManagerGfx11@{ImageManagerGfx11}}
+\index{ImageManagerGfx11@{ImageManagerGfx11}!rocr::image::ImageManagerGfx11@{rocr::image::ImageManagerGfx11}}
+\doxysubsubsection{\texorpdfstring{ImageManagerGfx11()}{ImageManagerGfx11()}}
+{\footnotesize\ttfamily rocr\+::image\+::\+Image\+Manager\+Gfx11\+::\+Image\+Manager\+Gfx11 (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classrocr_1_1image_1_1ImageManagerGfx11_adea041b9373925f587a09381f52f07f8}\label{classrocr_1_1image_1_1ImageManagerGfx11_adea041b9373925f587a09381f52f07f8}} 
+\index{rocr::image::ImageManagerGfx11@{rocr::image::ImageManagerGfx11}!````~ImageManagerGfx11@{$\sim$ImageManagerGfx11}}
+\index{````~ImageManagerGfx11@{$\sim$ImageManagerGfx11}!rocr::image::ImageManagerGfx11@{rocr::image::ImageManagerGfx11}}
+\doxysubsubsection{\texorpdfstring{$\sim$ImageManagerGfx11()}{~ImageManagerGfx11()}}
+{\footnotesize\ttfamily rocr\+::image\+::\+Image\+Manager\+Gfx11\+::$\sim$\+Image\+Manager\+Gfx11 (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classrocr_1_1image_1_1ImageManagerGfx11_a471980633ec1261f617bd0e6563d77c9}\label{classrocr_1_1image_1_1ImageManagerGfx11_a471980633ec1261f617bd0e6563d77c9}} 
+\index{rocr::image::ImageManagerGfx11@{rocr::image::ImageManagerGfx11}!CalculateImageSizeAndAlignment@{CalculateImageSizeAndAlignment}}
+\index{CalculateImageSizeAndAlignment@{CalculateImageSizeAndAlignment}!rocr::image::ImageManagerGfx11@{rocr::image::ImageManagerGfx11}}
+\doxysubsubsection{\texorpdfstring{CalculateImageSizeAndAlignment()}{CalculateImageSizeAndAlignment()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{group__status_gad755322e7ff95456520e8abdbe90d225}{hsa\+\_\+status\+\_\+t}} rocr\+::image\+::\+Image\+Manager\+Gfx11\+::\+Calculate\+Image\+Size\+And\+Alignment (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{group__agentinfo_ga9ce217ef08e7d5e89c8e83ce7b6ef22b}{hsa\+\_\+agent\+\_\+t}}}]{component,  }\item[{const \mbox{\hyperlink{group__ext-images_ga7ccf44400f9bbb459c8e52f54a3c5eb0}{hsa\+\_\+ext\+\_\+image\+\_\+descriptor\+\_\+t}} \&}]{desc,  }\item[{\mbox{\hyperlink{group__ext-images_ga102222a1420a2434d9b50100350305e4}{hsa\+\_\+ext\+\_\+image\+\_\+data\+\_\+layout\+\_\+t}}}]{image\+\_\+data\+\_\+layout,  }\item[{size\+\_\+t}]{image\+\_\+data\+\_\+row\+\_\+pitch,  }\item[{size\+\_\+t}]{image\+\_\+data\+\_\+slice\+\_\+pitch,  }\item[{\mbox{\hyperlink{group__ext-images_gada32050df34dc3f6c0b9124706d8984b}{hsa\+\_\+ext\+\_\+image\+\_\+data\+\_\+info\+\_\+t}} \&}]{image\+\_\+info }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Calculate the size and alignment of the backing storage of an image. 
+
+
+
+Reimplemented from \mbox{\hyperlink{classrocr_1_1image_1_1ImageManagerKv_a35438a9c19a831d1eb4c1f862f4ca6b2}{rocr\+::image\+::\+Image\+Manager\+Kv}}.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classrocr_1_1image_1_1ImageManagerGfx11_a471980633ec1261f617bd0e6563d77c9_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classrocr_1_1image_1_1ImageManagerGfx11_a433eb2d44e4606884c82ae353146dc99}\label{classrocr_1_1image_1_1ImageManagerGfx11_a433eb2d44e4606884c82ae353146dc99}} 
+\index{rocr::image::ImageManagerGfx11@{rocr::image::ImageManagerGfx11}!DISALLOW\_COPY\_AND\_ASSIGN@{DISALLOW\_COPY\_AND\_ASSIGN}}
+\index{DISALLOW\_COPY\_AND\_ASSIGN@{DISALLOW\_COPY\_AND\_ASSIGN}!rocr::image::ImageManagerGfx11@{rocr::image::ImageManagerGfx11}}
+\doxysubsubsection{\texorpdfstring{DISALLOW\_COPY\_AND\_ASSIGN()}{DISALLOW\_COPY\_AND\_ASSIGN()}}
+{\footnotesize\ttfamily rocr\+::image\+::\+Image\+Manager\+Gfx11\+::\+DISALLOW\+\_\+\+COPY\+\_\+\+AND\+\_\+\+ASSIGN (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classrocr_1_1image_1_1ImageManagerGfx11}{Image\+Manager\+Gfx11}}}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classrocr_1_1image_1_1ImageManagerGfx11_a735420d27180f750df0bdfed86c91768}\label{classrocr_1_1image_1_1ImageManagerGfx11_a735420d27180f750df0bdfed86c91768}} 
+\index{rocr::image::ImageManagerGfx11@{rocr::image::ImageManagerGfx11}!FillImage@{FillImage}}
+\index{FillImage@{FillImage}!rocr::image::ImageManagerGfx11@{rocr::image::ImageManagerGfx11}}
+\doxysubsubsection{\texorpdfstring{FillImage()}{FillImage()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{group__status_gad755322e7ff95456520e8abdbe90d225}{hsa\+\_\+status\+\_\+t}} rocr\+::image\+::\+Image\+Manager\+Gfx11\+::\+Fill\+Image (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{structrocr_1_1image_1_1Image}{Image}} \&}]{image,  }\item[{const void $\ast$}]{pattern,  }\item[{const \mbox{\hyperlink{group__ext-images_gaa407e3fb8aa43d59f8e8560294d1c702}{hsa\+\_\+ext\+\_\+image\+\_\+region\+\_\+t}} \&}]{region }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Fill image backing storage using agent copy. 
+
+
+
+Reimplemented from \mbox{\hyperlink{classrocr_1_1image_1_1ImageManagerKv_a355b09fc78ea84832186c6243befae68}{rocr\+::image\+::\+Image\+Manager\+Kv}}.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classrocr_1_1image_1_1ImageManagerGfx11_a735420d27180f750df0bdfed86c91768_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classrocr_1_1image_1_1ImageManagerGfx11_a51d9e4fecbc2c17c3d66a5fdc0dd0426}\label{classrocr_1_1image_1_1ImageManagerGfx11_a51d9e4fecbc2c17c3d66a5fdc0dd0426}} 
+\index{rocr::image::ImageManagerGfx11@{rocr::image::ImageManagerGfx11}!GetAddrlibSurfaceInfoNv@{GetAddrlibSurfaceInfoNv}}
+\index{GetAddrlibSurfaceInfoNv@{GetAddrlibSurfaceInfoNv}!rocr::image::ImageManagerGfx11@{rocr::image::ImageManagerGfx11}}
+\doxysubsubsection{\texorpdfstring{GetAddrlibSurfaceInfoNv()}{GetAddrlibSurfaceInfoNv()}}
+{\footnotesize\ttfamily uint32\+\_\+t rocr\+::image\+::\+Image\+Manager\+Gfx11\+::\+Get\+Addrlib\+Surface\+Info\+Nv (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{group__agentinfo_ga9ce217ef08e7d5e89c8e83ce7b6ef22b}{hsa\+\_\+agent\+\_\+t}}}]{component,  }\item[{const \mbox{\hyperlink{group__ext-images_ga7ccf44400f9bbb459c8e52f54a3c5eb0}{hsa\+\_\+ext\+\_\+image\+\_\+descriptor\+\_\+t}} \&}]{desc,  }\item[{\mbox{\hyperlink{structrocr_1_1image_1_1Image_a4f72acb4b024e33dbeaed942866dcaef}{Image\+::\+Tile\+Mode}}}]{tile\+Mode,  }\item[{size\+\_\+t}]{image\+\_\+data\+\_\+row\+\_\+pitch,  }\item[{size\+\_\+t}]{image\+\_\+data\+\_\+slice\+\_\+pitch,  }\item[{\mbox{\hyperlink{namespacerocr_aa64211e3cee652bcca905fc7cfea8e7b}{ADDR2\+\_\+\+COMPUTE\+\_\+\+SURFACE\+\_\+\+INFO\+\_\+\+OUTPUT}} \&}]{out }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [protected]}}
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classrocr_1_1image_1_1ImageManagerGfx11_a51d9e4fecbc2c17c3d66a5fdc0dd0426_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classrocr_1_1image_1_1ImageManagerGfx11_a51d9e4fecbc2c17c3d66a5fdc0dd0426_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classrocr_1_1image_1_1ImageManagerGfx11_a6789b6ffd3954c4096b697105736f2d2}\label{classrocr_1_1image_1_1ImageManagerGfx11_a6789b6ffd3954c4096b697105736f2d2}} 
+\index{rocr::image::ImageManagerGfx11@{rocr::image::ImageManagerGfx11}!ImageLut@{ImageLut}}
+\index{ImageLut@{ImageLut}!rocr::image::ImageManagerGfx11@{rocr::image::ImageManagerGfx11}}
+\doxysubsubsection{\texorpdfstring{ImageLut()}{ImageLut()}}
+{\footnotesize\ttfamily virtual const \mbox{\hyperlink{classrocr_1_1image_1_1ImageLutGfx11}{Image\+Lut\+Gfx11}}\& rocr\+::image\+::\+Image\+Manager\+Gfx11\+::\+Image\+Lut (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [protected]}, {\ttfamily [virtual]}}
+
+
+
+Reimplemented from \mbox{\hyperlink{classrocr_1_1image_1_1ImageManagerKv_a28f3b5d1001c0c86eb72b88d57a8e045}{rocr\+::image\+::\+Image\+Manager\+Kv}}.
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classrocr_1_1image_1_1ImageManagerGfx11_a6789b6ffd3954c4096b697105736f2d2_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classrocr_1_1image_1_1ImageManagerGfx11_ae2529cf7688ddcd460616bb535f0e626}\label{classrocr_1_1image_1_1ImageManagerGfx11_ae2529cf7688ddcd460616bb535f0e626}} 
+\index{rocr::image::ImageManagerGfx11@{rocr::image::ImageManagerGfx11}!IsLocalMemory@{IsLocalMemory}}
+\index{IsLocalMemory@{IsLocalMemory}!rocr::image::ImageManagerGfx11@{rocr::image::ImageManagerGfx11}}
+\doxysubsubsection{\texorpdfstring{IsLocalMemory()}{IsLocalMemory()}}
+{\footnotesize\ttfamily bool rocr\+::image\+::\+Image\+Manager\+Gfx11\+::\+Is\+Local\+Memory (\begin{DoxyParamCaption}\item[{const void $\ast$}]{address }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [virtual]}}
+
+
+
+Reimplemented from \mbox{\hyperlink{classrocr_1_1image_1_1ImageManagerKv_a58c8a8cb6cc590046a250354272ea4a8}{rocr\+::image\+::\+Image\+Manager\+Kv}}.
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classrocr_1_1image_1_1ImageManagerGfx11_ae2529cf7688ddcd460616bb535f0e626_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classrocr_1_1image_1_1ImageManagerGfx11_aceb84eea8b66b57ec24209e4caa373c8}\label{classrocr_1_1image_1_1ImageManagerGfx11_aceb84eea8b66b57ec24209e4caa373c8}} 
+\index{rocr::image::ImageManagerGfx11@{rocr::image::ImageManagerGfx11}!ModifyImageSrd@{ModifyImageSrd}}
+\index{ModifyImageSrd@{ModifyImageSrd}!rocr::image::ImageManagerGfx11@{rocr::image::ImageManagerGfx11}}
+\doxysubsubsection{\texorpdfstring{ModifyImageSrd()}{ModifyImageSrd()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{group__status_gad755322e7ff95456520e8abdbe90d225}{hsa\+\_\+status\+\_\+t}} rocr\+::image\+::\+Image\+Manager\+Gfx11\+::\+Modify\+Image\+Srd (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structrocr_1_1image_1_1Image}{Image}} \&}]{image,  }\item[{\mbox{\hyperlink{group__ext-images_ga37a5b98dd984766026174b4d6d486b29}{hsa\+\_\+ext\+\_\+image\+\_\+format\+\_\+t}} \&}]{new\+\_\+format }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Modify device specific image object according to the specified new format. 
+
+
+
+Reimplemented from \mbox{\hyperlink{classrocr_1_1image_1_1ImageManagerKv_a5bfbe448e4b0e150f90cdc94e6fe33e4}{rocr\+::image\+::\+Image\+Manager\+Kv}}.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classrocr_1_1image_1_1ImageManagerGfx11_aceb84eea8b66b57ec24209e4caa373c8_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classrocr_1_1image_1_1ImageManagerGfx11_a728da89f210f4b13915977d9e0290142}\label{classrocr_1_1image_1_1ImageManagerGfx11_a728da89f210f4b13915977d9e0290142}} 
+\index{rocr::image::ImageManagerGfx11@{rocr::image::ImageManagerGfx11}!PopulateImageSrd@{PopulateImageSrd}}
+\index{PopulateImageSrd@{PopulateImageSrd}!rocr::image::ImageManagerGfx11@{rocr::image::ImageManagerGfx11}}
+\doxysubsubsection{\texorpdfstring{PopulateImageSrd()}{PopulateImageSrd()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{group__status_gad755322e7ff95456520e8abdbe90d225}{hsa\+\_\+status\+\_\+t}} rocr\+::image\+::\+Image\+Manager\+Gfx11\+::\+Populate\+Image\+Srd (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structrocr_1_1image_1_1Image}{Image}} \&}]{image }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Fill image structure with device specific image object. 
+
+
+
+Reimplemented from \mbox{\hyperlink{classrocr_1_1image_1_1ImageManagerKv_a1414df1282b7c84de8f2237bcb9f4f93}{rocr\+::image\+::\+Image\+Manager\+Kv}}.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classrocr_1_1image_1_1ImageManagerGfx11_a728da89f210f4b13915977d9e0290142_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classrocr_1_1image_1_1ImageManagerGfx11_aed1e1386cf4749ea01276b7a94d3cbdc}\label{classrocr_1_1image_1_1ImageManagerGfx11_aed1e1386cf4749ea01276b7a94d3cbdc}} 
+\index{rocr::image::ImageManagerGfx11@{rocr::image::ImageManagerGfx11}!PopulateImageSrd@{PopulateImageSrd}}
+\index{PopulateImageSrd@{PopulateImageSrd}!rocr::image::ImageManagerGfx11@{rocr::image::ImageManagerGfx11}}
+\doxysubsubsection{\texorpdfstring{PopulateImageSrd()}{PopulateImageSrd()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{group__status_gad755322e7ff95456520e8abdbe90d225}{hsa\+\_\+status\+\_\+t}} rocr\+::image\+::\+Image\+Manager\+Gfx11\+::\+Populate\+Image\+Srd (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structrocr_1_1image_1_1Image}{Image}} \&}]{image,  }\item[{const \mbox{\hyperlink{namespacerocr_1_1image_ac638806459b7dc8cb5ebd2230c81bd60}{metadata\+\_\+amd\+\_\+t}} $\ast$}]{desc }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Fill image structure with device specific image object using the given format. 
+
+
+
+Reimplemented from \mbox{\hyperlink{classrocr_1_1image_1_1ImageManagerKv_abb90cdee19934f16268aef8e2d2e2e9c}{rocr\+::image\+::\+Image\+Manager\+Kv}}.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=550pt]{classrocr_1_1image_1_1ImageManagerGfx11_aed1e1386cf4749ea01276b7a94d3cbdc_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classrocr_1_1image_1_1ImageManagerGfx11_af76fe090d349e79229e56cda2b372c94}\label{classrocr_1_1image_1_1ImageManagerGfx11_af76fe090d349e79229e56cda2b372c94}} 
+\index{rocr::image::ImageManagerGfx11@{rocr::image::ImageManagerGfx11}!PopulateSamplerSrd@{PopulateSamplerSrd}}
+\index{PopulateSamplerSrd@{PopulateSamplerSrd}!rocr::image::ImageManagerGfx11@{rocr::image::ImageManagerGfx11}}
+\doxysubsubsection{\texorpdfstring{PopulateSamplerSrd()}{PopulateSamplerSrd()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{group__status_gad755322e7ff95456520e8abdbe90d225}{hsa\+\_\+status\+\_\+t}} rocr\+::image\+::\+Image\+Manager\+Gfx11\+::\+Populate\+Sampler\+Srd (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structrocr_1_1image_1_1Sampler}{Sampler}} \&}]{sampler }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Fill sampler structure with device specific sampler object. 
+
+
+
+Reimplemented from \mbox{\hyperlink{classrocr_1_1image_1_1ImageManagerKv_abf144773cbb40ea75c5f714667eb96b8}{rocr\+::image\+::\+Image\+Manager\+Kv}}.
+
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{classrocr_1_1image_1_1ImageManagerGfx11_a92d4a69ee907a6ee3cb951930015e811}\label{classrocr_1_1image_1_1ImageManagerGfx11_a92d4a69ee907a6ee3cb951930015e811}} 
+\index{rocr::image::ImageManagerGfx11@{rocr::image::ImageManagerGfx11}!image\_lut\_gfx11@{image\_lut\_gfx11}}
+\index{image\_lut\_gfx11@{image\_lut\_gfx11}!rocr::image::ImageManagerGfx11@{rocr::image::ImageManagerGfx11}}
+\doxysubsubsection{\texorpdfstring{image\_lut\_gfx11}{image\_lut\_gfx11}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classrocr_1_1image_1_1ImageLutGfx11}{Image\+Lut\+Gfx11}} rocr\+::image\+::\+Image\+Manager\+Gfx11\+::image\+\_\+lut\+\_\+gfx11\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+src/image/\mbox{\hyperlink{image__manager__gfx11_8h}{image\+\_\+manager\+\_\+gfx11.\+h}}\item 
+src/image/\mbox{\hyperlink{image__manager__gfx11_8cpp}{image\+\_\+manager\+\_\+gfx11.\+cpp}}\end{DoxyCompactItemize}

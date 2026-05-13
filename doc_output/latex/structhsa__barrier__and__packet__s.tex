@@ -1,0 +1,83 @@
+\hypertarget{structhsa__barrier__and__packet__s}{}\doxysection{hsa\+\_\+barrier\+\_\+and\+\_\+packet\+\_\+s Struct Reference}
+\label{structhsa__barrier__and__packet__s}\index{hsa\_barrier\_and\_packet\_s@{hsa\_barrier\_and\_packet\_s}}
+
+
+Barrier-\/\+AND packet.  
+
+
+
+
+{\ttfamily \#include $<$hsa.\+h$>$}
+
+
+
+Collaboration diagram for hsa\+\_\+barrier\+\_\+and\+\_\+packet\+\_\+s\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=228pt]{structhsa__barrier__and__packet__s__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+uint16\+\_\+t \mbox{\hyperlink{structhsa__barrier__and__packet__s_aca5da3d675e54818b98ad0d9a97440f9}{header}}
+\item 
+uint16\+\_\+t \mbox{\hyperlink{structhsa__barrier__and__packet__s_aa6d67218fe51e22cb229360fc5460b47}{reserved0}}
+\item 
+uint32\+\_\+t \mbox{\hyperlink{structhsa__barrier__and__packet__s_a019b20e4755bb8acf2bed184e126bdd6}{reserved1}}
+\item 
+\mbox{\hyperlink{group__signals_ga0003af605a660e7ef4f89aa555d3b3fc}{hsa\+\_\+signal\+\_\+t}} \mbox{\hyperlink{structhsa__barrier__and__packet__s_a9c7604e28a763acf856bebddd0d0819c}{dep\+\_\+signal}} \mbox{[}5\mbox{]}
+\item 
+uint64\+\_\+t \mbox{\hyperlink{structhsa__barrier__and__packet__s_a721ba5b832a948c3126aad185f12f78c}{reserved2}}
+\item 
+\mbox{\hyperlink{group__signals_ga0003af605a660e7ef4f89aa555d3b3fc}{hsa\+\_\+signal\+\_\+t}} \mbox{\hyperlink{structhsa__barrier__and__packet__s_a744262d05757f6073dd0fdf3cce2487e}{completion\+\_\+signal}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Barrier-\/\+AND packet. 
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{structhsa__barrier__and__packet__s_a744262d05757f6073dd0fdf3cce2487e}\label{structhsa__barrier__and__packet__s_a744262d05757f6073dd0fdf3cce2487e}} 
+\index{hsa\_barrier\_and\_packet\_s@{hsa\_barrier\_and\_packet\_s}!completion\_signal@{completion\_signal}}
+\index{completion\_signal@{completion\_signal}!hsa\_barrier\_and\_packet\_s@{hsa\_barrier\_and\_packet\_s}}
+\doxysubsubsection{\texorpdfstring{completion\_signal}{completion\_signal}}
+{\footnotesize\ttfamily \mbox{\hyperlink{group__signals_ga0003af605a660e7ef4f89aa555d3b3fc}{hsa\+\_\+signal\+\_\+t}} hsa\+\_\+barrier\+\_\+and\+\_\+packet\+\_\+s\+::completion\+\_\+signal}
+
+Signal used to indicate completion of the job. The application can use the special signal handle 0 to indicate that no signal is used. \mbox{\Hypertarget{structhsa__barrier__and__packet__s_a9c7604e28a763acf856bebddd0d0819c}\label{structhsa__barrier__and__packet__s_a9c7604e28a763acf856bebddd0d0819c}} 
+\index{hsa\_barrier\_and\_packet\_s@{hsa\_barrier\_and\_packet\_s}!dep\_signal@{dep\_signal}}
+\index{dep\_signal@{dep\_signal}!hsa\_barrier\_and\_packet\_s@{hsa\_barrier\_and\_packet\_s}}
+\doxysubsubsection{\texorpdfstring{dep\_signal}{dep\_signal}}
+{\footnotesize\ttfamily \mbox{\hyperlink{group__signals_ga0003af605a660e7ef4f89aa555d3b3fc}{hsa\+\_\+signal\+\_\+t}} hsa\+\_\+barrier\+\_\+and\+\_\+packet\+\_\+s\+::dep\+\_\+signal\mbox{[}5\mbox{]}}
+
+Array of dependent signal objects. Signals with a handle value of 0 are allowed and are interpreted by the packet processor as satisfied dependencies. \mbox{\Hypertarget{structhsa__barrier__and__packet__s_aca5da3d675e54818b98ad0d9a97440f9}\label{structhsa__barrier__and__packet__s_aca5da3d675e54818b98ad0d9a97440f9}} 
+\index{hsa\_barrier\_and\_packet\_s@{hsa\_barrier\_and\_packet\_s}!header@{header}}
+\index{header@{header}!hsa\_barrier\_and\_packet\_s@{hsa\_barrier\_and\_packet\_s}}
+\doxysubsubsection{\texorpdfstring{header}{header}}
+{\footnotesize\ttfamily uint16\+\_\+t hsa\+\_\+barrier\+\_\+and\+\_\+packet\+\_\+s\+::header}
+
+Packet header. Used to configure multiple packet parameters such as the packet type. The parameters are described by \mbox{\hyperlink{group__aql_ga2f03beef9c37e464b3837f2646d30870}{hsa\+\_\+packet\+\_\+header\+\_\+t}}. \mbox{\Hypertarget{structhsa__barrier__and__packet__s_aa6d67218fe51e22cb229360fc5460b47}\label{structhsa__barrier__and__packet__s_aa6d67218fe51e22cb229360fc5460b47}} 
+\index{hsa\_barrier\_and\_packet\_s@{hsa\_barrier\_and\_packet\_s}!reserved0@{reserved0}}
+\index{reserved0@{reserved0}!hsa\_barrier\_and\_packet\_s@{hsa\_barrier\_and\_packet\_s}}
+\doxysubsubsection{\texorpdfstring{reserved0}{reserved0}}
+{\footnotesize\ttfamily uint16\+\_\+t hsa\+\_\+barrier\+\_\+and\+\_\+packet\+\_\+s\+::reserved0}
+
+Reserved. Must be 0. \mbox{\Hypertarget{structhsa__barrier__and__packet__s_a019b20e4755bb8acf2bed184e126bdd6}\label{structhsa__barrier__and__packet__s_a019b20e4755bb8acf2bed184e126bdd6}} 
+\index{hsa\_barrier\_and\_packet\_s@{hsa\_barrier\_and\_packet\_s}!reserved1@{reserved1}}
+\index{reserved1@{reserved1}!hsa\_barrier\_and\_packet\_s@{hsa\_barrier\_and\_packet\_s}}
+\doxysubsubsection{\texorpdfstring{reserved1}{reserved1}}
+{\footnotesize\ttfamily uint32\+\_\+t hsa\+\_\+barrier\+\_\+and\+\_\+packet\+\_\+s\+::reserved1}
+
+Reserved. Must be 0. \mbox{\Hypertarget{structhsa__barrier__and__packet__s_a721ba5b832a948c3126aad185f12f78c}\label{structhsa__barrier__and__packet__s_a721ba5b832a948c3126aad185f12f78c}} 
+\index{hsa\_barrier\_and\_packet\_s@{hsa\_barrier\_and\_packet\_s}!reserved2@{reserved2}}
+\index{reserved2@{reserved2}!hsa\_barrier\_and\_packet\_s@{hsa\_barrier\_and\_packet\_s}}
+\doxysubsubsection{\texorpdfstring{reserved2}{reserved2}}
+{\footnotesize\ttfamily uint64\+\_\+t hsa\+\_\+barrier\+\_\+and\+\_\+packet\+\_\+s\+::reserved2}
+
+Reserved. Must be 0. 
+
+The documentation for this struct was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+src/inc/\mbox{\hyperlink{inc_2hsa_8h}{hsa.\+h}}\end{DoxyCompactItemize}

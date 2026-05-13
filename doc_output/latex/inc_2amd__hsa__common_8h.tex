@@ -1,0 +1,71 @@
+\hypertarget{inc_2amd__hsa__common_8h}{}\doxysection{src/inc/amd\+\_\+hsa\+\_\+common.h File Reference}
+\label{inc_2amd__hsa__common_8h}\index{src/inc/amd\_hsa\_common.h@{src/inc/amd\_hsa\_common.h}}
+{\ttfamily \#include $<$stddef.\+h$>$}\newline
+{\ttfamily \#include $<$stdint.\+h$>$}\newline
+Include dependency graph for amd\+\_\+hsa\+\_\+common.\+h\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=220pt]{inc_2amd__hsa__common_8h__incl}
+\end{center}
+\end{figure}
+This graph shows which files directly or indirectly include this file\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{inc_2amd__hsa__common_8h__dep__incl}
+\end{center}
+\end{figure}
+\doxysubsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \mbox{\hyperlink{inc_2amd__hsa__common_8h_a835e20b13739f1933f9c7531907f26b6}{AMD\+\_\+\+HSA\+\_\+\+ABI\+\_\+\+VERSION}}~\char`\"{}AMD GPU Architecture v0.\+35 (June 25, 2015)\char`\"{}
+\item 
+\#define \mbox{\hyperlink{inc_2amd__hsa__common_8h_a868f36bb3575e1ffe2338e2904d7a86c}{AMD\+\_\+\+HSA\+\_\+\+BITS\+\_\+\+CREATE\+\_\+\+ENUM\+\_\+\+ENTRIES}}(name,  shift,  width)
+\item 
+\#define \mbox{\hyperlink{inc_2amd__hsa__common_8h_a64fecf0743025c2d34abf67a45fff9e9}{AMD\+\_\+\+HSA\+\_\+\+BITS\+\_\+\+GET}}(src,  mask)~  ((src \& mask) $>$$>$ mask \#\# \+\_\+\+SHIFT)                                             \textbackslash{}
+\item 
+\#define \mbox{\hyperlink{inc_2amd__hsa__common_8h_a55f074fb1bd8c82ae322608be62ca00b}{AMD\+\_\+\+HSA\+\_\+\+BITS\+\_\+\+SET}}(dst,  mask,  val)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Macro Definition Documentation}
+\mbox{\Hypertarget{inc_2amd__hsa__common_8h_a835e20b13739f1933f9c7531907f26b6}\label{inc_2amd__hsa__common_8h_a835e20b13739f1933f9c7531907f26b6}} 
+\index{amd\_hsa\_common.h@{amd\_hsa\_common.h}!AMD\_HSA\_ABI\_VERSION@{AMD\_HSA\_ABI\_VERSION}}
+\index{AMD\_HSA\_ABI\_VERSION@{AMD\_HSA\_ABI\_VERSION}!amd\_hsa\_common.h@{amd\_hsa\_common.h}}
+\doxysubsubsection{\texorpdfstring{AMD\_HSA\_ABI\_VERSION}{AMD\_HSA\_ABI\_VERSION}}
+{\footnotesize\ttfamily \#define AMD\+\_\+\+HSA\+\_\+\+ABI\+\_\+\+VERSION~\char`\"{}AMD GPU Architecture v0.\+35 (June 25, 2015)\char`\"{}}
+
+\mbox{\Hypertarget{inc_2amd__hsa__common_8h_a868f36bb3575e1ffe2338e2904d7a86c}\label{inc_2amd__hsa__common_8h_a868f36bb3575e1ffe2338e2904d7a86c}} 
+\index{amd\_hsa\_common.h@{amd\_hsa\_common.h}!AMD\_HSA\_BITS\_CREATE\_ENUM\_ENTRIES@{AMD\_HSA\_BITS\_CREATE\_ENUM\_ENTRIES}}
+\index{AMD\_HSA\_BITS\_CREATE\_ENUM\_ENTRIES@{AMD\_HSA\_BITS\_CREATE\_ENUM\_ENTRIES}!amd\_hsa\_common.h@{amd\_hsa\_common.h}}
+\doxysubsubsection{\texorpdfstring{AMD\_HSA\_BITS\_CREATE\_ENUM\_ENTRIES}{AMD\_HSA\_BITS\_CREATE\_ENUM\_ENTRIES}}
+{\footnotesize\ttfamily \#define AMD\+\_\+\+HSA\+\_\+\+BITS\+\_\+\+CREATE\+\_\+\+ENUM\+\_\+\+ENTRIES(\begin{DoxyParamCaption}\item[{}]{name,  }\item[{}]{shift,  }\item[{}]{width }\end{DoxyParamCaption})}
+
+{\bfseries Value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{  name\#\#\_SHIFT = (shift),                                                      \(\backslash\)}
+\DoxyCodeLine{  name\#\#\_WIDTH = (width),                                                      \(\backslash\)}
+\DoxyCodeLine{  name = (((1 << (width)) -\/ 1) << (shift))                                     \(\backslash\)}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{inc_2amd__hsa__common_8h_a64fecf0743025c2d34abf67a45fff9e9}\label{inc_2amd__hsa__common_8h_a64fecf0743025c2d34abf67a45fff9e9}} 
+\index{amd\_hsa\_common.h@{amd\_hsa\_common.h}!AMD\_HSA\_BITS\_GET@{AMD\_HSA\_BITS\_GET}}
+\index{AMD\_HSA\_BITS\_GET@{AMD\_HSA\_BITS\_GET}!amd\_hsa\_common.h@{amd\_hsa\_common.h}}
+\doxysubsubsection{\texorpdfstring{AMD\_HSA\_BITS\_GET}{AMD\_HSA\_BITS\_GET}}
+{\footnotesize\ttfamily \#define AMD\+\_\+\+HSA\+\_\+\+BITS\+\_\+\+GET(\begin{DoxyParamCaption}\item[{}]{src,  }\item[{}]{mask }\end{DoxyParamCaption})~  ((src \& mask) $>$$>$ mask \#\# \+\_\+\+SHIFT)                                             \textbackslash{}}
+
+\mbox{\Hypertarget{inc_2amd__hsa__common_8h_a55f074fb1bd8c82ae322608be62ca00b}\label{inc_2amd__hsa__common_8h_a55f074fb1bd8c82ae322608be62ca00b}} 
+\index{amd\_hsa\_common.h@{amd\_hsa\_common.h}!AMD\_HSA\_BITS\_SET@{AMD\_HSA\_BITS\_SET}}
+\index{AMD\_HSA\_BITS\_SET@{AMD\_HSA\_BITS\_SET}!amd\_hsa\_common.h@{amd\_hsa\_common.h}}
+\doxysubsubsection{\texorpdfstring{AMD\_HSA\_BITS\_SET}{AMD\_HSA\_BITS\_SET}}
+{\footnotesize\ttfamily \#define AMD\+\_\+\+HSA\+\_\+\+BITS\+\_\+\+SET(\begin{DoxyParamCaption}\item[{}]{dst,  }\item[{}]{mask,  }\item[{}]{val }\end{DoxyParamCaption})}
+
+{\bfseries Value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{  dst \&= (\string~(1 << mask\#\#\_SHIFT) \& \string~mask);                                       \(\backslash\)}
+\DoxyCodeLine{  dst |= (((val) << mask\#\#\_SHIFT) \& mask)                                      \(\backslash\)}
+
+\end{DoxyCode}

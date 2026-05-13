@@ -1,0 +1,100 @@
+\hypertarget{atomic__helpers_8h}{}\doxysection{src/core/util/atomic\+\_\+helpers.h File Reference}
+\label{atomic__helpers_8h}\index{src/core/util/atomic\_helpers.h@{src/core/util/atomic\_helpers.h}}
+{\ttfamily \#include $<$atomic$>$}\newline
+{\ttfamily \#include \char`\"{}utils.\+h\char`\"{}}\newline
+Include dependency graph for atomic\+\_\+helpers.\+h\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{atomic__helpers_8h__incl}
+\end{center}
+\end{figure}
+This graph shows which files directly or indirectly include this file\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{atomic__helpers_8h__dep__incl}
+\end{center}
+\end{figure}
+\doxysubsection*{Namespaces}
+\begin{DoxyCompactItemize}
+\item 
+ \mbox{\hyperlink{namespacerocr}{rocr}}
+\item 
+ \mbox{\hyperlink{namespacerocr_1_1atomic}{rocr\+::atomic}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \mbox{\hyperlink{atomic__helpers_8h_a44674cafaf7502e7982175b5b48c723e}{ALWAYS\+\_\+\+CONSERVATIVE}}~0
+\end{DoxyCompactItemize}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+static constexpr int \mbox{\hyperlink{namespacerocr_1_1atomic_af0043f0bfb54e6714a36b3af92848671}{rocr\+::atomic\+::c11\+To\+Built\+In\+Flags}} (std\+::memory\+\_\+order order)
+\item 
+static \+\_\+\+\_\+forceinline void \mbox{\hyperlink{namespacerocr_1_1atomic_aac775b102f017d9de079ca4f1b9e5c01}{rocr\+::atomic\+::\+Pre\+Fence}} (std\+::memory\+\_\+order order)
+\item 
+static \+\_\+\+\_\+forceinline void \mbox{\hyperlink{namespacerocr_1_1atomic_a8f80b5e9887be0b33255beff388f59b7}{rocr\+::atomic\+::\+Post\+Fence}} (std\+::memory\+\_\+order order)
+\item 
+static \+\_\+\+\_\+forceinline void \mbox{\hyperlink{namespacerocr_1_1atomic_aa24d64d8435f6e90e9e07dfa83d2d471}{rocr\+::atomic\+::\+Fence}} (std\+::memory\+\_\+order order=std\+::memory\+\_\+order\+\_\+seq\+\_\+cst)
+\item 
+{\footnotesize template$<$class T $>$ }\\static \+\_\+\+\_\+forceinline void \mbox{\hyperlink{namespacerocr_1_1atomic_a6707f0e2f53a1a3faf0b6eca174308e9}{rocr\+::atomic\+::\+Basic\+Check}} (const T $\ast$ptr)
+\item 
+{\footnotesize template$<$class T $>$ }\\static \+\_\+\+\_\+forceinline void \mbox{\hyperlink{namespacerocr_1_1atomic_af93a65c47fda9809b69d00a70af39ed2}{rocr\+::atomic\+::\+Basic\+Check}} (const volatile T $\ast$ptr)
+\item 
+{\footnotesize template$<$class T $>$ }\\static \+\_\+\+\_\+forceinline T \mbox{\hyperlink{namespacerocr_1_1atomic_a2d4659b703b5221813bad7f957be5b44}{rocr\+::atomic\+::\+Load}} (const T $\ast$ptr, std\+::memory\+\_\+order order=std\+::memory\+\_\+order\+\_\+relaxed)
+\begin{DoxyCompactList}\small\item\em \+: Load value of type T atomically with specified memory order. \end{DoxyCompactList}\item 
+{\footnotesize template$<$class T $>$ }\\static \+\_\+\+\_\+forceinline T \mbox{\hyperlink{namespacerocr_1_1atomic_a947200ac90a55991c090eba75fe4f57b}{rocr\+::atomic\+::\+Load}} (const volatile T $\ast$ptr, std\+::memory\+\_\+order order=std\+::memory\+\_\+order\+\_\+relaxed)
+\begin{DoxyCompactList}\small\item\em \+: function overloading, for more info, see previous one. \end{DoxyCompactList}\item 
+{\footnotesize template$<$class T $>$ }\\static \+\_\+\+\_\+forceinline void \mbox{\hyperlink{namespacerocr_1_1atomic_ae9307c0cd1f6370c71ab4c7e3ecd3b9c}{rocr\+::atomic\+::\+Store}} (T $\ast$ptr, T val, std\+::memory\+\_\+order order=std\+::memory\+\_\+order\+\_\+relaxed)
+\begin{DoxyCompactList}\small\item\em \+: Store value of type T with specified memory order. \end{DoxyCompactList}\item 
+{\footnotesize template$<$class T $>$ }\\static \+\_\+\+\_\+forceinline void \mbox{\hyperlink{namespacerocr_1_1atomic_ae5a7cef107b908af918e272b60ab1a7f}{rocr\+::atomic\+::\+Store}} (volatile T $\ast$ptr, T val, std\+::memory\+\_\+order order=std\+::memory\+\_\+order\+\_\+relaxed)
+\begin{DoxyCompactList}\small\item\em \+: Function overloading, for more info, see previous one. \end{DoxyCompactList}\item 
+{\footnotesize template$<$class T $>$ }\\static \+\_\+\+\_\+forceinline T \mbox{\hyperlink{namespacerocr_1_1atomic_a5eaf927d1a4e790021e5366d8567f5e9}{rocr\+::atomic\+::\+Cas}} (T $\ast$ptr, T val, T expected, std\+::memory\+\_\+order order=std\+::memory\+\_\+order\+\_\+relaxed)
+\begin{DoxyCompactList}\small\item\em \+: Compare and swap value atomically with specified memory order. \end{DoxyCompactList}\item 
+{\footnotesize template$<$class T $>$ }\\static \+\_\+\+\_\+forceinline T \mbox{\hyperlink{namespacerocr_1_1atomic_ac5b05892c0c3686f877b419dd4931ad9}{rocr\+::atomic\+::\+Cas}} (volatile T $\ast$ptr, T val, T expected, std\+::memory\+\_\+order order=std\+::memory\+\_\+order\+\_\+relaxed)
+\begin{DoxyCompactList}\small\item\em \+: Function overloading, for more info, see previous one. \end{DoxyCompactList}\item 
+{\footnotesize template$<$class T $>$ }\\static \+\_\+\+\_\+forceinline T \mbox{\hyperlink{namespacerocr_1_1atomic_ae8dd1fd489f55d8e223d3ffc721ac8b4}{rocr\+::atomic\+::\+Exchange}} (T $\ast$ptr, T val, std\+::memory\+\_\+order order=std\+::memory\+\_\+order\+\_\+relaxed)
+\begin{DoxyCompactList}\small\item\em \+: Exchange the value atomically with specified memory order. \end{DoxyCompactList}\item 
+{\footnotesize template$<$class T $>$ }\\static \+\_\+\+\_\+forceinline T \mbox{\hyperlink{namespacerocr_1_1atomic_a6d204d1a8aa2fc42bb87ec3c4606db24}{rocr\+::atomic\+::\+Exchange}} (volatile T $\ast$ptr, T val, std\+::memory\+\_\+order order=std\+::memory\+\_\+order\+\_\+relaxed)
+\begin{DoxyCompactList}\small\item\em \+: Function overloading, for more info, see previous one. \end{DoxyCompactList}\item 
+{\footnotesize template$<$class T $>$ }\\static \+\_\+\+\_\+forceinline T \mbox{\hyperlink{namespacerocr_1_1atomic_a3f3866c4b0e364e1dc2d0aabfc1027e3}{rocr\+::atomic\+::\+Add}} (T $\ast$ptr, T val, std\+::memory\+\_\+order order=std\+::memory\+\_\+order\+\_\+relaxed)
+\begin{DoxyCompactList}\small\item\em \+: Add value to variable atomically with specified memory order. \end{DoxyCompactList}\item 
+{\footnotesize template$<$class T $>$ }\\static \+\_\+\+\_\+forceinline T \mbox{\hyperlink{namespacerocr_1_1atomic_ab8f9d2cdbc87d74a4e0b53f2d2f75271}{rocr\+::atomic\+::\+Sub}} (T $\ast$ptr, T val, std\+::memory\+\_\+order order=std\+::memory\+\_\+order\+\_\+relaxed)
+\begin{DoxyCompactList}\small\item\em \+: Subtract value from the variable atomically with specified memory order. \end{DoxyCompactList}\item 
+{\footnotesize template$<$class T $>$ }\\static \+\_\+\+\_\+forceinline T \mbox{\hyperlink{namespacerocr_1_1atomic_aeeacf6bbab974b09d801f4cb003edb59}{rocr\+::atomic\+::\+And}} (T $\ast$ptr, T val, std\+::memory\+\_\+order order=std\+::memory\+\_\+order\+\_\+relaxed)
+\begin{DoxyCompactList}\small\item\em \+: Bit And operation on variable atomically with specified memory order. \end{DoxyCompactList}\item 
+{\footnotesize template$<$class T $>$ }\\static \+\_\+\+\_\+forceinline T \mbox{\hyperlink{namespacerocr_1_1atomic_a986dd90bf44abc4f229fa5cf889a0d25}{rocr\+::atomic\+::\+Or}} (T $\ast$ptr, T val, std\+::memory\+\_\+order order=std\+::memory\+\_\+order\+\_\+relaxed)
+\begin{DoxyCompactList}\small\item\em \+: Bit Or operation on variable atomically with specified memory order. \end{DoxyCompactList}\item 
+{\footnotesize template$<$class T $>$ }\\static \+\_\+\+\_\+forceinline T \mbox{\hyperlink{namespacerocr_1_1atomic_a933f7d42d217a4b2427bb8fc804178b1}{rocr\+::atomic\+::\+Xor}} (T $\ast$ptr, T val, std\+::memory\+\_\+order order=std\+::memory\+\_\+order\+\_\+relaxed)
+\begin{DoxyCompactList}\small\item\em \+: Bit Xor operation on variable atomically with specified memory order. \end{DoxyCompactList}\item 
+{\footnotesize template$<$class T $>$ }\\static \+\_\+\+\_\+forceinline T \mbox{\hyperlink{namespacerocr_1_1atomic_a89b0cca63e81343a7c1c44ef2a6ed54d}{rocr\+::atomic\+::\+Increment}} (T $\ast$ptr, std\+::memory\+\_\+order order=std\+::memory\+\_\+order\+\_\+relaxed)
+\begin{DoxyCompactList}\small\item\em \+: Increase the value of variable atomically with specified memory order. \end{DoxyCompactList}\item 
+{\footnotesize template$<$class T $>$ }\\static \+\_\+\+\_\+forceinline T \mbox{\hyperlink{namespacerocr_1_1atomic_a784704cf3463dc497f9f39f561dc4534}{rocr\+::atomic\+::\+Decrement}} (T $\ast$ptr, std\+::memory\+\_\+order order=std\+::memory\+\_\+order\+\_\+relaxed)
+\begin{DoxyCompactList}\small\item\em \+: Decrease the value of the variable atomically with specified memory order. \end{DoxyCompactList}\item 
+{\footnotesize template$<$class T $>$ }\\static \+\_\+\+\_\+forceinline T \mbox{\hyperlink{namespacerocr_1_1atomic_a89c5da228297520f994c3a76765d1991}{rocr\+::atomic\+::\+Add}} (volatile T $\ast$ptr, T val, std\+::memory\+\_\+order order=std\+::memory\+\_\+order\+\_\+relaxed)
+\begin{DoxyCompactList}\small\item\em \+: Add value to variable atomically with specified memory order. \end{DoxyCompactList}\item 
+{\footnotesize template$<$class T $>$ }\\static \+\_\+\+\_\+forceinline T \mbox{\hyperlink{namespacerocr_1_1atomic_a385ec5c4139ca6459cb9425152c107f6}{rocr\+::atomic\+::\+Sub}} (volatile T $\ast$ptr, T val, std\+::memory\+\_\+order order=std\+::memory\+\_\+order\+\_\+relaxed)
+\begin{DoxyCompactList}\small\item\em \+: Subtract value from the variable atomically with specified memory order. \end{DoxyCompactList}\item 
+{\footnotesize template$<$class T $>$ }\\static \+\_\+\+\_\+forceinline T \mbox{\hyperlink{namespacerocr_1_1atomic_a5f17d2463623af23d854ee7ccebb0bd9}{rocr\+::atomic\+::\+And}} (volatile T $\ast$ptr, T val, std\+::memory\+\_\+order order=std\+::memory\+\_\+order\+\_\+relaxed)
+\begin{DoxyCompactList}\small\item\em \+: Bit And operation on variable atomically with specified memory order. \end{DoxyCompactList}\item 
+{\footnotesize template$<$class T $>$ }\\static \+\_\+\+\_\+forceinline T \mbox{\hyperlink{namespacerocr_1_1atomic_a0b4c44c620adc81e13ba4a3e593176b2}{rocr\+::atomic\+::\+Or}} (volatile T $\ast$ptr, T val, std\+::memory\+\_\+order order=std\+::memory\+\_\+order\+\_\+relaxed)
+\begin{DoxyCompactList}\small\item\em \+: Bit Or operation on variable atomically with specified memory order. \end{DoxyCompactList}\item 
+{\footnotesize template$<$class T $>$ }\\static \+\_\+\+\_\+forceinline T \mbox{\hyperlink{namespacerocr_1_1atomic_ab20aed341180dc9b5630504f4664baee}{rocr\+::atomic\+::\+Xor}} (volatile T $\ast$ptr, T val, std\+::memory\+\_\+order order=std\+::memory\+\_\+order\+\_\+relaxed)
+\begin{DoxyCompactList}\small\item\em \+: Bit Xor operation on variable atomically with specified memory order. \end{DoxyCompactList}\item 
+{\footnotesize template$<$class T $>$ }\\static \+\_\+\+\_\+forceinline T \mbox{\hyperlink{namespacerocr_1_1atomic_a205faefd647bd73e0aeb50eb729d6b36}{rocr\+::atomic\+::\+Increment}} (volatile T $\ast$ptr, std\+::memory\+\_\+order order=std\+::memory\+\_\+order\+\_\+relaxed)
+\begin{DoxyCompactList}\small\item\em \+: Increase the value of variable atomically with specified memory order. \end{DoxyCompactList}\item 
+{\footnotesize template$<$class T $>$ }\\static \+\_\+\+\_\+forceinline T \mbox{\hyperlink{namespacerocr_1_1atomic_a896c29b8c549b7253b0fd2ce6b9b84ff}{rocr\+::atomic\+::\+Decrement}} (volatile T $\ast$ptr, std\+::memory\+\_\+order order=std\+::memory\+\_\+order\+\_\+relaxed)
+\begin{DoxyCompactList}\small\item\em \+: Decrease the value of the variable atomically with specified memory order. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Macro Definition Documentation}
+\mbox{\Hypertarget{atomic__helpers_8h_a44674cafaf7502e7982175b5b48c723e}\label{atomic__helpers_8h_a44674cafaf7502e7982175b5b48c723e}} 
+\index{atomic\_helpers.h@{atomic\_helpers.h}!ALWAYS\_CONSERVATIVE@{ALWAYS\_CONSERVATIVE}}
+\index{ALWAYS\_CONSERVATIVE@{ALWAYS\_CONSERVATIVE}!atomic\_helpers.h@{atomic\_helpers.h}}
+\doxysubsubsection{\texorpdfstring{ALWAYS\_CONSERVATIVE}{ALWAYS\_CONSERVATIVE}}
+{\footnotesize\ttfamily \#define ALWAYS\+\_\+\+CONSERVATIVE~0}
+

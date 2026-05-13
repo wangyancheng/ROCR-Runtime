@@ -1,0 +1,87 @@
+\hypertarget{runtime_8cpp}{}\doxysection{src/core/runtime/runtime.cpp File Reference}
+\label{runtime_8cpp}\index{src/core/runtime/runtime.cpp@{src/core/runtime/runtime.cpp}}
+{\ttfamily \#include \char`\"{}core/inc/runtime.\+h\char`\"{}}\newline
+{\ttfamily \#include $<$algorithm$>$}\newline
+{\ttfamily \#include $<$atomic$>$}\newline
+{\ttfamily \#include $<$cstring$>$}\newline
+{\ttfamily \#include $<$string$>$}\newline
+{\ttfamily \#include $<$vector$>$}\newline
+{\ttfamily \#include $<$list$>$}\newline
+{\ttfamily \#include \char`\"{}core/common/shared.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}core/inc/hsa\+\_\+ext\+\_\+interface.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}core/inc/amd\+\_\+cpu\+\_\+agent.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}core/inc/amd\+\_\+gpu\+\_\+agent.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}core/inc/amd\+\_\+memory\+\_\+region.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}core/inc/amd\+\_\+topology.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}core/inc/signal.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}core/inc/interrupt\+\_\+signal.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}core/inc/hsa\+\_\+ext\+\_\+amd\+\_\+impl.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}core/inc/hsa\+\_\+api\+\_\+trace\+\_\+int.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}core/util/os.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}core/inc/exceptions.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}inc/hsa\+\_\+ven\+\_\+amd\+\_\+aqlprofile.\+h\char`\"{}}\newline
+Include dependency graph for runtime.\+cpp\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{runtime_8cpp__incl}
+\end{center}
+\end{figure}
+\doxysubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class \mbox{\hyperlink{classrocr_1_1core_1_1RuntimeCleanup}{rocr\+::core\+::\+Runtime\+Cleanup}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Namespaces}
+\begin{DoxyCompactItemize}
+\item 
+ \mbox{\hyperlink{namespacerocr}{rocr}}
+\item 
+ \mbox{\hyperlink{namespacerocr_1_1core}{rocr\+::core}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \mbox{\hyperlink{runtime_8cpp_a763afb6b6c24c9fa93911a194f4e9ca3}{HSA\+\_\+\+VERSION\+\_\+\+MAJOR}}~1
+\item 
+\#define \mbox{\hyperlink{runtime_8cpp_a12d14bbc54ef11fb203114d7c5901402}{HSA\+\_\+\+VERSION\+\_\+\+MINOR}}~1
+\end{DoxyCompactItemize}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+const char rocrbuildid\mbox{[}$\,$\mbox{]} \mbox{\hyperlink{runtime_8cpp_acd8973dd008836cd9e8075934d916651}{\+\_\+\+\_\+attribute\+\_\+\+\_\+}} ((used))
+\item 
+static std\+::vector$<$ std\+::string $>$ \mbox{\hyperlink{namespacerocr_1_1core_ab8e28fc0d63a8e3302fcb11db7378a05}{rocr\+::core\+::parse\+\_\+tool\+\_\+names}} (std\+::string tool\+\_\+names)
+\end{DoxyCompactItemize}
+\doxysubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+static bool \mbox{\hyperlink{namespacerocr_1_1core_a965737fa2d41c6ef01b879cc3d36bcc8}{rocr\+::core\+::loaded}} = true
+\item 
+static Runtime\+Cleanup \mbox{\hyperlink{namespacerocr_1_1core_ab33d6773fe520d94070c38068602fd9a}{rocr\+::core\+::cleanup\+\_\+at\+\_\+unload\+\_\+}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Macro Definition Documentation}
+\mbox{\Hypertarget{runtime_8cpp_a763afb6b6c24c9fa93911a194f4e9ca3}\label{runtime_8cpp_a763afb6b6c24c9fa93911a194f4e9ca3}} 
+\index{runtime.cpp@{runtime.cpp}!HSA\_VERSION\_MAJOR@{HSA\_VERSION\_MAJOR}}
+\index{HSA\_VERSION\_MAJOR@{HSA\_VERSION\_MAJOR}!runtime.cpp@{runtime.cpp}}
+\doxysubsubsection{\texorpdfstring{HSA\_VERSION\_MAJOR}{HSA\_VERSION\_MAJOR}}
+{\footnotesize\ttfamily \#define HSA\+\_\+\+VERSION\+\_\+\+MAJOR~1}
+
+\mbox{\Hypertarget{runtime_8cpp_a12d14bbc54ef11fb203114d7c5901402}\label{runtime_8cpp_a12d14bbc54ef11fb203114d7c5901402}} 
+\index{runtime.cpp@{runtime.cpp}!HSA\_VERSION\_MINOR@{HSA\_VERSION\_MINOR}}
+\index{HSA\_VERSION\_MINOR@{HSA\_VERSION\_MINOR}!runtime.cpp@{runtime.cpp}}
+\doxysubsubsection{\texorpdfstring{HSA\_VERSION\_MINOR}{HSA\_VERSION\_MINOR}}
+{\footnotesize\ttfamily \#define HSA\+\_\+\+VERSION\+\_\+\+MINOR~1}
+
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{runtime_8cpp_acd8973dd008836cd9e8075934d916651}\label{runtime_8cpp_acd8973dd008836cd9e8075934d916651}} 
+\index{runtime.cpp@{runtime.cpp}!\_\_attribute\_\_@{\_\_attribute\_\_}}
+\index{\_\_attribute\_\_@{\_\_attribute\_\_}!runtime.cpp@{runtime.cpp}}
+\doxysubsubsection{\texorpdfstring{\_\_attribute\_\_()}{\_\_attribute\_\_()}}
+{\footnotesize\ttfamily const char rocrbuildid \mbox{[}$\,$\mbox{]} \+\_\+\+\_\+attribute\+\_\+\+\_\+ (\begin{DoxyParamCaption}\item[{(used)}]{ }\end{DoxyParamCaption})}
+

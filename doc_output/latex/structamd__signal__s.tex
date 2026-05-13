@@ -1,0 +1,128 @@
+\hypertarget{structamd__signal__s}{}\doxysection{amd\+\_\+signal\+\_\+s Struct Reference}
+\label{structamd__signal__s}\index{amd\_signal\_s@{amd\_signal\_s}}
+
+
+{\ttfamily \#include $<$amd\+\_\+hsa\+\_\+signal.\+h$>$}
+
+\doxysubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{inc_2amd__hsa__signal_8h_a43e24a599b8f987e28e79517c0d5afe8}{amd\+\_\+signal\+\_\+kind64\+\_\+t}} \mbox{\hyperlink{structamd__signal__s_a4dfa6c9b59b66ea4e9628d611ac10199}{kind}}
+\item 
+\begin{tabbing}
+xx\=xx\=xx\=xx\=xx\=xx\=xx\=xx\=xx\=\kill
+union \{\\
+\>volatile int64\_t \mbox{\hyperlink{structamd__signal__s_ac13c8a0f299d7431a42926e0af9307b2}{value}}\\
+\>volatile uint32\_t $\ast$ \mbox{\hyperlink{structamd__signal__s_a734db1d983fbdac0d20791f08d036c89}{legacy\_hardware\_doorbell\_ptr}}\\
+\>volatile uint64\_t $\ast$ \mbox{\hyperlink{structamd__signal__s_a0075d30a78ba3cc06969d4ae0e994cdd}{hardware\_doorbell\_ptr}}\\
+\}; \\
+
+\end{tabbing}\item 
+uint64\+\_\+t \mbox{\hyperlink{structamd__signal__s_ae796e926397f860290ab6db2fe9c8704}{event\+\_\+mailbox\+\_\+ptr}}
+\item 
+uint32\+\_\+t \mbox{\hyperlink{structamd__signal__s_a5f5edcb47632a72c92f1bad385de6f12}{event\+\_\+id}}
+\item 
+uint32\+\_\+t \mbox{\hyperlink{structamd__signal__s_a17af1c61f884498aacfc5cc8e9b5c32d}{reserved1}}
+\item 
+uint64\+\_\+t \mbox{\hyperlink{structamd__signal__s_ac476d9f86949c707cfee0fe6773b1e06}{start\+\_\+ts}}
+\item 
+uint64\+\_\+t \mbox{\hyperlink{structamd__signal__s_aaac035963aa8c6feabd97cb08652a325}{end\+\_\+ts}}
+\item 
+\begin{tabbing}
+xx\=xx\=xx\=xx\=xx\=xx\=xx\=xx\=xx\=\kill
+union \{\\
+\>\mbox{\hyperlink{inc_2amd__hsa__queue_8h_ad1a6e5202af3be59ebd6bf900ebb134f}{amd\_queue\_t}} $\ast$ \mbox{\hyperlink{structamd__signal__s_a37f2c774035664ab670aee97191bdfda}{queue\_ptr}}\\
+\>uint64\_t \mbox{\hyperlink{structamd__signal__s_a7a59dd515edf28dd8d806119c885051c}{reserved2}}\\
+\}; \\
+
+\end{tabbing}\item 
+uint32\+\_\+t \mbox{\hyperlink{structamd__signal__s_a9e8814f8df72d6a80afe1febd626d0a9}{reserved3}} \mbox{[}2\mbox{]}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{structamd__signal__s_a83e9fd9073a407ffc37e347bc7eaf46b}\label{structamd__signal__s_a83e9fd9073a407ffc37e347bc7eaf46b}} 
+\doxysubsubsection{\texorpdfstring{}{}}
+{\footnotesize\ttfamily union \{ ... \} }
+
+\mbox{\Hypertarget{structamd__signal__s_a25018084e4c25ce08819c89205355b37}\label{structamd__signal__s_a25018084e4c25ce08819c89205355b37}} 
+\doxysubsubsection{\texorpdfstring{}{}}
+{\footnotesize\ttfamily union \{ ... \} }
+
+\mbox{\Hypertarget{structamd__signal__s_aaac035963aa8c6feabd97cb08652a325}\label{structamd__signal__s_aaac035963aa8c6feabd97cb08652a325}} 
+\index{amd\_signal\_s@{amd\_signal\_s}!end\_ts@{end\_ts}}
+\index{end\_ts@{end\_ts}!amd\_signal\_s@{amd\_signal\_s}}
+\doxysubsubsection{\texorpdfstring{end\_ts}{end\_ts}}
+{\footnotesize\ttfamily uint64\+\_\+t amd\+\_\+signal\+\_\+s\+::end\+\_\+ts}
+
+\mbox{\Hypertarget{structamd__signal__s_a5f5edcb47632a72c92f1bad385de6f12}\label{structamd__signal__s_a5f5edcb47632a72c92f1bad385de6f12}} 
+\index{amd\_signal\_s@{amd\_signal\_s}!event\_id@{event\_id}}
+\index{event\_id@{event\_id}!amd\_signal\_s@{amd\_signal\_s}}
+\doxysubsubsection{\texorpdfstring{event\_id}{event\_id}}
+{\footnotesize\ttfamily uint32\+\_\+t amd\+\_\+signal\+\_\+s\+::event\+\_\+id}
+
+\mbox{\Hypertarget{structamd__signal__s_ae796e926397f860290ab6db2fe9c8704}\label{structamd__signal__s_ae796e926397f860290ab6db2fe9c8704}} 
+\index{amd\_signal\_s@{amd\_signal\_s}!event\_mailbox\_ptr@{event\_mailbox\_ptr}}
+\index{event\_mailbox\_ptr@{event\_mailbox\_ptr}!amd\_signal\_s@{amd\_signal\_s}}
+\doxysubsubsection{\texorpdfstring{event\_mailbox\_ptr}{event\_mailbox\_ptr}}
+{\footnotesize\ttfamily uint64\+\_\+t amd\+\_\+signal\+\_\+s\+::event\+\_\+mailbox\+\_\+ptr}
+
+\mbox{\Hypertarget{structamd__signal__s_a0075d30a78ba3cc06969d4ae0e994cdd}\label{structamd__signal__s_a0075d30a78ba3cc06969d4ae0e994cdd}} 
+\index{amd\_signal\_s@{amd\_signal\_s}!hardware\_doorbell\_ptr@{hardware\_doorbell\_ptr}}
+\index{hardware\_doorbell\_ptr@{hardware\_doorbell\_ptr}!amd\_signal\_s@{amd\_signal\_s}}
+\doxysubsubsection{\texorpdfstring{hardware\_doorbell\_ptr}{hardware\_doorbell\_ptr}}
+{\footnotesize\ttfamily volatile uint64\+\_\+t$\ast$ amd\+\_\+signal\+\_\+s\+::hardware\+\_\+doorbell\+\_\+ptr}
+
+\mbox{\Hypertarget{structamd__signal__s_a4dfa6c9b59b66ea4e9628d611ac10199}\label{structamd__signal__s_a4dfa6c9b59b66ea4e9628d611ac10199}} 
+\index{amd\_signal\_s@{amd\_signal\_s}!kind@{kind}}
+\index{kind@{kind}!amd\_signal\_s@{amd\_signal\_s}}
+\doxysubsubsection{\texorpdfstring{kind}{kind}}
+{\footnotesize\ttfamily \mbox{\hyperlink{inc_2amd__hsa__signal_8h_a43e24a599b8f987e28e79517c0d5afe8}{amd\+\_\+signal\+\_\+kind64\+\_\+t}} amd\+\_\+signal\+\_\+s\+::kind}
+
+\mbox{\Hypertarget{structamd__signal__s_a734db1d983fbdac0d20791f08d036c89}\label{structamd__signal__s_a734db1d983fbdac0d20791f08d036c89}} 
+\index{amd\_signal\_s@{amd\_signal\_s}!legacy\_hardware\_doorbell\_ptr@{legacy\_hardware\_doorbell\_ptr}}
+\index{legacy\_hardware\_doorbell\_ptr@{legacy\_hardware\_doorbell\_ptr}!amd\_signal\_s@{amd\_signal\_s}}
+\doxysubsubsection{\texorpdfstring{legacy\_hardware\_doorbell\_ptr}{legacy\_hardware\_doorbell\_ptr}}
+{\footnotesize\ttfamily volatile uint32\+\_\+t$\ast$ amd\+\_\+signal\+\_\+s\+::legacy\+\_\+hardware\+\_\+doorbell\+\_\+ptr}
+
+\mbox{\Hypertarget{structamd__signal__s_a37f2c774035664ab670aee97191bdfda}\label{structamd__signal__s_a37f2c774035664ab670aee97191bdfda}} 
+\index{amd\_signal\_s@{amd\_signal\_s}!queue\_ptr@{queue\_ptr}}
+\index{queue\_ptr@{queue\_ptr}!amd\_signal\_s@{amd\_signal\_s}}
+\doxysubsubsection{\texorpdfstring{queue\_ptr}{queue\_ptr}}
+{\footnotesize\ttfamily \mbox{\hyperlink{inc_2amd__hsa__queue_8h_ad1a6e5202af3be59ebd6bf900ebb134f}{amd\+\_\+queue\+\_\+t}}$\ast$ amd\+\_\+signal\+\_\+s\+::queue\+\_\+ptr}
+
+\mbox{\Hypertarget{structamd__signal__s_a17af1c61f884498aacfc5cc8e9b5c32d}\label{structamd__signal__s_a17af1c61f884498aacfc5cc8e9b5c32d}} 
+\index{amd\_signal\_s@{amd\_signal\_s}!reserved1@{reserved1}}
+\index{reserved1@{reserved1}!amd\_signal\_s@{amd\_signal\_s}}
+\doxysubsubsection{\texorpdfstring{reserved1}{reserved1}}
+{\footnotesize\ttfamily uint32\+\_\+t amd\+\_\+signal\+\_\+s\+::reserved1}
+
+\mbox{\Hypertarget{structamd__signal__s_a7a59dd515edf28dd8d806119c885051c}\label{structamd__signal__s_a7a59dd515edf28dd8d806119c885051c}} 
+\index{amd\_signal\_s@{amd\_signal\_s}!reserved2@{reserved2}}
+\index{reserved2@{reserved2}!amd\_signal\_s@{amd\_signal\_s}}
+\doxysubsubsection{\texorpdfstring{reserved2}{reserved2}}
+{\footnotesize\ttfamily uint64\+\_\+t amd\+\_\+signal\+\_\+s\+::reserved2}
+
+\mbox{\Hypertarget{structamd__signal__s_a9e8814f8df72d6a80afe1febd626d0a9}\label{structamd__signal__s_a9e8814f8df72d6a80afe1febd626d0a9}} 
+\index{amd\_signal\_s@{amd\_signal\_s}!reserved3@{reserved3}}
+\index{reserved3@{reserved3}!amd\_signal\_s@{amd\_signal\_s}}
+\doxysubsubsection{\texorpdfstring{reserved3}{reserved3}}
+{\footnotesize\ttfamily uint32\+\_\+t amd\+\_\+signal\+\_\+s\+::reserved3\mbox{[}2\mbox{]}}
+
+\mbox{\Hypertarget{structamd__signal__s_ac476d9f86949c707cfee0fe6773b1e06}\label{structamd__signal__s_ac476d9f86949c707cfee0fe6773b1e06}} 
+\index{amd\_signal\_s@{amd\_signal\_s}!start\_ts@{start\_ts}}
+\index{start\_ts@{start\_ts}!amd\_signal\_s@{amd\_signal\_s}}
+\doxysubsubsection{\texorpdfstring{start\_ts}{start\_ts}}
+{\footnotesize\ttfamily uint64\+\_\+t amd\+\_\+signal\+\_\+s\+::start\+\_\+ts}
+
+\mbox{\Hypertarget{structamd__signal__s_ac13c8a0f299d7431a42926e0af9307b2}\label{structamd__signal__s_ac13c8a0f299d7431a42926e0af9307b2}} 
+\index{amd\_signal\_s@{amd\_signal\_s}!value@{value}}
+\index{value@{value}!amd\_signal\_s@{amd\_signal\_s}}
+\doxysubsubsection{\texorpdfstring{value}{value}}
+{\footnotesize\ttfamily volatile int64\+\_\+t amd\+\_\+signal\+\_\+s\+::value}
+
+
+
+The documentation for this struct was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+src/inc/\mbox{\hyperlink{inc_2amd__hsa__signal_8h}{amd\+\_\+hsa\+\_\+signal.\+h}}\end{DoxyCompactItemize}

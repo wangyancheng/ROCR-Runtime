@@ -1,0 +1,223 @@
+\hypertarget{structrocr_1_1core_1_1SharedSignal}{}\doxysection{rocr\+::core\+::Shared\+Signal Struct Reference}
+\label{structrocr_1_1core_1_1SharedSignal}\index{rocr::core::SharedSignal@{rocr::core::SharedSignal}}
+
+
+ABI and object conversion struct for signals. May be shared between processes.  
+
+
+
+
+{\ttfamily \#include $<$signal.\+h$>$}
+
+
+
+Collaboration diagram for rocr\+::core\+::Shared\+Signal\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{structrocr_1_1core_1_1SharedSignal__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{structrocr_1_1core_1_1SharedSignal_a4d03e0abb8d6b0a65ebd54c756276bd6}{Shared\+Signal}} ()
+\item 
+bool \mbox{\hyperlink{structrocr_1_1core_1_1SharedSignal_adbfa0f0a3935360a1b4d8723fc647c3e}{Is\+Valid}} () const
+\item 
+bool \mbox{\hyperlink{structrocr_1_1core_1_1SharedSignal_ab5c880e6ef0282becb2567671209f8ce}{Is\+IPC}} () const
+\item 
+void \mbox{\hyperlink{structrocr_1_1core_1_1SharedSignal_a29c473e6c1dd12d3137fa4e6938a9031}{Get\+Sdma\+Ts\+Addresses}} (uint64\+\_\+t $\ast$\&start, uint64\+\_\+t $\ast$\&end)
+\item 
+void \mbox{\hyperlink{structrocr_1_1core_1_1SharedSignal_a88dc6a5dbb518193927e633e4b78b77d}{Copy\+Prep}} ()
+\item 
+void \mbox{\hyperlink{structrocr_1_1core_1_1SharedSignal_aa77eae3c88ccf0afdcf5d527becd964e}{Get\+Raw\+Ts}} (bool Fetch\+Copy\+Ts, uint64\+\_\+t \&start, uint64\+\_\+t \&end)
+\end{DoxyCompactItemize}
+\doxysubsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static \+\_\+\+\_\+forceinline \mbox{\hyperlink{structrocr_1_1core_1_1SharedSignal}{Shared\+Signal}} $\ast$ \mbox{\hyperlink{structrocr_1_1core_1_1SharedSignal_ad33d3eb69c06e282cd0814b3716875b3}{Convert}} (\mbox{\hyperlink{group__signals_ga0003af605a660e7ef4f89aa555d3b3fc}{hsa\+\_\+signal\+\_\+t}} signal)
+\item 
+static \+\_\+\+\_\+forceinline \mbox{\hyperlink{group__signals_ga0003af605a660e7ef4f89aa555d3b3fc}{hsa\+\_\+signal\+\_\+t}} \mbox{\hyperlink{structrocr_1_1core_1_1SharedSignal_ab2094b971febede7fe1d362a5bfba375}{Convert}} (const \mbox{\hyperlink{structrocr_1_1core_1_1SharedSignal}{Shared\+Signal}} $\ast$signal)
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{inc_2amd__hsa__signal_8h_a343c5f5e62cd0ec69d16c5835dc82bfa}{amd\+\_\+signal\+\_\+t}} \mbox{\hyperlink{structrocr_1_1core_1_1SharedSignal_ace44ca13872a69e5281fe18dd42bab68}{amd\+\_\+signal}}
+\item 
+uint64\+\_\+t \mbox{\hyperlink{structrocr_1_1core_1_1SharedSignal_a50d3423960b88c47e59ba85296963f7b}{sdma\+\_\+start\+\_\+ts}}
+\item 
+\mbox{\hyperlink{classrocr_1_1core_1_1Signal}{Signal}} $\ast$ \mbox{\hyperlink{structrocr_1_1core_1_1SharedSignal_af8583f3cd2a3376d4e69c0ad742d7c33}{core\+\_\+signal}}
+\item 
+\mbox{\hyperlink{classrocr_1_1core_1_1Check}{Check}}$<$ 0x71\+FCCA6\+A3\+D5\+D5276, true $>$ \mbox{\hyperlink{structrocr_1_1core_1_1SharedSignal_a924946ff9d093bc41101d5397e113b45}{id}}
+\item 
+uint8\+\_\+t \mbox{\hyperlink{structrocr_1_1core_1_1SharedSignal_aa154de5874d2580bea50c32300621dc1}{reserved}} \mbox{[}8\mbox{]}
+\item 
+uint64\+\_\+t \mbox{\hyperlink{structrocr_1_1core_1_1SharedSignal_ae2ed809545824c13091aeafde4e518cf}{sdma\+\_\+end\+\_\+ts}}
+\item 
+uint8\+\_\+t \mbox{\hyperlink{structrocr_1_1core_1_1SharedSignal_ab04395217fe1164850da02107573c782}{reserved2}} \mbox{[}24\mbox{]}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+ABI and object conversion struct for signals. May be shared between processes. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{structrocr_1_1core_1_1SharedSignal_a4d03e0abb8d6b0a65ebd54c756276bd6}\label{structrocr_1_1core_1_1SharedSignal_a4d03e0abb8d6b0a65ebd54c756276bd6}} 
+\index{rocr::core::SharedSignal@{rocr::core::SharedSignal}!SharedSignal@{SharedSignal}}
+\index{SharedSignal@{SharedSignal}!rocr::core::SharedSignal@{rocr::core::SharedSignal}}
+\doxysubsubsection{\texorpdfstring{SharedSignal()}{SharedSignal()}}
+{\footnotesize\ttfamily rocr\+::core\+::\+Shared\+Signal\+::\+Shared\+Signal (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{structrocr_1_1core_1_1SharedSignal_ab2094b971febede7fe1d362a5bfba375}\label{structrocr_1_1core_1_1SharedSignal_ab2094b971febede7fe1d362a5bfba375}} 
+\index{rocr::core::SharedSignal@{rocr::core::SharedSignal}!Convert@{Convert}}
+\index{Convert@{Convert}!rocr::core::SharedSignal@{rocr::core::SharedSignal}}
+\doxysubsubsection{\texorpdfstring{Convert()}{Convert()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily static \+\_\+\+\_\+forceinline \mbox{\hyperlink{group__signals_ga0003af605a660e7ef4f89aa555d3b3fc}{hsa\+\_\+signal\+\_\+t}} rocr\+::core\+::\+Shared\+Signal\+::\+Convert (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{structrocr_1_1core_1_1SharedSignal}{Shared\+Signal}} $\ast$}]{signal }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+\mbox{\Hypertarget{structrocr_1_1core_1_1SharedSignal_ad33d3eb69c06e282cd0814b3716875b3}\label{structrocr_1_1core_1_1SharedSignal_ad33d3eb69c06e282cd0814b3716875b3}} 
+\index{rocr::core::SharedSignal@{rocr::core::SharedSignal}!Convert@{Convert}}
+\index{Convert@{Convert}!rocr::core::SharedSignal@{rocr::core::SharedSignal}}
+\doxysubsubsection{\texorpdfstring{Convert()}{Convert()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily static \+\_\+\+\_\+forceinline \mbox{\hyperlink{structrocr_1_1core_1_1SharedSignal}{Shared\+Signal}}$\ast$ rocr\+::core\+::\+Shared\+Signal\+::\+Convert (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{group__signals_ga0003af605a660e7ef4f89aa555d3b3fc}{hsa\+\_\+signal\+\_\+t}}}]{signal }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{structrocr_1_1core_1_1SharedSignal_ad33d3eb69c06e282cd0814b3716875b3_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{structrocr_1_1core_1_1SharedSignal_a88dc6a5dbb518193927e633e4b78b77d}\label{structrocr_1_1core_1_1SharedSignal_a88dc6a5dbb518193927e633e4b78b77d}} 
+\index{rocr::core::SharedSignal@{rocr::core::SharedSignal}!CopyPrep@{CopyPrep}}
+\index{CopyPrep@{CopyPrep}!rocr::core::SharedSignal@{rocr::core::SharedSignal}}
+\doxysubsubsection{\texorpdfstring{CopyPrep()}{CopyPrep()}}
+{\footnotesize\ttfamily void rocr\+::core\+::\+Shared\+Signal\+::\+Copy\+Prep (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{structrocr_1_1core_1_1SharedSignal_a88dc6a5dbb518193927e633e4b78b77d_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{structrocr_1_1core_1_1SharedSignal_aa77eae3c88ccf0afdcf5d527becd964e}\label{structrocr_1_1core_1_1SharedSignal_aa77eae3c88ccf0afdcf5d527becd964e}} 
+\index{rocr::core::SharedSignal@{rocr::core::SharedSignal}!GetRawTs@{GetRawTs}}
+\index{GetRawTs@{GetRawTs}!rocr::core::SharedSignal@{rocr::core::SharedSignal}}
+\doxysubsubsection{\texorpdfstring{GetRawTs()}{GetRawTs()}}
+{\footnotesize\ttfamily void rocr\+::core\+::\+Shared\+Signal\+::\+Get\+Raw\+Ts (\begin{DoxyParamCaption}\item[{bool}]{Fetch\+Copy\+Ts,  }\item[{uint64\+\_\+t \&}]{start,  }\item[{uint64\+\_\+t \&}]{end }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{structrocr_1_1core_1_1SharedSignal_aa77eae3c88ccf0afdcf5d527becd964e_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{structrocr_1_1core_1_1SharedSignal_a29c473e6c1dd12d3137fa4e6938a9031}\label{structrocr_1_1core_1_1SharedSignal_a29c473e6c1dd12d3137fa4e6938a9031}} 
+\index{rocr::core::SharedSignal@{rocr::core::SharedSignal}!GetSdmaTsAddresses@{GetSdmaTsAddresses}}
+\index{GetSdmaTsAddresses@{GetSdmaTsAddresses}!rocr::core::SharedSignal@{rocr::core::SharedSignal}}
+\doxysubsubsection{\texorpdfstring{GetSdmaTsAddresses()}{GetSdmaTsAddresses()}}
+{\footnotesize\ttfamily void rocr\+::core\+::\+Shared\+Signal\+::\+Get\+Sdma\+Ts\+Addresses (\begin{DoxyParamCaption}\item[{uint64\+\_\+t $\ast$\&}]{start,  }\item[{uint64\+\_\+t $\ast$\&}]{end }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{structrocr_1_1core_1_1SharedSignal_a29c473e6c1dd12d3137fa4e6938a9031_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{structrocr_1_1core_1_1SharedSignal_ab5c880e6ef0282becb2567671209f8ce}\label{structrocr_1_1core_1_1SharedSignal_ab5c880e6ef0282becb2567671209f8ce}} 
+\index{rocr::core::SharedSignal@{rocr::core::SharedSignal}!IsIPC@{IsIPC}}
+\index{IsIPC@{IsIPC}!rocr::core::SharedSignal@{rocr::core::SharedSignal}}
+\doxysubsubsection{\texorpdfstring{IsIPC()}{IsIPC()}}
+{\footnotesize\ttfamily bool rocr\+::core\+::\+Shared\+Signal\+::\+Is\+IPC (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{structrocr_1_1core_1_1SharedSignal_ab5c880e6ef0282becb2567671209f8ce_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{structrocr_1_1core_1_1SharedSignal_adbfa0f0a3935360a1b4d8723fc647c3e}\label{structrocr_1_1core_1_1SharedSignal_adbfa0f0a3935360a1b4d8723fc647c3e}} 
+\index{rocr::core::SharedSignal@{rocr::core::SharedSignal}!IsValid@{IsValid}}
+\index{IsValid@{IsValid}!rocr::core::SharedSignal@{rocr::core::SharedSignal}}
+\doxysubsubsection{\texorpdfstring{IsValid()}{IsValid()}}
+{\footnotesize\ttfamily bool rocr\+::core\+::\+Shared\+Signal\+::\+Is\+Valid (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{structrocr_1_1core_1_1SharedSignal_adbfa0f0a3935360a1b4d8723fc647c3e_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{structrocr_1_1core_1_1SharedSignal_adbfa0f0a3935360a1b4d8723fc647c3e_icgraph}
+\end{center}
+\end{figure}
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{structrocr_1_1core_1_1SharedSignal_ace44ca13872a69e5281fe18dd42bab68}\label{structrocr_1_1core_1_1SharedSignal_ace44ca13872a69e5281fe18dd42bab68}} 
+\index{rocr::core::SharedSignal@{rocr::core::SharedSignal}!amd\_signal@{amd\_signal}}
+\index{amd\_signal@{amd\_signal}!rocr::core::SharedSignal@{rocr::core::SharedSignal}}
+\doxysubsubsection{\texorpdfstring{amd\_signal}{amd\_signal}}
+{\footnotesize\ttfamily \mbox{\hyperlink{inc_2amd__hsa__signal_8h_a343c5f5e62cd0ec69d16c5835dc82bfa}{amd\+\_\+signal\+\_\+t}} rocr\+::core\+::\+Shared\+Signal\+::amd\+\_\+signal}
+
+\mbox{\Hypertarget{structrocr_1_1core_1_1SharedSignal_af8583f3cd2a3376d4e69c0ad742d7c33}\label{structrocr_1_1core_1_1SharedSignal_af8583f3cd2a3376d4e69c0ad742d7c33}} 
+\index{rocr::core::SharedSignal@{rocr::core::SharedSignal}!core\_signal@{core\_signal}}
+\index{core\_signal@{core\_signal}!rocr::core::SharedSignal@{rocr::core::SharedSignal}}
+\doxysubsubsection{\texorpdfstring{core\_signal}{core\_signal}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classrocr_1_1core_1_1Signal}{Signal}}$\ast$ rocr\+::core\+::\+Shared\+Signal\+::core\+\_\+signal}
+
+\mbox{\Hypertarget{structrocr_1_1core_1_1SharedSignal_a924946ff9d093bc41101d5397e113b45}\label{structrocr_1_1core_1_1SharedSignal_a924946ff9d093bc41101d5397e113b45}} 
+\index{rocr::core::SharedSignal@{rocr::core::SharedSignal}!id@{id}}
+\index{id@{id}!rocr::core::SharedSignal@{rocr::core::SharedSignal}}
+\doxysubsubsection{\texorpdfstring{id}{id}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classrocr_1_1core_1_1Check}{Check}}$<$0x71\+FCCA6\+A3\+D5\+D5276, true$>$ rocr\+::core\+::\+Shared\+Signal\+::id}
+
+\mbox{\Hypertarget{structrocr_1_1core_1_1SharedSignal_aa154de5874d2580bea50c32300621dc1}\label{structrocr_1_1core_1_1SharedSignal_aa154de5874d2580bea50c32300621dc1}} 
+\index{rocr::core::SharedSignal@{rocr::core::SharedSignal}!reserved@{reserved}}
+\index{reserved@{reserved}!rocr::core::SharedSignal@{rocr::core::SharedSignal}}
+\doxysubsubsection{\texorpdfstring{reserved}{reserved}}
+{\footnotesize\ttfamily uint8\+\_\+t rocr\+::core\+::\+Shared\+Signal\+::reserved\mbox{[}8\mbox{]}}
+
+\mbox{\Hypertarget{structrocr_1_1core_1_1SharedSignal_ab04395217fe1164850da02107573c782}\label{structrocr_1_1core_1_1SharedSignal_ab04395217fe1164850da02107573c782}} 
+\index{rocr::core::SharedSignal@{rocr::core::SharedSignal}!reserved2@{reserved2}}
+\index{reserved2@{reserved2}!rocr::core::SharedSignal@{rocr::core::SharedSignal}}
+\doxysubsubsection{\texorpdfstring{reserved2}{reserved2}}
+{\footnotesize\ttfamily uint8\+\_\+t rocr\+::core\+::\+Shared\+Signal\+::reserved2\mbox{[}24\mbox{]}}
+
+\mbox{\Hypertarget{structrocr_1_1core_1_1SharedSignal_ae2ed809545824c13091aeafde4e518cf}\label{structrocr_1_1core_1_1SharedSignal_ae2ed809545824c13091aeafde4e518cf}} 
+\index{rocr::core::SharedSignal@{rocr::core::SharedSignal}!sdma\_end\_ts@{sdma\_end\_ts}}
+\index{sdma\_end\_ts@{sdma\_end\_ts}!rocr::core::SharedSignal@{rocr::core::SharedSignal}}
+\doxysubsubsection{\texorpdfstring{sdma\_end\_ts}{sdma\_end\_ts}}
+{\footnotesize\ttfamily uint64\+\_\+t rocr\+::core\+::\+Shared\+Signal\+::sdma\+\_\+end\+\_\+ts}
+
+\mbox{\Hypertarget{structrocr_1_1core_1_1SharedSignal_a50d3423960b88c47e59ba85296963f7b}\label{structrocr_1_1core_1_1SharedSignal_a50d3423960b88c47e59ba85296963f7b}} 
+\index{rocr::core::SharedSignal@{rocr::core::SharedSignal}!sdma\_start\_ts@{sdma\_start\_ts}}
+\index{sdma\_start\_ts@{sdma\_start\_ts}!rocr::core::SharedSignal@{rocr::core::SharedSignal}}
+\doxysubsubsection{\texorpdfstring{sdma\_start\_ts}{sdma\_start\_ts}}
+{\footnotesize\ttfamily uint64\+\_\+t rocr\+::core\+::\+Shared\+Signal\+::sdma\+\_\+start\+\_\+ts}
+
+
+
+The documentation for this struct was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+src/core/inc/\mbox{\hyperlink{signal_8h}{signal.\+h}}\end{DoxyCompactItemize}

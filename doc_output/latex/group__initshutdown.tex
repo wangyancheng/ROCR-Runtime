@@ -1,0 +1,57 @@
+\hypertarget{group__initshutdown}{}\doxysection{Initialization and Shut Down}
+\label{group__initshutdown}\index{Initialization and Shut Down@{Initialization and Shut Down}}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{group__status_gad755322e7ff95456520e8abdbe90d225}{hsa\+\_\+status\+\_\+t}} \mbox{\hyperlink{inc_2hsa__ext__image_8h_a64216765b98b62ee87deb50fd2899836}{HSA\+\_\+\+API}} \mbox{\hyperlink{group__initshutdown_ga5b8574433e7dbcbd31ea397a02e3c32b}{hsa\+\_\+init}} ()
+\begin{DoxyCompactList}\small\item\em Initialize the HSA runtime. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{group__status_gad755322e7ff95456520e8abdbe90d225}{hsa\+\_\+status\+\_\+t}} \mbox{\hyperlink{inc_2hsa__ext__image_8h_a64216765b98b62ee87deb50fd2899836}{HSA\+\_\+\+API}} \mbox{\hyperlink{group__initshutdown_ga97bdbccbd372609ad14a7ae7389cf4bf}{hsa\+\_\+shut\+\_\+down}} ()
+\begin{DoxyCompactList}\small\item\em Shut down the HSA runtime. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{group__initshutdown_ga5b8574433e7dbcbd31ea397a02e3c32b}\label{group__initshutdown_ga5b8574433e7dbcbd31ea397a02e3c32b}} 
+\index{Initialization and Shut Down@{Initialization and Shut Down}!hsa\_init@{hsa\_init}}
+\index{hsa\_init@{hsa\_init}!Initialization and Shut Down@{Initialization and Shut Down}}
+\doxysubsubsection{\texorpdfstring{hsa\_init()}{hsa\_init()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{group__status_gad755322e7ff95456520e8abdbe90d225}{hsa\+\_\+status\+\_\+t}} \mbox{\hyperlink{inc_2hsa__ext__image_8h_a64216765b98b62ee87deb50fd2899836}{HSA\+\_\+\+API}} hsa\+\_\+init (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Initialize the HSA runtime. 
+
+Initializes the HSA runtime if it is not already initialized, and increases the reference counter associated with the HSA runtime for the current process. Invocation of any HSA function other than \mbox{\hyperlink{group__initshutdown_ga5b8574433e7dbcbd31ea397a02e3c32b}{hsa\+\_\+init}} results in undefined behavior if the current HSA runtime reference counter is less than one.
+
+
+\begin{DoxyRetVals}{Return values}
+{\em \mbox{\hyperlink{group__status_ggad755322e7ff95456520e8abdbe90d225ae382ea0c9c05cce5a60d0317375159cc}{HSA\+\_\+\+STATUS\+\_\+\+SUCCESS}}} & The function has been executed successfully.\\
+\hline
+{\em \mbox{\hyperlink{group__status_ggad755322e7ff95456520e8abdbe90d225a1a77fcf36d0d140874c4361ab093eff7}{HSA\+\_\+\+STATUS\+\_\+\+ERROR\+\_\+\+OUT\+\_\+\+OF\+\_\+\+RESOURCES}}} & The HSA runtime failed to allocate the required resources.\\
+\hline
+{\em \mbox{\hyperlink{group__status_ggad755322e7ff95456520e8abdbe90d225aa9218eed04d1d2ffc5ed8f33f2cd1c9b}{HSA\+\_\+\+STATUS\+\_\+\+ERROR\+\_\+\+REFCOUNT\+\_\+\+OVERFLOW}}} & The HSA runtime reference count reaches INT32\+\_\+\+MAX. \\
+\hline
+\end{DoxyRetVals}
+\mbox{\Hypertarget{group__initshutdown_ga97bdbccbd372609ad14a7ae7389cf4bf}\label{group__initshutdown_ga97bdbccbd372609ad14a7ae7389cf4bf}} 
+\index{Initialization and Shut Down@{Initialization and Shut Down}!hsa\_shut\_down@{hsa\_shut\_down}}
+\index{hsa\_shut\_down@{hsa\_shut\_down}!Initialization and Shut Down@{Initialization and Shut Down}}
+\doxysubsubsection{\texorpdfstring{hsa\_shut\_down()}{hsa\_shut\_down()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{group__status_gad755322e7ff95456520e8abdbe90d225}{hsa\+\_\+status\+\_\+t}} \mbox{\hyperlink{inc_2hsa__ext__image_8h_a64216765b98b62ee87deb50fd2899836}{HSA\+\_\+\+API}} hsa\+\_\+shut\+\_\+down (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Shut down the HSA runtime. 
+
+Decreases the reference count of the HSA runtime instance. When the reference count reaches 0, the HSA runtime is no longer considered valid but the application might call \mbox{\hyperlink{group__initshutdown_ga5b8574433e7dbcbd31ea397a02e3c32b}{hsa\+\_\+init}} to initialize the HSA runtime again.
+
+Once the reference count of the HSA runtime reaches 0, all the resources associated with it (queues, signals, agent information, etc.) are considered invalid and any attempt to reference them in subsequent API calls results in undefined behavior. When the reference count reaches 0, the HSA runtime may release resources associated with it.
+
+
+\begin{DoxyRetVals}{Return values}
+{\em \mbox{\hyperlink{group__status_ggad755322e7ff95456520e8abdbe90d225ae382ea0c9c05cce5a60d0317375159cc}{HSA\+\_\+\+STATUS\+\_\+\+SUCCESS}}} & The function has been executed successfully.\\
+\hline
+{\em \mbox{\hyperlink{group__status_ggad755322e7ff95456520e8abdbe90d225a34ea59ade5bfce95eee935238a99f5b5}{HSA\+\_\+\+STATUS\+\_\+\+ERROR\+\_\+\+NOT\+\_\+\+INITIALIZED}}} & The HSA runtime has not been initialized. \\
+\hline
+\end{DoxyRetVals}

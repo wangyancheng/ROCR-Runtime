@@ -1,0 +1,202 @@
+\hypertarget{classrocr_1_1core_1_1IPCSignal}{}\doxysection{rocr\+::core\+::IPCSignal Class Reference}
+\label{classrocr_1_1core_1_1IPCSignal}\index{rocr::core::IPCSignal@{rocr::core::IPCSignal}}
+
+
+Memory only signal using a shared memory ABI block.  
+
+
+
+
+{\ttfamily \#include $<$ipc\+\_\+signal.\+h$>$}
+
+
+
+Inheritance diagram for rocr\+::core\+::IPCSignal\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classrocr_1_1core_1_1IPCSignal__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for rocr\+::core\+::IPCSignal\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classrocr_1_1core_1_1IPCSignal__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static void \mbox{\hyperlink{classrocr_1_1core_1_1IPCSignal_a3ab13614caff985decd62c9c1caf898a}{Create\+Handle}} (\mbox{\hyperlink{classrocr_1_1core_1_1Signal}{Signal}} $\ast$\mbox{\hyperlink{classrocr_1_1core_1_1SharedMemorySignal_af60d26d1e2cec6bb6eb0ea756c375c86}{signal}}, \mbox{\hyperlink{inc_2hsa__ext__amd_8h_a4471f6d6bc091b8fbdcbea16ce12d498}{hsa\+\_\+amd\+\_\+ipc\+\_\+signal\+\_\+t}} $\ast$ipc\+\_\+handle)
+\begin{DoxyCompactList}\small\item\em Creates a sharable handle for an IPC enabled signal. \end{DoxyCompactList}\item 
+static \mbox{\hyperlink{classrocr_1_1core_1_1Signal}{Signal}} $\ast$ \mbox{\hyperlink{classrocr_1_1core_1_1IPCSignal_aa92c517b5bb0998d5b3b87ec58856111}{Attach}} (const \mbox{\hyperlink{inc_2hsa__ext__amd_8h_a4471f6d6bc091b8fbdcbea16ce12d498}{hsa\+\_\+amd\+\_\+ipc\+\_\+signal\+\_\+t}} $\ast$ipc\+\_\+handle)
+\begin{DoxyCompactList}\small\item\em Opens an IPC signal from its IPC handle. \end{DoxyCompactList}\item 
+static \+\_\+\+\_\+forceinline bool \mbox{\hyperlink{classrocr_1_1core_1_1IPCSignal_a7b8acacf36492943b1ab2483a1d2cdc3}{Is\+Type}} (\mbox{\hyperlink{classrocr_1_1core_1_1Signal}{Signal}} $\ast$ptr)
+\begin{DoxyCompactList}\small\item\em Determines if a Signal$\ast$ can be safely converted to Busy\+Wait\+Signal$\ast$ via static\+\_\+cast. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+bool \mbox{\hyperlink{classrocr_1_1core_1_1IPCSignal_a3a03678681394d7822375bd8dc17db38}{\+\_\+\+IsA}} (\mbox{\hyperlink{classrocr_1_1core_1_1Signal_a72da3ee567e1cbb30a07292e8be69bc6}{rtti\+\_\+t}} id) const
+\begin{DoxyCompactList}\small\item\em Simple RTTI type checking helper Returns true if the object can be converted to the query type via static\+\_\+cast. Do not use directly. Use Is\+Type in the desired derived type instead. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classrocr_1_1core_1_1IPCSignal_adb270474308d3de8e993bba2629edc2d}{IPCSignal}} (\mbox{\hyperlink{classrocr_1_1core_1_1SharedMemorySignal}{Shared\+Memory\+Signal}} \&\&abi\+\_\+block)
+\item 
+\mbox{\hyperlink{classrocr_1_1core_1_1IPCSignal_ac234257d7cc12c56aabfe0739ecfbe9d}{DISALLOW\+\_\+\+COPY\+\_\+\+AND\+\_\+\+ASSIGN}} (\mbox{\hyperlink{classrocr_1_1core_1_1IPCSignal}{IPCSignal}})
+\end{DoxyCompactItemize}
+\doxysubsection*{Static Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+static int \mbox{\hyperlink{classrocr_1_1core_1_1IPCSignal_ae7a701402264e319b644d9024ce5847d}{rtti\+\_\+id\+\_\+}} = 0
+\item 
+static \mbox{\hyperlink{classrocr_1_1KernelMutex}{Kernel\+Mutex}} \mbox{\hyperlink{classrocr_1_1core_1_1IPCSignal_a1e367f86bdcac53a046a5e6a8ca3d38b}{lock\+\_\+}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Additional Inherited Members}
+
+
+\doxysubsection{Detailed Description}
+Memory only signal using a shared memory ABI block. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classrocr_1_1core_1_1IPCSignal_adb270474308d3de8e993bba2629edc2d}\label{classrocr_1_1core_1_1IPCSignal_adb270474308d3de8e993bba2629edc2d}} 
+\index{rocr::core::IPCSignal@{rocr::core::IPCSignal}!IPCSignal@{IPCSignal}}
+\index{IPCSignal@{IPCSignal}!rocr::core::IPCSignal@{rocr::core::IPCSignal}}
+\doxysubsubsection{\texorpdfstring{IPCSignal()}{IPCSignal()}}
+{\footnotesize\ttfamily rocr\+::core\+::\+IPCSignal\+::\+IPCSignal (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classrocr_1_1core_1_1SharedMemorySignal}{Shared\+Memory\+Signal}} \&\&}]{abi\+\_\+block }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [explicit]}, {\ttfamily [private]}}
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classrocr_1_1core_1_1IPCSignal_adb270474308d3de8e993bba2629edc2d_icgraph}
+\end{center}
+\end{figure}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classrocr_1_1core_1_1IPCSignal_a3a03678681394d7822375bd8dc17db38}\label{classrocr_1_1core_1_1IPCSignal_a3a03678681394d7822375bd8dc17db38}} 
+\index{rocr::core::IPCSignal@{rocr::core::IPCSignal}!\_IsA@{\_IsA}}
+\index{\_IsA@{\_IsA}!rocr::core::IPCSignal@{rocr::core::IPCSignal}}
+\doxysubsubsection{\texorpdfstring{\_IsA()}{\_IsA()}}
+{\footnotesize\ttfamily bool rocr\+::core\+::\+IPCSignal\+::\+\_\+\+IsA (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classrocr_1_1core_1_1Signal_a72da3ee567e1cbb30a07292e8be69bc6}{rtti\+\_\+t}}}]{id }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [protected]}, {\ttfamily [virtual]}}
+
+
+
+Simple RTTI type checking helper Returns true if the object can be converted to the query type via static\+\_\+cast. Do not use directly. Use Is\+Type in the desired derived type instead. 
+
+
+
+Reimplemented from \mbox{\hyperlink{classrocr_1_1core_1_1BusyWaitSignal_a967b0e7476d16236ac54d5bf44cdb228}{rocr\+::core\+::\+Busy\+Wait\+Signal}}.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classrocr_1_1core_1_1IPCSignal_a3a03678681394d7822375bd8dc17db38_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classrocr_1_1core_1_1IPCSignal_aa92c517b5bb0998d5b3b87ec58856111}\label{classrocr_1_1core_1_1IPCSignal_aa92c517b5bb0998d5b3b87ec58856111}} 
+\index{rocr::core::IPCSignal@{rocr::core::IPCSignal}!Attach@{Attach}}
+\index{Attach@{Attach}!rocr::core::IPCSignal@{rocr::core::IPCSignal}}
+\doxysubsubsection{\texorpdfstring{Attach()}{Attach()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classrocr_1_1core_1_1Signal}{Signal}} $\ast$ rocr\+::core\+::\+IPCSignal\+::\+Attach (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{inc_2hsa__ext__amd_8h_a4471f6d6bc091b8fbdcbea16ce12d498}{hsa\+\_\+amd\+\_\+ipc\+\_\+signal\+\_\+t}} $\ast$}]{ipc\+\_\+handle }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Opens an IPC signal from its IPC handle. 
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classrocr_1_1core_1_1IPCSignal_aa92c517b5bb0998d5b3b87ec58856111_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classrocr_1_1core_1_1IPCSignal_aa92c517b5bb0998d5b3b87ec58856111_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classrocr_1_1core_1_1IPCSignal_a3ab13614caff985decd62c9c1caf898a}\label{classrocr_1_1core_1_1IPCSignal_a3ab13614caff985decd62c9c1caf898a}} 
+\index{rocr::core::IPCSignal@{rocr::core::IPCSignal}!CreateHandle@{CreateHandle}}
+\index{CreateHandle@{CreateHandle}!rocr::core::IPCSignal@{rocr::core::IPCSignal}}
+\doxysubsubsection{\texorpdfstring{CreateHandle()}{CreateHandle()}}
+{\footnotesize\ttfamily void rocr\+::core\+::\+IPCSignal\+::\+Create\+Handle (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classrocr_1_1core_1_1Signal}{Signal}} $\ast$}]{signal,  }\item[{\mbox{\hyperlink{inc_2hsa__ext__amd_8h_a4471f6d6bc091b8fbdcbea16ce12d498}{hsa\+\_\+amd\+\_\+ipc\+\_\+signal\+\_\+t}} $\ast$}]{ipc\+\_\+handle }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Creates a sharable handle for an IPC enabled signal. 
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classrocr_1_1core_1_1IPCSignal_a3ab13614caff985decd62c9c1caf898a_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classrocr_1_1core_1_1IPCSignal_a3ab13614caff985decd62c9c1caf898a_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classrocr_1_1core_1_1IPCSignal_ac234257d7cc12c56aabfe0739ecfbe9d}\label{classrocr_1_1core_1_1IPCSignal_ac234257d7cc12c56aabfe0739ecfbe9d}} 
+\index{rocr::core::IPCSignal@{rocr::core::IPCSignal}!DISALLOW\_COPY\_AND\_ASSIGN@{DISALLOW\_COPY\_AND\_ASSIGN}}
+\index{DISALLOW\_COPY\_AND\_ASSIGN@{DISALLOW\_COPY\_AND\_ASSIGN}!rocr::core::IPCSignal@{rocr::core::IPCSignal}}
+\doxysubsubsection{\texorpdfstring{DISALLOW\_COPY\_AND\_ASSIGN()}{DISALLOW\_COPY\_AND\_ASSIGN()}}
+{\footnotesize\ttfamily rocr\+::core\+::\+IPCSignal\+::\+DISALLOW\+\_\+\+COPY\+\_\+\+AND\+\_\+\+ASSIGN (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classrocr_1_1core_1_1IPCSignal}{IPCSignal}}}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classrocr_1_1core_1_1IPCSignal_a7b8acacf36492943b1ab2483a1d2cdc3}\label{classrocr_1_1core_1_1IPCSignal_a7b8acacf36492943b1ab2483a1d2cdc3}} 
+\index{rocr::core::IPCSignal@{rocr::core::IPCSignal}!IsType@{IsType}}
+\index{IsType@{IsType}!rocr::core::IPCSignal@{rocr::core::IPCSignal}}
+\doxysubsubsection{\texorpdfstring{IsType()}{IsType()}}
+{\footnotesize\ttfamily static \+\_\+\+\_\+forceinline bool rocr\+::core\+::\+IPCSignal\+::\+Is\+Type (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classrocr_1_1core_1_1Signal}{Signal}} $\ast$}]{ptr }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+
+
+Determines if a Signal$\ast$ can be safely converted to Busy\+Wait\+Signal$\ast$ via static\+\_\+cast. 
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classrocr_1_1core_1_1IPCSignal_a7b8acacf36492943b1ab2483a1d2cdc3_cgraph}
+\end{center}
+\end{figure}
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{classrocr_1_1core_1_1IPCSignal_a1e367f86bdcac53a046a5e6a8ca3d38b}\label{classrocr_1_1core_1_1IPCSignal_a1e367f86bdcac53a046a5e6a8ca3d38b}} 
+\index{rocr::core::IPCSignal@{rocr::core::IPCSignal}!lock\_@{lock\_}}
+\index{lock\_@{lock\_}!rocr::core::IPCSignal@{rocr::core::IPCSignal}}
+\doxysubsubsection{\texorpdfstring{lock\_}{lock\_}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classrocr_1_1KernelMutex}{Kernel\+Mutex}} rocr\+::core\+::\+IPCSignal\+::lock\+\_\+\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [private]}}
+
+\mbox{\Hypertarget{classrocr_1_1core_1_1IPCSignal_ae7a701402264e319b644d9024ce5847d}\label{classrocr_1_1core_1_1IPCSignal_ae7a701402264e319b644d9024ce5847d}} 
+\index{rocr::core::IPCSignal@{rocr::core::IPCSignal}!rtti\_id\_@{rtti\_id\_}}
+\index{rtti\_id\_@{rtti\_id\_}!rocr::core::IPCSignal@{rocr::core::IPCSignal}}
+\doxysubsubsection{\texorpdfstring{rtti\_id\_}{rtti\_id\_}}
+{\footnotesize\ttfamily int rocr\+::core\+::\+IPCSignal\+::rtti\+\_\+id\+\_\+ = 0\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [private]}}
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+src/core/inc/\mbox{\hyperlink{ipc__signal_8h}{ipc\+\_\+signal.\+h}}\item 
+src/core/runtime/\mbox{\hyperlink{ipc__signal_8cpp}{ipc\+\_\+signal.\+cpp}}\end{DoxyCompactItemize}

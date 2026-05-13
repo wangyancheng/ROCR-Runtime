@@ -1,0 +1,113 @@
+\hypertarget{gfx11addrlib_8h}{}\doxysection{src/image/addrlib/src/gfx11/gfx11addrlib.h File Reference}
+\label{gfx11addrlib_8h}\index{src/image/addrlib/src/gfx11/gfx11addrlib.h@{src/image/addrlib/src/gfx11/gfx11addrlib.h}}
+
+
+Contains the Gfx11\+Lib class definition.  
+
+
+{\ttfamily \#include \char`\"{}addrlib2.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}coord.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}gfx11\+Swizzle\+Pattern.\+h\char`\"{}}\newline
+Include dependency graph for gfx11addrlib.\+h\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{gfx11addrlib_8h__incl}
+\end{center}
+\end{figure}
+This graph shows which files directly or indirectly include this file\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=198pt]{gfx11addrlib_8h__dep__incl}
+\end{center}
+\end{figure}
+\doxysubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{structrocr_1_1Addr_1_1V2_1_1Gfx11ChipSettings}{rocr\+::\+Addr\+::\+V2\+::\+Gfx11\+Chip\+Settings}}
+\begin{DoxyCompactList}\small\item\em GFX11 specific settings structure. \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{classrocr_1_1Addr_1_1V2_1_1Gfx11Lib}{rocr\+::\+Addr\+::\+V2\+::\+Gfx11\+Lib}}
+\begin{DoxyCompactList}\small\item\em This class is the GFX11 specific address library function set. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Namespaces}
+\begin{DoxyCompactItemize}
+\item 
+ \mbox{\hyperlink{namespacerocr}{rocr}}
+\item 
+ \mbox{\hyperlink{namespacerocr_1_1Addr}{rocr\+::\+Addr}}
+\item 
+ \mbox{\hyperlink{namespacerocr_1_1Addr_1_1V2}{rocr\+::\+Addr\+::\+V2}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Enumerations}
+\begin{DoxyCompactItemize}
+\item 
+enum \mbox{\hyperlink{namespacerocr_1_1Addr_1_1V2_ae6ffa64ef973acad3659a7d420cd36ba}{rocr\+::\+Addr\+::\+V2\+::\+Gfx11\+Data\+Type}} \{ \mbox{\hyperlink{namespacerocr_1_1Addr_1_1V2_ae6ffa64ef973acad3659a7d420cd36baa271102aa6140557600930eea9d422cbc}{rocr\+::\+Addr\+::\+V2\+::\+Gfx11\+Data\+Color}}
+, \mbox{\hyperlink{namespacerocr_1_1Addr_1_1V2_ae6ffa64ef973acad3659a7d420cd36baac6851aadba97233f1215bc1791d3f955}{rocr\+::\+Addr\+::\+V2\+::\+Gfx11\+Data\+Depth\+Stencil}}
+ \}
+\begin{DoxyCompactList}\small\item\em GFX11 data surface type. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+const \mbox{\hyperlink{addrtypes_8h_af5a2be58a28390f9a494538f34054637}{UINT\+\_\+32}} \mbox{\hyperlink{namespacerocr_1_1Addr_1_1V2_a7ab2c6b69270b53023069704c8697530}{rocr\+::\+Addr\+::\+V2\+::\+Gfx11\+Linear\+Sw\+Mode\+Mask}} = (1u $<$$<$ \mbox{\hyperlink{addrtypes_8h_af2beb43b92a6a43e77370de1af05772da4f92bd2ff2a915408cb60b031145413c}{ADDR\+\_\+\+SW\+\_\+\+LINEAR}})
+\item 
+const \mbox{\hyperlink{addrtypes_8h_af5a2be58a28390f9a494538f34054637}{UINT\+\_\+32}} \mbox{\hyperlink{namespacerocr_1_1Addr_1_1V2_ab38c2006c68674665e310735a689d889}{rocr\+::\+Addr\+::\+V2\+::\+Gfx11\+Blk256\+BSw\+Mode\+Mask}} = (1u $<$$<$ \mbox{\hyperlink{addrtypes_8h_af2beb43b92a6a43e77370de1af05772daf3d81c89ec843d3422c24365efa798da}{ADDR\+\_\+\+SW\+\_\+256\+B\+\_\+D}})
+\item 
+const \mbox{\hyperlink{addrtypes_8h_af5a2be58a28390f9a494538f34054637}{UINT\+\_\+32}} \mbox{\hyperlink{namespacerocr_1_1Addr_1_1V2_aa42acc014c5d9e2056878b37268e45c7}{rocr\+::\+Addr\+::\+V2\+::\+Gfx11\+Blk4\+KBSw\+Mode\+Mask}}
+\item 
+const \mbox{\hyperlink{addrtypes_8h_af5a2be58a28390f9a494538f34054637}{UINT\+\_\+32}} \mbox{\hyperlink{namespacerocr_1_1Addr_1_1V2_afbc7deddfcc116b381335d2f4a305757}{rocr\+::\+Addr\+::\+V2\+::\+Gfx11\+Blk64\+KBSw\+Mode\+Mask}}
+\item 
+const \mbox{\hyperlink{addrtypes_8h_af5a2be58a28390f9a494538f34054637}{UINT\+\_\+32}} \mbox{\hyperlink{namespacerocr_1_1Addr_1_1V2_a46dfd9ef4cdb0f405f10ce04d5391b6e}{rocr\+::\+Addr\+::\+V2\+::\+Gfx11\+Blk256\+KBSw\+Mode\+Mask}}
+\item 
+const \mbox{\hyperlink{addrtypes_8h_af5a2be58a28390f9a494538f34054637}{UINT\+\_\+32}} \mbox{\hyperlink{namespacerocr_1_1Addr_1_1V2_a2977f01e55f18e4f1abaac829c3c8e83}{rocr\+::\+Addr\+::\+V2\+::\+Gfx11\+ZSw\+Mode\+Mask}}
+\item 
+const \mbox{\hyperlink{addrtypes_8h_af5a2be58a28390f9a494538f34054637}{UINT\+\_\+32}} \mbox{\hyperlink{namespacerocr_1_1Addr_1_1V2_aaf7bb639779b19ad0374f8297f50b33c}{rocr\+::\+Addr\+::\+V2\+::\+Gfx11\+Standard\+Sw\+Mode\+Mask}}
+\item 
+const \mbox{\hyperlink{addrtypes_8h_af5a2be58a28390f9a494538f34054637}{UINT\+\_\+32}} \mbox{\hyperlink{namespacerocr_1_1Addr_1_1V2_a9afbe0c27ebbbedb1d4d2074d7cdf55b}{rocr\+::\+Addr\+::\+V2\+::\+Gfx11\+Display\+Sw\+Mode\+Mask}}
+\item 
+const \mbox{\hyperlink{addrtypes_8h_af5a2be58a28390f9a494538f34054637}{UINT\+\_\+32}} \mbox{\hyperlink{namespacerocr_1_1Addr_1_1V2_ae113ed1aeb05d0a1c97acda875973fed}{rocr\+::\+Addr\+::\+V2\+::\+Gfx11\+Render\+Sw\+Mode\+Mask}}
+\item 
+const \mbox{\hyperlink{addrtypes_8h_af5a2be58a28390f9a494538f34054637}{UINT\+\_\+32}} \mbox{\hyperlink{namespacerocr_1_1Addr_1_1V2_aa2c6bb98b05f6d66fca3392142a31f74}{rocr\+::\+Addr\+::\+V2\+::\+Gfx11\+XSw\+Mode\+Mask}}
+\item 
+const \mbox{\hyperlink{addrtypes_8h_af5a2be58a28390f9a494538f34054637}{UINT\+\_\+32}} \mbox{\hyperlink{namespacerocr_1_1Addr_1_1V2_a06ba569ca43aed16af6ebb0487c2b9f9}{rocr\+::\+Addr\+::\+V2\+::\+Gfx11\+TSw\+Mode\+Mask}}
+\item 
+const \mbox{\hyperlink{addrtypes_8h_af5a2be58a28390f9a494538f34054637}{UINT\+\_\+32}} \mbox{\hyperlink{namespacerocr_1_1Addr_1_1V2_a16a7f22b81e70bd520d9f2b14fac979d}{rocr\+::\+Addr\+::\+V2\+::\+Gfx11\+Xor\+Sw\+Mode\+Mask}}
+\item 
+const \mbox{\hyperlink{addrtypes_8h_af5a2be58a28390f9a494538f34054637}{UINT\+\_\+32}} \mbox{\hyperlink{namespacerocr_1_1Addr_1_1V2_a10863ecaae830bdefafc47b606337639}{rocr\+::\+Addr\+::\+V2\+::\+Gfx11\+Rsrc1d\+Sw\+Mode\+Mask}}
+\item 
+const \mbox{\hyperlink{addrtypes_8h_af5a2be58a28390f9a494538f34054637}{UINT\+\_\+32}} \mbox{\hyperlink{namespacerocr_1_1Addr_1_1V2_aaefb09f0e55f25048bebfcf144efb4a3}{rocr\+::\+Addr\+::\+V2\+::\+Gfx11\+Rsrc2d\+Sw\+Mode\+Mask}}
+\item 
+const \mbox{\hyperlink{addrtypes_8h_af5a2be58a28390f9a494538f34054637}{UINT\+\_\+32}} \mbox{\hyperlink{namespacerocr_1_1Addr_1_1V2_ab60c95234b5244da52d3f8d00e6e8232}{rocr\+::\+Addr\+::\+V2\+::\+Gfx11\+Rsrc3d\+Sw\+Mode\+Mask}}
+\item 
+const \mbox{\hyperlink{addrtypes_8h_af5a2be58a28390f9a494538f34054637}{UINT\+\_\+32}} \mbox{\hyperlink{namespacerocr_1_1Addr_1_1V2_ada3e2d992690aaa24c0f57155c4fc31a}{rocr\+::\+Addr\+::\+V2\+::\+Gfx11\+Rsrc2d\+Prt\+Sw\+Mode\+Mask}}
+\item 
+const \mbox{\hyperlink{addrtypes_8h_af5a2be58a28390f9a494538f34054637}{UINT\+\_\+32}} \mbox{\hyperlink{namespacerocr_1_1Addr_1_1V2_a0334b6ddd82a391a2087709c47d685c1}{rocr\+::\+Addr\+::\+V2\+::\+Gfx11\+Rsrc3d\+Prt\+Sw\+Mode\+Mask}}
+\item 
+const \mbox{\hyperlink{addrtypes_8h_af5a2be58a28390f9a494538f34054637}{UINT\+\_\+32}} \mbox{\hyperlink{namespacerocr_1_1Addr_1_1V2_a95a3b7e5807cab818724b133170530d5}{rocr\+::\+Addr\+::\+V2\+::\+Gfx11\+Rsrc3d\+Thin64\+KBSw\+Mode\+Mask}}
+\item 
+const \mbox{\hyperlink{addrtypes_8h_af5a2be58a28390f9a494538f34054637}{UINT\+\_\+32}} \mbox{\hyperlink{namespacerocr_1_1Addr_1_1V2_a466fcb8ca514aeddb62af2bd0a97010e}{rocr\+::\+Addr\+::\+V2\+::\+Gfx11\+Rsrc3d\+Thin256\+KBSw\+Mode\+Mask}}
+\item 
+const \mbox{\hyperlink{addrtypes_8h_af5a2be58a28390f9a494538f34054637}{UINT\+\_\+32}} \mbox{\hyperlink{namespacerocr_1_1Addr_1_1V2_a8ea820a0b81aa71ce38ea056c6844b84}{rocr\+::\+Addr\+::\+V2\+::\+Gfx11\+Rsrc3d\+Thin\+Sw\+Mode\+Mask}} = Gfx11\+Rsrc3d\+Thin64\+KBSw\+Mode\+Mask $\vert$ Gfx11\+Rsrc3d\+Thin256\+KBSw\+Mode\+Mask
+\item 
+const \mbox{\hyperlink{addrtypes_8h_af5a2be58a28390f9a494538f34054637}{UINT\+\_\+32}} \mbox{\hyperlink{namespacerocr_1_1Addr_1_1V2_a4e5d2689ad8aecd7238eb2754366cf1d}{rocr\+::\+Addr\+::\+V2\+::\+Gfx11\+Rsrc3d\+Thick\+Sw\+Mode\+Mask}} = Gfx11\+Rsrc3d\+Sw\+Mode\+Mask \& $\sim$(Gfx11\+Rsrc3d\+Thin\+Sw\+Mode\+Mask $\vert$ Gfx11\+Linear\+Sw\+Mode\+Mask)
+\item 
+const \mbox{\hyperlink{addrtypes_8h_af5a2be58a28390f9a494538f34054637}{UINT\+\_\+32}} \mbox{\hyperlink{namespacerocr_1_1Addr_1_1V2_a3c33a93658788f06aa0ab593f5ed7a1e}{rocr\+::\+Addr\+::\+V2\+::\+Gfx11\+Rsrc3d\+Thick4\+KBSw\+Mode\+Mask}} = Gfx11\+Rsrc3d\+Thick\+Sw\+Mode\+Mask \& Gfx11\+Blk4\+KBSw\+Mode\+Mask
+\item 
+const \mbox{\hyperlink{addrtypes_8h_af5a2be58a28390f9a494538f34054637}{UINT\+\_\+32}} \mbox{\hyperlink{namespacerocr_1_1Addr_1_1V2_a05c0029db130255c6f5ce72e7e657111}{rocr\+::\+Addr\+::\+V2\+::\+Gfx11\+Rsrc3d\+Thick64\+KBSw\+Mode\+Mask}} = Gfx11\+Rsrc3d\+Thick\+Sw\+Mode\+Mask \& Gfx11\+Blk64\+KBSw\+Mode\+Mask
+\item 
+const \mbox{\hyperlink{addrtypes_8h_af5a2be58a28390f9a494538f34054637}{UINT\+\_\+32}} \mbox{\hyperlink{namespacerocr_1_1Addr_1_1V2_acc317c44c1878ba8e34b43ae68d9d794}{rocr\+::\+Addr\+::\+V2\+::\+Gfx11\+Rsrc3d\+Thick256\+KBSw\+Mode\+Mask}} = Gfx11\+Rsrc3d\+Thick\+Sw\+Mode\+Mask \& Gfx11\+Blk256\+KBSw\+Mode\+Mask
+\item 
+const \mbox{\hyperlink{addrtypes_8h_af5a2be58a28390f9a494538f34054637}{UINT\+\_\+32}} \mbox{\hyperlink{namespacerocr_1_1Addr_1_1V2_a8d6c62c47262d6334ab465ceef927940}{rocr\+::\+Addr\+::\+V2\+::\+Gfx11\+Msaa\+Sw\+Mode\+Mask}}
+\item 
+const \mbox{\hyperlink{addrtypes_8h_af5a2be58a28390f9a494538f34054637}{UINT\+\_\+32}} \mbox{\hyperlink{namespacerocr_1_1Addr_1_1V2_a1b31a59560c1dce50310cdc5b50c3828}{rocr\+::\+Addr\+::\+V2\+::\+Dcn32\+Sw\+Mode\+Mask}}
+\item 
+const \mbox{\hyperlink{addrtypes_8h_af5a2be58a28390f9a494538f34054637}{UINT\+\_\+32}} \mbox{\hyperlink{namespacerocr_1_1Addr_1_1V2_a3408878d270617d6fa7875cf25b0dfc1}{rocr\+::\+Addr\+::\+V2\+::\+Size256K}} = 262144u
+\item 
+const \mbox{\hyperlink{addrtypes_8h_af5a2be58a28390f9a494538f34054637}{UINT\+\_\+32}} \mbox{\hyperlink{namespacerocr_1_1Addr_1_1V2_aaead999eafcaa0e6bc3963adf5b25e7b}{rocr\+::\+Addr\+::\+V2\+::\+Log2\+Size256K}} = 18u
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Contains the Gfx11\+Lib class definition. 
+

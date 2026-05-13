@@ -1,0 +1,1800 @@
+\hypertarget{group__signals}{}\doxysection{Signals}
+\label{group__signals}\index{Signals@{Signals}}
+\doxysubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{structhsa__signal__s}{hsa\+\_\+signal\+\_\+s}}
+\begin{DoxyCompactList}\small\item\em Signal handle. \end{DoxyCompactList}\item 
+struct \mbox{\hyperlink{structhsa__signal__group__s}{hsa\+\_\+signal\+\_\+group\+\_\+s}}
+\begin{DoxyCompactList}\small\item\em Group of signals. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+typedef struct \mbox{\hyperlink{structhsa__signal__s}{hsa\+\_\+signal\+\_\+s}} \mbox{\hyperlink{group__signals_ga0003af605a660e7ef4f89aa555d3b3fc}{hsa\+\_\+signal\+\_\+t}}
+\begin{DoxyCompactList}\small\item\em Signal handle. \end{DoxyCompactList}\item 
+typedef int32\+\_\+t \mbox{\hyperlink{group__signals_ga67ca2818879c9990e1b5f1b14ce7ed27}{hsa\+\_\+signal\+\_\+value\+\_\+t}}
+\begin{DoxyCompactList}\small\item\em Signal value. The value occupies 32 bits in small machine mode, and 64 bits in large machine mode. \end{DoxyCompactList}\item 
+typedef struct \mbox{\hyperlink{structhsa__signal__group__s}{hsa\+\_\+signal\+\_\+group\+\_\+s}} \mbox{\hyperlink{group__signals_gaf5db341c9f3fa5fb32e638ac8d16aac8}{hsa\+\_\+signal\+\_\+group\+\_\+t}}
+\begin{DoxyCompactList}\small\item\em Group of signals. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Enumerations}
+\begin{DoxyCompactItemize}
+\item 
+enum \mbox{\hyperlink{group__signals_gab7190fcff48c6dbeded341389ed17c8d}{hsa\+\_\+signal\+\_\+condition\+\_\+t}} \{ \mbox{\hyperlink{group__signals_ggab7190fcff48c6dbeded341389ed17c8daa07a8b5cdd2ba567b220e4d20744e922}{HSA\+\_\+\+SIGNAL\+\_\+\+CONDITION\+\_\+\+EQ}} = 0
+, \mbox{\hyperlink{group__signals_ggab7190fcff48c6dbeded341389ed17c8da2eeea882d3d29762a9305c07cbee4975}{HSA\+\_\+\+SIGNAL\+\_\+\+CONDITION\+\_\+\+NE}} = 1
+, \mbox{\hyperlink{group__signals_ggab7190fcff48c6dbeded341389ed17c8dab1018e2ec0b8610bece947eccb066eff}{HSA\+\_\+\+SIGNAL\+\_\+\+CONDITION\+\_\+\+LT}} = 2
+, \mbox{\hyperlink{group__signals_ggab7190fcff48c6dbeded341389ed17c8dae9e454c9587c406ee5cf0d4732a4881b}{HSA\+\_\+\+SIGNAL\+\_\+\+CONDITION\+\_\+\+GTE}} = 3
+ \}
+\begin{DoxyCompactList}\small\item\em Wait condition operator. \end{DoxyCompactList}\item 
+enum \mbox{\hyperlink{group__signals_gac0d2ec14d7a58c6cccc259943a03c569}{hsa\+\_\+wait\+\_\+state\+\_\+t}} \{ \mbox{\hyperlink{group__signals_ggac0d2ec14d7a58c6cccc259943a03c569ac54bd69c1e4052d09469d2a58769e258}{HSA\+\_\+\+WAIT\+\_\+\+STATE\+\_\+\+BLOCKED}} = 0
+, \mbox{\hyperlink{group__signals_ggac0d2ec14d7a58c6cccc259943a03c569ac34cddf41039dc646c21d05a91f1dce8}{HSA\+\_\+\+WAIT\+\_\+\+STATE\+\_\+\+ACTIVE}} = 1
+ \}
+\begin{DoxyCompactList}\small\item\em State of the application thread during a signal wait. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{group__status_gad755322e7ff95456520e8abdbe90d225}{hsa\+\_\+status\+\_\+t}} \mbox{\hyperlink{inc_2hsa__ext__image_8h_a64216765b98b62ee87deb50fd2899836}{HSA\+\_\+\+API}} \mbox{\hyperlink{group__signals_gac39387d1e844c4e4e932ad9bb89a476f}{hsa\+\_\+signal\+\_\+create}} (\mbox{\hyperlink{group__signals_ga67ca2818879c9990e1b5f1b14ce7ed27}{hsa\+\_\+signal\+\_\+value\+\_\+t}} initial\+\_\+value, uint32\+\_\+t num\+\_\+consumers, const \mbox{\hyperlink{group__agentinfo_ga9ce217ef08e7d5e89c8e83ce7b6ef22b}{hsa\+\_\+agent\+\_\+t}} $\ast$consumers, \mbox{\hyperlink{group__signals_ga0003af605a660e7ef4f89aa555d3b3fc}{hsa\+\_\+signal\+\_\+t}} $\ast$signal)
+\begin{DoxyCompactList}\small\item\em Create a signal. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{group__status_gad755322e7ff95456520e8abdbe90d225}{hsa\+\_\+status\+\_\+t}} \mbox{\hyperlink{inc_2hsa__ext__image_8h_a64216765b98b62ee87deb50fd2899836}{HSA\+\_\+\+API}} \mbox{\hyperlink{group__signals_ga333c1a73cc382bb0ffded6ce84cde254}{hsa\+\_\+signal\+\_\+destroy}} (\mbox{\hyperlink{group__signals_ga0003af605a660e7ef4f89aa555d3b3fc}{hsa\+\_\+signal\+\_\+t}} signal)
+\begin{DoxyCompactList}\small\item\em Destroy a signal previous created by \mbox{\hyperlink{group__signals_gac39387d1e844c4e4e932ad9bb89a476f}{hsa\+\_\+signal\+\_\+create}}. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{group__signals_ga67ca2818879c9990e1b5f1b14ce7ed27}{hsa\+\_\+signal\+\_\+value\+\_\+t}} \mbox{\hyperlink{inc_2hsa__ext__image_8h_a64216765b98b62ee87deb50fd2899836}{HSA\+\_\+\+API}} \mbox{\hyperlink{group__signals_gab12db5c6ca3ea9b4e418ac84b560fdfd}{hsa\+\_\+signal\+\_\+load\+\_\+scacquire}} (\mbox{\hyperlink{group__signals_ga0003af605a660e7ef4f89aa555d3b3fc}{hsa\+\_\+signal\+\_\+t}} signal)
+\begin{DoxyCompactList}\small\item\em Atomically read the current value of a signal. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{group__signals_ga67ca2818879c9990e1b5f1b14ce7ed27}{hsa\+\_\+signal\+\_\+value\+\_\+t}} \mbox{\hyperlink{inc_2hsa__ext__image_8h_a64216765b98b62ee87deb50fd2899836}{HSA\+\_\+\+API}} \mbox{\hyperlink{group__signals_ga1a4f6949e06c77ced03ebafadd70a91a}{hsa\+\_\+signal\+\_\+load\+\_\+relaxed}} (\mbox{\hyperlink{group__signals_ga0003af605a660e7ef4f89aa555d3b3fc}{hsa\+\_\+signal\+\_\+t}} signal)
+\begin{DoxyCompactList}\small\item\em Atomically read the current value of a signal. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{group__signals_ga67ca2818879c9990e1b5f1b14ce7ed27}{hsa\+\_\+signal\+\_\+value\+\_\+t}} \mbox{\hyperlink{inc_2hsa__ext__image_8h_a64216765b98b62ee87deb50fd2899836}{HSA\+\_\+\+API}} \mbox{\hyperlink{inc_2hsa_8h_a2321f8ca7d706cada4f617b191a478b0}{HSA\+\_\+\+DEPRECATED}} \mbox{\hyperlink{group__signals_gaea4d07e714b33461bb0d6741b11977b5}{hsa\+\_\+signal\+\_\+load\+\_\+acquire}} (\mbox{\hyperlink{group__signals_ga0003af605a660e7ef4f89aa555d3b3fc}{hsa\+\_\+signal\+\_\+t}} signal)
+\begin{DoxyCompactList}\small\item\em Atomically read the current value of a signal. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{inc_2hsa__ext__image_8h_a64216765b98b62ee87deb50fd2899836}{HSA\+\_\+\+API}} \mbox{\hyperlink{group__signals_gaee3d3fbcebcda6acb4ae1b57122b2ecd}{hsa\+\_\+signal\+\_\+store\+\_\+relaxed}} (\mbox{\hyperlink{group__signals_ga0003af605a660e7ef4f89aa555d3b3fc}{hsa\+\_\+signal\+\_\+t}} signal, \mbox{\hyperlink{group__signals_ga67ca2818879c9990e1b5f1b14ce7ed27}{hsa\+\_\+signal\+\_\+value\+\_\+t}} value)
+\begin{DoxyCompactList}\small\item\em Atomically set the value of a signal. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{inc_2hsa__ext__image_8h_a64216765b98b62ee87deb50fd2899836}{HSA\+\_\+\+API}} \mbox{\hyperlink{group__signals_ga11e015a932aae848dff4a8951221d922}{hsa\+\_\+signal\+\_\+store\+\_\+screlease}} (\mbox{\hyperlink{group__signals_ga0003af605a660e7ef4f89aa555d3b3fc}{hsa\+\_\+signal\+\_\+t}} signal, \mbox{\hyperlink{group__signals_ga67ca2818879c9990e1b5f1b14ce7ed27}{hsa\+\_\+signal\+\_\+value\+\_\+t}} value)
+\begin{DoxyCompactList}\small\item\em Atomically set the value of a signal. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{inc_2hsa__ext__image_8h_a64216765b98b62ee87deb50fd2899836}{HSA\+\_\+\+API}} \mbox{\hyperlink{inc_2hsa_8h_a2321f8ca7d706cada4f617b191a478b0}{HSA\+\_\+\+DEPRECATED}} \mbox{\hyperlink{group__signals_ga7fb97bba5edb2ed56aa3fe9150e95df7}{hsa\+\_\+signal\+\_\+store\+\_\+release}} (\mbox{\hyperlink{group__signals_ga0003af605a660e7ef4f89aa555d3b3fc}{hsa\+\_\+signal\+\_\+t}} signal, \mbox{\hyperlink{group__signals_ga67ca2818879c9990e1b5f1b14ce7ed27}{hsa\+\_\+signal\+\_\+value\+\_\+t}} value)
+\begin{DoxyCompactList}\small\item\em Atomically set the value of a signal. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{inc_2hsa__ext__image_8h_a64216765b98b62ee87deb50fd2899836}{HSA\+\_\+\+API}} \mbox{\hyperlink{group__signals_ga77081625dc65951d23ad37e79c391d32}{hsa\+\_\+signal\+\_\+silent\+\_\+store\+\_\+relaxed}} (\mbox{\hyperlink{group__signals_ga0003af605a660e7ef4f89aa555d3b3fc}{hsa\+\_\+signal\+\_\+t}} signal, \mbox{\hyperlink{group__signals_ga67ca2818879c9990e1b5f1b14ce7ed27}{hsa\+\_\+signal\+\_\+value\+\_\+t}} value)
+\begin{DoxyCompactList}\small\item\em Atomically set the value of a signal without necessarily notifying the the agents waiting on it. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{inc_2hsa__ext__image_8h_a64216765b98b62ee87deb50fd2899836}{HSA\+\_\+\+API}} \mbox{\hyperlink{group__signals_ga9db582a4a03c42ef8e1440dc88266ed9}{hsa\+\_\+signal\+\_\+silent\+\_\+store\+\_\+screlease}} (\mbox{\hyperlink{group__signals_ga0003af605a660e7ef4f89aa555d3b3fc}{hsa\+\_\+signal\+\_\+t}} signal, \mbox{\hyperlink{group__signals_ga67ca2818879c9990e1b5f1b14ce7ed27}{hsa\+\_\+signal\+\_\+value\+\_\+t}} value)
+\begin{DoxyCompactList}\small\item\em Atomically set the value of a signal without necessarily notifying the the agents waiting on it. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{group__signals_ga67ca2818879c9990e1b5f1b14ce7ed27}{hsa\+\_\+signal\+\_\+value\+\_\+t}} \mbox{\hyperlink{inc_2hsa__ext__image_8h_a64216765b98b62ee87deb50fd2899836}{HSA\+\_\+\+API}} \mbox{\hyperlink{group__signals_gab21596aa1a86f54ab97fec9118b6e512}{hsa\+\_\+signal\+\_\+exchange\+\_\+scacq\+\_\+screl}} (\mbox{\hyperlink{group__signals_ga0003af605a660e7ef4f89aa555d3b3fc}{hsa\+\_\+signal\+\_\+t}} signal, \mbox{\hyperlink{group__signals_ga67ca2818879c9990e1b5f1b14ce7ed27}{hsa\+\_\+signal\+\_\+value\+\_\+t}} value)
+\begin{DoxyCompactList}\small\item\em Atomically set the value of a signal and return its previous value. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{group__signals_ga67ca2818879c9990e1b5f1b14ce7ed27}{hsa\+\_\+signal\+\_\+value\+\_\+t}} \mbox{\hyperlink{inc_2hsa__ext__image_8h_a64216765b98b62ee87deb50fd2899836}{HSA\+\_\+\+API}} \mbox{\hyperlink{inc_2hsa_8h_a2321f8ca7d706cada4f617b191a478b0}{HSA\+\_\+\+DEPRECATED}} \mbox{\hyperlink{group__signals_gadaa7eeeaa252a00fcff4afabcecbded2}{hsa\+\_\+signal\+\_\+exchange\+\_\+acq\+\_\+rel}} (\mbox{\hyperlink{group__signals_ga0003af605a660e7ef4f89aa555d3b3fc}{hsa\+\_\+signal\+\_\+t}} signal, \mbox{\hyperlink{group__signals_ga67ca2818879c9990e1b5f1b14ce7ed27}{hsa\+\_\+signal\+\_\+value\+\_\+t}} value)
+\begin{DoxyCompactList}\small\item\em Atomically set the value of a signal and return its previous value. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{group__signals_ga67ca2818879c9990e1b5f1b14ce7ed27}{hsa\+\_\+signal\+\_\+value\+\_\+t}} \mbox{\hyperlink{inc_2hsa__ext__image_8h_a64216765b98b62ee87deb50fd2899836}{HSA\+\_\+\+API}} \mbox{\hyperlink{group__signals_gaed3e29467c7a6f3db4d4bad6b1a2f6fd}{hsa\+\_\+signal\+\_\+exchange\+\_\+scacquire}} (\mbox{\hyperlink{group__signals_ga0003af605a660e7ef4f89aa555d3b3fc}{hsa\+\_\+signal\+\_\+t}} signal, \mbox{\hyperlink{group__signals_ga67ca2818879c9990e1b5f1b14ce7ed27}{hsa\+\_\+signal\+\_\+value\+\_\+t}} value)
+\begin{DoxyCompactList}\small\item\em Atomically set the value of a signal and return its previous value. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{group__signals_ga67ca2818879c9990e1b5f1b14ce7ed27}{hsa\+\_\+signal\+\_\+value\+\_\+t}} \mbox{\hyperlink{inc_2hsa__ext__image_8h_a64216765b98b62ee87deb50fd2899836}{HSA\+\_\+\+API}} \mbox{\hyperlink{inc_2hsa_8h_a2321f8ca7d706cada4f617b191a478b0}{HSA\+\_\+\+DEPRECATED}} \mbox{\hyperlink{group__signals_gac394c1252670df3cf8f7daab72300d29}{hsa\+\_\+signal\+\_\+exchange\+\_\+acquire}} (\mbox{\hyperlink{group__signals_ga0003af605a660e7ef4f89aa555d3b3fc}{hsa\+\_\+signal\+\_\+t}} signal, \mbox{\hyperlink{group__signals_ga67ca2818879c9990e1b5f1b14ce7ed27}{hsa\+\_\+signal\+\_\+value\+\_\+t}} value)
+\begin{DoxyCompactList}\small\item\em Atomically set the value of a signal and return its previous value. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{group__signals_ga67ca2818879c9990e1b5f1b14ce7ed27}{hsa\+\_\+signal\+\_\+value\+\_\+t}} \mbox{\hyperlink{inc_2hsa__ext__image_8h_a64216765b98b62ee87deb50fd2899836}{HSA\+\_\+\+API}} \mbox{\hyperlink{group__signals_ga02b83b834ffb257a1c2ee641b2680d14}{hsa\+\_\+signal\+\_\+exchange\+\_\+relaxed}} (\mbox{\hyperlink{group__signals_ga0003af605a660e7ef4f89aa555d3b3fc}{hsa\+\_\+signal\+\_\+t}} signal, \mbox{\hyperlink{group__signals_ga67ca2818879c9990e1b5f1b14ce7ed27}{hsa\+\_\+signal\+\_\+value\+\_\+t}} value)
+\begin{DoxyCompactList}\small\item\em Atomically set the value of a signal and return its previous value. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{group__signals_ga67ca2818879c9990e1b5f1b14ce7ed27}{hsa\+\_\+signal\+\_\+value\+\_\+t}} \mbox{\hyperlink{inc_2hsa__ext__image_8h_a64216765b98b62ee87deb50fd2899836}{HSA\+\_\+\+API}} \mbox{\hyperlink{group__signals_gae1f84a23129247da684a76183a772d3a}{hsa\+\_\+signal\+\_\+exchange\+\_\+screlease}} (\mbox{\hyperlink{group__signals_ga0003af605a660e7ef4f89aa555d3b3fc}{hsa\+\_\+signal\+\_\+t}} signal, \mbox{\hyperlink{group__signals_ga67ca2818879c9990e1b5f1b14ce7ed27}{hsa\+\_\+signal\+\_\+value\+\_\+t}} value)
+\begin{DoxyCompactList}\small\item\em Atomically set the value of a signal and return its previous value. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{group__signals_ga67ca2818879c9990e1b5f1b14ce7ed27}{hsa\+\_\+signal\+\_\+value\+\_\+t}} \mbox{\hyperlink{inc_2hsa__ext__image_8h_a64216765b98b62ee87deb50fd2899836}{HSA\+\_\+\+API}} \mbox{\hyperlink{inc_2hsa_8h_a2321f8ca7d706cada4f617b191a478b0}{HSA\+\_\+\+DEPRECATED}} \mbox{\hyperlink{group__signals_ga64de5f0c9b0cd2f5098b19161b5bb204}{hsa\+\_\+signal\+\_\+exchange\+\_\+release}} (\mbox{\hyperlink{group__signals_ga0003af605a660e7ef4f89aa555d3b3fc}{hsa\+\_\+signal\+\_\+t}} signal, \mbox{\hyperlink{group__signals_ga67ca2818879c9990e1b5f1b14ce7ed27}{hsa\+\_\+signal\+\_\+value\+\_\+t}} value)
+\begin{DoxyCompactList}\small\item\em Atomically set the value of a signal and return its previous value. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{group__signals_ga67ca2818879c9990e1b5f1b14ce7ed27}{hsa\+\_\+signal\+\_\+value\+\_\+t}} \mbox{\hyperlink{inc_2hsa__ext__image_8h_a64216765b98b62ee87deb50fd2899836}{HSA\+\_\+\+API}} \mbox{\hyperlink{group__signals_ga511eddeffa9d1c8e926b078495662a46}{hsa\+\_\+signal\+\_\+cas\+\_\+scacq\+\_\+screl}} (\mbox{\hyperlink{group__signals_ga0003af605a660e7ef4f89aa555d3b3fc}{hsa\+\_\+signal\+\_\+t}} signal, \mbox{\hyperlink{group__signals_ga67ca2818879c9990e1b5f1b14ce7ed27}{hsa\+\_\+signal\+\_\+value\+\_\+t}} expected, \mbox{\hyperlink{group__signals_ga67ca2818879c9990e1b5f1b14ce7ed27}{hsa\+\_\+signal\+\_\+value\+\_\+t}} value)
+\begin{DoxyCompactList}\small\item\em Atomically set the value of a signal if the observed value is equal to the expected value. The observed value is returned regardless of whether the replacement was done. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{group__signals_ga67ca2818879c9990e1b5f1b14ce7ed27}{hsa\+\_\+signal\+\_\+value\+\_\+t}} \mbox{\hyperlink{inc_2hsa__ext__image_8h_a64216765b98b62ee87deb50fd2899836}{HSA\+\_\+\+API}} \mbox{\hyperlink{inc_2hsa_8h_a2321f8ca7d706cada4f617b191a478b0}{HSA\+\_\+\+DEPRECATED}} \mbox{\hyperlink{group__signals_ga5908be474083480945c1187d28bc9272}{hsa\+\_\+signal\+\_\+cas\+\_\+acq\+\_\+rel}} (\mbox{\hyperlink{group__signals_ga0003af605a660e7ef4f89aa555d3b3fc}{hsa\+\_\+signal\+\_\+t}} signal, \mbox{\hyperlink{group__signals_ga67ca2818879c9990e1b5f1b14ce7ed27}{hsa\+\_\+signal\+\_\+value\+\_\+t}} expected, \mbox{\hyperlink{group__signals_ga67ca2818879c9990e1b5f1b14ce7ed27}{hsa\+\_\+signal\+\_\+value\+\_\+t}} value)
+\begin{DoxyCompactList}\small\item\em Atomically set the value of a signal if the observed value is equal to the expected value. The observed value is returned regardless of whether the replacement was done. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{group__signals_ga67ca2818879c9990e1b5f1b14ce7ed27}{hsa\+\_\+signal\+\_\+value\+\_\+t}} \mbox{\hyperlink{inc_2hsa__ext__image_8h_a64216765b98b62ee87deb50fd2899836}{HSA\+\_\+\+API}} \mbox{\hyperlink{group__signals_ga9af1003464abbf4e348052294e5f1670}{hsa\+\_\+signal\+\_\+cas\+\_\+scacquire}} (\mbox{\hyperlink{group__signals_ga0003af605a660e7ef4f89aa555d3b3fc}{hsa\+\_\+signal\+\_\+t}} signal, \mbox{\hyperlink{group__signals_ga67ca2818879c9990e1b5f1b14ce7ed27}{hsa\+\_\+signal\+\_\+value\+\_\+t}} expected, \mbox{\hyperlink{group__signals_ga67ca2818879c9990e1b5f1b14ce7ed27}{hsa\+\_\+signal\+\_\+value\+\_\+t}} value)
+\begin{DoxyCompactList}\small\item\em Atomically set the value of a signal if the observed value is equal to the expected value. The observed value is returned regardless of whether the replacement was done. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{group__signals_ga67ca2818879c9990e1b5f1b14ce7ed27}{hsa\+\_\+signal\+\_\+value\+\_\+t}} \mbox{\hyperlink{inc_2hsa__ext__image_8h_a64216765b98b62ee87deb50fd2899836}{HSA\+\_\+\+API}} \mbox{\hyperlink{inc_2hsa_8h_a2321f8ca7d706cada4f617b191a478b0}{HSA\+\_\+\+DEPRECATED}} \mbox{\hyperlink{group__signals_gacc75d2a40e17b4d71d68c8ceeff35cbc}{hsa\+\_\+signal\+\_\+cas\+\_\+acquire}} (\mbox{\hyperlink{group__signals_ga0003af605a660e7ef4f89aa555d3b3fc}{hsa\+\_\+signal\+\_\+t}} signal, \mbox{\hyperlink{group__signals_ga67ca2818879c9990e1b5f1b14ce7ed27}{hsa\+\_\+signal\+\_\+value\+\_\+t}} expected, \mbox{\hyperlink{group__signals_ga67ca2818879c9990e1b5f1b14ce7ed27}{hsa\+\_\+signal\+\_\+value\+\_\+t}} value)
+\begin{DoxyCompactList}\small\item\em Atomically set the value of a signal if the observed value is equal to the expected value. The observed value is returned regardless of whether the replacement was done. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{group__signals_ga67ca2818879c9990e1b5f1b14ce7ed27}{hsa\+\_\+signal\+\_\+value\+\_\+t}} \mbox{\hyperlink{inc_2hsa__ext__image_8h_a64216765b98b62ee87deb50fd2899836}{HSA\+\_\+\+API}} \mbox{\hyperlink{group__signals_ga40ce477c9284c411a163a12d8bad3a1a}{hsa\+\_\+signal\+\_\+cas\+\_\+relaxed}} (\mbox{\hyperlink{group__signals_ga0003af605a660e7ef4f89aa555d3b3fc}{hsa\+\_\+signal\+\_\+t}} signal, \mbox{\hyperlink{group__signals_ga67ca2818879c9990e1b5f1b14ce7ed27}{hsa\+\_\+signal\+\_\+value\+\_\+t}} expected, \mbox{\hyperlink{group__signals_ga67ca2818879c9990e1b5f1b14ce7ed27}{hsa\+\_\+signal\+\_\+value\+\_\+t}} value)
+\begin{DoxyCompactList}\small\item\em Atomically set the value of a signal if the observed value is equal to the expected value. The observed value is returned regardless of whether the replacement was done. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{group__signals_ga67ca2818879c9990e1b5f1b14ce7ed27}{hsa\+\_\+signal\+\_\+value\+\_\+t}} \mbox{\hyperlink{inc_2hsa__ext__image_8h_a64216765b98b62ee87deb50fd2899836}{HSA\+\_\+\+API}} \mbox{\hyperlink{group__signals_gaf79867e365e245d4863898880923b42f}{hsa\+\_\+signal\+\_\+cas\+\_\+screlease}} (\mbox{\hyperlink{group__signals_ga0003af605a660e7ef4f89aa555d3b3fc}{hsa\+\_\+signal\+\_\+t}} signal, \mbox{\hyperlink{group__signals_ga67ca2818879c9990e1b5f1b14ce7ed27}{hsa\+\_\+signal\+\_\+value\+\_\+t}} expected, \mbox{\hyperlink{group__signals_ga67ca2818879c9990e1b5f1b14ce7ed27}{hsa\+\_\+signal\+\_\+value\+\_\+t}} value)
+\begin{DoxyCompactList}\small\item\em Atomically set the value of a signal if the observed value is equal to the expected value. The observed value is returned regardless of whether the replacement was done. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{group__signals_ga67ca2818879c9990e1b5f1b14ce7ed27}{hsa\+\_\+signal\+\_\+value\+\_\+t}} \mbox{\hyperlink{inc_2hsa__ext__image_8h_a64216765b98b62ee87deb50fd2899836}{HSA\+\_\+\+API}} \mbox{\hyperlink{inc_2hsa_8h_a2321f8ca7d706cada4f617b191a478b0}{HSA\+\_\+\+DEPRECATED}} \mbox{\hyperlink{group__signals_gaf316bc2fd7b7ed263f3d4909f4ec95b5}{hsa\+\_\+signal\+\_\+cas\+\_\+release}} (\mbox{\hyperlink{group__signals_ga0003af605a660e7ef4f89aa555d3b3fc}{hsa\+\_\+signal\+\_\+t}} signal, \mbox{\hyperlink{group__signals_ga67ca2818879c9990e1b5f1b14ce7ed27}{hsa\+\_\+signal\+\_\+value\+\_\+t}} expected, \mbox{\hyperlink{group__signals_ga67ca2818879c9990e1b5f1b14ce7ed27}{hsa\+\_\+signal\+\_\+value\+\_\+t}} value)
+\begin{DoxyCompactList}\small\item\em Atomically set the value of a signal if the observed value is equal to the expected value. The observed value is returned regardless of whether the replacement was done. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{inc_2hsa__ext__image_8h_a64216765b98b62ee87deb50fd2899836}{HSA\+\_\+\+API}} \mbox{\hyperlink{group__signals_ga8f518434bc2abe5ab75b58eb23fb50ea}{hsa\+\_\+signal\+\_\+add\+\_\+scacq\+\_\+screl}} (\mbox{\hyperlink{group__signals_ga0003af605a660e7ef4f89aa555d3b3fc}{hsa\+\_\+signal\+\_\+t}} signal, \mbox{\hyperlink{group__signals_ga67ca2818879c9990e1b5f1b14ce7ed27}{hsa\+\_\+signal\+\_\+value\+\_\+t}} value)
+\begin{DoxyCompactList}\small\item\em Atomically increment the value of a signal by a given amount. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{inc_2hsa__ext__image_8h_a64216765b98b62ee87deb50fd2899836}{HSA\+\_\+\+API}} \mbox{\hyperlink{inc_2hsa_8h_a2321f8ca7d706cada4f617b191a478b0}{HSA\+\_\+\+DEPRECATED}} \mbox{\hyperlink{group__signals_gad08b02e38432ac2d1738d66c3a48fbd6}{hsa\+\_\+signal\+\_\+add\+\_\+acq\+\_\+rel}} (\mbox{\hyperlink{group__signals_ga0003af605a660e7ef4f89aa555d3b3fc}{hsa\+\_\+signal\+\_\+t}} signal, \mbox{\hyperlink{group__signals_ga67ca2818879c9990e1b5f1b14ce7ed27}{hsa\+\_\+signal\+\_\+value\+\_\+t}} value)
+\begin{DoxyCompactList}\small\item\em Atomically increment the value of a signal by a given amount. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{inc_2hsa__ext__image_8h_a64216765b98b62ee87deb50fd2899836}{HSA\+\_\+\+API}} \mbox{\hyperlink{group__signals_gaf870548348dfbce15ab0b91b7df1d7d4}{hsa\+\_\+signal\+\_\+add\+\_\+scacquire}} (\mbox{\hyperlink{group__signals_ga0003af605a660e7ef4f89aa555d3b3fc}{hsa\+\_\+signal\+\_\+t}} signal, \mbox{\hyperlink{group__signals_ga67ca2818879c9990e1b5f1b14ce7ed27}{hsa\+\_\+signal\+\_\+value\+\_\+t}} value)
+\begin{DoxyCompactList}\small\item\em Atomically increment the value of a signal by a given amount. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{inc_2hsa__ext__image_8h_a64216765b98b62ee87deb50fd2899836}{HSA\+\_\+\+API}} \mbox{\hyperlink{inc_2hsa_8h_a2321f8ca7d706cada4f617b191a478b0}{HSA\+\_\+\+DEPRECATED}} \mbox{\hyperlink{group__signals_ga10214f5ed3e675dad85e3c2aa7d1e024}{hsa\+\_\+signal\+\_\+add\+\_\+acquire}} (\mbox{\hyperlink{group__signals_ga0003af605a660e7ef4f89aa555d3b3fc}{hsa\+\_\+signal\+\_\+t}} signal, \mbox{\hyperlink{group__signals_ga67ca2818879c9990e1b5f1b14ce7ed27}{hsa\+\_\+signal\+\_\+value\+\_\+t}} value)
+\begin{DoxyCompactList}\small\item\em Atomically increment the value of a signal by a given amount. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{inc_2hsa__ext__image_8h_a64216765b98b62ee87deb50fd2899836}{HSA\+\_\+\+API}} \mbox{\hyperlink{group__signals_ga8f4dee3009b7d1a74ba80e5295ef8a5b}{hsa\+\_\+signal\+\_\+add\+\_\+relaxed}} (\mbox{\hyperlink{group__signals_ga0003af605a660e7ef4f89aa555d3b3fc}{hsa\+\_\+signal\+\_\+t}} signal, \mbox{\hyperlink{group__signals_ga67ca2818879c9990e1b5f1b14ce7ed27}{hsa\+\_\+signal\+\_\+value\+\_\+t}} value)
+\begin{DoxyCompactList}\small\item\em Atomically increment the value of a signal by a given amount. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{inc_2hsa__ext__image_8h_a64216765b98b62ee87deb50fd2899836}{HSA\+\_\+\+API}} \mbox{\hyperlink{group__signals_ga188ec4334811cf3dfa708b7ca734d7fb}{hsa\+\_\+signal\+\_\+add\+\_\+screlease}} (\mbox{\hyperlink{group__signals_ga0003af605a660e7ef4f89aa555d3b3fc}{hsa\+\_\+signal\+\_\+t}} signal, \mbox{\hyperlink{group__signals_ga67ca2818879c9990e1b5f1b14ce7ed27}{hsa\+\_\+signal\+\_\+value\+\_\+t}} value)
+\begin{DoxyCompactList}\small\item\em Atomically increment the value of a signal by a given amount. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{inc_2hsa__ext__image_8h_a64216765b98b62ee87deb50fd2899836}{HSA\+\_\+\+API}} \mbox{\hyperlink{inc_2hsa_8h_a2321f8ca7d706cada4f617b191a478b0}{HSA\+\_\+\+DEPRECATED}} \mbox{\hyperlink{group__signals_gabbcafbb0b667b836901f090ac9732dc3}{hsa\+\_\+signal\+\_\+add\+\_\+release}} (\mbox{\hyperlink{group__signals_ga0003af605a660e7ef4f89aa555d3b3fc}{hsa\+\_\+signal\+\_\+t}} signal, \mbox{\hyperlink{group__signals_ga67ca2818879c9990e1b5f1b14ce7ed27}{hsa\+\_\+signal\+\_\+value\+\_\+t}} value)
+\begin{DoxyCompactList}\small\item\em Atomically increment the value of a signal by a given amount. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{inc_2hsa__ext__image_8h_a64216765b98b62ee87deb50fd2899836}{HSA\+\_\+\+API}} \mbox{\hyperlink{group__signals_ga60476dbfb421b5e884110da8cb4e5f5a}{hsa\+\_\+signal\+\_\+subtract\+\_\+scacq\+\_\+screl}} (\mbox{\hyperlink{group__signals_ga0003af605a660e7ef4f89aa555d3b3fc}{hsa\+\_\+signal\+\_\+t}} signal, \mbox{\hyperlink{group__signals_ga67ca2818879c9990e1b5f1b14ce7ed27}{hsa\+\_\+signal\+\_\+value\+\_\+t}} value)
+\begin{DoxyCompactList}\small\item\em Atomically decrement the value of a signal by a given amount. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{inc_2hsa__ext__image_8h_a64216765b98b62ee87deb50fd2899836}{HSA\+\_\+\+API}} \mbox{\hyperlink{inc_2hsa_8h_a2321f8ca7d706cada4f617b191a478b0}{HSA\+\_\+\+DEPRECATED}} \mbox{\hyperlink{group__signals_ga86ad6a3b815df580443a2784bfe8338c}{hsa\+\_\+signal\+\_\+subtract\+\_\+acq\+\_\+rel}} (\mbox{\hyperlink{group__signals_ga0003af605a660e7ef4f89aa555d3b3fc}{hsa\+\_\+signal\+\_\+t}} signal, \mbox{\hyperlink{group__signals_ga67ca2818879c9990e1b5f1b14ce7ed27}{hsa\+\_\+signal\+\_\+value\+\_\+t}} value)
+\begin{DoxyCompactList}\small\item\em Atomically decrement the value of a signal by a given amount. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{inc_2hsa__ext__image_8h_a64216765b98b62ee87deb50fd2899836}{HSA\+\_\+\+API}} \mbox{\hyperlink{group__signals_ga5b0566fff20fb4daffbc8945e4e9b1c8}{hsa\+\_\+signal\+\_\+subtract\+\_\+scacquire}} (\mbox{\hyperlink{group__signals_ga0003af605a660e7ef4f89aa555d3b3fc}{hsa\+\_\+signal\+\_\+t}} signal, \mbox{\hyperlink{group__signals_ga67ca2818879c9990e1b5f1b14ce7ed27}{hsa\+\_\+signal\+\_\+value\+\_\+t}} value)
+\begin{DoxyCompactList}\small\item\em Atomically decrement the value of a signal by a given amount. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{inc_2hsa__ext__image_8h_a64216765b98b62ee87deb50fd2899836}{HSA\+\_\+\+API}} \mbox{\hyperlink{inc_2hsa_8h_a2321f8ca7d706cada4f617b191a478b0}{HSA\+\_\+\+DEPRECATED}} \mbox{\hyperlink{group__signals_gac0a4e4372c574005db617bd96e5f4cfb}{hsa\+\_\+signal\+\_\+subtract\+\_\+acquire}} (\mbox{\hyperlink{group__signals_ga0003af605a660e7ef4f89aa555d3b3fc}{hsa\+\_\+signal\+\_\+t}} signal, \mbox{\hyperlink{group__signals_ga67ca2818879c9990e1b5f1b14ce7ed27}{hsa\+\_\+signal\+\_\+value\+\_\+t}} value)
+\begin{DoxyCompactList}\small\item\em Atomically decrement the value of a signal by a given amount. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{inc_2hsa__ext__image_8h_a64216765b98b62ee87deb50fd2899836}{HSA\+\_\+\+API}} \mbox{\hyperlink{group__signals_gae4c78ee2deb280a56d794af5eff2a680}{hsa\+\_\+signal\+\_\+subtract\+\_\+relaxed}} (\mbox{\hyperlink{group__signals_ga0003af605a660e7ef4f89aa555d3b3fc}{hsa\+\_\+signal\+\_\+t}} signal, \mbox{\hyperlink{group__signals_ga67ca2818879c9990e1b5f1b14ce7ed27}{hsa\+\_\+signal\+\_\+value\+\_\+t}} value)
+\begin{DoxyCompactList}\small\item\em Atomically decrement the value of a signal by a given amount. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{inc_2hsa__ext__image_8h_a64216765b98b62ee87deb50fd2899836}{HSA\+\_\+\+API}} \mbox{\hyperlink{group__signals_ga7a96ceefb09ffb812d29b5fa86715b73}{hsa\+\_\+signal\+\_\+subtract\+\_\+screlease}} (\mbox{\hyperlink{group__signals_ga0003af605a660e7ef4f89aa555d3b3fc}{hsa\+\_\+signal\+\_\+t}} signal, \mbox{\hyperlink{group__signals_ga67ca2818879c9990e1b5f1b14ce7ed27}{hsa\+\_\+signal\+\_\+value\+\_\+t}} value)
+\begin{DoxyCompactList}\small\item\em Atomically decrement the value of a signal by a given amount. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{inc_2hsa__ext__image_8h_a64216765b98b62ee87deb50fd2899836}{HSA\+\_\+\+API}} \mbox{\hyperlink{inc_2hsa_8h_a2321f8ca7d706cada4f617b191a478b0}{HSA\+\_\+\+DEPRECATED}} \mbox{\hyperlink{group__signals_ga4789b8169ed94cdca20213d8620b1e84}{hsa\+\_\+signal\+\_\+subtract\+\_\+release}} (\mbox{\hyperlink{group__signals_ga0003af605a660e7ef4f89aa555d3b3fc}{hsa\+\_\+signal\+\_\+t}} signal, \mbox{\hyperlink{group__signals_ga67ca2818879c9990e1b5f1b14ce7ed27}{hsa\+\_\+signal\+\_\+value\+\_\+t}} value)
+\begin{DoxyCompactList}\small\item\em Atomically decrement the value of a signal by a given amount. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{inc_2hsa__ext__image_8h_a64216765b98b62ee87deb50fd2899836}{HSA\+\_\+\+API}} \mbox{\hyperlink{group__signals_gacaecd8bb2681f26ca6d7ff1e3f5b062b}{hsa\+\_\+signal\+\_\+and\+\_\+scacq\+\_\+screl}} (\mbox{\hyperlink{group__signals_ga0003af605a660e7ef4f89aa555d3b3fc}{hsa\+\_\+signal\+\_\+t}} signal, \mbox{\hyperlink{group__signals_ga67ca2818879c9990e1b5f1b14ce7ed27}{hsa\+\_\+signal\+\_\+value\+\_\+t}} value)
+\begin{DoxyCompactList}\small\item\em Atomically perform a bitwise AND operation between the value of a signal and a given value. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{inc_2hsa__ext__image_8h_a64216765b98b62ee87deb50fd2899836}{HSA\+\_\+\+API}} \mbox{\hyperlink{inc_2hsa_8h_a2321f8ca7d706cada4f617b191a478b0}{HSA\+\_\+\+DEPRECATED}} \mbox{\hyperlink{group__signals_gadcb4113b6829b12d030be1f1223027a6}{hsa\+\_\+signal\+\_\+and\+\_\+acq\+\_\+rel}} (\mbox{\hyperlink{group__signals_ga0003af605a660e7ef4f89aa555d3b3fc}{hsa\+\_\+signal\+\_\+t}} signal, \mbox{\hyperlink{group__signals_ga67ca2818879c9990e1b5f1b14ce7ed27}{hsa\+\_\+signal\+\_\+value\+\_\+t}} value)
+\begin{DoxyCompactList}\small\item\em Atomically perform a bitwise AND operation between the value of a signal and a given value. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{inc_2hsa__ext__image_8h_a64216765b98b62ee87deb50fd2899836}{HSA\+\_\+\+API}} \mbox{\hyperlink{group__signals_ga15ffa27960ef7f07fd17db6b59323ea5}{hsa\+\_\+signal\+\_\+and\+\_\+scacquire}} (\mbox{\hyperlink{group__signals_ga0003af605a660e7ef4f89aa555d3b3fc}{hsa\+\_\+signal\+\_\+t}} signal, \mbox{\hyperlink{group__signals_ga67ca2818879c9990e1b5f1b14ce7ed27}{hsa\+\_\+signal\+\_\+value\+\_\+t}} value)
+\begin{DoxyCompactList}\small\item\em Atomically perform a bitwise AND operation between the value of a signal and a given value. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{inc_2hsa__ext__image_8h_a64216765b98b62ee87deb50fd2899836}{HSA\+\_\+\+API}} \mbox{\hyperlink{inc_2hsa_8h_a2321f8ca7d706cada4f617b191a478b0}{HSA\+\_\+\+DEPRECATED}} \mbox{\hyperlink{group__signals_ga61dd32721bdf810a0286459bbcdd6a63}{hsa\+\_\+signal\+\_\+and\+\_\+acquire}} (\mbox{\hyperlink{group__signals_ga0003af605a660e7ef4f89aa555d3b3fc}{hsa\+\_\+signal\+\_\+t}} signal, \mbox{\hyperlink{group__signals_ga67ca2818879c9990e1b5f1b14ce7ed27}{hsa\+\_\+signal\+\_\+value\+\_\+t}} value)
+\begin{DoxyCompactList}\small\item\em Atomically perform a bitwise AND operation between the value of a signal and a given value. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{inc_2hsa__ext__image_8h_a64216765b98b62ee87deb50fd2899836}{HSA\+\_\+\+API}} \mbox{\hyperlink{group__signals_gab33fd8ab1f7ef958c11f24d06cfec0f8}{hsa\+\_\+signal\+\_\+and\+\_\+relaxed}} (\mbox{\hyperlink{group__signals_ga0003af605a660e7ef4f89aa555d3b3fc}{hsa\+\_\+signal\+\_\+t}} signal, \mbox{\hyperlink{group__signals_ga67ca2818879c9990e1b5f1b14ce7ed27}{hsa\+\_\+signal\+\_\+value\+\_\+t}} value)
+\begin{DoxyCompactList}\small\item\em Atomically perform a bitwise AND operation between the value of a signal and a given value. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{inc_2hsa__ext__image_8h_a64216765b98b62ee87deb50fd2899836}{HSA\+\_\+\+API}} \mbox{\hyperlink{group__signals_gab2045369b95b7f76f4adaaa02f678ef6}{hsa\+\_\+signal\+\_\+and\+\_\+screlease}} (\mbox{\hyperlink{group__signals_ga0003af605a660e7ef4f89aa555d3b3fc}{hsa\+\_\+signal\+\_\+t}} signal, \mbox{\hyperlink{group__signals_ga67ca2818879c9990e1b5f1b14ce7ed27}{hsa\+\_\+signal\+\_\+value\+\_\+t}} value)
+\begin{DoxyCompactList}\small\item\em Atomically perform a bitwise AND operation between the value of a signal and a given value. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{inc_2hsa__ext__image_8h_a64216765b98b62ee87deb50fd2899836}{HSA\+\_\+\+API}} \mbox{\hyperlink{inc_2hsa_8h_a2321f8ca7d706cada4f617b191a478b0}{HSA\+\_\+\+DEPRECATED}} \mbox{\hyperlink{group__signals_ga5711f2dd3d5d02c7e2e5bbac51cc0617}{hsa\+\_\+signal\+\_\+and\+\_\+release}} (\mbox{\hyperlink{group__signals_ga0003af605a660e7ef4f89aa555d3b3fc}{hsa\+\_\+signal\+\_\+t}} signal, \mbox{\hyperlink{group__signals_ga67ca2818879c9990e1b5f1b14ce7ed27}{hsa\+\_\+signal\+\_\+value\+\_\+t}} value)
+\begin{DoxyCompactList}\small\item\em Atomically perform a bitwise AND operation between the value of a signal and a given value. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{inc_2hsa__ext__image_8h_a64216765b98b62ee87deb50fd2899836}{HSA\+\_\+\+API}} \mbox{\hyperlink{group__signals_gaf3f48c15bf7dc296c0fe283175d2b8b6}{hsa\+\_\+signal\+\_\+or\+\_\+scacq\+\_\+screl}} (\mbox{\hyperlink{group__signals_ga0003af605a660e7ef4f89aa555d3b3fc}{hsa\+\_\+signal\+\_\+t}} signal, \mbox{\hyperlink{group__signals_ga67ca2818879c9990e1b5f1b14ce7ed27}{hsa\+\_\+signal\+\_\+value\+\_\+t}} value)
+\begin{DoxyCompactList}\small\item\em Atomically perform a bitwise OR operation between the value of a signal and a given value. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{inc_2hsa__ext__image_8h_a64216765b98b62ee87deb50fd2899836}{HSA\+\_\+\+API}} \mbox{\hyperlink{inc_2hsa_8h_a2321f8ca7d706cada4f617b191a478b0}{HSA\+\_\+\+DEPRECATED}} \mbox{\hyperlink{group__signals_gab31b90f93a6936b352e5a2c2d8f26278}{hsa\+\_\+signal\+\_\+or\+\_\+acq\+\_\+rel}} (\mbox{\hyperlink{group__signals_ga0003af605a660e7ef4f89aa555d3b3fc}{hsa\+\_\+signal\+\_\+t}} signal, \mbox{\hyperlink{group__signals_ga67ca2818879c9990e1b5f1b14ce7ed27}{hsa\+\_\+signal\+\_\+value\+\_\+t}} value)
+\begin{DoxyCompactList}\small\item\em Atomically perform a bitwise OR operation between the value of a signal and a given value. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{inc_2hsa__ext__image_8h_a64216765b98b62ee87deb50fd2899836}{HSA\+\_\+\+API}} \mbox{\hyperlink{group__signals_ga6f39761ab3c1946d508b2b5f6dcfc4cc}{hsa\+\_\+signal\+\_\+or\+\_\+scacquire}} (\mbox{\hyperlink{group__signals_ga0003af605a660e7ef4f89aa555d3b3fc}{hsa\+\_\+signal\+\_\+t}} signal, \mbox{\hyperlink{group__signals_ga67ca2818879c9990e1b5f1b14ce7ed27}{hsa\+\_\+signal\+\_\+value\+\_\+t}} value)
+\begin{DoxyCompactList}\small\item\em Atomically perform a bitwise OR operation between the value of a signal and a given value. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{inc_2hsa__ext__image_8h_a64216765b98b62ee87deb50fd2899836}{HSA\+\_\+\+API}} \mbox{\hyperlink{inc_2hsa_8h_a2321f8ca7d706cada4f617b191a478b0}{HSA\+\_\+\+DEPRECATED}} \mbox{\hyperlink{group__signals_ga4c03fd219e7f1bf427900138f40cd82d}{hsa\+\_\+signal\+\_\+or\+\_\+acquire}} (\mbox{\hyperlink{group__signals_ga0003af605a660e7ef4f89aa555d3b3fc}{hsa\+\_\+signal\+\_\+t}} signal, \mbox{\hyperlink{group__signals_ga67ca2818879c9990e1b5f1b14ce7ed27}{hsa\+\_\+signal\+\_\+value\+\_\+t}} value)
+\begin{DoxyCompactList}\small\item\em Atomically perform a bitwise OR operation between the value of a signal and a given value. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{inc_2hsa__ext__image_8h_a64216765b98b62ee87deb50fd2899836}{HSA\+\_\+\+API}} \mbox{\hyperlink{group__signals_ga43a6bff22162457f2b5338b4e3f73430}{hsa\+\_\+signal\+\_\+or\+\_\+relaxed}} (\mbox{\hyperlink{group__signals_ga0003af605a660e7ef4f89aa555d3b3fc}{hsa\+\_\+signal\+\_\+t}} signal, \mbox{\hyperlink{group__signals_ga67ca2818879c9990e1b5f1b14ce7ed27}{hsa\+\_\+signal\+\_\+value\+\_\+t}} value)
+\begin{DoxyCompactList}\small\item\em Atomically perform a bitwise OR operation between the value of a signal and a given value. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{inc_2hsa__ext__image_8h_a64216765b98b62ee87deb50fd2899836}{HSA\+\_\+\+API}} \mbox{\hyperlink{group__signals_ga344a50950c79b84f6852a70fdfb47fe9}{hsa\+\_\+signal\+\_\+or\+\_\+screlease}} (\mbox{\hyperlink{group__signals_ga0003af605a660e7ef4f89aa555d3b3fc}{hsa\+\_\+signal\+\_\+t}} signal, \mbox{\hyperlink{group__signals_ga67ca2818879c9990e1b5f1b14ce7ed27}{hsa\+\_\+signal\+\_\+value\+\_\+t}} value)
+\begin{DoxyCompactList}\small\item\em Atomically perform a bitwise OR operation between the value of a signal and a given value. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{inc_2hsa__ext__image_8h_a64216765b98b62ee87deb50fd2899836}{HSA\+\_\+\+API}} \mbox{\hyperlink{inc_2hsa_8h_a2321f8ca7d706cada4f617b191a478b0}{HSA\+\_\+\+DEPRECATED}} \mbox{\hyperlink{group__signals_ga1fda0da9ed25d443085c7b05c5034428}{hsa\+\_\+signal\+\_\+or\+\_\+release}} (\mbox{\hyperlink{group__signals_ga0003af605a660e7ef4f89aa555d3b3fc}{hsa\+\_\+signal\+\_\+t}} signal, \mbox{\hyperlink{group__signals_ga67ca2818879c9990e1b5f1b14ce7ed27}{hsa\+\_\+signal\+\_\+value\+\_\+t}} value)
+\begin{DoxyCompactList}\small\item\em Atomically perform a bitwise OR operation between the value of a signal and a given value. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{inc_2hsa__ext__image_8h_a64216765b98b62ee87deb50fd2899836}{HSA\+\_\+\+API}} \mbox{\hyperlink{group__signals_ga011dc5fda6e71c5673475bb58c1a10bf}{hsa\+\_\+signal\+\_\+xor\+\_\+scacq\+\_\+screl}} (\mbox{\hyperlink{group__signals_ga0003af605a660e7ef4f89aa555d3b3fc}{hsa\+\_\+signal\+\_\+t}} signal, \mbox{\hyperlink{group__signals_ga67ca2818879c9990e1b5f1b14ce7ed27}{hsa\+\_\+signal\+\_\+value\+\_\+t}} value)
+\begin{DoxyCompactList}\small\item\em Atomically perform a bitwise XOR operation between the value of a signal and a given value. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{inc_2hsa__ext__image_8h_a64216765b98b62ee87deb50fd2899836}{HSA\+\_\+\+API}} \mbox{\hyperlink{inc_2hsa_8h_a2321f8ca7d706cada4f617b191a478b0}{HSA\+\_\+\+DEPRECATED}} \mbox{\hyperlink{group__signals_gafa94f82f2d1c4a871b56fbdb4cdd448f}{hsa\+\_\+signal\+\_\+xor\+\_\+acq\+\_\+rel}} (\mbox{\hyperlink{group__signals_ga0003af605a660e7ef4f89aa555d3b3fc}{hsa\+\_\+signal\+\_\+t}} signal, \mbox{\hyperlink{group__signals_ga67ca2818879c9990e1b5f1b14ce7ed27}{hsa\+\_\+signal\+\_\+value\+\_\+t}} value)
+\begin{DoxyCompactList}\small\item\em Atomically perform a bitwise XOR operation between the value of a signal and a given value. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{inc_2hsa__ext__image_8h_a64216765b98b62ee87deb50fd2899836}{HSA\+\_\+\+API}} \mbox{\hyperlink{group__signals_ga1ef17d38dcd907c6717bedaa1f5eb2ab}{hsa\+\_\+signal\+\_\+xor\+\_\+scacquire}} (\mbox{\hyperlink{group__signals_ga0003af605a660e7ef4f89aa555d3b3fc}{hsa\+\_\+signal\+\_\+t}} signal, \mbox{\hyperlink{group__signals_ga67ca2818879c9990e1b5f1b14ce7ed27}{hsa\+\_\+signal\+\_\+value\+\_\+t}} value)
+\begin{DoxyCompactList}\small\item\em Atomically perform a bitwise XOR operation between the value of a signal and a given value. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{inc_2hsa__ext__image_8h_a64216765b98b62ee87deb50fd2899836}{HSA\+\_\+\+API}} \mbox{\hyperlink{inc_2hsa_8h_a2321f8ca7d706cada4f617b191a478b0}{HSA\+\_\+\+DEPRECATED}} \mbox{\hyperlink{group__signals_gacaae60cc04d3f14357a2aba868401b96}{hsa\+\_\+signal\+\_\+xor\+\_\+acquire}} (\mbox{\hyperlink{group__signals_ga0003af605a660e7ef4f89aa555d3b3fc}{hsa\+\_\+signal\+\_\+t}} signal, \mbox{\hyperlink{group__signals_ga67ca2818879c9990e1b5f1b14ce7ed27}{hsa\+\_\+signal\+\_\+value\+\_\+t}} value)
+\begin{DoxyCompactList}\small\item\em Atomically perform a bitwise XOR operation between the value of a signal and a given value. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{inc_2hsa__ext__image_8h_a64216765b98b62ee87deb50fd2899836}{HSA\+\_\+\+API}} \mbox{\hyperlink{group__signals_ga87e389c478dc15864183bd0e9c6eb319}{hsa\+\_\+signal\+\_\+xor\+\_\+relaxed}} (\mbox{\hyperlink{group__signals_ga0003af605a660e7ef4f89aa555d3b3fc}{hsa\+\_\+signal\+\_\+t}} signal, \mbox{\hyperlink{group__signals_ga67ca2818879c9990e1b5f1b14ce7ed27}{hsa\+\_\+signal\+\_\+value\+\_\+t}} value)
+\begin{DoxyCompactList}\small\item\em Atomically perform a bitwise XOR operation between the value of a signal and a given value. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{inc_2hsa__ext__image_8h_a64216765b98b62ee87deb50fd2899836}{HSA\+\_\+\+API}} \mbox{\hyperlink{group__signals_ga67c2d2e84599282ec2e74bb7813668db}{hsa\+\_\+signal\+\_\+xor\+\_\+screlease}} (\mbox{\hyperlink{group__signals_ga0003af605a660e7ef4f89aa555d3b3fc}{hsa\+\_\+signal\+\_\+t}} signal, \mbox{\hyperlink{group__signals_ga67ca2818879c9990e1b5f1b14ce7ed27}{hsa\+\_\+signal\+\_\+value\+\_\+t}} value)
+\begin{DoxyCompactList}\small\item\em Atomically perform a bitwise XOR operation between the value of a signal and a given value. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{inc_2hsa__ext__image_8h_a64216765b98b62ee87deb50fd2899836}{HSA\+\_\+\+API}} \mbox{\hyperlink{inc_2hsa_8h_a2321f8ca7d706cada4f617b191a478b0}{HSA\+\_\+\+DEPRECATED}} \mbox{\hyperlink{group__signals_gaa71856d357a9ee130e5ce09afeb10570}{hsa\+\_\+signal\+\_\+xor\+\_\+release}} (\mbox{\hyperlink{group__signals_ga0003af605a660e7ef4f89aa555d3b3fc}{hsa\+\_\+signal\+\_\+t}} signal, \mbox{\hyperlink{group__signals_ga67ca2818879c9990e1b5f1b14ce7ed27}{hsa\+\_\+signal\+\_\+value\+\_\+t}} value)
+\begin{DoxyCompactList}\small\item\em Atomically perform a bitwise XOR operation between the value of a signal and a given value. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{group__signals_ga67ca2818879c9990e1b5f1b14ce7ed27}{hsa\+\_\+signal\+\_\+value\+\_\+t}} \mbox{\hyperlink{inc_2hsa__ext__image_8h_a64216765b98b62ee87deb50fd2899836}{HSA\+\_\+\+API}} \mbox{\hyperlink{group__signals_gaae9521aad9ef69a1079fd71dfd8104cd}{hsa\+\_\+signal\+\_\+wait\+\_\+scacquire}} (\mbox{\hyperlink{group__signals_ga0003af605a660e7ef4f89aa555d3b3fc}{hsa\+\_\+signal\+\_\+t}} signal, \mbox{\hyperlink{group__signals_gab7190fcff48c6dbeded341389ed17c8d}{hsa\+\_\+signal\+\_\+condition\+\_\+t}} condition, \mbox{\hyperlink{group__signals_ga67ca2818879c9990e1b5f1b14ce7ed27}{hsa\+\_\+signal\+\_\+value\+\_\+t}} compare\+\_\+value, uint64\+\_\+t timeout\+\_\+hint, \mbox{\hyperlink{group__signals_gac0d2ec14d7a58c6cccc259943a03c569}{hsa\+\_\+wait\+\_\+state\+\_\+t}} wait\+\_\+state\+\_\+hint)
+\begin{DoxyCompactList}\small\item\em Wait until a signal value satisfies a specified condition, or a certain amount of time has elapsed. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{group__signals_ga67ca2818879c9990e1b5f1b14ce7ed27}{hsa\+\_\+signal\+\_\+value\+\_\+t}} \mbox{\hyperlink{inc_2hsa__ext__image_8h_a64216765b98b62ee87deb50fd2899836}{HSA\+\_\+\+API}} \mbox{\hyperlink{group__signals_ga4afaad605c8a35ba7a7557698d740ca3}{hsa\+\_\+signal\+\_\+wait\+\_\+relaxed}} (\mbox{\hyperlink{group__signals_ga0003af605a660e7ef4f89aa555d3b3fc}{hsa\+\_\+signal\+\_\+t}} signal, \mbox{\hyperlink{group__signals_gab7190fcff48c6dbeded341389ed17c8d}{hsa\+\_\+signal\+\_\+condition\+\_\+t}} condition, \mbox{\hyperlink{group__signals_ga67ca2818879c9990e1b5f1b14ce7ed27}{hsa\+\_\+signal\+\_\+value\+\_\+t}} compare\+\_\+value, uint64\+\_\+t timeout\+\_\+hint, \mbox{\hyperlink{group__signals_gac0d2ec14d7a58c6cccc259943a03c569}{hsa\+\_\+wait\+\_\+state\+\_\+t}} wait\+\_\+state\+\_\+hint)
+\begin{DoxyCompactList}\small\item\em Wait until a signal value satisfies a specified condition, or a certain amount of time has elapsed. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{group__signals_ga67ca2818879c9990e1b5f1b14ce7ed27}{hsa\+\_\+signal\+\_\+value\+\_\+t}} \mbox{\hyperlink{inc_2hsa__ext__image_8h_a64216765b98b62ee87deb50fd2899836}{HSA\+\_\+\+API}} \mbox{\hyperlink{inc_2hsa_8h_a2321f8ca7d706cada4f617b191a478b0}{HSA\+\_\+\+DEPRECATED}} \mbox{\hyperlink{group__signals_gad9ba765e0a90348aaafa92a488274ace}{hsa\+\_\+signal\+\_\+wait\+\_\+acquire}} (\mbox{\hyperlink{group__signals_ga0003af605a660e7ef4f89aa555d3b3fc}{hsa\+\_\+signal\+\_\+t}} signal, \mbox{\hyperlink{group__signals_gab7190fcff48c6dbeded341389ed17c8d}{hsa\+\_\+signal\+\_\+condition\+\_\+t}} condition, \mbox{\hyperlink{group__signals_ga67ca2818879c9990e1b5f1b14ce7ed27}{hsa\+\_\+signal\+\_\+value\+\_\+t}} compare\+\_\+value, uint64\+\_\+t timeout\+\_\+hint, \mbox{\hyperlink{group__signals_gac0d2ec14d7a58c6cccc259943a03c569}{hsa\+\_\+wait\+\_\+state\+\_\+t}} wait\+\_\+state\+\_\+hint)
+\begin{DoxyCompactList}\small\item\em Wait until a signal value satisfies a specified condition, or a certain amount of time has elapsed. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{group__status_gad755322e7ff95456520e8abdbe90d225}{hsa\+\_\+status\+\_\+t}} \mbox{\hyperlink{inc_2hsa__ext__image_8h_a64216765b98b62ee87deb50fd2899836}{HSA\+\_\+\+API}} \mbox{\hyperlink{group__signals_ga893939215cd155c3d7a9ca50e9bf5555}{hsa\+\_\+signal\+\_\+group\+\_\+create}} (uint32\+\_\+t num\+\_\+signals, const \mbox{\hyperlink{group__signals_ga0003af605a660e7ef4f89aa555d3b3fc}{hsa\+\_\+signal\+\_\+t}} $\ast$signals, uint32\+\_\+t num\+\_\+consumers, const \mbox{\hyperlink{group__agentinfo_ga9ce217ef08e7d5e89c8e83ce7b6ef22b}{hsa\+\_\+agent\+\_\+t}} $\ast$consumers, \mbox{\hyperlink{group__signals_gaf5db341c9f3fa5fb32e638ac8d16aac8}{hsa\+\_\+signal\+\_\+group\+\_\+t}} $\ast$signal\+\_\+group)
+\begin{DoxyCompactList}\small\item\em Create a signal group. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{group__status_gad755322e7ff95456520e8abdbe90d225}{hsa\+\_\+status\+\_\+t}} \mbox{\hyperlink{inc_2hsa__ext__image_8h_a64216765b98b62ee87deb50fd2899836}{HSA\+\_\+\+API}} \mbox{\hyperlink{group__signals_gac255e6be05250d784e735652523dc0ef}{hsa\+\_\+signal\+\_\+group\+\_\+destroy}} (\mbox{\hyperlink{group__signals_gaf5db341c9f3fa5fb32e638ac8d16aac8}{hsa\+\_\+signal\+\_\+group\+\_\+t}} signal\+\_\+group)
+\begin{DoxyCompactList}\small\item\em Destroy a signal group previous created by \mbox{\hyperlink{group__signals_ga893939215cd155c3d7a9ca50e9bf5555}{hsa\+\_\+signal\+\_\+group\+\_\+create}}. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{group__status_gad755322e7ff95456520e8abdbe90d225}{hsa\+\_\+status\+\_\+t}} \mbox{\hyperlink{inc_2hsa__ext__image_8h_a64216765b98b62ee87deb50fd2899836}{HSA\+\_\+\+API}} \mbox{\hyperlink{group__signals_gab31cba8ff293badfc294f37f390d5410}{hsa\+\_\+signal\+\_\+group\+\_\+wait\+\_\+any\+\_\+scacquire}} (\mbox{\hyperlink{group__signals_gaf5db341c9f3fa5fb32e638ac8d16aac8}{hsa\+\_\+signal\+\_\+group\+\_\+t}} signal\+\_\+group, const \mbox{\hyperlink{group__signals_gab7190fcff48c6dbeded341389ed17c8d}{hsa\+\_\+signal\+\_\+condition\+\_\+t}} $\ast$conditions, const \mbox{\hyperlink{group__signals_ga67ca2818879c9990e1b5f1b14ce7ed27}{hsa\+\_\+signal\+\_\+value\+\_\+t}} $\ast$compare\+\_\+values, \mbox{\hyperlink{group__signals_gac0d2ec14d7a58c6cccc259943a03c569}{hsa\+\_\+wait\+\_\+state\+\_\+t}} wait\+\_\+state\+\_\+hint, \mbox{\hyperlink{group__signals_ga0003af605a660e7ef4f89aa555d3b3fc}{hsa\+\_\+signal\+\_\+t}} $\ast$signal, \mbox{\hyperlink{group__signals_ga67ca2818879c9990e1b5f1b14ce7ed27}{hsa\+\_\+signal\+\_\+value\+\_\+t}} $\ast$value)
+\begin{DoxyCompactList}\small\item\em Wait until the value of at least one of the signals in a signal group satisfies its associated condition. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{group__status_gad755322e7ff95456520e8abdbe90d225}{hsa\+\_\+status\+\_\+t}} \mbox{\hyperlink{inc_2hsa__ext__image_8h_a64216765b98b62ee87deb50fd2899836}{HSA\+\_\+\+API}} \mbox{\hyperlink{group__signals_ga577c739b4eec2b0777a3128e5efa5a70}{hsa\+\_\+signal\+\_\+group\+\_\+wait\+\_\+any\+\_\+relaxed}} (\mbox{\hyperlink{group__signals_gaf5db341c9f3fa5fb32e638ac8d16aac8}{hsa\+\_\+signal\+\_\+group\+\_\+t}} signal\+\_\+group, const \mbox{\hyperlink{group__signals_gab7190fcff48c6dbeded341389ed17c8d}{hsa\+\_\+signal\+\_\+condition\+\_\+t}} $\ast$conditions, const \mbox{\hyperlink{group__signals_ga67ca2818879c9990e1b5f1b14ce7ed27}{hsa\+\_\+signal\+\_\+value\+\_\+t}} $\ast$compare\+\_\+values, \mbox{\hyperlink{group__signals_gac0d2ec14d7a58c6cccc259943a03c569}{hsa\+\_\+wait\+\_\+state\+\_\+t}} wait\+\_\+state\+\_\+hint, \mbox{\hyperlink{group__signals_ga0003af605a660e7ef4f89aa555d3b3fc}{hsa\+\_\+signal\+\_\+t}} $\ast$signal, \mbox{\hyperlink{group__signals_ga67ca2818879c9990e1b5f1b14ce7ed27}{hsa\+\_\+signal\+\_\+value\+\_\+t}} $\ast$value)
+\begin{DoxyCompactList}\small\item\em Wait until the value of at least one of the signals in a signal group satisfies its associated condition. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+
+
+\doxysubsection{Typedef Documentation}
+\mbox{\Hypertarget{group__signals_gaf5db341c9f3fa5fb32e638ac8d16aac8}\label{group__signals_gaf5db341c9f3fa5fb32e638ac8d16aac8}} 
+\index{Signals@{Signals}!hsa\_signal\_group\_t@{hsa\_signal\_group\_t}}
+\index{hsa\_signal\_group\_t@{hsa\_signal\_group\_t}!Signals@{Signals}}
+\doxysubsubsection{\texorpdfstring{hsa\_signal\_group\_t}{hsa\_signal\_group\_t}}
+{\footnotesize\ttfamily typedef struct \mbox{\hyperlink{structhsa__signal__group__s}{hsa\+\_\+signal\+\_\+group\+\_\+s}} \mbox{\hyperlink{group__signals_gaf5db341c9f3fa5fb32e638ac8d16aac8}{hsa\+\_\+signal\+\_\+group\+\_\+t}}}
+
+
+
+Group of signals. 
+
+\mbox{\Hypertarget{group__signals_ga0003af605a660e7ef4f89aa555d3b3fc}\label{group__signals_ga0003af605a660e7ef4f89aa555d3b3fc}} 
+\index{Signals@{Signals}!hsa\_signal\_t@{hsa\_signal\_t}}
+\index{hsa\_signal\_t@{hsa\_signal\_t}!Signals@{Signals}}
+\doxysubsubsection{\texorpdfstring{hsa\_signal\_t}{hsa\_signal\_t}}
+{\footnotesize\ttfamily typedef struct \mbox{\hyperlink{structhsa__signal__s}{hsa\+\_\+signal\+\_\+s}} \mbox{\hyperlink{group__signals_ga0003af605a660e7ef4f89aa555d3b3fc}{hsa\+\_\+signal\+\_\+t}}}
+
+
+
+Signal handle. 
+
+\mbox{\Hypertarget{group__signals_ga67ca2818879c9990e1b5f1b14ce7ed27}\label{group__signals_ga67ca2818879c9990e1b5f1b14ce7ed27}} 
+\index{Signals@{Signals}!hsa\_signal\_value\_t@{hsa\_signal\_value\_t}}
+\index{hsa\_signal\_value\_t@{hsa\_signal\_value\_t}!Signals@{Signals}}
+\doxysubsubsection{\texorpdfstring{hsa\_signal\_value\_t}{hsa\_signal\_value\_t}}
+{\footnotesize\ttfamily typedef int32\+\_\+t \mbox{\hyperlink{group__signals_ga67ca2818879c9990e1b5f1b14ce7ed27}{hsa\+\_\+signal\+\_\+value\+\_\+t}}}
+
+
+
+Signal value. The value occupies 32 bits in small machine mode, and 64 bits in large machine mode. 
+
+
+
+\doxysubsection{Enumeration Type Documentation}
+\mbox{\Hypertarget{group__signals_gab7190fcff48c6dbeded341389ed17c8d}\label{group__signals_gab7190fcff48c6dbeded341389ed17c8d}} 
+\index{Signals@{Signals}!hsa\_signal\_condition\_t@{hsa\_signal\_condition\_t}}
+\index{hsa\_signal\_condition\_t@{hsa\_signal\_condition\_t}!Signals@{Signals}}
+\doxysubsubsection{\texorpdfstring{hsa\_signal\_condition\_t}{hsa\_signal\_condition\_t}}
+{\footnotesize\ttfamily enum \mbox{\hyperlink{group__signals_gab7190fcff48c6dbeded341389ed17c8d}{hsa\+\_\+signal\+\_\+condition\+\_\+t}}}
+
+
+
+Wait condition operator. 
+
+\begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{HSA\_SIGNAL\_CONDITION\_EQ@{HSA\_SIGNAL\_CONDITION\_EQ}!Signals@{Signals}}\index{Signals@{Signals}!HSA\_SIGNAL\_CONDITION\_EQ@{HSA\_SIGNAL\_CONDITION\_EQ}}}\mbox{\Hypertarget{group__signals_ggab7190fcff48c6dbeded341389ed17c8daa07a8b5cdd2ba567b220e4d20744e922}\label{group__signals_ggab7190fcff48c6dbeded341389ed17c8daa07a8b5cdd2ba567b220e4d20744e922}} 
+HSA\+\_\+\+SIGNAL\+\_\+\+CONDITION\+\_\+\+EQ&The two operands are equal. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{HSA\_SIGNAL\_CONDITION\_NE@{HSA\_SIGNAL\_CONDITION\_NE}!Signals@{Signals}}\index{Signals@{Signals}!HSA\_SIGNAL\_CONDITION\_NE@{HSA\_SIGNAL\_CONDITION\_NE}}}\mbox{\Hypertarget{group__signals_ggab7190fcff48c6dbeded341389ed17c8da2eeea882d3d29762a9305c07cbee4975}\label{group__signals_ggab7190fcff48c6dbeded341389ed17c8da2eeea882d3d29762a9305c07cbee4975}} 
+HSA\+\_\+\+SIGNAL\+\_\+\+CONDITION\+\_\+\+NE&The two operands are not equal. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{HSA\_SIGNAL\_CONDITION\_LT@{HSA\_SIGNAL\_CONDITION\_LT}!Signals@{Signals}}\index{Signals@{Signals}!HSA\_SIGNAL\_CONDITION\_LT@{HSA\_SIGNAL\_CONDITION\_LT}}}\mbox{\Hypertarget{group__signals_ggab7190fcff48c6dbeded341389ed17c8dab1018e2ec0b8610bece947eccb066eff}\label{group__signals_ggab7190fcff48c6dbeded341389ed17c8dab1018e2ec0b8610bece947eccb066eff}} 
+HSA\+\_\+\+SIGNAL\+\_\+\+CONDITION\+\_\+\+LT&The first operand is less than the second operand. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{HSA\_SIGNAL\_CONDITION\_GTE@{HSA\_SIGNAL\_CONDITION\_GTE}!Signals@{Signals}}\index{Signals@{Signals}!HSA\_SIGNAL\_CONDITION\_GTE@{HSA\_SIGNAL\_CONDITION\_GTE}}}\mbox{\Hypertarget{group__signals_ggab7190fcff48c6dbeded341389ed17c8dae9e454c9587c406ee5cf0d4732a4881b}\label{group__signals_ggab7190fcff48c6dbeded341389ed17c8dae9e454c9587c406ee5cf0d4732a4881b}} 
+HSA\+\_\+\+SIGNAL\+\_\+\+CONDITION\+\_\+\+GTE&The first operand is greater than or equal to the second operand. \\
+\hline
+
+\end{DoxyEnumFields}
+\mbox{\Hypertarget{group__signals_gac0d2ec14d7a58c6cccc259943a03c569}\label{group__signals_gac0d2ec14d7a58c6cccc259943a03c569}} 
+\index{Signals@{Signals}!hsa\_wait\_state\_t@{hsa\_wait\_state\_t}}
+\index{hsa\_wait\_state\_t@{hsa\_wait\_state\_t}!Signals@{Signals}}
+\doxysubsubsection{\texorpdfstring{hsa\_wait\_state\_t}{hsa\_wait\_state\_t}}
+{\footnotesize\ttfamily enum \mbox{\hyperlink{group__signals_gac0d2ec14d7a58c6cccc259943a03c569}{hsa\+\_\+wait\+\_\+state\+\_\+t}}}
+
+
+
+State of the application thread during a signal wait. 
+
+\begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{HSA\_WAIT\_STATE\_BLOCKED@{HSA\_WAIT\_STATE\_BLOCKED}!Signals@{Signals}}\index{Signals@{Signals}!HSA\_WAIT\_STATE\_BLOCKED@{HSA\_WAIT\_STATE\_BLOCKED}}}\mbox{\Hypertarget{group__signals_ggac0d2ec14d7a58c6cccc259943a03c569ac54bd69c1e4052d09469d2a58769e258}\label{group__signals_ggac0d2ec14d7a58c6cccc259943a03c569ac54bd69c1e4052d09469d2a58769e258}} 
+HSA\+\_\+\+WAIT\+\_\+\+STATE\+\_\+\+BLOCKED&The application thread may be rescheduled while waiting on the signal. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{HSA\_WAIT\_STATE\_ACTIVE@{HSA\_WAIT\_STATE\_ACTIVE}!Signals@{Signals}}\index{Signals@{Signals}!HSA\_WAIT\_STATE\_ACTIVE@{HSA\_WAIT\_STATE\_ACTIVE}}}\mbox{\Hypertarget{group__signals_ggac0d2ec14d7a58c6cccc259943a03c569ac34cddf41039dc646c21d05a91f1dce8}\label{group__signals_ggac0d2ec14d7a58c6cccc259943a03c569ac34cddf41039dc646c21d05a91f1dce8}} 
+HSA\+\_\+\+WAIT\+\_\+\+STATE\+\_\+\+ACTIVE&The application thread stays active while waiting on a signal. \\
+\hline
+
+\end{DoxyEnumFields}
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{group__signals_gad08b02e38432ac2d1738d66c3a48fbd6}\label{group__signals_gad08b02e38432ac2d1738d66c3a48fbd6}} 
+\index{Signals@{Signals}!hsa\_signal\_add\_acq\_rel@{hsa\_signal\_add\_acq\_rel}}
+\index{hsa\_signal\_add\_acq\_rel@{hsa\_signal\_add\_acq\_rel}!Signals@{Signals}}
+\doxysubsubsection{\texorpdfstring{hsa\_signal\_add\_acq\_rel()}{hsa\_signal\_add\_acq\_rel()}}
+{\footnotesize\ttfamily void \mbox{\hyperlink{inc_2hsa__ext__image_8h_a64216765b98b62ee87deb50fd2899836}{HSA\+\_\+\+API}} \mbox{\hyperlink{inc_2hsa_8h_a2321f8ca7d706cada4f617b191a478b0}{HSA\+\_\+\+DEPRECATED}} hsa\+\_\+signal\+\_\+add\+\_\+acq\+\_\+rel (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{group__signals_ga0003af605a660e7ef4f89aa555d3b3fc}{hsa\+\_\+signal\+\_\+t}}}]{signal,  }\item[{\mbox{\hyperlink{group__signals_ga67ca2818879c9990e1b5f1b14ce7ed27}{hsa\+\_\+signal\+\_\+value\+\_\+t}}}]{value }\end{DoxyParamCaption})}
+
+
+
+Atomically increment the value of a signal by a given amount. 
+
+\begin{DoxyRefDesc}{Deprecated}
+\item[\mbox{\hyperlink{deprecated__deprecated000013}{Deprecated}}]Renamed as \mbox{\hyperlink{group__signals_ga8f518434bc2abe5ab75b58eb23fb50ea}{hsa\+\_\+signal\+\_\+add\+\_\+scacq\+\_\+screl}}.\end{DoxyRefDesc}
+
+
+If the value of the signal is changed, all the agents waiting on {\ttfamily signal} for which {\ttfamily value} satisfies their wait condition are awakened.
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em signal} & Signal. If {\ttfamily signal} is a queue doorbell signal, the behavior is undefined.\\
+\hline
+\mbox{\texttt{ in}}  & {\em value} & Value to add to the value of the signal. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{group__signals_ga10214f5ed3e675dad85e3c2aa7d1e024}\label{group__signals_ga10214f5ed3e675dad85e3c2aa7d1e024}} 
+\index{Signals@{Signals}!hsa\_signal\_add\_acquire@{hsa\_signal\_add\_acquire}}
+\index{hsa\_signal\_add\_acquire@{hsa\_signal\_add\_acquire}!Signals@{Signals}}
+\doxysubsubsection{\texorpdfstring{hsa\_signal\_add\_acquire()}{hsa\_signal\_add\_acquire()}}
+{\footnotesize\ttfamily void \mbox{\hyperlink{inc_2hsa__ext__image_8h_a64216765b98b62ee87deb50fd2899836}{HSA\+\_\+\+API}} \mbox{\hyperlink{inc_2hsa_8h_a2321f8ca7d706cada4f617b191a478b0}{HSA\+\_\+\+DEPRECATED}} hsa\+\_\+signal\+\_\+add\+\_\+acquire (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{group__signals_ga0003af605a660e7ef4f89aa555d3b3fc}{hsa\+\_\+signal\+\_\+t}}}]{signal,  }\item[{\mbox{\hyperlink{group__signals_ga67ca2818879c9990e1b5f1b14ce7ed27}{hsa\+\_\+signal\+\_\+value\+\_\+t}}}]{value }\end{DoxyParamCaption})}
+
+
+
+Atomically increment the value of a signal by a given amount. 
+
+\begin{DoxyRefDesc}{Deprecated}
+\item[\mbox{\hyperlink{deprecated__deprecated000014}{Deprecated}}]Renamed as \mbox{\hyperlink{group__signals_gaf870548348dfbce15ab0b91b7df1d7d4}{hsa\+\_\+signal\+\_\+add\+\_\+scacquire}}.\end{DoxyRefDesc}
+
+
+If the value of the signal is changed, all the agents waiting on {\ttfamily signal} for which {\ttfamily value} satisfies their wait condition are awakened.
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em signal} & Signal. If {\ttfamily signal} is a queue doorbell signal, the behavior is undefined.\\
+\hline
+\mbox{\texttt{ in}}  & {\em value} & Value to add to the value of the signal. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{group__signals_ga8f4dee3009b7d1a74ba80e5295ef8a5b}\label{group__signals_ga8f4dee3009b7d1a74ba80e5295ef8a5b}} 
+\index{Signals@{Signals}!hsa\_signal\_add\_relaxed@{hsa\_signal\_add\_relaxed}}
+\index{hsa\_signal\_add\_relaxed@{hsa\_signal\_add\_relaxed}!Signals@{Signals}}
+\doxysubsubsection{\texorpdfstring{hsa\_signal\_add\_relaxed()}{hsa\_signal\_add\_relaxed()}}
+{\footnotesize\ttfamily void \mbox{\hyperlink{inc_2hsa__ext__image_8h_a64216765b98b62ee87deb50fd2899836}{HSA\+\_\+\+API}} hsa\+\_\+signal\+\_\+add\+\_\+relaxed (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{group__signals_ga0003af605a660e7ef4f89aa555d3b3fc}{hsa\+\_\+signal\+\_\+t}}}]{signal,  }\item[{\mbox{\hyperlink{group__signals_ga67ca2818879c9990e1b5f1b14ce7ed27}{hsa\+\_\+signal\+\_\+value\+\_\+t}}}]{value }\end{DoxyParamCaption})}
+
+
+
+Atomically increment the value of a signal by a given amount. 
+
+If the value of the signal is changed, all the agents waiting on {\ttfamily signal} for which {\ttfamily value} satisfies their wait condition are awakened.
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em signal} & Signal. If {\ttfamily signal} is a queue doorbell signal, the behavior is undefined.\\
+\hline
+\mbox{\texttt{ in}}  & {\em value} & Value to add to the value of the signal. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{group__signals_gabbcafbb0b667b836901f090ac9732dc3}\label{group__signals_gabbcafbb0b667b836901f090ac9732dc3}} 
+\index{Signals@{Signals}!hsa\_signal\_add\_release@{hsa\_signal\_add\_release}}
+\index{hsa\_signal\_add\_release@{hsa\_signal\_add\_release}!Signals@{Signals}}
+\doxysubsubsection{\texorpdfstring{hsa\_signal\_add\_release()}{hsa\_signal\_add\_release()}}
+{\footnotesize\ttfamily void \mbox{\hyperlink{inc_2hsa__ext__image_8h_a64216765b98b62ee87deb50fd2899836}{HSA\+\_\+\+API}} \mbox{\hyperlink{inc_2hsa_8h_a2321f8ca7d706cada4f617b191a478b0}{HSA\+\_\+\+DEPRECATED}} hsa\+\_\+signal\+\_\+add\+\_\+release (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{group__signals_ga0003af605a660e7ef4f89aa555d3b3fc}{hsa\+\_\+signal\+\_\+t}}}]{signal,  }\item[{\mbox{\hyperlink{group__signals_ga67ca2818879c9990e1b5f1b14ce7ed27}{hsa\+\_\+signal\+\_\+value\+\_\+t}}}]{value }\end{DoxyParamCaption})}
+
+
+
+Atomically increment the value of a signal by a given amount. 
+
+\begin{DoxyRefDesc}{Deprecated}
+\item[\mbox{\hyperlink{deprecated__deprecated000015}{Deprecated}}]Renamed as \mbox{\hyperlink{group__signals_ga188ec4334811cf3dfa708b7ca734d7fb}{hsa\+\_\+signal\+\_\+add\+\_\+screlease}}.\end{DoxyRefDesc}
+
+
+If the value of the signal is changed, all the agents waiting on {\ttfamily signal} for which {\ttfamily value} satisfies their wait condition are awakened.
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em signal} & Signal. If {\ttfamily signal} is a queue doorbell signal, the behavior is undefined.\\
+\hline
+\mbox{\texttt{ in}}  & {\em value} & Value to add to the value of the signal. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{group__signals_ga8f518434bc2abe5ab75b58eb23fb50ea}\label{group__signals_ga8f518434bc2abe5ab75b58eb23fb50ea}} 
+\index{Signals@{Signals}!hsa\_signal\_add\_scacq\_screl@{hsa\_signal\_add\_scacq\_screl}}
+\index{hsa\_signal\_add\_scacq\_screl@{hsa\_signal\_add\_scacq\_screl}!Signals@{Signals}}
+\doxysubsubsection{\texorpdfstring{hsa\_signal\_add\_scacq\_screl()}{hsa\_signal\_add\_scacq\_screl()}}
+{\footnotesize\ttfamily void \mbox{\hyperlink{inc_2hsa__ext__image_8h_a64216765b98b62ee87deb50fd2899836}{HSA\+\_\+\+API}} hsa\+\_\+signal\+\_\+add\+\_\+scacq\+\_\+screl (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{group__signals_ga0003af605a660e7ef4f89aa555d3b3fc}{hsa\+\_\+signal\+\_\+t}}}]{signal,  }\item[{\mbox{\hyperlink{group__signals_ga67ca2818879c9990e1b5f1b14ce7ed27}{hsa\+\_\+signal\+\_\+value\+\_\+t}}}]{value }\end{DoxyParamCaption})}
+
+
+
+Atomically increment the value of a signal by a given amount. 
+
+If the value of the signal is changed, all the agents waiting on {\ttfamily signal} for which {\ttfamily value} satisfies their wait condition are awakened.
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em signal} & Signal. If {\ttfamily signal} is a queue doorbell signal, the behavior is undefined.\\
+\hline
+\mbox{\texttt{ in}}  & {\em value} & Value to add to the value of the signal. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{group__signals_gaf870548348dfbce15ab0b91b7df1d7d4}\label{group__signals_gaf870548348dfbce15ab0b91b7df1d7d4}} 
+\index{Signals@{Signals}!hsa\_signal\_add\_scacquire@{hsa\_signal\_add\_scacquire}}
+\index{hsa\_signal\_add\_scacquire@{hsa\_signal\_add\_scacquire}!Signals@{Signals}}
+\doxysubsubsection{\texorpdfstring{hsa\_signal\_add\_scacquire()}{hsa\_signal\_add\_scacquire()}}
+{\footnotesize\ttfamily void \mbox{\hyperlink{inc_2hsa__ext__image_8h_a64216765b98b62ee87deb50fd2899836}{HSA\+\_\+\+API}} hsa\+\_\+signal\+\_\+add\+\_\+scacquire (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{group__signals_ga0003af605a660e7ef4f89aa555d3b3fc}{hsa\+\_\+signal\+\_\+t}}}]{signal,  }\item[{\mbox{\hyperlink{group__signals_ga67ca2818879c9990e1b5f1b14ce7ed27}{hsa\+\_\+signal\+\_\+value\+\_\+t}}}]{value }\end{DoxyParamCaption})}
+
+
+
+Atomically increment the value of a signal by a given amount. 
+
+If the value of the signal is changed, all the agents waiting on {\ttfamily signal} for which {\ttfamily value} satisfies their wait condition are awakened.
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em signal} & Signal. If {\ttfamily signal} is a queue doorbell signal, the behavior is undefined.\\
+\hline
+\mbox{\texttt{ in}}  & {\em value} & Value to add to the value of the signal. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{group__signals_ga188ec4334811cf3dfa708b7ca734d7fb}\label{group__signals_ga188ec4334811cf3dfa708b7ca734d7fb}} 
+\index{Signals@{Signals}!hsa\_signal\_add\_screlease@{hsa\_signal\_add\_screlease}}
+\index{hsa\_signal\_add\_screlease@{hsa\_signal\_add\_screlease}!Signals@{Signals}}
+\doxysubsubsection{\texorpdfstring{hsa\_signal\_add\_screlease()}{hsa\_signal\_add\_screlease()}}
+{\footnotesize\ttfamily void \mbox{\hyperlink{inc_2hsa__ext__image_8h_a64216765b98b62ee87deb50fd2899836}{HSA\+\_\+\+API}} hsa\+\_\+signal\+\_\+add\+\_\+screlease (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{group__signals_ga0003af605a660e7ef4f89aa555d3b3fc}{hsa\+\_\+signal\+\_\+t}}}]{signal,  }\item[{\mbox{\hyperlink{group__signals_ga67ca2818879c9990e1b5f1b14ce7ed27}{hsa\+\_\+signal\+\_\+value\+\_\+t}}}]{value }\end{DoxyParamCaption})}
+
+
+
+Atomically increment the value of a signal by a given amount. 
+
+If the value of the signal is changed, all the agents waiting on {\ttfamily signal} for which {\ttfamily value} satisfies their wait condition are awakened.
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em signal} & Signal. If {\ttfamily signal} is a queue doorbell signal, the behavior is undefined.\\
+\hline
+\mbox{\texttt{ in}}  & {\em value} & Value to add to the value of the signal. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{group__signals_gadcb4113b6829b12d030be1f1223027a6}\label{group__signals_gadcb4113b6829b12d030be1f1223027a6}} 
+\index{Signals@{Signals}!hsa\_signal\_and\_acq\_rel@{hsa\_signal\_and\_acq\_rel}}
+\index{hsa\_signal\_and\_acq\_rel@{hsa\_signal\_and\_acq\_rel}!Signals@{Signals}}
+\doxysubsubsection{\texorpdfstring{hsa\_signal\_and\_acq\_rel()}{hsa\_signal\_and\_acq\_rel()}}
+{\footnotesize\ttfamily void \mbox{\hyperlink{inc_2hsa__ext__image_8h_a64216765b98b62ee87deb50fd2899836}{HSA\+\_\+\+API}} \mbox{\hyperlink{inc_2hsa_8h_a2321f8ca7d706cada4f617b191a478b0}{HSA\+\_\+\+DEPRECATED}} hsa\+\_\+signal\+\_\+and\+\_\+acq\+\_\+rel (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{group__signals_ga0003af605a660e7ef4f89aa555d3b3fc}{hsa\+\_\+signal\+\_\+t}}}]{signal,  }\item[{\mbox{\hyperlink{group__signals_ga67ca2818879c9990e1b5f1b14ce7ed27}{hsa\+\_\+signal\+\_\+value\+\_\+t}}}]{value }\end{DoxyParamCaption})}
+
+
+
+Atomically perform a bitwise AND operation between the value of a signal and a given value. 
+
+\begin{DoxyRefDesc}{Deprecated}
+\item[\mbox{\hyperlink{deprecated__deprecated000019}{Deprecated}}]Renamed as \mbox{\hyperlink{group__signals_gacaecd8bb2681f26ca6d7ff1e3f5b062b}{hsa\+\_\+signal\+\_\+and\+\_\+scacq\+\_\+screl}}.\end{DoxyRefDesc}
+
+
+If the value of the signal is changed, all the agents waiting on {\ttfamily signal} for which {\ttfamily value} satisfies their wait condition are awakened.
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em signal} & Signal. If {\ttfamily signal} is a queue doorbell signal, the behavior is undefined.\\
+\hline
+\mbox{\texttt{ in}}  & {\em value} & Value to AND with the value of the signal. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{group__signals_ga61dd32721bdf810a0286459bbcdd6a63}\label{group__signals_ga61dd32721bdf810a0286459bbcdd6a63}} 
+\index{Signals@{Signals}!hsa\_signal\_and\_acquire@{hsa\_signal\_and\_acquire}}
+\index{hsa\_signal\_and\_acquire@{hsa\_signal\_and\_acquire}!Signals@{Signals}}
+\doxysubsubsection{\texorpdfstring{hsa\_signal\_and\_acquire()}{hsa\_signal\_and\_acquire()}}
+{\footnotesize\ttfamily void \mbox{\hyperlink{inc_2hsa__ext__image_8h_a64216765b98b62ee87deb50fd2899836}{HSA\+\_\+\+API}} \mbox{\hyperlink{inc_2hsa_8h_a2321f8ca7d706cada4f617b191a478b0}{HSA\+\_\+\+DEPRECATED}} hsa\+\_\+signal\+\_\+and\+\_\+acquire (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{group__signals_ga0003af605a660e7ef4f89aa555d3b3fc}{hsa\+\_\+signal\+\_\+t}}}]{signal,  }\item[{\mbox{\hyperlink{group__signals_ga67ca2818879c9990e1b5f1b14ce7ed27}{hsa\+\_\+signal\+\_\+value\+\_\+t}}}]{value }\end{DoxyParamCaption})}
+
+
+
+Atomically perform a bitwise AND operation between the value of a signal and a given value. 
+
+\begin{DoxyRefDesc}{Deprecated}
+\item[\mbox{\hyperlink{deprecated__deprecated000020}{Deprecated}}]Renamed as \mbox{\hyperlink{group__signals_ga15ffa27960ef7f07fd17db6b59323ea5}{hsa\+\_\+signal\+\_\+and\+\_\+scacquire}}.\end{DoxyRefDesc}
+
+
+If the value of the signal is changed, all the agents waiting on {\ttfamily signal} for which {\ttfamily value} satisfies their wait condition are awakened.
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em signal} & Signal. If {\ttfamily signal} is a queue doorbell signal, the behavior is undefined.\\
+\hline
+\mbox{\texttt{ in}}  & {\em value} & Value to AND with the value of the signal. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{group__signals_gab33fd8ab1f7ef958c11f24d06cfec0f8}\label{group__signals_gab33fd8ab1f7ef958c11f24d06cfec0f8}} 
+\index{Signals@{Signals}!hsa\_signal\_and\_relaxed@{hsa\_signal\_and\_relaxed}}
+\index{hsa\_signal\_and\_relaxed@{hsa\_signal\_and\_relaxed}!Signals@{Signals}}
+\doxysubsubsection{\texorpdfstring{hsa\_signal\_and\_relaxed()}{hsa\_signal\_and\_relaxed()}}
+{\footnotesize\ttfamily void \mbox{\hyperlink{inc_2hsa__ext__image_8h_a64216765b98b62ee87deb50fd2899836}{HSA\+\_\+\+API}} hsa\+\_\+signal\+\_\+and\+\_\+relaxed (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{group__signals_ga0003af605a660e7ef4f89aa555d3b3fc}{hsa\+\_\+signal\+\_\+t}}}]{signal,  }\item[{\mbox{\hyperlink{group__signals_ga67ca2818879c9990e1b5f1b14ce7ed27}{hsa\+\_\+signal\+\_\+value\+\_\+t}}}]{value }\end{DoxyParamCaption})}
+
+
+
+Atomically perform a bitwise AND operation between the value of a signal and a given value. 
+
+If the value of the signal is changed, all the agents waiting on {\ttfamily signal} for which {\ttfamily value} satisfies their wait condition are awakened.
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em signal} & Signal. If {\ttfamily signal} is a queue doorbell signal, the behavior is undefined.\\
+\hline
+\mbox{\texttt{ in}}  & {\em value} & Value to AND with the value of the signal. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{group__signals_ga5711f2dd3d5d02c7e2e5bbac51cc0617}\label{group__signals_ga5711f2dd3d5d02c7e2e5bbac51cc0617}} 
+\index{Signals@{Signals}!hsa\_signal\_and\_release@{hsa\_signal\_and\_release}}
+\index{hsa\_signal\_and\_release@{hsa\_signal\_and\_release}!Signals@{Signals}}
+\doxysubsubsection{\texorpdfstring{hsa\_signal\_and\_release()}{hsa\_signal\_and\_release()}}
+{\footnotesize\ttfamily void \mbox{\hyperlink{inc_2hsa__ext__image_8h_a64216765b98b62ee87deb50fd2899836}{HSA\+\_\+\+API}} \mbox{\hyperlink{inc_2hsa_8h_a2321f8ca7d706cada4f617b191a478b0}{HSA\+\_\+\+DEPRECATED}} hsa\+\_\+signal\+\_\+and\+\_\+release (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{group__signals_ga0003af605a660e7ef4f89aa555d3b3fc}{hsa\+\_\+signal\+\_\+t}}}]{signal,  }\item[{\mbox{\hyperlink{group__signals_ga67ca2818879c9990e1b5f1b14ce7ed27}{hsa\+\_\+signal\+\_\+value\+\_\+t}}}]{value }\end{DoxyParamCaption})}
+
+
+
+Atomically perform a bitwise AND operation between the value of a signal and a given value. 
+
+\begin{DoxyRefDesc}{Deprecated}
+\item[\mbox{\hyperlink{deprecated__deprecated000021}{Deprecated}}]Renamed as \mbox{\hyperlink{group__signals_gab2045369b95b7f76f4adaaa02f678ef6}{hsa\+\_\+signal\+\_\+and\+\_\+screlease}}.\end{DoxyRefDesc}
+
+
+If the value of the signal is changed, all the agents waiting on {\ttfamily signal} for which {\ttfamily value} satisfies their wait condition are awakened.
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em signal} & Signal. If {\ttfamily signal} is a queue doorbell signal, the behavior is undefined.\\
+\hline
+\mbox{\texttt{ in}}  & {\em value} & Value to AND with the value of the signal. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{group__signals_gacaecd8bb2681f26ca6d7ff1e3f5b062b}\label{group__signals_gacaecd8bb2681f26ca6d7ff1e3f5b062b}} 
+\index{Signals@{Signals}!hsa\_signal\_and\_scacq\_screl@{hsa\_signal\_and\_scacq\_screl}}
+\index{hsa\_signal\_and\_scacq\_screl@{hsa\_signal\_and\_scacq\_screl}!Signals@{Signals}}
+\doxysubsubsection{\texorpdfstring{hsa\_signal\_and\_scacq\_screl()}{hsa\_signal\_and\_scacq\_screl()}}
+{\footnotesize\ttfamily void \mbox{\hyperlink{inc_2hsa__ext__image_8h_a64216765b98b62ee87deb50fd2899836}{HSA\+\_\+\+API}} hsa\+\_\+signal\+\_\+and\+\_\+scacq\+\_\+screl (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{group__signals_ga0003af605a660e7ef4f89aa555d3b3fc}{hsa\+\_\+signal\+\_\+t}}}]{signal,  }\item[{\mbox{\hyperlink{group__signals_ga67ca2818879c9990e1b5f1b14ce7ed27}{hsa\+\_\+signal\+\_\+value\+\_\+t}}}]{value }\end{DoxyParamCaption})}
+
+
+
+Atomically perform a bitwise AND operation between the value of a signal and a given value. 
+
+If the value of the signal is changed, all the agents waiting on {\ttfamily signal} for which {\ttfamily value} satisfies their wait condition are awakened.
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em signal} & Signal. If {\ttfamily signal} is a queue doorbell signal, the behavior is undefined.\\
+\hline
+\mbox{\texttt{ in}}  & {\em value} & Value to AND with the value of the signal. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{group__signals_ga15ffa27960ef7f07fd17db6b59323ea5}\label{group__signals_ga15ffa27960ef7f07fd17db6b59323ea5}} 
+\index{Signals@{Signals}!hsa\_signal\_and\_scacquire@{hsa\_signal\_and\_scacquire}}
+\index{hsa\_signal\_and\_scacquire@{hsa\_signal\_and\_scacquire}!Signals@{Signals}}
+\doxysubsubsection{\texorpdfstring{hsa\_signal\_and\_scacquire()}{hsa\_signal\_and\_scacquire()}}
+{\footnotesize\ttfamily void \mbox{\hyperlink{inc_2hsa__ext__image_8h_a64216765b98b62ee87deb50fd2899836}{HSA\+\_\+\+API}} hsa\+\_\+signal\+\_\+and\+\_\+scacquire (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{group__signals_ga0003af605a660e7ef4f89aa555d3b3fc}{hsa\+\_\+signal\+\_\+t}}}]{signal,  }\item[{\mbox{\hyperlink{group__signals_ga67ca2818879c9990e1b5f1b14ce7ed27}{hsa\+\_\+signal\+\_\+value\+\_\+t}}}]{value }\end{DoxyParamCaption})}
+
+
+
+Atomically perform a bitwise AND operation between the value of a signal and a given value. 
+
+If the value of the signal is changed, all the agents waiting on {\ttfamily signal} for which {\ttfamily value} satisfies their wait condition are awakened.
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em signal} & Signal. If {\ttfamily signal} is a queue doorbell signal, the behavior is undefined.\\
+\hline
+\mbox{\texttt{ in}}  & {\em value} & Value to AND with the value of the signal. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{group__signals_gab2045369b95b7f76f4adaaa02f678ef6}\label{group__signals_gab2045369b95b7f76f4adaaa02f678ef6}} 
+\index{Signals@{Signals}!hsa\_signal\_and\_screlease@{hsa\_signal\_and\_screlease}}
+\index{hsa\_signal\_and\_screlease@{hsa\_signal\_and\_screlease}!Signals@{Signals}}
+\doxysubsubsection{\texorpdfstring{hsa\_signal\_and\_screlease()}{hsa\_signal\_and\_screlease()}}
+{\footnotesize\ttfamily void \mbox{\hyperlink{inc_2hsa__ext__image_8h_a64216765b98b62ee87deb50fd2899836}{HSA\+\_\+\+API}} hsa\+\_\+signal\+\_\+and\+\_\+screlease (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{group__signals_ga0003af605a660e7ef4f89aa555d3b3fc}{hsa\+\_\+signal\+\_\+t}}}]{signal,  }\item[{\mbox{\hyperlink{group__signals_ga67ca2818879c9990e1b5f1b14ce7ed27}{hsa\+\_\+signal\+\_\+value\+\_\+t}}}]{value }\end{DoxyParamCaption})}
+
+
+
+Atomically perform a bitwise AND operation between the value of a signal and a given value. 
+
+If the value of the signal is changed, all the agents waiting on {\ttfamily signal} for which {\ttfamily value} satisfies their wait condition are awakened.
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em signal} & Signal. If {\ttfamily signal} is a queue doorbell signal, the behavior is undefined.\\
+\hline
+\mbox{\texttt{ in}}  & {\em value} & Value to AND with the value of the signal. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{group__signals_ga5908be474083480945c1187d28bc9272}\label{group__signals_ga5908be474083480945c1187d28bc9272}} 
+\index{Signals@{Signals}!hsa\_signal\_cas\_acq\_rel@{hsa\_signal\_cas\_acq\_rel}}
+\index{hsa\_signal\_cas\_acq\_rel@{hsa\_signal\_cas\_acq\_rel}!Signals@{Signals}}
+\doxysubsubsection{\texorpdfstring{hsa\_signal\_cas\_acq\_rel()}{hsa\_signal\_cas\_acq\_rel()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{group__signals_ga67ca2818879c9990e1b5f1b14ce7ed27}{hsa\+\_\+signal\+\_\+value\+\_\+t}} \mbox{\hyperlink{inc_2hsa__ext__image_8h_a64216765b98b62ee87deb50fd2899836}{HSA\+\_\+\+API}} \mbox{\hyperlink{inc_2hsa_8h_a2321f8ca7d706cada4f617b191a478b0}{HSA\+\_\+\+DEPRECATED}} hsa\+\_\+signal\+\_\+cas\+\_\+acq\+\_\+rel (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{group__signals_ga0003af605a660e7ef4f89aa555d3b3fc}{hsa\+\_\+signal\+\_\+t}}}]{signal,  }\item[{\mbox{\hyperlink{group__signals_ga67ca2818879c9990e1b5f1b14ce7ed27}{hsa\+\_\+signal\+\_\+value\+\_\+t}}}]{expected,  }\item[{\mbox{\hyperlink{group__signals_ga67ca2818879c9990e1b5f1b14ce7ed27}{hsa\+\_\+signal\+\_\+value\+\_\+t}}}]{value }\end{DoxyParamCaption})}
+
+
+
+Atomically set the value of a signal if the observed value is equal to the expected value. The observed value is returned regardless of whether the replacement was done. 
+
+\begin{DoxyRefDesc}{Deprecated}
+\item[\mbox{\hyperlink{deprecated__deprecated000010}{Deprecated}}]Renamed as \mbox{\hyperlink{group__signals_ga511eddeffa9d1c8e926b078495662a46}{hsa\+\_\+signal\+\_\+cas\+\_\+scacq\+\_\+screl}}.\end{DoxyRefDesc}
+
+
+If the value of the signal is changed, all the agents waiting on {\ttfamily signal} for which {\ttfamily value} satisfies their wait condition are awakened.
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em signal} & Signal. If {\ttfamily signal} is a queue doorbell signal, the behavior is undefined.\\
+\hline
+\mbox{\texttt{ in}}  & {\em expected} & Value to compare with.\\
+\hline
+\mbox{\texttt{ in}}  & {\em value} & New value.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Observed value of the signal. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{group__signals_gacc75d2a40e17b4d71d68c8ceeff35cbc}\label{group__signals_gacc75d2a40e17b4d71d68c8ceeff35cbc}} 
+\index{Signals@{Signals}!hsa\_signal\_cas\_acquire@{hsa\_signal\_cas\_acquire}}
+\index{hsa\_signal\_cas\_acquire@{hsa\_signal\_cas\_acquire}!Signals@{Signals}}
+\doxysubsubsection{\texorpdfstring{hsa\_signal\_cas\_acquire()}{hsa\_signal\_cas\_acquire()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{group__signals_ga67ca2818879c9990e1b5f1b14ce7ed27}{hsa\+\_\+signal\+\_\+value\+\_\+t}} \mbox{\hyperlink{inc_2hsa__ext__image_8h_a64216765b98b62ee87deb50fd2899836}{HSA\+\_\+\+API}} \mbox{\hyperlink{inc_2hsa_8h_a2321f8ca7d706cada4f617b191a478b0}{HSA\+\_\+\+DEPRECATED}} hsa\+\_\+signal\+\_\+cas\+\_\+acquire (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{group__signals_ga0003af605a660e7ef4f89aa555d3b3fc}{hsa\+\_\+signal\+\_\+t}}}]{signal,  }\item[{\mbox{\hyperlink{group__signals_ga67ca2818879c9990e1b5f1b14ce7ed27}{hsa\+\_\+signal\+\_\+value\+\_\+t}}}]{expected,  }\item[{\mbox{\hyperlink{group__signals_ga67ca2818879c9990e1b5f1b14ce7ed27}{hsa\+\_\+signal\+\_\+value\+\_\+t}}}]{value }\end{DoxyParamCaption})}
+
+
+
+Atomically set the value of a signal if the observed value is equal to the expected value. The observed value is returned regardless of whether the replacement was done. 
+
+\begin{DoxyRefDesc}{Deprecated}
+\item[\mbox{\hyperlink{deprecated__deprecated000011}{Deprecated}}]Renamed as \mbox{\hyperlink{group__signals_ga9af1003464abbf4e348052294e5f1670}{hsa\+\_\+signal\+\_\+cas\+\_\+scacquire}}.\end{DoxyRefDesc}
+
+
+If the value of the signal is changed, all the agents waiting on {\ttfamily signal} for which {\ttfamily value} satisfies their wait condition are awakened.
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em signal} & Signal. If {\ttfamily signal} is a queue doorbell signal, the behavior is undefined.\\
+\hline
+\mbox{\texttt{ in}}  & {\em expected} & Value to compare with.\\
+\hline
+\mbox{\texttt{ in}}  & {\em value} & New value.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Observed value of the signal. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{group__signals_ga40ce477c9284c411a163a12d8bad3a1a}\label{group__signals_ga40ce477c9284c411a163a12d8bad3a1a}} 
+\index{Signals@{Signals}!hsa\_signal\_cas\_relaxed@{hsa\_signal\_cas\_relaxed}}
+\index{hsa\_signal\_cas\_relaxed@{hsa\_signal\_cas\_relaxed}!Signals@{Signals}}
+\doxysubsubsection{\texorpdfstring{hsa\_signal\_cas\_relaxed()}{hsa\_signal\_cas\_relaxed()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{group__signals_ga67ca2818879c9990e1b5f1b14ce7ed27}{hsa\+\_\+signal\+\_\+value\+\_\+t}} \mbox{\hyperlink{inc_2hsa__ext__image_8h_a64216765b98b62ee87deb50fd2899836}{HSA\+\_\+\+API}} hsa\+\_\+signal\+\_\+cas\+\_\+relaxed (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{group__signals_ga0003af605a660e7ef4f89aa555d3b3fc}{hsa\+\_\+signal\+\_\+t}}}]{signal,  }\item[{\mbox{\hyperlink{group__signals_ga67ca2818879c9990e1b5f1b14ce7ed27}{hsa\+\_\+signal\+\_\+value\+\_\+t}}}]{expected,  }\item[{\mbox{\hyperlink{group__signals_ga67ca2818879c9990e1b5f1b14ce7ed27}{hsa\+\_\+signal\+\_\+value\+\_\+t}}}]{value }\end{DoxyParamCaption})}
+
+
+
+Atomically set the value of a signal if the observed value is equal to the expected value. The observed value is returned regardless of whether the replacement was done. 
+
+If the value of the signal is changed, all the agents waiting on {\ttfamily signal} for which {\ttfamily value} satisfies their wait condition are awakened.
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em signal} & Signal. If {\ttfamily signal} is a queue doorbell signal, the behavior is undefined.\\
+\hline
+\mbox{\texttt{ in}}  & {\em expected} & Value to compare with.\\
+\hline
+\mbox{\texttt{ in}}  & {\em value} & New value.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Observed value of the signal. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{group__signals_gaf316bc2fd7b7ed263f3d4909f4ec95b5}\label{group__signals_gaf316bc2fd7b7ed263f3d4909f4ec95b5}} 
+\index{Signals@{Signals}!hsa\_signal\_cas\_release@{hsa\_signal\_cas\_release}}
+\index{hsa\_signal\_cas\_release@{hsa\_signal\_cas\_release}!Signals@{Signals}}
+\doxysubsubsection{\texorpdfstring{hsa\_signal\_cas\_release()}{hsa\_signal\_cas\_release()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{group__signals_ga67ca2818879c9990e1b5f1b14ce7ed27}{hsa\+\_\+signal\+\_\+value\+\_\+t}} \mbox{\hyperlink{inc_2hsa__ext__image_8h_a64216765b98b62ee87deb50fd2899836}{HSA\+\_\+\+API}} \mbox{\hyperlink{inc_2hsa_8h_a2321f8ca7d706cada4f617b191a478b0}{HSA\+\_\+\+DEPRECATED}} hsa\+\_\+signal\+\_\+cas\+\_\+release (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{group__signals_ga0003af605a660e7ef4f89aa555d3b3fc}{hsa\+\_\+signal\+\_\+t}}}]{signal,  }\item[{\mbox{\hyperlink{group__signals_ga67ca2818879c9990e1b5f1b14ce7ed27}{hsa\+\_\+signal\+\_\+value\+\_\+t}}}]{expected,  }\item[{\mbox{\hyperlink{group__signals_ga67ca2818879c9990e1b5f1b14ce7ed27}{hsa\+\_\+signal\+\_\+value\+\_\+t}}}]{value }\end{DoxyParamCaption})}
+
+
+
+Atomically set the value of a signal if the observed value is equal to the expected value. The observed value is returned regardless of whether the replacement was done. 
+
+\begin{DoxyRefDesc}{Deprecated}
+\item[\mbox{\hyperlink{deprecated__deprecated000012}{Deprecated}}]Renamed as \mbox{\hyperlink{group__signals_gaf79867e365e245d4863898880923b42f}{hsa\+\_\+signal\+\_\+cas\+\_\+screlease}}.\end{DoxyRefDesc}
+
+
+If the value of the signal is changed, all the agents waiting on {\ttfamily signal} for which {\ttfamily value} satisfies their wait condition are awakened.
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em signal} & Signal. If {\ttfamily signal} is a queue doorbell signal, the behavior is undefined.\\
+\hline
+\mbox{\texttt{ in}}  & {\em expected} & Value to compare with.\\
+\hline
+\mbox{\texttt{ in}}  & {\em value} & New value.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Observed value of the signal. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{group__signals_ga511eddeffa9d1c8e926b078495662a46}\label{group__signals_ga511eddeffa9d1c8e926b078495662a46}} 
+\index{Signals@{Signals}!hsa\_signal\_cas\_scacq\_screl@{hsa\_signal\_cas\_scacq\_screl}}
+\index{hsa\_signal\_cas\_scacq\_screl@{hsa\_signal\_cas\_scacq\_screl}!Signals@{Signals}}
+\doxysubsubsection{\texorpdfstring{hsa\_signal\_cas\_scacq\_screl()}{hsa\_signal\_cas\_scacq\_screl()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{group__signals_ga67ca2818879c9990e1b5f1b14ce7ed27}{hsa\+\_\+signal\+\_\+value\+\_\+t}} \mbox{\hyperlink{inc_2hsa__ext__image_8h_a64216765b98b62ee87deb50fd2899836}{HSA\+\_\+\+API}} hsa\+\_\+signal\+\_\+cas\+\_\+scacq\+\_\+screl (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{group__signals_ga0003af605a660e7ef4f89aa555d3b3fc}{hsa\+\_\+signal\+\_\+t}}}]{signal,  }\item[{\mbox{\hyperlink{group__signals_ga67ca2818879c9990e1b5f1b14ce7ed27}{hsa\+\_\+signal\+\_\+value\+\_\+t}}}]{expected,  }\item[{\mbox{\hyperlink{group__signals_ga67ca2818879c9990e1b5f1b14ce7ed27}{hsa\+\_\+signal\+\_\+value\+\_\+t}}}]{value }\end{DoxyParamCaption})}
+
+
+
+Atomically set the value of a signal if the observed value is equal to the expected value. The observed value is returned regardless of whether the replacement was done. 
+
+If the value of the signal is changed, all the agents waiting on {\ttfamily signal} for which {\ttfamily value} satisfies their wait condition are awakened.
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em signal} & Signal. If {\ttfamily signal} is a queue doorbell signal, the behavior is undefined.\\
+\hline
+\mbox{\texttt{ in}}  & {\em expected} & Value to compare with.\\
+\hline
+\mbox{\texttt{ in}}  & {\em value} & New value.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Observed value of the signal. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{group__signals_ga9af1003464abbf4e348052294e5f1670}\label{group__signals_ga9af1003464abbf4e348052294e5f1670}} 
+\index{Signals@{Signals}!hsa\_signal\_cas\_scacquire@{hsa\_signal\_cas\_scacquire}}
+\index{hsa\_signal\_cas\_scacquire@{hsa\_signal\_cas\_scacquire}!Signals@{Signals}}
+\doxysubsubsection{\texorpdfstring{hsa\_signal\_cas\_scacquire()}{hsa\_signal\_cas\_scacquire()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{group__signals_ga67ca2818879c9990e1b5f1b14ce7ed27}{hsa\+\_\+signal\+\_\+value\+\_\+t}} \mbox{\hyperlink{inc_2hsa__ext__image_8h_a64216765b98b62ee87deb50fd2899836}{HSA\+\_\+\+API}} hsa\+\_\+signal\+\_\+cas\+\_\+scacquire (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{group__signals_ga0003af605a660e7ef4f89aa555d3b3fc}{hsa\+\_\+signal\+\_\+t}}}]{signal,  }\item[{\mbox{\hyperlink{group__signals_ga67ca2818879c9990e1b5f1b14ce7ed27}{hsa\+\_\+signal\+\_\+value\+\_\+t}}}]{expected,  }\item[{\mbox{\hyperlink{group__signals_ga67ca2818879c9990e1b5f1b14ce7ed27}{hsa\+\_\+signal\+\_\+value\+\_\+t}}}]{value }\end{DoxyParamCaption})}
+
+
+
+Atomically set the value of a signal if the observed value is equal to the expected value. The observed value is returned regardless of whether the replacement was done. 
+
+If the value of the signal is changed, all the agents waiting on {\ttfamily signal} for which {\ttfamily value} satisfies their wait condition are awakened.
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em signal} & Signal. If {\ttfamily signal} is a queue doorbell signal, the behavior is undefined.\\
+\hline
+\mbox{\texttt{ in}}  & {\em expected} & Value to compare with.\\
+\hline
+\mbox{\texttt{ in}}  & {\em value} & New value.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Observed value of the signal. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{group__signals_gaf79867e365e245d4863898880923b42f}\label{group__signals_gaf79867e365e245d4863898880923b42f}} 
+\index{Signals@{Signals}!hsa\_signal\_cas\_screlease@{hsa\_signal\_cas\_screlease}}
+\index{hsa\_signal\_cas\_screlease@{hsa\_signal\_cas\_screlease}!Signals@{Signals}}
+\doxysubsubsection{\texorpdfstring{hsa\_signal\_cas\_screlease()}{hsa\_signal\_cas\_screlease()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{group__signals_ga67ca2818879c9990e1b5f1b14ce7ed27}{hsa\+\_\+signal\+\_\+value\+\_\+t}} \mbox{\hyperlink{inc_2hsa__ext__image_8h_a64216765b98b62ee87deb50fd2899836}{HSA\+\_\+\+API}} hsa\+\_\+signal\+\_\+cas\+\_\+screlease (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{group__signals_ga0003af605a660e7ef4f89aa555d3b3fc}{hsa\+\_\+signal\+\_\+t}}}]{signal,  }\item[{\mbox{\hyperlink{group__signals_ga67ca2818879c9990e1b5f1b14ce7ed27}{hsa\+\_\+signal\+\_\+value\+\_\+t}}}]{expected,  }\item[{\mbox{\hyperlink{group__signals_ga67ca2818879c9990e1b5f1b14ce7ed27}{hsa\+\_\+signal\+\_\+value\+\_\+t}}}]{value }\end{DoxyParamCaption})}
+
+
+
+Atomically set the value of a signal if the observed value is equal to the expected value. The observed value is returned regardless of whether the replacement was done. 
+
+If the value of the signal is changed, all the agents waiting on {\ttfamily signal} for which {\ttfamily value} satisfies their wait condition are awakened.
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em signal} & Signal. If {\ttfamily signal} is a queue doorbell signal, the behavior is undefined.\\
+\hline
+\mbox{\texttt{ in}}  & {\em expected} & Value to compare with.\\
+\hline
+\mbox{\texttt{ in}}  & {\em value} & New value.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Observed value of the signal. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{group__signals_gac39387d1e844c4e4e932ad9bb89a476f}\label{group__signals_gac39387d1e844c4e4e932ad9bb89a476f}} 
+\index{Signals@{Signals}!hsa\_signal\_create@{hsa\_signal\_create}}
+\index{hsa\_signal\_create@{hsa\_signal\_create}!Signals@{Signals}}
+\doxysubsubsection{\texorpdfstring{hsa\_signal\_create()}{hsa\_signal\_create()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{group__status_gad755322e7ff95456520e8abdbe90d225}{hsa\+\_\+status\+\_\+t}} \mbox{\hyperlink{inc_2hsa__ext__image_8h_a64216765b98b62ee87deb50fd2899836}{HSA\+\_\+\+API}} hsa\+\_\+signal\+\_\+create (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{group__signals_ga67ca2818879c9990e1b5f1b14ce7ed27}{hsa\+\_\+signal\+\_\+value\+\_\+t}}}]{initial\+\_\+value,  }\item[{uint32\+\_\+t}]{num\+\_\+consumers,  }\item[{const \mbox{\hyperlink{group__agentinfo_ga9ce217ef08e7d5e89c8e83ce7b6ef22b}{hsa\+\_\+agent\+\_\+t}} $\ast$}]{consumers,  }\item[{\mbox{\hyperlink{group__signals_ga0003af605a660e7ef4f89aa555d3b3fc}{hsa\+\_\+signal\+\_\+t}} $\ast$}]{signal }\end{DoxyParamCaption})}
+
+
+
+Create a signal. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em initial\+\_\+value} & Initial value of the signal.\\
+\hline
+\mbox{\texttt{ in}}  & {\em num\+\_\+consumers} & Size of {\ttfamily consumers}. A value of 0 indicates that any agent might wait on the signal.\\
+\hline
+\mbox{\texttt{ in}}  & {\em consumers} & List of agents that might consume (wait on) the signal. If {\ttfamily num\+\_\+consumers} is 0, this argument is ignored; otherwise, the HSA runtime might use the list to optimize the handling of the signal object. If an agent not listed in {\ttfamily consumers} waits on the returned signal, the behavior is undefined. The memory associated with {\ttfamily consumers} can be reused or freed after the function returns.\\
+\hline
+\mbox{\texttt{ out}}  & {\em signal} & Pointer to a memory location where the HSA runtime will store the newly created signal handle. Must not be NULL.\\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em \mbox{\hyperlink{group__status_ggad755322e7ff95456520e8abdbe90d225ae382ea0c9c05cce5a60d0317375159cc}{HSA\+\_\+\+STATUS\+\_\+\+SUCCESS}}} & The function has been executed successfully.\\
+\hline
+{\em \mbox{\hyperlink{group__status_ggad755322e7ff95456520e8abdbe90d225a34ea59ade5bfce95eee935238a99f5b5}{HSA\+\_\+\+STATUS\+\_\+\+ERROR\+\_\+\+NOT\+\_\+\+INITIALIZED}}} & The HSA runtime has not been initialized.\\
+\hline
+{\em \mbox{\hyperlink{group__status_ggad755322e7ff95456520e8abdbe90d225a1a77fcf36d0d140874c4361ab093eff7}{HSA\+\_\+\+STATUS\+\_\+\+ERROR\+\_\+\+OUT\+\_\+\+OF\+\_\+\+RESOURCES}}} & The HSA runtime failed to allocate the required resources.\\
+\hline
+{\em \mbox{\hyperlink{group__status_ggad755322e7ff95456520e8abdbe90d225ac7d3651f75107d2a6a8ba3b25683c030}{HSA\+\_\+\+STATUS\+\_\+\+ERROR\+\_\+\+INVALID\+\_\+\+ARGUMENT}}} & {\ttfamily signal} is NULL, {\ttfamily num\+\_\+consumers} is greater than 0 but {\ttfamily consumers} is NULL, or {\ttfamily consumers} contains duplicates. \\
+\hline
+\end{DoxyRetVals}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=321pt]{group__signals_gac39387d1e844c4e4e932ad9bb89a476f_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{group__signals_ga333c1a73cc382bb0ffded6ce84cde254}\label{group__signals_ga333c1a73cc382bb0ffded6ce84cde254}} 
+\index{Signals@{Signals}!hsa\_signal\_destroy@{hsa\_signal\_destroy}}
+\index{hsa\_signal\_destroy@{hsa\_signal\_destroy}!Signals@{Signals}}
+\doxysubsubsection{\texorpdfstring{hsa\_signal\_destroy()}{hsa\_signal\_destroy()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{group__status_gad755322e7ff95456520e8abdbe90d225}{hsa\+\_\+status\+\_\+t}} \mbox{\hyperlink{inc_2hsa__ext__image_8h_a64216765b98b62ee87deb50fd2899836}{HSA\+\_\+\+API}} hsa\+\_\+signal\+\_\+destroy (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{group__signals_ga0003af605a660e7ef4f89aa555d3b3fc}{hsa\+\_\+signal\+\_\+t}}}]{signal }\end{DoxyParamCaption})}
+
+
+
+Destroy a signal previous created by \mbox{\hyperlink{group__signals_gac39387d1e844c4e4e932ad9bb89a476f}{hsa\+\_\+signal\+\_\+create}}. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em signal} & Signal.\\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em \mbox{\hyperlink{group__status_ggad755322e7ff95456520e8abdbe90d225ae382ea0c9c05cce5a60d0317375159cc}{HSA\+\_\+\+STATUS\+\_\+\+SUCCESS}}} & The function has been executed successfully.\\
+\hline
+{\em \mbox{\hyperlink{group__status_ggad755322e7ff95456520e8abdbe90d225a34ea59ade5bfce95eee935238a99f5b5}{HSA\+\_\+\+STATUS\+\_\+\+ERROR\+\_\+\+NOT\+\_\+\+INITIALIZED}}} & The HSA runtime has not been initialized.\\
+\hline
+{\em \mbox{\hyperlink{group__status_ggad755322e7ff95456520e8abdbe90d225a7b4c8c0d4c99a1fe966abc2d39b575fe}{HSA\+\_\+\+STATUS\+\_\+\+ERROR\+\_\+\+INVALID\+\_\+\+SIGNAL}}} & {\ttfamily signal} is invalid.\\
+\hline
+{\em \mbox{\hyperlink{group__status_ggad755322e7ff95456520e8abdbe90d225ac7d3651f75107d2a6a8ba3b25683c030}{HSA\+\_\+\+STATUS\+\_\+\+ERROR\+\_\+\+INVALID\+\_\+\+ARGUMENT}}} & The handle in {\ttfamily signal} is 0. \\
+\hline
+\end{DoxyRetVals}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=327pt]{group__signals_ga333c1a73cc382bb0ffded6ce84cde254_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{group__signals_gadaa7eeeaa252a00fcff4afabcecbded2}\label{group__signals_gadaa7eeeaa252a00fcff4afabcecbded2}} 
+\index{Signals@{Signals}!hsa\_signal\_exchange\_acq\_rel@{hsa\_signal\_exchange\_acq\_rel}}
+\index{hsa\_signal\_exchange\_acq\_rel@{hsa\_signal\_exchange\_acq\_rel}!Signals@{Signals}}
+\doxysubsubsection{\texorpdfstring{hsa\_signal\_exchange\_acq\_rel()}{hsa\_signal\_exchange\_acq\_rel()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{group__signals_ga67ca2818879c9990e1b5f1b14ce7ed27}{hsa\+\_\+signal\+\_\+value\+\_\+t}} \mbox{\hyperlink{inc_2hsa__ext__image_8h_a64216765b98b62ee87deb50fd2899836}{HSA\+\_\+\+API}} \mbox{\hyperlink{inc_2hsa_8h_a2321f8ca7d706cada4f617b191a478b0}{HSA\+\_\+\+DEPRECATED}} hsa\+\_\+signal\+\_\+exchange\+\_\+acq\+\_\+rel (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{group__signals_ga0003af605a660e7ef4f89aa555d3b3fc}{hsa\+\_\+signal\+\_\+t}}}]{signal,  }\item[{\mbox{\hyperlink{group__signals_ga67ca2818879c9990e1b5f1b14ce7ed27}{hsa\+\_\+signal\+\_\+value\+\_\+t}}}]{value }\end{DoxyParamCaption})}
+
+
+
+Atomically set the value of a signal and return its previous value. 
+
+\begin{DoxyRefDesc}{Deprecated}
+\item[\mbox{\hyperlink{deprecated__deprecated000007}{Deprecated}}]Renamed as \mbox{\hyperlink{group__signals_gab21596aa1a86f54ab97fec9118b6e512}{hsa\+\_\+signal\+\_\+exchange\+\_\+scacq\+\_\+screl}}.\end{DoxyRefDesc}
+
+
+If the value of the signal is changed, all the agents waiting on {\ttfamily signal} for which {\ttfamily value} satisfies their wait condition are awakened.
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em signal} & Signal. If {\ttfamily signal} is a queue doorbell signal, the behavior is undefined.\\
+\hline
+\mbox{\texttt{ in}}  & {\em value} & New value.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Value of the signal prior to the exchange. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{group__signals_gac394c1252670df3cf8f7daab72300d29}\label{group__signals_gac394c1252670df3cf8f7daab72300d29}} 
+\index{Signals@{Signals}!hsa\_signal\_exchange\_acquire@{hsa\_signal\_exchange\_acquire}}
+\index{hsa\_signal\_exchange\_acquire@{hsa\_signal\_exchange\_acquire}!Signals@{Signals}}
+\doxysubsubsection{\texorpdfstring{hsa\_signal\_exchange\_acquire()}{hsa\_signal\_exchange\_acquire()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{group__signals_ga67ca2818879c9990e1b5f1b14ce7ed27}{hsa\+\_\+signal\+\_\+value\+\_\+t}} \mbox{\hyperlink{inc_2hsa__ext__image_8h_a64216765b98b62ee87deb50fd2899836}{HSA\+\_\+\+API}} \mbox{\hyperlink{inc_2hsa_8h_a2321f8ca7d706cada4f617b191a478b0}{HSA\+\_\+\+DEPRECATED}} hsa\+\_\+signal\+\_\+exchange\+\_\+acquire (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{group__signals_ga0003af605a660e7ef4f89aa555d3b3fc}{hsa\+\_\+signal\+\_\+t}}}]{signal,  }\item[{\mbox{\hyperlink{group__signals_ga67ca2818879c9990e1b5f1b14ce7ed27}{hsa\+\_\+signal\+\_\+value\+\_\+t}}}]{value }\end{DoxyParamCaption})}
+
+
+
+Atomically set the value of a signal and return its previous value. 
+
+\begin{DoxyRefDesc}{Deprecated}
+\item[\mbox{\hyperlink{deprecated__deprecated000008}{Deprecated}}]Renamed as \mbox{\hyperlink{group__signals_gaed3e29467c7a6f3db4d4bad6b1a2f6fd}{hsa\+\_\+signal\+\_\+exchange\+\_\+scacquire}}.\end{DoxyRefDesc}
+
+
+If the value of the signal is changed, all the agents waiting on {\ttfamily signal} for which {\ttfamily value} satisfies their wait condition are awakened.
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em signal} & Signal. If {\ttfamily signal} is a queue doorbell signal, the behavior is undefined.\\
+\hline
+\mbox{\texttt{ in}}  & {\em value} & New value.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Value of the signal prior to the exchange. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{group__signals_ga02b83b834ffb257a1c2ee641b2680d14}\label{group__signals_ga02b83b834ffb257a1c2ee641b2680d14}} 
+\index{Signals@{Signals}!hsa\_signal\_exchange\_relaxed@{hsa\_signal\_exchange\_relaxed}}
+\index{hsa\_signal\_exchange\_relaxed@{hsa\_signal\_exchange\_relaxed}!Signals@{Signals}}
+\doxysubsubsection{\texorpdfstring{hsa\_signal\_exchange\_relaxed()}{hsa\_signal\_exchange\_relaxed()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{group__signals_ga67ca2818879c9990e1b5f1b14ce7ed27}{hsa\+\_\+signal\+\_\+value\+\_\+t}} \mbox{\hyperlink{inc_2hsa__ext__image_8h_a64216765b98b62ee87deb50fd2899836}{HSA\+\_\+\+API}} hsa\+\_\+signal\+\_\+exchange\+\_\+relaxed (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{group__signals_ga0003af605a660e7ef4f89aa555d3b3fc}{hsa\+\_\+signal\+\_\+t}}}]{signal,  }\item[{\mbox{\hyperlink{group__signals_ga67ca2818879c9990e1b5f1b14ce7ed27}{hsa\+\_\+signal\+\_\+value\+\_\+t}}}]{value }\end{DoxyParamCaption})}
+
+
+
+Atomically set the value of a signal and return its previous value. 
+
+If the value of the signal is changed, all the agents waiting on {\ttfamily signal} for which {\ttfamily value} satisfies their wait condition are awakened.
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em signal} & Signal. If {\ttfamily signal} is a queue doorbell signal, the behavior is undefined.\\
+\hline
+\mbox{\texttt{ in}}  & {\em value} & New value.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Value of the signal prior to the exchange. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{group__signals_ga64de5f0c9b0cd2f5098b19161b5bb204}\label{group__signals_ga64de5f0c9b0cd2f5098b19161b5bb204}} 
+\index{Signals@{Signals}!hsa\_signal\_exchange\_release@{hsa\_signal\_exchange\_release}}
+\index{hsa\_signal\_exchange\_release@{hsa\_signal\_exchange\_release}!Signals@{Signals}}
+\doxysubsubsection{\texorpdfstring{hsa\_signal\_exchange\_release()}{hsa\_signal\_exchange\_release()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{group__signals_ga67ca2818879c9990e1b5f1b14ce7ed27}{hsa\+\_\+signal\+\_\+value\+\_\+t}} \mbox{\hyperlink{inc_2hsa__ext__image_8h_a64216765b98b62ee87deb50fd2899836}{HSA\+\_\+\+API}} \mbox{\hyperlink{inc_2hsa_8h_a2321f8ca7d706cada4f617b191a478b0}{HSA\+\_\+\+DEPRECATED}} hsa\+\_\+signal\+\_\+exchange\+\_\+release (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{group__signals_ga0003af605a660e7ef4f89aa555d3b3fc}{hsa\+\_\+signal\+\_\+t}}}]{signal,  }\item[{\mbox{\hyperlink{group__signals_ga67ca2818879c9990e1b5f1b14ce7ed27}{hsa\+\_\+signal\+\_\+value\+\_\+t}}}]{value }\end{DoxyParamCaption})}
+
+
+
+Atomically set the value of a signal and return its previous value. 
+
+\begin{DoxyRefDesc}{Deprecated}
+\item[\mbox{\hyperlink{deprecated__deprecated000009}{Deprecated}}]Renamed as \mbox{\hyperlink{group__signals_gae1f84a23129247da684a76183a772d3a}{hsa\+\_\+signal\+\_\+exchange\+\_\+screlease}}.\end{DoxyRefDesc}
+
+
+If the value of the signal is changed, all the agents waiting on {\ttfamily signal} for which {\ttfamily value} satisfies their wait condition are awakened.
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em signal} & Signal. If {\ttfamily signal} is a queue doorbell signal, the behavior is undefined.\\
+\hline
+\mbox{\texttt{ in}}  & {\em value} & New value.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Value of the signal prior to the exchange. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{group__signals_gab21596aa1a86f54ab97fec9118b6e512}\label{group__signals_gab21596aa1a86f54ab97fec9118b6e512}} 
+\index{Signals@{Signals}!hsa\_signal\_exchange\_scacq\_screl@{hsa\_signal\_exchange\_scacq\_screl}}
+\index{hsa\_signal\_exchange\_scacq\_screl@{hsa\_signal\_exchange\_scacq\_screl}!Signals@{Signals}}
+\doxysubsubsection{\texorpdfstring{hsa\_signal\_exchange\_scacq\_screl()}{hsa\_signal\_exchange\_scacq\_screl()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{group__signals_ga67ca2818879c9990e1b5f1b14ce7ed27}{hsa\+\_\+signal\+\_\+value\+\_\+t}} \mbox{\hyperlink{inc_2hsa__ext__image_8h_a64216765b98b62ee87deb50fd2899836}{HSA\+\_\+\+API}} hsa\+\_\+signal\+\_\+exchange\+\_\+scacq\+\_\+screl (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{group__signals_ga0003af605a660e7ef4f89aa555d3b3fc}{hsa\+\_\+signal\+\_\+t}}}]{signal,  }\item[{\mbox{\hyperlink{group__signals_ga67ca2818879c9990e1b5f1b14ce7ed27}{hsa\+\_\+signal\+\_\+value\+\_\+t}}}]{value }\end{DoxyParamCaption})}
+
+
+
+Atomically set the value of a signal and return its previous value. 
+
+If the value of the signal is changed, all the agents waiting on {\ttfamily signal} for which {\ttfamily value} satisfies their wait condition are awakened.
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em signal} & Signal. If {\ttfamily signal} is a queue doorbell signal, the behavior is undefined.\\
+\hline
+\mbox{\texttt{ in}}  & {\em value} & New value.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Value of the signal prior to the exchange. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{group__signals_gaed3e29467c7a6f3db4d4bad6b1a2f6fd}\label{group__signals_gaed3e29467c7a6f3db4d4bad6b1a2f6fd}} 
+\index{Signals@{Signals}!hsa\_signal\_exchange\_scacquire@{hsa\_signal\_exchange\_scacquire}}
+\index{hsa\_signal\_exchange\_scacquire@{hsa\_signal\_exchange\_scacquire}!Signals@{Signals}}
+\doxysubsubsection{\texorpdfstring{hsa\_signal\_exchange\_scacquire()}{hsa\_signal\_exchange\_scacquire()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{group__signals_ga67ca2818879c9990e1b5f1b14ce7ed27}{hsa\+\_\+signal\+\_\+value\+\_\+t}} \mbox{\hyperlink{inc_2hsa__ext__image_8h_a64216765b98b62ee87deb50fd2899836}{HSA\+\_\+\+API}} hsa\+\_\+signal\+\_\+exchange\+\_\+scacquire (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{group__signals_ga0003af605a660e7ef4f89aa555d3b3fc}{hsa\+\_\+signal\+\_\+t}}}]{signal,  }\item[{\mbox{\hyperlink{group__signals_ga67ca2818879c9990e1b5f1b14ce7ed27}{hsa\+\_\+signal\+\_\+value\+\_\+t}}}]{value }\end{DoxyParamCaption})}
+
+
+
+Atomically set the value of a signal and return its previous value. 
+
+If the value of the signal is changed, all the agents waiting on {\ttfamily signal} for which {\ttfamily value} satisfies their wait condition are awakened.
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em signal} & Signal. If {\ttfamily signal} is a queue doorbell signal, the behavior is undefined.\\
+\hline
+\mbox{\texttt{ in}}  & {\em value} & New value.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Value of the signal prior to the exchange. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{group__signals_gae1f84a23129247da684a76183a772d3a}\label{group__signals_gae1f84a23129247da684a76183a772d3a}} 
+\index{Signals@{Signals}!hsa\_signal\_exchange\_screlease@{hsa\_signal\_exchange\_screlease}}
+\index{hsa\_signal\_exchange\_screlease@{hsa\_signal\_exchange\_screlease}!Signals@{Signals}}
+\doxysubsubsection{\texorpdfstring{hsa\_signal\_exchange\_screlease()}{hsa\_signal\_exchange\_screlease()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{group__signals_ga67ca2818879c9990e1b5f1b14ce7ed27}{hsa\+\_\+signal\+\_\+value\+\_\+t}} \mbox{\hyperlink{inc_2hsa__ext__image_8h_a64216765b98b62ee87deb50fd2899836}{HSA\+\_\+\+API}} hsa\+\_\+signal\+\_\+exchange\+\_\+screlease (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{group__signals_ga0003af605a660e7ef4f89aa555d3b3fc}{hsa\+\_\+signal\+\_\+t}}}]{signal,  }\item[{\mbox{\hyperlink{group__signals_ga67ca2818879c9990e1b5f1b14ce7ed27}{hsa\+\_\+signal\+\_\+value\+\_\+t}}}]{value }\end{DoxyParamCaption})}
+
+
+
+Atomically set the value of a signal and return its previous value. 
+
+If the value of the signal is changed, all the agents waiting on {\ttfamily signal} for which {\ttfamily value} satisfies their wait condition are awakened.
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em signal} & Signal. If {\ttfamily signal} is a queue doorbell signal, the behavior is undefined.\\
+\hline
+\mbox{\texttt{ in}}  & {\em value} & New value.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Value of the signal prior to the exchange. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{group__signals_ga893939215cd155c3d7a9ca50e9bf5555}\label{group__signals_ga893939215cd155c3d7a9ca50e9bf5555}} 
+\index{Signals@{Signals}!hsa\_signal\_group\_create@{hsa\_signal\_group\_create}}
+\index{hsa\_signal\_group\_create@{hsa\_signal\_group\_create}!Signals@{Signals}}
+\doxysubsubsection{\texorpdfstring{hsa\_signal\_group\_create()}{hsa\_signal\_group\_create()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{group__status_gad755322e7ff95456520e8abdbe90d225}{hsa\+\_\+status\+\_\+t}} \mbox{\hyperlink{inc_2hsa__ext__image_8h_a64216765b98b62ee87deb50fd2899836}{HSA\+\_\+\+API}} hsa\+\_\+signal\+\_\+group\+\_\+create (\begin{DoxyParamCaption}\item[{uint32\+\_\+t}]{num\+\_\+signals,  }\item[{const \mbox{\hyperlink{group__signals_ga0003af605a660e7ef4f89aa555d3b3fc}{hsa\+\_\+signal\+\_\+t}} $\ast$}]{signals,  }\item[{uint32\+\_\+t}]{num\+\_\+consumers,  }\item[{const \mbox{\hyperlink{group__agentinfo_ga9ce217ef08e7d5e89c8e83ce7b6ef22b}{hsa\+\_\+agent\+\_\+t}} $\ast$}]{consumers,  }\item[{\mbox{\hyperlink{group__signals_gaf5db341c9f3fa5fb32e638ac8d16aac8}{hsa\+\_\+signal\+\_\+group\+\_\+t}} $\ast$}]{signal\+\_\+group }\end{DoxyParamCaption})}
+
+
+
+Create a signal group. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em num\+\_\+signals} & Number of elements in {\ttfamily signals}. Must not be 0.\\
+\hline
+\mbox{\texttt{ in}}  & {\em signals} & List of signals in the group. The list must not contain any repeated elements. Must not be NULL.\\
+\hline
+\mbox{\texttt{ in}}  & {\em num\+\_\+consumers} & Number of elements in {\ttfamily consumers}. Must not be 0.\\
+\hline
+\mbox{\texttt{ in}}  & {\em consumers} & List of agents that might consume (wait on) the signal group. The list must not contain repeated elements, and must be a subset of the set of agents that are allowed to wait on all the signals in the group. If an agent not listed in {\ttfamily consumers} waits on the returned group, the behavior is undefined. The memory associated with {\ttfamily consumers} can be reused or freed after the function returns. Must not be NULL.\\
+\hline
+\mbox{\texttt{ out}}  & {\em signal\+\_\+group} & Pointer to newly created signal group. Must not be NULL.\\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em \mbox{\hyperlink{group__status_ggad755322e7ff95456520e8abdbe90d225ae382ea0c9c05cce5a60d0317375159cc}{HSA\+\_\+\+STATUS\+\_\+\+SUCCESS}}} & The function has been executed successfully.\\
+\hline
+{\em \mbox{\hyperlink{group__status_ggad755322e7ff95456520e8abdbe90d225a34ea59ade5bfce95eee935238a99f5b5}{HSA\+\_\+\+STATUS\+\_\+\+ERROR\+\_\+\+NOT\+\_\+\+INITIALIZED}}} & The HSA runtime has not been initialized.\\
+\hline
+{\em \mbox{\hyperlink{group__status_ggad755322e7ff95456520e8abdbe90d225a1a77fcf36d0d140874c4361ab093eff7}{HSA\+\_\+\+STATUS\+\_\+\+ERROR\+\_\+\+OUT\+\_\+\+OF\+\_\+\+RESOURCES}}} & The HSA runtime failed to allocate the required resources.\\
+\hline
+{\em \mbox{\hyperlink{group__status_ggad755322e7ff95456520e8abdbe90d225ac7d3651f75107d2a6a8ba3b25683c030}{HSA\+\_\+\+STATUS\+\_\+\+ERROR\+\_\+\+INVALID\+\_\+\+ARGUMENT}}} & {\ttfamily num\+\_\+signals} is 0, {\ttfamily signals} is NULL, {\ttfamily num\+\_\+consumers} is 0, {\ttfamily consumers} is NULL, or {\ttfamily signal\+\_\+group} is NULL. \\
+\hline
+\end{DoxyRetVals}
+\mbox{\Hypertarget{group__signals_gac255e6be05250d784e735652523dc0ef}\label{group__signals_gac255e6be05250d784e735652523dc0ef}} 
+\index{Signals@{Signals}!hsa\_signal\_group\_destroy@{hsa\_signal\_group\_destroy}}
+\index{hsa\_signal\_group\_destroy@{hsa\_signal\_group\_destroy}!Signals@{Signals}}
+\doxysubsubsection{\texorpdfstring{hsa\_signal\_group\_destroy()}{hsa\_signal\_group\_destroy()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{group__status_gad755322e7ff95456520e8abdbe90d225}{hsa\+\_\+status\+\_\+t}} \mbox{\hyperlink{inc_2hsa__ext__image_8h_a64216765b98b62ee87deb50fd2899836}{HSA\+\_\+\+API}} hsa\+\_\+signal\+\_\+group\+\_\+destroy (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{group__signals_gaf5db341c9f3fa5fb32e638ac8d16aac8}{hsa\+\_\+signal\+\_\+group\+\_\+t}}}]{signal\+\_\+group }\end{DoxyParamCaption})}
+
+
+
+Destroy a signal group previous created by \mbox{\hyperlink{group__signals_ga893939215cd155c3d7a9ca50e9bf5555}{hsa\+\_\+signal\+\_\+group\+\_\+create}}. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em signal\+\_\+group} & Signal group.\\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em \mbox{\hyperlink{group__status_ggad755322e7ff95456520e8abdbe90d225ae382ea0c9c05cce5a60d0317375159cc}{HSA\+\_\+\+STATUS\+\_\+\+SUCCESS}}} & The function has been executed successfully.\\
+\hline
+{\em \mbox{\hyperlink{group__status_ggad755322e7ff95456520e8abdbe90d225a34ea59ade5bfce95eee935238a99f5b5}{HSA\+\_\+\+STATUS\+\_\+\+ERROR\+\_\+\+NOT\+\_\+\+INITIALIZED}}} & The HSA runtime has not been initialized.\\
+\hline
+{\em \mbox{\hyperlink{group__status_ggad755322e7ff95456520e8abdbe90d225abd03356b33a9726a76b3c96baee8badc}{HSA\+\_\+\+STATUS\+\_\+\+ERROR\+\_\+\+INVALID\+\_\+\+SIGNAL\+\_\+\+GROUP}}} & {\ttfamily signal\+\_\+group} is invalid. \\
+\hline
+\end{DoxyRetVals}
+\mbox{\Hypertarget{group__signals_ga577c739b4eec2b0777a3128e5efa5a70}\label{group__signals_ga577c739b4eec2b0777a3128e5efa5a70}} 
+\index{Signals@{Signals}!hsa\_signal\_group\_wait\_any\_relaxed@{hsa\_signal\_group\_wait\_any\_relaxed}}
+\index{hsa\_signal\_group\_wait\_any\_relaxed@{hsa\_signal\_group\_wait\_any\_relaxed}!Signals@{Signals}}
+\doxysubsubsection{\texorpdfstring{hsa\_signal\_group\_wait\_any\_relaxed()}{hsa\_signal\_group\_wait\_any\_relaxed()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{group__status_gad755322e7ff95456520e8abdbe90d225}{hsa\+\_\+status\+\_\+t}} \mbox{\hyperlink{inc_2hsa__ext__image_8h_a64216765b98b62ee87deb50fd2899836}{HSA\+\_\+\+API}} hsa\+\_\+signal\+\_\+group\+\_\+wait\+\_\+any\+\_\+relaxed (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{group__signals_gaf5db341c9f3fa5fb32e638ac8d16aac8}{hsa\+\_\+signal\+\_\+group\+\_\+t}}}]{signal\+\_\+group,  }\item[{const \mbox{\hyperlink{group__signals_gab7190fcff48c6dbeded341389ed17c8d}{hsa\+\_\+signal\+\_\+condition\+\_\+t}} $\ast$}]{conditions,  }\item[{const \mbox{\hyperlink{group__signals_ga67ca2818879c9990e1b5f1b14ce7ed27}{hsa\+\_\+signal\+\_\+value\+\_\+t}} $\ast$}]{compare\+\_\+values,  }\item[{\mbox{\hyperlink{group__signals_gac0d2ec14d7a58c6cccc259943a03c569}{hsa\+\_\+wait\+\_\+state\+\_\+t}}}]{wait\+\_\+state\+\_\+hint,  }\item[{\mbox{\hyperlink{group__signals_ga0003af605a660e7ef4f89aa555d3b3fc}{hsa\+\_\+signal\+\_\+t}} $\ast$}]{signal,  }\item[{\mbox{\hyperlink{group__signals_ga67ca2818879c9990e1b5f1b14ce7ed27}{hsa\+\_\+signal\+\_\+value\+\_\+t}} $\ast$}]{value }\end{DoxyParamCaption})}
+
+
+
+Wait until the value of at least one of the signals in a signal group satisfies its associated condition. 
+
+The function is guaranteed to return if the value of at least one of the signals in the group satisfies its associated condition at some point in time during the wait, but the signal value returned to the application may no longer satisfy the condition. The application must ensure that signals in the group are used in such way that wait wakeup conditions are not invalidated before dependent threads have woken up.
+
+When this operation internally loads the value of the passed signal, it uses the memory order indicated in the function name.
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em signal\+\_\+group} & Signal group.\\
+\hline
+\mbox{\texttt{ in}}  & {\em conditions} & List of conditions. Each condition, and the value at the same index in {\ttfamily compare\+\_\+values}, is used to compare the value of the signal at that index in {\ttfamily signal\+\_\+group} (the signal passed by the application to \mbox{\hyperlink{group__signals_ga893939215cd155c3d7a9ca50e9bf5555}{hsa\+\_\+signal\+\_\+group\+\_\+create}} at that particular index). The size of {\ttfamily conditions} must not be smaller than the number of signals in {\ttfamily signal\+\_\+group}; any extra elements are ignored. Must not be NULL.\\
+\hline
+\mbox{\texttt{ in}}  & {\em compare\+\_\+values} & List of comparison values. The size of {\ttfamily compare\+\_\+values} must not be smaller than the number of signals in {\ttfamily signal\+\_\+group}; any extra elements are ignored. Must not be NULL.\\
+\hline
+\mbox{\texttt{ in}}  & {\em wait\+\_\+state\+\_\+hint} & Hint used by the application to indicate the preferred waiting state. The actual waiting state is decided by the HSA runtime and may not match the provided hint. A value of \mbox{\hyperlink{group__signals_ggac0d2ec14d7a58c6cccc259943a03c569ac34cddf41039dc646c21d05a91f1dce8}{HSA\+\_\+\+WAIT\+\_\+\+STATE\+\_\+\+ACTIVE}} may improve the latency of response to a signal update by avoiding rescheduling overhead.\\
+\hline
+\mbox{\texttt{ out}}  & {\em signal} & Signal in the group that satisfied the associated condition. If several signals satisfied their condition, the function can return any of those signals. Must not be NULL.\\
+\hline
+\mbox{\texttt{ out}}  & {\em value} & Observed value for {\ttfamily signal}, which might no longer satisfy the specified condition. Must not be NULL.\\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em \mbox{\hyperlink{group__status_ggad755322e7ff95456520e8abdbe90d225ae382ea0c9c05cce5a60d0317375159cc}{HSA\+\_\+\+STATUS\+\_\+\+SUCCESS}}} & The function has been executed successfully.\\
+\hline
+{\em \mbox{\hyperlink{group__status_ggad755322e7ff95456520e8abdbe90d225abd03356b33a9726a76b3c96baee8badc}{HSA\+\_\+\+STATUS\+\_\+\+ERROR\+\_\+\+INVALID\+\_\+\+SIGNAL\+\_\+\+GROUP}}} & {\ttfamily signal\+\_\+group} is invalid.\\
+\hline
+{\em \mbox{\hyperlink{group__status_ggad755322e7ff95456520e8abdbe90d225ac7d3651f75107d2a6a8ba3b25683c030}{HSA\+\_\+\+STATUS\+\_\+\+ERROR\+\_\+\+INVALID\+\_\+\+ARGUMENT}}} & {\ttfamily conditions} is NULL, {\ttfamily compare\+\_\+values} is NULL, {\ttfamily signal} is NULL, or {\ttfamily value} is NULL. \\
+\hline
+\end{DoxyRetVals}
+\mbox{\Hypertarget{group__signals_gab31cba8ff293badfc294f37f390d5410}\label{group__signals_gab31cba8ff293badfc294f37f390d5410}} 
+\index{Signals@{Signals}!hsa\_signal\_group\_wait\_any\_scacquire@{hsa\_signal\_group\_wait\_any\_scacquire}}
+\index{hsa\_signal\_group\_wait\_any\_scacquire@{hsa\_signal\_group\_wait\_any\_scacquire}!Signals@{Signals}}
+\doxysubsubsection{\texorpdfstring{hsa\_signal\_group\_wait\_any\_scacquire()}{hsa\_signal\_group\_wait\_any\_scacquire()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{group__status_gad755322e7ff95456520e8abdbe90d225}{hsa\+\_\+status\+\_\+t}} \mbox{\hyperlink{inc_2hsa__ext__image_8h_a64216765b98b62ee87deb50fd2899836}{HSA\+\_\+\+API}} hsa\+\_\+signal\+\_\+group\+\_\+wait\+\_\+any\+\_\+scacquire (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{group__signals_gaf5db341c9f3fa5fb32e638ac8d16aac8}{hsa\+\_\+signal\+\_\+group\+\_\+t}}}]{signal\+\_\+group,  }\item[{const \mbox{\hyperlink{group__signals_gab7190fcff48c6dbeded341389ed17c8d}{hsa\+\_\+signal\+\_\+condition\+\_\+t}} $\ast$}]{conditions,  }\item[{const \mbox{\hyperlink{group__signals_ga67ca2818879c9990e1b5f1b14ce7ed27}{hsa\+\_\+signal\+\_\+value\+\_\+t}} $\ast$}]{compare\+\_\+values,  }\item[{\mbox{\hyperlink{group__signals_gac0d2ec14d7a58c6cccc259943a03c569}{hsa\+\_\+wait\+\_\+state\+\_\+t}}}]{wait\+\_\+state\+\_\+hint,  }\item[{\mbox{\hyperlink{group__signals_ga0003af605a660e7ef4f89aa555d3b3fc}{hsa\+\_\+signal\+\_\+t}} $\ast$}]{signal,  }\item[{\mbox{\hyperlink{group__signals_ga67ca2818879c9990e1b5f1b14ce7ed27}{hsa\+\_\+signal\+\_\+value\+\_\+t}} $\ast$}]{value }\end{DoxyParamCaption})}
+
+
+
+Wait until the value of at least one of the signals in a signal group satisfies its associated condition. 
+
+The function is guaranteed to return if the value of at least one of the signals in the group satisfies its associated condition at some point in time during the wait, but the signal value returned to the application may no longer satisfy the condition. The application must ensure that signals in the group are used in such way that wait wakeup conditions are not invalidated before dependent threads have woken up.
+
+When this operation internally loads the value of the passed signal, it uses the memory order indicated in the function name.
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em signal\+\_\+group} & Signal group.\\
+\hline
+\mbox{\texttt{ in}}  & {\em conditions} & List of conditions. Each condition, and the value at the same index in {\ttfamily compare\+\_\+values}, is used to compare the value of the signal at that index in {\ttfamily signal\+\_\+group} (the signal passed by the application to \mbox{\hyperlink{group__signals_ga893939215cd155c3d7a9ca50e9bf5555}{hsa\+\_\+signal\+\_\+group\+\_\+create}} at that particular index). The size of {\ttfamily conditions} must not be smaller than the number of signals in {\ttfamily signal\+\_\+group}; any extra elements are ignored. Must not be NULL.\\
+\hline
+\mbox{\texttt{ in}}  & {\em compare\+\_\+values} & List of comparison values. The size of {\ttfamily compare\+\_\+values} must not be smaller than the number of signals in {\ttfamily signal\+\_\+group}; any extra elements are ignored. Must not be NULL.\\
+\hline
+\mbox{\texttt{ in}}  & {\em wait\+\_\+state\+\_\+hint} & Hint used by the application to indicate the preferred waiting state. The actual waiting state is decided by the HSA runtime and may not match the provided hint. A value of \mbox{\hyperlink{group__signals_ggac0d2ec14d7a58c6cccc259943a03c569ac34cddf41039dc646c21d05a91f1dce8}{HSA\+\_\+\+WAIT\+\_\+\+STATE\+\_\+\+ACTIVE}} may improve the latency of response to a signal update by avoiding rescheduling overhead.\\
+\hline
+\mbox{\texttt{ out}}  & {\em signal} & Signal in the group that satisfied the associated condition. If several signals satisfied their condition, the function can return any of those signals. Must not be NULL.\\
+\hline
+\mbox{\texttt{ out}}  & {\em value} & Observed value for {\ttfamily signal}, which might no longer satisfy the specified condition. Must not be NULL.\\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em \mbox{\hyperlink{group__status_ggad755322e7ff95456520e8abdbe90d225ae382ea0c9c05cce5a60d0317375159cc}{HSA\+\_\+\+STATUS\+\_\+\+SUCCESS}}} & The function has been executed successfully.\\
+\hline
+{\em \mbox{\hyperlink{group__status_ggad755322e7ff95456520e8abdbe90d225abd03356b33a9726a76b3c96baee8badc}{HSA\+\_\+\+STATUS\+\_\+\+ERROR\+\_\+\+INVALID\+\_\+\+SIGNAL\+\_\+\+GROUP}}} & {\ttfamily signal\+\_\+group} is invalid.\\
+\hline
+{\em \mbox{\hyperlink{group__status_ggad755322e7ff95456520e8abdbe90d225ac7d3651f75107d2a6a8ba3b25683c030}{HSA\+\_\+\+STATUS\+\_\+\+ERROR\+\_\+\+INVALID\+\_\+\+ARGUMENT}}} & {\ttfamily conditions} is NULL, {\ttfamily compare\+\_\+values} is NULL, {\ttfamily signal} is NULL, or {\ttfamily value} is NULL. \\
+\hline
+\end{DoxyRetVals}
+\mbox{\Hypertarget{group__signals_gaea4d07e714b33461bb0d6741b11977b5}\label{group__signals_gaea4d07e714b33461bb0d6741b11977b5}} 
+\index{Signals@{Signals}!hsa\_signal\_load\_acquire@{hsa\_signal\_load\_acquire}}
+\index{hsa\_signal\_load\_acquire@{hsa\_signal\_load\_acquire}!Signals@{Signals}}
+\doxysubsubsection{\texorpdfstring{hsa\_signal\_load\_acquire()}{hsa\_signal\_load\_acquire()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{group__signals_ga67ca2818879c9990e1b5f1b14ce7ed27}{hsa\+\_\+signal\+\_\+value\+\_\+t}} \mbox{\hyperlink{inc_2hsa__ext__image_8h_a64216765b98b62ee87deb50fd2899836}{HSA\+\_\+\+API}} \mbox{\hyperlink{inc_2hsa_8h_a2321f8ca7d706cada4f617b191a478b0}{HSA\+\_\+\+DEPRECATED}} hsa\+\_\+signal\+\_\+load\+\_\+acquire (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{group__signals_ga0003af605a660e7ef4f89aa555d3b3fc}{hsa\+\_\+signal\+\_\+t}}}]{signal }\end{DoxyParamCaption})}
+
+
+
+Atomically read the current value of a signal. 
+
+\begin{DoxyRefDesc}{Deprecated}
+\item[\mbox{\hyperlink{deprecated__deprecated000005}{Deprecated}}]Renamed as \mbox{\hyperlink{group__signals_gab12db5c6ca3ea9b4e418ac84b560fdfd}{hsa\+\_\+signal\+\_\+load\+\_\+scacquire}}.\end{DoxyRefDesc}
+
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em signal} & Signal.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Value of the signal. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{group__signals_ga1a4f6949e06c77ced03ebafadd70a91a}\label{group__signals_ga1a4f6949e06c77ced03ebafadd70a91a}} 
+\index{Signals@{Signals}!hsa\_signal\_load\_relaxed@{hsa\_signal\_load\_relaxed}}
+\index{hsa\_signal\_load\_relaxed@{hsa\_signal\_load\_relaxed}!Signals@{Signals}}
+\doxysubsubsection{\texorpdfstring{hsa\_signal\_load\_relaxed()}{hsa\_signal\_load\_relaxed()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{group__signals_ga67ca2818879c9990e1b5f1b14ce7ed27}{hsa\+\_\+signal\+\_\+value\+\_\+t}} \mbox{\hyperlink{inc_2hsa__ext__image_8h_a64216765b98b62ee87deb50fd2899836}{HSA\+\_\+\+API}} hsa\+\_\+signal\+\_\+load\+\_\+relaxed (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{group__signals_ga0003af605a660e7ef4f89aa555d3b3fc}{hsa\+\_\+signal\+\_\+t}}}]{signal }\end{DoxyParamCaption})}
+
+
+
+Atomically read the current value of a signal. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em signal} & Signal.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Value of the signal. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{group__signals_gab12db5c6ca3ea9b4e418ac84b560fdfd}\label{group__signals_gab12db5c6ca3ea9b4e418ac84b560fdfd}} 
+\index{Signals@{Signals}!hsa\_signal\_load\_scacquire@{hsa\_signal\_load\_scacquire}}
+\index{hsa\_signal\_load\_scacquire@{hsa\_signal\_load\_scacquire}!Signals@{Signals}}
+\doxysubsubsection{\texorpdfstring{hsa\_signal\_load\_scacquire()}{hsa\_signal\_load\_scacquire()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{group__signals_ga67ca2818879c9990e1b5f1b14ce7ed27}{hsa\+\_\+signal\+\_\+value\+\_\+t}} \mbox{\hyperlink{inc_2hsa__ext__image_8h_a64216765b98b62ee87deb50fd2899836}{HSA\+\_\+\+API}} hsa\+\_\+signal\+\_\+load\+\_\+scacquire (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{group__signals_ga0003af605a660e7ef4f89aa555d3b3fc}{hsa\+\_\+signal\+\_\+t}}}]{signal }\end{DoxyParamCaption})}
+
+
+
+Atomically read the current value of a signal. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em signal} & Signal.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Value of the signal. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{group__signals_gab31b90f93a6936b352e5a2c2d8f26278}\label{group__signals_gab31b90f93a6936b352e5a2c2d8f26278}} 
+\index{Signals@{Signals}!hsa\_signal\_or\_acq\_rel@{hsa\_signal\_or\_acq\_rel}}
+\index{hsa\_signal\_or\_acq\_rel@{hsa\_signal\_or\_acq\_rel}!Signals@{Signals}}
+\doxysubsubsection{\texorpdfstring{hsa\_signal\_or\_acq\_rel()}{hsa\_signal\_or\_acq\_rel()}}
+{\footnotesize\ttfamily void \mbox{\hyperlink{inc_2hsa__ext__image_8h_a64216765b98b62ee87deb50fd2899836}{HSA\+\_\+\+API}} \mbox{\hyperlink{inc_2hsa_8h_a2321f8ca7d706cada4f617b191a478b0}{HSA\+\_\+\+DEPRECATED}} hsa\+\_\+signal\+\_\+or\+\_\+acq\+\_\+rel (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{group__signals_ga0003af605a660e7ef4f89aa555d3b3fc}{hsa\+\_\+signal\+\_\+t}}}]{signal,  }\item[{\mbox{\hyperlink{group__signals_ga67ca2818879c9990e1b5f1b14ce7ed27}{hsa\+\_\+signal\+\_\+value\+\_\+t}}}]{value }\end{DoxyParamCaption})}
+
+
+
+Atomically perform a bitwise OR operation between the value of a signal and a given value. 
+
+\begin{DoxyRefDesc}{Deprecated}
+\item[\mbox{\hyperlink{deprecated__deprecated000022}{Deprecated}}]Renamed as \mbox{\hyperlink{group__signals_gaf3f48c15bf7dc296c0fe283175d2b8b6}{hsa\+\_\+signal\+\_\+or\+\_\+scacq\+\_\+screl}}.\end{DoxyRefDesc}
+
+
+If the value of the signal is changed, all the agents waiting on {\ttfamily signal} for which {\ttfamily value} satisfies their wait condition are awakened.
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em signal} & Signal. If {\ttfamily signal} is a queue doorbell signal, the behavior is undefined.\\
+\hline
+\mbox{\texttt{ in}}  & {\em value} & Value to OR with the value of the signal. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{group__signals_ga4c03fd219e7f1bf427900138f40cd82d}\label{group__signals_ga4c03fd219e7f1bf427900138f40cd82d}} 
+\index{Signals@{Signals}!hsa\_signal\_or\_acquire@{hsa\_signal\_or\_acquire}}
+\index{hsa\_signal\_or\_acquire@{hsa\_signal\_or\_acquire}!Signals@{Signals}}
+\doxysubsubsection{\texorpdfstring{hsa\_signal\_or\_acquire()}{hsa\_signal\_or\_acquire()}}
+{\footnotesize\ttfamily void \mbox{\hyperlink{inc_2hsa__ext__image_8h_a64216765b98b62ee87deb50fd2899836}{HSA\+\_\+\+API}} \mbox{\hyperlink{inc_2hsa_8h_a2321f8ca7d706cada4f617b191a478b0}{HSA\+\_\+\+DEPRECATED}} hsa\+\_\+signal\+\_\+or\+\_\+acquire (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{group__signals_ga0003af605a660e7ef4f89aa555d3b3fc}{hsa\+\_\+signal\+\_\+t}}}]{signal,  }\item[{\mbox{\hyperlink{group__signals_ga67ca2818879c9990e1b5f1b14ce7ed27}{hsa\+\_\+signal\+\_\+value\+\_\+t}}}]{value }\end{DoxyParamCaption})}
+
+
+
+Atomically perform a bitwise OR operation between the value of a signal and a given value. 
+
+\begin{DoxyRefDesc}{Deprecated}
+\item[\mbox{\hyperlink{deprecated__deprecated000023}{Deprecated}}]Renamed as \mbox{\hyperlink{group__signals_ga6f39761ab3c1946d508b2b5f6dcfc4cc}{hsa\+\_\+signal\+\_\+or\+\_\+scacquire}}.\end{DoxyRefDesc}
+
+
+If the value of the signal is changed, all the agents waiting on {\ttfamily signal} for which {\ttfamily value} satisfies their wait condition are awakened.
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em signal} & Signal. If {\ttfamily signal} is a queue doorbell signal, the behavior is undefined.\\
+\hline
+\mbox{\texttt{ in}}  & {\em value} & Value to OR with the value of the signal. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{group__signals_ga43a6bff22162457f2b5338b4e3f73430}\label{group__signals_ga43a6bff22162457f2b5338b4e3f73430}} 
+\index{Signals@{Signals}!hsa\_signal\_or\_relaxed@{hsa\_signal\_or\_relaxed}}
+\index{hsa\_signal\_or\_relaxed@{hsa\_signal\_or\_relaxed}!Signals@{Signals}}
+\doxysubsubsection{\texorpdfstring{hsa\_signal\_or\_relaxed()}{hsa\_signal\_or\_relaxed()}}
+{\footnotesize\ttfamily void \mbox{\hyperlink{inc_2hsa__ext__image_8h_a64216765b98b62ee87deb50fd2899836}{HSA\+\_\+\+API}} hsa\+\_\+signal\+\_\+or\+\_\+relaxed (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{group__signals_ga0003af605a660e7ef4f89aa555d3b3fc}{hsa\+\_\+signal\+\_\+t}}}]{signal,  }\item[{\mbox{\hyperlink{group__signals_ga67ca2818879c9990e1b5f1b14ce7ed27}{hsa\+\_\+signal\+\_\+value\+\_\+t}}}]{value }\end{DoxyParamCaption})}
+
+
+
+Atomically perform a bitwise OR operation between the value of a signal and a given value. 
+
+If the value of the signal is changed, all the agents waiting on {\ttfamily signal} for which {\ttfamily value} satisfies their wait condition are awakened.
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em signal} & Signal. If {\ttfamily signal} is a queue doorbell signal, the behavior is undefined.\\
+\hline
+\mbox{\texttt{ in}}  & {\em value} & Value to OR with the value of the signal. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{group__signals_ga1fda0da9ed25d443085c7b05c5034428}\label{group__signals_ga1fda0da9ed25d443085c7b05c5034428}} 
+\index{Signals@{Signals}!hsa\_signal\_or\_release@{hsa\_signal\_or\_release}}
+\index{hsa\_signal\_or\_release@{hsa\_signal\_or\_release}!Signals@{Signals}}
+\doxysubsubsection{\texorpdfstring{hsa\_signal\_or\_release()}{hsa\_signal\_or\_release()}}
+{\footnotesize\ttfamily void \mbox{\hyperlink{inc_2hsa__ext__image_8h_a64216765b98b62ee87deb50fd2899836}{HSA\+\_\+\+API}} \mbox{\hyperlink{inc_2hsa_8h_a2321f8ca7d706cada4f617b191a478b0}{HSA\+\_\+\+DEPRECATED}} hsa\+\_\+signal\+\_\+or\+\_\+release (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{group__signals_ga0003af605a660e7ef4f89aa555d3b3fc}{hsa\+\_\+signal\+\_\+t}}}]{signal,  }\item[{\mbox{\hyperlink{group__signals_ga67ca2818879c9990e1b5f1b14ce7ed27}{hsa\+\_\+signal\+\_\+value\+\_\+t}}}]{value }\end{DoxyParamCaption})}
+
+
+
+Atomically perform a bitwise OR operation between the value of a signal and a given value. 
+
+\begin{DoxyRefDesc}{Deprecated}
+\item[\mbox{\hyperlink{deprecated__deprecated000024}{Deprecated}}]Renamed as \mbox{\hyperlink{group__signals_ga344a50950c79b84f6852a70fdfb47fe9}{hsa\+\_\+signal\+\_\+or\+\_\+screlease}}.\end{DoxyRefDesc}
+
+
+If the value of the signal is changed, all the agents waiting on {\ttfamily signal} for which {\ttfamily value} satisfies their wait condition are awakened.
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em signal} & Signal. If {\ttfamily signal} is a queue doorbell signal, the behavior is undefined.\\
+\hline
+\mbox{\texttt{ in}}  & {\em value} & Value to OR with the value of the signal. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{group__signals_gaf3f48c15bf7dc296c0fe283175d2b8b6}\label{group__signals_gaf3f48c15bf7dc296c0fe283175d2b8b6}} 
+\index{Signals@{Signals}!hsa\_signal\_or\_scacq\_screl@{hsa\_signal\_or\_scacq\_screl}}
+\index{hsa\_signal\_or\_scacq\_screl@{hsa\_signal\_or\_scacq\_screl}!Signals@{Signals}}
+\doxysubsubsection{\texorpdfstring{hsa\_signal\_or\_scacq\_screl()}{hsa\_signal\_or\_scacq\_screl()}}
+{\footnotesize\ttfamily void \mbox{\hyperlink{inc_2hsa__ext__image_8h_a64216765b98b62ee87deb50fd2899836}{HSA\+\_\+\+API}} hsa\+\_\+signal\+\_\+or\+\_\+scacq\+\_\+screl (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{group__signals_ga0003af605a660e7ef4f89aa555d3b3fc}{hsa\+\_\+signal\+\_\+t}}}]{signal,  }\item[{\mbox{\hyperlink{group__signals_ga67ca2818879c9990e1b5f1b14ce7ed27}{hsa\+\_\+signal\+\_\+value\+\_\+t}}}]{value }\end{DoxyParamCaption})}
+
+
+
+Atomically perform a bitwise OR operation between the value of a signal and a given value. 
+
+If the value of the signal is changed, all the agents waiting on {\ttfamily signal} for which {\ttfamily value} satisfies their wait condition are awakened.
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em signal} & Signal. If {\ttfamily signal} is a queue doorbell signal, the behavior is undefined.\\
+\hline
+\mbox{\texttt{ in}}  & {\em value} & Value to OR with the value of the signal. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{group__signals_ga6f39761ab3c1946d508b2b5f6dcfc4cc}\label{group__signals_ga6f39761ab3c1946d508b2b5f6dcfc4cc}} 
+\index{Signals@{Signals}!hsa\_signal\_or\_scacquire@{hsa\_signal\_or\_scacquire}}
+\index{hsa\_signal\_or\_scacquire@{hsa\_signal\_or\_scacquire}!Signals@{Signals}}
+\doxysubsubsection{\texorpdfstring{hsa\_signal\_or\_scacquire()}{hsa\_signal\_or\_scacquire()}}
+{\footnotesize\ttfamily void \mbox{\hyperlink{inc_2hsa__ext__image_8h_a64216765b98b62ee87deb50fd2899836}{HSA\+\_\+\+API}} hsa\+\_\+signal\+\_\+or\+\_\+scacquire (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{group__signals_ga0003af605a660e7ef4f89aa555d3b3fc}{hsa\+\_\+signal\+\_\+t}}}]{signal,  }\item[{\mbox{\hyperlink{group__signals_ga67ca2818879c9990e1b5f1b14ce7ed27}{hsa\+\_\+signal\+\_\+value\+\_\+t}}}]{value }\end{DoxyParamCaption})}
+
+
+
+Atomically perform a bitwise OR operation between the value of a signal and a given value. 
+
+If the value of the signal is changed, all the agents waiting on {\ttfamily signal} for which {\ttfamily value} satisfies their wait condition are awakened.
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em signal} & Signal. If {\ttfamily signal} is a queue doorbell signal, the behavior is undefined.\\
+\hline
+\mbox{\texttt{ in}}  & {\em value} & Value to OR with the value of the signal. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{group__signals_ga344a50950c79b84f6852a70fdfb47fe9}\label{group__signals_ga344a50950c79b84f6852a70fdfb47fe9}} 
+\index{Signals@{Signals}!hsa\_signal\_or\_screlease@{hsa\_signal\_or\_screlease}}
+\index{hsa\_signal\_or\_screlease@{hsa\_signal\_or\_screlease}!Signals@{Signals}}
+\doxysubsubsection{\texorpdfstring{hsa\_signal\_or\_screlease()}{hsa\_signal\_or\_screlease()}}
+{\footnotesize\ttfamily void \mbox{\hyperlink{inc_2hsa__ext__image_8h_a64216765b98b62ee87deb50fd2899836}{HSA\+\_\+\+API}} hsa\+\_\+signal\+\_\+or\+\_\+screlease (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{group__signals_ga0003af605a660e7ef4f89aa555d3b3fc}{hsa\+\_\+signal\+\_\+t}}}]{signal,  }\item[{\mbox{\hyperlink{group__signals_ga67ca2818879c9990e1b5f1b14ce7ed27}{hsa\+\_\+signal\+\_\+value\+\_\+t}}}]{value }\end{DoxyParamCaption})}
+
+
+
+Atomically perform a bitwise OR operation between the value of a signal and a given value. 
+
+If the value of the signal is changed, all the agents waiting on {\ttfamily signal} for which {\ttfamily value} satisfies their wait condition are awakened.
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em signal} & Signal. If {\ttfamily signal} is a queue doorbell signal, the behavior is undefined.\\
+\hline
+\mbox{\texttt{ in}}  & {\em value} & Value to OR with the value of the signal. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{group__signals_ga77081625dc65951d23ad37e79c391d32}\label{group__signals_ga77081625dc65951d23ad37e79c391d32}} 
+\index{Signals@{Signals}!hsa\_signal\_silent\_store\_relaxed@{hsa\_signal\_silent\_store\_relaxed}}
+\index{hsa\_signal\_silent\_store\_relaxed@{hsa\_signal\_silent\_store\_relaxed}!Signals@{Signals}}
+\doxysubsubsection{\texorpdfstring{hsa\_signal\_silent\_store\_relaxed()}{hsa\_signal\_silent\_store\_relaxed()}}
+{\footnotesize\ttfamily void \mbox{\hyperlink{inc_2hsa__ext__image_8h_a64216765b98b62ee87deb50fd2899836}{HSA\+\_\+\+API}} hsa\+\_\+signal\+\_\+silent\+\_\+store\+\_\+relaxed (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{group__signals_ga0003af605a660e7ef4f89aa555d3b3fc}{hsa\+\_\+signal\+\_\+t}}}]{signal,  }\item[{\mbox{\hyperlink{group__signals_ga67ca2818879c9990e1b5f1b14ce7ed27}{hsa\+\_\+signal\+\_\+value\+\_\+t}}}]{value }\end{DoxyParamCaption})}
+
+
+
+Atomically set the value of a signal without necessarily notifying the the agents waiting on it. 
+
+The agents waiting on {\ttfamily signal} may not wake up even when the new value satisfies their wait condition. If the application wants to update the signal and there is no need to notify any agent, invoking this function can be more efficient than calling the non-\/silent counterpart.
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em signal} & Signal.\\
+\hline
+\mbox{\texttt{ in}}  & {\em value} & New signal value. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{group__signals_ga9db582a4a03c42ef8e1440dc88266ed9}\label{group__signals_ga9db582a4a03c42ef8e1440dc88266ed9}} 
+\index{Signals@{Signals}!hsa\_signal\_silent\_store\_screlease@{hsa\_signal\_silent\_store\_screlease}}
+\index{hsa\_signal\_silent\_store\_screlease@{hsa\_signal\_silent\_store\_screlease}!Signals@{Signals}}
+\doxysubsubsection{\texorpdfstring{hsa\_signal\_silent\_store\_screlease()}{hsa\_signal\_silent\_store\_screlease()}}
+{\footnotesize\ttfamily void \mbox{\hyperlink{inc_2hsa__ext__image_8h_a64216765b98b62ee87deb50fd2899836}{HSA\+\_\+\+API}} hsa\+\_\+signal\+\_\+silent\+\_\+store\+\_\+screlease (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{group__signals_ga0003af605a660e7ef4f89aa555d3b3fc}{hsa\+\_\+signal\+\_\+t}}}]{signal,  }\item[{\mbox{\hyperlink{group__signals_ga67ca2818879c9990e1b5f1b14ce7ed27}{hsa\+\_\+signal\+\_\+value\+\_\+t}}}]{value }\end{DoxyParamCaption})}
+
+
+
+Atomically set the value of a signal without necessarily notifying the the agents waiting on it. 
+
+The agents waiting on {\ttfamily signal} may not wake up even when the new value satisfies their wait condition. If the application wants to update the signal and there is no need to notify any agent, invoking this function can be more efficient than calling the non-\/silent counterpart.
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em signal} & Signal.\\
+\hline
+\mbox{\texttt{ in}}  & {\em value} & New signal value. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{group__signals_gaee3d3fbcebcda6acb4ae1b57122b2ecd}\label{group__signals_gaee3d3fbcebcda6acb4ae1b57122b2ecd}} 
+\index{Signals@{Signals}!hsa\_signal\_store\_relaxed@{hsa\_signal\_store\_relaxed}}
+\index{hsa\_signal\_store\_relaxed@{hsa\_signal\_store\_relaxed}!Signals@{Signals}}
+\doxysubsubsection{\texorpdfstring{hsa\_signal\_store\_relaxed()}{hsa\_signal\_store\_relaxed()}}
+{\footnotesize\ttfamily void \mbox{\hyperlink{inc_2hsa__ext__image_8h_a64216765b98b62ee87deb50fd2899836}{HSA\+\_\+\+API}} hsa\+\_\+signal\+\_\+store\+\_\+relaxed (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{group__signals_ga0003af605a660e7ef4f89aa555d3b3fc}{hsa\+\_\+signal\+\_\+t}}}]{signal,  }\item[{\mbox{\hyperlink{group__signals_ga67ca2818879c9990e1b5f1b14ce7ed27}{hsa\+\_\+signal\+\_\+value\+\_\+t}}}]{value }\end{DoxyParamCaption})}
+
+
+
+Atomically set the value of a signal. 
+
+If the value of the signal is changed, all the agents waiting on {\ttfamily signal} for which {\ttfamily value} satisfies their wait condition are awakened.
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em signal} & Signal.\\
+\hline
+\mbox{\texttt{ in}}  & {\em value} & New signal value. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{group__signals_ga7fb97bba5edb2ed56aa3fe9150e95df7}\label{group__signals_ga7fb97bba5edb2ed56aa3fe9150e95df7}} 
+\index{Signals@{Signals}!hsa\_signal\_store\_release@{hsa\_signal\_store\_release}}
+\index{hsa\_signal\_store\_release@{hsa\_signal\_store\_release}!Signals@{Signals}}
+\doxysubsubsection{\texorpdfstring{hsa\_signal\_store\_release()}{hsa\_signal\_store\_release()}}
+{\footnotesize\ttfamily void \mbox{\hyperlink{inc_2hsa__ext__image_8h_a64216765b98b62ee87deb50fd2899836}{HSA\+\_\+\+API}} \mbox{\hyperlink{inc_2hsa_8h_a2321f8ca7d706cada4f617b191a478b0}{HSA\+\_\+\+DEPRECATED}} hsa\+\_\+signal\+\_\+store\+\_\+release (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{group__signals_ga0003af605a660e7ef4f89aa555d3b3fc}{hsa\+\_\+signal\+\_\+t}}}]{signal,  }\item[{\mbox{\hyperlink{group__signals_ga67ca2818879c9990e1b5f1b14ce7ed27}{hsa\+\_\+signal\+\_\+value\+\_\+t}}}]{value }\end{DoxyParamCaption})}
+
+
+
+Atomically set the value of a signal. 
+
+\begin{DoxyRefDesc}{Deprecated}
+\item[\mbox{\hyperlink{deprecated__deprecated000006}{Deprecated}}]Renamed as \mbox{\hyperlink{group__signals_ga11e015a932aae848dff4a8951221d922}{hsa\+\_\+signal\+\_\+store\+\_\+screlease}}.\end{DoxyRefDesc}
+
+
+If the value of the signal is changed, all the agents waiting on {\ttfamily signal} for which {\ttfamily value} satisfies their wait condition are awakened.
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em signal} & Signal.\\
+\hline
+\mbox{\texttt{ in}}  & {\em value} & New signal value. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{group__signals_ga11e015a932aae848dff4a8951221d922}\label{group__signals_ga11e015a932aae848dff4a8951221d922}} 
+\index{Signals@{Signals}!hsa\_signal\_store\_screlease@{hsa\_signal\_store\_screlease}}
+\index{hsa\_signal\_store\_screlease@{hsa\_signal\_store\_screlease}!Signals@{Signals}}
+\doxysubsubsection{\texorpdfstring{hsa\_signal\_store\_screlease()}{hsa\_signal\_store\_screlease()}}
+{\footnotesize\ttfamily void \mbox{\hyperlink{inc_2hsa__ext__image_8h_a64216765b98b62ee87deb50fd2899836}{HSA\+\_\+\+API}} hsa\+\_\+signal\+\_\+store\+\_\+screlease (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{group__signals_ga0003af605a660e7ef4f89aa555d3b3fc}{hsa\+\_\+signal\+\_\+t}}}]{signal,  }\item[{\mbox{\hyperlink{group__signals_ga67ca2818879c9990e1b5f1b14ce7ed27}{hsa\+\_\+signal\+\_\+value\+\_\+t}}}]{value }\end{DoxyParamCaption})}
+
+
+
+Atomically set the value of a signal. 
+
+If the value of the signal is changed, all the agents waiting on {\ttfamily signal} for which {\ttfamily value} satisfies their wait condition are awakened.
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em signal} & Signal.\\
+\hline
+\mbox{\texttt{ in}}  & {\em value} & New signal value. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{group__signals_ga86ad6a3b815df580443a2784bfe8338c}\label{group__signals_ga86ad6a3b815df580443a2784bfe8338c}} 
+\index{Signals@{Signals}!hsa\_signal\_subtract\_acq\_rel@{hsa\_signal\_subtract\_acq\_rel}}
+\index{hsa\_signal\_subtract\_acq\_rel@{hsa\_signal\_subtract\_acq\_rel}!Signals@{Signals}}
+\doxysubsubsection{\texorpdfstring{hsa\_signal\_subtract\_acq\_rel()}{hsa\_signal\_subtract\_acq\_rel()}}
+{\footnotesize\ttfamily void \mbox{\hyperlink{inc_2hsa__ext__image_8h_a64216765b98b62ee87deb50fd2899836}{HSA\+\_\+\+API}} \mbox{\hyperlink{inc_2hsa_8h_a2321f8ca7d706cada4f617b191a478b0}{HSA\+\_\+\+DEPRECATED}} hsa\+\_\+signal\+\_\+subtract\+\_\+acq\+\_\+rel (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{group__signals_ga0003af605a660e7ef4f89aa555d3b3fc}{hsa\+\_\+signal\+\_\+t}}}]{signal,  }\item[{\mbox{\hyperlink{group__signals_ga67ca2818879c9990e1b5f1b14ce7ed27}{hsa\+\_\+signal\+\_\+value\+\_\+t}}}]{value }\end{DoxyParamCaption})}
+
+
+
+Atomically decrement the value of a signal by a given amount. 
+
+\begin{DoxyRefDesc}{Deprecated}
+\item[\mbox{\hyperlink{deprecated__deprecated000016}{Deprecated}}]Renamed as \mbox{\hyperlink{group__signals_ga60476dbfb421b5e884110da8cb4e5f5a}{hsa\+\_\+signal\+\_\+subtract\+\_\+scacq\+\_\+screl}}.\end{DoxyRefDesc}
+
+
+If the value of the signal is changed, all the agents waiting on {\ttfamily signal} for which {\ttfamily value} satisfies their wait condition are awakened.
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em signal} & Signal. If {\ttfamily signal} is a queue doorbell signal, the behavior is undefined.\\
+\hline
+\mbox{\texttt{ in}}  & {\em value} & Value to subtract from the value of the signal. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{group__signals_gac0a4e4372c574005db617bd96e5f4cfb}\label{group__signals_gac0a4e4372c574005db617bd96e5f4cfb}} 
+\index{Signals@{Signals}!hsa\_signal\_subtract\_acquire@{hsa\_signal\_subtract\_acquire}}
+\index{hsa\_signal\_subtract\_acquire@{hsa\_signal\_subtract\_acquire}!Signals@{Signals}}
+\doxysubsubsection{\texorpdfstring{hsa\_signal\_subtract\_acquire()}{hsa\_signal\_subtract\_acquire()}}
+{\footnotesize\ttfamily void \mbox{\hyperlink{inc_2hsa__ext__image_8h_a64216765b98b62ee87deb50fd2899836}{HSA\+\_\+\+API}} \mbox{\hyperlink{inc_2hsa_8h_a2321f8ca7d706cada4f617b191a478b0}{HSA\+\_\+\+DEPRECATED}} hsa\+\_\+signal\+\_\+subtract\+\_\+acquire (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{group__signals_ga0003af605a660e7ef4f89aa555d3b3fc}{hsa\+\_\+signal\+\_\+t}}}]{signal,  }\item[{\mbox{\hyperlink{group__signals_ga67ca2818879c9990e1b5f1b14ce7ed27}{hsa\+\_\+signal\+\_\+value\+\_\+t}}}]{value }\end{DoxyParamCaption})}
+
+
+
+Atomically decrement the value of a signal by a given amount. 
+
+\begin{DoxyRefDesc}{Deprecated}
+\item[\mbox{\hyperlink{deprecated__deprecated000017}{Deprecated}}]Renamed as \mbox{\hyperlink{group__signals_ga5b0566fff20fb4daffbc8945e4e9b1c8}{hsa\+\_\+signal\+\_\+subtract\+\_\+scacquire}}.\end{DoxyRefDesc}
+
+
+If the value of the signal is changed, all the agents waiting on {\ttfamily signal} for which {\ttfamily value} satisfies their wait condition are awakened.
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em signal} & Signal. If {\ttfamily signal} is a queue doorbell signal, the behavior is undefined.\\
+\hline
+\mbox{\texttt{ in}}  & {\em value} & Value to subtract from the value of the signal. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{group__signals_gae4c78ee2deb280a56d794af5eff2a680}\label{group__signals_gae4c78ee2deb280a56d794af5eff2a680}} 
+\index{Signals@{Signals}!hsa\_signal\_subtract\_relaxed@{hsa\_signal\_subtract\_relaxed}}
+\index{hsa\_signal\_subtract\_relaxed@{hsa\_signal\_subtract\_relaxed}!Signals@{Signals}}
+\doxysubsubsection{\texorpdfstring{hsa\_signal\_subtract\_relaxed()}{hsa\_signal\_subtract\_relaxed()}}
+{\footnotesize\ttfamily void \mbox{\hyperlink{inc_2hsa__ext__image_8h_a64216765b98b62ee87deb50fd2899836}{HSA\+\_\+\+API}} hsa\+\_\+signal\+\_\+subtract\+\_\+relaxed (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{group__signals_ga0003af605a660e7ef4f89aa555d3b3fc}{hsa\+\_\+signal\+\_\+t}}}]{signal,  }\item[{\mbox{\hyperlink{group__signals_ga67ca2818879c9990e1b5f1b14ce7ed27}{hsa\+\_\+signal\+\_\+value\+\_\+t}}}]{value }\end{DoxyParamCaption})}
+
+
+
+Atomically decrement the value of a signal by a given amount. 
+
+If the value of the signal is changed, all the agents waiting on {\ttfamily signal} for which {\ttfamily value} satisfies their wait condition are awakened.
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em signal} & Signal. If {\ttfamily signal} is a queue doorbell signal, the behavior is undefined.\\
+\hline
+\mbox{\texttt{ in}}  & {\em value} & Value to subtract from the value of the signal. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{group__signals_ga4789b8169ed94cdca20213d8620b1e84}\label{group__signals_ga4789b8169ed94cdca20213d8620b1e84}} 
+\index{Signals@{Signals}!hsa\_signal\_subtract\_release@{hsa\_signal\_subtract\_release}}
+\index{hsa\_signal\_subtract\_release@{hsa\_signal\_subtract\_release}!Signals@{Signals}}
+\doxysubsubsection{\texorpdfstring{hsa\_signal\_subtract\_release()}{hsa\_signal\_subtract\_release()}}
+{\footnotesize\ttfamily void \mbox{\hyperlink{inc_2hsa__ext__image_8h_a64216765b98b62ee87deb50fd2899836}{HSA\+\_\+\+API}} \mbox{\hyperlink{inc_2hsa_8h_a2321f8ca7d706cada4f617b191a478b0}{HSA\+\_\+\+DEPRECATED}} hsa\+\_\+signal\+\_\+subtract\+\_\+release (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{group__signals_ga0003af605a660e7ef4f89aa555d3b3fc}{hsa\+\_\+signal\+\_\+t}}}]{signal,  }\item[{\mbox{\hyperlink{group__signals_ga67ca2818879c9990e1b5f1b14ce7ed27}{hsa\+\_\+signal\+\_\+value\+\_\+t}}}]{value }\end{DoxyParamCaption})}
+
+
+
+Atomically decrement the value of a signal by a given amount. 
+
+\begin{DoxyRefDesc}{Deprecated}
+\item[\mbox{\hyperlink{deprecated__deprecated000018}{Deprecated}}]Renamed as \mbox{\hyperlink{group__signals_ga7a96ceefb09ffb812d29b5fa86715b73}{hsa\+\_\+signal\+\_\+subtract\+\_\+screlease}}.\end{DoxyRefDesc}
+
+
+If the value of the signal is changed, all the agents waiting on {\ttfamily signal} for which {\ttfamily value} satisfies their wait condition are awakened.
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em signal} & Signal. If {\ttfamily signal} is a queue doorbell signal, the behavior is undefined.\\
+\hline
+\mbox{\texttt{ in}}  & {\em value} & Value to subtract from the value of the signal. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{group__signals_ga60476dbfb421b5e884110da8cb4e5f5a}\label{group__signals_ga60476dbfb421b5e884110da8cb4e5f5a}} 
+\index{Signals@{Signals}!hsa\_signal\_subtract\_scacq\_screl@{hsa\_signal\_subtract\_scacq\_screl}}
+\index{hsa\_signal\_subtract\_scacq\_screl@{hsa\_signal\_subtract\_scacq\_screl}!Signals@{Signals}}
+\doxysubsubsection{\texorpdfstring{hsa\_signal\_subtract\_scacq\_screl()}{hsa\_signal\_subtract\_scacq\_screl()}}
+{\footnotesize\ttfamily void \mbox{\hyperlink{inc_2hsa__ext__image_8h_a64216765b98b62ee87deb50fd2899836}{HSA\+\_\+\+API}} hsa\+\_\+signal\+\_\+subtract\+\_\+scacq\+\_\+screl (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{group__signals_ga0003af605a660e7ef4f89aa555d3b3fc}{hsa\+\_\+signal\+\_\+t}}}]{signal,  }\item[{\mbox{\hyperlink{group__signals_ga67ca2818879c9990e1b5f1b14ce7ed27}{hsa\+\_\+signal\+\_\+value\+\_\+t}}}]{value }\end{DoxyParamCaption})}
+
+
+
+Atomically decrement the value of a signal by a given amount. 
+
+If the value of the signal is changed, all the agents waiting on {\ttfamily signal} for which {\ttfamily value} satisfies their wait condition are awakened.
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em signal} & Signal. If {\ttfamily signal} is a queue doorbell signal, the behavior is undefined.\\
+\hline
+\mbox{\texttt{ in}}  & {\em value} & Value to subtract from the value of the signal. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{group__signals_ga5b0566fff20fb4daffbc8945e4e9b1c8}\label{group__signals_ga5b0566fff20fb4daffbc8945e4e9b1c8}} 
+\index{Signals@{Signals}!hsa\_signal\_subtract\_scacquire@{hsa\_signal\_subtract\_scacquire}}
+\index{hsa\_signal\_subtract\_scacquire@{hsa\_signal\_subtract\_scacquire}!Signals@{Signals}}
+\doxysubsubsection{\texorpdfstring{hsa\_signal\_subtract\_scacquire()}{hsa\_signal\_subtract\_scacquire()}}
+{\footnotesize\ttfamily void \mbox{\hyperlink{inc_2hsa__ext__image_8h_a64216765b98b62ee87deb50fd2899836}{HSA\+\_\+\+API}} hsa\+\_\+signal\+\_\+subtract\+\_\+scacquire (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{group__signals_ga0003af605a660e7ef4f89aa555d3b3fc}{hsa\+\_\+signal\+\_\+t}}}]{signal,  }\item[{\mbox{\hyperlink{group__signals_ga67ca2818879c9990e1b5f1b14ce7ed27}{hsa\+\_\+signal\+\_\+value\+\_\+t}}}]{value }\end{DoxyParamCaption})}
+
+
+
+Atomically decrement the value of a signal by a given amount. 
+
+If the value of the signal is changed, all the agents waiting on {\ttfamily signal} for which {\ttfamily value} satisfies their wait condition are awakened.
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em signal} & Signal. If {\ttfamily signal} is a queue doorbell signal, the behavior is undefined.\\
+\hline
+\mbox{\texttt{ in}}  & {\em value} & Value to subtract from the value of the signal. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{group__signals_ga7a96ceefb09ffb812d29b5fa86715b73}\label{group__signals_ga7a96ceefb09ffb812d29b5fa86715b73}} 
+\index{Signals@{Signals}!hsa\_signal\_subtract\_screlease@{hsa\_signal\_subtract\_screlease}}
+\index{hsa\_signal\_subtract\_screlease@{hsa\_signal\_subtract\_screlease}!Signals@{Signals}}
+\doxysubsubsection{\texorpdfstring{hsa\_signal\_subtract\_screlease()}{hsa\_signal\_subtract\_screlease()}}
+{\footnotesize\ttfamily void \mbox{\hyperlink{inc_2hsa__ext__image_8h_a64216765b98b62ee87deb50fd2899836}{HSA\+\_\+\+API}} hsa\+\_\+signal\+\_\+subtract\+\_\+screlease (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{group__signals_ga0003af605a660e7ef4f89aa555d3b3fc}{hsa\+\_\+signal\+\_\+t}}}]{signal,  }\item[{\mbox{\hyperlink{group__signals_ga67ca2818879c9990e1b5f1b14ce7ed27}{hsa\+\_\+signal\+\_\+value\+\_\+t}}}]{value }\end{DoxyParamCaption})}
+
+
+
+Atomically decrement the value of a signal by a given amount. 
+
+If the value of the signal is changed, all the agents waiting on {\ttfamily signal} for which {\ttfamily value} satisfies their wait condition are awakened.
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em signal} & Signal. If {\ttfamily signal} is a queue doorbell signal, the behavior is undefined.\\
+\hline
+\mbox{\texttt{ in}}  & {\em value} & Value to subtract from the value of the signal. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{group__signals_gad9ba765e0a90348aaafa92a488274ace}\label{group__signals_gad9ba765e0a90348aaafa92a488274ace}} 
+\index{Signals@{Signals}!hsa\_signal\_wait\_acquire@{hsa\_signal\_wait\_acquire}}
+\index{hsa\_signal\_wait\_acquire@{hsa\_signal\_wait\_acquire}!Signals@{Signals}}
+\doxysubsubsection{\texorpdfstring{hsa\_signal\_wait\_acquire()}{hsa\_signal\_wait\_acquire()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{group__signals_ga67ca2818879c9990e1b5f1b14ce7ed27}{hsa\+\_\+signal\+\_\+value\+\_\+t}} \mbox{\hyperlink{inc_2hsa__ext__image_8h_a64216765b98b62ee87deb50fd2899836}{HSA\+\_\+\+API}} \mbox{\hyperlink{inc_2hsa_8h_a2321f8ca7d706cada4f617b191a478b0}{HSA\+\_\+\+DEPRECATED}} hsa\+\_\+signal\+\_\+wait\+\_\+acquire (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{group__signals_ga0003af605a660e7ef4f89aa555d3b3fc}{hsa\+\_\+signal\+\_\+t}}}]{signal,  }\item[{\mbox{\hyperlink{group__signals_gab7190fcff48c6dbeded341389ed17c8d}{hsa\+\_\+signal\+\_\+condition\+\_\+t}}}]{condition,  }\item[{\mbox{\hyperlink{group__signals_ga67ca2818879c9990e1b5f1b14ce7ed27}{hsa\+\_\+signal\+\_\+value\+\_\+t}}}]{compare\+\_\+value,  }\item[{uint64\+\_\+t}]{timeout\+\_\+hint,  }\item[{\mbox{\hyperlink{group__signals_gac0d2ec14d7a58c6cccc259943a03c569}{hsa\+\_\+wait\+\_\+state\+\_\+t}}}]{wait\+\_\+state\+\_\+hint }\end{DoxyParamCaption})}
+
+
+
+Wait until a signal value satisfies a specified condition, or a certain amount of time has elapsed. 
+
+\begin{DoxyRefDesc}{Deprecated}
+\item[\mbox{\hyperlink{deprecated__deprecated000028}{Deprecated}}]Renamed as \mbox{\hyperlink{group__signals_gaae9521aad9ef69a1079fd71dfd8104cd}{hsa\+\_\+signal\+\_\+wait\+\_\+scacquire}}.\end{DoxyRefDesc}
+
+
+A wait operation can spuriously resume at any time sooner than the timeout (for example, due to system or other external factors) even when the condition has not been met.
+
+The function is guaranteed to return if the signal value satisfies the condition at some point in time during the wait, but the value returned to the application might not satisfy the condition. The application must ensure that signals are used in such way that wait wakeup conditions are not invalidated before dependent threads have woken up.
+
+When the wait operation internally loads the value of the passed signal, it uses the memory order indicated in the function name.
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em signal} & Signal.\\
+\hline
+\mbox{\texttt{ in}}  & {\em condition} & Condition used to compare the signal value with {\ttfamily compare\+\_\+value}.\\
+\hline
+\mbox{\texttt{ in}}  & {\em compare\+\_\+value} & Value to compare with.\\
+\hline
+\mbox{\texttt{ in}}  & {\em timeout\+\_\+hint} & Maximum duration of the wait. Specified in the same unit as the system timestamp. The operation might block for a shorter or longer time even if the condition is not met. A value of UINT64\+\_\+\+MAX indicates no maximum.\\
+\hline
+\mbox{\texttt{ in}}  & {\em wait\+\_\+state\+\_\+hint} & Hint used by the application to indicate the preferred waiting state. The actual waiting state is ultimately decided by HSA runtime and may not match the provided hint. A value of \mbox{\hyperlink{group__signals_ggac0d2ec14d7a58c6cccc259943a03c569ac34cddf41039dc646c21d05a91f1dce8}{HSA\+\_\+\+WAIT\+\_\+\+STATE\+\_\+\+ACTIVE}} may improve the latency of response to a signal update by avoiding rescheduling overhead.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Observed value of the signal, which might not satisfy the specified condition. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{group__signals_ga4afaad605c8a35ba7a7557698d740ca3}\label{group__signals_ga4afaad605c8a35ba7a7557698d740ca3}} 
+\index{Signals@{Signals}!hsa\_signal\_wait\_relaxed@{hsa\_signal\_wait\_relaxed}}
+\index{hsa\_signal\_wait\_relaxed@{hsa\_signal\_wait\_relaxed}!Signals@{Signals}}
+\doxysubsubsection{\texorpdfstring{hsa\_signal\_wait\_relaxed()}{hsa\_signal\_wait\_relaxed()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{group__signals_ga67ca2818879c9990e1b5f1b14ce7ed27}{hsa\+\_\+signal\+\_\+value\+\_\+t}} \mbox{\hyperlink{inc_2hsa__ext__image_8h_a64216765b98b62ee87deb50fd2899836}{HSA\+\_\+\+API}} hsa\+\_\+signal\+\_\+wait\+\_\+relaxed (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{group__signals_ga0003af605a660e7ef4f89aa555d3b3fc}{hsa\+\_\+signal\+\_\+t}}}]{signal,  }\item[{\mbox{\hyperlink{group__signals_gab7190fcff48c6dbeded341389ed17c8d}{hsa\+\_\+signal\+\_\+condition\+\_\+t}}}]{condition,  }\item[{\mbox{\hyperlink{group__signals_ga67ca2818879c9990e1b5f1b14ce7ed27}{hsa\+\_\+signal\+\_\+value\+\_\+t}}}]{compare\+\_\+value,  }\item[{uint64\+\_\+t}]{timeout\+\_\+hint,  }\item[{\mbox{\hyperlink{group__signals_gac0d2ec14d7a58c6cccc259943a03c569}{hsa\+\_\+wait\+\_\+state\+\_\+t}}}]{wait\+\_\+state\+\_\+hint }\end{DoxyParamCaption})}
+
+
+
+Wait until a signal value satisfies a specified condition, or a certain amount of time has elapsed. 
+
+A wait operation can spuriously resume at any time sooner than the timeout (for example, due to system or other external factors) even when the condition has not been met.
+
+The function is guaranteed to return if the signal value satisfies the condition at some point in time during the wait, but the value returned to the application might not satisfy the condition. The application must ensure that signals are used in such way that wait wakeup conditions are not invalidated before dependent threads have woken up.
+
+When the wait operation internally loads the value of the passed signal, it uses the memory order indicated in the function name.
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em signal} & Signal.\\
+\hline
+\mbox{\texttt{ in}}  & {\em condition} & Condition used to compare the signal value with {\ttfamily compare\+\_\+value}.\\
+\hline
+\mbox{\texttt{ in}}  & {\em compare\+\_\+value} & Value to compare with.\\
+\hline
+\mbox{\texttt{ in}}  & {\em timeout\+\_\+hint} & Maximum duration of the wait. Specified in the same unit as the system timestamp. The operation might block for a shorter or longer time even if the condition is not met. A value of UINT64\+\_\+\+MAX indicates no maximum.\\
+\hline
+\mbox{\texttt{ in}}  & {\em wait\+\_\+state\+\_\+hint} & Hint used by the application to indicate the preferred waiting state. The actual waiting state is ultimately decided by HSA runtime and may not match the provided hint. A value of \mbox{\hyperlink{group__signals_ggac0d2ec14d7a58c6cccc259943a03c569ac34cddf41039dc646c21d05a91f1dce8}{HSA\+\_\+\+WAIT\+\_\+\+STATE\+\_\+\+ACTIVE}} may improve the latency of response to a signal update by avoiding rescheduling overhead.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Observed value of the signal, which might not satisfy the specified condition. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{group__signals_gaae9521aad9ef69a1079fd71dfd8104cd}\label{group__signals_gaae9521aad9ef69a1079fd71dfd8104cd}} 
+\index{Signals@{Signals}!hsa\_signal\_wait\_scacquire@{hsa\_signal\_wait\_scacquire}}
+\index{hsa\_signal\_wait\_scacquire@{hsa\_signal\_wait\_scacquire}!Signals@{Signals}}
+\doxysubsubsection{\texorpdfstring{hsa\_signal\_wait\_scacquire()}{hsa\_signal\_wait\_scacquire()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{group__signals_ga67ca2818879c9990e1b5f1b14ce7ed27}{hsa\+\_\+signal\+\_\+value\+\_\+t}} \mbox{\hyperlink{inc_2hsa__ext__image_8h_a64216765b98b62ee87deb50fd2899836}{HSA\+\_\+\+API}} hsa\+\_\+signal\+\_\+wait\+\_\+scacquire (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{group__signals_ga0003af605a660e7ef4f89aa555d3b3fc}{hsa\+\_\+signal\+\_\+t}}}]{signal,  }\item[{\mbox{\hyperlink{group__signals_gab7190fcff48c6dbeded341389ed17c8d}{hsa\+\_\+signal\+\_\+condition\+\_\+t}}}]{condition,  }\item[{\mbox{\hyperlink{group__signals_ga67ca2818879c9990e1b5f1b14ce7ed27}{hsa\+\_\+signal\+\_\+value\+\_\+t}}}]{compare\+\_\+value,  }\item[{uint64\+\_\+t}]{timeout\+\_\+hint,  }\item[{\mbox{\hyperlink{group__signals_gac0d2ec14d7a58c6cccc259943a03c569}{hsa\+\_\+wait\+\_\+state\+\_\+t}}}]{wait\+\_\+state\+\_\+hint }\end{DoxyParamCaption})}
+
+
+
+Wait until a signal value satisfies a specified condition, or a certain amount of time has elapsed. 
+
+A wait operation can spuriously resume at any time sooner than the timeout (for example, due to system or other external factors) even when the condition has not been met.
+
+The function is guaranteed to return if the signal value satisfies the condition at some point in time during the wait, but the value returned to the application might not satisfy the condition. The application must ensure that signals are used in such way that wait wakeup conditions are not invalidated before dependent threads have woken up.
+
+When the wait operation internally loads the value of the passed signal, it uses the memory order indicated in the function name.
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em signal} & Signal.\\
+\hline
+\mbox{\texttt{ in}}  & {\em condition} & Condition used to compare the signal value with {\ttfamily compare\+\_\+value}.\\
+\hline
+\mbox{\texttt{ in}}  & {\em compare\+\_\+value} & Value to compare with.\\
+\hline
+\mbox{\texttt{ in}}  & {\em timeout\+\_\+hint} & Maximum duration of the wait. Specified in the same unit as the system timestamp. The operation might block for a shorter or longer time even if the condition is not met. A value of UINT64\+\_\+\+MAX indicates no maximum.\\
+\hline
+\mbox{\texttt{ in}}  & {\em wait\+\_\+state\+\_\+hint} & Hint used by the application to indicate the preferred waiting state. The actual waiting state is ultimately decided by HSA runtime and may not match the provided hint. A value of \mbox{\hyperlink{group__signals_ggac0d2ec14d7a58c6cccc259943a03c569ac34cddf41039dc646c21d05a91f1dce8}{HSA\+\_\+\+WAIT\+\_\+\+STATE\+\_\+\+ACTIVE}} may improve the latency of response to a signal update by avoiding rescheduling overhead.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Observed value of the signal, which might not satisfy the specified condition. 
+\end{DoxyReturn}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{group__signals_gaae9521aad9ef69a1079fd71dfd8104cd_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{group__signals_gafa94f82f2d1c4a871b56fbdb4cdd448f}\label{group__signals_gafa94f82f2d1c4a871b56fbdb4cdd448f}} 
+\index{Signals@{Signals}!hsa\_signal\_xor\_acq\_rel@{hsa\_signal\_xor\_acq\_rel}}
+\index{hsa\_signal\_xor\_acq\_rel@{hsa\_signal\_xor\_acq\_rel}!Signals@{Signals}}
+\doxysubsubsection{\texorpdfstring{hsa\_signal\_xor\_acq\_rel()}{hsa\_signal\_xor\_acq\_rel()}}
+{\footnotesize\ttfamily void \mbox{\hyperlink{inc_2hsa__ext__image_8h_a64216765b98b62ee87deb50fd2899836}{HSA\+\_\+\+API}} \mbox{\hyperlink{inc_2hsa_8h_a2321f8ca7d706cada4f617b191a478b0}{HSA\+\_\+\+DEPRECATED}} hsa\+\_\+signal\+\_\+xor\+\_\+acq\+\_\+rel (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{group__signals_ga0003af605a660e7ef4f89aa555d3b3fc}{hsa\+\_\+signal\+\_\+t}}}]{signal,  }\item[{\mbox{\hyperlink{group__signals_ga67ca2818879c9990e1b5f1b14ce7ed27}{hsa\+\_\+signal\+\_\+value\+\_\+t}}}]{value }\end{DoxyParamCaption})}
+
+
+
+Atomically perform a bitwise XOR operation between the value of a signal and a given value. 
+
+\begin{DoxyRefDesc}{Deprecated}
+\item[\mbox{\hyperlink{deprecated__deprecated000025}{Deprecated}}]Renamed as \mbox{\hyperlink{group__signals_ga011dc5fda6e71c5673475bb58c1a10bf}{hsa\+\_\+signal\+\_\+xor\+\_\+scacq\+\_\+screl}}.\end{DoxyRefDesc}
+
+
+If the value of the signal is changed, all the agents waiting on {\ttfamily signal} for which {\ttfamily value} satisfies their wait condition are awakened.
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em signal} & Signal. If {\ttfamily signal} is a queue doorbell signal, the behavior is undefined.\\
+\hline
+\mbox{\texttt{ in}}  & {\em value} & Value to XOR with the value of the signal. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{group__signals_gacaae60cc04d3f14357a2aba868401b96}\label{group__signals_gacaae60cc04d3f14357a2aba868401b96}} 
+\index{Signals@{Signals}!hsa\_signal\_xor\_acquire@{hsa\_signal\_xor\_acquire}}
+\index{hsa\_signal\_xor\_acquire@{hsa\_signal\_xor\_acquire}!Signals@{Signals}}
+\doxysubsubsection{\texorpdfstring{hsa\_signal\_xor\_acquire()}{hsa\_signal\_xor\_acquire()}}
+{\footnotesize\ttfamily void \mbox{\hyperlink{inc_2hsa__ext__image_8h_a64216765b98b62ee87deb50fd2899836}{HSA\+\_\+\+API}} \mbox{\hyperlink{inc_2hsa_8h_a2321f8ca7d706cada4f617b191a478b0}{HSA\+\_\+\+DEPRECATED}} hsa\+\_\+signal\+\_\+xor\+\_\+acquire (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{group__signals_ga0003af605a660e7ef4f89aa555d3b3fc}{hsa\+\_\+signal\+\_\+t}}}]{signal,  }\item[{\mbox{\hyperlink{group__signals_ga67ca2818879c9990e1b5f1b14ce7ed27}{hsa\+\_\+signal\+\_\+value\+\_\+t}}}]{value }\end{DoxyParamCaption})}
+
+
+
+Atomically perform a bitwise XOR operation between the value of a signal and a given value. 
+
+\begin{DoxyRefDesc}{Deprecated}
+\item[\mbox{\hyperlink{deprecated__deprecated000026}{Deprecated}}]Renamed as \mbox{\hyperlink{group__signals_ga1ef17d38dcd907c6717bedaa1f5eb2ab}{hsa\+\_\+signal\+\_\+xor\+\_\+scacquire}}.\end{DoxyRefDesc}
+
+
+If the value of the signal is changed, all the agents waiting on {\ttfamily signal} for which {\ttfamily value} satisfies their wait condition are awakened.
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em signal} & Signal. If {\ttfamily signal} is a queue doorbell signal, the behavior is undefined.\\
+\hline
+\mbox{\texttt{ in}}  & {\em value} & Value to XOR with the value of the signal. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{group__signals_ga87e389c478dc15864183bd0e9c6eb319}\label{group__signals_ga87e389c478dc15864183bd0e9c6eb319}} 
+\index{Signals@{Signals}!hsa\_signal\_xor\_relaxed@{hsa\_signal\_xor\_relaxed}}
+\index{hsa\_signal\_xor\_relaxed@{hsa\_signal\_xor\_relaxed}!Signals@{Signals}}
+\doxysubsubsection{\texorpdfstring{hsa\_signal\_xor\_relaxed()}{hsa\_signal\_xor\_relaxed()}}
+{\footnotesize\ttfamily void \mbox{\hyperlink{inc_2hsa__ext__image_8h_a64216765b98b62ee87deb50fd2899836}{HSA\+\_\+\+API}} hsa\+\_\+signal\+\_\+xor\+\_\+relaxed (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{group__signals_ga0003af605a660e7ef4f89aa555d3b3fc}{hsa\+\_\+signal\+\_\+t}}}]{signal,  }\item[{\mbox{\hyperlink{group__signals_ga67ca2818879c9990e1b5f1b14ce7ed27}{hsa\+\_\+signal\+\_\+value\+\_\+t}}}]{value }\end{DoxyParamCaption})}
+
+
+
+Atomically perform a bitwise XOR operation between the value of a signal and a given value. 
+
+If the value of the signal is changed, all the agents waiting on {\ttfamily signal} for which {\ttfamily value} satisfies their wait condition are awakened.
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em signal} & Signal. If {\ttfamily signal} is a queue doorbell signal, the behavior is undefined.\\
+\hline
+\mbox{\texttt{ in}}  & {\em value} & Value to XOR with the value of the signal. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{group__signals_gaa71856d357a9ee130e5ce09afeb10570}\label{group__signals_gaa71856d357a9ee130e5ce09afeb10570}} 
+\index{Signals@{Signals}!hsa\_signal\_xor\_release@{hsa\_signal\_xor\_release}}
+\index{hsa\_signal\_xor\_release@{hsa\_signal\_xor\_release}!Signals@{Signals}}
+\doxysubsubsection{\texorpdfstring{hsa\_signal\_xor\_release()}{hsa\_signal\_xor\_release()}}
+{\footnotesize\ttfamily void \mbox{\hyperlink{inc_2hsa__ext__image_8h_a64216765b98b62ee87deb50fd2899836}{HSA\+\_\+\+API}} \mbox{\hyperlink{inc_2hsa_8h_a2321f8ca7d706cada4f617b191a478b0}{HSA\+\_\+\+DEPRECATED}} hsa\+\_\+signal\+\_\+xor\+\_\+release (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{group__signals_ga0003af605a660e7ef4f89aa555d3b3fc}{hsa\+\_\+signal\+\_\+t}}}]{signal,  }\item[{\mbox{\hyperlink{group__signals_ga67ca2818879c9990e1b5f1b14ce7ed27}{hsa\+\_\+signal\+\_\+value\+\_\+t}}}]{value }\end{DoxyParamCaption})}
+
+
+
+Atomically perform a bitwise XOR operation between the value of a signal and a given value. 
+
+\begin{DoxyRefDesc}{Deprecated}
+\item[\mbox{\hyperlink{deprecated__deprecated000027}{Deprecated}}]Renamed as \mbox{\hyperlink{group__signals_ga67c2d2e84599282ec2e74bb7813668db}{hsa\+\_\+signal\+\_\+xor\+\_\+screlease}}.\end{DoxyRefDesc}
+
+
+If the value of the signal is changed, all the agents waiting on {\ttfamily signal} for which {\ttfamily value} satisfies their wait condition are awakened.
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em signal} & Signal. If {\ttfamily signal} is a queue doorbell signal, the behavior is undefined.\\
+\hline
+\mbox{\texttt{ in}}  & {\em value} & Value to XOR with the value of the signal. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{group__signals_ga011dc5fda6e71c5673475bb58c1a10bf}\label{group__signals_ga011dc5fda6e71c5673475bb58c1a10bf}} 
+\index{Signals@{Signals}!hsa\_signal\_xor\_scacq\_screl@{hsa\_signal\_xor\_scacq\_screl}}
+\index{hsa\_signal\_xor\_scacq\_screl@{hsa\_signal\_xor\_scacq\_screl}!Signals@{Signals}}
+\doxysubsubsection{\texorpdfstring{hsa\_signal\_xor\_scacq\_screl()}{hsa\_signal\_xor\_scacq\_screl()}}
+{\footnotesize\ttfamily void \mbox{\hyperlink{inc_2hsa__ext__image_8h_a64216765b98b62ee87deb50fd2899836}{HSA\+\_\+\+API}} hsa\+\_\+signal\+\_\+xor\+\_\+scacq\+\_\+screl (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{group__signals_ga0003af605a660e7ef4f89aa555d3b3fc}{hsa\+\_\+signal\+\_\+t}}}]{signal,  }\item[{\mbox{\hyperlink{group__signals_ga67ca2818879c9990e1b5f1b14ce7ed27}{hsa\+\_\+signal\+\_\+value\+\_\+t}}}]{value }\end{DoxyParamCaption})}
+
+
+
+Atomically perform a bitwise XOR operation between the value of a signal and a given value. 
+
+If the value of the signal is changed, all the agents waiting on {\ttfamily signal} for which {\ttfamily value} satisfies their wait condition are awakened.
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em signal} & Signal. If {\ttfamily signal} is a queue doorbell signal, the behavior is undefined.\\
+\hline
+\mbox{\texttt{ in}}  & {\em value} & Value to XOR with the value of the signal. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{group__signals_ga1ef17d38dcd907c6717bedaa1f5eb2ab}\label{group__signals_ga1ef17d38dcd907c6717bedaa1f5eb2ab}} 
+\index{Signals@{Signals}!hsa\_signal\_xor\_scacquire@{hsa\_signal\_xor\_scacquire}}
+\index{hsa\_signal\_xor\_scacquire@{hsa\_signal\_xor\_scacquire}!Signals@{Signals}}
+\doxysubsubsection{\texorpdfstring{hsa\_signal\_xor\_scacquire()}{hsa\_signal\_xor\_scacquire()}}
+{\footnotesize\ttfamily void \mbox{\hyperlink{inc_2hsa__ext__image_8h_a64216765b98b62ee87deb50fd2899836}{HSA\+\_\+\+API}} hsa\+\_\+signal\+\_\+xor\+\_\+scacquire (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{group__signals_ga0003af605a660e7ef4f89aa555d3b3fc}{hsa\+\_\+signal\+\_\+t}}}]{signal,  }\item[{\mbox{\hyperlink{group__signals_ga67ca2818879c9990e1b5f1b14ce7ed27}{hsa\+\_\+signal\+\_\+value\+\_\+t}}}]{value }\end{DoxyParamCaption})}
+
+
+
+Atomically perform a bitwise XOR operation between the value of a signal and a given value. 
+
+If the value of the signal is changed, all the agents waiting on {\ttfamily signal} for which {\ttfamily value} satisfies their wait condition are awakened.
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em signal} & Signal. If {\ttfamily signal} is a queue doorbell signal, the behavior is undefined.\\
+\hline
+\mbox{\texttt{ in}}  & {\em value} & Value to XOR with the value of the signal. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{group__signals_ga67c2d2e84599282ec2e74bb7813668db}\label{group__signals_ga67c2d2e84599282ec2e74bb7813668db}} 
+\index{Signals@{Signals}!hsa\_signal\_xor\_screlease@{hsa\_signal\_xor\_screlease}}
+\index{hsa\_signal\_xor\_screlease@{hsa\_signal\_xor\_screlease}!Signals@{Signals}}
+\doxysubsubsection{\texorpdfstring{hsa\_signal\_xor\_screlease()}{hsa\_signal\_xor\_screlease()}}
+{\footnotesize\ttfamily void \mbox{\hyperlink{inc_2hsa__ext__image_8h_a64216765b98b62ee87deb50fd2899836}{HSA\+\_\+\+API}} hsa\+\_\+signal\+\_\+xor\+\_\+screlease (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{group__signals_ga0003af605a660e7ef4f89aa555d3b3fc}{hsa\+\_\+signal\+\_\+t}}}]{signal,  }\item[{\mbox{\hyperlink{group__signals_ga67ca2818879c9990e1b5f1b14ce7ed27}{hsa\+\_\+signal\+\_\+value\+\_\+t}}}]{value }\end{DoxyParamCaption})}
+
+
+
+Atomically perform a bitwise XOR operation between the value of a signal and a given value. 
+
+If the value of the signal is changed, all the agents waiting on {\ttfamily signal} for which {\ttfamily value} satisfies their wait condition are awakened.
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em signal} & Signal. If {\ttfamily signal} is a queue doorbell signal, the behavior is undefined.\\
+\hline
+\mbox{\texttt{ in}}  & {\em value} & Value to XOR with the value of the signal. \\
+\hline
+\end{DoxyParams}

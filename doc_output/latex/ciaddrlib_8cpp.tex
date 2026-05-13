@@ -1,0 +1,45 @@
+\hypertarget{ciaddrlib_8cpp}{}\doxysection{src/image/addrlib/src/r800/ciaddrlib.cpp File Reference}
+\label{ciaddrlib_8cpp}\index{src/image/addrlib/src/r800/ciaddrlib.cpp@{src/image/addrlib/src/r800/ciaddrlib.cpp}}
+
+
+Contains the implementation for the Ci\+Lib class.  
+
+
+{\ttfamily \#include \char`\"{}ciaddrlib.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}si\+\_\+gb\+\_\+reg.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}amdgpu\+\_\+asic\+\_\+addr.\+h\char`\"{}}\newline
+Include dependency graph for ciaddrlib.\+cpp\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=550pt]{ciaddrlib_8cpp__incl}
+\end{center}
+\end{figure}
+\doxysubsection*{Namespaces}
+\begin{DoxyCompactItemize}
+\item 
+ \mbox{\hyperlink{namespacerocr}{rocr}}
+\item 
+ \mbox{\hyperlink{namespacerocr_1_1Addr}{rocr\+::\+Addr}}
+\item 
+ \mbox{\hyperlink{namespacerocr_1_1Addr_1_1V1}{rocr\+::\+Addr\+::\+V1}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+Lib $\ast$ \mbox{\hyperlink{namespacerocr_1_1Addr_a2a97e48ccda595dc514506c65a050685}{rocr\+::\+Addr\+::\+Ci\+Hwl\+Init}} (const Client $\ast$p\+Client)
+\begin{DoxyCompactList}\small\item\em Creates an Ci\+Lib object. \end{DoxyCompactList}\item 
+static \mbox{\hyperlink{addrtypes_8h_ac4116bb9a5e80b5cb845d4f2674c160f}{UINT\+\_\+64}} \mbox{\hyperlink{namespacerocr_1_1Addr_1_1V1_a0cf52b12c28a353efc8dd081dff7a6e2}{rocr\+::\+Addr\+::\+V1\+::\+Mask}} (\mbox{\hyperlink{addrtypes_8h_af5a2be58a28390f9a494538f34054637}{UINT\+\_\+32}} width)
+\begin{DoxyCompactList}\small\item\em Gets a mask of \char`\"{}width\char`\"{}. \end{DoxyCompactList}\item 
+static \mbox{\hyperlink{addrtypes_8h_ac4116bb9a5e80b5cb845d4f2674c160f}{UINT\+\_\+64}} \mbox{\hyperlink{namespacerocr_1_1Addr_1_1V1_afaf132162166dd215505094e759f80c8}{rocr\+::\+Addr\+::\+V1\+::\+Get\+Bits}} (\mbox{\hyperlink{addrtypes_8h_ac4116bb9a5e80b5cb845d4f2674c160f}{UINT\+\_\+64}} bits, \mbox{\hyperlink{addrtypes_8h_af5a2be58a28390f9a494538f34054637}{UINT\+\_\+32}} msb, \mbox{\hyperlink{addrtypes_8h_af5a2be58a28390f9a494538f34054637}{UINT\+\_\+32}} lsb)
+\begin{DoxyCompactList}\small\item\em Gets bits within a range of \mbox{[}msb, lsb\mbox{]}. \end{DoxyCompactList}\item 
+static \mbox{\hyperlink{addrtypes_8h_ac4116bb9a5e80b5cb845d4f2674c160f}{UINT\+\_\+64}} \mbox{\hyperlink{namespacerocr_1_1Addr_1_1V1_add531c508481a583d25f3d946d0a8008}{rocr\+::\+Addr\+::\+V1\+::\+Remove\+Bits}} (\mbox{\hyperlink{addrtypes_8h_ac4116bb9a5e80b5cb845d4f2674c160f}{UINT\+\_\+64}} bits, \mbox{\hyperlink{addrtypes_8h_af5a2be58a28390f9a494538f34054637}{UINT\+\_\+32}} msb, \mbox{\hyperlink{addrtypes_8h_af5a2be58a28390f9a494538f34054637}{UINT\+\_\+32}} lsb)
+\begin{DoxyCompactList}\small\item\em Removes bits within the range of \mbox{[}msb, lsb\mbox{]}. \end{DoxyCompactList}\item 
+static \mbox{\hyperlink{addrtypes_8h_ac4116bb9a5e80b5cb845d4f2674c160f}{UINT\+\_\+64}} \mbox{\hyperlink{namespacerocr_1_1Addr_1_1V1_ae1cdc75282281b45c78ca03e5afc61a3}{rocr\+::\+Addr\+::\+V1\+::\+Insert\+Bits}} (\mbox{\hyperlink{addrtypes_8h_ac4116bb9a5e80b5cb845d4f2674c160f}{UINT\+\_\+64}} bits, \mbox{\hyperlink{addrtypes_8h_ac4116bb9a5e80b5cb845d4f2674c160f}{UINT\+\_\+64}} new\+Bits, \mbox{\hyperlink{addrtypes_8h_af5a2be58a28390f9a494538f34054637}{UINT\+\_\+32}} msb, \mbox{\hyperlink{addrtypes_8h_af5a2be58a28390f9a494538f34054637}{UINT\+\_\+32}} lsb)
+\begin{DoxyCompactList}\small\item\em Inserts new bits into the range of \mbox{[}msb, lsb\mbox{]}. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Contains the implementation for the Ci\+Lib class. 
+

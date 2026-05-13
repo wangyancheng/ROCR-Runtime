@@ -1,0 +1,202 @@
+\hypertarget{classrocr_1_1amd_1_1hsa_1_1loader_1_1SymbolImpl}{}\doxysection{rocr\+::amd\+::hsa\+::loader\+::Symbol\+Impl Class Reference}
+\label{classrocr_1_1amd_1_1hsa_1_1loader_1_1SymbolImpl}\index{rocr::amd::hsa::loader::SymbolImpl@{rocr::amd::hsa::loader::SymbolImpl}}
+
+
+{\ttfamily \#include $<$executable.\+hpp$>$}
+
+
+
+Inheritance diagram for rocr\+::amd\+::hsa\+::loader\+::Symbol\+Impl\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=322pt]{classrocr_1_1amd_1_1hsa_1_1loader_1_1SymbolImpl__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for rocr\+::amd\+::hsa\+::loader\+::Symbol\+Impl\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=282pt]{classrocr_1_1amd_1_1hsa_1_1loader_1_1SymbolImpl__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+virtual \mbox{\hyperlink{classrocr_1_1amd_1_1hsa_1_1loader_1_1SymbolImpl_a9e52088a3d2f02be666b9184b61af5f5}{$\sim$\+Symbol\+Impl}} ()
+\item 
+bool \mbox{\hyperlink{classrocr_1_1amd_1_1hsa_1_1loader_1_1SymbolImpl_a5d14f886fa6f6cfb50da26fc87163f77}{Is\+Kernel}} () const
+\item 
+bool \mbox{\hyperlink{classrocr_1_1amd_1_1hsa_1_1loader_1_1SymbolImpl_a347870d4f1551aabb173b702fe4cc846}{Is\+Variable}} () const
+\item 
+\mbox{\hyperlink{group__agentinfo_ga9ce217ef08e7d5e89c8e83ce7b6ef22b}{hsa\+\_\+agent\+\_\+t}} \mbox{\hyperlink{classrocr_1_1amd_1_1hsa_1_1loader_1_1SymbolImpl_a824ac8951434bd646398b1b54ccd79c5}{Get\+Agent}} () override
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+bool \mbox{\hyperlink{classrocr_1_1amd_1_1hsa_1_1loader_1_1SymbolImpl_ab7f33645a171ad7224152b6626009732}{is\+\_\+loaded}}
+\item 
+\mbox{\hyperlink{group__executable_ga530ca6dcd35807946cd1dfb8202ff4be}{hsa\+\_\+symbol\+\_\+kind\+\_\+t}} \mbox{\hyperlink{classrocr_1_1amd_1_1hsa_1_1loader_1_1SymbolImpl_ae1d2eb105727d06edc58292b9fd36d65}{kind}}
+\item 
+std\+::string \mbox{\hyperlink{classrocr_1_1amd_1_1hsa_1_1loader_1_1SymbolImpl_a4049a5b7b4614cc0e38647800a6202b5}{module\+\_\+name}}
+\item 
+std\+::string \mbox{\hyperlink{classrocr_1_1amd_1_1hsa_1_1loader_1_1SymbolImpl_a15276c2d4cc02db60ad8d70f16e7d22d}{symbol\+\_\+name}}
+\item 
+\mbox{\hyperlink{group__executable_gaf2aba3b2a8dc8fe4faa91635520ca25c}{hsa\+\_\+symbol\+\_\+linkage\+\_\+t}} \mbox{\hyperlink{classrocr_1_1amd_1_1hsa_1_1loader_1_1SymbolImpl_ab40655c173ce1cedd84b63f7ca9634f8}{linkage}}
+\item 
+bool \mbox{\hyperlink{classrocr_1_1amd_1_1hsa_1_1loader_1_1SymbolImpl_a0ae0724d4415141b4653ae71b35a60fb}{is\+\_\+definition}}
+\item 
+uint64\+\_\+t \mbox{\hyperlink{classrocr_1_1amd_1_1hsa_1_1loader_1_1SymbolImpl_aaca3626cf3ddb3ea28af3e39f90ea2e7}{address}}
+\item 
+\mbox{\hyperlink{group__agentinfo_ga9ce217ef08e7d5e89c8e83ce7b6ef22b}{hsa\+\_\+agent\+\_\+t}} \mbox{\hyperlink{classrocr_1_1amd_1_1hsa_1_1loader_1_1SymbolImpl_a8a9862e1fdc782f44e1f1c49511e9afc}{agent}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classrocr_1_1amd_1_1hsa_1_1loader_1_1SymbolImpl_a366304792b159b70ef8c2ae7b495e9bd}{Symbol\+Impl}} (const bool \&\+\_\+is\+\_\+loaded, const \mbox{\hyperlink{group__executable_ga530ca6dcd35807946cd1dfb8202ff4be}{hsa\+\_\+symbol\+\_\+kind\+\_\+t}} \&\+\_\+kind, const std\+::string \&\+\_\+module\+\_\+name, const std\+::string \&\+\_\+symbol\+\_\+name, const \mbox{\hyperlink{group__executable_gaf2aba3b2a8dc8fe4faa91635520ca25c}{hsa\+\_\+symbol\+\_\+linkage\+\_\+t}} \&\+\_\+linkage, const bool \&\+\_\+is\+\_\+definition, const uint64\+\_\+t \&\+\_\+address=0)
+\item 
+virtual bool \mbox{\hyperlink{classrocr_1_1amd_1_1hsa_1_1loader_1_1SymbolImpl_a4718235bbe093bf81cfeab1e17246427}{Get\+Info}} (\mbox{\hyperlink{amd__hsa__loader_8hpp_a18a41c944d447cda03a02f29bca53ffd}{hsa\+\_\+symbol\+\_\+info32\+\_\+t}} symbol\+\_\+info, void $\ast$value) override
+\end{DoxyCompactItemize}
+\doxysubsection*{Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classrocr_1_1amd_1_1hsa_1_1loader_1_1SymbolImpl_a21829e1f134ec50366b4922a64241b95}{Symbol\+Impl}} (const \mbox{\hyperlink{classrocr_1_1amd_1_1hsa_1_1loader_1_1SymbolImpl}{Symbol\+Impl}} \&s)
+\item 
+\mbox{\hyperlink{classrocr_1_1amd_1_1hsa_1_1loader_1_1SymbolImpl}{Symbol\+Impl}} \& \mbox{\hyperlink{classrocr_1_1amd_1_1hsa_1_1loader_1_1SymbolImpl_ae67dd4ee243b1e05ce70843b5fe1d9a3}{operator=}} (const \mbox{\hyperlink{classrocr_1_1amd_1_1hsa_1_1loader_1_1SymbolImpl}{Symbol\+Impl}} \&s)
+\end{DoxyCompactItemize}
+\doxysubsection*{Additional Inherited Members}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classrocr_1_1amd_1_1hsa_1_1loader_1_1SymbolImpl_a9e52088a3d2f02be666b9184b61af5f5}\label{classrocr_1_1amd_1_1hsa_1_1loader_1_1SymbolImpl_a9e52088a3d2f02be666b9184b61af5f5}} 
+\index{rocr::amd::hsa::loader::SymbolImpl@{rocr::amd::hsa::loader::SymbolImpl}!````~SymbolImpl@{$\sim$SymbolImpl}}
+\index{````~SymbolImpl@{$\sim$SymbolImpl}!rocr::amd::hsa::loader::SymbolImpl@{rocr::amd::hsa::loader::SymbolImpl}}
+\doxysubsubsection{\texorpdfstring{$\sim$SymbolImpl()}{~SymbolImpl()}}
+{\footnotesize\ttfamily virtual rocr\+::amd\+::hsa\+::loader\+::\+Symbol\+Impl\+::$\sim$\+Symbol\+Impl (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+\mbox{\Hypertarget{classrocr_1_1amd_1_1hsa_1_1loader_1_1SymbolImpl_a366304792b159b70ef8c2ae7b495e9bd}\label{classrocr_1_1amd_1_1hsa_1_1loader_1_1SymbolImpl_a366304792b159b70ef8c2ae7b495e9bd}} 
+\index{rocr::amd::hsa::loader::SymbolImpl@{rocr::amd::hsa::loader::SymbolImpl}!SymbolImpl@{SymbolImpl}}
+\index{SymbolImpl@{SymbolImpl}!rocr::amd::hsa::loader::SymbolImpl@{rocr::amd::hsa::loader::SymbolImpl}}
+\doxysubsubsection{\texorpdfstring{SymbolImpl()}{SymbolImpl()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily rocr\+::amd\+::hsa\+::loader\+::\+Symbol\+Impl\+::\+Symbol\+Impl (\begin{DoxyParamCaption}\item[{const bool \&}]{\+\_\+is\+\_\+loaded,  }\item[{const \mbox{\hyperlink{group__executable_ga530ca6dcd35807946cd1dfb8202ff4be}{hsa\+\_\+symbol\+\_\+kind\+\_\+t}} \&}]{\+\_\+kind,  }\item[{const std\+::string \&}]{\+\_\+module\+\_\+name,  }\item[{const std\+::string \&}]{\+\_\+symbol\+\_\+name,  }\item[{const \mbox{\hyperlink{group__executable_gaf2aba3b2a8dc8fe4faa91635520ca25c}{hsa\+\_\+symbol\+\_\+linkage\+\_\+t}} \&}]{\+\_\+linkage,  }\item[{const bool \&}]{\+\_\+is\+\_\+definition,  }\item[{const uint64\+\_\+t \&}]{\+\_\+address = {\ttfamily 0} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [protected]}}
+
+\mbox{\Hypertarget{classrocr_1_1amd_1_1hsa_1_1loader_1_1SymbolImpl_a21829e1f134ec50366b4922a64241b95}\label{classrocr_1_1amd_1_1hsa_1_1loader_1_1SymbolImpl_a21829e1f134ec50366b4922a64241b95}} 
+\index{rocr::amd::hsa::loader::SymbolImpl@{rocr::amd::hsa::loader::SymbolImpl}!SymbolImpl@{SymbolImpl}}
+\index{SymbolImpl@{SymbolImpl}!rocr::amd::hsa::loader::SymbolImpl@{rocr::amd::hsa::loader::SymbolImpl}}
+\doxysubsubsection{\texorpdfstring{SymbolImpl()}{SymbolImpl()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily rocr\+::amd\+::hsa\+::loader\+::\+Symbol\+Impl\+::\+Symbol\+Impl (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classrocr_1_1amd_1_1hsa_1_1loader_1_1SymbolImpl}{Symbol\+Impl}} \&}]{s }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classrocr_1_1amd_1_1hsa_1_1loader_1_1SymbolImpl_a824ac8951434bd646398b1b54ccd79c5}\label{classrocr_1_1amd_1_1hsa_1_1loader_1_1SymbolImpl_a824ac8951434bd646398b1b54ccd79c5}} 
+\index{rocr::amd::hsa::loader::SymbolImpl@{rocr::amd::hsa::loader::SymbolImpl}!GetAgent@{GetAgent}}
+\index{GetAgent@{GetAgent}!rocr::amd::hsa::loader::SymbolImpl@{rocr::amd::hsa::loader::SymbolImpl}}
+\doxysubsubsection{\texorpdfstring{GetAgent()}{GetAgent()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{group__agentinfo_ga9ce217ef08e7d5e89c8e83ce7b6ef22b}{hsa\+\_\+agent\+\_\+t}} rocr\+::amd\+::hsa\+::loader\+::\+Symbol\+Impl\+::\+Get\+Agent (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Implements \mbox{\hyperlink{classrocr_1_1amd_1_1hsa_1_1loader_1_1Symbol_a9f58fcff73561a30a85e44d99cc9e71b}{rocr\+::amd\+::hsa\+::loader\+::\+Symbol}}.
+
+\mbox{\Hypertarget{classrocr_1_1amd_1_1hsa_1_1loader_1_1SymbolImpl_a4718235bbe093bf81cfeab1e17246427}\label{classrocr_1_1amd_1_1hsa_1_1loader_1_1SymbolImpl_a4718235bbe093bf81cfeab1e17246427}} 
+\index{rocr::amd::hsa::loader::SymbolImpl@{rocr::amd::hsa::loader::SymbolImpl}!GetInfo@{GetInfo}}
+\index{GetInfo@{GetInfo}!rocr::amd::hsa::loader::SymbolImpl@{rocr::amd::hsa::loader::SymbolImpl}}
+\doxysubsubsection{\texorpdfstring{GetInfo()}{GetInfo()}}
+{\footnotesize\ttfamily bool rocr\+::amd\+::hsa\+::loader\+::\+Symbol\+Impl\+::\+Get\+Info (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{amd__hsa__loader_8hpp_a18a41c944d447cda03a02f29bca53ffd}{hsa\+\_\+symbol\+\_\+info32\+\_\+t}}}]{symbol\+\_\+info,  }\item[{void $\ast$}]{value }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [protected]}, {\ttfamily [virtual]}}
+
+
+
+Implements \mbox{\hyperlink{classrocr_1_1amd_1_1hsa_1_1loader_1_1Symbol_a6fa530d41cc9e5f3e693174bb93c4fe9}{rocr\+::amd\+::hsa\+::loader\+::\+Symbol}}.
+
+
+
+Reimplemented in \mbox{\hyperlink{classrocr_1_1amd_1_1hsa_1_1loader_1_1VariableSymbol_af59f17502af8339ab1054a394e20b2e6}{rocr\+::amd\+::hsa\+::loader\+::\+Variable\+Symbol}}, and \mbox{\hyperlink{classrocr_1_1amd_1_1hsa_1_1loader_1_1KernelSymbol_ae4bb0b3ceea7471eb047798f245da76c}{rocr\+::amd\+::hsa\+::loader\+::\+Kernel\+Symbol}}.
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classrocr_1_1amd_1_1hsa_1_1loader_1_1SymbolImpl_a4718235bbe093bf81cfeab1e17246427_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classrocr_1_1amd_1_1hsa_1_1loader_1_1SymbolImpl_a5d14f886fa6f6cfb50da26fc87163f77}\label{classrocr_1_1amd_1_1hsa_1_1loader_1_1SymbolImpl_a5d14f886fa6f6cfb50da26fc87163f77}} 
+\index{rocr::amd::hsa::loader::SymbolImpl@{rocr::amd::hsa::loader::SymbolImpl}!IsKernel@{IsKernel}}
+\index{IsKernel@{IsKernel}!rocr::amd::hsa::loader::SymbolImpl@{rocr::amd::hsa::loader::SymbolImpl}}
+\doxysubsubsection{\texorpdfstring{IsKernel()}{IsKernel()}}
+{\footnotesize\ttfamily bool rocr\+::amd\+::hsa\+::loader\+::\+Symbol\+Impl\+::\+Is\+Kernel (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{classrocr_1_1amd_1_1hsa_1_1loader_1_1SymbolImpl_a347870d4f1551aabb173b702fe4cc846}\label{classrocr_1_1amd_1_1hsa_1_1loader_1_1SymbolImpl_a347870d4f1551aabb173b702fe4cc846}} 
+\index{rocr::amd::hsa::loader::SymbolImpl@{rocr::amd::hsa::loader::SymbolImpl}!IsVariable@{IsVariable}}
+\index{IsVariable@{IsVariable}!rocr::amd::hsa::loader::SymbolImpl@{rocr::amd::hsa::loader::SymbolImpl}}
+\doxysubsubsection{\texorpdfstring{IsVariable()}{IsVariable()}}
+{\footnotesize\ttfamily bool rocr\+::amd\+::hsa\+::loader\+::\+Symbol\+Impl\+::\+Is\+Variable (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{classrocr_1_1amd_1_1hsa_1_1loader_1_1SymbolImpl_ae67dd4ee243b1e05ce70843b5fe1d9a3}\label{classrocr_1_1amd_1_1hsa_1_1loader_1_1SymbolImpl_ae67dd4ee243b1e05ce70843b5fe1d9a3}} 
+\index{rocr::amd::hsa::loader::SymbolImpl@{rocr::amd::hsa::loader::SymbolImpl}!operator=@{operator=}}
+\index{operator=@{operator=}!rocr::amd::hsa::loader::SymbolImpl@{rocr::amd::hsa::loader::SymbolImpl}}
+\doxysubsubsection{\texorpdfstring{operator=()}{operator=()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classrocr_1_1amd_1_1hsa_1_1loader_1_1SymbolImpl}{Symbol\+Impl}}\& rocr\+::amd\+::hsa\+::loader\+::\+Symbol\+Impl\+::operator= (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classrocr_1_1amd_1_1hsa_1_1loader_1_1SymbolImpl}{Symbol\+Impl}} \&}]{s }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{classrocr_1_1amd_1_1hsa_1_1loader_1_1SymbolImpl_aaca3626cf3ddb3ea28af3e39f90ea2e7}\label{classrocr_1_1amd_1_1hsa_1_1loader_1_1SymbolImpl_aaca3626cf3ddb3ea28af3e39f90ea2e7}} 
+\index{rocr::amd::hsa::loader::SymbolImpl@{rocr::amd::hsa::loader::SymbolImpl}!address@{address}}
+\index{address@{address}!rocr::amd::hsa::loader::SymbolImpl@{rocr::amd::hsa::loader::SymbolImpl}}
+\doxysubsubsection{\texorpdfstring{address}{address}}
+{\footnotesize\ttfamily uint64\+\_\+t rocr\+::amd\+::hsa\+::loader\+::\+Symbol\+Impl\+::address}
+
+\mbox{\Hypertarget{classrocr_1_1amd_1_1hsa_1_1loader_1_1SymbolImpl_a8a9862e1fdc782f44e1f1c49511e9afc}\label{classrocr_1_1amd_1_1hsa_1_1loader_1_1SymbolImpl_a8a9862e1fdc782f44e1f1c49511e9afc}} 
+\index{rocr::amd::hsa::loader::SymbolImpl@{rocr::amd::hsa::loader::SymbolImpl}!agent@{agent}}
+\index{agent@{agent}!rocr::amd::hsa::loader::SymbolImpl@{rocr::amd::hsa::loader::SymbolImpl}}
+\doxysubsubsection{\texorpdfstring{agent}{agent}}
+{\footnotesize\ttfamily \mbox{\hyperlink{group__agentinfo_ga9ce217ef08e7d5e89c8e83ce7b6ef22b}{hsa\+\_\+agent\+\_\+t}} rocr\+::amd\+::hsa\+::loader\+::\+Symbol\+Impl\+::agent}
+
+\mbox{\Hypertarget{classrocr_1_1amd_1_1hsa_1_1loader_1_1SymbolImpl_a0ae0724d4415141b4653ae71b35a60fb}\label{classrocr_1_1amd_1_1hsa_1_1loader_1_1SymbolImpl_a0ae0724d4415141b4653ae71b35a60fb}} 
+\index{rocr::amd::hsa::loader::SymbolImpl@{rocr::amd::hsa::loader::SymbolImpl}!is\_definition@{is\_definition}}
+\index{is\_definition@{is\_definition}!rocr::amd::hsa::loader::SymbolImpl@{rocr::amd::hsa::loader::SymbolImpl}}
+\doxysubsubsection{\texorpdfstring{is\_definition}{is\_definition}}
+{\footnotesize\ttfamily bool rocr\+::amd\+::hsa\+::loader\+::\+Symbol\+Impl\+::is\+\_\+definition}
+
+\mbox{\Hypertarget{classrocr_1_1amd_1_1hsa_1_1loader_1_1SymbolImpl_ab7f33645a171ad7224152b6626009732}\label{classrocr_1_1amd_1_1hsa_1_1loader_1_1SymbolImpl_ab7f33645a171ad7224152b6626009732}} 
+\index{rocr::amd::hsa::loader::SymbolImpl@{rocr::amd::hsa::loader::SymbolImpl}!is\_loaded@{is\_loaded}}
+\index{is\_loaded@{is\_loaded}!rocr::amd::hsa::loader::SymbolImpl@{rocr::amd::hsa::loader::SymbolImpl}}
+\doxysubsubsection{\texorpdfstring{is\_loaded}{is\_loaded}}
+{\footnotesize\ttfamily bool rocr\+::amd\+::hsa\+::loader\+::\+Symbol\+Impl\+::is\+\_\+loaded}
+
+\mbox{\Hypertarget{classrocr_1_1amd_1_1hsa_1_1loader_1_1SymbolImpl_ae1d2eb105727d06edc58292b9fd36d65}\label{classrocr_1_1amd_1_1hsa_1_1loader_1_1SymbolImpl_ae1d2eb105727d06edc58292b9fd36d65}} 
+\index{rocr::amd::hsa::loader::SymbolImpl@{rocr::amd::hsa::loader::SymbolImpl}!kind@{kind}}
+\index{kind@{kind}!rocr::amd::hsa::loader::SymbolImpl@{rocr::amd::hsa::loader::SymbolImpl}}
+\doxysubsubsection{\texorpdfstring{kind}{kind}}
+{\footnotesize\ttfamily \mbox{\hyperlink{group__executable_ga530ca6dcd35807946cd1dfb8202ff4be}{hsa\+\_\+symbol\+\_\+kind\+\_\+t}} rocr\+::amd\+::hsa\+::loader\+::\+Symbol\+Impl\+::kind}
+
+\mbox{\Hypertarget{classrocr_1_1amd_1_1hsa_1_1loader_1_1SymbolImpl_ab40655c173ce1cedd84b63f7ca9634f8}\label{classrocr_1_1amd_1_1hsa_1_1loader_1_1SymbolImpl_ab40655c173ce1cedd84b63f7ca9634f8}} 
+\index{rocr::amd::hsa::loader::SymbolImpl@{rocr::amd::hsa::loader::SymbolImpl}!linkage@{linkage}}
+\index{linkage@{linkage}!rocr::amd::hsa::loader::SymbolImpl@{rocr::amd::hsa::loader::SymbolImpl}}
+\doxysubsubsection{\texorpdfstring{linkage}{linkage}}
+{\footnotesize\ttfamily \mbox{\hyperlink{group__executable_gaf2aba3b2a8dc8fe4faa91635520ca25c}{hsa\+\_\+symbol\+\_\+linkage\+\_\+t}} rocr\+::amd\+::hsa\+::loader\+::\+Symbol\+Impl\+::linkage}
+
+\mbox{\Hypertarget{classrocr_1_1amd_1_1hsa_1_1loader_1_1SymbolImpl_a4049a5b7b4614cc0e38647800a6202b5}\label{classrocr_1_1amd_1_1hsa_1_1loader_1_1SymbolImpl_a4049a5b7b4614cc0e38647800a6202b5}} 
+\index{rocr::amd::hsa::loader::SymbolImpl@{rocr::amd::hsa::loader::SymbolImpl}!module\_name@{module\_name}}
+\index{module\_name@{module\_name}!rocr::amd::hsa::loader::SymbolImpl@{rocr::amd::hsa::loader::SymbolImpl}}
+\doxysubsubsection{\texorpdfstring{module\_name}{module\_name}}
+{\footnotesize\ttfamily std\+::string rocr\+::amd\+::hsa\+::loader\+::\+Symbol\+Impl\+::module\+\_\+name}
+
+\mbox{\Hypertarget{classrocr_1_1amd_1_1hsa_1_1loader_1_1SymbolImpl_a15276c2d4cc02db60ad8d70f16e7d22d}\label{classrocr_1_1amd_1_1hsa_1_1loader_1_1SymbolImpl_a15276c2d4cc02db60ad8d70f16e7d22d}} 
+\index{rocr::amd::hsa::loader::SymbolImpl@{rocr::amd::hsa::loader::SymbolImpl}!symbol\_name@{symbol\_name}}
+\index{symbol\_name@{symbol\_name}!rocr::amd::hsa::loader::SymbolImpl@{rocr::amd::hsa::loader::SymbolImpl}}
+\doxysubsubsection{\texorpdfstring{symbol\_name}{symbol\_name}}
+{\footnotesize\ttfamily std\+::string rocr\+::amd\+::hsa\+::loader\+::\+Symbol\+Impl\+::symbol\+\_\+name}
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+src/loader/\mbox{\hyperlink{executable_8hpp}{executable.\+hpp}}\item 
+src/loader/\mbox{\hyperlink{executable_8cpp}{executable.\+cpp}}\end{DoxyCompactItemize}

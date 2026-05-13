@@ -1,0 +1,379 @@
+\hypertarget{classrocr_1_1amd_1_1elf_1_1GElfSymbol}{}\doxysection{rocr\+::amd\+::elf\+::GElf\+Symbol Class Reference}
+\label{classrocr_1_1amd_1_1elf_1_1GElfSymbol}\index{rocr::amd::elf::GElfSymbol@{rocr::amd::elf::GElfSymbol}}
+
+
+Inheritance diagram for rocr\+::amd\+::elf\+::GElf\+Symbol\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=213pt]{classrocr_1_1amd_1_1elf_1_1GElfSymbol__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for rocr\+::amd\+::elf\+::GElf\+Symbol\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classrocr_1_1amd_1_1elf_1_1GElfSymbol__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classrocr_1_1amd_1_1elf_1_1GElfSymbol_a30ce81acc2b5a0ac2183d59e42b31c3e}{GElf\+Symbol}} (\mbox{\hyperlink{classrocr_1_1amd_1_1elf_1_1GElfSymbolTable}{GElf\+Symbol\+Table}} $\ast$\mbox{\hyperlink{classrocr_1_1amd_1_1elf_1_1GElfSymbol_a1feea49e83f5b0c8396167452e1c4145}{symtab}}, \mbox{\hyperlink{classrocr_1_1amd_1_1elf_1_1Buffer}{Buffer}} \&data, size\+\_\+t \mbox{\hyperlink{classrocr_1_1amd_1_1elf_1_1GElfSymbol_a58ed30818d2aa785482692ea9cbc0a2e}{index}})
+\item 
+bool \mbox{\hyperlink{classrocr_1_1amd_1_1elf_1_1GElfSymbol_a2ae8505cd6469e787a245a8a3ae9cadf}{push}} (const std\+::string \&\mbox{\hyperlink{classrocr_1_1amd_1_1elf_1_1GElfSymbol_a2340576fb5ad23a17dc10efd1c593c07}{name}}, uint64\+\_\+t \mbox{\hyperlink{classrocr_1_1amd_1_1elf_1_1GElfSymbol_a07f527a9b6c9392879c466e8af870c88}{value}}, uint64\+\_\+t \mbox{\hyperlink{classrocr_1_1amd_1_1elf_1_1GElfSymbol_af4b79f34320e7119dc87adf39afae720}{size}}, unsigned char \mbox{\hyperlink{classrocr_1_1amd_1_1elf_1_1GElfSymbol_a59e40b9f2ac76dedb142a258897422a9}{type}}, unsigned char \mbox{\hyperlink{classrocr_1_1amd_1_1elf_1_1GElfSymbol_a10cb4577d883b53b0416b8767166c33c}{binding}}, uint16\+\_\+t shndx, unsigned char \mbox{\hyperlink{classrocr_1_1amd_1_1elf_1_1GElfSymbol_a0c6ba939cc5a15288a2aa49a9a5592e4}{other}})
+\item 
+uint32\+\_\+t \mbox{\hyperlink{classrocr_1_1amd_1_1elf_1_1GElfSymbol_a58ed30818d2aa785482692ea9cbc0a2e}{index}} () override
+\item 
+uint32\+\_\+t \mbox{\hyperlink{classrocr_1_1amd_1_1elf_1_1GElfSymbol_a59e40b9f2ac76dedb142a258897422a9}{type}} () override
+\item 
+uint32\+\_\+t \mbox{\hyperlink{classrocr_1_1amd_1_1elf_1_1GElfSymbol_a10cb4577d883b53b0416b8767166c33c}{binding}} () override
+\item 
+uint64\+\_\+t \mbox{\hyperlink{classrocr_1_1amd_1_1elf_1_1GElfSymbol_af4b79f34320e7119dc87adf39afae720}{size}} () override
+\item 
+uint64\+\_\+t \mbox{\hyperlink{classrocr_1_1amd_1_1elf_1_1GElfSymbol_a07f527a9b6c9392879c466e8af870c88}{value}} () override
+\item 
+unsigned char \mbox{\hyperlink{classrocr_1_1amd_1_1elf_1_1GElfSymbol_a0c6ba939cc5a15288a2aa49a9a5592e4}{other}} () override
+\item 
+std\+::string \mbox{\hyperlink{classrocr_1_1amd_1_1elf_1_1GElfSymbol_a2340576fb5ad23a17dc10efd1c593c07}{name}} () override
+\item 
+\mbox{\hyperlink{classrocr_1_1amd_1_1elf_1_1Section}{Section}} $\ast$ \mbox{\hyperlink{classrocr_1_1amd_1_1elf_1_1GElfSymbol_aeeb32353434fedcc8c306cd79ac3fb73}{section}} () override
+\item 
+void \mbox{\hyperlink{classrocr_1_1amd_1_1elf_1_1GElfSymbol_a8c8bf98a004737706c2eb0311bbeaf52}{set\+Value}} (uint64\+\_\+t \mbox{\hyperlink{classrocr_1_1amd_1_1elf_1_1GElfSymbol_a07f527a9b6c9392879c466e8af870c88}{value}}) override
+\item 
+void \mbox{\hyperlink{classrocr_1_1amd_1_1elf_1_1GElfSymbol_acc1ebc33df2b3b275a4846f302cda4ef}{set\+Size}} (uint64\+\_\+t \mbox{\hyperlink{classrocr_1_1amd_1_1elf_1_1GElfSymbol_af4b79f34320e7119dc87adf39afae720}{size}}) override
+\end{DoxyCompactItemize}
+\doxysubsection*{Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+GElf\+\_\+\+Sym $\ast$ \mbox{\hyperlink{classrocr_1_1amd_1_1elf_1_1GElfSymbol_a25cd8a6c0b273e487499aa83d0b7f057}{Sym}} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classrocr_1_1amd_1_1elf_1_1GElfSymbolTable}{GElf\+Symbol\+Table}} $\ast$ \mbox{\hyperlink{classrocr_1_1amd_1_1elf_1_1GElfSymbol_a1feea49e83f5b0c8396167452e1c4145}{symtab}}
+\item 
+\mbox{\hyperlink{classrocr_1_1amd_1_1elf_1_1Buffer}{Buffer}} \& \mbox{\hyperlink{classrocr_1_1amd_1_1elf_1_1GElfSymbol_a34e9d662d0d0352fbda90a6ed712eda5}{edata}}
+\item 
+size\+\_\+t \mbox{\hyperlink{classrocr_1_1amd_1_1elf_1_1GElfSymbol_a700316d91dc2f877b99a4898b31af2cb}{eindex}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Friends}
+\begin{DoxyCompactItemize}
+\item 
+class \mbox{\hyperlink{classrocr_1_1amd_1_1elf_1_1GElfSymbol_ac203427affc79e65d2abd63cadc37e3c}{GElf\+Symbol\+Table}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classrocr_1_1amd_1_1elf_1_1GElfSymbol_a30ce81acc2b5a0ac2183d59e42b31c3e}\label{classrocr_1_1amd_1_1elf_1_1GElfSymbol_a30ce81acc2b5a0ac2183d59e42b31c3e}} 
+\index{rocr::amd::elf::GElfSymbol@{rocr::amd::elf::GElfSymbol}!GElfSymbol@{GElfSymbol}}
+\index{GElfSymbol@{GElfSymbol}!rocr::amd::elf::GElfSymbol@{rocr::amd::elf::GElfSymbol}}
+\doxysubsubsection{\texorpdfstring{GElfSymbol()}{GElfSymbol()}}
+{\footnotesize\ttfamily rocr\+::amd\+::elf\+::\+GElf\+Symbol\+::\+GElf\+Symbol (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classrocr_1_1amd_1_1elf_1_1GElfSymbolTable}{GElf\+Symbol\+Table}} $\ast$}]{symtab,  }\item[{\mbox{\hyperlink{classrocr_1_1amd_1_1elf_1_1Buffer}{Buffer}} \&}]{data,  }\item[{size\+\_\+t}]{index }\end{DoxyParamCaption})}
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classrocr_1_1amd_1_1elf_1_1GElfSymbol_a10cb4577d883b53b0416b8767166c33c}\label{classrocr_1_1amd_1_1elf_1_1GElfSymbol_a10cb4577d883b53b0416b8767166c33c}} 
+\index{rocr::amd::elf::GElfSymbol@{rocr::amd::elf::GElfSymbol}!binding@{binding}}
+\index{binding@{binding}!rocr::amd::elf::GElfSymbol@{rocr::amd::elf::GElfSymbol}}
+\doxysubsubsection{\texorpdfstring{binding()}{binding()}}
+{\footnotesize\ttfamily uint32\+\_\+t rocr\+::amd\+::elf\+::\+GElf\+Symbol\+::binding (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Implements \mbox{\hyperlink{classrocr_1_1amd_1_1elf_1_1Symbol_a92bf442b1f9f247e9669afd253613c71}{rocr\+::amd\+::elf\+::\+Symbol}}.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classrocr_1_1amd_1_1elf_1_1GElfSymbol_a10cb4577d883b53b0416b8767166c33c_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classrocr_1_1amd_1_1elf_1_1GElfSymbol_a10cb4577d883b53b0416b8767166c33c_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classrocr_1_1amd_1_1elf_1_1GElfSymbol_a58ed30818d2aa785482692ea9cbc0a2e}\label{classrocr_1_1amd_1_1elf_1_1GElfSymbol_a58ed30818d2aa785482692ea9cbc0a2e}} 
+\index{rocr::amd::elf::GElfSymbol@{rocr::amd::elf::GElfSymbol}!index@{index}}
+\index{index@{index}!rocr::amd::elf::GElfSymbol@{rocr::amd::elf::GElfSymbol}}
+\doxysubsubsection{\texorpdfstring{index()}{index()}}
+{\footnotesize\ttfamily uint32\+\_\+t rocr\+::amd\+::elf\+::\+GElf\+Symbol\+::index (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Implements \mbox{\hyperlink{classrocr_1_1amd_1_1elf_1_1Symbol_a75b1b13e8d7c427acc64897d3e74465d}{rocr\+::amd\+::elf\+::\+Symbol}}.
+
+\mbox{\Hypertarget{classrocr_1_1amd_1_1elf_1_1GElfSymbol_a2340576fb5ad23a17dc10efd1c593c07}\label{classrocr_1_1amd_1_1elf_1_1GElfSymbol_a2340576fb5ad23a17dc10efd1c593c07}} 
+\index{rocr::amd::elf::GElfSymbol@{rocr::amd::elf::GElfSymbol}!name@{name}}
+\index{name@{name}!rocr::amd::elf::GElfSymbol@{rocr::amd::elf::GElfSymbol}}
+\doxysubsubsection{\texorpdfstring{name()}{name()}}
+{\footnotesize\ttfamily std\+::string rocr\+::amd\+::elf\+::\+GElf\+Symbol\+::name (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Implements \mbox{\hyperlink{classrocr_1_1amd_1_1elf_1_1Symbol_a0e790a072842bb1414dc933968a4660f}{rocr\+::amd\+::elf\+::\+Symbol}}.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classrocr_1_1amd_1_1elf_1_1GElfSymbol_a2340576fb5ad23a17dc10efd1c593c07_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classrocr_1_1amd_1_1elf_1_1GElfSymbol_a2340576fb5ad23a17dc10efd1c593c07_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classrocr_1_1amd_1_1elf_1_1GElfSymbol_a0c6ba939cc5a15288a2aa49a9a5592e4}\label{classrocr_1_1amd_1_1elf_1_1GElfSymbol_a0c6ba939cc5a15288a2aa49a9a5592e4}} 
+\index{rocr::amd::elf::GElfSymbol@{rocr::amd::elf::GElfSymbol}!other@{other}}
+\index{other@{other}!rocr::amd::elf::GElfSymbol@{rocr::amd::elf::GElfSymbol}}
+\doxysubsubsection{\texorpdfstring{other()}{other()}}
+{\footnotesize\ttfamily unsigned char rocr\+::amd\+::elf\+::\+GElf\+Symbol\+::other (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Implements \mbox{\hyperlink{classrocr_1_1amd_1_1elf_1_1Symbol_a40cd3ab9416ef961d41952acab8c8fb8}{rocr\+::amd\+::elf\+::\+Symbol}}.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classrocr_1_1amd_1_1elf_1_1GElfSymbol_a0c6ba939cc5a15288a2aa49a9a5592e4_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classrocr_1_1amd_1_1elf_1_1GElfSymbol_a0c6ba939cc5a15288a2aa49a9a5592e4_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classrocr_1_1amd_1_1elf_1_1GElfSymbol_a2ae8505cd6469e787a245a8a3ae9cadf}\label{classrocr_1_1amd_1_1elf_1_1GElfSymbol_a2ae8505cd6469e787a245a8a3ae9cadf}} 
+\index{rocr::amd::elf::GElfSymbol@{rocr::amd::elf::GElfSymbol}!push@{push}}
+\index{push@{push}!rocr::amd::elf::GElfSymbol@{rocr::amd::elf::GElfSymbol}}
+\doxysubsubsection{\texorpdfstring{push()}{push()}}
+{\footnotesize\ttfamily bool rocr\+::amd\+::elf\+::\+GElf\+Symbol\+::push (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{name,  }\item[{uint64\+\_\+t}]{value,  }\item[{uint64\+\_\+t}]{size,  }\item[{unsigned char}]{type,  }\item[{unsigned char}]{binding,  }\item[{uint16\+\_\+t}]{shndx,  }\item[{unsigned char}]{other }\end{DoxyParamCaption})}
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classrocr_1_1amd_1_1elf_1_1GElfSymbol_a2ae8505cd6469e787a245a8a3ae9cadf_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classrocr_1_1amd_1_1elf_1_1GElfSymbol_a2ae8505cd6469e787a245a8a3ae9cadf_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classrocr_1_1amd_1_1elf_1_1GElfSymbol_aeeb32353434fedcc8c306cd79ac3fb73}\label{classrocr_1_1amd_1_1elf_1_1GElfSymbol_aeeb32353434fedcc8c306cd79ac3fb73}} 
+\index{rocr::amd::elf::GElfSymbol@{rocr::amd::elf::GElfSymbol}!section@{section}}
+\index{section@{section}!rocr::amd::elf::GElfSymbol@{rocr::amd::elf::GElfSymbol}}
+\doxysubsubsection{\texorpdfstring{section()}{section()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classrocr_1_1amd_1_1elf_1_1Section}{Section}} $\ast$ rocr\+::amd\+::elf\+::\+GElf\+Symbol\+::section (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Implements \mbox{\hyperlink{classrocr_1_1amd_1_1elf_1_1Symbol_a52a043c62b4e4c0f729996c60d52bf0b}{rocr\+::amd\+::elf\+::\+Symbol}}.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classrocr_1_1amd_1_1elf_1_1GElfSymbol_aeeb32353434fedcc8c306cd79ac3fb73_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classrocr_1_1amd_1_1elf_1_1GElfSymbol_acc1ebc33df2b3b275a4846f302cda4ef}\label{classrocr_1_1amd_1_1elf_1_1GElfSymbol_acc1ebc33df2b3b275a4846f302cda4ef}} 
+\index{rocr::amd::elf::GElfSymbol@{rocr::amd::elf::GElfSymbol}!setSize@{setSize}}
+\index{setSize@{setSize}!rocr::amd::elf::GElfSymbol@{rocr::amd::elf::GElfSymbol}}
+\doxysubsubsection{\texorpdfstring{setSize()}{setSize()}}
+{\footnotesize\ttfamily void rocr\+::amd\+::elf\+::\+GElf\+Symbol\+::set\+Size (\begin{DoxyParamCaption}\item[{uint64\+\_\+t}]{size }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Implements \mbox{\hyperlink{classrocr_1_1amd_1_1elf_1_1Symbol_aac57ef6ac1bffc928f0a2f154d19165e}{rocr\+::amd\+::elf\+::\+Symbol}}.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classrocr_1_1amd_1_1elf_1_1GElfSymbol_acc1ebc33df2b3b275a4846f302cda4ef_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classrocr_1_1amd_1_1elf_1_1GElfSymbol_a8c8bf98a004737706c2eb0311bbeaf52}\label{classrocr_1_1amd_1_1elf_1_1GElfSymbol_a8c8bf98a004737706c2eb0311bbeaf52}} 
+\index{rocr::amd::elf::GElfSymbol@{rocr::amd::elf::GElfSymbol}!setValue@{setValue}}
+\index{setValue@{setValue}!rocr::amd::elf::GElfSymbol@{rocr::amd::elf::GElfSymbol}}
+\doxysubsubsection{\texorpdfstring{setValue()}{setValue()}}
+{\footnotesize\ttfamily void rocr\+::amd\+::elf\+::\+GElf\+Symbol\+::set\+Value (\begin{DoxyParamCaption}\item[{uint64\+\_\+t}]{value }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Implements \mbox{\hyperlink{classrocr_1_1amd_1_1elf_1_1Symbol_ad01090bc7ef3591e7f965c3b46b65484}{rocr\+::amd\+::elf\+::\+Symbol}}.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classrocr_1_1amd_1_1elf_1_1GElfSymbol_a8c8bf98a004737706c2eb0311bbeaf52_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classrocr_1_1amd_1_1elf_1_1GElfSymbol_af4b79f34320e7119dc87adf39afae720}\label{classrocr_1_1amd_1_1elf_1_1GElfSymbol_af4b79f34320e7119dc87adf39afae720}} 
+\index{rocr::amd::elf::GElfSymbol@{rocr::amd::elf::GElfSymbol}!size@{size}}
+\index{size@{size}!rocr::amd::elf::GElfSymbol@{rocr::amd::elf::GElfSymbol}}
+\doxysubsubsection{\texorpdfstring{size()}{size()}}
+{\footnotesize\ttfamily uint64\+\_\+t rocr\+::amd\+::elf\+::\+GElf\+Symbol\+::size (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Implements \mbox{\hyperlink{classrocr_1_1amd_1_1elf_1_1Symbol_a39adebd513a03c46677cc602d2f38cd8}{rocr\+::amd\+::elf\+::\+Symbol}}.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classrocr_1_1amd_1_1elf_1_1GElfSymbol_af4b79f34320e7119dc87adf39afae720_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classrocr_1_1amd_1_1elf_1_1GElfSymbol_af4b79f34320e7119dc87adf39afae720_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classrocr_1_1amd_1_1elf_1_1GElfSymbol_a25cd8a6c0b273e487499aa83d0b7f057}\label{classrocr_1_1amd_1_1elf_1_1GElfSymbol_a25cd8a6c0b273e487499aa83d0b7f057}} 
+\index{rocr::amd::elf::GElfSymbol@{rocr::amd::elf::GElfSymbol}!Sym@{Sym}}
+\index{Sym@{Sym}!rocr::amd::elf::GElfSymbol@{rocr::amd::elf::GElfSymbol}}
+\doxysubsubsection{\texorpdfstring{Sym()}{Sym()}}
+{\footnotesize\ttfamily GElf\+\_\+\+Sym$\ast$ rocr\+::amd\+::elf\+::\+GElf\+Symbol\+::\+Sym (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [private]}}
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classrocr_1_1amd_1_1elf_1_1GElfSymbol_a25cd8a6c0b273e487499aa83d0b7f057_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classrocr_1_1amd_1_1elf_1_1GElfSymbol_a25cd8a6c0b273e487499aa83d0b7f057_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classrocr_1_1amd_1_1elf_1_1GElfSymbol_a59e40b9f2ac76dedb142a258897422a9}\label{classrocr_1_1amd_1_1elf_1_1GElfSymbol_a59e40b9f2ac76dedb142a258897422a9}} 
+\index{rocr::amd::elf::GElfSymbol@{rocr::amd::elf::GElfSymbol}!type@{type}}
+\index{type@{type}!rocr::amd::elf::GElfSymbol@{rocr::amd::elf::GElfSymbol}}
+\doxysubsubsection{\texorpdfstring{type()}{type()}}
+{\footnotesize\ttfamily uint32\+\_\+t rocr\+::amd\+::elf\+::\+GElf\+Symbol\+::type (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Implements \mbox{\hyperlink{classrocr_1_1amd_1_1elf_1_1Symbol_a6aa027d620e47e40991a2d85d863d00b}{rocr\+::amd\+::elf\+::\+Symbol}}.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classrocr_1_1amd_1_1elf_1_1GElfSymbol_a59e40b9f2ac76dedb142a258897422a9_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classrocr_1_1amd_1_1elf_1_1GElfSymbol_a59e40b9f2ac76dedb142a258897422a9_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classrocr_1_1amd_1_1elf_1_1GElfSymbol_a07f527a9b6c9392879c466e8af870c88}\label{classrocr_1_1amd_1_1elf_1_1GElfSymbol_a07f527a9b6c9392879c466e8af870c88}} 
+\index{rocr::amd::elf::GElfSymbol@{rocr::amd::elf::GElfSymbol}!value@{value}}
+\index{value@{value}!rocr::amd::elf::GElfSymbol@{rocr::amd::elf::GElfSymbol}}
+\doxysubsubsection{\texorpdfstring{value()}{value()}}
+{\footnotesize\ttfamily uint64\+\_\+t rocr\+::amd\+::elf\+::\+GElf\+Symbol\+::value (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Implements \mbox{\hyperlink{classrocr_1_1amd_1_1elf_1_1Symbol_a5b88a7ddf7d6b5ee5c5c0411c7316c01}{rocr\+::amd\+::elf\+::\+Symbol}}.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classrocr_1_1amd_1_1elf_1_1GElfSymbol_a07f527a9b6c9392879c466e8af870c88_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classrocr_1_1amd_1_1elf_1_1GElfSymbol_a07f527a9b6c9392879c466e8af870c88_icgraph}
+\end{center}
+\end{figure}
+
+
+\doxysubsection{Friends And Related Function Documentation}
+\mbox{\Hypertarget{classrocr_1_1amd_1_1elf_1_1GElfSymbol_ac203427affc79e65d2abd63cadc37e3c}\label{classrocr_1_1amd_1_1elf_1_1GElfSymbol_ac203427affc79e65d2abd63cadc37e3c}} 
+\index{rocr::amd::elf::GElfSymbol@{rocr::amd::elf::GElfSymbol}!GElfSymbolTable@{GElfSymbolTable}}
+\index{GElfSymbolTable@{GElfSymbolTable}!rocr::amd::elf::GElfSymbol@{rocr::amd::elf::GElfSymbol}}
+\doxysubsubsection{\texorpdfstring{GElfSymbolTable}{GElfSymbolTable}}
+{\footnotesize\ttfamily friend class \mbox{\hyperlink{classrocr_1_1amd_1_1elf_1_1GElfSymbolTable}{GElf\+Symbol\+Table}}\hspace{0.3cm}{\ttfamily [friend]}}
+
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{classrocr_1_1amd_1_1elf_1_1GElfSymbol_a34e9d662d0d0352fbda90a6ed712eda5}\label{classrocr_1_1amd_1_1elf_1_1GElfSymbol_a34e9d662d0d0352fbda90a6ed712eda5}} 
+\index{rocr::amd::elf::GElfSymbol@{rocr::amd::elf::GElfSymbol}!edata@{edata}}
+\index{edata@{edata}!rocr::amd::elf::GElfSymbol@{rocr::amd::elf::GElfSymbol}}
+\doxysubsubsection{\texorpdfstring{edata}{edata}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classrocr_1_1amd_1_1elf_1_1Buffer}{Buffer}}\& rocr\+::amd\+::elf\+::\+GElf\+Symbol\+::edata\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classrocr_1_1amd_1_1elf_1_1GElfSymbol_a700316d91dc2f877b99a4898b31af2cb}\label{classrocr_1_1amd_1_1elf_1_1GElfSymbol_a700316d91dc2f877b99a4898b31af2cb}} 
+\index{rocr::amd::elf::GElfSymbol@{rocr::amd::elf::GElfSymbol}!eindex@{eindex}}
+\index{eindex@{eindex}!rocr::amd::elf::GElfSymbol@{rocr::amd::elf::GElfSymbol}}
+\doxysubsubsection{\texorpdfstring{eindex}{eindex}}
+{\footnotesize\ttfamily size\+\_\+t rocr\+::amd\+::elf\+::\+GElf\+Symbol\+::eindex\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classrocr_1_1amd_1_1elf_1_1GElfSymbol_a1feea49e83f5b0c8396167452e1c4145}\label{classrocr_1_1amd_1_1elf_1_1GElfSymbol_a1feea49e83f5b0c8396167452e1c4145}} 
+\index{rocr::amd::elf::GElfSymbol@{rocr::amd::elf::GElfSymbol}!symtab@{symtab}}
+\index{symtab@{symtab}!rocr::amd::elf::GElfSymbol@{rocr::amd::elf::GElfSymbol}}
+\doxysubsubsection{\texorpdfstring{symtab}{symtab}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classrocr_1_1amd_1_1elf_1_1GElfSymbolTable}{GElf\+Symbol\+Table}}$\ast$ rocr\+::amd\+::elf\+::\+GElf\+Symbol\+::symtab\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+src/libamdhsacode/\mbox{\hyperlink{amd__elf__image_8cpp}{amd\+\_\+elf\+\_\+image.\+cpp}}\end{DoxyCompactItemize}

@@ -1,0 +1,108 @@
+\hypertarget{runtime_8h}{}\doxysection{src/core/inc/runtime.h File Reference}
+\label{runtime_8h}\index{src/core/inc/runtime.h@{src/core/inc/runtime.h}}
+{\ttfamily \#include $<$vector$>$}\newline
+{\ttfamily \#include $<$map$>$}\newline
+{\ttfamily \#include $<$memory$>$}\newline
+{\ttfamily \#include $<$tuple$>$}\newline
+{\ttfamily \#include $<$utility$>$}\newline
+{\ttfamily \#include $<$thread$>$}\newline
+{\ttfamily \#include \char`\"{}core/inc/hsa\+\_\+ext\+\_\+interface.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}core/inc/hsa\+\_\+internal.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}core/inc/hsa\+\_\+ext\+\_\+amd\+\_\+impl.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}core/inc/agent.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}core/inc/exceptions.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}core/inc/memory\+\_\+region.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}core/inc/signal.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}core/inc/interrupt\+\_\+signal.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}core/inc/svm\+\_\+profiler.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}core/util/flag.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}core/util/locks.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}core/util/os.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}core/util/utils.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}core/inc/amd\+\_\+loader\+\_\+context.\+hpp\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}core/inc/amd\+\_\+hsa\+\_\+code.\+hpp\char`\"{}}\newline
+Include dependency graph for runtime.\+h\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{runtime_8h__incl}
+\end{center}
+\end{figure}
+This graph shows which files directly or indirectly include this file\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{runtime_8h__dep__incl}
+\end{center}
+\end{figure}
+\doxysubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class \mbox{\hyperlink{classrocr_1_1core_1_1Runtime}{rocr\+::core\+::\+Runtime}}
+\begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{classrocr_1_1core_1_1Runtime}{Runtime}} class provides the following functions\+: \end{DoxyCompactList}\item 
+struct \mbox{\hyperlink{structrocr_1_1core_1_1Runtime_1_1LinkInfo}{rocr\+::core\+::\+Runtime\+::\+Link\+Info}}
+\begin{DoxyCompactList}\small\item\em Structure to describe connectivity between agents. \end{DoxyCompactList}\item 
+struct \mbox{\hyperlink{structrocr_1_1core_1_1Runtime_1_1KfdVersion__t}{rocr\+::core\+::\+Runtime\+::\+Kfd\+Version\+\_\+t}}
+\item 
+struct \mbox{\hyperlink{structrocr_1_1core_1_1Runtime_1_1PtrInfoBlockData}{rocr\+::core\+::\+Runtime\+::\+Ptr\+Info\+Block\+Data}}
+\item 
+struct \mbox{\hyperlink{structrocr_1_1core_1_1Runtime_1_1AllocationRegion}{rocr\+::core\+::\+Runtime\+::\+Allocation\+Region}}
+\item 
+struct \mbox{\hyperlink{structrocr_1_1core_1_1Runtime_1_1AllocationRegion_1_1notifier__t}{rocr\+::core\+::\+Runtime\+::\+Allocation\+Region\+::notifier\+\_\+t}}
+\item 
+struct \mbox{\hyperlink{structrocr_1_1core_1_1Runtime_1_1AsyncEventsControl}{rocr\+::core\+::\+Runtime\+::\+Async\+Events\+Control}}
+\item 
+struct \mbox{\hyperlink{structrocr_1_1core_1_1Runtime_1_1AsyncEvents}{rocr\+::core\+::\+Runtime\+::\+Async\+Events}}
+\item 
+struct \mbox{\hyperlink{structrocr_1_1core_1_1Runtime_1_1PrefetchOp}{rocr\+::core\+::\+Runtime\+::\+Prefetch\+Op}}
+\item 
+struct \mbox{\hyperlink{structrocr_1_1core_1_1Runtime_1_1PrefetchRange}{rocr\+::core\+::\+Runtime\+::\+Prefetch\+Range}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Namespaces}
+\begin{DoxyCompactItemize}
+\item 
+ \mbox{\hyperlink{namespacerocr}{rocr}}
+\item 
+ \mbox{\hyperlink{namespacerocr_1_1AMD}{rocr\+::\+AMD}}
+\item 
+ \mbox{\hyperlink{namespacerocr_1_1core}{rocr\+::core}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \mbox{\hyperlink{runtime_8h_acf18c711d0386525050c3ef3ff0539eb}{HSA\+\_\+\+ARGUMENT\+\_\+\+ALIGN\+\_\+\+BYTES}}~16
+\item 
+\#define \mbox{\hyperlink{runtime_8h_a0facf8d8d65a74c806b37f3cc3d5bf5f}{HSA\+\_\+\+QUEUE\+\_\+\+ALIGN\+\_\+\+BYTES}}~64
+\item 
+\#define \mbox{\hyperlink{runtime_8h_a9ec481f3c769fc6d0d3cae9eefcfb77a}{HSA\+\_\+\+PACKET\+\_\+\+ALIGN\+\_\+\+BYTES}}~64
+\end{DoxyCompactItemize}
+\doxysubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+bool \mbox{\hyperlink{namespacerocr_1_1core_adc112d5305ba1c3ca2fb32b212b215c1}{rocr\+::core\+::g\+\_\+use\+\_\+interrupt\+\_\+wait}} = true
+\item 
+bool \mbox{\hyperlink{namespacerocr_1_1core_a8504eb91b5feb44aa01aa71ee4fae274}{rocr\+::core\+::g\+\_\+use\+\_\+mwaitx}} = true
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Macro Definition Documentation}
+\mbox{\Hypertarget{runtime_8h_acf18c711d0386525050c3ef3ff0539eb}\label{runtime_8h_acf18c711d0386525050c3ef3ff0539eb}} 
+\index{runtime.h@{runtime.h}!HSA\_ARGUMENT\_ALIGN\_BYTES@{HSA\_ARGUMENT\_ALIGN\_BYTES}}
+\index{HSA\_ARGUMENT\_ALIGN\_BYTES@{HSA\_ARGUMENT\_ALIGN\_BYTES}!runtime.h@{runtime.h}}
+\doxysubsubsection{\texorpdfstring{HSA\_ARGUMENT\_ALIGN\_BYTES}{HSA\_ARGUMENT\_ALIGN\_BYTES}}
+{\footnotesize\ttfamily \#define HSA\+\_\+\+ARGUMENT\+\_\+\+ALIGN\+\_\+\+BYTES~16}
+
+\mbox{\Hypertarget{runtime_8h_a9ec481f3c769fc6d0d3cae9eefcfb77a}\label{runtime_8h_a9ec481f3c769fc6d0d3cae9eefcfb77a}} 
+\index{runtime.h@{runtime.h}!HSA\_PACKET\_ALIGN\_BYTES@{HSA\_PACKET\_ALIGN\_BYTES}}
+\index{HSA\_PACKET\_ALIGN\_BYTES@{HSA\_PACKET\_ALIGN\_BYTES}!runtime.h@{runtime.h}}
+\doxysubsubsection{\texorpdfstring{HSA\_PACKET\_ALIGN\_BYTES}{HSA\_PACKET\_ALIGN\_BYTES}}
+{\footnotesize\ttfamily \#define HSA\+\_\+\+PACKET\+\_\+\+ALIGN\+\_\+\+BYTES~64}
+
+\mbox{\Hypertarget{runtime_8h_a0facf8d8d65a74c806b37f3cc3d5bf5f}\label{runtime_8h_a0facf8d8d65a74c806b37f3cc3d5bf5f}} 
+\index{runtime.h@{runtime.h}!HSA\_QUEUE\_ALIGN\_BYTES@{HSA\_QUEUE\_ALIGN\_BYTES}}
+\index{HSA\_QUEUE\_ALIGN\_BYTES@{HSA\_QUEUE\_ALIGN\_BYTES}!runtime.h@{runtime.h}}
+\doxysubsubsection{\texorpdfstring{HSA\_QUEUE\_ALIGN\_BYTES}{HSA\_QUEUE\_ALIGN\_BYTES}}
+{\footnotesize\ttfamily \#define HSA\+\_\+\+QUEUE\+\_\+\+ALIGN\+\_\+\+BYTES~64}
+

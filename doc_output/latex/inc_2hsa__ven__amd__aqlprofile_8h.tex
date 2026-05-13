@@ -1,0 +1,617 @@
+\hypertarget{inc_2hsa__ven__amd__aqlprofile_8h}{}\doxysection{src/inc/hsa\+\_\+ven\+\_\+amd\+\_\+aqlprofile.h File Reference}
+\label{inc_2hsa__ven__amd__aqlprofile_8h}\index{src/inc/hsa\_ven\_amd\_aqlprofile.h@{src/inc/hsa\_ven\_amd\_aqlprofile.h}}
+{\ttfamily \#include $<$stdint.\+h$>$}\newline
+{\ttfamily \#include \char`\"{}hsa.\+h\char`\"{}}\newline
+Include dependency graph for hsa\+\_\+ven\+\_\+amd\+\_\+aqlprofile.\+h\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=274pt]{inc_2hsa__ven__amd__aqlprofile_8h__incl}
+\end{center}
+\end{figure}
+This graph shows which files directly or indirectly include this file\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{inc_2hsa__ven__amd__aqlprofile_8h__dep__incl}
+\end{center}
+\end{figure}
+\doxysubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{structhsa__ven__amd__aqlprofile__event__t}{hsa\+\_\+ven\+\_\+amd\+\_\+aqlprofile\+\_\+event\+\_\+t}}
+\item 
+struct \mbox{\hyperlink{structhsa__ven__amd__aqlprofile__parameter__t}{hsa\+\_\+ven\+\_\+amd\+\_\+aqlprofile\+\_\+parameter\+\_\+t}}
+\item 
+struct \mbox{\hyperlink{structhsa__ven__amd__aqlprofile__descriptor__t}{hsa\+\_\+ven\+\_\+amd\+\_\+aqlprofile\+\_\+descriptor\+\_\+t}}
+\item 
+struct \mbox{\hyperlink{structhsa__ven__amd__aqlprofile__profile__t}{hsa\+\_\+ven\+\_\+amd\+\_\+aqlprofile\+\_\+profile\+\_\+t}}
+\item 
+struct \mbox{\hyperlink{structhsa__ext__amd__aql__pm4__packet__t}{hsa\+\_\+ext\+\_\+amd\+\_\+aql\+\_\+pm4\+\_\+packet\+\_\+t}}
+\item 
+struct \mbox{\hyperlink{structhsa__ven__amd__aqlprofile__info__data__t}{hsa\+\_\+ven\+\_\+amd\+\_\+aqlprofile\+\_\+info\+\_\+data\+\_\+t}}
+\item 
+struct \mbox{\hyperlink{structhsa__ven__amd__aqlprofile__id__query__t}{hsa\+\_\+ven\+\_\+amd\+\_\+aqlprofile\+\_\+id\+\_\+query\+\_\+t}}
+\item 
+struct \mbox{\hyperlink{structhsa__ven__amd__aqlprofile__1__00__pfn__s}{hsa\+\_\+ven\+\_\+amd\+\_\+aqlprofile\+\_\+1\+\_\+00\+\_\+pfn\+\_\+s}}
+\begin{DoxyCompactList}\small\item\em Extension function table. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \mbox{\hyperlink{inc_2hsa__ven__amd__aqlprofile_8h_a172f455b671a1376425dd23f990b4890}{HSA\+\_\+\+AQLPROFILE\+\_\+\+VERSION\+\_\+\+MAJOR}}~2
+\item 
+\#define \mbox{\hyperlink{inc_2hsa__ven__amd__aqlprofile_8h_a53531ce778f8ab6da161b5f8d6914e95}{HSA\+\_\+\+AQLPROFILE\+\_\+\+VERSION\+\_\+\+MINOR}}~0
+\item 
+\#define \mbox{\hyperlink{inc_2hsa__ven__amd__aqlprofile_8h_a9e24651707f9a95d2258a7dacc66d4a5}{hsa\+\_\+ven\+\_\+amd\+\_\+aqlprofile\+\_\+\+VERSION\+\_\+\+MAJOR}}~1
+\begin{DoxyCompactList}\small\item\em Extension version. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{inc_2hsa__ven__amd__aqlprofile_8h_adeb5a17866347eb476975a0da9568d65}{hsa\+\_\+ven\+\_\+amd\+\_\+aqlprofile\+\_\+\+LIB}}(suff)~\char`\"{}libhsa-\/amd-\/aqlprofile\char`\"{} suff \char`\"{}.so\char`\"{}
+\end{DoxyCompactItemize}
+\doxysubsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+typedef \mbox{\hyperlink{group__status_gad755322e7ff95456520e8abdbe90d225}{hsa\+\_\+status\+\_\+t}}($\ast$ \mbox{\hyperlink{inc_2hsa__ven__amd__aqlprofile_8h_a656631107c7a47c2481476f3ced89f50}{hsa\+\_\+ven\+\_\+amd\+\_\+aqlprofile\+\_\+data\+\_\+callback\+\_\+t}}) (\mbox{\hyperlink{inc_2hsa__ven__amd__aqlprofile_8h_a6aff6ff86e935f42e4686e4f2ae7a724}{hsa\+\_\+ven\+\_\+amd\+\_\+aqlprofile\+\_\+info\+\_\+type\+\_\+t}} info\+\_\+type, \mbox{\hyperlink{structhsa__ven__amd__aqlprofile__info__data__t}{hsa\+\_\+ven\+\_\+amd\+\_\+aqlprofile\+\_\+info\+\_\+data\+\_\+t}} $\ast$info\+\_\+data, void $\ast$callback\+\_\+data)
+\item 
+typedef struct \mbox{\hyperlink{structhsa__ven__amd__aqlprofile__1__00__pfn__s}{hsa\+\_\+ven\+\_\+amd\+\_\+aqlprofile\+\_\+1\+\_\+00\+\_\+pfn\+\_\+s}} \mbox{\hyperlink{inc_2hsa__ven__amd__aqlprofile_8h_ac0bcff0aead2fb1edce24e3e1ba322e9}{hsa\+\_\+ven\+\_\+amd\+\_\+aqlprofile\+\_\+1\+\_\+00\+\_\+pfn\+\_\+t}}
+\begin{DoxyCompactList}\small\item\em Extension function table. \end{DoxyCompactList}\item 
+typedef \mbox{\hyperlink{inc_2hsa__ven__amd__aqlprofile_8h_ac0bcff0aead2fb1edce24e3e1ba322e9}{hsa\+\_\+ven\+\_\+amd\+\_\+aqlprofile\+\_\+1\+\_\+00\+\_\+pfn\+\_\+t}} \mbox{\hyperlink{inc_2hsa__ven__amd__aqlprofile_8h_a720c58cc51241aa28271c9e3914aeea4}{hsa\+\_\+ven\+\_\+amd\+\_\+aqlprofile\+\_\+pfn\+\_\+t}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Enumerations}
+\begin{DoxyCompactItemize}
+\item 
+enum \mbox{\hyperlink{inc_2hsa__ven__amd__aqlprofile_8h_a491dfe1026c5ce643c8766bef6765fcb}{hsa\+\_\+ven\+\_\+amd\+\_\+aqlprofile\+\_\+event\+\_\+type\+\_\+t}} \{ \mbox{\hyperlink{inc_2hsa__ven__amd__aqlprofile_8h_a491dfe1026c5ce643c8766bef6765fcbad9fc9281707eec617c0cd6061ddb8644}{HSA\+\_\+\+VEN\+\_\+\+AMD\+\_\+\+AQLPROFILE\+\_\+\+EVENT\+\_\+\+TYPE\+\_\+\+PMC}} = 0
+, \mbox{\hyperlink{inc_2hsa__ven__amd__aqlprofile_8h_a491dfe1026c5ce643c8766bef6765fcba0836565cf63c421b9665a917152db506}{HSA\+\_\+\+VEN\+\_\+\+AMD\+\_\+\+AQLPROFILE\+\_\+\+EVENT\+\_\+\+TYPE\+\_\+\+TRACE}} = 1
+ \}
+\item 
+enum \mbox{\hyperlink{inc_2hsa__ven__amd__aqlprofile_8h_a41b548ada2be5b9ef8678762c85f7f0f}{hsa\+\_\+ven\+\_\+amd\+\_\+aqlprofile\+\_\+block\+\_\+name\+\_\+t}} \{ \newline
+\mbox{\hyperlink{inc_2hsa__ven__amd__aqlprofile_8h_a41b548ada2be5b9ef8678762c85f7f0fa84b2ded66011444b3ab85b09a35cfcdb}{HSA\+\_\+\+VEN\+\_\+\+AMD\+\_\+\+AQLPROFILE\+\_\+\+BLOCK\+\_\+\+NAME\+\_\+\+CPC}} = 0
+, \mbox{\hyperlink{inc_2hsa__ven__amd__aqlprofile_8h_a41b548ada2be5b9ef8678762c85f7f0faf5f2ee037953098c002268778b2d96b0}{HSA\+\_\+\+VEN\+\_\+\+AMD\+\_\+\+AQLPROFILE\+\_\+\+BLOCK\+\_\+\+NAME\+\_\+\+CPF}} = 1
+, \mbox{\hyperlink{inc_2hsa__ven__amd__aqlprofile_8h_a41b548ada2be5b9ef8678762c85f7f0fa5e39db33fe6e3e18514b841af54ec6f5}{HSA\+\_\+\+VEN\+\_\+\+AMD\+\_\+\+AQLPROFILE\+\_\+\+BLOCK\+\_\+\+NAME\+\_\+\+GDS}} = 2
+, \mbox{\hyperlink{inc_2hsa__ven__amd__aqlprofile_8h_a41b548ada2be5b9ef8678762c85f7f0fac2ffed406d34fa6bfb40a0ff9bf1dde6}{HSA\+\_\+\+VEN\+\_\+\+AMD\+\_\+\+AQLPROFILE\+\_\+\+BLOCK\+\_\+\+NAME\+\_\+\+GRBM}} = 3
+, \newline
+\mbox{\hyperlink{inc_2hsa__ven__amd__aqlprofile_8h_a41b548ada2be5b9ef8678762c85f7f0fa35367d09eb205529cf9ddbf4ee281d47}{HSA\+\_\+\+VEN\+\_\+\+AMD\+\_\+\+AQLPROFILE\+\_\+\+BLOCK\+\_\+\+NAME\+\_\+\+GRBMSE}} = 4
+, \mbox{\hyperlink{inc_2hsa__ven__amd__aqlprofile_8h_a41b548ada2be5b9ef8678762c85f7f0faaf339de5baf502d333425f2b34820171}{HSA\+\_\+\+VEN\+\_\+\+AMD\+\_\+\+AQLPROFILE\+\_\+\+BLOCK\+\_\+\+NAME\+\_\+\+SPI}} = 5
+, \mbox{\hyperlink{inc_2hsa__ven__amd__aqlprofile_8h_a41b548ada2be5b9ef8678762c85f7f0fa63ba62befc590d13e7bd8feb125e8083}{HSA\+\_\+\+VEN\+\_\+\+AMD\+\_\+\+AQLPROFILE\+\_\+\+BLOCK\+\_\+\+NAME\+\_\+\+SQ}} = 6
+, \mbox{\hyperlink{inc_2hsa__ven__amd__aqlprofile_8h_a41b548ada2be5b9ef8678762c85f7f0fa99f4338fd24970fcc58c319396b7c5e4}{HSA\+\_\+\+VEN\+\_\+\+AMD\+\_\+\+AQLPROFILE\+\_\+\+BLOCK\+\_\+\+NAME\+\_\+\+SQCS}} = 7
+, \newline
+\mbox{\hyperlink{inc_2hsa__ven__amd__aqlprofile_8h_a41b548ada2be5b9ef8678762c85f7f0fa338e9dc1b84a5d6df194d9756f424e40}{HSA\+\_\+\+VEN\+\_\+\+AMD\+\_\+\+AQLPROFILE\+\_\+\+BLOCK\+\_\+\+NAME\+\_\+\+SRBM}} = 8
+, \mbox{\hyperlink{inc_2hsa__ven__amd__aqlprofile_8h_a41b548ada2be5b9ef8678762c85f7f0fa5056855c63398cc4fb9c4857bfd77ab2}{HSA\+\_\+\+VEN\+\_\+\+AMD\+\_\+\+AQLPROFILE\+\_\+\+BLOCK\+\_\+\+NAME\+\_\+\+SX}} = 9
+, \mbox{\hyperlink{inc_2hsa__ven__amd__aqlprofile_8h_a41b548ada2be5b9ef8678762c85f7f0faca7b0c173bcdacd037b334767bdbe6cf}{HSA\+\_\+\+VEN\+\_\+\+AMD\+\_\+\+AQLPROFILE\+\_\+\+BLOCK\+\_\+\+NAME\+\_\+\+TA}} = 10
+, \mbox{\hyperlink{inc_2hsa__ven__amd__aqlprofile_8h_a41b548ada2be5b9ef8678762c85f7f0fa620eb2bd3eaf7a6d247d0de53ad26f07}{HSA\+\_\+\+VEN\+\_\+\+AMD\+\_\+\+AQLPROFILE\+\_\+\+BLOCK\+\_\+\+NAME\+\_\+\+TCA}} = 11
+, \newline
+\mbox{\hyperlink{inc_2hsa__ven__amd__aqlprofile_8h_a41b548ada2be5b9ef8678762c85f7f0fab786fe44e51bfbb7f5625ed70c61723a}{HSA\+\_\+\+VEN\+\_\+\+AMD\+\_\+\+AQLPROFILE\+\_\+\+BLOCK\+\_\+\+NAME\+\_\+\+TCC}} = 12
+, \mbox{\hyperlink{inc_2hsa__ven__amd__aqlprofile_8h_a41b548ada2be5b9ef8678762c85f7f0fa1ce17319d421c6451bebc458c3c868ad}{HSA\+\_\+\+VEN\+\_\+\+AMD\+\_\+\+AQLPROFILE\+\_\+\+BLOCK\+\_\+\+NAME\+\_\+\+TCP}} = 13
+, \mbox{\hyperlink{inc_2hsa__ven__amd__aqlprofile_8h_a41b548ada2be5b9ef8678762c85f7f0fae53182dc320377db5e5445e8ff90ffa6}{HSA\+\_\+\+VEN\+\_\+\+AMD\+\_\+\+AQLPROFILE\+\_\+\+BLOCK\+\_\+\+NAME\+\_\+\+TD}} = 14
+, \mbox{\hyperlink{inc_2hsa__ven__amd__aqlprofile_8h_a41b548ada2be5b9ef8678762c85f7f0fadcf174237a5196be292ee8df2c70c6f0}{HSA\+\_\+\+VEN\+\_\+\+AMD\+\_\+\+AQLPROFILE\+\_\+\+BLOCK\+\_\+\+NAME\+\_\+\+MCARB}} = 15
+, \newline
+\mbox{\hyperlink{inc_2hsa__ven__amd__aqlprofile_8h_a41b548ada2be5b9ef8678762c85f7f0fa8e390d6c3af5f9d382f83d6897c217fe}{HSA\+\_\+\+VEN\+\_\+\+AMD\+\_\+\+AQLPROFILE\+\_\+\+BLOCK\+\_\+\+NAME\+\_\+\+MCHUB}} = 16
+, \mbox{\hyperlink{inc_2hsa__ven__amd__aqlprofile_8h_a41b548ada2be5b9ef8678762c85f7f0fa8504249ab17d29481e4997662f122127}{HSA\+\_\+\+VEN\+\_\+\+AMD\+\_\+\+AQLPROFILE\+\_\+\+BLOCK\+\_\+\+NAME\+\_\+\+MCMCBVM}} = 17
+, \mbox{\hyperlink{inc_2hsa__ven__amd__aqlprofile_8h_a41b548ada2be5b9ef8678762c85f7f0fad1da9a6aa5fdaa68964d711fe3896b01}{HSA\+\_\+\+VEN\+\_\+\+AMD\+\_\+\+AQLPROFILE\+\_\+\+BLOCK\+\_\+\+NAME\+\_\+\+MCSEQ}} = 18
+, \mbox{\hyperlink{inc_2hsa__ven__amd__aqlprofile_8h_a41b548ada2be5b9ef8678762c85f7f0fad4e641f8dd3bed144b2b46f34774fbd3}{HSA\+\_\+\+VEN\+\_\+\+AMD\+\_\+\+AQLPROFILE\+\_\+\+BLOCK\+\_\+\+NAME\+\_\+\+MCVML2}} = 19
+, \newline
+\mbox{\hyperlink{inc_2hsa__ven__amd__aqlprofile_8h_a41b548ada2be5b9ef8678762c85f7f0fa6622089a0f4b43400fb5a50ce3b893c9}{HSA\+\_\+\+VEN\+\_\+\+AMD\+\_\+\+AQLPROFILE\+\_\+\+BLOCK\+\_\+\+NAME\+\_\+\+MCXBAR}} = 20
+, \mbox{\hyperlink{inc_2hsa__ven__amd__aqlprofile_8h_a41b548ada2be5b9ef8678762c85f7f0fa359ee8cf90323b06216fcc04ea2c0833}{HSA\+\_\+\+VEN\+\_\+\+AMD\+\_\+\+AQLPROFILE\+\_\+\+BLOCK\+\_\+\+NAME\+\_\+\+ATC}} = 21
+, \mbox{\hyperlink{inc_2hsa__ven__amd__aqlprofile_8h_a41b548ada2be5b9ef8678762c85f7f0faf385de54d803a36357241cd0ee92fc8a}{HSA\+\_\+\+VEN\+\_\+\+AMD\+\_\+\+AQLPROFILE\+\_\+\+BLOCK\+\_\+\+NAME\+\_\+\+ATCL2}} = 22
+, \mbox{\hyperlink{inc_2hsa__ven__amd__aqlprofile_8h_a41b548ada2be5b9ef8678762c85f7f0faad5d5f7639fdbfd6138b065376b3f8d6}{HSA\+\_\+\+VEN\+\_\+\+AMD\+\_\+\+AQLPROFILE\+\_\+\+BLOCK\+\_\+\+NAME\+\_\+\+GCEA}} = 23
+, \newline
+\mbox{\hyperlink{inc_2hsa__ven__amd__aqlprofile_8h_a41b548ada2be5b9ef8678762c85f7f0fa45bd55820d13a0d4458c00491c3ff8dd}{HSA\+\_\+\+VEN\+\_\+\+AMD\+\_\+\+AQLPROFILE\+\_\+\+BLOCK\+\_\+\+NAME\+\_\+\+RPB}} = 24
+, \mbox{\hyperlink{inc_2hsa__ven__amd__aqlprofile_8h_a41b548ada2be5b9ef8678762c85f7f0faed8d6ea060303eaddb6fcc090940fbc4}{HSA\+\_\+\+VEN\+\_\+\+AMD\+\_\+\+AQLPROFILE\+\_\+\+BLOCK\+\_\+\+NAME\+\_\+\+SDMA}} = 25
+, \mbox{\hyperlink{inc_2hsa__ven__amd__aqlprofile_8h_a41b548ada2be5b9ef8678762c85f7f0faaba2a6411e1e537f7cc7150274dfe09d}{HSA\+\_\+\+VEN\+\_\+\+AMD\+\_\+\+AQLPROFILE\+\_\+\+BLOCK\+\_\+\+NAME\+\_\+\+GL1A}} = 26
+, \mbox{\hyperlink{inc_2hsa__ven__amd__aqlprofile_8h_a41b548ada2be5b9ef8678762c85f7f0faa3d51d770882cf933df2c5ae1d7a37f6}{HSA\+\_\+\+VEN\+\_\+\+AMD\+\_\+\+AQLPROFILE\+\_\+\+BLOCK\+\_\+\+NAME\+\_\+\+GL1C}} = 27
+, \newline
+\mbox{\hyperlink{inc_2hsa__ven__amd__aqlprofile_8h_a41b548ada2be5b9ef8678762c85f7f0faccd365235733854940bec1383918b021}{HSA\+\_\+\+VEN\+\_\+\+AMD\+\_\+\+AQLPROFILE\+\_\+\+BLOCK\+\_\+\+NAME\+\_\+\+GL2A}} = 28
+, \mbox{\hyperlink{inc_2hsa__ven__amd__aqlprofile_8h_a41b548ada2be5b9ef8678762c85f7f0fa2af65523fb21717071dccfb87fe14f55}{HSA\+\_\+\+VEN\+\_\+\+AMD\+\_\+\+AQLPROFILE\+\_\+\+BLOCK\+\_\+\+NAME\+\_\+\+GL2C}} = 29
+, \mbox{\hyperlink{inc_2hsa__ven__amd__aqlprofile_8h_a41b548ada2be5b9ef8678762c85f7f0fad5f5b65632978822f0ba9fdaf184c7c8}{HSA\+\_\+\+VEN\+\_\+\+AMD\+\_\+\+AQLPROFILE\+\_\+\+BLOCK\+\_\+\+NAME\+\_\+\+GCR}} = 30
+, \mbox{\hyperlink{inc_2hsa__ven__amd__aqlprofile_8h_a41b548ada2be5b9ef8678762c85f7f0fa6713fa5c4c2bec75027bafd03de22b55}{HSA\+\_\+\+VEN\+\_\+\+AMD\+\_\+\+AQLPROFILE\+\_\+\+BLOCK\+\_\+\+NAME\+\_\+\+GUS}} = 31
+, \newline
+\mbox{\hyperlink{inc_2hsa__ven__amd__aqlprofile_8h_a41b548ada2be5b9ef8678762c85f7f0fa0aed80d5efd216569a47da504158b71c}{HSA\+\_\+\+VEN\+\_\+\+AMD\+\_\+\+AQLPROFILE\+\_\+\+BLOCKS\+\_\+\+NUMBER}}
+ \}
+\item 
+enum \mbox{\hyperlink{inc_2hsa__ven__amd__aqlprofile_8h_a6563133c2df1a56d48d985f4db3eeb38}{hsa\+\_\+ven\+\_\+amd\+\_\+aqlprofile\+\_\+parameter\+\_\+name\+\_\+t}} \{ \newline
+\mbox{\hyperlink{inc_2hsa__ven__amd__aqlprofile_8h_a6563133c2df1a56d48d985f4db3eeb38afde9510e1a7c58be0a7f19d56ee1bba1}{HSA\+\_\+\+VEN\+\_\+\+AMD\+\_\+\+AQLPROFILE\+\_\+\+PARAMETER\+\_\+\+NAME\+\_\+\+COMPUTE\+\_\+\+UNIT\+\_\+\+TARGET}} = 0
+, \mbox{\hyperlink{inc_2hsa__ven__amd__aqlprofile_8h_a6563133c2df1a56d48d985f4db3eeb38ae2df164312dac06211c244a0db770292}{HSA\+\_\+\+VEN\+\_\+\+AMD\+\_\+\+AQLPROFILE\+\_\+\+PARAMETER\+\_\+\+NAME\+\_\+\+VM\+\_\+\+ID\+\_\+\+MASK}} = 1
+, \mbox{\hyperlink{inc_2hsa__ven__amd__aqlprofile_8h_a6563133c2df1a56d48d985f4db3eeb38a787ada69140fa490a95f9a8b675deed0}{HSA\+\_\+\+VEN\+\_\+\+AMD\+\_\+\+AQLPROFILE\+\_\+\+PARAMETER\+\_\+\+NAME\+\_\+\+MASK}} = 2
+, \mbox{\hyperlink{inc_2hsa__ven__amd__aqlprofile_8h_a6563133c2df1a56d48d985f4db3eeb38a2d08784aa6fa310b42a80265d9a9eb1f}{HSA\+\_\+\+VEN\+\_\+\+AMD\+\_\+\+AQLPROFILE\+\_\+\+PARAMETER\+\_\+\+NAME\+\_\+\+TOKEN\+\_\+\+MASK}} = 3
+, \newline
+\mbox{\hyperlink{inc_2hsa__ven__amd__aqlprofile_8h_a6563133c2df1a56d48d985f4db3eeb38afc28b8c1ecc54f326b3ef6181e12fbbe}{HSA\+\_\+\+VEN\+\_\+\+AMD\+\_\+\+AQLPROFILE\+\_\+\+PARAMETER\+\_\+\+NAME\+\_\+\+TOKEN\+\_\+\+MASK2}} = 4
+, \mbox{\hyperlink{inc_2hsa__ven__amd__aqlprofile_8h_a6563133c2df1a56d48d985f4db3eeb38a2e4a8d48a0f86b17e25ae7b5487d3eaf}{HSA\+\_\+\+VEN\+\_\+\+AMD\+\_\+\+AQLPROFILE\+\_\+\+PARAMETER\+\_\+\+NAME\+\_\+\+SE\+\_\+\+MASK}} = 5
+, \mbox{\hyperlink{inc_2hsa__ven__amd__aqlprofile_8h_a6563133c2df1a56d48d985f4db3eeb38ae225dadc58c1fd7ccf46f5ba262131d6}{HSA\+\_\+\+VEN\+\_\+\+AMD\+\_\+\+AQLPROFILE\+\_\+\+PARAMETER\+\_\+\+NAME\+\_\+\+SAMPLE\+\_\+\+RATE}} = 6
+, \mbox{\hyperlink{inc_2hsa__ven__amd__aqlprofile_8h_a6563133c2df1a56d48d985f4db3eeb38a5238c230a0edd9694df11176b111d2b1}{HSA\+\_\+\+VEN\+\_\+\+AMD\+\_\+\+AQLPROFILE\+\_\+\+PARAMETER\+\_\+\+NAME\+\_\+\+K\+\_\+\+CONCURRENT}} = 7
+ \}
+\item 
+enum \mbox{\hyperlink{inc_2hsa__ven__amd__aqlprofile_8h_a6aff6ff86e935f42e4686e4f2ae7a724}{hsa\+\_\+ven\+\_\+amd\+\_\+aqlprofile\+\_\+info\+\_\+type\+\_\+t}} \{ \newline
+\mbox{\hyperlink{inc_2hsa__ven__amd__aqlprofile_8h_a6aff6ff86e935f42e4686e4f2ae7a724a0920eb9683792fd12bad4cacb86d8e58}{HSA\+\_\+\+VEN\+\_\+\+AMD\+\_\+\+AQLPROFILE\+\_\+\+INFO\+\_\+\+COMMAND\+\_\+\+BUFFER\+\_\+\+SIZE}} = 0
+, \mbox{\hyperlink{inc_2hsa__ven__amd__aqlprofile_8h_a6aff6ff86e935f42e4686e4f2ae7a724a8215d3d56057d1d2cf2485777ed37cb4}{HSA\+\_\+\+VEN\+\_\+\+AMD\+\_\+\+AQLPROFILE\+\_\+\+INFO\+\_\+\+PMC\+\_\+\+DATA\+\_\+\+SIZE}} = 1
+, \mbox{\hyperlink{inc_2hsa__ven__amd__aqlprofile_8h_a6aff6ff86e935f42e4686e4f2ae7a724a4007ae485e0b4c2965374160d2fa5119}{HSA\+\_\+\+VEN\+\_\+\+AMD\+\_\+\+AQLPROFILE\+\_\+\+INFO\+\_\+\+PMC\+\_\+\+DATA}} = 2
+, \mbox{\hyperlink{inc_2hsa__ven__amd__aqlprofile_8h_a6aff6ff86e935f42e4686e4f2ae7a724a5a9306ebd2784dec8ec2bbb5940e2c27}{HSA\+\_\+\+VEN\+\_\+\+AMD\+\_\+\+AQLPROFILE\+\_\+\+INFO\+\_\+\+TRACE\+\_\+\+DATA}} = 3
+, \newline
+\mbox{\hyperlink{inc_2hsa__ven__amd__aqlprofile_8h_a6aff6ff86e935f42e4686e4f2ae7a724a8e3d0c27f844cda2b5af080bc7561aa5}{HSA\+\_\+\+VEN\+\_\+\+AMD\+\_\+\+AQLPROFILE\+\_\+\+INFO\+\_\+\+BLOCK\+\_\+\+COUNTERS}} = 4
+, \mbox{\hyperlink{inc_2hsa__ven__amd__aqlprofile_8h_a6aff6ff86e935f42e4686e4f2ae7a724a4de318c95a9a1b369983b0bf9ba84fcb}{HSA\+\_\+\+VEN\+\_\+\+AMD\+\_\+\+AQLPROFILE\+\_\+\+INFO\+\_\+\+BLOCK\+\_\+\+ID}} = 5
+, \mbox{\hyperlink{inc_2hsa__ven__amd__aqlprofile_8h_a6aff6ff86e935f42e4686e4f2ae7a724a5260271b0c29c691adf2daff16f171ce}{HSA\+\_\+\+VEN\+\_\+\+AMD\+\_\+\+AQLPROFILE\+\_\+\+INFO\+\_\+\+ENABLE\+\_\+\+CMD}} = 6
+, \mbox{\hyperlink{inc_2hsa__ven__amd__aqlprofile_8h_a6aff6ff86e935f42e4686e4f2ae7a724a8e6081b0ca8b52e28fcf50dc70052edc}{HSA\+\_\+\+VEN\+\_\+\+AMD\+\_\+\+AQLPROFILE\+\_\+\+INFO\+\_\+\+DISABLE\+\_\+\+CMD}} = 7
+ \}
+\end{DoxyCompactItemize}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+uint32\+\_\+t \mbox{\hyperlink{inc_2hsa__ven__amd__aqlprofile_8h_a3b94ecac493b200679cd9aaf2ae15f38}{hsa\+\_\+ven\+\_\+amd\+\_\+aqlprofile\+\_\+version\+\_\+major}} ()
+\item 
+uint32\+\_\+t \mbox{\hyperlink{inc_2hsa__ven__amd__aqlprofile_8h_a770e8e4c8aa73fd74effeddf187cb8f2}{hsa\+\_\+ven\+\_\+amd\+\_\+aqlprofile\+\_\+version\+\_\+minor}} ()
+\item 
+\mbox{\hyperlink{group__status_gad755322e7ff95456520e8abdbe90d225}{hsa\+\_\+status\+\_\+t}} \mbox{\hyperlink{inc_2hsa__ven__amd__aqlprofile_8h_a37cd498a43dc2aaaac9d510675ba76c7}{hsa\+\_\+ven\+\_\+amd\+\_\+aqlprofile\+\_\+validate\+\_\+event}} (\mbox{\hyperlink{group__agentinfo_ga9ce217ef08e7d5e89c8e83ce7b6ef22b}{hsa\+\_\+agent\+\_\+t}} agent, const \mbox{\hyperlink{structhsa__ven__amd__aqlprofile__event__t}{hsa\+\_\+ven\+\_\+amd\+\_\+aqlprofile\+\_\+event\+\_\+t}} $\ast$event, bool $\ast$result)
+\item 
+\mbox{\hyperlink{group__status_gad755322e7ff95456520e8abdbe90d225}{hsa\+\_\+status\+\_\+t}} \mbox{\hyperlink{inc_2hsa__ven__amd__aqlprofile_8h_aaf282f2d0a22be54becb1e0342a04329}{hsa\+\_\+ven\+\_\+amd\+\_\+aqlprofile\+\_\+start}} (\mbox{\hyperlink{structhsa__ven__amd__aqlprofile__profile__t}{hsa\+\_\+ven\+\_\+amd\+\_\+aqlprofile\+\_\+profile\+\_\+t}} $\ast$profile, \mbox{\hyperlink{structhsa__ext__amd__aql__pm4__packet__t}{hsa\+\_\+ext\+\_\+amd\+\_\+aql\+\_\+pm4\+\_\+packet\+\_\+t}} $\ast$aql\+\_\+start\+\_\+packet)
+\item 
+\mbox{\hyperlink{group__status_gad755322e7ff95456520e8abdbe90d225}{hsa\+\_\+status\+\_\+t}} \mbox{\hyperlink{inc_2hsa__ven__amd__aqlprofile_8h_aa935b8b47e606b9585c0b439bea43dc0}{hsa\+\_\+ven\+\_\+amd\+\_\+aqlprofile\+\_\+stop}} (const \mbox{\hyperlink{structhsa__ven__amd__aqlprofile__profile__t}{hsa\+\_\+ven\+\_\+amd\+\_\+aqlprofile\+\_\+profile\+\_\+t}} $\ast$profile, \mbox{\hyperlink{structhsa__ext__amd__aql__pm4__packet__t}{hsa\+\_\+ext\+\_\+amd\+\_\+aql\+\_\+pm4\+\_\+packet\+\_\+t}} $\ast$aql\+\_\+stop\+\_\+packet)
+\item 
+\mbox{\hyperlink{group__status_gad755322e7ff95456520e8abdbe90d225}{hsa\+\_\+status\+\_\+t}} \mbox{\hyperlink{inc_2hsa__ven__amd__aqlprofile_8h_ae900d2d00afcafbaeea588c51315b345}{hsa\+\_\+ven\+\_\+amd\+\_\+aqlprofile\+\_\+read}} (const \mbox{\hyperlink{structhsa__ven__amd__aqlprofile__profile__t}{hsa\+\_\+ven\+\_\+amd\+\_\+aqlprofile\+\_\+profile\+\_\+t}} $\ast$profile, \mbox{\hyperlink{structhsa__ext__amd__aql__pm4__packet__t}{hsa\+\_\+ext\+\_\+amd\+\_\+aql\+\_\+pm4\+\_\+packet\+\_\+t}} $\ast$aql\+\_\+read\+\_\+packet)
+\item 
+\mbox{\hyperlink{group__status_gad755322e7ff95456520e8abdbe90d225}{hsa\+\_\+status\+\_\+t}} \mbox{\hyperlink{inc_2hsa__ven__amd__aqlprofile_8h_a331fddfe145d892d2600fcca0d130818}{hsa\+\_\+ven\+\_\+amd\+\_\+aqlprofile\+\_\+legacy\+\_\+get\+\_\+pm4}} (const \mbox{\hyperlink{structhsa__ext__amd__aql__pm4__packet__t}{hsa\+\_\+ext\+\_\+amd\+\_\+aql\+\_\+pm4\+\_\+packet\+\_\+t}} $\ast$aql\+\_\+packet, void $\ast$data)
+\item 
+\mbox{\hyperlink{group__status_gad755322e7ff95456520e8abdbe90d225}{hsa\+\_\+status\+\_\+t}} \mbox{\hyperlink{inc_2hsa__ven__amd__aqlprofile_8h_a91a2f24def75d95b9bae0ff15abed275}{hsa\+\_\+ven\+\_\+amd\+\_\+aqlprofile\+\_\+get\+\_\+info}} (const \mbox{\hyperlink{structhsa__ven__amd__aqlprofile__profile__t}{hsa\+\_\+ven\+\_\+amd\+\_\+aqlprofile\+\_\+profile\+\_\+t}} $\ast$profile, \mbox{\hyperlink{inc_2hsa__ven__amd__aqlprofile_8h_a6aff6ff86e935f42e4686e4f2ae7a724}{hsa\+\_\+ven\+\_\+amd\+\_\+aqlprofile\+\_\+info\+\_\+type\+\_\+t}} attribute, void $\ast$value)
+\item 
+\mbox{\hyperlink{group__status_gad755322e7ff95456520e8abdbe90d225}{hsa\+\_\+status\+\_\+t}} \mbox{\hyperlink{inc_2hsa__ven__amd__aqlprofile_8h_a90d83349751455fbca1c9c10098318d6}{hsa\+\_\+ven\+\_\+amd\+\_\+aqlprofile\+\_\+iterate\+\_\+data}} (const \mbox{\hyperlink{structhsa__ven__amd__aqlprofile__profile__t}{hsa\+\_\+ven\+\_\+amd\+\_\+aqlprofile\+\_\+profile\+\_\+t}} $\ast$profile, \mbox{\hyperlink{inc_2hsa__ven__amd__aqlprofile_8h_a656631107c7a47c2481476f3ced89f50}{hsa\+\_\+ven\+\_\+amd\+\_\+aqlprofile\+\_\+data\+\_\+callback\+\_\+t}} callback, void $\ast$data)
+\item 
+\mbox{\hyperlink{group__status_gad755322e7ff95456520e8abdbe90d225}{hsa\+\_\+status\+\_\+t}} \mbox{\hyperlink{inc_2hsa__ven__amd__aqlprofile_8h_a99895d9dfd83ba810e7a79bd6b337326}{hsa\+\_\+ven\+\_\+amd\+\_\+aqlprofile\+\_\+error\+\_\+string}} (const char $\ast$$\ast$str)
+\end{DoxyCompactItemize}
+\doxysubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+const unsigned \mbox{\hyperlink{inc_2hsa__ven__amd__aqlprofile_8h_aef698a2593810edbc5e5d9ba622394f5}{HSA\+\_\+\+VEN\+\_\+\+AMD\+\_\+\+AQLPROFILE\+\_\+\+LEGACY\+\_\+\+PM4\+\_\+\+PACKET\+\_\+\+SIZE}} = 192
+\item 
+static const char \mbox{\hyperlink{inc_2hsa__ven__amd__aqlprofile_8h_ad66be561ac5661f2aefd7ed3ac897274}{k\+Aql\+Profile\+Lib}} \mbox{[}$\,$\mbox{]} = \mbox{\hyperlink{inc_2hsa__ven__amd__aqlprofile_8h_adeb5a17866347eb476975a0da9568d65}{hsa\+\_\+ven\+\_\+amd\+\_\+aqlprofile\+\_\+\+LIB}}(\char`\"{}\char`\"{})
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Macro Definition Documentation}
+\mbox{\Hypertarget{inc_2hsa__ven__amd__aqlprofile_8h_a172f455b671a1376425dd23f990b4890}\label{inc_2hsa__ven__amd__aqlprofile_8h_a172f455b671a1376425dd23f990b4890}} 
+\index{hsa\_ven\_amd\_aqlprofile.h@{hsa\_ven\_amd\_aqlprofile.h}!HSA\_AQLPROFILE\_VERSION\_MAJOR@{HSA\_AQLPROFILE\_VERSION\_MAJOR}}
+\index{HSA\_AQLPROFILE\_VERSION\_MAJOR@{HSA\_AQLPROFILE\_VERSION\_MAJOR}!hsa\_ven\_amd\_aqlprofile.h@{hsa\_ven\_amd\_aqlprofile.h}}
+\doxysubsubsection{\texorpdfstring{HSA\_AQLPROFILE\_VERSION\_MAJOR}{HSA\_AQLPROFILE\_VERSION\_MAJOR}}
+{\footnotesize\ttfamily \#define HSA\+\_\+\+AQLPROFILE\+\_\+\+VERSION\+\_\+\+MAJOR~2}
+
+\mbox{\Hypertarget{inc_2hsa__ven__amd__aqlprofile_8h_a53531ce778f8ab6da161b5f8d6914e95}\label{inc_2hsa__ven__amd__aqlprofile_8h_a53531ce778f8ab6da161b5f8d6914e95}} 
+\index{hsa\_ven\_amd\_aqlprofile.h@{hsa\_ven\_amd\_aqlprofile.h}!HSA\_AQLPROFILE\_VERSION\_MINOR@{HSA\_AQLPROFILE\_VERSION\_MINOR}}
+\index{HSA\_AQLPROFILE\_VERSION\_MINOR@{HSA\_AQLPROFILE\_VERSION\_MINOR}!hsa\_ven\_amd\_aqlprofile.h@{hsa\_ven\_amd\_aqlprofile.h}}
+\doxysubsubsection{\texorpdfstring{HSA\_AQLPROFILE\_VERSION\_MINOR}{HSA\_AQLPROFILE\_VERSION\_MINOR}}
+{\footnotesize\ttfamily \#define HSA\+\_\+\+AQLPROFILE\+\_\+\+VERSION\+\_\+\+MINOR~0}
+
+\mbox{\Hypertarget{inc_2hsa__ven__amd__aqlprofile_8h_adeb5a17866347eb476975a0da9568d65}\label{inc_2hsa__ven__amd__aqlprofile_8h_adeb5a17866347eb476975a0da9568d65}} 
+\index{hsa\_ven\_amd\_aqlprofile.h@{hsa\_ven\_amd\_aqlprofile.h}!hsa\_ven\_amd\_aqlprofile\_LIB@{hsa\_ven\_amd\_aqlprofile\_LIB}}
+\index{hsa\_ven\_amd\_aqlprofile\_LIB@{hsa\_ven\_amd\_aqlprofile\_LIB}!hsa\_ven\_amd\_aqlprofile.h@{hsa\_ven\_amd\_aqlprofile.h}}
+\doxysubsubsection{\texorpdfstring{hsa\_ven\_amd\_aqlprofile\_LIB}{hsa\_ven\_amd\_aqlprofile\_LIB}}
+{\footnotesize\ttfamily \#define hsa\+\_\+ven\+\_\+amd\+\_\+aqlprofile\+\_\+\+LIB(\begin{DoxyParamCaption}\item[{}]{suff }\end{DoxyParamCaption})~\char`\"{}libhsa-\/amd-\/aqlprofile\char`\"{} suff \char`\"{}.so\char`\"{}}
+
+\mbox{\Hypertarget{inc_2hsa__ven__amd__aqlprofile_8h_a9e24651707f9a95d2258a7dacc66d4a5}\label{inc_2hsa__ven__amd__aqlprofile_8h_a9e24651707f9a95d2258a7dacc66d4a5}} 
+\index{hsa\_ven\_amd\_aqlprofile.h@{hsa\_ven\_amd\_aqlprofile.h}!hsa\_ven\_amd\_aqlprofile\_VERSION\_MAJOR@{hsa\_ven\_amd\_aqlprofile\_VERSION\_MAJOR}}
+\index{hsa\_ven\_amd\_aqlprofile\_VERSION\_MAJOR@{hsa\_ven\_amd\_aqlprofile\_VERSION\_MAJOR}!hsa\_ven\_amd\_aqlprofile.h@{hsa\_ven\_amd\_aqlprofile.h}}
+\doxysubsubsection{\texorpdfstring{hsa\_ven\_amd\_aqlprofile\_VERSION\_MAJOR}{hsa\_ven\_amd\_aqlprofile\_VERSION\_MAJOR}}
+{\footnotesize\ttfamily \#define hsa\+\_\+ven\+\_\+amd\+\_\+aqlprofile\+\_\+\+VERSION\+\_\+\+MAJOR~1}
+
+
+
+Extension version. 
+
+
+
+\doxysubsection{Typedef Documentation}
+\mbox{\Hypertarget{inc_2hsa__ven__amd__aqlprofile_8h_ac0bcff0aead2fb1edce24e3e1ba322e9}\label{inc_2hsa__ven__amd__aqlprofile_8h_ac0bcff0aead2fb1edce24e3e1ba322e9}} 
+\index{hsa\_ven\_amd\_aqlprofile.h@{hsa\_ven\_amd\_aqlprofile.h}!hsa\_ven\_amd\_aqlprofile\_1\_00\_pfn\_t@{hsa\_ven\_amd\_aqlprofile\_1\_00\_pfn\_t}}
+\index{hsa\_ven\_amd\_aqlprofile\_1\_00\_pfn\_t@{hsa\_ven\_amd\_aqlprofile\_1\_00\_pfn\_t}!hsa\_ven\_amd\_aqlprofile.h@{hsa\_ven\_amd\_aqlprofile.h}}
+\doxysubsubsection{\texorpdfstring{hsa\_ven\_amd\_aqlprofile\_1\_00\_pfn\_t}{hsa\_ven\_amd\_aqlprofile\_1\_00\_pfn\_t}}
+{\footnotesize\ttfamily typedef struct \mbox{\hyperlink{structhsa__ven__amd__aqlprofile__1__00__pfn__s}{hsa\+\_\+ven\+\_\+amd\+\_\+aqlprofile\+\_\+1\+\_\+00\+\_\+pfn\+\_\+s}} \mbox{\hyperlink{inc_2hsa__ven__amd__aqlprofile_8h_ac0bcff0aead2fb1edce24e3e1ba322e9}{hsa\+\_\+ven\+\_\+amd\+\_\+aqlprofile\+\_\+1\+\_\+00\+\_\+pfn\+\_\+t}}}
+
+
+
+Extension function table. 
+
+\mbox{\Hypertarget{inc_2hsa__ven__amd__aqlprofile_8h_a656631107c7a47c2481476f3ced89f50}\label{inc_2hsa__ven__amd__aqlprofile_8h_a656631107c7a47c2481476f3ced89f50}} 
+\index{hsa\_ven\_amd\_aqlprofile.h@{hsa\_ven\_amd\_aqlprofile.h}!hsa\_ven\_amd\_aqlprofile\_data\_callback\_t@{hsa\_ven\_amd\_aqlprofile\_data\_callback\_t}}
+\index{hsa\_ven\_amd\_aqlprofile\_data\_callback\_t@{hsa\_ven\_amd\_aqlprofile\_data\_callback\_t}!hsa\_ven\_amd\_aqlprofile.h@{hsa\_ven\_amd\_aqlprofile.h}}
+\doxysubsubsection{\texorpdfstring{hsa\_ven\_amd\_aqlprofile\_data\_callback\_t}{hsa\_ven\_amd\_aqlprofile\_data\_callback\_t}}
+{\footnotesize\ttfamily typedef \mbox{\hyperlink{group__status_gad755322e7ff95456520e8abdbe90d225}{hsa\+\_\+status\+\_\+t}}($\ast$ hsa\+\_\+ven\+\_\+amd\+\_\+aqlprofile\+\_\+data\+\_\+callback\+\_\+t) (\mbox{\hyperlink{inc_2hsa__ven__amd__aqlprofile_8h_a6aff6ff86e935f42e4686e4f2ae7a724}{hsa\+\_\+ven\+\_\+amd\+\_\+aqlprofile\+\_\+info\+\_\+type\+\_\+t}} info\+\_\+type, \mbox{\hyperlink{structhsa__ven__amd__aqlprofile__info__data__t}{hsa\+\_\+ven\+\_\+amd\+\_\+aqlprofile\+\_\+info\+\_\+data\+\_\+t}} $\ast$info\+\_\+data, void $\ast$callback\+\_\+data)}
+
+\mbox{\Hypertarget{inc_2hsa__ven__amd__aqlprofile_8h_a720c58cc51241aa28271c9e3914aeea4}\label{inc_2hsa__ven__amd__aqlprofile_8h_a720c58cc51241aa28271c9e3914aeea4}} 
+\index{hsa\_ven\_amd\_aqlprofile.h@{hsa\_ven\_amd\_aqlprofile.h}!hsa\_ven\_amd\_aqlprofile\_pfn\_t@{hsa\_ven\_amd\_aqlprofile\_pfn\_t}}
+\index{hsa\_ven\_amd\_aqlprofile\_pfn\_t@{hsa\_ven\_amd\_aqlprofile\_pfn\_t}!hsa\_ven\_amd\_aqlprofile.h@{hsa\_ven\_amd\_aqlprofile.h}}
+\doxysubsubsection{\texorpdfstring{hsa\_ven\_amd\_aqlprofile\_pfn\_t}{hsa\_ven\_amd\_aqlprofile\_pfn\_t}}
+{\footnotesize\ttfamily typedef \mbox{\hyperlink{inc_2hsa__ven__amd__aqlprofile_8h_ac0bcff0aead2fb1edce24e3e1ba322e9}{hsa\+\_\+ven\+\_\+amd\+\_\+aqlprofile\+\_\+1\+\_\+00\+\_\+pfn\+\_\+t}} \mbox{\hyperlink{inc_2hsa__ven__amd__aqlprofile_8h_a720c58cc51241aa28271c9e3914aeea4}{hsa\+\_\+ven\+\_\+amd\+\_\+aqlprofile\+\_\+pfn\+\_\+t}}}
+
+
+
+\doxysubsection{Enumeration Type Documentation}
+\mbox{\Hypertarget{inc_2hsa__ven__amd__aqlprofile_8h_a41b548ada2be5b9ef8678762c85f7f0f}\label{inc_2hsa__ven__amd__aqlprofile_8h_a41b548ada2be5b9ef8678762c85f7f0f}} 
+\index{hsa\_ven\_amd\_aqlprofile.h@{hsa\_ven\_amd\_aqlprofile.h}!hsa\_ven\_amd\_aqlprofile\_block\_name\_t@{hsa\_ven\_amd\_aqlprofile\_block\_name\_t}}
+\index{hsa\_ven\_amd\_aqlprofile\_block\_name\_t@{hsa\_ven\_amd\_aqlprofile\_block\_name\_t}!hsa\_ven\_amd\_aqlprofile.h@{hsa\_ven\_amd\_aqlprofile.h}}
+\doxysubsubsection{\texorpdfstring{hsa\_ven\_amd\_aqlprofile\_block\_name\_t}{hsa\_ven\_amd\_aqlprofile\_block\_name\_t}}
+{\footnotesize\ttfamily enum \mbox{\hyperlink{inc_2hsa__ven__amd__aqlprofile_8h_a41b548ada2be5b9ef8678762c85f7f0f}{hsa\+\_\+ven\+\_\+amd\+\_\+aqlprofile\+\_\+block\+\_\+name\+\_\+t}}}
+
+\begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{HSA\_VEN\_AMD\_AQLPROFILE\_BLOCK\_NAME\_CPC@{HSA\_VEN\_AMD\_AQLPROFILE\_BLOCK\_NAME\_CPC}!hsa\_ven\_amd\_aqlprofile.h@{hsa\_ven\_amd\_aqlprofile.h}}\index{hsa\_ven\_amd\_aqlprofile.h@{hsa\_ven\_amd\_aqlprofile.h}!HSA\_VEN\_AMD\_AQLPROFILE\_BLOCK\_NAME\_CPC@{HSA\_VEN\_AMD\_AQLPROFILE\_BLOCK\_NAME\_CPC}}}\mbox{\Hypertarget{inc_2hsa__ven__amd__aqlprofile_8h_a41b548ada2be5b9ef8678762c85f7f0fa84b2ded66011444b3ab85b09a35cfcdb}\label{inc_2hsa__ven__amd__aqlprofile_8h_a41b548ada2be5b9ef8678762c85f7f0fa84b2ded66011444b3ab85b09a35cfcdb}} 
+HSA\+\_\+\+VEN\+\_\+\+AMD\+\_\+\+AQLPROFILE\+\_\+\+BLOCK\+\_\+\+NAME\+\_\+\+CPC&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{HSA\_VEN\_AMD\_AQLPROFILE\_BLOCK\_NAME\_CPF@{HSA\_VEN\_AMD\_AQLPROFILE\_BLOCK\_NAME\_CPF}!hsa\_ven\_amd\_aqlprofile.h@{hsa\_ven\_amd\_aqlprofile.h}}\index{hsa\_ven\_amd\_aqlprofile.h@{hsa\_ven\_amd\_aqlprofile.h}!HSA\_VEN\_AMD\_AQLPROFILE\_BLOCK\_NAME\_CPF@{HSA\_VEN\_AMD\_AQLPROFILE\_BLOCK\_NAME\_CPF}}}\mbox{\Hypertarget{inc_2hsa__ven__amd__aqlprofile_8h_a41b548ada2be5b9ef8678762c85f7f0faf5f2ee037953098c002268778b2d96b0}\label{inc_2hsa__ven__amd__aqlprofile_8h_a41b548ada2be5b9ef8678762c85f7f0faf5f2ee037953098c002268778b2d96b0}} 
+HSA\+\_\+\+VEN\+\_\+\+AMD\+\_\+\+AQLPROFILE\+\_\+\+BLOCK\+\_\+\+NAME\+\_\+\+CPF&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{HSA\_VEN\_AMD\_AQLPROFILE\_BLOCK\_NAME\_GDS@{HSA\_VEN\_AMD\_AQLPROFILE\_BLOCK\_NAME\_GDS}!hsa\_ven\_amd\_aqlprofile.h@{hsa\_ven\_amd\_aqlprofile.h}}\index{hsa\_ven\_amd\_aqlprofile.h@{hsa\_ven\_amd\_aqlprofile.h}!HSA\_VEN\_AMD\_AQLPROFILE\_BLOCK\_NAME\_GDS@{HSA\_VEN\_AMD\_AQLPROFILE\_BLOCK\_NAME\_GDS}}}\mbox{\Hypertarget{inc_2hsa__ven__amd__aqlprofile_8h_a41b548ada2be5b9ef8678762c85f7f0fa5e39db33fe6e3e18514b841af54ec6f5}\label{inc_2hsa__ven__amd__aqlprofile_8h_a41b548ada2be5b9ef8678762c85f7f0fa5e39db33fe6e3e18514b841af54ec6f5}} 
+HSA\+\_\+\+VEN\+\_\+\+AMD\+\_\+\+AQLPROFILE\+\_\+\+BLOCK\+\_\+\+NAME\+\_\+\+GDS&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{HSA\_VEN\_AMD\_AQLPROFILE\_BLOCK\_NAME\_GRBM@{HSA\_VEN\_AMD\_AQLPROFILE\_BLOCK\_NAME\_GRBM}!hsa\_ven\_amd\_aqlprofile.h@{hsa\_ven\_amd\_aqlprofile.h}}\index{hsa\_ven\_amd\_aqlprofile.h@{hsa\_ven\_amd\_aqlprofile.h}!HSA\_VEN\_AMD\_AQLPROFILE\_BLOCK\_NAME\_GRBM@{HSA\_VEN\_AMD\_AQLPROFILE\_BLOCK\_NAME\_GRBM}}}\mbox{\Hypertarget{inc_2hsa__ven__amd__aqlprofile_8h_a41b548ada2be5b9ef8678762c85f7f0fac2ffed406d34fa6bfb40a0ff9bf1dde6}\label{inc_2hsa__ven__amd__aqlprofile_8h_a41b548ada2be5b9ef8678762c85f7f0fac2ffed406d34fa6bfb40a0ff9bf1dde6}} 
+HSA\+\_\+\+VEN\+\_\+\+AMD\+\_\+\+AQLPROFILE\+\_\+\+BLOCK\+\_\+\+NAME\+\_\+\+GRBM&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{HSA\_VEN\_AMD\_AQLPROFILE\_BLOCK\_NAME\_GRBMSE@{HSA\_VEN\_AMD\_AQLPROFILE\_BLOCK\_NAME\_GRBMSE}!hsa\_ven\_amd\_aqlprofile.h@{hsa\_ven\_amd\_aqlprofile.h}}\index{hsa\_ven\_amd\_aqlprofile.h@{hsa\_ven\_amd\_aqlprofile.h}!HSA\_VEN\_AMD\_AQLPROFILE\_BLOCK\_NAME\_GRBMSE@{HSA\_VEN\_AMD\_AQLPROFILE\_BLOCK\_NAME\_GRBMSE}}}\mbox{\Hypertarget{inc_2hsa__ven__amd__aqlprofile_8h_a41b548ada2be5b9ef8678762c85f7f0fa35367d09eb205529cf9ddbf4ee281d47}\label{inc_2hsa__ven__amd__aqlprofile_8h_a41b548ada2be5b9ef8678762c85f7f0fa35367d09eb205529cf9ddbf4ee281d47}} 
+HSA\+\_\+\+VEN\+\_\+\+AMD\+\_\+\+AQLPROFILE\+\_\+\+BLOCK\+\_\+\+NAME\+\_\+\+GRBMSE&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{HSA\_VEN\_AMD\_AQLPROFILE\_BLOCK\_NAME\_SPI@{HSA\_VEN\_AMD\_AQLPROFILE\_BLOCK\_NAME\_SPI}!hsa\_ven\_amd\_aqlprofile.h@{hsa\_ven\_amd\_aqlprofile.h}}\index{hsa\_ven\_amd\_aqlprofile.h@{hsa\_ven\_amd\_aqlprofile.h}!HSA\_VEN\_AMD\_AQLPROFILE\_BLOCK\_NAME\_SPI@{HSA\_VEN\_AMD\_AQLPROFILE\_BLOCK\_NAME\_SPI}}}\mbox{\Hypertarget{inc_2hsa__ven__amd__aqlprofile_8h_a41b548ada2be5b9ef8678762c85f7f0faaf339de5baf502d333425f2b34820171}\label{inc_2hsa__ven__amd__aqlprofile_8h_a41b548ada2be5b9ef8678762c85f7f0faaf339de5baf502d333425f2b34820171}} 
+HSA\+\_\+\+VEN\+\_\+\+AMD\+\_\+\+AQLPROFILE\+\_\+\+BLOCK\+\_\+\+NAME\+\_\+\+SPI&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{HSA\_VEN\_AMD\_AQLPROFILE\_BLOCK\_NAME\_SQ@{HSA\_VEN\_AMD\_AQLPROFILE\_BLOCK\_NAME\_SQ}!hsa\_ven\_amd\_aqlprofile.h@{hsa\_ven\_amd\_aqlprofile.h}}\index{hsa\_ven\_amd\_aqlprofile.h@{hsa\_ven\_amd\_aqlprofile.h}!HSA\_VEN\_AMD\_AQLPROFILE\_BLOCK\_NAME\_SQ@{HSA\_VEN\_AMD\_AQLPROFILE\_BLOCK\_NAME\_SQ}}}\mbox{\Hypertarget{inc_2hsa__ven__amd__aqlprofile_8h_a41b548ada2be5b9ef8678762c85f7f0fa63ba62befc590d13e7bd8feb125e8083}\label{inc_2hsa__ven__amd__aqlprofile_8h_a41b548ada2be5b9ef8678762c85f7f0fa63ba62befc590d13e7bd8feb125e8083}} 
+HSA\+\_\+\+VEN\+\_\+\+AMD\+\_\+\+AQLPROFILE\+\_\+\+BLOCK\+\_\+\+NAME\+\_\+\+SQ&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{HSA\_VEN\_AMD\_AQLPROFILE\_BLOCK\_NAME\_SQCS@{HSA\_VEN\_AMD\_AQLPROFILE\_BLOCK\_NAME\_SQCS}!hsa\_ven\_amd\_aqlprofile.h@{hsa\_ven\_amd\_aqlprofile.h}}\index{hsa\_ven\_amd\_aqlprofile.h@{hsa\_ven\_amd\_aqlprofile.h}!HSA\_VEN\_AMD\_AQLPROFILE\_BLOCK\_NAME\_SQCS@{HSA\_VEN\_AMD\_AQLPROFILE\_BLOCK\_NAME\_SQCS}}}\mbox{\Hypertarget{inc_2hsa__ven__amd__aqlprofile_8h_a41b548ada2be5b9ef8678762c85f7f0fa99f4338fd24970fcc58c319396b7c5e4}\label{inc_2hsa__ven__amd__aqlprofile_8h_a41b548ada2be5b9ef8678762c85f7f0fa99f4338fd24970fcc58c319396b7c5e4}} 
+HSA\+\_\+\+VEN\+\_\+\+AMD\+\_\+\+AQLPROFILE\+\_\+\+BLOCK\+\_\+\+NAME\+\_\+\+SQCS&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{HSA\_VEN\_AMD\_AQLPROFILE\_BLOCK\_NAME\_SRBM@{HSA\_VEN\_AMD\_AQLPROFILE\_BLOCK\_NAME\_SRBM}!hsa\_ven\_amd\_aqlprofile.h@{hsa\_ven\_amd\_aqlprofile.h}}\index{hsa\_ven\_amd\_aqlprofile.h@{hsa\_ven\_amd\_aqlprofile.h}!HSA\_VEN\_AMD\_AQLPROFILE\_BLOCK\_NAME\_SRBM@{HSA\_VEN\_AMD\_AQLPROFILE\_BLOCK\_NAME\_SRBM}}}\mbox{\Hypertarget{inc_2hsa__ven__amd__aqlprofile_8h_a41b548ada2be5b9ef8678762c85f7f0fa338e9dc1b84a5d6df194d9756f424e40}\label{inc_2hsa__ven__amd__aqlprofile_8h_a41b548ada2be5b9ef8678762c85f7f0fa338e9dc1b84a5d6df194d9756f424e40}} 
+HSA\+\_\+\+VEN\+\_\+\+AMD\+\_\+\+AQLPROFILE\+\_\+\+BLOCK\+\_\+\+NAME\+\_\+\+SRBM&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{HSA\_VEN\_AMD\_AQLPROFILE\_BLOCK\_NAME\_SX@{HSA\_VEN\_AMD\_AQLPROFILE\_BLOCK\_NAME\_SX}!hsa\_ven\_amd\_aqlprofile.h@{hsa\_ven\_amd\_aqlprofile.h}}\index{hsa\_ven\_amd\_aqlprofile.h@{hsa\_ven\_amd\_aqlprofile.h}!HSA\_VEN\_AMD\_AQLPROFILE\_BLOCK\_NAME\_SX@{HSA\_VEN\_AMD\_AQLPROFILE\_BLOCK\_NAME\_SX}}}\mbox{\Hypertarget{inc_2hsa__ven__amd__aqlprofile_8h_a41b548ada2be5b9ef8678762c85f7f0fa5056855c63398cc4fb9c4857bfd77ab2}\label{inc_2hsa__ven__amd__aqlprofile_8h_a41b548ada2be5b9ef8678762c85f7f0fa5056855c63398cc4fb9c4857bfd77ab2}} 
+HSA\+\_\+\+VEN\+\_\+\+AMD\+\_\+\+AQLPROFILE\+\_\+\+BLOCK\+\_\+\+NAME\+\_\+\+SX&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{HSA\_VEN\_AMD\_AQLPROFILE\_BLOCK\_NAME\_TA@{HSA\_VEN\_AMD\_AQLPROFILE\_BLOCK\_NAME\_TA}!hsa\_ven\_amd\_aqlprofile.h@{hsa\_ven\_amd\_aqlprofile.h}}\index{hsa\_ven\_amd\_aqlprofile.h@{hsa\_ven\_amd\_aqlprofile.h}!HSA\_VEN\_AMD\_AQLPROFILE\_BLOCK\_NAME\_TA@{HSA\_VEN\_AMD\_AQLPROFILE\_BLOCK\_NAME\_TA}}}\mbox{\Hypertarget{inc_2hsa__ven__amd__aqlprofile_8h_a41b548ada2be5b9ef8678762c85f7f0faca7b0c173bcdacd037b334767bdbe6cf}\label{inc_2hsa__ven__amd__aqlprofile_8h_a41b548ada2be5b9ef8678762c85f7f0faca7b0c173bcdacd037b334767bdbe6cf}} 
+HSA\+\_\+\+VEN\+\_\+\+AMD\+\_\+\+AQLPROFILE\+\_\+\+BLOCK\+\_\+\+NAME\+\_\+\+TA&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{HSA\_VEN\_AMD\_AQLPROFILE\_BLOCK\_NAME\_TCA@{HSA\_VEN\_AMD\_AQLPROFILE\_BLOCK\_NAME\_TCA}!hsa\_ven\_amd\_aqlprofile.h@{hsa\_ven\_amd\_aqlprofile.h}}\index{hsa\_ven\_amd\_aqlprofile.h@{hsa\_ven\_amd\_aqlprofile.h}!HSA\_VEN\_AMD\_AQLPROFILE\_BLOCK\_NAME\_TCA@{HSA\_VEN\_AMD\_AQLPROFILE\_BLOCK\_NAME\_TCA}}}\mbox{\Hypertarget{inc_2hsa__ven__amd__aqlprofile_8h_a41b548ada2be5b9ef8678762c85f7f0fa620eb2bd3eaf7a6d247d0de53ad26f07}\label{inc_2hsa__ven__amd__aqlprofile_8h_a41b548ada2be5b9ef8678762c85f7f0fa620eb2bd3eaf7a6d247d0de53ad26f07}} 
+HSA\+\_\+\+VEN\+\_\+\+AMD\+\_\+\+AQLPROFILE\+\_\+\+BLOCK\+\_\+\+NAME\+\_\+\+TCA&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{HSA\_VEN\_AMD\_AQLPROFILE\_BLOCK\_NAME\_TCC@{HSA\_VEN\_AMD\_AQLPROFILE\_BLOCK\_NAME\_TCC}!hsa\_ven\_amd\_aqlprofile.h@{hsa\_ven\_amd\_aqlprofile.h}}\index{hsa\_ven\_amd\_aqlprofile.h@{hsa\_ven\_amd\_aqlprofile.h}!HSA\_VEN\_AMD\_AQLPROFILE\_BLOCK\_NAME\_TCC@{HSA\_VEN\_AMD\_AQLPROFILE\_BLOCK\_NAME\_TCC}}}\mbox{\Hypertarget{inc_2hsa__ven__amd__aqlprofile_8h_a41b548ada2be5b9ef8678762c85f7f0fab786fe44e51bfbb7f5625ed70c61723a}\label{inc_2hsa__ven__amd__aqlprofile_8h_a41b548ada2be5b9ef8678762c85f7f0fab786fe44e51bfbb7f5625ed70c61723a}} 
+HSA\+\_\+\+VEN\+\_\+\+AMD\+\_\+\+AQLPROFILE\+\_\+\+BLOCK\+\_\+\+NAME\+\_\+\+TCC&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{HSA\_VEN\_AMD\_AQLPROFILE\_BLOCK\_NAME\_TCP@{HSA\_VEN\_AMD\_AQLPROFILE\_BLOCK\_NAME\_TCP}!hsa\_ven\_amd\_aqlprofile.h@{hsa\_ven\_amd\_aqlprofile.h}}\index{hsa\_ven\_amd\_aqlprofile.h@{hsa\_ven\_amd\_aqlprofile.h}!HSA\_VEN\_AMD\_AQLPROFILE\_BLOCK\_NAME\_TCP@{HSA\_VEN\_AMD\_AQLPROFILE\_BLOCK\_NAME\_TCP}}}\mbox{\Hypertarget{inc_2hsa__ven__amd__aqlprofile_8h_a41b548ada2be5b9ef8678762c85f7f0fa1ce17319d421c6451bebc458c3c868ad}\label{inc_2hsa__ven__amd__aqlprofile_8h_a41b548ada2be5b9ef8678762c85f7f0fa1ce17319d421c6451bebc458c3c868ad}} 
+HSA\+\_\+\+VEN\+\_\+\+AMD\+\_\+\+AQLPROFILE\+\_\+\+BLOCK\+\_\+\+NAME\+\_\+\+TCP&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{HSA\_VEN\_AMD\_AQLPROFILE\_BLOCK\_NAME\_TD@{HSA\_VEN\_AMD\_AQLPROFILE\_BLOCK\_NAME\_TD}!hsa\_ven\_amd\_aqlprofile.h@{hsa\_ven\_amd\_aqlprofile.h}}\index{hsa\_ven\_amd\_aqlprofile.h@{hsa\_ven\_amd\_aqlprofile.h}!HSA\_VEN\_AMD\_AQLPROFILE\_BLOCK\_NAME\_TD@{HSA\_VEN\_AMD\_AQLPROFILE\_BLOCK\_NAME\_TD}}}\mbox{\Hypertarget{inc_2hsa__ven__amd__aqlprofile_8h_a41b548ada2be5b9ef8678762c85f7f0fae53182dc320377db5e5445e8ff90ffa6}\label{inc_2hsa__ven__amd__aqlprofile_8h_a41b548ada2be5b9ef8678762c85f7f0fae53182dc320377db5e5445e8ff90ffa6}} 
+HSA\+\_\+\+VEN\+\_\+\+AMD\+\_\+\+AQLPROFILE\+\_\+\+BLOCK\+\_\+\+NAME\+\_\+\+TD&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{HSA\_VEN\_AMD\_AQLPROFILE\_BLOCK\_NAME\_MCARB@{HSA\_VEN\_AMD\_AQLPROFILE\_BLOCK\_NAME\_MCARB}!hsa\_ven\_amd\_aqlprofile.h@{hsa\_ven\_amd\_aqlprofile.h}}\index{hsa\_ven\_amd\_aqlprofile.h@{hsa\_ven\_amd\_aqlprofile.h}!HSA\_VEN\_AMD\_AQLPROFILE\_BLOCK\_NAME\_MCARB@{HSA\_VEN\_AMD\_AQLPROFILE\_BLOCK\_NAME\_MCARB}}}\mbox{\Hypertarget{inc_2hsa__ven__amd__aqlprofile_8h_a41b548ada2be5b9ef8678762c85f7f0fadcf174237a5196be292ee8df2c70c6f0}\label{inc_2hsa__ven__amd__aqlprofile_8h_a41b548ada2be5b9ef8678762c85f7f0fadcf174237a5196be292ee8df2c70c6f0}} 
+HSA\+\_\+\+VEN\+\_\+\+AMD\+\_\+\+AQLPROFILE\+\_\+\+BLOCK\+\_\+\+NAME\+\_\+\+MCARB&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{HSA\_VEN\_AMD\_AQLPROFILE\_BLOCK\_NAME\_MCHUB@{HSA\_VEN\_AMD\_AQLPROFILE\_BLOCK\_NAME\_MCHUB}!hsa\_ven\_amd\_aqlprofile.h@{hsa\_ven\_amd\_aqlprofile.h}}\index{hsa\_ven\_amd\_aqlprofile.h@{hsa\_ven\_amd\_aqlprofile.h}!HSA\_VEN\_AMD\_AQLPROFILE\_BLOCK\_NAME\_MCHUB@{HSA\_VEN\_AMD\_AQLPROFILE\_BLOCK\_NAME\_MCHUB}}}\mbox{\Hypertarget{inc_2hsa__ven__amd__aqlprofile_8h_a41b548ada2be5b9ef8678762c85f7f0fa8e390d6c3af5f9d382f83d6897c217fe}\label{inc_2hsa__ven__amd__aqlprofile_8h_a41b548ada2be5b9ef8678762c85f7f0fa8e390d6c3af5f9d382f83d6897c217fe}} 
+HSA\+\_\+\+VEN\+\_\+\+AMD\+\_\+\+AQLPROFILE\+\_\+\+BLOCK\+\_\+\+NAME\+\_\+\+MCHUB&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{HSA\_VEN\_AMD\_AQLPROFILE\_BLOCK\_NAME\_MCMCBVM@{HSA\_VEN\_AMD\_AQLPROFILE\_BLOCK\_NAME\_MCMCBVM}!hsa\_ven\_amd\_aqlprofile.h@{hsa\_ven\_amd\_aqlprofile.h}}\index{hsa\_ven\_amd\_aqlprofile.h@{hsa\_ven\_amd\_aqlprofile.h}!HSA\_VEN\_AMD\_AQLPROFILE\_BLOCK\_NAME\_MCMCBVM@{HSA\_VEN\_AMD\_AQLPROFILE\_BLOCK\_NAME\_MCMCBVM}}}\mbox{\Hypertarget{inc_2hsa__ven__amd__aqlprofile_8h_a41b548ada2be5b9ef8678762c85f7f0fa8504249ab17d29481e4997662f122127}\label{inc_2hsa__ven__amd__aqlprofile_8h_a41b548ada2be5b9ef8678762c85f7f0fa8504249ab17d29481e4997662f122127}} 
+HSA\+\_\+\+VEN\+\_\+\+AMD\+\_\+\+AQLPROFILE\+\_\+\+BLOCK\+\_\+\+NAME\+\_\+\+MCMCBVM&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{HSA\_VEN\_AMD\_AQLPROFILE\_BLOCK\_NAME\_MCSEQ@{HSA\_VEN\_AMD\_AQLPROFILE\_BLOCK\_NAME\_MCSEQ}!hsa\_ven\_amd\_aqlprofile.h@{hsa\_ven\_amd\_aqlprofile.h}}\index{hsa\_ven\_amd\_aqlprofile.h@{hsa\_ven\_amd\_aqlprofile.h}!HSA\_VEN\_AMD\_AQLPROFILE\_BLOCK\_NAME\_MCSEQ@{HSA\_VEN\_AMD\_AQLPROFILE\_BLOCK\_NAME\_MCSEQ}}}\mbox{\Hypertarget{inc_2hsa__ven__amd__aqlprofile_8h_a41b548ada2be5b9ef8678762c85f7f0fad1da9a6aa5fdaa68964d711fe3896b01}\label{inc_2hsa__ven__amd__aqlprofile_8h_a41b548ada2be5b9ef8678762c85f7f0fad1da9a6aa5fdaa68964d711fe3896b01}} 
+HSA\+\_\+\+VEN\+\_\+\+AMD\+\_\+\+AQLPROFILE\+\_\+\+BLOCK\+\_\+\+NAME\+\_\+\+MCSEQ&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{HSA\_VEN\_AMD\_AQLPROFILE\_BLOCK\_NAME\_MCVML2@{HSA\_VEN\_AMD\_AQLPROFILE\_BLOCK\_NAME\_MCVML2}!hsa\_ven\_amd\_aqlprofile.h@{hsa\_ven\_amd\_aqlprofile.h}}\index{hsa\_ven\_amd\_aqlprofile.h@{hsa\_ven\_amd\_aqlprofile.h}!HSA\_VEN\_AMD\_AQLPROFILE\_BLOCK\_NAME\_MCVML2@{HSA\_VEN\_AMD\_AQLPROFILE\_BLOCK\_NAME\_MCVML2}}}\mbox{\Hypertarget{inc_2hsa__ven__amd__aqlprofile_8h_a41b548ada2be5b9ef8678762c85f7f0fad4e641f8dd3bed144b2b46f34774fbd3}\label{inc_2hsa__ven__amd__aqlprofile_8h_a41b548ada2be5b9ef8678762c85f7f0fad4e641f8dd3bed144b2b46f34774fbd3}} 
+HSA\+\_\+\+VEN\+\_\+\+AMD\+\_\+\+AQLPROFILE\+\_\+\+BLOCK\+\_\+\+NAME\+\_\+\+MCVML2&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{HSA\_VEN\_AMD\_AQLPROFILE\_BLOCK\_NAME\_MCXBAR@{HSA\_VEN\_AMD\_AQLPROFILE\_BLOCK\_NAME\_MCXBAR}!hsa\_ven\_amd\_aqlprofile.h@{hsa\_ven\_amd\_aqlprofile.h}}\index{hsa\_ven\_amd\_aqlprofile.h@{hsa\_ven\_amd\_aqlprofile.h}!HSA\_VEN\_AMD\_AQLPROFILE\_BLOCK\_NAME\_MCXBAR@{HSA\_VEN\_AMD\_AQLPROFILE\_BLOCK\_NAME\_MCXBAR}}}\mbox{\Hypertarget{inc_2hsa__ven__amd__aqlprofile_8h_a41b548ada2be5b9ef8678762c85f7f0fa6622089a0f4b43400fb5a50ce3b893c9}\label{inc_2hsa__ven__amd__aqlprofile_8h_a41b548ada2be5b9ef8678762c85f7f0fa6622089a0f4b43400fb5a50ce3b893c9}} 
+HSA\+\_\+\+VEN\+\_\+\+AMD\+\_\+\+AQLPROFILE\+\_\+\+BLOCK\+\_\+\+NAME\+\_\+\+MCXBAR&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{HSA\_VEN\_AMD\_AQLPROFILE\_BLOCK\_NAME\_ATC@{HSA\_VEN\_AMD\_AQLPROFILE\_BLOCK\_NAME\_ATC}!hsa\_ven\_amd\_aqlprofile.h@{hsa\_ven\_amd\_aqlprofile.h}}\index{hsa\_ven\_amd\_aqlprofile.h@{hsa\_ven\_amd\_aqlprofile.h}!HSA\_VEN\_AMD\_AQLPROFILE\_BLOCK\_NAME\_ATC@{HSA\_VEN\_AMD\_AQLPROFILE\_BLOCK\_NAME\_ATC}}}\mbox{\Hypertarget{inc_2hsa__ven__amd__aqlprofile_8h_a41b548ada2be5b9ef8678762c85f7f0fa359ee8cf90323b06216fcc04ea2c0833}\label{inc_2hsa__ven__amd__aqlprofile_8h_a41b548ada2be5b9ef8678762c85f7f0fa359ee8cf90323b06216fcc04ea2c0833}} 
+HSA\+\_\+\+VEN\+\_\+\+AMD\+\_\+\+AQLPROFILE\+\_\+\+BLOCK\+\_\+\+NAME\+\_\+\+ATC&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{HSA\_VEN\_AMD\_AQLPROFILE\_BLOCK\_NAME\_ATCL2@{HSA\_VEN\_AMD\_AQLPROFILE\_BLOCK\_NAME\_ATCL2}!hsa\_ven\_amd\_aqlprofile.h@{hsa\_ven\_amd\_aqlprofile.h}}\index{hsa\_ven\_amd\_aqlprofile.h@{hsa\_ven\_amd\_aqlprofile.h}!HSA\_VEN\_AMD\_AQLPROFILE\_BLOCK\_NAME\_ATCL2@{HSA\_VEN\_AMD\_AQLPROFILE\_BLOCK\_NAME\_ATCL2}}}\mbox{\Hypertarget{inc_2hsa__ven__amd__aqlprofile_8h_a41b548ada2be5b9ef8678762c85f7f0faf385de54d803a36357241cd0ee92fc8a}\label{inc_2hsa__ven__amd__aqlprofile_8h_a41b548ada2be5b9ef8678762c85f7f0faf385de54d803a36357241cd0ee92fc8a}} 
+HSA\+\_\+\+VEN\+\_\+\+AMD\+\_\+\+AQLPROFILE\+\_\+\+BLOCK\+\_\+\+NAME\+\_\+\+ATCL2&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{HSA\_VEN\_AMD\_AQLPROFILE\_BLOCK\_NAME\_GCEA@{HSA\_VEN\_AMD\_AQLPROFILE\_BLOCK\_NAME\_GCEA}!hsa\_ven\_amd\_aqlprofile.h@{hsa\_ven\_amd\_aqlprofile.h}}\index{hsa\_ven\_amd\_aqlprofile.h@{hsa\_ven\_amd\_aqlprofile.h}!HSA\_VEN\_AMD\_AQLPROFILE\_BLOCK\_NAME\_GCEA@{HSA\_VEN\_AMD\_AQLPROFILE\_BLOCK\_NAME\_GCEA}}}\mbox{\Hypertarget{inc_2hsa__ven__amd__aqlprofile_8h_a41b548ada2be5b9ef8678762c85f7f0faad5d5f7639fdbfd6138b065376b3f8d6}\label{inc_2hsa__ven__amd__aqlprofile_8h_a41b548ada2be5b9ef8678762c85f7f0faad5d5f7639fdbfd6138b065376b3f8d6}} 
+HSA\+\_\+\+VEN\+\_\+\+AMD\+\_\+\+AQLPROFILE\+\_\+\+BLOCK\+\_\+\+NAME\+\_\+\+GCEA&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{HSA\_VEN\_AMD\_AQLPROFILE\_BLOCK\_NAME\_RPB@{HSA\_VEN\_AMD\_AQLPROFILE\_BLOCK\_NAME\_RPB}!hsa\_ven\_amd\_aqlprofile.h@{hsa\_ven\_amd\_aqlprofile.h}}\index{hsa\_ven\_amd\_aqlprofile.h@{hsa\_ven\_amd\_aqlprofile.h}!HSA\_VEN\_AMD\_AQLPROFILE\_BLOCK\_NAME\_RPB@{HSA\_VEN\_AMD\_AQLPROFILE\_BLOCK\_NAME\_RPB}}}\mbox{\Hypertarget{inc_2hsa__ven__amd__aqlprofile_8h_a41b548ada2be5b9ef8678762c85f7f0fa45bd55820d13a0d4458c00491c3ff8dd}\label{inc_2hsa__ven__amd__aqlprofile_8h_a41b548ada2be5b9ef8678762c85f7f0fa45bd55820d13a0d4458c00491c3ff8dd}} 
+HSA\+\_\+\+VEN\+\_\+\+AMD\+\_\+\+AQLPROFILE\+\_\+\+BLOCK\+\_\+\+NAME\+\_\+\+RPB&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{HSA\_VEN\_AMD\_AQLPROFILE\_BLOCK\_NAME\_SDMA@{HSA\_VEN\_AMD\_AQLPROFILE\_BLOCK\_NAME\_SDMA}!hsa\_ven\_amd\_aqlprofile.h@{hsa\_ven\_amd\_aqlprofile.h}}\index{hsa\_ven\_amd\_aqlprofile.h@{hsa\_ven\_amd\_aqlprofile.h}!HSA\_VEN\_AMD\_AQLPROFILE\_BLOCK\_NAME\_SDMA@{HSA\_VEN\_AMD\_AQLPROFILE\_BLOCK\_NAME\_SDMA}}}\mbox{\Hypertarget{inc_2hsa__ven__amd__aqlprofile_8h_a41b548ada2be5b9ef8678762c85f7f0faed8d6ea060303eaddb6fcc090940fbc4}\label{inc_2hsa__ven__amd__aqlprofile_8h_a41b548ada2be5b9ef8678762c85f7f0faed8d6ea060303eaddb6fcc090940fbc4}} 
+HSA\+\_\+\+VEN\+\_\+\+AMD\+\_\+\+AQLPROFILE\+\_\+\+BLOCK\+\_\+\+NAME\+\_\+\+SDMA&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{HSA\_VEN\_AMD\_AQLPROFILE\_BLOCK\_NAME\_GL1A@{HSA\_VEN\_AMD\_AQLPROFILE\_BLOCK\_NAME\_GL1A}!hsa\_ven\_amd\_aqlprofile.h@{hsa\_ven\_amd\_aqlprofile.h}}\index{hsa\_ven\_amd\_aqlprofile.h@{hsa\_ven\_amd\_aqlprofile.h}!HSA\_VEN\_AMD\_AQLPROFILE\_BLOCK\_NAME\_GL1A@{HSA\_VEN\_AMD\_AQLPROFILE\_BLOCK\_NAME\_GL1A}}}\mbox{\Hypertarget{inc_2hsa__ven__amd__aqlprofile_8h_a41b548ada2be5b9ef8678762c85f7f0faaba2a6411e1e537f7cc7150274dfe09d}\label{inc_2hsa__ven__amd__aqlprofile_8h_a41b548ada2be5b9ef8678762c85f7f0faaba2a6411e1e537f7cc7150274dfe09d}} 
+HSA\+\_\+\+VEN\+\_\+\+AMD\+\_\+\+AQLPROFILE\+\_\+\+BLOCK\+\_\+\+NAME\+\_\+\+GL1A&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{HSA\_VEN\_AMD\_AQLPROFILE\_BLOCK\_NAME\_GL1C@{HSA\_VEN\_AMD\_AQLPROFILE\_BLOCK\_NAME\_GL1C}!hsa\_ven\_amd\_aqlprofile.h@{hsa\_ven\_amd\_aqlprofile.h}}\index{hsa\_ven\_amd\_aqlprofile.h@{hsa\_ven\_amd\_aqlprofile.h}!HSA\_VEN\_AMD\_AQLPROFILE\_BLOCK\_NAME\_GL1C@{HSA\_VEN\_AMD\_AQLPROFILE\_BLOCK\_NAME\_GL1C}}}\mbox{\Hypertarget{inc_2hsa__ven__amd__aqlprofile_8h_a41b548ada2be5b9ef8678762c85f7f0faa3d51d770882cf933df2c5ae1d7a37f6}\label{inc_2hsa__ven__amd__aqlprofile_8h_a41b548ada2be5b9ef8678762c85f7f0faa3d51d770882cf933df2c5ae1d7a37f6}} 
+HSA\+\_\+\+VEN\+\_\+\+AMD\+\_\+\+AQLPROFILE\+\_\+\+BLOCK\+\_\+\+NAME\+\_\+\+GL1C&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{HSA\_VEN\_AMD\_AQLPROFILE\_BLOCK\_NAME\_GL2A@{HSA\_VEN\_AMD\_AQLPROFILE\_BLOCK\_NAME\_GL2A}!hsa\_ven\_amd\_aqlprofile.h@{hsa\_ven\_amd\_aqlprofile.h}}\index{hsa\_ven\_amd\_aqlprofile.h@{hsa\_ven\_amd\_aqlprofile.h}!HSA\_VEN\_AMD\_AQLPROFILE\_BLOCK\_NAME\_GL2A@{HSA\_VEN\_AMD\_AQLPROFILE\_BLOCK\_NAME\_GL2A}}}\mbox{\Hypertarget{inc_2hsa__ven__amd__aqlprofile_8h_a41b548ada2be5b9ef8678762c85f7f0faccd365235733854940bec1383918b021}\label{inc_2hsa__ven__amd__aqlprofile_8h_a41b548ada2be5b9ef8678762c85f7f0faccd365235733854940bec1383918b021}} 
+HSA\+\_\+\+VEN\+\_\+\+AMD\+\_\+\+AQLPROFILE\+\_\+\+BLOCK\+\_\+\+NAME\+\_\+\+GL2A&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{HSA\_VEN\_AMD\_AQLPROFILE\_BLOCK\_NAME\_GL2C@{HSA\_VEN\_AMD\_AQLPROFILE\_BLOCK\_NAME\_GL2C}!hsa\_ven\_amd\_aqlprofile.h@{hsa\_ven\_amd\_aqlprofile.h}}\index{hsa\_ven\_amd\_aqlprofile.h@{hsa\_ven\_amd\_aqlprofile.h}!HSA\_VEN\_AMD\_AQLPROFILE\_BLOCK\_NAME\_GL2C@{HSA\_VEN\_AMD\_AQLPROFILE\_BLOCK\_NAME\_GL2C}}}\mbox{\Hypertarget{inc_2hsa__ven__amd__aqlprofile_8h_a41b548ada2be5b9ef8678762c85f7f0fa2af65523fb21717071dccfb87fe14f55}\label{inc_2hsa__ven__amd__aqlprofile_8h_a41b548ada2be5b9ef8678762c85f7f0fa2af65523fb21717071dccfb87fe14f55}} 
+HSA\+\_\+\+VEN\+\_\+\+AMD\+\_\+\+AQLPROFILE\+\_\+\+BLOCK\+\_\+\+NAME\+\_\+\+GL2C&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{HSA\_VEN\_AMD\_AQLPROFILE\_BLOCK\_NAME\_GCR@{HSA\_VEN\_AMD\_AQLPROFILE\_BLOCK\_NAME\_GCR}!hsa\_ven\_amd\_aqlprofile.h@{hsa\_ven\_amd\_aqlprofile.h}}\index{hsa\_ven\_amd\_aqlprofile.h@{hsa\_ven\_amd\_aqlprofile.h}!HSA\_VEN\_AMD\_AQLPROFILE\_BLOCK\_NAME\_GCR@{HSA\_VEN\_AMD\_AQLPROFILE\_BLOCK\_NAME\_GCR}}}\mbox{\Hypertarget{inc_2hsa__ven__amd__aqlprofile_8h_a41b548ada2be5b9ef8678762c85f7f0fad5f5b65632978822f0ba9fdaf184c7c8}\label{inc_2hsa__ven__amd__aqlprofile_8h_a41b548ada2be5b9ef8678762c85f7f0fad5f5b65632978822f0ba9fdaf184c7c8}} 
+HSA\+\_\+\+VEN\+\_\+\+AMD\+\_\+\+AQLPROFILE\+\_\+\+BLOCK\+\_\+\+NAME\+\_\+\+GCR&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{HSA\_VEN\_AMD\_AQLPROFILE\_BLOCK\_NAME\_GUS@{HSA\_VEN\_AMD\_AQLPROFILE\_BLOCK\_NAME\_GUS}!hsa\_ven\_amd\_aqlprofile.h@{hsa\_ven\_amd\_aqlprofile.h}}\index{hsa\_ven\_amd\_aqlprofile.h@{hsa\_ven\_amd\_aqlprofile.h}!HSA\_VEN\_AMD\_AQLPROFILE\_BLOCK\_NAME\_GUS@{HSA\_VEN\_AMD\_AQLPROFILE\_BLOCK\_NAME\_GUS}}}\mbox{\Hypertarget{inc_2hsa__ven__amd__aqlprofile_8h_a41b548ada2be5b9ef8678762c85f7f0fa6713fa5c4c2bec75027bafd03de22b55}\label{inc_2hsa__ven__amd__aqlprofile_8h_a41b548ada2be5b9ef8678762c85f7f0fa6713fa5c4c2bec75027bafd03de22b55}} 
+HSA\+\_\+\+VEN\+\_\+\+AMD\+\_\+\+AQLPROFILE\+\_\+\+BLOCK\+\_\+\+NAME\+\_\+\+GUS&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{HSA\_VEN\_AMD\_AQLPROFILE\_BLOCKS\_NUMBER@{HSA\_VEN\_AMD\_AQLPROFILE\_BLOCKS\_NUMBER}!hsa\_ven\_amd\_aqlprofile.h@{hsa\_ven\_amd\_aqlprofile.h}}\index{hsa\_ven\_amd\_aqlprofile.h@{hsa\_ven\_amd\_aqlprofile.h}!HSA\_VEN\_AMD\_AQLPROFILE\_BLOCKS\_NUMBER@{HSA\_VEN\_AMD\_AQLPROFILE\_BLOCKS\_NUMBER}}}\mbox{\Hypertarget{inc_2hsa__ven__amd__aqlprofile_8h_a41b548ada2be5b9ef8678762c85f7f0fa0aed80d5efd216569a47da504158b71c}\label{inc_2hsa__ven__amd__aqlprofile_8h_a41b548ada2be5b9ef8678762c85f7f0fa0aed80d5efd216569a47da504158b71c}} 
+HSA\+\_\+\+VEN\+\_\+\+AMD\+\_\+\+AQLPROFILE\+\_\+\+BLOCKS\+\_\+\+NUMBER&\\
+\hline
+
+\end{DoxyEnumFields}
+\mbox{\Hypertarget{inc_2hsa__ven__amd__aqlprofile_8h_a491dfe1026c5ce643c8766bef6765fcb}\label{inc_2hsa__ven__amd__aqlprofile_8h_a491dfe1026c5ce643c8766bef6765fcb}} 
+\index{hsa\_ven\_amd\_aqlprofile.h@{hsa\_ven\_amd\_aqlprofile.h}!hsa\_ven\_amd\_aqlprofile\_event\_type\_t@{hsa\_ven\_amd\_aqlprofile\_event\_type\_t}}
+\index{hsa\_ven\_amd\_aqlprofile\_event\_type\_t@{hsa\_ven\_amd\_aqlprofile\_event\_type\_t}!hsa\_ven\_amd\_aqlprofile.h@{hsa\_ven\_amd\_aqlprofile.h}}
+\doxysubsubsection{\texorpdfstring{hsa\_ven\_amd\_aqlprofile\_event\_type\_t}{hsa\_ven\_amd\_aqlprofile\_event\_type\_t}}
+{\footnotesize\ttfamily enum \mbox{\hyperlink{inc_2hsa__ven__amd__aqlprofile_8h_a491dfe1026c5ce643c8766bef6765fcb}{hsa\+\_\+ven\+\_\+amd\+\_\+aqlprofile\+\_\+event\+\_\+type\+\_\+t}}}
+
+\begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{HSA\_VEN\_AMD\_AQLPROFILE\_EVENT\_TYPE\_PMC@{HSA\_VEN\_AMD\_AQLPROFILE\_EVENT\_TYPE\_PMC}!hsa\_ven\_amd\_aqlprofile.h@{hsa\_ven\_amd\_aqlprofile.h}}\index{hsa\_ven\_amd\_aqlprofile.h@{hsa\_ven\_amd\_aqlprofile.h}!HSA\_VEN\_AMD\_AQLPROFILE\_EVENT\_TYPE\_PMC@{HSA\_VEN\_AMD\_AQLPROFILE\_EVENT\_TYPE\_PMC}}}\mbox{\Hypertarget{inc_2hsa__ven__amd__aqlprofile_8h_a491dfe1026c5ce643c8766bef6765fcbad9fc9281707eec617c0cd6061ddb8644}\label{inc_2hsa__ven__amd__aqlprofile_8h_a491dfe1026c5ce643c8766bef6765fcbad9fc9281707eec617c0cd6061ddb8644}} 
+HSA\+\_\+\+VEN\+\_\+\+AMD\+\_\+\+AQLPROFILE\+\_\+\+EVENT\+\_\+\+TYPE\+\_\+\+PMC&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{HSA\_VEN\_AMD\_AQLPROFILE\_EVENT\_TYPE\_TRACE@{HSA\_VEN\_AMD\_AQLPROFILE\_EVENT\_TYPE\_TRACE}!hsa\_ven\_amd\_aqlprofile.h@{hsa\_ven\_amd\_aqlprofile.h}}\index{hsa\_ven\_amd\_aqlprofile.h@{hsa\_ven\_amd\_aqlprofile.h}!HSA\_VEN\_AMD\_AQLPROFILE\_EVENT\_TYPE\_TRACE@{HSA\_VEN\_AMD\_AQLPROFILE\_EVENT\_TYPE\_TRACE}}}\mbox{\Hypertarget{inc_2hsa__ven__amd__aqlprofile_8h_a491dfe1026c5ce643c8766bef6765fcba0836565cf63c421b9665a917152db506}\label{inc_2hsa__ven__amd__aqlprofile_8h_a491dfe1026c5ce643c8766bef6765fcba0836565cf63c421b9665a917152db506}} 
+HSA\+\_\+\+VEN\+\_\+\+AMD\+\_\+\+AQLPROFILE\+\_\+\+EVENT\+\_\+\+TYPE\+\_\+\+TRACE&\\
+\hline
+
+\end{DoxyEnumFields}
+\mbox{\Hypertarget{inc_2hsa__ven__amd__aqlprofile_8h_a6aff6ff86e935f42e4686e4f2ae7a724}\label{inc_2hsa__ven__amd__aqlprofile_8h_a6aff6ff86e935f42e4686e4f2ae7a724}} 
+\index{hsa\_ven\_amd\_aqlprofile.h@{hsa\_ven\_amd\_aqlprofile.h}!hsa\_ven\_amd\_aqlprofile\_info\_type\_t@{hsa\_ven\_amd\_aqlprofile\_info\_type\_t}}
+\index{hsa\_ven\_amd\_aqlprofile\_info\_type\_t@{hsa\_ven\_amd\_aqlprofile\_info\_type\_t}!hsa\_ven\_amd\_aqlprofile.h@{hsa\_ven\_amd\_aqlprofile.h}}
+\doxysubsubsection{\texorpdfstring{hsa\_ven\_amd\_aqlprofile\_info\_type\_t}{hsa\_ven\_amd\_aqlprofile\_info\_type\_t}}
+{\footnotesize\ttfamily enum \mbox{\hyperlink{inc_2hsa__ven__amd__aqlprofile_8h_a6aff6ff86e935f42e4686e4f2ae7a724}{hsa\+\_\+ven\+\_\+amd\+\_\+aqlprofile\+\_\+info\+\_\+type\+\_\+t}}}
+
+\begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{HSA\_VEN\_AMD\_AQLPROFILE\_INFO\_COMMAND\_BUFFER\_SIZE@{HSA\_VEN\_AMD\_AQLPROFILE\_INFO\_COMMAND\_BUFFER\_SIZE}!hsa\_ven\_amd\_aqlprofile.h@{hsa\_ven\_amd\_aqlprofile.h}}\index{hsa\_ven\_amd\_aqlprofile.h@{hsa\_ven\_amd\_aqlprofile.h}!HSA\_VEN\_AMD\_AQLPROFILE\_INFO\_COMMAND\_BUFFER\_SIZE@{HSA\_VEN\_AMD\_AQLPROFILE\_INFO\_COMMAND\_BUFFER\_SIZE}}}\mbox{\Hypertarget{inc_2hsa__ven__amd__aqlprofile_8h_a6aff6ff86e935f42e4686e4f2ae7a724a0920eb9683792fd12bad4cacb86d8e58}\label{inc_2hsa__ven__amd__aqlprofile_8h_a6aff6ff86e935f42e4686e4f2ae7a724a0920eb9683792fd12bad4cacb86d8e58}} 
+HSA\+\_\+\+VEN\+\_\+\+AMD\+\_\+\+AQLPROFILE\+\_\+\+INFO\+\_\+\+COMMAND\+\_\+\+BUFFER\+\_\+\+SIZE&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{HSA\_VEN\_AMD\_AQLPROFILE\_INFO\_PMC\_DATA\_SIZE@{HSA\_VEN\_AMD\_AQLPROFILE\_INFO\_PMC\_DATA\_SIZE}!hsa\_ven\_amd\_aqlprofile.h@{hsa\_ven\_amd\_aqlprofile.h}}\index{hsa\_ven\_amd\_aqlprofile.h@{hsa\_ven\_amd\_aqlprofile.h}!HSA\_VEN\_AMD\_AQLPROFILE\_INFO\_PMC\_DATA\_SIZE@{HSA\_VEN\_AMD\_AQLPROFILE\_INFO\_PMC\_DATA\_SIZE}}}\mbox{\Hypertarget{inc_2hsa__ven__amd__aqlprofile_8h_a6aff6ff86e935f42e4686e4f2ae7a724a8215d3d56057d1d2cf2485777ed37cb4}\label{inc_2hsa__ven__amd__aqlprofile_8h_a6aff6ff86e935f42e4686e4f2ae7a724a8215d3d56057d1d2cf2485777ed37cb4}} 
+HSA\+\_\+\+VEN\+\_\+\+AMD\+\_\+\+AQLPROFILE\+\_\+\+INFO\+\_\+\+PMC\+\_\+\+DATA\+\_\+\+SIZE&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{HSA\_VEN\_AMD\_AQLPROFILE\_INFO\_PMC\_DATA@{HSA\_VEN\_AMD\_AQLPROFILE\_INFO\_PMC\_DATA}!hsa\_ven\_amd\_aqlprofile.h@{hsa\_ven\_amd\_aqlprofile.h}}\index{hsa\_ven\_amd\_aqlprofile.h@{hsa\_ven\_amd\_aqlprofile.h}!HSA\_VEN\_AMD\_AQLPROFILE\_INFO\_PMC\_DATA@{HSA\_VEN\_AMD\_AQLPROFILE\_INFO\_PMC\_DATA}}}\mbox{\Hypertarget{inc_2hsa__ven__amd__aqlprofile_8h_a6aff6ff86e935f42e4686e4f2ae7a724a4007ae485e0b4c2965374160d2fa5119}\label{inc_2hsa__ven__amd__aqlprofile_8h_a6aff6ff86e935f42e4686e4f2ae7a724a4007ae485e0b4c2965374160d2fa5119}} 
+HSA\+\_\+\+VEN\+\_\+\+AMD\+\_\+\+AQLPROFILE\+\_\+\+INFO\+\_\+\+PMC\+\_\+\+DATA&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{HSA\_VEN\_AMD\_AQLPROFILE\_INFO\_TRACE\_DATA@{HSA\_VEN\_AMD\_AQLPROFILE\_INFO\_TRACE\_DATA}!hsa\_ven\_amd\_aqlprofile.h@{hsa\_ven\_amd\_aqlprofile.h}}\index{hsa\_ven\_amd\_aqlprofile.h@{hsa\_ven\_amd\_aqlprofile.h}!HSA\_VEN\_AMD\_AQLPROFILE\_INFO\_TRACE\_DATA@{HSA\_VEN\_AMD\_AQLPROFILE\_INFO\_TRACE\_DATA}}}\mbox{\Hypertarget{inc_2hsa__ven__amd__aqlprofile_8h_a6aff6ff86e935f42e4686e4f2ae7a724a5a9306ebd2784dec8ec2bbb5940e2c27}\label{inc_2hsa__ven__amd__aqlprofile_8h_a6aff6ff86e935f42e4686e4f2ae7a724a5a9306ebd2784dec8ec2bbb5940e2c27}} 
+HSA\+\_\+\+VEN\+\_\+\+AMD\+\_\+\+AQLPROFILE\+\_\+\+INFO\+\_\+\+TRACE\+\_\+\+DATA&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{HSA\_VEN\_AMD\_AQLPROFILE\_INFO\_BLOCK\_COUNTERS@{HSA\_VEN\_AMD\_AQLPROFILE\_INFO\_BLOCK\_COUNTERS}!hsa\_ven\_amd\_aqlprofile.h@{hsa\_ven\_amd\_aqlprofile.h}}\index{hsa\_ven\_amd\_aqlprofile.h@{hsa\_ven\_amd\_aqlprofile.h}!HSA\_VEN\_AMD\_AQLPROFILE\_INFO\_BLOCK\_COUNTERS@{HSA\_VEN\_AMD\_AQLPROFILE\_INFO\_BLOCK\_COUNTERS}}}\mbox{\Hypertarget{inc_2hsa__ven__amd__aqlprofile_8h_a6aff6ff86e935f42e4686e4f2ae7a724a8e3d0c27f844cda2b5af080bc7561aa5}\label{inc_2hsa__ven__amd__aqlprofile_8h_a6aff6ff86e935f42e4686e4f2ae7a724a8e3d0c27f844cda2b5af080bc7561aa5}} 
+HSA\+\_\+\+VEN\+\_\+\+AMD\+\_\+\+AQLPROFILE\+\_\+\+INFO\+\_\+\+BLOCK\+\_\+\+COUNTERS&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{HSA\_VEN\_AMD\_AQLPROFILE\_INFO\_BLOCK\_ID@{HSA\_VEN\_AMD\_AQLPROFILE\_INFO\_BLOCK\_ID}!hsa\_ven\_amd\_aqlprofile.h@{hsa\_ven\_amd\_aqlprofile.h}}\index{hsa\_ven\_amd\_aqlprofile.h@{hsa\_ven\_amd\_aqlprofile.h}!HSA\_VEN\_AMD\_AQLPROFILE\_INFO\_BLOCK\_ID@{HSA\_VEN\_AMD\_AQLPROFILE\_INFO\_BLOCK\_ID}}}\mbox{\Hypertarget{inc_2hsa__ven__amd__aqlprofile_8h_a6aff6ff86e935f42e4686e4f2ae7a724a4de318c95a9a1b369983b0bf9ba84fcb}\label{inc_2hsa__ven__amd__aqlprofile_8h_a6aff6ff86e935f42e4686e4f2ae7a724a4de318c95a9a1b369983b0bf9ba84fcb}} 
+HSA\+\_\+\+VEN\+\_\+\+AMD\+\_\+\+AQLPROFILE\+\_\+\+INFO\+\_\+\+BLOCK\+\_\+\+ID&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{HSA\_VEN\_AMD\_AQLPROFILE\_INFO\_ENABLE\_CMD@{HSA\_VEN\_AMD\_AQLPROFILE\_INFO\_ENABLE\_CMD}!hsa\_ven\_amd\_aqlprofile.h@{hsa\_ven\_amd\_aqlprofile.h}}\index{hsa\_ven\_amd\_aqlprofile.h@{hsa\_ven\_amd\_aqlprofile.h}!HSA\_VEN\_AMD\_AQLPROFILE\_INFO\_ENABLE\_CMD@{HSA\_VEN\_AMD\_AQLPROFILE\_INFO\_ENABLE\_CMD}}}\mbox{\Hypertarget{inc_2hsa__ven__amd__aqlprofile_8h_a6aff6ff86e935f42e4686e4f2ae7a724a5260271b0c29c691adf2daff16f171ce}\label{inc_2hsa__ven__amd__aqlprofile_8h_a6aff6ff86e935f42e4686e4f2ae7a724a5260271b0c29c691adf2daff16f171ce}} 
+HSA\+\_\+\+VEN\+\_\+\+AMD\+\_\+\+AQLPROFILE\+\_\+\+INFO\+\_\+\+ENABLE\+\_\+\+CMD&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{HSA\_VEN\_AMD\_AQLPROFILE\_INFO\_DISABLE\_CMD@{HSA\_VEN\_AMD\_AQLPROFILE\_INFO\_DISABLE\_CMD}!hsa\_ven\_amd\_aqlprofile.h@{hsa\_ven\_amd\_aqlprofile.h}}\index{hsa\_ven\_amd\_aqlprofile.h@{hsa\_ven\_amd\_aqlprofile.h}!HSA\_VEN\_AMD\_AQLPROFILE\_INFO\_DISABLE\_CMD@{HSA\_VEN\_AMD\_AQLPROFILE\_INFO\_DISABLE\_CMD}}}\mbox{\Hypertarget{inc_2hsa__ven__amd__aqlprofile_8h_a6aff6ff86e935f42e4686e4f2ae7a724a8e6081b0ca8b52e28fcf50dc70052edc}\label{inc_2hsa__ven__amd__aqlprofile_8h_a6aff6ff86e935f42e4686e4f2ae7a724a8e6081b0ca8b52e28fcf50dc70052edc}} 
+HSA\+\_\+\+VEN\+\_\+\+AMD\+\_\+\+AQLPROFILE\+\_\+\+INFO\+\_\+\+DISABLE\+\_\+\+CMD&\\
+\hline
+
+\end{DoxyEnumFields}
+\mbox{\Hypertarget{inc_2hsa__ven__amd__aqlprofile_8h_a6563133c2df1a56d48d985f4db3eeb38}\label{inc_2hsa__ven__amd__aqlprofile_8h_a6563133c2df1a56d48d985f4db3eeb38}} 
+\index{hsa\_ven\_amd\_aqlprofile.h@{hsa\_ven\_amd\_aqlprofile.h}!hsa\_ven\_amd\_aqlprofile\_parameter\_name\_t@{hsa\_ven\_amd\_aqlprofile\_parameter\_name\_t}}
+\index{hsa\_ven\_amd\_aqlprofile\_parameter\_name\_t@{hsa\_ven\_amd\_aqlprofile\_parameter\_name\_t}!hsa\_ven\_amd\_aqlprofile.h@{hsa\_ven\_amd\_aqlprofile.h}}
+\doxysubsubsection{\texorpdfstring{hsa\_ven\_amd\_aqlprofile\_parameter\_name\_t}{hsa\_ven\_amd\_aqlprofile\_parameter\_name\_t}}
+{\footnotesize\ttfamily enum \mbox{\hyperlink{inc_2hsa__ven__amd__aqlprofile_8h_a6563133c2df1a56d48d985f4db3eeb38}{hsa\+\_\+ven\+\_\+amd\+\_\+aqlprofile\+\_\+parameter\+\_\+name\+\_\+t}}}
+
+\begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{HSA\_VEN\_AMD\_AQLPROFILE\_PARAMETER\_NAME\_COMPUTE\_UNIT\_TARGET@{HSA\_VEN\_AMD\_AQLPROFILE\_PARAMETER\_NAME\_COMPUTE\_UNIT\_TARGET}!hsa\_ven\_amd\_aqlprofile.h@{hsa\_ven\_amd\_aqlprofile.h}}\index{hsa\_ven\_amd\_aqlprofile.h@{hsa\_ven\_amd\_aqlprofile.h}!HSA\_VEN\_AMD\_AQLPROFILE\_PARAMETER\_NAME\_COMPUTE\_UNIT\_TARGET@{HSA\_VEN\_AMD\_AQLPROFILE\_PARAMETER\_NAME\_COMPUTE\_UNIT\_TARGET}}}\mbox{\Hypertarget{inc_2hsa__ven__amd__aqlprofile_8h_a6563133c2df1a56d48d985f4db3eeb38afde9510e1a7c58be0a7f19d56ee1bba1}\label{inc_2hsa__ven__amd__aqlprofile_8h_a6563133c2df1a56d48d985f4db3eeb38afde9510e1a7c58be0a7f19d56ee1bba1}} 
+HSA\+\_\+\+VEN\+\_\+\+AMD\+\_\+\+AQLPROFILE\+\_\+\+PARAMETER\+\_\+\+NAME\+\_\+\+COMPUTE\+\_\+\+UNIT\+\_\+\+TARGET&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{HSA\_VEN\_AMD\_AQLPROFILE\_PARAMETER\_NAME\_VM\_ID\_MASK@{HSA\_VEN\_AMD\_AQLPROFILE\_PARAMETER\_NAME\_VM\_ID\_MASK}!hsa\_ven\_amd\_aqlprofile.h@{hsa\_ven\_amd\_aqlprofile.h}}\index{hsa\_ven\_amd\_aqlprofile.h@{hsa\_ven\_amd\_aqlprofile.h}!HSA\_VEN\_AMD\_AQLPROFILE\_PARAMETER\_NAME\_VM\_ID\_MASK@{HSA\_VEN\_AMD\_AQLPROFILE\_PARAMETER\_NAME\_VM\_ID\_MASK}}}\mbox{\Hypertarget{inc_2hsa__ven__amd__aqlprofile_8h_a6563133c2df1a56d48d985f4db3eeb38ae2df164312dac06211c244a0db770292}\label{inc_2hsa__ven__amd__aqlprofile_8h_a6563133c2df1a56d48d985f4db3eeb38ae2df164312dac06211c244a0db770292}} 
+HSA\+\_\+\+VEN\+\_\+\+AMD\+\_\+\+AQLPROFILE\+\_\+\+PARAMETER\+\_\+\+NAME\+\_\+\+VM\+\_\+\+ID\+\_\+\+MASK&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{HSA\_VEN\_AMD\_AQLPROFILE\_PARAMETER\_NAME\_MASK@{HSA\_VEN\_AMD\_AQLPROFILE\_PARAMETER\_NAME\_MASK}!hsa\_ven\_amd\_aqlprofile.h@{hsa\_ven\_amd\_aqlprofile.h}}\index{hsa\_ven\_amd\_aqlprofile.h@{hsa\_ven\_amd\_aqlprofile.h}!HSA\_VEN\_AMD\_AQLPROFILE\_PARAMETER\_NAME\_MASK@{HSA\_VEN\_AMD\_AQLPROFILE\_PARAMETER\_NAME\_MASK}}}\mbox{\Hypertarget{inc_2hsa__ven__amd__aqlprofile_8h_a6563133c2df1a56d48d985f4db3eeb38a787ada69140fa490a95f9a8b675deed0}\label{inc_2hsa__ven__amd__aqlprofile_8h_a6563133c2df1a56d48d985f4db3eeb38a787ada69140fa490a95f9a8b675deed0}} 
+HSA\+\_\+\+VEN\+\_\+\+AMD\+\_\+\+AQLPROFILE\+\_\+\+PARAMETER\+\_\+\+NAME\+\_\+\+MASK&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{HSA\_VEN\_AMD\_AQLPROFILE\_PARAMETER\_NAME\_TOKEN\_MASK@{HSA\_VEN\_AMD\_AQLPROFILE\_PARAMETER\_NAME\_TOKEN\_MASK}!hsa\_ven\_amd\_aqlprofile.h@{hsa\_ven\_amd\_aqlprofile.h}}\index{hsa\_ven\_amd\_aqlprofile.h@{hsa\_ven\_amd\_aqlprofile.h}!HSA\_VEN\_AMD\_AQLPROFILE\_PARAMETER\_NAME\_TOKEN\_MASK@{HSA\_VEN\_AMD\_AQLPROFILE\_PARAMETER\_NAME\_TOKEN\_MASK}}}\mbox{\Hypertarget{inc_2hsa__ven__amd__aqlprofile_8h_a6563133c2df1a56d48d985f4db3eeb38a2d08784aa6fa310b42a80265d9a9eb1f}\label{inc_2hsa__ven__amd__aqlprofile_8h_a6563133c2df1a56d48d985f4db3eeb38a2d08784aa6fa310b42a80265d9a9eb1f}} 
+HSA\+\_\+\+VEN\+\_\+\+AMD\+\_\+\+AQLPROFILE\+\_\+\+PARAMETER\+\_\+\+NAME\+\_\+\+TOKEN\+\_\+\+MASK&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{HSA\_VEN\_AMD\_AQLPROFILE\_PARAMETER\_NAME\_TOKEN\_MASK2@{HSA\_VEN\_AMD\_AQLPROFILE\_PARAMETER\_NAME\_TOKEN\_MASK2}!hsa\_ven\_amd\_aqlprofile.h@{hsa\_ven\_amd\_aqlprofile.h}}\index{hsa\_ven\_amd\_aqlprofile.h@{hsa\_ven\_amd\_aqlprofile.h}!HSA\_VEN\_AMD\_AQLPROFILE\_PARAMETER\_NAME\_TOKEN\_MASK2@{HSA\_VEN\_AMD\_AQLPROFILE\_PARAMETER\_NAME\_TOKEN\_MASK2}}}\mbox{\Hypertarget{inc_2hsa__ven__amd__aqlprofile_8h_a6563133c2df1a56d48d985f4db3eeb38afc28b8c1ecc54f326b3ef6181e12fbbe}\label{inc_2hsa__ven__amd__aqlprofile_8h_a6563133c2df1a56d48d985f4db3eeb38afc28b8c1ecc54f326b3ef6181e12fbbe}} 
+HSA\+\_\+\+VEN\+\_\+\+AMD\+\_\+\+AQLPROFILE\+\_\+\+PARAMETER\+\_\+\+NAME\+\_\+\+TOKEN\+\_\+\+MASK2&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{HSA\_VEN\_AMD\_AQLPROFILE\_PARAMETER\_NAME\_SE\_MASK@{HSA\_VEN\_AMD\_AQLPROFILE\_PARAMETER\_NAME\_SE\_MASK}!hsa\_ven\_amd\_aqlprofile.h@{hsa\_ven\_amd\_aqlprofile.h}}\index{hsa\_ven\_amd\_aqlprofile.h@{hsa\_ven\_amd\_aqlprofile.h}!HSA\_VEN\_AMD\_AQLPROFILE\_PARAMETER\_NAME\_SE\_MASK@{HSA\_VEN\_AMD\_AQLPROFILE\_PARAMETER\_NAME\_SE\_MASK}}}\mbox{\Hypertarget{inc_2hsa__ven__amd__aqlprofile_8h_a6563133c2df1a56d48d985f4db3eeb38a2e4a8d48a0f86b17e25ae7b5487d3eaf}\label{inc_2hsa__ven__amd__aqlprofile_8h_a6563133c2df1a56d48d985f4db3eeb38a2e4a8d48a0f86b17e25ae7b5487d3eaf}} 
+HSA\+\_\+\+VEN\+\_\+\+AMD\+\_\+\+AQLPROFILE\+\_\+\+PARAMETER\+\_\+\+NAME\+\_\+\+SE\+\_\+\+MASK&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{HSA\_VEN\_AMD\_AQLPROFILE\_PARAMETER\_NAME\_SAMPLE\_RATE@{HSA\_VEN\_AMD\_AQLPROFILE\_PARAMETER\_NAME\_SAMPLE\_RATE}!hsa\_ven\_amd\_aqlprofile.h@{hsa\_ven\_amd\_aqlprofile.h}}\index{hsa\_ven\_amd\_aqlprofile.h@{hsa\_ven\_amd\_aqlprofile.h}!HSA\_VEN\_AMD\_AQLPROFILE\_PARAMETER\_NAME\_SAMPLE\_RATE@{HSA\_VEN\_AMD\_AQLPROFILE\_PARAMETER\_NAME\_SAMPLE\_RATE}}}\mbox{\Hypertarget{inc_2hsa__ven__amd__aqlprofile_8h_a6563133c2df1a56d48d985f4db3eeb38ae225dadc58c1fd7ccf46f5ba262131d6}\label{inc_2hsa__ven__amd__aqlprofile_8h_a6563133c2df1a56d48d985f4db3eeb38ae225dadc58c1fd7ccf46f5ba262131d6}} 
+HSA\+\_\+\+VEN\+\_\+\+AMD\+\_\+\+AQLPROFILE\+\_\+\+PARAMETER\+\_\+\+NAME\+\_\+\+SAMPLE\+\_\+\+RATE&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{HSA\_VEN\_AMD\_AQLPROFILE\_PARAMETER\_NAME\_K\_CONCURRENT@{HSA\_VEN\_AMD\_AQLPROFILE\_PARAMETER\_NAME\_K\_CONCURRENT}!hsa\_ven\_amd\_aqlprofile.h@{hsa\_ven\_amd\_aqlprofile.h}}\index{hsa\_ven\_amd\_aqlprofile.h@{hsa\_ven\_amd\_aqlprofile.h}!HSA\_VEN\_AMD\_AQLPROFILE\_PARAMETER\_NAME\_K\_CONCURRENT@{HSA\_VEN\_AMD\_AQLPROFILE\_PARAMETER\_NAME\_K\_CONCURRENT}}}\mbox{\Hypertarget{inc_2hsa__ven__amd__aqlprofile_8h_a6563133c2df1a56d48d985f4db3eeb38a5238c230a0edd9694df11176b111d2b1}\label{inc_2hsa__ven__amd__aqlprofile_8h_a6563133c2df1a56d48d985f4db3eeb38a5238c230a0edd9694df11176b111d2b1}} 
+HSA\+\_\+\+VEN\+\_\+\+AMD\+\_\+\+AQLPROFILE\+\_\+\+PARAMETER\+\_\+\+NAME\+\_\+\+K\+\_\+\+CONCURRENT&\\
+\hline
+
+\end{DoxyEnumFields}
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{inc_2hsa__ven__amd__aqlprofile_8h_a99895d9dfd83ba810e7a79bd6b337326}\label{inc_2hsa__ven__amd__aqlprofile_8h_a99895d9dfd83ba810e7a79bd6b337326}} 
+\index{hsa\_ven\_amd\_aqlprofile.h@{hsa\_ven\_amd\_aqlprofile.h}!hsa\_ven\_amd\_aqlprofile\_error\_string@{hsa\_ven\_amd\_aqlprofile\_error\_string}}
+\index{hsa\_ven\_amd\_aqlprofile\_error\_string@{hsa\_ven\_amd\_aqlprofile\_error\_string}!hsa\_ven\_amd\_aqlprofile.h@{hsa\_ven\_amd\_aqlprofile.h}}
+\doxysubsubsection{\texorpdfstring{hsa\_ven\_amd\_aqlprofile\_error\_string()}{hsa\_ven\_amd\_aqlprofile\_error\_string()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{group__status_gad755322e7ff95456520e8abdbe90d225}{hsa\+\_\+status\+\_\+t}} hsa\+\_\+ven\+\_\+amd\+\_\+aqlprofile\+\_\+error\+\_\+string (\begin{DoxyParamCaption}\item[{const char $\ast$$\ast$}]{str }\end{DoxyParamCaption})}
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{inc_2hsa__ven__amd__aqlprofile_8h_a99895d9dfd83ba810e7a79bd6b337326_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{inc_2hsa__ven__amd__aqlprofile_8h_a91a2f24def75d95b9bae0ff15abed275}\label{inc_2hsa__ven__amd__aqlprofile_8h_a91a2f24def75d95b9bae0ff15abed275}} 
+\index{hsa\_ven\_amd\_aqlprofile.h@{hsa\_ven\_amd\_aqlprofile.h}!hsa\_ven\_amd\_aqlprofile\_get\_info@{hsa\_ven\_amd\_aqlprofile\_get\_info}}
+\index{hsa\_ven\_amd\_aqlprofile\_get\_info@{hsa\_ven\_amd\_aqlprofile\_get\_info}!hsa\_ven\_amd\_aqlprofile.h@{hsa\_ven\_amd\_aqlprofile.h}}
+\doxysubsubsection{\texorpdfstring{hsa\_ven\_amd\_aqlprofile\_get\_info()}{hsa\_ven\_amd\_aqlprofile\_get\_info()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{group__status_gad755322e7ff95456520e8abdbe90d225}{hsa\+\_\+status\+\_\+t}} hsa\+\_\+ven\+\_\+amd\+\_\+aqlprofile\+\_\+get\+\_\+info (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{structhsa__ven__amd__aqlprofile__profile__t}{hsa\+\_\+ven\+\_\+amd\+\_\+aqlprofile\+\_\+profile\+\_\+t}} $\ast$}]{profile,  }\item[{\mbox{\hyperlink{inc_2hsa__ven__amd__aqlprofile_8h_a6aff6ff86e935f42e4686e4f2ae7a724}{hsa\+\_\+ven\+\_\+amd\+\_\+aqlprofile\+\_\+info\+\_\+type\+\_\+t}}}]{attribute,  }\item[{void $\ast$}]{value }\end{DoxyParamCaption})}
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{inc_2hsa__ven__amd__aqlprofile_8h_a91a2f24def75d95b9bae0ff15abed275_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{inc_2hsa__ven__amd__aqlprofile_8h_a90d83349751455fbca1c9c10098318d6}\label{inc_2hsa__ven__amd__aqlprofile_8h_a90d83349751455fbca1c9c10098318d6}} 
+\index{hsa\_ven\_amd\_aqlprofile.h@{hsa\_ven\_amd\_aqlprofile.h}!hsa\_ven\_amd\_aqlprofile\_iterate\_data@{hsa\_ven\_amd\_aqlprofile\_iterate\_data}}
+\index{hsa\_ven\_amd\_aqlprofile\_iterate\_data@{hsa\_ven\_amd\_aqlprofile\_iterate\_data}!hsa\_ven\_amd\_aqlprofile.h@{hsa\_ven\_amd\_aqlprofile.h}}
+\doxysubsubsection{\texorpdfstring{hsa\_ven\_amd\_aqlprofile\_iterate\_data()}{hsa\_ven\_amd\_aqlprofile\_iterate\_data()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{group__status_gad755322e7ff95456520e8abdbe90d225}{hsa\+\_\+status\+\_\+t}} hsa\+\_\+ven\+\_\+amd\+\_\+aqlprofile\+\_\+iterate\+\_\+data (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{structhsa__ven__amd__aqlprofile__profile__t}{hsa\+\_\+ven\+\_\+amd\+\_\+aqlprofile\+\_\+profile\+\_\+t}} $\ast$}]{profile,  }\item[{\mbox{\hyperlink{inc_2hsa__ven__amd__aqlprofile_8h_a656631107c7a47c2481476f3ced89f50}{hsa\+\_\+ven\+\_\+amd\+\_\+aqlprofile\+\_\+data\+\_\+callback\+\_\+t}}}]{callback,  }\item[{void $\ast$}]{data }\end{DoxyParamCaption})}
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{inc_2hsa__ven__amd__aqlprofile_8h_a90d83349751455fbca1c9c10098318d6_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{inc_2hsa__ven__amd__aqlprofile_8h_a331fddfe145d892d2600fcca0d130818}\label{inc_2hsa__ven__amd__aqlprofile_8h_a331fddfe145d892d2600fcca0d130818}} 
+\index{hsa\_ven\_amd\_aqlprofile.h@{hsa\_ven\_amd\_aqlprofile.h}!hsa\_ven\_amd\_aqlprofile\_legacy\_get\_pm4@{hsa\_ven\_amd\_aqlprofile\_legacy\_get\_pm4}}
+\index{hsa\_ven\_amd\_aqlprofile\_legacy\_get\_pm4@{hsa\_ven\_amd\_aqlprofile\_legacy\_get\_pm4}!hsa\_ven\_amd\_aqlprofile.h@{hsa\_ven\_amd\_aqlprofile.h}}
+\doxysubsubsection{\texorpdfstring{hsa\_ven\_amd\_aqlprofile\_legacy\_get\_pm4()}{hsa\_ven\_amd\_aqlprofile\_legacy\_get\_pm4()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{group__status_gad755322e7ff95456520e8abdbe90d225}{hsa\+\_\+status\+\_\+t}} hsa\+\_\+ven\+\_\+amd\+\_\+aqlprofile\+\_\+legacy\+\_\+get\+\_\+pm4 (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{structhsa__ext__amd__aql__pm4__packet__t}{hsa\+\_\+ext\+\_\+amd\+\_\+aql\+\_\+pm4\+\_\+packet\+\_\+t}} $\ast$}]{aql\+\_\+packet,  }\item[{void $\ast$}]{data }\end{DoxyParamCaption})}
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{inc_2hsa__ven__amd__aqlprofile_8h_a331fddfe145d892d2600fcca0d130818_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{inc_2hsa__ven__amd__aqlprofile_8h_ae900d2d00afcafbaeea588c51315b345}\label{inc_2hsa__ven__amd__aqlprofile_8h_ae900d2d00afcafbaeea588c51315b345}} 
+\index{hsa\_ven\_amd\_aqlprofile.h@{hsa\_ven\_amd\_aqlprofile.h}!hsa\_ven\_amd\_aqlprofile\_read@{hsa\_ven\_amd\_aqlprofile\_read}}
+\index{hsa\_ven\_amd\_aqlprofile\_read@{hsa\_ven\_amd\_aqlprofile\_read}!hsa\_ven\_amd\_aqlprofile.h@{hsa\_ven\_amd\_aqlprofile.h}}
+\doxysubsubsection{\texorpdfstring{hsa\_ven\_amd\_aqlprofile\_read()}{hsa\_ven\_amd\_aqlprofile\_read()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{group__status_gad755322e7ff95456520e8abdbe90d225}{hsa\+\_\+status\+\_\+t}} hsa\+\_\+ven\+\_\+amd\+\_\+aqlprofile\+\_\+read (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{structhsa__ven__amd__aqlprofile__profile__t}{hsa\+\_\+ven\+\_\+amd\+\_\+aqlprofile\+\_\+profile\+\_\+t}} $\ast$}]{profile,  }\item[{\mbox{\hyperlink{structhsa__ext__amd__aql__pm4__packet__t}{hsa\+\_\+ext\+\_\+amd\+\_\+aql\+\_\+pm4\+\_\+packet\+\_\+t}} $\ast$}]{aql\+\_\+read\+\_\+packet }\end{DoxyParamCaption})}
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{inc_2hsa__ven__amd__aqlprofile_8h_ae900d2d00afcafbaeea588c51315b345_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{inc_2hsa__ven__amd__aqlprofile_8h_aaf282f2d0a22be54becb1e0342a04329}\label{inc_2hsa__ven__amd__aqlprofile_8h_aaf282f2d0a22be54becb1e0342a04329}} 
+\index{hsa\_ven\_amd\_aqlprofile.h@{hsa\_ven\_amd\_aqlprofile.h}!hsa\_ven\_amd\_aqlprofile\_start@{hsa\_ven\_amd\_aqlprofile\_start}}
+\index{hsa\_ven\_amd\_aqlprofile\_start@{hsa\_ven\_amd\_aqlprofile\_start}!hsa\_ven\_amd\_aqlprofile.h@{hsa\_ven\_amd\_aqlprofile.h}}
+\doxysubsubsection{\texorpdfstring{hsa\_ven\_amd\_aqlprofile\_start()}{hsa\_ven\_amd\_aqlprofile\_start()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{group__status_gad755322e7ff95456520e8abdbe90d225}{hsa\+\_\+status\+\_\+t}} hsa\+\_\+ven\+\_\+amd\+\_\+aqlprofile\+\_\+start (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structhsa__ven__amd__aqlprofile__profile__t}{hsa\+\_\+ven\+\_\+amd\+\_\+aqlprofile\+\_\+profile\+\_\+t}} $\ast$}]{profile,  }\item[{\mbox{\hyperlink{structhsa__ext__amd__aql__pm4__packet__t}{hsa\+\_\+ext\+\_\+amd\+\_\+aql\+\_\+pm4\+\_\+packet\+\_\+t}} $\ast$}]{aql\+\_\+start\+\_\+packet }\end{DoxyParamCaption})}
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{inc_2hsa__ven__amd__aqlprofile_8h_aaf282f2d0a22be54becb1e0342a04329_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{inc_2hsa__ven__amd__aqlprofile_8h_aa935b8b47e606b9585c0b439bea43dc0}\label{inc_2hsa__ven__amd__aqlprofile_8h_aa935b8b47e606b9585c0b439bea43dc0}} 
+\index{hsa\_ven\_amd\_aqlprofile.h@{hsa\_ven\_amd\_aqlprofile.h}!hsa\_ven\_amd\_aqlprofile\_stop@{hsa\_ven\_amd\_aqlprofile\_stop}}
+\index{hsa\_ven\_amd\_aqlprofile\_stop@{hsa\_ven\_amd\_aqlprofile\_stop}!hsa\_ven\_amd\_aqlprofile.h@{hsa\_ven\_amd\_aqlprofile.h}}
+\doxysubsubsection{\texorpdfstring{hsa\_ven\_amd\_aqlprofile\_stop()}{hsa\_ven\_amd\_aqlprofile\_stop()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{group__status_gad755322e7ff95456520e8abdbe90d225}{hsa\+\_\+status\+\_\+t}} hsa\+\_\+ven\+\_\+amd\+\_\+aqlprofile\+\_\+stop (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{structhsa__ven__amd__aqlprofile__profile__t}{hsa\+\_\+ven\+\_\+amd\+\_\+aqlprofile\+\_\+profile\+\_\+t}} $\ast$}]{profile,  }\item[{\mbox{\hyperlink{structhsa__ext__amd__aql__pm4__packet__t}{hsa\+\_\+ext\+\_\+amd\+\_\+aql\+\_\+pm4\+\_\+packet\+\_\+t}} $\ast$}]{aql\+\_\+stop\+\_\+packet }\end{DoxyParamCaption})}
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{inc_2hsa__ven__amd__aqlprofile_8h_aa935b8b47e606b9585c0b439bea43dc0_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{inc_2hsa__ven__amd__aqlprofile_8h_a37cd498a43dc2aaaac9d510675ba76c7}\label{inc_2hsa__ven__amd__aqlprofile_8h_a37cd498a43dc2aaaac9d510675ba76c7}} 
+\index{hsa\_ven\_amd\_aqlprofile.h@{hsa\_ven\_amd\_aqlprofile.h}!hsa\_ven\_amd\_aqlprofile\_validate\_event@{hsa\_ven\_amd\_aqlprofile\_validate\_event}}
+\index{hsa\_ven\_amd\_aqlprofile\_validate\_event@{hsa\_ven\_amd\_aqlprofile\_validate\_event}!hsa\_ven\_amd\_aqlprofile.h@{hsa\_ven\_amd\_aqlprofile.h}}
+\doxysubsubsection{\texorpdfstring{hsa\_ven\_amd\_aqlprofile\_validate\_event()}{hsa\_ven\_amd\_aqlprofile\_validate\_event()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{group__status_gad755322e7ff95456520e8abdbe90d225}{hsa\+\_\+status\+\_\+t}} hsa\+\_\+ven\+\_\+amd\+\_\+aqlprofile\+\_\+validate\+\_\+event (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{group__agentinfo_ga9ce217ef08e7d5e89c8e83ce7b6ef22b}{hsa\+\_\+agent\+\_\+t}}}]{agent,  }\item[{const \mbox{\hyperlink{structhsa__ven__amd__aqlprofile__event__t}{hsa\+\_\+ven\+\_\+amd\+\_\+aqlprofile\+\_\+event\+\_\+t}} $\ast$}]{event,  }\item[{bool $\ast$}]{result }\end{DoxyParamCaption})}
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{inc_2hsa__ven__amd__aqlprofile_8h_a37cd498a43dc2aaaac9d510675ba76c7_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{inc_2hsa__ven__amd__aqlprofile_8h_a3b94ecac493b200679cd9aaf2ae15f38}\label{inc_2hsa__ven__amd__aqlprofile_8h_a3b94ecac493b200679cd9aaf2ae15f38}} 
+\index{hsa\_ven\_amd\_aqlprofile.h@{hsa\_ven\_amd\_aqlprofile.h}!hsa\_ven\_amd\_aqlprofile\_version\_major@{hsa\_ven\_amd\_aqlprofile\_version\_major}}
+\index{hsa\_ven\_amd\_aqlprofile\_version\_major@{hsa\_ven\_amd\_aqlprofile\_version\_major}!hsa\_ven\_amd\_aqlprofile.h@{hsa\_ven\_amd\_aqlprofile.h}}
+\doxysubsubsection{\texorpdfstring{hsa\_ven\_amd\_aqlprofile\_version\_major()}{hsa\_ven\_amd\_aqlprofile\_version\_major()}}
+{\footnotesize\ttfamily uint32\+\_\+t hsa\+\_\+ven\+\_\+amd\+\_\+aqlprofile\+\_\+version\+\_\+major (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{inc_2hsa__ven__amd__aqlprofile_8h_a3b94ecac493b200679cd9aaf2ae15f38_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{inc_2hsa__ven__amd__aqlprofile_8h_a770e8e4c8aa73fd74effeddf187cb8f2}\label{inc_2hsa__ven__amd__aqlprofile_8h_a770e8e4c8aa73fd74effeddf187cb8f2}} 
+\index{hsa\_ven\_amd\_aqlprofile.h@{hsa\_ven\_amd\_aqlprofile.h}!hsa\_ven\_amd\_aqlprofile\_version\_minor@{hsa\_ven\_amd\_aqlprofile\_version\_minor}}
+\index{hsa\_ven\_amd\_aqlprofile\_version\_minor@{hsa\_ven\_amd\_aqlprofile\_version\_minor}!hsa\_ven\_amd\_aqlprofile.h@{hsa\_ven\_amd\_aqlprofile.h}}
+\doxysubsubsection{\texorpdfstring{hsa\_ven\_amd\_aqlprofile\_version\_minor()}{hsa\_ven\_amd\_aqlprofile\_version\_minor()}}
+{\footnotesize\ttfamily uint32\+\_\+t hsa\+\_\+ven\+\_\+amd\+\_\+aqlprofile\+\_\+version\+\_\+minor (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{inc_2hsa__ven__amd__aqlprofile_8h_a770e8e4c8aa73fd74effeddf187cb8f2_icgraph}
+\end{center}
+\end{figure}
+
+
+\doxysubsection{Variable Documentation}
+\mbox{\Hypertarget{inc_2hsa__ven__amd__aqlprofile_8h_aef698a2593810edbc5e5d9ba622394f5}\label{inc_2hsa__ven__amd__aqlprofile_8h_aef698a2593810edbc5e5d9ba622394f5}} 
+\index{hsa\_ven\_amd\_aqlprofile.h@{hsa\_ven\_amd\_aqlprofile.h}!HSA\_VEN\_AMD\_AQLPROFILE\_LEGACY\_PM4\_PACKET\_SIZE@{HSA\_VEN\_AMD\_AQLPROFILE\_LEGACY\_PM4\_PACKET\_SIZE}}
+\index{HSA\_VEN\_AMD\_AQLPROFILE\_LEGACY\_PM4\_PACKET\_SIZE@{HSA\_VEN\_AMD\_AQLPROFILE\_LEGACY\_PM4\_PACKET\_SIZE}!hsa\_ven\_amd\_aqlprofile.h@{hsa\_ven\_amd\_aqlprofile.h}}
+\doxysubsubsection{\texorpdfstring{HSA\_VEN\_AMD\_AQLPROFILE\_LEGACY\_PM4\_PACKET\_SIZE}{HSA\_VEN\_AMD\_AQLPROFILE\_LEGACY\_PM4\_PACKET\_SIZE}}
+{\footnotesize\ttfamily const unsigned HSA\+\_\+\+VEN\+\_\+\+AMD\+\_\+\+AQLPROFILE\+\_\+\+LEGACY\+\_\+\+PM4\+\_\+\+PACKET\+\_\+\+SIZE = 192}
+
+\mbox{\Hypertarget{inc_2hsa__ven__amd__aqlprofile_8h_ad66be561ac5661f2aefd7ed3ac897274}\label{inc_2hsa__ven__amd__aqlprofile_8h_ad66be561ac5661f2aefd7ed3ac897274}} 
+\index{hsa\_ven\_amd\_aqlprofile.h@{hsa\_ven\_amd\_aqlprofile.h}!kAqlProfileLib@{kAqlProfileLib}}
+\index{kAqlProfileLib@{kAqlProfileLib}!hsa\_ven\_amd\_aqlprofile.h@{hsa\_ven\_amd\_aqlprofile.h}}
+\doxysubsubsection{\texorpdfstring{kAqlProfileLib}{kAqlProfileLib}}
+{\footnotesize\ttfamily const char k\+Aql\+Profile\+Lib\mbox{[}$\,$\mbox{]} = \mbox{\hyperlink{inc_2hsa__ven__amd__aqlprofile_8h_adeb5a17866347eb476975a0da9568d65}{hsa\+\_\+ven\+\_\+amd\+\_\+aqlprofile\+\_\+\+LIB}}(\char`\"{}\char`\"{})\hspace{0.3cm}{\ttfamily [static]}}
+

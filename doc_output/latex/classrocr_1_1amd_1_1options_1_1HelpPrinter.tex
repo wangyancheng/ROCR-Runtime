@@ -1,0 +1,193 @@
+\hypertarget{classrocr_1_1amd_1_1options_1_1HelpPrinter}{}\doxysection{rocr\+::amd\+::options\+::Help\+Printer Class Reference}
+\label{classrocr_1_1amd_1_1options_1_1HelpPrinter}\index{rocr::amd::options::HelpPrinter@{rocr::amd::options::HelpPrinter}}
+
+
+{\ttfamily \#include $<$amd\+\_\+options.\+hpp$>$}
+
+
+
+Collaboration diagram for rocr\+::amd\+::options\+::Help\+Printer\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=175pt]{classrocr_1_1amd_1_1options_1_1HelpPrinter__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classrocr_1_1amd_1_1options_1_1HelpPrinter}{Help\+Printer}} \& \mbox{\hyperlink{classrocr_1_1amd_1_1options_1_1HelpPrinter_a65a19cb8547bb9b6d28a97c6ca5f0664}{Print\+Usage}} (const std\+::string \&usage)
+\item 
+\mbox{\hyperlink{classrocr_1_1amd_1_1options_1_1HelpPrinter}{Help\+Printer}} \& \mbox{\hyperlink{classrocr_1_1amd_1_1options_1_1HelpPrinter_a4294361124eec9d9dff70f6469e34e23}{Print\+Description}} (const std\+::string \&description)
+\item 
+std\+::ostream \& \mbox{\hyperlink{classrocr_1_1amd_1_1options_1_1HelpPrinter_ab7acdeb6596c34fee7c230bad1f75456}{Stream}} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classrocr_1_1amd_1_1options_1_1HelpPrinter_ab8e04526c43791f73c0a96b6404621c2}{Help\+Printer}} (std\+::ostream \&out=std\+::cout)
+\item 
+\mbox{\hyperlink{classrocr_1_1amd_1_1options_1_1HelpPrinter_a78d58be80a3753493c5ddae408af9b62}{Help\+Printer}} (const \mbox{\hyperlink{classrocr_1_1amd_1_1options_1_1HelpPrinter}{Help\+Printer}} \&)
+\begin{DoxyCompactList}\small\item\em Not copy-\/constructible. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classrocr_1_1amd_1_1options_1_1HelpPrinter}{Help\+Printer}} \& \mbox{\hyperlink{classrocr_1_1amd_1_1options_1_1HelpPrinter_a54c79d219623f8d2fc56a12483cbb993}{operator=}} (const \mbox{\hyperlink{classrocr_1_1amd_1_1options_1_1HelpPrinter}{Help\+Printer}} \&)
+\begin{DoxyCompactList}\small\item\em Not copy-\/assignable. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+std\+::ostream $\ast$ \mbox{\hyperlink{classrocr_1_1amd_1_1options_1_1HelpPrinter_a5f26e1b1b3e8f26273fc4b913faf3f7c}{out\+\_\+}}
+\item 
+\mbox{\hyperlink{classrocr_1_1amd_1_1options_1_1HelpStreambuf}{Help\+Streambuf}} \mbox{\hyperlink{classrocr_1_1amd_1_1options_1_1HelpPrinter_a60656d21996785ba63de9fd29b06d58a}{sbuf\+\_\+}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Static Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+static const unsigned \mbox{\hyperlink{classrocr_1_1amd_1_1options_1_1HelpPrinter_a7de3d76dbbb573d7df76327c87e3f2f7}{USAGE\+\_\+\+WIDTH}} = 30
+\item 
+static const unsigned \mbox{\hyperlink{classrocr_1_1amd_1_1options_1_1HelpPrinter_afc6522edc78192eb6c07b9c5a98850ab}{PADDING\+\_\+\+WIDTH}} = 2
+\item 
+static const unsigned \mbox{\hyperlink{classrocr_1_1amd_1_1options_1_1HelpPrinter_affcb8d3886906bde57cebba214091235}{DESCRIPTION\+\_\+\+WIDTH}} = 50
+\end{DoxyCompactItemize}
+\doxysubsection*{Friends}
+\begin{DoxyCompactItemize}
+\item 
+class \mbox{\hyperlink{classrocr_1_1amd_1_1options_1_1HelpPrinter_abfd5482e3827b031cfe42cb142f8fd84}{Option\+Parser}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classrocr_1_1amd_1_1options_1_1HelpPrinter_ab8e04526c43791f73c0a96b6404621c2}\label{classrocr_1_1amd_1_1options_1_1HelpPrinter_ab8e04526c43791f73c0a96b6404621c2}} 
+\index{rocr::amd::options::HelpPrinter@{rocr::amd::options::HelpPrinter}!HelpPrinter@{HelpPrinter}}
+\index{HelpPrinter@{HelpPrinter}!rocr::amd::options::HelpPrinter@{rocr::amd::options::HelpPrinter}}
+\doxysubsubsection{\texorpdfstring{HelpPrinter()}{HelpPrinter()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily rocr\+::amd\+::options\+::\+Help\+Printer\+::\+Help\+Printer (\begin{DoxyParamCaption}\item[{std\+::ostream \&}]{out = {\ttfamily std\+:\+:cout} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [explicit]}, {\ttfamily [private]}}
+
+\mbox{\Hypertarget{classrocr_1_1amd_1_1options_1_1HelpPrinter_a78d58be80a3753493c5ddae408af9b62}\label{classrocr_1_1amd_1_1options_1_1HelpPrinter_a78d58be80a3753493c5ddae408af9b62}} 
+\index{rocr::amd::options::HelpPrinter@{rocr::amd::options::HelpPrinter}!HelpPrinter@{HelpPrinter}}
+\index{HelpPrinter@{HelpPrinter}!rocr::amd::options::HelpPrinter@{rocr::amd::options::HelpPrinter}}
+\doxysubsubsection{\texorpdfstring{HelpPrinter()}{HelpPrinter()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily rocr\+::amd\+::options\+::\+Help\+Printer\+::\+Help\+Printer (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classrocr_1_1amd_1_1options_1_1HelpPrinter}{Help\+Printer}} \&}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Not copy-\/constructible. 
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classrocr_1_1amd_1_1options_1_1HelpPrinter_a54c79d219623f8d2fc56a12483cbb993}\label{classrocr_1_1amd_1_1options_1_1HelpPrinter_a54c79d219623f8d2fc56a12483cbb993}} 
+\index{rocr::amd::options::HelpPrinter@{rocr::amd::options::HelpPrinter}!operator=@{operator=}}
+\index{operator=@{operator=}!rocr::amd::options::HelpPrinter@{rocr::amd::options::HelpPrinter}}
+\doxysubsubsection{\texorpdfstring{operator=()}{operator=()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classrocr_1_1amd_1_1options_1_1HelpPrinter}{Help\+Printer}}\& rocr\+::amd\+::options\+::\+Help\+Printer\+::operator= (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classrocr_1_1amd_1_1options_1_1HelpPrinter}{Help\+Printer}} \&}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Not copy-\/assignable. 
+
+\mbox{\Hypertarget{classrocr_1_1amd_1_1options_1_1HelpPrinter_a4294361124eec9d9dff70f6469e34e23}\label{classrocr_1_1amd_1_1options_1_1HelpPrinter_a4294361124eec9d9dff70f6469e34e23}} 
+\index{rocr::amd::options::HelpPrinter@{rocr::amd::options::HelpPrinter}!PrintDescription@{PrintDescription}}
+\index{PrintDescription@{PrintDescription}!rocr::amd::options::HelpPrinter@{rocr::amd::options::HelpPrinter}}
+\doxysubsubsection{\texorpdfstring{PrintDescription()}{PrintDescription()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classrocr_1_1amd_1_1options_1_1HelpPrinter}{Help\+Printer}} \& rocr\+::amd\+::options\+::\+Help\+Printer\+::\+Print\+Description (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{description }\end{DoxyParamCaption})}
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classrocr_1_1amd_1_1options_1_1HelpPrinter_a4294361124eec9d9dff70f6469e34e23_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classrocr_1_1amd_1_1options_1_1HelpPrinter_a4294361124eec9d9dff70f6469e34e23_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classrocr_1_1amd_1_1options_1_1HelpPrinter_a65a19cb8547bb9b6d28a97c6ca5f0664}\label{classrocr_1_1amd_1_1options_1_1HelpPrinter_a65a19cb8547bb9b6d28a97c6ca5f0664}} 
+\index{rocr::amd::options::HelpPrinter@{rocr::amd::options::HelpPrinter}!PrintUsage@{PrintUsage}}
+\index{PrintUsage@{PrintUsage}!rocr::amd::options::HelpPrinter@{rocr::amd::options::HelpPrinter}}
+\doxysubsubsection{\texorpdfstring{PrintUsage()}{PrintUsage()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classrocr_1_1amd_1_1options_1_1HelpPrinter}{Help\+Printer}} \& rocr\+::amd\+::options\+::\+Help\+Printer\+::\+Print\+Usage (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{usage }\end{DoxyParamCaption})}
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classrocr_1_1amd_1_1options_1_1HelpPrinter_a65a19cb8547bb9b6d28a97c6ca5f0664_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classrocr_1_1amd_1_1options_1_1HelpPrinter_a65a19cb8547bb9b6d28a97c6ca5f0664_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classrocr_1_1amd_1_1options_1_1HelpPrinter_ab7acdeb6596c34fee7c230bad1f75456}\label{classrocr_1_1amd_1_1options_1_1HelpPrinter_ab7acdeb6596c34fee7c230bad1f75456}} 
+\index{rocr::amd::options::HelpPrinter@{rocr::amd::options::HelpPrinter}!Stream@{Stream}}
+\index{Stream@{Stream}!rocr::amd::options::HelpPrinter@{rocr::amd::options::HelpPrinter}}
+\doxysubsubsection{\texorpdfstring{Stream()}{Stream()}}
+{\footnotesize\ttfamily std\+::ostream\& rocr\+::amd\+::options\+::\+Help\+Printer\+::\+Stream (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classrocr_1_1amd_1_1options_1_1HelpPrinter_ab7acdeb6596c34fee7c230bad1f75456_icgraph}
+\end{center}
+\end{figure}
+
+
+\doxysubsection{Friends And Related Function Documentation}
+\mbox{\Hypertarget{classrocr_1_1amd_1_1options_1_1HelpPrinter_abfd5482e3827b031cfe42cb142f8fd84}\label{classrocr_1_1amd_1_1options_1_1HelpPrinter_abfd5482e3827b031cfe42cb142f8fd84}} 
+\index{rocr::amd::options::HelpPrinter@{rocr::amd::options::HelpPrinter}!OptionParser@{OptionParser}}
+\index{OptionParser@{OptionParser}!rocr::amd::options::HelpPrinter@{rocr::amd::options::HelpPrinter}}
+\doxysubsubsection{\texorpdfstring{OptionParser}{OptionParser}}
+{\footnotesize\ttfamily friend class \mbox{\hyperlink{classrocr_1_1amd_1_1options_1_1OptionParser}{Option\+Parser}}\hspace{0.3cm}{\ttfamily [friend]}}
+
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{classrocr_1_1amd_1_1options_1_1HelpPrinter_affcb8d3886906bde57cebba214091235}\label{classrocr_1_1amd_1_1options_1_1HelpPrinter_affcb8d3886906bde57cebba214091235}} 
+\index{rocr::amd::options::HelpPrinter@{rocr::amd::options::HelpPrinter}!DESCRIPTION\_WIDTH@{DESCRIPTION\_WIDTH}}
+\index{DESCRIPTION\_WIDTH@{DESCRIPTION\_WIDTH}!rocr::amd::options::HelpPrinter@{rocr::amd::options::HelpPrinter}}
+\doxysubsubsection{\texorpdfstring{DESCRIPTION\_WIDTH}{DESCRIPTION\_WIDTH}}
+{\footnotesize\ttfamily const unsigned rocr\+::amd\+::options\+::\+Help\+Printer\+::\+DESCRIPTION\+\_\+\+WIDTH = 50\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [private]}}
+
+\mbox{\Hypertarget{classrocr_1_1amd_1_1options_1_1HelpPrinter_a5f26e1b1b3e8f26273fc4b913faf3f7c}\label{classrocr_1_1amd_1_1options_1_1HelpPrinter_a5f26e1b1b3e8f26273fc4b913faf3f7c}} 
+\index{rocr::amd::options::HelpPrinter@{rocr::amd::options::HelpPrinter}!out\_@{out\_}}
+\index{out\_@{out\_}!rocr::amd::options::HelpPrinter@{rocr::amd::options::HelpPrinter}}
+\doxysubsubsection{\texorpdfstring{out\_}{out\_}}
+{\footnotesize\ttfamily std\+::ostream$\ast$ rocr\+::amd\+::options\+::\+Help\+Printer\+::out\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classrocr_1_1amd_1_1options_1_1HelpPrinter_afc6522edc78192eb6c07b9c5a98850ab}\label{classrocr_1_1amd_1_1options_1_1HelpPrinter_afc6522edc78192eb6c07b9c5a98850ab}} 
+\index{rocr::amd::options::HelpPrinter@{rocr::amd::options::HelpPrinter}!PADDING\_WIDTH@{PADDING\_WIDTH}}
+\index{PADDING\_WIDTH@{PADDING\_WIDTH}!rocr::amd::options::HelpPrinter@{rocr::amd::options::HelpPrinter}}
+\doxysubsubsection{\texorpdfstring{PADDING\_WIDTH}{PADDING\_WIDTH}}
+{\footnotesize\ttfamily const unsigned rocr\+::amd\+::options\+::\+Help\+Printer\+::\+PADDING\+\_\+\+WIDTH = 2\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [private]}}
+
+\mbox{\Hypertarget{classrocr_1_1amd_1_1options_1_1HelpPrinter_a60656d21996785ba63de9fd29b06d58a}\label{classrocr_1_1amd_1_1options_1_1HelpPrinter_a60656d21996785ba63de9fd29b06d58a}} 
+\index{rocr::amd::options::HelpPrinter@{rocr::amd::options::HelpPrinter}!sbuf\_@{sbuf\_}}
+\index{sbuf\_@{sbuf\_}!rocr::amd::options::HelpPrinter@{rocr::amd::options::HelpPrinter}}
+\doxysubsubsection{\texorpdfstring{sbuf\_}{sbuf\_}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classrocr_1_1amd_1_1options_1_1HelpStreambuf}{Help\+Streambuf}} rocr\+::amd\+::options\+::\+Help\+Printer\+::sbuf\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classrocr_1_1amd_1_1options_1_1HelpPrinter_a7de3d76dbbb573d7df76327c87e3f2f7}\label{classrocr_1_1amd_1_1options_1_1HelpPrinter_a7de3d76dbbb573d7df76327c87e3f2f7}} 
+\index{rocr::amd::options::HelpPrinter@{rocr::amd::options::HelpPrinter}!USAGE\_WIDTH@{USAGE\_WIDTH}}
+\index{USAGE\_WIDTH@{USAGE\_WIDTH}!rocr::amd::options::HelpPrinter@{rocr::amd::options::HelpPrinter}}
+\doxysubsubsection{\texorpdfstring{USAGE\_WIDTH}{USAGE\_WIDTH}}
+{\footnotesize\ttfamily const unsigned rocr\+::amd\+::options\+::\+Help\+Printer\+::\+USAGE\+\_\+\+WIDTH = 30\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [private]}}
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+src/libamdhsacode/\mbox{\hyperlink{amd__options_8hpp}{amd\+\_\+options.\+hpp}}\item 
+src/libamdhsacode/\mbox{\hyperlink{amd__options_8cpp}{amd\+\_\+options.\+cpp}}\end{DoxyCompactItemize}

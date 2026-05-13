@@ -1,0 +1,102 @@
+\hypertarget{structrocr_1_1__ADDR__TILEINFO}{}\doxysection{rocr\+::\+\_\+\+ADDR\+\_\+\+TILEINFO Struct Reference}
+\label{structrocr_1_1__ADDR__TILEINFO}\index{rocr::\_ADDR\_TILEINFO@{rocr::\_ADDR\_TILEINFO}}
+
+
+Bank/tiling parameters. On function input, these can be set as desired or left 0 for Addr\+Lib to calculate/default. On function output, these are the actual parameters used.  
+
+
+
+
+{\ttfamily \#include $<$addrinterface.\+h$>$}
+
+\doxysubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{addrtypes_8h_af5a2be58a28390f9a494538f34054637}{UINT\+\_\+32}} \mbox{\hyperlink{structrocr_1_1__ADDR__TILEINFO_ae15a2e7267ec7f0a628a06f8e640ccab}{banks}}
+\begin{DoxyCompactList}\small\item\em Any of these parameters can be set to 0 to use the HW default. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{addrtypes_8h_af5a2be58a28390f9a494538f34054637}{UINT\+\_\+32}} \mbox{\hyperlink{structrocr_1_1__ADDR__TILEINFO_a125b4defe725702e6cceb737f71bd075}{bank\+Width}}
+\begin{DoxyCompactList}\small\item\em Number of tiles in the X direction in the same bank. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{addrtypes_8h_af5a2be58a28390f9a494538f34054637}{UINT\+\_\+32}} \mbox{\hyperlink{structrocr_1_1__ADDR__TILEINFO_a6935b8cc3cde821a47e62dff34cf4df9}{bank\+Height}}
+\begin{DoxyCompactList}\small\item\em Number of tiles in the Y direction in the same bank. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{addrtypes_8h_af5a2be58a28390f9a494538f34054637}{UINT\+\_\+32}} \mbox{\hyperlink{structrocr_1_1__ADDR__TILEINFO_a92a77adafefb4c16817c17bfc9cac816}{macro\+Aspect\+Ratio}}
+\begin{DoxyCompactList}\small\item\em Macro tile aspect ratio. 1-\/1\+:1, 2-\/4\+:1, 4-\/16\+:1, 8-\/64\+:1. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{addrtypes_8h_af5a2be58a28390f9a494538f34054637}{UINT\+\_\+32}} \mbox{\hyperlink{structrocr_1_1__ADDR__TILEINFO_a74ffc7658069b98c9ffd5c242d49f090}{tile\+Split\+Bytes}}
+\begin{DoxyCompactList}\small\item\em Tile split size, in bytes. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{addrtypes_8h_a41b6c4d86868a354f041abb20c2ab4a4}{Addr\+Pipe\+Cfg}} \mbox{\hyperlink{structrocr_1_1__ADDR__TILEINFO_a2f057152a9c9b5fada54d480e12ca08d}{pipe\+Config}}
+\begin{DoxyCompactList}\small\item\em Pipe Config = HW enum + 1. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Bank/tiling parameters. On function input, these can be set as desired or left 0 for Addr\+Lib to calculate/default. On function output, these are the actual parameters used. 
+
+\begin{DoxyNote}{Note}
+Valid bank\+Width/bank\+Height value\+: 1,2,4,8. They are factors instead of pixels or bytes.
+\end{DoxyNote}
+The bank number remains constant across each row of the macro tile as each pipe is selected, so the number of tiles in the x direction with the same bank number will be bank\+\_\+width $\ast$ num\+\_\+pipes. 
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{structrocr_1_1__ADDR__TILEINFO_a6935b8cc3cde821a47e62dff34cf4df9}\label{structrocr_1_1__ADDR__TILEINFO_a6935b8cc3cde821a47e62dff34cf4df9}} 
+\index{rocr::\_ADDR\_TILEINFO@{rocr::\_ADDR\_TILEINFO}!bankHeight@{bankHeight}}
+\index{bankHeight@{bankHeight}!rocr::\_ADDR\_TILEINFO@{rocr::\_ADDR\_TILEINFO}}
+\doxysubsubsection{\texorpdfstring{bankHeight}{bankHeight}}
+{\footnotesize\ttfamily \mbox{\hyperlink{addrtypes_8h_af5a2be58a28390f9a494538f34054637}{UINT\+\_\+32}} rocr\+::\+\_\+\+ADDR\+\_\+\+TILEINFO\+::bank\+Height}
+
+
+
+Number of tiles in the Y direction in the same bank. 
+
+\mbox{\Hypertarget{structrocr_1_1__ADDR__TILEINFO_ae15a2e7267ec7f0a628a06f8e640ccab}\label{structrocr_1_1__ADDR__TILEINFO_ae15a2e7267ec7f0a628a06f8e640ccab}} 
+\index{rocr::\_ADDR\_TILEINFO@{rocr::\_ADDR\_TILEINFO}!banks@{banks}}
+\index{banks@{banks}!rocr::\_ADDR\_TILEINFO@{rocr::\_ADDR\_TILEINFO}}
+\doxysubsubsection{\texorpdfstring{banks}{banks}}
+{\footnotesize\ttfamily \mbox{\hyperlink{addrtypes_8h_af5a2be58a28390f9a494538f34054637}{UINT\+\_\+32}} rocr\+::\+\_\+\+ADDR\+\_\+\+TILEINFO\+::banks}
+
+
+
+Any of these parameters can be set to 0 to use the HW default. 
+
+Number of banks, numerical value \mbox{\Hypertarget{structrocr_1_1__ADDR__TILEINFO_a125b4defe725702e6cceb737f71bd075}\label{structrocr_1_1__ADDR__TILEINFO_a125b4defe725702e6cceb737f71bd075}} 
+\index{rocr::\_ADDR\_TILEINFO@{rocr::\_ADDR\_TILEINFO}!bankWidth@{bankWidth}}
+\index{bankWidth@{bankWidth}!rocr::\_ADDR\_TILEINFO@{rocr::\_ADDR\_TILEINFO}}
+\doxysubsubsection{\texorpdfstring{bankWidth}{bankWidth}}
+{\footnotesize\ttfamily \mbox{\hyperlink{addrtypes_8h_af5a2be58a28390f9a494538f34054637}{UINT\+\_\+32}} rocr\+::\+\_\+\+ADDR\+\_\+\+TILEINFO\+::bank\+Width}
+
+
+
+Number of tiles in the X direction in the same bank. 
+
+\mbox{\Hypertarget{structrocr_1_1__ADDR__TILEINFO_a92a77adafefb4c16817c17bfc9cac816}\label{structrocr_1_1__ADDR__TILEINFO_a92a77adafefb4c16817c17bfc9cac816}} 
+\index{rocr::\_ADDR\_TILEINFO@{rocr::\_ADDR\_TILEINFO}!macroAspectRatio@{macroAspectRatio}}
+\index{macroAspectRatio@{macroAspectRatio}!rocr::\_ADDR\_TILEINFO@{rocr::\_ADDR\_TILEINFO}}
+\doxysubsubsection{\texorpdfstring{macroAspectRatio}{macroAspectRatio}}
+{\footnotesize\ttfamily \mbox{\hyperlink{addrtypes_8h_af5a2be58a28390f9a494538f34054637}{UINT\+\_\+32}} rocr\+::\+\_\+\+ADDR\+\_\+\+TILEINFO\+::macro\+Aspect\+Ratio}
+
+
+
+Macro tile aspect ratio. 1-\/1\+:1, 2-\/4\+:1, 4-\/16\+:1, 8-\/64\+:1. 
+
+\mbox{\Hypertarget{structrocr_1_1__ADDR__TILEINFO_a2f057152a9c9b5fada54d480e12ca08d}\label{structrocr_1_1__ADDR__TILEINFO_a2f057152a9c9b5fada54d480e12ca08d}} 
+\index{rocr::\_ADDR\_TILEINFO@{rocr::\_ADDR\_TILEINFO}!pipeConfig@{pipeConfig}}
+\index{pipeConfig@{pipeConfig}!rocr::\_ADDR\_TILEINFO@{rocr::\_ADDR\_TILEINFO}}
+\doxysubsubsection{\texorpdfstring{pipeConfig}{pipeConfig}}
+{\footnotesize\ttfamily \mbox{\hyperlink{addrtypes_8h_a41b6c4d86868a354f041abb20c2ab4a4}{Addr\+Pipe\+Cfg}} rocr\+::\+\_\+\+ADDR\+\_\+\+TILEINFO\+::pipe\+Config}
+
+
+
+Pipe Config = HW enum + 1. 
+
+\mbox{\Hypertarget{structrocr_1_1__ADDR__TILEINFO_a74ffc7658069b98c9ffd5c242d49f090}\label{structrocr_1_1__ADDR__TILEINFO_a74ffc7658069b98c9ffd5c242d49f090}} 
+\index{rocr::\_ADDR\_TILEINFO@{rocr::\_ADDR\_TILEINFO}!tileSplitBytes@{tileSplitBytes}}
+\index{tileSplitBytes@{tileSplitBytes}!rocr::\_ADDR\_TILEINFO@{rocr::\_ADDR\_TILEINFO}}
+\doxysubsubsection{\texorpdfstring{tileSplitBytes}{tileSplitBytes}}
+{\footnotesize\ttfamily \mbox{\hyperlink{addrtypes_8h_af5a2be58a28390f9a494538f34054637}{UINT\+\_\+32}} rocr\+::\+\_\+\+ADDR\+\_\+\+TILEINFO\+::tile\+Split\+Bytes}
+
+
+
+Tile split size, in bytes. 
+
+
+
+The documentation for this struct was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+src/image/addrlib/inc/\mbox{\hyperlink{addrinterface_8h}{addrinterface.\+h}}\end{DoxyCompactItemize}

@@ -1,0 +1,97 @@
+\hypertarget{structhsa__amd__memory__pool__link__info__s}{}\doxysection{hsa\+\_\+amd\+\_\+memory\+\_\+pool\+\_\+link\+\_\+info\+\_\+s Struct Reference}
+\label{structhsa__amd__memory__pool__link__info__s}\index{hsa\_amd\_memory\_pool\_link\_info\_s@{hsa\_amd\_memory\_pool\_link\_info\_s}}
+
+
+Link properties when accessing the memory pool from the specified agent.  
+
+
+
+
+{\ttfamily \#include $<$hsa\+\_\+ext\+\_\+amd.\+h$>$}
+
+\doxysubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+uint32\+\_\+t \mbox{\hyperlink{structhsa__amd__memory__pool__link__info__s_ae21d2add7c97a905e5b9ba7c9bd26bc3}{min\+\_\+latency}}
+\item 
+uint32\+\_\+t \mbox{\hyperlink{structhsa__amd__memory__pool__link__info__s_a192814af96dfb1b2215835637560fd97}{max\+\_\+latency}}
+\item 
+uint32\+\_\+t \mbox{\hyperlink{structhsa__amd__memory__pool__link__info__s_abb77825d9b63b1f5954caac78131936e}{min\+\_\+bandwidth}}
+\item 
+uint32\+\_\+t \mbox{\hyperlink{structhsa__amd__memory__pool__link__info__s_a4a8bec1601391031785e1c0ce708b56d}{max\+\_\+bandwidth}}
+\item 
+bool \mbox{\hyperlink{structhsa__amd__memory__pool__link__info__s_a7aefeec146b4b0bf7ab05130fea72503}{atomic\+\_\+support\+\_\+32bit}}
+\item 
+bool \mbox{\hyperlink{structhsa__amd__memory__pool__link__info__s_aec517345f8c1e8f32c93accfd9951de2}{atomic\+\_\+support\+\_\+64bit}}
+\item 
+bool \mbox{\hyperlink{structhsa__amd__memory__pool__link__info__s_a7f33c3d1dd06397fd0b2c4928c3bf43f}{coherent\+\_\+support}}
+\item 
+\mbox{\hyperlink{inc_2hsa__ext__amd_8h_af3058d890c1f907c306f2f25de90f506}{hsa\+\_\+amd\+\_\+link\+\_\+info\+\_\+type\+\_\+t}} \mbox{\hyperlink{structhsa__amd__memory__pool__link__info__s_a43725e30ab3863479ca95d7f462499b4}{link\+\_\+type}}
+\item 
+uint32\+\_\+t \mbox{\hyperlink{structhsa__amd__memory__pool__link__info__s_a2f5f2a6b76e99e8ad962e62699eb5d7c}{numa\+\_\+distance}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Link properties when accessing the memory pool from the specified agent. 
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{structhsa__amd__memory__pool__link__info__s_a7aefeec146b4b0bf7ab05130fea72503}\label{structhsa__amd__memory__pool__link__info__s_a7aefeec146b4b0bf7ab05130fea72503}} 
+\index{hsa\_amd\_memory\_pool\_link\_info\_s@{hsa\_amd\_memory\_pool\_link\_info\_s}!atomic\_support\_32bit@{atomic\_support\_32bit}}
+\index{atomic\_support\_32bit@{atomic\_support\_32bit}!hsa\_amd\_memory\_pool\_link\_info\_s@{hsa\_amd\_memory\_pool\_link\_info\_s}}
+\doxysubsubsection{\texorpdfstring{atomic\_support\_32bit}{atomic\_support\_32bit}}
+{\footnotesize\ttfamily bool hsa\+\_\+amd\+\_\+memory\+\_\+pool\+\_\+link\+\_\+info\+\_\+s\+::atomic\+\_\+support\+\_\+32bit}
+
+Support for 32-\/bit atomic transactions. \mbox{\Hypertarget{structhsa__amd__memory__pool__link__info__s_aec517345f8c1e8f32c93accfd9951de2}\label{structhsa__amd__memory__pool__link__info__s_aec517345f8c1e8f32c93accfd9951de2}} 
+\index{hsa\_amd\_memory\_pool\_link\_info\_s@{hsa\_amd\_memory\_pool\_link\_info\_s}!atomic\_support\_64bit@{atomic\_support\_64bit}}
+\index{atomic\_support\_64bit@{atomic\_support\_64bit}!hsa\_amd\_memory\_pool\_link\_info\_s@{hsa\_amd\_memory\_pool\_link\_info\_s}}
+\doxysubsubsection{\texorpdfstring{atomic\_support\_64bit}{atomic\_support\_64bit}}
+{\footnotesize\ttfamily bool hsa\+\_\+amd\+\_\+memory\+\_\+pool\+\_\+link\+\_\+info\+\_\+s\+::atomic\+\_\+support\+\_\+64bit}
+
+Support for 64-\/bit atomic transactions. \mbox{\Hypertarget{structhsa__amd__memory__pool__link__info__s_a7f33c3d1dd06397fd0b2c4928c3bf43f}\label{structhsa__amd__memory__pool__link__info__s_a7f33c3d1dd06397fd0b2c4928c3bf43f}} 
+\index{hsa\_amd\_memory\_pool\_link\_info\_s@{hsa\_amd\_memory\_pool\_link\_info\_s}!coherent\_support@{coherent\_support}}
+\index{coherent\_support@{coherent\_support}!hsa\_amd\_memory\_pool\_link\_info\_s@{hsa\_amd\_memory\_pool\_link\_info\_s}}
+\doxysubsubsection{\texorpdfstring{coherent\_support}{coherent\_support}}
+{\footnotesize\ttfamily bool hsa\+\_\+amd\+\_\+memory\+\_\+pool\+\_\+link\+\_\+info\+\_\+s\+::coherent\+\_\+support}
+
+Support for cache coherent transactions. \mbox{\Hypertarget{structhsa__amd__memory__pool__link__info__s_a43725e30ab3863479ca95d7f462499b4}\label{structhsa__amd__memory__pool__link__info__s_a43725e30ab3863479ca95d7f462499b4}} 
+\index{hsa\_amd\_memory\_pool\_link\_info\_s@{hsa\_amd\_memory\_pool\_link\_info\_s}!link\_type@{link\_type}}
+\index{link\_type@{link\_type}!hsa\_amd\_memory\_pool\_link\_info\_s@{hsa\_amd\_memory\_pool\_link\_info\_s}}
+\doxysubsubsection{\texorpdfstring{link\_type}{link\_type}}
+{\footnotesize\ttfamily \mbox{\hyperlink{inc_2hsa__ext__amd_8h_af3058d890c1f907c306f2f25de90f506}{hsa\+\_\+amd\+\_\+link\+\_\+info\+\_\+type\+\_\+t}} hsa\+\_\+amd\+\_\+memory\+\_\+pool\+\_\+link\+\_\+info\+\_\+s\+::link\+\_\+type}
+
+The type of bus/link. \mbox{\Hypertarget{structhsa__amd__memory__pool__link__info__s_a4a8bec1601391031785e1c0ce708b56d}\label{structhsa__amd__memory__pool__link__info__s_a4a8bec1601391031785e1c0ce708b56d}} 
+\index{hsa\_amd\_memory\_pool\_link\_info\_s@{hsa\_amd\_memory\_pool\_link\_info\_s}!max\_bandwidth@{max\_bandwidth}}
+\index{max\_bandwidth@{max\_bandwidth}!hsa\_amd\_memory\_pool\_link\_info\_s@{hsa\_amd\_memory\_pool\_link\_info\_s}}
+\doxysubsubsection{\texorpdfstring{max\_bandwidth}{max\_bandwidth}}
+{\footnotesize\ttfamily uint32\+\_\+t hsa\+\_\+amd\+\_\+memory\+\_\+pool\+\_\+link\+\_\+info\+\_\+s\+::max\+\_\+bandwidth}
+
+Maximum link interface bandwidth in MB/s. \mbox{\Hypertarget{structhsa__amd__memory__pool__link__info__s_a192814af96dfb1b2215835637560fd97}\label{structhsa__amd__memory__pool__link__info__s_a192814af96dfb1b2215835637560fd97}} 
+\index{hsa\_amd\_memory\_pool\_link\_info\_s@{hsa\_amd\_memory\_pool\_link\_info\_s}!max\_latency@{max\_latency}}
+\index{max\_latency@{max\_latency}!hsa\_amd\_memory\_pool\_link\_info\_s@{hsa\_amd\_memory\_pool\_link\_info\_s}}
+\doxysubsubsection{\texorpdfstring{max\_latency}{max\_latency}}
+{\footnotesize\ttfamily uint32\+\_\+t hsa\+\_\+amd\+\_\+memory\+\_\+pool\+\_\+link\+\_\+info\+\_\+s\+::max\+\_\+latency}
+
+Maximum transfer latency (rounded to ns). \mbox{\Hypertarget{structhsa__amd__memory__pool__link__info__s_abb77825d9b63b1f5954caac78131936e}\label{structhsa__amd__memory__pool__link__info__s_abb77825d9b63b1f5954caac78131936e}} 
+\index{hsa\_amd\_memory\_pool\_link\_info\_s@{hsa\_amd\_memory\_pool\_link\_info\_s}!min\_bandwidth@{min\_bandwidth}}
+\index{min\_bandwidth@{min\_bandwidth}!hsa\_amd\_memory\_pool\_link\_info\_s@{hsa\_amd\_memory\_pool\_link\_info\_s}}
+\doxysubsubsection{\texorpdfstring{min\_bandwidth}{min\_bandwidth}}
+{\footnotesize\ttfamily uint32\+\_\+t hsa\+\_\+amd\+\_\+memory\+\_\+pool\+\_\+link\+\_\+info\+\_\+s\+::min\+\_\+bandwidth}
+
+Minimum link interface bandwidth in MB/s. \mbox{\Hypertarget{structhsa__amd__memory__pool__link__info__s_ae21d2add7c97a905e5b9ba7c9bd26bc3}\label{structhsa__amd__memory__pool__link__info__s_ae21d2add7c97a905e5b9ba7c9bd26bc3}} 
+\index{hsa\_amd\_memory\_pool\_link\_info\_s@{hsa\_amd\_memory\_pool\_link\_info\_s}!min\_latency@{min\_latency}}
+\index{min\_latency@{min\_latency}!hsa\_amd\_memory\_pool\_link\_info\_s@{hsa\_amd\_memory\_pool\_link\_info\_s}}
+\doxysubsubsection{\texorpdfstring{min\_latency}{min\_latency}}
+{\footnotesize\ttfamily uint32\+\_\+t hsa\+\_\+amd\+\_\+memory\+\_\+pool\+\_\+link\+\_\+info\+\_\+s\+::min\+\_\+latency}
+
+Minimum transfer latency (rounded to ns). \mbox{\Hypertarget{structhsa__amd__memory__pool__link__info__s_a2f5f2a6b76e99e8ad962e62699eb5d7c}\label{structhsa__amd__memory__pool__link__info__s_a2f5f2a6b76e99e8ad962e62699eb5d7c}} 
+\index{hsa\_amd\_memory\_pool\_link\_info\_s@{hsa\_amd\_memory\_pool\_link\_info\_s}!numa\_distance@{numa\_distance}}
+\index{numa\_distance@{numa\_distance}!hsa\_amd\_memory\_pool\_link\_info\_s@{hsa\_amd\_memory\_pool\_link\_info\_s}}
+\doxysubsubsection{\texorpdfstring{numa\_distance}{numa\_distance}}
+{\footnotesize\ttfamily uint32\+\_\+t hsa\+\_\+amd\+\_\+memory\+\_\+pool\+\_\+link\+\_\+info\+\_\+s\+::numa\+\_\+distance}
+
+NUMA distance of memory pool relative to querying agent 
+
+The documentation for this struct was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+src/inc/\mbox{\hyperlink{inc_2hsa__ext__amd_8h}{hsa\+\_\+ext\+\_\+amd.\+h}}\end{DoxyCompactItemize}

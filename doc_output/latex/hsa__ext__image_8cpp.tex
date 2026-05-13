@@ -1,0 +1,95 @@
+\hypertarget{hsa__ext__image_8cpp}{}\doxysection{src/image/hsa\+\_\+ext\+\_\+image.cpp File Reference}
+\label{hsa__ext__image_8cpp}\index{src/image/hsa\_ext\_image.cpp@{src/image/hsa\_ext\_image.cpp}}
+{\ttfamily \#include \char`\"{}image\+\_\+runtime.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}image/inc/hsa\+\_\+ext\+\_\+image\+\_\+impl.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}core/inc/exceptions.\+h\char`\"{}}\newline
+Include dependency graph for hsa\+\_\+ext\+\_\+image.\+cpp\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{hsa__ext__image_8cpp__incl}
+\end{center}
+\end{figure}
+\doxysubsection*{Namespaces}
+\begin{DoxyCompactItemize}
+\item 
+ \mbox{\hyperlink{namespacerocr}{rocr}}
+\item 
+ \mbox{\hyperlink{namespacerocr_1_1AMD}{rocr\+::\+AMD}}
+\item 
+ \mbox{\hyperlink{namespacerocr_1_1image}{rocr\+::image}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \mbox{\hyperlink{hsa__ext__image_8cpp_ad2746371528bdf15c3910b7bf217dac0}{TRY}}~try \{
+\item 
+\#define \mbox{\hyperlink{hsa__ext__image_8cpp_ae30f5c713cfa6a69c6b26492c992052b}{CATCH}}~\} catch(...) \{ return AMD\+::handle\+Exception(); \}
+\item 
+\#define \mbox{\hyperlink{hsa__ext__image_8cpp_af8805f7cefcfe890bc641ef707b753b0}{CATCHRET}}(RETURN\+\_\+\+TYPE)~\} catch(...) \{ return AMD\+::handle\+ExceptionT$<$RETURN\+\_\+\+TYPE$>$(); \}
+\end{DoxyCompactItemize}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{group__status_gad755322e7ff95456520e8abdbe90d225}{hsa\+\_\+status\+\_\+t}} \mbox{\hyperlink{namespacerocr_1_1AMD_a85c1dc627483c172954e373f424f633e}{rocr\+::\+AMD\+::handle\+Exception}} ()
+\item 
+{\footnotesize template$<$class T $>$ }\\static \+\_\+\+\_\+forceinline T \mbox{\hyperlink{namespacerocr_1_1AMD_a83e5885449b70cef1eafac966990a28f}{rocr\+::\+AMD\+::handle\+ExceptionT}} ()
+\item 
+static void \mbox{\hyperlink{namespacerocr_1_1image_a61b4278d4923d0c0c08d75a6f2cb65c1}{rocr\+::image\+::enforce\+Default\+Pitch}} (\mbox{\hyperlink{group__agentinfo_ga9ce217ef08e7d5e89c8e83ce7b6ef22b}{hsa\+\_\+agent\+\_\+t}} agent, const \mbox{\hyperlink{group__ext-images_ga7ccf44400f9bbb459c8e52f54a3c5eb0}{hsa\+\_\+ext\+\_\+image\+\_\+descriptor\+\_\+t}} $\ast$image\+\_\+descriptor, size\+\_\+t \&image\+\_\+data\+\_\+row\+\_\+pitch, size\+\_\+t \&image\+\_\+data\+\_\+slice\+\_\+pitch)
+\item 
+\mbox{\hyperlink{group__status_gad755322e7ff95456520e8abdbe90d225}{hsa\+\_\+status\+\_\+t}} \mbox{\hyperlink{namespacerocr_1_1image_a66974243f9aed359fe1973a07bb0a4e4}{rocr\+::image\+::hsa\+\_\+amd\+\_\+image\+\_\+get\+\_\+info\+\_\+max\+\_\+dim}} (\mbox{\hyperlink{group__agentinfo_ga9ce217ef08e7d5e89c8e83ce7b6ef22b}{hsa\+\_\+agent\+\_\+t}} agent, \mbox{\hyperlink{group__agentinfo_ga39d0684207d95717d96319573b3e4a42}{hsa\+\_\+agent\+\_\+info\+\_\+t}} attribute, void $\ast$value)
+\item 
+\mbox{\hyperlink{group__status_gad755322e7ff95456520e8abdbe90d225}{hsa\+\_\+status\+\_\+t}} \mbox{\hyperlink{namespacerocr_1_1image_a1aab7ff475781c42c79fd0f3bf7db84a}{rocr\+::image\+::hsa\+\_\+ext\+\_\+image\+\_\+get\+\_\+capability}} (\mbox{\hyperlink{group__agentinfo_ga9ce217ef08e7d5e89c8e83ce7b6ef22b}{hsa\+\_\+agent\+\_\+t}} agent, \mbox{\hyperlink{group__ext-images_gac61587d98a80d1660378e3904a66fc9c}{hsa\+\_\+ext\+\_\+image\+\_\+geometry\+\_\+t}} image\+\_\+geometry, const \mbox{\hyperlink{group__ext-images_ga37a5b98dd984766026174b4d6d486b29}{hsa\+\_\+ext\+\_\+image\+\_\+format\+\_\+t}} $\ast$image\+\_\+format, uint32\+\_\+t $\ast$capability\+\_\+mask)
+\item 
+\mbox{\hyperlink{group__status_gad755322e7ff95456520e8abdbe90d225}{hsa\+\_\+status\+\_\+t}} \mbox{\hyperlink{namespacerocr_1_1image_a64a522bdee7cb1f09b58453424eddb43}{rocr\+::image\+::hsa\+\_\+ext\+\_\+image\+\_\+data\+\_\+get\+\_\+info}} (\mbox{\hyperlink{group__agentinfo_ga9ce217ef08e7d5e89c8e83ce7b6ef22b}{hsa\+\_\+agent\+\_\+t}} agent, const \mbox{\hyperlink{group__ext-images_ga7ccf44400f9bbb459c8e52f54a3c5eb0}{hsa\+\_\+ext\+\_\+image\+\_\+descriptor\+\_\+t}} $\ast$image\+\_\+descriptor, \mbox{\hyperlink{group__common_gacef73774a0af1d1df56fdcd9e04bb708}{hsa\+\_\+access\+\_\+permission\+\_\+t}} access\+\_\+permission, \mbox{\hyperlink{group__ext-images_gada32050df34dc3f6c0b9124706d8984b}{hsa\+\_\+ext\+\_\+image\+\_\+data\+\_\+info\+\_\+t}} $\ast$image\+\_\+data\+\_\+info)
+\item 
+\mbox{\hyperlink{group__status_gad755322e7ff95456520e8abdbe90d225}{hsa\+\_\+status\+\_\+t}} \mbox{\hyperlink{namespacerocr_1_1image_a7b6cd9517fe1456368351b8687fd0162}{rocr\+::image\+::hsa\+\_\+ext\+\_\+image\+\_\+create}} (\mbox{\hyperlink{group__agentinfo_ga9ce217ef08e7d5e89c8e83ce7b6ef22b}{hsa\+\_\+agent\+\_\+t}} agent, const \mbox{\hyperlink{group__ext-images_ga7ccf44400f9bbb459c8e52f54a3c5eb0}{hsa\+\_\+ext\+\_\+image\+\_\+descriptor\+\_\+t}} $\ast$image\+\_\+descriptor, const void $\ast$image\+\_\+data, \mbox{\hyperlink{group__common_gacef73774a0af1d1df56fdcd9e04bb708}{hsa\+\_\+access\+\_\+permission\+\_\+t}} access\+\_\+permission, \mbox{\hyperlink{group__ext-images_ga4e192988bd0b5abe2a57e248934e6dc6}{hsa\+\_\+ext\+\_\+image\+\_\+t}} $\ast$image)
+\item 
+\mbox{\hyperlink{group__status_gad755322e7ff95456520e8abdbe90d225}{hsa\+\_\+status\+\_\+t}} \mbox{\hyperlink{namespacerocr_1_1image_a6519ddc6ab93cd31bbe32942bb1ea745}{rocr\+::image\+::hsa\+\_\+ext\+\_\+image\+\_\+destroy}} (\mbox{\hyperlink{group__agentinfo_ga9ce217ef08e7d5e89c8e83ce7b6ef22b}{hsa\+\_\+agent\+\_\+t}} agent, \mbox{\hyperlink{group__ext-images_ga4e192988bd0b5abe2a57e248934e6dc6}{hsa\+\_\+ext\+\_\+image\+\_\+t}} image)
+\item 
+\mbox{\hyperlink{group__status_gad755322e7ff95456520e8abdbe90d225}{hsa\+\_\+status\+\_\+t}} \mbox{\hyperlink{namespacerocr_1_1image_ae0663f4b64bca18b292380cc510525a6}{rocr\+::image\+::hsa\+\_\+ext\+\_\+image\+\_\+copy}} (\mbox{\hyperlink{group__agentinfo_ga9ce217ef08e7d5e89c8e83ce7b6ef22b}{hsa\+\_\+agent\+\_\+t}} agent, \mbox{\hyperlink{group__ext-images_ga4e192988bd0b5abe2a57e248934e6dc6}{hsa\+\_\+ext\+\_\+image\+\_\+t}} src\+\_\+image, const \mbox{\hyperlink{group__common_gae460d1df8c508a9c889d4550ea4eea30}{hsa\+\_\+dim3\+\_\+t}} $\ast$src\+\_\+offset, \mbox{\hyperlink{group__ext-images_ga4e192988bd0b5abe2a57e248934e6dc6}{hsa\+\_\+ext\+\_\+image\+\_\+t}} dst\+\_\+image, const \mbox{\hyperlink{group__common_gae460d1df8c508a9c889d4550ea4eea30}{hsa\+\_\+dim3\+\_\+t}} $\ast$dst\+\_\+offset, const \mbox{\hyperlink{group__common_gae460d1df8c508a9c889d4550ea4eea30}{hsa\+\_\+dim3\+\_\+t}} $\ast$range)
+\item 
+\mbox{\hyperlink{group__status_gad755322e7ff95456520e8abdbe90d225}{hsa\+\_\+status\+\_\+t}} \mbox{\hyperlink{namespacerocr_1_1image_af0550bc48fcbc9001d92f1f4b9800946}{rocr\+::image\+::hsa\+\_\+ext\+\_\+image\+\_\+import}} (\mbox{\hyperlink{group__agentinfo_ga9ce217ef08e7d5e89c8e83ce7b6ef22b}{hsa\+\_\+agent\+\_\+t}} agent, const void $\ast$src\+\_\+memory, size\+\_\+t src\+\_\+row\+\_\+pitch, size\+\_\+t src\+\_\+slice\+\_\+pitch, \mbox{\hyperlink{group__ext-images_ga4e192988bd0b5abe2a57e248934e6dc6}{hsa\+\_\+ext\+\_\+image\+\_\+t}} dst\+\_\+image, const \mbox{\hyperlink{group__ext-images_gaa407e3fb8aa43d59f8e8560294d1c702}{hsa\+\_\+ext\+\_\+image\+\_\+region\+\_\+t}} $\ast$image\+\_\+region)
+\item 
+\mbox{\hyperlink{group__status_gad755322e7ff95456520e8abdbe90d225}{hsa\+\_\+status\+\_\+t}} \mbox{\hyperlink{namespacerocr_1_1image_aeeb7bc4f0f2b3b2a38cf78dd5c22bb7b}{rocr\+::image\+::hsa\+\_\+ext\+\_\+image\+\_\+export}} (\mbox{\hyperlink{group__agentinfo_ga9ce217ef08e7d5e89c8e83ce7b6ef22b}{hsa\+\_\+agent\+\_\+t}} agent, \mbox{\hyperlink{group__ext-images_ga4e192988bd0b5abe2a57e248934e6dc6}{hsa\+\_\+ext\+\_\+image\+\_\+t}} src\+\_\+image, void $\ast$dst\+\_\+memory, size\+\_\+t dst\+\_\+row\+\_\+pitch, size\+\_\+t dst\+\_\+slice\+\_\+pitch, const \mbox{\hyperlink{group__ext-images_gaa407e3fb8aa43d59f8e8560294d1c702}{hsa\+\_\+ext\+\_\+image\+\_\+region\+\_\+t}} $\ast$image\+\_\+region)
+\item 
+\mbox{\hyperlink{group__status_gad755322e7ff95456520e8abdbe90d225}{hsa\+\_\+status\+\_\+t}} \mbox{\hyperlink{namespacerocr_1_1image_a9d9d000ed5332943e959a141b77bdee4}{rocr\+::image\+::hsa\+\_\+ext\+\_\+image\+\_\+clear}} (\mbox{\hyperlink{group__agentinfo_ga9ce217ef08e7d5e89c8e83ce7b6ef22b}{hsa\+\_\+agent\+\_\+t}} agent, \mbox{\hyperlink{group__ext-images_ga4e192988bd0b5abe2a57e248934e6dc6}{hsa\+\_\+ext\+\_\+image\+\_\+t}} image, const void $\ast$data, const \mbox{\hyperlink{group__ext-images_gaa407e3fb8aa43d59f8e8560294d1c702}{hsa\+\_\+ext\+\_\+image\+\_\+region\+\_\+t}} $\ast$image\+\_\+region)
+\item 
+\mbox{\hyperlink{group__status_gad755322e7ff95456520e8abdbe90d225}{hsa\+\_\+status\+\_\+t}} \mbox{\hyperlink{namespacerocr_1_1image_a4b7fa6567a1d2a14ff6c8578ca1da7f5}{rocr\+::image\+::hsa\+\_\+ext\+\_\+sampler\+\_\+create}} (\mbox{\hyperlink{group__agentinfo_ga9ce217ef08e7d5e89c8e83ce7b6ef22b}{hsa\+\_\+agent\+\_\+t}} agent, const \mbox{\hyperlink{group__ext-images_gabed3b941e5a41287f2240f366797bda2}{hsa\+\_\+ext\+\_\+sampler\+\_\+descriptor\+\_\+t}} $\ast$sampler\+\_\+descriptor, \mbox{\hyperlink{group__ext-images_ga41c5c0a2cbd7c9020ef8ce2afc1c6101}{hsa\+\_\+ext\+\_\+sampler\+\_\+t}} $\ast$sampler)
+\item 
+\mbox{\hyperlink{group__status_gad755322e7ff95456520e8abdbe90d225}{hsa\+\_\+status\+\_\+t}} \mbox{\hyperlink{namespacerocr_1_1image_a0501dc9f5ebfe198acc3431c47566822}{rocr\+::image\+::hsa\+\_\+ext\+\_\+sampler\+\_\+destroy}} (\mbox{\hyperlink{group__agentinfo_ga9ce217ef08e7d5e89c8e83ce7b6ef22b}{hsa\+\_\+agent\+\_\+t}} agent, \mbox{\hyperlink{group__ext-images_ga41c5c0a2cbd7c9020ef8ce2afc1c6101}{hsa\+\_\+ext\+\_\+sampler\+\_\+t}} sampler)
+\item 
+\mbox{\hyperlink{group__status_gad755322e7ff95456520e8abdbe90d225}{hsa\+\_\+status\+\_\+t}} \mbox{\hyperlink{namespacerocr_1_1image_a3ed95f58fa68a22a5132ad9bbeb712f7}{rocr\+::image\+::hsa\+\_\+ext\+\_\+image\+\_\+get\+\_\+capability\+\_\+with\+\_\+layout}} (\mbox{\hyperlink{group__agentinfo_ga9ce217ef08e7d5e89c8e83ce7b6ef22b}{hsa\+\_\+agent\+\_\+t}} agent, \mbox{\hyperlink{group__ext-images_gac61587d98a80d1660378e3904a66fc9c}{hsa\+\_\+ext\+\_\+image\+\_\+geometry\+\_\+t}} image\+\_\+geometry, const \mbox{\hyperlink{group__ext-images_ga37a5b98dd984766026174b4d6d486b29}{hsa\+\_\+ext\+\_\+image\+\_\+format\+\_\+t}} $\ast$image\+\_\+format, \mbox{\hyperlink{group__ext-images_ga102222a1420a2434d9b50100350305e4}{hsa\+\_\+ext\+\_\+image\+\_\+data\+\_\+layout\+\_\+t}} image\+\_\+data\+\_\+layout, uint32\+\_\+t $\ast$capability\+\_\+mask)
+\item 
+\mbox{\hyperlink{group__status_gad755322e7ff95456520e8abdbe90d225}{hsa\+\_\+status\+\_\+t}} \mbox{\hyperlink{namespacerocr_1_1image_aa6ebd891b1af3dffcb4c03e41028f70e}{rocr\+::image\+::hsa\+\_\+ext\+\_\+image\+\_\+data\+\_\+get\+\_\+info\+\_\+with\+\_\+layout}} (\mbox{\hyperlink{group__agentinfo_ga9ce217ef08e7d5e89c8e83ce7b6ef22b}{hsa\+\_\+agent\+\_\+t}} agent, const \mbox{\hyperlink{group__ext-images_ga7ccf44400f9bbb459c8e52f54a3c5eb0}{hsa\+\_\+ext\+\_\+image\+\_\+descriptor\+\_\+t}} $\ast$image\+\_\+descriptor, \mbox{\hyperlink{group__common_gacef73774a0af1d1df56fdcd9e04bb708}{hsa\+\_\+access\+\_\+permission\+\_\+t}} access\+\_\+permission, \mbox{\hyperlink{group__ext-images_ga102222a1420a2434d9b50100350305e4}{hsa\+\_\+ext\+\_\+image\+\_\+data\+\_\+layout\+\_\+t}} image\+\_\+data\+\_\+layout, size\+\_\+t image\+\_\+data\+\_\+row\+\_\+pitch, size\+\_\+t image\+\_\+data\+\_\+slice\+\_\+pitch, \mbox{\hyperlink{group__ext-images_gada32050df34dc3f6c0b9124706d8984b}{hsa\+\_\+ext\+\_\+image\+\_\+data\+\_\+info\+\_\+t}} $\ast$image\+\_\+data\+\_\+info)
+\item 
+\mbox{\hyperlink{group__status_gad755322e7ff95456520e8abdbe90d225}{hsa\+\_\+status\+\_\+t}} \mbox{\hyperlink{namespacerocr_1_1image_a1aded615850ee64ad1e9b3dcb36993a5}{rocr\+::image\+::hsa\+\_\+ext\+\_\+image\+\_\+create\+\_\+with\+\_\+layout}} (\mbox{\hyperlink{group__agentinfo_ga9ce217ef08e7d5e89c8e83ce7b6ef22b}{hsa\+\_\+agent\+\_\+t}} agent, const \mbox{\hyperlink{group__ext-images_ga7ccf44400f9bbb459c8e52f54a3c5eb0}{hsa\+\_\+ext\+\_\+image\+\_\+descriptor\+\_\+t}} $\ast$image\+\_\+descriptor, const void $\ast$image\+\_\+data, \mbox{\hyperlink{group__common_gacef73774a0af1d1df56fdcd9e04bb708}{hsa\+\_\+access\+\_\+permission\+\_\+t}} access\+\_\+permission, \mbox{\hyperlink{group__ext-images_ga102222a1420a2434d9b50100350305e4}{hsa\+\_\+ext\+\_\+image\+\_\+data\+\_\+layout\+\_\+t}} image\+\_\+data\+\_\+layout, size\+\_\+t image\+\_\+data\+\_\+row\+\_\+pitch, size\+\_\+t image\+\_\+data\+\_\+slice\+\_\+pitch, \mbox{\hyperlink{group__ext-images_ga4e192988bd0b5abe2a57e248934e6dc6}{hsa\+\_\+ext\+\_\+image\+\_\+t}} $\ast$image)
+\item 
+\mbox{\hyperlink{group__status_gad755322e7ff95456520e8abdbe90d225}{hsa\+\_\+status\+\_\+t}} \mbox{\hyperlink{namespacerocr_1_1image_aa2e938b3ac91ce467c2d32d26693b334}{rocr\+::image\+::hsa\+\_\+amd\+\_\+image\+\_\+create}} (\mbox{\hyperlink{group__agentinfo_ga9ce217ef08e7d5e89c8e83ce7b6ef22b}{hsa\+\_\+agent\+\_\+t}} agent, const \mbox{\hyperlink{group__ext-images_ga7ccf44400f9bbb459c8e52f54a3c5eb0}{hsa\+\_\+ext\+\_\+image\+\_\+descriptor\+\_\+t}} $\ast$image\+\_\+descriptor, const \mbox{\hyperlink{inc_2hsa__ext__amd_8h_a15773440040b822a4a0ac4a2aed5412d}{hsa\+\_\+amd\+\_\+image\+\_\+descriptor\+\_\+t}} $\ast$image\+\_\+layout, const void $\ast$image\+\_\+data, \mbox{\hyperlink{group__common_gacef73774a0af1d1df56fdcd9e04bb708}{hsa\+\_\+access\+\_\+permission\+\_\+t}} access\+\_\+permission, \mbox{\hyperlink{group__ext-images_ga4e192988bd0b5abe2a57e248934e6dc6}{hsa\+\_\+ext\+\_\+image\+\_\+t}} $\ast$image)
+\item 
+void \mbox{\hyperlink{namespacerocr_1_1image_acd46f7527dabbf732a0ecc203d78b639}{rocr\+::image\+::\+Load\+Image}} (core\+::\+Image\+Ext\+Table\+Internal $\ast$image\+\_\+api, decltype(\+::\mbox{\hyperlink{inc_2hsa__ext__amd_8h_a88865352a85a861af31041d1376ee8ea}{hsa\+\_\+amd\+\_\+image\+\_\+create}}) $\ast$$\ast$interface\+\_\+api)
+\item 
+void \mbox{\hyperlink{namespacerocr_1_1image_acdb7b11bf3498f0cbda14cb99fdd3d7f}{rocr\+::image\+::\+Release\+Image\+Rsrcs}} ()
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Macro Definition Documentation}
+\mbox{\Hypertarget{hsa__ext__image_8cpp_ae30f5c713cfa6a69c6b26492c992052b}\label{hsa__ext__image_8cpp_ae30f5c713cfa6a69c6b26492c992052b}} 
+\index{hsa\_ext\_image.cpp@{hsa\_ext\_image.cpp}!CATCH@{CATCH}}
+\index{CATCH@{CATCH}!hsa\_ext\_image.cpp@{hsa\_ext\_image.cpp}}
+\doxysubsubsection{\texorpdfstring{CATCH}{CATCH}}
+{\footnotesize\ttfamily \#define CATCH~\} catch(...) \{ return AMD\+::handle\+Exception(); \}}
+
+\mbox{\Hypertarget{hsa__ext__image_8cpp_af8805f7cefcfe890bc641ef707b753b0}\label{hsa__ext__image_8cpp_af8805f7cefcfe890bc641ef707b753b0}} 
+\index{hsa\_ext\_image.cpp@{hsa\_ext\_image.cpp}!CATCHRET@{CATCHRET}}
+\index{CATCHRET@{CATCHRET}!hsa\_ext\_image.cpp@{hsa\_ext\_image.cpp}}
+\doxysubsubsection{\texorpdfstring{CATCHRET}{CATCHRET}}
+{\footnotesize\ttfamily \#define CATCHRET(\begin{DoxyParamCaption}\item[{}]{RETURN\+\_\+\+TYPE }\end{DoxyParamCaption})~\} catch(...) \{ return AMD\+::handle\+ExceptionT$<$RETURN\+\_\+\+TYPE$>$(); \}}
+
+\mbox{\Hypertarget{hsa__ext__image_8cpp_ad2746371528bdf15c3910b7bf217dac0}\label{hsa__ext__image_8cpp_ad2746371528bdf15c3910b7bf217dac0}} 
+\index{hsa\_ext\_image.cpp@{hsa\_ext\_image.cpp}!TRY@{TRY}}
+\index{TRY@{TRY}!hsa\_ext\_image.cpp@{hsa\_ext\_image.cpp}}
+\doxysubsubsection{\texorpdfstring{TRY}{TRY}}
+{\footnotesize\ttfamily \#define TRY~try \{}
+

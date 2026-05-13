@@ -1,0 +1,559 @@
+\hypertarget{group__instruction-set-architecture}{}\doxysection{Instruction Set Architecture.}
+\label{group__instruction-set-architecture}\index{Instruction Set Architecture.@{Instruction Set Architecture.}}
+\doxysubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{structhsa__isa__s}{hsa\+\_\+isa\+\_\+s}}
+\begin{DoxyCompactList}\small\item\em Instruction set architecture. \end{DoxyCompactList}\item 
+struct \mbox{\hyperlink{structhsa__wavefront__s}{hsa\+\_\+wavefront\+\_\+s}}
+\begin{DoxyCompactList}\small\item\em Wavefront handle. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+typedef struct \mbox{\hyperlink{structhsa__isa__s}{hsa\+\_\+isa\+\_\+s}} \mbox{\hyperlink{group__instruction-set-architecture_ga459b132d062bba98dd1870f38b6ab721}{hsa\+\_\+isa\+\_\+t}}
+\begin{DoxyCompactList}\small\item\em Instruction set architecture. \end{DoxyCompactList}\item 
+typedef struct \mbox{\hyperlink{structhsa__wavefront__s}{hsa\+\_\+wavefront\+\_\+s}} \mbox{\hyperlink{group__instruction-set-architecture_ga3aaffc42e5ed215e2a4781fa23edb1d4}{hsa\+\_\+wavefront\+\_\+t}}
+\begin{DoxyCompactList}\small\item\em Wavefront handle. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Enumerations}
+\begin{DoxyCompactItemize}
+\item 
+enum \mbox{\hyperlink{group__instruction-set-architecture_gaa8a09719dffad53bb3908b11ed25c1e4}{hsa\+\_\+isa\+\_\+info\+\_\+t}} \{ \newline
+\mbox{\hyperlink{group__instruction-set-architecture_ggaa8a09719dffad53bb3908b11ed25c1e4aca73b418e6abed877d1d8a318ebb6d37}{HSA\+\_\+\+ISA\+\_\+\+INFO\+\_\+\+NAME\+\_\+\+LENGTH}} = 0
+, \mbox{\hyperlink{group__instruction-set-architecture_ggaa8a09719dffad53bb3908b11ed25c1e4aa602eaba13cd85aefa8f57ae2d428b98}{HSA\+\_\+\+ISA\+\_\+\+INFO\+\_\+\+NAME}} = 1
+, \mbox{\hyperlink{group__instruction-set-architecture_ggaa8a09719dffad53bb3908b11ed25c1e4aa6d791d65444a479b8f393a9d7664ae8}{HSA\+\_\+\+ISA\+\_\+\+INFO\+\_\+\+CALL\+\_\+\+CONVENTION\+\_\+\+COUNT}} = 2
+, \mbox{\hyperlink{group__instruction-set-architecture_ggaa8a09719dffad53bb3908b11ed25c1e4a4ca28c1e2fbcc919167e566e78af4e6d}{HSA\+\_\+\+ISA\+\_\+\+INFO\+\_\+\+CALL\+\_\+\+CONVENTION\+\_\+\+INFO\+\_\+\+WAVEFRONT\+\_\+\+SIZE}} = 3
+, \newline
+\mbox{\hyperlink{group__instruction-set-architecture_ggaa8a09719dffad53bb3908b11ed25c1e4ab3a1db10e1d3b5dbb967801813f2bda3}{HSA\+\_\+\+ISA\+\_\+\+INFO\+\_\+\+CALL\+\_\+\+CONVENTION\+\_\+\+INFO\+\_\+\+WAVEFRONTS\+\_\+\+PER\+\_\+\+COMPUTE\+\_\+\+UNIT}} = 4
+, \mbox{\hyperlink{group__instruction-set-architecture_ggaa8a09719dffad53bb3908b11ed25c1e4a4c6576d085e48f922da100f01ed6b1ef}{HSA\+\_\+\+ISA\+\_\+\+INFO\+\_\+\+MACHINE\+\_\+\+MODELS}} = 5
+, \mbox{\hyperlink{group__instruction-set-architecture_ggaa8a09719dffad53bb3908b11ed25c1e4acdb85a23d05ef213bbbe041f5d49d6ec}{HSA\+\_\+\+ISA\+\_\+\+INFO\+\_\+\+PROFILES}} = 6
+, \mbox{\hyperlink{group__instruction-set-architecture_ggaa8a09719dffad53bb3908b11ed25c1e4a2b3ecf16a9ab3b3ad54737231c65597f}{HSA\+\_\+\+ISA\+\_\+\+INFO\+\_\+\+DEFAULT\+\_\+\+FLOAT\+\_\+\+ROUNDING\+\_\+\+MODES}} = 7
+, \newline
+\mbox{\hyperlink{group__instruction-set-architecture_ggaa8a09719dffad53bb3908b11ed25c1e4a2c954a4c554d354340518348c65a18a0}{HSA\+\_\+\+ISA\+\_\+\+INFO\+\_\+\+BASE\+\_\+\+PROFILE\+\_\+\+DEFAULT\+\_\+\+FLOAT\+\_\+\+ROUNDING\+\_\+\+MODES}} = 8
+, \mbox{\hyperlink{group__instruction-set-architecture_ggaa8a09719dffad53bb3908b11ed25c1e4a25ea781e5bf0e215df3852f99f509a81}{HSA\+\_\+\+ISA\+\_\+\+INFO\+\_\+\+FAST\+\_\+\+F16\+\_\+\+OPERATION}} = 9
+, \mbox{\hyperlink{group__instruction-set-architecture_ggaa8a09719dffad53bb3908b11ed25c1e4a9e506d282bf8670bd7b190145c6e57af}{HSA\+\_\+\+ISA\+\_\+\+INFO\+\_\+\+WORKGROUP\+\_\+\+MAX\+\_\+\+DIM}} = 12
+, \mbox{\hyperlink{group__instruction-set-architecture_ggaa8a09719dffad53bb3908b11ed25c1e4a6d67d9695339fe28ac98122d93c33538}{HSA\+\_\+\+ISA\+\_\+\+INFO\+\_\+\+WORKGROUP\+\_\+\+MAX\+\_\+\+SIZE}} = 13
+, \newline
+\mbox{\hyperlink{group__instruction-set-architecture_ggaa8a09719dffad53bb3908b11ed25c1e4a74d19d354befd5137d1fa9b76fb65701}{HSA\+\_\+\+ISA\+\_\+\+INFO\+\_\+\+GRID\+\_\+\+MAX\+\_\+\+DIM}} = 14
+, \mbox{\hyperlink{group__instruction-set-architecture_ggaa8a09719dffad53bb3908b11ed25c1e4a10539ad11e71308ad3e2e47237233cb6}{HSA\+\_\+\+ISA\+\_\+\+INFO\+\_\+\+GRID\+\_\+\+MAX\+\_\+\+SIZE}} = 16
+, \mbox{\hyperlink{group__instruction-set-architecture_ggaa8a09719dffad53bb3908b11ed25c1e4aa0679ff582693a037b5523330ed25e3f}{HSA\+\_\+\+ISA\+\_\+\+INFO\+\_\+\+FBARRIER\+\_\+\+MAX\+\_\+\+SIZE}} = 17
+ \}
+\begin{DoxyCompactList}\small\item\em Instruction set architecture attributes. \end{DoxyCompactList}\item 
+enum \mbox{\hyperlink{group__instruction-set-architecture_gaf6261c0d6e072edc0c450fd0ecb0a090}{hsa\+\_\+fp\+\_\+type\+\_\+t}} \{ \mbox{\hyperlink{group__instruction-set-architecture_ggaf6261c0d6e072edc0c450fd0ecb0a090ad80211a626874e3eee01f74b14fd3c21}{HSA\+\_\+\+FP\+\_\+\+TYPE\+\_\+16}} = 1
+, \mbox{\hyperlink{group__instruction-set-architecture_ggaf6261c0d6e072edc0c450fd0ecb0a090a14c9f2fb3abfbda7d34ff0c9ad0daa31}{HSA\+\_\+\+FP\+\_\+\+TYPE\+\_\+32}} = 2
+, \mbox{\hyperlink{group__instruction-set-architecture_ggaf6261c0d6e072edc0c450fd0ecb0a090a849dc38724955cf5427c2675618107f8}{HSA\+\_\+\+FP\+\_\+\+TYPE\+\_\+64}} = 4
+ \}
+\begin{DoxyCompactList}\small\item\em Floating-\/point types. \end{DoxyCompactList}\item 
+enum \mbox{\hyperlink{group__instruction-set-architecture_gac6969924c9e839aef51a0b18c3a6dd0d}{hsa\+\_\+flush\+\_\+mode\+\_\+t}} \{ \mbox{\hyperlink{group__instruction-set-architecture_ggac6969924c9e839aef51a0b18c3a6dd0da2d0fc3fc90ba2080af2da87e2629ec32}{HSA\+\_\+\+FLUSH\+\_\+\+MODE\+\_\+\+FTZ}} = 1
+, \mbox{\hyperlink{group__instruction-set-architecture_ggac6969924c9e839aef51a0b18c3a6dd0dad0abe58e56e06d887ece192713572712}{HSA\+\_\+\+FLUSH\+\_\+\+MODE\+\_\+\+NON\+\_\+\+FTZ}} = 2
+ \}
+\begin{DoxyCompactList}\small\item\em Flush to zero modes. \end{DoxyCompactList}\item 
+enum \mbox{\hyperlink{group__instruction-set-architecture_gad6158bdca7cafbb7bdcc820dac89078c}{hsa\+\_\+round\+\_\+method\+\_\+t}} \{ \mbox{\hyperlink{group__instruction-set-architecture_ggad6158bdca7cafbb7bdcc820dac89078ca8c1e13c28daeabaf2445727202837ec8}{HSA\+\_\+\+ROUND\+\_\+\+METHOD\+\_\+\+SINGLE}} = 1
+, \mbox{\hyperlink{group__instruction-set-architecture_ggad6158bdca7cafbb7bdcc820dac89078cadfc3e3db7e09374422a81d81023b0fae}{HSA\+\_\+\+ROUND\+\_\+\+METHOD\+\_\+\+DOUBLE}} = 2
+ \}
+\begin{DoxyCompactList}\small\item\em Round methods. \end{DoxyCompactList}\item 
+enum \mbox{\hyperlink{group__instruction-set-architecture_ga18048e15c5756d68df8b66ddfd0b1754}{hsa\+\_\+wavefront\+\_\+info\+\_\+t}} \{ \mbox{\hyperlink{group__instruction-set-architecture_gga18048e15c5756d68df8b66ddfd0b1754a8e1b3070a581459b9b1417dcaa8b0641}{HSA\+\_\+\+WAVEFRONT\+\_\+\+INFO\+\_\+\+SIZE}} = 0
+ \}
+\begin{DoxyCompactList}\small\item\em Wavefront attributes. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{group__status_gad755322e7ff95456520e8abdbe90d225}{hsa\+\_\+status\+\_\+t}} \mbox{\hyperlink{inc_2hsa__ext__image_8h_a64216765b98b62ee87deb50fd2899836}{HSA\+\_\+\+API}} \mbox{\hyperlink{group__instruction-set-architecture_ga4835eb119f4fca41be62d3a15f4c263f}{hsa\+\_\+isa\+\_\+from\+\_\+name}} (const char $\ast$name, \mbox{\hyperlink{group__instruction-set-architecture_ga459b132d062bba98dd1870f38b6ab721}{hsa\+\_\+isa\+\_\+t}} $\ast$isa)
+\begin{DoxyCompactList}\small\item\em Retrieve a reference to an instruction set architecture handle out of a symbolic name. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{group__status_gad755322e7ff95456520e8abdbe90d225}{hsa\+\_\+status\+\_\+t}} \mbox{\hyperlink{inc_2hsa__ext__image_8h_a64216765b98b62ee87deb50fd2899836}{HSA\+\_\+\+API}} \mbox{\hyperlink{group__instruction-set-architecture_gaa624c390f2cfec064bc1b4d9c9303ed4}{hsa\+\_\+agent\+\_\+iterate\+\_\+isas}} (\mbox{\hyperlink{group__agentinfo_ga9ce217ef08e7d5e89c8e83ce7b6ef22b}{hsa\+\_\+agent\+\_\+t}} agent, \mbox{\hyperlink{group__status_gad755322e7ff95456520e8abdbe90d225}{hsa\+\_\+status\+\_\+t}}($\ast$callback)(\mbox{\hyperlink{group__instruction-set-architecture_ga459b132d062bba98dd1870f38b6ab721}{hsa\+\_\+isa\+\_\+t}} isa, void $\ast$data), void $\ast$data)
+\begin{DoxyCompactList}\small\item\em Iterate over the instruction sets supported by the given agent, and invoke an application-\/defined callback on every iteration. The iterator is deterministic\+: if an agent supports several instruction set architectures, they are traversed in the same order in every invocation of this function. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{group__status_gad755322e7ff95456520e8abdbe90d225}{hsa\+\_\+status\+\_\+t}} \mbox{\hyperlink{inc_2hsa__ext__image_8h_a64216765b98b62ee87deb50fd2899836}{HSA\+\_\+\+API}} \mbox{\hyperlink{inc_2hsa_8h_a2321f8ca7d706cada4f617b191a478b0}{HSA\+\_\+\+DEPRECATED}} \mbox{\hyperlink{group__instruction-set-architecture_ga910e9f1ee3a9ca8b32b04d9f1fb97849}{hsa\+\_\+isa\+\_\+get\+\_\+info}} (\mbox{\hyperlink{group__instruction-set-architecture_ga459b132d062bba98dd1870f38b6ab721}{hsa\+\_\+isa\+\_\+t}} isa, \mbox{\hyperlink{group__instruction-set-architecture_gaa8a09719dffad53bb3908b11ed25c1e4}{hsa\+\_\+isa\+\_\+info\+\_\+t}} attribute, uint32\+\_\+t index, void $\ast$value)
+\begin{DoxyCompactList}\small\item\em Get the current value of an attribute for a given instruction set architecture (ISA). \end{DoxyCompactList}\item 
+\mbox{\hyperlink{group__status_gad755322e7ff95456520e8abdbe90d225}{hsa\+\_\+status\+\_\+t}} \mbox{\hyperlink{inc_2hsa__ext__image_8h_a64216765b98b62ee87deb50fd2899836}{HSA\+\_\+\+API}} \mbox{\hyperlink{group__instruction-set-architecture_ga996c452ea131661d5585724a7a7db75f}{hsa\+\_\+isa\+\_\+get\+\_\+info\+\_\+alt}} (\mbox{\hyperlink{group__instruction-set-architecture_ga459b132d062bba98dd1870f38b6ab721}{hsa\+\_\+isa\+\_\+t}} isa, \mbox{\hyperlink{group__instruction-set-architecture_gaa8a09719dffad53bb3908b11ed25c1e4}{hsa\+\_\+isa\+\_\+info\+\_\+t}} attribute, void $\ast$value)
+\begin{DoxyCompactList}\small\item\em Get the current value of an attribute for a given instruction set architecture (ISA). \end{DoxyCompactList}\item 
+\mbox{\hyperlink{group__status_gad755322e7ff95456520e8abdbe90d225}{hsa\+\_\+status\+\_\+t}} \mbox{\hyperlink{inc_2hsa__ext__image_8h_a64216765b98b62ee87deb50fd2899836}{HSA\+\_\+\+API}} \mbox{\hyperlink{group__instruction-set-architecture_gab478487c2d8064db32d50ef574de44ea}{hsa\+\_\+isa\+\_\+get\+\_\+exception\+\_\+policies}} (\mbox{\hyperlink{group__instruction-set-architecture_ga459b132d062bba98dd1870f38b6ab721}{hsa\+\_\+isa\+\_\+t}} isa, \mbox{\hyperlink{group__agentinfo_gacafd4247e2a04cbe0ac0b3998c127532}{hsa\+\_\+profile\+\_\+t}} profile, uint16\+\_\+t $\ast$mask)
+\begin{DoxyCompactList}\small\item\em Retrieve the exception policy support for a given combination of instruction set architecture and profile. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{group__status_gad755322e7ff95456520e8abdbe90d225}{hsa\+\_\+status\+\_\+t}} \mbox{\hyperlink{inc_2hsa__ext__image_8h_a64216765b98b62ee87deb50fd2899836}{HSA\+\_\+\+API}} \mbox{\hyperlink{group__instruction-set-architecture_gaef929d5e604e688f554ebc4e2a3114e3}{hsa\+\_\+isa\+\_\+get\+\_\+round\+\_\+method}} (\mbox{\hyperlink{group__instruction-set-architecture_ga459b132d062bba98dd1870f38b6ab721}{hsa\+\_\+isa\+\_\+t}} isa, \mbox{\hyperlink{group__instruction-set-architecture_gaf6261c0d6e072edc0c450fd0ecb0a090}{hsa\+\_\+fp\+\_\+type\+\_\+t}} fp\+\_\+type, \mbox{\hyperlink{group__instruction-set-architecture_gac6969924c9e839aef51a0b18c3a6dd0d}{hsa\+\_\+flush\+\_\+mode\+\_\+t}} flush\+\_\+mode, \mbox{\hyperlink{group__instruction-set-architecture_gad6158bdca7cafbb7bdcc820dac89078c}{hsa\+\_\+round\+\_\+method\+\_\+t}} $\ast$round\+\_\+method)
+\begin{DoxyCompactList}\small\item\em Retrieve the round method (single or double) used to implement the floating-\/point multiply add instruction (mad) for a given combination of instruction set architecture, floating-\/point type, and flush to zero modifier. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{group__status_gad755322e7ff95456520e8abdbe90d225}{hsa\+\_\+status\+\_\+t}} \mbox{\hyperlink{inc_2hsa__ext__image_8h_a64216765b98b62ee87deb50fd2899836}{HSA\+\_\+\+API}} \mbox{\hyperlink{group__instruction-set-architecture_gab27dd40a62c5dcb0b031ebc73ad1452c}{hsa\+\_\+wavefront\+\_\+get\+\_\+info}} (\mbox{\hyperlink{group__instruction-set-architecture_ga3aaffc42e5ed215e2a4781fa23edb1d4}{hsa\+\_\+wavefront\+\_\+t}} wavefront, \mbox{\hyperlink{group__instruction-set-architecture_ga18048e15c5756d68df8b66ddfd0b1754}{hsa\+\_\+wavefront\+\_\+info\+\_\+t}} attribute, void $\ast$value)
+\begin{DoxyCompactList}\small\item\em Get the current value of a wavefront attribute. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{group__status_gad755322e7ff95456520e8abdbe90d225}{hsa\+\_\+status\+\_\+t}} \mbox{\hyperlink{inc_2hsa__ext__image_8h_a64216765b98b62ee87deb50fd2899836}{HSA\+\_\+\+API}} \mbox{\hyperlink{group__instruction-set-architecture_gab06dc0d43c91a75a9e14bf52d9be1079}{hsa\+\_\+isa\+\_\+iterate\+\_\+wavefronts}} (\mbox{\hyperlink{group__instruction-set-architecture_ga459b132d062bba98dd1870f38b6ab721}{hsa\+\_\+isa\+\_\+t}} isa, \mbox{\hyperlink{group__status_gad755322e7ff95456520e8abdbe90d225}{hsa\+\_\+status\+\_\+t}}($\ast$callback)(\mbox{\hyperlink{group__instruction-set-architecture_ga3aaffc42e5ed215e2a4781fa23edb1d4}{hsa\+\_\+wavefront\+\_\+t}} wavefront, void $\ast$data), void $\ast$data)
+\begin{DoxyCompactList}\small\item\em Iterate over the different wavefronts supported by an instruction set architecture, and invoke an application-\/defined callback on every iteration. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{group__status_gad755322e7ff95456520e8abdbe90d225}{hsa\+\_\+status\+\_\+t}} \mbox{\hyperlink{inc_2hsa__ext__image_8h_a64216765b98b62ee87deb50fd2899836}{HSA\+\_\+\+API}} \mbox{\hyperlink{inc_2hsa_8h_a2321f8ca7d706cada4f617b191a478b0}{HSA\+\_\+\+DEPRECATED}} \mbox{\hyperlink{group__instruction-set-architecture_gab07043140652350c7f852e58d0ba446f}{hsa\+\_\+isa\+\_\+compatible}} (\mbox{\hyperlink{group__instruction-set-architecture_ga459b132d062bba98dd1870f38b6ab721}{hsa\+\_\+isa\+\_\+t}} code\+\_\+object\+\_\+isa, \mbox{\hyperlink{group__instruction-set-architecture_ga459b132d062bba98dd1870f38b6ab721}{hsa\+\_\+isa\+\_\+t}} agent\+\_\+isa, bool $\ast$result)
+\begin{DoxyCompactList}\small\item\em Check if the instruction set architecture of a code object can be executed on an agent associated with another architecture. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+
+
+\doxysubsection{Typedef Documentation}
+\mbox{\Hypertarget{group__instruction-set-architecture_ga459b132d062bba98dd1870f38b6ab721}\label{group__instruction-set-architecture_ga459b132d062bba98dd1870f38b6ab721}} 
+\index{Instruction Set Architecture.@{Instruction Set Architecture.}!hsa\_isa\_t@{hsa\_isa\_t}}
+\index{hsa\_isa\_t@{hsa\_isa\_t}!Instruction Set Architecture.@{Instruction Set Architecture.}}
+\doxysubsubsection{\texorpdfstring{hsa\_isa\_t}{hsa\_isa\_t}}
+{\footnotesize\ttfamily typedef struct \mbox{\hyperlink{structhsa__isa__s}{hsa\+\_\+isa\+\_\+s}} \mbox{\hyperlink{group__instruction-set-architecture_ga459b132d062bba98dd1870f38b6ab721}{hsa\+\_\+isa\+\_\+t}}}
+
+
+
+Instruction set architecture. 
+
+\mbox{\Hypertarget{group__instruction-set-architecture_ga3aaffc42e5ed215e2a4781fa23edb1d4}\label{group__instruction-set-architecture_ga3aaffc42e5ed215e2a4781fa23edb1d4}} 
+\index{Instruction Set Architecture.@{Instruction Set Architecture.}!hsa\_wavefront\_t@{hsa\_wavefront\_t}}
+\index{hsa\_wavefront\_t@{hsa\_wavefront\_t}!Instruction Set Architecture.@{Instruction Set Architecture.}}
+\doxysubsubsection{\texorpdfstring{hsa\_wavefront\_t}{hsa\_wavefront\_t}}
+{\footnotesize\ttfamily typedef struct \mbox{\hyperlink{structhsa__wavefront__s}{hsa\+\_\+wavefront\+\_\+s}} \mbox{\hyperlink{group__instruction-set-architecture_ga3aaffc42e5ed215e2a4781fa23edb1d4}{hsa\+\_\+wavefront\+\_\+t}}}
+
+
+
+Wavefront handle. 
+
+
+
+\doxysubsection{Enumeration Type Documentation}
+\mbox{\Hypertarget{group__instruction-set-architecture_gac6969924c9e839aef51a0b18c3a6dd0d}\label{group__instruction-set-architecture_gac6969924c9e839aef51a0b18c3a6dd0d}} 
+\index{Instruction Set Architecture.@{Instruction Set Architecture.}!hsa\_flush\_mode\_t@{hsa\_flush\_mode\_t}}
+\index{hsa\_flush\_mode\_t@{hsa\_flush\_mode\_t}!Instruction Set Architecture.@{Instruction Set Architecture.}}
+\doxysubsubsection{\texorpdfstring{hsa\_flush\_mode\_t}{hsa\_flush\_mode\_t}}
+{\footnotesize\ttfamily enum \mbox{\hyperlink{group__instruction-set-architecture_gac6969924c9e839aef51a0b18c3a6dd0d}{hsa\+\_\+flush\+\_\+mode\+\_\+t}}}
+
+
+
+Flush to zero modes. 
+
+\begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{HSA\_FLUSH\_MODE\_FTZ@{HSA\_FLUSH\_MODE\_FTZ}!Instruction Set Architecture.@{Instruction Set Architecture.}}\index{Instruction Set Architecture.@{Instruction Set Architecture.}!HSA\_FLUSH\_MODE\_FTZ@{HSA\_FLUSH\_MODE\_FTZ}}}\mbox{\Hypertarget{group__instruction-set-architecture_ggac6969924c9e839aef51a0b18c3a6dd0da2d0fc3fc90ba2080af2da87e2629ec32}\label{group__instruction-set-architecture_ggac6969924c9e839aef51a0b18c3a6dd0da2d0fc3fc90ba2080af2da87e2629ec32}} 
+HSA\+\_\+\+FLUSH\+\_\+\+MODE\+\_\+\+FTZ&Flush to zero. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{HSA\_FLUSH\_MODE\_NON\_FTZ@{HSA\_FLUSH\_MODE\_NON\_FTZ}!Instruction Set Architecture.@{Instruction Set Architecture.}}\index{Instruction Set Architecture.@{Instruction Set Architecture.}!HSA\_FLUSH\_MODE\_NON\_FTZ@{HSA\_FLUSH\_MODE\_NON\_FTZ}}}\mbox{\Hypertarget{group__instruction-set-architecture_ggac6969924c9e839aef51a0b18c3a6dd0dad0abe58e56e06d887ece192713572712}\label{group__instruction-set-architecture_ggac6969924c9e839aef51a0b18c3a6dd0dad0abe58e56e06d887ece192713572712}} 
+HSA\+\_\+\+FLUSH\+\_\+\+MODE\+\_\+\+NON\+\_\+\+FTZ&Do not flush to zero. \\
+\hline
+
+\end{DoxyEnumFields}
+\mbox{\Hypertarget{group__instruction-set-architecture_gaf6261c0d6e072edc0c450fd0ecb0a090}\label{group__instruction-set-architecture_gaf6261c0d6e072edc0c450fd0ecb0a090}} 
+\index{Instruction Set Architecture.@{Instruction Set Architecture.}!hsa\_fp\_type\_t@{hsa\_fp\_type\_t}}
+\index{hsa\_fp\_type\_t@{hsa\_fp\_type\_t}!Instruction Set Architecture.@{Instruction Set Architecture.}}
+\doxysubsubsection{\texorpdfstring{hsa\_fp\_type\_t}{hsa\_fp\_type\_t}}
+{\footnotesize\ttfamily enum \mbox{\hyperlink{group__instruction-set-architecture_gaf6261c0d6e072edc0c450fd0ecb0a090}{hsa\+\_\+fp\+\_\+type\+\_\+t}}}
+
+
+
+Floating-\/point types. 
+
+\begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{HSA\_FP\_TYPE\_16@{HSA\_FP\_TYPE\_16}!Instruction Set Architecture.@{Instruction Set Architecture.}}\index{Instruction Set Architecture.@{Instruction Set Architecture.}!HSA\_FP\_TYPE\_16@{HSA\_FP\_TYPE\_16}}}\mbox{\Hypertarget{group__instruction-set-architecture_ggaf6261c0d6e072edc0c450fd0ecb0a090ad80211a626874e3eee01f74b14fd3c21}\label{group__instruction-set-architecture_ggaf6261c0d6e072edc0c450fd0ecb0a090ad80211a626874e3eee01f74b14fd3c21}} 
+HSA\+\_\+\+FP\+\_\+\+TYPE\+\_\+16&16-\/bit floating-\/point type. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{HSA\_FP\_TYPE\_32@{HSA\_FP\_TYPE\_32}!Instruction Set Architecture.@{Instruction Set Architecture.}}\index{Instruction Set Architecture.@{Instruction Set Architecture.}!HSA\_FP\_TYPE\_32@{HSA\_FP\_TYPE\_32}}}\mbox{\Hypertarget{group__instruction-set-architecture_ggaf6261c0d6e072edc0c450fd0ecb0a090a14c9f2fb3abfbda7d34ff0c9ad0daa31}\label{group__instruction-set-architecture_ggaf6261c0d6e072edc0c450fd0ecb0a090a14c9f2fb3abfbda7d34ff0c9ad0daa31}} 
+HSA\+\_\+\+FP\+\_\+\+TYPE\+\_\+32&32-\/bit floating-\/point type. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{HSA\_FP\_TYPE\_64@{HSA\_FP\_TYPE\_64}!Instruction Set Architecture.@{Instruction Set Architecture.}}\index{Instruction Set Architecture.@{Instruction Set Architecture.}!HSA\_FP\_TYPE\_64@{HSA\_FP\_TYPE\_64}}}\mbox{\Hypertarget{group__instruction-set-architecture_ggaf6261c0d6e072edc0c450fd0ecb0a090a849dc38724955cf5427c2675618107f8}\label{group__instruction-set-architecture_ggaf6261c0d6e072edc0c450fd0ecb0a090a849dc38724955cf5427c2675618107f8}} 
+HSA\+\_\+\+FP\+\_\+\+TYPE\+\_\+64&64-\/bit floating-\/point type. \\
+\hline
+
+\end{DoxyEnumFields}
+\mbox{\Hypertarget{group__instruction-set-architecture_gaa8a09719dffad53bb3908b11ed25c1e4}\label{group__instruction-set-architecture_gaa8a09719dffad53bb3908b11ed25c1e4}} 
+\index{Instruction Set Architecture.@{Instruction Set Architecture.}!hsa\_isa\_info\_t@{hsa\_isa\_info\_t}}
+\index{hsa\_isa\_info\_t@{hsa\_isa\_info\_t}!Instruction Set Architecture.@{Instruction Set Architecture.}}
+\doxysubsubsection{\texorpdfstring{hsa\_isa\_info\_t}{hsa\_isa\_info\_t}}
+{\footnotesize\ttfamily enum \mbox{\hyperlink{group__instruction-set-architecture_gaa8a09719dffad53bb3908b11ed25c1e4}{hsa\+\_\+isa\+\_\+info\+\_\+t}}}
+
+
+
+Instruction set architecture attributes. 
+
+\begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{HSA\_ISA\_INFO\_NAME\_LENGTH@{HSA\_ISA\_INFO\_NAME\_LENGTH}!Instruction Set Architecture.@{Instruction Set Architecture.}}\index{Instruction Set Architecture.@{Instruction Set Architecture.}!HSA\_ISA\_INFO\_NAME\_LENGTH@{HSA\_ISA\_INFO\_NAME\_LENGTH}}}\mbox{\Hypertarget{group__instruction-set-architecture_ggaa8a09719dffad53bb3908b11ed25c1e4aca73b418e6abed877d1d8a318ebb6d37}\label{group__instruction-set-architecture_ggaa8a09719dffad53bb3908b11ed25c1e4aca73b418e6abed877d1d8a318ebb6d37}} 
+HSA\+\_\+\+ISA\+\_\+\+INFO\+\_\+\+NAME\+\_\+\+LENGTH&The length of the ISA name in bytes, not including the NUL terminator. The type of this attribute is uint32\+\_\+t. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{HSA\_ISA\_INFO\_NAME@{HSA\_ISA\_INFO\_NAME}!Instruction Set Architecture.@{Instruction Set Architecture.}}\index{Instruction Set Architecture.@{Instruction Set Architecture.}!HSA\_ISA\_INFO\_NAME@{HSA\_ISA\_INFO\_NAME}}}\mbox{\Hypertarget{group__instruction-set-architecture_ggaa8a09719dffad53bb3908b11ed25c1e4aa602eaba13cd85aefa8f57ae2d428b98}\label{group__instruction-set-architecture_ggaa8a09719dffad53bb3908b11ed25c1e4aa602eaba13cd85aefa8f57ae2d428b98}} 
+HSA\+\_\+\+ISA\+\_\+\+INFO\+\_\+\+NAME&Human-\/readable description. The type of this attribute is character array with the length equal to the value of \mbox{\hyperlink{group__instruction-set-architecture_ggaa8a09719dffad53bb3908b11ed25c1e4aca73b418e6abed877d1d8a318ebb6d37}{HSA\+\_\+\+ISA\+\_\+\+INFO\+\_\+\+NAME\+\_\+\+LENGTH}} attribute. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{HSA\_ISA\_INFO\_CALL\_CONVENTION\_COUNT@{HSA\_ISA\_INFO\_CALL\_CONVENTION\_COUNT}!Instruction Set Architecture.@{Instruction Set Architecture.}}\index{Instruction Set Architecture.@{Instruction Set Architecture.}!HSA\_ISA\_INFO\_CALL\_CONVENTION\_COUNT@{HSA\_ISA\_INFO\_CALL\_CONVENTION\_COUNT}}}\mbox{\Hypertarget{group__instruction-set-architecture_ggaa8a09719dffad53bb3908b11ed25c1e4aa6d791d65444a479b8f393a9d7664ae8}\label{group__instruction-set-architecture_ggaa8a09719dffad53bb3908b11ed25c1e4aa6d791d65444a479b8f393a9d7664ae8}} 
+HSA\+\_\+\+ISA\+\_\+\+INFO\+\_\+\+CALL\+\_\+\+CONVENTION\+\_\+\+COUNT&\begin{DoxyRefDesc}{Deprecated}
+\item[\mbox{\hyperlink{deprecated__deprecated000078}{Deprecated}}]\end{DoxyRefDesc}
+
+
+Number of call conventions supported by the instruction set architecture. Must be greater than zero. The type of this attribute is uint32\+\_\+t. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{HSA\_ISA\_INFO\_CALL\_CONVENTION\_INFO\_WAVEFRONT\_SIZE@{HSA\_ISA\_INFO\_CALL\_CONVENTION\_INFO\_WAVEFRONT\_SIZE}!Instruction Set Architecture.@{Instruction Set Architecture.}}\index{Instruction Set Architecture.@{Instruction Set Architecture.}!HSA\_ISA\_INFO\_CALL\_CONVENTION\_INFO\_WAVEFRONT\_SIZE@{HSA\_ISA\_INFO\_CALL\_CONVENTION\_INFO\_WAVEFRONT\_SIZE}}}\mbox{\Hypertarget{group__instruction-set-architecture_ggaa8a09719dffad53bb3908b11ed25c1e4a4ca28c1e2fbcc919167e566e78af4e6d}\label{group__instruction-set-architecture_ggaa8a09719dffad53bb3908b11ed25c1e4a4ca28c1e2fbcc919167e566e78af4e6d}} 
+HSA\+\_\+\+ISA\+\_\+\+INFO\+\_\+\+CALL\+\_\+\+CONVENTION\+\_\+\+INFO\+\_\+\+WAVEFRONT\+\_\+\+SIZE&\begin{DoxyRefDesc}{Deprecated}
+\item[\mbox{\hyperlink{deprecated__deprecated000079}{Deprecated}}]\end{DoxyRefDesc}
+
+
+Number of work-\/items in a wavefront for a given call convention. Must be a power of 2 in the range \mbox{[}1,256\mbox{]}. The type of this attribute is uint32\+\_\+t. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{HSA\_ISA\_INFO\_CALL\_CONVENTION\_INFO\_WAVEFRONTS\_PER\_COMPUTE\_UNIT@{HSA\_ISA\_INFO\_CALL\_CONVENTION\_INFO\_WAVEFRONTS\_PER\_COMPUTE\_UNIT}!Instruction Set Architecture.@{Instruction Set Architecture.}}\index{Instruction Set Architecture.@{Instruction Set Architecture.}!HSA\_ISA\_INFO\_CALL\_CONVENTION\_INFO\_WAVEFRONTS\_PER\_COMPUTE\_UNIT@{HSA\_ISA\_INFO\_CALL\_CONVENTION\_INFO\_WAVEFRONTS\_PER\_COMPUTE\_UNIT}}}\mbox{\Hypertarget{group__instruction-set-architecture_ggaa8a09719dffad53bb3908b11ed25c1e4ab3a1db10e1d3b5dbb967801813f2bda3}\label{group__instruction-set-architecture_ggaa8a09719dffad53bb3908b11ed25c1e4ab3a1db10e1d3b5dbb967801813f2bda3}} 
+HSA\+\_\+\+ISA\+\_\+\+INFO\+\_\+\+CALL\+\_\+\+CONVENTION\+\_\+\+INFO\+\_\+\+WAVEFRONTS\+\_\+\+PER\+\_\+\+COMPUTE\+\_\+\+UNIT&\begin{DoxyRefDesc}{Deprecated}
+\item[\mbox{\hyperlink{deprecated__deprecated000080}{Deprecated}}]\end{DoxyRefDesc}
+
+
+Number of wavefronts per compute unit for a given call convention. In practice, other factors (for example, the amount of group memory used by a work-\/group) may further limit the number of wavefronts per compute unit. The type of this attribute is uint32\+\_\+t. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{HSA\_ISA\_INFO\_MACHINE\_MODELS@{HSA\_ISA\_INFO\_MACHINE\_MODELS}!Instruction Set Architecture.@{Instruction Set Architecture.}}\index{Instruction Set Architecture.@{Instruction Set Architecture.}!HSA\_ISA\_INFO\_MACHINE\_MODELS@{HSA\_ISA\_INFO\_MACHINE\_MODELS}}}\mbox{\Hypertarget{group__instruction-set-architecture_ggaa8a09719dffad53bb3908b11ed25c1e4a4c6576d085e48f922da100f01ed6b1ef}\label{group__instruction-set-architecture_ggaa8a09719dffad53bb3908b11ed25c1e4a4c6576d085e48f922da100f01ed6b1ef}} 
+HSA\+\_\+\+ISA\+\_\+\+INFO\+\_\+\+MACHINE\+\_\+\+MODELS&Machine models supported by the instruction set architecture. The type of this attribute is a bool\mbox{[}2\mbox{]}. If the ISA supports the small machine model, the element at index \mbox{\hyperlink{group__agentinfo_gga4d45919fd6f6e8dbb8ae2f4030870e11a5e49fab73802d5f94ee043350e6336ef}{HSA\+\_\+\+MACHINE\+\_\+\+MODEL\+\_\+\+SMALL}} is true. If the ISA supports the large model, the element at index \mbox{\hyperlink{group__agentinfo_gga4d45919fd6f6e8dbb8ae2f4030870e11a53190aaa0a3c717fc1b7987faa59b705}{HSA\+\_\+\+MACHINE\+\_\+\+MODEL\+\_\+\+LARGE}} is true. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{HSA\_ISA\_INFO\_PROFILES@{HSA\_ISA\_INFO\_PROFILES}!Instruction Set Architecture.@{Instruction Set Architecture.}}\index{Instruction Set Architecture.@{Instruction Set Architecture.}!HSA\_ISA\_INFO\_PROFILES@{HSA\_ISA\_INFO\_PROFILES}}}\mbox{\Hypertarget{group__instruction-set-architecture_ggaa8a09719dffad53bb3908b11ed25c1e4acdb85a23d05ef213bbbe041f5d49d6ec}\label{group__instruction-set-architecture_ggaa8a09719dffad53bb3908b11ed25c1e4acdb85a23d05ef213bbbe041f5d49d6ec}} 
+HSA\+\_\+\+ISA\+\_\+\+INFO\+\_\+\+PROFILES&Profiles supported by the instruction set architecture. The type of this attribute is a bool\mbox{[}2\mbox{]}. If the ISA supports the base profile, the element at index \mbox{\hyperlink{group__agentinfo_ggacafd4247e2a04cbe0ac0b3998c127532aa72d9bb0182593b99af4c3444c792695}{HSA\+\_\+\+PROFILE\+\_\+\+BASE}} is true. If the ISA supports the full profile, the element at index \mbox{\hyperlink{group__agentinfo_ggacafd4247e2a04cbe0ac0b3998c127532a852b05a668a760fd970ff0a59e46b269}{HSA\+\_\+\+PROFILE\+\_\+\+FULL}} is true. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{HSA\_ISA\_INFO\_DEFAULT\_FLOAT\_ROUNDING\_MODES@{HSA\_ISA\_INFO\_DEFAULT\_FLOAT\_ROUNDING\_MODES}!Instruction Set Architecture.@{Instruction Set Architecture.}}\index{Instruction Set Architecture.@{Instruction Set Architecture.}!HSA\_ISA\_INFO\_DEFAULT\_FLOAT\_ROUNDING\_MODES@{HSA\_ISA\_INFO\_DEFAULT\_FLOAT\_ROUNDING\_MODES}}}\mbox{\Hypertarget{group__instruction-set-architecture_ggaa8a09719dffad53bb3908b11ed25c1e4a2b3ecf16a9ab3b3ad54737231c65597f}\label{group__instruction-set-architecture_ggaa8a09719dffad53bb3908b11ed25c1e4a2b3ecf16a9ab3b3ad54737231c65597f}} 
+HSA\+\_\+\+ISA\+\_\+\+INFO\+\_\+\+DEFAULT\+\_\+\+FLOAT\+\_\+\+ROUNDING\+\_\+\+MODES&Default floating-\/point rounding modes supported by the instruction set architecture. The type of this attribute is a bool\mbox{[}3\mbox{]}. The value at a given index is true if the corresponding rounding mode in \mbox{\hyperlink{group__agentinfo_gaac56321e4596fe10a90b5bb3fedc4b73}{hsa\+\_\+default\+\_\+float\+\_\+rounding\+\_\+mode\+\_\+t}} is supported. At least one default mode has to be supported.
+
+If the default mode is supported, then \mbox{\hyperlink{group__instruction-set-architecture_ggaa8a09719dffad53bb3908b11ed25c1e4a2c954a4c554d354340518348c65a18a0}{HSA\+\_\+\+ISA\+\_\+\+INFO\+\_\+\+BASE\+\_\+\+PROFILE\+\_\+\+DEFAULT\+\_\+\+FLOAT\+\_\+\+ROUNDING\+\_\+\+MODES}} must report that both the zero and the near roundings modes are supported. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{HSA\_ISA\_INFO\_BASE\_PROFILE\_DEFAULT\_FLOAT\_ROUNDING\_MODES@{HSA\_ISA\_INFO\_BASE\_PROFILE\_DEFAULT\_FLOAT\_ROUNDING\_MODES}!Instruction Set Architecture.@{Instruction Set Architecture.}}\index{Instruction Set Architecture.@{Instruction Set Architecture.}!HSA\_ISA\_INFO\_BASE\_PROFILE\_DEFAULT\_FLOAT\_ROUNDING\_MODES@{HSA\_ISA\_INFO\_BASE\_PROFILE\_DEFAULT\_FLOAT\_ROUNDING\_MODES}}}\mbox{\Hypertarget{group__instruction-set-architecture_ggaa8a09719dffad53bb3908b11ed25c1e4a2c954a4c554d354340518348c65a18a0}\label{group__instruction-set-architecture_ggaa8a09719dffad53bb3908b11ed25c1e4a2c954a4c554d354340518348c65a18a0}} 
+HSA\+\_\+\+ISA\+\_\+\+INFO\+\_\+\+BASE\+\_\+\+PROFILE\+\_\+\+DEFAULT\+\_\+\+FLOAT\+\_\+\+ROUNDING\+\_\+\+MODES&Default floating-\/point rounding modes supported by the instruction set architecture in the Base profile. The type of this attribute is a bool\mbox{[}3\mbox{]}. The value at a given index is true if the corresponding rounding mode in \mbox{\hyperlink{group__agentinfo_gaac56321e4596fe10a90b5bb3fedc4b73}{hsa\+\_\+default\+\_\+float\+\_\+rounding\+\_\+mode\+\_\+t}} is supported. The value at index HSA\+\_\+\+DEFAULT\+\_\+\+FLOAT\+\_\+\+ROUNDING\+\_\+\+MODE\+\_\+\+DEFAULT must be false. At least one of the values at indexes \mbox{\hyperlink{group__agentinfo_ggaac56321e4596fe10a90b5bb3fedc4b73a728ca37667c6479e2e397cfcf3795a02}{HSA\+\_\+\+DEFAULT\+\_\+\+FLOAT\+\_\+\+ROUNDING\+\_\+\+MODE\+\_\+\+ZERO}} or HSA\+\_\+\+DEFAULT\+\_\+\+FLOAT\+\_\+\+ROUNDING\+\_\+\+MODE\+\_\+\+NEAR must be true. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{HSA\_ISA\_INFO\_FAST\_F16\_OPERATION@{HSA\_ISA\_INFO\_FAST\_F16\_OPERATION}!Instruction Set Architecture.@{Instruction Set Architecture.}}\index{Instruction Set Architecture.@{Instruction Set Architecture.}!HSA\_ISA\_INFO\_FAST\_F16\_OPERATION@{HSA\_ISA\_INFO\_FAST\_F16\_OPERATION}}}\mbox{\Hypertarget{group__instruction-set-architecture_ggaa8a09719dffad53bb3908b11ed25c1e4a25ea781e5bf0e215df3852f99f509a81}\label{group__instruction-set-architecture_ggaa8a09719dffad53bb3908b11ed25c1e4a25ea781e5bf0e215df3852f99f509a81}} 
+HSA\+\_\+\+ISA\+\_\+\+INFO\+\_\+\+FAST\+\_\+\+F16\+\_\+\+OPERATION&Flag indicating that the f16 HSAIL operation is at least as fast as the f32 operation in the instruction set architecture. The type of this attribute is bool. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{HSA\_ISA\_INFO\_WORKGROUP\_MAX\_DIM@{HSA\_ISA\_INFO\_WORKGROUP\_MAX\_DIM}!Instruction Set Architecture.@{Instruction Set Architecture.}}\index{Instruction Set Architecture.@{Instruction Set Architecture.}!HSA\_ISA\_INFO\_WORKGROUP\_MAX\_DIM@{HSA\_ISA\_INFO\_WORKGROUP\_MAX\_DIM}}}\mbox{\Hypertarget{group__instruction-set-architecture_ggaa8a09719dffad53bb3908b11ed25c1e4a9e506d282bf8670bd7b190145c6e57af}\label{group__instruction-set-architecture_ggaa8a09719dffad53bb3908b11ed25c1e4a9e506d282bf8670bd7b190145c6e57af}} 
+HSA\+\_\+\+ISA\+\_\+\+INFO\+\_\+\+WORKGROUP\+\_\+\+MAX\+\_\+\+DIM&Maximum number of work-\/items of each dimension of a work-\/group. Each maximum must be greater than 0. No maximum can exceed the value of \mbox{\hyperlink{group__instruction-set-architecture_ggaa8a09719dffad53bb3908b11ed25c1e4a6d67d9695339fe28ac98122d93c33538}{HSA\+\_\+\+ISA\+\_\+\+INFO\+\_\+\+WORKGROUP\+\_\+\+MAX\+\_\+\+SIZE}}. The type of this attribute is uint16\+\_\+t\mbox{[}3\mbox{]}. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{HSA\_ISA\_INFO\_WORKGROUP\_MAX\_SIZE@{HSA\_ISA\_INFO\_WORKGROUP\_MAX\_SIZE}!Instruction Set Architecture.@{Instruction Set Architecture.}}\index{Instruction Set Architecture.@{Instruction Set Architecture.}!HSA\_ISA\_INFO\_WORKGROUP\_MAX\_SIZE@{HSA\_ISA\_INFO\_WORKGROUP\_MAX\_SIZE}}}\mbox{\Hypertarget{group__instruction-set-architecture_ggaa8a09719dffad53bb3908b11ed25c1e4a6d67d9695339fe28ac98122d93c33538}\label{group__instruction-set-architecture_ggaa8a09719dffad53bb3908b11ed25c1e4a6d67d9695339fe28ac98122d93c33538}} 
+HSA\+\_\+\+ISA\+\_\+\+INFO\+\_\+\+WORKGROUP\+\_\+\+MAX\+\_\+\+SIZE&Maximum total number of work-\/items in a work-\/group. The type of this attribute is uint32\+\_\+t. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{HSA\_ISA\_INFO\_GRID\_MAX\_DIM@{HSA\_ISA\_INFO\_GRID\_MAX\_DIM}!Instruction Set Architecture.@{Instruction Set Architecture.}}\index{Instruction Set Architecture.@{Instruction Set Architecture.}!HSA\_ISA\_INFO\_GRID\_MAX\_DIM@{HSA\_ISA\_INFO\_GRID\_MAX\_DIM}}}\mbox{\Hypertarget{group__instruction-set-architecture_ggaa8a09719dffad53bb3908b11ed25c1e4a74d19d354befd5137d1fa9b76fb65701}\label{group__instruction-set-architecture_ggaa8a09719dffad53bb3908b11ed25c1e4a74d19d354befd5137d1fa9b76fb65701}} 
+HSA\+\_\+\+ISA\+\_\+\+INFO\+\_\+\+GRID\+\_\+\+MAX\+\_\+\+DIM&Maximum number of work-\/items of each dimension of a grid. Each maximum must be greater than 0, and must not be smaller than the corresponding value in \mbox{\hyperlink{group__instruction-set-architecture_ggaa8a09719dffad53bb3908b11ed25c1e4a9e506d282bf8670bd7b190145c6e57af}{HSA\+\_\+\+ISA\+\_\+\+INFO\+\_\+\+WORKGROUP\+\_\+\+MAX\+\_\+\+DIM}}. No maximum can exceed the value of \mbox{\hyperlink{group__instruction-set-architecture_ggaa8a09719dffad53bb3908b11ed25c1e4a10539ad11e71308ad3e2e47237233cb6}{HSA\+\_\+\+ISA\+\_\+\+INFO\+\_\+\+GRID\+\_\+\+MAX\+\_\+\+SIZE}}. The type of this attribute is \mbox{\hyperlink{group__common_gae460d1df8c508a9c889d4550ea4eea30}{hsa\+\_\+dim3\+\_\+t}}. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{HSA\_ISA\_INFO\_GRID\_MAX\_SIZE@{HSA\_ISA\_INFO\_GRID\_MAX\_SIZE}!Instruction Set Architecture.@{Instruction Set Architecture.}}\index{Instruction Set Architecture.@{Instruction Set Architecture.}!HSA\_ISA\_INFO\_GRID\_MAX\_SIZE@{HSA\_ISA\_INFO\_GRID\_MAX\_SIZE}}}\mbox{\Hypertarget{group__instruction-set-architecture_ggaa8a09719dffad53bb3908b11ed25c1e4a10539ad11e71308ad3e2e47237233cb6}\label{group__instruction-set-architecture_ggaa8a09719dffad53bb3908b11ed25c1e4a10539ad11e71308ad3e2e47237233cb6}} 
+HSA\+\_\+\+ISA\+\_\+\+INFO\+\_\+\+GRID\+\_\+\+MAX\+\_\+\+SIZE&Maximum total number of work-\/items in a grid. The type of this attribute is uint64\+\_\+t. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{HSA\_ISA\_INFO\_FBARRIER\_MAX\_SIZE@{HSA\_ISA\_INFO\_FBARRIER\_MAX\_SIZE}!Instruction Set Architecture.@{Instruction Set Architecture.}}\index{Instruction Set Architecture.@{Instruction Set Architecture.}!HSA\_ISA\_INFO\_FBARRIER\_MAX\_SIZE@{HSA\_ISA\_INFO\_FBARRIER\_MAX\_SIZE}}}\mbox{\Hypertarget{group__instruction-set-architecture_ggaa8a09719dffad53bb3908b11ed25c1e4aa0679ff582693a037b5523330ed25e3f}\label{group__instruction-set-architecture_ggaa8a09719dffad53bb3908b11ed25c1e4aa0679ff582693a037b5523330ed25e3f}} 
+HSA\+\_\+\+ISA\+\_\+\+INFO\+\_\+\+FBARRIER\+\_\+\+MAX\+\_\+\+SIZE&Maximum number of fbarriers per work-\/group. Must be at least 32. The type of this attribute is uint32\+\_\+t. \\
+\hline
+
+\end{DoxyEnumFields}
+\mbox{\Hypertarget{group__instruction-set-architecture_gad6158bdca7cafbb7bdcc820dac89078c}\label{group__instruction-set-architecture_gad6158bdca7cafbb7bdcc820dac89078c}} 
+\index{Instruction Set Architecture.@{Instruction Set Architecture.}!hsa\_round\_method\_t@{hsa\_round\_method\_t}}
+\index{hsa\_round\_method\_t@{hsa\_round\_method\_t}!Instruction Set Architecture.@{Instruction Set Architecture.}}
+\doxysubsubsection{\texorpdfstring{hsa\_round\_method\_t}{hsa\_round\_method\_t}}
+{\footnotesize\ttfamily enum \mbox{\hyperlink{group__instruction-set-architecture_gad6158bdca7cafbb7bdcc820dac89078c}{hsa\+\_\+round\+\_\+method\+\_\+t}}}
+
+
+
+Round methods. 
+
+\begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{HSA\_ROUND\_METHOD\_SINGLE@{HSA\_ROUND\_METHOD\_SINGLE}!Instruction Set Architecture.@{Instruction Set Architecture.}}\index{Instruction Set Architecture.@{Instruction Set Architecture.}!HSA\_ROUND\_METHOD\_SINGLE@{HSA\_ROUND\_METHOD\_SINGLE}}}\mbox{\Hypertarget{group__instruction-set-architecture_ggad6158bdca7cafbb7bdcc820dac89078ca8c1e13c28daeabaf2445727202837ec8}\label{group__instruction-set-architecture_ggad6158bdca7cafbb7bdcc820dac89078ca8c1e13c28daeabaf2445727202837ec8}} 
+HSA\+\_\+\+ROUND\+\_\+\+METHOD\+\_\+\+SINGLE&Single round method. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{HSA\_ROUND\_METHOD\_DOUBLE@{HSA\_ROUND\_METHOD\_DOUBLE}!Instruction Set Architecture.@{Instruction Set Architecture.}}\index{Instruction Set Architecture.@{Instruction Set Architecture.}!HSA\_ROUND\_METHOD\_DOUBLE@{HSA\_ROUND\_METHOD\_DOUBLE}}}\mbox{\Hypertarget{group__instruction-set-architecture_ggad6158bdca7cafbb7bdcc820dac89078cadfc3e3db7e09374422a81d81023b0fae}\label{group__instruction-set-architecture_ggad6158bdca7cafbb7bdcc820dac89078cadfc3e3db7e09374422a81d81023b0fae}} 
+HSA\+\_\+\+ROUND\+\_\+\+METHOD\+\_\+\+DOUBLE&Double round method. \\
+\hline
+
+\end{DoxyEnumFields}
+\mbox{\Hypertarget{group__instruction-set-architecture_ga18048e15c5756d68df8b66ddfd0b1754}\label{group__instruction-set-architecture_ga18048e15c5756d68df8b66ddfd0b1754}} 
+\index{Instruction Set Architecture.@{Instruction Set Architecture.}!hsa\_wavefront\_info\_t@{hsa\_wavefront\_info\_t}}
+\index{hsa\_wavefront\_info\_t@{hsa\_wavefront\_info\_t}!Instruction Set Architecture.@{Instruction Set Architecture.}}
+\doxysubsubsection{\texorpdfstring{hsa\_wavefront\_info\_t}{hsa\_wavefront\_info\_t}}
+{\footnotesize\ttfamily enum \mbox{\hyperlink{group__instruction-set-architecture_ga18048e15c5756d68df8b66ddfd0b1754}{hsa\+\_\+wavefront\+\_\+info\+\_\+t}}}
+
+
+
+Wavefront attributes. 
+
+\begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{HSA\_WAVEFRONT\_INFO\_SIZE@{HSA\_WAVEFRONT\_INFO\_SIZE}!Instruction Set Architecture.@{Instruction Set Architecture.}}\index{Instruction Set Architecture.@{Instruction Set Architecture.}!HSA\_WAVEFRONT\_INFO\_SIZE@{HSA\_WAVEFRONT\_INFO\_SIZE}}}\mbox{\Hypertarget{group__instruction-set-architecture_gga18048e15c5756d68df8b66ddfd0b1754a8e1b3070a581459b9b1417dcaa8b0641}\label{group__instruction-set-architecture_gga18048e15c5756d68df8b66ddfd0b1754a8e1b3070a581459b9b1417dcaa8b0641}} 
+HSA\+\_\+\+WAVEFRONT\+\_\+\+INFO\+\_\+\+SIZE&Number of work-\/items in the wavefront. Must be a power of 2 in the range \mbox{[}1,256\mbox{]}. The type of this attribute is uint32\+\_\+t. \\
+\hline
+
+\end{DoxyEnumFields}
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{group__instruction-set-architecture_gaa624c390f2cfec064bc1b4d9c9303ed4}\label{group__instruction-set-architecture_gaa624c390f2cfec064bc1b4d9c9303ed4}} 
+\index{Instruction Set Architecture.@{Instruction Set Architecture.}!hsa\_agent\_iterate\_isas@{hsa\_agent\_iterate\_isas}}
+\index{hsa\_agent\_iterate\_isas@{hsa\_agent\_iterate\_isas}!Instruction Set Architecture.@{Instruction Set Architecture.}}
+\doxysubsubsection{\texorpdfstring{hsa\_agent\_iterate\_isas()}{hsa\_agent\_iterate\_isas()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{group__status_gad755322e7ff95456520e8abdbe90d225}{hsa\+\_\+status\+\_\+t}} \mbox{\hyperlink{inc_2hsa__ext__image_8h_a64216765b98b62ee87deb50fd2899836}{HSA\+\_\+\+API}} hsa\+\_\+agent\+\_\+iterate\+\_\+isas (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{group__agentinfo_ga9ce217ef08e7d5e89c8e83ce7b6ef22b}{hsa\+\_\+agent\+\_\+t}}}]{agent,  }\item[{\mbox{\hyperlink{group__status_gad755322e7ff95456520e8abdbe90d225}{hsa\+\_\+status\+\_\+t}}($\ast$)(\mbox{\hyperlink{group__instruction-set-architecture_ga459b132d062bba98dd1870f38b6ab721}{hsa\+\_\+isa\+\_\+t}} isa, void $\ast$data)}]{callback,  }\item[{void $\ast$}]{data }\end{DoxyParamCaption})}
+
+
+
+Iterate over the instruction sets supported by the given agent, and invoke an application-\/defined callback on every iteration. The iterator is deterministic\+: if an agent supports several instruction set architectures, they are traversed in the same order in every invocation of this function. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em agent} & A valid agent.\\
+\hline
+\mbox{\texttt{ in}}  & {\em callback} & Callback to be invoked once per instruction set architecture. The HSA runtime passes two arguments to the callback\+: the ISA and the application data. If {\ttfamily callback} returns a status other than \mbox{\hyperlink{group__status_ggad755322e7ff95456520e8abdbe90d225ae382ea0c9c05cce5a60d0317375159cc}{HSA\+\_\+\+STATUS\+\_\+\+SUCCESS}} for a particular iteration, the traversal stops and that status value is returned.\\
+\hline
+\mbox{\texttt{ in}}  & {\em data} & Application data that is passed to {\ttfamily callback} on every iteration. May be NULL.\\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em \mbox{\hyperlink{group__status_ggad755322e7ff95456520e8abdbe90d225ae382ea0c9c05cce5a60d0317375159cc}{HSA\+\_\+\+STATUS\+\_\+\+SUCCESS}}} & The function has been executed successfully.\\
+\hline
+{\em \mbox{\hyperlink{group__status_ggad755322e7ff95456520e8abdbe90d225a34ea59ade5bfce95eee935238a99f5b5}{HSA\+\_\+\+STATUS\+\_\+\+ERROR\+\_\+\+NOT\+\_\+\+INITIALIZED}}} & The HSA runtime has not been initialized.\\
+\hline
+{\em \mbox{\hyperlink{group__status_ggad755322e7ff95456520e8abdbe90d225a3a5d835c109c2d0ad5b9c2771e133e5d}{HSA\+\_\+\+STATUS\+\_\+\+ERROR\+\_\+\+INVALID\+\_\+\+AGENT}}} & The agent is invalid.\\
+\hline
+{\em \mbox{\hyperlink{group__status_ggad755322e7ff95456520e8abdbe90d225ac7d3651f75107d2a6a8ba3b25683c030}{HSA\+\_\+\+STATUS\+\_\+\+ERROR\+\_\+\+INVALID\+\_\+\+ARGUMENT}}} & {\ttfamily callback} is NULL. \\
+\hline
+\end{DoxyRetVals}
+\mbox{\Hypertarget{group__instruction-set-architecture_gab07043140652350c7f852e58d0ba446f}\label{group__instruction-set-architecture_gab07043140652350c7f852e58d0ba446f}} 
+\index{Instruction Set Architecture.@{Instruction Set Architecture.}!hsa\_isa\_compatible@{hsa\_isa\_compatible}}
+\index{hsa\_isa\_compatible@{hsa\_isa\_compatible}!Instruction Set Architecture.@{Instruction Set Architecture.}}
+\doxysubsubsection{\texorpdfstring{hsa\_isa\_compatible()}{hsa\_isa\_compatible()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{group__status_gad755322e7ff95456520e8abdbe90d225}{hsa\+\_\+status\+\_\+t}} \mbox{\hyperlink{inc_2hsa__ext__image_8h_a64216765b98b62ee87deb50fd2899836}{HSA\+\_\+\+API}} \mbox{\hyperlink{inc_2hsa_8h_a2321f8ca7d706cada4f617b191a478b0}{HSA\+\_\+\+DEPRECATED}} hsa\+\_\+isa\+\_\+compatible (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{group__instruction-set-architecture_ga459b132d062bba98dd1870f38b6ab721}{hsa\+\_\+isa\+\_\+t}}}]{code\+\_\+object\+\_\+isa,  }\item[{\mbox{\hyperlink{group__instruction-set-architecture_ga459b132d062bba98dd1870f38b6ab721}{hsa\+\_\+isa\+\_\+t}}}]{agent\+\_\+isa,  }\item[{bool $\ast$}]{result }\end{DoxyParamCaption})}
+
+
+
+Check if the instruction set architecture of a code object can be executed on an agent associated with another architecture. 
+
+\begin{DoxyRefDesc}{Deprecated}
+\item[\mbox{\hyperlink{deprecated__deprecated000040}{Deprecated}}]Use \mbox{\hyperlink{group__instruction-set-architecture_gaa624c390f2cfec064bc1b4d9c9303ed4}{hsa\+\_\+agent\+\_\+iterate\+\_\+isas}} to query which instructions set architectures are supported by a given agent.\end{DoxyRefDesc}
+
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em code\+\_\+object\+\_\+isa} & Instruction set architecture associated with a code object.\\
+\hline
+\mbox{\texttt{ in}}  & {\em agent\+\_\+isa} & Instruction set architecture associated with an agent.\\
+\hline
+\mbox{\texttt{ out}}  & {\em result} & Pointer to a memory location where the HSA runtime stores the result of the check. If the two architectures are compatible, the result is true; if they are incompatible, the result is false.\\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em \mbox{\hyperlink{group__status_ggad755322e7ff95456520e8abdbe90d225ae382ea0c9c05cce5a60d0317375159cc}{HSA\+\_\+\+STATUS\+\_\+\+SUCCESS}}} & The function has been executed successfully.\\
+\hline
+{\em \mbox{\hyperlink{group__status_ggad755322e7ff95456520e8abdbe90d225a34ea59ade5bfce95eee935238a99f5b5}{HSA\+\_\+\+STATUS\+\_\+\+ERROR\+\_\+\+NOT\+\_\+\+INITIALIZED}}} & The HSA runtime has not been initialized.\\
+\hline
+{\em \mbox{\hyperlink{group__status_ggad755322e7ff95456520e8abdbe90d225a6907a990eee322a97285e3656b846120}{HSA\+\_\+\+STATUS\+\_\+\+ERROR\+\_\+\+INVALID\+\_\+\+ISA}}} & {\ttfamily code\+\_\+object\+\_\+isa} or {\ttfamily agent\+\_\+isa} are invalid.\\
+\hline
+{\em \mbox{\hyperlink{group__status_ggad755322e7ff95456520e8abdbe90d225ac7d3651f75107d2a6a8ba3b25683c030}{HSA\+\_\+\+STATUS\+\_\+\+ERROR\+\_\+\+INVALID\+\_\+\+ARGUMENT}}} & {\ttfamily result} is NULL. \\
+\hline
+\end{DoxyRetVals}
+\mbox{\Hypertarget{group__instruction-set-architecture_ga4835eb119f4fca41be62d3a15f4c263f}\label{group__instruction-set-architecture_ga4835eb119f4fca41be62d3a15f4c263f}} 
+\index{Instruction Set Architecture.@{Instruction Set Architecture.}!hsa\_isa\_from\_name@{hsa\_isa\_from\_name}}
+\index{hsa\_isa\_from\_name@{hsa\_isa\_from\_name}!Instruction Set Architecture.@{Instruction Set Architecture.}}
+\doxysubsubsection{\texorpdfstring{hsa\_isa\_from\_name()}{hsa\_isa\_from\_name()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{group__status_gad755322e7ff95456520e8abdbe90d225}{hsa\+\_\+status\+\_\+t}} \mbox{\hyperlink{inc_2hsa__ext__image_8h_a64216765b98b62ee87deb50fd2899836}{HSA\+\_\+\+API}} hsa\+\_\+isa\+\_\+from\+\_\+name (\begin{DoxyParamCaption}\item[{const char $\ast$}]{name,  }\item[{\mbox{\hyperlink{group__instruction-set-architecture_ga459b132d062bba98dd1870f38b6ab721}{hsa\+\_\+isa\+\_\+t}} $\ast$}]{isa }\end{DoxyParamCaption})}
+
+
+
+Retrieve a reference to an instruction set architecture handle out of a symbolic name. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em name} & Vendor-\/specific name associated with a a particular instruction set architecture. {\ttfamily name} must start with the vendor name and a colon (for example, \char`\"{}\+AMD\+:\char`\"{}). The rest of the name is vendor-\/specific. Must be a NUL-\/terminated string.\\
+\hline
+\mbox{\texttt{ out}}  & {\em isa} & Memory location where the HSA runtime stores the ISA handle corresponding to the given name. Must not be NULL.\\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em \mbox{\hyperlink{group__status_ggad755322e7ff95456520e8abdbe90d225ae382ea0c9c05cce5a60d0317375159cc}{HSA\+\_\+\+STATUS\+\_\+\+SUCCESS}}} & The function has been executed successfully.\\
+\hline
+{\em \mbox{\hyperlink{group__status_ggad755322e7ff95456520e8abdbe90d225a34ea59ade5bfce95eee935238a99f5b5}{HSA\+\_\+\+STATUS\+\_\+\+ERROR\+\_\+\+NOT\+\_\+\+INITIALIZED}}} & The HSA runtime has not been initialized.\\
+\hline
+{\em \mbox{\hyperlink{group__status_ggad755322e7ff95456520e8abdbe90d225a4328de4769aea88e55e84a3e16ac3ed8}{HSA\+\_\+\+STATUS\+\_\+\+ERROR\+\_\+\+INVALID\+\_\+\+ISA\+\_\+\+NAME}}} & The given name does not correspond to any instruction set architecture.\\
+\hline
+{\em \mbox{\hyperlink{group__status_ggad755322e7ff95456520e8abdbe90d225a1a77fcf36d0d140874c4361ab093eff7}{HSA\+\_\+\+STATUS\+\_\+\+ERROR\+\_\+\+OUT\+\_\+\+OF\+\_\+\+RESOURCES}}} & The HSA runtime failed to allocate the required resources.\\
+\hline
+{\em \mbox{\hyperlink{group__status_ggad755322e7ff95456520e8abdbe90d225ac7d3651f75107d2a6a8ba3b25683c030}{HSA\+\_\+\+STATUS\+\_\+\+ERROR\+\_\+\+INVALID\+\_\+\+ARGUMENT}}} & {\ttfamily name} is NULL, or {\ttfamily isa} is NULL. \\
+\hline
+\end{DoxyRetVals}
+\mbox{\Hypertarget{group__instruction-set-architecture_gab478487c2d8064db32d50ef574de44ea}\label{group__instruction-set-architecture_gab478487c2d8064db32d50ef574de44ea}} 
+\index{Instruction Set Architecture.@{Instruction Set Architecture.}!hsa\_isa\_get\_exception\_policies@{hsa\_isa\_get\_exception\_policies}}
+\index{hsa\_isa\_get\_exception\_policies@{hsa\_isa\_get\_exception\_policies}!Instruction Set Architecture.@{Instruction Set Architecture.}}
+\doxysubsubsection{\texorpdfstring{hsa\_isa\_get\_exception\_policies()}{hsa\_isa\_get\_exception\_policies()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{group__status_gad755322e7ff95456520e8abdbe90d225}{hsa\+\_\+status\+\_\+t}} \mbox{\hyperlink{inc_2hsa__ext__image_8h_a64216765b98b62ee87deb50fd2899836}{HSA\+\_\+\+API}} hsa\+\_\+isa\+\_\+get\+\_\+exception\+\_\+policies (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{group__instruction-set-architecture_ga459b132d062bba98dd1870f38b6ab721}{hsa\+\_\+isa\+\_\+t}}}]{isa,  }\item[{\mbox{\hyperlink{group__agentinfo_gacafd4247e2a04cbe0ac0b3998c127532}{hsa\+\_\+profile\+\_\+t}}}]{profile,  }\item[{uint16\+\_\+t $\ast$}]{mask }\end{DoxyParamCaption})}
+
+
+
+Retrieve the exception policy support for a given combination of instruction set architecture and profile. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em isa} & A valid instruction set architecture.\\
+\hline
+\mbox{\texttt{ in}}  & {\em profile} & Profile.\\
+\hline
+\mbox{\texttt{ out}}  & {\em mask} & Pointer to a memory location where the HSA runtime stores a mask of \mbox{\hyperlink{group__agentinfo_gadaa0623d4a3fb29ba3fa4a6eb2a74c80}{hsa\+\_\+exception\+\_\+policy\+\_\+t}} values. Must not be NULL.\\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em \mbox{\hyperlink{group__status_ggad755322e7ff95456520e8abdbe90d225ae382ea0c9c05cce5a60d0317375159cc}{HSA\+\_\+\+STATUS\+\_\+\+SUCCESS}}} & The function has been executed successfully.\\
+\hline
+{\em \mbox{\hyperlink{group__status_ggad755322e7ff95456520e8abdbe90d225a34ea59ade5bfce95eee935238a99f5b5}{HSA\+\_\+\+STATUS\+\_\+\+ERROR\+\_\+\+NOT\+\_\+\+INITIALIZED}}} & The HSA runtime has not been initialized.\\
+\hline
+{\em \mbox{\hyperlink{group__status_ggad755322e7ff95456520e8abdbe90d225a6907a990eee322a97285e3656b846120}{HSA\+\_\+\+STATUS\+\_\+\+ERROR\+\_\+\+INVALID\+\_\+\+ISA}}} & The instruction set architecture is invalid.\\
+\hline
+{\em \mbox{\hyperlink{group__status_ggad755322e7ff95456520e8abdbe90d225ac7d3651f75107d2a6a8ba3b25683c030}{HSA\+\_\+\+STATUS\+\_\+\+ERROR\+\_\+\+INVALID\+\_\+\+ARGUMENT}}} & {\ttfamily profile} is not a valid profile, or {\ttfamily mask} is NULL. \\
+\hline
+\end{DoxyRetVals}
+\mbox{\Hypertarget{group__instruction-set-architecture_ga910e9f1ee3a9ca8b32b04d9f1fb97849}\label{group__instruction-set-architecture_ga910e9f1ee3a9ca8b32b04d9f1fb97849}} 
+\index{Instruction Set Architecture.@{Instruction Set Architecture.}!hsa\_isa\_get\_info@{hsa\_isa\_get\_info}}
+\index{hsa\_isa\_get\_info@{hsa\_isa\_get\_info}!Instruction Set Architecture.@{Instruction Set Architecture.}}
+\doxysubsubsection{\texorpdfstring{hsa\_isa\_get\_info()}{hsa\_isa\_get\_info()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{group__status_gad755322e7ff95456520e8abdbe90d225}{hsa\+\_\+status\+\_\+t}} \mbox{\hyperlink{inc_2hsa__ext__image_8h_a64216765b98b62ee87deb50fd2899836}{HSA\+\_\+\+API}} \mbox{\hyperlink{inc_2hsa_8h_a2321f8ca7d706cada4f617b191a478b0}{HSA\+\_\+\+DEPRECATED}} hsa\+\_\+isa\+\_\+get\+\_\+info (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{group__instruction-set-architecture_ga459b132d062bba98dd1870f38b6ab721}{hsa\+\_\+isa\+\_\+t}}}]{isa,  }\item[{\mbox{\hyperlink{group__instruction-set-architecture_gaa8a09719dffad53bb3908b11ed25c1e4}{hsa\+\_\+isa\+\_\+info\+\_\+t}}}]{attribute,  }\item[{uint32\+\_\+t}]{index,  }\item[{void $\ast$}]{value }\end{DoxyParamCaption})}
+
+
+
+Get the current value of an attribute for a given instruction set architecture (ISA). 
+
+\begin{DoxyRefDesc}{Deprecated}
+\item[\mbox{\hyperlink{deprecated__deprecated000039}{Deprecated}}]The concept of call convention has been deprecated. If the application wants to query the value of an attribute for a given instruction set architecture, use \mbox{\hyperlink{group__instruction-set-architecture_ga996c452ea131661d5585724a7a7db75f}{hsa\+\_\+isa\+\_\+get\+\_\+info\+\_\+alt}} instead. If the application wants to query an attribute that is specific to a given combination of ISA and wavefront, use \mbox{\hyperlink{group__instruction-set-architecture_gab27dd40a62c5dcb0b031ebc73ad1452c}{hsa\+\_\+wavefront\+\_\+get\+\_\+info}}.\end{DoxyRefDesc}
+
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em isa} & A valid instruction set architecture.\\
+\hline
+\mbox{\texttt{ in}}  & {\em attribute} & Attribute to query.\\
+\hline
+\mbox{\texttt{ in}}  & {\em index} & Call convention index. Used only for call convention attributes, otherwise ignored. Must have a value between 0 (inclusive) and the value of the attribute \mbox{\hyperlink{group__instruction-set-architecture_ggaa8a09719dffad53bb3908b11ed25c1e4aa6d791d65444a479b8f393a9d7664ae8}{HSA\+\_\+\+ISA\+\_\+\+INFO\+\_\+\+CALL\+\_\+\+CONVENTION\+\_\+\+COUNT}} (not inclusive) in {\ttfamily isa}.\\
+\hline
+\mbox{\texttt{ out}}  & {\em value} & Pointer to an application-\/allocated buffer where to store the value of the attribute. If the buffer passed by the application is not large enough to hold the value of {\ttfamily attribute}, the behavior is undefined.\\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em \mbox{\hyperlink{group__status_ggad755322e7ff95456520e8abdbe90d225ae382ea0c9c05cce5a60d0317375159cc}{HSA\+\_\+\+STATUS\+\_\+\+SUCCESS}}} & The function has been executed successfully.\\
+\hline
+{\em \mbox{\hyperlink{group__status_ggad755322e7ff95456520e8abdbe90d225a34ea59ade5bfce95eee935238a99f5b5}{HSA\+\_\+\+STATUS\+\_\+\+ERROR\+\_\+\+NOT\+\_\+\+INITIALIZED}}} & The HSA runtime has not been initialized.\\
+\hline
+{\em \mbox{\hyperlink{group__status_ggad755322e7ff95456520e8abdbe90d225a6907a990eee322a97285e3656b846120}{HSA\+\_\+\+STATUS\+\_\+\+ERROR\+\_\+\+INVALID\+\_\+\+ISA}}} & The instruction set architecture is invalid.\\
+\hline
+{\em \mbox{\hyperlink{group__status_ggad755322e7ff95456520e8abdbe90d225a810d9e6e3fa9db4478f270e60aa963dc}{HSA\+\_\+\+STATUS\+\_\+\+ERROR\+\_\+\+INVALID\+\_\+\+INDEX}}} & The index is out of range.\\
+\hline
+{\em \mbox{\hyperlink{group__status_ggad755322e7ff95456520e8abdbe90d225ac7d3651f75107d2a6a8ba3b25683c030}{HSA\+\_\+\+STATUS\+\_\+\+ERROR\+\_\+\+INVALID\+\_\+\+ARGUMENT}}} & {\ttfamily attribute} is an invalid instruction set architecture attribute, or {\ttfamily value} is NULL. \\
+\hline
+\end{DoxyRetVals}
+\mbox{\Hypertarget{group__instruction-set-architecture_ga996c452ea131661d5585724a7a7db75f}\label{group__instruction-set-architecture_ga996c452ea131661d5585724a7a7db75f}} 
+\index{Instruction Set Architecture.@{Instruction Set Architecture.}!hsa\_isa\_get\_info\_alt@{hsa\_isa\_get\_info\_alt}}
+\index{hsa\_isa\_get\_info\_alt@{hsa\_isa\_get\_info\_alt}!Instruction Set Architecture.@{Instruction Set Architecture.}}
+\doxysubsubsection{\texorpdfstring{hsa\_isa\_get\_info\_alt()}{hsa\_isa\_get\_info\_alt()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{group__status_gad755322e7ff95456520e8abdbe90d225}{hsa\+\_\+status\+\_\+t}} \mbox{\hyperlink{inc_2hsa__ext__image_8h_a64216765b98b62ee87deb50fd2899836}{HSA\+\_\+\+API}} hsa\+\_\+isa\+\_\+get\+\_\+info\+\_\+alt (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{group__instruction-set-architecture_ga459b132d062bba98dd1870f38b6ab721}{hsa\+\_\+isa\+\_\+t}}}]{isa,  }\item[{\mbox{\hyperlink{group__instruction-set-architecture_gaa8a09719dffad53bb3908b11ed25c1e4}{hsa\+\_\+isa\+\_\+info\+\_\+t}}}]{attribute,  }\item[{void $\ast$}]{value }\end{DoxyParamCaption})}
+
+
+
+Get the current value of an attribute for a given instruction set architecture (ISA). 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em isa} & A valid instruction set architecture.\\
+\hline
+\mbox{\texttt{ in}}  & {\em attribute} & Attribute to query.\\
+\hline
+\mbox{\texttt{ out}}  & {\em value} & Pointer to an application-\/allocated buffer where to store the value of the attribute. If the buffer passed by the application is not large enough to hold the value of {\ttfamily attribute}, the behavior is undefined.\\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em \mbox{\hyperlink{group__status_ggad755322e7ff95456520e8abdbe90d225ae382ea0c9c05cce5a60d0317375159cc}{HSA\+\_\+\+STATUS\+\_\+\+SUCCESS}}} & The function has been executed successfully.\\
+\hline
+{\em \mbox{\hyperlink{group__status_ggad755322e7ff95456520e8abdbe90d225a34ea59ade5bfce95eee935238a99f5b5}{HSA\+\_\+\+STATUS\+\_\+\+ERROR\+\_\+\+NOT\+\_\+\+INITIALIZED}}} & The HSA runtime has not been initialized.\\
+\hline
+{\em \mbox{\hyperlink{group__status_ggad755322e7ff95456520e8abdbe90d225a6907a990eee322a97285e3656b846120}{HSA\+\_\+\+STATUS\+\_\+\+ERROR\+\_\+\+INVALID\+\_\+\+ISA}}} & The instruction set architecture is invalid.\\
+\hline
+{\em \mbox{\hyperlink{group__status_ggad755322e7ff95456520e8abdbe90d225ac7d3651f75107d2a6a8ba3b25683c030}{HSA\+\_\+\+STATUS\+\_\+\+ERROR\+\_\+\+INVALID\+\_\+\+ARGUMENT}}} & {\ttfamily attribute} is an invalid instruction set architecture attribute, or {\ttfamily value} is NULL. \\
+\hline
+\end{DoxyRetVals}
+\mbox{\Hypertarget{group__instruction-set-architecture_gaef929d5e604e688f554ebc4e2a3114e3}\label{group__instruction-set-architecture_gaef929d5e604e688f554ebc4e2a3114e3}} 
+\index{Instruction Set Architecture.@{Instruction Set Architecture.}!hsa\_isa\_get\_round\_method@{hsa\_isa\_get\_round\_method}}
+\index{hsa\_isa\_get\_round\_method@{hsa\_isa\_get\_round\_method}!Instruction Set Architecture.@{Instruction Set Architecture.}}
+\doxysubsubsection{\texorpdfstring{hsa\_isa\_get\_round\_method()}{hsa\_isa\_get\_round\_method()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{group__status_gad755322e7ff95456520e8abdbe90d225}{hsa\+\_\+status\+\_\+t}} \mbox{\hyperlink{inc_2hsa__ext__image_8h_a64216765b98b62ee87deb50fd2899836}{HSA\+\_\+\+API}} hsa\+\_\+isa\+\_\+get\+\_\+round\+\_\+method (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{group__instruction-set-architecture_ga459b132d062bba98dd1870f38b6ab721}{hsa\+\_\+isa\+\_\+t}}}]{isa,  }\item[{\mbox{\hyperlink{group__instruction-set-architecture_gaf6261c0d6e072edc0c450fd0ecb0a090}{hsa\+\_\+fp\+\_\+type\+\_\+t}}}]{fp\+\_\+type,  }\item[{\mbox{\hyperlink{group__instruction-set-architecture_gac6969924c9e839aef51a0b18c3a6dd0d}{hsa\+\_\+flush\+\_\+mode\+\_\+t}}}]{flush\+\_\+mode,  }\item[{\mbox{\hyperlink{group__instruction-set-architecture_gad6158bdca7cafbb7bdcc820dac89078c}{hsa\+\_\+round\+\_\+method\+\_\+t}} $\ast$}]{round\+\_\+method }\end{DoxyParamCaption})}
+
+
+
+Retrieve the round method (single or double) used to implement the floating-\/point multiply add instruction (mad) for a given combination of instruction set architecture, floating-\/point type, and flush to zero modifier. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em isa} & Instruction set architecture.\\
+\hline
+\mbox{\texttt{ in}}  & {\em fp\+\_\+type} & Floating-\/point type.\\
+\hline
+\mbox{\texttt{ in}}  & {\em flush\+\_\+mode} & Flush to zero modifier.\\
+\hline
+\mbox{\texttt{ out}}  & {\em round\+\_\+method} & Pointer to a memory location where the HSA runtime stores the round method used by the implementation. Must not be NULL.\\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em \mbox{\hyperlink{group__status_ggad755322e7ff95456520e8abdbe90d225ae382ea0c9c05cce5a60d0317375159cc}{HSA\+\_\+\+STATUS\+\_\+\+SUCCESS}}} & The function has been executed successfully.\\
+\hline
+{\em \mbox{\hyperlink{group__status_ggad755322e7ff95456520e8abdbe90d225a34ea59ade5bfce95eee935238a99f5b5}{HSA\+\_\+\+STATUS\+\_\+\+ERROR\+\_\+\+NOT\+\_\+\+INITIALIZED}}} & The HSA runtime has not been initialized.\\
+\hline
+{\em \mbox{\hyperlink{group__status_ggad755322e7ff95456520e8abdbe90d225a6907a990eee322a97285e3656b846120}{HSA\+\_\+\+STATUS\+\_\+\+ERROR\+\_\+\+INVALID\+\_\+\+ISA}}} & The instruction set architecture is invalid.\\
+\hline
+{\em \mbox{\hyperlink{group__status_ggad755322e7ff95456520e8abdbe90d225ac7d3651f75107d2a6a8ba3b25683c030}{HSA\+\_\+\+STATUS\+\_\+\+ERROR\+\_\+\+INVALID\+\_\+\+ARGUMENT}}} & {\ttfamily fp\+\_\+type} is not a valid floating-\/point type, or {\ttfamily flush\+\_\+mode} is not a valid flush to zero modifier, or {\ttfamily round\+\_\+method} is NULL. \\
+\hline
+\end{DoxyRetVals}
+\mbox{\Hypertarget{group__instruction-set-architecture_gab06dc0d43c91a75a9e14bf52d9be1079}\label{group__instruction-set-architecture_gab06dc0d43c91a75a9e14bf52d9be1079}} 
+\index{Instruction Set Architecture.@{Instruction Set Architecture.}!hsa\_isa\_iterate\_wavefronts@{hsa\_isa\_iterate\_wavefronts}}
+\index{hsa\_isa\_iterate\_wavefronts@{hsa\_isa\_iterate\_wavefronts}!Instruction Set Architecture.@{Instruction Set Architecture.}}
+\doxysubsubsection{\texorpdfstring{hsa\_isa\_iterate\_wavefronts()}{hsa\_isa\_iterate\_wavefronts()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{group__status_gad755322e7ff95456520e8abdbe90d225}{hsa\+\_\+status\+\_\+t}} \mbox{\hyperlink{inc_2hsa__ext__image_8h_a64216765b98b62ee87deb50fd2899836}{HSA\+\_\+\+API}} hsa\+\_\+isa\+\_\+iterate\+\_\+wavefronts (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{group__instruction-set-architecture_ga459b132d062bba98dd1870f38b6ab721}{hsa\+\_\+isa\+\_\+t}}}]{isa,  }\item[{\mbox{\hyperlink{group__status_gad755322e7ff95456520e8abdbe90d225}{hsa\+\_\+status\+\_\+t}}($\ast$)(\mbox{\hyperlink{group__instruction-set-architecture_ga3aaffc42e5ed215e2a4781fa23edb1d4}{hsa\+\_\+wavefront\+\_\+t}} wavefront, void $\ast$data)}]{callback,  }\item[{void $\ast$}]{data }\end{DoxyParamCaption})}
+
+
+
+Iterate over the different wavefronts supported by an instruction set architecture, and invoke an application-\/defined callback on every iteration. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em isa} & Instruction set architecture.\\
+\hline
+\mbox{\texttt{ in}}  & {\em callback} & Callback to be invoked once per wavefront that is supported by the agent. The HSA runtime passes two arguments to the callback\+: the wavefront handle and the application data. If {\ttfamily callback} returns a status other than \mbox{\hyperlink{group__status_ggad755322e7ff95456520e8abdbe90d225ae382ea0c9c05cce5a60d0317375159cc}{HSA\+\_\+\+STATUS\+\_\+\+SUCCESS}} for a particular iteration, the traversal stops and that value is returned.\\
+\hline
+\mbox{\texttt{ in}}  & {\em data} & Application data that is passed to {\ttfamily callback} on every iteration. May be NULL.\\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em \mbox{\hyperlink{group__status_ggad755322e7ff95456520e8abdbe90d225ae382ea0c9c05cce5a60d0317375159cc}{HSA\+\_\+\+STATUS\+\_\+\+SUCCESS}}} & The function has been executed successfully.\\
+\hline
+{\em \mbox{\hyperlink{group__status_ggad755322e7ff95456520e8abdbe90d225a34ea59ade5bfce95eee935238a99f5b5}{HSA\+\_\+\+STATUS\+\_\+\+ERROR\+\_\+\+NOT\+\_\+\+INITIALIZED}}} & The HSA runtime has not been initialized.\\
+\hline
+{\em \mbox{\hyperlink{group__status_ggad755322e7ff95456520e8abdbe90d225a6907a990eee322a97285e3656b846120}{HSA\+\_\+\+STATUS\+\_\+\+ERROR\+\_\+\+INVALID\+\_\+\+ISA}}} & The instruction set architecture is invalid.\\
+\hline
+{\em \mbox{\hyperlink{group__status_ggad755322e7ff95456520e8abdbe90d225ac7d3651f75107d2a6a8ba3b25683c030}{HSA\+\_\+\+STATUS\+\_\+\+ERROR\+\_\+\+INVALID\+\_\+\+ARGUMENT}}} & {\ttfamily callback} is NULL. \\
+\hline
+\end{DoxyRetVals}
+\mbox{\Hypertarget{group__instruction-set-architecture_gab27dd40a62c5dcb0b031ebc73ad1452c}\label{group__instruction-set-architecture_gab27dd40a62c5dcb0b031ebc73ad1452c}} 
+\index{Instruction Set Architecture.@{Instruction Set Architecture.}!hsa\_wavefront\_get\_info@{hsa\_wavefront\_get\_info}}
+\index{hsa\_wavefront\_get\_info@{hsa\_wavefront\_get\_info}!Instruction Set Architecture.@{Instruction Set Architecture.}}
+\doxysubsubsection{\texorpdfstring{hsa\_wavefront\_get\_info()}{hsa\_wavefront\_get\_info()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{group__status_gad755322e7ff95456520e8abdbe90d225}{hsa\+\_\+status\+\_\+t}} \mbox{\hyperlink{inc_2hsa__ext__image_8h_a64216765b98b62ee87deb50fd2899836}{HSA\+\_\+\+API}} hsa\+\_\+wavefront\+\_\+get\+\_\+info (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{group__instruction-set-architecture_ga3aaffc42e5ed215e2a4781fa23edb1d4}{hsa\+\_\+wavefront\+\_\+t}}}]{wavefront,  }\item[{\mbox{\hyperlink{group__instruction-set-architecture_ga18048e15c5756d68df8b66ddfd0b1754}{hsa\+\_\+wavefront\+\_\+info\+\_\+t}}}]{attribute,  }\item[{void $\ast$}]{value }\end{DoxyParamCaption})}
+
+
+
+Get the current value of a wavefront attribute. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em wavefront} & A wavefront.\\
+\hline
+\mbox{\texttt{ in}}  & {\em attribute} & Attribute to query.\\
+\hline
+\mbox{\texttt{ out}}  & {\em value} & Pointer to an application-\/allocated buffer where to store the value of the attribute. If the buffer passed by the application is not large enough to hold the value of {\ttfamily attribute}, the behavior is undefined.\\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em \mbox{\hyperlink{group__status_ggad755322e7ff95456520e8abdbe90d225ae382ea0c9c05cce5a60d0317375159cc}{HSA\+\_\+\+STATUS\+\_\+\+SUCCESS}}} & The function has been executed successfully.\\
+\hline
+{\em \mbox{\hyperlink{group__status_ggad755322e7ff95456520e8abdbe90d225a34ea59ade5bfce95eee935238a99f5b5}{HSA\+\_\+\+STATUS\+\_\+\+ERROR\+\_\+\+NOT\+\_\+\+INITIALIZED}}} & The HSA runtime has not been initialized.\\
+\hline
+{\em \mbox{\hyperlink{group__status_ggad755322e7ff95456520e8abdbe90d225a69740ca218b05c182f2ea9e65466fc73}{HSA\+\_\+\+STATUS\+\_\+\+ERROR\+\_\+\+INVALID\+\_\+\+WAVEFRONT}}} & The wavefront is invalid.\\
+\hline
+{\em \mbox{\hyperlink{group__status_ggad755322e7ff95456520e8abdbe90d225ac7d3651f75107d2a6a8ba3b25683c030}{HSA\+\_\+\+STATUS\+\_\+\+ERROR\+\_\+\+INVALID\+\_\+\+ARGUMENT}}} & {\ttfamily attribute} is an invalid wavefront attribute, or {\ttfamily value} is NULL. \\
+\hline
+\end{DoxyRetVals}

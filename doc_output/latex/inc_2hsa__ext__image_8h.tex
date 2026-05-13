@@ -1,0 +1,238 @@
+\hypertarget{inc_2hsa__ext__image_8h}{}\doxysection{src/inc/hsa\+\_\+ext\+\_\+image.h File Reference}
+\label{inc_2hsa__ext__image_8h}\index{src/inc/hsa\_ext\_image.h@{src/inc/hsa\_ext\_image.h}}
+{\ttfamily \#include \char`\"{}hsa.\+h\char`\"{}}\newline
+Include dependency graph for hsa\+\_\+ext\+\_\+image.\+h\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=274pt]{inc_2hsa__ext__image_8h__incl}
+\end{center}
+\end{figure}
+This graph shows which files directly or indirectly include this file\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{inc_2hsa__ext__image_8h__dep__incl}
+\end{center}
+\end{figure}
+\doxysubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{structhsa__ext__image__s}{hsa\+\_\+ext\+\_\+image\+\_\+s}}
+\begin{DoxyCompactList}\small\item\em Image handle, populated by \mbox{\hyperlink{group__ext-images_ga985562c68508d4d8b0edcfd0729b6d49}{hsa\+\_\+ext\+\_\+image\+\_\+create}} or \mbox{\hyperlink{group__ext-images_ga7de92e8bde1496761b7dd00d1e03186e}{hsa\+\_\+ext\+\_\+image\+\_\+create\+\_\+with\+\_\+layout}}. Image handles are only unique within an agent, not across agents. \end{DoxyCompactList}\item 
+struct \mbox{\hyperlink{structhsa__ext__image__format__s}{hsa\+\_\+ext\+\_\+image\+\_\+format\+\_\+s}}
+\begin{DoxyCompactList}\small\item\em Image format. \end{DoxyCompactList}\item 
+struct \mbox{\hyperlink{structhsa__ext__image__descriptor__s}{hsa\+\_\+ext\+\_\+image\+\_\+descriptor\+\_\+s}}
+\begin{DoxyCompactList}\small\item\em Implementation independent image descriptor. \end{DoxyCompactList}\item 
+struct \mbox{\hyperlink{structhsa__ext__image__data__info__s}{hsa\+\_\+ext\+\_\+image\+\_\+data\+\_\+info\+\_\+s}}
+\begin{DoxyCompactList}\small\item\em Agent specific image size and alignment requirements, populated by \mbox{\hyperlink{group__ext-images_gad8e2426d1829f772af6e603ff226f65a}{hsa\+\_\+ext\+\_\+image\+\_\+data\+\_\+get\+\_\+info}} and \mbox{\hyperlink{group__ext-images_ga2d3f7ebd674fe267e608b3f1c1a89965}{hsa\+\_\+ext\+\_\+image\+\_\+data\+\_\+get\+\_\+info\+\_\+with\+\_\+layout}}. \end{DoxyCompactList}\item 
+struct \mbox{\hyperlink{structhsa__ext__image__region__s}{hsa\+\_\+ext\+\_\+image\+\_\+region\+\_\+s}}
+\begin{DoxyCompactList}\small\item\em Image region. \end{DoxyCompactList}\item 
+struct \mbox{\hyperlink{structhsa__ext__sampler__s}{hsa\+\_\+ext\+\_\+sampler\+\_\+s}}
+\begin{DoxyCompactList}\small\item\em Sampler handle. Samplers are populated by \mbox{\hyperlink{group__ext-images_gaf3b5567510870cf0130efd69d5af3c07}{hsa\+\_\+ext\+\_\+sampler\+\_\+create}}. Sampler handles are only unique within an agent, not across agents. \end{DoxyCompactList}\item 
+struct \mbox{\hyperlink{structhsa__ext__sampler__descriptor__s}{hsa\+\_\+ext\+\_\+sampler\+\_\+descriptor\+\_\+s}}
+\begin{DoxyCompactList}\small\item\em Implementation independent sampler descriptor. \end{DoxyCompactList}\item 
+struct \mbox{\hyperlink{structhsa__ext__images__1__00__pfn__s}{hsa\+\_\+ext\+\_\+images\+\_\+1\+\_\+00\+\_\+pfn\+\_\+s}}
+\begin{DoxyCompactList}\small\item\em The function pointer table for the images v1.\+00 extension. Can be returned by \mbox{\hyperlink{group__agentinfo_gaf5f1a0e5884522f692c13525205978bb}{hsa\+\_\+system\+\_\+get\+\_\+extension\+\_\+table}} or \mbox{\hyperlink{group__agentinfo_ga728cb3122cea1f40ad9dbc2822d2e431}{hsa\+\_\+system\+\_\+get\+\_\+major\+\_\+extension\+\_\+table}}. \end{DoxyCompactList}\item 
+struct \mbox{\hyperlink{structhsa__ext__images__1__pfn__s}{hsa\+\_\+ext\+\_\+images\+\_\+1\+\_\+pfn\+\_\+s}}
+\begin{DoxyCompactList}\small\item\em The function pointer table for the images v1 extension. Can be returned by \mbox{\hyperlink{group__agentinfo_gaf5f1a0e5884522f692c13525205978bb}{hsa\+\_\+system\+\_\+get\+\_\+extension\+\_\+table}} or \mbox{\hyperlink{group__agentinfo_ga728cb3122cea1f40ad9dbc2822d2e431}{hsa\+\_\+system\+\_\+get\+\_\+major\+\_\+extension\+\_\+table}}. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \mbox{\hyperlink{inc_2hsa__ext__image_8h_a64216765b98b62ee87deb50fd2899836}{HSA\+\_\+\+API}}~\mbox{\hyperlink{inc_2hsa_8h_a91f7b64d53fdd78621e7a29cfbe26c7e}{HSA\+\_\+\+API\+\_\+\+IMPORT}}
+\item 
+\#define \mbox{\hyperlink{group__ext-images_ga9e18e4efcfa4f7680002a3ea7cc68941}{hsa\+\_\+ext\+\_\+images\+\_\+1\+\_\+00}}
+\item 
+\#define \mbox{\hyperlink{group__ext-images_ga985c4f63e8170261949cf1f304070175}{hsa\+\_\+ext\+\_\+images\+\_\+1}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+typedef struct \mbox{\hyperlink{structhsa__ext__image__s}{hsa\+\_\+ext\+\_\+image\+\_\+s}} \mbox{\hyperlink{group__ext-images_ga4e192988bd0b5abe2a57e248934e6dc6}{hsa\+\_\+ext\+\_\+image\+\_\+t}}
+\begin{DoxyCompactList}\small\item\em Image handle, populated by \mbox{\hyperlink{group__ext-images_ga985562c68508d4d8b0edcfd0729b6d49}{hsa\+\_\+ext\+\_\+image\+\_\+create}} or \mbox{\hyperlink{group__ext-images_ga7de92e8bde1496761b7dd00d1e03186e}{hsa\+\_\+ext\+\_\+image\+\_\+create\+\_\+with\+\_\+layout}}. Image handles are only unique within an agent, not across agents. \end{DoxyCompactList}\item 
+typedef uint32\+\_\+t \mbox{\hyperlink{group__ext-images_ga001a082f110c66bc038f0aa3009f146a}{hsa\+\_\+ext\+\_\+image\+\_\+channel\+\_\+type32\+\_\+t}}
+\begin{DoxyCompactList}\small\item\em A fixed-\/size type used to represent \mbox{\hyperlink{group__ext-images_gaa143aa6feeaf24103b886c571ace568f}{hsa\+\_\+ext\+\_\+image\+\_\+channel\+\_\+type\+\_\+t}} constants. \end{DoxyCompactList}\item 
+typedef uint32\+\_\+t \mbox{\hyperlink{group__ext-images_ga0d11cab5cdf800545276a1c049a1766d}{hsa\+\_\+ext\+\_\+image\+\_\+channel\+\_\+order32\+\_\+t}}
+\begin{DoxyCompactList}\small\item\em A fixed-\/size type used to represent \mbox{\hyperlink{group__ext-images_gabaced4fb1f3b9fdaa978e143af5ff055}{hsa\+\_\+ext\+\_\+image\+\_\+channel\+\_\+order\+\_\+t}} constants. \end{DoxyCompactList}\item 
+typedef struct \mbox{\hyperlink{structhsa__ext__image__format__s}{hsa\+\_\+ext\+\_\+image\+\_\+format\+\_\+s}} \mbox{\hyperlink{group__ext-images_ga37a5b98dd984766026174b4d6d486b29}{hsa\+\_\+ext\+\_\+image\+\_\+format\+\_\+t}}
+\begin{DoxyCompactList}\small\item\em Image format. \end{DoxyCompactList}\item 
+typedef struct \mbox{\hyperlink{structhsa__ext__image__descriptor__s}{hsa\+\_\+ext\+\_\+image\+\_\+descriptor\+\_\+s}} \mbox{\hyperlink{group__ext-images_ga7ccf44400f9bbb459c8e52f54a3c5eb0}{hsa\+\_\+ext\+\_\+image\+\_\+descriptor\+\_\+t}}
+\begin{DoxyCompactList}\small\item\em Implementation independent image descriptor. \end{DoxyCompactList}\item 
+typedef struct \mbox{\hyperlink{structhsa__ext__image__data__info__s}{hsa\+\_\+ext\+\_\+image\+\_\+data\+\_\+info\+\_\+s}} \mbox{\hyperlink{group__ext-images_gada32050df34dc3f6c0b9124706d8984b}{hsa\+\_\+ext\+\_\+image\+\_\+data\+\_\+info\+\_\+t}}
+\begin{DoxyCompactList}\small\item\em Agent specific image size and alignment requirements, populated by \mbox{\hyperlink{group__ext-images_gad8e2426d1829f772af6e603ff226f65a}{hsa\+\_\+ext\+\_\+image\+\_\+data\+\_\+get\+\_\+info}} and \mbox{\hyperlink{group__ext-images_ga2d3f7ebd674fe267e608b3f1c1a89965}{hsa\+\_\+ext\+\_\+image\+\_\+data\+\_\+get\+\_\+info\+\_\+with\+\_\+layout}}. \end{DoxyCompactList}\item 
+typedef struct \mbox{\hyperlink{structhsa__ext__image__region__s}{hsa\+\_\+ext\+\_\+image\+\_\+region\+\_\+s}} \mbox{\hyperlink{group__ext-images_gaa407e3fb8aa43d59f8e8560294d1c702}{hsa\+\_\+ext\+\_\+image\+\_\+region\+\_\+t}}
+\begin{DoxyCompactList}\small\item\em Image region. \end{DoxyCompactList}\item 
+typedef struct \mbox{\hyperlink{structhsa__ext__sampler__s}{hsa\+\_\+ext\+\_\+sampler\+\_\+s}} \mbox{\hyperlink{group__ext-images_ga41c5c0a2cbd7c9020ef8ce2afc1c6101}{hsa\+\_\+ext\+\_\+sampler\+\_\+t}}
+\begin{DoxyCompactList}\small\item\em Sampler handle. Samplers are populated by \mbox{\hyperlink{group__ext-images_gaf3b5567510870cf0130efd69d5af3c07}{hsa\+\_\+ext\+\_\+sampler\+\_\+create}}. Sampler handles are only unique within an agent, not across agents. \end{DoxyCompactList}\item 
+typedef uint32\+\_\+t \mbox{\hyperlink{group__ext-images_ga2772ccb88d7ec77ef3b770d71d0750b3}{hsa\+\_\+ext\+\_\+sampler\+\_\+addressing\+\_\+mode32\+\_\+t}}
+\begin{DoxyCompactList}\small\item\em A fixed-\/size type used to represent \mbox{\hyperlink{group__ext-images_ga60a9fcdc1a1f338bd7e54445359fdf0f}{hsa\+\_\+ext\+\_\+sampler\+\_\+addressing\+\_\+mode\+\_\+t}} constants. \end{DoxyCompactList}\item 
+typedef uint32\+\_\+t \mbox{\hyperlink{group__ext-images_ga2bc1c9a8ff6599631d78775ef1b08cd6}{hsa\+\_\+ext\+\_\+sampler\+\_\+coordinate\+\_\+mode32\+\_\+t}}
+\begin{DoxyCompactList}\small\item\em A fixed-\/size type used to represent \mbox{\hyperlink{group__ext-images_gad7644f3eccb4f8ce5693313b88440d87}{hsa\+\_\+ext\+\_\+sampler\+\_\+coordinate\+\_\+mode\+\_\+t}} constants. \end{DoxyCompactList}\item 
+typedef uint32\+\_\+t \mbox{\hyperlink{group__ext-images_ga789cca3686944d15916b4e6241108146}{hsa\+\_\+ext\+\_\+sampler\+\_\+filter\+\_\+mode32\+\_\+t}}
+\begin{DoxyCompactList}\small\item\em A fixed-\/size type used to represent \mbox{\hyperlink{group__ext-images_ga0f0c16fdeea5c2a56130ecefe7cefd02}{hsa\+\_\+ext\+\_\+sampler\+\_\+filter\+\_\+mode\+\_\+t}} constants. \end{DoxyCompactList}\item 
+typedef struct \mbox{\hyperlink{structhsa__ext__sampler__descriptor__s}{hsa\+\_\+ext\+\_\+sampler\+\_\+descriptor\+\_\+s}} \mbox{\hyperlink{group__ext-images_gabed3b941e5a41287f2240f366797bda2}{hsa\+\_\+ext\+\_\+sampler\+\_\+descriptor\+\_\+t}}
+\begin{DoxyCompactList}\small\item\em Implementation independent sampler descriptor. \end{DoxyCompactList}\item 
+typedef struct \mbox{\hyperlink{structhsa__ext__images__1__00__pfn__s}{hsa\+\_\+ext\+\_\+images\+\_\+1\+\_\+00\+\_\+pfn\+\_\+s}} \mbox{\hyperlink{group__ext-images_ga4890187e1de667ab7f542c628c82481b}{hsa\+\_\+ext\+\_\+images\+\_\+1\+\_\+00\+\_\+pfn\+\_\+t}}
+\begin{DoxyCompactList}\small\item\em The function pointer table for the images v1.\+00 extension. Can be returned by \mbox{\hyperlink{group__agentinfo_gaf5f1a0e5884522f692c13525205978bb}{hsa\+\_\+system\+\_\+get\+\_\+extension\+\_\+table}} or \mbox{\hyperlink{group__agentinfo_ga728cb3122cea1f40ad9dbc2822d2e431}{hsa\+\_\+system\+\_\+get\+\_\+major\+\_\+extension\+\_\+table}}. \end{DoxyCompactList}\item 
+typedef struct \mbox{\hyperlink{structhsa__ext__images__1__pfn__s}{hsa\+\_\+ext\+\_\+images\+\_\+1\+\_\+pfn\+\_\+s}} \mbox{\hyperlink{group__ext-images_ga9ea749701480741f7d3858af9984ffbb}{hsa\+\_\+ext\+\_\+images\+\_\+1\+\_\+pfn\+\_\+t}}
+\begin{DoxyCompactList}\small\item\em The function pointer table for the images v1 extension. Can be returned by \mbox{\hyperlink{group__agentinfo_gaf5f1a0e5884522f692c13525205978bb}{hsa\+\_\+system\+\_\+get\+\_\+extension\+\_\+table}} or \mbox{\hyperlink{group__agentinfo_ga728cb3122cea1f40ad9dbc2822d2e431}{hsa\+\_\+system\+\_\+get\+\_\+major\+\_\+extension\+\_\+table}}. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Enumerations}
+\begin{DoxyCompactItemize}
+\item 
+enum \{ \mbox{\hyperlink{group__ext-images_ggae6cdb622357fec6e889e47579a078524a42108181943a2d94749d95dc7942b7d0}{HSA\+\_\+\+EXT\+\_\+\+STATUS\+\_\+\+ERROR\+\_\+\+IMAGE\+\_\+\+FORMAT\+\_\+\+UNSUPPORTED}} = 0x3000
+, \mbox{\hyperlink{group__ext-images_ggae6cdb622357fec6e889e47579a078524a3ff898da367040b1f382c14c9f0a1bab}{HSA\+\_\+\+EXT\+\_\+\+STATUS\+\_\+\+ERROR\+\_\+\+IMAGE\+\_\+\+SIZE\+\_\+\+UNSUPPORTED}} = 0x3001
+, \mbox{\hyperlink{group__ext-images_ggae6cdb622357fec6e889e47579a078524adf82d2411103b76656e8d99f0b894440}{HSA\+\_\+\+EXT\+\_\+\+STATUS\+\_\+\+ERROR\+\_\+\+IMAGE\+\_\+\+PITCH\+\_\+\+UNSUPPORTED}} = 0x3002
+, \mbox{\hyperlink{group__ext-images_ggae6cdb622357fec6e889e47579a078524a5f5858e98041ec936780edcbebd38f79}{HSA\+\_\+\+EXT\+\_\+\+STATUS\+\_\+\+ERROR\+\_\+\+SAMPLER\+\_\+\+DESCRIPTOR\+\_\+\+UNSUPPORTED}} = 0x3003
+ \}
+\begin{DoxyCompactList}\small\item\em Enumeration constants added to \mbox{\hyperlink{group__status_gad755322e7ff95456520e8abdbe90d225}{hsa\+\_\+status\+\_\+t}} by this extension. \end{DoxyCompactList}\item 
+enum \{ \newline
+\mbox{\hyperlink{group__ext-images_gga6b1af8ba72fb238659a469ca5d2ef52baec34e7fe9f6f42ecbc1e72b48956fe5e}{HSA\+\_\+\+EXT\+\_\+\+AGENT\+\_\+\+INFO\+\_\+\+IMAGE\+\_\+1\+D\+\_\+\+MAX\+\_\+\+ELEMENTS}} = 0x3000
+, \mbox{\hyperlink{group__ext-images_gga6b1af8ba72fb238659a469ca5d2ef52bab597cd205855caea8a58fbe9256a001f}{HSA\+\_\+\+EXT\+\_\+\+AGENT\+\_\+\+INFO\+\_\+\+IMAGE\+\_\+1\+DA\+\_\+\+MAX\+\_\+\+ELEMENTS}} = 0x3001
+, \mbox{\hyperlink{group__ext-images_gga6b1af8ba72fb238659a469ca5d2ef52ba145fa8a0ef85752e1e21966f88ffd85f}{HSA\+\_\+\+EXT\+\_\+\+AGENT\+\_\+\+INFO\+\_\+\+IMAGE\+\_\+1\+DB\+\_\+\+MAX\+\_\+\+ELEMENTS}} = 0x3002
+, \mbox{\hyperlink{group__ext-images_gga6b1af8ba72fb238659a469ca5d2ef52bac36ca2ff9c2b82444410acc2c05750c7}{HSA\+\_\+\+EXT\+\_\+\+AGENT\+\_\+\+INFO\+\_\+\+IMAGE\+\_\+2\+D\+\_\+\+MAX\+\_\+\+ELEMENTS}} = 0x3003
+, \newline
+\mbox{\hyperlink{group__ext-images_gga6b1af8ba72fb238659a469ca5d2ef52ba9ee2d789843a03ae02bbd8cf44465ec6}{HSA\+\_\+\+EXT\+\_\+\+AGENT\+\_\+\+INFO\+\_\+\+IMAGE\+\_\+2\+DA\+\_\+\+MAX\+\_\+\+ELEMENTS}} = 0x3004
+, \mbox{\hyperlink{group__ext-images_gga6b1af8ba72fb238659a469ca5d2ef52ba15262e3b83a1ff50af219c186b70ccde}{HSA\+\_\+\+EXT\+\_\+\+AGENT\+\_\+\+INFO\+\_\+\+IMAGE\+\_\+2\+DDEPTH\+\_\+\+MAX\+\_\+\+ELEMENTS}} = 0x3005
+, \mbox{\hyperlink{group__ext-images_gga6b1af8ba72fb238659a469ca5d2ef52babeb08bb9caae027b3d11d700aff4b306}{HSA\+\_\+\+EXT\+\_\+\+AGENT\+\_\+\+INFO\+\_\+\+IMAGE\+\_\+2\+DADEPTH\+\_\+\+MAX\+\_\+\+ELEMENTS}} = 0x3006
+, \mbox{\hyperlink{group__ext-images_gga6b1af8ba72fb238659a469ca5d2ef52ba433a88189e85f3050829d04dd07b0667}{HSA\+\_\+\+EXT\+\_\+\+AGENT\+\_\+\+INFO\+\_\+\+IMAGE\+\_\+3\+D\+\_\+\+MAX\+\_\+\+ELEMENTS}} = 0x3007
+, \newline
+\mbox{\hyperlink{group__ext-images_gga6b1af8ba72fb238659a469ca5d2ef52bab389f4eb651f13c05a01d91533b0f443}{HSA\+\_\+\+EXT\+\_\+\+AGENT\+\_\+\+INFO\+\_\+\+IMAGE\+\_\+\+ARRAY\+\_\+\+MAX\+\_\+\+LAYERS}} = 0x3008
+, \mbox{\hyperlink{group__ext-images_gga6b1af8ba72fb238659a469ca5d2ef52bae7f9af4696df6fc8f82fb80fb0c1f70e}{HSA\+\_\+\+EXT\+\_\+\+AGENT\+\_\+\+INFO\+\_\+\+MAX\+\_\+\+IMAGE\+\_\+\+RD\+\_\+\+HANDLES}} = 0x3009
+, \mbox{\hyperlink{group__ext-images_gga6b1af8ba72fb238659a469ca5d2ef52baa86fdcbb6e4a248d2b7a6d4f3146a552}{HSA\+\_\+\+EXT\+\_\+\+AGENT\+\_\+\+INFO\+\_\+\+MAX\+\_\+\+IMAGE\+\_\+\+RORW\+\_\+\+HANDLES}} = 0x300A
+, \mbox{\hyperlink{group__ext-images_gga6b1af8ba72fb238659a469ca5d2ef52ba0e620b75fff69194e05f87f17ff82994}{HSA\+\_\+\+EXT\+\_\+\+AGENT\+\_\+\+INFO\+\_\+\+MAX\+\_\+\+SAMPLER\+\_\+\+HANDLERS}} = 0x300B
+, \newline
+\mbox{\hyperlink{group__ext-images_gga6b1af8ba72fb238659a469ca5d2ef52baff1dadde6022a69baa28b63d0e638af5}{HSA\+\_\+\+EXT\+\_\+\+AGENT\+\_\+\+INFO\+\_\+\+IMAGE\+\_\+\+LINEAR\+\_\+\+ROW\+\_\+\+PITCH\+\_\+\+ALIGNMENT}} = 0x300C
+ \}
+\begin{DoxyCompactList}\small\item\em Enumeration constants added to \mbox{\hyperlink{group__agentinfo_ga39d0684207d95717d96319573b3e4a42}{hsa\+\_\+agent\+\_\+info\+\_\+t}} by this extension. \end{DoxyCompactList}\item 
+enum \mbox{\hyperlink{group__ext-images_gac61587d98a80d1660378e3904a66fc9c}{hsa\+\_\+ext\+\_\+image\+\_\+geometry\+\_\+t}} \{ \newline
+\mbox{\hyperlink{group__ext-images_ggac61587d98a80d1660378e3904a66fc9caa025ea993dbfe3101d3ff0caea2ea0cf}{HSA\+\_\+\+EXT\+\_\+\+IMAGE\+\_\+\+GEOMETRY\+\_\+1D}} = 0
+, \mbox{\hyperlink{group__ext-images_ggac61587d98a80d1660378e3904a66fc9ca4bcc28ccad5a32bd9c9dbf203da4464e}{HSA\+\_\+\+EXT\+\_\+\+IMAGE\+\_\+\+GEOMETRY\+\_\+2D}} = 1
+, \mbox{\hyperlink{group__ext-images_ggac61587d98a80d1660378e3904a66fc9ca2e749b6b96377b9a744fc837296e318c}{HSA\+\_\+\+EXT\+\_\+\+IMAGE\+\_\+\+GEOMETRY\+\_\+3D}} = 2
+, \mbox{\hyperlink{group__ext-images_ggac61587d98a80d1660378e3904a66fc9cad989c8e619b376dc98ac3950be9afa33}{HSA\+\_\+\+EXT\+\_\+\+IMAGE\+\_\+\+GEOMETRY\+\_\+1\+DA}} = 3
+, \newline
+\mbox{\hyperlink{group__ext-images_ggac61587d98a80d1660378e3904a66fc9ca90929e69cbf0b447060e1aeb23fd6dd4}{HSA\+\_\+\+EXT\+\_\+\+IMAGE\+\_\+\+GEOMETRY\+\_\+2\+DA}} = 4
+, \mbox{\hyperlink{group__ext-images_ggac61587d98a80d1660378e3904a66fc9ca47b208990ed715c37071f1fff17e812c}{HSA\+\_\+\+EXT\+\_\+\+IMAGE\+\_\+\+GEOMETRY\+\_\+1\+DB}} = 5
+, \mbox{\hyperlink{group__ext-images_ggac61587d98a80d1660378e3904a66fc9caf1f195107c114c7235275f047d2f0474}{HSA\+\_\+\+EXT\+\_\+\+IMAGE\+\_\+\+GEOMETRY\+\_\+2\+DDEPTH}} = 6
+, \mbox{\hyperlink{group__ext-images_ggac61587d98a80d1660378e3904a66fc9caf3d5440659a9dfd7892da13c1fe992bd}{HSA\+\_\+\+EXT\+\_\+\+IMAGE\+\_\+\+GEOMETRY\+\_\+2\+DADEPTH}} = 7
+ \}
+\begin{DoxyCompactList}\small\item\em Geometry associated with the image. This specifies the number of image dimensions and whether the image is an image array. See the {\itshape Image Geometry} section in the {\itshape HSA Programming Reference Manual} for definitions on each geometry. The enumeration values match the BRIG type {\ttfamily hsa\+\_\+ext\+\_\+brig\+\_\+image\+\_\+geometry\+\_\+t}. \end{DoxyCompactList}\item 
+enum \mbox{\hyperlink{group__ext-images_gaa143aa6feeaf24103b886c571ace568f}{hsa\+\_\+ext\+\_\+image\+\_\+channel\+\_\+type\+\_\+t}} \{ \newline
+\mbox{\hyperlink{group__ext-images_ggaa143aa6feeaf24103b886c571ace568fa59d72c5a5199e360e7a5773987696e42}{HSA\+\_\+\+EXT\+\_\+\+IMAGE\+\_\+\+CHANNEL\+\_\+\+TYPE\+\_\+\+SNORM\+\_\+\+INT8}} = 0
+, \mbox{\hyperlink{group__ext-images_ggaa143aa6feeaf24103b886c571ace568fa55ee5e3b2e6f3b593a9cf99f1f195b91}{HSA\+\_\+\+EXT\+\_\+\+IMAGE\+\_\+\+CHANNEL\+\_\+\+TYPE\+\_\+\+SNORM\+\_\+\+INT16}} = 1
+, \mbox{\hyperlink{group__ext-images_ggaa143aa6feeaf24103b886c571ace568fae3100c7304a6e1805711cd6965919e53}{HSA\+\_\+\+EXT\+\_\+\+IMAGE\+\_\+\+CHANNEL\+\_\+\+TYPE\+\_\+\+UNORM\+\_\+\+INT8}} = 2
+, \mbox{\hyperlink{group__ext-images_ggaa143aa6feeaf24103b886c571ace568fa9a27c2852fb86761dcbabfda391a8e73}{HSA\+\_\+\+EXT\+\_\+\+IMAGE\+\_\+\+CHANNEL\+\_\+\+TYPE\+\_\+\+UNORM\+\_\+\+INT16}} = 3
+, \newline
+\mbox{\hyperlink{group__ext-images_ggaa143aa6feeaf24103b886c571ace568fa0b12c9e8bee88608297ecd9246ebf96a}{HSA\+\_\+\+EXT\+\_\+\+IMAGE\+\_\+\+CHANNEL\+\_\+\+TYPE\+\_\+\+UNORM\+\_\+\+INT24}} = 4
+, \mbox{\hyperlink{group__ext-images_ggaa143aa6feeaf24103b886c571ace568fa40e1eb056776d35da9f1dbaf2e264a19}{HSA\+\_\+\+EXT\+\_\+\+IMAGE\+\_\+\+CHANNEL\+\_\+\+TYPE\+\_\+\+UNORM\+\_\+\+SHORT\+\_\+555}} = 5
+, \mbox{\hyperlink{group__ext-images_ggaa143aa6feeaf24103b886c571ace568fa6165cebe82d6c2b115bbce04548f5626}{HSA\+\_\+\+EXT\+\_\+\+IMAGE\+\_\+\+CHANNEL\+\_\+\+TYPE\+\_\+\+UNORM\+\_\+\+SHORT\+\_\+565}} = 6
+, \mbox{\hyperlink{group__ext-images_ggaa143aa6feeaf24103b886c571ace568fad5193853cc5321dd50b16eb9e920237f}{HSA\+\_\+\+EXT\+\_\+\+IMAGE\+\_\+\+CHANNEL\+\_\+\+TYPE\+\_\+\+UNORM\+\_\+\+SHORT\+\_\+101010}} = 7
+, \newline
+\mbox{\hyperlink{group__ext-images_ggaa143aa6feeaf24103b886c571ace568fa39b7795d032ee6afc6c701b25632b7c0}{HSA\+\_\+\+EXT\+\_\+\+IMAGE\+\_\+\+CHANNEL\+\_\+\+TYPE\+\_\+\+SIGNED\+\_\+\+INT8}} = 8
+, \mbox{\hyperlink{group__ext-images_ggaa143aa6feeaf24103b886c571ace568fa94b5591edcfac1939f541c48a6f84400}{HSA\+\_\+\+EXT\+\_\+\+IMAGE\+\_\+\+CHANNEL\+\_\+\+TYPE\+\_\+\+SIGNED\+\_\+\+INT16}} = 9
+, \mbox{\hyperlink{group__ext-images_ggaa143aa6feeaf24103b886c571ace568fab58308c224a7d513ecbf0ffd51846ff2}{HSA\+\_\+\+EXT\+\_\+\+IMAGE\+\_\+\+CHANNEL\+\_\+\+TYPE\+\_\+\+SIGNED\+\_\+\+INT32}} = 10
+, \mbox{\hyperlink{group__ext-images_ggaa143aa6feeaf24103b886c571ace568fad5a41c0a19a7cb34f4343db6cf757b7a}{HSA\+\_\+\+EXT\+\_\+\+IMAGE\+\_\+\+CHANNEL\+\_\+\+TYPE\+\_\+\+UNSIGNED\+\_\+\+INT8}} = 11
+, \newline
+\mbox{\hyperlink{group__ext-images_ggaa143aa6feeaf24103b886c571ace568fa1779271b7ca06132b05918e5a72a2a85}{HSA\+\_\+\+EXT\+\_\+\+IMAGE\+\_\+\+CHANNEL\+\_\+\+TYPE\+\_\+\+UNSIGNED\+\_\+\+INT16}} = 12
+, \mbox{\hyperlink{group__ext-images_ggaa143aa6feeaf24103b886c571ace568faf925e28a04ef0162badd74c43b324ec5}{HSA\+\_\+\+EXT\+\_\+\+IMAGE\+\_\+\+CHANNEL\+\_\+\+TYPE\+\_\+\+UNSIGNED\+\_\+\+INT32}} = 13
+, \mbox{\hyperlink{group__ext-images_ggaa143aa6feeaf24103b886c571ace568fa71200bfc55d6373e117594a624472973}{HSA\+\_\+\+EXT\+\_\+\+IMAGE\+\_\+\+CHANNEL\+\_\+\+TYPE\+\_\+\+HALF\+\_\+\+FLOAT}} = 14
+, \mbox{\hyperlink{group__ext-images_ggaa143aa6feeaf24103b886c571ace568fa4b06498e72cfae3bffd55e5c7a483576}{HSA\+\_\+\+EXT\+\_\+\+IMAGE\+\_\+\+CHANNEL\+\_\+\+TYPE\+\_\+\+FLOAT}} = 15
+ \}
+\begin{DoxyCompactList}\small\item\em Channel type associated with the elements of an image. See the {\itshape Channel Type} section in the {\itshape HSA Programming Reference Manual} for definitions on each channel type. The enumeration values and definition match the BRIG type {\ttfamily hsa\+\_\+ext\+\_\+brig\+\_\+image\+\_\+channel\+\_\+type\+\_\+t}. \end{DoxyCompactList}\item 
+enum \mbox{\hyperlink{group__ext-images_gabaced4fb1f3b9fdaa978e143af5ff055}{hsa\+\_\+ext\+\_\+image\+\_\+channel\+\_\+order\+\_\+t}} \{ \newline
+\mbox{\hyperlink{group__ext-images_ggabaced4fb1f3b9fdaa978e143af5ff055aa68ce325d9662ff1a1c78598835c8d55}{HSA\+\_\+\+EXT\+\_\+\+IMAGE\+\_\+\+CHANNEL\+\_\+\+ORDER\+\_\+A}} = 0
+, \mbox{\hyperlink{group__ext-images_ggabaced4fb1f3b9fdaa978e143af5ff055ae6f5e256120da86e073db6a996e778d7}{HSA\+\_\+\+EXT\+\_\+\+IMAGE\+\_\+\+CHANNEL\+\_\+\+ORDER\+\_\+R}} = 1
+, \mbox{\hyperlink{group__ext-images_ggabaced4fb1f3b9fdaa978e143af5ff055ad22499f0285b97596caa1a316f839ace}{HSA\+\_\+\+EXT\+\_\+\+IMAGE\+\_\+\+CHANNEL\+\_\+\+ORDER\+\_\+\+RX}} = 2
+, \mbox{\hyperlink{group__ext-images_ggabaced4fb1f3b9fdaa978e143af5ff055a49185aef99188ff46b53d4da23614798}{HSA\+\_\+\+EXT\+\_\+\+IMAGE\+\_\+\+CHANNEL\+\_\+\+ORDER\+\_\+\+RG}} = 3
+, \newline
+\mbox{\hyperlink{group__ext-images_ggabaced4fb1f3b9fdaa978e143af5ff055a59e32fe3e15c24a407c5f1e56a6935f4}{HSA\+\_\+\+EXT\+\_\+\+IMAGE\+\_\+\+CHANNEL\+\_\+\+ORDER\+\_\+\+RGX}} = 4
+, \mbox{\hyperlink{group__ext-images_ggabaced4fb1f3b9fdaa978e143af5ff055a7ec545d6291f17a9a779b6f673fad718}{HSA\+\_\+\+EXT\+\_\+\+IMAGE\+\_\+\+CHANNEL\+\_\+\+ORDER\+\_\+\+RA}} = 5
+, \mbox{\hyperlink{group__ext-images_ggabaced4fb1f3b9fdaa978e143af5ff055ae3d2eed3398c973eab1e66e1b92a8efe}{HSA\+\_\+\+EXT\+\_\+\+IMAGE\+\_\+\+CHANNEL\+\_\+\+ORDER\+\_\+\+RGB}} = 6
+, \mbox{\hyperlink{group__ext-images_ggabaced4fb1f3b9fdaa978e143af5ff055a3d93bdf6b20f6409a9d684646908bfe1}{HSA\+\_\+\+EXT\+\_\+\+IMAGE\+\_\+\+CHANNEL\+\_\+\+ORDER\+\_\+\+RGBX}} = 7
+, \newline
+\mbox{\hyperlink{group__ext-images_ggabaced4fb1f3b9fdaa978e143af5ff055a0c5e8dc0eef9af781786ef67ee3702df}{HSA\+\_\+\+EXT\+\_\+\+IMAGE\+\_\+\+CHANNEL\+\_\+\+ORDER\+\_\+\+RGBA}} = 8
+, \mbox{\hyperlink{group__ext-images_ggabaced4fb1f3b9fdaa978e143af5ff055a8f8724381ae9dfe592a15808ebe8c1d2}{HSA\+\_\+\+EXT\+\_\+\+IMAGE\+\_\+\+CHANNEL\+\_\+\+ORDER\+\_\+\+BGRA}} = 9
+, \mbox{\hyperlink{group__ext-images_ggabaced4fb1f3b9fdaa978e143af5ff055a7a49085ae07e467293c0a10d003a2356}{HSA\+\_\+\+EXT\+\_\+\+IMAGE\+\_\+\+CHANNEL\+\_\+\+ORDER\+\_\+\+ARGB}} = 10
+, \mbox{\hyperlink{group__ext-images_ggabaced4fb1f3b9fdaa978e143af5ff055a8fd833428ebe3e1428e0001115ec6880}{HSA\+\_\+\+EXT\+\_\+\+IMAGE\+\_\+\+CHANNEL\+\_\+\+ORDER\+\_\+\+ABGR}} = 11
+, \newline
+\mbox{\hyperlink{group__ext-images_ggabaced4fb1f3b9fdaa978e143af5ff055a64dbb297ed7cf48f525ffe32aa653319}{HSA\+\_\+\+EXT\+\_\+\+IMAGE\+\_\+\+CHANNEL\+\_\+\+ORDER\+\_\+\+SRGB}} = 12
+, \mbox{\hyperlink{group__ext-images_ggabaced4fb1f3b9fdaa978e143af5ff055a38d8f1c70900f6646df6a6d20746f840}{HSA\+\_\+\+EXT\+\_\+\+IMAGE\+\_\+\+CHANNEL\+\_\+\+ORDER\+\_\+\+SRGBX}} = 13
+, \mbox{\hyperlink{group__ext-images_ggabaced4fb1f3b9fdaa978e143af5ff055ae9980a3013f42e7d56f4fd28ea8c3b7c}{HSA\+\_\+\+EXT\+\_\+\+IMAGE\+\_\+\+CHANNEL\+\_\+\+ORDER\+\_\+\+SRGBA}} = 14
+, \mbox{\hyperlink{group__ext-images_ggabaced4fb1f3b9fdaa978e143af5ff055a2617e3d26bbf6dd3c136534dcf5e4594}{HSA\+\_\+\+EXT\+\_\+\+IMAGE\+\_\+\+CHANNEL\+\_\+\+ORDER\+\_\+\+SBGRA}} = 15
+, \newline
+\mbox{\hyperlink{group__ext-images_ggabaced4fb1f3b9fdaa978e143af5ff055a5fb131f53f229f55456287a009da9b6e}{HSA\+\_\+\+EXT\+\_\+\+IMAGE\+\_\+\+CHANNEL\+\_\+\+ORDER\+\_\+\+INTENSITY}} = 16
+, \mbox{\hyperlink{group__ext-images_ggabaced4fb1f3b9fdaa978e143af5ff055a5576d6ae7fd07c21fa8196c4323f1476}{HSA\+\_\+\+EXT\+\_\+\+IMAGE\+\_\+\+CHANNEL\+\_\+\+ORDER\+\_\+\+LUMINANCE}} = 17
+, \mbox{\hyperlink{group__ext-images_ggabaced4fb1f3b9fdaa978e143af5ff055ad26aef84eb00f1d1e9defc45f7508e50}{HSA\+\_\+\+EXT\+\_\+\+IMAGE\+\_\+\+CHANNEL\+\_\+\+ORDER\+\_\+\+DEPTH}} = 18
+, \mbox{\hyperlink{group__ext-images_ggabaced4fb1f3b9fdaa978e143af5ff055aa1c158a53efa2619ceefa748f3d99a99}{HSA\+\_\+\+EXT\+\_\+\+IMAGE\+\_\+\+CHANNEL\+\_\+\+ORDER\+\_\+\+DEPTH\+\_\+\+STENCIL}} = 19
+ \}
+\begin{DoxyCompactList}\small\item\em Channel order associated with the elements of an image. See the {\itshape Channel Order} section in the {\itshape HSA Programming Reference Manual} for definitions on each channel order. The enumeration values match the BRIG type {\ttfamily hsa\+\_\+ext\+\_\+brig\+\_\+image\+\_\+channel\+\_\+order\+\_\+t}. \end{DoxyCompactList}\item 
+enum \mbox{\hyperlink{group__ext-images_gab3d3401883f796b3f2d8dfad14f90568}{hsa\+\_\+ext\+\_\+image\+\_\+capability\+\_\+t}} \{ \newline
+\mbox{\hyperlink{group__ext-images_ggab3d3401883f796b3f2d8dfad14f90568acd8ea93bf52221ca2503b74dc1bf967a}{HSA\+\_\+\+EXT\+\_\+\+IMAGE\+\_\+\+CAPABILITY\+\_\+\+NOT\+\_\+\+SUPPORTED}} = 0x0
+, \mbox{\hyperlink{group__ext-images_ggab3d3401883f796b3f2d8dfad14f90568add60b4b84820b05474e9431f85954e93}{HSA\+\_\+\+EXT\+\_\+\+IMAGE\+\_\+\+CAPABILITY\+\_\+\+READ\+\_\+\+ONLY}} = 0x1
+, \mbox{\hyperlink{group__ext-images_ggab3d3401883f796b3f2d8dfad14f90568a01a4d914c62d2f7505c002e3d0510d22}{HSA\+\_\+\+EXT\+\_\+\+IMAGE\+\_\+\+CAPABILITY\+\_\+\+WRITE\+\_\+\+ONLY}} = 0x2
+, \mbox{\hyperlink{group__ext-images_ggab3d3401883f796b3f2d8dfad14f90568a46df4b1dde4bd8fe803f49bfd4cec867}{HSA\+\_\+\+EXT\+\_\+\+IMAGE\+\_\+\+CAPABILITY\+\_\+\+READ\+\_\+\+WRITE}} = 0x4
+, \newline
+\mbox{\hyperlink{group__ext-images_ggab3d3401883f796b3f2d8dfad14f90568a93c1635f2a1cf303202219cdf9a96a10}{HSA\+\_\+\+EXT\+\_\+\+IMAGE\+\_\+\+CAPABILITY\+\_\+\+READ\+\_\+\+MODIFY\+\_\+\+WRITE}} = 0x8
+, \mbox{\hyperlink{group__ext-images_ggab3d3401883f796b3f2d8dfad14f90568a7e7df436921a7ef7028281b9c12d6dc2}{HSA\+\_\+\+EXT\+\_\+\+IMAGE\+\_\+\+CAPABILITY\+\_\+\+ACCESS\+\_\+\+INVARIANT\+\_\+\+DATA\+\_\+\+LAYOUT}} = 0x10
+ \}
+\begin{DoxyCompactList}\small\item\em Image capability. \end{DoxyCompactList}\item 
+enum \mbox{\hyperlink{group__ext-images_ga102222a1420a2434d9b50100350305e4}{hsa\+\_\+ext\+\_\+image\+\_\+data\+\_\+layout\+\_\+t}} \{ \mbox{\hyperlink{group__ext-images_gga102222a1420a2434d9b50100350305e4a6d2884d8802b4696feda4dbbdc7ce86c}{HSA\+\_\+\+EXT\+\_\+\+IMAGE\+\_\+\+DATA\+\_\+\+LAYOUT\+\_\+\+OPAQUE}} = 0x0
+, \mbox{\hyperlink{group__ext-images_gga102222a1420a2434d9b50100350305e4a989b98c2fc0e31d5c434bbb946ae63d0}{HSA\+\_\+\+EXT\+\_\+\+IMAGE\+\_\+\+DATA\+\_\+\+LAYOUT\+\_\+\+LINEAR}} = 0x1
+ \}
+\begin{DoxyCompactList}\small\item\em Image data layout. \end{DoxyCompactList}\item 
+enum \mbox{\hyperlink{group__ext-images_ga60a9fcdc1a1f338bd7e54445359fdf0f}{hsa\+\_\+ext\+\_\+sampler\+\_\+addressing\+\_\+mode\+\_\+t}} \{ \newline
+\mbox{\hyperlink{group__ext-images_gga60a9fcdc1a1f338bd7e54445359fdf0fa4b02e9d069ed545eb3771b2a2c69ccb8}{HSA\+\_\+\+EXT\+\_\+\+SAMPLER\+\_\+\+ADDRESSING\+\_\+\+MODE\+\_\+\+UNDEFINED}} = 0
+, \mbox{\hyperlink{group__ext-images_gga60a9fcdc1a1f338bd7e54445359fdf0faefb1f71d8741673081efd7fbb3141533}{HSA\+\_\+\+EXT\+\_\+\+SAMPLER\+\_\+\+ADDRESSING\+\_\+\+MODE\+\_\+\+CLAMP\+\_\+\+TO\+\_\+\+EDGE}} = 1
+, \mbox{\hyperlink{group__ext-images_gga60a9fcdc1a1f338bd7e54445359fdf0faf9fe6a395063062f4b827610f0c38572}{HSA\+\_\+\+EXT\+\_\+\+SAMPLER\+\_\+\+ADDRESSING\+\_\+\+MODE\+\_\+\+CLAMP\+\_\+\+TO\+\_\+\+BORDER}} = 2
+, \mbox{\hyperlink{group__ext-images_gga60a9fcdc1a1f338bd7e54445359fdf0facbb546d8b317e2e0af9b78fbfbc36b50}{HSA\+\_\+\+EXT\+\_\+\+SAMPLER\+\_\+\+ADDRESSING\+\_\+\+MODE\+\_\+\+REPEAT}} = 3
+, \newline
+\mbox{\hyperlink{group__ext-images_gga60a9fcdc1a1f338bd7e54445359fdf0faf4172b4d90cb5296e55885c7afa14bb6}{HSA\+\_\+\+EXT\+\_\+\+SAMPLER\+\_\+\+ADDRESSING\+\_\+\+MODE\+\_\+\+MIRRORED\+\_\+\+REPEAT}} = 4
+ \}
+\begin{DoxyCompactList}\small\item\em Sampler address modes. The sampler address mode describes the processing of out-\/of-\/range image coordinates. See the {\itshape Addressing Mode} section in the {\itshape HSA Programming Reference Manual} for definitions on each address mode. The values match the BRIG type {\ttfamily hsa\+\_\+ext\+\_\+brig\+\_\+sampler\+\_\+addressing\+\_\+t}. \end{DoxyCompactList}\item 
+enum \mbox{\hyperlink{group__ext-images_gad7644f3eccb4f8ce5693313b88440d87}{hsa\+\_\+ext\+\_\+sampler\+\_\+coordinate\+\_\+mode\+\_\+t}} \{ \mbox{\hyperlink{group__ext-images_ggad7644f3eccb4f8ce5693313b88440d87a12bd33ab83e502cff3e7b8016470e97e}{HSA\+\_\+\+EXT\+\_\+\+SAMPLER\+\_\+\+COORDINATE\+\_\+\+MODE\+\_\+\+UNNORMALIZED}} = 0
+, \mbox{\hyperlink{group__ext-images_ggad7644f3eccb4f8ce5693313b88440d87a278882aec9c205d2bd184e1d0a1e6391}{HSA\+\_\+\+EXT\+\_\+\+SAMPLER\+\_\+\+COORDINATE\+\_\+\+MODE\+\_\+\+NORMALIZED}} = 1
+ \}
+\begin{DoxyCompactList}\small\item\em Sampler coordinate normalization modes. See the {\itshape Coordinate Normalization Mode} section in the {\itshape HSA Programming Reference Manual} for definitions on each coordinate normalization mode. The values match the BRIG type {\ttfamily hsa\+\_\+ext\+\_\+brig\+\_\+sampler\+\_\+coord\+\_\+normalization\+\_\+t}. \end{DoxyCompactList}\item 
+enum \mbox{\hyperlink{group__ext-images_ga0f0c16fdeea5c2a56130ecefe7cefd02}{hsa\+\_\+ext\+\_\+sampler\+\_\+filter\+\_\+mode\+\_\+t}} \{ \mbox{\hyperlink{group__ext-images_gga0f0c16fdeea5c2a56130ecefe7cefd02a48340bfcc19863880213631f47b8607e}{HSA\+\_\+\+EXT\+\_\+\+SAMPLER\+\_\+\+FILTER\+\_\+\+MODE\+\_\+\+NEAREST}} = 0
+, \mbox{\hyperlink{group__ext-images_gga0f0c16fdeea5c2a56130ecefe7cefd02a18009b32510cb5d6f890e09758b20b5e}{HSA\+\_\+\+EXT\+\_\+\+SAMPLER\+\_\+\+FILTER\+\_\+\+MODE\+\_\+\+LINEAR}} = 1
+ \}
+\begin{DoxyCompactList}\small\item\em Sampler filter modes. See the {\itshape Filter Mode} section in the {\itshape HSA Programming Reference Manual} for definitions on each address mode. The enumeration values match the BRIG type {\ttfamily hsa\+\_\+ext\+\_\+brig\+\_\+sampler\+\_\+filter\+\_\+t}. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{group__status_gad755322e7ff95456520e8abdbe90d225}{hsa\+\_\+status\+\_\+t}} \mbox{\hyperlink{inc_2hsa__ext__image_8h_a64216765b98b62ee87deb50fd2899836}{HSA\+\_\+\+API}} \mbox{\hyperlink{group__ext-images_ga12a909df33851b76afa2850abc7086f1}{hsa\+\_\+ext\+\_\+image\+\_\+get\+\_\+capability}} (\mbox{\hyperlink{group__agentinfo_ga9ce217ef08e7d5e89c8e83ce7b6ef22b}{hsa\+\_\+agent\+\_\+t}} agent, \mbox{\hyperlink{group__ext-images_gac61587d98a80d1660378e3904a66fc9c}{hsa\+\_\+ext\+\_\+image\+\_\+geometry\+\_\+t}} geometry, const \mbox{\hyperlink{group__ext-images_ga37a5b98dd984766026174b4d6d486b29}{hsa\+\_\+ext\+\_\+image\+\_\+format\+\_\+t}} $\ast$image\+\_\+format, uint32\+\_\+t $\ast$capability\+\_\+mask)
+\begin{DoxyCompactList}\small\item\em Retrieve the supported image capabilities for a given combination of agent, geometry, and image format for an image created with an opaque image data layout. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{group__status_gad755322e7ff95456520e8abdbe90d225}{hsa\+\_\+status\+\_\+t}} \mbox{\hyperlink{inc_2hsa__ext__image_8h_a64216765b98b62ee87deb50fd2899836}{HSA\+\_\+\+API}} \mbox{\hyperlink{group__ext-images_ga65fc81035fd8c70c3229ce8f5285e5e6}{hsa\+\_\+ext\+\_\+image\+\_\+get\+\_\+capability\+\_\+with\+\_\+layout}} (\mbox{\hyperlink{group__agentinfo_ga9ce217ef08e7d5e89c8e83ce7b6ef22b}{hsa\+\_\+agent\+\_\+t}} agent, \mbox{\hyperlink{group__ext-images_gac61587d98a80d1660378e3904a66fc9c}{hsa\+\_\+ext\+\_\+image\+\_\+geometry\+\_\+t}} geometry, const \mbox{\hyperlink{group__ext-images_ga37a5b98dd984766026174b4d6d486b29}{hsa\+\_\+ext\+\_\+image\+\_\+format\+\_\+t}} $\ast$image\+\_\+format, \mbox{\hyperlink{group__ext-images_ga102222a1420a2434d9b50100350305e4}{hsa\+\_\+ext\+\_\+image\+\_\+data\+\_\+layout\+\_\+t}} image\+\_\+data\+\_\+layout, uint32\+\_\+t $\ast$capability\+\_\+mask)
+\begin{DoxyCompactList}\small\item\em Retrieve the supported image capabilities for a given combination of agent, geometry, image format, and image layout for an image created with an explicit image data layout. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{group__status_gad755322e7ff95456520e8abdbe90d225}{hsa\+\_\+status\+\_\+t}} \mbox{\hyperlink{inc_2hsa__ext__image_8h_a64216765b98b62ee87deb50fd2899836}{HSA\+\_\+\+API}} \mbox{\hyperlink{group__ext-images_gad8e2426d1829f772af6e603ff226f65a}{hsa\+\_\+ext\+\_\+image\+\_\+data\+\_\+get\+\_\+info}} (\mbox{\hyperlink{group__agentinfo_ga9ce217ef08e7d5e89c8e83ce7b6ef22b}{hsa\+\_\+agent\+\_\+t}} agent, const \mbox{\hyperlink{group__ext-images_ga7ccf44400f9bbb459c8e52f54a3c5eb0}{hsa\+\_\+ext\+\_\+image\+\_\+descriptor\+\_\+t}} $\ast$image\+\_\+descriptor, \mbox{\hyperlink{group__common_gacef73774a0af1d1df56fdcd9e04bb708}{hsa\+\_\+access\+\_\+permission\+\_\+t}} access\+\_\+permission, \mbox{\hyperlink{group__ext-images_gada32050df34dc3f6c0b9124706d8984b}{hsa\+\_\+ext\+\_\+image\+\_\+data\+\_\+info\+\_\+t}} $\ast$image\+\_\+data\+\_\+info)
+\begin{DoxyCompactList}\small\item\em Retrieve the image data requirements for a given combination of agent, image descriptor, and access permission for an image created with an opaque image data layout. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{group__status_gad755322e7ff95456520e8abdbe90d225}{hsa\+\_\+status\+\_\+t}} \mbox{\hyperlink{inc_2hsa__ext__image_8h_a64216765b98b62ee87deb50fd2899836}{HSA\+\_\+\+API}} \mbox{\hyperlink{group__ext-images_ga2d3f7ebd674fe267e608b3f1c1a89965}{hsa\+\_\+ext\+\_\+image\+\_\+data\+\_\+get\+\_\+info\+\_\+with\+\_\+layout}} (\mbox{\hyperlink{group__agentinfo_ga9ce217ef08e7d5e89c8e83ce7b6ef22b}{hsa\+\_\+agent\+\_\+t}} agent, const \mbox{\hyperlink{group__ext-images_ga7ccf44400f9bbb459c8e52f54a3c5eb0}{hsa\+\_\+ext\+\_\+image\+\_\+descriptor\+\_\+t}} $\ast$image\+\_\+descriptor, \mbox{\hyperlink{group__common_gacef73774a0af1d1df56fdcd9e04bb708}{hsa\+\_\+access\+\_\+permission\+\_\+t}} access\+\_\+permission, \mbox{\hyperlink{group__ext-images_ga102222a1420a2434d9b50100350305e4}{hsa\+\_\+ext\+\_\+image\+\_\+data\+\_\+layout\+\_\+t}} image\+\_\+data\+\_\+layout, size\+\_\+t image\+\_\+data\+\_\+row\+\_\+pitch, size\+\_\+t image\+\_\+data\+\_\+slice\+\_\+pitch, \mbox{\hyperlink{group__ext-images_gada32050df34dc3f6c0b9124706d8984b}{hsa\+\_\+ext\+\_\+image\+\_\+data\+\_\+info\+\_\+t}} $\ast$image\+\_\+data\+\_\+info)
+\begin{DoxyCompactList}\small\item\em Retrieve the image data requirements for a given combination of image descriptor, access permission, image data layout, image data row pitch, and image data slice pitch for an image created with an explicit image data layout. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{group__status_gad755322e7ff95456520e8abdbe90d225}{hsa\+\_\+status\+\_\+t}} \mbox{\hyperlink{inc_2hsa__ext__image_8h_a64216765b98b62ee87deb50fd2899836}{HSA\+\_\+\+API}} \mbox{\hyperlink{group__ext-images_ga985562c68508d4d8b0edcfd0729b6d49}{hsa\+\_\+ext\+\_\+image\+\_\+create}} (\mbox{\hyperlink{group__agentinfo_ga9ce217ef08e7d5e89c8e83ce7b6ef22b}{hsa\+\_\+agent\+\_\+t}} agent, const \mbox{\hyperlink{group__ext-images_ga7ccf44400f9bbb459c8e52f54a3c5eb0}{hsa\+\_\+ext\+\_\+image\+\_\+descriptor\+\_\+t}} $\ast$image\+\_\+descriptor, const void $\ast$image\+\_\+data, \mbox{\hyperlink{group__common_gacef73774a0af1d1df56fdcd9e04bb708}{hsa\+\_\+access\+\_\+permission\+\_\+t}} access\+\_\+permission, \mbox{\hyperlink{group__ext-images_ga4e192988bd0b5abe2a57e248934e6dc6}{hsa\+\_\+ext\+\_\+image\+\_\+t}} $\ast$image)
+\begin{DoxyCompactList}\small\item\em Creates an agent specific image handle to an image with an opaque image data layout. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{group__status_gad755322e7ff95456520e8abdbe90d225}{hsa\+\_\+status\+\_\+t}} \mbox{\hyperlink{inc_2hsa__ext__image_8h_a64216765b98b62ee87deb50fd2899836}{HSA\+\_\+\+API}} \mbox{\hyperlink{group__ext-images_ga7de92e8bde1496761b7dd00d1e03186e}{hsa\+\_\+ext\+\_\+image\+\_\+create\+\_\+with\+\_\+layout}} (\mbox{\hyperlink{group__agentinfo_ga9ce217ef08e7d5e89c8e83ce7b6ef22b}{hsa\+\_\+agent\+\_\+t}} agent, const \mbox{\hyperlink{group__ext-images_ga7ccf44400f9bbb459c8e52f54a3c5eb0}{hsa\+\_\+ext\+\_\+image\+\_\+descriptor\+\_\+t}} $\ast$image\+\_\+descriptor, const void $\ast$image\+\_\+data, \mbox{\hyperlink{group__common_gacef73774a0af1d1df56fdcd9e04bb708}{hsa\+\_\+access\+\_\+permission\+\_\+t}} access\+\_\+permission, \mbox{\hyperlink{group__ext-images_ga102222a1420a2434d9b50100350305e4}{hsa\+\_\+ext\+\_\+image\+\_\+data\+\_\+layout\+\_\+t}} image\+\_\+data\+\_\+layout, size\+\_\+t image\+\_\+data\+\_\+row\+\_\+pitch, size\+\_\+t image\+\_\+data\+\_\+slice\+\_\+pitch, \mbox{\hyperlink{group__ext-images_ga4e192988bd0b5abe2a57e248934e6dc6}{hsa\+\_\+ext\+\_\+image\+\_\+t}} $\ast$image)
+\begin{DoxyCompactList}\small\item\em Creates an agent specific image handle to an image with an explicit image data layout. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{group__status_gad755322e7ff95456520e8abdbe90d225}{hsa\+\_\+status\+\_\+t}} \mbox{\hyperlink{inc_2hsa__ext__image_8h_a64216765b98b62ee87deb50fd2899836}{HSA\+\_\+\+API}} \mbox{\hyperlink{group__ext-images_ga7fdb9d51ec1916b0eeb6fc6742dc7572}{hsa\+\_\+ext\+\_\+image\+\_\+destroy}} (\mbox{\hyperlink{group__agentinfo_ga9ce217ef08e7d5e89c8e83ce7b6ef22b}{hsa\+\_\+agent\+\_\+t}} agent, \mbox{\hyperlink{group__ext-images_ga4e192988bd0b5abe2a57e248934e6dc6}{hsa\+\_\+ext\+\_\+image\+\_\+t}} image)
+\begin{DoxyCompactList}\small\item\em Destroy an image handle previously created using \mbox{\hyperlink{group__ext-images_ga985562c68508d4d8b0edcfd0729b6d49}{hsa\+\_\+ext\+\_\+image\+\_\+create}} or \mbox{\hyperlink{group__ext-images_ga7de92e8bde1496761b7dd00d1e03186e}{hsa\+\_\+ext\+\_\+image\+\_\+create\+\_\+with\+\_\+layout}}. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{group__status_gad755322e7ff95456520e8abdbe90d225}{hsa\+\_\+status\+\_\+t}} \mbox{\hyperlink{inc_2hsa__ext__image_8h_a64216765b98b62ee87deb50fd2899836}{HSA\+\_\+\+API}} \mbox{\hyperlink{group__ext-images_ga3c8f7cdc2f8f5fc7aa4ad3f845a3dc8d}{hsa\+\_\+ext\+\_\+image\+\_\+copy}} (\mbox{\hyperlink{group__agentinfo_ga9ce217ef08e7d5e89c8e83ce7b6ef22b}{hsa\+\_\+agent\+\_\+t}} agent, \mbox{\hyperlink{group__ext-images_ga4e192988bd0b5abe2a57e248934e6dc6}{hsa\+\_\+ext\+\_\+image\+\_\+t}} src\+\_\+image, const \mbox{\hyperlink{group__common_gae460d1df8c508a9c889d4550ea4eea30}{hsa\+\_\+dim3\+\_\+t}} $\ast$src\+\_\+offset, \mbox{\hyperlink{group__ext-images_ga4e192988bd0b5abe2a57e248934e6dc6}{hsa\+\_\+ext\+\_\+image\+\_\+t}} dst\+\_\+image, const \mbox{\hyperlink{group__common_gae460d1df8c508a9c889d4550ea4eea30}{hsa\+\_\+dim3\+\_\+t}} $\ast$dst\+\_\+offset, const \mbox{\hyperlink{group__common_gae460d1df8c508a9c889d4550ea4eea30}{hsa\+\_\+dim3\+\_\+t}} $\ast$range)
+\begin{DoxyCompactList}\small\item\em Copies a portion of one image (the source) to another image (the destination). \end{DoxyCompactList}\item 
+\mbox{\hyperlink{group__status_gad755322e7ff95456520e8abdbe90d225}{hsa\+\_\+status\+\_\+t}} \mbox{\hyperlink{inc_2hsa__ext__image_8h_a64216765b98b62ee87deb50fd2899836}{HSA\+\_\+\+API}} \mbox{\hyperlink{group__ext-images_gaea7edbc97a6758a71eaf4160c133802f}{hsa\+\_\+ext\+\_\+image\+\_\+import}} (\mbox{\hyperlink{group__agentinfo_ga9ce217ef08e7d5e89c8e83ce7b6ef22b}{hsa\+\_\+agent\+\_\+t}} agent, const void $\ast$src\+\_\+memory, size\+\_\+t src\+\_\+row\+\_\+pitch, size\+\_\+t src\+\_\+slice\+\_\+pitch, \mbox{\hyperlink{group__ext-images_ga4e192988bd0b5abe2a57e248934e6dc6}{hsa\+\_\+ext\+\_\+image\+\_\+t}} dst\+\_\+image, const \mbox{\hyperlink{group__ext-images_gaa407e3fb8aa43d59f8e8560294d1c702}{hsa\+\_\+ext\+\_\+image\+\_\+region\+\_\+t}} $\ast$image\+\_\+region)
+\begin{DoxyCompactList}\small\item\em Import a linearly organized image data from memory directly to an image handle. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{group__status_gad755322e7ff95456520e8abdbe90d225}{hsa\+\_\+status\+\_\+t}} \mbox{\hyperlink{inc_2hsa__ext__image_8h_a64216765b98b62ee87deb50fd2899836}{HSA\+\_\+\+API}} \mbox{\hyperlink{group__ext-images_ga2187349ce5a986c7292c70ce61437666}{hsa\+\_\+ext\+\_\+image\+\_\+export}} (\mbox{\hyperlink{group__agentinfo_ga9ce217ef08e7d5e89c8e83ce7b6ef22b}{hsa\+\_\+agent\+\_\+t}} agent, \mbox{\hyperlink{group__ext-images_ga4e192988bd0b5abe2a57e248934e6dc6}{hsa\+\_\+ext\+\_\+image\+\_\+t}} src\+\_\+image, void $\ast$dst\+\_\+memory, size\+\_\+t dst\+\_\+row\+\_\+pitch, size\+\_\+t dst\+\_\+slice\+\_\+pitch, const \mbox{\hyperlink{group__ext-images_gaa407e3fb8aa43d59f8e8560294d1c702}{hsa\+\_\+ext\+\_\+image\+\_\+region\+\_\+t}} $\ast$image\+\_\+region)
+\begin{DoxyCompactList}\small\item\em Export the image data to linearly organized memory. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{group__status_gad755322e7ff95456520e8abdbe90d225}{hsa\+\_\+status\+\_\+t}} \mbox{\hyperlink{inc_2hsa__ext__image_8h_a64216765b98b62ee87deb50fd2899836}{HSA\+\_\+\+API}} \mbox{\hyperlink{group__ext-images_gacc311188d2d5c9182e4a07bfceabbd99}{hsa\+\_\+ext\+\_\+image\+\_\+clear}} (\mbox{\hyperlink{group__agentinfo_ga9ce217ef08e7d5e89c8e83ce7b6ef22b}{hsa\+\_\+agent\+\_\+t}} agent, \mbox{\hyperlink{group__ext-images_ga4e192988bd0b5abe2a57e248934e6dc6}{hsa\+\_\+ext\+\_\+image\+\_\+t}} image, const void $\ast$data, const \mbox{\hyperlink{group__ext-images_gaa407e3fb8aa43d59f8e8560294d1c702}{hsa\+\_\+ext\+\_\+image\+\_\+region\+\_\+t}} $\ast$image\+\_\+region)
+\begin{DoxyCompactList}\small\item\em Clear a region of an image so that every image element has the specified value. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{group__status_gad755322e7ff95456520e8abdbe90d225}{hsa\+\_\+status\+\_\+t}} \mbox{\hyperlink{inc_2hsa__ext__image_8h_a64216765b98b62ee87deb50fd2899836}{HSA\+\_\+\+API}} \mbox{\hyperlink{group__ext-images_gaf3b5567510870cf0130efd69d5af3c07}{hsa\+\_\+ext\+\_\+sampler\+\_\+create}} (\mbox{\hyperlink{group__agentinfo_ga9ce217ef08e7d5e89c8e83ce7b6ef22b}{hsa\+\_\+agent\+\_\+t}} agent, const \mbox{\hyperlink{group__ext-images_gabed3b941e5a41287f2240f366797bda2}{hsa\+\_\+ext\+\_\+sampler\+\_\+descriptor\+\_\+t}} $\ast$sampler\+\_\+descriptor, \mbox{\hyperlink{group__ext-images_ga41c5c0a2cbd7c9020ef8ce2afc1c6101}{hsa\+\_\+ext\+\_\+sampler\+\_\+t}} $\ast$sampler)
+\begin{DoxyCompactList}\small\item\em Create an agent specific sampler handle for a given agent independent sampler descriptor and agent. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{group__status_gad755322e7ff95456520e8abdbe90d225}{hsa\+\_\+status\+\_\+t}} \mbox{\hyperlink{inc_2hsa__ext__image_8h_a64216765b98b62ee87deb50fd2899836}{HSA\+\_\+\+API}} \mbox{\hyperlink{group__ext-images_gaae9e9552761238b093b4197dadf3ef70}{hsa\+\_\+ext\+\_\+sampler\+\_\+destroy}} (\mbox{\hyperlink{group__agentinfo_ga9ce217ef08e7d5e89c8e83ce7b6ef22b}{hsa\+\_\+agent\+\_\+t}} agent, \mbox{\hyperlink{group__ext-images_ga41c5c0a2cbd7c9020ef8ce2afc1c6101}{hsa\+\_\+ext\+\_\+sampler\+\_\+t}} sampler)
+\begin{DoxyCompactList}\small\item\em Destroy a sampler handle previously created using \mbox{\hyperlink{group__ext-images_gaf3b5567510870cf0130efd69d5af3c07}{hsa\+\_\+ext\+\_\+sampler\+\_\+create}}. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Macro Definition Documentation}
+\mbox{\Hypertarget{inc_2hsa__ext__image_8h_a64216765b98b62ee87deb50fd2899836}\label{inc_2hsa__ext__image_8h_a64216765b98b62ee87deb50fd2899836}} 
+\index{hsa\_ext\_image.h@{hsa\_ext\_image.h}!HSA\_API@{HSA\_API}}
+\index{HSA\_API@{HSA\_API}!hsa\_ext\_image.h@{hsa\_ext\_image.h}}
+\doxysubsubsection{\texorpdfstring{HSA\_API}{HSA\_API}}
+{\footnotesize\ttfamily \#define HSA\+\_\+\+API~\mbox{\hyperlink{inc_2hsa_8h_a91f7b64d53fdd78621e7a29cfbe26c7e}{HSA\+\_\+\+API\+\_\+\+IMPORT}}}
+

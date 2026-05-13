@@ -1,0 +1,195 @@
+\hypertarget{structamd__queue__s}{}\doxysection{amd\+\_\+queue\+\_\+s Struct Reference}
+\label{structamd__queue__s}\index{amd\_queue\_s@{amd\_queue\_s}}
+
+
+{\ttfamily \#include $<$amd\+\_\+hsa\+\_\+queue.\+h$>$}
+
+
+
+Collaboration diagram for amd\+\_\+queue\+\_\+s\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=293pt]{structamd__queue__s__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{group__queue_ga9e74fdf8d39c8bc42508c534316185f8}{hsa\+\_\+queue\+\_\+t}} \mbox{\hyperlink{structamd__queue__s_aa6ca658e25283bbf24510d3ba5b645f0}{hsa\+\_\+queue}}
+\item 
+uint32\+\_\+t \mbox{\hyperlink{structamd__queue__s_a45401fed25ccc4b185cc2b43f8ba2cec}{reserved1}} \mbox{[}4\mbox{]}
+\item 
+volatile uint64\+\_\+t \mbox{\hyperlink{structamd__queue__s_a1dc0ae3c251cabf194b3410dbcbad3b5}{write\+\_\+dispatch\+\_\+id}}
+\item 
+uint32\+\_\+t \mbox{\hyperlink{structamd__queue__s_ac0eb32ea01b59343fad4e1ec96a8826b}{group\+\_\+segment\+\_\+aperture\+\_\+base\+\_\+hi}}
+\item 
+uint32\+\_\+t \mbox{\hyperlink{structamd__queue__s_a4c863ec30efdc03a1a08d32a457a464f}{private\+\_\+segment\+\_\+aperture\+\_\+base\+\_\+hi}}
+\item 
+uint32\+\_\+t \mbox{\hyperlink{structamd__queue__s_a8ec6bc05cd5572632b9e6bca909ef823}{max\+\_\+cu\+\_\+id}}
+\item 
+uint32\+\_\+t \mbox{\hyperlink{structamd__queue__s_a83e16d5b3bb3b31d31762aa6e1ff39b0}{max\+\_\+wave\+\_\+id}}
+\item 
+volatile uint64\+\_\+t \mbox{\hyperlink{structamd__queue__s_aed725b3f5e442eef0f35b188ecc41439}{max\+\_\+legacy\+\_\+doorbell\+\_\+dispatch\+\_\+id\+\_\+plus\+\_\+1}}
+\item 
+volatile uint32\+\_\+t \mbox{\hyperlink{structamd__queue__s_a40aa83c4ae32f25f31bf729136c29d10}{legacy\+\_\+doorbell\+\_\+lock}}
+\item 
+uint32\+\_\+t \mbox{\hyperlink{structamd__queue__s_ad60c07968ec231263cfb82ce65672eed}{reserved2}} \mbox{[}9\mbox{]}
+\item 
+volatile uint64\+\_\+t \mbox{\hyperlink{structamd__queue__s_a98c30bce28ef6ce368b4904afbbf28ac}{read\+\_\+dispatch\+\_\+id}}
+\item 
+uint32\+\_\+t \mbox{\hyperlink{structamd__queue__s_afb0fb8c74d16bed7e92a5c5fe8fdcb52}{read\+\_\+dispatch\+\_\+id\+\_\+field\+\_\+base\+\_\+byte\+\_\+offset}}
+\item 
+uint32\+\_\+t \mbox{\hyperlink{structamd__queue__s_a93178a071a586896b5286ace2fd54746}{compute\+\_\+tmpring\+\_\+size}}
+\item 
+uint32\+\_\+t \mbox{\hyperlink{structamd__queue__s_a6a838bf82d91b71e460e2c2732cc05fe}{scratch\+\_\+resource\+\_\+descriptor}} \mbox{[}4\mbox{]}
+\item 
+uint64\+\_\+t \mbox{\hyperlink{structamd__queue__s_aff6632b508e28932188324d0a32c58c3}{scratch\+\_\+backing\+\_\+memory\+\_\+location}}
+\item 
+uint64\+\_\+t \mbox{\hyperlink{structamd__queue__s_a5a40edb74c179e5c81bc15c58b14f913}{scratch\+\_\+backing\+\_\+memory\+\_\+byte\+\_\+size}}
+\item 
+uint32\+\_\+t \mbox{\hyperlink{structamd__queue__s_a848792b175af55bd1dbaf1c683d5695e}{scratch\+\_\+wave64\+\_\+lane\+\_\+byte\+\_\+size}}
+\item 
+\mbox{\hyperlink{inc_2amd__hsa__queue_8h_ab76beabc67e0bdfe5fd8a05960007d9e}{amd\+\_\+queue\+\_\+properties32\+\_\+t}} \mbox{\hyperlink{structamd__queue__s_a85ec1bb28656f0307465b2ca19ee1a87}{queue\+\_\+properties}}
+\item 
+uint32\+\_\+t \mbox{\hyperlink{structamd__queue__s_a644a75258a75595de9a43b209d80e4ff}{reserved3}} \mbox{[}2\mbox{]}
+\item 
+\mbox{\hyperlink{group__signals_ga0003af605a660e7ef4f89aa555d3b3fc}{hsa\+\_\+signal\+\_\+t}} \mbox{\hyperlink{structamd__queue__s_a04c5606a897fb3298e0361a79fd92f9d}{queue\+\_\+inactive\+\_\+signal}}
+\item 
+uint32\+\_\+t \mbox{\hyperlink{structamd__queue__s_aea43f8a295b0dcf464d61c661b9b2f20}{reserved4}} \mbox{[}14\mbox{]}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{structamd__queue__s_a93178a071a586896b5286ace2fd54746}\label{structamd__queue__s_a93178a071a586896b5286ace2fd54746}} 
+\index{amd\_queue\_s@{amd\_queue\_s}!compute\_tmpring\_size@{compute\_tmpring\_size}}
+\index{compute\_tmpring\_size@{compute\_tmpring\_size}!amd\_queue\_s@{amd\_queue\_s}}
+\doxysubsubsection{\texorpdfstring{compute\_tmpring\_size}{compute\_tmpring\_size}}
+{\footnotesize\ttfamily uint32\+\_\+t amd\+\_\+queue\+\_\+s\+::compute\+\_\+tmpring\+\_\+size}
+
+\mbox{\Hypertarget{structamd__queue__s_ac0eb32ea01b59343fad4e1ec96a8826b}\label{structamd__queue__s_ac0eb32ea01b59343fad4e1ec96a8826b}} 
+\index{amd\_queue\_s@{amd\_queue\_s}!group\_segment\_aperture\_base\_hi@{group\_segment\_aperture\_base\_hi}}
+\index{group\_segment\_aperture\_base\_hi@{group\_segment\_aperture\_base\_hi}!amd\_queue\_s@{amd\_queue\_s}}
+\doxysubsubsection{\texorpdfstring{group\_segment\_aperture\_base\_hi}{group\_segment\_aperture\_base\_hi}}
+{\footnotesize\ttfamily uint32\+\_\+t amd\+\_\+queue\+\_\+s\+::group\+\_\+segment\+\_\+aperture\+\_\+base\+\_\+hi}
+
+\mbox{\Hypertarget{structamd__queue__s_aa6ca658e25283bbf24510d3ba5b645f0}\label{structamd__queue__s_aa6ca658e25283bbf24510d3ba5b645f0}} 
+\index{amd\_queue\_s@{amd\_queue\_s}!hsa\_queue@{hsa\_queue}}
+\index{hsa\_queue@{hsa\_queue}!amd\_queue\_s@{amd\_queue\_s}}
+\doxysubsubsection{\texorpdfstring{hsa\_queue}{hsa\_queue}}
+{\footnotesize\ttfamily \mbox{\hyperlink{group__queue_ga9e74fdf8d39c8bc42508c534316185f8}{hsa\+\_\+queue\+\_\+t}} amd\+\_\+queue\+\_\+s\+::hsa\+\_\+queue}
+
+\mbox{\Hypertarget{structamd__queue__s_a40aa83c4ae32f25f31bf729136c29d10}\label{structamd__queue__s_a40aa83c4ae32f25f31bf729136c29d10}} 
+\index{amd\_queue\_s@{amd\_queue\_s}!legacy\_doorbell\_lock@{legacy\_doorbell\_lock}}
+\index{legacy\_doorbell\_lock@{legacy\_doorbell\_lock}!amd\_queue\_s@{amd\_queue\_s}}
+\doxysubsubsection{\texorpdfstring{legacy\_doorbell\_lock}{legacy\_doorbell\_lock}}
+{\footnotesize\ttfamily volatile uint32\+\_\+t amd\+\_\+queue\+\_\+s\+::legacy\+\_\+doorbell\+\_\+lock}
+
+\mbox{\Hypertarget{structamd__queue__s_a8ec6bc05cd5572632b9e6bca909ef823}\label{structamd__queue__s_a8ec6bc05cd5572632b9e6bca909ef823}} 
+\index{amd\_queue\_s@{amd\_queue\_s}!max\_cu\_id@{max\_cu\_id}}
+\index{max\_cu\_id@{max\_cu\_id}!amd\_queue\_s@{amd\_queue\_s}}
+\doxysubsubsection{\texorpdfstring{max\_cu\_id}{max\_cu\_id}}
+{\footnotesize\ttfamily uint32\+\_\+t amd\+\_\+queue\+\_\+s\+::max\+\_\+cu\+\_\+id}
+
+\mbox{\Hypertarget{structamd__queue__s_aed725b3f5e442eef0f35b188ecc41439}\label{structamd__queue__s_aed725b3f5e442eef0f35b188ecc41439}} 
+\index{amd\_queue\_s@{amd\_queue\_s}!max\_legacy\_doorbell\_dispatch\_id\_plus\_1@{max\_legacy\_doorbell\_dispatch\_id\_plus\_1}}
+\index{max\_legacy\_doorbell\_dispatch\_id\_plus\_1@{max\_legacy\_doorbell\_dispatch\_id\_plus\_1}!amd\_queue\_s@{amd\_queue\_s}}
+\doxysubsubsection{\texorpdfstring{max\_legacy\_doorbell\_dispatch\_id\_plus\_1}{max\_legacy\_doorbell\_dispatch\_id\_plus\_1}}
+{\footnotesize\ttfamily volatile uint64\+\_\+t amd\+\_\+queue\+\_\+s\+::max\+\_\+legacy\+\_\+doorbell\+\_\+dispatch\+\_\+id\+\_\+plus\+\_\+1}
+
+\mbox{\Hypertarget{structamd__queue__s_a83e16d5b3bb3b31d31762aa6e1ff39b0}\label{structamd__queue__s_a83e16d5b3bb3b31d31762aa6e1ff39b0}} 
+\index{amd\_queue\_s@{amd\_queue\_s}!max\_wave\_id@{max\_wave\_id}}
+\index{max\_wave\_id@{max\_wave\_id}!amd\_queue\_s@{amd\_queue\_s}}
+\doxysubsubsection{\texorpdfstring{max\_wave\_id}{max\_wave\_id}}
+{\footnotesize\ttfamily uint32\+\_\+t amd\+\_\+queue\+\_\+s\+::max\+\_\+wave\+\_\+id}
+
+\mbox{\Hypertarget{structamd__queue__s_a4c863ec30efdc03a1a08d32a457a464f}\label{structamd__queue__s_a4c863ec30efdc03a1a08d32a457a464f}} 
+\index{amd\_queue\_s@{amd\_queue\_s}!private\_segment\_aperture\_base\_hi@{private\_segment\_aperture\_base\_hi}}
+\index{private\_segment\_aperture\_base\_hi@{private\_segment\_aperture\_base\_hi}!amd\_queue\_s@{amd\_queue\_s}}
+\doxysubsubsection{\texorpdfstring{private\_segment\_aperture\_base\_hi}{private\_segment\_aperture\_base\_hi}}
+{\footnotesize\ttfamily uint32\+\_\+t amd\+\_\+queue\+\_\+s\+::private\+\_\+segment\+\_\+aperture\+\_\+base\+\_\+hi}
+
+\mbox{\Hypertarget{structamd__queue__s_a04c5606a897fb3298e0361a79fd92f9d}\label{structamd__queue__s_a04c5606a897fb3298e0361a79fd92f9d}} 
+\index{amd\_queue\_s@{amd\_queue\_s}!queue\_inactive\_signal@{queue\_inactive\_signal}}
+\index{queue\_inactive\_signal@{queue\_inactive\_signal}!amd\_queue\_s@{amd\_queue\_s}}
+\doxysubsubsection{\texorpdfstring{queue\_inactive\_signal}{queue\_inactive\_signal}}
+{\footnotesize\ttfamily \mbox{\hyperlink{group__signals_ga0003af605a660e7ef4f89aa555d3b3fc}{hsa\+\_\+signal\+\_\+t}} amd\+\_\+queue\+\_\+s\+::queue\+\_\+inactive\+\_\+signal}
+
+\mbox{\Hypertarget{structamd__queue__s_a85ec1bb28656f0307465b2ca19ee1a87}\label{structamd__queue__s_a85ec1bb28656f0307465b2ca19ee1a87}} 
+\index{amd\_queue\_s@{amd\_queue\_s}!queue\_properties@{queue\_properties}}
+\index{queue\_properties@{queue\_properties}!amd\_queue\_s@{amd\_queue\_s}}
+\doxysubsubsection{\texorpdfstring{queue\_properties}{queue\_properties}}
+{\footnotesize\ttfamily \mbox{\hyperlink{inc_2amd__hsa__queue_8h_ab76beabc67e0bdfe5fd8a05960007d9e}{amd\+\_\+queue\+\_\+properties32\+\_\+t}} amd\+\_\+queue\+\_\+s\+::queue\+\_\+properties}
+
+\mbox{\Hypertarget{structamd__queue__s_a98c30bce28ef6ce368b4904afbbf28ac}\label{structamd__queue__s_a98c30bce28ef6ce368b4904afbbf28ac}} 
+\index{amd\_queue\_s@{amd\_queue\_s}!read\_dispatch\_id@{read\_dispatch\_id}}
+\index{read\_dispatch\_id@{read\_dispatch\_id}!amd\_queue\_s@{amd\_queue\_s}}
+\doxysubsubsection{\texorpdfstring{read\_dispatch\_id}{read\_dispatch\_id}}
+{\footnotesize\ttfamily volatile uint64\+\_\+t amd\+\_\+queue\+\_\+s\+::read\+\_\+dispatch\+\_\+id}
+
+\mbox{\Hypertarget{structamd__queue__s_afb0fb8c74d16bed7e92a5c5fe8fdcb52}\label{structamd__queue__s_afb0fb8c74d16bed7e92a5c5fe8fdcb52}} 
+\index{amd\_queue\_s@{amd\_queue\_s}!read\_dispatch\_id\_field\_base\_byte\_offset@{read\_dispatch\_id\_field\_base\_byte\_offset}}
+\index{read\_dispatch\_id\_field\_base\_byte\_offset@{read\_dispatch\_id\_field\_base\_byte\_offset}!amd\_queue\_s@{amd\_queue\_s}}
+\doxysubsubsection{\texorpdfstring{read\_dispatch\_id\_field\_base\_byte\_offset}{read\_dispatch\_id\_field\_base\_byte\_offset}}
+{\footnotesize\ttfamily uint32\+\_\+t amd\+\_\+queue\+\_\+s\+::read\+\_\+dispatch\+\_\+id\+\_\+field\+\_\+base\+\_\+byte\+\_\+offset}
+
+\mbox{\Hypertarget{structamd__queue__s_a45401fed25ccc4b185cc2b43f8ba2cec}\label{structamd__queue__s_a45401fed25ccc4b185cc2b43f8ba2cec}} 
+\index{amd\_queue\_s@{amd\_queue\_s}!reserved1@{reserved1}}
+\index{reserved1@{reserved1}!amd\_queue\_s@{amd\_queue\_s}}
+\doxysubsubsection{\texorpdfstring{reserved1}{reserved1}}
+{\footnotesize\ttfamily uint32\+\_\+t amd\+\_\+queue\+\_\+s\+::reserved1\mbox{[}4\mbox{]}}
+
+\mbox{\Hypertarget{structamd__queue__s_ad60c07968ec231263cfb82ce65672eed}\label{structamd__queue__s_ad60c07968ec231263cfb82ce65672eed}} 
+\index{amd\_queue\_s@{amd\_queue\_s}!reserved2@{reserved2}}
+\index{reserved2@{reserved2}!amd\_queue\_s@{amd\_queue\_s}}
+\doxysubsubsection{\texorpdfstring{reserved2}{reserved2}}
+{\footnotesize\ttfamily uint32\+\_\+t amd\+\_\+queue\+\_\+s\+::reserved2\mbox{[}9\mbox{]}}
+
+\mbox{\Hypertarget{structamd__queue__s_a644a75258a75595de9a43b209d80e4ff}\label{structamd__queue__s_a644a75258a75595de9a43b209d80e4ff}} 
+\index{amd\_queue\_s@{amd\_queue\_s}!reserved3@{reserved3}}
+\index{reserved3@{reserved3}!amd\_queue\_s@{amd\_queue\_s}}
+\doxysubsubsection{\texorpdfstring{reserved3}{reserved3}}
+{\footnotesize\ttfamily uint32\+\_\+t amd\+\_\+queue\+\_\+s\+::reserved3\mbox{[}2\mbox{]}}
+
+\mbox{\Hypertarget{structamd__queue__s_aea43f8a295b0dcf464d61c661b9b2f20}\label{structamd__queue__s_aea43f8a295b0dcf464d61c661b9b2f20}} 
+\index{amd\_queue\_s@{amd\_queue\_s}!reserved4@{reserved4}}
+\index{reserved4@{reserved4}!amd\_queue\_s@{amd\_queue\_s}}
+\doxysubsubsection{\texorpdfstring{reserved4}{reserved4}}
+{\footnotesize\ttfamily uint32\+\_\+t amd\+\_\+queue\+\_\+s\+::reserved4\mbox{[}14\mbox{]}}
+
+\mbox{\Hypertarget{structamd__queue__s_a5a40edb74c179e5c81bc15c58b14f913}\label{structamd__queue__s_a5a40edb74c179e5c81bc15c58b14f913}} 
+\index{amd\_queue\_s@{amd\_queue\_s}!scratch\_backing\_memory\_byte\_size@{scratch\_backing\_memory\_byte\_size}}
+\index{scratch\_backing\_memory\_byte\_size@{scratch\_backing\_memory\_byte\_size}!amd\_queue\_s@{amd\_queue\_s}}
+\doxysubsubsection{\texorpdfstring{scratch\_backing\_memory\_byte\_size}{scratch\_backing\_memory\_byte\_size}}
+{\footnotesize\ttfamily uint64\+\_\+t amd\+\_\+queue\+\_\+s\+::scratch\+\_\+backing\+\_\+memory\+\_\+byte\+\_\+size}
+
+\mbox{\Hypertarget{structamd__queue__s_aff6632b508e28932188324d0a32c58c3}\label{structamd__queue__s_aff6632b508e28932188324d0a32c58c3}} 
+\index{amd\_queue\_s@{amd\_queue\_s}!scratch\_backing\_memory\_location@{scratch\_backing\_memory\_location}}
+\index{scratch\_backing\_memory\_location@{scratch\_backing\_memory\_location}!amd\_queue\_s@{amd\_queue\_s}}
+\doxysubsubsection{\texorpdfstring{scratch\_backing\_memory\_location}{scratch\_backing\_memory\_location}}
+{\footnotesize\ttfamily uint64\+\_\+t amd\+\_\+queue\+\_\+s\+::scratch\+\_\+backing\+\_\+memory\+\_\+location}
+
+\mbox{\Hypertarget{structamd__queue__s_a6a838bf82d91b71e460e2c2732cc05fe}\label{structamd__queue__s_a6a838bf82d91b71e460e2c2732cc05fe}} 
+\index{amd\_queue\_s@{amd\_queue\_s}!scratch\_resource\_descriptor@{scratch\_resource\_descriptor}}
+\index{scratch\_resource\_descriptor@{scratch\_resource\_descriptor}!amd\_queue\_s@{amd\_queue\_s}}
+\doxysubsubsection{\texorpdfstring{scratch\_resource\_descriptor}{scratch\_resource\_descriptor}}
+{\footnotesize\ttfamily uint32\+\_\+t amd\+\_\+queue\+\_\+s\+::scratch\+\_\+resource\+\_\+descriptor\mbox{[}4\mbox{]}}
+
+\mbox{\Hypertarget{structamd__queue__s_a848792b175af55bd1dbaf1c683d5695e}\label{structamd__queue__s_a848792b175af55bd1dbaf1c683d5695e}} 
+\index{amd\_queue\_s@{amd\_queue\_s}!scratch\_wave64\_lane\_byte\_size@{scratch\_wave64\_lane\_byte\_size}}
+\index{scratch\_wave64\_lane\_byte\_size@{scratch\_wave64\_lane\_byte\_size}!amd\_queue\_s@{amd\_queue\_s}}
+\doxysubsubsection{\texorpdfstring{scratch\_wave64\_lane\_byte\_size}{scratch\_wave64\_lane\_byte\_size}}
+{\footnotesize\ttfamily uint32\+\_\+t amd\+\_\+queue\+\_\+s\+::scratch\+\_\+wave64\+\_\+lane\+\_\+byte\+\_\+size}
+
+\mbox{\Hypertarget{structamd__queue__s_a1dc0ae3c251cabf194b3410dbcbad3b5}\label{structamd__queue__s_a1dc0ae3c251cabf194b3410dbcbad3b5}} 
+\index{amd\_queue\_s@{amd\_queue\_s}!write\_dispatch\_id@{write\_dispatch\_id}}
+\index{write\_dispatch\_id@{write\_dispatch\_id}!amd\_queue\_s@{amd\_queue\_s}}
+\doxysubsubsection{\texorpdfstring{write\_dispatch\_id}{write\_dispatch\_id}}
+{\footnotesize\ttfamily volatile uint64\+\_\+t amd\+\_\+queue\+\_\+s\+::write\+\_\+dispatch\+\_\+id}
+
+
+
+The documentation for this struct was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+src/inc/\mbox{\hyperlink{inc_2amd__hsa__queue_8h}{amd\+\_\+hsa\+\_\+queue.\+h}}\end{DoxyCompactItemize}

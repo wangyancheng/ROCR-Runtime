@@ -1,0 +1,245 @@
+\hypertarget{AMDHSAKernelDescriptor_8h}{}\doxysection{src/loader/\+AMDHSAKernel\+Descriptor.h File Reference}
+\label{AMDHSAKernelDescriptor_8h}\index{src/loader/AMDHSAKernelDescriptor.h@{src/loader/AMDHSAKernelDescriptor.h}}
+{\ttfamily \#include $<$cstddef$>$}\newline
+{\ttfamily \#include $<$cstdint$>$}\newline
+Include dependency graph for AMDHSAKernel\+Descriptor.\+h\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=266pt]{AMDHSAKernelDescriptor_8h__incl}
+\end{center}
+\end{figure}
+This graph shows which files directly or indirectly include this file\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=266pt]{AMDHSAKernelDescriptor_8h__dep__incl}
+\end{center}
+\end{figure}
+\doxysubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{structrocr_1_1llvm_1_1amdhsa_1_1kernel__descriptor__t}{rocr\+::llvm\+::amdhsa\+::kernel\+\_\+descriptor\+\_\+t}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Namespaces}
+\begin{DoxyCompactItemize}
+\item 
+ \mbox{\hyperlink{namespacerocr}{rocr}}
+\item 
+ \mbox{\hyperlink{namespacerocr_1_1llvm}{rocr\+::llvm}}
+\item 
+ \mbox{\hyperlink{namespacerocr_1_1llvm_1_1amdhsa}{rocr\+::llvm\+::amdhsa}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \mbox{\hyperlink{AMDHSAKernelDescriptor_8h_a276e8a32e0bbf024aadd9420b8f2d3b3}{offsetof}}(TYPE,  MEMBER)~((size\+\_\+t)\&((TYPE$\ast$)0)-\/$>$MEMBER)
+\item 
+\#define \mbox{\hyperlink{AMDHSAKernelDescriptor_8h_ae6a45f3d61391e87ca72159b73bed5f4}{AMDHSA\+\_\+\+BITS\+\_\+\+ENUM\+\_\+\+ENTRY}}(NAME,  SHIFT,  WIDTH)
+\item 
+\#define \mbox{\hyperlink{AMDHSAKernelDescriptor_8h_a286f2813b785a6b1d7f9c688580c2dc4}{AMDHSA\+\_\+\+BITS\+\_\+\+GET}}(SRC,  MSK)~((SRC \& MSK) $>$$>$ MSK \#\# \+\_\+\+SHIFT)
+\item 
+\#define \mbox{\hyperlink{AMDHSAKernelDescriptor_8h_adce610366807c48cc27d759a245b20cd}{AMDHSA\+\_\+\+BITS\+\_\+\+SET}}(DST,  MSK,  VAL)
+\item 
+\#define \mbox{\hyperlink{AMDHSAKernelDescriptor_8h_a34bafff22e321250ea590779a90f0fab}{COMPUTE\+\_\+\+PGM\+\_\+\+RSRC1}}(NAME,  SHIFT,  WIDTH)~  \mbox{\hyperlink{AMDHSAKernelDescriptor_8h_ae6a45f3d61391e87ca72159b73bed5f4}{AMDHSA\+\_\+\+BITS\+\_\+\+ENUM\+\_\+\+ENTRY}}(COMPUTE\+\_\+\+PGM\+\_\+\+RSRC1\+\_\+ \#\# NAME, SHIFT, WIDTH)
+\item 
+\#define \mbox{\hyperlink{AMDHSAKernelDescriptor_8h_a6e0a976b9d48db21751f62e812b4b588}{COMPUTE\+\_\+\+PGM\+\_\+\+RSRC2}}(NAME,  SHIFT,  WIDTH)~  \mbox{\hyperlink{AMDHSAKernelDescriptor_8h_ae6a45f3d61391e87ca72159b73bed5f4}{AMDHSA\+\_\+\+BITS\+\_\+\+ENUM\+\_\+\+ENTRY}}(COMPUTE\+\_\+\+PGM\+\_\+\+RSRC2\+\_\+ \#\# NAME, SHIFT, WIDTH)
+\item 
+\#define \mbox{\hyperlink{AMDHSAKernelDescriptor_8h_ab3b83c6117b9ca484569f88e2f472551}{COMPUTE\+\_\+\+PGM\+\_\+\+RSRC3\+\_\+\+GFX90A}}(NAME,  SHIFT,  WIDTH)~  \mbox{\hyperlink{AMDHSAKernelDescriptor_8h_ae6a45f3d61391e87ca72159b73bed5f4}{AMDHSA\+\_\+\+BITS\+\_\+\+ENUM\+\_\+\+ENTRY}}(COMPUTE\+\_\+\+PGM\+\_\+\+RSRC3\+\_\+\+GFX90\+A\+\_\+ \#\# NAME, SHIFT, WIDTH)
+\item 
+\#define \mbox{\hyperlink{AMDHSAKernelDescriptor_8h_a7aebc44cfcfdc2d81ddf83350a2ed037}{COMPUTE\+\_\+\+PGM\+\_\+\+RSRC3\+\_\+\+GFX10\+\_\+\+PLUS}}(NAME,  SHIFT,  WIDTH)~  \mbox{\hyperlink{AMDHSAKernelDescriptor_8h_ae6a45f3d61391e87ca72159b73bed5f4}{AMDHSA\+\_\+\+BITS\+\_\+\+ENUM\+\_\+\+ENTRY}}(COMPUTE\+\_\+\+PGM\+\_\+\+RSRC3\+\_\+\+GFX10\+\_\+\+PLUS\+\_\+ \#\# NAME, SHIFT, WIDTH)
+\item 
+\#define \mbox{\hyperlink{AMDHSAKernelDescriptor_8h_ae106ed3b538dc6930bd46ac24be124e0}{KERNEL\+\_\+\+CODE\+\_\+\+PROPERTY}}(NAME,  SHIFT,  WIDTH)~  \mbox{\hyperlink{AMDHSAKernelDescriptor_8h_ae6a45f3d61391e87ca72159b73bed5f4}{AMDHSA\+\_\+\+BITS\+\_\+\+ENUM\+\_\+\+ENTRY}}(KERNEL\+\_\+\+CODE\+\_\+\+PROPERTY\+\_\+ \#\# NAME, SHIFT, WIDTH)
+\end{DoxyCompactItemize}
+\doxysubsection*{Enumerations}
+\begin{DoxyCompactItemize}
+\item 
+enum \+: uint8\+\_\+t \{ \mbox{\hyperlink{namespacerocr_1_1llvm_1_1amdhsa_a487723ca510a62f847f7be423d0a42d6ad1effda7c43c535964ad4038b2ae8df5}{rocr\+::llvm\+::amdhsa\+::\+FLOAT\+\_\+\+ROUND\+\_\+\+MODE\+\_\+\+NEAR\+\_\+\+EVEN}} = 0
+, \mbox{\hyperlink{namespacerocr_1_1llvm_1_1amdhsa_a487723ca510a62f847f7be423d0a42d6af6bc217b808e2366ca21a45031061f3a}{rocr\+::llvm\+::amdhsa\+::\+FLOAT\+\_\+\+ROUND\+\_\+\+MODE\+\_\+\+PLUS\+\_\+\+INFINITY}} = 1
+, \mbox{\hyperlink{namespacerocr_1_1llvm_1_1amdhsa_a487723ca510a62f847f7be423d0a42d6ace501b0021a338ce933b86e559f9480c}{rocr\+::llvm\+::amdhsa\+::\+FLOAT\+\_\+\+ROUND\+\_\+\+MODE\+\_\+\+MINUS\+\_\+\+INFINITY}} = 2
+, \mbox{\hyperlink{namespacerocr_1_1llvm_1_1amdhsa_a487723ca510a62f847f7be423d0a42d6ac0f5058612e801f02e3b4b0b9722954b}{rocr\+::llvm\+::amdhsa\+::\+FLOAT\+\_\+\+ROUND\+\_\+\+MODE\+\_\+\+ZERO}} = 3
+ \}
+\item 
+enum \+: uint8\+\_\+t \{ \mbox{\hyperlink{namespacerocr_1_1llvm_1_1amdhsa_a4277dc67b2fc1b277acf2fa59e8d73e6ad369f2e1fa29a677cab565f23c2619dd}{rocr\+::llvm\+::amdhsa\+::\+FLOAT\+\_\+\+DENORM\+\_\+\+MODE\+\_\+\+FLUSH\+\_\+\+SRC\+\_\+\+DST}} = 0
+, \mbox{\hyperlink{namespacerocr_1_1llvm_1_1amdhsa_a4277dc67b2fc1b277acf2fa59e8d73e6aedc118345ada39268224fdaa2df45b10}{rocr\+::llvm\+::amdhsa\+::\+FLOAT\+\_\+\+DENORM\+\_\+\+MODE\+\_\+\+FLUSH\+\_\+\+DST}} = 1
+, \mbox{\hyperlink{namespacerocr_1_1llvm_1_1amdhsa_a4277dc67b2fc1b277acf2fa59e8d73e6a7934e473b8d334ccc39e0b84d0c56869}{rocr\+::llvm\+::amdhsa\+::\+FLOAT\+\_\+\+DENORM\+\_\+\+MODE\+\_\+\+FLUSH\+\_\+\+SRC}} = 2
+, \mbox{\hyperlink{namespacerocr_1_1llvm_1_1amdhsa_a4277dc67b2fc1b277acf2fa59e8d73e6ace84543c84aade044c261f76f158e7cb}{rocr\+::llvm\+::amdhsa\+::\+FLOAT\+\_\+\+DENORM\+\_\+\+MODE\+\_\+\+FLUSH\+\_\+\+NONE}} = 3
+ \}
+\item 
+enum \+: uint8\+\_\+t \{ \mbox{\hyperlink{namespacerocr_1_1llvm_1_1amdhsa_ab4c6cda2c30a0e86a78371f9fef5aaedacc1433966d6e2051e8e87fc91c4f454e}{rocr\+::llvm\+::amdhsa\+::\+SYSTEM\+\_\+\+VGPR\+\_\+\+WORKITEM\+\_\+\+ID\+\_\+X}} = 0
+, \mbox{\hyperlink{namespacerocr_1_1llvm_1_1amdhsa_ab4c6cda2c30a0e86a78371f9fef5aaeda78651aadb1da19e546bf40a428845418}{rocr\+::llvm\+::amdhsa\+::\+SYSTEM\+\_\+\+VGPR\+\_\+\+WORKITEM\+\_\+\+ID\+\_\+\+X\+\_\+Y}} = 1
+, \mbox{\hyperlink{namespacerocr_1_1llvm_1_1amdhsa_ab4c6cda2c30a0e86a78371f9fef5aaedaf44fe05ce3689ed9811b1edd800dd2dc}{rocr\+::llvm\+::amdhsa\+::\+SYSTEM\+\_\+\+VGPR\+\_\+\+WORKITEM\+\_\+\+ID\+\_\+\+X\+\_\+\+Y\+\_\+Z}} = 2
+, \mbox{\hyperlink{namespacerocr_1_1llvm_1_1amdhsa_ab4c6cda2c30a0e86a78371f9fef5aaeda31dd431972ec88c4f067fe30b7da219c}{rocr\+::llvm\+::amdhsa\+::\+SYSTEM\+\_\+\+VGPR\+\_\+\+WORKITEM\+\_\+\+ID\+\_\+\+UNDEFINED}} = 3
+ \}
+\item 
+enum \+: int32\+\_\+t \{ \newline
+\mbox{\hyperlink{namespacerocr_1_1llvm_1_1amdhsa_a15f68681bc944bf8465631177ca2a261ae1a3153f518b8ef82aae9018d1708485}{rocr\+::llvm\+::amdhsa\+::\+COMPUTE\+\_\+\+PGM\+\_\+\+RSRC1}} =(GRANULATED\+\_\+\+WORKITEM\+\_\+\+VGPR\+\_\+\+COUNT, 0, 6)
+, \mbox{\hyperlink{namespacerocr_1_1llvm_1_1amdhsa_a15f68681bc944bf8465631177ca2a261ae1a3153f518b8ef82aae9018d1708485}{rocr\+::llvm\+::amdhsa\+::\+COMPUTE\+\_\+\+PGM\+\_\+\+RSRC1}} =(GRANULATED\+\_\+\+WORKITEM\+\_\+\+VGPR\+\_\+\+COUNT, 0, 6)
+, \mbox{\hyperlink{namespacerocr_1_1llvm_1_1amdhsa_a15f68681bc944bf8465631177ca2a261ae1a3153f518b8ef82aae9018d1708485}{rocr\+::llvm\+::amdhsa\+::\+COMPUTE\+\_\+\+PGM\+\_\+\+RSRC1}} =(GRANULATED\+\_\+\+WORKITEM\+\_\+\+VGPR\+\_\+\+COUNT, 0, 6)
+, \mbox{\hyperlink{namespacerocr_1_1llvm_1_1amdhsa_a15f68681bc944bf8465631177ca2a261ae1a3153f518b8ef82aae9018d1708485}{rocr\+::llvm\+::amdhsa\+::\+COMPUTE\+\_\+\+PGM\+\_\+\+RSRC1}} =(GRANULATED\+\_\+\+WORKITEM\+\_\+\+VGPR\+\_\+\+COUNT, 0, 6)
+, \newline
+\mbox{\hyperlink{namespacerocr_1_1llvm_1_1amdhsa_a15f68681bc944bf8465631177ca2a261ae1a3153f518b8ef82aae9018d1708485}{rocr\+::llvm\+::amdhsa\+::\+COMPUTE\+\_\+\+PGM\+\_\+\+RSRC1}} =(GRANULATED\+\_\+\+WORKITEM\+\_\+\+VGPR\+\_\+\+COUNT, 0, 6)
+, \mbox{\hyperlink{namespacerocr_1_1llvm_1_1amdhsa_a15f68681bc944bf8465631177ca2a261ae1a3153f518b8ef82aae9018d1708485}{rocr\+::llvm\+::amdhsa\+::\+COMPUTE\+\_\+\+PGM\+\_\+\+RSRC1}} =(GRANULATED\+\_\+\+WORKITEM\+\_\+\+VGPR\+\_\+\+COUNT, 0, 6)
+, \mbox{\hyperlink{namespacerocr_1_1llvm_1_1amdhsa_a15f68681bc944bf8465631177ca2a261ae1a3153f518b8ef82aae9018d1708485}{rocr\+::llvm\+::amdhsa\+::\+COMPUTE\+\_\+\+PGM\+\_\+\+RSRC1}} =(GRANULATED\+\_\+\+WORKITEM\+\_\+\+VGPR\+\_\+\+COUNT, 0, 6)
+, \mbox{\hyperlink{namespacerocr_1_1llvm_1_1amdhsa_a15f68681bc944bf8465631177ca2a261ae1a3153f518b8ef82aae9018d1708485}{rocr\+::llvm\+::amdhsa\+::\+COMPUTE\+\_\+\+PGM\+\_\+\+RSRC1}} =(GRANULATED\+\_\+\+WORKITEM\+\_\+\+VGPR\+\_\+\+COUNT, 0, 6)
+, \newline
+\mbox{\hyperlink{namespacerocr_1_1llvm_1_1amdhsa_a15f68681bc944bf8465631177ca2a261ae1a3153f518b8ef82aae9018d1708485}{rocr\+::llvm\+::amdhsa\+::\+COMPUTE\+\_\+\+PGM\+\_\+\+RSRC1}} =(GRANULATED\+\_\+\+WORKITEM\+\_\+\+VGPR\+\_\+\+COUNT, 0, 6)
+, \mbox{\hyperlink{namespacerocr_1_1llvm_1_1amdhsa_a15f68681bc944bf8465631177ca2a261ae1a3153f518b8ef82aae9018d1708485}{rocr\+::llvm\+::amdhsa\+::\+COMPUTE\+\_\+\+PGM\+\_\+\+RSRC1}} =(GRANULATED\+\_\+\+WORKITEM\+\_\+\+VGPR\+\_\+\+COUNT, 0, 6)
+, \mbox{\hyperlink{namespacerocr_1_1llvm_1_1amdhsa_a15f68681bc944bf8465631177ca2a261ae1a3153f518b8ef82aae9018d1708485}{rocr\+::llvm\+::amdhsa\+::\+COMPUTE\+\_\+\+PGM\+\_\+\+RSRC1}} =(GRANULATED\+\_\+\+WORKITEM\+\_\+\+VGPR\+\_\+\+COUNT, 0, 6)
+, \mbox{\hyperlink{namespacerocr_1_1llvm_1_1amdhsa_a15f68681bc944bf8465631177ca2a261ae1a3153f518b8ef82aae9018d1708485}{rocr\+::llvm\+::amdhsa\+::\+COMPUTE\+\_\+\+PGM\+\_\+\+RSRC1}} =(GRANULATED\+\_\+\+WORKITEM\+\_\+\+VGPR\+\_\+\+COUNT, 0, 6)
+, \newline
+\mbox{\hyperlink{namespacerocr_1_1llvm_1_1amdhsa_a15f68681bc944bf8465631177ca2a261ae1a3153f518b8ef82aae9018d1708485}{rocr\+::llvm\+::amdhsa\+::\+COMPUTE\+\_\+\+PGM\+\_\+\+RSRC1}} =(GRANULATED\+\_\+\+WORKITEM\+\_\+\+VGPR\+\_\+\+COUNT, 0, 6)
+, \mbox{\hyperlink{namespacerocr_1_1llvm_1_1amdhsa_a15f68681bc944bf8465631177ca2a261ae1a3153f518b8ef82aae9018d1708485}{rocr\+::llvm\+::amdhsa\+::\+COMPUTE\+\_\+\+PGM\+\_\+\+RSRC1}} =(GRANULATED\+\_\+\+WORKITEM\+\_\+\+VGPR\+\_\+\+COUNT, 0, 6)
+, \mbox{\hyperlink{namespacerocr_1_1llvm_1_1amdhsa_a15f68681bc944bf8465631177ca2a261ae1a3153f518b8ef82aae9018d1708485}{rocr\+::llvm\+::amdhsa\+::\+COMPUTE\+\_\+\+PGM\+\_\+\+RSRC1}} =(GRANULATED\+\_\+\+WORKITEM\+\_\+\+VGPR\+\_\+\+COUNT, 0, 6)
+, \mbox{\hyperlink{namespacerocr_1_1llvm_1_1amdhsa_a15f68681bc944bf8465631177ca2a261ae1a3153f518b8ef82aae9018d1708485}{rocr\+::llvm\+::amdhsa\+::\+COMPUTE\+\_\+\+PGM\+\_\+\+RSRC1}} =(GRANULATED\+\_\+\+WORKITEM\+\_\+\+VGPR\+\_\+\+COUNT, 0, 6)
+, \newline
+\mbox{\hyperlink{namespacerocr_1_1llvm_1_1amdhsa_a15f68681bc944bf8465631177ca2a261ae1a3153f518b8ef82aae9018d1708485}{rocr\+::llvm\+::amdhsa\+::\+COMPUTE\+\_\+\+PGM\+\_\+\+RSRC1}} =(GRANULATED\+\_\+\+WORKITEM\+\_\+\+VGPR\+\_\+\+COUNT, 0, 6)
+, \mbox{\hyperlink{namespacerocr_1_1llvm_1_1amdhsa_a15f68681bc944bf8465631177ca2a261ae1a3153f518b8ef82aae9018d1708485}{rocr\+::llvm\+::amdhsa\+::\+COMPUTE\+\_\+\+PGM\+\_\+\+RSRC1}} =(GRANULATED\+\_\+\+WORKITEM\+\_\+\+VGPR\+\_\+\+COUNT, 0, 6)
+ \}
+\item 
+enum \+: int32\+\_\+t \{ \newline
+\mbox{\hyperlink{namespacerocr_1_1llvm_1_1amdhsa_a938d8cd9cee60e9b06a6d1e4a668e2eea23a567fd8aa032e2f47a0b2826a13d88}{rocr\+::llvm\+::amdhsa\+::\+COMPUTE\+\_\+\+PGM\+\_\+\+RSRC2}} =(ENABLE\+\_\+\+PRIVATE\+\_\+\+SEGMENT, 0, 1)
+, \mbox{\hyperlink{namespacerocr_1_1llvm_1_1amdhsa_a938d8cd9cee60e9b06a6d1e4a668e2eea23a567fd8aa032e2f47a0b2826a13d88}{rocr\+::llvm\+::amdhsa\+::\+COMPUTE\+\_\+\+PGM\+\_\+\+RSRC2}} =(ENABLE\+\_\+\+PRIVATE\+\_\+\+SEGMENT, 0, 1)
+, \mbox{\hyperlink{namespacerocr_1_1llvm_1_1amdhsa_a938d8cd9cee60e9b06a6d1e4a668e2eea23a567fd8aa032e2f47a0b2826a13d88}{rocr\+::llvm\+::amdhsa\+::\+COMPUTE\+\_\+\+PGM\+\_\+\+RSRC2}} =(ENABLE\+\_\+\+PRIVATE\+\_\+\+SEGMENT, 0, 1)
+, \mbox{\hyperlink{namespacerocr_1_1llvm_1_1amdhsa_a938d8cd9cee60e9b06a6d1e4a668e2eea23a567fd8aa032e2f47a0b2826a13d88}{rocr\+::llvm\+::amdhsa\+::\+COMPUTE\+\_\+\+PGM\+\_\+\+RSRC2}} =(ENABLE\+\_\+\+PRIVATE\+\_\+\+SEGMENT, 0, 1)
+, \newline
+\mbox{\hyperlink{namespacerocr_1_1llvm_1_1amdhsa_a938d8cd9cee60e9b06a6d1e4a668e2eea23a567fd8aa032e2f47a0b2826a13d88}{rocr\+::llvm\+::amdhsa\+::\+COMPUTE\+\_\+\+PGM\+\_\+\+RSRC2}} =(ENABLE\+\_\+\+PRIVATE\+\_\+\+SEGMENT, 0, 1)
+, \mbox{\hyperlink{namespacerocr_1_1llvm_1_1amdhsa_a938d8cd9cee60e9b06a6d1e4a668e2eea23a567fd8aa032e2f47a0b2826a13d88}{rocr\+::llvm\+::amdhsa\+::\+COMPUTE\+\_\+\+PGM\+\_\+\+RSRC2}} =(ENABLE\+\_\+\+PRIVATE\+\_\+\+SEGMENT, 0, 1)
+, \mbox{\hyperlink{namespacerocr_1_1llvm_1_1amdhsa_a938d8cd9cee60e9b06a6d1e4a668e2eea23a567fd8aa032e2f47a0b2826a13d88}{rocr\+::llvm\+::amdhsa\+::\+COMPUTE\+\_\+\+PGM\+\_\+\+RSRC2}} =(ENABLE\+\_\+\+PRIVATE\+\_\+\+SEGMENT, 0, 1)
+, \mbox{\hyperlink{namespacerocr_1_1llvm_1_1amdhsa_a938d8cd9cee60e9b06a6d1e4a668e2eea23a567fd8aa032e2f47a0b2826a13d88}{rocr\+::llvm\+::amdhsa\+::\+COMPUTE\+\_\+\+PGM\+\_\+\+RSRC2}} =(ENABLE\+\_\+\+PRIVATE\+\_\+\+SEGMENT, 0, 1)
+, \newline
+\mbox{\hyperlink{namespacerocr_1_1llvm_1_1amdhsa_a938d8cd9cee60e9b06a6d1e4a668e2eea23a567fd8aa032e2f47a0b2826a13d88}{rocr\+::llvm\+::amdhsa\+::\+COMPUTE\+\_\+\+PGM\+\_\+\+RSRC2}} =(ENABLE\+\_\+\+PRIVATE\+\_\+\+SEGMENT, 0, 1)
+, \mbox{\hyperlink{namespacerocr_1_1llvm_1_1amdhsa_a938d8cd9cee60e9b06a6d1e4a668e2eea23a567fd8aa032e2f47a0b2826a13d88}{rocr\+::llvm\+::amdhsa\+::\+COMPUTE\+\_\+\+PGM\+\_\+\+RSRC2}} =(ENABLE\+\_\+\+PRIVATE\+\_\+\+SEGMENT, 0, 1)
+, \mbox{\hyperlink{namespacerocr_1_1llvm_1_1amdhsa_a938d8cd9cee60e9b06a6d1e4a668e2eea23a567fd8aa032e2f47a0b2826a13d88}{rocr\+::llvm\+::amdhsa\+::\+COMPUTE\+\_\+\+PGM\+\_\+\+RSRC2}} =(ENABLE\+\_\+\+PRIVATE\+\_\+\+SEGMENT, 0, 1)
+, \mbox{\hyperlink{namespacerocr_1_1llvm_1_1amdhsa_a938d8cd9cee60e9b06a6d1e4a668e2eea23a567fd8aa032e2f47a0b2826a13d88}{rocr\+::llvm\+::amdhsa\+::\+COMPUTE\+\_\+\+PGM\+\_\+\+RSRC2}} =(ENABLE\+\_\+\+PRIVATE\+\_\+\+SEGMENT, 0, 1)
+, \newline
+\mbox{\hyperlink{namespacerocr_1_1llvm_1_1amdhsa_a938d8cd9cee60e9b06a6d1e4a668e2eea23a567fd8aa032e2f47a0b2826a13d88}{rocr\+::llvm\+::amdhsa\+::\+COMPUTE\+\_\+\+PGM\+\_\+\+RSRC2}} =(ENABLE\+\_\+\+PRIVATE\+\_\+\+SEGMENT, 0, 1)
+, \mbox{\hyperlink{namespacerocr_1_1llvm_1_1amdhsa_a938d8cd9cee60e9b06a6d1e4a668e2eea23a567fd8aa032e2f47a0b2826a13d88}{rocr\+::llvm\+::amdhsa\+::\+COMPUTE\+\_\+\+PGM\+\_\+\+RSRC2}} =(ENABLE\+\_\+\+PRIVATE\+\_\+\+SEGMENT, 0, 1)
+, \mbox{\hyperlink{namespacerocr_1_1llvm_1_1amdhsa_a938d8cd9cee60e9b06a6d1e4a668e2eea23a567fd8aa032e2f47a0b2826a13d88}{rocr\+::llvm\+::amdhsa\+::\+COMPUTE\+\_\+\+PGM\+\_\+\+RSRC2}} =(ENABLE\+\_\+\+PRIVATE\+\_\+\+SEGMENT, 0, 1)
+, \mbox{\hyperlink{namespacerocr_1_1llvm_1_1amdhsa_a938d8cd9cee60e9b06a6d1e4a668e2eea23a567fd8aa032e2f47a0b2826a13d88}{rocr\+::llvm\+::amdhsa\+::\+COMPUTE\+\_\+\+PGM\+\_\+\+RSRC2}} =(ENABLE\+\_\+\+PRIVATE\+\_\+\+SEGMENT, 0, 1)
+, \newline
+\mbox{\hyperlink{namespacerocr_1_1llvm_1_1amdhsa_a938d8cd9cee60e9b06a6d1e4a668e2eea23a567fd8aa032e2f47a0b2826a13d88}{rocr\+::llvm\+::amdhsa\+::\+COMPUTE\+\_\+\+PGM\+\_\+\+RSRC2}} =(ENABLE\+\_\+\+PRIVATE\+\_\+\+SEGMENT, 0, 1)
+, \mbox{\hyperlink{namespacerocr_1_1llvm_1_1amdhsa_a938d8cd9cee60e9b06a6d1e4a668e2eea23a567fd8aa032e2f47a0b2826a13d88}{rocr\+::llvm\+::amdhsa\+::\+COMPUTE\+\_\+\+PGM\+\_\+\+RSRC2}} =(ENABLE\+\_\+\+PRIVATE\+\_\+\+SEGMENT, 0, 1)
+, \mbox{\hyperlink{namespacerocr_1_1llvm_1_1amdhsa_a938d8cd9cee60e9b06a6d1e4a668e2eea23a567fd8aa032e2f47a0b2826a13d88}{rocr\+::llvm\+::amdhsa\+::\+COMPUTE\+\_\+\+PGM\+\_\+\+RSRC2}} =(ENABLE\+\_\+\+PRIVATE\+\_\+\+SEGMENT, 0, 1)
+ \}
+\item 
+enum \+: int32\+\_\+t \{ \mbox{\hyperlink{namespacerocr_1_1llvm_1_1amdhsa_ac181503c432681d3c4233b54967bbcfaa0c8a31d2d9688c282a81740605fb1eac}{rocr\+::llvm\+::amdhsa\+::\+COMPUTE\+\_\+\+PGM\+\_\+\+RSRC3\+\_\+\+GFX90A}} =(ACCUM\+\_\+\+OFFSET, 0, 6)
+, \mbox{\hyperlink{namespacerocr_1_1llvm_1_1amdhsa_ac181503c432681d3c4233b54967bbcfaa0c8a31d2d9688c282a81740605fb1eac}{rocr\+::llvm\+::amdhsa\+::\+COMPUTE\+\_\+\+PGM\+\_\+\+RSRC3\+\_\+\+GFX90A}} =(ACCUM\+\_\+\+OFFSET, 0, 6)
+, \mbox{\hyperlink{namespacerocr_1_1llvm_1_1amdhsa_ac181503c432681d3c4233b54967bbcfaa0c8a31d2d9688c282a81740605fb1eac}{rocr\+::llvm\+::amdhsa\+::\+COMPUTE\+\_\+\+PGM\+\_\+\+RSRC3\+\_\+\+GFX90A}} =(ACCUM\+\_\+\+OFFSET, 0, 6)
+, \mbox{\hyperlink{namespacerocr_1_1llvm_1_1amdhsa_ac181503c432681d3c4233b54967bbcfaa0c8a31d2d9688c282a81740605fb1eac}{rocr\+::llvm\+::amdhsa\+::\+COMPUTE\+\_\+\+PGM\+\_\+\+RSRC3\+\_\+\+GFX90A}} =(ACCUM\+\_\+\+OFFSET, 0, 6)
+ \}
+\item 
+enum \+: int32\+\_\+t \{ \newline
+\mbox{\hyperlink{namespacerocr_1_1llvm_1_1amdhsa_a0a806b04331e54566372d4557ab77128a4789279945d15e4e5dc9335e44150919}{rocr\+::llvm\+::amdhsa\+::\+COMPUTE\+\_\+\+PGM\+\_\+\+RSRC3\+\_\+\+GFX10\+\_\+\+PLUS}} =(SHARED\+\_\+\+VGPR\+\_\+\+COUNT, 0, 4)
+, \mbox{\hyperlink{namespacerocr_1_1llvm_1_1amdhsa_a0a806b04331e54566372d4557ab77128a4789279945d15e4e5dc9335e44150919}{rocr\+::llvm\+::amdhsa\+::\+COMPUTE\+\_\+\+PGM\+\_\+\+RSRC3\+\_\+\+GFX10\+\_\+\+PLUS}} =(SHARED\+\_\+\+VGPR\+\_\+\+COUNT, 0, 4)
+, \mbox{\hyperlink{namespacerocr_1_1llvm_1_1amdhsa_a0a806b04331e54566372d4557ab77128a4789279945d15e4e5dc9335e44150919}{rocr\+::llvm\+::amdhsa\+::\+COMPUTE\+\_\+\+PGM\+\_\+\+RSRC3\+\_\+\+GFX10\+\_\+\+PLUS}} =(SHARED\+\_\+\+VGPR\+\_\+\+COUNT, 0, 4)
+, \mbox{\hyperlink{namespacerocr_1_1llvm_1_1amdhsa_a0a806b04331e54566372d4557ab77128a4789279945d15e4e5dc9335e44150919}{rocr\+::llvm\+::amdhsa\+::\+COMPUTE\+\_\+\+PGM\+\_\+\+RSRC3\+\_\+\+GFX10\+\_\+\+PLUS}} =(SHARED\+\_\+\+VGPR\+\_\+\+COUNT, 0, 4)
+, \newline
+\mbox{\hyperlink{namespacerocr_1_1llvm_1_1amdhsa_a0a806b04331e54566372d4557ab77128a4789279945d15e4e5dc9335e44150919}{rocr\+::llvm\+::amdhsa\+::\+COMPUTE\+\_\+\+PGM\+\_\+\+RSRC3\+\_\+\+GFX10\+\_\+\+PLUS}} =(SHARED\+\_\+\+VGPR\+\_\+\+COUNT, 0, 4)
+, \mbox{\hyperlink{namespacerocr_1_1llvm_1_1amdhsa_a0a806b04331e54566372d4557ab77128a4789279945d15e4e5dc9335e44150919}{rocr\+::llvm\+::amdhsa\+::\+COMPUTE\+\_\+\+PGM\+\_\+\+RSRC3\+\_\+\+GFX10\+\_\+\+PLUS}} =(SHARED\+\_\+\+VGPR\+\_\+\+COUNT, 0, 4)
+ \}
+\item 
+enum \+: int32\+\_\+t \{ \newline
+\mbox{\hyperlink{namespacerocr_1_1llvm_1_1amdhsa_a2edfc54953fc4022b882af73d1fffc9aa3ceaeefe32224616526bec469d6f1226}{rocr\+::llvm\+::amdhsa\+::\+KERNEL\+\_\+\+CODE\+\_\+\+PROPERTY}} =(ENABLE\+\_\+\+SGPR\+\_\+\+PRIVATE\+\_\+\+SEGMENT\+\_\+\+BUFFER, 0, 1)
+, \mbox{\hyperlink{namespacerocr_1_1llvm_1_1amdhsa_a2edfc54953fc4022b882af73d1fffc9aa3ceaeefe32224616526bec469d6f1226}{rocr\+::llvm\+::amdhsa\+::\+KERNEL\+\_\+\+CODE\+\_\+\+PROPERTY}} =(ENABLE\+\_\+\+SGPR\+\_\+\+PRIVATE\+\_\+\+SEGMENT\+\_\+\+BUFFER, 0, 1)
+, \mbox{\hyperlink{namespacerocr_1_1llvm_1_1amdhsa_a2edfc54953fc4022b882af73d1fffc9aa3ceaeefe32224616526bec469d6f1226}{rocr\+::llvm\+::amdhsa\+::\+KERNEL\+\_\+\+CODE\+\_\+\+PROPERTY}} =(ENABLE\+\_\+\+SGPR\+\_\+\+PRIVATE\+\_\+\+SEGMENT\+\_\+\+BUFFER, 0, 1)
+, \mbox{\hyperlink{namespacerocr_1_1llvm_1_1amdhsa_a2edfc54953fc4022b882af73d1fffc9aa3ceaeefe32224616526bec469d6f1226}{rocr\+::llvm\+::amdhsa\+::\+KERNEL\+\_\+\+CODE\+\_\+\+PROPERTY}} =(ENABLE\+\_\+\+SGPR\+\_\+\+PRIVATE\+\_\+\+SEGMENT\+\_\+\+BUFFER, 0, 1)
+, \newline
+\mbox{\hyperlink{namespacerocr_1_1llvm_1_1amdhsa_a2edfc54953fc4022b882af73d1fffc9aa3ceaeefe32224616526bec469d6f1226}{rocr\+::llvm\+::amdhsa\+::\+KERNEL\+\_\+\+CODE\+\_\+\+PROPERTY}} =(ENABLE\+\_\+\+SGPR\+\_\+\+PRIVATE\+\_\+\+SEGMENT\+\_\+\+BUFFER, 0, 1)
+, \mbox{\hyperlink{namespacerocr_1_1llvm_1_1amdhsa_a2edfc54953fc4022b882af73d1fffc9aa3ceaeefe32224616526bec469d6f1226}{rocr\+::llvm\+::amdhsa\+::\+KERNEL\+\_\+\+CODE\+\_\+\+PROPERTY}} =(ENABLE\+\_\+\+SGPR\+\_\+\+PRIVATE\+\_\+\+SEGMENT\+\_\+\+BUFFER, 0, 1)
+, \mbox{\hyperlink{namespacerocr_1_1llvm_1_1amdhsa_a2edfc54953fc4022b882af73d1fffc9aa3ceaeefe32224616526bec469d6f1226}{rocr\+::llvm\+::amdhsa\+::\+KERNEL\+\_\+\+CODE\+\_\+\+PROPERTY}} =(ENABLE\+\_\+\+SGPR\+\_\+\+PRIVATE\+\_\+\+SEGMENT\+\_\+\+BUFFER, 0, 1)
+, \mbox{\hyperlink{namespacerocr_1_1llvm_1_1amdhsa_a2edfc54953fc4022b882af73d1fffc9aa3ceaeefe32224616526bec469d6f1226}{rocr\+::llvm\+::amdhsa\+::\+KERNEL\+\_\+\+CODE\+\_\+\+PROPERTY}} =(ENABLE\+\_\+\+SGPR\+\_\+\+PRIVATE\+\_\+\+SEGMENT\+\_\+\+BUFFER, 0, 1)
+, \newline
+\mbox{\hyperlink{namespacerocr_1_1llvm_1_1amdhsa_a2edfc54953fc4022b882af73d1fffc9aa3ceaeefe32224616526bec469d6f1226}{rocr\+::llvm\+::amdhsa\+::\+KERNEL\+\_\+\+CODE\+\_\+\+PROPERTY}} =(ENABLE\+\_\+\+SGPR\+\_\+\+PRIVATE\+\_\+\+SEGMENT\+\_\+\+BUFFER, 0, 1)
+, \mbox{\hyperlink{namespacerocr_1_1llvm_1_1amdhsa_a2edfc54953fc4022b882af73d1fffc9aa3ceaeefe32224616526bec469d6f1226}{rocr\+::llvm\+::amdhsa\+::\+KERNEL\+\_\+\+CODE\+\_\+\+PROPERTY}} =(ENABLE\+\_\+\+SGPR\+\_\+\+PRIVATE\+\_\+\+SEGMENT\+\_\+\+BUFFER, 0, 1)
+, \mbox{\hyperlink{namespacerocr_1_1llvm_1_1amdhsa_a2edfc54953fc4022b882af73d1fffc9aa3ceaeefe32224616526bec469d6f1226}{rocr\+::llvm\+::amdhsa\+::\+KERNEL\+\_\+\+CODE\+\_\+\+PROPERTY}} =(ENABLE\+\_\+\+SGPR\+\_\+\+PRIVATE\+\_\+\+SEGMENT\+\_\+\+BUFFER, 0, 1)
+ \}
+\item 
+enum \+: uint32\+\_\+t \{ \newline
+\mbox{\hyperlink{namespacerocr_1_1llvm_1_1amdhsa_a045357080becc73f593d09e1d8e78d56a0a5d8722a8ff2919c5f1103490a5ea27}{rocr\+::llvm\+::amdhsa\+::\+GROUP\+\_\+\+SEGMENT\+\_\+\+FIXED\+\_\+\+SIZE\+\_\+\+OFFSET}} = 0
+, \mbox{\hyperlink{namespacerocr_1_1llvm_1_1amdhsa_a045357080becc73f593d09e1d8e78d56ad7e260c57189c8111dfd0a6dbfd487a5}{rocr\+::llvm\+::amdhsa\+::\+PRIVATE\+\_\+\+SEGMENT\+\_\+\+FIXED\+\_\+\+SIZE\+\_\+\+OFFSET}} = 4
+, \mbox{\hyperlink{namespacerocr_1_1llvm_1_1amdhsa_a045357080becc73f593d09e1d8e78d56aa08a332eac39c1d82dfa10d20f3edf47}{rocr\+::llvm\+::amdhsa\+::\+KERNARG\+\_\+\+SIZE\+\_\+\+OFFSET}} = 8
+, \mbox{\hyperlink{namespacerocr_1_1llvm_1_1amdhsa_a045357080becc73f593d09e1d8e78d56ae323ba697fe34002269b89f49da613c4}{rocr\+::llvm\+::amdhsa\+::\+RESERVED0\+\_\+\+OFFSET}} = 12
+, \newline
+\mbox{\hyperlink{namespacerocr_1_1llvm_1_1amdhsa_a045357080becc73f593d09e1d8e78d56ad3863400cca934cec47a4741fdd25343}{rocr\+::llvm\+::amdhsa\+::\+KERNEL\+\_\+\+CODE\+\_\+\+ENTRY\+\_\+\+BYTE\+\_\+\+OFFSET\+\_\+\+OFFSET}} = 16
+, \mbox{\hyperlink{namespacerocr_1_1llvm_1_1amdhsa_a045357080becc73f593d09e1d8e78d56a1e52f6eba44dd8b22466cb8df410d8d5}{rocr\+::llvm\+::amdhsa\+::\+RESERVED1\+\_\+\+OFFSET}} = 24
+, \mbox{\hyperlink{namespacerocr_1_1llvm_1_1amdhsa_a045357080becc73f593d09e1d8e78d56acf740976de4b34dc11150c2ecb75fe16}{rocr\+::llvm\+::amdhsa\+::\+COMPUTE\+\_\+\+PGM\+\_\+\+RSRC3\+\_\+\+OFFSET}} = 44
+, \mbox{\hyperlink{namespacerocr_1_1llvm_1_1amdhsa_a045357080becc73f593d09e1d8e78d56a8f7d0c72e52b77134a84c9f2883f5f36}{rocr\+::llvm\+::amdhsa\+::\+COMPUTE\+\_\+\+PGM\+\_\+\+RSRC1\+\_\+\+OFFSET}} = 48
+, \newline
+\mbox{\hyperlink{namespacerocr_1_1llvm_1_1amdhsa_a045357080becc73f593d09e1d8e78d56abf246067b287cf60fa22c7d2d6b31077}{rocr\+::llvm\+::amdhsa\+::\+COMPUTE\+\_\+\+PGM\+\_\+\+RSRC2\+\_\+\+OFFSET}} = 52
+, \mbox{\hyperlink{namespacerocr_1_1llvm_1_1amdhsa_a045357080becc73f593d09e1d8e78d56a0131fce417bbde61fcae83e5ed475a2e}{rocr\+::llvm\+::amdhsa\+::\+KERNEL\+\_\+\+CODE\+\_\+\+PROPERTIES\+\_\+\+OFFSET}} = 56
+, \mbox{\hyperlink{namespacerocr_1_1llvm_1_1amdhsa_a045357080becc73f593d09e1d8e78d56a8969b025467f8aa36a678f9a8a50db26}{rocr\+::llvm\+::amdhsa\+::\+RESERVED2\+\_\+\+OFFSET}} = 58
+ \}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Macro Definition Documentation}
+\mbox{\Hypertarget{AMDHSAKernelDescriptor_8h_ae6a45f3d61391e87ca72159b73bed5f4}\label{AMDHSAKernelDescriptor_8h_ae6a45f3d61391e87ca72159b73bed5f4}} 
+\index{AMDHSAKernelDescriptor.h@{AMDHSAKernelDescriptor.h}!AMDHSA\_BITS\_ENUM\_ENTRY@{AMDHSA\_BITS\_ENUM\_ENTRY}}
+\index{AMDHSA\_BITS\_ENUM\_ENTRY@{AMDHSA\_BITS\_ENUM\_ENTRY}!AMDHSAKernelDescriptor.h@{AMDHSAKernelDescriptor.h}}
+\doxysubsubsection{\texorpdfstring{AMDHSA\_BITS\_ENUM\_ENTRY}{AMDHSA\_BITS\_ENUM\_ENTRY}}
+{\footnotesize\ttfamily \#define AMDHSA\+\_\+\+BITS\+\_\+\+ENUM\+\_\+\+ENTRY(\begin{DoxyParamCaption}\item[{}]{NAME,  }\item[{}]{SHIFT,  }\item[{}]{WIDTH }\end{DoxyParamCaption})}
+
+{\bfseries Value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{  NAME \#\# \_SHIFT = (SHIFT),                        \(\backslash\)}
+\DoxyCodeLine{  NAME \#\# \_WIDTH = (WIDTH),                        \(\backslash\)}
+\DoxyCodeLine{  NAME = (((1 << (WIDTH)) -\/ 1) << (SHIFT))}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{AMDHSAKernelDescriptor_8h_a286f2813b785a6b1d7f9c688580c2dc4}\label{AMDHSAKernelDescriptor_8h_a286f2813b785a6b1d7f9c688580c2dc4}} 
+\index{AMDHSAKernelDescriptor.h@{AMDHSAKernelDescriptor.h}!AMDHSA\_BITS\_GET@{AMDHSA\_BITS\_GET}}
+\index{AMDHSA\_BITS\_GET@{AMDHSA\_BITS\_GET}!AMDHSAKernelDescriptor.h@{AMDHSAKernelDescriptor.h}}
+\doxysubsubsection{\texorpdfstring{AMDHSA\_BITS\_GET}{AMDHSA\_BITS\_GET}}
+{\footnotesize\ttfamily \#define AMDHSA\+\_\+\+BITS\+\_\+\+GET(\begin{DoxyParamCaption}\item[{}]{SRC,  }\item[{}]{MSK }\end{DoxyParamCaption})~((SRC \& MSK) $>$$>$ MSK \#\# \+\_\+\+SHIFT)}
+
+\mbox{\Hypertarget{AMDHSAKernelDescriptor_8h_adce610366807c48cc27d759a245b20cd}\label{AMDHSAKernelDescriptor_8h_adce610366807c48cc27d759a245b20cd}} 
+\index{AMDHSAKernelDescriptor.h@{AMDHSAKernelDescriptor.h}!AMDHSA\_BITS\_SET@{AMDHSA\_BITS\_SET}}
+\index{AMDHSA\_BITS\_SET@{AMDHSA\_BITS\_SET}!AMDHSAKernelDescriptor.h@{AMDHSAKernelDescriptor.h}}
+\doxysubsubsection{\texorpdfstring{AMDHSA\_BITS\_SET}{AMDHSA\_BITS\_SET}}
+{\footnotesize\ttfamily \#define AMDHSA\+\_\+\+BITS\+\_\+\+SET(\begin{DoxyParamCaption}\item[{}]{DST,  }\item[{}]{MSK,  }\item[{}]{VAL }\end{DoxyParamCaption})}
+
+{\bfseries Value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{  DST \&= \string~MSK;                          \(\backslash\)}
+\DoxyCodeLine{  DST |= ((VAL << MSK \#\# \_SHIFT) \& MSK)}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{AMDHSAKernelDescriptor_8h_a34bafff22e321250ea590779a90f0fab}\label{AMDHSAKernelDescriptor_8h_a34bafff22e321250ea590779a90f0fab}} 
+\index{AMDHSAKernelDescriptor.h@{AMDHSAKernelDescriptor.h}!COMPUTE\_PGM\_RSRC1@{COMPUTE\_PGM\_RSRC1}}
+\index{COMPUTE\_PGM\_RSRC1@{COMPUTE\_PGM\_RSRC1}!AMDHSAKernelDescriptor.h@{AMDHSAKernelDescriptor.h}}
+\doxysubsubsection{\texorpdfstring{COMPUTE\_PGM\_RSRC1}{COMPUTE\_PGM\_RSRC1}}
+{\footnotesize\ttfamily \#define COMPUTE\+\_\+\+PGM\+\_\+\+RSRC1(\begin{DoxyParamCaption}\item[{}]{NAME,  }\item[{}]{SHIFT,  }\item[{}]{WIDTH }\end{DoxyParamCaption})~  \mbox{\hyperlink{AMDHSAKernelDescriptor_8h_ae6a45f3d61391e87ca72159b73bed5f4}{AMDHSA\+\_\+\+BITS\+\_\+\+ENUM\+\_\+\+ENTRY}}(COMPUTE\+\_\+\+PGM\+\_\+\+RSRC1\+\_\+ \#\# NAME, SHIFT, WIDTH)}
+
+\mbox{\Hypertarget{AMDHSAKernelDescriptor_8h_a6e0a976b9d48db21751f62e812b4b588}\label{AMDHSAKernelDescriptor_8h_a6e0a976b9d48db21751f62e812b4b588}} 
+\index{AMDHSAKernelDescriptor.h@{AMDHSAKernelDescriptor.h}!COMPUTE\_PGM\_RSRC2@{COMPUTE\_PGM\_RSRC2}}
+\index{COMPUTE\_PGM\_RSRC2@{COMPUTE\_PGM\_RSRC2}!AMDHSAKernelDescriptor.h@{AMDHSAKernelDescriptor.h}}
+\doxysubsubsection{\texorpdfstring{COMPUTE\_PGM\_RSRC2}{COMPUTE\_PGM\_RSRC2}}
+{\footnotesize\ttfamily \#define COMPUTE\+\_\+\+PGM\+\_\+\+RSRC2(\begin{DoxyParamCaption}\item[{}]{NAME,  }\item[{}]{SHIFT,  }\item[{}]{WIDTH }\end{DoxyParamCaption})~  \mbox{\hyperlink{AMDHSAKernelDescriptor_8h_ae6a45f3d61391e87ca72159b73bed5f4}{AMDHSA\+\_\+\+BITS\+\_\+\+ENUM\+\_\+\+ENTRY}}(COMPUTE\+\_\+\+PGM\+\_\+\+RSRC2\+\_\+ \#\# NAME, SHIFT, WIDTH)}
+
+\mbox{\Hypertarget{AMDHSAKernelDescriptor_8h_a7aebc44cfcfdc2d81ddf83350a2ed037}\label{AMDHSAKernelDescriptor_8h_a7aebc44cfcfdc2d81ddf83350a2ed037}} 
+\index{AMDHSAKernelDescriptor.h@{AMDHSAKernelDescriptor.h}!COMPUTE\_PGM\_RSRC3\_GFX10\_PLUS@{COMPUTE\_PGM\_RSRC3\_GFX10\_PLUS}}
+\index{COMPUTE\_PGM\_RSRC3\_GFX10\_PLUS@{COMPUTE\_PGM\_RSRC3\_GFX10\_PLUS}!AMDHSAKernelDescriptor.h@{AMDHSAKernelDescriptor.h}}
+\doxysubsubsection{\texorpdfstring{COMPUTE\_PGM\_RSRC3\_GFX10\_PLUS}{COMPUTE\_PGM\_RSRC3\_GFX10\_PLUS}}
+{\footnotesize\ttfamily \#define COMPUTE\+\_\+\+PGM\+\_\+\+RSRC3\+\_\+\+GFX10\+\_\+\+PLUS(\begin{DoxyParamCaption}\item[{}]{NAME,  }\item[{}]{SHIFT,  }\item[{}]{WIDTH }\end{DoxyParamCaption})~  \mbox{\hyperlink{AMDHSAKernelDescriptor_8h_ae6a45f3d61391e87ca72159b73bed5f4}{AMDHSA\+\_\+\+BITS\+\_\+\+ENUM\+\_\+\+ENTRY}}(COMPUTE\+\_\+\+PGM\+\_\+\+RSRC3\+\_\+\+GFX10\+\_\+\+PLUS\+\_\+ \#\# NAME, SHIFT, WIDTH)}
+
+\mbox{\Hypertarget{AMDHSAKernelDescriptor_8h_ab3b83c6117b9ca484569f88e2f472551}\label{AMDHSAKernelDescriptor_8h_ab3b83c6117b9ca484569f88e2f472551}} 
+\index{AMDHSAKernelDescriptor.h@{AMDHSAKernelDescriptor.h}!COMPUTE\_PGM\_RSRC3\_GFX90A@{COMPUTE\_PGM\_RSRC3\_GFX90A}}
+\index{COMPUTE\_PGM\_RSRC3\_GFX90A@{COMPUTE\_PGM\_RSRC3\_GFX90A}!AMDHSAKernelDescriptor.h@{AMDHSAKernelDescriptor.h}}
+\doxysubsubsection{\texorpdfstring{COMPUTE\_PGM\_RSRC3\_GFX90A}{COMPUTE\_PGM\_RSRC3\_GFX90A}}
+{\footnotesize\ttfamily \#define COMPUTE\+\_\+\+PGM\+\_\+\+RSRC3\+\_\+\+GFX90A(\begin{DoxyParamCaption}\item[{}]{NAME,  }\item[{}]{SHIFT,  }\item[{}]{WIDTH }\end{DoxyParamCaption})~  \mbox{\hyperlink{AMDHSAKernelDescriptor_8h_ae6a45f3d61391e87ca72159b73bed5f4}{AMDHSA\+\_\+\+BITS\+\_\+\+ENUM\+\_\+\+ENTRY}}(COMPUTE\+\_\+\+PGM\+\_\+\+RSRC3\+\_\+\+GFX90\+A\+\_\+ \#\# NAME, SHIFT, WIDTH)}
+
+\mbox{\Hypertarget{AMDHSAKernelDescriptor_8h_ae106ed3b538dc6930bd46ac24be124e0}\label{AMDHSAKernelDescriptor_8h_ae106ed3b538dc6930bd46ac24be124e0}} 
+\index{AMDHSAKernelDescriptor.h@{AMDHSAKernelDescriptor.h}!KERNEL\_CODE\_PROPERTY@{KERNEL\_CODE\_PROPERTY}}
+\index{KERNEL\_CODE\_PROPERTY@{KERNEL\_CODE\_PROPERTY}!AMDHSAKernelDescriptor.h@{AMDHSAKernelDescriptor.h}}
+\doxysubsubsection{\texorpdfstring{KERNEL\_CODE\_PROPERTY}{KERNEL\_CODE\_PROPERTY}}
+{\footnotesize\ttfamily \#define KERNEL\+\_\+\+CODE\+\_\+\+PROPERTY(\begin{DoxyParamCaption}\item[{}]{NAME,  }\item[{}]{SHIFT,  }\item[{}]{WIDTH }\end{DoxyParamCaption})~  \mbox{\hyperlink{AMDHSAKernelDescriptor_8h_ae6a45f3d61391e87ca72159b73bed5f4}{AMDHSA\+\_\+\+BITS\+\_\+\+ENUM\+\_\+\+ENTRY}}(KERNEL\+\_\+\+CODE\+\_\+\+PROPERTY\+\_\+ \#\# NAME, SHIFT, WIDTH)}
+
+\mbox{\Hypertarget{AMDHSAKernelDescriptor_8h_a276e8a32e0bbf024aadd9420b8f2d3b3}\label{AMDHSAKernelDescriptor_8h_a276e8a32e0bbf024aadd9420b8f2d3b3}} 
+\index{AMDHSAKernelDescriptor.h@{AMDHSAKernelDescriptor.h}!offsetof@{offsetof}}
+\index{offsetof@{offsetof}!AMDHSAKernelDescriptor.h@{AMDHSAKernelDescriptor.h}}
+\doxysubsubsection{\texorpdfstring{offsetof}{offsetof}}
+{\footnotesize\ttfamily \#define offsetof(\begin{DoxyParamCaption}\item[{}]{TYPE,  }\item[{}]{MEMBER }\end{DoxyParamCaption})~((size\+\_\+t)\&((TYPE$\ast$)0)-\/$>$MEMBER)}
+

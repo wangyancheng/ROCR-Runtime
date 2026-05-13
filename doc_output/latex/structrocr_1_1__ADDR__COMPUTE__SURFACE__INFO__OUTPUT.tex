@@ -1,0 +1,451 @@
+\hypertarget{structrocr_1_1__ADDR__COMPUTE__SURFACE__INFO__OUTPUT}{}\doxysection{rocr\+::\+\_\+\+ADDR\+\_\+\+COMPUTE\+\_\+\+SURFACE\+\_\+\+INFO\+\_\+\+OUTPUT Struct Reference}
+\label{structrocr_1_1__ADDR__COMPUTE__SURFACE__INFO__OUTPUT}\index{rocr::\_ADDR\_COMPUTE\_SURFACE\_INFO\_OUTPUT@{rocr::\_ADDR\_COMPUTE\_SURFACE\_INFO\_OUTPUT}}
+
+
+Output structure for Addr\+Compute\+Surf\+Info.  
+
+
+
+
+{\ttfamily \#include $<$addrinterface.\+h$>$}
+
+
+
+Collaboration diagram for rocr\+::\+\_\+\+ADDR\+\_\+\+COMPUTE\+\_\+\+SURFACE\+\_\+\+INFO\+\_\+\+OUTPUT\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{structrocr_1_1__ADDR__COMPUTE__SURFACE__INFO__OUTPUT__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{addrtypes_8h_af5a2be58a28390f9a494538f34054637}{UINT\+\_\+32}} \mbox{\hyperlink{structrocr_1_1__ADDR__COMPUTE__SURFACE__INFO__OUTPUT_a308453002b3a65b99d822a044217c3c9}{size}}
+\begin{DoxyCompactList}\small\item\em Size of this structure in bytes. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{addrtypes_8h_af5a2be58a28390f9a494538f34054637}{UINT\+\_\+32}} \mbox{\hyperlink{structrocr_1_1__ADDR__COMPUTE__SURFACE__INFO__OUTPUT_a80d44fe420793d01519f3dbd32396851}{pitch}}
+\begin{DoxyCompactList}\small\item\em Pitch in elements (in blocks for compressed formats) \end{DoxyCompactList}\item 
+\mbox{\hyperlink{addrtypes_8h_af5a2be58a28390f9a494538f34054637}{UINT\+\_\+32}} \mbox{\hyperlink{structrocr_1_1__ADDR__COMPUTE__SURFACE__INFO__OUTPUT_a8b2227febe1fe5c061b081c4a40b5c1e}{height}}
+\begin{DoxyCompactList}\small\item\em Height in elements (in blocks for compressed formats) \end{DoxyCompactList}\item 
+\mbox{\hyperlink{addrtypes_8h_af5a2be58a28390f9a494538f34054637}{UINT\+\_\+32}} \mbox{\hyperlink{structrocr_1_1__ADDR__COMPUTE__SURFACE__INFO__OUTPUT_a659eb4c49511310182a267fd05a82bd5}{depth}}
+\begin{DoxyCompactList}\small\item\em Number of slice/depth. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{addrtypes_8h_ac4116bb9a5e80b5cb845d4f2674c160f}{UINT\+\_\+64}} \mbox{\hyperlink{structrocr_1_1__ADDR__COMPUTE__SURFACE__INFO__OUTPUT_a3f6605cd8fb8cb6682ec8dba063a9924}{surf\+Size}}
+\begin{DoxyCompactList}\small\item\em Surface size in bytes. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{addrtypes_8h_a9dffa8321911d7791c03fe3a233a34e7}{Addr\+Tile\+Mode}} \mbox{\hyperlink{structrocr_1_1__ADDR__COMPUTE__SURFACE__INFO__OUTPUT_ad204da97a20dfdf87b7d332240d6bb98}{tile\+Mode}}
+\begin{DoxyCompactList}\small\item\em Actual tile mode. May differ from that in input. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{addrtypes_8h_af5a2be58a28390f9a494538f34054637}{UINT\+\_\+32}} \mbox{\hyperlink{structrocr_1_1__ADDR__COMPUTE__SURFACE__INFO__OUTPUT_aef9ab91e900b055a26f89f881992e6bb}{base\+Align}}
+\begin{DoxyCompactList}\small\item\em Base address alignment. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{addrtypes_8h_af5a2be58a28390f9a494538f34054637}{UINT\+\_\+32}} \mbox{\hyperlink{structrocr_1_1__ADDR__COMPUTE__SURFACE__INFO__OUTPUT_a0544558dbfa6767bcc95d652e499d300}{pitch\+Align}}
+\begin{DoxyCompactList}\small\item\em Pitch alignment, in elements. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{addrtypes_8h_af5a2be58a28390f9a494538f34054637}{UINT\+\_\+32}} \mbox{\hyperlink{structrocr_1_1__ADDR__COMPUTE__SURFACE__INFO__OUTPUT_a495fee95a85c24322ce73cde5968872a}{height\+Align}}
+\begin{DoxyCompactList}\small\item\em Height alignment, in elements. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{addrtypes_8h_af5a2be58a28390f9a494538f34054637}{UINT\+\_\+32}} \mbox{\hyperlink{structrocr_1_1__ADDR__COMPUTE__SURFACE__INFO__OUTPUT_aaf7caba5fec7734f8675a750b319c527}{depth\+Align}}
+\begin{DoxyCompactList}\small\item\em Depth alignment, aligned to thickness, for 3d texture. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{addrtypes_8h_af5a2be58a28390f9a494538f34054637}{UINT\+\_\+32}} \mbox{\hyperlink{structrocr_1_1__ADDR__COMPUTE__SURFACE__INFO__OUTPUT_a7f0e5a5a514954ea0243fe139354fb9f}{bpp}}
+\begin{DoxyCompactList}\small\item\em Bits per elements (e.\+g. blocks for BCn, 1/3 for 96bit) \end{DoxyCompactList}\item 
+\mbox{\hyperlink{addrtypes_8h_af5a2be58a28390f9a494538f34054637}{UINT\+\_\+32}} \mbox{\hyperlink{structrocr_1_1__ADDR__COMPUTE__SURFACE__INFO__OUTPUT_ab48979d811c3098328e392a6929b8c55}{pixel\+Pitch}}
+\begin{DoxyCompactList}\small\item\em Pitch in original pixels. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{addrtypes_8h_af5a2be58a28390f9a494538f34054637}{UINT\+\_\+32}} \mbox{\hyperlink{structrocr_1_1__ADDR__COMPUTE__SURFACE__INFO__OUTPUT_a5ac227db0363fa1b1660302c1ca351a4}{pixel\+Height}}
+\begin{DoxyCompactList}\small\item\em Height in original pixels. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{addrtypes_8h_af5a2be58a28390f9a494538f34054637}{UINT\+\_\+32}} \mbox{\hyperlink{structrocr_1_1__ADDR__COMPUTE__SURFACE__INFO__OUTPUT_ab2147c5b4cb1c31ad2de737a74f98905}{pixel\+Bits}}
+\begin{DoxyCompactList}\small\item\em Original bits per pixel, passed from input. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{addrtypes_8h_ac4116bb9a5e80b5cb845d4f2674c160f}{UINT\+\_\+64}} \mbox{\hyperlink{structrocr_1_1__ADDR__COMPUTE__SURFACE__INFO__OUTPUT_a646d84c0c161ed83bc06e161c9e4063d}{slice\+Size}}
+\item 
+\mbox{\hyperlink{addrtypes_8h_af5a2be58a28390f9a494538f34054637}{UINT\+\_\+32}} \mbox{\hyperlink{structrocr_1_1__ADDR__COMPUTE__SURFACE__INFO__OUTPUT_a6af0bd6b97c200476d973020c50ffec3}{pitch\+Tile\+Max}}
+\begin{DoxyCompactList}\small\item\em PITCH\+\_\+\+TILE\+\_\+\+MAX value for h/w register. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{addrtypes_8h_af5a2be58a28390f9a494538f34054637}{UINT\+\_\+32}} \mbox{\hyperlink{structrocr_1_1__ADDR__COMPUTE__SURFACE__INFO__OUTPUT_a820c3230c7d521bc1ee8e15722478625}{height\+Tile\+Max}}
+\begin{DoxyCompactList}\small\item\em HEIGHT\+\_\+\+TILE\+\_\+\+MAX value for h/w register. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{addrtypes_8h_af5a2be58a28390f9a494538f34054637}{UINT\+\_\+32}} \mbox{\hyperlink{structrocr_1_1__ADDR__COMPUTE__SURFACE__INFO__OUTPUT_a61c7812a1b6c27b1fc7449205adf9e2f}{slice\+Tile\+Max}}
+\begin{DoxyCompactList}\small\item\em SLICE\+\_\+\+TILE\+\_\+\+MAX value for h/w register. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{addrtypes_8h_af5a2be58a28390f9a494538f34054637}{UINT\+\_\+32}} \mbox{\hyperlink{structrocr_1_1__ADDR__COMPUTE__SURFACE__INFO__OUTPUT_ad139c81e89218f9efed0caf6ebdba314}{num\+Samples}}
+\begin{DoxyCompactList}\small\item\em Pass the effective num\+Samples processed in this call. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{namespacerocr_a22dcb0c31be418f31f99d0311c45522c}{ADDR\+\_\+\+TILEINFO}} $\ast$ \mbox{\hyperlink{structrocr_1_1__ADDR__COMPUTE__SURFACE__INFO__OUTPUT_a428336fdec2de5c9d3bfc6bbc50f54dc}{p\+Tile\+Info}}
+\begin{DoxyCompactList}\small\item\em r800 and later HWL parameters \end{DoxyCompactList}\item 
+\mbox{\hyperlink{addrtypes_8h_a7dd4750472a9413e05a56dbb7e9692c7}{Addr\+Tile\+Type}} \mbox{\hyperlink{structrocr_1_1__ADDR__COMPUTE__SURFACE__INFO__OUTPUT_af9892ae65f75535397fc0b127443f864}{tile\+Type}}
+\begin{DoxyCompactList}\small\item\em Micro tiling type, only valid when tile\+Index != -\/1. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{addrtypes_8h_adacc69c9db3b9adfc072b838ebf2bb0e}{INT\+\_\+32}} \mbox{\hyperlink{structrocr_1_1__ADDR__COMPUTE__SURFACE__INFO__OUTPUT_a8592216f34b6e8212cf15c296b972a1c}{tile\+Index}}
+\begin{DoxyCompactList}\small\item\em Tile index, MAY be \char`\"{}downgraded\char`\"{}. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{addrtypes_8h_adacc69c9db3b9adfc072b838ebf2bb0e}{INT\+\_\+32}} \mbox{\hyperlink{structrocr_1_1__ADDR__COMPUTE__SURFACE__INFO__OUTPUT_a66b1766570d6ce6adb0192e6ec58852f}{macro\+Mode\+Index}}
+\item 
+\begin{tabbing}
+xx\=xx\=xx\=xx\=xx\=xx\=xx\=xx\=xx\=\kill
+struct \{\\
+\>\mbox{\hyperlink{addrtypes_8h_af5a2be58a28390f9a494538f34054637}{UINT\_32}} \mbox{\hyperlink{structrocr_1_1__ADDR__COMPUTE__SURFACE__INFO__OUTPUT_a6ec00af0ea54b9a82a04b3f030ad2dc6}{last2DLevel}}: 1\\
+\>\>{\em Special information to work around SI mipmap swizzle bug UBTS \#317508. }\\
+\>\mbox{\hyperlink{addrtypes_8h_af5a2be58a28390f9a494538f34054637}{UINT\_32}} \mbox{\hyperlink{structrocr_1_1__ADDR__COMPUTE__SURFACE__INFO__OUTPUT_a09de8416356b2da1257be922effa8b0e}{tcCompatible}}: 1\\
+\>\>{\em If the surface can be shader compatible. }\\
+\>\mbox{\hyperlink{addrtypes_8h_af5a2be58a28390f9a494538f34054637}{UINT\_32}} \mbox{\hyperlink{structrocr_1_1__ADDR__COMPUTE__SURFACE__INFO__OUTPUT_a2668ef3bef4891f939bb4f486e242e6e}{dccUnsupport}}: 1\\
+\>\>{\em If the surface can support DCC compressed rendering. }\\
+\>\mbox{\hyperlink{addrtypes_8h_af5a2be58a28390f9a494538f34054637}{UINT\_32}} \mbox{\hyperlink{structrocr_1_1__ADDR__COMPUTE__SURFACE__INFO__OUTPUT_a423321facbbb1dc0c75f2f47d452bc89}{prtTileIndex}}: 1\\
+\>\mbox{\hyperlink{addrtypes_8h_af5a2be58a28390f9a494538f34054637}{UINT\_32}} \mbox{\hyperlink{structrocr_1_1__ADDR__COMPUTE__SURFACE__INFO__OUTPUT_a5a98fc2ef8725833afa5ae64fbe07063}{reserved}}:28\\
+\>\>{\em Reserved bits. }\\
+\}; \\
+
+\end{tabbing}\begin{DoxyCompactList}\small\item\em Output flags. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{addrtypes_8h_af5a2be58a28390f9a494538f34054637}{UINT\+\_\+32}} \mbox{\hyperlink{structrocr_1_1__ADDR__COMPUTE__SURFACE__INFO__OUTPUT_af7dc58c5fcc9449ce791440306b2f889}{equation\+Index}}
+\begin{DoxyCompactList}\small\item\em Equation index in the equation table;. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{addrtypes_8h_af5a2be58a28390f9a494538f34054637}{UINT\+\_\+32}} \mbox{\hyperlink{structrocr_1_1__ADDR__COMPUTE__SURFACE__INFO__OUTPUT_ae746869367487b227fb7cdaf43f78782}{block\+Width}}
+\begin{DoxyCompactList}\small\item\em Width in element inside one block(1D-\/$>$Micro, 2D-\/$>$Macro) \end{DoxyCompactList}\item 
+\mbox{\hyperlink{addrtypes_8h_af5a2be58a28390f9a494538f34054637}{UINT\+\_\+32}} \mbox{\hyperlink{structrocr_1_1__ADDR__COMPUTE__SURFACE__INFO__OUTPUT_a107a28c892b45cae89a6955ab8f406ba}{block\+Height}}
+\begin{DoxyCompactList}\small\item\em Height in element inside one block(1D-\/$>$Micro, 2D-\/$>$Macro) \end{DoxyCompactList}\item 
+\mbox{\hyperlink{addrtypes_8h_af5a2be58a28390f9a494538f34054637}{UINT\+\_\+32}} \mbox{\hyperlink{structrocr_1_1__ADDR__COMPUTE__SURFACE__INFO__OUTPUT_a60c5e188f9ca11e3309e7972fab6e18e}{block\+Slices}}
+\begin{DoxyCompactList}\small\item\em Slice number inside one block(1D-\/$>$Micro, 2D-\/$>$Macro) \end{DoxyCompactList}\item 
+\mbox{\hyperlink{namespacerocr_a4a5750966ab60451cf4c70ba18e6fab2}{ADDR\+\_\+\+QBSTEREOINFO}} $\ast$ \mbox{\hyperlink{structrocr_1_1__ADDR__COMPUTE__SURFACE__INFO__OUTPUT_abe01a22cf570306910b550564cb7990b}{p\+Stereo\+Info}}
+\begin{DoxyCompactList}\small\item\em Stereo info. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{addrtypes_8h_adacc69c9db3b9adfc072b838ebf2bb0e}{INT\+\_\+32}} \mbox{\hyperlink{structrocr_1_1__ADDR__COMPUTE__SURFACE__INFO__OUTPUT_a6d3ed828783f97855d42ff30bb992dc6}{stencil\+Tile\+Idx}}
+\begin{DoxyCompactList}\small\item\em stencil tile index output when match\+Stencil\+Tile\+Cfg was set \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Output structure for Addr\+Compute\+Surf\+Info. 
+
+ADDR\+\_\+\+COMPUTE\+\_\+\+SURFACE\+\_\+\+INFO\+\_\+\+OUTPUT
+
+\begin{DoxyNote}{Note}
+Element\+: Addr\+Lib unit for computing. e.\+g. BCn\+: 4x4 blocks; R32\+B32\+B32\+: 32bit with 3x pitch Pixel\+: Original pixel 
+\end{DoxyNote}
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{structrocr_1_1__ADDR__COMPUTE__SURFACE__INFO__OUTPUT_a3eff3d80c85aad97cbe60a34b7926dcf}\label{structrocr_1_1__ADDR__COMPUTE__SURFACE__INFO__OUTPUT_a3eff3d80c85aad97cbe60a34b7926dcf}} 
+\doxysubsubsection{\texorpdfstring{}{}}
+{\footnotesize\ttfamily struct \{ ... \} }
+
+
+
+Output flags. 
+
+\mbox{\Hypertarget{structrocr_1_1__ADDR__COMPUTE__SURFACE__INFO__OUTPUT_aef9ab91e900b055a26f89f881992e6bb}\label{structrocr_1_1__ADDR__COMPUTE__SURFACE__INFO__OUTPUT_aef9ab91e900b055a26f89f881992e6bb}} 
+\index{rocr::\_ADDR\_COMPUTE\_SURFACE\_INFO\_OUTPUT@{rocr::\_ADDR\_COMPUTE\_SURFACE\_INFO\_OUTPUT}!baseAlign@{baseAlign}}
+\index{baseAlign@{baseAlign}!rocr::\_ADDR\_COMPUTE\_SURFACE\_INFO\_OUTPUT@{rocr::\_ADDR\_COMPUTE\_SURFACE\_INFO\_OUTPUT}}
+\doxysubsubsection{\texorpdfstring{baseAlign}{baseAlign}}
+{\footnotesize\ttfamily \mbox{\hyperlink{addrtypes_8h_af5a2be58a28390f9a494538f34054637}{UINT\+\_\+32}} rocr\+::\+\_\+\+ADDR\+\_\+\+COMPUTE\+\_\+\+SURFACE\+\_\+\+INFO\+\_\+\+OUTPUT\+::base\+Align}
+
+
+
+Base address alignment. 
+
+\mbox{\Hypertarget{structrocr_1_1__ADDR__COMPUTE__SURFACE__INFO__OUTPUT_a107a28c892b45cae89a6955ab8f406ba}\label{structrocr_1_1__ADDR__COMPUTE__SURFACE__INFO__OUTPUT_a107a28c892b45cae89a6955ab8f406ba}} 
+\index{rocr::\_ADDR\_COMPUTE\_SURFACE\_INFO\_OUTPUT@{rocr::\_ADDR\_COMPUTE\_SURFACE\_INFO\_OUTPUT}!blockHeight@{blockHeight}}
+\index{blockHeight@{blockHeight}!rocr::\_ADDR\_COMPUTE\_SURFACE\_INFO\_OUTPUT@{rocr::\_ADDR\_COMPUTE\_SURFACE\_INFO\_OUTPUT}}
+\doxysubsubsection{\texorpdfstring{blockHeight}{blockHeight}}
+{\footnotesize\ttfamily \mbox{\hyperlink{addrtypes_8h_af5a2be58a28390f9a494538f34054637}{UINT\+\_\+32}} rocr\+::\+\_\+\+ADDR\+\_\+\+COMPUTE\+\_\+\+SURFACE\+\_\+\+INFO\+\_\+\+OUTPUT\+::block\+Height}
+
+
+
+Height in element inside one block(1D-\/$>$Micro, 2D-\/$>$Macro) 
+
+\mbox{\Hypertarget{structrocr_1_1__ADDR__COMPUTE__SURFACE__INFO__OUTPUT_a60c5e188f9ca11e3309e7972fab6e18e}\label{structrocr_1_1__ADDR__COMPUTE__SURFACE__INFO__OUTPUT_a60c5e188f9ca11e3309e7972fab6e18e}} 
+\index{rocr::\_ADDR\_COMPUTE\_SURFACE\_INFO\_OUTPUT@{rocr::\_ADDR\_COMPUTE\_SURFACE\_INFO\_OUTPUT}!blockSlices@{blockSlices}}
+\index{blockSlices@{blockSlices}!rocr::\_ADDR\_COMPUTE\_SURFACE\_INFO\_OUTPUT@{rocr::\_ADDR\_COMPUTE\_SURFACE\_INFO\_OUTPUT}}
+\doxysubsubsection{\texorpdfstring{blockSlices}{blockSlices}}
+{\footnotesize\ttfamily \mbox{\hyperlink{addrtypes_8h_af5a2be58a28390f9a494538f34054637}{UINT\+\_\+32}} rocr\+::\+\_\+\+ADDR\+\_\+\+COMPUTE\+\_\+\+SURFACE\+\_\+\+INFO\+\_\+\+OUTPUT\+::block\+Slices}
+
+
+
+Slice number inside one block(1D-\/$>$Micro, 2D-\/$>$Macro) 
+
+\mbox{\Hypertarget{structrocr_1_1__ADDR__COMPUTE__SURFACE__INFO__OUTPUT_ae746869367487b227fb7cdaf43f78782}\label{structrocr_1_1__ADDR__COMPUTE__SURFACE__INFO__OUTPUT_ae746869367487b227fb7cdaf43f78782}} 
+\index{rocr::\_ADDR\_COMPUTE\_SURFACE\_INFO\_OUTPUT@{rocr::\_ADDR\_COMPUTE\_SURFACE\_INFO\_OUTPUT}!blockWidth@{blockWidth}}
+\index{blockWidth@{blockWidth}!rocr::\_ADDR\_COMPUTE\_SURFACE\_INFO\_OUTPUT@{rocr::\_ADDR\_COMPUTE\_SURFACE\_INFO\_OUTPUT}}
+\doxysubsubsection{\texorpdfstring{blockWidth}{blockWidth}}
+{\footnotesize\ttfamily \mbox{\hyperlink{addrtypes_8h_af5a2be58a28390f9a494538f34054637}{UINT\+\_\+32}} rocr\+::\+\_\+\+ADDR\+\_\+\+COMPUTE\+\_\+\+SURFACE\+\_\+\+INFO\+\_\+\+OUTPUT\+::block\+Width}
+
+
+
+Width in element inside one block(1D-\/$>$Micro, 2D-\/$>$Macro) 
+
+\mbox{\Hypertarget{structrocr_1_1__ADDR__COMPUTE__SURFACE__INFO__OUTPUT_a7f0e5a5a514954ea0243fe139354fb9f}\label{structrocr_1_1__ADDR__COMPUTE__SURFACE__INFO__OUTPUT_a7f0e5a5a514954ea0243fe139354fb9f}} 
+\index{rocr::\_ADDR\_COMPUTE\_SURFACE\_INFO\_OUTPUT@{rocr::\_ADDR\_COMPUTE\_SURFACE\_INFO\_OUTPUT}!bpp@{bpp}}
+\index{bpp@{bpp}!rocr::\_ADDR\_COMPUTE\_SURFACE\_INFO\_OUTPUT@{rocr::\_ADDR\_COMPUTE\_SURFACE\_INFO\_OUTPUT}}
+\doxysubsubsection{\texorpdfstring{bpp}{bpp}}
+{\footnotesize\ttfamily \mbox{\hyperlink{addrtypes_8h_af5a2be58a28390f9a494538f34054637}{UINT\+\_\+32}} rocr\+::\+\_\+\+ADDR\+\_\+\+COMPUTE\+\_\+\+SURFACE\+\_\+\+INFO\+\_\+\+OUTPUT\+::bpp}
+
+
+
+Bits per elements (e.\+g. blocks for BCn, 1/3 for 96bit) 
+
+\mbox{\Hypertarget{structrocr_1_1__ADDR__COMPUTE__SURFACE__INFO__OUTPUT_a2668ef3bef4891f939bb4f486e242e6e}\label{structrocr_1_1__ADDR__COMPUTE__SURFACE__INFO__OUTPUT_a2668ef3bef4891f939bb4f486e242e6e}} 
+\index{rocr::\_ADDR\_COMPUTE\_SURFACE\_INFO\_OUTPUT@{rocr::\_ADDR\_COMPUTE\_SURFACE\_INFO\_OUTPUT}!dccUnsupport@{dccUnsupport}}
+\index{dccUnsupport@{dccUnsupport}!rocr::\_ADDR\_COMPUTE\_SURFACE\_INFO\_OUTPUT@{rocr::\_ADDR\_COMPUTE\_SURFACE\_INFO\_OUTPUT}}
+\doxysubsubsection{\texorpdfstring{dccUnsupport}{dccUnsupport}}
+{\footnotesize\ttfamily \mbox{\hyperlink{addrtypes_8h_af5a2be58a28390f9a494538f34054637}{UINT\+\_\+32}} rocr\+::\+\_\+\+ADDR\+\_\+\+COMPUTE\+\_\+\+SURFACE\+\_\+\+INFO\+\_\+\+OUTPUT\+::dcc\+Unsupport}
+
+
+
+If the surface can support DCC compressed rendering. 
+
+\mbox{\Hypertarget{structrocr_1_1__ADDR__COMPUTE__SURFACE__INFO__OUTPUT_a659eb4c49511310182a267fd05a82bd5}\label{structrocr_1_1__ADDR__COMPUTE__SURFACE__INFO__OUTPUT_a659eb4c49511310182a267fd05a82bd5}} 
+\index{rocr::\_ADDR\_COMPUTE\_SURFACE\_INFO\_OUTPUT@{rocr::\_ADDR\_COMPUTE\_SURFACE\_INFO\_OUTPUT}!depth@{depth}}
+\index{depth@{depth}!rocr::\_ADDR\_COMPUTE\_SURFACE\_INFO\_OUTPUT@{rocr::\_ADDR\_COMPUTE\_SURFACE\_INFO\_OUTPUT}}
+\doxysubsubsection{\texorpdfstring{depth}{depth}}
+{\footnotesize\ttfamily \mbox{\hyperlink{addrtypes_8h_af5a2be58a28390f9a494538f34054637}{UINT\+\_\+32}} rocr\+::\+\_\+\+ADDR\+\_\+\+COMPUTE\+\_\+\+SURFACE\+\_\+\+INFO\+\_\+\+OUTPUT\+::depth}
+
+
+
+Number of slice/depth. 
+
+\mbox{\Hypertarget{structrocr_1_1__ADDR__COMPUTE__SURFACE__INFO__OUTPUT_aaf7caba5fec7734f8675a750b319c527}\label{structrocr_1_1__ADDR__COMPUTE__SURFACE__INFO__OUTPUT_aaf7caba5fec7734f8675a750b319c527}} 
+\index{rocr::\_ADDR\_COMPUTE\_SURFACE\_INFO\_OUTPUT@{rocr::\_ADDR\_COMPUTE\_SURFACE\_INFO\_OUTPUT}!depthAlign@{depthAlign}}
+\index{depthAlign@{depthAlign}!rocr::\_ADDR\_COMPUTE\_SURFACE\_INFO\_OUTPUT@{rocr::\_ADDR\_COMPUTE\_SURFACE\_INFO\_OUTPUT}}
+\doxysubsubsection{\texorpdfstring{depthAlign}{depthAlign}}
+{\footnotesize\ttfamily \mbox{\hyperlink{addrtypes_8h_af5a2be58a28390f9a494538f34054637}{UINT\+\_\+32}} rocr\+::\+\_\+\+ADDR\+\_\+\+COMPUTE\+\_\+\+SURFACE\+\_\+\+INFO\+\_\+\+OUTPUT\+::depth\+Align}
+
+
+
+Depth alignment, aligned to thickness, for 3d texture. 
+
+\mbox{\Hypertarget{structrocr_1_1__ADDR__COMPUTE__SURFACE__INFO__OUTPUT_af7dc58c5fcc9449ce791440306b2f889}\label{structrocr_1_1__ADDR__COMPUTE__SURFACE__INFO__OUTPUT_af7dc58c5fcc9449ce791440306b2f889}} 
+\index{rocr::\_ADDR\_COMPUTE\_SURFACE\_INFO\_OUTPUT@{rocr::\_ADDR\_COMPUTE\_SURFACE\_INFO\_OUTPUT}!equationIndex@{equationIndex}}
+\index{equationIndex@{equationIndex}!rocr::\_ADDR\_COMPUTE\_SURFACE\_INFO\_OUTPUT@{rocr::\_ADDR\_COMPUTE\_SURFACE\_INFO\_OUTPUT}}
+\doxysubsubsection{\texorpdfstring{equationIndex}{equationIndex}}
+{\footnotesize\ttfamily \mbox{\hyperlink{addrtypes_8h_af5a2be58a28390f9a494538f34054637}{UINT\+\_\+32}} rocr\+::\+\_\+\+ADDR\+\_\+\+COMPUTE\+\_\+\+SURFACE\+\_\+\+INFO\+\_\+\+OUTPUT\+::equation\+Index}
+
+
+
+Equation index in the equation table;. 
+
+\mbox{\Hypertarget{structrocr_1_1__ADDR__COMPUTE__SURFACE__INFO__OUTPUT_a8b2227febe1fe5c061b081c4a40b5c1e}\label{structrocr_1_1__ADDR__COMPUTE__SURFACE__INFO__OUTPUT_a8b2227febe1fe5c061b081c4a40b5c1e}} 
+\index{rocr::\_ADDR\_COMPUTE\_SURFACE\_INFO\_OUTPUT@{rocr::\_ADDR\_COMPUTE\_SURFACE\_INFO\_OUTPUT}!height@{height}}
+\index{height@{height}!rocr::\_ADDR\_COMPUTE\_SURFACE\_INFO\_OUTPUT@{rocr::\_ADDR\_COMPUTE\_SURFACE\_INFO\_OUTPUT}}
+\doxysubsubsection{\texorpdfstring{height}{height}}
+{\footnotesize\ttfamily \mbox{\hyperlink{addrtypes_8h_af5a2be58a28390f9a494538f34054637}{UINT\+\_\+32}} rocr\+::\+\_\+\+ADDR\+\_\+\+COMPUTE\+\_\+\+SURFACE\+\_\+\+INFO\+\_\+\+OUTPUT\+::height}
+
+
+
+Height in elements (in blocks for compressed formats) 
+
+\mbox{\Hypertarget{structrocr_1_1__ADDR__COMPUTE__SURFACE__INFO__OUTPUT_a495fee95a85c24322ce73cde5968872a}\label{structrocr_1_1__ADDR__COMPUTE__SURFACE__INFO__OUTPUT_a495fee95a85c24322ce73cde5968872a}} 
+\index{rocr::\_ADDR\_COMPUTE\_SURFACE\_INFO\_OUTPUT@{rocr::\_ADDR\_COMPUTE\_SURFACE\_INFO\_OUTPUT}!heightAlign@{heightAlign}}
+\index{heightAlign@{heightAlign}!rocr::\_ADDR\_COMPUTE\_SURFACE\_INFO\_OUTPUT@{rocr::\_ADDR\_COMPUTE\_SURFACE\_INFO\_OUTPUT}}
+\doxysubsubsection{\texorpdfstring{heightAlign}{heightAlign}}
+{\footnotesize\ttfamily \mbox{\hyperlink{addrtypes_8h_af5a2be58a28390f9a494538f34054637}{UINT\+\_\+32}} rocr\+::\+\_\+\+ADDR\+\_\+\+COMPUTE\+\_\+\+SURFACE\+\_\+\+INFO\+\_\+\+OUTPUT\+::height\+Align}
+
+
+
+Height alignment, in elements. 
+
+\mbox{\Hypertarget{structrocr_1_1__ADDR__COMPUTE__SURFACE__INFO__OUTPUT_a820c3230c7d521bc1ee8e15722478625}\label{structrocr_1_1__ADDR__COMPUTE__SURFACE__INFO__OUTPUT_a820c3230c7d521bc1ee8e15722478625}} 
+\index{rocr::\_ADDR\_COMPUTE\_SURFACE\_INFO\_OUTPUT@{rocr::\_ADDR\_COMPUTE\_SURFACE\_INFO\_OUTPUT}!heightTileMax@{heightTileMax}}
+\index{heightTileMax@{heightTileMax}!rocr::\_ADDR\_COMPUTE\_SURFACE\_INFO\_OUTPUT@{rocr::\_ADDR\_COMPUTE\_SURFACE\_INFO\_OUTPUT}}
+\doxysubsubsection{\texorpdfstring{heightTileMax}{heightTileMax}}
+{\footnotesize\ttfamily \mbox{\hyperlink{addrtypes_8h_af5a2be58a28390f9a494538f34054637}{UINT\+\_\+32}} rocr\+::\+\_\+\+ADDR\+\_\+\+COMPUTE\+\_\+\+SURFACE\+\_\+\+INFO\+\_\+\+OUTPUT\+::height\+Tile\+Max}
+
+
+
+HEIGHT\+\_\+\+TILE\+\_\+\+MAX value for h/w register. 
+
+\mbox{\Hypertarget{structrocr_1_1__ADDR__COMPUTE__SURFACE__INFO__OUTPUT_a6ec00af0ea54b9a82a04b3f030ad2dc6}\label{structrocr_1_1__ADDR__COMPUTE__SURFACE__INFO__OUTPUT_a6ec00af0ea54b9a82a04b3f030ad2dc6}} 
+\index{rocr::\_ADDR\_COMPUTE\_SURFACE\_INFO\_OUTPUT@{rocr::\_ADDR\_COMPUTE\_SURFACE\_INFO\_OUTPUT}!last2DLevel@{last2DLevel}}
+\index{last2DLevel@{last2DLevel}!rocr::\_ADDR\_COMPUTE\_SURFACE\_INFO\_OUTPUT@{rocr::\_ADDR\_COMPUTE\_SURFACE\_INFO\_OUTPUT}}
+\doxysubsubsection{\texorpdfstring{last2DLevel}{last2DLevel}}
+{\footnotesize\ttfamily \mbox{\hyperlink{addrtypes_8h_af5a2be58a28390f9a494538f34054637}{UINT\+\_\+32}} rocr\+::\+\_\+\+ADDR\+\_\+\+COMPUTE\+\_\+\+SURFACE\+\_\+\+INFO\+\_\+\+OUTPUT\+::last2\+DLevel}
+
+
+
+Special information to work around SI mipmap swizzle bug UBTS \#317508. 
+
+TRUE if this is the last 2D(3\+D) tiled Only meaningful when create flag check\+Last2\+DLevel is set \mbox{\Hypertarget{structrocr_1_1__ADDR__COMPUTE__SURFACE__INFO__OUTPUT_a66b1766570d6ce6adb0192e6ec58852f}\label{structrocr_1_1__ADDR__COMPUTE__SURFACE__INFO__OUTPUT_a66b1766570d6ce6adb0192e6ec58852f}} 
+\index{rocr::\_ADDR\_COMPUTE\_SURFACE\_INFO\_OUTPUT@{rocr::\_ADDR\_COMPUTE\_SURFACE\_INFO\_OUTPUT}!macroModeIndex@{macroModeIndex}}
+\index{macroModeIndex@{macroModeIndex}!rocr::\_ADDR\_COMPUTE\_SURFACE\_INFO\_OUTPUT@{rocr::\_ADDR\_COMPUTE\_SURFACE\_INFO\_OUTPUT}}
+\doxysubsubsection{\texorpdfstring{macroModeIndex}{macroModeIndex}}
+{\footnotesize\ttfamily \mbox{\hyperlink{addrtypes_8h_adacc69c9db3b9adfc072b838ebf2bb0e}{INT\+\_\+32}} rocr\+::\+\_\+\+ADDR\+\_\+\+COMPUTE\+\_\+\+SURFACE\+\_\+\+INFO\+\_\+\+OUTPUT\+::macro\+Mode\+Index}
+
+Index in macro tile mode table if there is one (CI) \mbox{\Hypertarget{structrocr_1_1__ADDR__COMPUTE__SURFACE__INFO__OUTPUT_ad139c81e89218f9efed0caf6ebdba314}\label{structrocr_1_1__ADDR__COMPUTE__SURFACE__INFO__OUTPUT_ad139c81e89218f9efed0caf6ebdba314}} 
+\index{rocr::\_ADDR\_COMPUTE\_SURFACE\_INFO\_OUTPUT@{rocr::\_ADDR\_COMPUTE\_SURFACE\_INFO\_OUTPUT}!numSamples@{numSamples}}
+\index{numSamples@{numSamples}!rocr::\_ADDR\_COMPUTE\_SURFACE\_INFO\_OUTPUT@{rocr::\_ADDR\_COMPUTE\_SURFACE\_INFO\_OUTPUT}}
+\doxysubsubsection{\texorpdfstring{numSamples}{numSamples}}
+{\footnotesize\ttfamily \mbox{\hyperlink{addrtypes_8h_af5a2be58a28390f9a494538f34054637}{UINT\+\_\+32}} rocr\+::\+\_\+\+ADDR\+\_\+\+COMPUTE\+\_\+\+SURFACE\+\_\+\+INFO\+\_\+\+OUTPUT\+::num\+Samples}
+
+
+
+Pass the effective num\+Samples processed in this call. 
+
+\mbox{\Hypertarget{structrocr_1_1__ADDR__COMPUTE__SURFACE__INFO__OUTPUT_a80d44fe420793d01519f3dbd32396851}\label{structrocr_1_1__ADDR__COMPUTE__SURFACE__INFO__OUTPUT_a80d44fe420793d01519f3dbd32396851}} 
+\index{rocr::\_ADDR\_COMPUTE\_SURFACE\_INFO\_OUTPUT@{rocr::\_ADDR\_COMPUTE\_SURFACE\_INFO\_OUTPUT}!pitch@{pitch}}
+\index{pitch@{pitch}!rocr::\_ADDR\_COMPUTE\_SURFACE\_INFO\_OUTPUT@{rocr::\_ADDR\_COMPUTE\_SURFACE\_INFO\_OUTPUT}}
+\doxysubsubsection{\texorpdfstring{pitch}{pitch}}
+{\footnotesize\ttfamily \mbox{\hyperlink{addrtypes_8h_af5a2be58a28390f9a494538f34054637}{UINT\+\_\+32}} rocr\+::\+\_\+\+ADDR\+\_\+\+COMPUTE\+\_\+\+SURFACE\+\_\+\+INFO\+\_\+\+OUTPUT\+::pitch}
+
+
+
+Pitch in elements (in blocks for compressed formats) 
+
+\mbox{\Hypertarget{structrocr_1_1__ADDR__COMPUTE__SURFACE__INFO__OUTPUT_a0544558dbfa6767bcc95d652e499d300}\label{structrocr_1_1__ADDR__COMPUTE__SURFACE__INFO__OUTPUT_a0544558dbfa6767bcc95d652e499d300}} 
+\index{rocr::\_ADDR\_COMPUTE\_SURFACE\_INFO\_OUTPUT@{rocr::\_ADDR\_COMPUTE\_SURFACE\_INFO\_OUTPUT}!pitchAlign@{pitchAlign}}
+\index{pitchAlign@{pitchAlign}!rocr::\_ADDR\_COMPUTE\_SURFACE\_INFO\_OUTPUT@{rocr::\_ADDR\_COMPUTE\_SURFACE\_INFO\_OUTPUT}}
+\doxysubsubsection{\texorpdfstring{pitchAlign}{pitchAlign}}
+{\footnotesize\ttfamily \mbox{\hyperlink{addrtypes_8h_af5a2be58a28390f9a494538f34054637}{UINT\+\_\+32}} rocr\+::\+\_\+\+ADDR\+\_\+\+COMPUTE\+\_\+\+SURFACE\+\_\+\+INFO\+\_\+\+OUTPUT\+::pitch\+Align}
+
+
+
+Pitch alignment, in elements. 
+
+\mbox{\Hypertarget{structrocr_1_1__ADDR__COMPUTE__SURFACE__INFO__OUTPUT_a6af0bd6b97c200476d973020c50ffec3}\label{structrocr_1_1__ADDR__COMPUTE__SURFACE__INFO__OUTPUT_a6af0bd6b97c200476d973020c50ffec3}} 
+\index{rocr::\_ADDR\_COMPUTE\_SURFACE\_INFO\_OUTPUT@{rocr::\_ADDR\_COMPUTE\_SURFACE\_INFO\_OUTPUT}!pitchTileMax@{pitchTileMax}}
+\index{pitchTileMax@{pitchTileMax}!rocr::\_ADDR\_COMPUTE\_SURFACE\_INFO\_OUTPUT@{rocr::\_ADDR\_COMPUTE\_SURFACE\_INFO\_OUTPUT}}
+\doxysubsubsection{\texorpdfstring{pitchTileMax}{pitchTileMax}}
+{\footnotesize\ttfamily \mbox{\hyperlink{addrtypes_8h_af5a2be58a28390f9a494538f34054637}{UINT\+\_\+32}} rocr\+::\+\_\+\+ADDR\+\_\+\+COMPUTE\+\_\+\+SURFACE\+\_\+\+INFO\+\_\+\+OUTPUT\+::pitch\+Tile\+Max}
+
+
+
+PITCH\+\_\+\+TILE\+\_\+\+MAX value for h/w register. 
+
+\mbox{\Hypertarget{structrocr_1_1__ADDR__COMPUTE__SURFACE__INFO__OUTPUT_ab2147c5b4cb1c31ad2de737a74f98905}\label{structrocr_1_1__ADDR__COMPUTE__SURFACE__INFO__OUTPUT_ab2147c5b4cb1c31ad2de737a74f98905}} 
+\index{rocr::\_ADDR\_COMPUTE\_SURFACE\_INFO\_OUTPUT@{rocr::\_ADDR\_COMPUTE\_SURFACE\_INFO\_OUTPUT}!pixelBits@{pixelBits}}
+\index{pixelBits@{pixelBits}!rocr::\_ADDR\_COMPUTE\_SURFACE\_INFO\_OUTPUT@{rocr::\_ADDR\_COMPUTE\_SURFACE\_INFO\_OUTPUT}}
+\doxysubsubsection{\texorpdfstring{pixelBits}{pixelBits}}
+{\footnotesize\ttfamily \mbox{\hyperlink{addrtypes_8h_af5a2be58a28390f9a494538f34054637}{UINT\+\_\+32}} rocr\+::\+\_\+\+ADDR\+\_\+\+COMPUTE\+\_\+\+SURFACE\+\_\+\+INFO\+\_\+\+OUTPUT\+::pixel\+Bits}
+
+
+
+Original bits per pixel, passed from input. 
+
+\mbox{\Hypertarget{structrocr_1_1__ADDR__COMPUTE__SURFACE__INFO__OUTPUT_a5ac227db0363fa1b1660302c1ca351a4}\label{structrocr_1_1__ADDR__COMPUTE__SURFACE__INFO__OUTPUT_a5ac227db0363fa1b1660302c1ca351a4}} 
+\index{rocr::\_ADDR\_COMPUTE\_SURFACE\_INFO\_OUTPUT@{rocr::\_ADDR\_COMPUTE\_SURFACE\_INFO\_OUTPUT}!pixelHeight@{pixelHeight}}
+\index{pixelHeight@{pixelHeight}!rocr::\_ADDR\_COMPUTE\_SURFACE\_INFO\_OUTPUT@{rocr::\_ADDR\_COMPUTE\_SURFACE\_INFO\_OUTPUT}}
+\doxysubsubsection{\texorpdfstring{pixelHeight}{pixelHeight}}
+{\footnotesize\ttfamily \mbox{\hyperlink{addrtypes_8h_af5a2be58a28390f9a494538f34054637}{UINT\+\_\+32}} rocr\+::\+\_\+\+ADDR\+\_\+\+COMPUTE\+\_\+\+SURFACE\+\_\+\+INFO\+\_\+\+OUTPUT\+::pixel\+Height}
+
+
+
+Height in original pixels. 
+
+\mbox{\Hypertarget{structrocr_1_1__ADDR__COMPUTE__SURFACE__INFO__OUTPUT_ab48979d811c3098328e392a6929b8c55}\label{structrocr_1_1__ADDR__COMPUTE__SURFACE__INFO__OUTPUT_ab48979d811c3098328e392a6929b8c55}} 
+\index{rocr::\_ADDR\_COMPUTE\_SURFACE\_INFO\_OUTPUT@{rocr::\_ADDR\_COMPUTE\_SURFACE\_INFO\_OUTPUT}!pixelPitch@{pixelPitch}}
+\index{pixelPitch@{pixelPitch}!rocr::\_ADDR\_COMPUTE\_SURFACE\_INFO\_OUTPUT@{rocr::\_ADDR\_COMPUTE\_SURFACE\_INFO\_OUTPUT}}
+\doxysubsubsection{\texorpdfstring{pixelPitch}{pixelPitch}}
+{\footnotesize\ttfamily \mbox{\hyperlink{addrtypes_8h_af5a2be58a28390f9a494538f34054637}{UINT\+\_\+32}} rocr\+::\+\_\+\+ADDR\+\_\+\+COMPUTE\+\_\+\+SURFACE\+\_\+\+INFO\+\_\+\+OUTPUT\+::pixel\+Pitch}
+
+
+
+Pitch in original pixels. 
+
+\mbox{\Hypertarget{structrocr_1_1__ADDR__COMPUTE__SURFACE__INFO__OUTPUT_a423321facbbb1dc0c75f2f47d452bc89}\label{structrocr_1_1__ADDR__COMPUTE__SURFACE__INFO__OUTPUT_a423321facbbb1dc0c75f2f47d452bc89}} 
+\index{rocr::\_ADDR\_COMPUTE\_SURFACE\_INFO\_OUTPUT@{rocr::\_ADDR\_COMPUTE\_SURFACE\_INFO\_OUTPUT}!prtTileIndex@{prtTileIndex}}
+\index{prtTileIndex@{prtTileIndex}!rocr::\_ADDR\_COMPUTE\_SURFACE\_INFO\_OUTPUT@{rocr::\_ADDR\_COMPUTE\_SURFACE\_INFO\_OUTPUT}}
+\doxysubsubsection{\texorpdfstring{prtTileIndex}{prtTileIndex}}
+{\footnotesize\ttfamily \mbox{\hyperlink{addrtypes_8h_af5a2be58a28390f9a494538f34054637}{UINT\+\_\+32}} rocr\+::\+\_\+\+ADDR\+\_\+\+COMPUTE\+\_\+\+SURFACE\+\_\+\+INFO\+\_\+\+OUTPUT\+::prt\+Tile\+Index}
+
+SI only, indicate the returned tile index is for PRT If address lib return true for mip 0, client should set prt flag for child mips in subsequent compute surface info calls \mbox{\Hypertarget{structrocr_1_1__ADDR__COMPUTE__SURFACE__INFO__OUTPUT_abe01a22cf570306910b550564cb7990b}\label{structrocr_1_1__ADDR__COMPUTE__SURFACE__INFO__OUTPUT_abe01a22cf570306910b550564cb7990b}} 
+\index{rocr::\_ADDR\_COMPUTE\_SURFACE\_INFO\_OUTPUT@{rocr::\_ADDR\_COMPUTE\_SURFACE\_INFO\_OUTPUT}!pStereoInfo@{pStereoInfo}}
+\index{pStereoInfo@{pStereoInfo}!rocr::\_ADDR\_COMPUTE\_SURFACE\_INFO\_OUTPUT@{rocr::\_ADDR\_COMPUTE\_SURFACE\_INFO\_OUTPUT}}
+\doxysubsubsection{\texorpdfstring{pStereoInfo}{pStereoInfo}}
+{\footnotesize\ttfamily \mbox{\hyperlink{namespacerocr_a4a5750966ab60451cf4c70ba18e6fab2}{ADDR\+\_\+\+QBSTEREOINFO}}$\ast$ rocr\+::\+\_\+\+ADDR\+\_\+\+COMPUTE\+\_\+\+SURFACE\+\_\+\+INFO\+\_\+\+OUTPUT\+::p\+Stereo\+Info}
+
+
+
+Stereo info. 
+
+Stereo information, needed when .qb\+Stereo flag is TRUE \mbox{\Hypertarget{structrocr_1_1__ADDR__COMPUTE__SURFACE__INFO__OUTPUT_a428336fdec2de5c9d3bfc6bbc50f54dc}\label{structrocr_1_1__ADDR__COMPUTE__SURFACE__INFO__OUTPUT_a428336fdec2de5c9d3bfc6bbc50f54dc}} 
+\index{rocr::\_ADDR\_COMPUTE\_SURFACE\_INFO\_OUTPUT@{rocr::\_ADDR\_COMPUTE\_SURFACE\_INFO\_OUTPUT}!pTileInfo@{pTileInfo}}
+\index{pTileInfo@{pTileInfo}!rocr::\_ADDR\_COMPUTE\_SURFACE\_INFO\_OUTPUT@{rocr::\_ADDR\_COMPUTE\_SURFACE\_INFO\_OUTPUT}}
+\doxysubsubsection{\texorpdfstring{pTileInfo}{pTileInfo}}
+{\footnotesize\ttfamily \mbox{\hyperlink{namespacerocr_a22dcb0c31be418f31f99d0311c45522c}{ADDR\+\_\+\+TILEINFO}}$\ast$ rocr\+::\+\_\+\+ADDR\+\_\+\+COMPUTE\+\_\+\+SURFACE\+\_\+\+INFO\+\_\+\+OUTPUT\+::p\+Tile\+Info}
+
+
+
+r800 and later HWL parameters 
+
+Tile parameters used. Filled in if 0 on input \mbox{\Hypertarget{structrocr_1_1__ADDR__COMPUTE__SURFACE__INFO__OUTPUT_a5a98fc2ef8725833afa5ae64fbe07063}\label{structrocr_1_1__ADDR__COMPUTE__SURFACE__INFO__OUTPUT_a5a98fc2ef8725833afa5ae64fbe07063}} 
+\index{rocr::\_ADDR\_COMPUTE\_SURFACE\_INFO\_OUTPUT@{rocr::\_ADDR\_COMPUTE\_SURFACE\_INFO\_OUTPUT}!reserved@{reserved}}
+\index{reserved@{reserved}!rocr::\_ADDR\_COMPUTE\_SURFACE\_INFO\_OUTPUT@{rocr::\_ADDR\_COMPUTE\_SURFACE\_INFO\_OUTPUT}}
+\doxysubsubsection{\texorpdfstring{reserved}{reserved}}
+{\footnotesize\ttfamily \mbox{\hyperlink{addrtypes_8h_af5a2be58a28390f9a494538f34054637}{UINT\+\_\+32}} rocr\+::\+\_\+\+ADDR\+\_\+\+COMPUTE\+\_\+\+SURFACE\+\_\+\+INFO\+\_\+\+OUTPUT\+::reserved}
+
+
+
+Reserved bits. 
+
+\mbox{\Hypertarget{structrocr_1_1__ADDR__COMPUTE__SURFACE__INFO__OUTPUT_a308453002b3a65b99d822a044217c3c9}\label{structrocr_1_1__ADDR__COMPUTE__SURFACE__INFO__OUTPUT_a308453002b3a65b99d822a044217c3c9}} 
+\index{rocr::\_ADDR\_COMPUTE\_SURFACE\_INFO\_OUTPUT@{rocr::\_ADDR\_COMPUTE\_SURFACE\_INFO\_OUTPUT}!size@{size}}
+\index{size@{size}!rocr::\_ADDR\_COMPUTE\_SURFACE\_INFO\_OUTPUT@{rocr::\_ADDR\_COMPUTE\_SURFACE\_INFO\_OUTPUT}}
+\doxysubsubsection{\texorpdfstring{size}{size}}
+{\footnotesize\ttfamily \mbox{\hyperlink{addrtypes_8h_af5a2be58a28390f9a494538f34054637}{UINT\+\_\+32}} rocr\+::\+\_\+\+ADDR\+\_\+\+COMPUTE\+\_\+\+SURFACE\+\_\+\+INFO\+\_\+\+OUTPUT\+::size}
+
+
+
+Size of this structure in bytes. 
+
+\mbox{\Hypertarget{structrocr_1_1__ADDR__COMPUTE__SURFACE__INFO__OUTPUT_a646d84c0c161ed83bc06e161c9e4063d}\label{structrocr_1_1__ADDR__COMPUTE__SURFACE__INFO__OUTPUT_a646d84c0c161ed83bc06e161c9e4063d}} 
+\index{rocr::\_ADDR\_COMPUTE\_SURFACE\_INFO\_OUTPUT@{rocr::\_ADDR\_COMPUTE\_SURFACE\_INFO\_OUTPUT}!sliceSize@{sliceSize}}
+\index{sliceSize@{sliceSize}!rocr::\_ADDR\_COMPUTE\_SURFACE\_INFO\_OUTPUT@{rocr::\_ADDR\_COMPUTE\_SURFACE\_INFO\_OUTPUT}}
+\doxysubsubsection{\texorpdfstring{sliceSize}{sliceSize}}
+{\footnotesize\ttfamily \mbox{\hyperlink{addrtypes_8h_ac4116bb9a5e80b5cb845d4f2674c160f}{UINT\+\_\+64}} rocr\+::\+\_\+\+ADDR\+\_\+\+COMPUTE\+\_\+\+SURFACE\+\_\+\+INFO\+\_\+\+OUTPUT\+::slice\+Size}
+
+Size of slice specified by input\textquotesingle{}s slice The result is controlled by surface flags \& create\+Flags By default this value equals to surf\+Size for volume \mbox{\Hypertarget{structrocr_1_1__ADDR__COMPUTE__SURFACE__INFO__OUTPUT_a61c7812a1b6c27b1fc7449205adf9e2f}\label{structrocr_1_1__ADDR__COMPUTE__SURFACE__INFO__OUTPUT_a61c7812a1b6c27b1fc7449205adf9e2f}} 
+\index{rocr::\_ADDR\_COMPUTE\_SURFACE\_INFO\_OUTPUT@{rocr::\_ADDR\_COMPUTE\_SURFACE\_INFO\_OUTPUT}!sliceTileMax@{sliceTileMax}}
+\index{sliceTileMax@{sliceTileMax}!rocr::\_ADDR\_COMPUTE\_SURFACE\_INFO\_OUTPUT@{rocr::\_ADDR\_COMPUTE\_SURFACE\_INFO\_OUTPUT}}
+\doxysubsubsection{\texorpdfstring{sliceTileMax}{sliceTileMax}}
+{\footnotesize\ttfamily \mbox{\hyperlink{addrtypes_8h_af5a2be58a28390f9a494538f34054637}{UINT\+\_\+32}} rocr\+::\+\_\+\+ADDR\+\_\+\+COMPUTE\+\_\+\+SURFACE\+\_\+\+INFO\+\_\+\+OUTPUT\+::slice\+Tile\+Max}
+
+
+
+SLICE\+\_\+\+TILE\+\_\+\+MAX value for h/w register. 
+
+\mbox{\Hypertarget{structrocr_1_1__ADDR__COMPUTE__SURFACE__INFO__OUTPUT_a6d3ed828783f97855d42ff30bb992dc6}\label{structrocr_1_1__ADDR__COMPUTE__SURFACE__INFO__OUTPUT_a6d3ed828783f97855d42ff30bb992dc6}} 
+\index{rocr::\_ADDR\_COMPUTE\_SURFACE\_INFO\_OUTPUT@{rocr::\_ADDR\_COMPUTE\_SURFACE\_INFO\_OUTPUT}!stencilTileIdx@{stencilTileIdx}}
+\index{stencilTileIdx@{stencilTileIdx}!rocr::\_ADDR\_COMPUTE\_SURFACE\_INFO\_OUTPUT@{rocr::\_ADDR\_COMPUTE\_SURFACE\_INFO\_OUTPUT}}
+\doxysubsubsection{\texorpdfstring{stencilTileIdx}{stencilTileIdx}}
+{\footnotesize\ttfamily \mbox{\hyperlink{addrtypes_8h_adacc69c9db3b9adfc072b838ebf2bb0e}{INT\+\_\+32}} rocr\+::\+\_\+\+ADDR\+\_\+\+COMPUTE\+\_\+\+SURFACE\+\_\+\+INFO\+\_\+\+OUTPUT\+::stencil\+Tile\+Idx}
+
+
+
+stencil tile index output when match\+Stencil\+Tile\+Cfg was set 
+
+\mbox{\Hypertarget{structrocr_1_1__ADDR__COMPUTE__SURFACE__INFO__OUTPUT_a3f6605cd8fb8cb6682ec8dba063a9924}\label{structrocr_1_1__ADDR__COMPUTE__SURFACE__INFO__OUTPUT_a3f6605cd8fb8cb6682ec8dba063a9924}} 
+\index{rocr::\_ADDR\_COMPUTE\_SURFACE\_INFO\_OUTPUT@{rocr::\_ADDR\_COMPUTE\_SURFACE\_INFO\_OUTPUT}!surfSize@{surfSize}}
+\index{surfSize@{surfSize}!rocr::\_ADDR\_COMPUTE\_SURFACE\_INFO\_OUTPUT@{rocr::\_ADDR\_COMPUTE\_SURFACE\_INFO\_OUTPUT}}
+\doxysubsubsection{\texorpdfstring{surfSize}{surfSize}}
+{\footnotesize\ttfamily \mbox{\hyperlink{addrtypes_8h_ac4116bb9a5e80b5cb845d4f2674c160f}{UINT\+\_\+64}} rocr\+::\+\_\+\+ADDR\+\_\+\+COMPUTE\+\_\+\+SURFACE\+\_\+\+INFO\+\_\+\+OUTPUT\+::surf\+Size}
+
+
+
+Surface size in bytes. 
+
+\mbox{\Hypertarget{structrocr_1_1__ADDR__COMPUTE__SURFACE__INFO__OUTPUT_a09de8416356b2da1257be922effa8b0e}\label{structrocr_1_1__ADDR__COMPUTE__SURFACE__INFO__OUTPUT_a09de8416356b2da1257be922effa8b0e}} 
+\index{rocr::\_ADDR\_COMPUTE\_SURFACE\_INFO\_OUTPUT@{rocr::\_ADDR\_COMPUTE\_SURFACE\_INFO\_OUTPUT}!tcCompatible@{tcCompatible}}
+\index{tcCompatible@{tcCompatible}!rocr::\_ADDR\_COMPUTE\_SURFACE\_INFO\_OUTPUT@{rocr::\_ADDR\_COMPUTE\_SURFACE\_INFO\_OUTPUT}}
+\doxysubsubsection{\texorpdfstring{tcCompatible}{tcCompatible}}
+{\footnotesize\ttfamily \mbox{\hyperlink{addrtypes_8h_af5a2be58a28390f9a494538f34054637}{UINT\+\_\+32}} rocr\+::\+\_\+\+ADDR\+\_\+\+COMPUTE\+\_\+\+SURFACE\+\_\+\+INFO\+\_\+\+OUTPUT\+::tc\+Compatible}
+
+
+
+If the surface can be shader compatible. 
+
+\mbox{\Hypertarget{structrocr_1_1__ADDR__COMPUTE__SURFACE__INFO__OUTPUT_a8592216f34b6e8212cf15c296b972a1c}\label{structrocr_1_1__ADDR__COMPUTE__SURFACE__INFO__OUTPUT_a8592216f34b6e8212cf15c296b972a1c}} 
+\index{rocr::\_ADDR\_COMPUTE\_SURFACE\_INFO\_OUTPUT@{rocr::\_ADDR\_COMPUTE\_SURFACE\_INFO\_OUTPUT}!tileIndex@{tileIndex}}
+\index{tileIndex@{tileIndex}!rocr::\_ADDR\_COMPUTE\_SURFACE\_INFO\_OUTPUT@{rocr::\_ADDR\_COMPUTE\_SURFACE\_INFO\_OUTPUT}}
+\doxysubsubsection{\texorpdfstring{tileIndex}{tileIndex}}
+{\footnotesize\ttfamily \mbox{\hyperlink{addrtypes_8h_adacc69c9db3b9adfc072b838ebf2bb0e}{INT\+\_\+32}} rocr\+::\+\_\+\+ADDR\+\_\+\+COMPUTE\+\_\+\+SURFACE\+\_\+\+INFO\+\_\+\+OUTPUT\+::tile\+Index}
+
+
+
+Tile index, MAY be \char`\"{}downgraded\char`\"{}. 
+
+\mbox{\Hypertarget{structrocr_1_1__ADDR__COMPUTE__SURFACE__INFO__OUTPUT_ad204da97a20dfdf87b7d332240d6bb98}\label{structrocr_1_1__ADDR__COMPUTE__SURFACE__INFO__OUTPUT_ad204da97a20dfdf87b7d332240d6bb98}} 
+\index{rocr::\_ADDR\_COMPUTE\_SURFACE\_INFO\_OUTPUT@{rocr::\_ADDR\_COMPUTE\_SURFACE\_INFO\_OUTPUT}!tileMode@{tileMode}}
+\index{tileMode@{tileMode}!rocr::\_ADDR\_COMPUTE\_SURFACE\_INFO\_OUTPUT@{rocr::\_ADDR\_COMPUTE\_SURFACE\_INFO\_OUTPUT}}
+\doxysubsubsection{\texorpdfstring{tileMode}{tileMode}}
+{\footnotesize\ttfamily \mbox{\hyperlink{addrtypes_8h_a9dffa8321911d7791c03fe3a233a34e7}{Addr\+Tile\+Mode}} rocr\+::\+\_\+\+ADDR\+\_\+\+COMPUTE\+\_\+\+SURFACE\+\_\+\+INFO\+\_\+\+OUTPUT\+::tile\+Mode}
+
+
+
+Actual tile mode. May differ from that in input. 
+
+\mbox{\Hypertarget{structrocr_1_1__ADDR__COMPUTE__SURFACE__INFO__OUTPUT_af9892ae65f75535397fc0b127443f864}\label{structrocr_1_1__ADDR__COMPUTE__SURFACE__INFO__OUTPUT_af9892ae65f75535397fc0b127443f864}} 
+\index{rocr::\_ADDR\_COMPUTE\_SURFACE\_INFO\_OUTPUT@{rocr::\_ADDR\_COMPUTE\_SURFACE\_INFO\_OUTPUT}!tileType@{tileType}}
+\index{tileType@{tileType}!rocr::\_ADDR\_COMPUTE\_SURFACE\_INFO\_OUTPUT@{rocr::\_ADDR\_COMPUTE\_SURFACE\_INFO\_OUTPUT}}
+\doxysubsubsection{\texorpdfstring{tileType}{tileType}}
+{\footnotesize\ttfamily \mbox{\hyperlink{addrtypes_8h_a7dd4750472a9413e05a56dbb7e9692c7}{Addr\+Tile\+Type}} rocr\+::\+\_\+\+ADDR\+\_\+\+COMPUTE\+\_\+\+SURFACE\+\_\+\+INFO\+\_\+\+OUTPUT\+::tile\+Type}
+
+
+
+Micro tiling type, only valid when tile\+Index != -\/1. 
+
+
+
+The documentation for this struct was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+src/image/addrlib/inc/\mbox{\hyperlink{addrinterface_8h}{addrinterface.\+h}}\end{DoxyCompactItemize}

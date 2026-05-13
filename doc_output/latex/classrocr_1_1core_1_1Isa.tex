@@ -1,0 +1,511 @@
+\hypertarget{classrocr_1_1core_1_1Isa}{}\doxysection{rocr\+::core\+::Isa Class Reference}
+\label{classrocr_1_1core_1_1Isa}\index{rocr::core::Isa@{rocr::core::Isa}}
+
+
+Instruction Set Architecture.  
+
+
+
+
+{\ttfamily \#include $<$isa.\+h$>$}
+
+
+
+Inheritance diagram for rocr\+::core\+::Isa\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=254pt]{classrocr_1_1core_1_1Isa__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for rocr\+::core\+::Isa\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classrocr_1_1core_1_1Isa__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+typedef std\+::tuple$<$ int32\+\_\+t, int32\+\_\+t, int32\+\_\+t $>$ \mbox{\hyperlink{classrocr_1_1core_1_1Isa_a6717314c453e6ebb7a9520d3d56aafa2}{Version}}
+\begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{classrocr_1_1core_1_1Isa}{Isa}}\textquotesingle{}s version type. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classrocr_1_1core_1_1Isa_ac8c4d7ca5a21a569b709ab5d6ef90445}{$\sim$\+Isa}} ()
+\begin{DoxyCompactList}\small\item\em Default destructor. \end{DoxyCompactList}\item 
+const \mbox{\hyperlink{classrocr_1_1core_1_1Isa_a6717314c453e6ebb7a9520d3d56aafa2}{Version}} \& \mbox{\hyperlink{classrocr_1_1core_1_1Isa_a95b242754c88583a635ccdc10edf6175}{Get\+Version}} () const
+\item 
+\mbox{\hyperlink{namespacerocr_1_1core_a4faf1bc0974ed98e5acbdee2892fd12a}{Isa\+Feature}} \mbox{\hyperlink{classrocr_1_1core_1_1Isa_a3bdb3c9f4ec084fccc76d2f53159d0fc}{Get\+Sramecc}} () const
+\item 
+\mbox{\hyperlink{namespacerocr_1_1core_a4faf1bc0974ed98e5acbdee2892fd12a}{Isa\+Feature}} \mbox{\hyperlink{classrocr_1_1core_1_1Isa_a144ced499b7056d29585a397341f7f5b}{Get\+Xnack}} () const
+\item 
+const \mbox{\hyperlink{classrocr_1_1core_1_1Wavefront}{Wavefront}} \& \mbox{\hyperlink{classrocr_1_1core_1_1Isa_ac031dd655ea3a7fe9f92d494640c4378}{Get\+Wavefront}} () const
+\item 
+bool \mbox{\hyperlink{classrocr_1_1core_1_1Isa_a88181406bd75cc41ebc92284bdb75d0b}{Is\+Sramecc\+Supported}} () const
+\item 
+bool \mbox{\hyperlink{classrocr_1_1core_1_1Isa_acfc92f005f99c85a9808a1769c9b9d6c}{Is\+Xnack\+Supported}} () const
+\item 
+int32\+\_\+t \mbox{\hyperlink{classrocr_1_1core_1_1Isa_a86ae0905590c2b9079f49bc951738b75}{Get\+Major\+Version}} () const
+\item 
+int32\+\_\+t \mbox{\hyperlink{classrocr_1_1core_1_1Isa_a27e9f0a62dca5441246b1fb3d49b7d0e}{Get\+Minor\+Version}} () const
+\item 
+int32\+\_\+t \mbox{\hyperlink{classrocr_1_1core_1_1Isa_a8fa678a428d0bb99ee888b50bfb9ae01}{Get\+Stepping}} () const
+\item 
+bool \mbox{\hyperlink{classrocr_1_1core_1_1Isa_a291d64ce650afd392def10a611602071}{Is\+Valid}} () const
+\begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{classrocr_1_1core_1_1Isa}{Isa}} is always in valid state. \end{DoxyCompactList}\item 
+std\+::string \mbox{\hyperlink{classrocr_1_1core_1_1Isa_a1656f88d581e4f8bea83726bfc00412e}{Get\+Processor\+Name}} () const
+\item 
+std\+::string \mbox{\hyperlink{classrocr_1_1core_1_1Isa_ac80e8d47dfad20a78688639eef6ce110}{Get\+Isa\+Name}} () const
+\item 
+bool \mbox{\hyperlink{classrocr_1_1core_1_1Isa_af9dcefe7cdb0f645df859dc553e2e7a2}{Get\+Info}} (const \mbox{\hyperlink{group__instruction-set-architecture_gaa8a09719dffad53bb3908b11ed25c1e4}{hsa\+\_\+isa\+\_\+info\+\_\+t}} \&attribute, void $\ast$value) const
+\begin{DoxyCompactList}\small\item\em Query value of requested {\ttfamily attribute} and record it in {\ttfamily value}. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{group__instruction-set-architecture_gad6158bdca7cafbb7bdcc820dac89078c}{hsa\+\_\+round\+\_\+method\+\_\+t}} \mbox{\hyperlink{classrocr_1_1core_1_1Isa_a304d840c45002b800f16d8ea5ed5c14b}{Get\+Round\+Method}} (\mbox{\hyperlink{group__instruction-set-architecture_gaf6261c0d6e072edc0c450fd0ecb0a090}{hsa\+\_\+fp\+\_\+type\+\_\+t}} fp\+\_\+type, \mbox{\hyperlink{group__instruction-set-architecture_gac6969924c9e839aef51a0b18c3a6dd0d}{hsa\+\_\+flush\+\_\+mode\+\_\+t}} flush\+\_\+mode) const
+\end{DoxyCompactItemize}
+\doxysubsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static \mbox{\hyperlink{group__instruction-set-architecture_ga459b132d062bba98dd1870f38b6ab721}{hsa\+\_\+isa\+\_\+t}} \mbox{\hyperlink{classrocr_1_1core_1_1Isa_ac025a9d6e356fe739ab6a04ed0650b7e}{Handle}} (const \mbox{\hyperlink{classrocr_1_1core_1_1Isa}{Isa}} $\ast$isa\+\_\+object)
+\item 
+static \mbox{\hyperlink{classrocr_1_1core_1_1Isa}{Isa}} $\ast$ \mbox{\hyperlink{classrocr_1_1core_1_1Isa_a09409d403719942a6210c0609eb9934a}{Object}} (const \mbox{\hyperlink{group__instruction-set-architecture_ga459b132d062bba98dd1870f38b6ab721}{hsa\+\_\+isa\+\_\+t}} \&isa\+\_\+handle)
+\item 
+static bool \mbox{\hyperlink{classrocr_1_1core_1_1Isa_a7155772dc6ca7999cc5f2e2f8d5058ff}{Is\+Compatible}} (const \mbox{\hyperlink{classrocr_1_1core_1_1Isa}{Isa}} \&code\+\_\+object\+\_\+isa, const \mbox{\hyperlink{classrocr_1_1core_1_1Isa}{Isa}} \&agent\+\_\+isa)
+\end{DoxyCompactItemize}
+\doxysubsection*{Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classrocr_1_1core_1_1Isa_a47c9df9d6649a292c099a19ee1b8ec65}{Isa}} ()
+\begin{DoxyCompactList}\small\item\em Default constructor. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+const char $\ast$ \mbox{\hyperlink{classrocr_1_1core_1_1Isa_acf40796c98c5674a8d32bfe2a38eccbc}{targetid\+\_\+}}
+\item 
+\mbox{\hyperlink{classrocr_1_1core_1_1Isa_a6717314c453e6ebb7a9520d3d56aafa2}{Version}} \mbox{\hyperlink{classrocr_1_1core_1_1Isa_abffe060da0e1a4e0cb4017d92db512fb}{version\+\_\+}}
+\begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{classrocr_1_1core_1_1Isa}{Isa}}\textquotesingle{}s version. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{namespacerocr_1_1core_a4faf1bc0974ed98e5acbdee2892fd12a}{Isa\+Feature}} \mbox{\hyperlink{classrocr_1_1core_1_1Isa_a3b077d7aba6adf56698222bce1dbf1aa}{sramecc\+\_\+}}
+\begin{DoxyCompactList}\small\item\em SRAMECC feature. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{namespacerocr_1_1core_a4faf1bc0974ed98e5acbdee2892fd12a}{Isa\+Feature}} \mbox{\hyperlink{classrocr_1_1core_1_1Isa_a3b3cb0447b6af0d2e243ac76dc6dba90}{xnack\+\_\+}}
+\begin{DoxyCompactList}\small\item\em XNACK feature. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classrocr_1_1core_1_1Wavefront}{Wavefront}} \mbox{\hyperlink{classrocr_1_1core_1_1Isa_ae2274a41ec89e8ca5375ee7b05503c6b}{wavefront\+\_\+}}
+\begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{classrocr_1_1core_1_1Isa}{Isa}}\textquotesingle{}s supported wavefront. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Friends}
+\begin{DoxyCompactItemize}
+\item 
+class \mbox{\hyperlink{classrocr_1_1core_1_1Isa_a5c87f7822a1b7e34ae5b5f4531584898}{Isa\+Registry}}
+\begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{classrocr_1_1core_1_1Isa}{Isa}}\textquotesingle{}s friends. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Additional Inherited Members}
+
+
+\doxysubsection{Detailed Description}
+Instruction Set Architecture. 
+
+\doxysubsection{Member Typedef Documentation}
+\mbox{\Hypertarget{classrocr_1_1core_1_1Isa_a6717314c453e6ebb7a9520d3d56aafa2}\label{classrocr_1_1core_1_1Isa_a6717314c453e6ebb7a9520d3d56aafa2}} 
+\index{rocr::core::Isa@{rocr::core::Isa}!Version@{Version}}
+\index{Version@{Version}!rocr::core::Isa@{rocr::core::Isa}}
+\doxysubsubsection{\texorpdfstring{Version}{Version}}
+{\footnotesize\ttfamily typedef std\+::tuple$<$int32\+\_\+t, int32\+\_\+t, int32\+\_\+t$>$ \mbox{\hyperlink{classrocr_1_1core_1_1Isa_a6717314c453e6ebb7a9520d3d56aafa2}{rocr\+::core\+::\+Isa\+::\+Version}}}
+
+
+
+\mbox{\hyperlink{classrocr_1_1core_1_1Isa}{Isa}}\textquotesingle{}s version type. 
+
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classrocr_1_1core_1_1Isa_ac8c4d7ca5a21a569b709ab5d6ef90445}\label{classrocr_1_1core_1_1Isa_ac8c4d7ca5a21a569b709ab5d6ef90445}} 
+\index{rocr::core::Isa@{rocr::core::Isa}!````~Isa@{$\sim$Isa}}
+\index{````~Isa@{$\sim$Isa}!rocr::core::Isa@{rocr::core::Isa}}
+\doxysubsubsection{\texorpdfstring{$\sim$Isa()}{~Isa()}}
+{\footnotesize\ttfamily rocr\+::core\+::\+Isa\+::$\sim$\+Isa (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Default destructor. 
+
+\mbox{\Hypertarget{classrocr_1_1core_1_1Isa_a47c9df9d6649a292c099a19ee1b8ec65}\label{classrocr_1_1core_1_1Isa_a47c9df9d6649a292c099a19ee1b8ec65}} 
+\index{rocr::core::Isa@{rocr::core::Isa}!Isa@{Isa}}
+\index{Isa@{Isa}!rocr::core::Isa@{rocr::core::Isa}}
+\doxysubsubsection{\texorpdfstring{Isa()}{Isa()}}
+{\footnotesize\ttfamily rocr\+::core\+::\+Isa\+::\+Isa (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [private]}}
+
+
+
+Default constructor. 
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classrocr_1_1core_1_1Isa_af9dcefe7cdb0f645df859dc553e2e7a2}\label{classrocr_1_1core_1_1Isa_af9dcefe7cdb0f645df859dc553e2e7a2}} 
+\index{rocr::core::Isa@{rocr::core::Isa}!GetInfo@{GetInfo}}
+\index{GetInfo@{GetInfo}!rocr::core::Isa@{rocr::core::Isa}}
+\doxysubsubsection{\texorpdfstring{GetInfo()}{GetInfo()}}
+{\footnotesize\ttfamily bool rocr\+::core\+::\+Isa\+::\+Get\+Info (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{group__instruction-set-architecture_gaa8a09719dffad53bb3908b11ed25c1e4}{hsa\+\_\+isa\+\_\+info\+\_\+t}} \&}]{attribute,  }\item[{void $\ast$}]{value }\end{DoxyParamCaption}) const}
+
+
+
+Query value of requested {\ttfamily attribute} and record it in {\ttfamily value}. 
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classrocr_1_1core_1_1Isa_af9dcefe7cdb0f645df859dc553e2e7a2_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classrocr_1_1core_1_1Isa_af9dcefe7cdb0f645df859dc553e2e7a2_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classrocr_1_1core_1_1Isa_ac80e8d47dfad20a78688639eef6ce110}\label{classrocr_1_1core_1_1Isa_ac80e8d47dfad20a78688639eef6ce110}} 
+\index{rocr::core::Isa@{rocr::core::Isa}!GetIsaName@{GetIsaName}}
+\index{GetIsaName@{GetIsaName}!rocr::core::Isa@{rocr::core::Isa}}
+\doxysubsubsection{\texorpdfstring{GetIsaName()}{GetIsaName()}}
+{\footnotesize\ttfamily std\+::string rocr\+::core\+::\+Isa\+::\+Get\+Isa\+Name (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+\begin{DoxyReturn}{Returns}
+This \mbox{\hyperlink{classrocr_1_1core_1_1Isa}{Isa}}\textquotesingle{}s name consisting of the target triple and target ID. 
+\end{DoxyReturn}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classrocr_1_1core_1_1Isa_ac80e8d47dfad20a78688639eef6ce110_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classrocr_1_1core_1_1Isa_a86ae0905590c2b9079f49bc951738b75}\label{classrocr_1_1core_1_1Isa_a86ae0905590c2b9079f49bc951738b75}} 
+\index{rocr::core::Isa@{rocr::core::Isa}!GetMajorVersion@{GetMajorVersion}}
+\index{GetMajorVersion@{GetMajorVersion}!rocr::core::Isa@{rocr::core::Isa}}
+\doxysubsubsection{\texorpdfstring{GetMajorVersion()}{GetMajorVersion()}}
+{\footnotesize\ttfamily int32\+\_\+t rocr\+::core\+::\+Isa\+::\+Get\+Major\+Version (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+\begin{DoxyReturn}{Returns}
+This \mbox{\hyperlink{classrocr_1_1core_1_1Isa}{Isa}}\textquotesingle{}s major version. 
+\end{DoxyReturn}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classrocr_1_1core_1_1Isa_a86ae0905590c2b9079f49bc951738b75_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classrocr_1_1core_1_1Isa_a27e9f0a62dca5441246b1fb3d49b7d0e}\label{classrocr_1_1core_1_1Isa_a27e9f0a62dca5441246b1fb3d49b7d0e}} 
+\index{rocr::core::Isa@{rocr::core::Isa}!GetMinorVersion@{GetMinorVersion}}
+\index{GetMinorVersion@{GetMinorVersion}!rocr::core::Isa@{rocr::core::Isa}}
+\doxysubsubsection{\texorpdfstring{GetMinorVersion()}{GetMinorVersion()}}
+{\footnotesize\ttfamily int32\+\_\+t rocr\+::core\+::\+Isa\+::\+Get\+Minor\+Version (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+\begin{DoxyReturn}{Returns}
+This \mbox{\hyperlink{classrocr_1_1core_1_1Isa}{Isa}}\textquotesingle{}s minor version. 
+\end{DoxyReturn}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classrocr_1_1core_1_1Isa_a27e9f0a62dca5441246b1fb3d49b7d0e_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classrocr_1_1core_1_1Isa_a1656f88d581e4f8bea83726bfc00412e}\label{classrocr_1_1core_1_1Isa_a1656f88d581e4f8bea83726bfc00412e}} 
+\index{rocr::core::Isa@{rocr::core::Isa}!GetProcessorName@{GetProcessorName}}
+\index{GetProcessorName@{GetProcessorName}!rocr::core::Isa@{rocr::core::Isa}}
+\doxysubsubsection{\texorpdfstring{GetProcessorName()}{GetProcessorName()}}
+{\footnotesize\ttfamily std\+::string rocr\+::core\+::\+Isa\+::\+Get\+Processor\+Name (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+\begin{DoxyReturn}{Returns}
+This \mbox{\hyperlink{classrocr_1_1core_1_1Isa}{Isa}}\textquotesingle{}s processor name. 
+\end{DoxyReturn}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classrocr_1_1core_1_1Isa_a1656f88d581e4f8bea83726bfc00412e_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classrocr_1_1core_1_1Isa_a304d840c45002b800f16d8ea5ed5c14b}\label{classrocr_1_1core_1_1Isa_a304d840c45002b800f16d8ea5ed5c14b}} 
+\index{rocr::core::Isa@{rocr::core::Isa}!GetRoundMethod@{GetRoundMethod}}
+\index{GetRoundMethod@{GetRoundMethod}!rocr::core::Isa@{rocr::core::Isa}}
+\doxysubsubsection{\texorpdfstring{GetRoundMethod()}{GetRoundMethod()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{group__instruction-set-architecture_gad6158bdca7cafbb7bdcc820dac89078c}{hsa\+\_\+round\+\_\+method\+\_\+t}} rocr\+::core\+::\+Isa\+::\+Get\+Round\+Method (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{group__instruction-set-architecture_gaf6261c0d6e072edc0c450fd0ecb0a090}{hsa\+\_\+fp\+\_\+type\+\_\+t}}}]{fp\+\_\+type,  }\item[{\mbox{\hyperlink{group__instruction-set-architecture_gac6969924c9e839aef51a0b18c3a6dd0d}{hsa\+\_\+flush\+\_\+mode\+\_\+t}}}]{flush\+\_\+mode }\end{DoxyParamCaption}) const}
+
+\begin{DoxyReturn}{Returns}
+Round method (single or double) used to implement the floating-\/ point multiply add instruction (mad) for a given combination of {\ttfamily fp\+\_\+type} and {\ttfamily flush\+\_\+mode}. 
+\end{DoxyReturn}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classrocr_1_1core_1_1Isa_a304d840c45002b800f16d8ea5ed5c14b_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classrocr_1_1core_1_1Isa_a3bdb3c9f4ec084fccc76d2f53159d0fc}\label{classrocr_1_1core_1_1Isa_a3bdb3c9f4ec084fccc76d2f53159d0fc}} 
+\index{rocr::core::Isa@{rocr::core::Isa}!GetSramecc@{GetSramecc}}
+\index{GetSramecc@{GetSramecc}!rocr::core::Isa@{rocr::core::Isa}}
+\doxysubsubsection{\texorpdfstring{GetSramecc()}{GetSramecc()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{namespacerocr_1_1core_a4faf1bc0974ed98e5acbdee2892fd12a}{Isa\+Feature}} rocr\+::core\+::\+Isa\+::\+Get\+Sramecc (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+\begin{DoxyReturn}{Returns}
+SRAM ECC feature status. 
+\end{DoxyReturn}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classrocr_1_1core_1_1Isa_a3bdb3c9f4ec084fccc76d2f53159d0fc_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classrocr_1_1core_1_1Isa_a8fa678a428d0bb99ee888b50bfb9ae01}\label{classrocr_1_1core_1_1Isa_a8fa678a428d0bb99ee888b50bfb9ae01}} 
+\index{rocr::core::Isa@{rocr::core::Isa}!GetStepping@{GetStepping}}
+\index{GetStepping@{GetStepping}!rocr::core::Isa@{rocr::core::Isa}}
+\doxysubsubsection{\texorpdfstring{GetStepping()}{GetStepping()}}
+{\footnotesize\ttfamily int32\+\_\+t rocr\+::core\+::\+Isa\+::\+Get\+Stepping (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+\begin{DoxyReturn}{Returns}
+This \mbox{\hyperlink{classrocr_1_1core_1_1Isa}{Isa}}\textquotesingle{}s stepping. 
+\end{DoxyReturn}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classrocr_1_1core_1_1Isa_a8fa678a428d0bb99ee888b50bfb9ae01_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classrocr_1_1core_1_1Isa_a95b242754c88583a635ccdc10edf6175}\label{classrocr_1_1core_1_1Isa_a95b242754c88583a635ccdc10edf6175}} 
+\index{rocr::core::Isa@{rocr::core::Isa}!GetVersion@{GetVersion}}
+\index{GetVersion@{GetVersion}!rocr::core::Isa@{rocr::core::Isa}}
+\doxysubsubsection{\texorpdfstring{GetVersion()}{GetVersion()}}
+{\footnotesize\ttfamily const \mbox{\hyperlink{classrocr_1_1core_1_1Isa_a6717314c453e6ebb7a9520d3d56aafa2}{Version}}\& rocr\+::core\+::\+Isa\+::\+Get\+Version (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+\begin{DoxyReturn}{Returns}
+This \mbox{\hyperlink{classrocr_1_1core_1_1Isa}{Isa}}\textquotesingle{}s version. 
+\end{DoxyReturn}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classrocr_1_1core_1_1Isa_a95b242754c88583a635ccdc10edf6175_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classrocr_1_1core_1_1Isa_ac031dd655ea3a7fe9f92d494640c4378}\label{classrocr_1_1core_1_1Isa_ac031dd655ea3a7fe9f92d494640c4378}} 
+\index{rocr::core::Isa@{rocr::core::Isa}!GetWavefront@{GetWavefront}}
+\index{GetWavefront@{GetWavefront}!rocr::core::Isa@{rocr::core::Isa}}
+\doxysubsubsection{\texorpdfstring{GetWavefront()}{GetWavefront()}}
+{\footnotesize\ttfamily const \mbox{\hyperlink{classrocr_1_1core_1_1Wavefront}{Wavefront}}\& rocr\+::core\+::\+Isa\+::\+Get\+Wavefront (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+\begin{DoxyReturn}{Returns}
+This \mbox{\hyperlink{classrocr_1_1core_1_1Isa}{Isa}}\textquotesingle{}s supported wavefront. 
+\end{DoxyReturn}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classrocr_1_1core_1_1Isa_ac031dd655ea3a7fe9f92d494640c4378_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classrocr_1_1core_1_1Isa_a144ced499b7056d29585a397341f7f5b}\label{classrocr_1_1core_1_1Isa_a144ced499b7056d29585a397341f7f5b}} 
+\index{rocr::core::Isa@{rocr::core::Isa}!GetXnack@{GetXnack}}
+\index{GetXnack@{GetXnack}!rocr::core::Isa@{rocr::core::Isa}}
+\doxysubsubsection{\texorpdfstring{GetXnack()}{GetXnack()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{namespacerocr_1_1core_a4faf1bc0974ed98e5acbdee2892fd12a}{Isa\+Feature}} rocr\+::core\+::\+Isa\+::\+Get\+Xnack (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+\begin{DoxyReturn}{Returns}
+XNACK feature status. 
+\end{DoxyReturn}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classrocr_1_1core_1_1Isa_a144ced499b7056d29585a397341f7f5b_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classrocr_1_1core_1_1Isa_ac025a9d6e356fe739ab6a04ed0650b7e}\label{classrocr_1_1core_1_1Isa_ac025a9d6e356fe739ab6a04ed0650b7e}} 
+\index{rocr::core::Isa@{rocr::core::Isa}!Handle@{Handle}}
+\index{Handle@{Handle}!rocr::core::Isa@{rocr::core::Isa}}
+\doxysubsubsection{\texorpdfstring{Handle()}{Handle()}}
+{\footnotesize\ttfamily static \mbox{\hyperlink{group__instruction-set-architecture_ga459b132d062bba98dd1870f38b6ab721}{hsa\+\_\+isa\+\_\+t}} rocr\+::core\+::\+Isa\+::\+Handle (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classrocr_1_1core_1_1Isa}{Isa}} $\ast$}]{isa\+\_\+object }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+\begin{DoxyReturn}{Returns}
+Handle equivalent of {\ttfamily isa\+\_\+object}. 
+\end{DoxyReturn}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classrocr_1_1core_1_1Isa_ac025a9d6e356fe739ab6a04ed0650b7e_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classrocr_1_1core_1_1Isa_a7155772dc6ca7999cc5f2e2f8d5058ff}\label{classrocr_1_1core_1_1Isa_a7155772dc6ca7999cc5f2e2f8d5058ff}} 
+\index{rocr::core::Isa@{rocr::core::Isa}!IsCompatible@{IsCompatible}}
+\index{IsCompatible@{IsCompatible}!rocr::core::Isa@{rocr::core::Isa}}
+\doxysubsubsection{\texorpdfstring{IsCompatible()}{IsCompatible()}}
+{\footnotesize\ttfamily bool rocr\+::core\+::\+Isa\+::\+Is\+Compatible (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classrocr_1_1core_1_1Isa}{Isa}} \&}]{code\+\_\+object\+\_\+isa,  }\item[{const \mbox{\hyperlink{classrocr_1_1core_1_1Isa}{Isa}} \&}]{agent\+\_\+isa }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+\begin{DoxyReturn}{Returns}
+True if {\ttfamily code\+\_\+object\+\_\+isa} and {\ttfamily agent\+\_\+isa} are compatible, false otherwise. 
+\end{DoxyReturn}
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classrocr_1_1core_1_1Isa_a7155772dc6ca7999cc5f2e2f8d5058ff_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classrocr_1_1core_1_1Isa_a7155772dc6ca7999cc5f2e2f8d5058ff_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classrocr_1_1core_1_1Isa_a88181406bd75cc41ebc92284bdb75d0b}\label{classrocr_1_1core_1_1Isa_a88181406bd75cc41ebc92284bdb75d0b}} 
+\index{rocr::core::Isa@{rocr::core::Isa}!IsSrameccSupported@{IsSrameccSupported}}
+\index{IsSrameccSupported@{IsSrameccSupported}!rocr::core::Isa@{rocr::core::Isa}}
+\doxysubsubsection{\texorpdfstring{IsSrameccSupported()}{IsSrameccSupported()}}
+{\footnotesize\ttfamily bool rocr\+::core\+::\+Isa\+::\+Is\+Sramecc\+Supported (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+\begin{DoxyReturn}{Returns}
+True if SRAMECC feature is supported, false otherwise. 
+\end{DoxyReturn}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classrocr_1_1core_1_1Isa_a88181406bd75cc41ebc92284bdb75d0b_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classrocr_1_1core_1_1Isa_a291d64ce650afd392def10a611602071}\label{classrocr_1_1core_1_1Isa_a291d64ce650afd392def10a611602071}} 
+\index{rocr::core::Isa@{rocr::core::Isa}!IsValid@{IsValid}}
+\index{IsValid@{IsValid}!rocr::core::Isa@{rocr::core::Isa}}
+\doxysubsubsection{\texorpdfstring{IsValid()}{IsValid()}}
+{\footnotesize\ttfamily bool rocr\+::core\+::\+Isa\+::\+Is\+Valid (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+\mbox{\hyperlink{classrocr_1_1core_1_1Isa}{Isa}} is always in valid state. 
+
+\mbox{\Hypertarget{classrocr_1_1core_1_1Isa_acfc92f005f99c85a9808a1769c9b9d6c}\label{classrocr_1_1core_1_1Isa_acfc92f005f99c85a9808a1769c9b9d6c}} 
+\index{rocr::core::Isa@{rocr::core::Isa}!IsXnackSupported@{IsXnackSupported}}
+\index{IsXnackSupported@{IsXnackSupported}!rocr::core::Isa@{rocr::core::Isa}}
+\doxysubsubsection{\texorpdfstring{IsXnackSupported()}{IsXnackSupported()}}
+{\footnotesize\ttfamily bool rocr\+::core\+::\+Isa\+::\+Is\+Xnack\+Supported (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+\begin{DoxyReturn}{Returns}
+True if XNACK feature is supported, false otherwise. 
+\end{DoxyReturn}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classrocr_1_1core_1_1Isa_acfc92f005f99c85a9808a1769c9b9d6c_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classrocr_1_1core_1_1Isa_a09409d403719942a6210c0609eb9934a}\label{classrocr_1_1core_1_1Isa_a09409d403719942a6210c0609eb9934a}} 
+\index{rocr::core::Isa@{rocr::core::Isa}!Object@{Object}}
+\index{Object@{Object}!rocr::core::Isa@{rocr::core::Isa}}
+\doxysubsubsection{\texorpdfstring{Object()}{Object()}}
+{\footnotesize\ttfamily static \mbox{\hyperlink{classrocr_1_1core_1_1Isa}{Isa}}$\ast$ rocr\+::core\+::\+Isa\+::\+Object (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{group__instruction-set-architecture_ga459b132d062bba98dd1870f38b6ab721}{hsa\+\_\+isa\+\_\+t}} \&}]{isa\+\_\+handle }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+\begin{DoxyReturn}{Returns}
+Object equivalent of {\ttfamily isa\+\_\+handle}. 
+\end{DoxyReturn}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classrocr_1_1core_1_1Isa_a09409d403719942a6210c0609eb9934a_icgraph}
+\end{center}
+\end{figure}
+
+
+\doxysubsection{Friends And Related Function Documentation}
+\mbox{\Hypertarget{classrocr_1_1core_1_1Isa_a5c87f7822a1b7e34ae5b5f4531584898}\label{classrocr_1_1core_1_1Isa_a5c87f7822a1b7e34ae5b5f4531584898}} 
+\index{rocr::core::Isa@{rocr::core::Isa}!IsaRegistry@{IsaRegistry}}
+\index{IsaRegistry@{IsaRegistry}!rocr::core::Isa@{rocr::core::Isa}}
+\doxysubsubsection{\texorpdfstring{IsaRegistry}{IsaRegistry}}
+{\footnotesize\ttfamily friend class \mbox{\hyperlink{classrocr_1_1core_1_1IsaRegistry}{Isa\+Registry}}\hspace{0.3cm}{\ttfamily [friend]}}
+
+
+
+\mbox{\hyperlink{classrocr_1_1core_1_1Isa}{Isa}}\textquotesingle{}s friends. 
+
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{classrocr_1_1core_1_1Isa_a3b077d7aba6adf56698222bce1dbf1aa}\label{classrocr_1_1core_1_1Isa_a3b077d7aba6adf56698222bce1dbf1aa}} 
+\index{rocr::core::Isa@{rocr::core::Isa}!sramecc\_@{sramecc\_}}
+\index{sramecc\_@{sramecc\_}!rocr::core::Isa@{rocr::core::Isa}}
+\doxysubsubsection{\texorpdfstring{sramecc\_}{sramecc\_}}
+{\footnotesize\ttfamily \mbox{\hyperlink{namespacerocr_1_1core_a4faf1bc0974ed98e5acbdee2892fd12a}{Isa\+Feature}} rocr\+::core\+::\+Isa\+::sramecc\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+SRAMECC feature. 
+
+\mbox{\Hypertarget{classrocr_1_1core_1_1Isa_acf40796c98c5674a8d32bfe2a38eccbc}\label{classrocr_1_1core_1_1Isa_acf40796c98c5674a8d32bfe2a38eccbc}} 
+\index{rocr::core::Isa@{rocr::core::Isa}!targetid\_@{targetid\_}}
+\index{targetid\_@{targetid\_}!rocr::core::Isa@{rocr::core::Isa}}
+\doxysubsubsection{\texorpdfstring{targetid\_}{targetid\_}}
+{\footnotesize\ttfamily const char$\ast$ rocr\+::core\+::\+Isa\+::targetid\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classrocr_1_1core_1_1Isa_abffe060da0e1a4e0cb4017d92db512fb}\label{classrocr_1_1core_1_1Isa_abffe060da0e1a4e0cb4017d92db512fb}} 
+\index{rocr::core::Isa@{rocr::core::Isa}!version\_@{version\_}}
+\index{version\_@{version\_}!rocr::core::Isa@{rocr::core::Isa}}
+\doxysubsubsection{\texorpdfstring{version\_}{version\_}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classrocr_1_1core_1_1Isa_a6717314c453e6ebb7a9520d3d56aafa2}{Version}} rocr\+::core\+::\+Isa\+::version\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+\mbox{\hyperlink{classrocr_1_1core_1_1Isa}{Isa}}\textquotesingle{}s version. 
+
+\mbox{\Hypertarget{classrocr_1_1core_1_1Isa_ae2274a41ec89e8ca5375ee7b05503c6b}\label{classrocr_1_1core_1_1Isa_ae2274a41ec89e8ca5375ee7b05503c6b}} 
+\index{rocr::core::Isa@{rocr::core::Isa}!wavefront\_@{wavefront\_}}
+\index{wavefront\_@{wavefront\_}!rocr::core::Isa@{rocr::core::Isa}}
+\doxysubsubsection{\texorpdfstring{wavefront\_}{wavefront\_}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classrocr_1_1core_1_1Wavefront}{Wavefront}} rocr\+::core\+::\+Isa\+::wavefront\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+\mbox{\hyperlink{classrocr_1_1core_1_1Isa}{Isa}}\textquotesingle{}s supported wavefront. 
+
+\mbox{\Hypertarget{classrocr_1_1core_1_1Isa_a3b3cb0447b6af0d2e243ac76dc6dba90}\label{classrocr_1_1core_1_1Isa_a3b3cb0447b6af0d2e243ac76dc6dba90}} 
+\index{rocr::core::Isa@{rocr::core::Isa}!xnack\_@{xnack\_}}
+\index{xnack\_@{xnack\_}!rocr::core::Isa@{rocr::core::Isa}}
+\doxysubsubsection{\texorpdfstring{xnack\_}{xnack\_}}
+{\footnotesize\ttfamily \mbox{\hyperlink{namespacerocr_1_1core_a4faf1bc0974ed98e5acbdee2892fd12a}{Isa\+Feature}} rocr\+::core\+::\+Isa\+::xnack\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+XNACK feature. 
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+src/core/inc/\mbox{\hyperlink{isa_8h}{isa.\+h}}\item 
+src/core/runtime/\mbox{\hyperlink{isa_8cpp}{isa.\+cpp}}\end{DoxyCompactItemize}

@@ -1,0 +1,312 @@
+\hypertarget{classrocr_1_1Addr_1_1Object}{}\doxysection{rocr\+::Addr\+::Object Class Reference}
+\label{classrocr_1_1Addr_1_1Object}\index{rocr::Addr::Object@{rocr::Addr::Object}}
+
+
+This class is the base class for all ADDR class objects.  
+
+
+
+
+{\ttfamily \#include $<$addrobject.\+h$>$}
+
+
+
+Inheritance diagram for rocr\+::Addr\+::Object\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classrocr_1_1Addr_1_1Object__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for rocr\+::Addr\+::Object\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classrocr_1_1Addr_1_1Object__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classrocr_1_1Addr_1_1Object_a2c151d79e2657058e18342ac1a6e2e79}{Object}} ()
+\begin{DoxyCompactList}\small\item\em Constructor for the \mbox{\hyperlink{classrocr_1_1Addr_1_1Object}{Object}} class. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classrocr_1_1Addr_1_1Object_a590de25e8ab32b0e4cf324ece87c2038}{Object}} (const \mbox{\hyperlink{structrocr_1_1Addr_1_1Client}{Client}} $\ast$p\+Client)
+\begin{DoxyCompactList}\small\item\em Constructor for the \mbox{\hyperlink{classrocr_1_1Addr_1_1Object}{Object}} class. \end{DoxyCompactList}\item 
+virtual \mbox{\hyperlink{classrocr_1_1Addr_1_1Object_a4973afd90c4a43b731c8a976eaf37b48}{$\sim$\+Object}} ()
+\begin{DoxyCompactList}\small\item\em Destructor for the \mbox{\hyperlink{classrocr_1_1Addr_1_1Object}{Object}} class. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{addrtypes_8h_a7927e087749615dae3114cc27b91c86d}{VOID}} $\ast$ \mbox{\hyperlink{classrocr_1_1Addr_1_1Object_acd249c247b7bc23abd433e3872ab694f}{operator new}} (size\+\_\+t size, \mbox{\hyperlink{addrtypes_8h_a7927e087749615dae3114cc27b91c86d}{VOID}} $\ast$p\+Mem) noexcept
+\begin{DoxyCompactList}\small\item\em Placement new operator. (with pre-\/allocated memory pointer) \end{DoxyCompactList}\item 
+\mbox{\hyperlink{addrtypes_8h_a7927e087749615dae3114cc27b91c86d}{VOID}} \mbox{\hyperlink{classrocr_1_1Addr_1_1Object_affe9745dd5554416f4950f14947b295b}{operator delete}} (\mbox{\hyperlink{addrtypes_8h_a7927e087749615dae3114cc27b91c86d}{VOID}} $\ast$p\+Obj)
+\begin{DoxyCompactList}\small\item\em Frees \mbox{\hyperlink{classrocr_1_1Addr_1_1Object}{Object}} object memory. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{addrtypes_8h_a7927e087749615dae3114cc27b91c86d}{VOID}} \mbox{\hyperlink{classrocr_1_1Addr_1_1Object_aa9ce353a713d5de54776eab36a60e020}{operator delete}} (\mbox{\hyperlink{addrtypes_8h_a7927e087749615dae3114cc27b91c86d}{VOID}} $\ast$p\+Obj, \mbox{\hyperlink{addrtypes_8h_a7927e087749615dae3114cc27b91c86d}{VOID}} $\ast$p\+Mem)
+\item 
+\mbox{\hyperlink{addrtypes_8h_a7927e087749615dae3114cc27b91c86d}{VOID}} $\ast$ \mbox{\hyperlink{classrocr_1_1Addr_1_1Object_a439915158be457cae2624591af9ce999}{Alloc}} (size\+\_\+t size) const
+\begin{DoxyCompactList}\small\item\em A wrapper of Client\+Alloc. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{addrtypes_8h_a7927e087749615dae3114cc27b91c86d}{VOID}} \mbox{\hyperlink{classrocr_1_1Addr_1_1Object_a48c0d055a6d97de98ed5f0953a881cca}{Free}} (\mbox{\hyperlink{addrtypes_8h_a7927e087749615dae3114cc27b91c86d}{VOID}} $\ast$p\+Obj) const
+\begin{DoxyCompactList}\small\item\em A wrapper of Client\+Free. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{addrtypes_8h_a7927e087749615dae3114cc27b91c86d}{VOID}} \mbox{\hyperlink{classrocr_1_1Addr_1_1Object_ac26b6cd57120d46ef6f5548733ed0fa2}{Debug\+Print}} (const \mbox{\hyperlink{addrtypes_8h_aebb9e13210d88d43e32e735ada43a425}{CHAR}} $\ast$p\+Debug\+String,...) const
+\begin{DoxyCompactList}\small\item\em Print debug message. \end{DoxyCompactList}\item 
+const \mbox{\hyperlink{structrocr_1_1Addr_1_1Client}{Client}} $\ast$ \mbox{\hyperlink{classrocr_1_1Addr_1_1Object_a59f4599a95a67e12f123fa5bdd886a09}{Get\+Client}} () const
+\end{DoxyCompactItemize}
+\doxysubsection*{Static Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static \mbox{\hyperlink{addrtypes_8h_a7927e087749615dae3114cc27b91c86d}{VOID}} $\ast$ \mbox{\hyperlink{classrocr_1_1Addr_1_1Object_ae801d3c6f3e99d7774f72bafc8820416}{Client\+Alloc}} (size\+\_\+t size, const \mbox{\hyperlink{structrocr_1_1Addr_1_1Client}{Client}} $\ast$p\+Client)
+\begin{DoxyCompactList}\small\item\em Calls instanced alloc\+Sys\+Mem inside \mbox{\hyperlink{structrocr_1_1Addr_1_1Client}{Client}}. \end{DoxyCompactList}\item 
+static \mbox{\hyperlink{addrtypes_8h_a7927e087749615dae3114cc27b91c86d}{VOID}} \mbox{\hyperlink{classrocr_1_1Addr_1_1Object_ad1167217e31e852d60a6669f6729b808}{Client\+Free}} (\mbox{\hyperlink{addrtypes_8h_a7927e087749615dae3114cc27b91c86d}{VOID}} $\ast$p\+Obj, const \mbox{\hyperlink{structrocr_1_1Addr_1_1Client}{Client}} $\ast$p\+Client)
+\begin{DoxyCompactList}\small\item\em Calls free\+Sys\+Mem inside \mbox{\hyperlink{structrocr_1_1Addr_1_1Client}{Client}}. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{structrocr_1_1Addr_1_1Client}{Client}} \mbox{\hyperlink{classrocr_1_1Addr_1_1Object_a0e1a104dcdfcb1b2c9cedfe978822352}{m\+\_\+client}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classrocr_1_1Addr_1_1Object_aadd9674cec954e7d1a6ba081c7c1bc11}{Object}} (const \mbox{\hyperlink{classrocr_1_1Addr_1_1Object}{Object}} \&a)
+\item 
+\mbox{\hyperlink{classrocr_1_1Addr_1_1Object}{Object}} \& \mbox{\hyperlink{classrocr_1_1Addr_1_1Object_af4fef7078c2ea6216d239cc8dcac0749}{operator=}} (const \mbox{\hyperlink{classrocr_1_1Addr_1_1Object}{Object}} \&a)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+This class is the base class for all ADDR class objects. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classrocr_1_1Addr_1_1Object_a2c151d79e2657058e18342ac1a6e2e79}\label{classrocr_1_1Addr_1_1Object_a2c151d79e2657058e18342ac1a6e2e79}} 
+\index{rocr::Addr::Object@{rocr::Addr::Object}!Object@{Object}}
+\index{Object@{Object}!rocr::Addr::Object@{rocr::Addr::Object}}
+\doxysubsubsection{\texorpdfstring{Object()}{Object()}\hspace{0.1cm}{\footnotesize\ttfamily [1/3]}}
+{\footnotesize\ttfamily rocr\+::\+Addr\+::\+Object\+::\+Object (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Constructor for the \mbox{\hyperlink{classrocr_1_1Addr_1_1Object}{Object}} class. 
+
+\mbox{\hyperlink{classrocr_1_1Addr_1_1Object_a2c151d79e2657058e18342ac1a6e2e79}{Object\+::\+Object}} \mbox{\Hypertarget{classrocr_1_1Addr_1_1Object_a590de25e8ab32b0e4cf324ece87c2038}\label{classrocr_1_1Addr_1_1Object_a590de25e8ab32b0e4cf324ece87c2038}} 
+\index{rocr::Addr::Object@{rocr::Addr::Object}!Object@{Object}}
+\index{Object@{Object}!rocr::Addr::Object@{rocr::Addr::Object}}
+\doxysubsubsection{\texorpdfstring{Object()}{Object()}\hspace{0.1cm}{\footnotesize\ttfamily [2/3]}}
+{\footnotesize\ttfamily rocr\+::\+Addr\+::\+Object\+::\+Object (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{structrocr_1_1Addr_1_1Client}{Client}} $\ast$}]{p\+Client }\end{DoxyParamCaption})}
+
+
+
+Constructor for the \mbox{\hyperlink{classrocr_1_1Addr_1_1Object}{Object}} class. 
+
+\mbox{\hyperlink{classrocr_1_1Addr_1_1Object_a2c151d79e2657058e18342ac1a6e2e79}{Object\+::\+Object}} \mbox{\Hypertarget{classrocr_1_1Addr_1_1Object_a4973afd90c4a43b731c8a976eaf37b48}\label{classrocr_1_1Addr_1_1Object_a4973afd90c4a43b731c8a976eaf37b48}} 
+\index{rocr::Addr::Object@{rocr::Addr::Object}!````~Object@{$\sim$Object}}
+\index{````~Object@{$\sim$Object}!rocr::Addr::Object@{rocr::Addr::Object}}
+\doxysubsubsection{\texorpdfstring{$\sim$Object()}{~Object()}}
+{\footnotesize\ttfamily rocr\+::\+Addr\+::\+Object\+::$\sim$\+Object (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Destructor for the \mbox{\hyperlink{classrocr_1_1Addr_1_1Object}{Object}} class. 
+
+\mbox{\hyperlink{classrocr_1_1Addr_1_1Object_a4973afd90c4a43b731c8a976eaf37b48}{Object\+::$\sim$\+Object}} \mbox{\Hypertarget{classrocr_1_1Addr_1_1Object_aadd9674cec954e7d1a6ba081c7c1bc11}\label{classrocr_1_1Addr_1_1Object_aadd9674cec954e7d1a6ba081c7c1bc11}} 
+\index{rocr::Addr::Object@{rocr::Addr::Object}!Object@{Object}}
+\index{Object@{Object}!rocr::Addr::Object@{rocr::Addr::Object}}
+\doxysubsubsection{\texorpdfstring{Object()}{Object()}\hspace{0.1cm}{\footnotesize\ttfamily [3/3]}}
+{\footnotesize\ttfamily rocr\+::\+Addr\+::\+Object\+::\+Object (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classrocr_1_1Addr_1_1Object}{Object}} \&}]{a }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classrocr_1_1Addr_1_1Object_a439915158be457cae2624591af9ce999}\label{classrocr_1_1Addr_1_1Object_a439915158be457cae2624591af9ce999}} 
+\index{rocr::Addr::Object@{rocr::Addr::Object}!Alloc@{Alloc}}
+\index{Alloc@{Alloc}!rocr::Addr::Object@{rocr::Addr::Object}}
+\doxysubsubsection{\texorpdfstring{Alloc()}{Alloc()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{addrtypes_8h_a7927e087749615dae3114cc27b91c86d}{VOID}} $\ast$ rocr\+::\+Addr\+::\+Object\+::\+Alloc (\begin{DoxyParamCaption}\item[{size\+\_\+t}]{obj\+Size }\end{DoxyParamCaption}) const}
+
+
+
+A wrapper of Client\+Alloc. 
+
+\mbox{\hyperlink{classrocr_1_1Addr_1_1Object_a439915158be457cae2624591af9ce999}{Object\+::\+Alloc}} 
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em obj\+Size} & Size to allocate \\
+\hline
+\end{DoxyParams}
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=304pt]{classrocr_1_1Addr_1_1Object_a439915158be457cae2624591af9ce999_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classrocr_1_1Addr_1_1Object_ae801d3c6f3e99d7774f72bafc8820416}\label{classrocr_1_1Addr_1_1Object_ae801d3c6f3e99d7774f72bafc8820416}} 
+\index{rocr::Addr::Object@{rocr::Addr::Object}!ClientAlloc@{ClientAlloc}}
+\index{ClientAlloc@{ClientAlloc}!rocr::Addr::Object@{rocr::Addr::Object}}
+\doxysubsubsection{\texorpdfstring{ClientAlloc()}{ClientAlloc()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{addrtypes_8h_a7927e087749615dae3114cc27b91c86d}{VOID}} $\ast$ rocr\+::\+Addr\+::\+Object\+::\+Client\+Alloc (\begin{DoxyParamCaption}\item[{size\+\_\+t}]{obj\+Size,  }\item[{const \mbox{\hyperlink{structrocr_1_1Addr_1_1Client}{Client}} $\ast$}]{p\+Client }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [protected]}}
+
+
+
+Calls instanced alloc\+Sys\+Mem inside \mbox{\hyperlink{structrocr_1_1Addr_1_1Client}{Client}}. 
+
+\mbox{\hyperlink{classrocr_1_1Addr_1_1Object_ae801d3c6f3e99d7774f72bafc8820416}{Object\+::\+Client\+Alloc}} 
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em obj\+Size} & Size to allocate \\
+\hline
+\mbox{\texttt{ in}}  & {\em p\+Client} & \mbox{\hyperlink{structrocr_1_1Addr_1_1Client}{Client}} pointer \\
+\hline
+\end{DoxyParams}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classrocr_1_1Addr_1_1Object_ae801d3c6f3e99d7774f72bafc8820416_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classrocr_1_1Addr_1_1Object_ad1167217e31e852d60a6669f6729b808}\label{classrocr_1_1Addr_1_1Object_ad1167217e31e852d60a6669f6729b808}} 
+\index{rocr::Addr::Object@{rocr::Addr::Object}!ClientFree@{ClientFree}}
+\index{ClientFree@{ClientFree}!rocr::Addr::Object@{rocr::Addr::Object}}
+\doxysubsubsection{\texorpdfstring{ClientFree()}{ClientFree()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{addrtypes_8h_a7927e087749615dae3114cc27b91c86d}{VOID}} rocr\+::\+Addr\+::\+Object\+::\+Client\+Free (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{addrtypes_8h_a7927e087749615dae3114cc27b91c86d}{VOID}} $\ast$}]{p\+Obj\+Mem,  }\item[{const \mbox{\hyperlink{structrocr_1_1Addr_1_1Client}{Client}} $\ast$}]{p\+Client }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [protected]}}
+
+
+
+Calls free\+Sys\+Mem inside \mbox{\hyperlink{structrocr_1_1Addr_1_1Client}{Client}}. 
+
+\mbox{\hyperlink{classrocr_1_1Addr_1_1Object_ad1167217e31e852d60a6669f6729b808}{Object\+::\+Client\+Free}} 
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em p\+Obj\+Mem} & User virtual address to free. \\
+\hline
+\mbox{\texttt{ in}}  & {\em p\+Client} & \mbox{\hyperlink{structrocr_1_1Addr_1_1Client}{Client}} pointer \\
+\hline
+\end{DoxyParams}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=304pt]{classrocr_1_1Addr_1_1Object_ad1167217e31e852d60a6669f6729b808_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classrocr_1_1Addr_1_1Object_ac26b6cd57120d46ef6f5548733ed0fa2}\label{classrocr_1_1Addr_1_1Object_ac26b6cd57120d46ef6f5548733ed0fa2}} 
+\index{rocr::Addr::Object@{rocr::Addr::Object}!DebugPrint@{DebugPrint}}
+\index{DebugPrint@{DebugPrint}!rocr::Addr::Object@{rocr::Addr::Object}}
+\doxysubsubsection{\texorpdfstring{DebugPrint()}{DebugPrint()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{addrtypes_8h_a7927e087749615dae3114cc27b91c86d}{VOID}} rocr\+::\+Addr\+::\+Object\+::\+Debug\+Print (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{addrtypes_8h_aebb9e13210d88d43e32e735ada43a425}{CHAR}} $\ast$}]{p\+Debug\+String,  }\item[{}]{... }\end{DoxyParamCaption}) const}
+
+
+
+Print debug message. 
+
+\mbox{\hyperlink{classrocr_1_1Addr_1_1Object_ac26b6cd57120d46ef6f5548733ed0fa2}{Object\+::\+Debug\+Print}}
+
+\begin{DoxyReturn}{Returns}
+N/A 
+\end{DoxyReturn}
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em p\+Debug\+String} & Debug string \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classrocr_1_1Addr_1_1Object_a48c0d055a6d97de98ed5f0953a881cca}\label{classrocr_1_1Addr_1_1Object_a48c0d055a6d97de98ed5f0953a881cca}} 
+\index{rocr::Addr::Object@{rocr::Addr::Object}!Free@{Free}}
+\index{Free@{Free}!rocr::Addr::Object@{rocr::Addr::Object}}
+\doxysubsubsection{\texorpdfstring{Free()}{Free()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{addrtypes_8h_a7927e087749615dae3114cc27b91c86d}{VOID}} rocr\+::\+Addr\+::\+Object\+::\+Free (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{addrtypes_8h_a7927e087749615dae3114cc27b91c86d}{VOID}} $\ast$}]{p\+Obj\+Mem }\end{DoxyParamCaption}) const}
+
+
+
+A wrapper of Client\+Free. 
+
+\mbox{\hyperlink{classrocr_1_1Addr_1_1Object_a48c0d055a6d97de98ed5f0953a881cca}{Object\+::\+Free}} 
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em p\+Obj\+Mem} & User virtual address to free. \\
+\hline
+\end{DoxyParams}
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=304pt]{classrocr_1_1Addr_1_1Object_a48c0d055a6d97de98ed5f0953a881cca_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classrocr_1_1Addr_1_1Object_a59f4599a95a67e12f123fa5bdd886a09}\label{classrocr_1_1Addr_1_1Object_a59f4599a95a67e12f123fa5bdd886a09}} 
+\index{rocr::Addr::Object@{rocr::Addr::Object}!GetClient@{GetClient}}
+\index{GetClient@{GetClient}!rocr::Addr::Object@{rocr::Addr::Object}}
+\doxysubsubsection{\texorpdfstring{GetClient()}{GetClient()}}
+{\footnotesize\ttfamily const \mbox{\hyperlink{structrocr_1_1Addr_1_1Client}{Client}}$\ast$ rocr\+::\+Addr\+::\+Object\+::\+Get\+Client (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classrocr_1_1Addr_1_1Object_a59f4599a95a67e12f123fa5bdd886a09_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classrocr_1_1Addr_1_1Object_affe9745dd5554416f4950f14947b295b}\label{classrocr_1_1Addr_1_1Object_affe9745dd5554416f4950f14947b295b}} 
+\index{rocr::Addr::Object@{rocr::Addr::Object}!operator delete@{operator delete}}
+\index{operator delete@{operator delete}!rocr::Addr::Object@{rocr::Addr::Object}}
+\doxysubsubsection{\texorpdfstring{operator delete()}{operator delete()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{addrtypes_8h_a7927e087749615dae3114cc27b91c86d}{VOID}} rocr\+::\+Addr\+::\+Object\+::operator delete (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{addrtypes_8h_a7927e087749615dae3114cc27b91c86d}{VOID}} $\ast$}]{p\+Obj\+Mem }\end{DoxyParamCaption})}
+
+
+
+Frees \mbox{\hyperlink{classrocr_1_1Addr_1_1Object}{Object}} object memory. 
+
+\mbox{\hyperlink{classrocr_1_1Addr_1_1Object_affe9745dd5554416f4950f14947b295b}{Object\+::operator delete}} 
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em p\+Obj\+Mem} & User virtual address to free. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classrocr_1_1Addr_1_1Object_aa9ce353a713d5de54776eab36a60e020}\label{classrocr_1_1Addr_1_1Object_aa9ce353a713d5de54776eab36a60e020}} 
+\index{rocr::Addr::Object@{rocr::Addr::Object}!operator delete@{operator delete}}
+\index{operator delete@{operator delete}!rocr::Addr::Object@{rocr::Addr::Object}}
+\doxysubsubsection{\texorpdfstring{operator delete()}{operator delete()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{addrtypes_8h_a7927e087749615dae3114cc27b91c86d}{VOID}} rocr\+::\+Addr\+::\+Object\+::operator delete (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{addrtypes_8h_a7927e087749615dae3114cc27b91c86d}{VOID}} $\ast$}]{p\+Obj,  }\item[{\mbox{\hyperlink{addrtypes_8h_a7927e087749615dae3114cc27b91c86d}{VOID}} $\ast$}]{p\+Mem }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Microsoft compiler requires a matching delete implementation, which seems to be called when bad\+\_\+alloc is thrown. But currently C++ exception isn\textquotesingle{}t allowed so a dummy implementation is added to eliminate the warning. \mbox{\Hypertarget{classrocr_1_1Addr_1_1Object_acd249c247b7bc23abd433e3872ab694f}\label{classrocr_1_1Addr_1_1Object_acd249c247b7bc23abd433e3872ab694f}} 
+\index{rocr::Addr::Object@{rocr::Addr::Object}!operator new@{operator new}}
+\index{operator new@{operator new}!rocr::Addr::Object@{rocr::Addr::Object}}
+\doxysubsubsection{\texorpdfstring{operator new()}{operator new()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{addrtypes_8h_a7927e087749615dae3114cc27b91c86d}{VOID}} $\ast$ rocr\+::\+Addr\+::\+Object\+::operator new (\begin{DoxyParamCaption}\item[{size\+\_\+t}]{obj\+Size,  }\item[{\mbox{\hyperlink{addrtypes_8h_a7927e087749615dae3114cc27b91c86d}{VOID}} $\ast$}]{p\+Mem }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [noexcept]}}
+
+
+
+Placement new operator. (with pre-\/allocated memory pointer) 
+
+\mbox{\hyperlink{classrocr_1_1Addr_1_1Object_acd249c247b7bc23abd433e3872ab694f}{Object\+::operator new}}
+
+\begin{DoxyReturn}{Returns}
+Returns pre-\/allocated memory pointer. 
+\end{DoxyReturn}
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em obj\+Size} & Size to allocate \\
+\hline
+\mbox{\texttt{ in}}  & {\em p\+Mem} & Pre-\/allocated pointer \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classrocr_1_1Addr_1_1Object_af4fef7078c2ea6216d239cc8dcac0749}\label{classrocr_1_1Addr_1_1Object_af4fef7078c2ea6216d239cc8dcac0749}} 
+\index{rocr::Addr::Object@{rocr::Addr::Object}!operator=@{operator=}}
+\index{operator=@{operator=}!rocr::Addr::Object@{rocr::Addr::Object}}
+\doxysubsubsection{\texorpdfstring{operator=()}{operator=()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classrocr_1_1Addr_1_1Object}{Object}}\& rocr\+::\+Addr\+::\+Object\+::operator= (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classrocr_1_1Addr_1_1Object}{Object}} \&}]{a }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{classrocr_1_1Addr_1_1Object_a0e1a104dcdfcb1b2c9cedfe978822352}\label{classrocr_1_1Addr_1_1Object_a0e1a104dcdfcb1b2c9cedfe978822352}} 
+\index{rocr::Addr::Object@{rocr::Addr::Object}!m\_client@{m\_client}}
+\index{m\_client@{m\_client}!rocr::Addr::Object@{rocr::Addr::Object}}
+\doxysubsubsection{\texorpdfstring{m\_client}{m\_client}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structrocr_1_1Addr_1_1Client}{Client}} rocr\+::\+Addr\+::\+Object\+::m\+\_\+client\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+src/image/addrlib/src/core/\mbox{\hyperlink{addrobject_8h}{addrobject.\+h}}\item 
+src/image/addrlib/src/core/\mbox{\hyperlink{addrobject_8cpp}{addrobject.\+cpp}}\end{DoxyCompactItemize}

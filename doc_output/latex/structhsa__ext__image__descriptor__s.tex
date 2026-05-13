@@ -1,0 +1,83 @@
+\hypertarget{structhsa__ext__image__descriptor__s}{}\doxysection{hsa\+\_\+ext\+\_\+image\+\_\+descriptor\+\_\+s Struct Reference}
+\label{structhsa__ext__image__descriptor__s}\index{hsa\_ext\_image\_descriptor\_s@{hsa\_ext\_image\_descriptor\_s}}
+
+
+Implementation independent image descriptor.  
+
+
+
+
+{\ttfamily \#include $<$hsa\+\_\+ext\+\_\+image.\+h$>$}
+
+
+
+Collaboration diagram for hsa\+\_\+ext\+\_\+image\+\_\+descriptor\+\_\+s\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=221pt]{structhsa__ext__image__descriptor__s__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{group__ext-images_gac61587d98a80d1660378e3904a66fc9c}{hsa\+\_\+ext\+\_\+image\+\_\+geometry\+\_\+t}} \mbox{\hyperlink{structhsa__ext__image__descriptor__s_aea5a4a53061a76966a2f92f256be780c}{geometry}}
+\item 
+size\+\_\+t \mbox{\hyperlink{structhsa__ext__image__descriptor__s_af6a340f3045147bbc9da72a23812372f}{width}}
+\item 
+size\+\_\+t \mbox{\hyperlink{structhsa__ext__image__descriptor__s_ace2d0e224cb922154a15ff0d5091119a}{height}}
+\item 
+size\+\_\+t \mbox{\hyperlink{structhsa__ext__image__descriptor__s_a7341c07e909e471ffb1f9c065f5bcafc}{depth}}
+\item 
+size\+\_\+t \mbox{\hyperlink{structhsa__ext__image__descriptor__s_adbf39bd4decc224b4b02be22f980b096}{array\+\_\+size}}
+\item 
+\mbox{\hyperlink{group__ext-images_ga37a5b98dd984766026174b4d6d486b29}{hsa\+\_\+ext\+\_\+image\+\_\+format\+\_\+t}} \mbox{\hyperlink{structhsa__ext__image__descriptor__s_a8164e6fb8fd5ba5498947e1b9b468bdb}{format}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Implementation independent image descriptor. 
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{structhsa__ext__image__descriptor__s_adbf39bd4decc224b4b02be22f980b096}\label{structhsa__ext__image__descriptor__s_adbf39bd4decc224b4b02be22f980b096}} 
+\index{hsa\_ext\_image\_descriptor\_s@{hsa\_ext\_image\_descriptor\_s}!array\_size@{array\_size}}
+\index{array\_size@{array\_size}!hsa\_ext\_image\_descriptor\_s@{hsa\_ext\_image\_descriptor\_s}}
+\doxysubsubsection{\texorpdfstring{array\_size}{array\_size}}
+{\footnotesize\ttfamily size\+\_\+t hsa\+\_\+ext\+\_\+image\+\_\+descriptor\+\_\+s\+::array\+\_\+size}
+
+Number of image layers in the image array. Only used if the geometry is \mbox{\hyperlink{group__ext-images_ggac61587d98a80d1660378e3904a66fc9cad989c8e619b376dc98ac3950be9afa33}{HSA\+\_\+\+EXT\+\_\+\+IMAGE\+\_\+\+GEOMETRY\+\_\+1\+DA}}, \mbox{\hyperlink{group__ext-images_ggac61587d98a80d1660378e3904a66fc9ca90929e69cbf0b447060e1aeb23fd6dd4}{HSA\+\_\+\+EXT\+\_\+\+IMAGE\+\_\+\+GEOMETRY\+\_\+2\+DA}}, or HSA\+\_\+\+EXT\+\_\+\+IMAGE\+\_\+\+GEOMETRY\+\_\+2\+DADEPTH, otherwise must be 0. \mbox{\Hypertarget{structhsa__ext__image__descriptor__s_a7341c07e909e471ffb1f9c065f5bcafc}\label{structhsa__ext__image__descriptor__s_a7341c07e909e471ffb1f9c065f5bcafc}} 
+\index{hsa\_ext\_image\_descriptor\_s@{hsa\_ext\_image\_descriptor\_s}!depth@{depth}}
+\index{depth@{depth}!hsa\_ext\_image\_descriptor\_s@{hsa\_ext\_image\_descriptor\_s}}
+\doxysubsubsection{\texorpdfstring{depth}{depth}}
+{\footnotesize\ttfamily size\+\_\+t hsa\+\_\+ext\+\_\+image\+\_\+descriptor\+\_\+s\+::depth}
+
+Depth of the image, in components. Only used if the geometry is \mbox{\hyperlink{group__ext-images_ggac61587d98a80d1660378e3904a66fc9ca2e749b6b96377b9a744fc837296e318c}{HSA\+\_\+\+EXT\+\_\+\+IMAGE\+\_\+\+GEOMETRY\+\_\+3D}}, otherwise must be 0. \mbox{\Hypertarget{structhsa__ext__image__descriptor__s_a8164e6fb8fd5ba5498947e1b9b468bdb}\label{structhsa__ext__image__descriptor__s_a8164e6fb8fd5ba5498947e1b9b468bdb}} 
+\index{hsa\_ext\_image\_descriptor\_s@{hsa\_ext\_image\_descriptor\_s}!format@{format}}
+\index{format@{format}!hsa\_ext\_image\_descriptor\_s@{hsa\_ext\_image\_descriptor\_s}}
+\doxysubsubsection{\texorpdfstring{format}{format}}
+{\footnotesize\ttfamily \mbox{\hyperlink{group__ext-images_ga37a5b98dd984766026174b4d6d486b29}{hsa\+\_\+ext\+\_\+image\+\_\+format\+\_\+t}} hsa\+\_\+ext\+\_\+image\+\_\+descriptor\+\_\+s\+::format}
+
+Image format. \mbox{\Hypertarget{structhsa__ext__image__descriptor__s_aea5a4a53061a76966a2f92f256be780c}\label{structhsa__ext__image__descriptor__s_aea5a4a53061a76966a2f92f256be780c}} 
+\index{hsa\_ext\_image\_descriptor\_s@{hsa\_ext\_image\_descriptor\_s}!geometry@{geometry}}
+\index{geometry@{geometry}!hsa\_ext\_image\_descriptor\_s@{hsa\_ext\_image\_descriptor\_s}}
+\doxysubsubsection{\texorpdfstring{geometry}{geometry}}
+{\footnotesize\ttfamily \mbox{\hyperlink{group__ext-images_gac61587d98a80d1660378e3904a66fc9c}{hsa\+\_\+ext\+\_\+image\+\_\+geometry\+\_\+t}} hsa\+\_\+ext\+\_\+image\+\_\+descriptor\+\_\+s\+::geometry}
+
+Image geometry. \mbox{\Hypertarget{structhsa__ext__image__descriptor__s_ace2d0e224cb922154a15ff0d5091119a}\label{structhsa__ext__image__descriptor__s_ace2d0e224cb922154a15ff0d5091119a}} 
+\index{hsa\_ext\_image\_descriptor\_s@{hsa\_ext\_image\_descriptor\_s}!height@{height}}
+\index{height@{height}!hsa\_ext\_image\_descriptor\_s@{hsa\_ext\_image\_descriptor\_s}}
+\doxysubsubsection{\texorpdfstring{height}{height}}
+{\footnotesize\ttfamily size\+\_\+t hsa\+\_\+ext\+\_\+image\+\_\+descriptor\+\_\+s\+::height}
+
+Height of the image, in components. Only used if the geometry is \mbox{\hyperlink{group__ext-images_ggac61587d98a80d1660378e3904a66fc9ca4bcc28ccad5a32bd9c9dbf203da4464e}{HSA\+\_\+\+EXT\+\_\+\+IMAGE\+\_\+\+GEOMETRY\+\_\+2D}}, \mbox{\hyperlink{group__ext-images_ggac61587d98a80d1660378e3904a66fc9ca2e749b6b96377b9a744fc837296e318c}{HSA\+\_\+\+EXT\+\_\+\+IMAGE\+\_\+\+GEOMETRY\+\_\+3D}}, HSA\+\_\+\+EXT\+\_\+\+IMAGE\+\_\+\+GEOMETRY\+\_\+2\+DA, HSA\+\_\+\+EXT\+\_\+\+IMAGE\+\_\+\+GEOMETRY\+\_\+2\+DDEPTH, or HSA\+\_\+\+EXT\+\_\+\+IMAGE\+\_\+\+GEOMETRY\+\_\+2\+DADEPTH, otherwise must be 0. \mbox{\Hypertarget{structhsa__ext__image__descriptor__s_af6a340f3045147bbc9da72a23812372f}\label{structhsa__ext__image__descriptor__s_af6a340f3045147bbc9da72a23812372f}} 
+\index{hsa\_ext\_image\_descriptor\_s@{hsa\_ext\_image\_descriptor\_s}!width@{width}}
+\index{width@{width}!hsa\_ext\_image\_descriptor\_s@{hsa\_ext\_image\_descriptor\_s}}
+\doxysubsubsection{\texorpdfstring{width}{width}}
+{\footnotesize\ttfamily size\+\_\+t hsa\+\_\+ext\+\_\+image\+\_\+descriptor\+\_\+s\+::width}
+
+Width of the image, in components. 
+
+The documentation for this struct was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+src/inc/\mbox{\hyperlink{inc_2hsa__ext__image_8h}{hsa\+\_\+ext\+\_\+image.\+h}}\end{DoxyCompactItemize}

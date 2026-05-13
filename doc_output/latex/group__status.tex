@@ -1,0 +1,243 @@
+\hypertarget{group__status}{}\doxysection{Runtime Notifications}
+\label{group__status}\index{Runtime Notifications@{Runtime Notifications}}
+\doxysubsection*{Enumerations}
+\begin{DoxyCompactItemize}
+\item 
+enum \mbox{\hyperlink{group__status_gad755322e7ff95456520e8abdbe90d225}{hsa\+\_\+status\+\_\+t}} \{ \newline
+\mbox{\hyperlink{group__status_ggad755322e7ff95456520e8abdbe90d225ae382ea0c9c05cce5a60d0317375159cc}{HSA\+\_\+\+STATUS\+\_\+\+SUCCESS}} = 0x0
+, \mbox{\hyperlink{group__status_ggad755322e7ff95456520e8abdbe90d225a86c476121ca787ff75f6a4676507b221}{HSA\+\_\+\+STATUS\+\_\+\+INFO\+\_\+\+BREAK}} = 0x1
+, \mbox{\hyperlink{group__status_ggad755322e7ff95456520e8abdbe90d225a60edf4d82e4703ff750ea38d619fea88}{HSA\+\_\+\+STATUS\+\_\+\+ERROR}} = 0x1000
+, \mbox{\hyperlink{group__status_ggad755322e7ff95456520e8abdbe90d225ac7d3651f75107d2a6a8ba3b25683c030}{HSA\+\_\+\+STATUS\+\_\+\+ERROR\+\_\+\+INVALID\+\_\+\+ARGUMENT}} = 0x1001
+, \newline
+\mbox{\hyperlink{group__status_ggad755322e7ff95456520e8abdbe90d225a7b27f50e23a776b496b8b4707f21ccad}{HSA\+\_\+\+STATUS\+\_\+\+ERROR\+\_\+\+INVALID\+\_\+\+QUEUE\+\_\+\+CREATION}} = 0x1002
+, \mbox{\hyperlink{group__status_ggad755322e7ff95456520e8abdbe90d225ac818189ff640d38ce13558e72daddb75}{HSA\+\_\+\+STATUS\+\_\+\+ERROR\+\_\+\+INVALID\+\_\+\+ALLOCATION}} = 0x1003
+, \mbox{\hyperlink{group__status_ggad755322e7ff95456520e8abdbe90d225a3a5d835c109c2d0ad5b9c2771e133e5d}{HSA\+\_\+\+STATUS\+\_\+\+ERROR\+\_\+\+INVALID\+\_\+\+AGENT}} = 0x1004
+, \mbox{\hyperlink{group__status_ggad755322e7ff95456520e8abdbe90d225ad63594ac02edec7ae7aa7722c11afcd9}{HSA\+\_\+\+STATUS\+\_\+\+ERROR\+\_\+\+INVALID\+\_\+\+REGION}} = 0x1005
+, \newline
+\mbox{\hyperlink{group__status_ggad755322e7ff95456520e8abdbe90d225a7b4c8c0d4c99a1fe966abc2d39b575fe}{HSA\+\_\+\+STATUS\+\_\+\+ERROR\+\_\+\+INVALID\+\_\+\+SIGNAL}} = 0x1006
+, \mbox{\hyperlink{group__status_ggad755322e7ff95456520e8abdbe90d225aa3c762eb6a61b358702b45259d1686c4}{HSA\+\_\+\+STATUS\+\_\+\+ERROR\+\_\+\+INVALID\+\_\+\+QUEUE}} = 0x1007
+, \mbox{\hyperlink{group__status_ggad755322e7ff95456520e8abdbe90d225a1a77fcf36d0d140874c4361ab093eff7}{HSA\+\_\+\+STATUS\+\_\+\+ERROR\+\_\+\+OUT\+\_\+\+OF\+\_\+\+RESOURCES}} = 0x1008
+, \mbox{\hyperlink{group__status_ggad755322e7ff95456520e8abdbe90d225a3fad45f72111eb99de5d8daef26c372c}{HSA\+\_\+\+STATUS\+\_\+\+ERROR\+\_\+\+INVALID\+\_\+\+PACKET\+\_\+\+FORMAT}} = 0x1009
+, \newline
+\mbox{\hyperlink{group__status_ggad755322e7ff95456520e8abdbe90d225a6406af88203fcbec4179fbb71cc66b65}{HSA\+\_\+\+STATUS\+\_\+\+ERROR\+\_\+\+RESOURCE\+\_\+\+FREE}} = 0x100A
+, \mbox{\hyperlink{group__status_ggad755322e7ff95456520e8abdbe90d225a34ea59ade5bfce95eee935238a99f5b5}{HSA\+\_\+\+STATUS\+\_\+\+ERROR\+\_\+\+NOT\+\_\+\+INITIALIZED}} = 0x100B
+, \mbox{\hyperlink{group__status_ggad755322e7ff95456520e8abdbe90d225aa9218eed04d1d2ffc5ed8f33f2cd1c9b}{HSA\+\_\+\+STATUS\+\_\+\+ERROR\+\_\+\+REFCOUNT\+\_\+\+OVERFLOW}} = 0x100C
+, \mbox{\hyperlink{group__status_ggad755322e7ff95456520e8abdbe90d225a896bcafdb5c10c5802cf70083c3aeb8a}{HSA\+\_\+\+STATUS\+\_\+\+ERROR\+\_\+\+INCOMPATIBLE\+\_\+\+ARGUMENTS}} = 0x100D
+, \newline
+\mbox{\hyperlink{group__status_ggad755322e7ff95456520e8abdbe90d225a810d9e6e3fa9db4478f270e60aa963dc}{HSA\+\_\+\+STATUS\+\_\+\+ERROR\+\_\+\+INVALID\+\_\+\+INDEX}} = 0x100E
+, \mbox{\hyperlink{group__status_ggad755322e7ff95456520e8abdbe90d225a6907a990eee322a97285e3656b846120}{HSA\+\_\+\+STATUS\+\_\+\+ERROR\+\_\+\+INVALID\+\_\+\+ISA}} = 0x100F
+, \mbox{\hyperlink{group__status_ggad755322e7ff95456520e8abdbe90d225a4328de4769aea88e55e84a3e16ac3ed8}{HSA\+\_\+\+STATUS\+\_\+\+ERROR\+\_\+\+INVALID\+\_\+\+ISA\+\_\+\+NAME}} = 0x1017
+, \mbox{\hyperlink{group__status_ggad755322e7ff95456520e8abdbe90d225a152d0a73aaefeeab32845d0d7a1e9952}{HSA\+\_\+\+STATUS\+\_\+\+ERROR\+\_\+\+INVALID\+\_\+\+CODE\+\_\+\+OBJECT}} = 0x1010
+, \newline
+\mbox{\hyperlink{group__status_ggad755322e7ff95456520e8abdbe90d225ae2fcb63555ddbffb6048b7e044501151}{HSA\+\_\+\+STATUS\+\_\+\+ERROR\+\_\+\+INVALID\+\_\+\+EXECUTABLE}} = 0x1011
+, \mbox{\hyperlink{group__status_ggad755322e7ff95456520e8abdbe90d225a32f01e35216b0a6473cd248db77bf2be}{HSA\+\_\+\+STATUS\+\_\+\+ERROR\+\_\+\+FROZEN\+\_\+\+EXECUTABLE}} = 0x1012
+, \mbox{\hyperlink{group__status_ggad755322e7ff95456520e8abdbe90d225a763aa9892acea9f7d145c0111247359c}{HSA\+\_\+\+STATUS\+\_\+\+ERROR\+\_\+\+INVALID\+\_\+\+SYMBOL\+\_\+\+NAME}} = 0x1013
+, \mbox{\hyperlink{group__status_ggad755322e7ff95456520e8abdbe90d225abff93790fdc804ac87c2299c296cc598}{HSA\+\_\+\+STATUS\+\_\+\+ERROR\+\_\+\+VARIABLE\+\_\+\+ALREADY\+\_\+\+DEFINED}} = 0x1014
+, \newline
+\mbox{\hyperlink{group__status_ggad755322e7ff95456520e8abdbe90d225a4dc84f78ba6a7ac6e5ae26143c17701d}{HSA\+\_\+\+STATUS\+\_\+\+ERROR\+\_\+\+VARIABLE\+\_\+\+UNDEFINED}} = 0x1015
+, \mbox{\hyperlink{group__status_ggad755322e7ff95456520e8abdbe90d225ac537647317af337965bc115688bb5db7}{HSA\+\_\+\+STATUS\+\_\+\+ERROR\+\_\+\+EXCEPTION}} = 0x1016
+, \mbox{\hyperlink{group__status_ggad755322e7ff95456520e8abdbe90d225a60262f8c37b2e374271d068625f6eed5}{HSA\+\_\+\+STATUS\+\_\+\+ERROR\+\_\+\+INVALID\+\_\+\+CODE\+\_\+\+SYMBOL}} = 0x1018
+, \mbox{\hyperlink{group__status_ggad755322e7ff95456520e8abdbe90d225a1db2eecfbdb0ba426626ab7feb0d3719}{HSA\+\_\+\+STATUS\+\_\+\+ERROR\+\_\+\+INVALID\+\_\+\+EXECUTABLE\+\_\+\+SYMBOL}} = 0x1019
+, \newline
+\mbox{\hyperlink{group__status_ggad755322e7ff95456520e8abdbe90d225a041d5163a93802756e6130e70810f2c3}{HSA\+\_\+\+STATUS\+\_\+\+ERROR\+\_\+\+INVALID\+\_\+\+FILE}} = 0x1020
+, \mbox{\hyperlink{group__status_ggad755322e7ff95456520e8abdbe90d225abf212e30cc0c2c2771471f60141a00fd}{HSA\+\_\+\+STATUS\+\_\+\+ERROR\+\_\+\+INVALID\+\_\+\+CODE\+\_\+\+OBJECT\+\_\+\+READER}} = 0x1021
+, \mbox{\hyperlink{group__status_ggad755322e7ff95456520e8abdbe90d225ad2fe1f825edb316e459e23c59e24b33c}{HSA\+\_\+\+STATUS\+\_\+\+ERROR\+\_\+\+INVALID\+\_\+\+CACHE}} = 0x1022
+, \mbox{\hyperlink{group__status_ggad755322e7ff95456520e8abdbe90d225a69740ca218b05c182f2ea9e65466fc73}{HSA\+\_\+\+STATUS\+\_\+\+ERROR\+\_\+\+INVALID\+\_\+\+WAVEFRONT}} = 0x1023
+, \newline
+\mbox{\hyperlink{group__status_ggad755322e7ff95456520e8abdbe90d225abd03356b33a9726a76b3c96baee8badc}{HSA\+\_\+\+STATUS\+\_\+\+ERROR\+\_\+\+INVALID\+\_\+\+SIGNAL\+\_\+\+GROUP}} = 0x1024
+, \mbox{\hyperlink{group__status_ggad755322e7ff95456520e8abdbe90d225a0757001bc552638a8937ca5ea611c55e}{HSA\+\_\+\+STATUS\+\_\+\+ERROR\+\_\+\+INVALID\+\_\+\+RUNTIME\+\_\+\+STATE}} = 0x1025
+, \mbox{\hyperlink{group__status_ggad755322e7ff95456520e8abdbe90d225a1c6ee5b351c7c9084cc943f579ba70da}{HSA\+\_\+\+STATUS\+\_\+\+ERROR\+\_\+\+FATAL}} = 0x1026
+ \}
+\begin{DoxyCompactList}\small\item\em Status codes. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{group__status_gad755322e7ff95456520e8abdbe90d225}{hsa\+\_\+status\+\_\+t}} \mbox{\hyperlink{inc_2hsa__ext__image_8h_a64216765b98b62ee87deb50fd2899836}{HSA\+\_\+\+API}} \mbox{\hyperlink{group__status_gad3c84c6119c06322ee8e9cd44fa47b25}{hsa\+\_\+status\+\_\+string}} (\mbox{\hyperlink{group__status_gad755322e7ff95456520e8abdbe90d225}{hsa\+\_\+status\+\_\+t}} status, const char $\ast$$\ast$status\+\_\+string)
+\begin{DoxyCompactList}\small\item\em Query additional information about a status code. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+
+
+\doxysubsection{Enumeration Type Documentation}
+\mbox{\Hypertarget{group__status_gad755322e7ff95456520e8abdbe90d225}\label{group__status_gad755322e7ff95456520e8abdbe90d225}} 
+\index{Runtime Notifications@{Runtime Notifications}!hsa\_status\_t@{hsa\_status\_t}}
+\index{hsa\_status\_t@{hsa\_status\_t}!Runtime Notifications@{Runtime Notifications}}
+\doxysubsubsection{\texorpdfstring{hsa\_status\_t}{hsa\_status\_t}}
+{\footnotesize\ttfamily enum \mbox{\hyperlink{group__status_gad755322e7ff95456520e8abdbe90d225}{hsa\+\_\+status\+\_\+t}}}
+
+
+
+Status codes. 
+
+\begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{HSA\_STATUS\_SUCCESS@{HSA\_STATUS\_SUCCESS}!Runtime Notifications@{Runtime Notifications}}\index{Runtime Notifications@{Runtime Notifications}!HSA\_STATUS\_SUCCESS@{HSA\_STATUS\_SUCCESS}}}\mbox{\Hypertarget{group__status_ggad755322e7ff95456520e8abdbe90d225ae382ea0c9c05cce5a60d0317375159cc}\label{group__status_ggad755322e7ff95456520e8abdbe90d225ae382ea0c9c05cce5a60d0317375159cc}} 
+HSA\+\_\+\+STATUS\+\_\+\+SUCCESS&The function has been executed successfully. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{HSA\_STATUS\_INFO\_BREAK@{HSA\_STATUS\_INFO\_BREAK}!Runtime Notifications@{Runtime Notifications}}\index{Runtime Notifications@{Runtime Notifications}!HSA\_STATUS\_INFO\_BREAK@{HSA\_STATUS\_INFO\_BREAK}}}\mbox{\Hypertarget{group__status_ggad755322e7ff95456520e8abdbe90d225a86c476121ca787ff75f6a4676507b221}\label{group__status_ggad755322e7ff95456520e8abdbe90d225a86c476121ca787ff75f6a4676507b221}} 
+HSA\+\_\+\+STATUS\+\_\+\+INFO\+\_\+\+BREAK&A traversal over a list of elements has been interrupted by the application before completing. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{HSA\_STATUS\_ERROR@{HSA\_STATUS\_ERROR}!Runtime Notifications@{Runtime Notifications}}\index{Runtime Notifications@{Runtime Notifications}!HSA\_STATUS\_ERROR@{HSA\_STATUS\_ERROR}}}\mbox{\Hypertarget{group__status_ggad755322e7ff95456520e8abdbe90d225a60edf4d82e4703ff750ea38d619fea88}\label{group__status_ggad755322e7ff95456520e8abdbe90d225a60edf4d82e4703ff750ea38d619fea88}} 
+HSA\+\_\+\+STATUS\+\_\+\+ERROR&A generic error has occurred. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{HSA\_STATUS\_ERROR\_INVALID\_ARGUMENT@{HSA\_STATUS\_ERROR\_INVALID\_ARGUMENT}!Runtime Notifications@{Runtime Notifications}}\index{Runtime Notifications@{Runtime Notifications}!HSA\_STATUS\_ERROR\_INVALID\_ARGUMENT@{HSA\_STATUS\_ERROR\_INVALID\_ARGUMENT}}}\mbox{\Hypertarget{group__status_ggad755322e7ff95456520e8abdbe90d225ac7d3651f75107d2a6a8ba3b25683c030}\label{group__status_ggad755322e7ff95456520e8abdbe90d225ac7d3651f75107d2a6a8ba3b25683c030}} 
+HSA\+\_\+\+STATUS\+\_\+\+ERROR\+\_\+\+INVALID\+\_\+\+ARGUMENT&One of the actual arguments does not meet a precondition stated in the documentation of the corresponding formal argument. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{HSA\_STATUS\_ERROR\_INVALID\_QUEUE\_CREATION@{HSA\_STATUS\_ERROR\_INVALID\_QUEUE\_CREATION}!Runtime Notifications@{Runtime Notifications}}\index{Runtime Notifications@{Runtime Notifications}!HSA\_STATUS\_ERROR\_INVALID\_QUEUE\_CREATION@{HSA\_STATUS\_ERROR\_INVALID\_QUEUE\_CREATION}}}\mbox{\Hypertarget{group__status_ggad755322e7ff95456520e8abdbe90d225a7b27f50e23a776b496b8b4707f21ccad}\label{group__status_ggad755322e7ff95456520e8abdbe90d225a7b27f50e23a776b496b8b4707f21ccad}} 
+HSA\+\_\+\+STATUS\+\_\+\+ERROR\+\_\+\+INVALID\+\_\+\+QUEUE\+\_\+\+CREATION&The requested queue creation is not valid. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{HSA\_STATUS\_ERROR\_INVALID\_ALLOCATION@{HSA\_STATUS\_ERROR\_INVALID\_ALLOCATION}!Runtime Notifications@{Runtime Notifications}}\index{Runtime Notifications@{Runtime Notifications}!HSA\_STATUS\_ERROR\_INVALID\_ALLOCATION@{HSA\_STATUS\_ERROR\_INVALID\_ALLOCATION}}}\mbox{\Hypertarget{group__status_ggad755322e7ff95456520e8abdbe90d225ac818189ff640d38ce13558e72daddb75}\label{group__status_ggad755322e7ff95456520e8abdbe90d225ac818189ff640d38ce13558e72daddb75}} 
+HSA\+\_\+\+STATUS\+\_\+\+ERROR\+\_\+\+INVALID\+\_\+\+ALLOCATION&The requested allocation is not valid. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{HSA\_STATUS\_ERROR\_INVALID\_AGENT@{HSA\_STATUS\_ERROR\_INVALID\_AGENT}!Runtime Notifications@{Runtime Notifications}}\index{Runtime Notifications@{Runtime Notifications}!HSA\_STATUS\_ERROR\_INVALID\_AGENT@{HSA\_STATUS\_ERROR\_INVALID\_AGENT}}}\mbox{\Hypertarget{group__status_ggad755322e7ff95456520e8abdbe90d225a3a5d835c109c2d0ad5b9c2771e133e5d}\label{group__status_ggad755322e7ff95456520e8abdbe90d225a3a5d835c109c2d0ad5b9c2771e133e5d}} 
+HSA\+\_\+\+STATUS\+\_\+\+ERROR\+\_\+\+INVALID\+\_\+\+AGENT&The agent is invalid. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{HSA\_STATUS\_ERROR\_INVALID\_REGION@{HSA\_STATUS\_ERROR\_INVALID\_REGION}!Runtime Notifications@{Runtime Notifications}}\index{Runtime Notifications@{Runtime Notifications}!HSA\_STATUS\_ERROR\_INVALID\_REGION@{HSA\_STATUS\_ERROR\_INVALID\_REGION}}}\mbox{\Hypertarget{group__status_ggad755322e7ff95456520e8abdbe90d225ad63594ac02edec7ae7aa7722c11afcd9}\label{group__status_ggad755322e7ff95456520e8abdbe90d225ad63594ac02edec7ae7aa7722c11afcd9}} 
+HSA\+\_\+\+STATUS\+\_\+\+ERROR\+\_\+\+INVALID\+\_\+\+REGION&The memory region is invalid. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{HSA\_STATUS\_ERROR\_INVALID\_SIGNAL@{HSA\_STATUS\_ERROR\_INVALID\_SIGNAL}!Runtime Notifications@{Runtime Notifications}}\index{Runtime Notifications@{Runtime Notifications}!HSA\_STATUS\_ERROR\_INVALID\_SIGNAL@{HSA\_STATUS\_ERROR\_INVALID\_SIGNAL}}}\mbox{\Hypertarget{group__status_ggad755322e7ff95456520e8abdbe90d225a7b4c8c0d4c99a1fe966abc2d39b575fe}\label{group__status_ggad755322e7ff95456520e8abdbe90d225a7b4c8c0d4c99a1fe966abc2d39b575fe}} 
+HSA\+\_\+\+STATUS\+\_\+\+ERROR\+\_\+\+INVALID\+\_\+\+SIGNAL&The signal is invalid. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{HSA\_STATUS\_ERROR\_INVALID\_QUEUE@{HSA\_STATUS\_ERROR\_INVALID\_QUEUE}!Runtime Notifications@{Runtime Notifications}}\index{Runtime Notifications@{Runtime Notifications}!HSA\_STATUS\_ERROR\_INVALID\_QUEUE@{HSA\_STATUS\_ERROR\_INVALID\_QUEUE}}}\mbox{\Hypertarget{group__status_ggad755322e7ff95456520e8abdbe90d225aa3c762eb6a61b358702b45259d1686c4}\label{group__status_ggad755322e7ff95456520e8abdbe90d225aa3c762eb6a61b358702b45259d1686c4}} 
+HSA\+\_\+\+STATUS\+\_\+\+ERROR\+\_\+\+INVALID\+\_\+\+QUEUE&The queue is invalid. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{HSA\_STATUS\_ERROR\_OUT\_OF\_RESOURCES@{HSA\_STATUS\_ERROR\_OUT\_OF\_RESOURCES}!Runtime Notifications@{Runtime Notifications}}\index{Runtime Notifications@{Runtime Notifications}!HSA\_STATUS\_ERROR\_OUT\_OF\_RESOURCES@{HSA\_STATUS\_ERROR\_OUT\_OF\_RESOURCES}}}\mbox{\Hypertarget{group__status_ggad755322e7ff95456520e8abdbe90d225a1a77fcf36d0d140874c4361ab093eff7}\label{group__status_ggad755322e7ff95456520e8abdbe90d225a1a77fcf36d0d140874c4361ab093eff7}} 
+HSA\+\_\+\+STATUS\+\_\+\+ERROR\+\_\+\+OUT\+\_\+\+OF\+\_\+\+RESOURCES&The HSA runtime failed to allocate the necessary resources. This error may also occur when the HSA runtime needs to spawn threads or create internal OS-\/specific events. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{HSA\_STATUS\_ERROR\_INVALID\_PACKET\_FORMAT@{HSA\_STATUS\_ERROR\_INVALID\_PACKET\_FORMAT}!Runtime Notifications@{Runtime Notifications}}\index{Runtime Notifications@{Runtime Notifications}!HSA\_STATUS\_ERROR\_INVALID\_PACKET\_FORMAT@{HSA\_STATUS\_ERROR\_INVALID\_PACKET\_FORMAT}}}\mbox{\Hypertarget{group__status_ggad755322e7ff95456520e8abdbe90d225a3fad45f72111eb99de5d8daef26c372c}\label{group__status_ggad755322e7ff95456520e8abdbe90d225a3fad45f72111eb99de5d8daef26c372c}} 
+HSA\+\_\+\+STATUS\+\_\+\+ERROR\+\_\+\+INVALID\+\_\+\+PACKET\+\_\+\+FORMAT&The AQL packet is malformed. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{HSA\_STATUS\_ERROR\_RESOURCE\_FREE@{HSA\_STATUS\_ERROR\_RESOURCE\_FREE}!Runtime Notifications@{Runtime Notifications}}\index{Runtime Notifications@{Runtime Notifications}!HSA\_STATUS\_ERROR\_RESOURCE\_FREE@{HSA\_STATUS\_ERROR\_RESOURCE\_FREE}}}\mbox{\Hypertarget{group__status_ggad755322e7ff95456520e8abdbe90d225a6406af88203fcbec4179fbb71cc66b65}\label{group__status_ggad755322e7ff95456520e8abdbe90d225a6406af88203fcbec4179fbb71cc66b65}} 
+HSA\+\_\+\+STATUS\+\_\+\+ERROR\+\_\+\+RESOURCE\+\_\+\+FREE&An error has been detected while releasing a resource. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{HSA\_STATUS\_ERROR\_NOT\_INITIALIZED@{HSA\_STATUS\_ERROR\_NOT\_INITIALIZED}!Runtime Notifications@{Runtime Notifications}}\index{Runtime Notifications@{Runtime Notifications}!HSA\_STATUS\_ERROR\_NOT\_INITIALIZED@{HSA\_STATUS\_ERROR\_NOT\_INITIALIZED}}}\mbox{\Hypertarget{group__status_ggad755322e7ff95456520e8abdbe90d225a34ea59ade5bfce95eee935238a99f5b5}\label{group__status_ggad755322e7ff95456520e8abdbe90d225a34ea59ade5bfce95eee935238a99f5b5}} 
+HSA\+\_\+\+STATUS\+\_\+\+ERROR\+\_\+\+NOT\+\_\+\+INITIALIZED&An API other than \mbox{\hyperlink{group__initshutdown_ga5b8574433e7dbcbd31ea397a02e3c32b}{hsa\+\_\+init}} has been invoked while the reference count of the HSA runtime is 0. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{HSA\_STATUS\_ERROR\_REFCOUNT\_OVERFLOW@{HSA\_STATUS\_ERROR\_REFCOUNT\_OVERFLOW}!Runtime Notifications@{Runtime Notifications}}\index{Runtime Notifications@{Runtime Notifications}!HSA\_STATUS\_ERROR\_REFCOUNT\_OVERFLOW@{HSA\_STATUS\_ERROR\_REFCOUNT\_OVERFLOW}}}\mbox{\Hypertarget{group__status_ggad755322e7ff95456520e8abdbe90d225aa9218eed04d1d2ffc5ed8f33f2cd1c9b}\label{group__status_ggad755322e7ff95456520e8abdbe90d225aa9218eed04d1d2ffc5ed8f33f2cd1c9b}} 
+HSA\+\_\+\+STATUS\+\_\+\+ERROR\+\_\+\+REFCOUNT\+\_\+\+OVERFLOW&The maximum reference count for the object has been reached. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{HSA\_STATUS\_ERROR\_INCOMPATIBLE\_ARGUMENTS@{HSA\_STATUS\_ERROR\_INCOMPATIBLE\_ARGUMENTS}!Runtime Notifications@{Runtime Notifications}}\index{Runtime Notifications@{Runtime Notifications}!HSA\_STATUS\_ERROR\_INCOMPATIBLE\_ARGUMENTS@{HSA\_STATUS\_ERROR\_INCOMPATIBLE\_ARGUMENTS}}}\mbox{\Hypertarget{group__status_ggad755322e7ff95456520e8abdbe90d225a896bcafdb5c10c5802cf70083c3aeb8a}\label{group__status_ggad755322e7ff95456520e8abdbe90d225a896bcafdb5c10c5802cf70083c3aeb8a}} 
+HSA\+\_\+\+STATUS\+\_\+\+ERROR\+\_\+\+INCOMPATIBLE\+\_\+\+ARGUMENTS&The arguments passed to a functions are not compatible. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{HSA\_STATUS\_ERROR\_INVALID\_INDEX@{HSA\_STATUS\_ERROR\_INVALID\_INDEX}!Runtime Notifications@{Runtime Notifications}}\index{Runtime Notifications@{Runtime Notifications}!HSA\_STATUS\_ERROR\_INVALID\_INDEX@{HSA\_STATUS\_ERROR\_INVALID\_INDEX}}}\mbox{\Hypertarget{group__status_ggad755322e7ff95456520e8abdbe90d225a810d9e6e3fa9db4478f270e60aa963dc}\label{group__status_ggad755322e7ff95456520e8abdbe90d225a810d9e6e3fa9db4478f270e60aa963dc}} 
+HSA\+\_\+\+STATUS\+\_\+\+ERROR\+\_\+\+INVALID\+\_\+\+INDEX&The index is invalid. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{HSA\_STATUS\_ERROR\_INVALID\_ISA@{HSA\_STATUS\_ERROR\_INVALID\_ISA}!Runtime Notifications@{Runtime Notifications}}\index{Runtime Notifications@{Runtime Notifications}!HSA\_STATUS\_ERROR\_INVALID\_ISA@{HSA\_STATUS\_ERROR\_INVALID\_ISA}}}\mbox{\Hypertarget{group__status_ggad755322e7ff95456520e8abdbe90d225a6907a990eee322a97285e3656b846120}\label{group__status_ggad755322e7ff95456520e8abdbe90d225a6907a990eee322a97285e3656b846120}} 
+HSA\+\_\+\+STATUS\+\_\+\+ERROR\+\_\+\+INVALID\+\_\+\+ISA&The instruction set architecture is invalid. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{HSA\_STATUS\_ERROR\_INVALID\_ISA\_NAME@{HSA\_STATUS\_ERROR\_INVALID\_ISA\_NAME}!Runtime Notifications@{Runtime Notifications}}\index{Runtime Notifications@{Runtime Notifications}!HSA\_STATUS\_ERROR\_INVALID\_ISA\_NAME@{HSA\_STATUS\_ERROR\_INVALID\_ISA\_NAME}}}\mbox{\Hypertarget{group__status_ggad755322e7ff95456520e8abdbe90d225a4328de4769aea88e55e84a3e16ac3ed8}\label{group__status_ggad755322e7ff95456520e8abdbe90d225a4328de4769aea88e55e84a3e16ac3ed8}} 
+HSA\+\_\+\+STATUS\+\_\+\+ERROR\+\_\+\+INVALID\+\_\+\+ISA\+\_\+\+NAME&The instruction set architecture name is invalid. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{HSA\_STATUS\_ERROR\_INVALID\_CODE\_OBJECT@{HSA\_STATUS\_ERROR\_INVALID\_CODE\_OBJECT}!Runtime Notifications@{Runtime Notifications}}\index{Runtime Notifications@{Runtime Notifications}!HSA\_STATUS\_ERROR\_INVALID\_CODE\_OBJECT@{HSA\_STATUS\_ERROR\_INVALID\_CODE\_OBJECT}}}\mbox{\Hypertarget{group__status_ggad755322e7ff95456520e8abdbe90d225a152d0a73aaefeeab32845d0d7a1e9952}\label{group__status_ggad755322e7ff95456520e8abdbe90d225a152d0a73aaefeeab32845d0d7a1e9952}} 
+HSA\+\_\+\+STATUS\+\_\+\+ERROR\+\_\+\+INVALID\+\_\+\+CODE\+\_\+\+OBJECT&The code object is invalid. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{HSA\_STATUS\_ERROR\_INVALID\_EXECUTABLE@{HSA\_STATUS\_ERROR\_INVALID\_EXECUTABLE}!Runtime Notifications@{Runtime Notifications}}\index{Runtime Notifications@{Runtime Notifications}!HSA\_STATUS\_ERROR\_INVALID\_EXECUTABLE@{HSA\_STATUS\_ERROR\_INVALID\_EXECUTABLE}}}\mbox{\Hypertarget{group__status_ggad755322e7ff95456520e8abdbe90d225ae2fcb63555ddbffb6048b7e044501151}\label{group__status_ggad755322e7ff95456520e8abdbe90d225ae2fcb63555ddbffb6048b7e044501151}} 
+HSA\+\_\+\+STATUS\+\_\+\+ERROR\+\_\+\+INVALID\+\_\+\+EXECUTABLE&The executable is invalid. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{HSA\_STATUS\_ERROR\_FROZEN\_EXECUTABLE@{HSA\_STATUS\_ERROR\_FROZEN\_EXECUTABLE}!Runtime Notifications@{Runtime Notifications}}\index{Runtime Notifications@{Runtime Notifications}!HSA\_STATUS\_ERROR\_FROZEN\_EXECUTABLE@{HSA\_STATUS\_ERROR\_FROZEN\_EXECUTABLE}}}\mbox{\Hypertarget{group__status_ggad755322e7ff95456520e8abdbe90d225a32f01e35216b0a6473cd248db77bf2be}\label{group__status_ggad755322e7ff95456520e8abdbe90d225a32f01e35216b0a6473cd248db77bf2be}} 
+HSA\+\_\+\+STATUS\+\_\+\+ERROR\+\_\+\+FROZEN\+\_\+\+EXECUTABLE&The executable is frozen. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{HSA\_STATUS\_ERROR\_INVALID\_SYMBOL\_NAME@{HSA\_STATUS\_ERROR\_INVALID\_SYMBOL\_NAME}!Runtime Notifications@{Runtime Notifications}}\index{Runtime Notifications@{Runtime Notifications}!HSA\_STATUS\_ERROR\_INVALID\_SYMBOL\_NAME@{HSA\_STATUS\_ERROR\_INVALID\_SYMBOL\_NAME}}}\mbox{\Hypertarget{group__status_ggad755322e7ff95456520e8abdbe90d225a763aa9892acea9f7d145c0111247359c}\label{group__status_ggad755322e7ff95456520e8abdbe90d225a763aa9892acea9f7d145c0111247359c}} 
+HSA\+\_\+\+STATUS\+\_\+\+ERROR\+\_\+\+INVALID\+\_\+\+SYMBOL\+\_\+\+NAME&There is no symbol with the given name. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{HSA\_STATUS\_ERROR\_VARIABLE\_ALREADY\_DEFINED@{HSA\_STATUS\_ERROR\_VARIABLE\_ALREADY\_DEFINED}!Runtime Notifications@{Runtime Notifications}}\index{Runtime Notifications@{Runtime Notifications}!HSA\_STATUS\_ERROR\_VARIABLE\_ALREADY\_DEFINED@{HSA\_STATUS\_ERROR\_VARIABLE\_ALREADY\_DEFINED}}}\mbox{\Hypertarget{group__status_ggad755322e7ff95456520e8abdbe90d225abff93790fdc804ac87c2299c296cc598}\label{group__status_ggad755322e7ff95456520e8abdbe90d225abff93790fdc804ac87c2299c296cc598}} 
+HSA\+\_\+\+STATUS\+\_\+\+ERROR\+\_\+\+VARIABLE\+\_\+\+ALREADY\+\_\+\+DEFINED&The variable is already defined. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{HSA\_STATUS\_ERROR\_VARIABLE\_UNDEFINED@{HSA\_STATUS\_ERROR\_VARIABLE\_UNDEFINED}!Runtime Notifications@{Runtime Notifications}}\index{Runtime Notifications@{Runtime Notifications}!HSA\_STATUS\_ERROR\_VARIABLE\_UNDEFINED@{HSA\_STATUS\_ERROR\_VARIABLE\_UNDEFINED}}}\mbox{\Hypertarget{group__status_ggad755322e7ff95456520e8abdbe90d225a4dc84f78ba6a7ac6e5ae26143c17701d}\label{group__status_ggad755322e7ff95456520e8abdbe90d225a4dc84f78ba6a7ac6e5ae26143c17701d}} 
+HSA\+\_\+\+STATUS\+\_\+\+ERROR\+\_\+\+VARIABLE\+\_\+\+UNDEFINED&The variable is undefined. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{HSA\_STATUS\_ERROR\_EXCEPTION@{HSA\_STATUS\_ERROR\_EXCEPTION}!Runtime Notifications@{Runtime Notifications}}\index{Runtime Notifications@{Runtime Notifications}!HSA\_STATUS\_ERROR\_EXCEPTION@{HSA\_STATUS\_ERROR\_EXCEPTION}}}\mbox{\Hypertarget{group__status_ggad755322e7ff95456520e8abdbe90d225ac537647317af337965bc115688bb5db7}\label{group__status_ggad755322e7ff95456520e8abdbe90d225ac537647317af337965bc115688bb5db7}} 
+HSA\+\_\+\+STATUS\+\_\+\+ERROR\+\_\+\+EXCEPTION&An HSAIL operation resulted in a hardware exception. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{HSA\_STATUS\_ERROR\_INVALID\_CODE\_SYMBOL@{HSA\_STATUS\_ERROR\_INVALID\_CODE\_SYMBOL}!Runtime Notifications@{Runtime Notifications}}\index{Runtime Notifications@{Runtime Notifications}!HSA\_STATUS\_ERROR\_INVALID\_CODE\_SYMBOL@{HSA\_STATUS\_ERROR\_INVALID\_CODE\_SYMBOL}}}\mbox{\Hypertarget{group__status_ggad755322e7ff95456520e8abdbe90d225a60262f8c37b2e374271d068625f6eed5}\label{group__status_ggad755322e7ff95456520e8abdbe90d225a60262f8c37b2e374271d068625f6eed5}} 
+HSA\+\_\+\+STATUS\+\_\+\+ERROR\+\_\+\+INVALID\+\_\+\+CODE\+\_\+\+SYMBOL&The code object symbol is invalid. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{HSA\_STATUS\_ERROR\_INVALID\_EXECUTABLE\_SYMBOL@{HSA\_STATUS\_ERROR\_INVALID\_EXECUTABLE\_SYMBOL}!Runtime Notifications@{Runtime Notifications}}\index{Runtime Notifications@{Runtime Notifications}!HSA\_STATUS\_ERROR\_INVALID\_EXECUTABLE\_SYMBOL@{HSA\_STATUS\_ERROR\_INVALID\_EXECUTABLE\_SYMBOL}}}\mbox{\Hypertarget{group__status_ggad755322e7ff95456520e8abdbe90d225a1db2eecfbdb0ba426626ab7feb0d3719}\label{group__status_ggad755322e7ff95456520e8abdbe90d225a1db2eecfbdb0ba426626ab7feb0d3719}} 
+HSA\+\_\+\+STATUS\+\_\+\+ERROR\+\_\+\+INVALID\+\_\+\+EXECUTABLE\+\_\+\+SYMBOL&The executable symbol is invalid. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{HSA\_STATUS\_ERROR\_INVALID\_FILE@{HSA\_STATUS\_ERROR\_INVALID\_FILE}!Runtime Notifications@{Runtime Notifications}}\index{Runtime Notifications@{Runtime Notifications}!HSA\_STATUS\_ERROR\_INVALID\_FILE@{HSA\_STATUS\_ERROR\_INVALID\_FILE}}}\mbox{\Hypertarget{group__status_ggad755322e7ff95456520e8abdbe90d225a041d5163a93802756e6130e70810f2c3}\label{group__status_ggad755322e7ff95456520e8abdbe90d225a041d5163a93802756e6130e70810f2c3}} 
+HSA\+\_\+\+STATUS\+\_\+\+ERROR\+\_\+\+INVALID\+\_\+\+FILE&The file descriptor is invalid. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{HSA\_STATUS\_ERROR\_INVALID\_CODE\_OBJECT\_READER@{HSA\_STATUS\_ERROR\_INVALID\_CODE\_OBJECT\_READER}!Runtime Notifications@{Runtime Notifications}}\index{Runtime Notifications@{Runtime Notifications}!HSA\_STATUS\_ERROR\_INVALID\_CODE\_OBJECT\_READER@{HSA\_STATUS\_ERROR\_INVALID\_CODE\_OBJECT\_READER}}}\mbox{\Hypertarget{group__status_ggad755322e7ff95456520e8abdbe90d225abf212e30cc0c2c2771471f60141a00fd}\label{group__status_ggad755322e7ff95456520e8abdbe90d225abf212e30cc0c2c2771471f60141a00fd}} 
+HSA\+\_\+\+STATUS\+\_\+\+ERROR\+\_\+\+INVALID\+\_\+\+CODE\+\_\+\+OBJECT\+\_\+\+READER&The code object reader is invalid. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{HSA\_STATUS\_ERROR\_INVALID\_CACHE@{HSA\_STATUS\_ERROR\_INVALID\_CACHE}!Runtime Notifications@{Runtime Notifications}}\index{Runtime Notifications@{Runtime Notifications}!HSA\_STATUS\_ERROR\_INVALID\_CACHE@{HSA\_STATUS\_ERROR\_INVALID\_CACHE}}}\mbox{\Hypertarget{group__status_ggad755322e7ff95456520e8abdbe90d225ad2fe1f825edb316e459e23c59e24b33c}\label{group__status_ggad755322e7ff95456520e8abdbe90d225ad2fe1f825edb316e459e23c59e24b33c}} 
+HSA\+\_\+\+STATUS\+\_\+\+ERROR\+\_\+\+INVALID\+\_\+\+CACHE&The cache is invalid. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{HSA\_STATUS\_ERROR\_INVALID\_WAVEFRONT@{HSA\_STATUS\_ERROR\_INVALID\_WAVEFRONT}!Runtime Notifications@{Runtime Notifications}}\index{Runtime Notifications@{Runtime Notifications}!HSA\_STATUS\_ERROR\_INVALID\_WAVEFRONT@{HSA\_STATUS\_ERROR\_INVALID\_WAVEFRONT}}}\mbox{\Hypertarget{group__status_ggad755322e7ff95456520e8abdbe90d225a69740ca218b05c182f2ea9e65466fc73}\label{group__status_ggad755322e7ff95456520e8abdbe90d225a69740ca218b05c182f2ea9e65466fc73}} 
+HSA\+\_\+\+STATUS\+\_\+\+ERROR\+\_\+\+INVALID\+\_\+\+WAVEFRONT&The wavefront is invalid. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{HSA\_STATUS\_ERROR\_INVALID\_SIGNAL\_GROUP@{HSA\_STATUS\_ERROR\_INVALID\_SIGNAL\_GROUP}!Runtime Notifications@{Runtime Notifications}}\index{Runtime Notifications@{Runtime Notifications}!HSA\_STATUS\_ERROR\_INVALID\_SIGNAL\_GROUP@{HSA\_STATUS\_ERROR\_INVALID\_SIGNAL\_GROUP}}}\mbox{\Hypertarget{group__status_ggad755322e7ff95456520e8abdbe90d225abd03356b33a9726a76b3c96baee8badc}\label{group__status_ggad755322e7ff95456520e8abdbe90d225abd03356b33a9726a76b3c96baee8badc}} 
+HSA\+\_\+\+STATUS\+\_\+\+ERROR\+\_\+\+INVALID\+\_\+\+SIGNAL\+\_\+\+GROUP&The signal group is invalid. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{HSA\_STATUS\_ERROR\_INVALID\_RUNTIME\_STATE@{HSA\_STATUS\_ERROR\_INVALID\_RUNTIME\_STATE}!Runtime Notifications@{Runtime Notifications}}\index{Runtime Notifications@{Runtime Notifications}!HSA\_STATUS\_ERROR\_INVALID\_RUNTIME\_STATE@{HSA\_STATUS\_ERROR\_INVALID\_RUNTIME\_STATE}}}\mbox{\Hypertarget{group__status_ggad755322e7ff95456520e8abdbe90d225a0757001bc552638a8937ca5ea611c55e}\label{group__status_ggad755322e7ff95456520e8abdbe90d225a0757001bc552638a8937ca5ea611c55e}} 
+HSA\+\_\+\+STATUS\+\_\+\+ERROR\+\_\+\+INVALID\+\_\+\+RUNTIME\+\_\+\+STATE&The HSA runtime is not in the configuration state. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{HSA\_STATUS\_ERROR\_FATAL@{HSA\_STATUS\_ERROR\_FATAL}!Runtime Notifications@{Runtime Notifications}}\index{Runtime Notifications@{Runtime Notifications}!HSA\_STATUS\_ERROR\_FATAL@{HSA\_STATUS\_ERROR\_FATAL}}}\mbox{\Hypertarget{group__status_ggad755322e7ff95456520e8abdbe90d225a1c6ee5b351c7c9084cc943f579ba70da}\label{group__status_ggad755322e7ff95456520e8abdbe90d225a1c6ee5b351c7c9084cc943f579ba70da}} 
+HSA\+\_\+\+STATUS\+\_\+\+ERROR\+\_\+\+FATAL&The queue received an error that may require process termination. \\
+\hline
+
+\end{DoxyEnumFields}
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{group__status_gad3c84c6119c06322ee8e9cd44fa47b25}\label{group__status_gad3c84c6119c06322ee8e9cd44fa47b25}} 
+\index{Runtime Notifications@{Runtime Notifications}!hsa\_status\_string@{hsa\_status\_string}}
+\index{hsa\_status\_string@{hsa\_status\_string}!Runtime Notifications@{Runtime Notifications}}
+\doxysubsubsection{\texorpdfstring{hsa\_status\_string()}{hsa\_status\_string()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{group__status_gad755322e7ff95456520e8abdbe90d225}{hsa\+\_\+status\+\_\+t}} \mbox{\hyperlink{inc_2hsa__ext__image_8h_a64216765b98b62ee87deb50fd2899836}{HSA\+\_\+\+API}} hsa\+\_\+status\+\_\+string (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{group__status_gad755322e7ff95456520e8abdbe90d225}{hsa\+\_\+status\+\_\+t}}}]{status,  }\item[{const char $\ast$$\ast$}]{status\+\_\+string }\end{DoxyParamCaption})}
+
+
+
+Query additional information about a status code. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em status} & Status code.\\
+\hline
+\mbox{\texttt{ out}}  & {\em status\+\_\+string} & A NUL-\/terminated string that describes the error status.\\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em \mbox{\hyperlink{group__status_ggad755322e7ff95456520e8abdbe90d225ae382ea0c9c05cce5a60d0317375159cc}{HSA\+\_\+\+STATUS\+\_\+\+SUCCESS}}} & The function has been executed successfully.\\
+\hline
+{\em \mbox{\hyperlink{group__status_ggad755322e7ff95456520e8abdbe90d225a34ea59ade5bfce95eee935238a99f5b5}{HSA\+\_\+\+STATUS\+\_\+\+ERROR\+\_\+\+NOT\+\_\+\+INITIALIZED}}} & The HSA runtime has not been initialized.\\
+\hline
+{\em \mbox{\hyperlink{group__status_ggad755322e7ff95456520e8abdbe90d225ac7d3651f75107d2a6a8ba3b25683c030}{HSA\+\_\+\+STATUS\+\_\+\+ERROR\+\_\+\+INVALID\+\_\+\+ARGUMENT}}} & {\ttfamily status} is an invalid status code, or {\ttfamily status\+\_\+string} is NULL. \\
+\hline
+\end{DoxyRetVals}

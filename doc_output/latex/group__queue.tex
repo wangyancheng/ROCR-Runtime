@@ -1,0 +1,869 @@
+\hypertarget{group__queue}{}\doxysection{Queues}
+\label{group__queue}\index{Queues@{Queues}}
+\doxysubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{structhsa__queue__s}{hsa\+\_\+queue\+\_\+s}}
+\begin{DoxyCompactList}\small\item\em User mode queue. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+typedef uint32\+\_\+t \mbox{\hyperlink{group__queue_ga4ca8f732dfceaf6b88dcfeec168d82ae}{hsa\+\_\+queue\+\_\+type32\+\_\+t}}
+\begin{DoxyCompactList}\small\item\em A fixed-\/size type used to represent \mbox{\hyperlink{group__queue_gaf1939f228a41fa6ee50cffd4de03b561}{hsa\+\_\+queue\+\_\+type\+\_\+t}} constants. \end{DoxyCompactList}\item 
+typedef struct \mbox{\hyperlink{structhsa__queue__s}{hsa\+\_\+queue\+\_\+s}} \mbox{\hyperlink{group__queue_ga9e74fdf8d39c8bc42508c534316185f8}{hsa\+\_\+queue\+\_\+t}}
+\begin{DoxyCompactList}\small\item\em User mode queue. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Enumerations}
+\begin{DoxyCompactItemize}
+\item 
+enum \mbox{\hyperlink{group__queue_gaf1939f228a41fa6ee50cffd4de03b561}{hsa\+\_\+queue\+\_\+type\+\_\+t}} \{ \mbox{\hyperlink{group__queue_ggaf1939f228a41fa6ee50cffd4de03b561abb25665f0708270e16e6c400c097c88b}{HSA\+\_\+\+QUEUE\+\_\+\+TYPE\+\_\+\+MULTI}} = 0
+, \mbox{\hyperlink{group__queue_ggaf1939f228a41fa6ee50cffd4de03b561a45c3277e4e4fcb8a9788081549551f0a}{HSA\+\_\+\+QUEUE\+\_\+\+TYPE\+\_\+\+SINGLE}} = 1
+, \mbox{\hyperlink{group__queue_ggaf1939f228a41fa6ee50cffd4de03b561afb9899917bca297673d4aaaf579121e8}{HSA\+\_\+\+QUEUE\+\_\+\+TYPE\+\_\+\+COOPERATIVE}} = 2
+ \}
+\begin{DoxyCompactList}\small\item\em Queue type. Intended to be used for dynamic queue protocol determination. \end{DoxyCompactList}\item 
+enum \mbox{\hyperlink{group__queue_ga1145b01f6d9e2670179a22c92db39413}{hsa\+\_\+queue\+\_\+feature\+\_\+t}} \{ \mbox{\hyperlink{group__queue_gga1145b01f6d9e2670179a22c92db39413a0c1b1490277cd41b0eb29cc2f782680b}{HSA\+\_\+\+QUEUE\+\_\+\+FEATURE\+\_\+\+KERNEL\+\_\+\+DISPATCH}} = 1
+, \mbox{\hyperlink{group__queue_gga1145b01f6d9e2670179a22c92db39413a3c16b42876eacbb11d9b2e7a5488dede}{HSA\+\_\+\+QUEUE\+\_\+\+FEATURE\+\_\+\+AGENT\+\_\+\+DISPATCH}} = 2
+ \}
+\begin{DoxyCompactList}\small\item\em Queue features. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{group__status_gad755322e7ff95456520e8abdbe90d225}{hsa\+\_\+status\+\_\+t}} \mbox{\hyperlink{inc_2hsa__ext__image_8h_a64216765b98b62ee87deb50fd2899836}{HSA\+\_\+\+API}} \mbox{\hyperlink{group__queue_ga6a3557e38dc8ac38bacea0b2ac7b0787}{hsa\+\_\+queue\+\_\+create}} (\mbox{\hyperlink{group__agentinfo_ga9ce217ef08e7d5e89c8e83ce7b6ef22b}{hsa\+\_\+agent\+\_\+t}} agent, uint32\+\_\+t size, \mbox{\hyperlink{group__queue_ga4ca8f732dfceaf6b88dcfeec168d82ae}{hsa\+\_\+queue\+\_\+type32\+\_\+t}} type, void($\ast$callback)(\mbox{\hyperlink{group__status_gad755322e7ff95456520e8abdbe90d225}{hsa\+\_\+status\+\_\+t}} status, \mbox{\hyperlink{group__queue_ga9e74fdf8d39c8bc42508c534316185f8}{hsa\+\_\+queue\+\_\+t}} $\ast$source, void $\ast$data), void $\ast$data, uint32\+\_\+t private\+\_\+segment\+\_\+size, uint32\+\_\+t group\+\_\+segment\+\_\+size, \mbox{\hyperlink{group__queue_ga9e74fdf8d39c8bc42508c534316185f8}{hsa\+\_\+queue\+\_\+t}} $\ast$$\ast$queue)
+\begin{DoxyCompactList}\small\item\em Create a user mode queue. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{group__status_gad755322e7ff95456520e8abdbe90d225}{hsa\+\_\+status\+\_\+t}} \mbox{\hyperlink{inc_2hsa__ext__image_8h_a64216765b98b62ee87deb50fd2899836}{HSA\+\_\+\+API}} \mbox{\hyperlink{group__queue_ga40c1dee00ef5d510bcd03f0bf825f570}{hsa\+\_\+soft\+\_\+queue\+\_\+create}} (\mbox{\hyperlink{group__memory_ga9c649e7034e53233198aaa1b58e9d79b}{hsa\+\_\+region\+\_\+t}} region, uint32\+\_\+t size, \mbox{\hyperlink{group__queue_ga4ca8f732dfceaf6b88dcfeec168d82ae}{hsa\+\_\+queue\+\_\+type32\+\_\+t}} type, uint32\+\_\+t features, \mbox{\hyperlink{group__signals_ga0003af605a660e7ef4f89aa555d3b3fc}{hsa\+\_\+signal\+\_\+t}} doorbell\+\_\+signal, \mbox{\hyperlink{group__queue_ga9e74fdf8d39c8bc42508c534316185f8}{hsa\+\_\+queue\+\_\+t}} $\ast$$\ast$queue)
+\begin{DoxyCompactList}\small\item\em Create a queue for which the application or a kernel is responsible for processing the AQL packets. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{group__status_gad755322e7ff95456520e8abdbe90d225}{hsa\+\_\+status\+\_\+t}} \mbox{\hyperlink{inc_2hsa__ext__image_8h_a64216765b98b62ee87deb50fd2899836}{HSA\+\_\+\+API}} \mbox{\hyperlink{group__queue_ga2669dc4c7190f2ba65b453110a92ceb5}{hsa\+\_\+queue\+\_\+destroy}} (\mbox{\hyperlink{group__queue_ga9e74fdf8d39c8bc42508c534316185f8}{hsa\+\_\+queue\+\_\+t}} $\ast$queue)
+\begin{DoxyCompactList}\small\item\em Destroy a user mode queue. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{group__status_gad755322e7ff95456520e8abdbe90d225}{hsa\+\_\+status\+\_\+t}} \mbox{\hyperlink{inc_2hsa__ext__image_8h_a64216765b98b62ee87deb50fd2899836}{HSA\+\_\+\+API}} \mbox{\hyperlink{group__queue_gac3fe6420d5b57a27cc453f97ccff3125}{hsa\+\_\+queue\+\_\+inactivate}} (\mbox{\hyperlink{group__queue_ga9e74fdf8d39c8bc42508c534316185f8}{hsa\+\_\+queue\+\_\+t}} $\ast$queue)
+\begin{DoxyCompactList}\small\item\em Inactivate a queue. \end{DoxyCompactList}\item 
+uint64\+\_\+t \mbox{\hyperlink{inc_2hsa__ext__image_8h_a64216765b98b62ee87deb50fd2899836}{HSA\+\_\+\+API}} \mbox{\hyperlink{inc_2hsa_8h_a2321f8ca7d706cada4f617b191a478b0}{HSA\+\_\+\+DEPRECATED}} \mbox{\hyperlink{group__queue_gae6651e6345873f116a2522289c8b6e7d}{hsa\+\_\+queue\+\_\+load\+\_\+read\+\_\+index\+\_\+acquire}} (const \mbox{\hyperlink{group__queue_ga9e74fdf8d39c8bc42508c534316185f8}{hsa\+\_\+queue\+\_\+t}} $\ast$queue)
+\begin{DoxyCompactList}\small\item\em Atomically load the read index of a queue. \end{DoxyCompactList}\item 
+uint64\+\_\+t \mbox{\hyperlink{inc_2hsa__ext__image_8h_a64216765b98b62ee87deb50fd2899836}{HSA\+\_\+\+API}} \mbox{\hyperlink{group__queue_gaf921ea074c4d6882a391544d0e14f6dd}{hsa\+\_\+queue\+\_\+load\+\_\+read\+\_\+index\+\_\+scacquire}} (const \mbox{\hyperlink{group__queue_ga9e74fdf8d39c8bc42508c534316185f8}{hsa\+\_\+queue\+\_\+t}} $\ast$queue)
+\begin{DoxyCompactList}\small\item\em Atomically load the read index of a queue. \end{DoxyCompactList}\item 
+uint64\+\_\+t \mbox{\hyperlink{inc_2hsa__ext__image_8h_a64216765b98b62ee87deb50fd2899836}{HSA\+\_\+\+API}} \mbox{\hyperlink{group__queue_ga8cbbfffe47df6b2f8555b2258d583023}{hsa\+\_\+queue\+\_\+load\+\_\+read\+\_\+index\+\_\+relaxed}} (const \mbox{\hyperlink{group__queue_ga9e74fdf8d39c8bc42508c534316185f8}{hsa\+\_\+queue\+\_\+t}} $\ast$queue)
+\begin{DoxyCompactList}\small\item\em Atomically load the read index of a queue. \end{DoxyCompactList}\item 
+uint64\+\_\+t \mbox{\hyperlink{inc_2hsa__ext__image_8h_a64216765b98b62ee87deb50fd2899836}{HSA\+\_\+\+API}} \mbox{\hyperlink{inc_2hsa_8h_a2321f8ca7d706cada4f617b191a478b0}{HSA\+\_\+\+DEPRECATED}} \mbox{\hyperlink{group__queue_gaed99dffc5920cf13864602f7e222a598}{hsa\+\_\+queue\+\_\+load\+\_\+write\+\_\+index\+\_\+acquire}} (const \mbox{\hyperlink{group__queue_ga9e74fdf8d39c8bc42508c534316185f8}{hsa\+\_\+queue\+\_\+t}} $\ast$queue)
+\begin{DoxyCompactList}\small\item\em Atomically load the write index of a queue. \end{DoxyCompactList}\item 
+uint64\+\_\+t \mbox{\hyperlink{inc_2hsa__ext__image_8h_a64216765b98b62ee87deb50fd2899836}{HSA\+\_\+\+API}} \mbox{\hyperlink{group__queue_ga343d951de465cbeecad352fc08393182}{hsa\+\_\+queue\+\_\+load\+\_\+write\+\_\+index\+\_\+scacquire}} (const \mbox{\hyperlink{group__queue_ga9e74fdf8d39c8bc42508c534316185f8}{hsa\+\_\+queue\+\_\+t}} $\ast$queue)
+\begin{DoxyCompactList}\small\item\em Atomically load the write index of a queue. \end{DoxyCompactList}\item 
+uint64\+\_\+t \mbox{\hyperlink{inc_2hsa__ext__image_8h_a64216765b98b62ee87deb50fd2899836}{HSA\+\_\+\+API}} \mbox{\hyperlink{group__queue_ga109ab55eadf912a64e31c3bd1887f302}{hsa\+\_\+queue\+\_\+load\+\_\+write\+\_\+index\+\_\+relaxed}} (const \mbox{\hyperlink{group__queue_ga9e74fdf8d39c8bc42508c534316185f8}{hsa\+\_\+queue\+\_\+t}} $\ast$queue)
+\begin{DoxyCompactList}\small\item\em Atomically load the write index of a queue. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{inc_2hsa__ext__image_8h_a64216765b98b62ee87deb50fd2899836}{HSA\+\_\+\+API}} \mbox{\hyperlink{group__queue_ga8a23cd26c6399ee30f23eb959143dceb}{hsa\+\_\+queue\+\_\+store\+\_\+write\+\_\+index\+\_\+relaxed}} (const \mbox{\hyperlink{group__queue_ga9e74fdf8d39c8bc42508c534316185f8}{hsa\+\_\+queue\+\_\+t}} $\ast$queue, uint64\+\_\+t value)
+\begin{DoxyCompactList}\small\item\em Atomically set the write index of a queue. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{inc_2hsa__ext__image_8h_a64216765b98b62ee87deb50fd2899836}{HSA\+\_\+\+API}} \mbox{\hyperlink{inc_2hsa_8h_a2321f8ca7d706cada4f617b191a478b0}{HSA\+\_\+\+DEPRECATED}} \mbox{\hyperlink{group__queue_ga87093a453f26ba87266efe8feb256e50}{hsa\+\_\+queue\+\_\+store\+\_\+write\+\_\+index\+\_\+release}} (const \mbox{\hyperlink{group__queue_ga9e74fdf8d39c8bc42508c534316185f8}{hsa\+\_\+queue\+\_\+t}} $\ast$queue, uint64\+\_\+t value)
+\begin{DoxyCompactList}\small\item\em Atomically set the write index of a queue. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{inc_2hsa__ext__image_8h_a64216765b98b62ee87deb50fd2899836}{HSA\+\_\+\+API}} \mbox{\hyperlink{group__queue_gae13cd7aa6f7cd1fe4352b205f00a533c}{hsa\+\_\+queue\+\_\+store\+\_\+write\+\_\+index\+\_\+screlease}} (const \mbox{\hyperlink{group__queue_ga9e74fdf8d39c8bc42508c534316185f8}{hsa\+\_\+queue\+\_\+t}} $\ast$queue, uint64\+\_\+t value)
+\begin{DoxyCompactList}\small\item\em Atomically set the write index of a queue. \end{DoxyCompactList}\item 
+uint64\+\_\+t \mbox{\hyperlink{inc_2hsa__ext__image_8h_a64216765b98b62ee87deb50fd2899836}{HSA\+\_\+\+API}} \mbox{\hyperlink{inc_2hsa_8h_a2321f8ca7d706cada4f617b191a478b0}{HSA\+\_\+\+DEPRECATED}} \mbox{\hyperlink{group__queue_gac3098f53dc8b4543a49499de5ae8dbb1}{hsa\+\_\+queue\+\_\+cas\+\_\+write\+\_\+index\+\_\+acq\+\_\+rel}} (const \mbox{\hyperlink{group__queue_ga9e74fdf8d39c8bc42508c534316185f8}{hsa\+\_\+queue\+\_\+t}} $\ast$queue, uint64\+\_\+t expected, uint64\+\_\+t value)
+\begin{DoxyCompactList}\small\item\em Atomically set the write index of a queue if the observed value is equal to the expected value. The application can inspect the returned value to determine if the replacement was done. \end{DoxyCompactList}\item 
+uint64\+\_\+t \mbox{\hyperlink{inc_2hsa__ext__image_8h_a64216765b98b62ee87deb50fd2899836}{HSA\+\_\+\+API}} \mbox{\hyperlink{group__queue_ga17e23893849aaa3de71e3c46c40034b4}{hsa\+\_\+queue\+\_\+cas\+\_\+write\+\_\+index\+\_\+scacq\+\_\+screl}} (const \mbox{\hyperlink{group__queue_ga9e74fdf8d39c8bc42508c534316185f8}{hsa\+\_\+queue\+\_\+t}} $\ast$queue, uint64\+\_\+t expected, uint64\+\_\+t value)
+\begin{DoxyCompactList}\small\item\em Atomically set the write index of a queue if the observed value is equal to the expected value. The application can inspect the returned value to determine if the replacement was done. \end{DoxyCompactList}\item 
+uint64\+\_\+t \mbox{\hyperlink{inc_2hsa__ext__image_8h_a64216765b98b62ee87deb50fd2899836}{HSA\+\_\+\+API}} \mbox{\hyperlink{inc_2hsa_8h_a2321f8ca7d706cada4f617b191a478b0}{HSA\+\_\+\+DEPRECATED}} \mbox{\hyperlink{group__queue_ga6730196b9c85dfa3624af33be752041f}{hsa\+\_\+queue\+\_\+cas\+\_\+write\+\_\+index\+\_\+acquire}} (const \mbox{\hyperlink{group__queue_ga9e74fdf8d39c8bc42508c534316185f8}{hsa\+\_\+queue\+\_\+t}} $\ast$queue, uint64\+\_\+t expected, uint64\+\_\+t value)
+\begin{DoxyCompactList}\small\item\em Atomically set the write index of a queue if the observed value is equal to the expected value. The application can inspect the returned value to determine if the replacement was done. \end{DoxyCompactList}\item 
+uint64\+\_\+t \mbox{\hyperlink{inc_2hsa__ext__image_8h_a64216765b98b62ee87deb50fd2899836}{HSA\+\_\+\+API}} \mbox{\hyperlink{group__queue_ga296ba9c8d6114d532c561e0643d87c6b}{hsa\+\_\+queue\+\_\+cas\+\_\+write\+\_\+index\+\_\+scacquire}} (const \mbox{\hyperlink{group__queue_ga9e74fdf8d39c8bc42508c534316185f8}{hsa\+\_\+queue\+\_\+t}} $\ast$queue, uint64\+\_\+t expected, uint64\+\_\+t value)
+\begin{DoxyCompactList}\small\item\em Atomically set the write index of a queue if the observed value is equal to the expected value. The application can inspect the returned value to determine if the replacement was done. \end{DoxyCompactList}\item 
+uint64\+\_\+t \mbox{\hyperlink{inc_2hsa__ext__image_8h_a64216765b98b62ee87deb50fd2899836}{HSA\+\_\+\+API}} \mbox{\hyperlink{group__queue_ga41a1af9d3fafbc6480d20d507ef1383e}{hsa\+\_\+queue\+\_\+cas\+\_\+write\+\_\+index\+\_\+relaxed}} (const \mbox{\hyperlink{group__queue_ga9e74fdf8d39c8bc42508c534316185f8}{hsa\+\_\+queue\+\_\+t}} $\ast$queue, uint64\+\_\+t expected, uint64\+\_\+t value)
+\begin{DoxyCompactList}\small\item\em Atomically set the write index of a queue if the observed value is equal to the expected value. The application can inspect the returned value to determine if the replacement was done. \end{DoxyCompactList}\item 
+uint64\+\_\+t \mbox{\hyperlink{inc_2hsa__ext__image_8h_a64216765b98b62ee87deb50fd2899836}{HSA\+\_\+\+API}} \mbox{\hyperlink{inc_2hsa_8h_a2321f8ca7d706cada4f617b191a478b0}{HSA\+\_\+\+DEPRECATED}} \mbox{\hyperlink{group__queue_ga9e026590e0190ee81cb113c2e2a644e1}{hsa\+\_\+queue\+\_\+cas\+\_\+write\+\_\+index\+\_\+release}} (const \mbox{\hyperlink{group__queue_ga9e74fdf8d39c8bc42508c534316185f8}{hsa\+\_\+queue\+\_\+t}} $\ast$queue, uint64\+\_\+t expected, uint64\+\_\+t value)
+\begin{DoxyCompactList}\small\item\em Atomically set the write index of a queue if the observed value is equal to the expected value. The application can inspect the returned value to determine if the replacement was done. \end{DoxyCompactList}\item 
+uint64\+\_\+t \mbox{\hyperlink{inc_2hsa__ext__image_8h_a64216765b98b62ee87deb50fd2899836}{HSA\+\_\+\+API}} \mbox{\hyperlink{group__queue_ga9528a54a120f0d8d784a381f766a0781}{hsa\+\_\+queue\+\_\+cas\+\_\+write\+\_\+index\+\_\+screlease}} (const \mbox{\hyperlink{group__queue_ga9e74fdf8d39c8bc42508c534316185f8}{hsa\+\_\+queue\+\_\+t}} $\ast$queue, uint64\+\_\+t expected, uint64\+\_\+t value)
+\begin{DoxyCompactList}\small\item\em Atomically set the write index of a queue if the observed value is equal to the expected value. The application can inspect the returned value to determine if the replacement was done. \end{DoxyCompactList}\item 
+uint64\+\_\+t \mbox{\hyperlink{inc_2hsa__ext__image_8h_a64216765b98b62ee87deb50fd2899836}{HSA\+\_\+\+API}} \mbox{\hyperlink{inc_2hsa_8h_a2321f8ca7d706cada4f617b191a478b0}{HSA\+\_\+\+DEPRECATED}} \mbox{\hyperlink{group__queue_ga9db78c52737c385156857caf46295bbd}{hsa\+\_\+queue\+\_\+add\+\_\+write\+\_\+index\+\_\+acq\+\_\+rel}} (const \mbox{\hyperlink{group__queue_ga9e74fdf8d39c8bc42508c534316185f8}{hsa\+\_\+queue\+\_\+t}} $\ast$queue, uint64\+\_\+t value)
+\begin{DoxyCompactList}\small\item\em Atomically increment the write index of a queue by an offset. \end{DoxyCompactList}\item 
+uint64\+\_\+t \mbox{\hyperlink{inc_2hsa__ext__image_8h_a64216765b98b62ee87deb50fd2899836}{HSA\+\_\+\+API}} \mbox{\hyperlink{group__queue_ga5dc86316fb0e0b4f2587e86ae9824e23}{hsa\+\_\+queue\+\_\+add\+\_\+write\+\_\+index\+\_\+scacq\+\_\+screl}} (const \mbox{\hyperlink{group__queue_ga9e74fdf8d39c8bc42508c534316185f8}{hsa\+\_\+queue\+\_\+t}} $\ast$queue, uint64\+\_\+t value)
+\begin{DoxyCompactList}\small\item\em Atomically increment the write index of a queue by an offset. \end{DoxyCompactList}\item 
+uint64\+\_\+t \mbox{\hyperlink{inc_2hsa__ext__image_8h_a64216765b98b62ee87deb50fd2899836}{HSA\+\_\+\+API}} \mbox{\hyperlink{inc_2hsa_8h_a2321f8ca7d706cada4f617b191a478b0}{HSA\+\_\+\+DEPRECATED}} \mbox{\hyperlink{group__queue_gaeafb5e4523ab649e529fc39db1362a38}{hsa\+\_\+queue\+\_\+add\+\_\+write\+\_\+index\+\_\+acquire}} (const \mbox{\hyperlink{group__queue_ga9e74fdf8d39c8bc42508c534316185f8}{hsa\+\_\+queue\+\_\+t}} $\ast$queue, uint64\+\_\+t value)
+\begin{DoxyCompactList}\small\item\em Atomically increment the write index of a queue by an offset. \end{DoxyCompactList}\item 
+uint64\+\_\+t \mbox{\hyperlink{inc_2hsa__ext__image_8h_a64216765b98b62ee87deb50fd2899836}{HSA\+\_\+\+API}} \mbox{\hyperlink{group__queue_gabe179a1797c1fb1c5e110bd0cf491f89}{hsa\+\_\+queue\+\_\+add\+\_\+write\+\_\+index\+\_\+scacquire}} (const \mbox{\hyperlink{group__queue_ga9e74fdf8d39c8bc42508c534316185f8}{hsa\+\_\+queue\+\_\+t}} $\ast$queue, uint64\+\_\+t value)
+\begin{DoxyCompactList}\small\item\em Atomically increment the write index of a queue by an offset. \end{DoxyCompactList}\item 
+uint64\+\_\+t \mbox{\hyperlink{inc_2hsa__ext__image_8h_a64216765b98b62ee87deb50fd2899836}{HSA\+\_\+\+API}} \mbox{\hyperlink{group__queue_gab8fe0e8b87295a02cff872113263aef8}{hsa\+\_\+queue\+\_\+add\+\_\+write\+\_\+index\+\_\+relaxed}} (const \mbox{\hyperlink{group__queue_ga9e74fdf8d39c8bc42508c534316185f8}{hsa\+\_\+queue\+\_\+t}} $\ast$queue, uint64\+\_\+t value)
+\begin{DoxyCompactList}\small\item\em Atomically increment the write index of a queue by an offset. \end{DoxyCompactList}\item 
+uint64\+\_\+t \mbox{\hyperlink{inc_2hsa__ext__image_8h_a64216765b98b62ee87deb50fd2899836}{HSA\+\_\+\+API}} \mbox{\hyperlink{inc_2hsa_8h_a2321f8ca7d706cada4f617b191a478b0}{HSA\+\_\+\+DEPRECATED}} \mbox{\hyperlink{group__queue_gac811544b4f8afc31009dc9247f6163b7}{hsa\+\_\+queue\+\_\+add\+\_\+write\+\_\+index\+\_\+release}} (const \mbox{\hyperlink{group__queue_ga9e74fdf8d39c8bc42508c534316185f8}{hsa\+\_\+queue\+\_\+t}} $\ast$queue, uint64\+\_\+t value)
+\begin{DoxyCompactList}\small\item\em Atomically increment the write index of a queue by an offset. \end{DoxyCompactList}\item 
+uint64\+\_\+t \mbox{\hyperlink{inc_2hsa__ext__image_8h_a64216765b98b62ee87deb50fd2899836}{HSA\+\_\+\+API}} \mbox{\hyperlink{group__queue_ga48712bc81e926571e3598d0611d6bb17}{hsa\+\_\+queue\+\_\+add\+\_\+write\+\_\+index\+\_\+screlease}} (const \mbox{\hyperlink{group__queue_ga9e74fdf8d39c8bc42508c534316185f8}{hsa\+\_\+queue\+\_\+t}} $\ast$queue, uint64\+\_\+t value)
+\begin{DoxyCompactList}\small\item\em Atomically increment the write index of a queue by an offset. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{inc_2hsa__ext__image_8h_a64216765b98b62ee87deb50fd2899836}{HSA\+\_\+\+API}} \mbox{\hyperlink{group__queue_gaf02a7288ec7b3964cddb7c54c4d7e807}{hsa\+\_\+queue\+\_\+store\+\_\+read\+\_\+index\+\_\+relaxed}} (const \mbox{\hyperlink{group__queue_ga9e74fdf8d39c8bc42508c534316185f8}{hsa\+\_\+queue\+\_\+t}} $\ast$queue, uint64\+\_\+t value)
+\begin{DoxyCompactList}\small\item\em Atomically set the read index of a queue. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{inc_2hsa__ext__image_8h_a64216765b98b62ee87deb50fd2899836}{HSA\+\_\+\+API}} \mbox{\hyperlink{inc_2hsa_8h_a2321f8ca7d706cada4f617b191a478b0}{HSA\+\_\+\+DEPRECATED}} \mbox{\hyperlink{group__queue_gaf21574e3d48902e62a5b73b40fd5bd6e}{hsa\+\_\+queue\+\_\+store\+\_\+read\+\_\+index\+\_\+release}} (const \mbox{\hyperlink{group__queue_ga9e74fdf8d39c8bc42508c534316185f8}{hsa\+\_\+queue\+\_\+t}} $\ast$queue, uint64\+\_\+t value)
+\begin{DoxyCompactList}\small\item\em Atomically set the read index of a queue. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{inc_2hsa__ext__image_8h_a64216765b98b62ee87deb50fd2899836}{HSA\+\_\+\+API}} \mbox{\hyperlink{group__queue_ga43499d41801e5623c869a8e71efcad4c}{hsa\+\_\+queue\+\_\+store\+\_\+read\+\_\+index\+\_\+screlease}} (const \mbox{\hyperlink{group__queue_ga9e74fdf8d39c8bc42508c534316185f8}{hsa\+\_\+queue\+\_\+t}} $\ast$queue, uint64\+\_\+t value)
+\begin{DoxyCompactList}\small\item\em Atomically set the read index of a queue. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+
+
+\doxysubsection{Typedef Documentation}
+\mbox{\Hypertarget{group__queue_ga9e74fdf8d39c8bc42508c534316185f8}\label{group__queue_ga9e74fdf8d39c8bc42508c534316185f8}} 
+\index{Queues@{Queues}!hsa\_queue\_t@{hsa\_queue\_t}}
+\index{hsa\_queue\_t@{hsa\_queue\_t}!Queues@{Queues}}
+\doxysubsubsection{\texorpdfstring{hsa\_queue\_t}{hsa\_queue\_t}}
+{\footnotesize\ttfamily typedef struct \mbox{\hyperlink{structhsa__queue__s}{hsa\+\_\+queue\+\_\+s}} \mbox{\hyperlink{group__queue_ga9e74fdf8d39c8bc42508c534316185f8}{hsa\+\_\+queue\+\_\+t}}}
+
+
+
+User mode queue. 
+
+The queue structure is read-\/only and allocated by the HSA runtime, but agents can directly modify the contents of the buffer pointed by {\itshape base\+\_\+address}, or use HSA runtime APIs to access the doorbell signal. \mbox{\Hypertarget{group__queue_ga4ca8f732dfceaf6b88dcfeec168d82ae}\label{group__queue_ga4ca8f732dfceaf6b88dcfeec168d82ae}} 
+\index{Queues@{Queues}!hsa\_queue\_type32\_t@{hsa\_queue\_type32\_t}}
+\index{hsa\_queue\_type32\_t@{hsa\_queue\_type32\_t}!Queues@{Queues}}
+\doxysubsubsection{\texorpdfstring{hsa\_queue\_type32\_t}{hsa\_queue\_type32\_t}}
+{\footnotesize\ttfamily typedef uint32\+\_\+t \mbox{\hyperlink{group__queue_ga4ca8f732dfceaf6b88dcfeec168d82ae}{hsa\+\_\+queue\+\_\+type32\+\_\+t}}}
+
+
+
+A fixed-\/size type used to represent \mbox{\hyperlink{group__queue_gaf1939f228a41fa6ee50cffd4de03b561}{hsa\+\_\+queue\+\_\+type\+\_\+t}} constants. 
+
+
+
+\doxysubsection{Enumeration Type Documentation}
+\mbox{\Hypertarget{group__queue_ga1145b01f6d9e2670179a22c92db39413}\label{group__queue_ga1145b01f6d9e2670179a22c92db39413}} 
+\index{Queues@{Queues}!hsa\_queue\_feature\_t@{hsa\_queue\_feature\_t}}
+\index{hsa\_queue\_feature\_t@{hsa\_queue\_feature\_t}!Queues@{Queues}}
+\doxysubsubsection{\texorpdfstring{hsa\_queue\_feature\_t}{hsa\_queue\_feature\_t}}
+{\footnotesize\ttfamily enum \mbox{\hyperlink{group__queue_ga1145b01f6d9e2670179a22c92db39413}{hsa\+\_\+queue\+\_\+feature\+\_\+t}}}
+
+
+
+Queue features. 
+
+\begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{HSA\_QUEUE\_FEATURE\_KERNEL\_DISPATCH@{HSA\_QUEUE\_FEATURE\_KERNEL\_DISPATCH}!Queues@{Queues}}\index{Queues@{Queues}!HSA\_QUEUE\_FEATURE\_KERNEL\_DISPATCH@{HSA\_QUEUE\_FEATURE\_KERNEL\_DISPATCH}}}\mbox{\Hypertarget{group__queue_gga1145b01f6d9e2670179a22c92db39413a0c1b1490277cd41b0eb29cc2f782680b}\label{group__queue_gga1145b01f6d9e2670179a22c92db39413a0c1b1490277cd41b0eb29cc2f782680b}} 
+HSA\+\_\+\+QUEUE\+\_\+\+FEATURE\+\_\+\+KERNEL\+\_\+\+DISPATCH&Queue supports kernel dispatch packets. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{HSA\_QUEUE\_FEATURE\_AGENT\_DISPATCH@{HSA\_QUEUE\_FEATURE\_AGENT\_DISPATCH}!Queues@{Queues}}\index{Queues@{Queues}!HSA\_QUEUE\_FEATURE\_AGENT\_DISPATCH@{HSA\_QUEUE\_FEATURE\_AGENT\_DISPATCH}}}\mbox{\Hypertarget{group__queue_gga1145b01f6d9e2670179a22c92db39413a3c16b42876eacbb11d9b2e7a5488dede}\label{group__queue_gga1145b01f6d9e2670179a22c92db39413a3c16b42876eacbb11d9b2e7a5488dede}} 
+HSA\+\_\+\+QUEUE\+\_\+\+FEATURE\+\_\+\+AGENT\+\_\+\+DISPATCH&Queue supports agent dispatch packets. \\
+\hline
+
+\end{DoxyEnumFields}
+\mbox{\Hypertarget{group__queue_gaf1939f228a41fa6ee50cffd4de03b561}\label{group__queue_gaf1939f228a41fa6ee50cffd4de03b561}} 
+\index{Queues@{Queues}!hsa\_queue\_type\_t@{hsa\_queue\_type\_t}}
+\index{hsa\_queue\_type\_t@{hsa\_queue\_type\_t}!Queues@{Queues}}
+\doxysubsubsection{\texorpdfstring{hsa\_queue\_type\_t}{hsa\_queue\_type\_t}}
+{\footnotesize\ttfamily enum \mbox{\hyperlink{group__queue_gaf1939f228a41fa6ee50cffd4de03b561}{hsa\+\_\+queue\+\_\+type\+\_\+t}}}
+
+
+
+Queue type. Intended to be used for dynamic queue protocol determination. 
+
+\begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{HSA\_QUEUE\_TYPE\_MULTI@{HSA\_QUEUE\_TYPE\_MULTI}!Queues@{Queues}}\index{Queues@{Queues}!HSA\_QUEUE\_TYPE\_MULTI@{HSA\_QUEUE\_TYPE\_MULTI}}}\mbox{\Hypertarget{group__queue_ggaf1939f228a41fa6ee50cffd4de03b561abb25665f0708270e16e6c400c097c88b}\label{group__queue_ggaf1939f228a41fa6ee50cffd4de03b561abb25665f0708270e16e6c400c097c88b}} 
+HSA\+\_\+\+QUEUE\+\_\+\+TYPE\+\_\+\+MULTI&Queue supports multiple producers. Use of multiproducer queue mechanics is required. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{HSA\_QUEUE\_TYPE\_SINGLE@{HSA\_QUEUE\_TYPE\_SINGLE}!Queues@{Queues}}\index{Queues@{Queues}!HSA\_QUEUE\_TYPE\_SINGLE@{HSA\_QUEUE\_TYPE\_SINGLE}}}\mbox{\Hypertarget{group__queue_ggaf1939f228a41fa6ee50cffd4de03b561a45c3277e4e4fcb8a9788081549551f0a}\label{group__queue_ggaf1939f228a41fa6ee50cffd4de03b561a45c3277e4e4fcb8a9788081549551f0a}} 
+HSA\+\_\+\+QUEUE\+\_\+\+TYPE\+\_\+\+SINGLE&Queue only supports a single producer. In some scenarios, the application may want to limit the submission of AQL packets to a single agent. Queues that support a single producer may be more efficient than queues supporting multiple producers. Use of multiproducer queue mechanics is not supported. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{HSA\_QUEUE\_TYPE\_COOPERATIVE@{HSA\_QUEUE\_TYPE\_COOPERATIVE}!Queues@{Queues}}\index{Queues@{Queues}!HSA\_QUEUE\_TYPE\_COOPERATIVE@{HSA\_QUEUE\_TYPE\_COOPERATIVE}}}\mbox{\Hypertarget{group__queue_ggaf1939f228a41fa6ee50cffd4de03b561afb9899917bca297673d4aaaf579121e8}\label{group__queue_ggaf1939f228a41fa6ee50cffd4de03b561afb9899917bca297673d4aaaf579121e8}} 
+HSA\+\_\+\+QUEUE\+\_\+\+TYPE\+\_\+\+COOPERATIVE&Queue supports multiple producers and cooperative dispatches. Cooperative dispatches are able to use GWS synchronization. Queues of this type may be limited in number. The runtime may return the same queue to serve multiple \mbox{\hyperlink{group__queue_ga6a3557e38dc8ac38bacea0b2ac7b0787}{hsa\+\_\+queue\+\_\+create}} calls when this type is given. Callers must inspect the returned queue to discover queue size. Queues of this type are reference counted and require a matching number of \mbox{\hyperlink{group__queue_ga2669dc4c7190f2ba65b453110a92ceb5}{hsa\+\_\+queue\+\_\+destroy}} calls to release. Use of multiproducer queue mechanics is required. See \mbox{\hyperlink{inc_2hsa__ext__amd_8h_aedb4fed8c5a00241c4fbb0f0a037001da27e309985c6dc72aa0a3fdfa7b252351}{HSA\+\_\+\+AMD\+\_\+\+AGENT\+\_\+\+INFO\+\_\+\+COOPERATIVE\+\_\+\+QUEUES}} to query agent support for this type. \\
+\hline
+
+\end{DoxyEnumFields}
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{group__queue_ga9db78c52737c385156857caf46295bbd}\label{group__queue_ga9db78c52737c385156857caf46295bbd}} 
+\index{Queues@{Queues}!hsa\_queue\_add\_write\_index\_acq\_rel@{hsa\_queue\_add\_write\_index\_acq\_rel}}
+\index{hsa\_queue\_add\_write\_index\_acq\_rel@{hsa\_queue\_add\_write\_index\_acq\_rel}!Queues@{Queues}}
+\doxysubsubsection{\texorpdfstring{hsa\_queue\_add\_write\_index\_acq\_rel()}{hsa\_queue\_add\_write\_index\_acq\_rel()}}
+{\footnotesize\ttfamily uint64\+\_\+t \mbox{\hyperlink{inc_2hsa__ext__image_8h_a64216765b98b62ee87deb50fd2899836}{HSA\+\_\+\+API}} \mbox{\hyperlink{inc_2hsa_8h_a2321f8ca7d706cada4f617b191a478b0}{HSA\+\_\+\+DEPRECATED}} hsa\+\_\+queue\+\_\+add\+\_\+write\+\_\+index\+\_\+acq\+\_\+rel (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{group__queue_ga9e74fdf8d39c8bc42508c534316185f8}{hsa\+\_\+queue\+\_\+t}} $\ast$}]{queue,  }\item[{uint64\+\_\+t}]{value }\end{DoxyParamCaption})}
+
+
+
+Atomically increment the write index of a queue by an offset. 
+
+\begin{DoxyRefDesc}{Deprecated}
+\item[\mbox{\hyperlink{deprecated__deprecated000035}{Deprecated}}]Renamed as \mbox{\hyperlink{group__queue_ga5dc86316fb0e0b4f2587e86ae9824e23}{hsa\+\_\+queue\+\_\+add\+\_\+write\+\_\+index\+\_\+scacq\+\_\+screl}}.\end{DoxyRefDesc}
+
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em queue} & Pointer to a queue.\\
+\hline
+\mbox{\texttt{ in}}  & {\em value} & Value to add to the write index.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Previous value of the write index. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{group__queue_gaeafb5e4523ab649e529fc39db1362a38}\label{group__queue_gaeafb5e4523ab649e529fc39db1362a38}} 
+\index{Queues@{Queues}!hsa\_queue\_add\_write\_index\_acquire@{hsa\_queue\_add\_write\_index\_acquire}}
+\index{hsa\_queue\_add\_write\_index\_acquire@{hsa\_queue\_add\_write\_index\_acquire}!Queues@{Queues}}
+\doxysubsubsection{\texorpdfstring{hsa\_queue\_add\_write\_index\_acquire()}{hsa\_queue\_add\_write\_index\_acquire()}}
+{\footnotesize\ttfamily uint64\+\_\+t \mbox{\hyperlink{inc_2hsa__ext__image_8h_a64216765b98b62ee87deb50fd2899836}{HSA\+\_\+\+API}} \mbox{\hyperlink{inc_2hsa_8h_a2321f8ca7d706cada4f617b191a478b0}{HSA\+\_\+\+DEPRECATED}} hsa\+\_\+queue\+\_\+add\+\_\+write\+\_\+index\+\_\+acquire (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{group__queue_ga9e74fdf8d39c8bc42508c534316185f8}{hsa\+\_\+queue\+\_\+t}} $\ast$}]{queue,  }\item[{uint64\+\_\+t}]{value }\end{DoxyParamCaption})}
+
+
+
+Atomically increment the write index of a queue by an offset. 
+
+\begin{DoxyRefDesc}{Deprecated}
+\item[\mbox{\hyperlink{deprecated__deprecated000036}{Deprecated}}]Renamed as \mbox{\hyperlink{group__queue_gabe179a1797c1fb1c5e110bd0cf491f89}{hsa\+\_\+queue\+\_\+add\+\_\+write\+\_\+index\+\_\+scacquire}}.\end{DoxyRefDesc}
+
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em queue} & Pointer to a queue.\\
+\hline
+\mbox{\texttt{ in}}  & {\em value} & Value to add to the write index.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Previous value of the write index. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{group__queue_gab8fe0e8b87295a02cff872113263aef8}\label{group__queue_gab8fe0e8b87295a02cff872113263aef8}} 
+\index{Queues@{Queues}!hsa\_queue\_add\_write\_index\_relaxed@{hsa\_queue\_add\_write\_index\_relaxed}}
+\index{hsa\_queue\_add\_write\_index\_relaxed@{hsa\_queue\_add\_write\_index\_relaxed}!Queues@{Queues}}
+\doxysubsubsection{\texorpdfstring{hsa\_queue\_add\_write\_index\_relaxed()}{hsa\_queue\_add\_write\_index\_relaxed()}}
+{\footnotesize\ttfamily uint64\+\_\+t \mbox{\hyperlink{inc_2hsa__ext__image_8h_a64216765b98b62ee87deb50fd2899836}{HSA\+\_\+\+API}} hsa\+\_\+queue\+\_\+add\+\_\+write\+\_\+index\+\_\+relaxed (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{group__queue_ga9e74fdf8d39c8bc42508c534316185f8}{hsa\+\_\+queue\+\_\+t}} $\ast$}]{queue,  }\item[{uint64\+\_\+t}]{value }\end{DoxyParamCaption})}
+
+
+
+Atomically increment the write index of a queue by an offset. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em queue} & Pointer to a queue.\\
+\hline
+\mbox{\texttt{ in}}  & {\em value} & Value to add to the write index.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Previous value of the write index. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{group__queue_gac811544b4f8afc31009dc9247f6163b7}\label{group__queue_gac811544b4f8afc31009dc9247f6163b7}} 
+\index{Queues@{Queues}!hsa\_queue\_add\_write\_index\_release@{hsa\_queue\_add\_write\_index\_release}}
+\index{hsa\_queue\_add\_write\_index\_release@{hsa\_queue\_add\_write\_index\_release}!Queues@{Queues}}
+\doxysubsubsection{\texorpdfstring{hsa\_queue\_add\_write\_index\_release()}{hsa\_queue\_add\_write\_index\_release()}}
+{\footnotesize\ttfamily uint64\+\_\+t \mbox{\hyperlink{inc_2hsa__ext__image_8h_a64216765b98b62ee87deb50fd2899836}{HSA\+\_\+\+API}} \mbox{\hyperlink{inc_2hsa_8h_a2321f8ca7d706cada4f617b191a478b0}{HSA\+\_\+\+DEPRECATED}} hsa\+\_\+queue\+\_\+add\+\_\+write\+\_\+index\+\_\+release (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{group__queue_ga9e74fdf8d39c8bc42508c534316185f8}{hsa\+\_\+queue\+\_\+t}} $\ast$}]{queue,  }\item[{uint64\+\_\+t}]{value }\end{DoxyParamCaption})}
+
+
+
+Atomically increment the write index of a queue by an offset. 
+
+\begin{DoxyRefDesc}{Deprecated}
+\item[\mbox{\hyperlink{deprecated__deprecated000037}{Deprecated}}]Renamed as \mbox{\hyperlink{group__queue_ga48712bc81e926571e3598d0611d6bb17}{hsa\+\_\+queue\+\_\+add\+\_\+write\+\_\+index\+\_\+screlease}}.\end{DoxyRefDesc}
+
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em queue} & Pointer to a queue.\\
+\hline
+\mbox{\texttt{ in}}  & {\em value} & Value to add to the write index.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Previous value of the write index. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{group__queue_ga5dc86316fb0e0b4f2587e86ae9824e23}\label{group__queue_ga5dc86316fb0e0b4f2587e86ae9824e23}} 
+\index{Queues@{Queues}!hsa\_queue\_add\_write\_index\_scacq\_screl@{hsa\_queue\_add\_write\_index\_scacq\_screl}}
+\index{hsa\_queue\_add\_write\_index\_scacq\_screl@{hsa\_queue\_add\_write\_index\_scacq\_screl}!Queues@{Queues}}
+\doxysubsubsection{\texorpdfstring{hsa\_queue\_add\_write\_index\_scacq\_screl()}{hsa\_queue\_add\_write\_index\_scacq\_screl()}}
+{\footnotesize\ttfamily uint64\+\_\+t \mbox{\hyperlink{inc_2hsa__ext__image_8h_a64216765b98b62ee87deb50fd2899836}{HSA\+\_\+\+API}} hsa\+\_\+queue\+\_\+add\+\_\+write\+\_\+index\+\_\+scacq\+\_\+screl (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{group__queue_ga9e74fdf8d39c8bc42508c534316185f8}{hsa\+\_\+queue\+\_\+t}} $\ast$}]{queue,  }\item[{uint64\+\_\+t}]{value }\end{DoxyParamCaption})}
+
+
+
+Atomically increment the write index of a queue by an offset. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em queue} & Pointer to a queue.\\
+\hline
+\mbox{\texttt{ in}}  & {\em value} & Value to add to the write index.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Previous value of the write index. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{group__queue_gabe179a1797c1fb1c5e110bd0cf491f89}\label{group__queue_gabe179a1797c1fb1c5e110bd0cf491f89}} 
+\index{Queues@{Queues}!hsa\_queue\_add\_write\_index\_scacquire@{hsa\_queue\_add\_write\_index\_scacquire}}
+\index{hsa\_queue\_add\_write\_index\_scacquire@{hsa\_queue\_add\_write\_index\_scacquire}!Queues@{Queues}}
+\doxysubsubsection{\texorpdfstring{hsa\_queue\_add\_write\_index\_scacquire()}{hsa\_queue\_add\_write\_index\_scacquire()}}
+{\footnotesize\ttfamily uint64\+\_\+t \mbox{\hyperlink{inc_2hsa__ext__image_8h_a64216765b98b62ee87deb50fd2899836}{HSA\+\_\+\+API}} hsa\+\_\+queue\+\_\+add\+\_\+write\+\_\+index\+\_\+scacquire (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{group__queue_ga9e74fdf8d39c8bc42508c534316185f8}{hsa\+\_\+queue\+\_\+t}} $\ast$}]{queue,  }\item[{uint64\+\_\+t}]{value }\end{DoxyParamCaption})}
+
+
+
+Atomically increment the write index of a queue by an offset. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em queue} & Pointer to a queue.\\
+\hline
+\mbox{\texttt{ in}}  & {\em value} & Value to add to the write index.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Previous value of the write index. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{group__queue_ga48712bc81e926571e3598d0611d6bb17}\label{group__queue_ga48712bc81e926571e3598d0611d6bb17}} 
+\index{Queues@{Queues}!hsa\_queue\_add\_write\_index\_screlease@{hsa\_queue\_add\_write\_index\_screlease}}
+\index{hsa\_queue\_add\_write\_index\_screlease@{hsa\_queue\_add\_write\_index\_screlease}!Queues@{Queues}}
+\doxysubsubsection{\texorpdfstring{hsa\_queue\_add\_write\_index\_screlease()}{hsa\_queue\_add\_write\_index\_screlease()}}
+{\footnotesize\ttfamily uint64\+\_\+t \mbox{\hyperlink{inc_2hsa__ext__image_8h_a64216765b98b62ee87deb50fd2899836}{HSA\+\_\+\+API}} hsa\+\_\+queue\+\_\+add\+\_\+write\+\_\+index\+\_\+screlease (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{group__queue_ga9e74fdf8d39c8bc42508c534316185f8}{hsa\+\_\+queue\+\_\+t}} $\ast$}]{queue,  }\item[{uint64\+\_\+t}]{value }\end{DoxyParamCaption})}
+
+
+
+Atomically increment the write index of a queue by an offset. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em queue} & Pointer to a queue.\\
+\hline
+\mbox{\texttt{ in}}  & {\em value} & Value to add to the write index.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Previous value of the write index. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{group__queue_gac3098f53dc8b4543a49499de5ae8dbb1}\label{group__queue_gac3098f53dc8b4543a49499de5ae8dbb1}} 
+\index{Queues@{Queues}!hsa\_queue\_cas\_write\_index\_acq\_rel@{hsa\_queue\_cas\_write\_index\_acq\_rel}}
+\index{hsa\_queue\_cas\_write\_index\_acq\_rel@{hsa\_queue\_cas\_write\_index\_acq\_rel}!Queues@{Queues}}
+\doxysubsubsection{\texorpdfstring{hsa\_queue\_cas\_write\_index\_acq\_rel()}{hsa\_queue\_cas\_write\_index\_acq\_rel()}}
+{\footnotesize\ttfamily uint64\+\_\+t \mbox{\hyperlink{inc_2hsa__ext__image_8h_a64216765b98b62ee87deb50fd2899836}{HSA\+\_\+\+API}} \mbox{\hyperlink{inc_2hsa_8h_a2321f8ca7d706cada4f617b191a478b0}{HSA\+\_\+\+DEPRECATED}} hsa\+\_\+queue\+\_\+cas\+\_\+write\+\_\+index\+\_\+acq\+\_\+rel (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{group__queue_ga9e74fdf8d39c8bc42508c534316185f8}{hsa\+\_\+queue\+\_\+t}} $\ast$}]{queue,  }\item[{uint64\+\_\+t}]{expected,  }\item[{uint64\+\_\+t}]{value }\end{DoxyParamCaption})}
+
+
+
+Atomically set the write index of a queue if the observed value is equal to the expected value. The application can inspect the returned value to determine if the replacement was done. 
+
+\begin{DoxyRefDesc}{Deprecated}
+\item[\mbox{\hyperlink{deprecated__deprecated000032}{Deprecated}}]Renamed as \mbox{\hyperlink{group__queue_ga17e23893849aaa3de71e3c46c40034b4}{hsa\+\_\+queue\+\_\+cas\+\_\+write\+\_\+index\+\_\+scacq\+\_\+screl}}.\end{DoxyRefDesc}
+
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em queue} & Pointer to a queue.\\
+\hline
+\mbox{\texttt{ in}}  & {\em expected} & Expected value.\\
+\hline
+\mbox{\texttt{ in}}  & {\em value} & Value to assign to the write index if {\ttfamily expected} matches the observed write index. Must be greater than {\ttfamily expected}.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Previous value of the write index. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{group__queue_ga6730196b9c85dfa3624af33be752041f}\label{group__queue_ga6730196b9c85dfa3624af33be752041f}} 
+\index{Queues@{Queues}!hsa\_queue\_cas\_write\_index\_acquire@{hsa\_queue\_cas\_write\_index\_acquire}}
+\index{hsa\_queue\_cas\_write\_index\_acquire@{hsa\_queue\_cas\_write\_index\_acquire}!Queues@{Queues}}
+\doxysubsubsection{\texorpdfstring{hsa\_queue\_cas\_write\_index\_acquire()}{hsa\_queue\_cas\_write\_index\_acquire()}}
+{\footnotesize\ttfamily uint64\+\_\+t \mbox{\hyperlink{inc_2hsa__ext__image_8h_a64216765b98b62ee87deb50fd2899836}{HSA\+\_\+\+API}} \mbox{\hyperlink{inc_2hsa_8h_a2321f8ca7d706cada4f617b191a478b0}{HSA\+\_\+\+DEPRECATED}} hsa\+\_\+queue\+\_\+cas\+\_\+write\+\_\+index\+\_\+acquire (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{group__queue_ga9e74fdf8d39c8bc42508c534316185f8}{hsa\+\_\+queue\+\_\+t}} $\ast$}]{queue,  }\item[{uint64\+\_\+t}]{expected,  }\item[{uint64\+\_\+t}]{value }\end{DoxyParamCaption})}
+
+
+
+Atomically set the write index of a queue if the observed value is equal to the expected value. The application can inspect the returned value to determine if the replacement was done. 
+
+\begin{DoxyRefDesc}{Deprecated}
+\item[\mbox{\hyperlink{deprecated__deprecated000033}{Deprecated}}]Renamed as \mbox{\hyperlink{group__queue_ga296ba9c8d6114d532c561e0643d87c6b}{hsa\+\_\+queue\+\_\+cas\+\_\+write\+\_\+index\+\_\+scacquire}}.\end{DoxyRefDesc}
+
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em queue} & Pointer to a queue.\\
+\hline
+\mbox{\texttt{ in}}  & {\em expected} & Expected value.\\
+\hline
+\mbox{\texttt{ in}}  & {\em value} & Value to assign to the write index if {\ttfamily expected} matches the observed write index. Must be greater than {\ttfamily expected}.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Previous value of the write index. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{group__queue_ga41a1af9d3fafbc6480d20d507ef1383e}\label{group__queue_ga41a1af9d3fafbc6480d20d507ef1383e}} 
+\index{Queues@{Queues}!hsa\_queue\_cas\_write\_index\_relaxed@{hsa\_queue\_cas\_write\_index\_relaxed}}
+\index{hsa\_queue\_cas\_write\_index\_relaxed@{hsa\_queue\_cas\_write\_index\_relaxed}!Queues@{Queues}}
+\doxysubsubsection{\texorpdfstring{hsa\_queue\_cas\_write\_index\_relaxed()}{hsa\_queue\_cas\_write\_index\_relaxed()}}
+{\footnotesize\ttfamily uint64\+\_\+t \mbox{\hyperlink{inc_2hsa__ext__image_8h_a64216765b98b62ee87deb50fd2899836}{HSA\+\_\+\+API}} hsa\+\_\+queue\+\_\+cas\+\_\+write\+\_\+index\+\_\+relaxed (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{group__queue_ga9e74fdf8d39c8bc42508c534316185f8}{hsa\+\_\+queue\+\_\+t}} $\ast$}]{queue,  }\item[{uint64\+\_\+t}]{expected,  }\item[{uint64\+\_\+t}]{value }\end{DoxyParamCaption})}
+
+
+
+Atomically set the write index of a queue if the observed value is equal to the expected value. The application can inspect the returned value to determine if the replacement was done. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em queue} & Pointer to a queue.\\
+\hline
+\mbox{\texttt{ in}}  & {\em expected} & Expected value.\\
+\hline
+\mbox{\texttt{ in}}  & {\em value} & Value to assign to the write index if {\ttfamily expected} matches the observed write index. Must be greater than {\ttfamily expected}.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Previous value of the write index. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{group__queue_ga9e026590e0190ee81cb113c2e2a644e1}\label{group__queue_ga9e026590e0190ee81cb113c2e2a644e1}} 
+\index{Queues@{Queues}!hsa\_queue\_cas\_write\_index\_release@{hsa\_queue\_cas\_write\_index\_release}}
+\index{hsa\_queue\_cas\_write\_index\_release@{hsa\_queue\_cas\_write\_index\_release}!Queues@{Queues}}
+\doxysubsubsection{\texorpdfstring{hsa\_queue\_cas\_write\_index\_release()}{hsa\_queue\_cas\_write\_index\_release()}}
+{\footnotesize\ttfamily uint64\+\_\+t \mbox{\hyperlink{inc_2hsa__ext__image_8h_a64216765b98b62ee87deb50fd2899836}{HSA\+\_\+\+API}} \mbox{\hyperlink{inc_2hsa_8h_a2321f8ca7d706cada4f617b191a478b0}{HSA\+\_\+\+DEPRECATED}} hsa\+\_\+queue\+\_\+cas\+\_\+write\+\_\+index\+\_\+release (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{group__queue_ga9e74fdf8d39c8bc42508c534316185f8}{hsa\+\_\+queue\+\_\+t}} $\ast$}]{queue,  }\item[{uint64\+\_\+t}]{expected,  }\item[{uint64\+\_\+t}]{value }\end{DoxyParamCaption})}
+
+
+
+Atomically set the write index of a queue if the observed value is equal to the expected value. The application can inspect the returned value to determine if the replacement was done. 
+
+\begin{DoxyRefDesc}{Deprecated}
+\item[\mbox{\hyperlink{deprecated__deprecated000034}{Deprecated}}]Renamed as \mbox{\hyperlink{group__queue_ga9528a54a120f0d8d784a381f766a0781}{hsa\+\_\+queue\+\_\+cas\+\_\+write\+\_\+index\+\_\+screlease}}.\end{DoxyRefDesc}
+
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em queue} & Pointer to a queue.\\
+\hline
+\mbox{\texttt{ in}}  & {\em expected} & Expected value.\\
+\hline
+\mbox{\texttt{ in}}  & {\em value} & Value to assign to the write index if {\ttfamily expected} matches the observed write index. Must be greater than {\ttfamily expected}.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Previous value of the write index. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{group__queue_ga17e23893849aaa3de71e3c46c40034b4}\label{group__queue_ga17e23893849aaa3de71e3c46c40034b4}} 
+\index{Queues@{Queues}!hsa\_queue\_cas\_write\_index\_scacq\_screl@{hsa\_queue\_cas\_write\_index\_scacq\_screl}}
+\index{hsa\_queue\_cas\_write\_index\_scacq\_screl@{hsa\_queue\_cas\_write\_index\_scacq\_screl}!Queues@{Queues}}
+\doxysubsubsection{\texorpdfstring{hsa\_queue\_cas\_write\_index\_scacq\_screl()}{hsa\_queue\_cas\_write\_index\_scacq\_screl()}}
+{\footnotesize\ttfamily uint64\+\_\+t \mbox{\hyperlink{inc_2hsa__ext__image_8h_a64216765b98b62ee87deb50fd2899836}{HSA\+\_\+\+API}} hsa\+\_\+queue\+\_\+cas\+\_\+write\+\_\+index\+\_\+scacq\+\_\+screl (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{group__queue_ga9e74fdf8d39c8bc42508c534316185f8}{hsa\+\_\+queue\+\_\+t}} $\ast$}]{queue,  }\item[{uint64\+\_\+t}]{expected,  }\item[{uint64\+\_\+t}]{value }\end{DoxyParamCaption})}
+
+
+
+Atomically set the write index of a queue if the observed value is equal to the expected value. The application can inspect the returned value to determine if the replacement was done. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em queue} & Pointer to a queue.\\
+\hline
+\mbox{\texttt{ in}}  & {\em expected} & Expected value.\\
+\hline
+\mbox{\texttt{ in}}  & {\em value} & Value to assign to the write index if {\ttfamily expected} matches the observed write index. Must be greater than {\ttfamily expected}.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Previous value of the write index. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{group__queue_ga296ba9c8d6114d532c561e0643d87c6b}\label{group__queue_ga296ba9c8d6114d532c561e0643d87c6b}} 
+\index{Queues@{Queues}!hsa\_queue\_cas\_write\_index\_scacquire@{hsa\_queue\_cas\_write\_index\_scacquire}}
+\index{hsa\_queue\_cas\_write\_index\_scacquire@{hsa\_queue\_cas\_write\_index\_scacquire}!Queues@{Queues}}
+\doxysubsubsection{\texorpdfstring{hsa\_queue\_cas\_write\_index\_scacquire()}{hsa\_queue\_cas\_write\_index\_scacquire()}}
+{\footnotesize\ttfamily uint64\+\_\+t \mbox{\hyperlink{inc_2hsa__ext__image_8h_a64216765b98b62ee87deb50fd2899836}{HSA\+\_\+\+API}} hsa\+\_\+queue\+\_\+cas\+\_\+write\+\_\+index\+\_\+scacquire (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{group__queue_ga9e74fdf8d39c8bc42508c534316185f8}{hsa\+\_\+queue\+\_\+t}} $\ast$}]{queue,  }\item[{uint64\+\_\+t}]{expected,  }\item[{uint64\+\_\+t}]{value }\end{DoxyParamCaption})}
+
+
+
+Atomically set the write index of a queue if the observed value is equal to the expected value. The application can inspect the returned value to determine if the replacement was done. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em queue} & Pointer to a queue.\\
+\hline
+\mbox{\texttt{ in}}  & {\em expected} & Expected value.\\
+\hline
+\mbox{\texttt{ in}}  & {\em value} & Value to assign to the write index if {\ttfamily expected} matches the observed write index. Must be greater than {\ttfamily expected}.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Previous value of the write index. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{group__queue_ga9528a54a120f0d8d784a381f766a0781}\label{group__queue_ga9528a54a120f0d8d784a381f766a0781}} 
+\index{Queues@{Queues}!hsa\_queue\_cas\_write\_index\_screlease@{hsa\_queue\_cas\_write\_index\_screlease}}
+\index{hsa\_queue\_cas\_write\_index\_screlease@{hsa\_queue\_cas\_write\_index\_screlease}!Queues@{Queues}}
+\doxysubsubsection{\texorpdfstring{hsa\_queue\_cas\_write\_index\_screlease()}{hsa\_queue\_cas\_write\_index\_screlease()}}
+{\footnotesize\ttfamily uint64\+\_\+t \mbox{\hyperlink{inc_2hsa__ext__image_8h_a64216765b98b62ee87deb50fd2899836}{HSA\+\_\+\+API}} hsa\+\_\+queue\+\_\+cas\+\_\+write\+\_\+index\+\_\+screlease (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{group__queue_ga9e74fdf8d39c8bc42508c534316185f8}{hsa\+\_\+queue\+\_\+t}} $\ast$}]{queue,  }\item[{uint64\+\_\+t}]{expected,  }\item[{uint64\+\_\+t}]{value }\end{DoxyParamCaption})}
+
+
+
+Atomically set the write index of a queue if the observed value is equal to the expected value. The application can inspect the returned value to determine if the replacement was done. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em queue} & Pointer to a queue.\\
+\hline
+\mbox{\texttt{ in}}  & {\em expected} & Expected value.\\
+\hline
+\mbox{\texttt{ in}}  & {\em value} & Value to assign to the write index if {\ttfamily expected} matches the observed write index. Must be greater than {\ttfamily expected}.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Previous value of the write index. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{group__queue_ga6a3557e38dc8ac38bacea0b2ac7b0787}\label{group__queue_ga6a3557e38dc8ac38bacea0b2ac7b0787}} 
+\index{Queues@{Queues}!hsa\_queue\_create@{hsa\_queue\_create}}
+\index{hsa\_queue\_create@{hsa\_queue\_create}!Queues@{Queues}}
+\doxysubsubsection{\texorpdfstring{hsa\_queue\_create()}{hsa\_queue\_create()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{group__status_gad755322e7ff95456520e8abdbe90d225}{hsa\+\_\+status\+\_\+t}} \mbox{\hyperlink{inc_2hsa__ext__image_8h_a64216765b98b62ee87deb50fd2899836}{HSA\+\_\+\+API}} hsa\+\_\+queue\+\_\+create (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{group__agentinfo_ga9ce217ef08e7d5e89c8e83ce7b6ef22b}{hsa\+\_\+agent\+\_\+t}}}]{agent,  }\item[{uint32\+\_\+t}]{size,  }\item[{\mbox{\hyperlink{group__queue_ga4ca8f732dfceaf6b88dcfeec168d82ae}{hsa\+\_\+queue\+\_\+type32\+\_\+t}}}]{type,  }\item[{void($\ast$)(\mbox{\hyperlink{group__status_gad755322e7ff95456520e8abdbe90d225}{hsa\+\_\+status\+\_\+t}} status, \mbox{\hyperlink{group__queue_ga9e74fdf8d39c8bc42508c534316185f8}{hsa\+\_\+queue\+\_\+t}} $\ast$source, void $\ast$data)}]{callback,  }\item[{void $\ast$}]{data,  }\item[{uint32\+\_\+t}]{private\+\_\+segment\+\_\+size,  }\item[{uint32\+\_\+t}]{group\+\_\+segment\+\_\+size,  }\item[{\mbox{\hyperlink{group__queue_ga9e74fdf8d39c8bc42508c534316185f8}{hsa\+\_\+queue\+\_\+t}} $\ast$$\ast$}]{queue }\end{DoxyParamCaption})}
+
+
+
+Create a user mode queue. 
+
+The HSA runtime creates the queue structure, the underlying packet buffer, the completion signal, and the write and read indexes. The initial value of the write and read indexes is 0. The type of every packet in the buffer is initialized to \mbox{\hyperlink{group__aql_gga35a04bfe654a1c980ac904cafd6373a1a9030931b8fe80fb9add8c796cd8886c5}{HSA\+\_\+\+PACKET\+\_\+\+TYPE\+\_\+\+INVALID}}.
+
+The application should only rely on the error code returned to determine if the queue is valid.
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em agent} & Agent where to create the queue.\\
+\hline
+\mbox{\texttt{ in}}  & {\em size} & Number of packets the queue is expected to hold. Must be a power of 2 between 1 and the value of \mbox{\hyperlink{group__agentinfo_gga39d0684207d95717d96319573b3e4a42acc88a2cb095e69df180ebee7aeb68c81}{HSA\+\_\+\+AGENT\+\_\+\+INFO\+\_\+\+QUEUE\+\_\+\+MAX\+\_\+\+SIZE}} in {\ttfamily agent}. The size of the newly created queue is the maximum of {\ttfamily size} and the value of \mbox{\hyperlink{group__agentinfo_gga39d0684207d95717d96319573b3e4a42ad5e6be0580d2865dced7a87a2fe14147}{HSA\+\_\+\+AGENT\+\_\+\+INFO\+\_\+\+QUEUE\+\_\+\+MIN\+\_\+\+SIZE}} in {\ttfamily agent}.\\
+\hline
+\mbox{\texttt{ in}}  & {\em type} & Type of the queue, a bitwise OR of hsa\+\_\+queue\+\_\+type\+\_\+t values. If the value of \mbox{\hyperlink{group__agentinfo_gga39d0684207d95717d96319573b3e4a42a46149fa502a210835171e0b66e16f988}{HSA\+\_\+\+AGENT\+\_\+\+INFO\+\_\+\+QUEUE\+\_\+\+TYPE}} in {\ttfamily agent} is \mbox{\hyperlink{group__queue_ggaf1939f228a41fa6ee50cffd4de03b561a45c3277e4e4fcb8a9788081549551f0a}{HSA\+\_\+\+QUEUE\+\_\+\+TYPE\+\_\+\+SINGLE}}, then {\ttfamily type} must also be \mbox{\hyperlink{group__queue_ggaf1939f228a41fa6ee50cffd4de03b561a45c3277e4e4fcb8a9788081549551f0a}{HSA\+\_\+\+QUEUE\+\_\+\+TYPE\+\_\+\+SINGLE}}.\\
+\hline
+\mbox{\texttt{ in}}  & {\em callback} & Callback invoked by the HSA runtime for every asynchronous event related to the newly created queue. May be NULL. The HSA runtime passes three arguments to the callback\+: a code identifying the event that triggered the invocation, a pointer to the queue where the event originated, and the application data.\\
+\hline
+\mbox{\texttt{ in}}  & {\em data} & Application data that is passed to {\ttfamily callback} on every iteration. May be NULL.\\
+\hline
+\mbox{\texttt{ in}}  & {\em private\+\_\+segment\+\_\+size} & Hint indicating the maximum expected private segment usage per work-\/item, in bytes. There may be performance degradation if the application places a kernel dispatch packet in the queue and the corresponding private segment usage exceeds {\ttfamily private\+\_\+segment\+\_\+size}. If the application does not want to specify any particular value for this argument, {\ttfamily private\+\_\+segment\+\_\+size} must be UINT32\+\_\+\+MAX. If the queue does not support kernel dispatch packets, this argument is ignored.\\
+\hline
+\mbox{\texttt{ in}}  & {\em group\+\_\+segment\+\_\+size} & Hint indicating the maximum expected group segment usage per work-\/group, in bytes. There may be performance degradation if the application places a kernel dispatch packet in the queue and the corresponding group segment usage exceeds {\ttfamily group\+\_\+segment\+\_\+size}. If the application does not want to specify any particular value for this argument, {\ttfamily group\+\_\+segment\+\_\+size} must be UINT32\+\_\+\+MAX. If the queue does not support kernel dispatch packets, this argument is ignored.\\
+\hline
+\mbox{\texttt{ out}}  & {\em queue} & Memory location where the HSA runtime stores a pointer to the newly created queue.\\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em \mbox{\hyperlink{group__status_ggad755322e7ff95456520e8abdbe90d225ae382ea0c9c05cce5a60d0317375159cc}{HSA\+\_\+\+STATUS\+\_\+\+SUCCESS}}} & The function has been executed successfully.\\
+\hline
+{\em \mbox{\hyperlink{group__status_ggad755322e7ff95456520e8abdbe90d225a34ea59ade5bfce95eee935238a99f5b5}{HSA\+\_\+\+STATUS\+\_\+\+ERROR\+\_\+\+NOT\+\_\+\+INITIALIZED}}} & The HSA runtime has not been initialized.\\
+\hline
+{\em \mbox{\hyperlink{group__status_ggad755322e7ff95456520e8abdbe90d225a1a77fcf36d0d140874c4361ab093eff7}{HSA\+\_\+\+STATUS\+\_\+\+ERROR\+\_\+\+OUT\+\_\+\+OF\+\_\+\+RESOURCES}}} & The HSA runtime failed to allocate the required resources.\\
+\hline
+{\em \mbox{\hyperlink{group__status_ggad755322e7ff95456520e8abdbe90d225a3a5d835c109c2d0ad5b9c2771e133e5d}{HSA\+\_\+\+STATUS\+\_\+\+ERROR\+\_\+\+INVALID\+\_\+\+AGENT}}} & The agent is invalid.\\
+\hline
+{\em \mbox{\hyperlink{group__status_ggad755322e7ff95456520e8abdbe90d225a7b27f50e23a776b496b8b4707f21ccad}{HSA\+\_\+\+STATUS\+\_\+\+ERROR\+\_\+\+INVALID\+\_\+\+QUEUE\+\_\+\+CREATION}}} & {\ttfamily agent} does not support queues of the given type.\\
+\hline
+{\em \mbox{\hyperlink{group__status_ggad755322e7ff95456520e8abdbe90d225ac7d3651f75107d2a6a8ba3b25683c030}{HSA\+\_\+\+STATUS\+\_\+\+ERROR\+\_\+\+INVALID\+\_\+\+ARGUMENT}}} & {\ttfamily size} is not a power of two, {\ttfamily size} is 0, {\ttfamily type} is an invalid queue type, or {\ttfamily queue} is NULL. \\
+\hline
+\end{DoxyRetVals}
+\mbox{\Hypertarget{group__queue_ga2669dc4c7190f2ba65b453110a92ceb5}\label{group__queue_ga2669dc4c7190f2ba65b453110a92ceb5}} 
+\index{Queues@{Queues}!hsa\_queue\_destroy@{hsa\_queue\_destroy}}
+\index{hsa\_queue\_destroy@{hsa\_queue\_destroy}!Queues@{Queues}}
+\doxysubsubsection{\texorpdfstring{hsa\_queue\_destroy()}{hsa\_queue\_destroy()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{group__status_gad755322e7ff95456520e8abdbe90d225}{hsa\+\_\+status\+\_\+t}} \mbox{\hyperlink{inc_2hsa__ext__image_8h_a64216765b98b62ee87deb50fd2899836}{HSA\+\_\+\+API}} hsa\+\_\+queue\+\_\+destroy (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{group__queue_ga9e74fdf8d39c8bc42508c534316185f8}{hsa\+\_\+queue\+\_\+t}} $\ast$}]{queue }\end{DoxyParamCaption})}
+
+
+
+Destroy a user mode queue. 
+
+When a queue is destroyed, the state of the AQL packets that have not been yet fully processed (their completion phase has not finished) becomes undefined. It is the responsibility of the application to ensure that all pending queue operations are finished if their results are required.
+
+The resources allocated by the HSA runtime during queue creation (queue structure, ring buffer, doorbell signal) are released. The queue should not be accessed after being destroyed.
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em queue} & Pointer to a queue created using \mbox{\hyperlink{group__queue_ga6a3557e38dc8ac38bacea0b2ac7b0787}{hsa\+\_\+queue\+\_\+create}}.\\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em \mbox{\hyperlink{group__status_ggad755322e7ff95456520e8abdbe90d225ae382ea0c9c05cce5a60d0317375159cc}{HSA\+\_\+\+STATUS\+\_\+\+SUCCESS}}} & The function has been executed successfully.\\
+\hline
+{\em \mbox{\hyperlink{group__status_ggad755322e7ff95456520e8abdbe90d225a34ea59ade5bfce95eee935238a99f5b5}{HSA\+\_\+\+STATUS\+\_\+\+ERROR\+\_\+\+NOT\+\_\+\+INITIALIZED}}} & The HSA runtime has not been initialized.\\
+\hline
+{\em \mbox{\hyperlink{group__status_ggad755322e7ff95456520e8abdbe90d225aa3c762eb6a61b358702b45259d1686c4}{HSA\+\_\+\+STATUS\+\_\+\+ERROR\+\_\+\+INVALID\+\_\+\+QUEUE}}} & The queue is invalid.\\
+\hline
+{\em \mbox{\hyperlink{group__status_ggad755322e7ff95456520e8abdbe90d225ac7d3651f75107d2a6a8ba3b25683c030}{HSA\+\_\+\+STATUS\+\_\+\+ERROR\+\_\+\+INVALID\+\_\+\+ARGUMENT}}} & {\ttfamily queue} is NULL. \\
+\hline
+\end{DoxyRetVals}
+\mbox{\Hypertarget{group__queue_gac3fe6420d5b57a27cc453f97ccff3125}\label{group__queue_gac3fe6420d5b57a27cc453f97ccff3125}} 
+\index{Queues@{Queues}!hsa\_queue\_inactivate@{hsa\_queue\_inactivate}}
+\index{hsa\_queue\_inactivate@{hsa\_queue\_inactivate}!Queues@{Queues}}
+\doxysubsubsection{\texorpdfstring{hsa\_queue\_inactivate()}{hsa\_queue\_inactivate()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{group__status_gad755322e7ff95456520e8abdbe90d225}{hsa\+\_\+status\+\_\+t}} \mbox{\hyperlink{inc_2hsa__ext__image_8h_a64216765b98b62ee87deb50fd2899836}{HSA\+\_\+\+API}} hsa\+\_\+queue\+\_\+inactivate (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{group__queue_ga9e74fdf8d39c8bc42508c534316185f8}{hsa\+\_\+queue\+\_\+t}} $\ast$}]{queue }\end{DoxyParamCaption})}
+
+
+
+Inactivate a queue. 
+
+Inactivating the queue aborts any pending executions and prevent any new packets from being processed. Any more packets written to the queue once it is inactivated will be ignored by the packet processor.
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em queue} & Pointer to a queue.\\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em \mbox{\hyperlink{group__status_ggad755322e7ff95456520e8abdbe90d225ae382ea0c9c05cce5a60d0317375159cc}{HSA\+\_\+\+STATUS\+\_\+\+SUCCESS}}} & The function has been executed successfully.\\
+\hline
+{\em \mbox{\hyperlink{group__status_ggad755322e7ff95456520e8abdbe90d225a34ea59ade5bfce95eee935238a99f5b5}{HSA\+\_\+\+STATUS\+\_\+\+ERROR\+\_\+\+NOT\+\_\+\+INITIALIZED}}} & The HSA runtime has not been initialized.\\
+\hline
+{\em \mbox{\hyperlink{group__status_ggad755322e7ff95456520e8abdbe90d225aa3c762eb6a61b358702b45259d1686c4}{HSA\+\_\+\+STATUS\+\_\+\+ERROR\+\_\+\+INVALID\+\_\+\+QUEUE}}} & The queue is invalid.\\
+\hline
+{\em \mbox{\hyperlink{group__status_ggad755322e7ff95456520e8abdbe90d225ac7d3651f75107d2a6a8ba3b25683c030}{HSA\+\_\+\+STATUS\+\_\+\+ERROR\+\_\+\+INVALID\+\_\+\+ARGUMENT}}} & {\ttfamily queue} is NULL. \\
+\hline
+\end{DoxyRetVals}
+\mbox{\Hypertarget{group__queue_gae6651e6345873f116a2522289c8b6e7d}\label{group__queue_gae6651e6345873f116a2522289c8b6e7d}} 
+\index{Queues@{Queues}!hsa\_queue\_load\_read\_index\_acquire@{hsa\_queue\_load\_read\_index\_acquire}}
+\index{hsa\_queue\_load\_read\_index\_acquire@{hsa\_queue\_load\_read\_index\_acquire}!Queues@{Queues}}
+\doxysubsubsection{\texorpdfstring{hsa\_queue\_load\_read\_index\_acquire()}{hsa\_queue\_load\_read\_index\_acquire()}}
+{\footnotesize\ttfamily uint64\+\_\+t \mbox{\hyperlink{inc_2hsa__ext__image_8h_a64216765b98b62ee87deb50fd2899836}{HSA\+\_\+\+API}} \mbox{\hyperlink{inc_2hsa_8h_a2321f8ca7d706cada4f617b191a478b0}{HSA\+\_\+\+DEPRECATED}} hsa\+\_\+queue\+\_\+load\+\_\+read\+\_\+index\+\_\+acquire (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{group__queue_ga9e74fdf8d39c8bc42508c534316185f8}{hsa\+\_\+queue\+\_\+t}} $\ast$}]{queue }\end{DoxyParamCaption})}
+
+
+
+Atomically load the read index of a queue. 
+
+\begin{DoxyRefDesc}{Deprecated}
+\item[\mbox{\hyperlink{deprecated__deprecated000029}{Deprecated}}]Renamed as \mbox{\hyperlink{group__queue_gaf921ea074c4d6882a391544d0e14f6dd}{hsa\+\_\+queue\+\_\+load\+\_\+read\+\_\+index\+\_\+scacquire}}.\end{DoxyRefDesc}
+
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em queue} & Pointer to a queue.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Read index of the queue pointed by {\ttfamily queue}. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{group__queue_ga8cbbfffe47df6b2f8555b2258d583023}\label{group__queue_ga8cbbfffe47df6b2f8555b2258d583023}} 
+\index{Queues@{Queues}!hsa\_queue\_load\_read\_index\_relaxed@{hsa\_queue\_load\_read\_index\_relaxed}}
+\index{hsa\_queue\_load\_read\_index\_relaxed@{hsa\_queue\_load\_read\_index\_relaxed}!Queues@{Queues}}
+\doxysubsubsection{\texorpdfstring{hsa\_queue\_load\_read\_index\_relaxed()}{hsa\_queue\_load\_read\_index\_relaxed()}}
+{\footnotesize\ttfamily uint64\+\_\+t \mbox{\hyperlink{inc_2hsa__ext__image_8h_a64216765b98b62ee87deb50fd2899836}{HSA\+\_\+\+API}} hsa\+\_\+queue\+\_\+load\+\_\+read\+\_\+index\+\_\+relaxed (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{group__queue_ga9e74fdf8d39c8bc42508c534316185f8}{hsa\+\_\+queue\+\_\+t}} $\ast$}]{queue }\end{DoxyParamCaption})}
+
+
+
+Atomically load the read index of a queue. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em queue} & Pointer to a queue.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Read index of the queue pointed by {\ttfamily queue}. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{group__queue_gaf921ea074c4d6882a391544d0e14f6dd}\label{group__queue_gaf921ea074c4d6882a391544d0e14f6dd}} 
+\index{Queues@{Queues}!hsa\_queue\_load\_read\_index\_scacquire@{hsa\_queue\_load\_read\_index\_scacquire}}
+\index{hsa\_queue\_load\_read\_index\_scacquire@{hsa\_queue\_load\_read\_index\_scacquire}!Queues@{Queues}}
+\doxysubsubsection{\texorpdfstring{hsa\_queue\_load\_read\_index\_scacquire()}{hsa\_queue\_load\_read\_index\_scacquire()}}
+{\footnotesize\ttfamily uint64\+\_\+t \mbox{\hyperlink{inc_2hsa__ext__image_8h_a64216765b98b62ee87deb50fd2899836}{HSA\+\_\+\+API}} hsa\+\_\+queue\+\_\+load\+\_\+read\+\_\+index\+\_\+scacquire (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{group__queue_ga9e74fdf8d39c8bc42508c534316185f8}{hsa\+\_\+queue\+\_\+t}} $\ast$}]{queue }\end{DoxyParamCaption})}
+
+
+
+Atomically load the read index of a queue. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em queue} & Pointer to a queue.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Read index of the queue pointed by {\ttfamily queue}. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{group__queue_gaed99dffc5920cf13864602f7e222a598}\label{group__queue_gaed99dffc5920cf13864602f7e222a598}} 
+\index{Queues@{Queues}!hsa\_queue\_load\_write\_index\_acquire@{hsa\_queue\_load\_write\_index\_acquire}}
+\index{hsa\_queue\_load\_write\_index\_acquire@{hsa\_queue\_load\_write\_index\_acquire}!Queues@{Queues}}
+\doxysubsubsection{\texorpdfstring{hsa\_queue\_load\_write\_index\_acquire()}{hsa\_queue\_load\_write\_index\_acquire()}}
+{\footnotesize\ttfamily uint64\+\_\+t \mbox{\hyperlink{inc_2hsa__ext__image_8h_a64216765b98b62ee87deb50fd2899836}{HSA\+\_\+\+API}} \mbox{\hyperlink{inc_2hsa_8h_a2321f8ca7d706cada4f617b191a478b0}{HSA\+\_\+\+DEPRECATED}} hsa\+\_\+queue\+\_\+load\+\_\+write\+\_\+index\+\_\+acquire (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{group__queue_ga9e74fdf8d39c8bc42508c534316185f8}{hsa\+\_\+queue\+\_\+t}} $\ast$}]{queue }\end{DoxyParamCaption})}
+
+
+
+Atomically load the write index of a queue. 
+
+\begin{DoxyRefDesc}{Deprecated}
+\item[\mbox{\hyperlink{deprecated__deprecated000030}{Deprecated}}]Renamed as \mbox{\hyperlink{group__queue_ga343d951de465cbeecad352fc08393182}{hsa\+\_\+queue\+\_\+load\+\_\+write\+\_\+index\+\_\+scacquire}}.\end{DoxyRefDesc}
+
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em queue} & Pointer to a queue.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Write index of the queue pointed by {\ttfamily queue}. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{group__queue_ga109ab55eadf912a64e31c3bd1887f302}\label{group__queue_ga109ab55eadf912a64e31c3bd1887f302}} 
+\index{Queues@{Queues}!hsa\_queue\_load\_write\_index\_relaxed@{hsa\_queue\_load\_write\_index\_relaxed}}
+\index{hsa\_queue\_load\_write\_index\_relaxed@{hsa\_queue\_load\_write\_index\_relaxed}!Queues@{Queues}}
+\doxysubsubsection{\texorpdfstring{hsa\_queue\_load\_write\_index\_relaxed()}{hsa\_queue\_load\_write\_index\_relaxed()}}
+{\footnotesize\ttfamily uint64\+\_\+t \mbox{\hyperlink{inc_2hsa__ext__image_8h_a64216765b98b62ee87deb50fd2899836}{HSA\+\_\+\+API}} hsa\+\_\+queue\+\_\+load\+\_\+write\+\_\+index\+\_\+relaxed (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{group__queue_ga9e74fdf8d39c8bc42508c534316185f8}{hsa\+\_\+queue\+\_\+t}} $\ast$}]{queue }\end{DoxyParamCaption})}
+
+
+
+Atomically load the write index of a queue. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em queue} & Pointer to a queue.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Write index of the queue pointed by {\ttfamily queue}. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{group__queue_ga343d951de465cbeecad352fc08393182}\label{group__queue_ga343d951de465cbeecad352fc08393182}} 
+\index{Queues@{Queues}!hsa\_queue\_load\_write\_index\_scacquire@{hsa\_queue\_load\_write\_index\_scacquire}}
+\index{hsa\_queue\_load\_write\_index\_scacquire@{hsa\_queue\_load\_write\_index\_scacquire}!Queues@{Queues}}
+\doxysubsubsection{\texorpdfstring{hsa\_queue\_load\_write\_index\_scacquire()}{hsa\_queue\_load\_write\_index\_scacquire()}}
+{\footnotesize\ttfamily uint64\+\_\+t \mbox{\hyperlink{inc_2hsa__ext__image_8h_a64216765b98b62ee87deb50fd2899836}{HSA\+\_\+\+API}} hsa\+\_\+queue\+\_\+load\+\_\+write\+\_\+index\+\_\+scacquire (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{group__queue_ga9e74fdf8d39c8bc42508c534316185f8}{hsa\+\_\+queue\+\_\+t}} $\ast$}]{queue }\end{DoxyParamCaption})}
+
+
+
+Atomically load the write index of a queue. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em queue} & Pointer to a queue.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Write index of the queue pointed by {\ttfamily queue}. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{group__queue_gaf02a7288ec7b3964cddb7c54c4d7e807}\label{group__queue_gaf02a7288ec7b3964cddb7c54c4d7e807}} 
+\index{Queues@{Queues}!hsa\_queue\_store\_read\_index\_relaxed@{hsa\_queue\_store\_read\_index\_relaxed}}
+\index{hsa\_queue\_store\_read\_index\_relaxed@{hsa\_queue\_store\_read\_index\_relaxed}!Queues@{Queues}}
+\doxysubsubsection{\texorpdfstring{hsa\_queue\_store\_read\_index\_relaxed()}{hsa\_queue\_store\_read\_index\_relaxed()}}
+{\footnotesize\ttfamily void \mbox{\hyperlink{inc_2hsa__ext__image_8h_a64216765b98b62ee87deb50fd2899836}{HSA\+\_\+\+API}} hsa\+\_\+queue\+\_\+store\+\_\+read\+\_\+index\+\_\+relaxed (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{group__queue_ga9e74fdf8d39c8bc42508c534316185f8}{hsa\+\_\+queue\+\_\+t}} $\ast$}]{queue,  }\item[{uint64\+\_\+t}]{value }\end{DoxyParamCaption})}
+
+
+
+Atomically set the read index of a queue. 
+
+Modifications of the read index are not allowed and result in undefined behavior if the queue is associated with an agent for which only the corresponding packet processor is permitted to update the read index.
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em queue} & Pointer to a queue.\\
+\hline
+\mbox{\texttt{ in}}  & {\em value} & Value to assign to the read index. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{group__queue_gaf21574e3d48902e62a5b73b40fd5bd6e}\label{group__queue_gaf21574e3d48902e62a5b73b40fd5bd6e}} 
+\index{Queues@{Queues}!hsa\_queue\_store\_read\_index\_release@{hsa\_queue\_store\_read\_index\_release}}
+\index{hsa\_queue\_store\_read\_index\_release@{hsa\_queue\_store\_read\_index\_release}!Queues@{Queues}}
+\doxysubsubsection{\texorpdfstring{hsa\_queue\_store\_read\_index\_release()}{hsa\_queue\_store\_read\_index\_release()}}
+{\footnotesize\ttfamily void \mbox{\hyperlink{inc_2hsa__ext__image_8h_a64216765b98b62ee87deb50fd2899836}{HSA\+\_\+\+API}} \mbox{\hyperlink{inc_2hsa_8h_a2321f8ca7d706cada4f617b191a478b0}{HSA\+\_\+\+DEPRECATED}} hsa\+\_\+queue\+\_\+store\+\_\+read\+\_\+index\+\_\+release (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{group__queue_ga9e74fdf8d39c8bc42508c534316185f8}{hsa\+\_\+queue\+\_\+t}} $\ast$}]{queue,  }\item[{uint64\+\_\+t}]{value }\end{DoxyParamCaption})}
+
+
+
+Atomically set the read index of a queue. 
+
+\begin{DoxyRefDesc}{Deprecated}
+\item[\mbox{\hyperlink{deprecated__deprecated000038}{Deprecated}}]Renamed as \mbox{\hyperlink{group__queue_ga43499d41801e5623c869a8e71efcad4c}{hsa\+\_\+queue\+\_\+store\+\_\+read\+\_\+index\+\_\+screlease}}.\end{DoxyRefDesc}
+
+
+Modifications of the read index are not allowed and result in undefined behavior if the queue is associated with an agent for which only the corresponding packet processor is permitted to update the read index.
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em queue} & Pointer to a queue.\\
+\hline
+\mbox{\texttt{ in}}  & {\em value} & Value to assign to the read index. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{group__queue_ga43499d41801e5623c869a8e71efcad4c}\label{group__queue_ga43499d41801e5623c869a8e71efcad4c}} 
+\index{Queues@{Queues}!hsa\_queue\_store\_read\_index\_screlease@{hsa\_queue\_store\_read\_index\_screlease}}
+\index{hsa\_queue\_store\_read\_index\_screlease@{hsa\_queue\_store\_read\_index\_screlease}!Queues@{Queues}}
+\doxysubsubsection{\texorpdfstring{hsa\_queue\_store\_read\_index\_screlease()}{hsa\_queue\_store\_read\_index\_screlease()}}
+{\footnotesize\ttfamily void \mbox{\hyperlink{inc_2hsa__ext__image_8h_a64216765b98b62ee87deb50fd2899836}{HSA\+\_\+\+API}} hsa\+\_\+queue\+\_\+store\+\_\+read\+\_\+index\+\_\+screlease (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{group__queue_ga9e74fdf8d39c8bc42508c534316185f8}{hsa\+\_\+queue\+\_\+t}} $\ast$}]{queue,  }\item[{uint64\+\_\+t}]{value }\end{DoxyParamCaption})}
+
+
+
+Atomically set the read index of a queue. 
+
+Modifications of the read index are not allowed and result in undefined behavior if the queue is associated with an agent for which only the corresponding packet processor is permitted to update the read index.
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em queue} & Pointer to a queue.\\
+\hline
+\mbox{\texttt{ in}}  & {\em value} & Value to assign to the read index. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{group__queue_ga8a23cd26c6399ee30f23eb959143dceb}\label{group__queue_ga8a23cd26c6399ee30f23eb959143dceb}} 
+\index{Queues@{Queues}!hsa\_queue\_store\_write\_index\_relaxed@{hsa\_queue\_store\_write\_index\_relaxed}}
+\index{hsa\_queue\_store\_write\_index\_relaxed@{hsa\_queue\_store\_write\_index\_relaxed}!Queues@{Queues}}
+\doxysubsubsection{\texorpdfstring{hsa\_queue\_store\_write\_index\_relaxed()}{hsa\_queue\_store\_write\_index\_relaxed()}}
+{\footnotesize\ttfamily void \mbox{\hyperlink{inc_2hsa__ext__image_8h_a64216765b98b62ee87deb50fd2899836}{HSA\+\_\+\+API}} hsa\+\_\+queue\+\_\+store\+\_\+write\+\_\+index\+\_\+relaxed (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{group__queue_ga9e74fdf8d39c8bc42508c534316185f8}{hsa\+\_\+queue\+\_\+t}} $\ast$}]{queue,  }\item[{uint64\+\_\+t}]{value }\end{DoxyParamCaption})}
+
+
+
+Atomically set the write index of a queue. 
+
+It is recommended that the application uses this function to update the write index when there is a single agent submitting work to the queue (the queue type is \mbox{\hyperlink{group__queue_ggaf1939f228a41fa6ee50cffd4de03b561a45c3277e4e4fcb8a9788081549551f0a}{HSA\+\_\+\+QUEUE\+\_\+\+TYPE\+\_\+\+SINGLE}}).
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em queue} & Pointer to a queue.\\
+\hline
+\mbox{\texttt{ in}}  & {\em value} & Value to assign to the write index. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{group__queue_ga87093a453f26ba87266efe8feb256e50}\label{group__queue_ga87093a453f26ba87266efe8feb256e50}} 
+\index{Queues@{Queues}!hsa\_queue\_store\_write\_index\_release@{hsa\_queue\_store\_write\_index\_release}}
+\index{hsa\_queue\_store\_write\_index\_release@{hsa\_queue\_store\_write\_index\_release}!Queues@{Queues}}
+\doxysubsubsection{\texorpdfstring{hsa\_queue\_store\_write\_index\_release()}{hsa\_queue\_store\_write\_index\_release()}}
+{\footnotesize\ttfamily void \mbox{\hyperlink{inc_2hsa__ext__image_8h_a64216765b98b62ee87deb50fd2899836}{HSA\+\_\+\+API}} \mbox{\hyperlink{inc_2hsa_8h_a2321f8ca7d706cada4f617b191a478b0}{HSA\+\_\+\+DEPRECATED}} hsa\+\_\+queue\+\_\+store\+\_\+write\+\_\+index\+\_\+release (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{group__queue_ga9e74fdf8d39c8bc42508c534316185f8}{hsa\+\_\+queue\+\_\+t}} $\ast$}]{queue,  }\item[{uint64\+\_\+t}]{value }\end{DoxyParamCaption})}
+
+
+
+Atomically set the write index of a queue. 
+
+\begin{DoxyRefDesc}{Deprecated}
+\item[\mbox{\hyperlink{deprecated__deprecated000031}{Deprecated}}]Renamed as \mbox{\hyperlink{group__queue_gae13cd7aa6f7cd1fe4352b205f00a533c}{hsa\+\_\+queue\+\_\+store\+\_\+write\+\_\+index\+\_\+screlease}}.\end{DoxyRefDesc}
+
+
+It is recommended that the application uses this function to update the write index when there is a single agent submitting work to the queue (the queue type is \mbox{\hyperlink{group__queue_ggaf1939f228a41fa6ee50cffd4de03b561a45c3277e4e4fcb8a9788081549551f0a}{HSA\+\_\+\+QUEUE\+\_\+\+TYPE\+\_\+\+SINGLE}}).
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em queue} & Pointer to a queue.\\
+\hline
+\mbox{\texttt{ in}}  & {\em value} & Value to assign to the write index. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{group__queue_gae13cd7aa6f7cd1fe4352b205f00a533c}\label{group__queue_gae13cd7aa6f7cd1fe4352b205f00a533c}} 
+\index{Queues@{Queues}!hsa\_queue\_store\_write\_index\_screlease@{hsa\_queue\_store\_write\_index\_screlease}}
+\index{hsa\_queue\_store\_write\_index\_screlease@{hsa\_queue\_store\_write\_index\_screlease}!Queues@{Queues}}
+\doxysubsubsection{\texorpdfstring{hsa\_queue\_store\_write\_index\_screlease()}{hsa\_queue\_store\_write\_index\_screlease()}}
+{\footnotesize\ttfamily void \mbox{\hyperlink{inc_2hsa__ext__image_8h_a64216765b98b62ee87deb50fd2899836}{HSA\+\_\+\+API}} hsa\+\_\+queue\+\_\+store\+\_\+write\+\_\+index\+\_\+screlease (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{group__queue_ga9e74fdf8d39c8bc42508c534316185f8}{hsa\+\_\+queue\+\_\+t}} $\ast$}]{queue,  }\item[{uint64\+\_\+t}]{value }\end{DoxyParamCaption})}
+
+
+
+Atomically set the write index of a queue. 
+
+It is recommended that the application uses this function to update the write index when there is a single agent submitting work to the queue (the queue type is \mbox{\hyperlink{group__queue_ggaf1939f228a41fa6ee50cffd4de03b561a45c3277e4e4fcb8a9788081549551f0a}{HSA\+\_\+\+QUEUE\+\_\+\+TYPE\+\_\+\+SINGLE}}).
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em queue} & Pointer to a queue.\\
+\hline
+\mbox{\texttt{ in}}  & {\em value} & Value to assign to the write index. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{group__queue_ga40c1dee00ef5d510bcd03f0bf825f570}\label{group__queue_ga40c1dee00ef5d510bcd03f0bf825f570}} 
+\index{Queues@{Queues}!hsa\_soft\_queue\_create@{hsa\_soft\_queue\_create}}
+\index{hsa\_soft\_queue\_create@{hsa\_soft\_queue\_create}!Queues@{Queues}}
+\doxysubsubsection{\texorpdfstring{hsa\_soft\_queue\_create()}{hsa\_soft\_queue\_create()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{group__status_gad755322e7ff95456520e8abdbe90d225}{hsa\+\_\+status\+\_\+t}} \mbox{\hyperlink{inc_2hsa__ext__image_8h_a64216765b98b62ee87deb50fd2899836}{HSA\+\_\+\+API}} hsa\+\_\+soft\+\_\+queue\+\_\+create (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{group__memory_ga9c649e7034e53233198aaa1b58e9d79b}{hsa\+\_\+region\+\_\+t}}}]{region,  }\item[{uint32\+\_\+t}]{size,  }\item[{\mbox{\hyperlink{group__queue_ga4ca8f732dfceaf6b88dcfeec168d82ae}{hsa\+\_\+queue\+\_\+type32\+\_\+t}}}]{type,  }\item[{uint32\+\_\+t}]{features,  }\item[{\mbox{\hyperlink{group__signals_ga0003af605a660e7ef4f89aa555d3b3fc}{hsa\+\_\+signal\+\_\+t}}}]{doorbell\+\_\+signal,  }\item[{\mbox{\hyperlink{group__queue_ga9e74fdf8d39c8bc42508c534316185f8}{hsa\+\_\+queue\+\_\+t}} $\ast$$\ast$}]{queue }\end{DoxyParamCaption})}
+
+
+
+Create a queue for which the application or a kernel is responsible for processing the AQL packets. 
+
+The application can use this function to create queues where AQL packets are not parsed by the packet processor associated with an agent, but rather by a unit of execution running on that agent (for example, a thread in the host application).
+
+The application is responsible for ensuring that all the producers and consumers of the resulting queue can access the provided doorbell signal and memory region. The application is also responsible for ensuring that the unit of execution processing the queue packets supports the indicated features (AQL packet types).
+
+When the queue is created, the HSA runtime allocates the packet buffer using {\ttfamily region}, and the write and read indexes. The initial value of the write and read indexes is 0, and the type of every packet in the buffer is initialized to \mbox{\hyperlink{group__aql_gga35a04bfe654a1c980ac904cafd6373a1a9030931b8fe80fb9add8c796cd8886c5}{HSA\+\_\+\+PACKET\+\_\+\+TYPE\+\_\+\+INVALID}}. The value of the {\itshape size}, {\itshape type}, {\itshape features}, and {\itshape doorbell\+\_\+signal} fields in the returned queue match the values passed by the application.
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em region} & Memory region that the HSA runtime should use to allocate the AQL packet buffer and any other queue metadata.\\
+\hline
+\mbox{\texttt{ in}}  & {\em size} & Number of packets the queue is expected to hold. Must be a power of 2 greater than 0.\\
+\hline
+\mbox{\texttt{ in}}  & {\em type} & Queue type.\\
+\hline
+\mbox{\texttt{ in}}  & {\em features} & Supported queue features. This is a bit-\/field of \mbox{\hyperlink{group__queue_ga1145b01f6d9e2670179a22c92db39413}{hsa\+\_\+queue\+\_\+feature\+\_\+t}} values.\\
+\hline
+\mbox{\texttt{ in}}  & {\em doorbell\+\_\+signal} & Doorbell signal that the HSA runtime must associate with the returned queue. The signal handle must not be 0.\\
+\hline
+\mbox{\texttt{ out}}  & {\em queue} & Memory location where the HSA runtime stores a pointer to the newly created queue. The application should not rely on the value returned for this argument but only in the status code to determine if the queue is valid. Must not be NULL.\\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em \mbox{\hyperlink{group__status_ggad755322e7ff95456520e8abdbe90d225ae382ea0c9c05cce5a60d0317375159cc}{HSA\+\_\+\+STATUS\+\_\+\+SUCCESS}}} & The function has been executed successfully.\\
+\hline
+{\em \mbox{\hyperlink{group__status_ggad755322e7ff95456520e8abdbe90d225a34ea59ade5bfce95eee935238a99f5b5}{HSA\+\_\+\+STATUS\+\_\+\+ERROR\+\_\+\+NOT\+\_\+\+INITIALIZED}}} & The HSA runtime has not been initialized.\\
+\hline
+{\em \mbox{\hyperlink{group__status_ggad755322e7ff95456520e8abdbe90d225a1a77fcf36d0d140874c4361ab093eff7}{HSA\+\_\+\+STATUS\+\_\+\+ERROR\+\_\+\+OUT\+\_\+\+OF\+\_\+\+RESOURCES}}} & The HSA runtime failed to allocate the required resources.\\
+\hline
+{\em \mbox{\hyperlink{group__status_ggad755322e7ff95456520e8abdbe90d225ac7d3651f75107d2a6a8ba3b25683c030}{HSA\+\_\+\+STATUS\+\_\+\+ERROR\+\_\+\+INVALID\+\_\+\+ARGUMENT}}} & {\ttfamily size} is not a power of two, {\ttfamily size} is 0, {\ttfamily type} is an invalid queue type, the doorbell signal handle is 0, or {\ttfamily queue} is NULL. \\
+\hline
+\end{DoxyRetVals}

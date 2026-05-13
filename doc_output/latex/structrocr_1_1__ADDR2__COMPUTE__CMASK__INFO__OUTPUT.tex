@@ -1,0 +1,179 @@
+\hypertarget{structrocr_1_1__ADDR2__COMPUTE__CMASK__INFO__OUTPUT}{}\doxysection{rocr\+::\+\_\+\+ADDR2\+\_\+\+COMPUTE\+\_\+\+CMASK\+\_\+\+INFO\+\_\+\+OUTPUT Struct Reference}
+\label{structrocr_1_1__ADDR2__COMPUTE__CMASK__INFO__OUTPUT}\index{rocr::\_ADDR2\_COMPUTE\_CMASK\_INFO\_OUTPUT@{rocr::\_ADDR2\_COMPUTE\_CMASK\_INFO\_OUTPUT}}
+
+
+Output structure of Addr2\+Compute\+Cmask\+Info.  
+
+
+
+
+{\ttfamily \#include $<$addrinterface.\+h$>$}
+
+
+
+Collaboration diagram for rocr\+::\+\_\+\+ADDR2\+\_\+\+COMPUTE\+\_\+\+CMASK\+\_\+\+INFO\+\_\+\+OUTPUT\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{structrocr_1_1__ADDR2__COMPUTE__CMASK__INFO__OUTPUT__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{addrtypes_8h_af5a2be58a28390f9a494538f34054637}{UINT\+\_\+32}} \mbox{\hyperlink{structrocr_1_1__ADDR2__COMPUTE__CMASK__INFO__OUTPUT_a3fc95aeb145976ffdde83f477b918943}{size}}
+\begin{DoxyCompactList}\small\item\em Size of this structure in bytes. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{addrtypes_8h_af5a2be58a28390f9a494538f34054637}{UINT\+\_\+32}} \mbox{\hyperlink{structrocr_1_1__ADDR2__COMPUTE__CMASK__INFO__OUTPUT_aad16723c77184acbcbe4dccdfb63c581}{pitch}}
+\item 
+\mbox{\hyperlink{addrtypes_8h_af5a2be58a28390f9a494538f34054637}{UINT\+\_\+32}} \mbox{\hyperlink{structrocr_1_1__ADDR2__COMPUTE__CMASK__INFO__OUTPUT_a68370169b85fad8fabf87048ef10ec61}{height}}
+\begin{DoxyCompactList}\small\item\em Height in pixels, as above. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{addrtypes_8h_af5a2be58a28390f9a494538f34054637}{UINT\+\_\+32}} \mbox{\hyperlink{structrocr_1_1__ADDR2__COMPUTE__CMASK__INFO__OUTPUT_a5d1980bf045b92eaaa941b912709cb51}{base\+Align}}
+\begin{DoxyCompactList}\small\item\em Base alignment. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{addrtypes_8h_af5a2be58a28390f9a494538f34054637}{UINT\+\_\+32}} \mbox{\hyperlink{structrocr_1_1__ADDR2__COMPUTE__CMASK__INFO__OUTPUT_a0b0f8101d3b70d31930d6458bf2d0cf6}{slice\+Size}}
+\begin{DoxyCompactList}\small\item\em Slice size, in bytes. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{addrtypes_8h_af5a2be58a28390f9a494538f34054637}{UINT\+\_\+32}} \mbox{\hyperlink{structrocr_1_1__ADDR2__COMPUTE__CMASK__INFO__OUTPUT_ae3d420ca86fe4ebe6917fcdf51ed313f}{cmask\+Bytes}}
+\begin{DoxyCompactList}\small\item\em Size in bytes of CMask buffer. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{addrtypes_8h_af5a2be58a28390f9a494538f34054637}{UINT\+\_\+32}} \mbox{\hyperlink{structrocr_1_1__ADDR2__COMPUTE__CMASK__INFO__OUTPUT_a4106bb5f4280aa7b2e1e4bc1ae659187}{meta\+Blk\+Width}}
+\begin{DoxyCompactList}\small\item\em Meta block width. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{addrtypes_8h_af5a2be58a28390f9a494538f34054637}{UINT\+\_\+32}} \mbox{\hyperlink{structrocr_1_1__ADDR2__COMPUTE__CMASK__INFO__OUTPUT_a96bce8d8f637cb0d5bfa005e29de8a96}{meta\+Blk\+Height}}
+\begin{DoxyCompactList}\small\item\em Meta block height. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{addrtypes_8h_af5a2be58a28390f9a494538f34054637}{UINT\+\_\+32}} \mbox{\hyperlink{structrocr_1_1__ADDR2__COMPUTE__CMASK__INFO__OUTPUT_a4c8a88c47eee8ff5a261e6f992bcd2a3}{meta\+Blk\+Num\+Per\+Slice}}
+\begin{DoxyCompactList}\small\item\em Number of metablock within one slice. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{namespacerocr_a4e1c8854853d86794e7b257976b68831}{ADDR2\+\_\+\+META\+\_\+\+MIP\+\_\+\+INFO}} $\ast$ \mbox{\hyperlink{structrocr_1_1__ADDR2__COMPUTE__CMASK__INFO__OUTPUT_a95b56b5aa340debcc9dc60aeb1d7cb1b}{p\+Mip\+Info}}
+\begin{DoxyCompactList}\small\item\em CMASK mip information. \end{DoxyCompactList}\item 
+\begin{tabbing}
+xx\=xx\=xx\=xx\=xx\=xx\=xx\=xx\=xx\=\kill
+union \{\\
+\>struct \mbox{\hyperlink{structrocr_1_1gfx9__addr__meta__equation}{gfx9\_addr\_meta\_equation}} \mbox{\hyperlink{structrocr_1_1__ADDR2__COMPUTE__CMASK__INFO__OUTPUT_aee1d3deb45754259299a672a2a2158cd}{gfx9}}\\
+\>\mbox{\hyperlink{addrtypes_8h_ad2fd22c2e9d45be42570bca078751457}{UINT\_16}} $\ast$ \mbox{\hyperlink{structrocr_1_1__ADDR2__COMPUTE__CMASK__INFO__OUTPUT_affc2d06706fc368b1d70920d57e25b64}{gfx10\_bits}}\\
+\} \mbox{\hyperlink{structrocr_1_1__ADDR2__COMPUTE__CMASK__INFO__OUTPUT_a1b04649c77bb75b82b143fa675b095dc}{equation}}\\
+
+\end{tabbing}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Output structure of Addr2\+Compute\+Cmask\+Info. 
+
+ADDR2\+\_\+\+COMPUTE\+\_\+\+CMASK\+\_\+\+INFO\+\_\+\+OUTPUT 
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{structrocr_1_1__ADDR2__COMPUTE__CMASK__INFO__OUTPUT_a5d1980bf045b92eaaa941b912709cb51}\label{structrocr_1_1__ADDR2__COMPUTE__CMASK__INFO__OUTPUT_a5d1980bf045b92eaaa941b912709cb51}} 
+\index{rocr::\_ADDR2\_COMPUTE\_CMASK\_INFO\_OUTPUT@{rocr::\_ADDR2\_COMPUTE\_CMASK\_INFO\_OUTPUT}!baseAlign@{baseAlign}}
+\index{baseAlign@{baseAlign}!rocr::\_ADDR2\_COMPUTE\_CMASK\_INFO\_OUTPUT@{rocr::\_ADDR2\_COMPUTE\_CMASK\_INFO\_OUTPUT}}
+\doxysubsubsection{\texorpdfstring{baseAlign}{baseAlign}}
+{\footnotesize\ttfamily \mbox{\hyperlink{addrtypes_8h_af5a2be58a28390f9a494538f34054637}{UINT\+\_\+32}} rocr\+::\+\_\+\+ADDR2\+\_\+\+COMPUTE\+\_\+\+CMASK\+\_\+\+INFO\+\_\+\+OUTPUT\+::base\+Align}
+
+
+
+Base alignment. 
+
+\mbox{\Hypertarget{structrocr_1_1__ADDR2__COMPUTE__CMASK__INFO__OUTPUT_ae3d420ca86fe4ebe6917fcdf51ed313f}\label{structrocr_1_1__ADDR2__COMPUTE__CMASK__INFO__OUTPUT_ae3d420ca86fe4ebe6917fcdf51ed313f}} 
+\index{rocr::\_ADDR2\_COMPUTE\_CMASK\_INFO\_OUTPUT@{rocr::\_ADDR2\_COMPUTE\_CMASK\_INFO\_OUTPUT}!cmaskBytes@{cmaskBytes}}
+\index{cmaskBytes@{cmaskBytes}!rocr::\_ADDR2\_COMPUTE\_CMASK\_INFO\_OUTPUT@{rocr::\_ADDR2\_COMPUTE\_CMASK\_INFO\_OUTPUT}}
+\doxysubsubsection{\texorpdfstring{cmaskBytes}{cmaskBytes}}
+{\footnotesize\ttfamily \mbox{\hyperlink{addrtypes_8h_af5a2be58a28390f9a494538f34054637}{UINT\+\_\+32}} rocr\+::\+\_\+\+ADDR2\+\_\+\+COMPUTE\+\_\+\+CMASK\+\_\+\+INFO\+\_\+\+OUTPUT\+::cmask\+Bytes}
+
+
+
+Size in bytes of CMask buffer. 
+
+\mbox{\Hypertarget{structrocr_1_1__ADDR2__COMPUTE__CMASK__INFO__OUTPUT_a1b04649c77bb75b82b143fa675b095dc}\label{structrocr_1_1__ADDR2__COMPUTE__CMASK__INFO__OUTPUT_a1b04649c77bb75b82b143fa675b095dc}} 
+\index{rocr::\_ADDR2\_COMPUTE\_CMASK\_INFO\_OUTPUT@{rocr::\_ADDR2\_COMPUTE\_CMASK\_INFO\_OUTPUT}!equation@{equation}}
+\index{equation@{equation}!rocr::\_ADDR2\_COMPUTE\_CMASK\_INFO\_OUTPUT@{rocr::\_ADDR2\_COMPUTE\_CMASK\_INFO\_OUTPUT}}
+\doxysubsubsection{\texorpdfstring{}{}}
+{\footnotesize\ttfamily union \{ ... \}  rocr\+::\+\_\+\+ADDR2\+\_\+\+COMPUTE\+\_\+\+CMASK\+\_\+\+INFO\+\_\+\+OUTPUT\+::equation}
+
+\mbox{\Hypertarget{structrocr_1_1__ADDR2__COMPUTE__CMASK__INFO__OUTPUT_affc2d06706fc368b1d70920d57e25b64}\label{structrocr_1_1__ADDR2__COMPUTE__CMASK__INFO__OUTPUT_affc2d06706fc368b1d70920d57e25b64}} 
+\index{rocr::\_ADDR2\_COMPUTE\_CMASK\_INFO\_OUTPUT@{rocr::\_ADDR2\_COMPUTE\_CMASK\_INFO\_OUTPUT}!gfx10\_bits@{gfx10\_bits}}
+\index{gfx10\_bits@{gfx10\_bits}!rocr::\_ADDR2\_COMPUTE\_CMASK\_INFO\_OUTPUT@{rocr::\_ADDR2\_COMPUTE\_CMASK\_INFO\_OUTPUT}}
+\doxysubsubsection{\texorpdfstring{gfx10\_bits}{gfx10\_bits}}
+{\footnotesize\ttfamily \mbox{\hyperlink{addrtypes_8h_ad2fd22c2e9d45be42570bca078751457}{UINT\+\_\+16}}$\ast$ rocr\+::\+\_\+\+ADDR2\+\_\+\+COMPUTE\+\_\+\+CMASK\+\_\+\+INFO\+\_\+\+OUTPUT\+::gfx10\+\_\+bits}
+
+\mbox{\Hypertarget{structrocr_1_1__ADDR2__COMPUTE__CMASK__INFO__OUTPUT_aee1d3deb45754259299a672a2a2158cd}\label{structrocr_1_1__ADDR2__COMPUTE__CMASK__INFO__OUTPUT_aee1d3deb45754259299a672a2a2158cd}} 
+\index{rocr::\_ADDR2\_COMPUTE\_CMASK\_INFO\_OUTPUT@{rocr::\_ADDR2\_COMPUTE\_CMASK\_INFO\_OUTPUT}!gfx9@{gfx9}}
+\index{gfx9@{gfx9}!rocr::\_ADDR2\_COMPUTE\_CMASK\_INFO\_OUTPUT@{rocr::\_ADDR2\_COMPUTE\_CMASK\_INFO\_OUTPUT}}
+\doxysubsubsection{\texorpdfstring{gfx9}{gfx9}}
+{\footnotesize\ttfamily struct \mbox{\hyperlink{structrocr_1_1gfx9__addr__meta__equation}{gfx9\+\_\+addr\+\_\+meta\+\_\+equation}} rocr\+::\+\_\+\+ADDR2\+\_\+\+COMPUTE\+\_\+\+CMASK\+\_\+\+INFO\+\_\+\+OUTPUT\+::gfx9}
+
+\mbox{\Hypertarget{structrocr_1_1__ADDR2__COMPUTE__CMASK__INFO__OUTPUT_a68370169b85fad8fabf87048ef10ec61}\label{structrocr_1_1__ADDR2__COMPUTE__CMASK__INFO__OUTPUT_a68370169b85fad8fabf87048ef10ec61}} 
+\index{rocr::\_ADDR2\_COMPUTE\_CMASK\_INFO\_OUTPUT@{rocr::\_ADDR2\_COMPUTE\_CMASK\_INFO\_OUTPUT}!height@{height}}
+\index{height@{height}!rocr::\_ADDR2\_COMPUTE\_CMASK\_INFO\_OUTPUT@{rocr::\_ADDR2\_COMPUTE\_CMASK\_INFO\_OUTPUT}}
+\doxysubsubsection{\texorpdfstring{height}{height}}
+{\footnotesize\ttfamily \mbox{\hyperlink{addrtypes_8h_af5a2be58a28390f9a494538f34054637}{UINT\+\_\+32}} rocr\+::\+\_\+\+ADDR2\+\_\+\+COMPUTE\+\_\+\+CMASK\+\_\+\+INFO\+\_\+\+OUTPUT\+::height}
+
+
+
+Height in pixels, as above. 
+
+\mbox{\Hypertarget{structrocr_1_1__ADDR2__COMPUTE__CMASK__INFO__OUTPUT_a96bce8d8f637cb0d5bfa005e29de8a96}\label{structrocr_1_1__ADDR2__COMPUTE__CMASK__INFO__OUTPUT_a96bce8d8f637cb0d5bfa005e29de8a96}} 
+\index{rocr::\_ADDR2\_COMPUTE\_CMASK\_INFO\_OUTPUT@{rocr::\_ADDR2\_COMPUTE\_CMASK\_INFO\_OUTPUT}!metaBlkHeight@{metaBlkHeight}}
+\index{metaBlkHeight@{metaBlkHeight}!rocr::\_ADDR2\_COMPUTE\_CMASK\_INFO\_OUTPUT@{rocr::\_ADDR2\_COMPUTE\_CMASK\_INFO\_OUTPUT}}
+\doxysubsubsection{\texorpdfstring{metaBlkHeight}{metaBlkHeight}}
+{\footnotesize\ttfamily \mbox{\hyperlink{addrtypes_8h_af5a2be58a28390f9a494538f34054637}{UINT\+\_\+32}} rocr\+::\+\_\+\+ADDR2\+\_\+\+COMPUTE\+\_\+\+CMASK\+\_\+\+INFO\+\_\+\+OUTPUT\+::meta\+Blk\+Height}
+
+
+
+Meta block height. 
+
+\mbox{\Hypertarget{structrocr_1_1__ADDR2__COMPUTE__CMASK__INFO__OUTPUT_a4c8a88c47eee8ff5a261e6f992bcd2a3}\label{structrocr_1_1__ADDR2__COMPUTE__CMASK__INFO__OUTPUT_a4c8a88c47eee8ff5a261e6f992bcd2a3}} 
+\index{rocr::\_ADDR2\_COMPUTE\_CMASK\_INFO\_OUTPUT@{rocr::\_ADDR2\_COMPUTE\_CMASK\_INFO\_OUTPUT}!metaBlkNumPerSlice@{metaBlkNumPerSlice}}
+\index{metaBlkNumPerSlice@{metaBlkNumPerSlice}!rocr::\_ADDR2\_COMPUTE\_CMASK\_INFO\_OUTPUT@{rocr::\_ADDR2\_COMPUTE\_CMASK\_INFO\_OUTPUT}}
+\doxysubsubsection{\texorpdfstring{metaBlkNumPerSlice}{metaBlkNumPerSlice}}
+{\footnotesize\ttfamily \mbox{\hyperlink{addrtypes_8h_af5a2be58a28390f9a494538f34054637}{UINT\+\_\+32}} rocr\+::\+\_\+\+ADDR2\+\_\+\+COMPUTE\+\_\+\+CMASK\+\_\+\+INFO\+\_\+\+OUTPUT\+::meta\+Blk\+Num\+Per\+Slice}
+
+
+
+Number of metablock within one slice. 
+
+\mbox{\Hypertarget{structrocr_1_1__ADDR2__COMPUTE__CMASK__INFO__OUTPUT_a4106bb5f4280aa7b2e1e4bc1ae659187}\label{structrocr_1_1__ADDR2__COMPUTE__CMASK__INFO__OUTPUT_a4106bb5f4280aa7b2e1e4bc1ae659187}} 
+\index{rocr::\_ADDR2\_COMPUTE\_CMASK\_INFO\_OUTPUT@{rocr::\_ADDR2\_COMPUTE\_CMASK\_INFO\_OUTPUT}!metaBlkWidth@{metaBlkWidth}}
+\index{metaBlkWidth@{metaBlkWidth}!rocr::\_ADDR2\_COMPUTE\_CMASK\_INFO\_OUTPUT@{rocr::\_ADDR2\_COMPUTE\_CMASK\_INFO\_OUTPUT}}
+\doxysubsubsection{\texorpdfstring{metaBlkWidth}{metaBlkWidth}}
+{\footnotesize\ttfamily \mbox{\hyperlink{addrtypes_8h_af5a2be58a28390f9a494538f34054637}{UINT\+\_\+32}} rocr\+::\+\_\+\+ADDR2\+\_\+\+COMPUTE\+\_\+\+CMASK\+\_\+\+INFO\+\_\+\+OUTPUT\+::meta\+Blk\+Width}
+
+
+
+Meta block width. 
+
+\mbox{\Hypertarget{structrocr_1_1__ADDR2__COMPUTE__CMASK__INFO__OUTPUT_aad16723c77184acbcbe4dccdfb63c581}\label{structrocr_1_1__ADDR2__COMPUTE__CMASK__INFO__OUTPUT_aad16723c77184acbcbe4dccdfb63c581}} 
+\index{rocr::\_ADDR2\_COMPUTE\_CMASK\_INFO\_OUTPUT@{rocr::\_ADDR2\_COMPUTE\_CMASK\_INFO\_OUTPUT}!pitch@{pitch}}
+\index{pitch@{pitch}!rocr::\_ADDR2\_COMPUTE\_CMASK\_INFO\_OUTPUT@{rocr::\_ADDR2\_COMPUTE\_CMASK\_INFO\_OUTPUT}}
+\doxysubsubsection{\texorpdfstring{pitch}{pitch}}
+{\footnotesize\ttfamily \mbox{\hyperlink{addrtypes_8h_af5a2be58a28390f9a494538f34054637}{UINT\+\_\+32}} rocr\+::\+\_\+\+ADDR2\+\_\+\+COMPUTE\+\_\+\+CMASK\+\_\+\+INFO\+\_\+\+OUTPUT\+::pitch}
+
+Pitch in pixels of color buffer which this Cmask matches. The size might be larger than original color buffer pitch when called with an unaligned pitch. \mbox{\Hypertarget{structrocr_1_1__ADDR2__COMPUTE__CMASK__INFO__OUTPUT_a95b56b5aa340debcc9dc60aeb1d7cb1b}\label{structrocr_1_1__ADDR2__COMPUTE__CMASK__INFO__OUTPUT_a95b56b5aa340debcc9dc60aeb1d7cb1b}} 
+\index{rocr::\_ADDR2\_COMPUTE\_CMASK\_INFO\_OUTPUT@{rocr::\_ADDR2\_COMPUTE\_CMASK\_INFO\_OUTPUT}!pMipInfo@{pMipInfo}}
+\index{pMipInfo@{pMipInfo}!rocr::\_ADDR2\_COMPUTE\_CMASK\_INFO\_OUTPUT@{rocr::\_ADDR2\_COMPUTE\_CMASK\_INFO\_OUTPUT}}
+\doxysubsubsection{\texorpdfstring{pMipInfo}{pMipInfo}}
+{\footnotesize\ttfamily \mbox{\hyperlink{namespacerocr_a4e1c8854853d86794e7b257976b68831}{ADDR2\+\_\+\+META\+\_\+\+MIP\+\_\+\+INFO}}$\ast$ rocr\+::\+\_\+\+ADDR2\+\_\+\+COMPUTE\+\_\+\+CMASK\+\_\+\+INFO\+\_\+\+OUTPUT\+::p\+Mip\+Info}
+
+
+
+CMASK mip information. 
+
+\mbox{\Hypertarget{structrocr_1_1__ADDR2__COMPUTE__CMASK__INFO__OUTPUT_a3fc95aeb145976ffdde83f477b918943}\label{structrocr_1_1__ADDR2__COMPUTE__CMASK__INFO__OUTPUT_a3fc95aeb145976ffdde83f477b918943}} 
+\index{rocr::\_ADDR2\_COMPUTE\_CMASK\_INFO\_OUTPUT@{rocr::\_ADDR2\_COMPUTE\_CMASK\_INFO\_OUTPUT}!size@{size}}
+\index{size@{size}!rocr::\_ADDR2\_COMPUTE\_CMASK\_INFO\_OUTPUT@{rocr::\_ADDR2\_COMPUTE\_CMASK\_INFO\_OUTPUT}}
+\doxysubsubsection{\texorpdfstring{size}{size}}
+{\footnotesize\ttfamily \mbox{\hyperlink{addrtypes_8h_af5a2be58a28390f9a494538f34054637}{UINT\+\_\+32}} rocr\+::\+\_\+\+ADDR2\+\_\+\+COMPUTE\+\_\+\+CMASK\+\_\+\+INFO\+\_\+\+OUTPUT\+::size}
+
+
+
+Size of this structure in bytes. 
+
+\mbox{\Hypertarget{structrocr_1_1__ADDR2__COMPUTE__CMASK__INFO__OUTPUT_a0b0f8101d3b70d31930d6458bf2d0cf6}\label{structrocr_1_1__ADDR2__COMPUTE__CMASK__INFO__OUTPUT_a0b0f8101d3b70d31930d6458bf2d0cf6}} 
+\index{rocr::\_ADDR2\_COMPUTE\_CMASK\_INFO\_OUTPUT@{rocr::\_ADDR2\_COMPUTE\_CMASK\_INFO\_OUTPUT}!sliceSize@{sliceSize}}
+\index{sliceSize@{sliceSize}!rocr::\_ADDR2\_COMPUTE\_CMASK\_INFO\_OUTPUT@{rocr::\_ADDR2\_COMPUTE\_CMASK\_INFO\_OUTPUT}}
+\doxysubsubsection{\texorpdfstring{sliceSize}{sliceSize}}
+{\footnotesize\ttfamily \mbox{\hyperlink{addrtypes_8h_af5a2be58a28390f9a494538f34054637}{UINT\+\_\+32}} rocr\+::\+\_\+\+ADDR2\+\_\+\+COMPUTE\+\_\+\+CMASK\+\_\+\+INFO\+\_\+\+OUTPUT\+::slice\+Size}
+
+
+
+Slice size, in bytes. 
+
+
+
+The documentation for this struct was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+src/image/addrlib/inc/\mbox{\hyperlink{addrinterface_8h}{addrinterface.\+h}}\end{DoxyCompactItemize}

@@ -1,0 +1,105 @@
+\hypertarget{inc_2amd__hsa__signal_8h}{}\doxysection{src/inc/amd\+\_\+hsa\+\_\+signal.h File Reference}
+\label{inc_2amd__hsa__signal_8h}\index{src/inc/amd\_hsa\_signal.h@{src/inc/amd\_hsa\_signal.h}}
+{\ttfamily \#include \char`\"{}amd\+\_\+hsa\+\_\+common.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}amd\+\_\+hsa\+\_\+queue.\+h\char`\"{}}\newline
+Include dependency graph for amd\+\_\+hsa\+\_\+signal.\+h\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=303pt]{inc_2amd__hsa__signal_8h__incl}
+\end{center}
+\end{figure}
+This graph shows which files directly or indirectly include this file\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{inc_2amd__hsa__signal_8h__dep__incl}
+\end{center}
+\end{figure}
+\doxysubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{structamd__signal__s}{amd\+\_\+signal\+\_\+s}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \mbox{\hyperlink{inc_2amd__hsa__signal_8h_a2d386904bef240c7d9b1203eda3ccdf9}{AMD\+\_\+\+SIGNAL\+\_\+\+ALIGN\+\_\+\+BYTES}}~64
+\item 
+\#define \mbox{\hyperlink{inc_2amd__hsa__signal_8h_aab0a76981c02a38b6f23cf3ecd7fe2ac}{AMD\+\_\+\+SIGNAL\+\_\+\+ALIGN}}~\+\_\+\+\_\+\+ALIGNED\+\_\+\+\_\+(\mbox{\hyperlink{inc_2amd__hsa__signal_8h_a2d386904bef240c7d9b1203eda3ccdf9}{AMD\+\_\+\+SIGNAL\+\_\+\+ALIGN\+\_\+\+BYTES}})
+\end{DoxyCompactItemize}
+\doxysubsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+typedef int64\+\_\+t \mbox{\hyperlink{inc_2amd__hsa__signal_8h_a43e24a599b8f987e28e79517c0d5afe8}{amd\+\_\+signal\+\_\+kind64\+\_\+t}}
+\item 
+typedef struct \mbox{\hyperlink{inc_2amd__hsa__signal_8h_aab0a76981c02a38b6f23cf3ecd7fe2ac}{AMD\+\_\+\+SIGNAL\+\_\+\+ALIGN}} \mbox{\hyperlink{structamd__signal__s}{amd\+\_\+signal\+\_\+s}} \mbox{\hyperlink{inc_2amd__hsa__signal_8h_a343c5f5e62cd0ec69d16c5835dc82bfa}{amd\+\_\+signal\+\_\+t}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Enumerations}
+\begin{DoxyCompactItemize}
+\item 
+enum \mbox{\hyperlink{inc_2amd__hsa__signal_8h_a1418115e2014dc6d2e86e94959f884e1}{amd\+\_\+signal\+\_\+kind\+\_\+t}} \{ \mbox{\hyperlink{inc_2amd__hsa__signal_8h_a1418115e2014dc6d2e86e94959f884e1af4db7a8d3ebaf9fc2ff29db6393086bf}{AMD\+\_\+\+SIGNAL\+\_\+\+KIND\+\_\+\+INVALID}} = 0
+, \mbox{\hyperlink{inc_2amd__hsa__signal_8h_a1418115e2014dc6d2e86e94959f884e1a5efc8796047071c5627af6cd79d8647d}{AMD\+\_\+\+SIGNAL\+\_\+\+KIND\+\_\+\+USER}} = 1
+, \mbox{\hyperlink{inc_2amd__hsa__signal_8h_a1418115e2014dc6d2e86e94959f884e1a41cfa53ad82f1b752e7aea264bdf5702}{AMD\+\_\+\+SIGNAL\+\_\+\+KIND\+\_\+\+DOORBELL}} = -\/1
+, \mbox{\hyperlink{inc_2amd__hsa__signal_8h_a1418115e2014dc6d2e86e94959f884e1a6e9089f1d0cfeae1c43dfe2cee71d26e}{AMD\+\_\+\+SIGNAL\+\_\+\+KIND\+\_\+\+LEGACY\+\_\+\+DOORBELL}} = -\/2
+ \}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Macro Definition Documentation}
+\mbox{\Hypertarget{inc_2amd__hsa__signal_8h_aab0a76981c02a38b6f23cf3ecd7fe2ac}\label{inc_2amd__hsa__signal_8h_aab0a76981c02a38b6f23cf3ecd7fe2ac}} 
+\index{amd\_hsa\_signal.h@{amd\_hsa\_signal.h}!AMD\_SIGNAL\_ALIGN@{AMD\_SIGNAL\_ALIGN}}
+\index{AMD\_SIGNAL\_ALIGN@{AMD\_SIGNAL\_ALIGN}!amd\_hsa\_signal.h@{amd\_hsa\_signal.h}}
+\doxysubsubsection{\texorpdfstring{AMD\_SIGNAL\_ALIGN}{AMD\_SIGNAL\_ALIGN}}
+{\footnotesize\ttfamily \#define AMD\+\_\+\+SIGNAL\+\_\+\+ALIGN~\+\_\+\+\_\+\+ALIGNED\+\_\+\+\_\+(\mbox{\hyperlink{inc_2amd__hsa__signal_8h_a2d386904bef240c7d9b1203eda3ccdf9}{AMD\+\_\+\+SIGNAL\+\_\+\+ALIGN\+\_\+\+BYTES}})}
+
+\mbox{\Hypertarget{inc_2amd__hsa__signal_8h_a2d386904bef240c7d9b1203eda3ccdf9}\label{inc_2amd__hsa__signal_8h_a2d386904bef240c7d9b1203eda3ccdf9}} 
+\index{amd\_hsa\_signal.h@{amd\_hsa\_signal.h}!AMD\_SIGNAL\_ALIGN\_BYTES@{AMD\_SIGNAL\_ALIGN\_BYTES}}
+\index{AMD\_SIGNAL\_ALIGN\_BYTES@{AMD\_SIGNAL\_ALIGN\_BYTES}!amd\_hsa\_signal.h@{amd\_hsa\_signal.h}}
+\doxysubsubsection{\texorpdfstring{AMD\_SIGNAL\_ALIGN\_BYTES}{AMD\_SIGNAL\_ALIGN\_BYTES}}
+{\footnotesize\ttfamily \#define AMD\+\_\+\+SIGNAL\+\_\+\+ALIGN\+\_\+\+BYTES~64}
+
+
+
+\doxysubsection{Typedef Documentation}
+\mbox{\Hypertarget{inc_2amd__hsa__signal_8h_a43e24a599b8f987e28e79517c0d5afe8}\label{inc_2amd__hsa__signal_8h_a43e24a599b8f987e28e79517c0d5afe8}} 
+\index{amd\_hsa\_signal.h@{amd\_hsa\_signal.h}!amd\_signal\_kind64\_t@{amd\_signal\_kind64\_t}}
+\index{amd\_signal\_kind64\_t@{amd\_signal\_kind64\_t}!amd\_hsa\_signal.h@{amd\_hsa\_signal.h}}
+\doxysubsubsection{\texorpdfstring{amd\_signal\_kind64\_t}{amd\_signal\_kind64\_t}}
+{\footnotesize\ttfamily typedef int64\+\_\+t \mbox{\hyperlink{inc_2amd__hsa__signal_8h_a43e24a599b8f987e28e79517c0d5afe8}{amd\+\_\+signal\+\_\+kind64\+\_\+t}}}
+
+\mbox{\Hypertarget{inc_2amd__hsa__signal_8h_a343c5f5e62cd0ec69d16c5835dc82bfa}\label{inc_2amd__hsa__signal_8h_a343c5f5e62cd0ec69d16c5835dc82bfa}} 
+\index{amd\_hsa\_signal.h@{amd\_hsa\_signal.h}!amd\_signal\_t@{amd\_signal\_t}}
+\index{amd\_signal\_t@{amd\_signal\_t}!amd\_hsa\_signal.h@{amd\_hsa\_signal.h}}
+\doxysubsubsection{\texorpdfstring{amd\_signal\_t}{amd\_signal\_t}}
+{\footnotesize\ttfamily typedef struct \mbox{\hyperlink{inc_2amd__hsa__signal_8h_aab0a76981c02a38b6f23cf3ecd7fe2ac}{AMD\+\_\+\+SIGNAL\+\_\+\+ALIGN}} \mbox{\hyperlink{structamd__signal__s}{amd\+\_\+signal\+\_\+s}} \mbox{\hyperlink{inc_2amd__hsa__signal_8h_a343c5f5e62cd0ec69d16c5835dc82bfa}{amd\+\_\+signal\+\_\+t}}}
+
+
+
+\doxysubsection{Enumeration Type Documentation}
+\mbox{\Hypertarget{inc_2amd__hsa__signal_8h_a1418115e2014dc6d2e86e94959f884e1}\label{inc_2amd__hsa__signal_8h_a1418115e2014dc6d2e86e94959f884e1}} 
+\index{amd\_hsa\_signal.h@{amd\_hsa\_signal.h}!amd\_signal\_kind\_t@{amd\_signal\_kind\_t}}
+\index{amd\_signal\_kind\_t@{amd\_signal\_kind\_t}!amd\_hsa\_signal.h@{amd\_hsa\_signal.h}}
+\doxysubsubsection{\texorpdfstring{amd\_signal\_kind\_t}{amd\_signal\_kind\_t}}
+{\footnotesize\ttfamily enum \mbox{\hyperlink{inc_2amd__hsa__signal_8h_a1418115e2014dc6d2e86e94959f884e1}{amd\+\_\+signal\+\_\+kind\+\_\+t}}}
+
+\begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{AMD\_SIGNAL\_KIND\_INVALID@{AMD\_SIGNAL\_KIND\_INVALID}!amd\_hsa\_signal.h@{amd\_hsa\_signal.h}}\index{amd\_hsa\_signal.h@{amd\_hsa\_signal.h}!AMD\_SIGNAL\_KIND\_INVALID@{AMD\_SIGNAL\_KIND\_INVALID}}}\mbox{\Hypertarget{inc_2amd__hsa__signal_8h_a1418115e2014dc6d2e86e94959f884e1af4db7a8d3ebaf9fc2ff29db6393086bf}\label{inc_2amd__hsa__signal_8h_a1418115e2014dc6d2e86e94959f884e1af4db7a8d3ebaf9fc2ff29db6393086bf}} 
+AMD\+\_\+\+SIGNAL\+\_\+\+KIND\+\_\+\+INVALID&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{AMD\_SIGNAL\_KIND\_USER@{AMD\_SIGNAL\_KIND\_USER}!amd\_hsa\_signal.h@{amd\_hsa\_signal.h}}\index{amd\_hsa\_signal.h@{amd\_hsa\_signal.h}!AMD\_SIGNAL\_KIND\_USER@{AMD\_SIGNAL\_KIND\_USER}}}\mbox{\Hypertarget{inc_2amd__hsa__signal_8h_a1418115e2014dc6d2e86e94959f884e1a5efc8796047071c5627af6cd79d8647d}\label{inc_2amd__hsa__signal_8h_a1418115e2014dc6d2e86e94959f884e1a5efc8796047071c5627af6cd79d8647d}} 
+AMD\+\_\+\+SIGNAL\+\_\+\+KIND\+\_\+\+USER&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{AMD\_SIGNAL\_KIND\_DOORBELL@{AMD\_SIGNAL\_KIND\_DOORBELL}!amd\_hsa\_signal.h@{amd\_hsa\_signal.h}}\index{amd\_hsa\_signal.h@{amd\_hsa\_signal.h}!AMD\_SIGNAL\_KIND\_DOORBELL@{AMD\_SIGNAL\_KIND\_DOORBELL}}}\mbox{\Hypertarget{inc_2amd__hsa__signal_8h_a1418115e2014dc6d2e86e94959f884e1a41cfa53ad82f1b752e7aea264bdf5702}\label{inc_2amd__hsa__signal_8h_a1418115e2014dc6d2e86e94959f884e1a41cfa53ad82f1b752e7aea264bdf5702}} 
+AMD\+\_\+\+SIGNAL\+\_\+\+KIND\+\_\+\+DOORBELL&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{AMD\_SIGNAL\_KIND\_LEGACY\_DOORBELL@{AMD\_SIGNAL\_KIND\_LEGACY\_DOORBELL}!amd\_hsa\_signal.h@{amd\_hsa\_signal.h}}\index{amd\_hsa\_signal.h@{amd\_hsa\_signal.h}!AMD\_SIGNAL\_KIND\_LEGACY\_DOORBELL@{AMD\_SIGNAL\_KIND\_LEGACY\_DOORBELL}}}\mbox{\Hypertarget{inc_2amd__hsa__signal_8h_a1418115e2014dc6d2e86e94959f884e1a6e9089f1d0cfeae1c43dfe2cee71d26e}\label{inc_2amd__hsa__signal_8h_a1418115e2014dc6d2e86e94959f884e1a6e9089f1d0cfeae1c43dfe2cee71d26e}} 
+AMD\+\_\+\+SIGNAL\+\_\+\+KIND\+\_\+\+LEGACY\+\_\+\+DOORBELL&\\
+\hline
+
+\end{DoxyEnumFields}

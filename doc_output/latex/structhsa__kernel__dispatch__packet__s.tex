@@ -1,0 +1,163 @@
+\hypertarget{structhsa__kernel__dispatch__packet__s}{}\doxysection{hsa\+\_\+kernel\+\_\+dispatch\+\_\+packet\+\_\+s Struct Reference}
+\label{structhsa__kernel__dispatch__packet__s}\index{hsa\_kernel\_dispatch\_packet\_s@{hsa\_kernel\_dispatch\_packet\_s}}
+
+
+AQL kernel dispatch packet.  
+
+
+
+
+{\ttfamily \#include $<$hsa.\+h$>$}
+
+
+
+Collaboration diagram for hsa\+\_\+kernel\+\_\+dispatch\+\_\+packet\+\_\+s\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=215pt]{structhsa__kernel__dispatch__packet__s__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+uint16\+\_\+t \mbox{\hyperlink{structhsa__kernel__dispatch__packet__s_a15226a92d165e4aefd16ae170218fb37}{header}}
+\item 
+uint16\+\_\+t \mbox{\hyperlink{structhsa__kernel__dispatch__packet__s_aa97b3ae8e4e288b31546d145538657b4}{setup}}
+\item 
+uint16\+\_\+t \mbox{\hyperlink{structhsa__kernel__dispatch__packet__s_ac7d5092c30b834cb649a7f90ec97ac43}{workgroup\+\_\+size\+\_\+x}}
+\item 
+uint16\+\_\+t \mbox{\hyperlink{structhsa__kernel__dispatch__packet__s_a8edfc2d5904d5df674a106f510c20056}{workgroup\+\_\+size\+\_\+y}}
+\item 
+uint16\+\_\+t \mbox{\hyperlink{structhsa__kernel__dispatch__packet__s_ac5450aa913ae04acf5b2448a7dd46e7a}{workgroup\+\_\+size\+\_\+z}}
+\item 
+uint16\+\_\+t \mbox{\hyperlink{structhsa__kernel__dispatch__packet__s_a65a832185fe95646d1f4f502a3fa42dd}{reserved0}}
+\item 
+uint32\+\_\+t \mbox{\hyperlink{structhsa__kernel__dispatch__packet__s_aad0a96e5544e4c8961582bce3d6bcef4}{grid\+\_\+size\+\_\+x}}
+\item 
+uint32\+\_\+t \mbox{\hyperlink{structhsa__kernel__dispatch__packet__s_afd8b1ce13173a68c8f2c75df057677e9}{grid\+\_\+size\+\_\+y}}
+\item 
+uint32\+\_\+t \mbox{\hyperlink{structhsa__kernel__dispatch__packet__s_a2d0dcb841a1a91ac38ff37b7d0f80843}{grid\+\_\+size\+\_\+z}}
+\item 
+uint32\+\_\+t \mbox{\hyperlink{structhsa__kernel__dispatch__packet__s_ad1b8c6b7f66eaa5bbee2a6d895701adc}{private\+\_\+segment\+\_\+size}}
+\item 
+uint32\+\_\+t \mbox{\hyperlink{structhsa__kernel__dispatch__packet__s_a3bdb1cfe8a3e334618ade61681571c07}{group\+\_\+segment\+\_\+size}}
+\item 
+uint64\+\_\+t \mbox{\hyperlink{structhsa__kernel__dispatch__packet__s_a742dcb7ab0145074b7c7faa8bb12023e}{kernel\+\_\+object}}
+\item 
+uint32\+\_\+t \mbox{\hyperlink{structhsa__kernel__dispatch__packet__s_a3b315f72f75d56cb28b75ec4be80d795}{reserved1}}
+\item 
+void $\ast$ \mbox{\hyperlink{structhsa__kernel__dispatch__packet__s_a4f2dd63d080d440c023d6fb32e384cdc}{kernarg\+\_\+address}}
+\item 
+uint64\+\_\+t \mbox{\hyperlink{structhsa__kernel__dispatch__packet__s_a062e8b42892cbee917a7f45b8960c87c}{reserved2}}
+\item 
+\mbox{\hyperlink{group__signals_ga0003af605a660e7ef4f89aa555d3b3fc}{hsa\+\_\+signal\+\_\+t}} \mbox{\hyperlink{structhsa__kernel__dispatch__packet__s_a8ce78821c13b7c10855aee5612b3ee84}{completion\+\_\+signal}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+AQL kernel dispatch packet. 
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{structhsa__kernel__dispatch__packet__s_a8ce78821c13b7c10855aee5612b3ee84}\label{structhsa__kernel__dispatch__packet__s_a8ce78821c13b7c10855aee5612b3ee84}} 
+\index{hsa\_kernel\_dispatch\_packet\_s@{hsa\_kernel\_dispatch\_packet\_s}!completion\_signal@{completion\_signal}}
+\index{completion\_signal@{completion\_signal}!hsa\_kernel\_dispatch\_packet\_s@{hsa\_kernel\_dispatch\_packet\_s}}
+\doxysubsubsection{\texorpdfstring{completion\_signal}{completion\_signal}}
+{\footnotesize\ttfamily \mbox{\hyperlink{group__signals_ga0003af605a660e7ef4f89aa555d3b3fc}{hsa\+\_\+signal\+\_\+t}} hsa\+\_\+kernel\+\_\+dispatch\+\_\+packet\+\_\+s\+::completion\+\_\+signal}
+
+Signal used to indicate completion of the job. The application can use the special signal handle 0 to indicate that no signal is used. \mbox{\Hypertarget{structhsa__kernel__dispatch__packet__s_aad0a96e5544e4c8961582bce3d6bcef4}\label{structhsa__kernel__dispatch__packet__s_aad0a96e5544e4c8961582bce3d6bcef4}} 
+\index{hsa\_kernel\_dispatch\_packet\_s@{hsa\_kernel\_dispatch\_packet\_s}!grid\_size\_x@{grid\_size\_x}}
+\index{grid\_size\_x@{grid\_size\_x}!hsa\_kernel\_dispatch\_packet\_s@{hsa\_kernel\_dispatch\_packet\_s}}
+\doxysubsubsection{\texorpdfstring{grid\_size\_x}{grid\_size\_x}}
+{\footnotesize\ttfamily uint32\+\_\+t hsa\+\_\+kernel\+\_\+dispatch\+\_\+packet\+\_\+s\+::grid\+\_\+size\+\_\+x}
+
+X dimension of grid, in work-\/items. Must be greater than 0. Must not be smaller than {\itshape workgroup\+\_\+size\+\_\+x}. \mbox{\Hypertarget{structhsa__kernel__dispatch__packet__s_afd8b1ce13173a68c8f2c75df057677e9}\label{structhsa__kernel__dispatch__packet__s_afd8b1ce13173a68c8f2c75df057677e9}} 
+\index{hsa\_kernel\_dispatch\_packet\_s@{hsa\_kernel\_dispatch\_packet\_s}!grid\_size\_y@{grid\_size\_y}}
+\index{grid\_size\_y@{grid\_size\_y}!hsa\_kernel\_dispatch\_packet\_s@{hsa\_kernel\_dispatch\_packet\_s}}
+\doxysubsubsection{\texorpdfstring{grid\_size\_y}{grid\_size\_y}}
+{\footnotesize\ttfamily uint32\+\_\+t hsa\+\_\+kernel\+\_\+dispatch\+\_\+packet\+\_\+s\+::grid\+\_\+size\+\_\+y}
+
+Y dimension of grid, in work-\/items. Must be greater than 0. If the grid has 1 dimension, the only valid value is 1. Must not be smaller than {\itshape workgroup\+\_\+size\+\_\+y}. \mbox{\Hypertarget{structhsa__kernel__dispatch__packet__s_a2d0dcb841a1a91ac38ff37b7d0f80843}\label{structhsa__kernel__dispatch__packet__s_a2d0dcb841a1a91ac38ff37b7d0f80843}} 
+\index{hsa\_kernel\_dispatch\_packet\_s@{hsa\_kernel\_dispatch\_packet\_s}!grid\_size\_z@{grid\_size\_z}}
+\index{grid\_size\_z@{grid\_size\_z}!hsa\_kernel\_dispatch\_packet\_s@{hsa\_kernel\_dispatch\_packet\_s}}
+\doxysubsubsection{\texorpdfstring{grid\_size\_z}{grid\_size\_z}}
+{\footnotesize\ttfamily uint32\+\_\+t hsa\+\_\+kernel\+\_\+dispatch\+\_\+packet\+\_\+s\+::grid\+\_\+size\+\_\+z}
+
+Z dimension of grid, in work-\/items. Must be greater than 0. If the grid has 1 or 2 dimensions, the only valid value is 1. Must not be smaller than {\itshape workgroup\+\_\+size\+\_\+z}. \mbox{\Hypertarget{structhsa__kernel__dispatch__packet__s_a3bdb1cfe8a3e334618ade61681571c07}\label{structhsa__kernel__dispatch__packet__s_a3bdb1cfe8a3e334618ade61681571c07}} 
+\index{hsa\_kernel\_dispatch\_packet\_s@{hsa\_kernel\_dispatch\_packet\_s}!group\_segment\_size@{group\_segment\_size}}
+\index{group\_segment\_size@{group\_segment\_size}!hsa\_kernel\_dispatch\_packet\_s@{hsa\_kernel\_dispatch\_packet\_s}}
+\doxysubsubsection{\texorpdfstring{group\_segment\_size}{group\_segment\_size}}
+{\footnotesize\ttfamily uint32\+\_\+t hsa\+\_\+kernel\+\_\+dispatch\+\_\+packet\+\_\+s\+::group\+\_\+segment\+\_\+size}
+
+Size in bytes of group memory allocation request (per work-\/group). Must not be less than the sum of the group memory used by the kernel (and the functions it calls directly or indirectly) and the dynamically allocated group segment variables. \mbox{\Hypertarget{structhsa__kernel__dispatch__packet__s_a15226a92d165e4aefd16ae170218fb37}\label{structhsa__kernel__dispatch__packet__s_a15226a92d165e4aefd16ae170218fb37}} 
+\index{hsa\_kernel\_dispatch\_packet\_s@{hsa\_kernel\_dispatch\_packet\_s}!header@{header}}
+\index{header@{header}!hsa\_kernel\_dispatch\_packet\_s@{hsa\_kernel\_dispatch\_packet\_s}}
+\doxysubsubsection{\texorpdfstring{header}{header}}
+{\footnotesize\ttfamily uint16\+\_\+t hsa\+\_\+kernel\+\_\+dispatch\+\_\+packet\+\_\+s\+::header}
+
+Packet header. Used to configure multiple packet parameters such as the packet type. The parameters are described by \mbox{\hyperlink{group__aql_ga2f03beef9c37e464b3837f2646d30870}{hsa\+\_\+packet\+\_\+header\+\_\+t}}. \mbox{\Hypertarget{structhsa__kernel__dispatch__packet__s_a4f2dd63d080d440c023d6fb32e384cdc}\label{structhsa__kernel__dispatch__packet__s_a4f2dd63d080d440c023d6fb32e384cdc}} 
+\index{hsa\_kernel\_dispatch\_packet\_s@{hsa\_kernel\_dispatch\_packet\_s}!kernarg\_address@{kernarg\_address}}
+\index{kernarg\_address@{kernarg\_address}!hsa\_kernel\_dispatch\_packet\_s@{hsa\_kernel\_dispatch\_packet\_s}}
+\doxysubsubsection{\texorpdfstring{kernarg\_address}{kernarg\_address}}
+{\footnotesize\ttfamily void$\ast$ hsa\+\_\+kernel\+\_\+dispatch\+\_\+packet\+\_\+s\+::kernarg\+\_\+address}
+
+\mbox{\Hypertarget{structhsa__kernel__dispatch__packet__s_a742dcb7ab0145074b7c7faa8bb12023e}\label{structhsa__kernel__dispatch__packet__s_a742dcb7ab0145074b7c7faa8bb12023e}} 
+\index{hsa\_kernel\_dispatch\_packet\_s@{hsa\_kernel\_dispatch\_packet\_s}!kernel\_object@{kernel\_object}}
+\index{kernel\_object@{kernel\_object}!hsa\_kernel\_dispatch\_packet\_s@{hsa\_kernel\_dispatch\_packet\_s}}
+\doxysubsubsection{\texorpdfstring{kernel\_object}{kernel\_object}}
+{\footnotesize\ttfamily uint64\+\_\+t hsa\+\_\+kernel\+\_\+dispatch\+\_\+packet\+\_\+s\+::kernel\+\_\+object}
+
+Opaque handle to a code object that includes an implementation-\/defined executable code for the kernel. \mbox{\Hypertarget{structhsa__kernel__dispatch__packet__s_ad1b8c6b7f66eaa5bbee2a6d895701adc}\label{structhsa__kernel__dispatch__packet__s_ad1b8c6b7f66eaa5bbee2a6d895701adc}} 
+\index{hsa\_kernel\_dispatch\_packet\_s@{hsa\_kernel\_dispatch\_packet\_s}!private\_segment\_size@{private\_segment\_size}}
+\index{private\_segment\_size@{private\_segment\_size}!hsa\_kernel\_dispatch\_packet\_s@{hsa\_kernel\_dispatch\_packet\_s}}
+\doxysubsubsection{\texorpdfstring{private\_segment\_size}{private\_segment\_size}}
+{\footnotesize\ttfamily uint32\+\_\+t hsa\+\_\+kernel\+\_\+dispatch\+\_\+packet\+\_\+s\+::private\+\_\+segment\+\_\+size}
+
+Size in bytes of private memory allocation request (per work-\/item). \mbox{\Hypertarget{structhsa__kernel__dispatch__packet__s_a65a832185fe95646d1f4f502a3fa42dd}\label{structhsa__kernel__dispatch__packet__s_a65a832185fe95646d1f4f502a3fa42dd}} 
+\index{hsa\_kernel\_dispatch\_packet\_s@{hsa\_kernel\_dispatch\_packet\_s}!reserved0@{reserved0}}
+\index{reserved0@{reserved0}!hsa\_kernel\_dispatch\_packet\_s@{hsa\_kernel\_dispatch\_packet\_s}}
+\doxysubsubsection{\texorpdfstring{reserved0}{reserved0}}
+{\footnotesize\ttfamily uint16\+\_\+t hsa\+\_\+kernel\+\_\+dispatch\+\_\+packet\+\_\+s\+::reserved0}
+
+Reserved. Must be 0. \mbox{\Hypertarget{structhsa__kernel__dispatch__packet__s_a3b315f72f75d56cb28b75ec4be80d795}\label{structhsa__kernel__dispatch__packet__s_a3b315f72f75d56cb28b75ec4be80d795}} 
+\index{hsa\_kernel\_dispatch\_packet\_s@{hsa\_kernel\_dispatch\_packet\_s}!reserved1@{reserved1}}
+\index{reserved1@{reserved1}!hsa\_kernel\_dispatch\_packet\_s@{hsa\_kernel\_dispatch\_packet\_s}}
+\doxysubsubsection{\texorpdfstring{reserved1}{reserved1}}
+{\footnotesize\ttfamily uint32\+\_\+t hsa\+\_\+kernel\+\_\+dispatch\+\_\+packet\+\_\+s\+::reserved1}
+
+\mbox{\Hypertarget{structhsa__kernel__dispatch__packet__s_a062e8b42892cbee917a7f45b8960c87c}\label{structhsa__kernel__dispatch__packet__s_a062e8b42892cbee917a7f45b8960c87c}} 
+\index{hsa\_kernel\_dispatch\_packet\_s@{hsa\_kernel\_dispatch\_packet\_s}!reserved2@{reserved2}}
+\index{reserved2@{reserved2}!hsa\_kernel\_dispatch\_packet\_s@{hsa\_kernel\_dispatch\_packet\_s}}
+\doxysubsubsection{\texorpdfstring{reserved2}{reserved2}}
+{\footnotesize\ttfamily uint64\+\_\+t hsa\+\_\+kernel\+\_\+dispatch\+\_\+packet\+\_\+s\+::reserved2}
+
+Reserved. Must be 0. \mbox{\Hypertarget{structhsa__kernel__dispatch__packet__s_aa97b3ae8e4e288b31546d145538657b4}\label{structhsa__kernel__dispatch__packet__s_aa97b3ae8e4e288b31546d145538657b4}} 
+\index{hsa\_kernel\_dispatch\_packet\_s@{hsa\_kernel\_dispatch\_packet\_s}!setup@{setup}}
+\index{setup@{setup}!hsa\_kernel\_dispatch\_packet\_s@{hsa\_kernel\_dispatch\_packet\_s}}
+\doxysubsubsection{\texorpdfstring{setup}{setup}}
+{\footnotesize\ttfamily uint16\+\_\+t hsa\+\_\+kernel\+\_\+dispatch\+\_\+packet\+\_\+s\+::setup}
+
+Dispatch setup parameters. Used to configure kernel dispatch parameters such as the number of dimensions in the grid. The parameters are described by \mbox{\hyperlink{group__aql_ga0b4e16703a05220bbd72a70bb0fca6fa}{hsa\+\_\+kernel\+\_\+dispatch\+\_\+packet\+\_\+setup\+\_\+t}}. \mbox{\Hypertarget{structhsa__kernel__dispatch__packet__s_ac7d5092c30b834cb649a7f90ec97ac43}\label{structhsa__kernel__dispatch__packet__s_ac7d5092c30b834cb649a7f90ec97ac43}} 
+\index{hsa\_kernel\_dispatch\_packet\_s@{hsa\_kernel\_dispatch\_packet\_s}!workgroup\_size\_x@{workgroup\_size\_x}}
+\index{workgroup\_size\_x@{workgroup\_size\_x}!hsa\_kernel\_dispatch\_packet\_s@{hsa\_kernel\_dispatch\_packet\_s}}
+\doxysubsubsection{\texorpdfstring{workgroup\_size\_x}{workgroup\_size\_x}}
+{\footnotesize\ttfamily uint16\+\_\+t hsa\+\_\+kernel\+\_\+dispatch\+\_\+packet\+\_\+s\+::workgroup\+\_\+size\+\_\+x}
+
+X dimension of work-\/group, in work-\/items. Must be greater than 0. \mbox{\Hypertarget{structhsa__kernel__dispatch__packet__s_a8edfc2d5904d5df674a106f510c20056}\label{structhsa__kernel__dispatch__packet__s_a8edfc2d5904d5df674a106f510c20056}} 
+\index{hsa\_kernel\_dispatch\_packet\_s@{hsa\_kernel\_dispatch\_packet\_s}!workgroup\_size\_y@{workgroup\_size\_y}}
+\index{workgroup\_size\_y@{workgroup\_size\_y}!hsa\_kernel\_dispatch\_packet\_s@{hsa\_kernel\_dispatch\_packet\_s}}
+\doxysubsubsection{\texorpdfstring{workgroup\_size\_y}{workgroup\_size\_y}}
+{\footnotesize\ttfamily uint16\+\_\+t hsa\+\_\+kernel\+\_\+dispatch\+\_\+packet\+\_\+s\+::workgroup\+\_\+size\+\_\+y}
+
+Y dimension of work-\/group, in work-\/items. Must be greater than 0. If the grid has 1 dimension, the only valid value is 1. \mbox{\Hypertarget{structhsa__kernel__dispatch__packet__s_ac5450aa913ae04acf5b2448a7dd46e7a}\label{structhsa__kernel__dispatch__packet__s_ac5450aa913ae04acf5b2448a7dd46e7a}} 
+\index{hsa\_kernel\_dispatch\_packet\_s@{hsa\_kernel\_dispatch\_packet\_s}!workgroup\_size\_z@{workgroup\_size\_z}}
+\index{workgroup\_size\_z@{workgroup\_size\_z}!hsa\_kernel\_dispatch\_packet\_s@{hsa\_kernel\_dispatch\_packet\_s}}
+\doxysubsubsection{\texorpdfstring{workgroup\_size\_z}{workgroup\_size\_z}}
+{\footnotesize\ttfamily uint16\+\_\+t hsa\+\_\+kernel\+\_\+dispatch\+\_\+packet\+\_\+s\+::workgroup\+\_\+size\+\_\+z}
+
+Z dimension of work-\/group, in work-\/items. Must be greater than 0. If the grid has 1 or 2 dimensions, the only valid value is 1. 
+
+The documentation for this struct was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+src/inc/\mbox{\hyperlink{inc_2hsa_8h}{hsa.\+h}}\end{DoxyCompactItemize}

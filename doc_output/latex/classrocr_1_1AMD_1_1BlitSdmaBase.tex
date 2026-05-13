@@ -1,0 +1,132 @@
+\hypertarget{classrocr_1_1AMD_1_1BlitSdmaBase}{}\doxysection{rocr\+::AMD\+::Blit\+Sdma\+Base Class Reference}
+\label{classrocr_1_1AMD_1_1BlitSdmaBase}\index{rocr::AMD::BlitSdmaBase@{rocr::AMD::BlitSdmaBase}}
+
+
+{\ttfamily \#include $<$amd\+\_\+blit\+\_\+sdma.\+h$>$}
+
+
+
+Inheritance diagram for rocr\+::AMD\+::Blit\+Sdma\+Base\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=253pt]{classrocr_1_1AMD_1_1BlitSdmaBase__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for rocr\+::AMD\+::Blit\+Sdma\+Base\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=210pt]{classrocr_1_1AMD_1_1BlitSdmaBase__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+virtual bool \mbox{\hyperlink{classrocr_1_1AMD_1_1BlitSdmaBase_a3ed3257ffcac164b63ebf9a4b51767d4}{is\+SDMA}} () const override
+\begin{DoxyCompactList}\small\item\em Blit operations use SDMA. \end{DoxyCompactList}\item 
+virtual \mbox{\hyperlink{group__status_gad755322e7ff95456520e8abdbe90d225}{hsa\+\_\+status\+\_\+t}} \mbox{\hyperlink{classrocr_1_1AMD_1_1BlitSdmaBase_a3932da0020a97a84a9b3f5979edef962}{Initialize}} (const \mbox{\hyperlink{classrocr_1_1core_1_1Agent}{core\+::\+Agent}} \&agent, bool use\+\_\+xgmi)=0
+\item 
+virtual \mbox{\hyperlink{group__status_gad755322e7ff95456520e8abdbe90d225}{hsa\+\_\+status\+\_\+t}} \mbox{\hyperlink{classrocr_1_1AMD_1_1BlitSdmaBase_ae43faf8c69461fb05d14b7251b07b1a8}{Submit\+Copy\+Rect\+Command}} (const \mbox{\hyperlink{inc_2hsa__ext__amd_8h_ad8d9a26d5d34727e5c8d648d0ad6ea38}{hsa\+\_\+pitched\+\_\+ptr\+\_\+t}} $\ast$dst, const \mbox{\hyperlink{group__common_gae460d1df8c508a9c889d4550ea4eea30}{hsa\+\_\+dim3\+\_\+t}} $\ast$dst\+\_\+offset, const \mbox{\hyperlink{inc_2hsa__ext__amd_8h_ad8d9a26d5d34727e5c8d648d0ad6ea38}{hsa\+\_\+pitched\+\_\+ptr\+\_\+t}} $\ast$src, const \mbox{\hyperlink{group__common_gae460d1df8c508a9c889d4550ea4eea30}{hsa\+\_\+dim3\+\_\+t}} $\ast$src\+\_\+offset, const \mbox{\hyperlink{group__common_gae460d1df8c508a9c889d4550ea4eea30}{hsa\+\_\+dim3\+\_\+t}} $\ast$range, std\+::vector$<$ \mbox{\hyperlink{classrocr_1_1core_1_1Signal}{core\+::\+Signal}} $\ast$ $>$ \&dep\+\_\+signals, \mbox{\hyperlink{classrocr_1_1core_1_1Signal}{core\+::\+Signal}} \&out\+\_\+signal)=0
+\end{DoxyCompactItemize}
+\doxysubsection*{Static Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+static const size\+\_\+t \mbox{\hyperlink{classrocr_1_1AMD_1_1BlitSdmaBase_ab4d2e5e2929115062aafdcfd34531cf8}{k\+Queue\+Size}} = 1024 $\ast$ 1024
+\item 
+static const size\+\_\+t \mbox{\hyperlink{classrocr_1_1AMD_1_1BlitSdmaBase_af89e2e1ff6f3d44bf5cbc1778104cdaa}{k\+Copy\+Packet\+Size}} = sizeof(\mbox{\hyperlink{namespacerocr_1_1AMD_a4009cd6a6987d35d9ecd2b71ed4ab657}{SDMA\+\_\+\+PKT\+\_\+\+COPY\+\_\+\+LINEAR}})
+\item 
+static const size\+\_\+t \mbox{\hyperlink{classrocr_1_1AMD_1_1BlitSdmaBase_a67339ef8574f5f2047fa708dc1c18598}{k\+Max\+Single\+Copy\+Size}} = \mbox{\hyperlink{structrocr_1_1AMD_1_1SDMA__PKT__COPY__LINEAR__TAG_a03eea4f7fbc8aa0a7024501db3bae8e6}{SDMA\+\_\+\+PKT\+\_\+\+COPY\+\_\+\+LINEAR\+::k\+Max\+Size\+\_\+}}
+\item 
+static const size\+\_\+t \mbox{\hyperlink{classrocr_1_1AMD_1_1BlitSdmaBase_afb34d33708faa31156d6e61e015b66fa}{k\+Max\+Single\+Fill\+Size}} = \mbox{\hyperlink{structrocr_1_1AMD_1_1SDMA__PKT__CONSTANT__FILL__TAG_ab9ca8a92a558ae6c15db208acc2cd757}{SDMA\+\_\+\+PKT\+\_\+\+CONSTANT\+\_\+\+FILL\+::k\+Max\+Size\+\_\+}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classrocr_1_1AMD_1_1BlitSdmaBase_a3932da0020a97a84a9b3f5979edef962}\label{classrocr_1_1AMD_1_1BlitSdmaBase_a3932da0020a97a84a9b3f5979edef962}} 
+\index{rocr::AMD::BlitSdmaBase@{rocr::AMD::BlitSdmaBase}!Initialize@{Initialize}}
+\index{Initialize@{Initialize}!rocr::AMD::BlitSdmaBase@{rocr::AMD::BlitSdmaBase}}
+\doxysubsubsection{\texorpdfstring{Initialize()}{Initialize()}}
+{\footnotesize\ttfamily virtual \mbox{\hyperlink{group__status_gad755322e7ff95456520e8abdbe90d225}{hsa\+\_\+status\+\_\+t}} rocr\+::\+AMD\+::\+Blit\+Sdma\+Base\+::\+Initialize (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classrocr_1_1core_1_1Agent}{core\+::\+Agent}} \&}]{agent,  }\item[{bool}]{use\+\_\+xgmi }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Implemented in \mbox{\hyperlink{classrocr_1_1AMD_1_1BlitSdma_a6286a7eb9777667539cbcdc14cce8571}{rocr\+::\+AMD\+::\+Blit\+Sdma$<$ Ring\+Index\+Ty, Hw\+Index\+Monotonic, Size\+To\+Count\+Offset, use\+GCR $>$}}.
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classrocr_1_1AMD_1_1BlitSdmaBase_a3932da0020a97a84a9b3f5979edef962_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classrocr_1_1AMD_1_1BlitSdmaBase_a3ed3257ffcac164b63ebf9a4b51767d4}\label{classrocr_1_1AMD_1_1BlitSdmaBase_a3ed3257ffcac164b63ebf9a4b51767d4}} 
+\index{rocr::AMD::BlitSdmaBase@{rocr::AMD::BlitSdmaBase}!isSDMA@{isSDMA}}
+\index{isSDMA@{isSDMA}!rocr::AMD::BlitSdmaBase@{rocr::AMD::BlitSdmaBase}}
+\doxysubsubsection{\texorpdfstring{isSDMA()}{isSDMA()}}
+{\footnotesize\ttfamily virtual bool rocr\+::\+AMD\+::\+Blit\+Sdma\+Base\+::is\+SDMA (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Blit operations use SDMA. 
+
+
+
+Reimplemented from \mbox{\hyperlink{classrocr_1_1core_1_1Blit_ad4633fec3312954858c4c3b40ff96f62}{rocr\+::core\+::\+Blit}}.
+
+\mbox{\Hypertarget{classrocr_1_1AMD_1_1BlitSdmaBase_ae43faf8c69461fb05d14b7251b07b1a8}\label{classrocr_1_1AMD_1_1BlitSdmaBase_ae43faf8c69461fb05d14b7251b07b1a8}} 
+\index{rocr::AMD::BlitSdmaBase@{rocr::AMD::BlitSdmaBase}!SubmitCopyRectCommand@{SubmitCopyRectCommand}}
+\index{SubmitCopyRectCommand@{SubmitCopyRectCommand}!rocr::AMD::BlitSdmaBase@{rocr::AMD::BlitSdmaBase}}
+\doxysubsubsection{\texorpdfstring{SubmitCopyRectCommand()}{SubmitCopyRectCommand()}}
+{\footnotesize\ttfamily virtual \mbox{\hyperlink{group__status_gad755322e7ff95456520e8abdbe90d225}{hsa\+\_\+status\+\_\+t}} rocr\+::\+AMD\+::\+Blit\+Sdma\+Base\+::\+Submit\+Copy\+Rect\+Command (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{inc_2hsa__ext__amd_8h_ad8d9a26d5d34727e5c8d648d0ad6ea38}{hsa\+\_\+pitched\+\_\+ptr\+\_\+t}} $\ast$}]{dst,  }\item[{const \mbox{\hyperlink{group__common_gae460d1df8c508a9c889d4550ea4eea30}{hsa\+\_\+dim3\+\_\+t}} $\ast$}]{dst\+\_\+offset,  }\item[{const \mbox{\hyperlink{inc_2hsa__ext__amd_8h_ad8d9a26d5d34727e5c8d648d0ad6ea38}{hsa\+\_\+pitched\+\_\+ptr\+\_\+t}} $\ast$}]{src,  }\item[{const \mbox{\hyperlink{group__common_gae460d1df8c508a9c889d4550ea4eea30}{hsa\+\_\+dim3\+\_\+t}} $\ast$}]{src\+\_\+offset,  }\item[{const \mbox{\hyperlink{group__common_gae460d1df8c508a9c889d4550ea4eea30}{hsa\+\_\+dim3\+\_\+t}} $\ast$}]{range,  }\item[{std\+::vector$<$ \mbox{\hyperlink{classrocr_1_1core_1_1Signal}{core\+::\+Signal}} $\ast$ $>$ \&}]{dep\+\_\+signals,  }\item[{\mbox{\hyperlink{classrocr_1_1core_1_1Signal}{core\+::\+Signal}} \&}]{out\+\_\+signal }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Implemented in \mbox{\hyperlink{classrocr_1_1AMD_1_1BlitSdma_a1e37affff838b3752e5f06d8d25cdc69}{rocr\+::\+AMD\+::\+Blit\+Sdma$<$ Ring\+Index\+Ty, Hw\+Index\+Monotonic, Size\+To\+Count\+Offset, use\+GCR $>$}}.
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classrocr_1_1AMD_1_1BlitSdmaBase_ae43faf8c69461fb05d14b7251b07b1a8_icgraph}
+\end{center}
+\end{figure}
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{classrocr_1_1AMD_1_1BlitSdmaBase_af89e2e1ff6f3d44bf5cbc1778104cdaa}\label{classrocr_1_1AMD_1_1BlitSdmaBase_af89e2e1ff6f3d44bf5cbc1778104cdaa}} 
+\index{rocr::AMD::BlitSdmaBase@{rocr::AMD::BlitSdmaBase}!kCopyPacketSize@{kCopyPacketSize}}
+\index{kCopyPacketSize@{kCopyPacketSize}!rocr::AMD::BlitSdmaBase@{rocr::AMD::BlitSdmaBase}}
+\doxysubsubsection{\texorpdfstring{kCopyPacketSize}{kCopyPacketSize}}
+{\footnotesize\ttfamily const size\+\_\+t rocr\+::\+AMD\+::\+Blit\+Sdma\+Base\+::k\+Copy\+Packet\+Size = sizeof(\mbox{\hyperlink{namespacerocr_1_1AMD_a4009cd6a6987d35d9ecd2b71ed4ab657}{SDMA\+\_\+\+PKT\+\_\+\+COPY\+\_\+\+LINEAR}})\hspace{0.3cm}{\ttfamily [static]}}
+
+\mbox{\Hypertarget{classrocr_1_1AMD_1_1BlitSdmaBase_a67339ef8574f5f2047fa708dc1c18598}\label{classrocr_1_1AMD_1_1BlitSdmaBase_a67339ef8574f5f2047fa708dc1c18598}} 
+\index{rocr::AMD::BlitSdmaBase@{rocr::AMD::BlitSdmaBase}!kMaxSingleCopySize@{kMaxSingleCopySize}}
+\index{kMaxSingleCopySize@{kMaxSingleCopySize}!rocr::AMD::BlitSdmaBase@{rocr::AMD::BlitSdmaBase}}
+\doxysubsubsection{\texorpdfstring{kMaxSingleCopySize}{kMaxSingleCopySize}}
+{\footnotesize\ttfamily const size\+\_\+t rocr\+::\+AMD\+::\+Blit\+Sdma\+Base\+::k\+Max\+Single\+Copy\+Size = \mbox{\hyperlink{structrocr_1_1AMD_1_1SDMA__PKT__COPY__LINEAR__TAG_a03eea4f7fbc8aa0a7024501db3bae8e6}{SDMA\+\_\+\+PKT\+\_\+\+COPY\+\_\+\+LINEAR\+::k\+Max\+Size\+\_\+}}\hspace{0.3cm}{\ttfamily [static]}}
+
+\mbox{\Hypertarget{classrocr_1_1AMD_1_1BlitSdmaBase_afb34d33708faa31156d6e61e015b66fa}\label{classrocr_1_1AMD_1_1BlitSdmaBase_afb34d33708faa31156d6e61e015b66fa}} 
+\index{rocr::AMD::BlitSdmaBase@{rocr::AMD::BlitSdmaBase}!kMaxSingleFillSize@{kMaxSingleFillSize}}
+\index{kMaxSingleFillSize@{kMaxSingleFillSize}!rocr::AMD::BlitSdmaBase@{rocr::AMD::BlitSdmaBase}}
+\doxysubsubsection{\texorpdfstring{kMaxSingleFillSize}{kMaxSingleFillSize}}
+{\footnotesize\ttfamily const size\+\_\+t rocr\+::\+AMD\+::\+Blit\+Sdma\+Base\+::k\+Max\+Single\+Fill\+Size = \mbox{\hyperlink{structrocr_1_1AMD_1_1SDMA__PKT__CONSTANT__FILL__TAG_ab9ca8a92a558ae6c15db208acc2cd757}{SDMA\+\_\+\+PKT\+\_\+\+CONSTANT\+\_\+\+FILL\+::k\+Max\+Size\+\_\+}}\hspace{0.3cm}{\ttfamily [static]}}
+
+\mbox{\Hypertarget{classrocr_1_1AMD_1_1BlitSdmaBase_ab4d2e5e2929115062aafdcfd34531cf8}\label{classrocr_1_1AMD_1_1BlitSdmaBase_ab4d2e5e2929115062aafdcfd34531cf8}} 
+\index{rocr::AMD::BlitSdmaBase@{rocr::AMD::BlitSdmaBase}!kQueueSize@{kQueueSize}}
+\index{kQueueSize@{kQueueSize}!rocr::AMD::BlitSdmaBase@{rocr::AMD::BlitSdmaBase}}
+\doxysubsubsection{\texorpdfstring{kQueueSize}{kQueueSize}}
+{\footnotesize\ttfamily const size\+\_\+t rocr\+::\+AMD\+::\+Blit\+Sdma\+Base\+::k\+Queue\+Size = 1024 $\ast$ 1024\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+src/core/inc/\mbox{\hyperlink{amd__blit__sdma_8h}{amd\+\_\+blit\+\_\+sdma.\+h}}\item 
+src/core/runtime/\mbox{\hyperlink{amd__blit__sdma_8cpp}{amd\+\_\+blit\+\_\+sdma.\+cpp}}\end{DoxyCompactItemize}

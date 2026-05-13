@@ -1,0 +1,171 @@
+\hypertarget{classrocr_1_1core_1_1SharedArray}{}\doxysection{rocr\+::core\+::Shared\+Array$<$ T, Align $>$ Class Template Reference}
+\label{classrocr_1_1core_1_1SharedArray}\index{rocr::core::SharedArray$<$ T, Align $>$@{rocr::core::SharedArray$<$ T, Align $>$}}
+
+
+Container for array located in GPU visible host memory. Alignment defaults to \+\_\+\+\_\+alignof(\+T) but may be increased.  
+
+
+
+
+{\ttfamily \#include $<$shared.\+h$>$}
+
+
+
+Inheritance diagram for rocr\+::core\+::Shared\+Array$<$ T, Align $>$\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=198pt]{classrocr_1_1core_1_1SharedArray__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for rocr\+::core\+::Shared\+Array$<$ T, Align $>$\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=198pt]{classrocr_1_1core_1_1SharedArray__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classrocr_1_1core_1_1SharedArray_a3404cee8570ec08f4125fd155a1aa28e}{Shared\+Array}} ()
+\item 
+\mbox{\hyperlink{classrocr_1_1core_1_1SharedArray_afd802bf049d2b30d9a660fc88dd6b582}{Shared\+Array}} (size\+\_\+t length)
+\item 
+\mbox{\hyperlink{classrocr_1_1core_1_1SharedArray_a4aae9adadb99cd5daf4d4434726cf4ed}{$\sim$\+Shared\+Array}} ()
+\item 
+\mbox{\hyperlink{classrocr_1_1core_1_1SharedArray_a5a5460eeef815441ebc50b2b7c624d7b}{Shared\+Array}} (\mbox{\hyperlink{classrocr_1_1core_1_1SharedArray}{Shared\+Array}} \&\&rhs)
+\item 
+\mbox{\hyperlink{classrocr_1_1core_1_1SharedArray}{Shared\+Array}} \& \mbox{\hyperlink{classrocr_1_1core_1_1SharedArray_a6e1964f65bbd6cbe4410f17009ae0131}{operator=}} (\mbox{\hyperlink{classrocr_1_1core_1_1SharedArray}{Shared\+Array}} \&\&rhs)
+\item 
+T \& \mbox{\hyperlink{classrocr_1_1core_1_1SharedArray_a3f3eb7fe2db035b867dc7981eccb3a10}{operator\mbox{[}$\,$\mbox{]}}} (size\+\_\+t index)
+\item 
+const T \& \mbox{\hyperlink{classrocr_1_1core_1_1SharedArray_a372cab547579310a3899c0fb0afd8e5f}{operator\mbox{[}$\,$\mbox{]}}} (size\+\_\+t index) const
+\end{DoxyCompactItemize}
+\doxysubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+T $\ast$ \mbox{\hyperlink{classrocr_1_1core_1_1SharedArray_a739d31d75325e7704f2be900098db81e}{shared\+\_\+object\+\_\+}}
+\item 
+size\+\_\+t \mbox{\hyperlink{classrocr_1_1core_1_1SharedArray_a2525ae03eec44b7f8942609a2cf46c39}{len}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Additional Inherited Members}
+
+
+\doxysubsection{Detailed Description}
+\subsubsection*{template$<$typename T, size\+\_\+t Align$>$\newline
+class rocr\+::core\+::\+Shared\+Array$<$ T, Align $>$}
+
+Container for array located in GPU visible host memory. Alignment defaults to \+\_\+\+\_\+alignof(\+T) but may be increased. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classrocr_1_1core_1_1SharedArray_a3404cee8570ec08f4125fd155a1aa28e}\label{classrocr_1_1core_1_1SharedArray_a3404cee8570ec08f4125fd155a1aa28e}} 
+\index{rocr::core::SharedArray$<$ T, Align $>$@{rocr::core::SharedArray$<$ T, Align $>$}!SharedArray@{SharedArray}}
+\index{SharedArray@{SharedArray}!rocr::core::SharedArray$<$ T, Align $>$@{rocr::core::SharedArray$<$ T, Align $>$}}
+\doxysubsubsection{\texorpdfstring{SharedArray()}{SharedArray()}\hspace{0.1cm}{\footnotesize\ttfamily [1/3]}}
+{\footnotesize\ttfamily template$<$typename T , size\+\_\+t Align$>$ \\
+\mbox{\hyperlink{classrocr_1_1core_1_1SharedArray}{rocr\+::core\+::\+Shared\+Array}}$<$ T, Align $>$\+::\mbox{\hyperlink{classrocr_1_1core_1_1SharedArray}{Shared\+Array}} (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{classrocr_1_1core_1_1SharedArray_afd802bf049d2b30d9a660fc88dd6b582}\label{classrocr_1_1core_1_1SharedArray_afd802bf049d2b30d9a660fc88dd6b582}} 
+\index{rocr::core::SharedArray$<$ T, Align $>$@{rocr::core::SharedArray$<$ T, Align $>$}!SharedArray@{SharedArray}}
+\index{SharedArray@{SharedArray}!rocr::core::SharedArray$<$ T, Align $>$@{rocr::core::SharedArray$<$ T, Align $>$}}
+\doxysubsubsection{\texorpdfstring{SharedArray()}{SharedArray()}\hspace{0.1cm}{\footnotesize\ttfamily [2/3]}}
+{\footnotesize\ttfamily template$<$typename T , size\+\_\+t Align$>$ \\
+\mbox{\hyperlink{classrocr_1_1core_1_1SharedArray}{rocr\+::core\+::\+Shared\+Array}}$<$ T, Align $>$\+::\mbox{\hyperlink{classrocr_1_1core_1_1SharedArray}{Shared\+Array}} (\begin{DoxyParamCaption}\item[{size\+\_\+t}]{length }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [explicit]}}
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=292pt]{classrocr_1_1core_1_1SharedArray_afd802bf049d2b30d9a660fc88dd6b582_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classrocr_1_1core_1_1SharedArray_a4aae9adadb99cd5daf4d4434726cf4ed}\label{classrocr_1_1core_1_1SharedArray_a4aae9adadb99cd5daf4d4434726cf4ed}} 
+\index{rocr::core::SharedArray$<$ T, Align $>$@{rocr::core::SharedArray$<$ T, Align $>$}!````~SharedArray@{$\sim$SharedArray}}
+\index{````~SharedArray@{$\sim$SharedArray}!rocr::core::SharedArray$<$ T, Align $>$@{rocr::core::SharedArray$<$ T, Align $>$}}
+\doxysubsubsection{\texorpdfstring{$\sim$SharedArray()}{~SharedArray()}}
+{\footnotesize\ttfamily template$<$typename T , size\+\_\+t Align$>$ \\
+\mbox{\hyperlink{classrocr_1_1core_1_1SharedArray}{rocr\+::core\+::\+Shared\+Array}}$<$ T, Align $>$\+::$\sim$\mbox{\hyperlink{classrocr_1_1core_1_1SharedArray}{Shared\+Array}} (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classrocr_1_1core_1_1SharedArray_a4aae9adadb99cd5daf4d4434726cf4ed_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classrocr_1_1core_1_1SharedArray_a5a5460eeef815441ebc50b2b7c624d7b}\label{classrocr_1_1core_1_1SharedArray_a5a5460eeef815441ebc50b2b7c624d7b}} 
+\index{rocr::core::SharedArray$<$ T, Align $>$@{rocr::core::SharedArray$<$ T, Align $>$}!SharedArray@{SharedArray}}
+\index{SharedArray@{SharedArray}!rocr::core::SharedArray$<$ T, Align $>$@{rocr::core::SharedArray$<$ T, Align $>$}}
+\doxysubsubsection{\texorpdfstring{SharedArray()}{SharedArray()}\hspace{0.1cm}{\footnotesize\ttfamily [3/3]}}
+{\footnotesize\ttfamily template$<$typename T , size\+\_\+t Align$>$ \\
+\mbox{\hyperlink{classrocr_1_1core_1_1SharedArray}{rocr\+::core\+::\+Shared\+Array}}$<$ T, Align $>$\+::\mbox{\hyperlink{classrocr_1_1core_1_1SharedArray}{Shared\+Array}} (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classrocr_1_1core_1_1SharedArray}{Shared\+Array}}$<$ T, Align $>$ \&\&}]{rhs }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classrocr_1_1core_1_1SharedArray_a5a5460eeef815441ebc50b2b7c624d7b_cgraph}
+\end{center}
+\end{figure}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classrocr_1_1core_1_1SharedArray_a6e1964f65bbd6cbe4410f17009ae0131}\label{classrocr_1_1core_1_1SharedArray_a6e1964f65bbd6cbe4410f17009ae0131}} 
+\index{rocr::core::SharedArray$<$ T, Align $>$@{rocr::core::SharedArray$<$ T, Align $>$}!operator=@{operator=}}
+\index{operator=@{operator=}!rocr::core::SharedArray$<$ T, Align $>$@{rocr::core::SharedArray$<$ T, Align $>$}}
+\doxysubsubsection{\texorpdfstring{operator=()}{operator=()}}
+{\footnotesize\ttfamily template$<$typename T , size\+\_\+t Align$>$ \\
+\mbox{\hyperlink{classrocr_1_1core_1_1SharedArray}{Shared\+Array}}\& \mbox{\hyperlink{classrocr_1_1core_1_1SharedArray}{rocr\+::core\+::\+Shared\+Array}}$<$ T, Align $>$\+::operator= (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classrocr_1_1core_1_1SharedArray}{Shared\+Array}}$<$ T, Align $>$ \&\&}]{rhs }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classrocr_1_1core_1_1SharedArray_a6e1964f65bbd6cbe4410f17009ae0131_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classrocr_1_1core_1_1SharedArray_a3f3eb7fe2db035b867dc7981eccb3a10}\label{classrocr_1_1core_1_1SharedArray_a3f3eb7fe2db035b867dc7981eccb3a10}} 
+\index{rocr::core::SharedArray$<$ T, Align $>$@{rocr::core::SharedArray$<$ T, Align $>$}!operator\mbox{[}\mbox{]}@{operator[]}}
+\index{operator\mbox{[}\mbox{]}@{operator[]}!rocr::core::SharedArray$<$ T, Align $>$@{rocr::core::SharedArray$<$ T, Align $>$}}
+\doxysubsubsection{\texorpdfstring{operator[]()}{operator[]()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily template$<$typename T , size\+\_\+t Align$>$ \\
+T\& \mbox{\hyperlink{classrocr_1_1core_1_1SharedArray}{rocr\+::core\+::\+Shared\+Array}}$<$ T, Align $>$\+::operator\mbox{[}$\,$\mbox{]} (\begin{DoxyParamCaption}\item[{size\+\_\+t}]{index }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{classrocr_1_1core_1_1SharedArray_a372cab547579310a3899c0fb0afd8e5f}\label{classrocr_1_1core_1_1SharedArray_a372cab547579310a3899c0fb0afd8e5f}} 
+\index{rocr::core::SharedArray$<$ T, Align $>$@{rocr::core::SharedArray$<$ T, Align $>$}!operator\mbox{[}\mbox{]}@{operator[]}}
+\index{operator\mbox{[}\mbox{]}@{operator[]}!rocr::core::SharedArray$<$ T, Align $>$@{rocr::core::SharedArray$<$ T, Align $>$}}
+\doxysubsubsection{\texorpdfstring{operator[]()}{operator[]()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily template$<$typename T , size\+\_\+t Align$>$ \\
+const T\& \mbox{\hyperlink{classrocr_1_1core_1_1SharedArray}{rocr\+::core\+::\+Shared\+Array}}$<$ T, Align $>$\+::operator\mbox{[}$\,$\mbox{]} (\begin{DoxyParamCaption}\item[{size\+\_\+t}]{index }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{classrocr_1_1core_1_1SharedArray_a2525ae03eec44b7f8942609a2cf46c39}\label{classrocr_1_1core_1_1SharedArray_a2525ae03eec44b7f8942609a2cf46c39}} 
+\index{rocr::core::SharedArray$<$ T, Align $>$@{rocr::core::SharedArray$<$ T, Align $>$}!len@{len}}
+\index{len@{len}!rocr::core::SharedArray$<$ T, Align $>$@{rocr::core::SharedArray$<$ T, Align $>$}}
+\doxysubsubsection{\texorpdfstring{len}{len}}
+{\footnotesize\ttfamily template$<$typename T , size\+\_\+t Align$>$ \\
+size\+\_\+t \mbox{\hyperlink{classrocr_1_1core_1_1SharedArray}{rocr\+::core\+::\+Shared\+Array}}$<$ T, Align $>$\+::len\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classrocr_1_1core_1_1SharedArray_a739d31d75325e7704f2be900098db81e}\label{classrocr_1_1core_1_1SharedArray_a739d31d75325e7704f2be900098db81e}} 
+\index{rocr::core::SharedArray$<$ T, Align $>$@{rocr::core::SharedArray$<$ T, Align $>$}!shared\_object\_@{shared\_object\_}}
+\index{shared\_object\_@{shared\_object\_}!rocr::core::SharedArray$<$ T, Align $>$@{rocr::core::SharedArray$<$ T, Align $>$}}
+\doxysubsubsection{\texorpdfstring{shared\_object\_}{shared\_object\_}}
+{\footnotesize\ttfamily template$<$typename T , size\+\_\+t Align$>$ \\
+T$\ast$ \mbox{\hyperlink{classrocr_1_1core_1_1SharedArray}{rocr\+::core\+::\+Shared\+Array}}$<$ T, Align $>$\+::shared\+\_\+object\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+src/core/common/\mbox{\hyperlink{shared_8h}{shared.\+h}}\end{DoxyCompactItemize}

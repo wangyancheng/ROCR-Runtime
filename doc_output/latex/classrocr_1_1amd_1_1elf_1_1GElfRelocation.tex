@@ -1,0 +1,277 @@
+\hypertarget{classrocr_1_1amd_1_1elf_1_1GElfRelocation}{}\doxysection{rocr\+::amd\+::elf\+::GElf\+Relocation Class Reference}
+\label{classrocr_1_1amd_1_1elf_1_1GElfRelocation}\index{rocr::amd::elf::GElfRelocation@{rocr::amd::elf::GElfRelocation}}
+
+
+Inheritance diagram for rocr\+::amd\+::elf\+::GElf\+Relocation\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=226pt]{classrocr_1_1amd_1_1elf_1_1GElfRelocation__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for rocr\+::amd\+::elf\+::GElf\+Relocation\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classrocr_1_1amd_1_1elf_1_1GElfRelocation__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classrocr_1_1amd_1_1elf_1_1GElfRelocation_ab52f5b457773d164947301a852d5041c}{GElf\+Relocation}} (\mbox{\hyperlink{classrocr_1_1amd_1_1elf_1_1GElfRelocationSection}{GElf\+Relocation\+Section}} $\ast$rsection\+\_\+, \mbox{\hyperlink{classrocr_1_1amd_1_1elf_1_1Buffer}{Buffer}} \&edata\+\_\+, size\+\_\+t eindex\+\_\+)
+\item 
+bool \mbox{\hyperlink{classrocr_1_1amd_1_1elf_1_1GElfRelocation_a7dd53c0917cde37f7ea54fae595e78c2}{push}} (uint32\+\_\+t \mbox{\hyperlink{classrocr_1_1amd_1_1elf_1_1GElfRelocation_aca3c1eb4cd58a2882564b8057ac66d71}{type}}, \mbox{\hyperlink{classrocr_1_1amd_1_1elf_1_1Symbol}{Symbol}} $\ast$\mbox{\hyperlink{classrocr_1_1amd_1_1elf_1_1GElfRelocation_ac3084d708ffb4a9e2957f7cad4185117}{symbol}}, uint64\+\_\+t \mbox{\hyperlink{classrocr_1_1amd_1_1elf_1_1GElfRelocation_a1607ccb12c3634923dd25ad2cbaec38f}{offset}}, int64\+\_\+t \mbox{\hyperlink{classrocr_1_1amd_1_1elf_1_1GElfRelocation_ad457c73cdf8325f0f54f2f369c09ffe3}{addend}})
+\item 
+\mbox{\hyperlink{classrocr_1_1amd_1_1elf_1_1RelocationSection}{Relocation\+Section}} $\ast$ \mbox{\hyperlink{classrocr_1_1amd_1_1elf_1_1GElfRelocation_a9d3774c95c29792f796c1b7926686874}{section}} () override
+\item 
+uint32\+\_\+t \mbox{\hyperlink{classrocr_1_1amd_1_1elf_1_1GElfRelocation_aca3c1eb4cd58a2882564b8057ac66d71}{type}} () override
+\item 
+uint32\+\_\+t \mbox{\hyperlink{classrocr_1_1amd_1_1elf_1_1GElfRelocation_aebb70dfebeefd71949b3ea2f9effc841}{symbol\+Index}} () override
+\item 
+\mbox{\hyperlink{classrocr_1_1amd_1_1elf_1_1Symbol}{Symbol}} $\ast$ \mbox{\hyperlink{classrocr_1_1amd_1_1elf_1_1GElfRelocation_ac3084d708ffb4a9e2957f7cad4185117}{symbol}} () override
+\item 
+uint64\+\_\+t \mbox{\hyperlink{classrocr_1_1amd_1_1elf_1_1GElfRelocation_a1607ccb12c3634923dd25ad2cbaec38f}{offset}} () override
+\item 
+int64\+\_\+t \mbox{\hyperlink{classrocr_1_1amd_1_1elf_1_1GElfRelocation_ad457c73cdf8325f0f54f2f369c09ffe3}{addend}} () override
+\end{DoxyCompactItemize}
+\doxysubsection*{Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+GElf\+\_\+\+Rela $\ast$ \mbox{\hyperlink{classrocr_1_1amd_1_1elf_1_1GElfRelocation_ab426e6e99cdf34c2b4a609aa3cea34cb}{Rela}} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classrocr_1_1amd_1_1elf_1_1GElfRelocationSection}{GElf\+Relocation\+Section}} $\ast$ \mbox{\hyperlink{classrocr_1_1amd_1_1elf_1_1GElfRelocation_af7a2c1726df0c45b93fc04d9d31dd6ce}{rsection}}
+\item 
+\mbox{\hyperlink{classrocr_1_1amd_1_1elf_1_1Buffer}{Buffer}} \& \mbox{\hyperlink{classrocr_1_1amd_1_1elf_1_1GElfRelocation_a6f46b1c676b95a14a48e4ca0a8af07c5}{edata}}
+\item 
+size\+\_\+t \mbox{\hyperlink{classrocr_1_1amd_1_1elf_1_1GElfRelocation_ac35f22a31a824d8efb3e8749dc165914}{eindex}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classrocr_1_1amd_1_1elf_1_1GElfRelocation_ab52f5b457773d164947301a852d5041c}\label{classrocr_1_1amd_1_1elf_1_1GElfRelocation_ab52f5b457773d164947301a852d5041c}} 
+\index{rocr::amd::elf::GElfRelocation@{rocr::amd::elf::GElfRelocation}!GElfRelocation@{GElfRelocation}}
+\index{GElfRelocation@{GElfRelocation}!rocr::amd::elf::GElfRelocation@{rocr::amd::elf::GElfRelocation}}
+\doxysubsubsection{\texorpdfstring{GElfRelocation()}{GElfRelocation()}}
+{\footnotesize\ttfamily rocr\+::amd\+::elf\+::\+GElf\+Relocation\+::\+GElf\+Relocation (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classrocr_1_1amd_1_1elf_1_1GElfRelocationSection}{GElf\+Relocation\+Section}} $\ast$}]{rsection\+\_\+,  }\item[{\mbox{\hyperlink{classrocr_1_1amd_1_1elf_1_1Buffer}{Buffer}} \&}]{edata\+\_\+,  }\item[{size\+\_\+t}]{eindex\+\_\+ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classrocr_1_1amd_1_1elf_1_1GElfRelocation_ad457c73cdf8325f0f54f2f369c09ffe3}\label{classrocr_1_1amd_1_1elf_1_1GElfRelocation_ad457c73cdf8325f0f54f2f369c09ffe3}} 
+\index{rocr::amd::elf::GElfRelocation@{rocr::amd::elf::GElfRelocation}!addend@{addend}}
+\index{addend@{addend}!rocr::amd::elf::GElfRelocation@{rocr::amd::elf::GElfRelocation}}
+\doxysubsubsection{\texorpdfstring{addend()}{addend()}}
+{\footnotesize\ttfamily int64\+\_\+t rocr\+::amd\+::elf\+::\+GElf\+Relocation\+::addend (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Implements \mbox{\hyperlink{classrocr_1_1amd_1_1elf_1_1Relocation_a8b6179d50077cd3e4f16e75ac43d17d3}{rocr\+::amd\+::elf\+::\+Relocation}}.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classrocr_1_1amd_1_1elf_1_1GElfRelocation_ad457c73cdf8325f0f54f2f369c09ffe3_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classrocr_1_1amd_1_1elf_1_1GElfRelocation_ad457c73cdf8325f0f54f2f369c09ffe3_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classrocr_1_1amd_1_1elf_1_1GElfRelocation_a1607ccb12c3634923dd25ad2cbaec38f}\label{classrocr_1_1amd_1_1elf_1_1GElfRelocation_a1607ccb12c3634923dd25ad2cbaec38f}} 
+\index{rocr::amd::elf::GElfRelocation@{rocr::amd::elf::GElfRelocation}!offset@{offset}}
+\index{offset@{offset}!rocr::amd::elf::GElfRelocation@{rocr::amd::elf::GElfRelocation}}
+\doxysubsubsection{\texorpdfstring{offset()}{offset()}}
+{\footnotesize\ttfamily uint64\+\_\+t rocr\+::amd\+::elf\+::\+GElf\+Relocation\+::offset (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Implements \mbox{\hyperlink{classrocr_1_1amd_1_1elf_1_1Relocation_a011499f00db83689a999b7e57e233243}{rocr\+::amd\+::elf\+::\+Relocation}}.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classrocr_1_1amd_1_1elf_1_1GElfRelocation_a1607ccb12c3634923dd25ad2cbaec38f_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classrocr_1_1amd_1_1elf_1_1GElfRelocation_a1607ccb12c3634923dd25ad2cbaec38f_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classrocr_1_1amd_1_1elf_1_1GElfRelocation_a7dd53c0917cde37f7ea54fae595e78c2}\label{classrocr_1_1amd_1_1elf_1_1GElfRelocation_a7dd53c0917cde37f7ea54fae595e78c2}} 
+\index{rocr::amd::elf::GElfRelocation@{rocr::amd::elf::GElfRelocation}!push@{push}}
+\index{push@{push}!rocr::amd::elf::GElfRelocation@{rocr::amd::elf::GElfRelocation}}
+\doxysubsubsection{\texorpdfstring{push()}{push()}}
+{\footnotesize\ttfamily bool rocr\+::amd\+::elf\+::\+GElf\+Relocation\+::push (\begin{DoxyParamCaption}\item[{uint32\+\_\+t}]{type,  }\item[{\mbox{\hyperlink{classrocr_1_1amd_1_1elf_1_1Symbol}{Symbol}} $\ast$}]{symbol,  }\item[{uint64\+\_\+t}]{offset,  }\item[{int64\+\_\+t}]{addend }\end{DoxyParamCaption})}
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classrocr_1_1amd_1_1elf_1_1GElfRelocation_a7dd53c0917cde37f7ea54fae595e78c2_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classrocr_1_1amd_1_1elf_1_1GElfRelocation_a7dd53c0917cde37f7ea54fae595e78c2_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classrocr_1_1amd_1_1elf_1_1GElfRelocation_ab426e6e99cdf34c2b4a609aa3cea34cb}\label{classrocr_1_1amd_1_1elf_1_1GElfRelocation_ab426e6e99cdf34c2b4a609aa3cea34cb}} 
+\index{rocr::amd::elf::GElfRelocation@{rocr::amd::elf::GElfRelocation}!Rela@{Rela}}
+\index{Rela@{Rela}!rocr::amd::elf::GElfRelocation@{rocr::amd::elf::GElfRelocation}}
+\doxysubsubsection{\texorpdfstring{Rela()}{Rela()}}
+{\footnotesize\ttfamily GElf\+\_\+\+Rela$\ast$ rocr\+::amd\+::elf\+::\+GElf\+Relocation\+::\+Rela (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [private]}}
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classrocr_1_1amd_1_1elf_1_1GElfRelocation_ab426e6e99cdf34c2b4a609aa3cea34cb_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classrocr_1_1amd_1_1elf_1_1GElfRelocation_ab426e6e99cdf34c2b4a609aa3cea34cb_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classrocr_1_1amd_1_1elf_1_1GElfRelocation_a9d3774c95c29792f796c1b7926686874}\label{classrocr_1_1amd_1_1elf_1_1GElfRelocation_a9d3774c95c29792f796c1b7926686874}} 
+\index{rocr::amd::elf::GElfRelocation@{rocr::amd::elf::GElfRelocation}!section@{section}}
+\index{section@{section}!rocr::amd::elf::GElfRelocation@{rocr::amd::elf::GElfRelocation}}
+\doxysubsubsection{\texorpdfstring{section()}{section()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classrocr_1_1amd_1_1elf_1_1RelocationSection}{Relocation\+Section}} $\ast$ rocr\+::amd\+::elf\+::\+GElf\+Relocation\+::section (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Implements \mbox{\hyperlink{classrocr_1_1amd_1_1elf_1_1Relocation_ac3d444bc59195f2e5d728779209f1042}{rocr\+::amd\+::elf\+::\+Relocation}}.
+
+\mbox{\Hypertarget{classrocr_1_1amd_1_1elf_1_1GElfRelocation_ac3084d708ffb4a9e2957f7cad4185117}\label{classrocr_1_1amd_1_1elf_1_1GElfRelocation_ac3084d708ffb4a9e2957f7cad4185117}} 
+\index{rocr::amd::elf::GElfRelocation@{rocr::amd::elf::GElfRelocation}!symbol@{symbol}}
+\index{symbol@{symbol}!rocr::amd::elf::GElfRelocation@{rocr::amd::elf::GElfRelocation}}
+\doxysubsubsection{\texorpdfstring{symbol()}{symbol()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classrocr_1_1amd_1_1elf_1_1Symbol}{Symbol}} $\ast$ rocr\+::amd\+::elf\+::\+GElf\+Relocation\+::symbol (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Implements \mbox{\hyperlink{classrocr_1_1amd_1_1elf_1_1Relocation_a539add502e800776dcd81e57221e0d92}{rocr\+::amd\+::elf\+::\+Relocation}}.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classrocr_1_1amd_1_1elf_1_1GElfRelocation_ac3084d708ffb4a9e2957f7cad4185117_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classrocr_1_1amd_1_1elf_1_1GElfRelocation_ac3084d708ffb4a9e2957f7cad4185117_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classrocr_1_1amd_1_1elf_1_1GElfRelocation_aebb70dfebeefd71949b3ea2f9effc841}\label{classrocr_1_1amd_1_1elf_1_1GElfRelocation_aebb70dfebeefd71949b3ea2f9effc841}} 
+\index{rocr::amd::elf::GElfRelocation@{rocr::amd::elf::GElfRelocation}!symbolIndex@{symbolIndex}}
+\index{symbolIndex@{symbolIndex}!rocr::amd::elf::GElfRelocation@{rocr::amd::elf::GElfRelocation}}
+\doxysubsubsection{\texorpdfstring{symbolIndex()}{symbolIndex()}}
+{\footnotesize\ttfamily uint32\+\_\+t rocr\+::amd\+::elf\+::\+GElf\+Relocation\+::symbol\+Index (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Implements \mbox{\hyperlink{classrocr_1_1amd_1_1elf_1_1Relocation_a2ee112a7b19573a149a0e84ac0b3cfff}{rocr\+::amd\+::elf\+::\+Relocation}}.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classrocr_1_1amd_1_1elf_1_1GElfRelocation_aebb70dfebeefd71949b3ea2f9effc841_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classrocr_1_1amd_1_1elf_1_1GElfRelocation_aebb70dfebeefd71949b3ea2f9effc841_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classrocr_1_1amd_1_1elf_1_1GElfRelocation_aca3c1eb4cd58a2882564b8057ac66d71}\label{classrocr_1_1amd_1_1elf_1_1GElfRelocation_aca3c1eb4cd58a2882564b8057ac66d71}} 
+\index{rocr::amd::elf::GElfRelocation@{rocr::amd::elf::GElfRelocation}!type@{type}}
+\index{type@{type}!rocr::amd::elf::GElfRelocation@{rocr::amd::elf::GElfRelocation}}
+\doxysubsubsection{\texorpdfstring{type()}{type()}}
+{\footnotesize\ttfamily uint32\+\_\+t rocr\+::amd\+::elf\+::\+GElf\+Relocation\+::type (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Implements \mbox{\hyperlink{classrocr_1_1amd_1_1elf_1_1Relocation_a2ce580aa1cfc98a8be5d6599b82e1ab6}{rocr\+::amd\+::elf\+::\+Relocation}}.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classrocr_1_1amd_1_1elf_1_1GElfRelocation_aca3c1eb4cd58a2882564b8057ac66d71_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classrocr_1_1amd_1_1elf_1_1GElfRelocation_aca3c1eb4cd58a2882564b8057ac66d71_icgraph}
+\end{center}
+\end{figure}
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{classrocr_1_1amd_1_1elf_1_1GElfRelocation_a6f46b1c676b95a14a48e4ca0a8af07c5}\label{classrocr_1_1amd_1_1elf_1_1GElfRelocation_a6f46b1c676b95a14a48e4ca0a8af07c5}} 
+\index{rocr::amd::elf::GElfRelocation@{rocr::amd::elf::GElfRelocation}!edata@{edata}}
+\index{edata@{edata}!rocr::amd::elf::GElfRelocation@{rocr::amd::elf::GElfRelocation}}
+\doxysubsubsection{\texorpdfstring{edata}{edata}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classrocr_1_1amd_1_1elf_1_1Buffer}{Buffer}}\& rocr\+::amd\+::elf\+::\+GElf\+Relocation\+::edata\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classrocr_1_1amd_1_1elf_1_1GElfRelocation_ac35f22a31a824d8efb3e8749dc165914}\label{classrocr_1_1amd_1_1elf_1_1GElfRelocation_ac35f22a31a824d8efb3e8749dc165914}} 
+\index{rocr::amd::elf::GElfRelocation@{rocr::amd::elf::GElfRelocation}!eindex@{eindex}}
+\index{eindex@{eindex}!rocr::amd::elf::GElfRelocation@{rocr::amd::elf::GElfRelocation}}
+\doxysubsubsection{\texorpdfstring{eindex}{eindex}}
+{\footnotesize\ttfamily size\+\_\+t rocr\+::amd\+::elf\+::\+GElf\+Relocation\+::eindex\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classrocr_1_1amd_1_1elf_1_1GElfRelocation_af7a2c1726df0c45b93fc04d9d31dd6ce}\label{classrocr_1_1amd_1_1elf_1_1GElfRelocation_af7a2c1726df0c45b93fc04d9d31dd6ce}} 
+\index{rocr::amd::elf::GElfRelocation@{rocr::amd::elf::GElfRelocation}!rsection@{rsection}}
+\index{rsection@{rsection}!rocr::amd::elf::GElfRelocation@{rocr::amd::elf::GElfRelocation}}
+\doxysubsubsection{\texorpdfstring{rsection}{rsection}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classrocr_1_1amd_1_1elf_1_1GElfRelocationSection}{GElf\+Relocation\+Section}}$\ast$ rocr\+::amd\+::elf\+::\+GElf\+Relocation\+::rsection\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+src/libamdhsacode/\mbox{\hyperlink{amd__elf__image_8cpp}{amd\+\_\+elf\+\_\+image.\+cpp}}\end{DoxyCompactItemize}

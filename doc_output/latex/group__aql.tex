@@ -1,0 +1,360 @@
+\hypertarget{group__aql}{}\doxysection{Architected Queuing Language}
+\label{group__aql}\index{Architected Queuing Language@{Architected Queuing Language}}
+\doxysubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{structhsa__kernel__dispatch__packet__s}{hsa\+\_\+kernel\+\_\+dispatch\+\_\+packet\+\_\+s}}
+\begin{DoxyCompactList}\small\item\em AQL kernel dispatch packet. \end{DoxyCompactList}\item 
+struct \mbox{\hyperlink{structhsa__agent__dispatch__packet__s}{hsa\+\_\+agent\+\_\+dispatch\+\_\+packet\+\_\+s}}
+\begin{DoxyCompactList}\small\item\em Agent dispatch packet. \end{DoxyCompactList}\item 
+struct \mbox{\hyperlink{structhsa__barrier__and__packet__s}{hsa\+\_\+barrier\+\_\+and\+\_\+packet\+\_\+s}}
+\begin{DoxyCompactList}\small\item\em Barrier-\/\+AND packet. \end{DoxyCompactList}\item 
+struct \mbox{\hyperlink{structhsa__barrier__or__packet__s}{hsa\+\_\+barrier\+\_\+or\+\_\+packet\+\_\+s}}
+\begin{DoxyCompactList}\small\item\em Barrier-\/\+OR packet. \end{DoxyCompactList}\item 
+struct \mbox{\hyperlink{structhsa__amd__packet__header__s}{hsa\+\_\+amd\+\_\+packet\+\_\+header\+\_\+s}}
+\begin{DoxyCompactList}\small\item\em AMD vendor specific AQL packet header. \end{DoxyCompactList}\item 
+struct \mbox{\hyperlink{structhsa__amd__barrier__value__packet__s}{hsa\+\_\+amd\+\_\+barrier\+\_\+value\+\_\+packet\+\_\+s}}
+\begin{DoxyCompactList}\small\item\em AMD barrier value packet. Halts packet processing and waits for (signal\+\_\+value \& \+::mask) \+::cond \+::value to be satisfied, where signal\+\_\+value is the value of the signal \+::signal. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+typedef struct \mbox{\hyperlink{structhsa__kernel__dispatch__packet__s}{hsa\+\_\+kernel\+\_\+dispatch\+\_\+packet\+\_\+s}} \mbox{\hyperlink{group__aql_gaf08e3b09665195c8274b0d7c4b1015e3}{hsa\+\_\+kernel\+\_\+dispatch\+\_\+packet\+\_\+t}}
+\begin{DoxyCompactList}\small\item\em AQL kernel dispatch packet. \end{DoxyCompactList}\item 
+typedef struct \mbox{\hyperlink{structhsa__agent__dispatch__packet__s}{hsa\+\_\+agent\+\_\+dispatch\+\_\+packet\+\_\+s}} \mbox{\hyperlink{group__aql_ga0d221a04e9a28834f9f8a53c6dc34927}{hsa\+\_\+agent\+\_\+dispatch\+\_\+packet\+\_\+t}}
+\begin{DoxyCompactList}\small\item\em Agent dispatch packet. \end{DoxyCompactList}\item 
+typedef struct \mbox{\hyperlink{structhsa__barrier__and__packet__s}{hsa\+\_\+barrier\+\_\+and\+\_\+packet\+\_\+s}} \mbox{\hyperlink{group__aql_gac999acb47a0e9232b4958c0a873bfacc}{hsa\+\_\+barrier\+\_\+and\+\_\+packet\+\_\+t}}
+\begin{DoxyCompactList}\small\item\em Barrier-\/\+AND packet. \end{DoxyCompactList}\item 
+typedef struct \mbox{\hyperlink{structhsa__barrier__or__packet__s}{hsa\+\_\+barrier\+\_\+or\+\_\+packet\+\_\+s}} \mbox{\hyperlink{group__aql_gaa20f8a6d8457782b1f09f9acf97e47e8}{hsa\+\_\+barrier\+\_\+or\+\_\+packet\+\_\+t}}
+\begin{DoxyCompactList}\small\item\em Barrier-\/\+OR packet. \end{DoxyCompactList}\item 
+typedef uint32\+\_\+t \mbox{\hyperlink{group__aql_gafe7712107c07c264ebc33d22b314a1c2}{hsa\+\_\+signal\+\_\+condition32\+\_\+t}}
+\begin{DoxyCompactList}\small\item\em A fixed-\/size type used to represent \mbox{\hyperlink{group__signals_gab7190fcff48c6dbeded341389ed17c8d}{hsa\+\_\+signal\+\_\+condition\+\_\+t}} constants. \end{DoxyCompactList}\item 
+typedef uint8\+\_\+t \mbox{\hyperlink{group__aql_ga32a84fac18e61e026682c0a69ca87e8a}{hsa\+\_\+amd\+\_\+packet\+\_\+type8\+\_\+t}}
+\begin{DoxyCompactList}\small\item\em A fixed-\/size type used to represent \mbox{\hyperlink{group__aql_ga75b4a4b8ec7d5f3eb97b0e1308fef7a8}{hsa\+\_\+amd\+\_\+packet\+\_\+type\+\_\+t}} constants. \end{DoxyCompactList}\item 
+typedef struct \mbox{\hyperlink{structhsa__amd__packet__header__s}{hsa\+\_\+amd\+\_\+packet\+\_\+header\+\_\+s}} \mbox{\hyperlink{group__aql_gaf9362e46344dd2fbfda4ac8f199db6ee}{hsa\+\_\+amd\+\_\+vendor\+\_\+packet\+\_\+header\+\_\+t}}
+\begin{DoxyCompactList}\small\item\em AMD vendor specific AQL packet header. \end{DoxyCompactList}\item 
+typedef struct \mbox{\hyperlink{structhsa__amd__barrier__value__packet__s}{hsa\+\_\+amd\+\_\+barrier\+\_\+value\+\_\+packet\+\_\+s}} \mbox{\hyperlink{group__aql_ga683484f187b02810ad81c20a607e844f}{hsa\+\_\+amd\+\_\+barrier\+\_\+value\+\_\+packet\+\_\+t}}
+\begin{DoxyCompactList}\small\item\em AMD barrier value packet. Halts packet processing and waits for (signal\+\_\+value \& \+::mask) \+::cond \+::value to be satisfied, where signal\+\_\+value is the value of the signal \+::signal. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Enumerations}
+\begin{DoxyCompactItemize}
+\item 
+enum \mbox{\hyperlink{group__aql_ga35a04bfe654a1c980ac904cafd6373a1}{hsa\+\_\+packet\+\_\+type\+\_\+t}} \{ \newline
+\mbox{\hyperlink{group__aql_gga35a04bfe654a1c980ac904cafd6373a1a86eecc1851fdf8b10538f994549ded8b}{HSA\+\_\+\+PACKET\+\_\+\+TYPE\+\_\+\+VENDOR\+\_\+\+SPECIFIC}} = 0
+, \mbox{\hyperlink{group__aql_gga35a04bfe654a1c980ac904cafd6373a1a9030931b8fe80fb9add8c796cd8886c5}{HSA\+\_\+\+PACKET\+\_\+\+TYPE\+\_\+\+INVALID}} = 1
+, \mbox{\hyperlink{group__aql_gga35a04bfe654a1c980ac904cafd6373a1ab639dc86e45ee0c9d07022a2e79cab56}{HSA\+\_\+\+PACKET\+\_\+\+TYPE\+\_\+\+KERNEL\+\_\+\+DISPATCH}} = 2
+, \mbox{\hyperlink{group__aql_gga35a04bfe654a1c980ac904cafd6373a1a015bb0b76eccde0f58f27a570ada6b56}{HSA\+\_\+\+PACKET\+\_\+\+TYPE\+\_\+\+BARRIER\+\_\+\+AND}} = 3
+, \newline
+\mbox{\hyperlink{group__aql_gga35a04bfe654a1c980ac904cafd6373a1aeb8ddfcceb12c29b12f52609e7bb7ce2}{HSA\+\_\+\+PACKET\+\_\+\+TYPE\+\_\+\+AGENT\+\_\+\+DISPATCH}} = 4
+, \mbox{\hyperlink{group__aql_gga35a04bfe654a1c980ac904cafd6373a1a1953e793495a0d122be19580cd6a2523}{HSA\+\_\+\+PACKET\+\_\+\+TYPE\+\_\+\+BARRIER\+\_\+\+OR}} = 5
+ \}
+\begin{DoxyCompactList}\small\item\em Packet type. \end{DoxyCompactList}\item 
+enum \mbox{\hyperlink{group__aql_ga6c1a86878de5b0f980202ad7e4e8d42a}{hsa\+\_\+fence\+\_\+scope\+\_\+t}} \{ \mbox{\hyperlink{group__aql_gga6c1a86878de5b0f980202ad7e4e8d42aa5dc7b942cd56f91094a088435027be2c}{HSA\+\_\+\+FENCE\+\_\+\+SCOPE\+\_\+\+NONE}} = 0
+, \mbox{\hyperlink{group__aql_gga6c1a86878de5b0f980202ad7e4e8d42aa9879cf99ba63616fe61da22281df814e}{HSA\+\_\+\+FENCE\+\_\+\+SCOPE\+\_\+\+AGENT}} = 1
+, \mbox{\hyperlink{group__aql_gga6c1a86878de5b0f980202ad7e4e8d42aa6ecb203c10f12ec4bcf475d527c3a870}{HSA\+\_\+\+FENCE\+\_\+\+SCOPE\+\_\+\+SYSTEM}} = 2
+ \}
+\begin{DoxyCompactList}\small\item\em Scope of the memory fence operation associated with a packet. \end{DoxyCompactList}\item 
+enum \mbox{\hyperlink{group__aql_ga2f03beef9c37e464b3837f2646d30870}{hsa\+\_\+packet\+\_\+header\+\_\+t}} \{ \newline
+\mbox{\hyperlink{group__aql_gga2f03beef9c37e464b3837f2646d30870a28b2f227c66db4ddcefb5856e7958e6c}{HSA\+\_\+\+PACKET\+\_\+\+HEADER\+\_\+\+TYPE}} = 0
+, \mbox{\hyperlink{group__aql_gga2f03beef9c37e464b3837f2646d30870aa967f75e5d6ad03f764a1db4bb8351a4}{HSA\+\_\+\+PACKET\+\_\+\+HEADER\+\_\+\+BARRIER}} = 8
+, \mbox{\hyperlink{group__aql_gga2f03beef9c37e464b3837f2646d30870a02bc578de13a9abc0d2ba7f59e788960}{HSA\+\_\+\+PACKET\+\_\+\+HEADER\+\_\+\+SCACQUIRE\+\_\+\+FENCE\+\_\+\+SCOPE}} = 9
+, \mbox{\hyperlink{group__aql_gga2f03beef9c37e464b3837f2646d30870ac601d1e724c4e367bc55e4c4c204dd93}{HSA\+\_\+\+PACKET\+\_\+\+HEADER\+\_\+\+ACQUIRE\+\_\+\+FENCE\+\_\+\+SCOPE}} = 9
+, \newline
+\mbox{\hyperlink{group__aql_gga2f03beef9c37e464b3837f2646d30870a8fd59e5972b701019cb4b55799891ced}{HSA\+\_\+\+PACKET\+\_\+\+HEADER\+\_\+\+SCRELEASE\+\_\+\+FENCE\+\_\+\+SCOPE}} = 11
+, \mbox{\hyperlink{group__aql_gga2f03beef9c37e464b3837f2646d30870a1249cac1bb408dc724f22362ded245c6}{HSA\+\_\+\+PACKET\+\_\+\+HEADER\+\_\+\+RELEASE\+\_\+\+FENCE\+\_\+\+SCOPE}} = 11
+ \}
+\begin{DoxyCompactList}\small\item\em Sub-\/fields of the {\itshape header} field that is present in any AQL packet. The offset (with respect to the address of {\itshape header}) of a sub-\/field is identical to its enumeration constant. The width of each sub-\/field is determined by the corresponding value in \mbox{\hyperlink{group__aql_gad1d46c8ae53112cb06bf364b65b4b0ca}{hsa\+\_\+packet\+\_\+header\+\_\+width\+\_\+t}}. The offset and the width are expressed in bits. \end{DoxyCompactList}\item 
+enum \mbox{\hyperlink{group__aql_gad1d46c8ae53112cb06bf364b65b4b0ca}{hsa\+\_\+packet\+\_\+header\+\_\+width\+\_\+t}} \{ \newline
+\mbox{\hyperlink{group__aql_ggad1d46c8ae53112cb06bf364b65b4b0caa9d692b0ccc6dcf9fa2f8fe908d0f5f5e}{HSA\+\_\+\+PACKET\+\_\+\+HEADER\+\_\+\+WIDTH\+\_\+\+TYPE}} = 8
+, \mbox{\hyperlink{group__aql_ggad1d46c8ae53112cb06bf364b65b4b0caa66f1ecb4b8877e84ae33ecf0d9696453}{HSA\+\_\+\+PACKET\+\_\+\+HEADER\+\_\+\+WIDTH\+\_\+\+BARRIER}} = 1
+, \mbox{\hyperlink{group__aql_ggad1d46c8ae53112cb06bf364b65b4b0caa57349a3d0d98ddd32020ff5269916704}{HSA\+\_\+\+PACKET\+\_\+\+HEADER\+\_\+\+WIDTH\+\_\+\+SCACQUIRE\+\_\+\+FENCE\+\_\+\+SCOPE}} = 2
+, \mbox{\hyperlink{group__aql_ggad1d46c8ae53112cb06bf364b65b4b0caaa93fa7a40165562b55931542d4dac6e4}{HSA\+\_\+\+PACKET\+\_\+\+HEADER\+\_\+\+WIDTH\+\_\+\+ACQUIRE\+\_\+\+FENCE\+\_\+\+SCOPE}} = 2
+, \newline
+\mbox{\hyperlink{group__aql_ggad1d46c8ae53112cb06bf364b65b4b0caa073e6f770ee5da8322269dce0b09977c}{HSA\+\_\+\+PACKET\+\_\+\+HEADER\+\_\+\+WIDTH\+\_\+\+SCRELEASE\+\_\+\+FENCE\+\_\+\+SCOPE}} = 2
+, \mbox{\hyperlink{group__aql_ggad1d46c8ae53112cb06bf364b65b4b0caafa5bc3e72b6870807487953db6d09e92}{HSA\+\_\+\+PACKET\+\_\+\+HEADER\+\_\+\+WIDTH\+\_\+\+RELEASE\+\_\+\+FENCE\+\_\+\+SCOPE}} = 2
+ \}
+\begin{DoxyCompactList}\small\item\em Width (in bits) of the sub-\/fields in \mbox{\hyperlink{group__aql_ga2f03beef9c37e464b3837f2646d30870}{hsa\+\_\+packet\+\_\+header\+\_\+t}}. \end{DoxyCompactList}\item 
+enum \mbox{\hyperlink{group__aql_ga0b4e16703a05220bbd72a70bb0fca6fa}{hsa\+\_\+kernel\+\_\+dispatch\+\_\+packet\+\_\+setup\+\_\+t}} \{ \mbox{\hyperlink{group__aql_gga0b4e16703a05220bbd72a70bb0fca6faa7fbd464fd82b46169843e11877f60bde}{HSA\+\_\+\+KERNEL\+\_\+\+DISPATCH\+\_\+\+PACKET\+\_\+\+SETUP\+\_\+\+DIMENSIONS}} = 0
+ \}
+\begin{DoxyCompactList}\small\item\em Sub-\/fields of the kernel dispatch packet {\itshape setup} field. The offset (with respect to the address of {\itshape setup}) of a sub-\/field is identical to its enumeration constant. The width of each sub-\/field is determined by the corresponding value in \mbox{\hyperlink{group__aql_gacf1c0ae7598d222c582cf5f68aefc994}{hsa\+\_\+kernel\+\_\+dispatch\+\_\+packet\+\_\+setup\+\_\+width\+\_\+t}}. The offset and the width are expressed in bits. \end{DoxyCompactList}\item 
+enum \mbox{\hyperlink{group__aql_gacf1c0ae7598d222c582cf5f68aefc994}{hsa\+\_\+kernel\+\_\+dispatch\+\_\+packet\+\_\+setup\+\_\+width\+\_\+t}} \{ \mbox{\hyperlink{group__aql_ggacf1c0ae7598d222c582cf5f68aefc994a8eae1a35c31d2e0295bfaf3c15f03c79}{HSA\+\_\+\+KERNEL\+\_\+\+DISPATCH\+\_\+\+PACKET\+\_\+\+SETUP\+\_\+\+WIDTH\+\_\+\+DIMENSIONS}} = 2
+ \}
+\begin{DoxyCompactList}\small\item\em Width (in bits) of the sub-\/fields in \mbox{\hyperlink{group__aql_ga0b4e16703a05220bbd72a70bb0fca6fa}{hsa\+\_\+kernel\+\_\+dispatch\+\_\+packet\+\_\+setup\+\_\+t}}. \end{DoxyCompactList}\item 
+enum \mbox{\hyperlink{group__aql_ga75b4a4b8ec7d5f3eb97b0e1308fef7a8}{hsa\+\_\+amd\+\_\+packet\+\_\+type\+\_\+t}} \{ \mbox{\hyperlink{group__aql_gga75b4a4b8ec7d5f3eb97b0e1308fef7a8a832a43ef3c54b9becb9182045450af57}{HSA\+\_\+\+AMD\+\_\+\+PACKET\+\_\+\+TYPE\+\_\+\+BARRIER\+\_\+\+VALUE}} = 2
+ \}
+\begin{DoxyCompactList}\small\item\em AMD vendor specific packet type. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+
+
+\doxysubsection{Typedef Documentation}
+\mbox{\Hypertarget{group__aql_ga0d221a04e9a28834f9f8a53c6dc34927}\label{group__aql_ga0d221a04e9a28834f9f8a53c6dc34927}} 
+\index{Architected Queuing Language@{Architected Queuing Language}!hsa\_agent\_dispatch\_packet\_t@{hsa\_agent\_dispatch\_packet\_t}}
+\index{hsa\_agent\_dispatch\_packet\_t@{hsa\_agent\_dispatch\_packet\_t}!Architected Queuing Language@{Architected Queuing Language}}
+\doxysubsubsection{\texorpdfstring{hsa\_agent\_dispatch\_packet\_t}{hsa\_agent\_dispatch\_packet\_t}}
+{\footnotesize\ttfamily typedef struct \mbox{\hyperlink{structhsa__agent__dispatch__packet__s}{hsa\+\_\+agent\+\_\+dispatch\+\_\+packet\+\_\+s}} \mbox{\hyperlink{group__aql_ga0d221a04e9a28834f9f8a53c6dc34927}{hsa\+\_\+agent\+\_\+dispatch\+\_\+packet\+\_\+t}}}
+
+
+
+Agent dispatch packet. 
+
+\mbox{\Hypertarget{group__aql_ga683484f187b02810ad81c20a607e844f}\label{group__aql_ga683484f187b02810ad81c20a607e844f}} 
+\index{Architected Queuing Language@{Architected Queuing Language}!hsa\_amd\_barrier\_value\_packet\_t@{hsa\_amd\_barrier\_value\_packet\_t}}
+\index{hsa\_amd\_barrier\_value\_packet\_t@{hsa\_amd\_barrier\_value\_packet\_t}!Architected Queuing Language@{Architected Queuing Language}}
+\doxysubsubsection{\texorpdfstring{hsa\_amd\_barrier\_value\_packet\_t}{hsa\_amd\_barrier\_value\_packet\_t}}
+{\footnotesize\ttfamily typedef struct \mbox{\hyperlink{structhsa__amd__barrier__value__packet__s}{hsa\+\_\+amd\+\_\+barrier\+\_\+value\+\_\+packet\+\_\+s}} \mbox{\hyperlink{group__aql_ga683484f187b02810ad81c20a607e844f}{hsa\+\_\+amd\+\_\+barrier\+\_\+value\+\_\+packet\+\_\+t}}}
+
+
+
+AMD barrier value packet. Halts packet processing and waits for (signal\+\_\+value \& \+::mask) \+::cond \+::value to be satisfied, where signal\+\_\+value is the value of the signal \+::signal. 
+
+\mbox{\Hypertarget{group__aql_ga32a84fac18e61e026682c0a69ca87e8a}\label{group__aql_ga32a84fac18e61e026682c0a69ca87e8a}} 
+\index{Architected Queuing Language@{Architected Queuing Language}!hsa\_amd\_packet\_type8\_t@{hsa\_amd\_packet\_type8\_t}}
+\index{hsa\_amd\_packet\_type8\_t@{hsa\_amd\_packet\_type8\_t}!Architected Queuing Language@{Architected Queuing Language}}
+\doxysubsubsection{\texorpdfstring{hsa\_amd\_packet\_type8\_t}{hsa\_amd\_packet\_type8\_t}}
+{\footnotesize\ttfamily typedef uint8\+\_\+t \mbox{\hyperlink{group__aql_ga32a84fac18e61e026682c0a69ca87e8a}{hsa\+\_\+amd\+\_\+packet\+\_\+type8\+\_\+t}}}
+
+
+
+A fixed-\/size type used to represent \mbox{\hyperlink{group__aql_ga75b4a4b8ec7d5f3eb97b0e1308fef7a8}{hsa\+\_\+amd\+\_\+packet\+\_\+type\+\_\+t}} constants. 
+
+\mbox{\Hypertarget{group__aql_gaf9362e46344dd2fbfda4ac8f199db6ee}\label{group__aql_gaf9362e46344dd2fbfda4ac8f199db6ee}} 
+\index{Architected Queuing Language@{Architected Queuing Language}!hsa\_amd\_vendor\_packet\_header\_t@{hsa\_amd\_vendor\_packet\_header\_t}}
+\index{hsa\_amd\_vendor\_packet\_header\_t@{hsa\_amd\_vendor\_packet\_header\_t}!Architected Queuing Language@{Architected Queuing Language}}
+\doxysubsubsection{\texorpdfstring{hsa\_amd\_vendor\_packet\_header\_t}{hsa\_amd\_vendor\_packet\_header\_t}}
+{\footnotesize\ttfamily typedef struct \mbox{\hyperlink{structhsa__amd__packet__header__s}{hsa\+\_\+amd\+\_\+packet\+\_\+header\+\_\+s}} \mbox{\hyperlink{group__aql_gaf9362e46344dd2fbfda4ac8f199db6ee}{hsa\+\_\+amd\+\_\+vendor\+\_\+packet\+\_\+header\+\_\+t}}}
+
+
+
+AMD vendor specific AQL packet header. 
+
+\mbox{\Hypertarget{group__aql_gac999acb47a0e9232b4958c0a873bfacc}\label{group__aql_gac999acb47a0e9232b4958c0a873bfacc}} 
+\index{Architected Queuing Language@{Architected Queuing Language}!hsa\_barrier\_and\_packet\_t@{hsa\_barrier\_and\_packet\_t}}
+\index{hsa\_barrier\_and\_packet\_t@{hsa\_barrier\_and\_packet\_t}!Architected Queuing Language@{Architected Queuing Language}}
+\doxysubsubsection{\texorpdfstring{hsa\_barrier\_and\_packet\_t}{hsa\_barrier\_and\_packet\_t}}
+{\footnotesize\ttfamily typedef struct \mbox{\hyperlink{structhsa__barrier__and__packet__s}{hsa\+\_\+barrier\+\_\+and\+\_\+packet\+\_\+s}} \mbox{\hyperlink{group__aql_gac999acb47a0e9232b4958c0a873bfacc}{hsa\+\_\+barrier\+\_\+and\+\_\+packet\+\_\+t}}}
+
+
+
+Barrier-\/\+AND packet. 
+
+\mbox{\Hypertarget{group__aql_gaa20f8a6d8457782b1f09f9acf97e47e8}\label{group__aql_gaa20f8a6d8457782b1f09f9acf97e47e8}} 
+\index{Architected Queuing Language@{Architected Queuing Language}!hsa\_barrier\_or\_packet\_t@{hsa\_barrier\_or\_packet\_t}}
+\index{hsa\_barrier\_or\_packet\_t@{hsa\_barrier\_or\_packet\_t}!Architected Queuing Language@{Architected Queuing Language}}
+\doxysubsubsection{\texorpdfstring{hsa\_barrier\_or\_packet\_t}{hsa\_barrier\_or\_packet\_t}}
+{\footnotesize\ttfamily typedef struct \mbox{\hyperlink{structhsa__barrier__or__packet__s}{hsa\+\_\+barrier\+\_\+or\+\_\+packet\+\_\+s}} \mbox{\hyperlink{group__aql_gaa20f8a6d8457782b1f09f9acf97e47e8}{hsa\+\_\+barrier\+\_\+or\+\_\+packet\+\_\+t}}}
+
+
+
+Barrier-\/\+OR packet. 
+
+\mbox{\Hypertarget{group__aql_gaf08e3b09665195c8274b0d7c4b1015e3}\label{group__aql_gaf08e3b09665195c8274b0d7c4b1015e3}} 
+\index{Architected Queuing Language@{Architected Queuing Language}!hsa\_kernel\_dispatch\_packet\_t@{hsa\_kernel\_dispatch\_packet\_t}}
+\index{hsa\_kernel\_dispatch\_packet\_t@{hsa\_kernel\_dispatch\_packet\_t}!Architected Queuing Language@{Architected Queuing Language}}
+\doxysubsubsection{\texorpdfstring{hsa\_kernel\_dispatch\_packet\_t}{hsa\_kernel\_dispatch\_packet\_t}}
+{\footnotesize\ttfamily typedef struct \mbox{\hyperlink{structhsa__kernel__dispatch__packet__s}{hsa\+\_\+kernel\+\_\+dispatch\+\_\+packet\+\_\+s}} \mbox{\hyperlink{group__aql_gaf08e3b09665195c8274b0d7c4b1015e3}{hsa\+\_\+kernel\+\_\+dispatch\+\_\+packet\+\_\+t}}}
+
+
+
+AQL kernel dispatch packet. 
+
+\mbox{\Hypertarget{group__aql_gafe7712107c07c264ebc33d22b314a1c2}\label{group__aql_gafe7712107c07c264ebc33d22b314a1c2}} 
+\index{Architected Queuing Language@{Architected Queuing Language}!hsa\_signal\_condition32\_t@{hsa\_signal\_condition32\_t}}
+\index{hsa\_signal\_condition32\_t@{hsa\_signal\_condition32\_t}!Architected Queuing Language@{Architected Queuing Language}}
+\doxysubsubsection{\texorpdfstring{hsa\_signal\_condition32\_t}{hsa\_signal\_condition32\_t}}
+{\footnotesize\ttfamily typedef uint32\+\_\+t \mbox{\hyperlink{group__aql_gafe7712107c07c264ebc33d22b314a1c2}{hsa\+\_\+signal\+\_\+condition32\+\_\+t}}}
+
+
+
+A fixed-\/size type used to represent \mbox{\hyperlink{group__signals_gab7190fcff48c6dbeded341389ed17c8d}{hsa\+\_\+signal\+\_\+condition\+\_\+t}} constants. 
+
+
+
+\doxysubsection{Enumeration Type Documentation}
+\mbox{\Hypertarget{group__aql_ga75b4a4b8ec7d5f3eb97b0e1308fef7a8}\label{group__aql_ga75b4a4b8ec7d5f3eb97b0e1308fef7a8}} 
+\index{Architected Queuing Language@{Architected Queuing Language}!hsa\_amd\_packet\_type\_t@{hsa\_amd\_packet\_type\_t}}
+\index{hsa\_amd\_packet\_type\_t@{hsa\_amd\_packet\_type\_t}!Architected Queuing Language@{Architected Queuing Language}}
+\doxysubsubsection{\texorpdfstring{hsa\_amd\_packet\_type\_t}{hsa\_amd\_packet\_type\_t}}
+{\footnotesize\ttfamily enum \mbox{\hyperlink{group__aql_ga75b4a4b8ec7d5f3eb97b0e1308fef7a8}{hsa\+\_\+amd\+\_\+packet\+\_\+type\+\_\+t}}}
+
+
+
+AMD vendor specific packet type. 
+
+\begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{HSA\_AMD\_PACKET\_TYPE\_BARRIER\_VALUE@{HSA\_AMD\_PACKET\_TYPE\_BARRIER\_VALUE}!Architected Queuing Language@{Architected Queuing Language}}\index{Architected Queuing Language@{Architected Queuing Language}!HSA\_AMD\_PACKET\_TYPE\_BARRIER\_VALUE@{HSA\_AMD\_PACKET\_TYPE\_BARRIER\_VALUE}}}\mbox{\Hypertarget{group__aql_gga75b4a4b8ec7d5f3eb97b0e1308fef7a8a832a43ef3c54b9becb9182045450af57}\label{group__aql_gga75b4a4b8ec7d5f3eb97b0e1308fef7a8a832a43ef3c54b9becb9182045450af57}} 
+HSA\+\_\+\+AMD\+\_\+\+PACKET\+\_\+\+TYPE\+\_\+\+BARRIER\+\_\+\+VALUE&Packet used by agents to delay processing of subsequent packets until a configurable condition is satisfied by an HSA signal. Only kernel dispatch queues created from AMD GPU Agents support this packet. \\
+\hline
+
+\end{DoxyEnumFields}
+\mbox{\Hypertarget{group__aql_ga6c1a86878de5b0f980202ad7e4e8d42a}\label{group__aql_ga6c1a86878de5b0f980202ad7e4e8d42a}} 
+\index{Architected Queuing Language@{Architected Queuing Language}!hsa\_fence\_scope\_t@{hsa\_fence\_scope\_t}}
+\index{hsa\_fence\_scope\_t@{hsa\_fence\_scope\_t}!Architected Queuing Language@{Architected Queuing Language}}
+\doxysubsubsection{\texorpdfstring{hsa\_fence\_scope\_t}{hsa\_fence\_scope\_t}}
+{\footnotesize\ttfamily enum \mbox{\hyperlink{group__aql_ga6c1a86878de5b0f980202ad7e4e8d42a}{hsa\+\_\+fence\+\_\+scope\+\_\+t}}}
+
+
+
+Scope of the memory fence operation associated with a packet. 
+
+\begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{HSA\_FENCE\_SCOPE\_NONE@{HSA\_FENCE\_SCOPE\_NONE}!Architected Queuing Language@{Architected Queuing Language}}\index{Architected Queuing Language@{Architected Queuing Language}!HSA\_FENCE\_SCOPE\_NONE@{HSA\_FENCE\_SCOPE\_NONE}}}\mbox{\Hypertarget{group__aql_gga6c1a86878de5b0f980202ad7e4e8d42aa5dc7b942cd56f91094a088435027be2c}\label{group__aql_gga6c1a86878de5b0f980202ad7e4e8d42aa5dc7b942cd56f91094a088435027be2c}} 
+HSA\+\_\+\+FENCE\+\_\+\+SCOPE\+\_\+\+NONE&No scope (no fence is applied). The packet relies on external fences to ensure visibility of memory updates. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{HSA\_FENCE\_SCOPE\_AGENT@{HSA\_FENCE\_SCOPE\_AGENT}!Architected Queuing Language@{Architected Queuing Language}}\index{Architected Queuing Language@{Architected Queuing Language}!HSA\_FENCE\_SCOPE\_AGENT@{HSA\_FENCE\_SCOPE\_AGENT}}}\mbox{\Hypertarget{group__aql_gga6c1a86878de5b0f980202ad7e4e8d42aa9879cf99ba63616fe61da22281df814e}\label{group__aql_gga6c1a86878de5b0f980202ad7e4e8d42aa9879cf99ba63616fe61da22281df814e}} 
+HSA\+\_\+\+FENCE\+\_\+\+SCOPE\+\_\+\+AGENT&The fence is applied with agent scope for the global segment. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{HSA\_FENCE\_SCOPE\_SYSTEM@{HSA\_FENCE\_SCOPE\_SYSTEM}!Architected Queuing Language@{Architected Queuing Language}}\index{Architected Queuing Language@{Architected Queuing Language}!HSA\_FENCE\_SCOPE\_SYSTEM@{HSA\_FENCE\_SCOPE\_SYSTEM}}}\mbox{\Hypertarget{group__aql_gga6c1a86878de5b0f980202ad7e4e8d42aa6ecb203c10f12ec4bcf475d527c3a870}\label{group__aql_gga6c1a86878de5b0f980202ad7e4e8d42aa6ecb203c10f12ec4bcf475d527c3a870}} 
+HSA\+\_\+\+FENCE\+\_\+\+SCOPE\+\_\+\+SYSTEM&The fence is applied across both agent and system scope for the global segment. \\
+\hline
+
+\end{DoxyEnumFields}
+\mbox{\Hypertarget{group__aql_ga0b4e16703a05220bbd72a70bb0fca6fa}\label{group__aql_ga0b4e16703a05220bbd72a70bb0fca6fa}} 
+\index{Architected Queuing Language@{Architected Queuing Language}!hsa\_kernel\_dispatch\_packet\_setup\_t@{hsa\_kernel\_dispatch\_packet\_setup\_t}}
+\index{hsa\_kernel\_dispatch\_packet\_setup\_t@{hsa\_kernel\_dispatch\_packet\_setup\_t}!Architected Queuing Language@{Architected Queuing Language}}
+\doxysubsubsection{\texorpdfstring{hsa\_kernel\_dispatch\_packet\_setup\_t}{hsa\_kernel\_dispatch\_packet\_setup\_t}}
+{\footnotesize\ttfamily enum \mbox{\hyperlink{group__aql_ga0b4e16703a05220bbd72a70bb0fca6fa}{hsa\+\_\+kernel\+\_\+dispatch\+\_\+packet\+\_\+setup\+\_\+t}}}
+
+
+
+Sub-\/fields of the kernel dispatch packet {\itshape setup} field. The offset (with respect to the address of {\itshape setup}) of a sub-\/field is identical to its enumeration constant. The width of each sub-\/field is determined by the corresponding value in \mbox{\hyperlink{group__aql_gacf1c0ae7598d222c582cf5f68aefc994}{hsa\+\_\+kernel\+\_\+dispatch\+\_\+packet\+\_\+setup\+\_\+width\+\_\+t}}. The offset and the width are expressed in bits. 
+
+\begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{HSA\_KERNEL\_DISPATCH\_PACKET\_SETUP\_DIMENSIONS@{HSA\_KERNEL\_DISPATCH\_PACKET\_SETUP\_DIMENSIONS}!Architected Queuing Language@{Architected Queuing Language}}\index{Architected Queuing Language@{Architected Queuing Language}!HSA\_KERNEL\_DISPATCH\_PACKET\_SETUP\_DIMENSIONS@{HSA\_KERNEL\_DISPATCH\_PACKET\_SETUP\_DIMENSIONS}}}\mbox{\Hypertarget{group__aql_gga0b4e16703a05220bbd72a70bb0fca6faa7fbd464fd82b46169843e11877f60bde}\label{group__aql_gga0b4e16703a05220bbd72a70bb0fca6faa7fbd464fd82b46169843e11877f60bde}} 
+HSA\+\_\+\+KERNEL\+\_\+\+DISPATCH\+\_\+\+PACKET\+\_\+\+SETUP\+\_\+\+DIMENSIONS&Number of dimensions of the grid. Valid values are 1, 2, or 3. \\
+\hline
+
+\end{DoxyEnumFields}
+\mbox{\Hypertarget{group__aql_gacf1c0ae7598d222c582cf5f68aefc994}\label{group__aql_gacf1c0ae7598d222c582cf5f68aefc994}} 
+\index{Architected Queuing Language@{Architected Queuing Language}!hsa\_kernel\_dispatch\_packet\_setup\_width\_t@{hsa\_kernel\_dispatch\_packet\_setup\_width\_t}}
+\index{hsa\_kernel\_dispatch\_packet\_setup\_width\_t@{hsa\_kernel\_dispatch\_packet\_setup\_width\_t}!Architected Queuing Language@{Architected Queuing Language}}
+\doxysubsubsection{\texorpdfstring{hsa\_kernel\_dispatch\_packet\_setup\_width\_t}{hsa\_kernel\_dispatch\_packet\_setup\_width\_t}}
+{\footnotesize\ttfamily enum \mbox{\hyperlink{group__aql_gacf1c0ae7598d222c582cf5f68aefc994}{hsa\+\_\+kernel\+\_\+dispatch\+\_\+packet\+\_\+setup\+\_\+width\+\_\+t}}}
+
+
+
+Width (in bits) of the sub-\/fields in \mbox{\hyperlink{group__aql_ga0b4e16703a05220bbd72a70bb0fca6fa}{hsa\+\_\+kernel\+\_\+dispatch\+\_\+packet\+\_\+setup\+\_\+t}}. 
+
+\begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{HSA\_KERNEL\_DISPATCH\_PACKET\_SETUP\_WIDTH\_DIMENSIONS@{HSA\_KERNEL\_DISPATCH\_PACKET\_SETUP\_WIDTH\_DIMENSIONS}!Architected Queuing Language@{Architected Queuing Language}}\index{Architected Queuing Language@{Architected Queuing Language}!HSA\_KERNEL\_DISPATCH\_PACKET\_SETUP\_WIDTH\_DIMENSIONS@{HSA\_KERNEL\_DISPATCH\_PACKET\_SETUP\_WIDTH\_DIMENSIONS}}}\mbox{\Hypertarget{group__aql_ggacf1c0ae7598d222c582cf5f68aefc994a8eae1a35c31d2e0295bfaf3c15f03c79}\label{group__aql_ggacf1c0ae7598d222c582cf5f68aefc994a8eae1a35c31d2e0295bfaf3c15f03c79}} 
+HSA\+\_\+\+KERNEL\+\_\+\+DISPATCH\+\_\+\+PACKET\+\_\+\+SETUP\+\_\+\+WIDTH\+\_\+\+DIMENSIONS&\\
+\hline
+
+\end{DoxyEnumFields}
+\mbox{\Hypertarget{group__aql_ga2f03beef9c37e464b3837f2646d30870}\label{group__aql_ga2f03beef9c37e464b3837f2646d30870}} 
+\index{Architected Queuing Language@{Architected Queuing Language}!hsa\_packet\_header\_t@{hsa\_packet\_header\_t}}
+\index{hsa\_packet\_header\_t@{hsa\_packet\_header\_t}!Architected Queuing Language@{Architected Queuing Language}}
+\doxysubsubsection{\texorpdfstring{hsa\_packet\_header\_t}{hsa\_packet\_header\_t}}
+{\footnotesize\ttfamily enum \mbox{\hyperlink{group__aql_ga2f03beef9c37e464b3837f2646d30870}{hsa\+\_\+packet\+\_\+header\+\_\+t}}}
+
+
+
+Sub-\/fields of the {\itshape header} field that is present in any AQL packet. The offset (with respect to the address of {\itshape header}) of a sub-\/field is identical to its enumeration constant. The width of each sub-\/field is determined by the corresponding value in \mbox{\hyperlink{group__aql_gad1d46c8ae53112cb06bf364b65b4b0ca}{hsa\+\_\+packet\+\_\+header\+\_\+width\+\_\+t}}. The offset and the width are expressed in bits. 
+
+\begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{HSA\_PACKET\_HEADER\_TYPE@{HSA\_PACKET\_HEADER\_TYPE}!Architected Queuing Language@{Architected Queuing Language}}\index{Architected Queuing Language@{Architected Queuing Language}!HSA\_PACKET\_HEADER\_TYPE@{HSA\_PACKET\_HEADER\_TYPE}}}\mbox{\Hypertarget{group__aql_gga2f03beef9c37e464b3837f2646d30870a28b2f227c66db4ddcefb5856e7958e6c}\label{group__aql_gga2f03beef9c37e464b3837f2646d30870a28b2f227c66db4ddcefb5856e7958e6c}} 
+HSA\+\_\+\+PACKET\+\_\+\+HEADER\+\_\+\+TYPE&Packet type. The value of this sub-\/field must be one of \mbox{\hyperlink{group__aql_ga35a04bfe654a1c980ac904cafd6373a1}{hsa\+\_\+packet\+\_\+type\+\_\+t}}. If the type is \mbox{\hyperlink{group__aql_gga35a04bfe654a1c980ac904cafd6373a1a86eecc1851fdf8b10538f994549ded8b}{HSA\+\_\+\+PACKET\+\_\+\+TYPE\+\_\+\+VENDOR\+\_\+\+SPECIFIC}}, the packet layout is vendor-\/specific. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{HSA\_PACKET\_HEADER\_BARRIER@{HSA\_PACKET\_HEADER\_BARRIER}!Architected Queuing Language@{Architected Queuing Language}}\index{Architected Queuing Language@{Architected Queuing Language}!HSA\_PACKET\_HEADER\_BARRIER@{HSA\_PACKET\_HEADER\_BARRIER}}}\mbox{\Hypertarget{group__aql_gga2f03beef9c37e464b3837f2646d30870aa967f75e5d6ad03f764a1db4bb8351a4}\label{group__aql_gga2f03beef9c37e464b3837f2646d30870aa967f75e5d6ad03f764a1db4bb8351a4}} 
+HSA\+\_\+\+PACKET\+\_\+\+HEADER\+\_\+\+BARRIER&Barrier bit. If the barrier bit is set, the processing of the current packet only launches when all preceding packets (within the same queue) are complete. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{HSA\_PACKET\_HEADER\_SCACQUIRE\_FENCE\_SCOPE@{HSA\_PACKET\_HEADER\_SCACQUIRE\_FENCE\_SCOPE}!Architected Queuing Language@{Architected Queuing Language}}\index{Architected Queuing Language@{Architected Queuing Language}!HSA\_PACKET\_HEADER\_SCACQUIRE\_FENCE\_SCOPE@{HSA\_PACKET\_HEADER\_SCACQUIRE\_FENCE\_SCOPE}}}\mbox{\Hypertarget{group__aql_gga2f03beef9c37e464b3837f2646d30870a02bc578de13a9abc0d2ba7f59e788960}\label{group__aql_gga2f03beef9c37e464b3837f2646d30870a02bc578de13a9abc0d2ba7f59e788960}} 
+HSA\+\_\+\+PACKET\+\_\+\+HEADER\+\_\+\+SCACQUIRE\+\_\+\+FENCE\+\_\+\+SCOPE&Acquire fence scope. The value of this sub-\/field determines the scope and type of the memory fence operation applied before the packet enters the active phase. An acquire fence ensures that any subsequent global segment or image loads by any unit of execution that belongs to a dispatch that has not yet entered the active phase on any queue of the same kernel agent, sees any data previously released at the scopes specified by the acquire fence. The value of this sub-\/field must be one of \mbox{\hyperlink{group__aql_ga6c1a86878de5b0f980202ad7e4e8d42a}{hsa\+\_\+fence\+\_\+scope\+\_\+t}}. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{HSA\_PACKET\_HEADER\_ACQUIRE\_FENCE\_SCOPE@{HSA\_PACKET\_HEADER\_ACQUIRE\_FENCE\_SCOPE}!Architected Queuing Language@{Architected Queuing Language}}\index{Architected Queuing Language@{Architected Queuing Language}!HSA\_PACKET\_HEADER\_ACQUIRE\_FENCE\_SCOPE@{HSA\_PACKET\_HEADER\_ACQUIRE\_FENCE\_SCOPE}}}\mbox{\Hypertarget{group__aql_gga2f03beef9c37e464b3837f2646d30870ac601d1e724c4e367bc55e4c4c204dd93}\label{group__aql_gga2f03beef9c37e464b3837f2646d30870ac601d1e724c4e367bc55e4c4c204dd93}} 
+HSA\+\_\+\+PACKET\+\_\+\+HEADER\+\_\+\+ACQUIRE\+\_\+\+FENCE\+\_\+\+SCOPE&\begin{DoxyRefDesc}{Deprecated}
+\item[\mbox{\hyperlink{deprecated__deprecated000074}{Deprecated}}]Renamed as \mbox{\hyperlink{group__aql_gga2f03beef9c37e464b3837f2646d30870a02bc578de13a9abc0d2ba7f59e788960}{HSA\+\_\+\+PACKET\+\_\+\+HEADER\+\_\+\+SCACQUIRE\+\_\+\+FENCE\+\_\+\+SCOPE}}. \end{DoxyRefDesc}
+\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{HSA\_PACKET\_HEADER\_SCRELEASE\_FENCE\_SCOPE@{HSA\_PACKET\_HEADER\_SCRELEASE\_FENCE\_SCOPE}!Architected Queuing Language@{Architected Queuing Language}}\index{Architected Queuing Language@{Architected Queuing Language}!HSA\_PACKET\_HEADER\_SCRELEASE\_FENCE\_SCOPE@{HSA\_PACKET\_HEADER\_SCRELEASE\_FENCE\_SCOPE}}}\mbox{\Hypertarget{group__aql_gga2f03beef9c37e464b3837f2646d30870a8fd59e5972b701019cb4b55799891ced}\label{group__aql_gga2f03beef9c37e464b3837f2646d30870a8fd59e5972b701019cb4b55799891ced}} 
+HSA\+\_\+\+PACKET\+\_\+\+HEADER\+\_\+\+SCRELEASE\+\_\+\+FENCE\+\_\+\+SCOPE&Release fence scope, The value of this sub-\/field determines the scope and type of the memory fence operation applied after kernel completion but before the packet is completed. A release fence makes any global segment or image data that was stored by any unit of execution that belonged to a dispatch that has completed the active phase on any queue of the same kernel agent visible in all the scopes specified by the release fence. The value of this sub-\/field must be one of \mbox{\hyperlink{group__aql_ga6c1a86878de5b0f980202ad7e4e8d42a}{hsa\+\_\+fence\+\_\+scope\+\_\+t}}. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{HSA\_PACKET\_HEADER\_RELEASE\_FENCE\_SCOPE@{HSA\_PACKET\_HEADER\_RELEASE\_FENCE\_SCOPE}!Architected Queuing Language@{Architected Queuing Language}}\index{Architected Queuing Language@{Architected Queuing Language}!HSA\_PACKET\_HEADER\_RELEASE\_FENCE\_SCOPE@{HSA\_PACKET\_HEADER\_RELEASE\_FENCE\_SCOPE}}}\mbox{\Hypertarget{group__aql_gga2f03beef9c37e464b3837f2646d30870a1249cac1bb408dc724f22362ded245c6}\label{group__aql_gga2f03beef9c37e464b3837f2646d30870a1249cac1bb408dc724f22362ded245c6}} 
+HSA\+\_\+\+PACKET\+\_\+\+HEADER\+\_\+\+RELEASE\+\_\+\+FENCE\+\_\+\+SCOPE&\begin{DoxyRefDesc}{Deprecated}
+\item[\mbox{\hyperlink{deprecated__deprecated000075}{Deprecated}}]Renamed as \mbox{\hyperlink{group__aql_gga2f03beef9c37e464b3837f2646d30870a8fd59e5972b701019cb4b55799891ced}{HSA\+\_\+\+PACKET\+\_\+\+HEADER\+\_\+\+SCRELEASE\+\_\+\+FENCE\+\_\+\+SCOPE}}. \end{DoxyRefDesc}
+\\
+\hline
+
+\end{DoxyEnumFields}
+\mbox{\Hypertarget{group__aql_gad1d46c8ae53112cb06bf364b65b4b0ca}\label{group__aql_gad1d46c8ae53112cb06bf364b65b4b0ca}} 
+\index{Architected Queuing Language@{Architected Queuing Language}!hsa\_packet\_header\_width\_t@{hsa\_packet\_header\_width\_t}}
+\index{hsa\_packet\_header\_width\_t@{hsa\_packet\_header\_width\_t}!Architected Queuing Language@{Architected Queuing Language}}
+\doxysubsubsection{\texorpdfstring{hsa\_packet\_header\_width\_t}{hsa\_packet\_header\_width\_t}}
+{\footnotesize\ttfamily enum \mbox{\hyperlink{group__aql_gad1d46c8ae53112cb06bf364b65b4b0ca}{hsa\+\_\+packet\+\_\+header\+\_\+width\+\_\+t}}}
+
+
+
+Width (in bits) of the sub-\/fields in \mbox{\hyperlink{group__aql_ga2f03beef9c37e464b3837f2646d30870}{hsa\+\_\+packet\+\_\+header\+\_\+t}}. 
+
+\begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{HSA\_PACKET\_HEADER\_WIDTH\_TYPE@{HSA\_PACKET\_HEADER\_WIDTH\_TYPE}!Architected Queuing Language@{Architected Queuing Language}}\index{Architected Queuing Language@{Architected Queuing Language}!HSA\_PACKET\_HEADER\_WIDTH\_TYPE@{HSA\_PACKET\_HEADER\_WIDTH\_TYPE}}}\mbox{\Hypertarget{group__aql_ggad1d46c8ae53112cb06bf364b65b4b0caa9d692b0ccc6dcf9fa2f8fe908d0f5f5e}\label{group__aql_ggad1d46c8ae53112cb06bf364b65b4b0caa9d692b0ccc6dcf9fa2f8fe908d0f5f5e}} 
+HSA\+\_\+\+PACKET\+\_\+\+HEADER\+\_\+\+WIDTH\+\_\+\+TYPE&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{HSA\_PACKET\_HEADER\_WIDTH\_BARRIER@{HSA\_PACKET\_HEADER\_WIDTH\_BARRIER}!Architected Queuing Language@{Architected Queuing Language}}\index{Architected Queuing Language@{Architected Queuing Language}!HSA\_PACKET\_HEADER\_WIDTH\_BARRIER@{HSA\_PACKET\_HEADER\_WIDTH\_BARRIER}}}\mbox{\Hypertarget{group__aql_ggad1d46c8ae53112cb06bf364b65b4b0caa66f1ecb4b8877e84ae33ecf0d9696453}\label{group__aql_ggad1d46c8ae53112cb06bf364b65b4b0caa66f1ecb4b8877e84ae33ecf0d9696453}} 
+HSA\+\_\+\+PACKET\+\_\+\+HEADER\+\_\+\+WIDTH\+\_\+\+BARRIER&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{HSA\_PACKET\_HEADER\_WIDTH\_SCACQUIRE\_FENCE\_SCOPE@{HSA\_PACKET\_HEADER\_WIDTH\_SCACQUIRE\_FENCE\_SCOPE}!Architected Queuing Language@{Architected Queuing Language}}\index{Architected Queuing Language@{Architected Queuing Language}!HSA\_PACKET\_HEADER\_WIDTH\_SCACQUIRE\_FENCE\_SCOPE@{HSA\_PACKET\_HEADER\_WIDTH\_SCACQUIRE\_FENCE\_SCOPE}}}\mbox{\Hypertarget{group__aql_ggad1d46c8ae53112cb06bf364b65b4b0caa57349a3d0d98ddd32020ff5269916704}\label{group__aql_ggad1d46c8ae53112cb06bf364b65b4b0caa57349a3d0d98ddd32020ff5269916704}} 
+HSA\+\_\+\+PACKET\+\_\+\+HEADER\+\_\+\+WIDTH\+\_\+\+SCACQUIRE\+\_\+\+FENCE\+\_\+\+SCOPE&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{HSA\_PACKET\_HEADER\_WIDTH\_ACQUIRE\_FENCE\_SCOPE@{HSA\_PACKET\_HEADER\_WIDTH\_ACQUIRE\_FENCE\_SCOPE}!Architected Queuing Language@{Architected Queuing Language}}\index{Architected Queuing Language@{Architected Queuing Language}!HSA\_PACKET\_HEADER\_WIDTH\_ACQUIRE\_FENCE\_SCOPE@{HSA\_PACKET\_HEADER\_WIDTH\_ACQUIRE\_FENCE\_SCOPE}}}\mbox{\Hypertarget{group__aql_ggad1d46c8ae53112cb06bf364b65b4b0caaa93fa7a40165562b55931542d4dac6e4}\label{group__aql_ggad1d46c8ae53112cb06bf364b65b4b0caaa93fa7a40165562b55931542d4dac6e4}} 
+HSA\+\_\+\+PACKET\+\_\+\+HEADER\+\_\+\+WIDTH\+\_\+\+ACQUIRE\+\_\+\+FENCE\+\_\+\+SCOPE&\begin{DoxyRefDesc}{Deprecated}
+\item[\mbox{\hyperlink{deprecated__deprecated000076}{Deprecated}}]Use HSA\+\_\+\+PACKET\+\_\+\+HEADER\+\_\+\+WIDTH\+\_\+\+SCACQUIRE\+\_\+\+FENCE\+\_\+\+SCOPE. \end{DoxyRefDesc}
+\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{HSA\_PACKET\_HEADER\_WIDTH\_SCRELEASE\_FENCE\_SCOPE@{HSA\_PACKET\_HEADER\_WIDTH\_SCRELEASE\_FENCE\_SCOPE}!Architected Queuing Language@{Architected Queuing Language}}\index{Architected Queuing Language@{Architected Queuing Language}!HSA\_PACKET\_HEADER\_WIDTH\_SCRELEASE\_FENCE\_SCOPE@{HSA\_PACKET\_HEADER\_WIDTH\_SCRELEASE\_FENCE\_SCOPE}}}\mbox{\Hypertarget{group__aql_ggad1d46c8ae53112cb06bf364b65b4b0caa073e6f770ee5da8322269dce0b09977c}\label{group__aql_ggad1d46c8ae53112cb06bf364b65b4b0caa073e6f770ee5da8322269dce0b09977c}} 
+HSA\+\_\+\+PACKET\+\_\+\+HEADER\+\_\+\+WIDTH\+\_\+\+SCRELEASE\+\_\+\+FENCE\+\_\+\+SCOPE&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{HSA\_PACKET\_HEADER\_WIDTH\_RELEASE\_FENCE\_SCOPE@{HSA\_PACKET\_HEADER\_WIDTH\_RELEASE\_FENCE\_SCOPE}!Architected Queuing Language@{Architected Queuing Language}}\index{Architected Queuing Language@{Architected Queuing Language}!HSA\_PACKET\_HEADER\_WIDTH\_RELEASE\_FENCE\_SCOPE@{HSA\_PACKET\_HEADER\_WIDTH\_RELEASE\_FENCE\_SCOPE}}}\mbox{\Hypertarget{group__aql_ggad1d46c8ae53112cb06bf364b65b4b0caafa5bc3e72b6870807487953db6d09e92}\label{group__aql_ggad1d46c8ae53112cb06bf364b65b4b0caafa5bc3e72b6870807487953db6d09e92}} 
+HSA\+\_\+\+PACKET\+\_\+\+HEADER\+\_\+\+WIDTH\+\_\+\+RELEASE\+\_\+\+FENCE\+\_\+\+SCOPE&\begin{DoxyRefDesc}{Deprecated}
+\item[\mbox{\hyperlink{deprecated__deprecated000077}{Deprecated}}]Use HSA\+\_\+\+PACKET\+\_\+\+HEADER\+\_\+\+WIDTH\+\_\+\+SCRELEASE\+\_\+\+FENCE\+\_\+\+SCOPE. \end{DoxyRefDesc}
+\\
+\hline
+
+\end{DoxyEnumFields}
+\mbox{\Hypertarget{group__aql_ga35a04bfe654a1c980ac904cafd6373a1}\label{group__aql_ga35a04bfe654a1c980ac904cafd6373a1}} 
+\index{Architected Queuing Language@{Architected Queuing Language}!hsa\_packet\_type\_t@{hsa\_packet\_type\_t}}
+\index{hsa\_packet\_type\_t@{hsa\_packet\_type\_t}!Architected Queuing Language@{Architected Queuing Language}}
+\doxysubsubsection{\texorpdfstring{hsa\_packet\_type\_t}{hsa\_packet\_type\_t}}
+{\footnotesize\ttfamily enum \mbox{\hyperlink{group__aql_ga35a04bfe654a1c980ac904cafd6373a1}{hsa\+\_\+packet\+\_\+type\+\_\+t}}}
+
+
+
+Packet type. 
+
+\begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{HSA\_PACKET\_TYPE\_VENDOR\_SPECIFIC@{HSA\_PACKET\_TYPE\_VENDOR\_SPECIFIC}!Architected Queuing Language@{Architected Queuing Language}}\index{Architected Queuing Language@{Architected Queuing Language}!HSA\_PACKET\_TYPE\_VENDOR\_SPECIFIC@{HSA\_PACKET\_TYPE\_VENDOR\_SPECIFIC}}}\mbox{\Hypertarget{group__aql_gga35a04bfe654a1c980ac904cafd6373a1a86eecc1851fdf8b10538f994549ded8b}\label{group__aql_gga35a04bfe654a1c980ac904cafd6373a1a86eecc1851fdf8b10538f994549ded8b}} 
+HSA\+\_\+\+PACKET\+\_\+\+TYPE\+\_\+\+VENDOR\+\_\+\+SPECIFIC&Vendor-\/specific packet. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{HSA\_PACKET\_TYPE\_INVALID@{HSA\_PACKET\_TYPE\_INVALID}!Architected Queuing Language@{Architected Queuing Language}}\index{Architected Queuing Language@{Architected Queuing Language}!HSA\_PACKET\_TYPE\_INVALID@{HSA\_PACKET\_TYPE\_INVALID}}}\mbox{\Hypertarget{group__aql_gga35a04bfe654a1c980ac904cafd6373a1a9030931b8fe80fb9add8c796cd8886c5}\label{group__aql_gga35a04bfe654a1c980ac904cafd6373a1a9030931b8fe80fb9add8c796cd8886c5}} 
+HSA\+\_\+\+PACKET\+\_\+\+TYPE\+\_\+\+INVALID&The packet has been processed in the past, but has not been reassigned to the packet processor. A packet processor must not process a packet of this type. All queues support this packet type. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{HSA\_PACKET\_TYPE\_KERNEL\_DISPATCH@{HSA\_PACKET\_TYPE\_KERNEL\_DISPATCH}!Architected Queuing Language@{Architected Queuing Language}}\index{Architected Queuing Language@{Architected Queuing Language}!HSA\_PACKET\_TYPE\_KERNEL\_DISPATCH@{HSA\_PACKET\_TYPE\_KERNEL\_DISPATCH}}}\mbox{\Hypertarget{group__aql_gga35a04bfe654a1c980ac904cafd6373a1ab639dc86e45ee0c9d07022a2e79cab56}\label{group__aql_gga35a04bfe654a1c980ac904cafd6373a1ab639dc86e45ee0c9d07022a2e79cab56}} 
+HSA\+\_\+\+PACKET\+\_\+\+TYPE\+\_\+\+KERNEL\+\_\+\+DISPATCH&Packet used by agents for dispatching jobs to kernel agents. Not all queues support packets of this type (see \mbox{\hyperlink{group__queue_ga1145b01f6d9e2670179a22c92db39413}{hsa\+\_\+queue\+\_\+feature\+\_\+t}}). \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{HSA\_PACKET\_TYPE\_BARRIER\_AND@{HSA\_PACKET\_TYPE\_BARRIER\_AND}!Architected Queuing Language@{Architected Queuing Language}}\index{Architected Queuing Language@{Architected Queuing Language}!HSA\_PACKET\_TYPE\_BARRIER\_AND@{HSA\_PACKET\_TYPE\_BARRIER\_AND}}}\mbox{\Hypertarget{group__aql_gga35a04bfe654a1c980ac904cafd6373a1a015bb0b76eccde0f58f27a570ada6b56}\label{group__aql_gga35a04bfe654a1c980ac904cafd6373a1a015bb0b76eccde0f58f27a570ada6b56}} 
+HSA\+\_\+\+PACKET\+\_\+\+TYPE\+\_\+\+BARRIER\+\_\+\+AND&Packet used by agents to delay processing of subsequent packets, and to express complex dependencies between multiple packets. All queues support this packet type. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{HSA\_PACKET\_TYPE\_AGENT\_DISPATCH@{HSA\_PACKET\_TYPE\_AGENT\_DISPATCH}!Architected Queuing Language@{Architected Queuing Language}}\index{Architected Queuing Language@{Architected Queuing Language}!HSA\_PACKET\_TYPE\_AGENT\_DISPATCH@{HSA\_PACKET\_TYPE\_AGENT\_DISPATCH}}}\mbox{\Hypertarget{group__aql_gga35a04bfe654a1c980ac904cafd6373a1aeb8ddfcceb12c29b12f52609e7bb7ce2}\label{group__aql_gga35a04bfe654a1c980ac904cafd6373a1aeb8ddfcceb12c29b12f52609e7bb7ce2}} 
+HSA\+\_\+\+PACKET\+\_\+\+TYPE\+\_\+\+AGENT\+\_\+\+DISPATCH&Packet used by agents for dispatching jobs to agents. Not all queues support packets of this type (see \mbox{\hyperlink{group__queue_ga1145b01f6d9e2670179a22c92db39413}{hsa\+\_\+queue\+\_\+feature\+\_\+t}}). \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{HSA\_PACKET\_TYPE\_BARRIER\_OR@{HSA\_PACKET\_TYPE\_BARRIER\_OR}!Architected Queuing Language@{Architected Queuing Language}}\index{Architected Queuing Language@{Architected Queuing Language}!HSA\_PACKET\_TYPE\_BARRIER\_OR@{HSA\_PACKET\_TYPE\_BARRIER\_OR}}}\mbox{\Hypertarget{group__aql_gga35a04bfe654a1c980ac904cafd6373a1a1953e793495a0d122be19580cd6a2523}\label{group__aql_gga35a04bfe654a1c980ac904cafd6373a1a1953e793495a0d122be19580cd6a2523}} 
+HSA\+\_\+\+PACKET\+\_\+\+TYPE\+\_\+\+BARRIER\+\_\+\+OR&Packet used by agents to delay processing of subsequent packets, and to express complex dependencies between multiple packets. All queues support this packet type. \\
+\hline
+
+\end{DoxyEnumFields}

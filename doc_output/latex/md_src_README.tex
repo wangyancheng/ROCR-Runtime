@@ -1,0 +1,181 @@
+This directory contains the ROC Runtime source code based on the HSA Runtime but modified to support AMD/\+ATI discrete GPUs.\hypertarget{md_src_README_autotoc_md12}{}\doxysection{Source \& Include Directories}\label{md_src_README_autotoc_md12}
+{\ttfamily core} -\/ Contains the source code for AMD\textquotesingle{}s implementation of the core HSA Runtime API\textquotesingle{}s.
+
+{\ttfamily cmake\+\_\+modules} -\/ CMake support modules and files.
+
+{\ttfamily inc} -\/ Contains the public and AMD specific header files exposing the HSA Runtime\`{}s interfaces.
+
+{\ttfamily libamdhsacode} -\/ Code object definitions and interface.
+
+{\ttfamily loader} -\/ Used to load code objects.
+
+{\ttfamily utils} -\/ Utilities required to build the core runtime.\hypertarget{md_src_README_autotoc_md13}{}\doxysection{Build Environment}\label{md_src_README_autotoc_md13}
+CMake build framework is used to build the ROC runtime. The minimum version is 3.\+7.
+
+Obtain cmake infrastructure\+: \href{http://www.cmake.org/download/}{\texttt{ http\+://www.\+cmake.\+org/download/}}
+
+Export cmake bin into your PATH\hypertarget{md_src_README_autotoc_md14}{}\doxysection{Package Dependencies}\label{md_src_README_autotoc_md14}
+The following support packages are required to successfully build the runtime\+:
+
+
+\begin{DoxyItemize}
+\item {\ttfamily libelf-\/dev}
+\item {\ttfamily g++}
+\end{DoxyItemize}\hypertarget{md_src_README_autotoc_md15}{}\doxysection{Building the Runtime}\label{md_src_README_autotoc_md15}
+To build the runtime a compatible version of the {\ttfamily libhsakmt} library and the {\ttfamily hsakmt.\+h} header file must be available. The latest version of these files can be obtained from the ROCT-\/\+Thunk-\/\+Interface repository, available here\+:
+
+\href{https://github.com/RadeonOpenCompute/ROCT-Thunk-Interface}{\texttt{ https\+://github.\+com/\+Radeon\+Open\+Compute/\+ROCT-\/\+Thunk-\/\+Interface}}
+
+As of ROCm release 3.\+7 {\ttfamily libhsakmt} development packages now include a CMake package config file. The runtime will now locate {\ttfamily libhsakmt} via {\ttfamily find\+\_\+package} if {\ttfamily libhsakmt} is installed to a standard location. For installations that do not use ROCm standard paths set CMake variables {\ttfamily CMAKE\+\_\+\+PREFIX\+\_\+\+PATH} or {\ttfamily hsakmt\+\_\+\+DIR} to override {\ttfamily find\+\_\+package} search paths.
+
+As of ROCm release 3.\+7 the runtime includes an optional image support module (previously {\ttfamily hsa-\/ext-\/rocr-\/dev}). By default this module is included in builds of the runtime. The image module may be excluded the runtime by setting CMake variable {\ttfamily IMAGE\+\_\+\+SUPPORT} to {\ttfamily OFF}.
+
+When building the optional image module additional build dependencies are required. An AMDGCN compatible clang and device library must be installed to build the image module. The latest version of these requirements can be obtained from the ROCm package repository (see\+: \href{https://rocmdocs.amd.com/en/latest/Installation_Guide/Installation-Guide.html}{\texttt{ https\+://rocmdocs.\+amd.\+com/en/latest/\+Installation\+\_\+\+Guide/\+Installation-\/\+Guide.\+html}}) The latest source for these projects may be found here\+:
+
+\href{https://github.com/RadeonOpenCompute/llvm-project}{\texttt{ https\+://github.\+com/\+Radeon\+Open\+Compute/llvm-\/project}}
+
+\href{https://github.com/RadeonOpenCompute/ROCm-Device-Libs}{\texttt{ https\+://github.\+com/\+Radeon\+Open\+Compute/\+ROCm-\/\+Device-\/\+Libs}}
+
+Additionally {\ttfamily xxd} must be installed.
+
+The runtime optionally supports use of the cmake user package registry. By default the registry is not modified. Set CMake variable {\ttfamily EXPORT\+\_\+\+TO\+\_\+\+USER\+\_\+\+PACKAGE\+\_\+\+REGISTRY} to {\ttfamily ON} to enable updating the package registry.
+
+For example, to build, install, and produce packages on a system with standard ROCm packages installed, execute the following from {\ttfamily src/}\+:
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{mkdir build}
+\DoxyCodeLine{cd build}
+\DoxyCodeLine{cmake -\/DCMAKE\_INSTALL\_PATH=/opt/rocm ..}
+\DoxyCodeLine{make}
+\DoxyCodeLine{make install}
+\DoxyCodeLine{make package}
+
+\end{DoxyCode}
+
+
+Example with a custom installation path, build dependency path, and options\+:
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{cmake -\/DIMAGE\_SUPPORT=OFF \(\backslash\)}
+\DoxyCodeLine{      -\/DEXPORT\_TO\_USER\_PACKAGE\_REGISTRY=ON \(\backslash\)}
+\DoxyCodeLine{      -\/DCMAKE\_VERBOSE\_MAKEFILE=1 \(\backslash\)}
+\DoxyCodeLine{      -\/DCMAKE\_PREFIX\_PATH=<alternate path(s) to build dependencies> \(\backslash\)}
+\DoxyCodeLine{      -\/DCMAKE\_INSTALL\_PATH=<custom install path for this build> \(\backslash\)}
+\DoxyCodeLine{      ..}
+
+\end{DoxyCode}
+
+
+Alternately {\ttfamily ccmake} and {\ttfamily cmake-\/gui} are supported\+:
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{mkdir build}
+\DoxyCodeLine{cd build}
+\DoxyCodeLine{ccmake ..}
+\DoxyCodeLine{press c to configure}
+\DoxyCodeLine{populate variables as desired}
+\DoxyCodeLine{press c again}
+\DoxyCodeLine{press g to generate and exit}
+\DoxyCodeLine{make}
+
+\end{DoxyCode}
+\hypertarget{md_src_README_autotoc_md16}{}\doxysection{Building Against the Runtime}\label{md_src_README_autotoc_md16}
+The runtime provides a CMake package config file, installed by default to {\ttfamily /opt/rocm/lib/cmake/hsa-\/runtime64}. The runtime exports CMake target {\ttfamily hsa-\/runtime64} in namespace {\ttfamily hsa-\/runtime64}. A CMake project ({\ttfamily Foo}) using the runtime may locate, include, and link the runtime with the following template\+:
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\# Add /opt/rocm to CMAKE\_PREFIX\_PATH.}
+\DoxyCodeLine{}
+\DoxyCodeLine{find\_package(hsa-\/runtime64 1.0 REQUIRED)}
+\DoxyCodeLine{...}
+\DoxyCodeLine{add\_library(Foo ...)}
+\DoxyCodeLine{...}
+\DoxyCodeLine{target\_link\_libraries(Foo PRIVATE hsa-\/runtime64::hsa-\/runtime64)}
+
+\end{DoxyCode}
+\hypertarget{md_src_README_autotoc_md17}{}\doxysection{Specs}\label{md_src_README_autotoc_md17}
+\href{http://www.hsafoundation.com/standards/}{\texttt{ http\+://www.\+hsafoundation.\+com/standards/}}
+
+HSA Runtime Specification 1.\+1
+
+HSA Programmer Reference Manual Specification 1.\+1
+
+HSA Platform System Architecture Specification 1.\+1\hypertarget{md_src_README_autotoc_md18}{}\doxysection{Runtime Design Overview}\label{md_src_README_autotoc_md18}
+The AMD ROC runtime consists of three primary layers\+:
+
+
+\begin{DoxyItemize}
+\item C interface adaptors
+\item C++ interfaces classes and common functions
+\item AMD device specific implementations
+\end{DoxyItemize}
+
+Additionally the runtime is dependent on a small utility library which provides simple common functions, limited operating system and compiler abstraction, as well as atomic operation interfaces.\hypertarget{md_src_README_autotoc_md19}{}\doxysection{C Interface Adaptors}\label{md_src_README_autotoc_md19}
+Files\+:
+
+
+\begin{DoxyItemize}
+\item {\ttfamily hsa.\+h}(cpp)
+\item {\ttfamily \mbox{\hyperlink{hsa__ext__interface_8h}{hsa\+\_\+ext\+\_\+interface.\+h}}}(cpp)
+\end{DoxyItemize}
+
+The C interface layer provides C99 APIs as defined in the HSA Runtime Specification 1.\+1. The interfaces and default definitions for the standard extensions are also provided. The interface functions simply forward to a function pointer table defined here. The table is initialized to point to default definitions, which simply return an appropriate error code. If available the extension library is loaded as part of runtime initialization and the table is updated to point into the extension library.\hypertarget{md_src_README_autotoc_md20}{}\doxysection{C++ Interfaces Classes \& Common Functions}\label{md_src_README_autotoc_md20}
+Files\+:
+
+
+\begin{DoxyItemize}
+\item {\ttfamily \mbox{\hyperlink{runtime_8h}{runtime.\+h}}}(cpp)
+\item {\ttfamily \mbox{\hyperlink{agent_8h}{agent.\+h}}}
+\item {\ttfamily \mbox{\hyperlink{queue_8h}{queue.\+h}}}
+\item {\ttfamily \mbox{\hyperlink{signal_8h}{signal.\+h}}}
+\item {\ttfamily \mbox{\hyperlink{memory__region_8h}{memory\+\_\+region.\+h}}}(cpp)
+\item {\ttfamily \mbox{\hyperlink{checked_8h}{checked.\+h}}}
+\item {\ttfamily memory\+\_\+database.\+h}(cpp)
+\item {\ttfamily \mbox{\hyperlink{default__signal_8h}{default\+\_\+signal.\+h}}}(cpp)
+\end{DoxyItemize}
+
+The C++ interface layer provides abstract interface classes encapsulating commands to HSA Signals, Agents, and Queues. This layer also contains the implementation of device independent commands, such as {\ttfamily hsa\+\_\+init} and {\ttfamily hsa\+\_\+system\+\_\+get\+\_\+info}, and a default signal and queue implementation.\hypertarget{md_src_README_autotoc_md21}{}\doxysection{Device Specific Implementations}\label{md_src_README_autotoc_md21}
+Files\+:
+
+
+\begin{DoxyItemize}
+\item {\ttfamily \mbox{\hyperlink{amd__cpu__agent_8h}{amd\+\_\+cpu\+\_\+agent.\+h}}}(cpp)
+\item {\ttfamily \mbox{\hyperlink{amd__gpu__agent_8h}{amd\+\_\+gpu\+\_\+agent.\+h}}}(cpp)
+\item {\ttfamily amd\+\_\+hw\+\_\+aql\+\_\+command\+\_\+processor.\+h}(cpp)
+\item {\ttfamily \mbox{\hyperlink{amd__memory__region_8h}{amd\+\_\+memory\+\_\+region.\+h}}}(cpp)
+\item {\ttfamily amd\+\_\+memory\+\_\+registration.\+h}(cpp)
+\item {\ttfamily \mbox{\hyperlink{amd__topology_8h}{amd\+\_\+topology.\+h}}}(cpp)
+\item {\ttfamily \mbox{\hyperlink{host__queue_8h}{host\+\_\+queue.\+h}}}(cpp)
+\item {\ttfamily \mbox{\hyperlink{interrupt__signal_8h}{interrupt\+\_\+signal.\+h}}}(cpp)
+\item {\ttfamily hsa\+\_\+ext\+\_\+private\+\_\+amd.\+h}(cpp)
+\end{DoxyItemize}
+
+The device specific layer contains implementations of the C++ interface classes which implement HSA functionality for ROCm supported devices.\hypertarget{md_src_README_autotoc_md22}{}\doxysection{Implemented Functionality}\label{md_src_README_autotoc_md22}
+
+\begin{DoxyItemize}
+\item The following queries are not implemented\+:
+\begin{DoxyItemize}
+\item {\ttfamily hsa\+\_\+code\+\_\+symbol\+\_\+get\+\_\+info}\+:
+\begin{DoxyItemize}
+\item {\ttfamily HSA\+\_\+\+CODE\+\_\+\+SYMBOL\+\_\+\+INFO\+\_\+\+INDIRECT\+\_\+\+FUNCTION\+\_\+\+CALL\+\_\+\+CONVENTION}
+\end{DoxyItemize}
+\item {\ttfamily hsa\+\_\+executable\+\_\+symbol\+\_\+get\+\_\+info}\+:
+\begin{DoxyItemize}
+\item {\ttfamily HSA\+\_\+\+EXECUTABLE\+\_\+\+SYMBOL\+\_\+\+INFO\+\_\+\+INDIRECT\+\_\+\+FUNCTION\+\_\+\+OBJECT}
+\item {\ttfamily HSA\+\_\+\+EXECUTABLE\+\_\+\+SYMBOL\+\_\+\+INFO\+\_\+\+INDIRECT\+\_\+\+FUNCTION\+\_\+\+CALL\+\_\+\+CONVENTION}
+\end{DoxyItemize}
+\end{DoxyItemize}
+\end{DoxyItemize}\hypertarget{md_src_README_autotoc_md23}{}\doxysection{Known Issues}\label{md_src_README_autotoc_md23}
+
+\begin{DoxyItemize}
+\item {\ttfamily hsa\+\_\+agent\+\_\+get\+\_\+exception\+\_\+policies} is not implemented.
+\item {\ttfamily hsa\+\_\+system\+\_\+get\+\_\+extension\+\_\+table} is not implemented for {\ttfamily HSA\+\_\+\+EXTENSION\+\_\+\+AMD\+\_\+\+PROFILER}.
+\end{DoxyItemize}\hypertarget{md_src_README_autotoc_md24}{}\doxysection{Disclaimer}\label{md_src_README_autotoc_md24}
+The information contained herein is for informational purposes only, and is subject to change without notice. While every precaution has been taken in the preparation of this document, it may contain technical inaccuracies, omissions and typographical errors, and AMD is under no obligation to update or otherwise correct this information. Advanced Micro Devices, Inc. makes no representations or warranties with respect to the accuracy or completeness of the contents of this document, and assumes no liability of any kind, including the implied warranties of noninfringement, merchantability or fitness for particular purposes, with respect to the operation or use of AMD hardware, software or other products described herein. No license, including implied or arising by estoppel, to any intellectual property rights is granted by this document. Terms and limitations applicable to the purchase or use of AMD\textquotesingle{}s products are as set forth in a signed agreement between the parties or in AMD\textquotesingle{}s Standard Terms and Conditions of Sale.
+
+AMD, the AMD Arrow logo, and combinations thereof are trademarks of Advanced Micro Devices, Inc. Other product names used in this publication are for identification purposes only and may be trademarks of their respective companies.
+
+Copyright © 2014-\/2021 Advanced Micro Devices, Inc. All rights reserved. 

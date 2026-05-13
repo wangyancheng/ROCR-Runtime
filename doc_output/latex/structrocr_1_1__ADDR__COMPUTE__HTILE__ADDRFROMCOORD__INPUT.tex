@@ -1,0 +1,221 @@
+\hypertarget{structrocr_1_1__ADDR__COMPUTE__HTILE__ADDRFROMCOORD__INPUT}{}\doxysection{rocr\+::\+\_\+\+ADDR\+\_\+\+COMPUTE\+\_\+\+HTILE\+\_\+\+ADDRFROMCOORD\+\_\+\+INPUT Struct Reference}
+\label{structrocr_1_1__ADDR__COMPUTE__HTILE__ADDRFROMCOORD__INPUT}\index{rocr::\_ADDR\_COMPUTE\_HTILE\_ADDRFROMCOORD\_INPUT@{rocr::\_ADDR\_COMPUTE\_HTILE\_ADDRFROMCOORD\_INPUT}}
+
+
+Input structure for Addr\+Compute\+Htile\+Addr\+From\+Coord.  
+
+
+
+
+{\ttfamily \#include $<$addrinterface.\+h$>$}
+
+
+
+Collaboration diagram for rocr\+::\+\_\+\+ADDR\+\_\+\+COMPUTE\+\_\+\+HTILE\+\_\+\+ADDRFROMCOORD\+\_\+\+INPUT\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{structrocr_1_1__ADDR__COMPUTE__HTILE__ADDRFROMCOORD__INPUT__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{addrtypes_8h_af5a2be58a28390f9a494538f34054637}{UINT\+\_\+32}} \mbox{\hyperlink{structrocr_1_1__ADDR__COMPUTE__HTILE__ADDRFROMCOORD__INPUT_a453f3e4c04ec4a408a37941f1aab26c9}{size}}
+\begin{DoxyCompactList}\small\item\em Size of this structure in bytes. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{addrtypes_8h_af5a2be58a28390f9a494538f34054637}{UINT\+\_\+32}} \mbox{\hyperlink{structrocr_1_1__ADDR__COMPUTE__HTILE__ADDRFROMCOORD__INPUT_a7855d08224512baf3d5f616ffe0ff3ac}{pitch}}
+\begin{DoxyCompactList}\small\item\em Pitch, in pixels. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{addrtypes_8h_af5a2be58a28390f9a494538f34054637}{UINT\+\_\+32}} \mbox{\hyperlink{structrocr_1_1__ADDR__COMPUTE__HTILE__ADDRFROMCOORD__INPUT_acfa104b7114a694a658bb0350b8ebef0}{height}}
+\begin{DoxyCompactList}\small\item\em Height in pixels. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{addrtypes_8h_af5a2be58a28390f9a494538f34054637}{UINT\+\_\+32}} \mbox{\hyperlink{structrocr_1_1__ADDR__COMPUTE__HTILE__ADDRFROMCOORD__INPUT_adc74a2a2856c4ec801434ad5f8830ebf}{x}}
+\begin{DoxyCompactList}\small\item\em X coordinate. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{addrtypes_8h_af5a2be58a28390f9a494538f34054637}{UINT\+\_\+32}} \mbox{\hyperlink{structrocr_1_1__ADDR__COMPUTE__HTILE__ADDRFROMCOORD__INPUT_ad4e4545dc75ef30bcdabbd263692792f}{y}}
+\begin{DoxyCompactList}\small\item\em Y coordinate. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{addrtypes_8h_af5a2be58a28390f9a494538f34054637}{UINT\+\_\+32}} \mbox{\hyperlink{structrocr_1_1__ADDR__COMPUTE__HTILE__ADDRFROMCOORD__INPUT_acd1bb70f807650e4667071c59c5c5e25}{slice}}
+\begin{DoxyCompactList}\small\item\em Index of slice. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{addrtypes_8h_af5a2be58a28390f9a494538f34054637}{UINT\+\_\+32}} \mbox{\hyperlink{structrocr_1_1__ADDR__COMPUTE__HTILE__ADDRFROMCOORD__INPUT_a268efdd43119b0c684fbdc2aea45aef6}{num\+Slices}}
+\begin{DoxyCompactList}\small\item\em Number of slices. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{addrtypes_8h_ac4225671b7e87c943146915461c9b2f4}{BOOL\+\_\+32}} \mbox{\hyperlink{structrocr_1_1__ADDR__COMPUTE__HTILE__ADDRFROMCOORD__INPUT_ab4b30dcb86b6adc4d7c218da186efba7}{is\+Linear}}
+\begin{DoxyCompactList}\small\item\em Linear or tiled HTILE layout. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{namespacerocr_aa260b2225901a8c1e0341851fb0a67c0}{ADDR\+\_\+\+HTILE\+\_\+\+FLAGS}} \mbox{\hyperlink{structrocr_1_1__ADDR__COMPUTE__HTILE__ADDRFROMCOORD__INPUT_adc5e641866ac74eb1e62f00cd223e136}{flags}}
+\begin{DoxyCompactList}\small\item\em htile flags \end{DoxyCompactList}\item 
+\mbox{\hyperlink{addrtypes_8h_a6221b1bde0b4f4644a9338b8ae0772c5}{Addr\+Htile\+Block\+Size}} \mbox{\hyperlink{structrocr_1_1__ADDR__COMPUTE__HTILE__ADDRFROMCOORD__INPUT_ad23ee0ebcb1168cdb74332ed2aa0da4d}{block\+Width}}
+\begin{DoxyCompactList}\small\item\em 4 or 8. 1 means 8, 0 means 4. EG above only support 8 \end{DoxyCompactList}\item 
+\mbox{\hyperlink{addrtypes_8h_a6221b1bde0b4f4644a9338b8ae0772c5}{Addr\+Htile\+Block\+Size}} \mbox{\hyperlink{structrocr_1_1__ADDR__COMPUTE__HTILE__ADDRFROMCOORD__INPUT_ad967ac8fd191e63ea9dea0bc21f454fe}{block\+Height}}
+\begin{DoxyCompactList}\small\item\em 4 or 8. 1 means 8, 0 means 4. EG above only support 8 \end{DoxyCompactList}\item 
+\mbox{\hyperlink{namespacerocr_a22dcb0c31be418f31f99d0311c45522c}{ADDR\+\_\+\+TILEINFO}} $\ast$ \mbox{\hyperlink{structrocr_1_1__ADDR__COMPUTE__HTILE__ADDRFROMCOORD__INPUT_a0c7d2601ec7e77c75a1750cb0b1ac708}{p\+Tile\+Info}}
+\begin{DoxyCompactList}\small\item\em Tile info. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{addrtypes_8h_adacc69c9db3b9adfc072b838ebf2bb0e}{INT\+\_\+32}} \mbox{\hyperlink{structrocr_1_1__ADDR__COMPUTE__HTILE__ADDRFROMCOORD__INPUT_a86618ba577e9665626943caf67f0bc8c}{tile\+Index}}
+\item 
+\mbox{\hyperlink{addrtypes_8h_adacc69c9db3b9adfc072b838ebf2bb0e}{INT\+\_\+32}} \mbox{\hyperlink{structrocr_1_1__ADDR__COMPUTE__HTILE__ADDRFROMCOORD__INPUT_a3c657494dd847af4f99dab6501fd5236}{macro\+Mode\+Index}}
+\item 
+\mbox{\hyperlink{addrtypes_8h_af5a2be58a28390f9a494538f34054637}{UINT\+\_\+32}} \mbox{\hyperlink{structrocr_1_1__ADDR__COMPUTE__HTILE__ADDRFROMCOORD__INPUT_a5c2d078df2824c7efac9a7f25c6312b8}{bpp}}
+\begin{DoxyCompactList}\small\item\em depth/stencil buffer bit per pixel size \end{DoxyCompactList}\item 
+\mbox{\hyperlink{addrtypes_8h_af5a2be58a28390f9a494538f34054637}{UINT\+\_\+32}} \mbox{\hyperlink{structrocr_1_1__ADDR__COMPUTE__HTILE__ADDRFROMCOORD__INPUT_a5e6a9a9cb104ae6dcde83e367f9a38ce}{z\+Stencil\+Addr}}
+\begin{DoxyCompactList}\small\item\em tc\+Compatible Z/\+Stencil surface address \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Input structure for Addr\+Compute\+Htile\+Addr\+From\+Coord. 
+
+ADDR\+\_\+\+COMPUTE\+\_\+\+HTILE\+\_\+\+ADDRFROMCOORD\+\_\+\+INPUT 
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{structrocr_1_1__ADDR__COMPUTE__HTILE__ADDRFROMCOORD__INPUT_ad967ac8fd191e63ea9dea0bc21f454fe}\label{structrocr_1_1__ADDR__COMPUTE__HTILE__ADDRFROMCOORD__INPUT_ad967ac8fd191e63ea9dea0bc21f454fe}} 
+\index{rocr::\_ADDR\_COMPUTE\_HTILE\_ADDRFROMCOORD\_INPUT@{rocr::\_ADDR\_COMPUTE\_HTILE\_ADDRFROMCOORD\_INPUT}!blockHeight@{blockHeight}}
+\index{blockHeight@{blockHeight}!rocr::\_ADDR\_COMPUTE\_HTILE\_ADDRFROMCOORD\_INPUT@{rocr::\_ADDR\_COMPUTE\_HTILE\_ADDRFROMCOORD\_INPUT}}
+\doxysubsubsection{\texorpdfstring{blockHeight}{blockHeight}}
+{\footnotesize\ttfamily \mbox{\hyperlink{addrtypes_8h_a6221b1bde0b4f4644a9338b8ae0772c5}{Addr\+Htile\+Block\+Size}} rocr\+::\+\_\+\+ADDR\+\_\+\+COMPUTE\+\_\+\+HTILE\+\_\+\+ADDRFROMCOORD\+\_\+\+INPUT\+::block\+Height}
+
+
+
+4 or 8. 1 means 8, 0 means 4. EG above only support 8 
+
+\mbox{\Hypertarget{structrocr_1_1__ADDR__COMPUTE__HTILE__ADDRFROMCOORD__INPUT_ad23ee0ebcb1168cdb74332ed2aa0da4d}\label{structrocr_1_1__ADDR__COMPUTE__HTILE__ADDRFROMCOORD__INPUT_ad23ee0ebcb1168cdb74332ed2aa0da4d}} 
+\index{rocr::\_ADDR\_COMPUTE\_HTILE\_ADDRFROMCOORD\_INPUT@{rocr::\_ADDR\_COMPUTE\_HTILE\_ADDRFROMCOORD\_INPUT}!blockWidth@{blockWidth}}
+\index{blockWidth@{blockWidth}!rocr::\_ADDR\_COMPUTE\_HTILE\_ADDRFROMCOORD\_INPUT@{rocr::\_ADDR\_COMPUTE\_HTILE\_ADDRFROMCOORD\_INPUT}}
+\doxysubsubsection{\texorpdfstring{blockWidth}{blockWidth}}
+{\footnotesize\ttfamily \mbox{\hyperlink{addrtypes_8h_a6221b1bde0b4f4644a9338b8ae0772c5}{Addr\+Htile\+Block\+Size}} rocr\+::\+\_\+\+ADDR\+\_\+\+COMPUTE\+\_\+\+HTILE\+\_\+\+ADDRFROMCOORD\+\_\+\+INPUT\+::block\+Width}
+
+
+
+4 or 8. 1 means 8, 0 means 4. EG above only support 8 
+
+\mbox{\Hypertarget{structrocr_1_1__ADDR__COMPUTE__HTILE__ADDRFROMCOORD__INPUT_a5c2d078df2824c7efac9a7f25c6312b8}\label{structrocr_1_1__ADDR__COMPUTE__HTILE__ADDRFROMCOORD__INPUT_a5c2d078df2824c7efac9a7f25c6312b8}} 
+\index{rocr::\_ADDR\_COMPUTE\_HTILE\_ADDRFROMCOORD\_INPUT@{rocr::\_ADDR\_COMPUTE\_HTILE\_ADDRFROMCOORD\_INPUT}!bpp@{bpp}}
+\index{bpp@{bpp}!rocr::\_ADDR\_COMPUTE\_HTILE\_ADDRFROMCOORD\_INPUT@{rocr::\_ADDR\_COMPUTE\_HTILE\_ADDRFROMCOORD\_INPUT}}
+\doxysubsubsection{\texorpdfstring{bpp}{bpp}}
+{\footnotesize\ttfamily \mbox{\hyperlink{addrtypes_8h_af5a2be58a28390f9a494538f34054637}{UINT\+\_\+32}} rocr\+::\+\_\+\+ADDR\+\_\+\+COMPUTE\+\_\+\+HTILE\+\_\+\+ADDRFROMCOORD\+\_\+\+INPUT\+::bpp}
+
+
+
+depth/stencil buffer bit per pixel size 
+
+\mbox{\Hypertarget{structrocr_1_1__ADDR__COMPUTE__HTILE__ADDRFROMCOORD__INPUT_adc5e641866ac74eb1e62f00cd223e136}\label{structrocr_1_1__ADDR__COMPUTE__HTILE__ADDRFROMCOORD__INPUT_adc5e641866ac74eb1e62f00cd223e136}} 
+\index{rocr::\_ADDR\_COMPUTE\_HTILE\_ADDRFROMCOORD\_INPUT@{rocr::\_ADDR\_COMPUTE\_HTILE\_ADDRFROMCOORD\_INPUT}!flags@{flags}}
+\index{flags@{flags}!rocr::\_ADDR\_COMPUTE\_HTILE\_ADDRFROMCOORD\_INPUT@{rocr::\_ADDR\_COMPUTE\_HTILE\_ADDRFROMCOORD\_INPUT}}
+\doxysubsubsection{\texorpdfstring{flags}{flags}}
+{\footnotesize\ttfamily \mbox{\hyperlink{namespacerocr_aa260b2225901a8c1e0341851fb0a67c0}{ADDR\+\_\+\+HTILE\+\_\+\+FLAGS}} rocr\+::\+\_\+\+ADDR\+\_\+\+COMPUTE\+\_\+\+HTILE\+\_\+\+ADDRFROMCOORD\+\_\+\+INPUT\+::flags}
+
+
+
+htile flags 
+
+\mbox{\Hypertarget{structrocr_1_1__ADDR__COMPUTE__HTILE__ADDRFROMCOORD__INPUT_acfa104b7114a694a658bb0350b8ebef0}\label{structrocr_1_1__ADDR__COMPUTE__HTILE__ADDRFROMCOORD__INPUT_acfa104b7114a694a658bb0350b8ebef0}} 
+\index{rocr::\_ADDR\_COMPUTE\_HTILE\_ADDRFROMCOORD\_INPUT@{rocr::\_ADDR\_COMPUTE\_HTILE\_ADDRFROMCOORD\_INPUT}!height@{height}}
+\index{height@{height}!rocr::\_ADDR\_COMPUTE\_HTILE\_ADDRFROMCOORD\_INPUT@{rocr::\_ADDR\_COMPUTE\_HTILE\_ADDRFROMCOORD\_INPUT}}
+\doxysubsubsection{\texorpdfstring{height}{height}}
+{\footnotesize\ttfamily \mbox{\hyperlink{addrtypes_8h_af5a2be58a28390f9a494538f34054637}{UINT\+\_\+32}} rocr\+::\+\_\+\+ADDR\+\_\+\+COMPUTE\+\_\+\+HTILE\+\_\+\+ADDRFROMCOORD\+\_\+\+INPUT\+::height}
+
+
+
+Height in pixels. 
+
+\mbox{\Hypertarget{structrocr_1_1__ADDR__COMPUTE__HTILE__ADDRFROMCOORD__INPUT_ab4b30dcb86b6adc4d7c218da186efba7}\label{structrocr_1_1__ADDR__COMPUTE__HTILE__ADDRFROMCOORD__INPUT_ab4b30dcb86b6adc4d7c218da186efba7}} 
+\index{rocr::\_ADDR\_COMPUTE\_HTILE\_ADDRFROMCOORD\_INPUT@{rocr::\_ADDR\_COMPUTE\_HTILE\_ADDRFROMCOORD\_INPUT}!isLinear@{isLinear}}
+\index{isLinear@{isLinear}!rocr::\_ADDR\_COMPUTE\_HTILE\_ADDRFROMCOORD\_INPUT@{rocr::\_ADDR\_COMPUTE\_HTILE\_ADDRFROMCOORD\_INPUT}}
+\doxysubsubsection{\texorpdfstring{isLinear}{isLinear}}
+{\footnotesize\ttfamily \mbox{\hyperlink{addrtypes_8h_ac4225671b7e87c943146915461c9b2f4}{BOOL\+\_\+32}} rocr\+::\+\_\+\+ADDR\+\_\+\+COMPUTE\+\_\+\+HTILE\+\_\+\+ADDRFROMCOORD\+\_\+\+INPUT\+::is\+Linear}
+
+
+
+Linear or tiled HTILE layout. 
+
+\mbox{\Hypertarget{structrocr_1_1__ADDR__COMPUTE__HTILE__ADDRFROMCOORD__INPUT_a3c657494dd847af4f99dab6501fd5236}\label{structrocr_1_1__ADDR__COMPUTE__HTILE__ADDRFROMCOORD__INPUT_a3c657494dd847af4f99dab6501fd5236}} 
+\index{rocr::\_ADDR\_COMPUTE\_HTILE\_ADDRFROMCOORD\_INPUT@{rocr::\_ADDR\_COMPUTE\_HTILE\_ADDRFROMCOORD\_INPUT}!macroModeIndex@{macroModeIndex}}
+\index{macroModeIndex@{macroModeIndex}!rocr::\_ADDR\_COMPUTE\_HTILE\_ADDRFROMCOORD\_INPUT@{rocr::\_ADDR\_COMPUTE\_HTILE\_ADDRFROMCOORD\_INPUT}}
+\doxysubsubsection{\texorpdfstring{macroModeIndex}{macroModeIndex}}
+{\footnotesize\ttfamily \mbox{\hyperlink{addrtypes_8h_adacc69c9db3b9adfc072b838ebf2bb0e}{INT\+\_\+32}} rocr\+::\+\_\+\+ADDR\+\_\+\+COMPUTE\+\_\+\+HTILE\+\_\+\+ADDRFROMCOORD\+\_\+\+INPUT\+::macro\+Mode\+Index}
+
+Index in macro tile mode table if there is one (CI) README\+: When tile\+Index is not -\/1, this must be valid \mbox{\Hypertarget{structrocr_1_1__ADDR__COMPUTE__HTILE__ADDRFROMCOORD__INPUT_a268efdd43119b0c684fbdc2aea45aef6}\label{structrocr_1_1__ADDR__COMPUTE__HTILE__ADDRFROMCOORD__INPUT_a268efdd43119b0c684fbdc2aea45aef6}} 
+\index{rocr::\_ADDR\_COMPUTE\_HTILE\_ADDRFROMCOORD\_INPUT@{rocr::\_ADDR\_COMPUTE\_HTILE\_ADDRFROMCOORD\_INPUT}!numSlices@{numSlices}}
+\index{numSlices@{numSlices}!rocr::\_ADDR\_COMPUTE\_HTILE\_ADDRFROMCOORD\_INPUT@{rocr::\_ADDR\_COMPUTE\_HTILE\_ADDRFROMCOORD\_INPUT}}
+\doxysubsubsection{\texorpdfstring{numSlices}{numSlices}}
+{\footnotesize\ttfamily \mbox{\hyperlink{addrtypes_8h_af5a2be58a28390f9a494538f34054637}{UINT\+\_\+32}} rocr\+::\+\_\+\+ADDR\+\_\+\+COMPUTE\+\_\+\+HTILE\+\_\+\+ADDRFROMCOORD\+\_\+\+INPUT\+::num\+Slices}
+
+
+
+Number of slices. 
+
+\mbox{\Hypertarget{structrocr_1_1__ADDR__COMPUTE__HTILE__ADDRFROMCOORD__INPUT_a7855d08224512baf3d5f616ffe0ff3ac}\label{structrocr_1_1__ADDR__COMPUTE__HTILE__ADDRFROMCOORD__INPUT_a7855d08224512baf3d5f616ffe0ff3ac}} 
+\index{rocr::\_ADDR\_COMPUTE\_HTILE\_ADDRFROMCOORD\_INPUT@{rocr::\_ADDR\_COMPUTE\_HTILE\_ADDRFROMCOORD\_INPUT}!pitch@{pitch}}
+\index{pitch@{pitch}!rocr::\_ADDR\_COMPUTE\_HTILE\_ADDRFROMCOORD\_INPUT@{rocr::\_ADDR\_COMPUTE\_HTILE\_ADDRFROMCOORD\_INPUT}}
+\doxysubsubsection{\texorpdfstring{pitch}{pitch}}
+{\footnotesize\ttfamily \mbox{\hyperlink{addrtypes_8h_af5a2be58a28390f9a494538f34054637}{UINT\+\_\+32}} rocr\+::\+\_\+\+ADDR\+\_\+\+COMPUTE\+\_\+\+HTILE\+\_\+\+ADDRFROMCOORD\+\_\+\+INPUT\+::pitch}
+
+
+
+Pitch, in pixels. 
+
+\mbox{\Hypertarget{structrocr_1_1__ADDR__COMPUTE__HTILE__ADDRFROMCOORD__INPUT_a0c7d2601ec7e77c75a1750cb0b1ac708}\label{structrocr_1_1__ADDR__COMPUTE__HTILE__ADDRFROMCOORD__INPUT_a0c7d2601ec7e77c75a1750cb0b1ac708}} 
+\index{rocr::\_ADDR\_COMPUTE\_HTILE\_ADDRFROMCOORD\_INPUT@{rocr::\_ADDR\_COMPUTE\_HTILE\_ADDRFROMCOORD\_INPUT}!pTileInfo@{pTileInfo}}
+\index{pTileInfo@{pTileInfo}!rocr::\_ADDR\_COMPUTE\_HTILE\_ADDRFROMCOORD\_INPUT@{rocr::\_ADDR\_COMPUTE\_HTILE\_ADDRFROMCOORD\_INPUT}}
+\doxysubsubsection{\texorpdfstring{pTileInfo}{pTileInfo}}
+{\footnotesize\ttfamily \mbox{\hyperlink{namespacerocr_a22dcb0c31be418f31f99d0311c45522c}{ADDR\+\_\+\+TILEINFO}}$\ast$ rocr\+::\+\_\+\+ADDR\+\_\+\+COMPUTE\+\_\+\+HTILE\+\_\+\+ADDRFROMCOORD\+\_\+\+INPUT\+::p\+Tile\+Info}
+
+
+
+Tile info. 
+
+\mbox{\Hypertarget{structrocr_1_1__ADDR__COMPUTE__HTILE__ADDRFROMCOORD__INPUT_a453f3e4c04ec4a408a37941f1aab26c9}\label{structrocr_1_1__ADDR__COMPUTE__HTILE__ADDRFROMCOORD__INPUT_a453f3e4c04ec4a408a37941f1aab26c9}} 
+\index{rocr::\_ADDR\_COMPUTE\_HTILE\_ADDRFROMCOORD\_INPUT@{rocr::\_ADDR\_COMPUTE\_HTILE\_ADDRFROMCOORD\_INPUT}!size@{size}}
+\index{size@{size}!rocr::\_ADDR\_COMPUTE\_HTILE\_ADDRFROMCOORD\_INPUT@{rocr::\_ADDR\_COMPUTE\_HTILE\_ADDRFROMCOORD\_INPUT}}
+\doxysubsubsection{\texorpdfstring{size}{size}}
+{\footnotesize\ttfamily \mbox{\hyperlink{addrtypes_8h_af5a2be58a28390f9a494538f34054637}{UINT\+\_\+32}} rocr\+::\+\_\+\+ADDR\+\_\+\+COMPUTE\+\_\+\+HTILE\+\_\+\+ADDRFROMCOORD\+\_\+\+INPUT\+::size}
+
+
+
+Size of this structure in bytes. 
+
+\mbox{\Hypertarget{structrocr_1_1__ADDR__COMPUTE__HTILE__ADDRFROMCOORD__INPUT_acd1bb70f807650e4667071c59c5c5e25}\label{structrocr_1_1__ADDR__COMPUTE__HTILE__ADDRFROMCOORD__INPUT_acd1bb70f807650e4667071c59c5c5e25}} 
+\index{rocr::\_ADDR\_COMPUTE\_HTILE\_ADDRFROMCOORD\_INPUT@{rocr::\_ADDR\_COMPUTE\_HTILE\_ADDRFROMCOORD\_INPUT}!slice@{slice}}
+\index{slice@{slice}!rocr::\_ADDR\_COMPUTE\_HTILE\_ADDRFROMCOORD\_INPUT@{rocr::\_ADDR\_COMPUTE\_HTILE\_ADDRFROMCOORD\_INPUT}}
+\doxysubsubsection{\texorpdfstring{slice}{slice}}
+{\footnotesize\ttfamily \mbox{\hyperlink{addrtypes_8h_af5a2be58a28390f9a494538f34054637}{UINT\+\_\+32}} rocr\+::\+\_\+\+ADDR\+\_\+\+COMPUTE\+\_\+\+HTILE\+\_\+\+ADDRFROMCOORD\+\_\+\+INPUT\+::slice}
+
+
+
+Index of slice. 
+
+\mbox{\Hypertarget{structrocr_1_1__ADDR__COMPUTE__HTILE__ADDRFROMCOORD__INPUT_a86618ba577e9665626943caf67f0bc8c}\label{structrocr_1_1__ADDR__COMPUTE__HTILE__ADDRFROMCOORD__INPUT_a86618ba577e9665626943caf67f0bc8c}} 
+\index{rocr::\_ADDR\_COMPUTE\_HTILE\_ADDRFROMCOORD\_INPUT@{rocr::\_ADDR\_COMPUTE\_HTILE\_ADDRFROMCOORD\_INPUT}!tileIndex@{tileIndex}}
+\index{tileIndex@{tileIndex}!rocr::\_ADDR\_COMPUTE\_HTILE\_ADDRFROMCOORD\_INPUT@{rocr::\_ADDR\_COMPUTE\_HTILE\_ADDRFROMCOORD\_INPUT}}
+\doxysubsubsection{\texorpdfstring{tileIndex}{tileIndex}}
+{\footnotesize\ttfamily \mbox{\hyperlink{addrtypes_8h_adacc69c9db3b9adfc072b838ebf2bb0e}{INT\+\_\+32}} rocr\+::\+\_\+\+ADDR\+\_\+\+COMPUTE\+\_\+\+HTILE\+\_\+\+ADDRFROMCOORD\+\_\+\+INPUT\+::tile\+Index}
+
+Tile index, MUST be -\/1 if you don\textquotesingle{}t want to use it while the global use\+Tile\+Index is set to 1 \mbox{\Hypertarget{structrocr_1_1__ADDR__COMPUTE__HTILE__ADDRFROMCOORD__INPUT_adc74a2a2856c4ec801434ad5f8830ebf}\label{structrocr_1_1__ADDR__COMPUTE__HTILE__ADDRFROMCOORD__INPUT_adc74a2a2856c4ec801434ad5f8830ebf}} 
+\index{rocr::\_ADDR\_COMPUTE\_HTILE\_ADDRFROMCOORD\_INPUT@{rocr::\_ADDR\_COMPUTE\_HTILE\_ADDRFROMCOORD\_INPUT}!x@{x}}
+\index{x@{x}!rocr::\_ADDR\_COMPUTE\_HTILE\_ADDRFROMCOORD\_INPUT@{rocr::\_ADDR\_COMPUTE\_HTILE\_ADDRFROMCOORD\_INPUT}}
+\doxysubsubsection{\texorpdfstring{x}{x}}
+{\footnotesize\ttfamily \mbox{\hyperlink{addrtypes_8h_af5a2be58a28390f9a494538f34054637}{UINT\+\_\+32}} rocr\+::\+\_\+\+ADDR\+\_\+\+COMPUTE\+\_\+\+HTILE\+\_\+\+ADDRFROMCOORD\+\_\+\+INPUT\+::x}
+
+
+
+X coordinate. 
+
+\mbox{\Hypertarget{structrocr_1_1__ADDR__COMPUTE__HTILE__ADDRFROMCOORD__INPUT_ad4e4545dc75ef30bcdabbd263692792f}\label{structrocr_1_1__ADDR__COMPUTE__HTILE__ADDRFROMCOORD__INPUT_ad4e4545dc75ef30bcdabbd263692792f}} 
+\index{rocr::\_ADDR\_COMPUTE\_HTILE\_ADDRFROMCOORD\_INPUT@{rocr::\_ADDR\_COMPUTE\_HTILE\_ADDRFROMCOORD\_INPUT}!y@{y}}
+\index{y@{y}!rocr::\_ADDR\_COMPUTE\_HTILE\_ADDRFROMCOORD\_INPUT@{rocr::\_ADDR\_COMPUTE\_HTILE\_ADDRFROMCOORD\_INPUT}}
+\doxysubsubsection{\texorpdfstring{y}{y}}
+{\footnotesize\ttfamily \mbox{\hyperlink{addrtypes_8h_af5a2be58a28390f9a494538f34054637}{UINT\+\_\+32}} rocr\+::\+\_\+\+ADDR\+\_\+\+COMPUTE\+\_\+\+HTILE\+\_\+\+ADDRFROMCOORD\+\_\+\+INPUT\+::y}
+
+
+
+Y coordinate. 
+
+\mbox{\Hypertarget{structrocr_1_1__ADDR__COMPUTE__HTILE__ADDRFROMCOORD__INPUT_a5e6a9a9cb104ae6dcde83e367f9a38ce}\label{structrocr_1_1__ADDR__COMPUTE__HTILE__ADDRFROMCOORD__INPUT_a5e6a9a9cb104ae6dcde83e367f9a38ce}} 
+\index{rocr::\_ADDR\_COMPUTE\_HTILE\_ADDRFROMCOORD\_INPUT@{rocr::\_ADDR\_COMPUTE\_HTILE\_ADDRFROMCOORD\_INPUT}!zStencilAddr@{zStencilAddr}}
+\index{zStencilAddr@{zStencilAddr}!rocr::\_ADDR\_COMPUTE\_HTILE\_ADDRFROMCOORD\_INPUT@{rocr::\_ADDR\_COMPUTE\_HTILE\_ADDRFROMCOORD\_INPUT}}
+\doxysubsubsection{\texorpdfstring{zStencilAddr}{zStencilAddr}}
+{\footnotesize\ttfamily \mbox{\hyperlink{addrtypes_8h_af5a2be58a28390f9a494538f34054637}{UINT\+\_\+32}} rocr\+::\+\_\+\+ADDR\+\_\+\+COMPUTE\+\_\+\+HTILE\+\_\+\+ADDRFROMCOORD\+\_\+\+INPUT\+::z\+Stencil\+Addr}
+
+
+
+tc\+Compatible Z/\+Stencil surface address 
+
+
+
+The documentation for this struct was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+src/image/addrlib/inc/\mbox{\hyperlink{addrinterface_8h}{addrinterface.\+h}}\end{DoxyCompactItemize}

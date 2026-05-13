@@ -1,0 +1,375 @@
+\hypertarget{namespacerocr_1_1Addr_1_1V1}{}\doxysection{rocr\+::Addr\+::V1 Namespace Reference}
+\label{namespacerocr_1_1Addr_1_1V1}\index{rocr::Addr::V1@{rocr::Addr::V1}}
+\doxysubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{structrocr_1_1Addr_1_1V1_1_1TileModeFlags}{Tile\+Mode\+Flags}}
+\begin{DoxyCompactList}\small\item\em Flags for Addr\+Tile\+Mode. \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{classrocr_1_1Addr_1_1V1_1_1Lib}{Lib}}
+\begin{DoxyCompactList}\small\item\em This class contains asic independent address lib functionalities. \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{classrocr_1_1Addr_1_1V1_1_1CiLib}{Ci\+Lib}}
+\begin{DoxyCompactList}\small\item\em This class is the CI specific address library function set. \end{DoxyCompactList}\item 
+struct \mbox{\hyperlink{structrocr_1_1Addr_1_1V1_1_1CoordFromBankPipe}{Coord\+From\+Bank\+Pipe}}
+\begin{DoxyCompactList}\small\item\em Structures for functions. \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{classrocr_1_1Addr_1_1V1_1_1EgBasedLib}{Eg\+Based\+Lib}}
+\begin{DoxyCompactList}\small\item\em This class is the Evergreen based address library. \end{DoxyCompactList}\item 
+struct \mbox{\hyperlink{structrocr_1_1Addr_1_1V1_1_1TileConfig}{Tile\+Config}}
+\begin{DoxyCompactList}\small\item\em Describes the information in tile mode table. \end{DoxyCompactList}\item 
+struct \mbox{\hyperlink{structrocr_1_1Addr_1_1V1_1_1SiChipSettings}{Si\+Chip\+Settings}}
+\begin{DoxyCompactList}\small\item\em SI specific settings structure. \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{classrocr_1_1Addr_1_1V1_1_1SiLib}{Si\+Lib}}
+\begin{DoxyCompactList}\small\item\em This class is the SI specific address library function set. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Enumerations}
+\begin{DoxyCompactItemize}
+\item 
+enum \mbox{\hyperlink{namespacerocr_1_1Addr_1_1V1_ac320adc473dc73832ee7515a705049fc}{Sample\+Split\+Size}} \{ \mbox{\hyperlink{namespacerocr_1_1Addr_1_1V1_ac320adc473dc73832ee7515a705049fca123665c3298f8afdcc676d95abeb81f7}{ADDR\+\_\+\+SAMPLESPLIT\+\_\+1\+KB}} = 1024
+, \mbox{\hyperlink{namespacerocr_1_1Addr_1_1V1_ac320adc473dc73832ee7515a705049fca070372f95d17e50ed262d00c6139a9a1}{ADDR\+\_\+\+SAMPLESPLIT\+\_\+2\+KB}} = 2048
+, \mbox{\hyperlink{namespacerocr_1_1Addr_1_1V1_ac320adc473dc73832ee7515a705049fca09006bd65121b0392bd75b81d9e34d2b}{ADDR\+\_\+\+SAMPLESPLIT\+\_\+4\+KB}} = 4096
+, \mbox{\hyperlink{namespacerocr_1_1Addr_1_1V1_ac320adc473dc73832ee7515a705049fca36de5e45ffd24a9e4d7db38a0ca0cd6d}{ADDR\+\_\+\+SAMPLESPLIT\+\_\+8\+KB}} = 8192
+ \}
+\begin{DoxyCompactList}\small\item\em Neutral enums that define bank swap size. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+static \mbox{\hyperlink{addrtypes_8h_ac4116bb9a5e80b5cb845d4f2674c160f}{UINT\+\_\+64}} \mbox{\hyperlink{namespacerocr_1_1Addr_1_1V1_a0cf52b12c28a353efc8dd081dff7a6e2}{Mask}} (\mbox{\hyperlink{addrtypes_8h_af5a2be58a28390f9a494538f34054637}{UINT\+\_\+32}} width)
+\begin{DoxyCompactList}\small\item\em Gets a mask of \char`\"{}width\char`\"{}. \end{DoxyCompactList}\item 
+static \mbox{\hyperlink{addrtypes_8h_ac4116bb9a5e80b5cb845d4f2674c160f}{UINT\+\_\+64}} \mbox{\hyperlink{namespacerocr_1_1Addr_1_1V1_afaf132162166dd215505094e759f80c8}{Get\+Bits}} (\mbox{\hyperlink{addrtypes_8h_ac4116bb9a5e80b5cb845d4f2674c160f}{UINT\+\_\+64}} bits, \mbox{\hyperlink{addrtypes_8h_af5a2be58a28390f9a494538f34054637}{UINT\+\_\+32}} msb, \mbox{\hyperlink{addrtypes_8h_af5a2be58a28390f9a494538f34054637}{UINT\+\_\+32}} lsb)
+\begin{DoxyCompactList}\small\item\em Gets bits within a range of \mbox{[}msb, lsb\mbox{]}. \end{DoxyCompactList}\item 
+static \mbox{\hyperlink{addrtypes_8h_ac4116bb9a5e80b5cb845d4f2674c160f}{UINT\+\_\+64}} \mbox{\hyperlink{namespacerocr_1_1Addr_1_1V1_add531c508481a583d25f3d946d0a8008}{Remove\+Bits}} (\mbox{\hyperlink{addrtypes_8h_ac4116bb9a5e80b5cb845d4f2674c160f}{UINT\+\_\+64}} bits, \mbox{\hyperlink{addrtypes_8h_af5a2be58a28390f9a494538f34054637}{UINT\+\_\+32}} msb, \mbox{\hyperlink{addrtypes_8h_af5a2be58a28390f9a494538f34054637}{UINT\+\_\+32}} lsb)
+\begin{DoxyCompactList}\small\item\em Removes bits within the range of \mbox{[}msb, lsb\mbox{]}. \end{DoxyCompactList}\item 
+static \mbox{\hyperlink{addrtypes_8h_ac4116bb9a5e80b5cb845d4f2674c160f}{UINT\+\_\+64}} \mbox{\hyperlink{namespacerocr_1_1Addr_1_1V1_ae1cdc75282281b45c78ca03e5afc61a3}{Insert\+Bits}} (\mbox{\hyperlink{addrtypes_8h_ac4116bb9a5e80b5cb845d4f2674c160f}{UINT\+\_\+64}} bits, \mbox{\hyperlink{addrtypes_8h_ac4116bb9a5e80b5cb845d4f2674c160f}{UINT\+\_\+64}} new\+Bits, \mbox{\hyperlink{addrtypes_8h_af5a2be58a28390f9a494538f34054637}{UINT\+\_\+32}} msb, \mbox{\hyperlink{addrtypes_8h_af5a2be58a28390f9a494538f34054637}{UINT\+\_\+32}} lsb)
+\begin{DoxyCompactList}\small\item\em Inserts new bits into the range of \mbox{[}msb, lsb\mbox{]}. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+static const \mbox{\hyperlink{addrtypes_8h_af5a2be58a28390f9a494538f34054637}{UINT\+\_\+32}} \mbox{\hyperlink{namespacerocr_1_1Addr_1_1V1_a888f360aa359956188a05c06a8e79cf2}{Micro\+Tile\+Width}} = 8
+\begin{DoxyCompactList}\small\item\em Micro tile width, for 1D and 2D tiling. \end{DoxyCompactList}\item 
+static const \mbox{\hyperlink{addrtypes_8h_af5a2be58a28390f9a494538f34054637}{UINT\+\_\+32}} \mbox{\hyperlink{namespacerocr_1_1Addr_1_1V1_a9e7a454aa128377879bef579cc50f634}{Micro\+Tile\+Height}} = 8
+\begin{DoxyCompactList}\small\item\em Micro tile height, for 1D and 2D tiling. \end{DoxyCompactList}\item 
+static const \mbox{\hyperlink{addrtypes_8h_af5a2be58a28390f9a494538f34054637}{UINT\+\_\+32}} \mbox{\hyperlink{namespacerocr_1_1Addr_1_1V1_a27096d3128fb74e920ff7fc751c5bd7f}{Thick\+Tile\+Thickness}} = 4
+\begin{DoxyCompactList}\small\item\em Micro tile thickness, for THICK modes. \end{DoxyCompactList}\item 
+static const \mbox{\hyperlink{addrtypes_8h_af5a2be58a28390f9a494538f34054637}{UINT\+\_\+32}} \mbox{\hyperlink{namespacerocr_1_1Addr_1_1V1_ae0920b551b42fc3de69f33b24e3f3fca}{XThick\+Tile\+Thickness}} = 8
+\begin{DoxyCompactList}\small\item\em Extra thick tiling thickness. \end{DoxyCompactList}\item 
+static const \mbox{\hyperlink{addrtypes_8h_af5a2be58a28390f9a494538f34054637}{UINT\+\_\+32}} \mbox{\hyperlink{namespacerocr_1_1Addr_1_1V1_ad4c7a1a148badaeaaa3c0b277f5217f6}{Power\+Save\+Tile\+Bytes}} = 64
+\begin{DoxyCompactList}\small\item\em Nuber of bytes per tile for power save 64. \end{DoxyCompactList}\item 
+static const \mbox{\hyperlink{addrtypes_8h_af5a2be58a28390f9a494538f34054637}{UINT\+\_\+32}} \mbox{\hyperlink{namespacerocr_1_1Addr_1_1V1_a11f42491824ce7cf155fa4a9794345a2}{Cmask\+Cache\+Bits}} = 1024
+\begin{DoxyCompactList}\small\item\em Number of bits for CMASK cache. \end{DoxyCompactList}\item 
+static const \mbox{\hyperlink{addrtypes_8h_af5a2be58a28390f9a494538f34054637}{UINT\+\_\+32}} \mbox{\hyperlink{namespacerocr_1_1Addr_1_1V1_ab58a7b03fff7a6be6f60c7952ce326a4}{Cmask\+Elem\+Bits}} = 4
+\begin{DoxyCompactList}\small\item\em Number of bits for CMASK element. \end{DoxyCompactList}\item 
+static const \mbox{\hyperlink{addrtypes_8h_af5a2be58a28390f9a494538f34054637}{UINT\+\_\+32}} \mbox{\hyperlink{namespacerocr_1_1Addr_1_1V1_afe3b466613ebc394e37645baaea4672a}{Htile\+Cache\+Bits}} = 16384
+\begin{DoxyCompactList}\small\item\em Number of bits for HTILE cache 512$\ast$32. \end{DoxyCompactList}\item 
+static const \mbox{\hyperlink{addrtypes_8h_af5a2be58a28390f9a494538f34054637}{UINT\+\_\+32}} \mbox{\hyperlink{namespacerocr_1_1Addr_1_1V1_a0a277aa755278630b2dd39473101b5d5}{Micro\+Tile\+Pixels}} = \mbox{\hyperlink{namespacerocr_1_1Addr_1_1V1_a888f360aa359956188a05c06a8e79cf2}{Micro\+Tile\+Width}} $\ast$ \mbox{\hyperlink{namespacerocr_1_1Addr_1_1V1_a9e7a454aa128377879bef579cc50f634}{Micro\+Tile\+Height}}
+\item 
+static const \mbox{\hyperlink{addrtypes_8h_adacc69c9db3b9adfc072b838ebf2bb0e}{INT\+\_\+32}} \mbox{\hyperlink{namespacerocr_1_1Addr_1_1V1_a40e553b9c327f0c2959bd9f20ecc2426}{Tile\+Index\+Invalid}} = \mbox{\hyperlink{addrtypes_8h_a20b3aef73ea1c7a81347f46fa3c664f0}{TILEINDEX\+\_\+\+INVALID}}
+\item 
+static const \mbox{\hyperlink{addrtypes_8h_adacc69c9db3b9adfc072b838ebf2bb0e}{INT\+\_\+32}} \mbox{\hyperlink{namespacerocr_1_1Addr_1_1V1_a986a59baa4602061269d09a22ac3da86}{Tile\+Index\+Linear\+General}} = \mbox{\hyperlink{addrtypes_8h_aba9b747e7209cd582388a906d8d4b328}{TILEINDEX\+\_\+\+LINEAR\+\_\+\+GENERAL}}
+\item 
+static const \mbox{\hyperlink{addrtypes_8h_adacc69c9db3b9adfc072b838ebf2bb0e}{INT\+\_\+32}} \mbox{\hyperlink{namespacerocr_1_1Addr_1_1V1_a6429defe8a09268fb168c0321e8f8bde}{Tile\+Index\+No\+Macro\+Index}} = -\/3
+\item 
+static const \mbox{\hyperlink{addrtypes_8h_af5a2be58a28390f9a494538f34054637}{UINT\+\_\+32}} \mbox{\hyperlink{namespacerocr_1_1Addr_1_1V1_a8aab6d13b59b7718667b40f484353ffb}{Block64K}} = 0x10000
+\item 
+static const \mbox{\hyperlink{addrtypes_8h_af5a2be58a28390f9a494538f34054637}{UINT\+\_\+32}} \mbox{\hyperlink{namespacerocr_1_1Addr_1_1V1_a469c862eaadb6a0609a9971e72f7bf26}{Prt\+Tile\+Size}} = \mbox{\hyperlink{namespacerocr_1_1Addr_1_1V1_a8aab6d13b59b7718667b40f484353ffb}{Block64K}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Enumeration Type Documentation}
+\mbox{\Hypertarget{namespacerocr_1_1Addr_1_1V1_ac320adc473dc73832ee7515a705049fc}\label{namespacerocr_1_1Addr_1_1V1_ac320adc473dc73832ee7515a705049fc}} 
+\index{rocr::Addr::V1@{rocr::Addr::V1}!SampleSplitSize@{SampleSplitSize}}
+\index{SampleSplitSize@{SampleSplitSize}!rocr::Addr::V1@{rocr::Addr::V1}}
+\doxysubsubsection{\texorpdfstring{SampleSplitSize}{SampleSplitSize}}
+{\footnotesize\ttfamily enum \mbox{\hyperlink{namespacerocr_1_1Addr_1_1V1_ac320adc473dc73832ee7515a705049fc}{rocr\+::\+Addr\+::\+V1\+::\+Sample\+Split\+Size}}}
+
+
+
+Neutral enums that define bank swap size. 
+
+\begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{ADDR\_SAMPLESPLIT\_1KB@{ADDR\_SAMPLESPLIT\_1KB}!rocr::Addr::V1@{rocr::Addr::V1}}\index{rocr::Addr::V1@{rocr::Addr::V1}!ADDR\_SAMPLESPLIT\_1KB@{ADDR\_SAMPLESPLIT\_1KB}}}\mbox{\Hypertarget{namespacerocr_1_1Addr_1_1V1_ac320adc473dc73832ee7515a705049fca123665c3298f8afdcc676d95abeb81f7}\label{namespacerocr_1_1Addr_1_1V1_ac320adc473dc73832ee7515a705049fca123665c3298f8afdcc676d95abeb81f7}} 
+ADDR\+\_\+\+SAMPLESPLIT\+\_\+1\+KB&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{ADDR\_SAMPLESPLIT\_2KB@{ADDR\_SAMPLESPLIT\_2KB}!rocr::Addr::V1@{rocr::Addr::V1}}\index{rocr::Addr::V1@{rocr::Addr::V1}!ADDR\_SAMPLESPLIT\_2KB@{ADDR\_SAMPLESPLIT\_2KB}}}\mbox{\Hypertarget{namespacerocr_1_1Addr_1_1V1_ac320adc473dc73832ee7515a705049fca070372f95d17e50ed262d00c6139a9a1}\label{namespacerocr_1_1Addr_1_1V1_ac320adc473dc73832ee7515a705049fca070372f95d17e50ed262d00c6139a9a1}} 
+ADDR\+\_\+\+SAMPLESPLIT\+\_\+2\+KB&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{ADDR\_SAMPLESPLIT\_4KB@{ADDR\_SAMPLESPLIT\_4KB}!rocr::Addr::V1@{rocr::Addr::V1}}\index{rocr::Addr::V1@{rocr::Addr::V1}!ADDR\_SAMPLESPLIT\_4KB@{ADDR\_SAMPLESPLIT\_4KB}}}\mbox{\Hypertarget{namespacerocr_1_1Addr_1_1V1_ac320adc473dc73832ee7515a705049fca09006bd65121b0392bd75b81d9e34d2b}\label{namespacerocr_1_1Addr_1_1V1_ac320adc473dc73832ee7515a705049fca09006bd65121b0392bd75b81d9e34d2b}} 
+ADDR\+\_\+\+SAMPLESPLIT\+\_\+4\+KB&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{ADDR\_SAMPLESPLIT\_8KB@{ADDR\_SAMPLESPLIT\_8KB}!rocr::Addr::V1@{rocr::Addr::V1}}\index{rocr::Addr::V1@{rocr::Addr::V1}!ADDR\_SAMPLESPLIT\_8KB@{ADDR\_SAMPLESPLIT\_8KB}}}\mbox{\Hypertarget{namespacerocr_1_1Addr_1_1V1_ac320adc473dc73832ee7515a705049fca36de5e45ffd24a9e4d7db38a0ca0cd6d}\label{namespacerocr_1_1Addr_1_1V1_ac320adc473dc73832ee7515a705049fca36de5e45ffd24a9e4d7db38a0ca0cd6d}} 
+ADDR\+\_\+\+SAMPLESPLIT\+\_\+8\+KB&\\
+\hline
+
+\end{DoxyEnumFields}
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{namespacerocr_1_1Addr_1_1V1_afaf132162166dd215505094e759f80c8}\label{namespacerocr_1_1Addr_1_1V1_afaf132162166dd215505094e759f80c8}} 
+\index{rocr::Addr::V1@{rocr::Addr::V1}!GetBits@{GetBits}}
+\index{GetBits@{GetBits}!rocr::Addr::V1@{rocr::Addr::V1}}
+\doxysubsubsection{\texorpdfstring{GetBits()}{GetBits()}}
+{\footnotesize\ttfamily static \mbox{\hyperlink{addrtypes_8h_ac4116bb9a5e80b5cb845d4f2674c160f}{UINT\+\_\+64}} rocr\+::\+Addr\+::\+V1\+::\+Get\+Bits (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{addrtypes_8h_ac4116bb9a5e80b5cb845d4f2674c160f}{UINT\+\_\+64}}}]{bits,  }\item[{\mbox{\hyperlink{addrtypes_8h_af5a2be58a28390f9a494538f34054637}{UINT\+\_\+32}}}]{msb,  }\item[{\mbox{\hyperlink{addrtypes_8h_af5a2be58a28390f9a494538f34054637}{UINT\+\_\+32}}}]{lsb }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Gets bits within a range of \mbox{[}msb, lsb\mbox{]}. 
+
+Get\+Bits
+
+\begin{DoxyReturn}{Returns}
+Bits of this range 
+\end{DoxyReturn}
+
+\begin{DoxyParams}{Parameters}
+{\em bits} & Source bits \\
+\hline
+{\em msb} & Most signicant bit \\
+\hline
+{\em lsb} & Least signicant bit \\
+\hline
+\end{DoxyParams}
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=339pt]{namespacerocr_1_1Addr_1_1V1_afaf132162166dd215505094e759f80c8_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{namespacerocr_1_1Addr_1_1V1_afaf132162166dd215505094e759f80c8_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{namespacerocr_1_1Addr_1_1V1_ae1cdc75282281b45c78ca03e5afc61a3}\label{namespacerocr_1_1Addr_1_1V1_ae1cdc75282281b45c78ca03e5afc61a3}} 
+\index{rocr::Addr::V1@{rocr::Addr::V1}!InsertBits@{InsertBits}}
+\index{InsertBits@{InsertBits}!rocr::Addr::V1@{rocr::Addr::V1}}
+\doxysubsubsection{\texorpdfstring{InsertBits()}{InsertBits()}}
+{\footnotesize\ttfamily static \mbox{\hyperlink{addrtypes_8h_ac4116bb9a5e80b5cb845d4f2674c160f}{UINT\+\_\+64}} rocr\+::\+Addr\+::\+V1\+::\+Insert\+Bits (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{addrtypes_8h_ac4116bb9a5e80b5cb845d4f2674c160f}{UINT\+\_\+64}}}]{bits,  }\item[{\mbox{\hyperlink{addrtypes_8h_ac4116bb9a5e80b5cb845d4f2674c160f}{UINT\+\_\+64}}}]{new\+Bits,  }\item[{\mbox{\hyperlink{addrtypes_8h_af5a2be58a28390f9a494538f34054637}{UINT\+\_\+32}}}]{msb,  }\item[{\mbox{\hyperlink{addrtypes_8h_af5a2be58a28390f9a494538f34054637}{UINT\+\_\+32}}}]{lsb }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Inserts new bits into the range of \mbox{[}msb, lsb\mbox{]}. 
+
+Insert\+Bits
+
+\begin{DoxyReturn}{Returns}
+Modified bits 
+\end{DoxyReturn}
+
+\begin{DoxyParams}{Parameters}
+{\em bits} & Source bits \\
+\hline
+{\em new\+Bits} & New bits to be inserted \\
+\hline
+{\em msb} & Most signicant bit \\
+\hline
+{\em lsb} & Least signicant bit \\
+\hline
+\end{DoxyParams}
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{namespacerocr_1_1Addr_1_1V1_ae1cdc75282281b45c78ca03e5afc61a3_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{namespacerocr_1_1Addr_1_1V1_ae1cdc75282281b45c78ca03e5afc61a3_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{namespacerocr_1_1Addr_1_1V1_a0cf52b12c28a353efc8dd081dff7a6e2}\label{namespacerocr_1_1Addr_1_1V1_a0cf52b12c28a353efc8dd081dff7a6e2}} 
+\index{rocr::Addr::V1@{rocr::Addr::V1}!Mask@{Mask}}
+\index{Mask@{Mask}!rocr::Addr::V1@{rocr::Addr::V1}}
+\doxysubsubsection{\texorpdfstring{Mask()}{Mask()}}
+{\footnotesize\ttfamily static \mbox{\hyperlink{addrtypes_8h_ac4116bb9a5e80b5cb845d4f2674c160f}{UINT\+\_\+64}} rocr\+::\+Addr\+::\+V1\+::\+Mask (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{addrtypes_8h_af5a2be58a28390f9a494538f34054637}{UINT\+\_\+32}}}]{width }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Gets a mask of \char`\"{}width\char`\"{}. 
+
+Mask
+
+\begin{DoxyReturn}{Returns}
+Bit mask 
+\end{DoxyReturn}
+
+\begin{DoxyParams}{Parameters}
+{\em width} & Width of bits \\
+\hline
+\end{DoxyParams}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{namespacerocr_1_1Addr_1_1V1_a0cf52b12c28a353efc8dd081dff7a6e2_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{namespacerocr_1_1Addr_1_1V1_add531c508481a583d25f3d946d0a8008}\label{namespacerocr_1_1Addr_1_1V1_add531c508481a583d25f3d946d0a8008}} 
+\index{rocr::Addr::V1@{rocr::Addr::V1}!RemoveBits@{RemoveBits}}
+\index{RemoveBits@{RemoveBits}!rocr::Addr::V1@{rocr::Addr::V1}}
+\doxysubsubsection{\texorpdfstring{RemoveBits()}{RemoveBits()}}
+{\footnotesize\ttfamily static \mbox{\hyperlink{addrtypes_8h_ac4116bb9a5e80b5cb845d4f2674c160f}{UINT\+\_\+64}} rocr\+::\+Addr\+::\+V1\+::\+Remove\+Bits (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{addrtypes_8h_ac4116bb9a5e80b5cb845d4f2674c160f}{UINT\+\_\+64}}}]{bits,  }\item[{\mbox{\hyperlink{addrtypes_8h_af5a2be58a28390f9a494538f34054637}{UINT\+\_\+32}}}]{msb,  }\item[{\mbox{\hyperlink{addrtypes_8h_af5a2be58a28390f9a494538f34054637}{UINT\+\_\+32}}}]{lsb }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Removes bits within the range of \mbox{[}msb, lsb\mbox{]}. 
+
+Remove\+Bits
+
+\begin{DoxyReturn}{Returns}
+Modified bits 
+\end{DoxyReturn}
+
+\begin{DoxyParams}{Parameters}
+{\em bits} & Source bits \\
+\hline
+{\em msb} & Most signicant bit \\
+\hline
+{\em lsb} & Least signicant bit \\
+\hline
+\end{DoxyParams}
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{namespacerocr_1_1Addr_1_1V1_add531c508481a583d25f3d946d0a8008_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{namespacerocr_1_1Addr_1_1V1_add531c508481a583d25f3d946d0a8008_icgraph}
+\end{center}
+\end{figure}
+
+
+\doxysubsection{Variable Documentation}
+\mbox{\Hypertarget{namespacerocr_1_1Addr_1_1V1_a8aab6d13b59b7718667b40f484353ffb}\label{namespacerocr_1_1Addr_1_1V1_a8aab6d13b59b7718667b40f484353ffb}} 
+\index{rocr::Addr::V1@{rocr::Addr::V1}!Block64K@{Block64K}}
+\index{Block64K@{Block64K}!rocr::Addr::V1@{rocr::Addr::V1}}
+\doxysubsubsection{\texorpdfstring{Block64K}{Block64K}}
+{\footnotesize\ttfamily const \mbox{\hyperlink{addrtypes_8h_af5a2be58a28390f9a494538f34054637}{UINT\+\_\+32}} rocr\+::\+Addr\+::\+V1\+::\+Block64K = 0x10000\hspace{0.3cm}{\ttfamily [static]}}
+
+\mbox{\Hypertarget{namespacerocr_1_1Addr_1_1V1_a11f42491824ce7cf155fa4a9794345a2}\label{namespacerocr_1_1Addr_1_1V1_a11f42491824ce7cf155fa4a9794345a2}} 
+\index{rocr::Addr::V1@{rocr::Addr::V1}!CmaskCacheBits@{CmaskCacheBits}}
+\index{CmaskCacheBits@{CmaskCacheBits}!rocr::Addr::V1@{rocr::Addr::V1}}
+\doxysubsubsection{\texorpdfstring{CmaskCacheBits}{CmaskCacheBits}}
+{\footnotesize\ttfamily const \mbox{\hyperlink{addrtypes_8h_af5a2be58a28390f9a494538f34054637}{UINT\+\_\+32}} rocr\+::\+Addr\+::\+V1\+::\+Cmask\+Cache\+Bits = 1024\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Number of bits for CMASK cache. 
+
+\mbox{\Hypertarget{namespacerocr_1_1Addr_1_1V1_ab58a7b03fff7a6be6f60c7952ce326a4}\label{namespacerocr_1_1Addr_1_1V1_ab58a7b03fff7a6be6f60c7952ce326a4}} 
+\index{rocr::Addr::V1@{rocr::Addr::V1}!CmaskElemBits@{CmaskElemBits}}
+\index{CmaskElemBits@{CmaskElemBits}!rocr::Addr::V1@{rocr::Addr::V1}}
+\doxysubsubsection{\texorpdfstring{CmaskElemBits}{CmaskElemBits}}
+{\footnotesize\ttfamily const \mbox{\hyperlink{addrtypes_8h_af5a2be58a28390f9a494538f34054637}{UINT\+\_\+32}} rocr\+::\+Addr\+::\+V1\+::\+Cmask\+Elem\+Bits = 4\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Number of bits for CMASK element. 
+
+\mbox{\Hypertarget{namespacerocr_1_1Addr_1_1V1_afe3b466613ebc394e37645baaea4672a}\label{namespacerocr_1_1Addr_1_1V1_afe3b466613ebc394e37645baaea4672a}} 
+\index{rocr::Addr::V1@{rocr::Addr::V1}!HtileCacheBits@{HtileCacheBits}}
+\index{HtileCacheBits@{HtileCacheBits}!rocr::Addr::V1@{rocr::Addr::V1}}
+\doxysubsubsection{\texorpdfstring{HtileCacheBits}{HtileCacheBits}}
+{\footnotesize\ttfamily const \mbox{\hyperlink{addrtypes_8h_af5a2be58a28390f9a494538f34054637}{UINT\+\_\+32}} rocr\+::\+Addr\+::\+V1\+::\+Htile\+Cache\+Bits = 16384\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Number of bits for HTILE cache 512$\ast$32. 
+
+\mbox{\Hypertarget{namespacerocr_1_1Addr_1_1V1_a9e7a454aa128377879bef579cc50f634}\label{namespacerocr_1_1Addr_1_1V1_a9e7a454aa128377879bef579cc50f634}} 
+\index{rocr::Addr::V1@{rocr::Addr::V1}!MicroTileHeight@{MicroTileHeight}}
+\index{MicroTileHeight@{MicroTileHeight}!rocr::Addr::V1@{rocr::Addr::V1}}
+\doxysubsubsection{\texorpdfstring{MicroTileHeight}{MicroTileHeight}}
+{\footnotesize\ttfamily const \mbox{\hyperlink{addrtypes_8h_af5a2be58a28390f9a494538f34054637}{UINT\+\_\+32}} rocr\+::\+Addr\+::\+V1\+::\+Micro\+Tile\+Height = 8\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Micro tile height, for 1D and 2D tiling. 
+
+\mbox{\Hypertarget{namespacerocr_1_1Addr_1_1V1_a0a277aa755278630b2dd39473101b5d5}\label{namespacerocr_1_1Addr_1_1V1_a0a277aa755278630b2dd39473101b5d5}} 
+\index{rocr::Addr::V1@{rocr::Addr::V1}!MicroTilePixels@{MicroTilePixels}}
+\index{MicroTilePixels@{MicroTilePixels}!rocr::Addr::V1@{rocr::Addr::V1}}
+\doxysubsubsection{\texorpdfstring{MicroTilePixels}{MicroTilePixels}}
+{\footnotesize\ttfamily const \mbox{\hyperlink{addrtypes_8h_af5a2be58a28390f9a494538f34054637}{UINT\+\_\+32}} rocr\+::\+Addr\+::\+V1\+::\+Micro\+Tile\+Pixels = \mbox{\hyperlink{namespacerocr_1_1Addr_1_1V1_a888f360aa359956188a05c06a8e79cf2}{Micro\+Tile\+Width}} $\ast$ \mbox{\hyperlink{namespacerocr_1_1Addr_1_1V1_a9e7a454aa128377879bef579cc50f634}{Micro\+Tile\+Height}}\hspace{0.3cm}{\ttfamily [static]}}
+
+\mbox{\Hypertarget{namespacerocr_1_1Addr_1_1V1_a888f360aa359956188a05c06a8e79cf2}\label{namespacerocr_1_1Addr_1_1V1_a888f360aa359956188a05c06a8e79cf2}} 
+\index{rocr::Addr::V1@{rocr::Addr::V1}!MicroTileWidth@{MicroTileWidth}}
+\index{MicroTileWidth@{MicroTileWidth}!rocr::Addr::V1@{rocr::Addr::V1}}
+\doxysubsubsection{\texorpdfstring{MicroTileWidth}{MicroTileWidth}}
+{\footnotesize\ttfamily const \mbox{\hyperlink{addrtypes_8h_af5a2be58a28390f9a494538f34054637}{UINT\+\_\+32}} rocr\+::\+Addr\+::\+V1\+::\+Micro\+Tile\+Width = 8\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Micro tile width, for 1D and 2D tiling. 
+
+\mbox{\Hypertarget{namespacerocr_1_1Addr_1_1V1_ad4c7a1a148badaeaaa3c0b277f5217f6}\label{namespacerocr_1_1Addr_1_1V1_ad4c7a1a148badaeaaa3c0b277f5217f6}} 
+\index{rocr::Addr::V1@{rocr::Addr::V1}!PowerSaveTileBytes@{PowerSaveTileBytes}}
+\index{PowerSaveTileBytes@{PowerSaveTileBytes}!rocr::Addr::V1@{rocr::Addr::V1}}
+\doxysubsubsection{\texorpdfstring{PowerSaveTileBytes}{PowerSaveTileBytes}}
+{\footnotesize\ttfamily const \mbox{\hyperlink{addrtypes_8h_af5a2be58a28390f9a494538f34054637}{UINT\+\_\+32}} rocr\+::\+Addr\+::\+V1\+::\+Power\+Save\+Tile\+Bytes = 64\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Nuber of bytes per tile for power save 64. 
+
+\mbox{\Hypertarget{namespacerocr_1_1Addr_1_1V1_a469c862eaadb6a0609a9971e72f7bf26}\label{namespacerocr_1_1Addr_1_1V1_a469c862eaadb6a0609a9971e72f7bf26}} 
+\index{rocr::Addr::V1@{rocr::Addr::V1}!PrtTileSize@{PrtTileSize}}
+\index{PrtTileSize@{PrtTileSize}!rocr::Addr::V1@{rocr::Addr::V1}}
+\doxysubsubsection{\texorpdfstring{PrtTileSize}{PrtTileSize}}
+{\footnotesize\ttfamily const \mbox{\hyperlink{addrtypes_8h_af5a2be58a28390f9a494538f34054637}{UINT\+\_\+32}} rocr\+::\+Addr\+::\+V1\+::\+Prt\+Tile\+Size = \mbox{\hyperlink{namespacerocr_1_1Addr_1_1V1_a8aab6d13b59b7718667b40f484353ffb}{Block64K}}\hspace{0.3cm}{\ttfamily [static]}}
+
+\mbox{\Hypertarget{namespacerocr_1_1Addr_1_1V1_a27096d3128fb74e920ff7fc751c5bd7f}\label{namespacerocr_1_1Addr_1_1V1_a27096d3128fb74e920ff7fc751c5bd7f}} 
+\index{rocr::Addr::V1@{rocr::Addr::V1}!ThickTileThickness@{ThickTileThickness}}
+\index{ThickTileThickness@{ThickTileThickness}!rocr::Addr::V1@{rocr::Addr::V1}}
+\doxysubsubsection{\texorpdfstring{ThickTileThickness}{ThickTileThickness}}
+{\footnotesize\ttfamily const \mbox{\hyperlink{addrtypes_8h_af5a2be58a28390f9a494538f34054637}{UINT\+\_\+32}} rocr\+::\+Addr\+::\+V1\+::\+Thick\+Tile\+Thickness = 4\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Micro tile thickness, for THICK modes. 
+
+\mbox{\Hypertarget{namespacerocr_1_1Addr_1_1V1_a40e553b9c327f0c2959bd9f20ecc2426}\label{namespacerocr_1_1Addr_1_1V1_a40e553b9c327f0c2959bd9f20ecc2426}} 
+\index{rocr::Addr::V1@{rocr::Addr::V1}!TileIndexInvalid@{TileIndexInvalid}}
+\index{TileIndexInvalid@{TileIndexInvalid}!rocr::Addr::V1@{rocr::Addr::V1}}
+\doxysubsubsection{\texorpdfstring{TileIndexInvalid}{TileIndexInvalid}}
+{\footnotesize\ttfamily const \mbox{\hyperlink{addrtypes_8h_adacc69c9db3b9adfc072b838ebf2bb0e}{INT\+\_\+32}} rocr\+::\+Addr\+::\+V1\+::\+Tile\+Index\+Invalid = \mbox{\hyperlink{addrtypes_8h_a20b3aef73ea1c7a81347f46fa3c664f0}{TILEINDEX\+\_\+\+INVALID}}\hspace{0.3cm}{\ttfamily [static]}}
+
+\mbox{\Hypertarget{namespacerocr_1_1Addr_1_1V1_a986a59baa4602061269d09a22ac3da86}\label{namespacerocr_1_1Addr_1_1V1_a986a59baa4602061269d09a22ac3da86}} 
+\index{rocr::Addr::V1@{rocr::Addr::V1}!TileIndexLinearGeneral@{TileIndexLinearGeneral}}
+\index{TileIndexLinearGeneral@{TileIndexLinearGeneral}!rocr::Addr::V1@{rocr::Addr::V1}}
+\doxysubsubsection{\texorpdfstring{TileIndexLinearGeneral}{TileIndexLinearGeneral}}
+{\footnotesize\ttfamily const \mbox{\hyperlink{addrtypes_8h_adacc69c9db3b9adfc072b838ebf2bb0e}{INT\+\_\+32}} rocr\+::\+Addr\+::\+V1\+::\+Tile\+Index\+Linear\+General = \mbox{\hyperlink{addrtypes_8h_aba9b747e7209cd582388a906d8d4b328}{TILEINDEX\+\_\+\+LINEAR\+\_\+\+GENERAL}}\hspace{0.3cm}{\ttfamily [static]}}
+
+\mbox{\Hypertarget{namespacerocr_1_1Addr_1_1V1_a6429defe8a09268fb168c0321e8f8bde}\label{namespacerocr_1_1Addr_1_1V1_a6429defe8a09268fb168c0321e8f8bde}} 
+\index{rocr::Addr::V1@{rocr::Addr::V1}!TileIndexNoMacroIndex@{TileIndexNoMacroIndex}}
+\index{TileIndexNoMacroIndex@{TileIndexNoMacroIndex}!rocr::Addr::V1@{rocr::Addr::V1}}
+\doxysubsubsection{\texorpdfstring{TileIndexNoMacroIndex}{TileIndexNoMacroIndex}}
+{\footnotesize\ttfamily const \mbox{\hyperlink{addrtypes_8h_adacc69c9db3b9adfc072b838ebf2bb0e}{INT\+\_\+32}} rocr\+::\+Addr\+::\+V1\+::\+Tile\+Index\+No\+Macro\+Index = -\/3\hspace{0.3cm}{\ttfamily [static]}}
+
+\mbox{\Hypertarget{namespacerocr_1_1Addr_1_1V1_ae0920b551b42fc3de69f33b24e3f3fca}\label{namespacerocr_1_1Addr_1_1V1_ae0920b551b42fc3de69f33b24e3f3fca}} 
+\index{rocr::Addr::V1@{rocr::Addr::V1}!XThickTileThickness@{XThickTileThickness}}
+\index{XThickTileThickness@{XThickTileThickness}!rocr::Addr::V1@{rocr::Addr::V1}}
+\doxysubsubsection{\texorpdfstring{XThickTileThickness}{XThickTileThickness}}
+{\footnotesize\ttfamily const \mbox{\hyperlink{addrtypes_8h_af5a2be58a28390f9a494538f34054637}{UINT\+\_\+32}} rocr\+::\+Addr\+::\+V1\+::\+XThick\+Tile\+Thickness = 8\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Extra thick tiling thickness. 
+

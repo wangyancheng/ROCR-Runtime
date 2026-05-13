@@ -1,0 +1,161 @@
+\hypertarget{classrocr_1_1KernelMutex}{}\doxysection{rocr\+::Kernel\+Mutex Class Reference}
+\label{classrocr_1_1KernelMutex}\index{rocr::KernelMutex@{rocr::KernelMutex}}
+
+
+\+: a class represents a kernel mutex. Uses the kernel\textquotesingle{}s scheduler to keep the waiting thread from being scheduled until the lock is released (Best for long waits, though anything using a kernel object is a long wait).  
+
+
+
+
+{\ttfamily \#include $<$locks.\+h$>$}
+
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classrocr_1_1KernelMutex_a1f8b01670dae0c7daa31f8452ec4c177}{Kernel\+Mutex}} ()
+\item 
+\mbox{\hyperlink{classrocr_1_1KernelMutex_aac218aa84452eab8b8df34c09dfa57ae}{$\sim$\+Kernel\+Mutex}} ()
+\item 
+bool \mbox{\hyperlink{classrocr_1_1KernelMutex_a7f299b411e30ba667af42af78bb13565}{Try}} ()
+\item 
+bool \mbox{\hyperlink{classrocr_1_1KernelMutex_a65a2672824679afde3b54ea43d823094}{Acquire}} ()
+\item 
+void \mbox{\hyperlink{classrocr_1_1KernelMutex_af6b3dc332b3e8ee53542d2c62485a87d}{Release}} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classrocr_1_1KernelMutex_a0e7548a04b6b02da58a0b9a187956c9f}{DISALLOW\+\_\+\+COPY\+\_\+\+AND\+\_\+\+ASSIGN}} (\mbox{\hyperlink{classrocr_1_1KernelMutex}{Kernel\+Mutex}})
+\begin{DoxyCompactList}\small\item\em \+: Disable copiable and assignable ability. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{namespacerocr_1_1os_ad197657099b389acf698b1e2b8d3da5c}{os\+::\+Mutex}} \mbox{\hyperlink{classrocr_1_1KernelMutex_a3bb3725e92205a525acf859d0729ad64}{lock\+\_\+}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+\+: a class represents a kernel mutex. Uses the kernel\textquotesingle{}s scheduler to keep the waiting thread from being scheduled until the lock is released (Best for long waits, though anything using a kernel object is a long wait). 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classrocr_1_1KernelMutex_a1f8b01670dae0c7daa31f8452ec4c177}\label{classrocr_1_1KernelMutex_a1f8b01670dae0c7daa31f8452ec4c177}} 
+\index{rocr::KernelMutex@{rocr::KernelMutex}!KernelMutex@{KernelMutex}}
+\index{KernelMutex@{KernelMutex}!rocr::KernelMutex@{rocr::KernelMutex}}
+\doxysubsubsection{\texorpdfstring{KernelMutex()}{KernelMutex()}}
+{\footnotesize\ttfamily rocr\+::\+Kernel\+Mutex\+::\+Kernel\+Mutex (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=328pt]{classrocr_1_1KernelMutex_a1f8b01670dae0c7daa31f8452ec4c177_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classrocr_1_1KernelMutex_aac218aa84452eab8b8df34c09dfa57ae}\label{classrocr_1_1KernelMutex_aac218aa84452eab8b8df34c09dfa57ae}} 
+\index{rocr::KernelMutex@{rocr::KernelMutex}!````~KernelMutex@{$\sim$KernelMutex}}
+\index{````~KernelMutex@{$\sim$KernelMutex}!rocr::KernelMutex@{rocr::KernelMutex}}
+\doxysubsubsection{\texorpdfstring{$\sim$KernelMutex()}{~KernelMutex()}}
+{\footnotesize\ttfamily rocr\+::\+Kernel\+Mutex\+::$\sim$\+Kernel\+Mutex (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=333pt]{classrocr_1_1KernelMutex_aac218aa84452eab8b8df34c09dfa57ae_cgraph}
+\end{center}
+\end{figure}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classrocr_1_1KernelMutex_a65a2672824679afde3b54ea43d823094}\label{classrocr_1_1KernelMutex_a65a2672824679afde3b54ea43d823094}} 
+\index{rocr::KernelMutex@{rocr::KernelMutex}!Acquire@{Acquire}}
+\index{Acquire@{Acquire}!rocr::KernelMutex@{rocr::KernelMutex}}
+\doxysubsubsection{\texorpdfstring{Acquire()}{Acquire()}}
+{\footnotesize\ttfamily bool rocr\+::\+Kernel\+Mutex\+::\+Acquire (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=332pt]{classrocr_1_1KernelMutex_a65a2672824679afde3b54ea43d823094_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classrocr_1_1KernelMutex_a65a2672824679afde3b54ea43d823094_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classrocr_1_1KernelMutex_a0e7548a04b6b02da58a0b9a187956c9f}\label{classrocr_1_1KernelMutex_a0e7548a04b6b02da58a0b9a187956c9f}} 
+\index{rocr::KernelMutex@{rocr::KernelMutex}!DISALLOW\_COPY\_AND\_ASSIGN@{DISALLOW\_COPY\_AND\_ASSIGN}}
+\index{DISALLOW\_COPY\_AND\_ASSIGN@{DISALLOW\_COPY\_AND\_ASSIGN}!rocr::KernelMutex@{rocr::KernelMutex}}
+\doxysubsubsection{\texorpdfstring{DISALLOW\_COPY\_AND\_ASSIGN()}{DISALLOW\_COPY\_AND\_ASSIGN()}}
+{\footnotesize\ttfamily rocr\+::\+Kernel\+Mutex\+::\+DISALLOW\+\_\+\+COPY\+\_\+\+AND\+\_\+\+ASSIGN (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classrocr_1_1KernelMutex}{Kernel\+Mutex}}}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+\+: Disable copiable and assignable ability. 
+
+\mbox{\Hypertarget{classrocr_1_1KernelMutex_af6b3dc332b3e8ee53542d2c62485a87d}\label{classrocr_1_1KernelMutex_af6b3dc332b3e8ee53542d2c62485a87d}} 
+\index{rocr::KernelMutex@{rocr::KernelMutex}!Release@{Release}}
+\index{Release@{Release}!rocr::KernelMutex@{rocr::KernelMutex}}
+\doxysubsubsection{\texorpdfstring{Release()}{Release()}}
+{\footnotesize\ttfamily void rocr\+::\+Kernel\+Mutex\+::\+Release (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=335pt]{classrocr_1_1KernelMutex_af6b3dc332b3e8ee53542d2c62485a87d_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classrocr_1_1KernelMutex_af6b3dc332b3e8ee53542d2c62485a87d_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classrocr_1_1KernelMutex_a7f299b411e30ba667af42af78bb13565}\label{classrocr_1_1KernelMutex_a7f299b411e30ba667af42af78bb13565}} 
+\index{rocr::KernelMutex@{rocr::KernelMutex}!Try@{Try}}
+\index{Try@{Try}!rocr::KernelMutex@{rocr::KernelMutex}}
+\doxysubsubsection{\texorpdfstring{Try()}{Try()}}
+{\footnotesize\ttfamily bool rocr\+::\+Kernel\+Mutex\+::\+Try (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classrocr_1_1KernelMutex_a7f299b411e30ba667af42af78bb13565_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classrocr_1_1KernelMutex_a7f299b411e30ba667af42af78bb13565_icgraph}
+\end{center}
+\end{figure}
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{classrocr_1_1KernelMutex_a3bb3725e92205a525acf859d0729ad64}\label{classrocr_1_1KernelMutex_a3bb3725e92205a525acf859d0729ad64}} 
+\index{rocr::KernelMutex@{rocr::KernelMutex}!lock\_@{lock\_}}
+\index{lock\_@{lock\_}!rocr::KernelMutex@{rocr::KernelMutex}}
+\doxysubsubsection{\texorpdfstring{lock\_}{lock\_}}
+{\footnotesize\ttfamily \mbox{\hyperlink{namespacerocr_1_1os_ad197657099b389acf698b1e2b8d3da5c}{os\+::\+Mutex}} rocr\+::\+Kernel\+Mutex\+::lock\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+src/core/util/\mbox{\hyperlink{locks_8h}{locks.\+h}}\end{DoxyCompactItemize}

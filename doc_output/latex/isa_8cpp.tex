@@ -1,0 +1,51 @@
+\hypertarget{isa_8cpp}{}\doxysection{src/core/runtime/isa.cpp File Reference}
+\label{isa_8cpp}\index{src/core/runtime/isa.cpp@{src/core/runtime/isa.cpp}}
+{\ttfamily \#include \char`\"{}core/inc/isa.\+h\char`\"{}}\newline
+{\ttfamily \#include $<$algorithm$>$}\newline
+{\ttfamily \#include $<$cstring$>$}\newline
+{\ttfamily \#include $<$iostream$>$}\newline
+{\ttfamily \#include $<$sstream$>$}\newline
+{\ttfamily \#include $<$utility$>$}\newline
+Include dependency graph for isa.\+cpp\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{isa_8cpp__incl}
+\end{center}
+\end{figure}
+\doxysubsection*{Namespaces}
+\begin{DoxyCompactItemize}
+\item 
+ \mbox{\hyperlink{namespacerocr}{rocr}}
+\item 
+ \mbox{\hyperlink{namespacerocr_1_1core}{rocr\+::core}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \mbox{\hyperlink{isa_8cpp_a9e7c4ded413b5668dd12d5027216799e}{ISAREG\+\_\+\+ENTRY\+\_\+\+GEN}}(name,  maj,  min,  stp,  sramecc,  xnack,  wavefrontsize)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Macro Definition Documentation}
+\mbox{\Hypertarget{isa_8cpp_a9e7c4ded413b5668dd12d5027216799e}\label{isa_8cpp_a9e7c4ded413b5668dd12d5027216799e}} 
+\index{isa.cpp@{isa.cpp}!ISAREG\_ENTRY\_GEN@{ISAREG\_ENTRY\_GEN}}
+\index{ISAREG\_ENTRY\_GEN@{ISAREG\_ENTRY\_GEN}!isa.cpp@{isa.cpp}}
+\doxysubsubsection{\texorpdfstring{ISAREG\_ENTRY\_GEN}{ISAREG\_ENTRY\_GEN}}
+{\footnotesize\ttfamily \#define ISAREG\+\_\+\+ENTRY\+\_\+\+GEN(\begin{DoxyParamCaption}\item[{}]{name,  }\item[{}]{maj,  }\item[{}]{min,  }\item[{}]{stp,  }\item[{}]{sramecc,  }\item[{}]{xnack,  }\item[{}]{wavefrontsize }\end{DoxyParamCaption})}
+
+{\bfseries Value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{  assert(std::char\_traits<char>::length(name) <= hsa\_name\_size);                                                                          \(\backslash\)}
+\DoxyCodeLine{  Isa amd\_amdgpu\_\#\#maj\#\#min\#\#stp\#\#\_SRAMECC\_\#\#sramecc\#\#\_XNACK\_\#\#xnack\#\#\_WAVEFRONTSIZE\_\#\#wavefrontsize;                                     \(\backslash\)}
+\DoxyCodeLine{  amd\_amdgpu\_\#\#maj\#\#min\#\#stp\#\#\_SRAMECC\_\#\#sramecc\#\#\_XNACK\_\#\#xnack\#\#\_WAVEFRONTSIZE\_\#\#wavefrontsize.targetid\_ = name;                        \(\backslash\)}
+\DoxyCodeLine{  amd\_amdgpu\_\#\#maj\#\#min\#\#stp\#\#\_SRAMECC\_\#\#sramecc\#\#\_XNACK\_\#\#xnack\#\#\_WAVEFRONTSIZE\_\#\#wavefrontsize.version\_ = Isa::Version(maj, min, stp);  \(\backslash\)}
+\DoxyCodeLine{  amd\_amdgpu\_\#\#maj\#\#min\#\#stp\#\#\_SRAMECC\_\#\#sramecc\#\#\_XNACK\_\#\#xnack\#\#\_WAVEFRONTSIZE\_\#\#wavefrontsize.sramecc\_ = sramecc;                      \(\backslash\)}
+\DoxyCodeLine{  amd\_amdgpu\_\#\#maj\#\#min\#\#stp\#\#\_SRAMECC\_\#\#sramecc\#\#\_XNACK\_\#\#xnack\#\#\_WAVEFRONTSIZE\_\#\#wavefrontsize.xnack\_ = xnack;                          \(\backslash\)}
+\DoxyCodeLine{  amd\_amdgpu\_\#\#maj\#\#min\#\#stp\#\#\_SRAMECC\_\#\#sramecc\#\#\_XNACK\_\#\#xnack\#\#\_WAVEFRONTSIZE\_\#\#wavefrontsize.wavefront\_.num\_threads\_ = wavefrontsize; \(\backslash\)}
+\DoxyCodeLine{  supported\_isas.insert(std::make\_pair(                                                                                                   \(\backslash\)}
+\DoxyCodeLine{      amd\_amdgpu\_\#\#maj\#\#min\#\#stp\#\#\_SRAMECC\_\#\#sramecc\#\#\_XNACK\_\#\#xnack\#\#\_WAVEFRONTSIZE\_\#\#wavefrontsize.GetIsaName(),                        \(\backslash\)}
+\DoxyCodeLine{      amd\_amdgpu\_\#\#maj\#\#min\#\#stp\#\#\_SRAMECC\_\#\#sramecc\#\#\_XNACK\_\#\#xnack\#\#\_WAVEFRONTSIZE\_\#\#wavefrontsize));                                   \(\backslash\)}
+
+\end{DoxyCode}

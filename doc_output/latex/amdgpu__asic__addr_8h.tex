@@ -1,0 +1,1032 @@
+\hypertarget{amdgpu__asic__addr_8h}{}\doxysection{src/image/addrlib/src/amdgpu\+\_\+asic\+\_\+addr.h File Reference}
+\label{amdgpu__asic__addr_8h}\index{src/image/addrlib/src/amdgpu\_asic\_addr.h@{src/image/addrlib/src/amdgpu\_asic\_addr.h}}
+This graph shows which files directly or indirectly include this file\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{amdgpu__asic__addr_8h__dep__incl}
+\end{center}
+\end{figure}
+\doxysubsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \mbox{\hyperlink{amdgpu__asic__addr_8h_ab4e08e00da6054c2fa363efb9270a0cd}{ATI\+\_\+\+VENDOR\+\_\+\+ID}}~0x1002
+\item 
+\#define \mbox{\hyperlink{amdgpu__asic__addr_8h_a69a6be0d9d60d238c80ab7cfe6ad48e7}{AMD\+\_\+\+VENDOR\+\_\+\+ID}}~0x1022
+\item 
+\#define \mbox{\hyperlink{amdgpu__asic__addr_8h_a357aa5980c9b2c7403ed91eace99baeb}{AMDGPU\+\_\+\+VENDOR\+\_\+\+IS\+\_\+\+AMD}}(v)~((v == \mbox{\hyperlink{amdgpu__asic__addr_8h_ab4e08e00da6054c2fa363efb9270a0cd}{ATI\+\_\+\+VENDOR\+\_\+\+ID}}) $\vert$$\vert$ (v == \mbox{\hyperlink{amdgpu__asic__addr_8h_a69a6be0d9d60d238c80ab7cfe6ad48e7}{AMD\+\_\+\+VENDOR\+\_\+\+ID}}))
+\item 
+\#define \mbox{\hyperlink{amdgpu__asic__addr_8h_a0a9caf38587a95f7810eb7acaf3e032c}{FAMILY\+\_\+\+UNKNOWN}}~0x00
+\item 
+\#define \mbox{\hyperlink{amdgpu__asic__addr_8h_ab9481320a3445496c193a0cbe1099c41}{FAMILY\+\_\+\+TN}}~0x69
+\item 
+\#define \mbox{\hyperlink{amdgpu__asic__addr_8h_a96bb90398ee305e2c6a225b0dc2b768d}{FAMILY\+\_\+\+SI}}~0x6E
+\item 
+\#define \mbox{\hyperlink{amdgpu__asic__addr_8h_ad0e46bdbd486167575da2c36080cc82f}{FAMILY\+\_\+\+CI}}~0x78
+\item 
+\#define \mbox{\hyperlink{amdgpu__asic__addr_8h_adb7f0f5cb58338a96165e89a37b2a913}{FAMILY\+\_\+\+KV}}~0x7D
+\item 
+\#define \mbox{\hyperlink{amdgpu__asic__addr_8h_a0b51a8641e63b672a850ee3e0c44598d}{FAMILY\+\_\+\+VI}}~0x82
+\item 
+\#define \mbox{\hyperlink{amdgpu__asic__addr_8h_a7fcf6ee308a14b6338ff011828a0799b}{FAMILY\+\_\+\+POLARIS}}~0x82
+\item 
+\#define \mbox{\hyperlink{amdgpu__asic__addr_8h_a18fe3e42494faa082aaec819100a1a60}{FAMILY\+\_\+\+CZ}}~0x87
+\item 
+\#define \mbox{\hyperlink{amdgpu__asic__addr_8h_a8264fee3e80c629b7284bf4c072640b8}{FAMILY\+\_\+\+AI}}~0x8D
+\item 
+\#define \mbox{\hyperlink{amdgpu__asic__addr_8h_aa643356fa7733a9ab51df2516cd7a242}{FAMILY\+\_\+\+RV}}~0x8E
+\item 
+\#define \mbox{\hyperlink{amdgpu__asic__addr_8h_ae300c94e9cb12b87e266d1a0c843df9d}{FAMILY\+\_\+\+NV}}~0x8F
+\item 
+\#define \mbox{\hyperlink{amdgpu__asic__addr_8h_a7978024323bf0d09c9c0718043aefb36}{FAMILY\+\_\+\+VGH}}~0x90
+\item 
+\#define \mbox{\hyperlink{amdgpu__asic__addr_8h_a6a9ca05ab9f019fdfba5888f56a747a1}{FAMILY\+\_\+\+GFX1100}}~0x91
+\item 
+\#define \mbox{\hyperlink{amdgpu__asic__addr_8h_adb5db517880c74984bfe4d9ab53ad9ac}{FAMILY\+\_\+\+GFX1103}}~0x94
+\item 
+\#define \mbox{\hyperlink{amdgpu__asic__addr_8h_a16e320bc26b0c0c6b555f63559ca00d2}{FAMILY\+\_\+\+RMB}}~0x92
+\item 
+\#define \mbox{\hyperlink{amdgpu__asic__addr_8h_a6ce98481d6be1a91dd4e624627da3e79}{FAMILY\+\_\+\+GC\+\_\+10\+\_\+3\+\_\+6}}~0x95
+\item 
+\#define \mbox{\hyperlink{amdgpu__asic__addr_8h_a50569948f71184334a30db4690fd3470}{FAMILY\+\_\+\+GC\+\_\+10\+\_\+3\+\_\+7}}~0x97
+\item 
+\#define \mbox{\hyperlink{amdgpu__asic__addr_8h_a5ae06ba68da506d0e601f9ffcbf543ae}{FAMILY\+\_\+\+IS}}(f,  fn)~(f == FAMILY\+\_\+\#\#fn)
+\item 
+\#define \mbox{\hyperlink{amdgpu__asic__addr_8h_a4035920e3bf79214e5a7ee46b0a969f8}{FAMILY\+\_\+\+IS\+\_\+\+TN}}(f)~\mbox{\hyperlink{amdgpu__asic__addr_8h_a5ae06ba68da506d0e601f9ffcbf543ae}{FAMILY\+\_\+\+IS}}(f, TN)
+\item 
+\#define \mbox{\hyperlink{amdgpu__asic__addr_8h_a38f2ff57f663230876cf4398cd3ca2fa}{FAMILY\+\_\+\+IS\+\_\+\+SI}}(f)~\mbox{\hyperlink{amdgpu__asic__addr_8h_a5ae06ba68da506d0e601f9ffcbf543ae}{FAMILY\+\_\+\+IS}}(f, SI)
+\item 
+\#define \mbox{\hyperlink{amdgpu__asic__addr_8h_a6a7cf9f8650b1fdd6f28a460a5dbd91e}{FAMILY\+\_\+\+IS\+\_\+\+CI}}(f)~\mbox{\hyperlink{amdgpu__asic__addr_8h_a5ae06ba68da506d0e601f9ffcbf543ae}{FAMILY\+\_\+\+IS}}(f, CI)
+\item 
+\#define \mbox{\hyperlink{amdgpu__asic__addr_8h_aba8aeb459e7b627bc1977add36d03c8d}{FAMILY\+\_\+\+IS\+\_\+\+KV}}(f)~\mbox{\hyperlink{amdgpu__asic__addr_8h_a5ae06ba68da506d0e601f9ffcbf543ae}{FAMILY\+\_\+\+IS}}(f, KV)
+\item 
+\#define \mbox{\hyperlink{amdgpu__asic__addr_8h_a6c1750df2e5b9b4d301b2b984e9e971b}{FAMILY\+\_\+\+IS\+\_\+\+VI}}(f)~\mbox{\hyperlink{amdgpu__asic__addr_8h_a5ae06ba68da506d0e601f9ffcbf543ae}{FAMILY\+\_\+\+IS}}(f, VI)
+\item 
+\#define \mbox{\hyperlink{amdgpu__asic__addr_8h_a5e27cadd4fd50ce5817b6ab4ebe6571f}{FAMILY\+\_\+\+IS\+\_\+\+POLARIS}}(f)~\mbox{\hyperlink{amdgpu__asic__addr_8h_a5ae06ba68da506d0e601f9ffcbf543ae}{FAMILY\+\_\+\+IS}}(f, POLARIS)
+\item 
+\#define \mbox{\hyperlink{amdgpu__asic__addr_8h_af5e7e186b442873ceeeeb8e7951ca72f}{FAMILY\+\_\+\+IS\+\_\+\+CZ}}(f)~\mbox{\hyperlink{amdgpu__asic__addr_8h_a5ae06ba68da506d0e601f9ffcbf543ae}{FAMILY\+\_\+\+IS}}(f, CZ)
+\item 
+\#define \mbox{\hyperlink{amdgpu__asic__addr_8h_a0cc05b398757928ba761ea543fdac54e}{FAMILY\+\_\+\+IS\+\_\+\+AI}}(f)~\mbox{\hyperlink{amdgpu__asic__addr_8h_a5ae06ba68da506d0e601f9ffcbf543ae}{FAMILY\+\_\+\+IS}}(f, AI)
+\item 
+\#define \mbox{\hyperlink{amdgpu__asic__addr_8h_a03ff28d02f116b305e7ae2a355b269c4}{FAMILY\+\_\+\+IS\+\_\+\+RV}}(f)~\mbox{\hyperlink{amdgpu__asic__addr_8h_a5ae06ba68da506d0e601f9ffcbf543ae}{FAMILY\+\_\+\+IS}}(f, RV)
+\item 
+\#define \mbox{\hyperlink{amdgpu__asic__addr_8h_a0a89b39354cd6641836f924a6568e039}{FAMILY\+\_\+\+IS\+\_\+\+NV}}(f)~\mbox{\hyperlink{amdgpu__asic__addr_8h_a5ae06ba68da506d0e601f9ffcbf543ae}{FAMILY\+\_\+\+IS}}(f, NV)
+\item 
+\#define \mbox{\hyperlink{amdgpu__asic__addr_8h_a478bbecf202c1582678a17681f1a9a6e}{FAMILY\+\_\+\+IS\+\_\+\+RMB}}(f)~\mbox{\hyperlink{amdgpu__asic__addr_8h_a5ae06ba68da506d0e601f9ffcbf543ae}{FAMILY\+\_\+\+IS}}(f, RMB)
+\item 
+\#define \mbox{\hyperlink{amdgpu__asic__addr_8h_acd2d5bb6c41ab2176796367b2b2b986f}{FAMILY\+\_\+\+IS\+\_\+\+GFX1100}}(f)~\mbox{\hyperlink{amdgpu__asic__addr_8h_a5ae06ba68da506d0e601f9ffcbf543ae}{FAMILY\+\_\+\+IS}}(f, GFX1100)
+\item 
+\#define \mbox{\hyperlink{amdgpu__asic__addr_8h_a2d54534b8f76ecf414c9b6d838c19f63}{FAMILY\+\_\+\+IS\+\_\+\+GFX1103}}(f)~\mbox{\hyperlink{amdgpu__asic__addr_8h_a5ae06ba68da506d0e601f9ffcbf543ae}{FAMILY\+\_\+\+IS}}(f, GFX1103)
+\item 
+\#define \mbox{\hyperlink{amdgpu__asic__addr_8h_abd29f4b23d52e963950d4cfea45bd9c1}{AMDGPU\+\_\+\+UNKNOWN}}~0x\+FF
+\item 
+\#define \mbox{\hyperlink{amdgpu__asic__addr_8h_a4b178ac10008ff0fe95f2567700b560e}{AMDGPU\+\_\+\+TAHITI\+\_\+\+RANGE}}~0x05, 0x14
+\item 
+\#define \mbox{\hyperlink{amdgpu__asic__addr_8h_a3fc54001116840a3f09c17861efb7316}{AMDGPU\+\_\+\+PITCAIRN\+\_\+\+RANGE}}~0x15, 0x28
+\item 
+\#define \mbox{\hyperlink{amdgpu__asic__addr_8h_acd977aaf1049a478750fcdd5de5eddcc}{AMDGPU\+\_\+\+CAPEVERDE\+\_\+\+RANGE}}~0x29, 0x3C
+\item 
+\#define \mbox{\hyperlink{amdgpu__asic__addr_8h_ad9a1f94d03f7c2d71651c1d50ad40637}{AMDGPU\+\_\+\+OLAND\+\_\+\+RANGE}}~0x3C, 0x46
+\item 
+\#define \mbox{\hyperlink{amdgpu__asic__addr_8h_a401352d75d9d4a78b95f4b27b190f2e3}{AMDGPU\+\_\+\+HAINAN\+\_\+\+RANGE}}~0x46, 0x\+FF
+\item 
+\#define \mbox{\hyperlink{amdgpu__asic__addr_8h_a13c85c2acc1859086e529bd06ffdaf48}{AMDGPU\+\_\+\+BONAIRE\+\_\+\+RANGE}}~0x14, 0x28
+\item 
+\#define \mbox{\hyperlink{amdgpu__asic__addr_8h_a525aa850c830a87491f00c87cce3a27d}{AMDGPU\+\_\+\+HAWAII\+\_\+\+RANGE}}~0x28, 0x3C
+\item 
+\#define \mbox{\hyperlink{amdgpu__asic__addr_8h_a6b38252d39b8ab6092937eb7dd4cb62f}{AMDGPU\+\_\+\+SPECTRE\+\_\+\+RANGE}}~0x01, 0x41
+\item 
+\#define \mbox{\hyperlink{amdgpu__asic__addr_8h_a0d5b40c11a6c608b1ceea3aac1e98bc8}{AMDGPU\+\_\+\+SPOOKY\+\_\+\+RANGE}}~0x41, 0x81
+\item 
+\#define \mbox{\hyperlink{amdgpu__asic__addr_8h_a58d353cd597fb48da9a15f12b5087064}{AMDGPU\+\_\+\+KALINDI\+\_\+\+RANGE}}~0x81, 0x\+A1
+\item 
+\#define \mbox{\hyperlink{amdgpu__asic__addr_8h_a96ee7b5b53ae14799edc15aae98635e9}{AMDGPU\+\_\+\+GODAVARI\+\_\+\+RANGE}}~0x\+A1, 0x\+FF
+\item 
+\#define \mbox{\hyperlink{amdgpu__asic__addr_8h_a1b439d37ab9e68f9282e8d34cabb78fc}{AMDGPU\+\_\+\+ICELAND\+\_\+\+RANGE}}~0x01, 0x14
+\item 
+\#define \mbox{\hyperlink{amdgpu__asic__addr_8h_a14b945708bf68f365c8559676959015f}{AMDGPU\+\_\+\+TONGA\+\_\+\+RANGE}}~0x14, 0x28
+\item 
+\#define \mbox{\hyperlink{amdgpu__asic__addr_8h_a0083c0f94503ed5c9ca1ccf1f51412fd}{AMDGPU\+\_\+\+FIJI\+\_\+\+RANGE}}~0x3C, 0x50
+\item 
+\#define \mbox{\hyperlink{amdgpu__asic__addr_8h_a275a90247de0269156bb827ed6e74554}{AMDGPU\+\_\+\+POLARIS10\+\_\+\+RANGE}}~0x50, 0x5A
+\item 
+\#define \mbox{\hyperlink{amdgpu__asic__addr_8h_afc62461dd5222a4155dadc66c82591c7}{AMDGPU\+\_\+\+POLARIS11\+\_\+\+RANGE}}~0x5A, 0x64
+\item 
+\#define \mbox{\hyperlink{amdgpu__asic__addr_8h_a36392e217b24781524bf6b3f7e9ad2e6}{AMDGPU\+\_\+\+POLARIS12\+\_\+\+RANGE}}~0x64, 0x6E
+\item 
+\#define \mbox{\hyperlink{amdgpu__asic__addr_8h_afd86bfb564aaa77d5c18d2dd4293e31c}{AMDGPU\+\_\+\+VEGAM\+\_\+\+RANGE}}~0x6E, 0x\+FF
+\item 
+\#define \mbox{\hyperlink{amdgpu__asic__addr_8h_a9f8cafc05b3555ecdc5ef6c4fca9fca4}{AMDGPU\+\_\+\+CARRIZO\+\_\+\+RANGE}}~0x01, 0x21
+\item 
+\#define \mbox{\hyperlink{amdgpu__asic__addr_8h_ae10efbda0d8e328e0f1eb8aeba2e9cd1}{AMDGPU\+\_\+\+STONEY\+\_\+\+RANGE}}~0x61, 0x\+FF
+\item 
+\#define \mbox{\hyperlink{amdgpu__asic__addr_8h_a8f7c90928798e8df24b33c2e7b02407c}{AMDGPU\+\_\+\+VEGA10\+\_\+\+RANGE}}~0x01, 0x14
+\item 
+\#define \mbox{\hyperlink{amdgpu__asic__addr_8h_a2437b5ad169d9823c10187b548c14aff}{AMDGPU\+\_\+\+VEGA12\+\_\+\+RANGE}}~0x14, 0x28
+\item 
+\#define \mbox{\hyperlink{amdgpu__asic__addr_8h_a6e3a72287fc4c3564fa09fb44f2ea782}{AMDGPU\+\_\+\+VEGA20\+\_\+\+RANGE}}~0x28, 0x32
+\item 
+\#define \mbox{\hyperlink{amdgpu__asic__addr_8h_a3f053e8c9bb3fd6da492a0d843f00c25}{AMDGPU\+\_\+\+ARCTURUS\+\_\+\+RANGE}}~0x32, 0x3C
+\item 
+\#define \mbox{\hyperlink{amdgpu__asic__addr_8h_ae82c5be7ac1bedb20989fa249c23a7fc}{AMDGPU\+\_\+\+ALDEBARAN\+\_\+\+RANGE}}~0x3C, 0x\+FF
+\item 
+\#define \mbox{\hyperlink{amdgpu__asic__addr_8h_a983ecd4fef8130128b9e81457dad8d58}{AMDGPU\+\_\+\+RAVEN\+\_\+\+RANGE}}~0x01, 0x81
+\item 
+\#define \mbox{\hyperlink{amdgpu__asic__addr_8h_a62e5716ff813f86f2aaa24c3a9f83815}{AMDGPU\+\_\+\+RAVEN2\+\_\+\+RANGE}}~0x81, 0x91
+\item 
+\#define \mbox{\hyperlink{amdgpu__asic__addr_8h_a5439ba3f66fbee5159173d5e63e44df8}{AMDGPU\+\_\+\+RENOIR\+\_\+\+RANGE}}~0x91, 0x\+FF
+\item 
+\#define \mbox{\hyperlink{amdgpu__asic__addr_8h_aad65db7d98743c19f0f9ab6b6c24760e}{AMDGPU\+\_\+\+NAVI10\+\_\+\+RANGE}}~0x01, 0x0A
+\item 
+\#define \mbox{\hyperlink{amdgpu__asic__addr_8h_a4e9b8f706ac660502aa3e1f37ff4a233}{AMDGPU\+\_\+\+NAVI12\+\_\+\+RANGE}}~0x0A, 0x14
+\item 
+\#define \mbox{\hyperlink{amdgpu__asic__addr_8h_a1c1e95111fb1fe9ff1b96646273c7b05}{AMDGPU\+\_\+\+NAVI14\+\_\+\+RANGE}}~0x14, 0x28
+\item 
+\#define \mbox{\hyperlink{amdgpu__asic__addr_8h_a41903f9f524132c56a5c724e4015de12}{AMDGPU\+\_\+\+NAVI21\+\_\+\+RANGE}}~0x28, 0x32
+\item 
+\#define \mbox{\hyperlink{amdgpu__asic__addr_8h_ae2d1609a594b09cce3ba909bf291769f}{AMDGPU\+\_\+\+NAVI22\+\_\+\+RANGE}}~0x32, 0x3C
+\item 
+\#define \mbox{\hyperlink{amdgpu__asic__addr_8h_a8e05055b9ff84029dee193f15ca45742}{AMDGPU\+\_\+\+NAVI23\+\_\+\+RANGE}}~0x3C, 0x46
+\item 
+\#define \mbox{\hyperlink{amdgpu__asic__addr_8h_ab29c367ceada8e19aea9bcb2be5940a3}{AMDGPU\+\_\+\+NAVI24\+\_\+\+RANGE}}~0x46, 0x50
+\item 
+\#define \mbox{\hyperlink{amdgpu__asic__addr_8h_a38c188ef916c732deaafc7b3c2510676}{AMDGPU\+\_\+\+VANGOGH\+\_\+\+RANGE}}~0x01, 0x\+FF
+\item 
+\#define \mbox{\hyperlink{amdgpu__asic__addr_8h_aca2d7c19186e629690cc8f1595754dad}{AMDGPU\+\_\+\+GFX1100\+\_\+\+RANGE}}~0x01, 0x10
+\item 
+\#define \mbox{\hyperlink{amdgpu__asic__addr_8h_a71323e06498a679fa137d6500f2a8ec6}{AMDGPU\+\_\+\+GFX1101\+\_\+\+RANGE}}~0x20, 0x\+FF
+\item 
+\#define \mbox{\hyperlink{amdgpu__asic__addr_8h_a6ee2e45c79d28b53a39c084d52f263c2}{AMDGPU\+\_\+\+GFX1102\+\_\+\+RANGE}}~0x10, 0x20
+\item 
+\#define \mbox{\hyperlink{amdgpu__asic__addr_8h_a3690c3a566bbd0d41fdecb0521baf17a}{AMDGPU\+\_\+\+GFX1103\+\_\+\+RANGE}}~0x01, 0x\+FF
+\item 
+\#define \mbox{\hyperlink{amdgpu__asic__addr_8h_a8e3fc69036b29bcd753f61d2e5285a3c}{AMDGPU\+\_\+\+REMBRANDT\+\_\+\+RANGE}}~0x01, 0x\+FF
+\item 
+\#define \mbox{\hyperlink{amdgpu__asic__addr_8h_ac8bd1d078dd37eecdd6cfe956ec97e4c}{AMDGPU\+\_\+\+GFX1036\+\_\+\+RANGE}}~0x01, 0x\+FF
+\item 
+\#define \mbox{\hyperlink{amdgpu__asic__addr_8h_a27f5414c940e7db22c0b79c8ddfe1390}{AMDGPU\+\_\+\+GFX1037\+\_\+\+RANGE}}~0x01, 0x\+FF
+\item 
+\#define \mbox{\hyperlink{amdgpu__asic__addr_8h_a64f63abe4bd112ebb2822a3d2cbc921c}{AMDGPU\+\_\+\+EXPAND\+\_\+\+FIX}}(x)~x
+\item 
+\#define \mbox{\hyperlink{amdgpu__asic__addr_8h_a8f77162de96ddec4acebbae42d070aea}{AMDGPU\+\_\+\+RANGE\+\_\+\+HELPER}}(val,  min,  max)~((val $>$= min) \&\& (val $<$ max))
+\item 
+\#define \mbox{\hyperlink{amdgpu__asic__addr_8h_a8f91b21cde61dd0ba41d0707bab1a031}{AMDGPU\+\_\+\+IN\+\_\+\+RANGE}}(val, ...)~\mbox{\hyperlink{amdgpu__asic__addr_8h_a64f63abe4bd112ebb2822a3d2cbc921c}{AMDGPU\+\_\+\+EXPAND\+\_\+\+FIX}}(\mbox{\hyperlink{amdgpu__asic__addr_8h_a8f77162de96ddec4acebbae42d070aea}{AMDGPU\+\_\+\+RANGE\+\_\+\+HELPER}}(val, \+\_\+\+\_\+\+VA\+\_\+\+ARGS\+\_\+\+\_\+))
+\item 
+\#define \mbox{\hyperlink{amdgpu__asic__addr_8h_a938d93d3633b95577b66072f390c5f9a}{ASICREV\+\_\+\+IS}}(r,  rn)~\mbox{\hyperlink{amdgpu__asic__addr_8h_a8f91b21cde61dd0ba41d0707bab1a031}{AMDGPU\+\_\+\+IN\+\_\+\+RANGE}}(r, AMDGPU\+\_\+\#\#rn\#\#\+\_\+\+RANGE)
+\item 
+\#define \mbox{\hyperlink{amdgpu__asic__addr_8h_a51881d4457eca52f1d25a1b1c8cdd4a7}{ASICREV\+\_\+\+IS\+\_\+\+TAHITI\+\_\+P}}(r)~\mbox{\hyperlink{amdgpu__asic__addr_8h_a938d93d3633b95577b66072f390c5f9a}{ASICREV\+\_\+\+IS}}(r, TAHITI)
+\item 
+\#define \mbox{\hyperlink{amdgpu__asic__addr_8h_adbd2ac44ce637557f3c5ca84c2d7f03d}{ASICREV\+\_\+\+IS\+\_\+\+PITCAIRN\+\_\+\+PM}}(r)~\mbox{\hyperlink{amdgpu__asic__addr_8h_a938d93d3633b95577b66072f390c5f9a}{ASICREV\+\_\+\+IS}}(r, PITCAIRN)
+\item 
+\#define \mbox{\hyperlink{amdgpu__asic__addr_8h_ac4ed0610833ab04b665489e6626104b5}{ASICREV\+\_\+\+IS\+\_\+\+CAPEVERDE\+\_\+M}}(r)~\mbox{\hyperlink{amdgpu__asic__addr_8h_a938d93d3633b95577b66072f390c5f9a}{ASICREV\+\_\+\+IS}}(r, CAPEVERDE)
+\item 
+\#define \mbox{\hyperlink{amdgpu__asic__addr_8h_a6f6fe53fa73b0a321052e9e0971c4048}{ASICREV\+\_\+\+IS\+\_\+\+OLAND\+\_\+M}}(r)~\mbox{\hyperlink{amdgpu__asic__addr_8h_a938d93d3633b95577b66072f390c5f9a}{ASICREV\+\_\+\+IS}}(r, OLAND)
+\item 
+\#define \mbox{\hyperlink{amdgpu__asic__addr_8h_aa41fc0bed4d63bb47eb7a1b78c170b54}{ASICREV\+\_\+\+IS\+\_\+\+HAINAN\+\_\+V}}(r)~\mbox{\hyperlink{amdgpu__asic__addr_8h_a938d93d3633b95577b66072f390c5f9a}{ASICREV\+\_\+\+IS}}(r, HAINAN)
+\item 
+\#define \mbox{\hyperlink{amdgpu__asic__addr_8h_a693e4c8d75be687915223c740258687e}{ASICREV\+\_\+\+IS\+\_\+\+BONAIRE\+\_\+M}}(r)~\mbox{\hyperlink{amdgpu__asic__addr_8h_a938d93d3633b95577b66072f390c5f9a}{ASICREV\+\_\+\+IS}}(r, BONAIRE)
+\item 
+\#define \mbox{\hyperlink{amdgpu__asic__addr_8h_a83b89a245c8ea6865f866c429a2a0a62}{ASICREV\+\_\+\+IS\+\_\+\+HAWAII\+\_\+P}}(r)~\mbox{\hyperlink{amdgpu__asic__addr_8h_a938d93d3633b95577b66072f390c5f9a}{ASICREV\+\_\+\+IS}}(r, HAWAII)
+\item 
+\#define \mbox{\hyperlink{amdgpu__asic__addr_8h_ad6b6d7353d82cfc6f00eedb82fda9a36}{ASICREV\+\_\+\+IS\+\_\+\+SPECTRE}}(r)~\mbox{\hyperlink{amdgpu__asic__addr_8h_a938d93d3633b95577b66072f390c5f9a}{ASICREV\+\_\+\+IS}}(r, SPECTRE)
+\item 
+\#define \mbox{\hyperlink{amdgpu__asic__addr_8h_ace99d03cb7fe32f6d161226f28baafe7}{ASICREV\+\_\+\+IS\+\_\+\+SPOOKY}}(r)~\mbox{\hyperlink{amdgpu__asic__addr_8h_a938d93d3633b95577b66072f390c5f9a}{ASICREV\+\_\+\+IS}}(r, SPOOKY)
+\item 
+\#define \mbox{\hyperlink{amdgpu__asic__addr_8h_afe569e90e4e02c1edaa02a358e9d1781}{ASICREV\+\_\+\+IS\+\_\+\+KALINDI}}(r)~\mbox{\hyperlink{amdgpu__asic__addr_8h_a938d93d3633b95577b66072f390c5f9a}{ASICREV\+\_\+\+IS}}(r, KALINDI)
+\item 
+\#define \mbox{\hyperlink{amdgpu__asic__addr_8h_ae304898b341b175e43bfd88e3c789adf}{ASICREV\+\_\+\+IS\+\_\+\+KALINDI\+\_\+\+GODAVARI}}(r)~\mbox{\hyperlink{amdgpu__asic__addr_8h_a938d93d3633b95577b66072f390c5f9a}{ASICREV\+\_\+\+IS}}(r, GODAVARI)
+\item 
+\#define \mbox{\hyperlink{amdgpu__asic__addr_8h_a642f17a78f8faf9d57daeae1f667cf9d}{ASICREV\+\_\+\+IS\+\_\+\+ICELAND\+\_\+M}}(r)~\mbox{\hyperlink{amdgpu__asic__addr_8h_a938d93d3633b95577b66072f390c5f9a}{ASICREV\+\_\+\+IS}}(r, ICELAND)
+\item 
+\#define \mbox{\hyperlink{amdgpu__asic__addr_8h_acb1dcb4b25b48331666d0158919a0238}{ASICREV\+\_\+\+IS\+\_\+\+TONGA\+\_\+P}}(r)~\mbox{\hyperlink{amdgpu__asic__addr_8h_a938d93d3633b95577b66072f390c5f9a}{ASICREV\+\_\+\+IS}}(r, TONGA)
+\item 
+\#define \mbox{\hyperlink{amdgpu__asic__addr_8h_ad535aa6741a707778890bff77b15883f}{ASICREV\+\_\+\+IS\+\_\+\+FIJI\+\_\+P}}(r)~\mbox{\hyperlink{amdgpu__asic__addr_8h_a938d93d3633b95577b66072f390c5f9a}{ASICREV\+\_\+\+IS}}(r, FIJI)
+\item 
+\#define \mbox{\hyperlink{amdgpu__asic__addr_8h_af18b80877aeb4883792976e1fd27c307}{ASICREV\+\_\+\+IS\+\_\+\+POLARIS10\+\_\+P}}(r)~\mbox{\hyperlink{amdgpu__asic__addr_8h_a938d93d3633b95577b66072f390c5f9a}{ASICREV\+\_\+\+IS}}(r, POLARIS10)
+\item 
+\#define \mbox{\hyperlink{amdgpu__asic__addr_8h_abd5ae747f6eeedb27d4a440ab85039d9}{ASICREV\+\_\+\+IS\+\_\+\+POLARIS11\+\_\+M}}(r)~\mbox{\hyperlink{amdgpu__asic__addr_8h_a938d93d3633b95577b66072f390c5f9a}{ASICREV\+\_\+\+IS}}(r, POLARIS11)
+\item 
+\#define \mbox{\hyperlink{amdgpu__asic__addr_8h_a82cc23ba01e9dd954b5c4914b010ca26}{ASICREV\+\_\+\+IS\+\_\+\+POLARIS12\+\_\+V}}(r)~\mbox{\hyperlink{amdgpu__asic__addr_8h_a938d93d3633b95577b66072f390c5f9a}{ASICREV\+\_\+\+IS}}(r, POLARIS12)
+\item 
+\#define \mbox{\hyperlink{amdgpu__asic__addr_8h_a804df7312aafc426c0b143119ef17996}{ASICREV\+\_\+\+IS\+\_\+\+VEGAM\+\_\+P}}(r)~\mbox{\hyperlink{amdgpu__asic__addr_8h_a938d93d3633b95577b66072f390c5f9a}{ASICREV\+\_\+\+IS}}(r, VEGAM)
+\item 
+\#define \mbox{\hyperlink{amdgpu__asic__addr_8h_a04311fc3705d0cdce5e6dedfd0c6fecd}{ASICREV\+\_\+\+IS\+\_\+\+CARRIZO}}(r)~\mbox{\hyperlink{amdgpu__asic__addr_8h_a938d93d3633b95577b66072f390c5f9a}{ASICREV\+\_\+\+IS}}(r, CARRIZO)
+\item 
+\#define \mbox{\hyperlink{amdgpu__asic__addr_8h_aab6bcb1e652b6872817da823b40d632a}{ASICREV\+\_\+\+IS\+\_\+\+STONEY}}(r)~\mbox{\hyperlink{amdgpu__asic__addr_8h_a938d93d3633b95577b66072f390c5f9a}{ASICREV\+\_\+\+IS}}(r, STONEY)
+\item 
+\#define \mbox{\hyperlink{amdgpu__asic__addr_8h_af368cc6e16cd2f8c7f03d8ff23f0ee8b}{ASICREV\+\_\+\+IS\+\_\+\+VEGA10\+\_\+M}}(r)~\mbox{\hyperlink{amdgpu__asic__addr_8h_a938d93d3633b95577b66072f390c5f9a}{ASICREV\+\_\+\+IS}}(r, VEGA10)
+\item 
+\#define \mbox{\hyperlink{amdgpu__asic__addr_8h_a2941644dfd06f82e657bdd83b9f515c2}{ASICREV\+\_\+\+IS\+\_\+\+VEGA10\+\_\+P}}(r)~\mbox{\hyperlink{amdgpu__asic__addr_8h_a938d93d3633b95577b66072f390c5f9a}{ASICREV\+\_\+\+IS}}(r, VEGA10)
+\item 
+\#define \mbox{\hyperlink{amdgpu__asic__addr_8h_aff4a681701c4940c85e296546af3ddf4}{ASICREV\+\_\+\+IS\+\_\+\+VEGA12\+\_\+P}}(r)~\mbox{\hyperlink{amdgpu__asic__addr_8h_a938d93d3633b95577b66072f390c5f9a}{ASICREV\+\_\+\+IS}}(r, VEGA12)
+\item 
+\#define \mbox{\hyperlink{amdgpu__asic__addr_8h_add38b50039472dae8629a77c2b196302}{ASICREV\+\_\+\+IS\+\_\+\+VEGA12\+\_\+p}}(r)~\mbox{\hyperlink{amdgpu__asic__addr_8h_a938d93d3633b95577b66072f390c5f9a}{ASICREV\+\_\+\+IS}}(r, VEGA12)
+\item 
+\#define \mbox{\hyperlink{amdgpu__asic__addr_8h_a7614ae5a5773f9498288cab0bf54defc}{ASICREV\+\_\+\+IS\+\_\+\+VEGA20\+\_\+P}}(r)~\mbox{\hyperlink{amdgpu__asic__addr_8h_a938d93d3633b95577b66072f390c5f9a}{ASICREV\+\_\+\+IS}}(r, VEGA20)
+\item 
+\#define \mbox{\hyperlink{amdgpu__asic__addr_8h_afe180ed08c2cb7fe253f4bdf36eb8754}{ASICREV\+\_\+\+IS\+\_\+\+ARCTURUS}}(r)~\mbox{\hyperlink{amdgpu__asic__addr_8h_a938d93d3633b95577b66072f390c5f9a}{ASICREV\+\_\+\+IS}}(r, ARCTURUS)
+\item 
+\#define \mbox{\hyperlink{amdgpu__asic__addr_8h_a2805d2f618290496dfb3586cca8929d9}{ASICREV\+\_\+\+IS\+\_\+\+ALDEBARAN}}(r)~\mbox{\hyperlink{amdgpu__asic__addr_8h_a938d93d3633b95577b66072f390c5f9a}{ASICREV\+\_\+\+IS}}(r, ALDEBARAN)
+\item 
+\#define \mbox{\hyperlink{amdgpu__asic__addr_8h_af06202d0488efd73579ea14f3d436b5b}{ASICREV\+\_\+\+IS\+\_\+\+RAVEN}}(r)~\mbox{\hyperlink{amdgpu__asic__addr_8h_a938d93d3633b95577b66072f390c5f9a}{ASICREV\+\_\+\+IS}}(r, RAVEN)
+\item 
+\#define \mbox{\hyperlink{amdgpu__asic__addr_8h_a75a6eb605a83af722e8458a664d008e8}{ASICREV\+\_\+\+IS\+\_\+\+RAVEN2}}(r)~\mbox{\hyperlink{amdgpu__asic__addr_8h_a938d93d3633b95577b66072f390c5f9a}{ASICREV\+\_\+\+IS}}(r, RAVEN2)
+\item 
+\#define \mbox{\hyperlink{amdgpu__asic__addr_8h_affc276c309ac494b1fc4823715227284}{ASICREV\+\_\+\+IS\+\_\+\+RENOIR}}(r)~\mbox{\hyperlink{amdgpu__asic__addr_8h_a938d93d3633b95577b66072f390c5f9a}{ASICREV\+\_\+\+IS}}(r, RENOIR)
+\item 
+\#define \mbox{\hyperlink{amdgpu__asic__addr_8h_abe1b2b59db126f9143d10cf5ccff655c}{ASICREV\+\_\+\+IS\+\_\+\+NAVI10\+\_\+P}}(r)~\mbox{\hyperlink{amdgpu__asic__addr_8h_a938d93d3633b95577b66072f390c5f9a}{ASICREV\+\_\+\+IS}}(r, NAVI10)
+\item 
+\#define \mbox{\hyperlink{amdgpu__asic__addr_8h_ae7e2bcd1c87e2235d83a15d74a07fea7}{ASICREV\+\_\+\+IS\+\_\+\+NAVI12\+\_\+P}}(r)~\mbox{\hyperlink{amdgpu__asic__addr_8h_a938d93d3633b95577b66072f390c5f9a}{ASICREV\+\_\+\+IS}}(r, NAVI12)
+\item 
+\#define \mbox{\hyperlink{amdgpu__asic__addr_8h_a7a2a5579a7fe08849cb99881d38b89cc}{ASICREV\+\_\+\+IS\+\_\+\+NAVI14\+\_\+M}}(r)~\mbox{\hyperlink{amdgpu__asic__addr_8h_a938d93d3633b95577b66072f390c5f9a}{ASICREV\+\_\+\+IS}}(r, NAVI14)
+\item 
+\#define \mbox{\hyperlink{amdgpu__asic__addr_8h_a1e9cd5064271783804e531ee152c60aa}{ASICREV\+\_\+\+IS\+\_\+\+NAVI21\+\_\+M}}(r)~\mbox{\hyperlink{amdgpu__asic__addr_8h_a938d93d3633b95577b66072f390c5f9a}{ASICREV\+\_\+\+IS}}(r, NAVI21)
+\item 
+\#define \mbox{\hyperlink{amdgpu__asic__addr_8h_ac7c75e7d2f24bde8dc2e38d058e69a97}{ASICREV\+\_\+\+IS\+\_\+\+NAVI22\+\_\+P}}(r)~\mbox{\hyperlink{amdgpu__asic__addr_8h_a938d93d3633b95577b66072f390c5f9a}{ASICREV\+\_\+\+IS}}(r, NAVI22)
+\item 
+\#define \mbox{\hyperlink{amdgpu__asic__addr_8h_a1fff50936e0fb44ec69baf1f4e872966}{ASICREV\+\_\+\+IS\+\_\+\+NAVI23\+\_\+P}}(r)~\mbox{\hyperlink{amdgpu__asic__addr_8h_a938d93d3633b95577b66072f390c5f9a}{ASICREV\+\_\+\+IS}}(r, NAVI23)
+\item 
+\#define \mbox{\hyperlink{amdgpu__asic__addr_8h_a001943fbd676c1223874b4b8dcec1fb3}{ASICREV\+\_\+\+IS\+\_\+\+NAVI24\+\_\+P}}(r)~\mbox{\hyperlink{amdgpu__asic__addr_8h_a938d93d3633b95577b66072f390c5f9a}{ASICREV\+\_\+\+IS}}(r, NAVI24)
+\item 
+\#define \mbox{\hyperlink{amdgpu__asic__addr_8h_ad600cd6a7f74a89ae9994dd63aaa564f}{ASICREV\+\_\+\+IS\+\_\+\+VANGOGH}}(r)~\mbox{\hyperlink{amdgpu__asic__addr_8h_a938d93d3633b95577b66072f390c5f9a}{ASICREV\+\_\+\+IS}}(r, VANGOGH)
+\item 
+\#define \mbox{\hyperlink{amdgpu__asic__addr_8h_ad4d8bd864112d2f238d370f99ffd0d5a}{ASICREV\+\_\+\+IS\+\_\+\+GFX1100}}(r)~\mbox{\hyperlink{amdgpu__asic__addr_8h_a938d93d3633b95577b66072f390c5f9a}{ASICREV\+\_\+\+IS}}(r, GFX1100)
+\item 
+\#define \mbox{\hyperlink{amdgpu__asic__addr_8h_a989b0a8886c15560e26b0ef99825eef3}{ASICREV\+\_\+\+IS\+\_\+\+GFX1101}}(r)~\mbox{\hyperlink{amdgpu__asic__addr_8h_a938d93d3633b95577b66072f390c5f9a}{ASICREV\+\_\+\+IS}}(r, GFX1101)
+\item 
+\#define \mbox{\hyperlink{amdgpu__asic__addr_8h_a3c15c217405b2518d1a63c4143c5f49d}{ASICREV\+\_\+\+IS\+\_\+\+GFX1102}}(r)~\mbox{\hyperlink{amdgpu__asic__addr_8h_a938d93d3633b95577b66072f390c5f9a}{ASICREV\+\_\+\+IS}}(r, GFX1102)
+\item 
+\#define \mbox{\hyperlink{amdgpu__asic__addr_8h_ab393dfeeff3ddc6ee296fb3a46b802a7}{ASICREV\+\_\+\+IS\+\_\+\+GFX1103}}(r)~\mbox{\hyperlink{amdgpu__asic__addr_8h_a938d93d3633b95577b66072f390c5f9a}{ASICREV\+\_\+\+IS}}(r, GFX1103)
+\item 
+\#define \mbox{\hyperlink{amdgpu__asic__addr_8h_a9a5b4b9c0c3e4cdfd4e0dae7906c717a}{ASICREV\+\_\+\+IS\+\_\+\+REMBRANDT}}(r)~\mbox{\hyperlink{amdgpu__asic__addr_8h_a938d93d3633b95577b66072f390c5f9a}{ASICREV\+\_\+\+IS}}(r, REMBRANDT)
+\item 
+\#define \mbox{\hyperlink{amdgpu__asic__addr_8h_af8d2e4d3ec9e4a3eaf0484934f03d091}{ASICREV\+\_\+\+IS\+\_\+\+GFX1036}}(r)~\mbox{\hyperlink{amdgpu__asic__addr_8h_a938d93d3633b95577b66072f390c5f9a}{ASICREV\+\_\+\+IS}}(r, GFX1036)
+\item 
+\#define \mbox{\hyperlink{amdgpu__asic__addr_8h_aeb312b35c0bbb082774b153047b2f037}{ASICREV\+\_\+\+IS\+\_\+\+GFX1037}}(r)~\mbox{\hyperlink{amdgpu__asic__addr_8h_a938d93d3633b95577b66072f390c5f9a}{ASICREV\+\_\+\+IS}}(r, GFX1037)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Macro Definition Documentation}
+\mbox{\Hypertarget{amdgpu__asic__addr_8h_a69a6be0d9d60d238c80ab7cfe6ad48e7}\label{amdgpu__asic__addr_8h_a69a6be0d9d60d238c80ab7cfe6ad48e7}} 
+\index{amdgpu\_asic\_addr.h@{amdgpu\_asic\_addr.h}!AMD\_VENDOR\_ID@{AMD\_VENDOR\_ID}}
+\index{AMD\_VENDOR\_ID@{AMD\_VENDOR\_ID}!amdgpu\_asic\_addr.h@{amdgpu\_asic\_addr.h}}
+\doxysubsubsection{\texorpdfstring{AMD\_VENDOR\_ID}{AMD\_VENDOR\_ID}}
+{\footnotesize\ttfamily \#define AMD\+\_\+\+VENDOR\+\_\+\+ID~0x1022}
+
+\mbox{\Hypertarget{amdgpu__asic__addr_8h_ae82c5be7ac1bedb20989fa249c23a7fc}\label{amdgpu__asic__addr_8h_ae82c5be7ac1bedb20989fa249c23a7fc}} 
+\index{amdgpu\_asic\_addr.h@{amdgpu\_asic\_addr.h}!AMDGPU\_ALDEBARAN\_RANGE@{AMDGPU\_ALDEBARAN\_RANGE}}
+\index{AMDGPU\_ALDEBARAN\_RANGE@{AMDGPU\_ALDEBARAN\_RANGE}!amdgpu\_asic\_addr.h@{amdgpu\_asic\_addr.h}}
+\doxysubsubsection{\texorpdfstring{AMDGPU\_ALDEBARAN\_RANGE}{AMDGPU\_ALDEBARAN\_RANGE}}
+{\footnotesize\ttfamily \#define AMDGPU\+\_\+\+ALDEBARAN\+\_\+\+RANGE~0x3C, 0x\+FF}
+
+\mbox{\Hypertarget{amdgpu__asic__addr_8h_a3f053e8c9bb3fd6da492a0d843f00c25}\label{amdgpu__asic__addr_8h_a3f053e8c9bb3fd6da492a0d843f00c25}} 
+\index{amdgpu\_asic\_addr.h@{amdgpu\_asic\_addr.h}!AMDGPU\_ARCTURUS\_RANGE@{AMDGPU\_ARCTURUS\_RANGE}}
+\index{AMDGPU\_ARCTURUS\_RANGE@{AMDGPU\_ARCTURUS\_RANGE}!amdgpu\_asic\_addr.h@{amdgpu\_asic\_addr.h}}
+\doxysubsubsection{\texorpdfstring{AMDGPU\_ARCTURUS\_RANGE}{AMDGPU\_ARCTURUS\_RANGE}}
+{\footnotesize\ttfamily \#define AMDGPU\+\_\+\+ARCTURUS\+\_\+\+RANGE~0x32, 0x3C}
+
+\mbox{\Hypertarget{amdgpu__asic__addr_8h_a13c85c2acc1859086e529bd06ffdaf48}\label{amdgpu__asic__addr_8h_a13c85c2acc1859086e529bd06ffdaf48}} 
+\index{amdgpu\_asic\_addr.h@{amdgpu\_asic\_addr.h}!AMDGPU\_BONAIRE\_RANGE@{AMDGPU\_BONAIRE\_RANGE}}
+\index{AMDGPU\_BONAIRE\_RANGE@{AMDGPU\_BONAIRE\_RANGE}!amdgpu\_asic\_addr.h@{amdgpu\_asic\_addr.h}}
+\doxysubsubsection{\texorpdfstring{AMDGPU\_BONAIRE\_RANGE}{AMDGPU\_BONAIRE\_RANGE}}
+{\footnotesize\ttfamily \#define AMDGPU\+\_\+\+BONAIRE\+\_\+\+RANGE~0x14, 0x28}
+
+\mbox{\Hypertarget{amdgpu__asic__addr_8h_acd977aaf1049a478750fcdd5de5eddcc}\label{amdgpu__asic__addr_8h_acd977aaf1049a478750fcdd5de5eddcc}} 
+\index{amdgpu\_asic\_addr.h@{amdgpu\_asic\_addr.h}!AMDGPU\_CAPEVERDE\_RANGE@{AMDGPU\_CAPEVERDE\_RANGE}}
+\index{AMDGPU\_CAPEVERDE\_RANGE@{AMDGPU\_CAPEVERDE\_RANGE}!amdgpu\_asic\_addr.h@{amdgpu\_asic\_addr.h}}
+\doxysubsubsection{\texorpdfstring{AMDGPU\_CAPEVERDE\_RANGE}{AMDGPU\_CAPEVERDE\_RANGE}}
+{\footnotesize\ttfamily \#define AMDGPU\+\_\+\+CAPEVERDE\+\_\+\+RANGE~0x29, 0x3C}
+
+\mbox{\Hypertarget{amdgpu__asic__addr_8h_a9f8cafc05b3555ecdc5ef6c4fca9fca4}\label{amdgpu__asic__addr_8h_a9f8cafc05b3555ecdc5ef6c4fca9fca4}} 
+\index{amdgpu\_asic\_addr.h@{amdgpu\_asic\_addr.h}!AMDGPU\_CARRIZO\_RANGE@{AMDGPU\_CARRIZO\_RANGE}}
+\index{AMDGPU\_CARRIZO\_RANGE@{AMDGPU\_CARRIZO\_RANGE}!amdgpu\_asic\_addr.h@{amdgpu\_asic\_addr.h}}
+\doxysubsubsection{\texorpdfstring{AMDGPU\_CARRIZO\_RANGE}{AMDGPU\_CARRIZO\_RANGE}}
+{\footnotesize\ttfamily \#define AMDGPU\+\_\+\+CARRIZO\+\_\+\+RANGE~0x01, 0x21}
+
+\mbox{\Hypertarget{amdgpu__asic__addr_8h_a64f63abe4bd112ebb2822a3d2cbc921c}\label{amdgpu__asic__addr_8h_a64f63abe4bd112ebb2822a3d2cbc921c}} 
+\index{amdgpu\_asic\_addr.h@{amdgpu\_asic\_addr.h}!AMDGPU\_EXPAND\_FIX@{AMDGPU\_EXPAND\_FIX}}
+\index{AMDGPU\_EXPAND\_FIX@{AMDGPU\_EXPAND\_FIX}!amdgpu\_asic\_addr.h@{amdgpu\_asic\_addr.h}}
+\doxysubsubsection{\texorpdfstring{AMDGPU\_EXPAND\_FIX}{AMDGPU\_EXPAND\_FIX}}
+{\footnotesize\ttfamily \#define AMDGPU\+\_\+\+EXPAND\+\_\+\+FIX(\begin{DoxyParamCaption}\item[{}]{x }\end{DoxyParamCaption})~x}
+
+\mbox{\Hypertarget{amdgpu__asic__addr_8h_a0083c0f94503ed5c9ca1ccf1f51412fd}\label{amdgpu__asic__addr_8h_a0083c0f94503ed5c9ca1ccf1f51412fd}} 
+\index{amdgpu\_asic\_addr.h@{amdgpu\_asic\_addr.h}!AMDGPU\_FIJI\_RANGE@{AMDGPU\_FIJI\_RANGE}}
+\index{AMDGPU\_FIJI\_RANGE@{AMDGPU\_FIJI\_RANGE}!amdgpu\_asic\_addr.h@{amdgpu\_asic\_addr.h}}
+\doxysubsubsection{\texorpdfstring{AMDGPU\_FIJI\_RANGE}{AMDGPU\_FIJI\_RANGE}}
+{\footnotesize\ttfamily \#define AMDGPU\+\_\+\+FIJI\+\_\+\+RANGE~0x3C, 0x50}
+
+\mbox{\Hypertarget{amdgpu__asic__addr_8h_ac8bd1d078dd37eecdd6cfe956ec97e4c}\label{amdgpu__asic__addr_8h_ac8bd1d078dd37eecdd6cfe956ec97e4c}} 
+\index{amdgpu\_asic\_addr.h@{amdgpu\_asic\_addr.h}!AMDGPU\_GFX1036\_RANGE@{AMDGPU\_GFX1036\_RANGE}}
+\index{AMDGPU\_GFX1036\_RANGE@{AMDGPU\_GFX1036\_RANGE}!amdgpu\_asic\_addr.h@{amdgpu\_asic\_addr.h}}
+\doxysubsubsection{\texorpdfstring{AMDGPU\_GFX1036\_RANGE}{AMDGPU\_GFX1036\_RANGE}}
+{\footnotesize\ttfamily \#define AMDGPU\+\_\+\+GFX1036\+\_\+\+RANGE~0x01, 0x\+FF}
+
+\mbox{\Hypertarget{amdgpu__asic__addr_8h_a27f5414c940e7db22c0b79c8ddfe1390}\label{amdgpu__asic__addr_8h_a27f5414c940e7db22c0b79c8ddfe1390}} 
+\index{amdgpu\_asic\_addr.h@{amdgpu\_asic\_addr.h}!AMDGPU\_GFX1037\_RANGE@{AMDGPU\_GFX1037\_RANGE}}
+\index{AMDGPU\_GFX1037\_RANGE@{AMDGPU\_GFX1037\_RANGE}!amdgpu\_asic\_addr.h@{amdgpu\_asic\_addr.h}}
+\doxysubsubsection{\texorpdfstring{AMDGPU\_GFX1037\_RANGE}{AMDGPU\_GFX1037\_RANGE}}
+{\footnotesize\ttfamily \#define AMDGPU\+\_\+\+GFX1037\+\_\+\+RANGE~0x01, 0x\+FF}
+
+\mbox{\Hypertarget{amdgpu__asic__addr_8h_aca2d7c19186e629690cc8f1595754dad}\label{amdgpu__asic__addr_8h_aca2d7c19186e629690cc8f1595754dad}} 
+\index{amdgpu\_asic\_addr.h@{amdgpu\_asic\_addr.h}!AMDGPU\_GFX1100\_RANGE@{AMDGPU\_GFX1100\_RANGE}}
+\index{AMDGPU\_GFX1100\_RANGE@{AMDGPU\_GFX1100\_RANGE}!amdgpu\_asic\_addr.h@{amdgpu\_asic\_addr.h}}
+\doxysubsubsection{\texorpdfstring{AMDGPU\_GFX1100\_RANGE}{AMDGPU\_GFX1100\_RANGE}}
+{\footnotesize\ttfamily \#define AMDGPU\+\_\+\+GFX1100\+\_\+\+RANGE~0x01, 0x10}
+
+\mbox{\Hypertarget{amdgpu__asic__addr_8h_a71323e06498a679fa137d6500f2a8ec6}\label{amdgpu__asic__addr_8h_a71323e06498a679fa137d6500f2a8ec6}} 
+\index{amdgpu\_asic\_addr.h@{amdgpu\_asic\_addr.h}!AMDGPU\_GFX1101\_RANGE@{AMDGPU\_GFX1101\_RANGE}}
+\index{AMDGPU\_GFX1101\_RANGE@{AMDGPU\_GFX1101\_RANGE}!amdgpu\_asic\_addr.h@{amdgpu\_asic\_addr.h}}
+\doxysubsubsection{\texorpdfstring{AMDGPU\_GFX1101\_RANGE}{AMDGPU\_GFX1101\_RANGE}}
+{\footnotesize\ttfamily \#define AMDGPU\+\_\+\+GFX1101\+\_\+\+RANGE~0x20, 0x\+FF}
+
+\mbox{\Hypertarget{amdgpu__asic__addr_8h_a6ee2e45c79d28b53a39c084d52f263c2}\label{amdgpu__asic__addr_8h_a6ee2e45c79d28b53a39c084d52f263c2}} 
+\index{amdgpu\_asic\_addr.h@{amdgpu\_asic\_addr.h}!AMDGPU\_GFX1102\_RANGE@{AMDGPU\_GFX1102\_RANGE}}
+\index{AMDGPU\_GFX1102\_RANGE@{AMDGPU\_GFX1102\_RANGE}!amdgpu\_asic\_addr.h@{amdgpu\_asic\_addr.h}}
+\doxysubsubsection{\texorpdfstring{AMDGPU\_GFX1102\_RANGE}{AMDGPU\_GFX1102\_RANGE}}
+{\footnotesize\ttfamily \#define AMDGPU\+\_\+\+GFX1102\+\_\+\+RANGE~0x10, 0x20}
+
+\mbox{\Hypertarget{amdgpu__asic__addr_8h_a3690c3a566bbd0d41fdecb0521baf17a}\label{amdgpu__asic__addr_8h_a3690c3a566bbd0d41fdecb0521baf17a}} 
+\index{amdgpu\_asic\_addr.h@{amdgpu\_asic\_addr.h}!AMDGPU\_GFX1103\_RANGE@{AMDGPU\_GFX1103\_RANGE}}
+\index{AMDGPU\_GFX1103\_RANGE@{AMDGPU\_GFX1103\_RANGE}!amdgpu\_asic\_addr.h@{amdgpu\_asic\_addr.h}}
+\doxysubsubsection{\texorpdfstring{AMDGPU\_GFX1103\_RANGE}{AMDGPU\_GFX1103\_RANGE}}
+{\footnotesize\ttfamily \#define AMDGPU\+\_\+\+GFX1103\+\_\+\+RANGE~0x01, 0x\+FF}
+
+\mbox{\Hypertarget{amdgpu__asic__addr_8h_a96ee7b5b53ae14799edc15aae98635e9}\label{amdgpu__asic__addr_8h_a96ee7b5b53ae14799edc15aae98635e9}} 
+\index{amdgpu\_asic\_addr.h@{amdgpu\_asic\_addr.h}!AMDGPU\_GODAVARI\_RANGE@{AMDGPU\_GODAVARI\_RANGE}}
+\index{AMDGPU\_GODAVARI\_RANGE@{AMDGPU\_GODAVARI\_RANGE}!amdgpu\_asic\_addr.h@{amdgpu\_asic\_addr.h}}
+\doxysubsubsection{\texorpdfstring{AMDGPU\_GODAVARI\_RANGE}{AMDGPU\_GODAVARI\_RANGE}}
+{\footnotesize\ttfamily \#define AMDGPU\+\_\+\+GODAVARI\+\_\+\+RANGE~0x\+A1, 0x\+FF}
+
+\mbox{\Hypertarget{amdgpu__asic__addr_8h_a401352d75d9d4a78b95f4b27b190f2e3}\label{amdgpu__asic__addr_8h_a401352d75d9d4a78b95f4b27b190f2e3}} 
+\index{amdgpu\_asic\_addr.h@{amdgpu\_asic\_addr.h}!AMDGPU\_HAINAN\_RANGE@{AMDGPU\_HAINAN\_RANGE}}
+\index{AMDGPU\_HAINAN\_RANGE@{AMDGPU\_HAINAN\_RANGE}!amdgpu\_asic\_addr.h@{amdgpu\_asic\_addr.h}}
+\doxysubsubsection{\texorpdfstring{AMDGPU\_HAINAN\_RANGE}{AMDGPU\_HAINAN\_RANGE}}
+{\footnotesize\ttfamily \#define AMDGPU\+\_\+\+HAINAN\+\_\+\+RANGE~0x46, 0x\+FF}
+
+\mbox{\Hypertarget{amdgpu__asic__addr_8h_a525aa850c830a87491f00c87cce3a27d}\label{amdgpu__asic__addr_8h_a525aa850c830a87491f00c87cce3a27d}} 
+\index{amdgpu\_asic\_addr.h@{amdgpu\_asic\_addr.h}!AMDGPU\_HAWAII\_RANGE@{AMDGPU\_HAWAII\_RANGE}}
+\index{AMDGPU\_HAWAII\_RANGE@{AMDGPU\_HAWAII\_RANGE}!amdgpu\_asic\_addr.h@{amdgpu\_asic\_addr.h}}
+\doxysubsubsection{\texorpdfstring{AMDGPU\_HAWAII\_RANGE}{AMDGPU\_HAWAII\_RANGE}}
+{\footnotesize\ttfamily \#define AMDGPU\+\_\+\+HAWAII\+\_\+\+RANGE~0x28, 0x3C}
+
+\mbox{\Hypertarget{amdgpu__asic__addr_8h_a1b439d37ab9e68f9282e8d34cabb78fc}\label{amdgpu__asic__addr_8h_a1b439d37ab9e68f9282e8d34cabb78fc}} 
+\index{amdgpu\_asic\_addr.h@{amdgpu\_asic\_addr.h}!AMDGPU\_ICELAND\_RANGE@{AMDGPU\_ICELAND\_RANGE}}
+\index{AMDGPU\_ICELAND\_RANGE@{AMDGPU\_ICELAND\_RANGE}!amdgpu\_asic\_addr.h@{amdgpu\_asic\_addr.h}}
+\doxysubsubsection{\texorpdfstring{AMDGPU\_ICELAND\_RANGE}{AMDGPU\_ICELAND\_RANGE}}
+{\footnotesize\ttfamily \#define AMDGPU\+\_\+\+ICELAND\+\_\+\+RANGE~0x01, 0x14}
+
+\mbox{\Hypertarget{amdgpu__asic__addr_8h_a8f91b21cde61dd0ba41d0707bab1a031}\label{amdgpu__asic__addr_8h_a8f91b21cde61dd0ba41d0707bab1a031}} 
+\index{amdgpu\_asic\_addr.h@{amdgpu\_asic\_addr.h}!AMDGPU\_IN\_RANGE@{AMDGPU\_IN\_RANGE}}
+\index{AMDGPU\_IN\_RANGE@{AMDGPU\_IN\_RANGE}!amdgpu\_asic\_addr.h@{amdgpu\_asic\_addr.h}}
+\doxysubsubsection{\texorpdfstring{AMDGPU\_IN\_RANGE}{AMDGPU\_IN\_RANGE}}
+{\footnotesize\ttfamily \#define AMDGPU\+\_\+\+IN\+\_\+\+RANGE(\begin{DoxyParamCaption}\item[{}]{val,  }\item[{}]{... }\end{DoxyParamCaption})~\mbox{\hyperlink{amdgpu__asic__addr_8h_a64f63abe4bd112ebb2822a3d2cbc921c}{AMDGPU\+\_\+\+EXPAND\+\_\+\+FIX}}(\mbox{\hyperlink{amdgpu__asic__addr_8h_a8f77162de96ddec4acebbae42d070aea}{AMDGPU\+\_\+\+RANGE\+\_\+\+HELPER}}(val, \+\_\+\+\_\+\+VA\+\_\+\+ARGS\+\_\+\+\_\+))}
+
+\mbox{\Hypertarget{amdgpu__asic__addr_8h_a58d353cd597fb48da9a15f12b5087064}\label{amdgpu__asic__addr_8h_a58d353cd597fb48da9a15f12b5087064}} 
+\index{amdgpu\_asic\_addr.h@{amdgpu\_asic\_addr.h}!AMDGPU\_KALINDI\_RANGE@{AMDGPU\_KALINDI\_RANGE}}
+\index{AMDGPU\_KALINDI\_RANGE@{AMDGPU\_KALINDI\_RANGE}!amdgpu\_asic\_addr.h@{amdgpu\_asic\_addr.h}}
+\doxysubsubsection{\texorpdfstring{AMDGPU\_KALINDI\_RANGE}{AMDGPU\_KALINDI\_RANGE}}
+{\footnotesize\ttfamily \#define AMDGPU\+\_\+\+KALINDI\+\_\+\+RANGE~0x81, 0x\+A1}
+
+\mbox{\Hypertarget{amdgpu__asic__addr_8h_aad65db7d98743c19f0f9ab6b6c24760e}\label{amdgpu__asic__addr_8h_aad65db7d98743c19f0f9ab6b6c24760e}} 
+\index{amdgpu\_asic\_addr.h@{amdgpu\_asic\_addr.h}!AMDGPU\_NAVI10\_RANGE@{AMDGPU\_NAVI10\_RANGE}}
+\index{AMDGPU\_NAVI10\_RANGE@{AMDGPU\_NAVI10\_RANGE}!amdgpu\_asic\_addr.h@{amdgpu\_asic\_addr.h}}
+\doxysubsubsection{\texorpdfstring{AMDGPU\_NAVI10\_RANGE}{AMDGPU\_NAVI10\_RANGE}}
+{\footnotesize\ttfamily \#define AMDGPU\+\_\+\+NAVI10\+\_\+\+RANGE~0x01, 0x0A}
+
+\mbox{\Hypertarget{amdgpu__asic__addr_8h_a4e9b8f706ac660502aa3e1f37ff4a233}\label{amdgpu__asic__addr_8h_a4e9b8f706ac660502aa3e1f37ff4a233}} 
+\index{amdgpu\_asic\_addr.h@{amdgpu\_asic\_addr.h}!AMDGPU\_NAVI12\_RANGE@{AMDGPU\_NAVI12\_RANGE}}
+\index{AMDGPU\_NAVI12\_RANGE@{AMDGPU\_NAVI12\_RANGE}!amdgpu\_asic\_addr.h@{amdgpu\_asic\_addr.h}}
+\doxysubsubsection{\texorpdfstring{AMDGPU\_NAVI12\_RANGE}{AMDGPU\_NAVI12\_RANGE}}
+{\footnotesize\ttfamily \#define AMDGPU\+\_\+\+NAVI12\+\_\+\+RANGE~0x0A, 0x14}
+
+\mbox{\Hypertarget{amdgpu__asic__addr_8h_a1c1e95111fb1fe9ff1b96646273c7b05}\label{amdgpu__asic__addr_8h_a1c1e95111fb1fe9ff1b96646273c7b05}} 
+\index{amdgpu\_asic\_addr.h@{amdgpu\_asic\_addr.h}!AMDGPU\_NAVI14\_RANGE@{AMDGPU\_NAVI14\_RANGE}}
+\index{AMDGPU\_NAVI14\_RANGE@{AMDGPU\_NAVI14\_RANGE}!amdgpu\_asic\_addr.h@{amdgpu\_asic\_addr.h}}
+\doxysubsubsection{\texorpdfstring{AMDGPU\_NAVI14\_RANGE}{AMDGPU\_NAVI14\_RANGE}}
+{\footnotesize\ttfamily \#define AMDGPU\+\_\+\+NAVI14\+\_\+\+RANGE~0x14, 0x28}
+
+\mbox{\Hypertarget{amdgpu__asic__addr_8h_a41903f9f524132c56a5c724e4015de12}\label{amdgpu__asic__addr_8h_a41903f9f524132c56a5c724e4015de12}} 
+\index{amdgpu\_asic\_addr.h@{amdgpu\_asic\_addr.h}!AMDGPU\_NAVI21\_RANGE@{AMDGPU\_NAVI21\_RANGE}}
+\index{AMDGPU\_NAVI21\_RANGE@{AMDGPU\_NAVI21\_RANGE}!amdgpu\_asic\_addr.h@{amdgpu\_asic\_addr.h}}
+\doxysubsubsection{\texorpdfstring{AMDGPU\_NAVI21\_RANGE}{AMDGPU\_NAVI21\_RANGE}}
+{\footnotesize\ttfamily \#define AMDGPU\+\_\+\+NAVI21\+\_\+\+RANGE~0x28, 0x32}
+
+\mbox{\Hypertarget{amdgpu__asic__addr_8h_ae2d1609a594b09cce3ba909bf291769f}\label{amdgpu__asic__addr_8h_ae2d1609a594b09cce3ba909bf291769f}} 
+\index{amdgpu\_asic\_addr.h@{amdgpu\_asic\_addr.h}!AMDGPU\_NAVI22\_RANGE@{AMDGPU\_NAVI22\_RANGE}}
+\index{AMDGPU\_NAVI22\_RANGE@{AMDGPU\_NAVI22\_RANGE}!amdgpu\_asic\_addr.h@{amdgpu\_asic\_addr.h}}
+\doxysubsubsection{\texorpdfstring{AMDGPU\_NAVI22\_RANGE}{AMDGPU\_NAVI22\_RANGE}}
+{\footnotesize\ttfamily \#define AMDGPU\+\_\+\+NAVI22\+\_\+\+RANGE~0x32, 0x3C}
+
+\mbox{\Hypertarget{amdgpu__asic__addr_8h_a8e05055b9ff84029dee193f15ca45742}\label{amdgpu__asic__addr_8h_a8e05055b9ff84029dee193f15ca45742}} 
+\index{amdgpu\_asic\_addr.h@{amdgpu\_asic\_addr.h}!AMDGPU\_NAVI23\_RANGE@{AMDGPU\_NAVI23\_RANGE}}
+\index{AMDGPU\_NAVI23\_RANGE@{AMDGPU\_NAVI23\_RANGE}!amdgpu\_asic\_addr.h@{amdgpu\_asic\_addr.h}}
+\doxysubsubsection{\texorpdfstring{AMDGPU\_NAVI23\_RANGE}{AMDGPU\_NAVI23\_RANGE}}
+{\footnotesize\ttfamily \#define AMDGPU\+\_\+\+NAVI23\+\_\+\+RANGE~0x3C, 0x46}
+
+\mbox{\Hypertarget{amdgpu__asic__addr_8h_ab29c367ceada8e19aea9bcb2be5940a3}\label{amdgpu__asic__addr_8h_ab29c367ceada8e19aea9bcb2be5940a3}} 
+\index{amdgpu\_asic\_addr.h@{amdgpu\_asic\_addr.h}!AMDGPU\_NAVI24\_RANGE@{AMDGPU\_NAVI24\_RANGE}}
+\index{AMDGPU\_NAVI24\_RANGE@{AMDGPU\_NAVI24\_RANGE}!amdgpu\_asic\_addr.h@{amdgpu\_asic\_addr.h}}
+\doxysubsubsection{\texorpdfstring{AMDGPU\_NAVI24\_RANGE}{AMDGPU\_NAVI24\_RANGE}}
+{\footnotesize\ttfamily \#define AMDGPU\+\_\+\+NAVI24\+\_\+\+RANGE~0x46, 0x50}
+
+\mbox{\Hypertarget{amdgpu__asic__addr_8h_ad9a1f94d03f7c2d71651c1d50ad40637}\label{amdgpu__asic__addr_8h_ad9a1f94d03f7c2d71651c1d50ad40637}} 
+\index{amdgpu\_asic\_addr.h@{amdgpu\_asic\_addr.h}!AMDGPU\_OLAND\_RANGE@{AMDGPU\_OLAND\_RANGE}}
+\index{AMDGPU\_OLAND\_RANGE@{AMDGPU\_OLAND\_RANGE}!amdgpu\_asic\_addr.h@{amdgpu\_asic\_addr.h}}
+\doxysubsubsection{\texorpdfstring{AMDGPU\_OLAND\_RANGE}{AMDGPU\_OLAND\_RANGE}}
+{\footnotesize\ttfamily \#define AMDGPU\+\_\+\+OLAND\+\_\+\+RANGE~0x3C, 0x46}
+
+\mbox{\Hypertarget{amdgpu__asic__addr_8h_a3fc54001116840a3f09c17861efb7316}\label{amdgpu__asic__addr_8h_a3fc54001116840a3f09c17861efb7316}} 
+\index{amdgpu\_asic\_addr.h@{amdgpu\_asic\_addr.h}!AMDGPU\_PITCAIRN\_RANGE@{AMDGPU\_PITCAIRN\_RANGE}}
+\index{AMDGPU\_PITCAIRN\_RANGE@{AMDGPU\_PITCAIRN\_RANGE}!amdgpu\_asic\_addr.h@{amdgpu\_asic\_addr.h}}
+\doxysubsubsection{\texorpdfstring{AMDGPU\_PITCAIRN\_RANGE}{AMDGPU\_PITCAIRN\_RANGE}}
+{\footnotesize\ttfamily \#define AMDGPU\+\_\+\+PITCAIRN\+\_\+\+RANGE~0x15, 0x28}
+
+\mbox{\Hypertarget{amdgpu__asic__addr_8h_a275a90247de0269156bb827ed6e74554}\label{amdgpu__asic__addr_8h_a275a90247de0269156bb827ed6e74554}} 
+\index{amdgpu\_asic\_addr.h@{amdgpu\_asic\_addr.h}!AMDGPU\_POLARIS10\_RANGE@{AMDGPU\_POLARIS10\_RANGE}}
+\index{AMDGPU\_POLARIS10\_RANGE@{AMDGPU\_POLARIS10\_RANGE}!amdgpu\_asic\_addr.h@{amdgpu\_asic\_addr.h}}
+\doxysubsubsection{\texorpdfstring{AMDGPU\_POLARIS10\_RANGE}{AMDGPU\_POLARIS10\_RANGE}}
+{\footnotesize\ttfamily \#define AMDGPU\+\_\+\+POLARIS10\+\_\+\+RANGE~0x50, 0x5A}
+
+\mbox{\Hypertarget{amdgpu__asic__addr_8h_afc62461dd5222a4155dadc66c82591c7}\label{amdgpu__asic__addr_8h_afc62461dd5222a4155dadc66c82591c7}} 
+\index{amdgpu\_asic\_addr.h@{amdgpu\_asic\_addr.h}!AMDGPU\_POLARIS11\_RANGE@{AMDGPU\_POLARIS11\_RANGE}}
+\index{AMDGPU\_POLARIS11\_RANGE@{AMDGPU\_POLARIS11\_RANGE}!amdgpu\_asic\_addr.h@{amdgpu\_asic\_addr.h}}
+\doxysubsubsection{\texorpdfstring{AMDGPU\_POLARIS11\_RANGE}{AMDGPU\_POLARIS11\_RANGE}}
+{\footnotesize\ttfamily \#define AMDGPU\+\_\+\+POLARIS11\+\_\+\+RANGE~0x5A, 0x64}
+
+\mbox{\Hypertarget{amdgpu__asic__addr_8h_a36392e217b24781524bf6b3f7e9ad2e6}\label{amdgpu__asic__addr_8h_a36392e217b24781524bf6b3f7e9ad2e6}} 
+\index{amdgpu\_asic\_addr.h@{amdgpu\_asic\_addr.h}!AMDGPU\_POLARIS12\_RANGE@{AMDGPU\_POLARIS12\_RANGE}}
+\index{AMDGPU\_POLARIS12\_RANGE@{AMDGPU\_POLARIS12\_RANGE}!amdgpu\_asic\_addr.h@{amdgpu\_asic\_addr.h}}
+\doxysubsubsection{\texorpdfstring{AMDGPU\_POLARIS12\_RANGE}{AMDGPU\_POLARIS12\_RANGE}}
+{\footnotesize\ttfamily \#define AMDGPU\+\_\+\+POLARIS12\+\_\+\+RANGE~0x64, 0x6E}
+
+\mbox{\Hypertarget{amdgpu__asic__addr_8h_a8f77162de96ddec4acebbae42d070aea}\label{amdgpu__asic__addr_8h_a8f77162de96ddec4acebbae42d070aea}} 
+\index{amdgpu\_asic\_addr.h@{amdgpu\_asic\_addr.h}!AMDGPU\_RANGE\_HELPER@{AMDGPU\_RANGE\_HELPER}}
+\index{AMDGPU\_RANGE\_HELPER@{AMDGPU\_RANGE\_HELPER}!amdgpu\_asic\_addr.h@{amdgpu\_asic\_addr.h}}
+\doxysubsubsection{\texorpdfstring{AMDGPU\_RANGE\_HELPER}{AMDGPU\_RANGE\_HELPER}}
+{\footnotesize\ttfamily \#define AMDGPU\+\_\+\+RANGE\+\_\+\+HELPER(\begin{DoxyParamCaption}\item[{}]{val,  }\item[{}]{min,  }\item[{}]{max }\end{DoxyParamCaption})~((val $>$= min) \&\& (val $<$ max))}
+
+\mbox{\Hypertarget{amdgpu__asic__addr_8h_a62e5716ff813f86f2aaa24c3a9f83815}\label{amdgpu__asic__addr_8h_a62e5716ff813f86f2aaa24c3a9f83815}} 
+\index{amdgpu\_asic\_addr.h@{amdgpu\_asic\_addr.h}!AMDGPU\_RAVEN2\_RANGE@{AMDGPU\_RAVEN2\_RANGE}}
+\index{AMDGPU\_RAVEN2\_RANGE@{AMDGPU\_RAVEN2\_RANGE}!amdgpu\_asic\_addr.h@{amdgpu\_asic\_addr.h}}
+\doxysubsubsection{\texorpdfstring{AMDGPU\_RAVEN2\_RANGE}{AMDGPU\_RAVEN2\_RANGE}}
+{\footnotesize\ttfamily \#define AMDGPU\+\_\+\+RAVEN2\+\_\+\+RANGE~0x81, 0x91}
+
+\mbox{\Hypertarget{amdgpu__asic__addr_8h_a983ecd4fef8130128b9e81457dad8d58}\label{amdgpu__asic__addr_8h_a983ecd4fef8130128b9e81457dad8d58}} 
+\index{amdgpu\_asic\_addr.h@{amdgpu\_asic\_addr.h}!AMDGPU\_RAVEN\_RANGE@{AMDGPU\_RAVEN\_RANGE}}
+\index{AMDGPU\_RAVEN\_RANGE@{AMDGPU\_RAVEN\_RANGE}!amdgpu\_asic\_addr.h@{amdgpu\_asic\_addr.h}}
+\doxysubsubsection{\texorpdfstring{AMDGPU\_RAVEN\_RANGE}{AMDGPU\_RAVEN\_RANGE}}
+{\footnotesize\ttfamily \#define AMDGPU\+\_\+\+RAVEN\+\_\+\+RANGE~0x01, 0x81}
+
+\mbox{\Hypertarget{amdgpu__asic__addr_8h_a8e3fc69036b29bcd753f61d2e5285a3c}\label{amdgpu__asic__addr_8h_a8e3fc69036b29bcd753f61d2e5285a3c}} 
+\index{amdgpu\_asic\_addr.h@{amdgpu\_asic\_addr.h}!AMDGPU\_REMBRANDT\_RANGE@{AMDGPU\_REMBRANDT\_RANGE}}
+\index{AMDGPU\_REMBRANDT\_RANGE@{AMDGPU\_REMBRANDT\_RANGE}!amdgpu\_asic\_addr.h@{amdgpu\_asic\_addr.h}}
+\doxysubsubsection{\texorpdfstring{AMDGPU\_REMBRANDT\_RANGE}{AMDGPU\_REMBRANDT\_RANGE}}
+{\footnotesize\ttfamily \#define AMDGPU\+\_\+\+REMBRANDT\+\_\+\+RANGE~0x01, 0x\+FF}
+
+\mbox{\Hypertarget{amdgpu__asic__addr_8h_a5439ba3f66fbee5159173d5e63e44df8}\label{amdgpu__asic__addr_8h_a5439ba3f66fbee5159173d5e63e44df8}} 
+\index{amdgpu\_asic\_addr.h@{amdgpu\_asic\_addr.h}!AMDGPU\_RENOIR\_RANGE@{AMDGPU\_RENOIR\_RANGE}}
+\index{AMDGPU\_RENOIR\_RANGE@{AMDGPU\_RENOIR\_RANGE}!amdgpu\_asic\_addr.h@{amdgpu\_asic\_addr.h}}
+\doxysubsubsection{\texorpdfstring{AMDGPU\_RENOIR\_RANGE}{AMDGPU\_RENOIR\_RANGE}}
+{\footnotesize\ttfamily \#define AMDGPU\+\_\+\+RENOIR\+\_\+\+RANGE~0x91, 0x\+FF}
+
+\mbox{\Hypertarget{amdgpu__asic__addr_8h_a6b38252d39b8ab6092937eb7dd4cb62f}\label{amdgpu__asic__addr_8h_a6b38252d39b8ab6092937eb7dd4cb62f}} 
+\index{amdgpu\_asic\_addr.h@{amdgpu\_asic\_addr.h}!AMDGPU\_SPECTRE\_RANGE@{AMDGPU\_SPECTRE\_RANGE}}
+\index{AMDGPU\_SPECTRE\_RANGE@{AMDGPU\_SPECTRE\_RANGE}!amdgpu\_asic\_addr.h@{amdgpu\_asic\_addr.h}}
+\doxysubsubsection{\texorpdfstring{AMDGPU\_SPECTRE\_RANGE}{AMDGPU\_SPECTRE\_RANGE}}
+{\footnotesize\ttfamily \#define AMDGPU\+\_\+\+SPECTRE\+\_\+\+RANGE~0x01, 0x41}
+
+\mbox{\Hypertarget{amdgpu__asic__addr_8h_a0d5b40c11a6c608b1ceea3aac1e98bc8}\label{amdgpu__asic__addr_8h_a0d5b40c11a6c608b1ceea3aac1e98bc8}} 
+\index{amdgpu\_asic\_addr.h@{amdgpu\_asic\_addr.h}!AMDGPU\_SPOOKY\_RANGE@{AMDGPU\_SPOOKY\_RANGE}}
+\index{AMDGPU\_SPOOKY\_RANGE@{AMDGPU\_SPOOKY\_RANGE}!amdgpu\_asic\_addr.h@{amdgpu\_asic\_addr.h}}
+\doxysubsubsection{\texorpdfstring{AMDGPU\_SPOOKY\_RANGE}{AMDGPU\_SPOOKY\_RANGE}}
+{\footnotesize\ttfamily \#define AMDGPU\+\_\+\+SPOOKY\+\_\+\+RANGE~0x41, 0x81}
+
+\mbox{\Hypertarget{amdgpu__asic__addr_8h_ae10efbda0d8e328e0f1eb8aeba2e9cd1}\label{amdgpu__asic__addr_8h_ae10efbda0d8e328e0f1eb8aeba2e9cd1}} 
+\index{amdgpu\_asic\_addr.h@{amdgpu\_asic\_addr.h}!AMDGPU\_STONEY\_RANGE@{AMDGPU\_STONEY\_RANGE}}
+\index{AMDGPU\_STONEY\_RANGE@{AMDGPU\_STONEY\_RANGE}!amdgpu\_asic\_addr.h@{amdgpu\_asic\_addr.h}}
+\doxysubsubsection{\texorpdfstring{AMDGPU\_STONEY\_RANGE}{AMDGPU\_STONEY\_RANGE}}
+{\footnotesize\ttfamily \#define AMDGPU\+\_\+\+STONEY\+\_\+\+RANGE~0x61, 0x\+FF}
+
+\mbox{\Hypertarget{amdgpu__asic__addr_8h_a4b178ac10008ff0fe95f2567700b560e}\label{amdgpu__asic__addr_8h_a4b178ac10008ff0fe95f2567700b560e}} 
+\index{amdgpu\_asic\_addr.h@{amdgpu\_asic\_addr.h}!AMDGPU\_TAHITI\_RANGE@{AMDGPU\_TAHITI\_RANGE}}
+\index{AMDGPU\_TAHITI\_RANGE@{AMDGPU\_TAHITI\_RANGE}!amdgpu\_asic\_addr.h@{amdgpu\_asic\_addr.h}}
+\doxysubsubsection{\texorpdfstring{AMDGPU\_TAHITI\_RANGE}{AMDGPU\_TAHITI\_RANGE}}
+{\footnotesize\ttfamily \#define AMDGPU\+\_\+\+TAHITI\+\_\+\+RANGE~0x05, 0x14}
+
+\mbox{\Hypertarget{amdgpu__asic__addr_8h_a14b945708bf68f365c8559676959015f}\label{amdgpu__asic__addr_8h_a14b945708bf68f365c8559676959015f}} 
+\index{amdgpu\_asic\_addr.h@{amdgpu\_asic\_addr.h}!AMDGPU\_TONGA\_RANGE@{AMDGPU\_TONGA\_RANGE}}
+\index{AMDGPU\_TONGA\_RANGE@{AMDGPU\_TONGA\_RANGE}!amdgpu\_asic\_addr.h@{amdgpu\_asic\_addr.h}}
+\doxysubsubsection{\texorpdfstring{AMDGPU\_TONGA\_RANGE}{AMDGPU\_TONGA\_RANGE}}
+{\footnotesize\ttfamily \#define AMDGPU\+\_\+\+TONGA\+\_\+\+RANGE~0x14, 0x28}
+
+\mbox{\Hypertarget{amdgpu__asic__addr_8h_abd29f4b23d52e963950d4cfea45bd9c1}\label{amdgpu__asic__addr_8h_abd29f4b23d52e963950d4cfea45bd9c1}} 
+\index{amdgpu\_asic\_addr.h@{amdgpu\_asic\_addr.h}!AMDGPU\_UNKNOWN@{AMDGPU\_UNKNOWN}}
+\index{AMDGPU\_UNKNOWN@{AMDGPU\_UNKNOWN}!amdgpu\_asic\_addr.h@{amdgpu\_asic\_addr.h}}
+\doxysubsubsection{\texorpdfstring{AMDGPU\_UNKNOWN}{AMDGPU\_UNKNOWN}}
+{\footnotesize\ttfamily \#define AMDGPU\+\_\+\+UNKNOWN~0x\+FF}
+
+\mbox{\Hypertarget{amdgpu__asic__addr_8h_a38c188ef916c732deaafc7b3c2510676}\label{amdgpu__asic__addr_8h_a38c188ef916c732deaafc7b3c2510676}} 
+\index{amdgpu\_asic\_addr.h@{amdgpu\_asic\_addr.h}!AMDGPU\_VANGOGH\_RANGE@{AMDGPU\_VANGOGH\_RANGE}}
+\index{AMDGPU\_VANGOGH\_RANGE@{AMDGPU\_VANGOGH\_RANGE}!amdgpu\_asic\_addr.h@{amdgpu\_asic\_addr.h}}
+\doxysubsubsection{\texorpdfstring{AMDGPU\_VANGOGH\_RANGE}{AMDGPU\_VANGOGH\_RANGE}}
+{\footnotesize\ttfamily \#define AMDGPU\+\_\+\+VANGOGH\+\_\+\+RANGE~0x01, 0x\+FF}
+
+\mbox{\Hypertarget{amdgpu__asic__addr_8h_a8f7c90928798e8df24b33c2e7b02407c}\label{amdgpu__asic__addr_8h_a8f7c90928798e8df24b33c2e7b02407c}} 
+\index{amdgpu\_asic\_addr.h@{amdgpu\_asic\_addr.h}!AMDGPU\_VEGA10\_RANGE@{AMDGPU\_VEGA10\_RANGE}}
+\index{AMDGPU\_VEGA10\_RANGE@{AMDGPU\_VEGA10\_RANGE}!amdgpu\_asic\_addr.h@{amdgpu\_asic\_addr.h}}
+\doxysubsubsection{\texorpdfstring{AMDGPU\_VEGA10\_RANGE}{AMDGPU\_VEGA10\_RANGE}}
+{\footnotesize\ttfamily \#define AMDGPU\+\_\+\+VEGA10\+\_\+\+RANGE~0x01, 0x14}
+
+\mbox{\Hypertarget{amdgpu__asic__addr_8h_a2437b5ad169d9823c10187b548c14aff}\label{amdgpu__asic__addr_8h_a2437b5ad169d9823c10187b548c14aff}} 
+\index{amdgpu\_asic\_addr.h@{amdgpu\_asic\_addr.h}!AMDGPU\_VEGA12\_RANGE@{AMDGPU\_VEGA12\_RANGE}}
+\index{AMDGPU\_VEGA12\_RANGE@{AMDGPU\_VEGA12\_RANGE}!amdgpu\_asic\_addr.h@{amdgpu\_asic\_addr.h}}
+\doxysubsubsection{\texorpdfstring{AMDGPU\_VEGA12\_RANGE}{AMDGPU\_VEGA12\_RANGE}}
+{\footnotesize\ttfamily \#define AMDGPU\+\_\+\+VEGA12\+\_\+\+RANGE~0x14, 0x28}
+
+\mbox{\Hypertarget{amdgpu__asic__addr_8h_a6e3a72287fc4c3564fa09fb44f2ea782}\label{amdgpu__asic__addr_8h_a6e3a72287fc4c3564fa09fb44f2ea782}} 
+\index{amdgpu\_asic\_addr.h@{amdgpu\_asic\_addr.h}!AMDGPU\_VEGA20\_RANGE@{AMDGPU\_VEGA20\_RANGE}}
+\index{AMDGPU\_VEGA20\_RANGE@{AMDGPU\_VEGA20\_RANGE}!amdgpu\_asic\_addr.h@{amdgpu\_asic\_addr.h}}
+\doxysubsubsection{\texorpdfstring{AMDGPU\_VEGA20\_RANGE}{AMDGPU\_VEGA20\_RANGE}}
+{\footnotesize\ttfamily \#define AMDGPU\+\_\+\+VEGA20\+\_\+\+RANGE~0x28, 0x32}
+
+\mbox{\Hypertarget{amdgpu__asic__addr_8h_afd86bfb564aaa77d5c18d2dd4293e31c}\label{amdgpu__asic__addr_8h_afd86bfb564aaa77d5c18d2dd4293e31c}} 
+\index{amdgpu\_asic\_addr.h@{amdgpu\_asic\_addr.h}!AMDGPU\_VEGAM\_RANGE@{AMDGPU\_VEGAM\_RANGE}}
+\index{AMDGPU\_VEGAM\_RANGE@{AMDGPU\_VEGAM\_RANGE}!amdgpu\_asic\_addr.h@{amdgpu\_asic\_addr.h}}
+\doxysubsubsection{\texorpdfstring{AMDGPU\_VEGAM\_RANGE}{AMDGPU\_VEGAM\_RANGE}}
+{\footnotesize\ttfamily \#define AMDGPU\+\_\+\+VEGAM\+\_\+\+RANGE~0x6E, 0x\+FF}
+
+\mbox{\Hypertarget{amdgpu__asic__addr_8h_a357aa5980c9b2c7403ed91eace99baeb}\label{amdgpu__asic__addr_8h_a357aa5980c9b2c7403ed91eace99baeb}} 
+\index{amdgpu\_asic\_addr.h@{amdgpu\_asic\_addr.h}!AMDGPU\_VENDOR\_IS\_AMD@{AMDGPU\_VENDOR\_IS\_AMD}}
+\index{AMDGPU\_VENDOR\_IS\_AMD@{AMDGPU\_VENDOR\_IS\_AMD}!amdgpu\_asic\_addr.h@{amdgpu\_asic\_addr.h}}
+\doxysubsubsection{\texorpdfstring{AMDGPU\_VENDOR\_IS\_AMD}{AMDGPU\_VENDOR\_IS\_AMD}}
+{\footnotesize\ttfamily \#define AMDGPU\+\_\+\+VENDOR\+\_\+\+IS\+\_\+\+AMD(\begin{DoxyParamCaption}\item[{}]{v }\end{DoxyParamCaption})~((v == \mbox{\hyperlink{amdgpu__asic__addr_8h_ab4e08e00da6054c2fa363efb9270a0cd}{ATI\+\_\+\+VENDOR\+\_\+\+ID}}) $\vert$$\vert$ (v == \mbox{\hyperlink{amdgpu__asic__addr_8h_a69a6be0d9d60d238c80ab7cfe6ad48e7}{AMD\+\_\+\+VENDOR\+\_\+\+ID}}))}
+
+\mbox{\Hypertarget{amdgpu__asic__addr_8h_a938d93d3633b95577b66072f390c5f9a}\label{amdgpu__asic__addr_8h_a938d93d3633b95577b66072f390c5f9a}} 
+\index{amdgpu\_asic\_addr.h@{amdgpu\_asic\_addr.h}!ASICREV\_IS@{ASICREV\_IS}}
+\index{ASICREV\_IS@{ASICREV\_IS}!amdgpu\_asic\_addr.h@{amdgpu\_asic\_addr.h}}
+\doxysubsubsection{\texorpdfstring{ASICREV\_IS}{ASICREV\_IS}}
+{\footnotesize\ttfamily \#define ASICREV\+\_\+\+IS(\begin{DoxyParamCaption}\item[{}]{r,  }\item[{}]{rn }\end{DoxyParamCaption})~\mbox{\hyperlink{amdgpu__asic__addr_8h_a8f91b21cde61dd0ba41d0707bab1a031}{AMDGPU\+\_\+\+IN\+\_\+\+RANGE}}(r, AMDGPU\+\_\+\#\#rn\#\#\+\_\+\+RANGE)}
+
+\mbox{\Hypertarget{amdgpu__asic__addr_8h_a2805d2f618290496dfb3586cca8929d9}\label{amdgpu__asic__addr_8h_a2805d2f618290496dfb3586cca8929d9}} 
+\index{amdgpu\_asic\_addr.h@{amdgpu\_asic\_addr.h}!ASICREV\_IS\_ALDEBARAN@{ASICREV\_IS\_ALDEBARAN}}
+\index{ASICREV\_IS\_ALDEBARAN@{ASICREV\_IS\_ALDEBARAN}!amdgpu\_asic\_addr.h@{amdgpu\_asic\_addr.h}}
+\doxysubsubsection{\texorpdfstring{ASICREV\_IS\_ALDEBARAN}{ASICREV\_IS\_ALDEBARAN}}
+{\footnotesize\ttfamily \#define ASICREV\+\_\+\+IS\+\_\+\+ALDEBARAN(\begin{DoxyParamCaption}\item[{}]{r }\end{DoxyParamCaption})~\mbox{\hyperlink{amdgpu__asic__addr_8h_a938d93d3633b95577b66072f390c5f9a}{ASICREV\+\_\+\+IS}}(r, ALDEBARAN)}
+
+\mbox{\Hypertarget{amdgpu__asic__addr_8h_afe180ed08c2cb7fe253f4bdf36eb8754}\label{amdgpu__asic__addr_8h_afe180ed08c2cb7fe253f4bdf36eb8754}} 
+\index{amdgpu\_asic\_addr.h@{amdgpu\_asic\_addr.h}!ASICREV\_IS\_ARCTURUS@{ASICREV\_IS\_ARCTURUS}}
+\index{ASICREV\_IS\_ARCTURUS@{ASICREV\_IS\_ARCTURUS}!amdgpu\_asic\_addr.h@{amdgpu\_asic\_addr.h}}
+\doxysubsubsection{\texorpdfstring{ASICREV\_IS\_ARCTURUS}{ASICREV\_IS\_ARCTURUS}}
+{\footnotesize\ttfamily \#define ASICREV\+\_\+\+IS\+\_\+\+ARCTURUS(\begin{DoxyParamCaption}\item[{}]{r }\end{DoxyParamCaption})~\mbox{\hyperlink{amdgpu__asic__addr_8h_a938d93d3633b95577b66072f390c5f9a}{ASICREV\+\_\+\+IS}}(r, ARCTURUS)}
+
+\mbox{\Hypertarget{amdgpu__asic__addr_8h_a693e4c8d75be687915223c740258687e}\label{amdgpu__asic__addr_8h_a693e4c8d75be687915223c740258687e}} 
+\index{amdgpu\_asic\_addr.h@{amdgpu\_asic\_addr.h}!ASICREV\_IS\_BONAIRE\_M@{ASICREV\_IS\_BONAIRE\_M}}
+\index{ASICREV\_IS\_BONAIRE\_M@{ASICREV\_IS\_BONAIRE\_M}!amdgpu\_asic\_addr.h@{amdgpu\_asic\_addr.h}}
+\doxysubsubsection{\texorpdfstring{ASICREV\_IS\_BONAIRE\_M}{ASICREV\_IS\_BONAIRE\_M}}
+{\footnotesize\ttfamily \#define ASICREV\+\_\+\+IS\+\_\+\+BONAIRE\+\_\+M(\begin{DoxyParamCaption}\item[{}]{r }\end{DoxyParamCaption})~\mbox{\hyperlink{amdgpu__asic__addr_8h_a938d93d3633b95577b66072f390c5f9a}{ASICREV\+\_\+\+IS}}(r, BONAIRE)}
+
+\mbox{\Hypertarget{amdgpu__asic__addr_8h_ac4ed0610833ab04b665489e6626104b5}\label{amdgpu__asic__addr_8h_ac4ed0610833ab04b665489e6626104b5}} 
+\index{amdgpu\_asic\_addr.h@{amdgpu\_asic\_addr.h}!ASICREV\_IS\_CAPEVERDE\_M@{ASICREV\_IS\_CAPEVERDE\_M}}
+\index{ASICREV\_IS\_CAPEVERDE\_M@{ASICREV\_IS\_CAPEVERDE\_M}!amdgpu\_asic\_addr.h@{amdgpu\_asic\_addr.h}}
+\doxysubsubsection{\texorpdfstring{ASICREV\_IS\_CAPEVERDE\_M}{ASICREV\_IS\_CAPEVERDE\_M}}
+{\footnotesize\ttfamily \#define ASICREV\+\_\+\+IS\+\_\+\+CAPEVERDE\+\_\+M(\begin{DoxyParamCaption}\item[{}]{r }\end{DoxyParamCaption})~\mbox{\hyperlink{amdgpu__asic__addr_8h_a938d93d3633b95577b66072f390c5f9a}{ASICREV\+\_\+\+IS}}(r, CAPEVERDE)}
+
+\mbox{\Hypertarget{amdgpu__asic__addr_8h_a04311fc3705d0cdce5e6dedfd0c6fecd}\label{amdgpu__asic__addr_8h_a04311fc3705d0cdce5e6dedfd0c6fecd}} 
+\index{amdgpu\_asic\_addr.h@{amdgpu\_asic\_addr.h}!ASICREV\_IS\_CARRIZO@{ASICREV\_IS\_CARRIZO}}
+\index{ASICREV\_IS\_CARRIZO@{ASICREV\_IS\_CARRIZO}!amdgpu\_asic\_addr.h@{amdgpu\_asic\_addr.h}}
+\doxysubsubsection{\texorpdfstring{ASICREV\_IS\_CARRIZO}{ASICREV\_IS\_CARRIZO}}
+{\footnotesize\ttfamily \#define ASICREV\+\_\+\+IS\+\_\+\+CARRIZO(\begin{DoxyParamCaption}\item[{}]{r }\end{DoxyParamCaption})~\mbox{\hyperlink{amdgpu__asic__addr_8h_a938d93d3633b95577b66072f390c5f9a}{ASICREV\+\_\+\+IS}}(r, CARRIZO)}
+
+\mbox{\Hypertarget{amdgpu__asic__addr_8h_ad535aa6741a707778890bff77b15883f}\label{amdgpu__asic__addr_8h_ad535aa6741a707778890bff77b15883f}} 
+\index{amdgpu\_asic\_addr.h@{amdgpu\_asic\_addr.h}!ASICREV\_IS\_FIJI\_P@{ASICREV\_IS\_FIJI\_P}}
+\index{ASICREV\_IS\_FIJI\_P@{ASICREV\_IS\_FIJI\_P}!amdgpu\_asic\_addr.h@{amdgpu\_asic\_addr.h}}
+\doxysubsubsection{\texorpdfstring{ASICREV\_IS\_FIJI\_P}{ASICREV\_IS\_FIJI\_P}}
+{\footnotesize\ttfamily \#define ASICREV\+\_\+\+IS\+\_\+\+FIJI\+\_\+P(\begin{DoxyParamCaption}\item[{}]{r }\end{DoxyParamCaption})~\mbox{\hyperlink{amdgpu__asic__addr_8h_a938d93d3633b95577b66072f390c5f9a}{ASICREV\+\_\+\+IS}}(r, FIJI)}
+
+\mbox{\Hypertarget{amdgpu__asic__addr_8h_af8d2e4d3ec9e4a3eaf0484934f03d091}\label{amdgpu__asic__addr_8h_af8d2e4d3ec9e4a3eaf0484934f03d091}} 
+\index{amdgpu\_asic\_addr.h@{amdgpu\_asic\_addr.h}!ASICREV\_IS\_GFX1036@{ASICREV\_IS\_GFX1036}}
+\index{ASICREV\_IS\_GFX1036@{ASICREV\_IS\_GFX1036}!amdgpu\_asic\_addr.h@{amdgpu\_asic\_addr.h}}
+\doxysubsubsection{\texorpdfstring{ASICREV\_IS\_GFX1036}{ASICREV\_IS\_GFX1036}}
+{\footnotesize\ttfamily \#define ASICREV\+\_\+\+IS\+\_\+\+GFX1036(\begin{DoxyParamCaption}\item[{}]{r }\end{DoxyParamCaption})~\mbox{\hyperlink{amdgpu__asic__addr_8h_a938d93d3633b95577b66072f390c5f9a}{ASICREV\+\_\+\+IS}}(r, GFX1036)}
+
+\mbox{\Hypertarget{amdgpu__asic__addr_8h_aeb312b35c0bbb082774b153047b2f037}\label{amdgpu__asic__addr_8h_aeb312b35c0bbb082774b153047b2f037}} 
+\index{amdgpu\_asic\_addr.h@{amdgpu\_asic\_addr.h}!ASICREV\_IS\_GFX1037@{ASICREV\_IS\_GFX1037}}
+\index{ASICREV\_IS\_GFX1037@{ASICREV\_IS\_GFX1037}!amdgpu\_asic\_addr.h@{amdgpu\_asic\_addr.h}}
+\doxysubsubsection{\texorpdfstring{ASICREV\_IS\_GFX1037}{ASICREV\_IS\_GFX1037}}
+{\footnotesize\ttfamily \#define ASICREV\+\_\+\+IS\+\_\+\+GFX1037(\begin{DoxyParamCaption}\item[{}]{r }\end{DoxyParamCaption})~\mbox{\hyperlink{amdgpu__asic__addr_8h_a938d93d3633b95577b66072f390c5f9a}{ASICREV\+\_\+\+IS}}(r, GFX1037)}
+
+\mbox{\Hypertarget{amdgpu__asic__addr_8h_ad4d8bd864112d2f238d370f99ffd0d5a}\label{amdgpu__asic__addr_8h_ad4d8bd864112d2f238d370f99ffd0d5a}} 
+\index{amdgpu\_asic\_addr.h@{amdgpu\_asic\_addr.h}!ASICREV\_IS\_GFX1100@{ASICREV\_IS\_GFX1100}}
+\index{ASICREV\_IS\_GFX1100@{ASICREV\_IS\_GFX1100}!amdgpu\_asic\_addr.h@{amdgpu\_asic\_addr.h}}
+\doxysubsubsection{\texorpdfstring{ASICREV\_IS\_GFX1100}{ASICREV\_IS\_GFX1100}}
+{\footnotesize\ttfamily \#define ASICREV\+\_\+\+IS\+\_\+\+GFX1100(\begin{DoxyParamCaption}\item[{}]{r }\end{DoxyParamCaption})~\mbox{\hyperlink{amdgpu__asic__addr_8h_a938d93d3633b95577b66072f390c5f9a}{ASICREV\+\_\+\+IS}}(r, GFX1100)}
+
+\mbox{\Hypertarget{amdgpu__asic__addr_8h_a989b0a8886c15560e26b0ef99825eef3}\label{amdgpu__asic__addr_8h_a989b0a8886c15560e26b0ef99825eef3}} 
+\index{amdgpu\_asic\_addr.h@{amdgpu\_asic\_addr.h}!ASICREV\_IS\_GFX1101@{ASICREV\_IS\_GFX1101}}
+\index{ASICREV\_IS\_GFX1101@{ASICREV\_IS\_GFX1101}!amdgpu\_asic\_addr.h@{amdgpu\_asic\_addr.h}}
+\doxysubsubsection{\texorpdfstring{ASICREV\_IS\_GFX1101}{ASICREV\_IS\_GFX1101}}
+{\footnotesize\ttfamily \#define ASICREV\+\_\+\+IS\+\_\+\+GFX1101(\begin{DoxyParamCaption}\item[{}]{r }\end{DoxyParamCaption})~\mbox{\hyperlink{amdgpu__asic__addr_8h_a938d93d3633b95577b66072f390c5f9a}{ASICREV\+\_\+\+IS}}(r, GFX1101)}
+
+\mbox{\Hypertarget{amdgpu__asic__addr_8h_a3c15c217405b2518d1a63c4143c5f49d}\label{amdgpu__asic__addr_8h_a3c15c217405b2518d1a63c4143c5f49d}} 
+\index{amdgpu\_asic\_addr.h@{amdgpu\_asic\_addr.h}!ASICREV\_IS\_GFX1102@{ASICREV\_IS\_GFX1102}}
+\index{ASICREV\_IS\_GFX1102@{ASICREV\_IS\_GFX1102}!amdgpu\_asic\_addr.h@{amdgpu\_asic\_addr.h}}
+\doxysubsubsection{\texorpdfstring{ASICREV\_IS\_GFX1102}{ASICREV\_IS\_GFX1102}}
+{\footnotesize\ttfamily \#define ASICREV\+\_\+\+IS\+\_\+\+GFX1102(\begin{DoxyParamCaption}\item[{}]{r }\end{DoxyParamCaption})~\mbox{\hyperlink{amdgpu__asic__addr_8h_a938d93d3633b95577b66072f390c5f9a}{ASICREV\+\_\+\+IS}}(r, GFX1102)}
+
+\mbox{\Hypertarget{amdgpu__asic__addr_8h_ab393dfeeff3ddc6ee296fb3a46b802a7}\label{amdgpu__asic__addr_8h_ab393dfeeff3ddc6ee296fb3a46b802a7}} 
+\index{amdgpu\_asic\_addr.h@{amdgpu\_asic\_addr.h}!ASICREV\_IS\_GFX1103@{ASICREV\_IS\_GFX1103}}
+\index{ASICREV\_IS\_GFX1103@{ASICREV\_IS\_GFX1103}!amdgpu\_asic\_addr.h@{amdgpu\_asic\_addr.h}}
+\doxysubsubsection{\texorpdfstring{ASICREV\_IS\_GFX1103}{ASICREV\_IS\_GFX1103}}
+{\footnotesize\ttfamily \#define ASICREV\+\_\+\+IS\+\_\+\+GFX1103(\begin{DoxyParamCaption}\item[{}]{r }\end{DoxyParamCaption})~\mbox{\hyperlink{amdgpu__asic__addr_8h_a938d93d3633b95577b66072f390c5f9a}{ASICREV\+\_\+\+IS}}(r, GFX1103)}
+
+\mbox{\Hypertarget{amdgpu__asic__addr_8h_aa41fc0bed4d63bb47eb7a1b78c170b54}\label{amdgpu__asic__addr_8h_aa41fc0bed4d63bb47eb7a1b78c170b54}} 
+\index{amdgpu\_asic\_addr.h@{amdgpu\_asic\_addr.h}!ASICREV\_IS\_HAINAN\_V@{ASICREV\_IS\_HAINAN\_V}}
+\index{ASICREV\_IS\_HAINAN\_V@{ASICREV\_IS\_HAINAN\_V}!amdgpu\_asic\_addr.h@{amdgpu\_asic\_addr.h}}
+\doxysubsubsection{\texorpdfstring{ASICREV\_IS\_HAINAN\_V}{ASICREV\_IS\_HAINAN\_V}}
+{\footnotesize\ttfamily \#define ASICREV\+\_\+\+IS\+\_\+\+HAINAN\+\_\+V(\begin{DoxyParamCaption}\item[{}]{r }\end{DoxyParamCaption})~\mbox{\hyperlink{amdgpu__asic__addr_8h_a938d93d3633b95577b66072f390c5f9a}{ASICREV\+\_\+\+IS}}(r, HAINAN)}
+
+\mbox{\Hypertarget{amdgpu__asic__addr_8h_a83b89a245c8ea6865f866c429a2a0a62}\label{amdgpu__asic__addr_8h_a83b89a245c8ea6865f866c429a2a0a62}} 
+\index{amdgpu\_asic\_addr.h@{amdgpu\_asic\_addr.h}!ASICREV\_IS\_HAWAII\_P@{ASICREV\_IS\_HAWAII\_P}}
+\index{ASICREV\_IS\_HAWAII\_P@{ASICREV\_IS\_HAWAII\_P}!amdgpu\_asic\_addr.h@{amdgpu\_asic\_addr.h}}
+\doxysubsubsection{\texorpdfstring{ASICREV\_IS\_HAWAII\_P}{ASICREV\_IS\_HAWAII\_P}}
+{\footnotesize\ttfamily \#define ASICREV\+\_\+\+IS\+\_\+\+HAWAII\+\_\+P(\begin{DoxyParamCaption}\item[{}]{r }\end{DoxyParamCaption})~\mbox{\hyperlink{amdgpu__asic__addr_8h_a938d93d3633b95577b66072f390c5f9a}{ASICREV\+\_\+\+IS}}(r, HAWAII)}
+
+\mbox{\Hypertarget{amdgpu__asic__addr_8h_a642f17a78f8faf9d57daeae1f667cf9d}\label{amdgpu__asic__addr_8h_a642f17a78f8faf9d57daeae1f667cf9d}} 
+\index{amdgpu\_asic\_addr.h@{amdgpu\_asic\_addr.h}!ASICREV\_IS\_ICELAND\_M@{ASICREV\_IS\_ICELAND\_M}}
+\index{ASICREV\_IS\_ICELAND\_M@{ASICREV\_IS\_ICELAND\_M}!amdgpu\_asic\_addr.h@{amdgpu\_asic\_addr.h}}
+\doxysubsubsection{\texorpdfstring{ASICREV\_IS\_ICELAND\_M}{ASICREV\_IS\_ICELAND\_M}}
+{\footnotesize\ttfamily \#define ASICREV\+\_\+\+IS\+\_\+\+ICELAND\+\_\+M(\begin{DoxyParamCaption}\item[{}]{r }\end{DoxyParamCaption})~\mbox{\hyperlink{amdgpu__asic__addr_8h_a938d93d3633b95577b66072f390c5f9a}{ASICREV\+\_\+\+IS}}(r, ICELAND)}
+
+\mbox{\Hypertarget{amdgpu__asic__addr_8h_afe569e90e4e02c1edaa02a358e9d1781}\label{amdgpu__asic__addr_8h_afe569e90e4e02c1edaa02a358e9d1781}} 
+\index{amdgpu\_asic\_addr.h@{amdgpu\_asic\_addr.h}!ASICREV\_IS\_KALINDI@{ASICREV\_IS\_KALINDI}}
+\index{ASICREV\_IS\_KALINDI@{ASICREV\_IS\_KALINDI}!amdgpu\_asic\_addr.h@{amdgpu\_asic\_addr.h}}
+\doxysubsubsection{\texorpdfstring{ASICREV\_IS\_KALINDI}{ASICREV\_IS\_KALINDI}}
+{\footnotesize\ttfamily \#define ASICREV\+\_\+\+IS\+\_\+\+KALINDI(\begin{DoxyParamCaption}\item[{}]{r }\end{DoxyParamCaption})~\mbox{\hyperlink{amdgpu__asic__addr_8h_a938d93d3633b95577b66072f390c5f9a}{ASICREV\+\_\+\+IS}}(r, KALINDI)}
+
+\mbox{\Hypertarget{amdgpu__asic__addr_8h_ae304898b341b175e43bfd88e3c789adf}\label{amdgpu__asic__addr_8h_ae304898b341b175e43bfd88e3c789adf}} 
+\index{amdgpu\_asic\_addr.h@{amdgpu\_asic\_addr.h}!ASICREV\_IS\_KALINDI\_GODAVARI@{ASICREV\_IS\_KALINDI\_GODAVARI}}
+\index{ASICREV\_IS\_KALINDI\_GODAVARI@{ASICREV\_IS\_KALINDI\_GODAVARI}!amdgpu\_asic\_addr.h@{amdgpu\_asic\_addr.h}}
+\doxysubsubsection{\texorpdfstring{ASICREV\_IS\_KALINDI\_GODAVARI}{ASICREV\_IS\_KALINDI\_GODAVARI}}
+{\footnotesize\ttfamily \#define ASICREV\+\_\+\+IS\+\_\+\+KALINDI\+\_\+\+GODAVARI(\begin{DoxyParamCaption}\item[{}]{r }\end{DoxyParamCaption})~\mbox{\hyperlink{amdgpu__asic__addr_8h_a938d93d3633b95577b66072f390c5f9a}{ASICREV\+\_\+\+IS}}(r, GODAVARI)}
+
+\mbox{\Hypertarget{amdgpu__asic__addr_8h_abe1b2b59db126f9143d10cf5ccff655c}\label{amdgpu__asic__addr_8h_abe1b2b59db126f9143d10cf5ccff655c}} 
+\index{amdgpu\_asic\_addr.h@{amdgpu\_asic\_addr.h}!ASICREV\_IS\_NAVI10\_P@{ASICREV\_IS\_NAVI10\_P}}
+\index{ASICREV\_IS\_NAVI10\_P@{ASICREV\_IS\_NAVI10\_P}!amdgpu\_asic\_addr.h@{amdgpu\_asic\_addr.h}}
+\doxysubsubsection{\texorpdfstring{ASICREV\_IS\_NAVI10\_P}{ASICREV\_IS\_NAVI10\_P}}
+{\footnotesize\ttfamily \#define ASICREV\+\_\+\+IS\+\_\+\+NAVI10\+\_\+P(\begin{DoxyParamCaption}\item[{}]{r }\end{DoxyParamCaption})~\mbox{\hyperlink{amdgpu__asic__addr_8h_a938d93d3633b95577b66072f390c5f9a}{ASICREV\+\_\+\+IS}}(r, NAVI10)}
+
+\mbox{\Hypertarget{amdgpu__asic__addr_8h_ae7e2bcd1c87e2235d83a15d74a07fea7}\label{amdgpu__asic__addr_8h_ae7e2bcd1c87e2235d83a15d74a07fea7}} 
+\index{amdgpu\_asic\_addr.h@{amdgpu\_asic\_addr.h}!ASICREV\_IS\_NAVI12\_P@{ASICREV\_IS\_NAVI12\_P}}
+\index{ASICREV\_IS\_NAVI12\_P@{ASICREV\_IS\_NAVI12\_P}!amdgpu\_asic\_addr.h@{amdgpu\_asic\_addr.h}}
+\doxysubsubsection{\texorpdfstring{ASICREV\_IS\_NAVI12\_P}{ASICREV\_IS\_NAVI12\_P}}
+{\footnotesize\ttfamily \#define ASICREV\+\_\+\+IS\+\_\+\+NAVI12\+\_\+P(\begin{DoxyParamCaption}\item[{}]{r }\end{DoxyParamCaption})~\mbox{\hyperlink{amdgpu__asic__addr_8h_a938d93d3633b95577b66072f390c5f9a}{ASICREV\+\_\+\+IS}}(r, NAVI12)}
+
+\mbox{\Hypertarget{amdgpu__asic__addr_8h_a7a2a5579a7fe08849cb99881d38b89cc}\label{amdgpu__asic__addr_8h_a7a2a5579a7fe08849cb99881d38b89cc}} 
+\index{amdgpu\_asic\_addr.h@{amdgpu\_asic\_addr.h}!ASICREV\_IS\_NAVI14\_M@{ASICREV\_IS\_NAVI14\_M}}
+\index{ASICREV\_IS\_NAVI14\_M@{ASICREV\_IS\_NAVI14\_M}!amdgpu\_asic\_addr.h@{amdgpu\_asic\_addr.h}}
+\doxysubsubsection{\texorpdfstring{ASICREV\_IS\_NAVI14\_M}{ASICREV\_IS\_NAVI14\_M}}
+{\footnotesize\ttfamily \#define ASICREV\+\_\+\+IS\+\_\+\+NAVI14\+\_\+M(\begin{DoxyParamCaption}\item[{}]{r }\end{DoxyParamCaption})~\mbox{\hyperlink{amdgpu__asic__addr_8h_a938d93d3633b95577b66072f390c5f9a}{ASICREV\+\_\+\+IS}}(r, NAVI14)}
+
+\mbox{\Hypertarget{amdgpu__asic__addr_8h_a1e9cd5064271783804e531ee152c60aa}\label{amdgpu__asic__addr_8h_a1e9cd5064271783804e531ee152c60aa}} 
+\index{amdgpu\_asic\_addr.h@{amdgpu\_asic\_addr.h}!ASICREV\_IS\_NAVI21\_M@{ASICREV\_IS\_NAVI21\_M}}
+\index{ASICREV\_IS\_NAVI21\_M@{ASICREV\_IS\_NAVI21\_M}!amdgpu\_asic\_addr.h@{amdgpu\_asic\_addr.h}}
+\doxysubsubsection{\texorpdfstring{ASICREV\_IS\_NAVI21\_M}{ASICREV\_IS\_NAVI21\_M}}
+{\footnotesize\ttfamily \#define ASICREV\+\_\+\+IS\+\_\+\+NAVI21\+\_\+M(\begin{DoxyParamCaption}\item[{}]{r }\end{DoxyParamCaption})~\mbox{\hyperlink{amdgpu__asic__addr_8h_a938d93d3633b95577b66072f390c5f9a}{ASICREV\+\_\+\+IS}}(r, NAVI21)}
+
+\mbox{\Hypertarget{amdgpu__asic__addr_8h_ac7c75e7d2f24bde8dc2e38d058e69a97}\label{amdgpu__asic__addr_8h_ac7c75e7d2f24bde8dc2e38d058e69a97}} 
+\index{amdgpu\_asic\_addr.h@{amdgpu\_asic\_addr.h}!ASICREV\_IS\_NAVI22\_P@{ASICREV\_IS\_NAVI22\_P}}
+\index{ASICREV\_IS\_NAVI22\_P@{ASICREV\_IS\_NAVI22\_P}!amdgpu\_asic\_addr.h@{amdgpu\_asic\_addr.h}}
+\doxysubsubsection{\texorpdfstring{ASICREV\_IS\_NAVI22\_P}{ASICREV\_IS\_NAVI22\_P}}
+{\footnotesize\ttfamily \#define ASICREV\+\_\+\+IS\+\_\+\+NAVI22\+\_\+P(\begin{DoxyParamCaption}\item[{}]{r }\end{DoxyParamCaption})~\mbox{\hyperlink{amdgpu__asic__addr_8h_a938d93d3633b95577b66072f390c5f9a}{ASICREV\+\_\+\+IS}}(r, NAVI22)}
+
+\mbox{\Hypertarget{amdgpu__asic__addr_8h_a1fff50936e0fb44ec69baf1f4e872966}\label{amdgpu__asic__addr_8h_a1fff50936e0fb44ec69baf1f4e872966}} 
+\index{amdgpu\_asic\_addr.h@{amdgpu\_asic\_addr.h}!ASICREV\_IS\_NAVI23\_P@{ASICREV\_IS\_NAVI23\_P}}
+\index{ASICREV\_IS\_NAVI23\_P@{ASICREV\_IS\_NAVI23\_P}!amdgpu\_asic\_addr.h@{amdgpu\_asic\_addr.h}}
+\doxysubsubsection{\texorpdfstring{ASICREV\_IS\_NAVI23\_P}{ASICREV\_IS\_NAVI23\_P}}
+{\footnotesize\ttfamily \#define ASICREV\+\_\+\+IS\+\_\+\+NAVI23\+\_\+P(\begin{DoxyParamCaption}\item[{}]{r }\end{DoxyParamCaption})~\mbox{\hyperlink{amdgpu__asic__addr_8h_a938d93d3633b95577b66072f390c5f9a}{ASICREV\+\_\+\+IS}}(r, NAVI23)}
+
+\mbox{\Hypertarget{amdgpu__asic__addr_8h_a001943fbd676c1223874b4b8dcec1fb3}\label{amdgpu__asic__addr_8h_a001943fbd676c1223874b4b8dcec1fb3}} 
+\index{amdgpu\_asic\_addr.h@{amdgpu\_asic\_addr.h}!ASICREV\_IS\_NAVI24\_P@{ASICREV\_IS\_NAVI24\_P}}
+\index{ASICREV\_IS\_NAVI24\_P@{ASICREV\_IS\_NAVI24\_P}!amdgpu\_asic\_addr.h@{amdgpu\_asic\_addr.h}}
+\doxysubsubsection{\texorpdfstring{ASICREV\_IS\_NAVI24\_P}{ASICREV\_IS\_NAVI24\_P}}
+{\footnotesize\ttfamily \#define ASICREV\+\_\+\+IS\+\_\+\+NAVI24\+\_\+P(\begin{DoxyParamCaption}\item[{}]{r }\end{DoxyParamCaption})~\mbox{\hyperlink{amdgpu__asic__addr_8h_a938d93d3633b95577b66072f390c5f9a}{ASICREV\+\_\+\+IS}}(r, NAVI24)}
+
+\mbox{\Hypertarget{amdgpu__asic__addr_8h_a6f6fe53fa73b0a321052e9e0971c4048}\label{amdgpu__asic__addr_8h_a6f6fe53fa73b0a321052e9e0971c4048}} 
+\index{amdgpu\_asic\_addr.h@{amdgpu\_asic\_addr.h}!ASICREV\_IS\_OLAND\_M@{ASICREV\_IS\_OLAND\_M}}
+\index{ASICREV\_IS\_OLAND\_M@{ASICREV\_IS\_OLAND\_M}!amdgpu\_asic\_addr.h@{amdgpu\_asic\_addr.h}}
+\doxysubsubsection{\texorpdfstring{ASICREV\_IS\_OLAND\_M}{ASICREV\_IS\_OLAND\_M}}
+{\footnotesize\ttfamily \#define ASICREV\+\_\+\+IS\+\_\+\+OLAND\+\_\+M(\begin{DoxyParamCaption}\item[{}]{r }\end{DoxyParamCaption})~\mbox{\hyperlink{amdgpu__asic__addr_8h_a938d93d3633b95577b66072f390c5f9a}{ASICREV\+\_\+\+IS}}(r, OLAND)}
+
+\mbox{\Hypertarget{amdgpu__asic__addr_8h_adbd2ac44ce637557f3c5ca84c2d7f03d}\label{amdgpu__asic__addr_8h_adbd2ac44ce637557f3c5ca84c2d7f03d}} 
+\index{amdgpu\_asic\_addr.h@{amdgpu\_asic\_addr.h}!ASICREV\_IS\_PITCAIRN\_PM@{ASICREV\_IS\_PITCAIRN\_PM}}
+\index{ASICREV\_IS\_PITCAIRN\_PM@{ASICREV\_IS\_PITCAIRN\_PM}!amdgpu\_asic\_addr.h@{amdgpu\_asic\_addr.h}}
+\doxysubsubsection{\texorpdfstring{ASICREV\_IS\_PITCAIRN\_PM}{ASICREV\_IS\_PITCAIRN\_PM}}
+{\footnotesize\ttfamily \#define ASICREV\+\_\+\+IS\+\_\+\+PITCAIRN\+\_\+\+PM(\begin{DoxyParamCaption}\item[{}]{r }\end{DoxyParamCaption})~\mbox{\hyperlink{amdgpu__asic__addr_8h_a938d93d3633b95577b66072f390c5f9a}{ASICREV\+\_\+\+IS}}(r, PITCAIRN)}
+
+\mbox{\Hypertarget{amdgpu__asic__addr_8h_af18b80877aeb4883792976e1fd27c307}\label{amdgpu__asic__addr_8h_af18b80877aeb4883792976e1fd27c307}} 
+\index{amdgpu\_asic\_addr.h@{amdgpu\_asic\_addr.h}!ASICREV\_IS\_POLARIS10\_P@{ASICREV\_IS\_POLARIS10\_P}}
+\index{ASICREV\_IS\_POLARIS10\_P@{ASICREV\_IS\_POLARIS10\_P}!amdgpu\_asic\_addr.h@{amdgpu\_asic\_addr.h}}
+\doxysubsubsection{\texorpdfstring{ASICREV\_IS\_POLARIS10\_P}{ASICREV\_IS\_POLARIS10\_P}}
+{\footnotesize\ttfamily \#define ASICREV\+\_\+\+IS\+\_\+\+POLARIS10\+\_\+P(\begin{DoxyParamCaption}\item[{}]{r }\end{DoxyParamCaption})~\mbox{\hyperlink{amdgpu__asic__addr_8h_a938d93d3633b95577b66072f390c5f9a}{ASICREV\+\_\+\+IS}}(r, POLARIS10)}
+
+\mbox{\Hypertarget{amdgpu__asic__addr_8h_abd5ae747f6eeedb27d4a440ab85039d9}\label{amdgpu__asic__addr_8h_abd5ae747f6eeedb27d4a440ab85039d9}} 
+\index{amdgpu\_asic\_addr.h@{amdgpu\_asic\_addr.h}!ASICREV\_IS\_POLARIS11\_M@{ASICREV\_IS\_POLARIS11\_M}}
+\index{ASICREV\_IS\_POLARIS11\_M@{ASICREV\_IS\_POLARIS11\_M}!amdgpu\_asic\_addr.h@{amdgpu\_asic\_addr.h}}
+\doxysubsubsection{\texorpdfstring{ASICREV\_IS\_POLARIS11\_M}{ASICREV\_IS\_POLARIS11\_M}}
+{\footnotesize\ttfamily \#define ASICREV\+\_\+\+IS\+\_\+\+POLARIS11\+\_\+M(\begin{DoxyParamCaption}\item[{}]{r }\end{DoxyParamCaption})~\mbox{\hyperlink{amdgpu__asic__addr_8h_a938d93d3633b95577b66072f390c5f9a}{ASICREV\+\_\+\+IS}}(r, POLARIS11)}
+
+\mbox{\Hypertarget{amdgpu__asic__addr_8h_a82cc23ba01e9dd954b5c4914b010ca26}\label{amdgpu__asic__addr_8h_a82cc23ba01e9dd954b5c4914b010ca26}} 
+\index{amdgpu\_asic\_addr.h@{amdgpu\_asic\_addr.h}!ASICREV\_IS\_POLARIS12\_V@{ASICREV\_IS\_POLARIS12\_V}}
+\index{ASICREV\_IS\_POLARIS12\_V@{ASICREV\_IS\_POLARIS12\_V}!amdgpu\_asic\_addr.h@{amdgpu\_asic\_addr.h}}
+\doxysubsubsection{\texorpdfstring{ASICREV\_IS\_POLARIS12\_V}{ASICREV\_IS\_POLARIS12\_V}}
+{\footnotesize\ttfamily \#define ASICREV\+\_\+\+IS\+\_\+\+POLARIS12\+\_\+V(\begin{DoxyParamCaption}\item[{}]{r }\end{DoxyParamCaption})~\mbox{\hyperlink{amdgpu__asic__addr_8h_a938d93d3633b95577b66072f390c5f9a}{ASICREV\+\_\+\+IS}}(r, POLARIS12)}
+
+\mbox{\Hypertarget{amdgpu__asic__addr_8h_af06202d0488efd73579ea14f3d436b5b}\label{amdgpu__asic__addr_8h_af06202d0488efd73579ea14f3d436b5b}} 
+\index{amdgpu\_asic\_addr.h@{amdgpu\_asic\_addr.h}!ASICREV\_IS\_RAVEN@{ASICREV\_IS\_RAVEN}}
+\index{ASICREV\_IS\_RAVEN@{ASICREV\_IS\_RAVEN}!amdgpu\_asic\_addr.h@{amdgpu\_asic\_addr.h}}
+\doxysubsubsection{\texorpdfstring{ASICREV\_IS\_RAVEN}{ASICREV\_IS\_RAVEN}}
+{\footnotesize\ttfamily \#define ASICREV\+\_\+\+IS\+\_\+\+RAVEN(\begin{DoxyParamCaption}\item[{}]{r }\end{DoxyParamCaption})~\mbox{\hyperlink{amdgpu__asic__addr_8h_a938d93d3633b95577b66072f390c5f9a}{ASICREV\+\_\+\+IS}}(r, RAVEN)}
+
+\mbox{\Hypertarget{amdgpu__asic__addr_8h_a75a6eb605a83af722e8458a664d008e8}\label{amdgpu__asic__addr_8h_a75a6eb605a83af722e8458a664d008e8}} 
+\index{amdgpu\_asic\_addr.h@{amdgpu\_asic\_addr.h}!ASICREV\_IS\_RAVEN2@{ASICREV\_IS\_RAVEN2}}
+\index{ASICREV\_IS\_RAVEN2@{ASICREV\_IS\_RAVEN2}!amdgpu\_asic\_addr.h@{amdgpu\_asic\_addr.h}}
+\doxysubsubsection{\texorpdfstring{ASICREV\_IS\_RAVEN2}{ASICREV\_IS\_RAVEN2}}
+{\footnotesize\ttfamily \#define ASICREV\+\_\+\+IS\+\_\+\+RAVEN2(\begin{DoxyParamCaption}\item[{}]{r }\end{DoxyParamCaption})~\mbox{\hyperlink{amdgpu__asic__addr_8h_a938d93d3633b95577b66072f390c5f9a}{ASICREV\+\_\+\+IS}}(r, RAVEN2)}
+
+\mbox{\Hypertarget{amdgpu__asic__addr_8h_a9a5b4b9c0c3e4cdfd4e0dae7906c717a}\label{amdgpu__asic__addr_8h_a9a5b4b9c0c3e4cdfd4e0dae7906c717a}} 
+\index{amdgpu\_asic\_addr.h@{amdgpu\_asic\_addr.h}!ASICREV\_IS\_REMBRANDT@{ASICREV\_IS\_REMBRANDT}}
+\index{ASICREV\_IS\_REMBRANDT@{ASICREV\_IS\_REMBRANDT}!amdgpu\_asic\_addr.h@{amdgpu\_asic\_addr.h}}
+\doxysubsubsection{\texorpdfstring{ASICREV\_IS\_REMBRANDT}{ASICREV\_IS\_REMBRANDT}}
+{\footnotesize\ttfamily \#define ASICREV\+\_\+\+IS\+\_\+\+REMBRANDT(\begin{DoxyParamCaption}\item[{}]{r }\end{DoxyParamCaption})~\mbox{\hyperlink{amdgpu__asic__addr_8h_a938d93d3633b95577b66072f390c5f9a}{ASICREV\+\_\+\+IS}}(r, REMBRANDT)}
+
+\mbox{\Hypertarget{amdgpu__asic__addr_8h_affc276c309ac494b1fc4823715227284}\label{amdgpu__asic__addr_8h_affc276c309ac494b1fc4823715227284}} 
+\index{amdgpu\_asic\_addr.h@{amdgpu\_asic\_addr.h}!ASICREV\_IS\_RENOIR@{ASICREV\_IS\_RENOIR}}
+\index{ASICREV\_IS\_RENOIR@{ASICREV\_IS\_RENOIR}!amdgpu\_asic\_addr.h@{amdgpu\_asic\_addr.h}}
+\doxysubsubsection{\texorpdfstring{ASICREV\_IS\_RENOIR}{ASICREV\_IS\_RENOIR}}
+{\footnotesize\ttfamily \#define ASICREV\+\_\+\+IS\+\_\+\+RENOIR(\begin{DoxyParamCaption}\item[{}]{r }\end{DoxyParamCaption})~\mbox{\hyperlink{amdgpu__asic__addr_8h_a938d93d3633b95577b66072f390c5f9a}{ASICREV\+\_\+\+IS}}(r, RENOIR)}
+
+\mbox{\Hypertarget{amdgpu__asic__addr_8h_ad6b6d7353d82cfc6f00eedb82fda9a36}\label{amdgpu__asic__addr_8h_ad6b6d7353d82cfc6f00eedb82fda9a36}} 
+\index{amdgpu\_asic\_addr.h@{amdgpu\_asic\_addr.h}!ASICREV\_IS\_SPECTRE@{ASICREV\_IS\_SPECTRE}}
+\index{ASICREV\_IS\_SPECTRE@{ASICREV\_IS\_SPECTRE}!amdgpu\_asic\_addr.h@{amdgpu\_asic\_addr.h}}
+\doxysubsubsection{\texorpdfstring{ASICREV\_IS\_SPECTRE}{ASICREV\_IS\_SPECTRE}}
+{\footnotesize\ttfamily \#define ASICREV\+\_\+\+IS\+\_\+\+SPECTRE(\begin{DoxyParamCaption}\item[{}]{r }\end{DoxyParamCaption})~\mbox{\hyperlink{amdgpu__asic__addr_8h_a938d93d3633b95577b66072f390c5f9a}{ASICREV\+\_\+\+IS}}(r, SPECTRE)}
+
+\mbox{\Hypertarget{amdgpu__asic__addr_8h_ace99d03cb7fe32f6d161226f28baafe7}\label{amdgpu__asic__addr_8h_ace99d03cb7fe32f6d161226f28baafe7}} 
+\index{amdgpu\_asic\_addr.h@{amdgpu\_asic\_addr.h}!ASICREV\_IS\_SPOOKY@{ASICREV\_IS\_SPOOKY}}
+\index{ASICREV\_IS\_SPOOKY@{ASICREV\_IS\_SPOOKY}!amdgpu\_asic\_addr.h@{amdgpu\_asic\_addr.h}}
+\doxysubsubsection{\texorpdfstring{ASICREV\_IS\_SPOOKY}{ASICREV\_IS\_SPOOKY}}
+{\footnotesize\ttfamily \#define ASICREV\+\_\+\+IS\+\_\+\+SPOOKY(\begin{DoxyParamCaption}\item[{}]{r }\end{DoxyParamCaption})~\mbox{\hyperlink{amdgpu__asic__addr_8h_a938d93d3633b95577b66072f390c5f9a}{ASICREV\+\_\+\+IS}}(r, SPOOKY)}
+
+\mbox{\Hypertarget{amdgpu__asic__addr_8h_aab6bcb1e652b6872817da823b40d632a}\label{amdgpu__asic__addr_8h_aab6bcb1e652b6872817da823b40d632a}} 
+\index{amdgpu\_asic\_addr.h@{amdgpu\_asic\_addr.h}!ASICREV\_IS\_STONEY@{ASICREV\_IS\_STONEY}}
+\index{ASICREV\_IS\_STONEY@{ASICREV\_IS\_STONEY}!amdgpu\_asic\_addr.h@{amdgpu\_asic\_addr.h}}
+\doxysubsubsection{\texorpdfstring{ASICREV\_IS\_STONEY}{ASICREV\_IS\_STONEY}}
+{\footnotesize\ttfamily \#define ASICREV\+\_\+\+IS\+\_\+\+STONEY(\begin{DoxyParamCaption}\item[{}]{r }\end{DoxyParamCaption})~\mbox{\hyperlink{amdgpu__asic__addr_8h_a938d93d3633b95577b66072f390c5f9a}{ASICREV\+\_\+\+IS}}(r, STONEY)}
+
+\mbox{\Hypertarget{amdgpu__asic__addr_8h_a51881d4457eca52f1d25a1b1c8cdd4a7}\label{amdgpu__asic__addr_8h_a51881d4457eca52f1d25a1b1c8cdd4a7}} 
+\index{amdgpu\_asic\_addr.h@{amdgpu\_asic\_addr.h}!ASICREV\_IS\_TAHITI\_P@{ASICREV\_IS\_TAHITI\_P}}
+\index{ASICREV\_IS\_TAHITI\_P@{ASICREV\_IS\_TAHITI\_P}!amdgpu\_asic\_addr.h@{amdgpu\_asic\_addr.h}}
+\doxysubsubsection{\texorpdfstring{ASICREV\_IS\_TAHITI\_P}{ASICREV\_IS\_TAHITI\_P}}
+{\footnotesize\ttfamily \#define ASICREV\+\_\+\+IS\+\_\+\+TAHITI\+\_\+P(\begin{DoxyParamCaption}\item[{}]{r }\end{DoxyParamCaption})~\mbox{\hyperlink{amdgpu__asic__addr_8h_a938d93d3633b95577b66072f390c5f9a}{ASICREV\+\_\+\+IS}}(r, TAHITI)}
+
+\mbox{\Hypertarget{amdgpu__asic__addr_8h_acb1dcb4b25b48331666d0158919a0238}\label{amdgpu__asic__addr_8h_acb1dcb4b25b48331666d0158919a0238}} 
+\index{amdgpu\_asic\_addr.h@{amdgpu\_asic\_addr.h}!ASICREV\_IS\_TONGA\_P@{ASICREV\_IS\_TONGA\_P}}
+\index{ASICREV\_IS\_TONGA\_P@{ASICREV\_IS\_TONGA\_P}!amdgpu\_asic\_addr.h@{amdgpu\_asic\_addr.h}}
+\doxysubsubsection{\texorpdfstring{ASICREV\_IS\_TONGA\_P}{ASICREV\_IS\_TONGA\_P}}
+{\footnotesize\ttfamily \#define ASICREV\+\_\+\+IS\+\_\+\+TONGA\+\_\+P(\begin{DoxyParamCaption}\item[{}]{r }\end{DoxyParamCaption})~\mbox{\hyperlink{amdgpu__asic__addr_8h_a938d93d3633b95577b66072f390c5f9a}{ASICREV\+\_\+\+IS}}(r, TONGA)}
+
+\mbox{\Hypertarget{amdgpu__asic__addr_8h_ad600cd6a7f74a89ae9994dd63aaa564f}\label{amdgpu__asic__addr_8h_ad600cd6a7f74a89ae9994dd63aaa564f}} 
+\index{amdgpu\_asic\_addr.h@{amdgpu\_asic\_addr.h}!ASICREV\_IS\_VANGOGH@{ASICREV\_IS\_VANGOGH}}
+\index{ASICREV\_IS\_VANGOGH@{ASICREV\_IS\_VANGOGH}!amdgpu\_asic\_addr.h@{amdgpu\_asic\_addr.h}}
+\doxysubsubsection{\texorpdfstring{ASICREV\_IS\_VANGOGH}{ASICREV\_IS\_VANGOGH}}
+{\footnotesize\ttfamily \#define ASICREV\+\_\+\+IS\+\_\+\+VANGOGH(\begin{DoxyParamCaption}\item[{}]{r }\end{DoxyParamCaption})~\mbox{\hyperlink{amdgpu__asic__addr_8h_a938d93d3633b95577b66072f390c5f9a}{ASICREV\+\_\+\+IS}}(r, VANGOGH)}
+
+\mbox{\Hypertarget{amdgpu__asic__addr_8h_af368cc6e16cd2f8c7f03d8ff23f0ee8b}\label{amdgpu__asic__addr_8h_af368cc6e16cd2f8c7f03d8ff23f0ee8b}} 
+\index{amdgpu\_asic\_addr.h@{amdgpu\_asic\_addr.h}!ASICREV\_IS\_VEGA10\_M@{ASICREV\_IS\_VEGA10\_M}}
+\index{ASICREV\_IS\_VEGA10\_M@{ASICREV\_IS\_VEGA10\_M}!amdgpu\_asic\_addr.h@{amdgpu\_asic\_addr.h}}
+\doxysubsubsection{\texorpdfstring{ASICREV\_IS\_VEGA10\_M}{ASICREV\_IS\_VEGA10\_M}}
+{\footnotesize\ttfamily \#define ASICREV\+\_\+\+IS\+\_\+\+VEGA10\+\_\+M(\begin{DoxyParamCaption}\item[{}]{r }\end{DoxyParamCaption})~\mbox{\hyperlink{amdgpu__asic__addr_8h_a938d93d3633b95577b66072f390c5f9a}{ASICREV\+\_\+\+IS}}(r, VEGA10)}
+
+\mbox{\Hypertarget{amdgpu__asic__addr_8h_a2941644dfd06f82e657bdd83b9f515c2}\label{amdgpu__asic__addr_8h_a2941644dfd06f82e657bdd83b9f515c2}} 
+\index{amdgpu\_asic\_addr.h@{amdgpu\_asic\_addr.h}!ASICREV\_IS\_VEGA10\_P@{ASICREV\_IS\_VEGA10\_P}}
+\index{ASICREV\_IS\_VEGA10\_P@{ASICREV\_IS\_VEGA10\_P}!amdgpu\_asic\_addr.h@{amdgpu\_asic\_addr.h}}
+\doxysubsubsection{\texorpdfstring{ASICREV\_IS\_VEGA10\_P}{ASICREV\_IS\_VEGA10\_P}}
+{\footnotesize\ttfamily \#define ASICREV\+\_\+\+IS\+\_\+\+VEGA10\+\_\+P(\begin{DoxyParamCaption}\item[{}]{r }\end{DoxyParamCaption})~\mbox{\hyperlink{amdgpu__asic__addr_8h_a938d93d3633b95577b66072f390c5f9a}{ASICREV\+\_\+\+IS}}(r, VEGA10)}
+
+\mbox{\Hypertarget{amdgpu__asic__addr_8h_aff4a681701c4940c85e296546af3ddf4}\label{amdgpu__asic__addr_8h_aff4a681701c4940c85e296546af3ddf4}} 
+\index{amdgpu\_asic\_addr.h@{amdgpu\_asic\_addr.h}!ASICREV\_IS\_VEGA12\_P@{ASICREV\_IS\_VEGA12\_P}}
+\index{ASICREV\_IS\_VEGA12\_P@{ASICREV\_IS\_VEGA12\_P}!amdgpu\_asic\_addr.h@{amdgpu\_asic\_addr.h}}
+\doxysubsubsection{\texorpdfstring{ASICREV\_IS\_VEGA12\_P}{ASICREV\_IS\_VEGA12\_P}}
+{\footnotesize\ttfamily \#define ASICREV\+\_\+\+IS\+\_\+\+VEGA12\+\_\+P(\begin{DoxyParamCaption}\item[{}]{r }\end{DoxyParamCaption})~\mbox{\hyperlink{amdgpu__asic__addr_8h_a938d93d3633b95577b66072f390c5f9a}{ASICREV\+\_\+\+IS}}(r, VEGA12)}
+
+\mbox{\Hypertarget{amdgpu__asic__addr_8h_add38b50039472dae8629a77c2b196302}\label{amdgpu__asic__addr_8h_add38b50039472dae8629a77c2b196302}} 
+\index{amdgpu\_asic\_addr.h@{amdgpu\_asic\_addr.h}!ASICREV\_IS\_VEGA12\_p@{ASICREV\_IS\_VEGA12\_p}}
+\index{ASICREV\_IS\_VEGA12\_p@{ASICREV\_IS\_VEGA12\_p}!amdgpu\_asic\_addr.h@{amdgpu\_asic\_addr.h}}
+\doxysubsubsection{\texorpdfstring{ASICREV\_IS\_VEGA12\_p}{ASICREV\_IS\_VEGA12\_p}}
+{\footnotesize\ttfamily \#define ASICREV\+\_\+\+IS\+\_\+\+VEGA12\+\_\+p(\begin{DoxyParamCaption}\item[{}]{r }\end{DoxyParamCaption})~\mbox{\hyperlink{amdgpu__asic__addr_8h_a938d93d3633b95577b66072f390c5f9a}{ASICREV\+\_\+\+IS}}(r, VEGA12)}
+
+\mbox{\Hypertarget{amdgpu__asic__addr_8h_a7614ae5a5773f9498288cab0bf54defc}\label{amdgpu__asic__addr_8h_a7614ae5a5773f9498288cab0bf54defc}} 
+\index{amdgpu\_asic\_addr.h@{amdgpu\_asic\_addr.h}!ASICREV\_IS\_VEGA20\_P@{ASICREV\_IS\_VEGA20\_P}}
+\index{ASICREV\_IS\_VEGA20\_P@{ASICREV\_IS\_VEGA20\_P}!amdgpu\_asic\_addr.h@{amdgpu\_asic\_addr.h}}
+\doxysubsubsection{\texorpdfstring{ASICREV\_IS\_VEGA20\_P}{ASICREV\_IS\_VEGA20\_P}}
+{\footnotesize\ttfamily \#define ASICREV\+\_\+\+IS\+\_\+\+VEGA20\+\_\+P(\begin{DoxyParamCaption}\item[{}]{r }\end{DoxyParamCaption})~\mbox{\hyperlink{amdgpu__asic__addr_8h_a938d93d3633b95577b66072f390c5f9a}{ASICREV\+\_\+\+IS}}(r, VEGA20)}
+
+\mbox{\Hypertarget{amdgpu__asic__addr_8h_a804df7312aafc426c0b143119ef17996}\label{amdgpu__asic__addr_8h_a804df7312aafc426c0b143119ef17996}} 
+\index{amdgpu\_asic\_addr.h@{amdgpu\_asic\_addr.h}!ASICREV\_IS\_VEGAM\_P@{ASICREV\_IS\_VEGAM\_P}}
+\index{ASICREV\_IS\_VEGAM\_P@{ASICREV\_IS\_VEGAM\_P}!amdgpu\_asic\_addr.h@{amdgpu\_asic\_addr.h}}
+\doxysubsubsection{\texorpdfstring{ASICREV\_IS\_VEGAM\_P}{ASICREV\_IS\_VEGAM\_P}}
+{\footnotesize\ttfamily \#define ASICREV\+\_\+\+IS\+\_\+\+VEGAM\+\_\+P(\begin{DoxyParamCaption}\item[{}]{r }\end{DoxyParamCaption})~\mbox{\hyperlink{amdgpu__asic__addr_8h_a938d93d3633b95577b66072f390c5f9a}{ASICREV\+\_\+\+IS}}(r, VEGAM)}
+
+\mbox{\Hypertarget{amdgpu__asic__addr_8h_ab4e08e00da6054c2fa363efb9270a0cd}\label{amdgpu__asic__addr_8h_ab4e08e00da6054c2fa363efb9270a0cd}} 
+\index{amdgpu\_asic\_addr.h@{amdgpu\_asic\_addr.h}!ATI\_VENDOR\_ID@{ATI\_VENDOR\_ID}}
+\index{ATI\_VENDOR\_ID@{ATI\_VENDOR\_ID}!amdgpu\_asic\_addr.h@{amdgpu\_asic\_addr.h}}
+\doxysubsubsection{\texorpdfstring{ATI\_VENDOR\_ID}{ATI\_VENDOR\_ID}}
+{\footnotesize\ttfamily \#define ATI\+\_\+\+VENDOR\+\_\+\+ID~0x1002}
+
+\mbox{\Hypertarget{amdgpu__asic__addr_8h_a8264fee3e80c629b7284bf4c072640b8}\label{amdgpu__asic__addr_8h_a8264fee3e80c629b7284bf4c072640b8}} 
+\index{amdgpu\_asic\_addr.h@{amdgpu\_asic\_addr.h}!FAMILY\_AI@{FAMILY\_AI}}
+\index{FAMILY\_AI@{FAMILY\_AI}!amdgpu\_asic\_addr.h@{amdgpu\_asic\_addr.h}}
+\doxysubsubsection{\texorpdfstring{FAMILY\_AI}{FAMILY\_AI}}
+{\footnotesize\ttfamily \#define FAMILY\+\_\+\+AI~0x8D}
+
+\mbox{\Hypertarget{amdgpu__asic__addr_8h_ad0e46bdbd486167575da2c36080cc82f}\label{amdgpu__asic__addr_8h_ad0e46bdbd486167575da2c36080cc82f}} 
+\index{amdgpu\_asic\_addr.h@{amdgpu\_asic\_addr.h}!FAMILY\_CI@{FAMILY\_CI}}
+\index{FAMILY\_CI@{FAMILY\_CI}!amdgpu\_asic\_addr.h@{amdgpu\_asic\_addr.h}}
+\doxysubsubsection{\texorpdfstring{FAMILY\_CI}{FAMILY\_CI}}
+{\footnotesize\ttfamily \#define FAMILY\+\_\+\+CI~0x78}
+
+\mbox{\Hypertarget{amdgpu__asic__addr_8h_a18fe3e42494faa082aaec819100a1a60}\label{amdgpu__asic__addr_8h_a18fe3e42494faa082aaec819100a1a60}} 
+\index{amdgpu\_asic\_addr.h@{amdgpu\_asic\_addr.h}!FAMILY\_CZ@{FAMILY\_CZ}}
+\index{FAMILY\_CZ@{FAMILY\_CZ}!amdgpu\_asic\_addr.h@{amdgpu\_asic\_addr.h}}
+\doxysubsubsection{\texorpdfstring{FAMILY\_CZ}{FAMILY\_CZ}}
+{\footnotesize\ttfamily \#define FAMILY\+\_\+\+CZ~0x87}
+
+\mbox{\Hypertarget{amdgpu__asic__addr_8h_a6ce98481d6be1a91dd4e624627da3e79}\label{amdgpu__asic__addr_8h_a6ce98481d6be1a91dd4e624627da3e79}} 
+\index{amdgpu\_asic\_addr.h@{amdgpu\_asic\_addr.h}!FAMILY\_GC\_10\_3\_6@{FAMILY\_GC\_10\_3\_6}}
+\index{FAMILY\_GC\_10\_3\_6@{FAMILY\_GC\_10\_3\_6}!amdgpu\_asic\_addr.h@{amdgpu\_asic\_addr.h}}
+\doxysubsubsection{\texorpdfstring{FAMILY\_GC\_10\_3\_6}{FAMILY\_GC\_10\_3\_6}}
+{\footnotesize\ttfamily \#define FAMILY\+\_\+\+GC\+\_\+10\+\_\+3\+\_\+6~0x95}
+
+\mbox{\Hypertarget{amdgpu__asic__addr_8h_a50569948f71184334a30db4690fd3470}\label{amdgpu__asic__addr_8h_a50569948f71184334a30db4690fd3470}} 
+\index{amdgpu\_asic\_addr.h@{amdgpu\_asic\_addr.h}!FAMILY\_GC\_10\_3\_7@{FAMILY\_GC\_10\_3\_7}}
+\index{FAMILY\_GC\_10\_3\_7@{FAMILY\_GC\_10\_3\_7}!amdgpu\_asic\_addr.h@{amdgpu\_asic\_addr.h}}
+\doxysubsubsection{\texorpdfstring{FAMILY\_GC\_10\_3\_7}{FAMILY\_GC\_10\_3\_7}}
+{\footnotesize\ttfamily \#define FAMILY\+\_\+\+GC\+\_\+10\+\_\+3\+\_\+7~0x97}
+
+\mbox{\Hypertarget{amdgpu__asic__addr_8h_a6a9ca05ab9f019fdfba5888f56a747a1}\label{amdgpu__asic__addr_8h_a6a9ca05ab9f019fdfba5888f56a747a1}} 
+\index{amdgpu\_asic\_addr.h@{amdgpu\_asic\_addr.h}!FAMILY\_GFX1100@{FAMILY\_GFX1100}}
+\index{FAMILY\_GFX1100@{FAMILY\_GFX1100}!amdgpu\_asic\_addr.h@{amdgpu\_asic\_addr.h}}
+\doxysubsubsection{\texorpdfstring{FAMILY\_GFX1100}{FAMILY\_GFX1100}}
+{\footnotesize\ttfamily \#define FAMILY\+\_\+\+GFX1100~0x91}
+
+\mbox{\Hypertarget{amdgpu__asic__addr_8h_adb5db517880c74984bfe4d9ab53ad9ac}\label{amdgpu__asic__addr_8h_adb5db517880c74984bfe4d9ab53ad9ac}} 
+\index{amdgpu\_asic\_addr.h@{amdgpu\_asic\_addr.h}!FAMILY\_GFX1103@{FAMILY\_GFX1103}}
+\index{FAMILY\_GFX1103@{FAMILY\_GFX1103}!amdgpu\_asic\_addr.h@{amdgpu\_asic\_addr.h}}
+\doxysubsubsection{\texorpdfstring{FAMILY\_GFX1103}{FAMILY\_GFX1103}}
+{\footnotesize\ttfamily \#define FAMILY\+\_\+\+GFX1103~0x94}
+
+\mbox{\Hypertarget{amdgpu__asic__addr_8h_a5ae06ba68da506d0e601f9ffcbf543ae}\label{amdgpu__asic__addr_8h_a5ae06ba68da506d0e601f9ffcbf543ae}} 
+\index{amdgpu\_asic\_addr.h@{amdgpu\_asic\_addr.h}!FAMILY\_IS@{FAMILY\_IS}}
+\index{FAMILY\_IS@{FAMILY\_IS}!amdgpu\_asic\_addr.h@{amdgpu\_asic\_addr.h}}
+\doxysubsubsection{\texorpdfstring{FAMILY\_IS}{FAMILY\_IS}}
+{\footnotesize\ttfamily \#define FAMILY\+\_\+\+IS(\begin{DoxyParamCaption}\item[{}]{f,  }\item[{}]{fn }\end{DoxyParamCaption})~(f == FAMILY\+\_\+\#\#fn)}
+
+\mbox{\Hypertarget{amdgpu__asic__addr_8h_a0cc05b398757928ba761ea543fdac54e}\label{amdgpu__asic__addr_8h_a0cc05b398757928ba761ea543fdac54e}} 
+\index{amdgpu\_asic\_addr.h@{amdgpu\_asic\_addr.h}!FAMILY\_IS\_AI@{FAMILY\_IS\_AI}}
+\index{FAMILY\_IS\_AI@{FAMILY\_IS\_AI}!amdgpu\_asic\_addr.h@{amdgpu\_asic\_addr.h}}
+\doxysubsubsection{\texorpdfstring{FAMILY\_IS\_AI}{FAMILY\_IS\_AI}}
+{\footnotesize\ttfamily \#define FAMILY\+\_\+\+IS\+\_\+\+AI(\begin{DoxyParamCaption}\item[{}]{f }\end{DoxyParamCaption})~\mbox{\hyperlink{amdgpu__asic__addr_8h_a5ae06ba68da506d0e601f9ffcbf543ae}{FAMILY\+\_\+\+IS}}(f, AI)}
+
+\mbox{\Hypertarget{amdgpu__asic__addr_8h_a6a7cf9f8650b1fdd6f28a460a5dbd91e}\label{amdgpu__asic__addr_8h_a6a7cf9f8650b1fdd6f28a460a5dbd91e}} 
+\index{amdgpu\_asic\_addr.h@{amdgpu\_asic\_addr.h}!FAMILY\_IS\_CI@{FAMILY\_IS\_CI}}
+\index{FAMILY\_IS\_CI@{FAMILY\_IS\_CI}!amdgpu\_asic\_addr.h@{amdgpu\_asic\_addr.h}}
+\doxysubsubsection{\texorpdfstring{FAMILY\_IS\_CI}{FAMILY\_IS\_CI}}
+{\footnotesize\ttfamily \#define FAMILY\+\_\+\+IS\+\_\+\+CI(\begin{DoxyParamCaption}\item[{}]{f }\end{DoxyParamCaption})~\mbox{\hyperlink{amdgpu__asic__addr_8h_a5ae06ba68da506d0e601f9ffcbf543ae}{FAMILY\+\_\+\+IS}}(f, CI)}
+
+\mbox{\Hypertarget{amdgpu__asic__addr_8h_af5e7e186b442873ceeeeb8e7951ca72f}\label{amdgpu__asic__addr_8h_af5e7e186b442873ceeeeb8e7951ca72f}} 
+\index{amdgpu\_asic\_addr.h@{amdgpu\_asic\_addr.h}!FAMILY\_IS\_CZ@{FAMILY\_IS\_CZ}}
+\index{FAMILY\_IS\_CZ@{FAMILY\_IS\_CZ}!amdgpu\_asic\_addr.h@{amdgpu\_asic\_addr.h}}
+\doxysubsubsection{\texorpdfstring{FAMILY\_IS\_CZ}{FAMILY\_IS\_CZ}}
+{\footnotesize\ttfamily \#define FAMILY\+\_\+\+IS\+\_\+\+CZ(\begin{DoxyParamCaption}\item[{}]{f }\end{DoxyParamCaption})~\mbox{\hyperlink{amdgpu__asic__addr_8h_a5ae06ba68da506d0e601f9ffcbf543ae}{FAMILY\+\_\+\+IS}}(f, CZ)}
+
+\mbox{\Hypertarget{amdgpu__asic__addr_8h_acd2d5bb6c41ab2176796367b2b2b986f}\label{amdgpu__asic__addr_8h_acd2d5bb6c41ab2176796367b2b2b986f}} 
+\index{amdgpu\_asic\_addr.h@{amdgpu\_asic\_addr.h}!FAMILY\_IS\_GFX1100@{FAMILY\_IS\_GFX1100}}
+\index{FAMILY\_IS\_GFX1100@{FAMILY\_IS\_GFX1100}!amdgpu\_asic\_addr.h@{amdgpu\_asic\_addr.h}}
+\doxysubsubsection{\texorpdfstring{FAMILY\_IS\_GFX1100}{FAMILY\_IS\_GFX1100}}
+{\footnotesize\ttfamily \#define FAMILY\+\_\+\+IS\+\_\+\+GFX1100(\begin{DoxyParamCaption}\item[{}]{f }\end{DoxyParamCaption})~\mbox{\hyperlink{amdgpu__asic__addr_8h_a5ae06ba68da506d0e601f9ffcbf543ae}{FAMILY\+\_\+\+IS}}(f, GFX1100)}
+
+\mbox{\Hypertarget{amdgpu__asic__addr_8h_a2d54534b8f76ecf414c9b6d838c19f63}\label{amdgpu__asic__addr_8h_a2d54534b8f76ecf414c9b6d838c19f63}} 
+\index{amdgpu\_asic\_addr.h@{amdgpu\_asic\_addr.h}!FAMILY\_IS\_GFX1103@{FAMILY\_IS\_GFX1103}}
+\index{FAMILY\_IS\_GFX1103@{FAMILY\_IS\_GFX1103}!amdgpu\_asic\_addr.h@{amdgpu\_asic\_addr.h}}
+\doxysubsubsection{\texorpdfstring{FAMILY\_IS\_GFX1103}{FAMILY\_IS\_GFX1103}}
+{\footnotesize\ttfamily \#define FAMILY\+\_\+\+IS\+\_\+\+GFX1103(\begin{DoxyParamCaption}\item[{}]{f }\end{DoxyParamCaption})~\mbox{\hyperlink{amdgpu__asic__addr_8h_a5ae06ba68da506d0e601f9ffcbf543ae}{FAMILY\+\_\+\+IS}}(f, GFX1103)}
+
+\mbox{\Hypertarget{amdgpu__asic__addr_8h_aba8aeb459e7b627bc1977add36d03c8d}\label{amdgpu__asic__addr_8h_aba8aeb459e7b627bc1977add36d03c8d}} 
+\index{amdgpu\_asic\_addr.h@{amdgpu\_asic\_addr.h}!FAMILY\_IS\_KV@{FAMILY\_IS\_KV}}
+\index{FAMILY\_IS\_KV@{FAMILY\_IS\_KV}!amdgpu\_asic\_addr.h@{amdgpu\_asic\_addr.h}}
+\doxysubsubsection{\texorpdfstring{FAMILY\_IS\_KV}{FAMILY\_IS\_KV}}
+{\footnotesize\ttfamily \#define FAMILY\+\_\+\+IS\+\_\+\+KV(\begin{DoxyParamCaption}\item[{}]{f }\end{DoxyParamCaption})~\mbox{\hyperlink{amdgpu__asic__addr_8h_a5ae06ba68da506d0e601f9ffcbf543ae}{FAMILY\+\_\+\+IS}}(f, KV)}
+
+\mbox{\Hypertarget{amdgpu__asic__addr_8h_a0a89b39354cd6641836f924a6568e039}\label{amdgpu__asic__addr_8h_a0a89b39354cd6641836f924a6568e039}} 
+\index{amdgpu\_asic\_addr.h@{amdgpu\_asic\_addr.h}!FAMILY\_IS\_NV@{FAMILY\_IS\_NV}}
+\index{FAMILY\_IS\_NV@{FAMILY\_IS\_NV}!amdgpu\_asic\_addr.h@{amdgpu\_asic\_addr.h}}
+\doxysubsubsection{\texorpdfstring{FAMILY\_IS\_NV}{FAMILY\_IS\_NV}}
+{\footnotesize\ttfamily \#define FAMILY\+\_\+\+IS\+\_\+\+NV(\begin{DoxyParamCaption}\item[{}]{f }\end{DoxyParamCaption})~\mbox{\hyperlink{amdgpu__asic__addr_8h_a5ae06ba68da506d0e601f9ffcbf543ae}{FAMILY\+\_\+\+IS}}(f, NV)}
+
+\mbox{\Hypertarget{amdgpu__asic__addr_8h_a5e27cadd4fd50ce5817b6ab4ebe6571f}\label{amdgpu__asic__addr_8h_a5e27cadd4fd50ce5817b6ab4ebe6571f}} 
+\index{amdgpu\_asic\_addr.h@{amdgpu\_asic\_addr.h}!FAMILY\_IS\_POLARIS@{FAMILY\_IS\_POLARIS}}
+\index{FAMILY\_IS\_POLARIS@{FAMILY\_IS\_POLARIS}!amdgpu\_asic\_addr.h@{amdgpu\_asic\_addr.h}}
+\doxysubsubsection{\texorpdfstring{FAMILY\_IS\_POLARIS}{FAMILY\_IS\_POLARIS}}
+{\footnotesize\ttfamily \#define FAMILY\+\_\+\+IS\+\_\+\+POLARIS(\begin{DoxyParamCaption}\item[{}]{f }\end{DoxyParamCaption})~\mbox{\hyperlink{amdgpu__asic__addr_8h_a5ae06ba68da506d0e601f9ffcbf543ae}{FAMILY\+\_\+\+IS}}(f, POLARIS)}
+
+\mbox{\Hypertarget{amdgpu__asic__addr_8h_a478bbecf202c1582678a17681f1a9a6e}\label{amdgpu__asic__addr_8h_a478bbecf202c1582678a17681f1a9a6e}} 
+\index{amdgpu\_asic\_addr.h@{amdgpu\_asic\_addr.h}!FAMILY\_IS\_RMB@{FAMILY\_IS\_RMB}}
+\index{FAMILY\_IS\_RMB@{FAMILY\_IS\_RMB}!amdgpu\_asic\_addr.h@{amdgpu\_asic\_addr.h}}
+\doxysubsubsection{\texorpdfstring{FAMILY\_IS\_RMB}{FAMILY\_IS\_RMB}}
+{\footnotesize\ttfamily \#define FAMILY\+\_\+\+IS\+\_\+\+RMB(\begin{DoxyParamCaption}\item[{}]{f }\end{DoxyParamCaption})~\mbox{\hyperlink{amdgpu__asic__addr_8h_a5ae06ba68da506d0e601f9ffcbf543ae}{FAMILY\+\_\+\+IS}}(f, RMB)}
+
+\mbox{\Hypertarget{amdgpu__asic__addr_8h_a03ff28d02f116b305e7ae2a355b269c4}\label{amdgpu__asic__addr_8h_a03ff28d02f116b305e7ae2a355b269c4}} 
+\index{amdgpu\_asic\_addr.h@{amdgpu\_asic\_addr.h}!FAMILY\_IS\_RV@{FAMILY\_IS\_RV}}
+\index{FAMILY\_IS\_RV@{FAMILY\_IS\_RV}!amdgpu\_asic\_addr.h@{amdgpu\_asic\_addr.h}}
+\doxysubsubsection{\texorpdfstring{FAMILY\_IS\_RV}{FAMILY\_IS\_RV}}
+{\footnotesize\ttfamily \#define FAMILY\+\_\+\+IS\+\_\+\+RV(\begin{DoxyParamCaption}\item[{}]{f }\end{DoxyParamCaption})~\mbox{\hyperlink{amdgpu__asic__addr_8h_a5ae06ba68da506d0e601f9ffcbf543ae}{FAMILY\+\_\+\+IS}}(f, RV)}
+
+\mbox{\Hypertarget{amdgpu__asic__addr_8h_a38f2ff57f663230876cf4398cd3ca2fa}\label{amdgpu__asic__addr_8h_a38f2ff57f663230876cf4398cd3ca2fa}} 
+\index{amdgpu\_asic\_addr.h@{amdgpu\_asic\_addr.h}!FAMILY\_IS\_SI@{FAMILY\_IS\_SI}}
+\index{FAMILY\_IS\_SI@{FAMILY\_IS\_SI}!amdgpu\_asic\_addr.h@{amdgpu\_asic\_addr.h}}
+\doxysubsubsection{\texorpdfstring{FAMILY\_IS\_SI}{FAMILY\_IS\_SI}}
+{\footnotesize\ttfamily \#define FAMILY\+\_\+\+IS\+\_\+\+SI(\begin{DoxyParamCaption}\item[{}]{f }\end{DoxyParamCaption})~\mbox{\hyperlink{amdgpu__asic__addr_8h_a5ae06ba68da506d0e601f9ffcbf543ae}{FAMILY\+\_\+\+IS}}(f, SI)}
+
+\mbox{\Hypertarget{amdgpu__asic__addr_8h_a4035920e3bf79214e5a7ee46b0a969f8}\label{amdgpu__asic__addr_8h_a4035920e3bf79214e5a7ee46b0a969f8}} 
+\index{amdgpu\_asic\_addr.h@{amdgpu\_asic\_addr.h}!FAMILY\_IS\_TN@{FAMILY\_IS\_TN}}
+\index{FAMILY\_IS\_TN@{FAMILY\_IS\_TN}!amdgpu\_asic\_addr.h@{amdgpu\_asic\_addr.h}}
+\doxysubsubsection{\texorpdfstring{FAMILY\_IS\_TN}{FAMILY\_IS\_TN}}
+{\footnotesize\ttfamily \#define FAMILY\+\_\+\+IS\+\_\+\+TN(\begin{DoxyParamCaption}\item[{}]{f }\end{DoxyParamCaption})~\mbox{\hyperlink{amdgpu__asic__addr_8h_a5ae06ba68da506d0e601f9ffcbf543ae}{FAMILY\+\_\+\+IS}}(f, TN)}
+
+\mbox{\Hypertarget{amdgpu__asic__addr_8h_a6c1750df2e5b9b4d301b2b984e9e971b}\label{amdgpu__asic__addr_8h_a6c1750df2e5b9b4d301b2b984e9e971b}} 
+\index{amdgpu\_asic\_addr.h@{amdgpu\_asic\_addr.h}!FAMILY\_IS\_VI@{FAMILY\_IS\_VI}}
+\index{FAMILY\_IS\_VI@{FAMILY\_IS\_VI}!amdgpu\_asic\_addr.h@{amdgpu\_asic\_addr.h}}
+\doxysubsubsection{\texorpdfstring{FAMILY\_IS\_VI}{FAMILY\_IS\_VI}}
+{\footnotesize\ttfamily \#define FAMILY\+\_\+\+IS\+\_\+\+VI(\begin{DoxyParamCaption}\item[{}]{f }\end{DoxyParamCaption})~\mbox{\hyperlink{amdgpu__asic__addr_8h_a5ae06ba68da506d0e601f9ffcbf543ae}{FAMILY\+\_\+\+IS}}(f, VI)}
+
+\mbox{\Hypertarget{amdgpu__asic__addr_8h_adb7f0f5cb58338a96165e89a37b2a913}\label{amdgpu__asic__addr_8h_adb7f0f5cb58338a96165e89a37b2a913}} 
+\index{amdgpu\_asic\_addr.h@{amdgpu\_asic\_addr.h}!FAMILY\_KV@{FAMILY\_KV}}
+\index{FAMILY\_KV@{FAMILY\_KV}!amdgpu\_asic\_addr.h@{amdgpu\_asic\_addr.h}}
+\doxysubsubsection{\texorpdfstring{FAMILY\_KV}{FAMILY\_KV}}
+{\footnotesize\ttfamily \#define FAMILY\+\_\+\+KV~0x7D}
+
+\mbox{\Hypertarget{amdgpu__asic__addr_8h_ae300c94e9cb12b87e266d1a0c843df9d}\label{amdgpu__asic__addr_8h_ae300c94e9cb12b87e266d1a0c843df9d}} 
+\index{amdgpu\_asic\_addr.h@{amdgpu\_asic\_addr.h}!FAMILY\_NV@{FAMILY\_NV}}
+\index{FAMILY\_NV@{FAMILY\_NV}!amdgpu\_asic\_addr.h@{amdgpu\_asic\_addr.h}}
+\doxysubsubsection{\texorpdfstring{FAMILY\_NV}{FAMILY\_NV}}
+{\footnotesize\ttfamily \#define FAMILY\+\_\+\+NV~0x8F}
+
+\mbox{\Hypertarget{amdgpu__asic__addr_8h_a7fcf6ee308a14b6338ff011828a0799b}\label{amdgpu__asic__addr_8h_a7fcf6ee308a14b6338ff011828a0799b}} 
+\index{amdgpu\_asic\_addr.h@{amdgpu\_asic\_addr.h}!FAMILY\_POLARIS@{FAMILY\_POLARIS}}
+\index{FAMILY\_POLARIS@{FAMILY\_POLARIS}!amdgpu\_asic\_addr.h@{amdgpu\_asic\_addr.h}}
+\doxysubsubsection{\texorpdfstring{FAMILY\_POLARIS}{FAMILY\_POLARIS}}
+{\footnotesize\ttfamily \#define FAMILY\+\_\+\+POLARIS~0x82}
+
+\mbox{\Hypertarget{amdgpu__asic__addr_8h_a16e320bc26b0c0c6b555f63559ca00d2}\label{amdgpu__asic__addr_8h_a16e320bc26b0c0c6b555f63559ca00d2}} 
+\index{amdgpu\_asic\_addr.h@{amdgpu\_asic\_addr.h}!FAMILY\_RMB@{FAMILY\_RMB}}
+\index{FAMILY\_RMB@{FAMILY\_RMB}!amdgpu\_asic\_addr.h@{amdgpu\_asic\_addr.h}}
+\doxysubsubsection{\texorpdfstring{FAMILY\_RMB}{FAMILY\_RMB}}
+{\footnotesize\ttfamily \#define FAMILY\+\_\+\+RMB~0x92}
+
+\mbox{\Hypertarget{amdgpu__asic__addr_8h_aa643356fa7733a9ab51df2516cd7a242}\label{amdgpu__asic__addr_8h_aa643356fa7733a9ab51df2516cd7a242}} 
+\index{amdgpu\_asic\_addr.h@{amdgpu\_asic\_addr.h}!FAMILY\_RV@{FAMILY\_RV}}
+\index{FAMILY\_RV@{FAMILY\_RV}!amdgpu\_asic\_addr.h@{amdgpu\_asic\_addr.h}}
+\doxysubsubsection{\texorpdfstring{FAMILY\_RV}{FAMILY\_RV}}
+{\footnotesize\ttfamily \#define FAMILY\+\_\+\+RV~0x8E}
+
+\mbox{\Hypertarget{amdgpu__asic__addr_8h_a96bb90398ee305e2c6a225b0dc2b768d}\label{amdgpu__asic__addr_8h_a96bb90398ee305e2c6a225b0dc2b768d}} 
+\index{amdgpu\_asic\_addr.h@{amdgpu\_asic\_addr.h}!FAMILY\_SI@{FAMILY\_SI}}
+\index{FAMILY\_SI@{FAMILY\_SI}!amdgpu\_asic\_addr.h@{amdgpu\_asic\_addr.h}}
+\doxysubsubsection{\texorpdfstring{FAMILY\_SI}{FAMILY\_SI}}
+{\footnotesize\ttfamily \#define FAMILY\+\_\+\+SI~0x6E}
+
+\mbox{\Hypertarget{amdgpu__asic__addr_8h_ab9481320a3445496c193a0cbe1099c41}\label{amdgpu__asic__addr_8h_ab9481320a3445496c193a0cbe1099c41}} 
+\index{amdgpu\_asic\_addr.h@{amdgpu\_asic\_addr.h}!FAMILY\_TN@{FAMILY\_TN}}
+\index{FAMILY\_TN@{FAMILY\_TN}!amdgpu\_asic\_addr.h@{amdgpu\_asic\_addr.h}}
+\doxysubsubsection{\texorpdfstring{FAMILY\_TN}{FAMILY\_TN}}
+{\footnotesize\ttfamily \#define FAMILY\+\_\+\+TN~0x69}
+
+\mbox{\Hypertarget{amdgpu__asic__addr_8h_a0a9caf38587a95f7810eb7acaf3e032c}\label{amdgpu__asic__addr_8h_a0a9caf38587a95f7810eb7acaf3e032c}} 
+\index{amdgpu\_asic\_addr.h@{amdgpu\_asic\_addr.h}!FAMILY\_UNKNOWN@{FAMILY\_UNKNOWN}}
+\index{FAMILY\_UNKNOWN@{FAMILY\_UNKNOWN}!amdgpu\_asic\_addr.h@{amdgpu\_asic\_addr.h}}
+\doxysubsubsection{\texorpdfstring{FAMILY\_UNKNOWN}{FAMILY\_UNKNOWN}}
+{\footnotesize\ttfamily \#define FAMILY\+\_\+\+UNKNOWN~0x00}
+
+\mbox{\Hypertarget{amdgpu__asic__addr_8h_a7978024323bf0d09c9c0718043aefb36}\label{amdgpu__asic__addr_8h_a7978024323bf0d09c9c0718043aefb36}} 
+\index{amdgpu\_asic\_addr.h@{amdgpu\_asic\_addr.h}!FAMILY\_VGH@{FAMILY\_VGH}}
+\index{FAMILY\_VGH@{FAMILY\_VGH}!amdgpu\_asic\_addr.h@{amdgpu\_asic\_addr.h}}
+\doxysubsubsection{\texorpdfstring{FAMILY\_VGH}{FAMILY\_VGH}}
+{\footnotesize\ttfamily \#define FAMILY\+\_\+\+VGH~0x90}
+
+\mbox{\Hypertarget{amdgpu__asic__addr_8h_a0b51a8641e63b672a850ee3e0c44598d}\label{amdgpu__asic__addr_8h_a0b51a8641e63b672a850ee3e0c44598d}} 
+\index{amdgpu\_asic\_addr.h@{amdgpu\_asic\_addr.h}!FAMILY\_VI@{FAMILY\_VI}}
+\index{FAMILY\_VI@{FAMILY\_VI}!amdgpu\_asic\_addr.h@{amdgpu\_asic\_addr.h}}
+\doxysubsubsection{\texorpdfstring{FAMILY\_VI}{FAMILY\_VI}}
+{\footnotesize\ttfamily \#define FAMILY\+\_\+\+VI~0x82}
+

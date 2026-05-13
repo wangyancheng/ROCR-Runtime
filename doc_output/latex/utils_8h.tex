@@ -1,0 +1,339 @@
+\hypertarget{utils_8h}{}\doxysection{src/core/util/utils.h File Reference}
+\label{utils_8h}\index{src/core/util/utils.h@{src/core/util/utils.h}}
+{\ttfamily \#include \char`\"{}stdint.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}stddef.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}stdlib.\+h\char`\"{}}\newline
+{\ttfamily \#include $<$assert.\+h$>$}\newline
+{\ttfamily \#include $<$iostream$>$}\newline
+{\ttfamily \#include $<$string$>$}\newline
+{\ttfamily \#include $<$algorithm$>$}\newline
+{\ttfamily \#include \char`\"{}atomic\+\_\+helpers.\+h\char`\"{}}\newline
+Include dependency graph for utils.\+h\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{utils_8h__incl}
+\end{center}
+\end{figure}
+This graph shows which files directly or indirectly include this file\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{utils_8h__dep__incl}
+\end{center}
+\end{figure}
+\doxysubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class \mbox{\hyperlink{classrocr_1_1ScopeGuard}{rocr\+::\+Scope\+Guard$<$ lambda $>$}}
+\item 
+struct \mbox{\hyperlink{structrocr_1_1DeleteObject}{rocr\+::\+Delete\+Object}}
+\begin{DoxyCompactList}\small\item\em \+: Free the memory space which is newed previously. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Namespaces}
+\begin{DoxyCompactItemize}
+\item 
+ \mbox{\hyperlink{namespacerocr}{rocr}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \mbox{\hyperlink{utils_8h_a931f53133bb7d8b2502c060567fb73c8}{STRING2}}(x)~\#x
+\item 
+\#define \mbox{\hyperlink{utils_8h_a9e9c7019565ee800abaf5fef300b73db}{STRING}}(x)~\mbox{\hyperlink{utils_8h_a931f53133bb7d8b2502c060567fb73c8}{STRING2}}(x)
+\item 
+\#define \mbox{\hyperlink{utils_8h_ad6f41535a782a4507947186ddcd56062}{PASTE2}}(x,  y)~x\#\#y
+\item 
+\#define \mbox{\hyperlink{utils_8h_a9ac9dd35b93432c0b194466d2aa84788}{PASTE}}(x,  y)~\mbox{\hyperlink{utils_8h_ad6f41535a782a4507947186ddcd56062}{PASTE2}}(x, y)
+\item 
+\#define \mbox{\hyperlink{utils_8h_afbfc2ba66a8d23eada8d19ccdccdc11e}{debug\+\_\+warning\+\_\+n}}(exp,  limit)
+\item 
+\#define \mbox{\hyperlink{utils_8h_ad1ddd43d3cd073015ac36d35bd293e3c}{debug\+\_\+warning}}(exp)~\mbox{\hyperlink{utils_8h_afbfc2ba66a8d23eada8d19ccdccdc11e}{debug\+\_\+warning\+\_\+n}}((exp), 0)
+\item 
+\#define \mbox{\hyperlink{utils_8h_a7377cc956f5c81538f0fbf0a0492a539}{debug\+\_\+print}}(fmt, ...)
+\item 
+\#define \mbox{\hyperlink{utils_8h_a25ab37aea7b7b9c8eab14198b189b5b0}{ifdebug}}~if (true)
+\item 
+\#define \mbox{\hyperlink{utils_8h_af8df3547bfde53a5acb93e2607b0034a}{DISALLOW\+\_\+\+COPY\+\_\+\+AND\+\_\+\+ASSIGN}}(Type\+Name)
+\item 
+\#define \mbox{\hyperlink{utils_8h_ad259891425ed377cd1c87b487cca1850}{MAKE\+\_\+\+SCOPE\+\_\+\+GUARD\+\_\+\+HELPER}}(lname,  sname, ...)
+\item 
+\#define \mbox{\hyperlink{utils_8h_acb19f46e69d1ab08005f0a0ca28d7d0c}{MAKE\+\_\+\+SCOPE\+\_\+\+GUARD}}(...)
+\item 
+\#define \mbox{\hyperlink{utils_8h_adc46e1493032263c4c1d63677ab200cb}{MAKE\+\_\+\+NAMED\+\_\+\+SCOPE\+\_\+\+GUARD}}(name, ...)
+\end{DoxyCompactItemize}
+\doxysubsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+typedef unsigned int \mbox{\hyperlink{namespacerocr_a70e499739cfc08c3e2232c79b991e1c5}{rocr\+::uint}}
+\item 
+typedef uint64\+\_\+t \mbox{\hyperlink{namespacerocr_abe2ff3f7c809838ffed21f37c13dd0ed}{rocr\+::uint64}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+{\footnotesize template$<$typename lambda $>$ }\\static \+\_\+\+\_\+forceinline \mbox{\hyperlink{classScopeGuard}{Scope\+Guard}}$<$ lambda $>$ \mbox{\hyperlink{namespacerocr_ae5569b07fb8a5ed66c3453b6f3e7440a}{rocr\+::\+Make\+Scope\+Guard}} (lambda rel)
+\item 
+{\footnotesize template$<$class T $>$ }\\static \+\_\+\+\_\+forceinline T \mbox{\hyperlink{namespacerocr_a62b38d6798f6ebe3d19a260f465a072e}{rocr\+::\+Min}} (const T \&a, const T \&b)
+\begin{DoxyCompactList}\small\item\em \+: Finds out the min one of two inputs, input must support \char`\"{}$>$\char`\"{} operator. \end{DoxyCompactList}\item 
+{\footnotesize template$<$class T , class... Arg$>$ }\\static \+\_\+\+\_\+forceinline T \mbox{\hyperlink{namespacerocr_a2ee5188ddd74c1cc969bebc2bf939bf9}{rocr\+::\+Min}} (const T \&a, const T \&b, Arg... args)
+\item 
+{\footnotesize template$<$class T $>$ }\\static \+\_\+\+\_\+forceinline T \mbox{\hyperlink{namespacerocr_ac17bf07bde59b69c7187c37d3e2add40}{rocr\+::\+Max}} (const T \&a, const T \&b)
+\begin{DoxyCompactList}\small\item\em \+: Find out the max one of two inputs, input must support \char`\"{}$>$\char`\"{} operator. \end{DoxyCompactList}\item 
+{\footnotesize template$<$class T , class... Arg$>$ }\\static \+\_\+\+\_\+forceinline T \mbox{\hyperlink{namespacerocr_ac464ad86b69db13ab9a2ca58d365f39b}{rocr\+::\+Max}} (const T \&a, const T \&b, Arg... args)
+\item 
+{\footnotesize template$<$typename T $>$ }\\static \+\_\+\+\_\+forceinline bool \mbox{\hyperlink{namespacerocr_a0faf2ae968ff4a34af38404d681ebf7e}{rocr\+::\+Is\+Power\+Of\+Two}} (T val)
+\begin{DoxyCompactList}\small\item\em \+: Checks if a value is power of two, if it is, return true. Be careful when passing 0. \end{DoxyCompactList}\item 
+{\footnotesize template$<$typename T $>$ }\\static \+\_\+\+\_\+forceinline T \mbox{\hyperlink{namespacerocr_af5bc2f2c9eb541c12226be18148e5eb7}{rocr\+::\+Align\+Down}} (T value, size\+\_\+t alignment)
+\begin{DoxyCompactList}\small\item\em \+: Calculates the floor value aligned based on parameter of alignment. If value is at the boundary of alignment, it is unchanged. \end{DoxyCompactList}\item 
+{\footnotesize template$<$typename T $>$ }\\static \+\_\+\+\_\+forceinline T $\ast$ \mbox{\hyperlink{namespacerocr_ab6209415dfd895cd6cb6a4bf0c274109}{rocr\+::\+Align\+Down}} (T $\ast$value, size\+\_\+t alignment)
+\begin{DoxyCompactList}\small\item\em \+: Same as previous one, but first parameter becomes pointer, for more info, see the previous desciption. \end{DoxyCompactList}\item 
+{\footnotesize template$<$typename T $>$ }\\static \+\_\+\+\_\+forceinline T \mbox{\hyperlink{namespacerocr_ad708f2a25fc02d180d36466b5d90d9a3}{rocr\+::\+Align\+Up}} (T value, size\+\_\+t alignment)
+\begin{DoxyCompactList}\small\item\em \+: Calculates the ceiling value aligned based on parameter of alignment. If value is at the boundary of alignment, it is unchanged. \end{DoxyCompactList}\item 
+{\footnotesize template$<$typename T $>$ }\\static \+\_\+\+\_\+forceinline T $\ast$ \mbox{\hyperlink{namespacerocr_a9301bb7be53d8745d9a6e01f3846f72d}{rocr\+::\+Align\+Up}} (T $\ast$value, size\+\_\+t alignment)
+\begin{DoxyCompactList}\small\item\em \+: Same as previous one, but first parameter becomes pointer, for more info, see the previous desciption. \end{DoxyCompactList}\item 
+{\footnotesize template$<$typename T $>$ }\\static \+\_\+\+\_\+forceinline bool \mbox{\hyperlink{namespacerocr_aaa903a77a247483cc746f8501a160e34}{rocr\+::\+Is\+Multiple\+Of}} (T value, size\+\_\+t alignment)
+\begin{DoxyCompactList}\small\item\em \+: Checks if the input value is at the boundary of alignment, if it is, \end{DoxyCompactList}\item 
+{\footnotesize template$<$typename T $>$ }\\static \+\_\+\+\_\+forceinline bool \mbox{\hyperlink{namespacerocr_aa03fd49ba4972bb5fa129273b30a5c9b}{rocr\+::\+Is\+Multiple\+Of}} (T $\ast$value, size\+\_\+t alignment)
+\begin{DoxyCompactList}\small\item\em \+: Same as previous one, but first parameter becomes pointer, for more info, see the previous desciption. \end{DoxyCompactList}\item 
+static \+\_\+\+\_\+forceinline uint32\+\_\+t \mbox{\hyperlink{namespacerocr_aeba9d3fb018b48c4a0311c0d72b09081}{rocr\+::\+Next\+Pow2}} (uint32\+\_\+t value)
+\item 
+static \+\_\+\+\_\+forceinline uint64\+\_\+t \mbox{\hyperlink{namespacerocr_ad7bdac631e761ab1affab35a0c0e144c}{rocr\+::\+Next\+Pow2}} (uint64\+\_\+t value)
+\item 
+static \+\_\+\+\_\+forceinline bool \mbox{\hyperlink{namespacerocr_ac84c34b7c788a1dd6900454148de560f}{rocr\+::str\+Is\+Empty}} (const char $\ast$str) noexcept
+\item 
+static \+\_\+\+\_\+forceinline std\+::string \& \mbox{\hyperlink{namespacerocr_a722062c632c52e5e4ac244a116a7fc1b}{rocr\+::ltrim}} (std\+::string \&s)
+\item 
+static \+\_\+\+\_\+forceinline std\+::string \& \mbox{\hyperlink{namespacerocr_ac4a209832731df9b1661c0087ab65441}{rocr\+::rtrim}} (std\+::string \&s)
+\item 
+static \+\_\+\+\_\+forceinline std\+::string \& \mbox{\hyperlink{namespacerocr_ac27efadf5d9255b6e80e749691c8c31f}{rocr\+::trim}} (std\+::string \&s)
+\item 
+{\footnotesize template$<$uint32\+\_\+t low\+Bit, uint32\+\_\+t high\+Bit, typename T $>$ }\\static \+\_\+\+\_\+forceinline uint32\+\_\+t \mbox{\hyperlink{utils_8h_a8dd2cc36e802b602cbc17b937026adbe}{Bit\+Select}} (T p)
+\item 
+uint32\+\_\+t \mbox{\hyperlink{utils_8h_a4588dc0bbca9cf953ba22a2f05dd8310}{Ptr\+Low16\+Shift8}} (const void $\ast$p)
+\item 
+uint32\+\_\+t \mbox{\hyperlink{utils_8h_a0ea0319f84c482025958a47d8ccb0abf}{Ptr\+High64\+Shift16}} (const void $\ast$p)
+\item 
+uint32\+\_\+t \mbox{\hyperlink{utils_8h_a619e69c052bc2ff510e086d4ffdbd4c4}{Ptr\+Low40\+Shift8}} (const void $\ast$p)
+\item 
+uint32\+\_\+t \mbox{\hyperlink{utils_8h_ab01c28faf1ec16978dc99720840d20b6}{Ptr\+High64\+Shift40}} (const void $\ast$p)
+\item 
+uint32\+\_\+t \mbox{\hyperlink{utils_8h_a61d1002af2b0a903264a5e44ce9f6b4e}{Ptr\+Low32}} (const void $\ast$p)
+\item 
+uint32\+\_\+t \mbox{\hyperlink{utils_8h_a90a02ec2beaa5b824158bc46960d4978}{Ptr\+High32}} (const void $\ast$p)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Macro Definition Documentation}
+\mbox{\Hypertarget{utils_8h_a7377cc956f5c81538f0fbf0a0492a539}\label{utils_8h_a7377cc956f5c81538f0fbf0a0492a539}} 
+\index{utils.h@{utils.h}!debug\_print@{debug\_print}}
+\index{debug\_print@{debug\_print}!utils.h@{utils.h}}
+\doxysubsubsection{\texorpdfstring{debug\_print}{debug\_print}}
+{\footnotesize\ttfamily \#define debug\+\_\+print(\begin{DoxyParamCaption}\item[{}]{fmt,  }\item[{}]{... }\end{DoxyParamCaption})}
+
+{\bfseries Value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{  \textcolor{keywordflow}{do} \{                                                                                             \(\backslash\)}
+\DoxyCodeLine{    fprintf(stderr, fmt, \#\#\_\_VA\_ARGS\_\_);                                                           \(\backslash\)}
+\DoxyCodeLine{  \} \textcolor{keywordflow}{while} (\textcolor{keyword}{false})}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{utils_8h_ad1ddd43d3cd073015ac36d35bd293e3c}\label{utils_8h_ad1ddd43d3cd073015ac36d35bd293e3c}} 
+\index{utils.h@{utils.h}!debug\_warning@{debug\_warning}}
+\index{debug\_warning@{debug\_warning}!utils.h@{utils.h}}
+\doxysubsubsection{\texorpdfstring{debug\_warning}{debug\_warning}}
+{\footnotesize\ttfamily \#define debug\+\_\+warning(\begin{DoxyParamCaption}\item[{}]{exp }\end{DoxyParamCaption})~\mbox{\hyperlink{utils_8h_afbfc2ba66a8d23eada8d19ccdccdc11e}{debug\+\_\+warning\+\_\+n}}((exp), 0)}
+
+\mbox{\Hypertarget{utils_8h_afbfc2ba66a8d23eada8d19ccdccdc11e}\label{utils_8h_afbfc2ba66a8d23eada8d19ccdccdc11e}} 
+\index{utils.h@{utils.h}!debug\_warning\_n@{debug\_warning\_n}}
+\index{debug\_warning\_n@{debug\_warning\_n}!utils.h@{utils.h}}
+\doxysubsubsection{\texorpdfstring{debug\_warning\_n}{debug\_warning\_n}}
+{\footnotesize\ttfamily \#define debug\+\_\+warning\+\_\+n(\begin{DoxyParamCaption}\item[{}]{exp,  }\item[{}]{limit }\end{DoxyParamCaption})}
+
+{\bfseries Value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{  \textcolor{keywordflow}{do} \{                                                                                             \(\backslash\)}
+\DoxyCodeLine{    static std::atomic<int> count(0);                                                              \(\backslash\)}
+\DoxyCodeLine{    if (!(exp) \&\& (limit == 0 || count < limit)) \{                                                 \(\backslash\)}
+\DoxyCodeLine{      fprintf(stderr, \textcolor{stringliteral}{"{}Warning: "{}} \mbox{\hyperlink{utils_8h_a9e9c7019565ee800abaf5fef300b73db}{STRING}}(exp) \textcolor{stringliteral}{"{} in \%s, "{}} \_\_FILE\_\_ \textcolor{stringliteral}{"{}:"{}} \mbox{\hyperlink{utils_8h_a9e9c7019565ee800abaf5fef300b73db}{STRING}}(\_\_LINE\_\_) \textcolor{stringliteral}{"{}\(\backslash\)n"{}},       \(\backslash\)}
+\DoxyCodeLine{              \_\_PRETTY\_FUNCTION\_\_);                                                                \(\backslash\)}
+\DoxyCodeLine{      count++;                                                                                     \(\backslash\)}
+\DoxyCodeLine{    \}                                                                                              \(\backslash\)}
+\DoxyCodeLine{  \} \textcolor{keywordflow}{while} (\textcolor{keyword}{false})}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{utils_8h_af8df3547bfde53a5acb93e2607b0034a}\label{utils_8h_af8df3547bfde53a5acb93e2607b0034a}} 
+\index{utils.h@{utils.h}!DISALLOW\_COPY\_AND\_ASSIGN@{DISALLOW\_COPY\_AND\_ASSIGN}}
+\index{DISALLOW\_COPY\_AND\_ASSIGN@{DISALLOW\_COPY\_AND\_ASSIGN}!utils.h@{utils.h}}
+\doxysubsubsection{\texorpdfstring{DISALLOW\_COPY\_AND\_ASSIGN}{DISALLOW\_COPY\_AND\_ASSIGN}}
+{\footnotesize\ttfamily \#define DISALLOW\+\_\+\+COPY\+\_\+\+AND\+\_\+\+ASSIGN(\begin{DoxyParamCaption}\item[{}]{Type\+Name }\end{DoxyParamCaption})}
+
+{\bfseries Value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{  TypeName(\textcolor{keyword}{const} TypeName\&) = \textcolor{keyword}{delete};                                                              \(\backslash\)}
+\DoxyCodeLine{  TypeName(TypeName\&\&) = \textcolor{keyword}{delete};                                                                   \(\backslash\)}
+\DoxyCodeLine{  void operator=(\textcolor{keyword}{const} TypeName\&) = \textcolor{keyword}{delete};                                                        \(\backslash\)}
+\DoxyCodeLine{  void operator=(TypeName\&\&) = \textcolor{keyword}{delete};}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{utils_8h_a25ab37aea7b7b9c8eab14198b189b5b0}\label{utils_8h_a25ab37aea7b7b9c8eab14198b189b5b0}} 
+\index{utils.h@{utils.h}!ifdebug@{ifdebug}}
+\index{ifdebug@{ifdebug}!utils.h@{utils.h}}
+\doxysubsubsection{\texorpdfstring{ifdebug}{ifdebug}}
+{\footnotesize\ttfamily \#define ifdebug~if (true)}
+
+\mbox{\Hypertarget{utils_8h_adc46e1493032263c4c1d63677ab200cb}\label{utils_8h_adc46e1493032263c4c1d63677ab200cb}} 
+\index{utils.h@{utils.h}!MAKE\_NAMED\_SCOPE\_GUARD@{MAKE\_NAMED\_SCOPE\_GUARD}}
+\index{MAKE\_NAMED\_SCOPE\_GUARD@{MAKE\_NAMED\_SCOPE\_GUARD}!utils.h@{utils.h}}
+\doxysubsubsection{\texorpdfstring{MAKE\_NAMED\_SCOPE\_GUARD}{MAKE\_NAMED\_SCOPE\_GUARD}}
+{\footnotesize\ttfamily \#define MAKE\+\_\+\+NAMED\+\_\+\+SCOPE\+\_\+\+GUARD(\begin{DoxyParamCaption}\item[{}]{name,  }\item[{}]{... }\end{DoxyParamCaption})}
+
+{\bfseries Value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{  \mbox{\hyperlink{utils_8h_ad259891425ed377cd1c87b487cca1850}{MAKE\_SCOPE\_GUARD\_HELPER}}(\mbox{\hyperlink{utils_8h_a9ac9dd35b93432c0b194466d2aa84788}{PASTE}}(scopeGuardLambda, \_\_COUNTER\_\_), name, \(\backslash\)}
+\DoxyCodeLine{                          \_\_VA\_ARGS\_\_)}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{utils_8h_acb19f46e69d1ab08005f0a0ca28d7d0c}\label{utils_8h_acb19f46e69d1ab08005f0a0ca28d7d0c}} 
+\index{utils.h@{utils.h}!MAKE\_SCOPE\_GUARD@{MAKE\_SCOPE\_GUARD}}
+\index{MAKE\_SCOPE\_GUARD@{MAKE\_SCOPE\_GUARD}!utils.h@{utils.h}}
+\doxysubsubsection{\texorpdfstring{MAKE\_SCOPE\_GUARD}{MAKE\_SCOPE\_GUARD}}
+{\footnotesize\ttfamily \#define MAKE\+\_\+\+SCOPE\+\_\+\+GUARD(\begin{DoxyParamCaption}\item[{}]{... }\end{DoxyParamCaption})}
+
+{\bfseries Value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{  \mbox{\hyperlink{utils_8h_ad259891425ed377cd1c87b487cca1850}{MAKE\_SCOPE\_GUARD\_HELPER}}(\mbox{\hyperlink{utils_8h_a9ac9dd35b93432c0b194466d2aa84788}{PASTE}}(scopeGuardLambda, \_\_COUNTER\_\_), \(\backslash\)}
+\DoxyCodeLine{                          \mbox{\hyperlink{utils_8h_a9ac9dd35b93432c0b194466d2aa84788}{PASTE}}(scopeGuard, \_\_COUNTER\_\_), \_\_VA\_ARGS\_\_)}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{utils_8h_ad259891425ed377cd1c87b487cca1850}\label{utils_8h_ad259891425ed377cd1c87b487cca1850}} 
+\index{utils.h@{utils.h}!MAKE\_SCOPE\_GUARD\_HELPER@{MAKE\_SCOPE\_GUARD\_HELPER}}
+\index{MAKE\_SCOPE\_GUARD\_HELPER@{MAKE\_SCOPE\_GUARD\_HELPER}!utils.h@{utils.h}}
+\doxysubsubsection{\texorpdfstring{MAKE\_SCOPE\_GUARD\_HELPER}{MAKE\_SCOPE\_GUARD\_HELPER}}
+{\footnotesize\ttfamily \#define MAKE\+\_\+\+SCOPE\+\_\+\+GUARD\+\_\+\+HELPER(\begin{DoxyParamCaption}\item[{}]{lname,  }\item[{}]{sname,  }\item[{}]{... }\end{DoxyParamCaption})}
+
+{\bfseries Value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{  \textcolor{keyword}{auto} lname = \_\_VA\_ARGS\_\_;                        \(\backslash\)}
+\DoxyCodeLine{  ScopeGuard<decltype(lname)> sname(lname);}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{utils_8h_a9ac9dd35b93432c0b194466d2aa84788}\label{utils_8h_a9ac9dd35b93432c0b194466d2aa84788}} 
+\index{utils.h@{utils.h}!PASTE@{PASTE}}
+\index{PASTE@{PASTE}!utils.h@{utils.h}}
+\doxysubsubsection{\texorpdfstring{PASTE}{PASTE}}
+{\footnotesize\ttfamily \#define PASTE(\begin{DoxyParamCaption}\item[{}]{x,  }\item[{}]{y }\end{DoxyParamCaption})~\mbox{\hyperlink{utils_8h_ad6f41535a782a4507947186ddcd56062}{PASTE2}}(x, y)}
+
+\mbox{\Hypertarget{utils_8h_ad6f41535a782a4507947186ddcd56062}\label{utils_8h_ad6f41535a782a4507947186ddcd56062}} 
+\index{utils.h@{utils.h}!PASTE2@{PASTE2}}
+\index{PASTE2@{PASTE2}!utils.h@{utils.h}}
+\doxysubsubsection{\texorpdfstring{PASTE2}{PASTE2}}
+{\footnotesize\ttfamily \#define PASTE2(\begin{DoxyParamCaption}\item[{}]{x,  }\item[{}]{y }\end{DoxyParamCaption})~x\#\#y}
+
+\mbox{\Hypertarget{utils_8h_a9e9c7019565ee800abaf5fef300b73db}\label{utils_8h_a9e9c7019565ee800abaf5fef300b73db}} 
+\index{utils.h@{utils.h}!STRING@{STRING}}
+\index{STRING@{STRING}!utils.h@{utils.h}}
+\doxysubsubsection{\texorpdfstring{STRING}{STRING}}
+{\footnotesize\ttfamily \#define STRING(\begin{DoxyParamCaption}\item[{}]{x }\end{DoxyParamCaption})~\mbox{\hyperlink{utils_8h_a931f53133bb7d8b2502c060567fb73c8}{STRING2}}(x)}
+
+\mbox{\Hypertarget{utils_8h_a931f53133bb7d8b2502c060567fb73c8}\label{utils_8h_a931f53133bb7d8b2502c060567fb73c8}} 
+\index{utils.h@{utils.h}!STRING2@{STRING2}}
+\index{STRING2@{STRING2}!utils.h@{utils.h}}
+\doxysubsubsection{\texorpdfstring{STRING2}{STRING2}}
+{\footnotesize\ttfamily \#define STRING2(\begin{DoxyParamCaption}\item[{}]{x }\end{DoxyParamCaption})~\#x}
+
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{utils_8h_a8dd2cc36e802b602cbc17b937026adbe}\label{utils_8h_a8dd2cc36e802b602cbc17b937026adbe}} 
+\index{utils.h@{utils.h}!BitSelect@{BitSelect}}
+\index{BitSelect@{BitSelect}!utils.h@{utils.h}}
+\doxysubsubsection{\texorpdfstring{BitSelect()}{BitSelect()}}
+{\footnotesize\ttfamily template$<$uint32\+\_\+t low\+Bit, uint32\+\_\+t high\+Bit, typename T $>$ \\
+static \+\_\+\+\_\+forceinline uint32\+\_\+t Bit\+Select (\begin{DoxyParamCaption}\item[{T}]{p }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+\mbox{\Hypertarget{utils_8h_a90a02ec2beaa5b824158bc46960d4978}\label{utils_8h_a90a02ec2beaa5b824158bc46960d4978}} 
+\index{utils.h@{utils.h}!PtrHigh32@{PtrHigh32}}
+\index{PtrHigh32@{PtrHigh32}!utils.h@{utils.h}}
+\doxysubsubsection{\texorpdfstring{PtrHigh32()}{PtrHigh32()}}
+{\footnotesize\ttfamily uint32\+\_\+t Ptr\+High32 (\begin{DoxyParamCaption}\item[{const void $\ast$}]{p }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=312pt]{utils_8h_a90a02ec2beaa5b824158bc46960d4978_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{utils_8h_a0ea0319f84c482025958a47d8ccb0abf}\label{utils_8h_a0ea0319f84c482025958a47d8ccb0abf}} 
+\index{utils.h@{utils.h}!PtrHigh64Shift16@{PtrHigh64Shift16}}
+\index{PtrHigh64Shift16@{PtrHigh64Shift16}!utils.h@{utils.h}}
+\doxysubsubsection{\texorpdfstring{PtrHigh64Shift16()}{PtrHigh64Shift16()}}
+{\footnotesize\ttfamily uint32\+\_\+t Ptr\+High64\+Shift16 (\begin{DoxyParamCaption}\item[{const void $\ast$}]{p }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=343pt]{utils_8h_a0ea0319f84c482025958a47d8ccb0abf_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{utils_8h_ab01c28faf1ec16978dc99720840d20b6}\label{utils_8h_ab01c28faf1ec16978dc99720840d20b6}} 
+\index{utils.h@{utils.h}!PtrHigh64Shift40@{PtrHigh64Shift40}}
+\index{PtrHigh64Shift40@{PtrHigh64Shift40}!utils.h@{utils.h}}
+\doxysubsubsection{\texorpdfstring{PtrHigh64Shift40()}{PtrHigh64Shift40()}}
+{\footnotesize\ttfamily uint32\+\_\+t Ptr\+High64\+Shift40 (\begin{DoxyParamCaption}\item[{const void $\ast$}]{p }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=343pt]{utils_8h_ab01c28faf1ec16978dc99720840d20b6_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{utils_8h_a4588dc0bbca9cf953ba22a2f05dd8310}\label{utils_8h_a4588dc0bbca9cf953ba22a2f05dd8310}} 
+\index{utils.h@{utils.h}!PtrLow16Shift8@{PtrLow16Shift8}}
+\index{PtrLow16Shift8@{PtrLow16Shift8}!utils.h@{utils.h}}
+\doxysubsubsection{\texorpdfstring{PtrLow16Shift8()}{PtrLow16Shift8()}}
+{\footnotesize\ttfamily uint32\+\_\+t Ptr\+Low16\+Shift8 (\begin{DoxyParamCaption}\item[{const void $\ast$}]{p }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=335pt]{utils_8h_a4588dc0bbca9cf953ba22a2f05dd8310_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{utils_8h_a61d1002af2b0a903264a5e44ce9f6b4e}\label{utils_8h_a61d1002af2b0a903264a5e44ce9f6b4e}} 
+\index{utils.h@{utils.h}!PtrLow32@{PtrLow32}}
+\index{PtrLow32@{PtrLow32}!utils.h@{utils.h}}
+\doxysubsubsection{\texorpdfstring{PtrLow32()}{PtrLow32()}}
+{\footnotesize\ttfamily uint32\+\_\+t Ptr\+Low32 (\begin{DoxyParamCaption}\item[{const void $\ast$}]{p }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=310pt]{utils_8h_a61d1002af2b0a903264a5e44ce9f6b4e_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{utils_8h_a619e69c052bc2ff510e086d4ffdbd4c4}\label{utils_8h_a619e69c052bc2ff510e086d4ffdbd4c4}} 
+\index{utils.h@{utils.h}!PtrLow40Shift8@{PtrLow40Shift8}}
+\index{PtrLow40Shift8@{PtrLow40Shift8}!utils.h@{utils.h}}
+\doxysubsubsection{\texorpdfstring{PtrLow40Shift8()}{PtrLow40Shift8()}}
+{\footnotesize\ttfamily uint32\+\_\+t Ptr\+Low40\+Shift8 (\begin{DoxyParamCaption}\item[{const void $\ast$}]{p }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=335pt]{utils_8h_a619e69c052bc2ff510e086d4ffdbd4c4_icgraph}
+\end{center}
+\end{figure}

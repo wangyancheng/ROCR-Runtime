@@ -1,0 +1,332 @@
+\hypertarget{classrocr_1_1AMD_1_1RvdFilter}{}\doxysection{rocr\+::AMD\+::Rvd\+Filter Class Reference}
+\label{classrocr_1_1AMD_1_1RvdFilter}\index{rocr::AMD::RvdFilter@{rocr::AMD::RvdFilter}}
+
+
+{\ttfamily \#include $<$amd\+\_\+filter\+\_\+device.\+h$>$}
+
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classrocr_1_1AMD_1_1RvdFilter_aceee9c3cb547e0039786823a3cdf43fc}{Rvd\+Filter}} ()
+\begin{DoxyCompactList}\small\item\em Constructor. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classrocr_1_1AMD_1_1RvdFilter_aaef6e3cf2b5c9154dd408f1740524b94}{$\sim$\+Rvd\+Filter}} ()
+\item 
+bool \mbox{\hyperlink{classrocr_1_1AMD_1_1RvdFilter_a00371d53cc3a7c4743b63a48c253c994}{Select\+Zero\+Devices}} ()
+\begin{DoxyCompactList}\small\item\em Determine if user has specified environment variable ROCR\+\_\+\+VISIBLE\+\_\+\+DEVICES (RVD) to filter out all Gpu devices i.\+e. surface ZERO devices. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classrocr_1_1AMD_1_1RvdFilter_a947db9d0ccc3826b7c46bde38d665a14}{Build\+Rvd\+Token\+List}} ()
+\begin{DoxyCompactList}\small\item\em Builds the list of tokens specified by user to filter and reorder Gpu devices. A token represents either a Gpu\textquotesingle{}s enumeration index or its UUID value. It is possible for the list to have no tokens i.\+e. user has selected zero devices. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classrocr_1_1AMD_1_1RvdFilter_aec8d421f30439c0b54b74c853c1c23e2}{Build\+Device\+Uuid\+List}} (uint32\+\_\+t num\+Nodes)
+\begin{DoxyCompactList}\small\item\em Build the list of Gpu device UUIDs as enumerated by ROCt. \end{DoxyCompactList}\item 
+uint32\+\_\+t \mbox{\hyperlink{classrocr_1_1AMD_1_1RvdFilter_a50e5d2e8f7333ec432fd50a77455f30f}{Build\+Usr\+Device\+List}} ()
+\begin{DoxyCompactList}\small\item\em Build the list of Gpu devices that will be enumerated to user. \end{DoxyCompactList}\item 
+int32\+\_\+t \mbox{\hyperlink{classrocr_1_1AMD_1_1RvdFilter_ab9b170eb48652d803e3d92d5604f87d9}{Process\+Uuid\+Token}} (const std\+::string \&token)
+\begin{DoxyCompactList}\small\item\em Processes UUID token and returns its enumeration index. \end{DoxyCompactList}\item 
+uint32\+\_\+t \mbox{\hyperlink{classrocr_1_1AMD_1_1RvdFilter_a8c6d60895c4061b029a737dfd575e3a6}{Get\+Usr\+Device\+List\+Size}} ()
+\begin{DoxyCompactList}\small\item\em Get the number of Gpu devices that will be surface upon device enumeration. \end{DoxyCompactList}\item 
+int32\+\_\+t \mbox{\hyperlink{classrocr_1_1AMD_1_1RvdFilter_a2cf837df7070df6071c91202f0b7d599}{Get\+Usr\+Device\+Rank}} (uint32\+\_\+t roct\+Idx)
+\begin{DoxyCompactList}\small\item\em Return the rank of queried Gpu device. If queried device is surfaced the number of Gpu devices that will be surface upon device enumeration. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classrocr_1_1AMD_1_1RvdFilter_ac3ed8e7082e7cfccd7190a5c42e69e48}{Set\+Device\+Uuid\+List}} ()
+\begin{DoxyCompactList}\small\item\em Set debug UUID values to Gpu devices. This is intended to help debug and test RVD module functionality. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classrocr_1_1AMD_1_1RvdFilter_a27e946b4c2967e21328e72ec7fb4b0f5}{Print\+Device\+Uuid\+List}} ()
+\begin{DoxyCompactList}\small\item\em Print the list of Uuids of Gpu devices present on system. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classrocr_1_1AMD_1_1RvdFilter_afbbc0b0287f49081a6bceafc18634cf3}{Print\+Usr\+Device\+List}} ()
+\begin{DoxyCompactList}\small\item\em Print the list of Gpu devices per their enumeration order. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classrocr_1_1AMD_1_1RvdFilter_a05b1d87e15d51d1bf264fd8c35891e37}{Print\+Rvd\+Token\+List}} ()
+\begin{DoxyCompactList}\small\item\em Print the list of tokens specified by user to filter and reorder Gpu devices. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static bool \mbox{\hyperlink{classrocr_1_1AMD_1_1RvdFilter_a8aa36050a96f1cb0d55c97b6fec0f6ec}{Filter\+Devices}} ()
+\begin{DoxyCompactList}\small\item\em Determine if user has specified environment variable ROCR\+\_\+\+VISIBLE\+\_\+\+DEVICES (RVD) to filter and reorder Gpu devices. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+std\+::vector$<$ std\+::string $>$ \mbox{\hyperlink{classrocr_1_1AMD_1_1RvdFilter_a246ac160b2b54ad43d2630965cf31b76}{rvd\+Token\+List\+\_\+}}
+\begin{DoxyCompactList}\small\item\em List of tokens specified by user to select and reorder. \end{DoxyCompactList}\item 
+std\+::vector$<$ std\+::string $>$ \mbox{\hyperlink{classrocr_1_1AMD_1_1RvdFilter_a1da5e01414d0a5deb7562e07fcfab942}{dev\+Uuid\+List\+\_\+}}
+\begin{DoxyCompactList}\small\item\em Ordered list of ROCt enumerated Gpu device\textquotesingle{}s UUID values. \end{DoxyCompactList}\item 
+std\+::map$<$ uint32\+\_\+t, int32\+\_\+t $>$ \mbox{\hyperlink{classrocr_1_1AMD_1_1RvdFilter_a51a8b1c18ee24166329745e6a59f1f8d}{usr\+Device\+List\+\_\+}}
+\begin{DoxyCompactList}\small\item\em Ordered list of ROCr enumerated Gpu devices. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classrocr_1_1AMD_1_1RvdFilter_aceee9c3cb547e0039786823a3cdf43fc}\label{classrocr_1_1AMD_1_1RvdFilter_aceee9c3cb547e0039786823a3cdf43fc}} 
+\index{rocr::AMD::RvdFilter@{rocr::AMD::RvdFilter}!RvdFilter@{RvdFilter}}
+\index{RvdFilter@{RvdFilter}!rocr::AMD::RvdFilter@{rocr::AMD::RvdFilter}}
+\doxysubsubsection{\texorpdfstring{RvdFilter()}{RvdFilter()}}
+{\footnotesize\ttfamily rocr\+::\+AMD\+::\+Rvd\+Filter\+::\+Rvd\+Filter (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Constructor. 
+
+\mbox{\Hypertarget{classrocr_1_1AMD_1_1RvdFilter_aaef6e3cf2b5c9154dd408f1740524b94}\label{classrocr_1_1AMD_1_1RvdFilter_aaef6e3cf2b5c9154dd408f1740524b94}} 
+\index{rocr::AMD::RvdFilter@{rocr::AMD::RvdFilter}!````~RvdFilter@{$\sim$RvdFilter}}
+\index{````~RvdFilter@{$\sim$RvdFilter}!rocr::AMD::RvdFilter@{rocr::AMD::RvdFilter}}
+\doxysubsubsection{\texorpdfstring{$\sim$RvdFilter()}{~RvdFilter()}}
+{\footnotesize\ttfamily rocr\+::\+AMD\+::\+Rvd\+Filter\+::$\sim$\+Rvd\+Filter (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classrocr_1_1AMD_1_1RvdFilter_aec8d421f30439c0b54b74c853c1c23e2}\label{classrocr_1_1AMD_1_1RvdFilter_aec8d421f30439c0b54b74c853c1c23e2}} 
+\index{rocr::AMD::RvdFilter@{rocr::AMD::RvdFilter}!BuildDeviceUuidList@{BuildDeviceUuidList}}
+\index{BuildDeviceUuidList@{BuildDeviceUuidList}!rocr::AMD::RvdFilter@{rocr::AMD::RvdFilter}}
+\doxysubsubsection{\texorpdfstring{BuildDeviceUuidList()}{BuildDeviceUuidList()}}
+{\footnotesize\ttfamily void rocr\+::\+AMD\+::\+Rvd\+Filter\+::\+Build\+Device\+Uuid\+List (\begin{DoxyParamCaption}\item[{uint32\+\_\+t}]{num\+Nodes }\end{DoxyParamCaption})}
+
+
+
+Build the list of Gpu device UUIDs as enumerated by ROCt. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em num\+Nodes} & Number of ROCm devices present on system, includes both Cpu and Gpu\textquotesingle{}s devices \\
+\hline
+\end{DoxyParams}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classrocr_1_1AMD_1_1RvdFilter_aec8d421f30439c0b54b74c853c1c23e2_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classrocr_1_1AMD_1_1RvdFilter_a947db9d0ccc3826b7c46bde38d665a14}\label{classrocr_1_1AMD_1_1RvdFilter_a947db9d0ccc3826b7c46bde38d665a14}} 
+\index{rocr::AMD::RvdFilter@{rocr::AMD::RvdFilter}!BuildRvdTokenList@{BuildRvdTokenList}}
+\index{BuildRvdTokenList@{BuildRvdTokenList}!rocr::AMD::RvdFilter@{rocr::AMD::RvdFilter}}
+\doxysubsubsection{\texorpdfstring{BuildRvdTokenList()}{BuildRvdTokenList()}}
+{\footnotesize\ttfamily void rocr\+::\+AMD\+::\+Rvd\+Filter\+::\+Build\+Rvd\+Token\+List (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Builds the list of tokens specified by user to filter and reorder Gpu devices. A token represents either a Gpu\textquotesingle{}s enumeration index or its UUID value. It is possible for the list to have no tokens i.\+e. user has selected zero devices. 
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classrocr_1_1AMD_1_1RvdFilter_a947db9d0ccc3826b7c46bde38d665a14_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classrocr_1_1AMD_1_1RvdFilter_a947db9d0ccc3826b7c46bde38d665a14_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classrocr_1_1AMD_1_1RvdFilter_a50e5d2e8f7333ec432fd50a77455f30f}\label{classrocr_1_1AMD_1_1RvdFilter_a50e5d2e8f7333ec432fd50a77455f30f}} 
+\index{rocr::AMD::RvdFilter@{rocr::AMD::RvdFilter}!BuildUsrDeviceList@{BuildUsrDeviceList}}
+\index{BuildUsrDeviceList@{BuildUsrDeviceList}!rocr::AMD::RvdFilter@{rocr::AMD::RvdFilter}}
+\doxysubsubsection{\texorpdfstring{BuildUsrDeviceList()}{BuildUsrDeviceList()}}
+{\footnotesize\ttfamily uint32\+\_\+t rocr\+::\+AMD\+::\+Rvd\+Filter\+::\+Build\+Usr\+Device\+List (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Build the list of Gpu devices that will be enumerated to user. 
+
+\begin{DoxyReturn}{Returns}
+Number of Gpu devices to surface upon devices enumeration 
+\end{DoxyReturn}
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=330pt]{classrocr_1_1AMD_1_1RvdFilter_a50e5d2e8f7333ec432fd50a77455f30f_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classrocr_1_1AMD_1_1RvdFilter_a50e5d2e8f7333ec432fd50a77455f30f_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classrocr_1_1AMD_1_1RvdFilter_a8aa36050a96f1cb0d55c97b6fec0f6ec}\label{classrocr_1_1AMD_1_1RvdFilter_a8aa36050a96f1cb0d55c97b6fec0f6ec}} 
+\index{rocr::AMD::RvdFilter@{rocr::AMD::RvdFilter}!FilterDevices@{FilterDevices}}
+\index{FilterDevices@{FilterDevices}!rocr::AMD::RvdFilter@{rocr::AMD::RvdFilter}}
+\doxysubsubsection{\texorpdfstring{FilterDevices()}{FilterDevices()}}
+{\footnotesize\ttfamily bool rocr\+::\+AMD\+::\+Rvd\+Filter\+::\+Filter\+Devices (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Determine if user has specified environment variable ROCR\+\_\+\+VISIBLE\+\_\+\+DEVICES (RVD) to filter and reorder Gpu devices. 
+
+\begin{DoxyReturn}{Returns}
+TRUE if user has defined the env RVD 
+\end{DoxyReturn}
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=324pt]{classrocr_1_1AMD_1_1RvdFilter_a8aa36050a96f1cb0d55c97b6fec0f6ec_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classrocr_1_1AMD_1_1RvdFilter_a8aa36050a96f1cb0d55c97b6fec0f6ec_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classrocr_1_1AMD_1_1RvdFilter_a8c6d60895c4061b029a737dfd575e3a6}\label{classrocr_1_1AMD_1_1RvdFilter_a8c6d60895c4061b029a737dfd575e3a6}} 
+\index{rocr::AMD::RvdFilter@{rocr::AMD::RvdFilter}!GetUsrDeviceListSize@{GetUsrDeviceListSize}}
+\index{GetUsrDeviceListSize@{GetUsrDeviceListSize}!rocr::AMD::RvdFilter@{rocr::AMD::RvdFilter}}
+\doxysubsubsection{\texorpdfstring{GetUsrDeviceListSize()}{GetUsrDeviceListSize()}}
+{\footnotesize\ttfamily uint32\+\_\+t rocr\+::\+AMD\+::\+Rvd\+Filter\+::\+Get\+Usr\+Device\+List\+Size (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Get the number of Gpu devices that will be surface upon device enumeration. 
+
+@uint32\+\_\+t Number of devices to enumerate including possibly ZERO devices \mbox{\Hypertarget{classrocr_1_1AMD_1_1RvdFilter_a2cf837df7070df6071c91202f0b7d599}\label{classrocr_1_1AMD_1_1RvdFilter_a2cf837df7070df6071c91202f0b7d599}} 
+\index{rocr::AMD::RvdFilter@{rocr::AMD::RvdFilter}!GetUsrDeviceRank@{GetUsrDeviceRank}}
+\index{GetUsrDeviceRank@{GetUsrDeviceRank}!rocr::AMD::RvdFilter@{rocr::AMD::RvdFilter}}
+\doxysubsubsection{\texorpdfstring{GetUsrDeviceRank()}{GetUsrDeviceRank()}}
+{\footnotesize\ttfamily int32\+\_\+t rocr\+::\+AMD\+::\+Rvd\+Filter\+::\+Get\+Usr\+Device\+Rank (\begin{DoxyParamCaption}\item[{uint32\+\_\+t}]{roct\+Idx }\end{DoxyParamCaption})}
+
+
+
+Return the rank of queried Gpu device. If queried device is surfaced the number of Gpu devices that will be surface upon device enumeration. 
+
+@int32\+\_\+t -\/1 if queried device is not surfaced, else a value in the range \mbox{[}0 -\/ (num\+Gpus -\/ 1)\mbox{]} Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classrocr_1_1AMD_1_1RvdFilter_a2cf837df7070df6071c91202f0b7d599_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classrocr_1_1AMD_1_1RvdFilter_a27e946b4c2967e21328e72ec7fb4b0f5}\label{classrocr_1_1AMD_1_1RvdFilter_a27e946b4c2967e21328e72ec7fb4b0f5}} 
+\index{rocr::AMD::RvdFilter@{rocr::AMD::RvdFilter}!PrintDeviceUuidList@{PrintDeviceUuidList}}
+\index{PrintDeviceUuidList@{PrintDeviceUuidList}!rocr::AMD::RvdFilter@{rocr::AMD::RvdFilter}}
+\doxysubsubsection{\texorpdfstring{PrintDeviceUuidList()}{PrintDeviceUuidList()}}
+{\footnotesize\ttfamily void rocr\+::\+AMD\+::\+Rvd\+Filter\+::\+Print\+Device\+Uuid\+List (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Print the list of Uuids of Gpu devices present on system. 
+
+\mbox{\Hypertarget{classrocr_1_1AMD_1_1RvdFilter_a05b1d87e15d51d1bf264fd8c35891e37}\label{classrocr_1_1AMD_1_1RvdFilter_a05b1d87e15d51d1bf264fd8c35891e37}} 
+\index{rocr::AMD::RvdFilter@{rocr::AMD::RvdFilter}!PrintRvdTokenList@{PrintRvdTokenList}}
+\index{PrintRvdTokenList@{PrintRvdTokenList}!rocr::AMD::RvdFilter@{rocr::AMD::RvdFilter}}
+\doxysubsubsection{\texorpdfstring{PrintRvdTokenList()}{PrintRvdTokenList()}}
+{\footnotesize\ttfamily void rocr\+::\+AMD\+::\+Rvd\+Filter\+::\+Print\+Rvd\+Token\+List (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Print the list of tokens specified by user to filter and reorder Gpu devices. 
+
+\mbox{\Hypertarget{classrocr_1_1AMD_1_1RvdFilter_afbbc0b0287f49081a6bceafc18634cf3}\label{classrocr_1_1AMD_1_1RvdFilter_afbbc0b0287f49081a6bceafc18634cf3}} 
+\index{rocr::AMD::RvdFilter@{rocr::AMD::RvdFilter}!PrintUsrDeviceList@{PrintUsrDeviceList}}
+\index{PrintUsrDeviceList@{PrintUsrDeviceList}!rocr::AMD::RvdFilter@{rocr::AMD::RvdFilter}}
+\doxysubsubsection{\texorpdfstring{PrintUsrDeviceList()}{PrintUsrDeviceList()}}
+{\footnotesize\ttfamily void rocr\+::\+AMD\+::\+Rvd\+Filter\+::\+Print\+Usr\+Device\+List (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Print the list of Gpu devices per their enumeration order. 
+
+\mbox{\Hypertarget{classrocr_1_1AMD_1_1RvdFilter_ab9b170eb48652d803e3d92d5604f87d9}\label{classrocr_1_1AMD_1_1RvdFilter_ab9b170eb48652d803e3d92d5604f87d9}} 
+\index{rocr::AMD::RvdFilter@{rocr::AMD::RvdFilter}!ProcessUuidToken@{ProcessUuidToken}}
+\index{ProcessUuidToken@{ProcessUuidToken}!rocr::AMD::RvdFilter@{rocr::AMD::RvdFilter}}
+\doxysubsubsection{\texorpdfstring{ProcessUuidToken()}{ProcessUuidToken()}}
+{\footnotesize\ttfamily int32\+\_\+t rocr\+::\+AMD\+::\+Rvd\+Filter\+::\+Process\+Uuid\+Token (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{token }\end{DoxyParamCaption})}
+
+
+
+Processes UUID token and returns its enumeration index. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em token} & RVD token encoding a device\textquotesingle{}s UUID value \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+int32\+\_\+t if it is valid, -\/1 otherwise 
+\end{DoxyReturn}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classrocr_1_1AMD_1_1RvdFilter_ab9b170eb48652d803e3d92d5604f87d9_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classrocr_1_1AMD_1_1RvdFilter_a00371d53cc3a7c4743b63a48c253c994}\label{classrocr_1_1AMD_1_1RvdFilter_a00371d53cc3a7c4743b63a48c253c994}} 
+\index{rocr::AMD::RvdFilter@{rocr::AMD::RvdFilter}!SelectZeroDevices@{SelectZeroDevices}}
+\index{SelectZeroDevices@{SelectZeroDevices}!rocr::AMD::RvdFilter@{rocr::AMD::RvdFilter}}
+\doxysubsubsection{\texorpdfstring{SelectZeroDevices()}{SelectZeroDevices()}}
+{\footnotesize\ttfamily bool rocr\+::\+AMD\+::\+Rvd\+Filter\+::\+Select\+Zero\+Devices (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Determine if user has specified environment variable ROCR\+\_\+\+VISIBLE\+\_\+\+DEVICES (RVD) to filter out all Gpu devices i.\+e. surface ZERO devices. 
+
+\begin{DoxyReturn}{Returns}
+TRUE if user has specified ZERO to be surfaced 
+\end{DoxyReturn}
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=341pt]{classrocr_1_1AMD_1_1RvdFilter_a00371d53cc3a7c4743b63a48c253c994_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classrocr_1_1AMD_1_1RvdFilter_ac3ed8e7082e7cfccd7190a5c42e69e48}\label{classrocr_1_1AMD_1_1RvdFilter_ac3ed8e7082e7cfccd7190a5c42e69e48}} 
+\index{rocr::AMD::RvdFilter@{rocr::AMD::RvdFilter}!SetDeviceUuidList@{SetDeviceUuidList}}
+\index{SetDeviceUuidList@{SetDeviceUuidList}!rocr::AMD::RvdFilter@{rocr::AMD::RvdFilter}}
+\doxysubsubsection{\texorpdfstring{SetDeviceUuidList()}{SetDeviceUuidList()}}
+{\footnotesize\ttfamily void rocr\+::\+AMD\+::\+Rvd\+Filter\+::\+Set\+Device\+Uuid\+List (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Set debug UUID values to Gpu devices. This is intended to help debug and test RVD module functionality. 
+
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{classrocr_1_1AMD_1_1RvdFilter_a1da5e01414d0a5deb7562e07fcfab942}\label{classrocr_1_1AMD_1_1RvdFilter_a1da5e01414d0a5deb7562e07fcfab942}} 
+\index{rocr::AMD::RvdFilter@{rocr::AMD::RvdFilter}!devUuidList\_@{devUuidList\_}}
+\index{devUuidList\_@{devUuidList\_}!rocr::AMD::RvdFilter@{rocr::AMD::RvdFilter}}
+\doxysubsubsection{\texorpdfstring{devUuidList\_}{devUuidList\_}}
+{\footnotesize\ttfamily std\+::vector$<$std\+::string$>$ rocr\+::\+AMD\+::\+Rvd\+Filter\+::dev\+Uuid\+List\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Ordered list of ROCt enumerated Gpu device\textquotesingle{}s UUID values. 
+
+\mbox{\Hypertarget{classrocr_1_1AMD_1_1RvdFilter_a246ac160b2b54ad43d2630965cf31b76}\label{classrocr_1_1AMD_1_1RvdFilter_a246ac160b2b54ad43d2630965cf31b76}} 
+\index{rocr::AMD::RvdFilter@{rocr::AMD::RvdFilter}!rvdTokenList\_@{rvdTokenList\_}}
+\index{rvdTokenList\_@{rvdTokenList\_}!rocr::AMD::RvdFilter@{rocr::AMD::RvdFilter}}
+\doxysubsubsection{\texorpdfstring{rvdTokenList\_}{rvdTokenList\_}}
+{\footnotesize\ttfamily std\+::vector$<$std\+::string$>$ rocr\+::\+AMD\+::\+Rvd\+Filter\+::rvd\+Token\+List\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+List of tokens specified by user to select and reorder. 
+
+\mbox{\Hypertarget{classrocr_1_1AMD_1_1RvdFilter_a51a8b1c18ee24166329745e6a59f1f8d}\label{classrocr_1_1AMD_1_1RvdFilter_a51a8b1c18ee24166329745e6a59f1f8d}} 
+\index{rocr::AMD::RvdFilter@{rocr::AMD::RvdFilter}!usrDeviceList\_@{usrDeviceList\_}}
+\index{usrDeviceList\_@{usrDeviceList\_}!rocr::AMD::RvdFilter@{rocr::AMD::RvdFilter}}
+\doxysubsubsection{\texorpdfstring{usrDeviceList\_}{usrDeviceList\_}}
+{\footnotesize\ttfamily std\+::map$<$uint32\+\_\+t, int32\+\_\+t$>$ rocr\+::\+AMD\+::\+Rvd\+Filter\+::usr\+Device\+List\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Ordered list of ROCr enumerated Gpu devices. 
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+src/core/inc/\mbox{\hyperlink{amd__filter__device_8h}{amd\+\_\+filter\+\_\+device.\+h}}\item 
+src/core/runtime/\mbox{\hyperlink{amd__filter__device_8cpp}{amd\+\_\+filter\+\_\+device.\+cpp}}\end{DoxyCompactItemize}

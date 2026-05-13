@@ -1,0 +1,155 @@
+\hypertarget{classrocr_1_1core_1_1SharedSignalPool__t}{}\doxysection{rocr\+::core\+::Shared\+Signal\+Pool\+\_\+t Class Reference}
+\label{classrocr_1_1core_1_1SharedSignalPool__t}\index{rocr::core::SharedSignalPool\_t@{rocr::core::SharedSignalPool\_t}}
+
+
+Pool class for \mbox{\hyperlink{structrocr_1_1core_1_1SharedSignal}{Shared\+Signal}} suitable for use with \mbox{\hyperlink{classrocr_1_1core_1_1Shared}{Shared}}.  
+
+
+
+
+{\ttfamily \#include $<$signal.\+h$>$}
+
+
+
+Inheritance diagram for rocr\+::core\+::Shared\+Signal\+Pool\+\_\+t\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=202pt]{classrocr_1_1core_1_1SharedSignalPool__t__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for rocr\+::core\+::Shared\+Signal\+Pool\+\_\+t\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=310pt]{classrocr_1_1core_1_1SharedSignalPool__t__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classrocr_1_1core_1_1SharedSignalPool__t_a3960a9edf8c2f23fba781f4c661211a3}{Shared\+Signal\+Pool\+\_\+t}} ()
+\item 
+\mbox{\hyperlink{classrocr_1_1core_1_1SharedSignalPool__t_af68efbb3bdc788dd8b7262df3b80c6d2}{$\sim$\+Shared\+Signal\+Pool\+\_\+t}} ()
+\item 
+\mbox{\hyperlink{structrocr_1_1core_1_1SharedSignal}{Shared\+Signal}} $\ast$ \mbox{\hyperlink{classrocr_1_1core_1_1SharedSignalPool__t_a95d276cdd6f266ada9e3988dcc568127}{alloc}} ()
+\item 
+void \mbox{\hyperlink{classrocr_1_1core_1_1SharedSignalPool__t_a14e02f66c34a2876cdc8653cadb17ad7}{free}} (\mbox{\hyperlink{structrocr_1_1core_1_1SharedSignal}{Shared\+Signal}} $\ast$ptr)
+\item 
+void \mbox{\hyperlink{classrocr_1_1core_1_1SharedSignalPool__t_a674e9520f17d14dafd446a328e806b4a}{clear}} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classrocr_1_1KernelMutex}{Kernel\+Mutex}} \mbox{\hyperlink{classrocr_1_1core_1_1SharedSignalPool__t_ae073ed461341d689c8a57f30ba87dc9c}{lock\+\_\+}}
+\item 
+std\+::vector$<$ \mbox{\hyperlink{structrocr_1_1core_1_1SharedSignal}{Shared\+Signal}} $\ast$ $>$ \mbox{\hyperlink{classrocr_1_1core_1_1SharedSignalPool__t_a1c0157beff38a36da8c0405309436a3b}{free\+\_\+list\+\_\+}}
+\item 
+std\+::vector$<$ std\+::pair$<$ void $\ast$, size\+\_\+t $>$ $>$ \mbox{\hyperlink{classrocr_1_1core_1_1SharedSignalPool__t_a8b4b3a4fd5f4121ebd47f5dcaa1c1bd3}{block\+\_\+list\+\_\+}}
+\item 
+size\+\_\+t \mbox{\hyperlink{classrocr_1_1core_1_1SharedSignalPool__t_a082522ebcf722c12be8557695401527a}{block\+\_\+size\+\_\+}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Static Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+static const size\+\_\+t \mbox{\hyperlink{classrocr_1_1core_1_1SharedSignalPool__t_a227d1f4bb6ebc25b3523731a1a5bc128}{minblock\+\_\+}} = 4096 / sizeof(\mbox{\hyperlink{structrocr_1_1core_1_1SharedSignal}{Shared\+Signal}})
+\end{DoxyCompactItemize}
+\doxysubsection*{Additional Inherited Members}
+
+
+\doxysubsection{Detailed Description}
+Pool class for \mbox{\hyperlink{structrocr_1_1core_1_1SharedSignal}{Shared\+Signal}} suitable for use with \mbox{\hyperlink{classrocr_1_1core_1_1Shared}{Shared}}. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classrocr_1_1core_1_1SharedSignalPool__t_a3960a9edf8c2f23fba781f4c661211a3}\label{classrocr_1_1core_1_1SharedSignalPool__t_a3960a9edf8c2f23fba781f4c661211a3}} 
+\index{rocr::core::SharedSignalPool\_t@{rocr::core::SharedSignalPool\_t}!SharedSignalPool\_t@{SharedSignalPool\_t}}
+\index{SharedSignalPool\_t@{SharedSignalPool\_t}!rocr::core::SharedSignalPool\_t@{rocr::core::SharedSignalPool\_t}}
+\doxysubsubsection{\texorpdfstring{SharedSignalPool\_t()}{SharedSignalPool\_t()}}
+{\footnotesize\ttfamily rocr\+::core\+::\+Shared\+Signal\+Pool\+\_\+t\+::\+Shared\+Signal\+Pool\+\_\+t (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{classrocr_1_1core_1_1SharedSignalPool__t_af68efbb3bdc788dd8b7262df3b80c6d2}\label{classrocr_1_1core_1_1SharedSignalPool__t_af68efbb3bdc788dd8b7262df3b80c6d2}} 
+\index{rocr::core::SharedSignalPool\_t@{rocr::core::SharedSignalPool\_t}!````~SharedSignalPool\_t@{$\sim$SharedSignalPool\_t}}
+\index{````~SharedSignalPool\_t@{$\sim$SharedSignalPool\_t}!rocr::core::SharedSignalPool\_t@{rocr::core::SharedSignalPool\_t}}
+\doxysubsubsection{\texorpdfstring{$\sim$SharedSignalPool\_t()}{~SharedSignalPool\_t()}}
+{\footnotesize\ttfamily rocr\+::core\+::\+Shared\+Signal\+Pool\+\_\+t\+::$\sim$\+Shared\+Signal\+Pool\+\_\+t (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classrocr_1_1core_1_1SharedSignalPool__t_af68efbb3bdc788dd8b7262df3b80c6d2_cgraph}
+\end{center}
+\end{figure}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classrocr_1_1core_1_1SharedSignalPool__t_a95d276cdd6f266ada9e3988dcc568127}\label{classrocr_1_1core_1_1SharedSignalPool__t_a95d276cdd6f266ada9e3988dcc568127}} 
+\index{rocr::core::SharedSignalPool\_t@{rocr::core::SharedSignalPool\_t}!alloc@{alloc}}
+\index{alloc@{alloc}!rocr::core::SharedSignalPool\_t@{rocr::core::SharedSignalPool\_t}}
+\doxysubsubsection{\texorpdfstring{alloc()}{alloc()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structrocr_1_1core_1_1SharedSignal}{Shared\+Signal}} $\ast$ rocr\+::core\+::\+Shared\+Signal\+Pool\+\_\+t\+::alloc (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classrocr_1_1core_1_1SharedSignalPool__t_a674e9520f17d14dafd446a328e806b4a}\label{classrocr_1_1core_1_1SharedSignalPool__t_a674e9520f17d14dafd446a328e806b4a}} 
+\index{rocr::core::SharedSignalPool\_t@{rocr::core::SharedSignalPool\_t}!clear@{clear}}
+\index{clear@{clear}!rocr::core::SharedSignalPool\_t@{rocr::core::SharedSignalPool\_t}}
+\doxysubsubsection{\texorpdfstring{clear()}{clear()}}
+{\footnotesize\ttfamily void rocr\+::core\+::\+Shared\+Signal\+Pool\+\_\+t\+::clear (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classrocr_1_1core_1_1SharedSignalPool__t_a674e9520f17d14dafd446a328e806b4a_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classrocr_1_1core_1_1SharedSignalPool__t_a14e02f66c34a2876cdc8653cadb17ad7}\label{classrocr_1_1core_1_1SharedSignalPool__t_a14e02f66c34a2876cdc8653cadb17ad7}} 
+\index{rocr::core::SharedSignalPool\_t@{rocr::core::SharedSignalPool\_t}!free@{free}}
+\index{free@{free}!rocr::core::SharedSignalPool\_t@{rocr::core::SharedSignalPool\_t}}
+\doxysubsubsection{\texorpdfstring{free()}{free()}}
+{\footnotesize\ttfamily void rocr\+::core\+::\+Shared\+Signal\+Pool\+\_\+t\+::free (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structrocr_1_1core_1_1SharedSignal}{Shared\+Signal}} $\ast$}]{ptr }\end{DoxyParamCaption})}
+
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{classrocr_1_1core_1_1SharedSignalPool__t_a8b4b3a4fd5f4121ebd47f5dcaa1c1bd3}\label{classrocr_1_1core_1_1SharedSignalPool__t_a8b4b3a4fd5f4121ebd47f5dcaa1c1bd3}} 
+\index{rocr::core::SharedSignalPool\_t@{rocr::core::SharedSignalPool\_t}!block\_list\_@{block\_list\_}}
+\index{block\_list\_@{block\_list\_}!rocr::core::SharedSignalPool\_t@{rocr::core::SharedSignalPool\_t}}
+\doxysubsubsection{\texorpdfstring{block\_list\_}{block\_list\_}}
+{\footnotesize\ttfamily std\+::vector$<$std\+::pair$<$void$\ast$, size\+\_\+t$>$ $>$ rocr\+::core\+::\+Shared\+Signal\+Pool\+\_\+t\+::block\+\_\+list\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classrocr_1_1core_1_1SharedSignalPool__t_a082522ebcf722c12be8557695401527a}\label{classrocr_1_1core_1_1SharedSignalPool__t_a082522ebcf722c12be8557695401527a}} 
+\index{rocr::core::SharedSignalPool\_t@{rocr::core::SharedSignalPool\_t}!block\_size\_@{block\_size\_}}
+\index{block\_size\_@{block\_size\_}!rocr::core::SharedSignalPool\_t@{rocr::core::SharedSignalPool\_t}}
+\doxysubsubsection{\texorpdfstring{block\_size\_}{block\_size\_}}
+{\footnotesize\ttfamily size\+\_\+t rocr\+::core\+::\+Shared\+Signal\+Pool\+\_\+t\+::block\+\_\+size\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classrocr_1_1core_1_1SharedSignalPool__t_a1c0157beff38a36da8c0405309436a3b}\label{classrocr_1_1core_1_1SharedSignalPool__t_a1c0157beff38a36da8c0405309436a3b}} 
+\index{rocr::core::SharedSignalPool\_t@{rocr::core::SharedSignalPool\_t}!free\_list\_@{free\_list\_}}
+\index{free\_list\_@{free\_list\_}!rocr::core::SharedSignalPool\_t@{rocr::core::SharedSignalPool\_t}}
+\doxysubsubsection{\texorpdfstring{free\_list\_}{free\_list\_}}
+{\footnotesize\ttfamily std\+::vector$<$\mbox{\hyperlink{structrocr_1_1core_1_1SharedSignal}{Shared\+Signal}}$\ast$$>$ rocr\+::core\+::\+Shared\+Signal\+Pool\+\_\+t\+::free\+\_\+list\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classrocr_1_1core_1_1SharedSignalPool__t_ae073ed461341d689c8a57f30ba87dc9c}\label{classrocr_1_1core_1_1SharedSignalPool__t_ae073ed461341d689c8a57f30ba87dc9c}} 
+\index{rocr::core::SharedSignalPool\_t@{rocr::core::SharedSignalPool\_t}!lock\_@{lock\_}}
+\index{lock\_@{lock\_}!rocr::core::SharedSignalPool\_t@{rocr::core::SharedSignalPool\_t}}
+\doxysubsubsection{\texorpdfstring{lock\_}{lock\_}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classrocr_1_1KernelMutex}{Kernel\+Mutex}} rocr\+::core\+::\+Shared\+Signal\+Pool\+\_\+t\+::lock\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classrocr_1_1core_1_1SharedSignalPool__t_a227d1f4bb6ebc25b3523731a1a5bc128}\label{classrocr_1_1core_1_1SharedSignalPool__t_a227d1f4bb6ebc25b3523731a1a5bc128}} 
+\index{rocr::core::SharedSignalPool\_t@{rocr::core::SharedSignalPool\_t}!minblock\_@{minblock\_}}
+\index{minblock\_@{minblock\_}!rocr::core::SharedSignalPool\_t@{rocr::core::SharedSignalPool\_t}}
+\doxysubsubsection{\texorpdfstring{minblock\_}{minblock\_}}
+{\footnotesize\ttfamily const size\+\_\+t rocr\+::core\+::\+Shared\+Signal\+Pool\+\_\+t\+::minblock\+\_\+ = 4096 / sizeof(\mbox{\hyperlink{structrocr_1_1core_1_1SharedSignal}{Shared\+Signal}})\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [private]}}
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+src/core/inc/\mbox{\hyperlink{signal_8h}{signal.\+h}}\item 
+src/core/runtime/\mbox{\hyperlink{signal_8cpp}{signal.\+cpp}}\end{DoxyCompactItemize}

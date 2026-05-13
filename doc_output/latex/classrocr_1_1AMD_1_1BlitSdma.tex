@@ -1,0 +1,851 @@
+\hypertarget{classrocr_1_1AMD_1_1BlitSdma}{}\doxysection{rocr\+::AMD\+::Blit\+Sdma$<$ Ring\+Index\+Ty, Hw\+Index\+Monotonic, Size\+To\+Count\+Offset, use\+GCR $>$ Class Template Reference}
+\label{classrocr_1_1AMD_1_1BlitSdma}\index{rocr::AMD::BlitSdma$<$ RingIndexTy, HwIndexMonotonic, SizeToCountOffset, useGCR $>$@{rocr::AMD::BlitSdma$<$ RingIndexTy, HwIndexMonotonic, SizeToCountOffset, useGCR $>$}}
+
+
+{\ttfamily \#include $<$amd\+\_\+blit\+\_\+sdma.\+h$>$}
+
+
+
+Inheritance diagram for rocr\+::AMD\+::Blit\+Sdma$<$ Ring\+Index\+Ty, Hw\+Index\+Monotonic, Size\+To\+Count\+Offset, use\+GCR $>$\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=253pt]{classrocr_1_1AMD_1_1BlitSdma__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for rocr\+::AMD\+::Blit\+Sdma$<$ Ring\+Index\+Ty, Hw\+Index\+Monotonic, Size\+To\+Count\+Offset, use\+GCR $>$\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classrocr_1_1AMD_1_1BlitSdma__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classrocr_1_1AMD_1_1BlitSdma_a6f67c0dd969c548ded8cc514b6f55458}{Blit\+Sdma}} ()
+\item 
+virtual \mbox{\hyperlink{classrocr_1_1AMD_1_1BlitSdma_a0a4d5e60720bc0ccdcdaa16eb7d29501}{$\sim$\+Blit\+Sdma}} () override
+\item 
+virtual \mbox{\hyperlink{group__status_gad755322e7ff95456520e8abdbe90d225}{hsa\+\_\+status\+\_\+t}} \mbox{\hyperlink{classrocr_1_1AMD_1_1BlitSdma_a6286a7eb9777667539cbcdc14cce8571}{Initialize}} (const \mbox{\hyperlink{classrocr_1_1core_1_1Agent}{core\+::\+Agent}} \&agent, bool use\+\_\+xgmi) override
+\begin{DoxyCompactList}\small\item\em Initialize a User Mode SDMA Queue object. Input parameters specify properties of queue being created. \end{DoxyCompactList}\item 
+virtual \mbox{\hyperlink{group__status_gad755322e7ff95456520e8abdbe90d225}{hsa\+\_\+status\+\_\+t}} \mbox{\hyperlink{classrocr_1_1AMD_1_1BlitSdma_a97a4457fe681bdbb6c71a2afa2f551dc}{Destroy}} (const \mbox{\hyperlink{classrocr_1_1core_1_1Agent}{core\+::\+Agent}} \&agent) override
+\begin{DoxyCompactList}\small\item\em Marks the queue object as invalid and uncouples its link with the underlying compute device\textquotesingle{}s control block. Use of queue object once it has been release is illegal and any behavior is indeterminate. \end{DoxyCompactList}\item 
+virtual \mbox{\hyperlink{group__status_gad755322e7ff95456520e8abdbe90d225}{hsa\+\_\+status\+\_\+t}} \mbox{\hyperlink{classrocr_1_1AMD_1_1BlitSdma_a9690cbe59a296be1b7a93b7bc0462979}{Submit\+Linear\+Copy\+Command}} (void $\ast$dst, const void $\ast$src, size\+\_\+t size) override
+\begin{DoxyCompactList}\small\item\em Submit a linear copy command to the queue buffer. \end{DoxyCompactList}\item 
+virtual \mbox{\hyperlink{group__status_gad755322e7ff95456520e8abdbe90d225}{hsa\+\_\+status\+\_\+t}} \mbox{\hyperlink{classrocr_1_1AMD_1_1BlitSdma_ad43be8123cacdbfd90e283ae9fbbbc8b}{Submit\+Linear\+Copy\+Command}} (void $\ast$dst, const void $\ast$src, size\+\_\+t size, std\+::vector$<$ \mbox{\hyperlink{classrocr_1_1core_1_1Signal}{core\+::\+Signal}} $\ast$ $>$ \&dep\+\_\+signals, \mbox{\hyperlink{classrocr_1_1core_1_1Signal}{core\+::\+Signal}} \&out\+\_\+signal) override
+\begin{DoxyCompactList}\small\item\em Submit a linear copy command to the the underlying compute device\textquotesingle{}s control block. The call is non blocking. The memory transfer will start after all dependent signals are satisfied. After the transfer is completed, the out signal will be decremented. \end{DoxyCompactList}\item 
+virtual \mbox{\hyperlink{group__status_gad755322e7ff95456520e8abdbe90d225}{hsa\+\_\+status\+\_\+t}} \mbox{\hyperlink{classrocr_1_1AMD_1_1BlitSdma_a1e37affff838b3752e5f06d8d25cdc69}{Submit\+Copy\+Rect\+Command}} (const \mbox{\hyperlink{inc_2hsa__ext__amd_8h_ad8d9a26d5d34727e5c8d648d0ad6ea38}{hsa\+\_\+pitched\+\_\+ptr\+\_\+t}} $\ast$dst, const \mbox{\hyperlink{group__common_gae460d1df8c508a9c889d4550ea4eea30}{hsa\+\_\+dim3\+\_\+t}} $\ast$dst\+\_\+offset, const \mbox{\hyperlink{inc_2hsa__ext__amd_8h_ad8d9a26d5d34727e5c8d648d0ad6ea38}{hsa\+\_\+pitched\+\_\+ptr\+\_\+t}} $\ast$src, const \mbox{\hyperlink{group__common_gae460d1df8c508a9c889d4550ea4eea30}{hsa\+\_\+dim3\+\_\+t}} $\ast$src\+\_\+offset, const \mbox{\hyperlink{group__common_gae460d1df8c508a9c889d4550ea4eea30}{hsa\+\_\+dim3\+\_\+t}} $\ast$range, std\+::vector$<$ \mbox{\hyperlink{classrocr_1_1core_1_1Signal}{core\+::\+Signal}} $\ast$ $>$ \&dep\+\_\+signals, \mbox{\hyperlink{classrocr_1_1core_1_1Signal}{core\+::\+Signal}} \&out\+\_\+signal) override
+\item 
+virtual \mbox{\hyperlink{group__status_gad755322e7ff95456520e8abdbe90d225}{hsa\+\_\+status\+\_\+t}} \mbox{\hyperlink{classrocr_1_1AMD_1_1BlitSdma_a7a64bdca7bce149a20ec39fd9c0f14da}{Submit\+Linear\+Fill\+Command}} (void $\ast$ptr, uint32\+\_\+t value, size\+\_\+t count) override
+\begin{DoxyCompactList}\small\item\em Submit a linear fill command to the queue buffer. \end{DoxyCompactList}\item 
+virtual \mbox{\hyperlink{group__status_gad755322e7ff95456520e8abdbe90d225}{hsa\+\_\+status\+\_\+t}} \mbox{\hyperlink{classrocr_1_1AMD_1_1BlitSdma_a0da9208dc13c1dbd65ebff3e9ff26344}{Enable\+Profiling}} (bool enable) override
+\begin{DoxyCompactList}\small\item\em Enable profiling of the asynchronous copy command. The timestamp of each copy request will be stored in the completion signal structure. \end{DoxyCompactList}\item 
+virtual uint64\+\_\+t \mbox{\hyperlink{classrocr_1_1AMD_1_1BlitSdma_a5fbbc0b083bd80310a41e6ab4ce2ccef}{Pending\+Bytes}} () override
+\end{DoxyCompactItemize}
+\doxysubsection*{Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+char $\ast$ \mbox{\hyperlink{classrocr_1_1AMD_1_1BlitSdma_a42c9f15d6c042821190932fde15cda92}{Acquire\+Write\+Address}} (uint32\+\_\+t cmd\+\_\+size, Ring\+Index\+Ty \&curr\+\_\+index)
+\begin{DoxyCompactList}\small\item\em Acquires the address into queue buffer where a new command packet of specified size could be written. The address that is returned is guaranteed to be unique even in a multi-\/threaded access scenario. This function is guaranteed to return a pointer for writing data into the queue buffer. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classrocr_1_1AMD_1_1BlitSdma_ac181b3e4b83cef4f580424c2a89f4c05}{Update\+Write\+And\+Doorbell\+Register}} (Ring\+Index\+Ty curr\+\_\+index, Ring\+Index\+Ty new\+\_\+index)
+\item 
+void \mbox{\hyperlink{classrocr_1_1AMD_1_1BlitSdma_aba1a4c73e16ae7a6b25b5c02760d403c}{Release\+Write\+Address}} (Ring\+Index\+Ty curr\+\_\+index, uint32\+\_\+t cmd\+\_\+size)
+\begin{DoxyCompactList}\small\item\em Updates the Write Register of compute device to the end of SDMA packet written into queue buffer. The update to Write Register will be safe under multi-\/threaded usage scenario. Furthermore, updates to Write Register are blocking until all prior updates are completed i.\+e. if two threads T1 \& T2 were to call release, then updates by T2 will block until T1 has completed its update (assumes T1 acquired the write address first). \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classrocr_1_1AMD_1_1BlitSdma_a92fa4c687f75bfc42fc2423960adb212}{Pad\+Ring\+To\+End}} (Ring\+Index\+Ty curr\+\_\+index)
+\begin{DoxyCompactList}\small\item\em Writes NO-\/\+OP words into queue buffer in case writing a command causes the queue buffer to wrap. \end{DoxyCompactList}\item 
+uint32\+\_\+t \mbox{\hyperlink{classrocr_1_1AMD_1_1BlitSdma_a5ff03ae7bde699b792531f4532324ea4}{Wrap\+Into\+Ring}} (Ring\+Index\+Ty index)
+\item 
+bool \mbox{\hyperlink{classrocr_1_1AMD_1_1BlitSdma_a3b69ba5a49af8cf015bb595fdf3f4dc7}{Can\+Write\+Upto}} (Ring\+Index\+Ty upto\+\_\+index)
+\item 
+void \mbox{\hyperlink{classrocr_1_1AMD_1_1BlitSdma_a0da5351554a58540c2fa715193b5f9f0}{Build\+Fence\+Command}} (char $\ast$fence\+\_\+command\+\_\+addr, uint32\+\_\+t $\ast$fence, uint32\+\_\+t fence\+\_\+value)
+\begin{DoxyCompactList}\small\item\em Build fence command. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classrocr_1_1AMD_1_1BlitSdma_a92f1cbaa4f798f685deb628521f16ce3}{Build\+Hdp\+Flush\+Command}} (char $\ast$cmd\+\_\+addr)
+\begin{DoxyCompactList}\small\item\em Build Hdp Flush command. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classrocr_1_1AMD_1_1BlitSdma_a8d7124a99180f96b5bd0cc2fde3221d0}{Build\+Copy\+Command}} (char $\ast$cmd\+\_\+addr, uint32\+\_\+t num\+\_\+copy\+\_\+command, void $\ast$dst, const void $\ast$src, size\+\_\+t size)
+\item 
+void \mbox{\hyperlink{classrocr_1_1AMD_1_1BlitSdma_a1d035cbba126d540d23d62d91a498ac1}{Build\+Copy\+Rect\+Command}} (const std\+::function$<$ void $\ast$(size\+\_\+t)$>$ \&append, const \mbox{\hyperlink{inc_2hsa__ext__amd_8h_ad8d9a26d5d34727e5c8d648d0ad6ea38}{hsa\+\_\+pitched\+\_\+ptr\+\_\+t}} $\ast$dst, const \mbox{\hyperlink{group__common_gae460d1df8c508a9c889d4550ea4eea30}{hsa\+\_\+dim3\+\_\+t}} $\ast$dst\+\_\+offset, const \mbox{\hyperlink{inc_2hsa__ext__amd_8h_ad8d9a26d5d34727e5c8d648d0ad6ea38}{hsa\+\_\+pitched\+\_\+ptr\+\_\+t}} $\ast$src, const \mbox{\hyperlink{group__common_gae460d1df8c508a9c889d4550ea4eea30}{hsa\+\_\+dim3\+\_\+t}} $\ast$src\+\_\+offset, const \mbox{\hyperlink{group__common_gae460d1df8c508a9c889d4550ea4eea30}{hsa\+\_\+dim3\+\_\+t}} $\ast$range)
+\item 
+void \mbox{\hyperlink{classrocr_1_1AMD_1_1BlitSdma_af4067e8dd047b2d219dacd5820fdaf79}{Build\+Fill\+Command}} (char $\ast$cmd\+\_\+addr, uint32\+\_\+t num\+\_\+fill\+\_\+command, void $\ast$ptr, uint32\+\_\+t value, size\+\_\+t count)
+\item 
+void \mbox{\hyperlink{classrocr_1_1AMD_1_1BlitSdma_a174b67dcf05e418027c84a526caa4278}{Build\+Poll\+Command}} (char $\ast$cmd\+\_\+addr, void $\ast$addr, uint32\+\_\+t reference)
+\item 
+void \mbox{\hyperlink{classrocr_1_1AMD_1_1BlitSdma_ae393e1e374bfe950028a8be52010d2cd}{Build\+Atomic\+Decrement\+Command}} (char $\ast$cmd\+\_\+addr, void $\ast$addr)
+\item 
+void \mbox{\hyperlink{classrocr_1_1AMD_1_1BlitSdma_aa7e83debe595fabbd674ea0b21beb8f7}{Build\+Get\+Global\+Timestamp\+Command}} (char $\ast$cmd\+\_\+addr, void $\ast$write\+\_\+address)
+\item 
+void \mbox{\hyperlink{classrocr_1_1AMD_1_1BlitSdma_a1706c610c4133343c27795318efe3085}{Build\+Trap\+Command}} (char $\ast$cmd\+\_\+addr, uint32\+\_\+t event\+\_\+id)
+\item 
+void \mbox{\hyperlink{classrocr_1_1AMD_1_1BlitSdma_a4dd210fda215963e7c18422b7f56ec8e}{Build\+GCRCommand}} (char $\ast$cmd\+\_\+addr, bool invalidate)
+\item 
+\mbox{\hyperlink{group__status_gad755322e7ff95456520e8abdbe90d225}{hsa\+\_\+status\+\_\+t}} \mbox{\hyperlink{classrocr_1_1AMD_1_1BlitSdma_a76b4706c6bb70f6bb7b2afee88540baf}{Submit\+Command}} (const void $\ast$cmds, size\+\_\+t cmd\+\_\+size, uint64\+\_\+t size, const std\+::vector$<$ \mbox{\hyperlink{classrocr_1_1core_1_1Signal}{core\+::\+Signal}} $\ast$ $>$ \&dep\+\_\+signals, \mbox{\hyperlink{classrocr_1_1core_1_1Signal}{core\+::\+Signal}} \&out\+\_\+signal)
+\item 
+\mbox{\hyperlink{group__status_gad755322e7ff95456520e8abdbe90d225}{hsa\+\_\+status\+\_\+t}} \mbox{\hyperlink{classrocr_1_1AMD_1_1BlitSdma_a18330d99c8f29bd3d662a34881b2cc63}{Submit\+Blocking\+Command}} (const void $\ast$cmds, size\+\_\+t cmd\+\_\+size, uint64\+\_\+t size)
+\end{DoxyCompactItemize}
+\doxysubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classrocr_1_1AMD_1_1GpuAgent}{Gpu\+Agent}} $\ast$ \mbox{\hyperlink{classrocr_1_1AMD_1_1BlitSdma_a4be493d9d605a64651a69c7067843cce}{agent\+\_\+}}
+\item 
+char $\ast$ \mbox{\hyperlink{classrocr_1_1AMD_1_1BlitSdma_af11dd8d17a629442dd2ac410f5ea011a}{queue\+\_\+start\+\_\+addr\+\_\+}}
+\begin{DoxyCompactList}\small\item\em Base address of the Queue buffer at construction time. \end{DoxyCompactList}\item 
+std\+::mutex \mbox{\hyperlink{classrocr_1_1AMD_1_1BlitSdma_a3ff311f1fb680925114015f74f03c8e9}{reservation\+\_\+lock\+\_\+}}
+\item 
+uint64\+\_\+t \mbox{\hyperlink{classrocr_1_1AMD_1_1BlitSdma_a354a70e9c982640de6b164bde6256d2b}{bytes\+\_\+queued\+\_\+}}
+\item 
+\begin{tabbing}
+xx\=xx\=xx\=xx\=xx\=xx\=xx\=xx\=xx\=\kill
+class \{\\
+\>std::vector$<$ uint64\_t $>$ \mbox{\hyperlink{classrocr_1_1AMD_1_1BlitSdma_a4030d4b5bc35c08c8ea0f4d943bc7d08}{data\_}}\\
+\} \mbox{\hyperlink{classrocr_1_1AMD_1_1BlitSdma_affc54d835f73fb6c8944cc99d91a93c0}{bytes\_written\_}}\\
+
+\end{tabbing}\item 
+\mbox{\hyperlink{namespacerocr_1_1core_a6e717c0b3cb9239a37ef236c53b52796}{core\+::unique\+\_\+signal\+\_\+ptr}} \mbox{\hyperlink{classrocr_1_1AMD_1_1BlitSdma_aa326ce8cb54feac1a3b0d2fec77bf8b7}{signals\+\_\+}} \mbox{[}2\mbox{]}
+\item 
+\mbox{\hyperlink{classrocr_1_1KernelMutex}{Kernel\+Mutex}} \mbox{\hyperlink{classrocr_1_1AMD_1_1BlitSdma_ae40d486a68e1b9ad8d62886aed77a31f}{lock\+\_\+}}
+\item 
+bool \mbox{\hyperlink{classrocr_1_1AMD_1_1BlitSdma_a290a6f52bdae16e4a96be35626189fb8}{parity\+\_\+}}
+\item 
+Hsa\+Queue\+Resource \mbox{\hyperlink{classrocr_1_1AMD_1_1BlitSdma_a30c8d52b2f3b56302efa5bc667132d1f}{queue\+\_\+resource\+\_\+}}
+\item 
+Ring\+Index\+Ty \mbox{\hyperlink{classrocr_1_1AMD_1_1BlitSdma_aae2960d09693db358992fcd243b2e45d}{cached\+\_\+reserve\+\_\+index\+\_\+}}
+\item 
+Ring\+Index\+Ty \mbox{\hyperlink{classrocr_1_1AMD_1_1BlitSdma_ad9b98764dccfdcbf70f399cb4162b3d6}{cached\+\_\+commit\+\_\+index\+\_\+}}
+\item 
+size\+\_\+t \mbox{\hyperlink{classrocr_1_1AMD_1_1BlitSdma_a97e9eae15e0757c5109509786bbbdd8a}{max\+\_\+single\+\_\+linear\+\_\+copy\+\_\+size\+\_\+}}
+\item 
+size\+\_\+t \mbox{\hyperlink{classrocr_1_1AMD_1_1BlitSdma_a70544598fbe5daa6b07359663f6d1fa7}{max\+\_\+total\+\_\+linear\+\_\+copy\+\_\+size\+\_\+}}
+\begin{DoxyCompactList}\small\item\em Max total copy size supported by the queue. \end{DoxyCompactList}\item 
+size\+\_\+t \mbox{\hyperlink{classrocr_1_1AMD_1_1BlitSdma_a6af9ad3bcd745c53c1b4e1320caf4cbb}{max\+\_\+single\+\_\+fill\+\_\+size\+\_\+}}
+\begin{DoxyCompactList}\small\item\em Max count of uint32\+\_\+t of a single fill command packet. \end{DoxyCompactList}\item 
+size\+\_\+t \mbox{\hyperlink{classrocr_1_1AMD_1_1BlitSdma_a49c44e06efff093602b856eab16a89f3}{max\+\_\+total\+\_\+fill\+\_\+size\+\_\+}}
+\begin{DoxyCompactList}\small\item\em Max total fill count supported by the queue. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classrocr_1_1AMD_1_1BlitSdma_a96c1987acd70c201810d6e898f444be5}{platform\+\_\+atomic\+\_\+support\+\_\+}}
+\begin{DoxyCompactList}\small\item\em True if platform atomic is supported. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classrocr_1_1AMD_1_1BlitSdma_a8ff9fd65597dc6d73f24a8770d222a71}{hdp\+\_\+flush\+\_\+support\+\_\+}}
+\begin{DoxyCompactList}\small\item\em True if s\+DMA supports HDP flush. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Static Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+static const uint32\+\_\+t \mbox{\hyperlink{classrocr_1_1AMD_1_1BlitSdma_a506f55e6c159d393f541abfc5640ebeb}{linear\+\_\+copy\+\_\+command\+\_\+size\+\_\+}} = sizeof(\mbox{\hyperlink{namespacerocr_1_1AMD_a4009cd6a6987d35d9ecd2b71ed4ab657}{SDMA\+\_\+\+PKT\+\_\+\+COPY\+\_\+\+LINEAR}})
+\item 
+static const uint32\+\_\+t \mbox{\hyperlink{classrocr_1_1AMD_1_1BlitSdma_aa44c499a1d685eb5b84ce49acab820a1}{fill\+\_\+command\+\_\+size\+\_\+}} = sizeof(\mbox{\hyperlink{namespacerocr_1_1AMD_abbaf537f4103cf134a983e382b2a0f38}{SDMA\+\_\+\+PKT\+\_\+\+CONSTANT\+\_\+\+FILL}})
+\item 
+static const uint32\+\_\+t \mbox{\hyperlink{classrocr_1_1AMD_1_1BlitSdma_ac3062bdd372e06dc2da88aefb61dbdfa}{fence\+\_\+command\+\_\+size\+\_\+}} = sizeof(\mbox{\hyperlink{namespacerocr_1_1AMD_ac1d56bfe68590d699342cdbb409e06cd}{SDMA\+\_\+\+PKT\+\_\+\+FENCE}})
+\item 
+static const uint32\+\_\+t \mbox{\hyperlink{classrocr_1_1AMD_1_1BlitSdma_a40a78e1eae78c3a571983a6b5ef19b2e}{poll\+\_\+command\+\_\+size\+\_\+}} = sizeof(\mbox{\hyperlink{namespacerocr_1_1AMD_ae499fe17ffe680f17fa1ea4ec03f1f26}{SDMA\+\_\+\+PKT\+\_\+\+POLL\+\_\+\+REGMEM}})
+\item 
+static const uint32\+\_\+t \mbox{\hyperlink{classrocr_1_1AMD_1_1BlitSdma_ab0c5ecaa03a11310e020df8d7495bb99}{flush\+\_\+command\+\_\+size\+\_\+}} = sizeof(\mbox{\hyperlink{namespacerocr_1_1AMD_ae499fe17ffe680f17fa1ea4ec03f1f26}{SDMA\+\_\+\+PKT\+\_\+\+POLL\+\_\+\+REGMEM}})
+\item 
+static const uint32\+\_\+t \mbox{\hyperlink{classrocr_1_1AMD_1_1BlitSdma_ae50e3343cfd85b2ce84e21c9211782d8}{atomic\+\_\+command\+\_\+size\+\_\+}} = sizeof(\mbox{\hyperlink{namespacerocr_1_1AMD_a01854aeb637817faffa3eb5652f4ebb9}{SDMA\+\_\+\+PKT\+\_\+\+ATOMIC}})
+\item 
+static const uint32\+\_\+t \mbox{\hyperlink{classrocr_1_1AMD_1_1BlitSdma_a952c7fc9b0be87b5068dc628da651b86}{timestamp\+\_\+command\+\_\+size\+\_\+}} = sizeof(\mbox{\hyperlink{namespacerocr_1_1AMD_aebe33e20a952bb995379a6fc47e16dba}{SDMA\+\_\+\+PKT\+\_\+\+TIMESTAMP}})
+\item 
+static const uint32\+\_\+t \mbox{\hyperlink{classrocr_1_1AMD_1_1BlitSdma_a286ee4c2862e467c092a0e901eaf35c7}{trap\+\_\+command\+\_\+size\+\_\+}} = sizeof(\mbox{\hyperlink{namespacerocr_1_1AMD_abb50473366b126865356c111e1103aae}{SDMA\+\_\+\+PKT\+\_\+\+TRAP}})
+\item 
+static const uint32\+\_\+t \mbox{\hyperlink{classrocr_1_1AMD_1_1BlitSdma_a71edca33cf4620c6f288a7a16e798e3e}{gcr\+\_\+command\+\_\+size\+\_\+}} = sizeof(\mbox{\hyperlink{namespacerocr_1_1AMD_a7ebe80605df8c4dd771c1265f3efb234}{SDMA\+\_\+\+PKT\+\_\+\+GCR}})
+\end{DoxyCompactItemize}
+\doxysubsection*{Additional Inherited Members}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classrocr_1_1AMD_1_1BlitSdma_a6f67c0dd969c548ded8cc514b6f55458}\label{classrocr_1_1AMD_1_1BlitSdma_a6f67c0dd969c548ded8cc514b6f55458}} 
+\index{rocr::AMD::BlitSdma$<$ RingIndexTy, HwIndexMonotonic, SizeToCountOffset, useGCR $>$@{rocr::AMD::BlitSdma$<$ RingIndexTy, HwIndexMonotonic, SizeToCountOffset, useGCR $>$}!BlitSdma@{BlitSdma}}
+\index{BlitSdma@{BlitSdma}!rocr::AMD::BlitSdma$<$ RingIndexTy, HwIndexMonotonic, SizeToCountOffset, useGCR $>$@{rocr::AMD::BlitSdma$<$ RingIndexTy, HwIndexMonotonic, SizeToCountOffset, useGCR $>$}}
+\doxysubsubsection{\texorpdfstring{BlitSdma()}{BlitSdma()}}
+{\footnotesize\ttfamily template$<$typename Ring\+Index\+Ty , bool Hw\+Index\+Monotonic, int Size\+To\+Count\+Offset, bool use\+GCR$>$ \\
+\mbox{\hyperlink{classrocr_1_1AMD_1_1BlitSdma}{rocr\+::\+AMD\+::\+Blit\+Sdma}}$<$ Ring\+Index\+Ty, Hw\+Index\+Monotonic, Size\+To\+Count\+Offset, use\+GCR $>$\+::\mbox{\hyperlink{classrocr_1_1AMD_1_1BlitSdma}{Blit\+Sdma}}}
+
+\mbox{\Hypertarget{classrocr_1_1AMD_1_1BlitSdma_a0a4d5e60720bc0ccdcdaa16eb7d29501}\label{classrocr_1_1AMD_1_1BlitSdma_a0a4d5e60720bc0ccdcdaa16eb7d29501}} 
+\index{rocr::AMD::BlitSdma$<$ RingIndexTy, HwIndexMonotonic, SizeToCountOffset, useGCR $>$@{rocr::AMD::BlitSdma$<$ RingIndexTy, HwIndexMonotonic, SizeToCountOffset, useGCR $>$}!````~BlitSdma@{$\sim$BlitSdma}}
+\index{````~BlitSdma@{$\sim$BlitSdma}!rocr::AMD::BlitSdma$<$ RingIndexTy, HwIndexMonotonic, SizeToCountOffset, useGCR $>$@{rocr::AMD::BlitSdma$<$ RingIndexTy, HwIndexMonotonic, SizeToCountOffset, useGCR $>$}}
+\doxysubsubsection{\texorpdfstring{$\sim$BlitSdma()}{~BlitSdma()}}
+{\footnotesize\ttfamily template$<$typename Ring\+Index\+Ty , bool Hw\+Index\+Monotonic, int Size\+To\+Count\+Offset, bool use\+GCR$>$ \\
+\mbox{\hyperlink{classrocr_1_1AMD_1_1BlitSdma}{rocr\+::\+AMD\+::\+Blit\+Sdma}}$<$ Ring\+Index\+Ty, Hw\+Index\+Monotonic, Size\+To\+Count\+Offset, use\+GCR $>$\+::$\sim$\mbox{\hyperlink{classrocr_1_1AMD_1_1BlitSdma}{Blit\+Sdma}}\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classrocr_1_1AMD_1_1BlitSdma_a42c9f15d6c042821190932fde15cda92}\label{classrocr_1_1AMD_1_1BlitSdma_a42c9f15d6c042821190932fde15cda92}} 
+\index{rocr::AMD::BlitSdma$<$ RingIndexTy, HwIndexMonotonic, SizeToCountOffset, useGCR $>$@{rocr::AMD::BlitSdma$<$ RingIndexTy, HwIndexMonotonic, SizeToCountOffset, useGCR $>$}!AcquireWriteAddress@{AcquireWriteAddress}}
+\index{AcquireWriteAddress@{AcquireWriteAddress}!rocr::AMD::BlitSdma$<$ RingIndexTy, HwIndexMonotonic, SizeToCountOffset, useGCR $>$@{rocr::AMD::BlitSdma$<$ RingIndexTy, HwIndexMonotonic, SizeToCountOffset, useGCR $>$}}
+\doxysubsubsection{\texorpdfstring{AcquireWriteAddress()}{AcquireWriteAddress()}}
+{\footnotesize\ttfamily template$<$typename Ring\+Index\+Ty , bool Hw\+Index\+Monotonic, int Size\+To\+Count\+Offset, bool use\+GCR$>$ \\
+char $\ast$ \mbox{\hyperlink{classrocr_1_1AMD_1_1BlitSdma}{rocr\+::\+AMD\+::\+Blit\+Sdma}}$<$ Ring\+Index\+Ty, Hw\+Index\+Monotonic, Size\+To\+Count\+Offset, use\+GCR $>$\+::Acquire\+Write\+Address (\begin{DoxyParamCaption}\item[{uint32\+\_\+t}]{cmd\+\_\+size,  }\item[{Ring\+Index\+Ty \&}]{curr\+\_\+index }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Acquires the address into queue buffer where a new command packet of specified size could be written. The address that is returned is guaranteed to be unique even in a multi-\/threaded access scenario. This function is guaranteed to return a pointer for writing data into the queue buffer. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em cmd\+\_\+size} & Command packet size in bytes.\\
+\hline
+{\em curr\+\_\+index} & (output) Index to pass to Release\+Write\+Address.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+pointer into the queue buffer where a PM4 packet of specified size could be written. NULL if input size is greater than the size of queue buffer. 
+\end{DoxyReturn}
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classrocr_1_1AMD_1_1BlitSdma_a42c9f15d6c042821190932fde15cda92_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classrocr_1_1AMD_1_1BlitSdma_ae393e1e374bfe950028a8be52010d2cd}\label{classrocr_1_1AMD_1_1BlitSdma_ae393e1e374bfe950028a8be52010d2cd}} 
+\index{rocr::AMD::BlitSdma$<$ RingIndexTy, HwIndexMonotonic, SizeToCountOffset, useGCR $>$@{rocr::AMD::BlitSdma$<$ RingIndexTy, HwIndexMonotonic, SizeToCountOffset, useGCR $>$}!BuildAtomicDecrementCommand@{BuildAtomicDecrementCommand}}
+\index{BuildAtomicDecrementCommand@{BuildAtomicDecrementCommand}!rocr::AMD::BlitSdma$<$ RingIndexTy, HwIndexMonotonic, SizeToCountOffset, useGCR $>$@{rocr::AMD::BlitSdma$<$ RingIndexTy, HwIndexMonotonic, SizeToCountOffset, useGCR $>$}}
+\doxysubsubsection{\texorpdfstring{BuildAtomicDecrementCommand()}{BuildAtomicDecrementCommand()}}
+{\footnotesize\ttfamily template$<$typename Ring\+Index\+Ty , bool Hw\+Index\+Monotonic, int Size\+To\+Count\+Offset, bool use\+GCR$>$ \\
+void \mbox{\hyperlink{classrocr_1_1AMD_1_1BlitSdma}{rocr\+::\+AMD\+::\+Blit\+Sdma}}$<$ Ring\+Index\+Ty, Hw\+Index\+Monotonic, Size\+To\+Count\+Offset, use\+GCR $>$\+::Build\+Atomic\+Decrement\+Command (\begin{DoxyParamCaption}\item[{char $\ast$}]{cmd\+\_\+addr,  }\item[{void $\ast$}]{addr }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classrocr_1_1AMD_1_1BlitSdma_ae393e1e374bfe950028a8be52010d2cd_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classrocr_1_1AMD_1_1BlitSdma_a8d7124a99180f96b5bd0cc2fde3221d0}\label{classrocr_1_1AMD_1_1BlitSdma_a8d7124a99180f96b5bd0cc2fde3221d0}} 
+\index{rocr::AMD::BlitSdma$<$ RingIndexTy, HwIndexMonotonic, SizeToCountOffset, useGCR $>$@{rocr::AMD::BlitSdma$<$ RingIndexTy, HwIndexMonotonic, SizeToCountOffset, useGCR $>$}!BuildCopyCommand@{BuildCopyCommand}}
+\index{BuildCopyCommand@{BuildCopyCommand}!rocr::AMD::BlitSdma$<$ RingIndexTy, HwIndexMonotonic, SizeToCountOffset, useGCR $>$@{rocr::AMD::BlitSdma$<$ RingIndexTy, HwIndexMonotonic, SizeToCountOffset, useGCR $>$}}
+\doxysubsubsection{\texorpdfstring{BuildCopyCommand()}{BuildCopyCommand()}}
+{\footnotesize\ttfamily template$<$typename Ring\+Index\+Ty , bool Hw\+Index\+Monotonic, int Size\+To\+Count\+Offset, bool use\+GCR$>$ \\
+void \mbox{\hyperlink{classrocr_1_1AMD_1_1BlitSdma}{rocr\+::\+AMD\+::\+Blit\+Sdma}}$<$ Ring\+Index\+Ty, Hw\+Index\+Monotonic, Size\+To\+Count\+Offset, use\+GCR $>$\+::Build\+Copy\+Command (\begin{DoxyParamCaption}\item[{char $\ast$}]{cmd\+\_\+addr,  }\item[{uint32\+\_\+t}]{num\+\_\+copy\+\_\+command,  }\item[{void $\ast$}]{dst,  }\item[{const void $\ast$}]{src,  }\item[{size\+\_\+t}]{size }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=336pt]{classrocr_1_1AMD_1_1BlitSdma_a8d7124a99180f96b5bd0cc2fde3221d0_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classrocr_1_1AMD_1_1BlitSdma_a1d035cbba126d540d23d62d91a498ac1}\label{classrocr_1_1AMD_1_1BlitSdma_a1d035cbba126d540d23d62d91a498ac1}} 
+\index{rocr::AMD::BlitSdma$<$ RingIndexTy, HwIndexMonotonic, SizeToCountOffset, useGCR $>$@{rocr::AMD::BlitSdma$<$ RingIndexTy, HwIndexMonotonic, SizeToCountOffset, useGCR $>$}!BuildCopyRectCommand@{BuildCopyRectCommand}}
+\index{BuildCopyRectCommand@{BuildCopyRectCommand}!rocr::AMD::BlitSdma$<$ RingIndexTy, HwIndexMonotonic, SizeToCountOffset, useGCR $>$@{rocr::AMD::BlitSdma$<$ RingIndexTy, HwIndexMonotonic, SizeToCountOffset, useGCR $>$}}
+\doxysubsubsection{\texorpdfstring{BuildCopyRectCommand()}{BuildCopyRectCommand()}}
+{\footnotesize\ttfamily template$<$typename Ring\+Index\+Ty , bool Hw\+Index\+Monotonic, int Size\+To\+Count\+Offset, bool use\+GCR$>$ \\
+void \mbox{\hyperlink{classrocr_1_1AMD_1_1BlitSdma}{rocr\+::\+AMD\+::\+Blit\+Sdma}}$<$ Ring\+Index\+Ty, Hw\+Index\+Monotonic, Size\+To\+Count\+Offset, use\+GCR $>$\+::Build\+Copy\+Rect\+Command (\begin{DoxyParamCaption}\item[{const std\+::function$<$ void $\ast$(size\+\_\+t)$>$ \&}]{append,  }\item[{const \mbox{\hyperlink{inc_2hsa__ext__amd_8h_ad8d9a26d5d34727e5c8d648d0ad6ea38}{hsa\+\_\+pitched\+\_\+ptr\+\_\+t}} $\ast$}]{dst,  }\item[{const \mbox{\hyperlink{group__common_gae460d1df8c508a9c889d4550ea4eea30}{hsa\+\_\+dim3\+\_\+t}} $\ast$}]{dst\+\_\+offset,  }\item[{const \mbox{\hyperlink{inc_2hsa__ext__amd_8h_ad8d9a26d5d34727e5c8d648d0ad6ea38}{hsa\+\_\+pitched\+\_\+ptr\+\_\+t}} $\ast$}]{src,  }\item[{const \mbox{\hyperlink{group__common_gae460d1df8c508a9c889d4550ea4eea30}{hsa\+\_\+dim3\+\_\+t}} $\ast$}]{src\+\_\+offset,  }\item[{const \mbox{\hyperlink{group__common_gae460d1df8c508a9c889d4550ea4eea30}{hsa\+\_\+dim3\+\_\+t}} $\ast$}]{range }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=305pt]{classrocr_1_1AMD_1_1BlitSdma_a1d035cbba126d540d23d62d91a498ac1_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classrocr_1_1AMD_1_1BlitSdma_a0da5351554a58540c2fa715193b5f9f0}\label{classrocr_1_1AMD_1_1BlitSdma_a0da5351554a58540c2fa715193b5f9f0}} 
+\index{rocr::AMD::BlitSdma$<$ RingIndexTy, HwIndexMonotonic, SizeToCountOffset, useGCR $>$@{rocr::AMD::BlitSdma$<$ RingIndexTy, HwIndexMonotonic, SizeToCountOffset, useGCR $>$}!BuildFenceCommand@{BuildFenceCommand}}
+\index{BuildFenceCommand@{BuildFenceCommand}!rocr::AMD::BlitSdma$<$ RingIndexTy, HwIndexMonotonic, SizeToCountOffset, useGCR $>$@{rocr::AMD::BlitSdma$<$ RingIndexTy, HwIndexMonotonic, SizeToCountOffset, useGCR $>$}}
+\doxysubsubsection{\texorpdfstring{BuildFenceCommand()}{BuildFenceCommand()}}
+{\footnotesize\ttfamily template$<$typename Ring\+Index\+Ty , bool Hw\+Index\+Monotonic, int Size\+To\+Count\+Offset, bool use\+GCR$>$ \\
+void \mbox{\hyperlink{classrocr_1_1AMD_1_1BlitSdma}{rocr\+::\+AMD\+::\+Blit\+Sdma}}$<$ Ring\+Index\+Ty, Hw\+Index\+Monotonic, Size\+To\+Count\+Offset, use\+GCR $>$\+::Build\+Fence\+Command (\begin{DoxyParamCaption}\item[{char $\ast$}]{fence\+\_\+command\+\_\+addr,  }\item[{uint32\+\_\+t $\ast$}]{fence,  }\item[{uint32\+\_\+t}]{fence\+\_\+value }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Build fence command. 
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=339pt]{classrocr_1_1AMD_1_1BlitSdma_a0da5351554a58540c2fa715193b5f9f0_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classrocr_1_1AMD_1_1BlitSdma_af4067e8dd047b2d219dacd5820fdaf79}\label{classrocr_1_1AMD_1_1BlitSdma_af4067e8dd047b2d219dacd5820fdaf79}} 
+\index{rocr::AMD::BlitSdma$<$ RingIndexTy, HwIndexMonotonic, SizeToCountOffset, useGCR $>$@{rocr::AMD::BlitSdma$<$ RingIndexTy, HwIndexMonotonic, SizeToCountOffset, useGCR $>$}!BuildFillCommand@{BuildFillCommand}}
+\index{BuildFillCommand@{BuildFillCommand}!rocr::AMD::BlitSdma$<$ RingIndexTy, HwIndexMonotonic, SizeToCountOffset, useGCR $>$@{rocr::AMD::BlitSdma$<$ RingIndexTy, HwIndexMonotonic, SizeToCountOffset, useGCR $>$}}
+\doxysubsubsection{\texorpdfstring{BuildFillCommand()}{BuildFillCommand()}}
+{\footnotesize\ttfamily template$<$typename Ring\+Index\+Ty , bool Hw\+Index\+Monotonic, int Size\+To\+Count\+Offset, bool use\+GCR$>$ \\
+void \mbox{\hyperlink{classrocr_1_1AMD_1_1BlitSdma}{rocr\+::\+AMD\+::\+Blit\+Sdma}}$<$ Ring\+Index\+Ty, Hw\+Index\+Monotonic, Size\+To\+Count\+Offset, use\+GCR $>$\+::Build\+Fill\+Command (\begin{DoxyParamCaption}\item[{char $\ast$}]{cmd\+\_\+addr,  }\item[{uint32\+\_\+t}]{num\+\_\+fill\+\_\+command,  }\item[{void $\ast$}]{ptr,  }\item[{uint32\+\_\+t}]{value,  }\item[{size\+\_\+t}]{count }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=330pt]{classrocr_1_1AMD_1_1BlitSdma_af4067e8dd047b2d219dacd5820fdaf79_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classrocr_1_1AMD_1_1BlitSdma_a4dd210fda215963e7c18422b7f56ec8e}\label{classrocr_1_1AMD_1_1BlitSdma_a4dd210fda215963e7c18422b7f56ec8e}} 
+\index{rocr::AMD::BlitSdma$<$ RingIndexTy, HwIndexMonotonic, SizeToCountOffset, useGCR $>$@{rocr::AMD::BlitSdma$<$ RingIndexTy, HwIndexMonotonic, SizeToCountOffset, useGCR $>$}!BuildGCRCommand@{BuildGCRCommand}}
+\index{BuildGCRCommand@{BuildGCRCommand}!rocr::AMD::BlitSdma$<$ RingIndexTy, HwIndexMonotonic, SizeToCountOffset, useGCR $>$@{rocr::AMD::BlitSdma$<$ RingIndexTy, HwIndexMonotonic, SizeToCountOffset, useGCR $>$}}
+\doxysubsubsection{\texorpdfstring{BuildGCRCommand()}{BuildGCRCommand()}}
+{\footnotesize\ttfamily template$<$typename Ring\+Index\+Ty , bool Hw\+Index\+Monotonic, int Size\+To\+Count\+Offset, bool use\+GCR$>$ \\
+void \mbox{\hyperlink{classrocr_1_1AMD_1_1BlitSdma}{rocr\+::\+AMD\+::\+Blit\+Sdma}}$<$ Ring\+Index\+Ty, Hw\+Index\+Monotonic, Size\+To\+Count\+Offset, use\+GCR $>$\+::Build\+GCRCommand (\begin{DoxyParamCaption}\item[{char $\ast$}]{cmd\+\_\+addr,  }\item[{bool}]{invalidate }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classrocr_1_1AMD_1_1BlitSdma_aa7e83debe595fabbd674ea0b21beb8f7}\label{classrocr_1_1AMD_1_1BlitSdma_aa7e83debe595fabbd674ea0b21beb8f7}} 
+\index{rocr::AMD::BlitSdma$<$ RingIndexTy, HwIndexMonotonic, SizeToCountOffset, useGCR $>$@{rocr::AMD::BlitSdma$<$ RingIndexTy, HwIndexMonotonic, SizeToCountOffset, useGCR $>$}!BuildGetGlobalTimestampCommand@{BuildGetGlobalTimestampCommand}}
+\index{BuildGetGlobalTimestampCommand@{BuildGetGlobalTimestampCommand}!rocr::AMD::BlitSdma$<$ RingIndexTy, HwIndexMonotonic, SizeToCountOffset, useGCR $>$@{rocr::AMD::BlitSdma$<$ RingIndexTy, HwIndexMonotonic, SizeToCountOffset, useGCR $>$}}
+\doxysubsubsection{\texorpdfstring{BuildGetGlobalTimestampCommand()}{BuildGetGlobalTimestampCommand()}}
+{\footnotesize\ttfamily template$<$typename Ring\+Index\+Ty , bool Hw\+Index\+Monotonic, int Size\+To\+Count\+Offset, bool use\+GCR$>$ \\
+void \mbox{\hyperlink{classrocr_1_1AMD_1_1BlitSdma}{rocr\+::\+AMD\+::\+Blit\+Sdma}}$<$ Ring\+Index\+Ty, Hw\+Index\+Monotonic, Size\+To\+Count\+Offset, use\+GCR $>$\+::Build\+Get\+Global\+Timestamp\+Command (\begin{DoxyParamCaption}\item[{char $\ast$}]{cmd\+\_\+addr,  }\item[{void $\ast$}]{write\+\_\+address }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classrocr_1_1AMD_1_1BlitSdma_aa7e83debe595fabbd674ea0b21beb8f7_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classrocr_1_1AMD_1_1BlitSdma_a92f1cbaa4f798f685deb628521f16ce3}\label{classrocr_1_1AMD_1_1BlitSdma_a92f1cbaa4f798f685deb628521f16ce3}} 
+\index{rocr::AMD::BlitSdma$<$ RingIndexTy, HwIndexMonotonic, SizeToCountOffset, useGCR $>$@{rocr::AMD::BlitSdma$<$ RingIndexTy, HwIndexMonotonic, SizeToCountOffset, useGCR $>$}!BuildHdpFlushCommand@{BuildHdpFlushCommand}}
+\index{BuildHdpFlushCommand@{BuildHdpFlushCommand}!rocr::AMD::BlitSdma$<$ RingIndexTy, HwIndexMonotonic, SizeToCountOffset, useGCR $>$@{rocr::AMD::BlitSdma$<$ RingIndexTy, HwIndexMonotonic, SizeToCountOffset, useGCR $>$}}
+\doxysubsubsection{\texorpdfstring{BuildHdpFlushCommand()}{BuildHdpFlushCommand()}}
+{\footnotesize\ttfamily template$<$typename Ring\+Index\+Ty , bool Hw\+Index\+Monotonic, int Size\+To\+Count\+Offset, bool use\+GCR$>$ \\
+void \mbox{\hyperlink{classrocr_1_1AMD_1_1BlitSdma}{rocr\+::\+AMD\+::\+Blit\+Sdma}}$<$ Ring\+Index\+Ty, Hw\+Index\+Monotonic, Size\+To\+Count\+Offset, use\+GCR $>$\+::Build\+Hdp\+Flush\+Command (\begin{DoxyParamCaption}\item[{char $\ast$}]{cmd\+\_\+addr }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Build Hdp Flush command. 
+
+\mbox{\Hypertarget{classrocr_1_1AMD_1_1BlitSdma_a174b67dcf05e418027c84a526caa4278}\label{classrocr_1_1AMD_1_1BlitSdma_a174b67dcf05e418027c84a526caa4278}} 
+\index{rocr::AMD::BlitSdma$<$ RingIndexTy, HwIndexMonotonic, SizeToCountOffset, useGCR $>$@{rocr::AMD::BlitSdma$<$ RingIndexTy, HwIndexMonotonic, SizeToCountOffset, useGCR $>$}!BuildPollCommand@{BuildPollCommand}}
+\index{BuildPollCommand@{BuildPollCommand}!rocr::AMD::BlitSdma$<$ RingIndexTy, HwIndexMonotonic, SizeToCountOffset, useGCR $>$@{rocr::AMD::BlitSdma$<$ RingIndexTy, HwIndexMonotonic, SizeToCountOffset, useGCR $>$}}
+\doxysubsubsection{\texorpdfstring{BuildPollCommand()}{BuildPollCommand()}}
+{\footnotesize\ttfamily template$<$typename Ring\+Index\+Ty , bool Hw\+Index\+Monotonic, int Size\+To\+Count\+Offset, bool use\+GCR$>$ \\
+void \mbox{\hyperlink{classrocr_1_1AMD_1_1BlitSdma}{rocr\+::\+AMD\+::\+Blit\+Sdma}}$<$ Ring\+Index\+Ty, Hw\+Index\+Monotonic, Size\+To\+Count\+Offset, use\+GCR $>$\+::Build\+Poll\+Command (\begin{DoxyParamCaption}\item[{char $\ast$}]{cmd\+\_\+addr,  }\item[{void $\ast$}]{addr,  }\item[{uint32\+\_\+t}]{reference }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=330pt]{classrocr_1_1AMD_1_1BlitSdma_a174b67dcf05e418027c84a526caa4278_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classrocr_1_1AMD_1_1BlitSdma_a1706c610c4133343c27795318efe3085}\label{classrocr_1_1AMD_1_1BlitSdma_a1706c610c4133343c27795318efe3085}} 
+\index{rocr::AMD::BlitSdma$<$ RingIndexTy, HwIndexMonotonic, SizeToCountOffset, useGCR $>$@{rocr::AMD::BlitSdma$<$ RingIndexTy, HwIndexMonotonic, SizeToCountOffset, useGCR $>$}!BuildTrapCommand@{BuildTrapCommand}}
+\index{BuildTrapCommand@{BuildTrapCommand}!rocr::AMD::BlitSdma$<$ RingIndexTy, HwIndexMonotonic, SizeToCountOffset, useGCR $>$@{rocr::AMD::BlitSdma$<$ RingIndexTy, HwIndexMonotonic, SizeToCountOffset, useGCR $>$}}
+\doxysubsubsection{\texorpdfstring{BuildTrapCommand()}{BuildTrapCommand()}}
+{\footnotesize\ttfamily template$<$typename Ring\+Index\+Ty , bool Hw\+Index\+Monotonic, int Size\+To\+Count\+Offset, bool use\+GCR$>$ \\
+void \mbox{\hyperlink{classrocr_1_1AMD_1_1BlitSdma}{rocr\+::\+AMD\+::\+Blit\+Sdma}}$<$ Ring\+Index\+Ty, Hw\+Index\+Monotonic, Size\+To\+Count\+Offset, use\+GCR $>$\+::Build\+Trap\+Command (\begin{DoxyParamCaption}\item[{char $\ast$}]{cmd\+\_\+addr,  }\item[{uint32\+\_\+t}]{event\+\_\+id }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classrocr_1_1AMD_1_1BlitSdma_a3b69ba5a49af8cf015bb595fdf3f4dc7}\label{classrocr_1_1AMD_1_1BlitSdma_a3b69ba5a49af8cf015bb595fdf3f4dc7}} 
+\index{rocr::AMD::BlitSdma$<$ RingIndexTy, HwIndexMonotonic, SizeToCountOffset, useGCR $>$@{rocr::AMD::BlitSdma$<$ RingIndexTy, HwIndexMonotonic, SizeToCountOffset, useGCR $>$}!CanWriteUpto@{CanWriteUpto}}
+\index{CanWriteUpto@{CanWriteUpto}!rocr::AMD::BlitSdma$<$ RingIndexTy, HwIndexMonotonic, SizeToCountOffset, useGCR $>$@{rocr::AMD::BlitSdma$<$ RingIndexTy, HwIndexMonotonic, SizeToCountOffset, useGCR $>$}}
+\doxysubsubsection{\texorpdfstring{CanWriteUpto()}{CanWriteUpto()}}
+{\footnotesize\ttfamily template$<$typename Ring\+Index\+Ty , bool Hw\+Index\+Monotonic, int Size\+To\+Count\+Offset, bool use\+GCR$>$ \\
+bool \mbox{\hyperlink{classrocr_1_1AMD_1_1BlitSdma}{rocr\+::\+AMD\+::\+Blit\+Sdma}}$<$ Ring\+Index\+Ty, Hw\+Index\+Monotonic, Size\+To\+Count\+Offset, use\+GCR $>$\+::Can\+Write\+Upto (\begin{DoxyParamCaption}\item[{Ring\+Index\+Ty}]{upto\+\_\+index }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classrocr_1_1AMD_1_1BlitSdma_a3b69ba5a49af8cf015bb595fdf3f4dc7_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classrocr_1_1AMD_1_1BlitSdma_a97a4457fe681bdbb6c71a2afa2f551dc}\label{classrocr_1_1AMD_1_1BlitSdma_a97a4457fe681bdbb6c71a2afa2f551dc}} 
+\index{rocr::AMD::BlitSdma$<$ RingIndexTy, HwIndexMonotonic, SizeToCountOffset, useGCR $>$@{rocr::AMD::BlitSdma$<$ RingIndexTy, HwIndexMonotonic, SizeToCountOffset, useGCR $>$}!Destroy@{Destroy}}
+\index{Destroy@{Destroy}!rocr::AMD::BlitSdma$<$ RingIndexTy, HwIndexMonotonic, SizeToCountOffset, useGCR $>$@{rocr::AMD::BlitSdma$<$ RingIndexTy, HwIndexMonotonic, SizeToCountOffset, useGCR $>$}}
+\doxysubsubsection{\texorpdfstring{Destroy()}{Destroy()}}
+{\footnotesize\ttfamily template$<$typename Ring\+Index\+Ty , bool Hw\+Index\+Monotonic, int Size\+To\+Count\+Offset, bool use\+GCR$>$ \\
+\mbox{\hyperlink{group__status_gad755322e7ff95456520e8abdbe90d225}{hsa\+\_\+status\+\_\+t}} \mbox{\hyperlink{classrocr_1_1AMD_1_1BlitSdma}{rocr\+::\+AMD\+::\+Blit\+Sdma}}$<$ Ring\+Index\+Ty, Hw\+Index\+Monotonic, Size\+To\+Count\+Offset, use\+GCR $>$\+::Destroy (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classrocr_1_1core_1_1Agent}{core\+::\+Agent}} \&}]{agent }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Marks the queue object as invalid and uncouples its link with the underlying compute device\textquotesingle{}s control block. Use of queue object once it has been release is illegal and any behavior is indeterminate. 
+
+\begin{DoxyNote}{Note}
+\+: The call will block until all packets have executed.
+\end{DoxyNote}
+
+\begin{DoxyParams}{Parameters}
+{\em agent} & Agent passed to Initialize.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+hsa\+\_\+status\+\_\+t 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{classrocr_1_1core_1_1Blit_ad2007f050a453aaabc1227f0895f567f}{rocr\+::core\+::\+Blit}}.
+
+\mbox{\Hypertarget{classrocr_1_1AMD_1_1BlitSdma_a0da9208dc13c1dbd65ebff3e9ff26344}\label{classrocr_1_1AMD_1_1BlitSdma_a0da9208dc13c1dbd65ebff3e9ff26344}} 
+\index{rocr::AMD::BlitSdma$<$ RingIndexTy, HwIndexMonotonic, SizeToCountOffset, useGCR $>$@{rocr::AMD::BlitSdma$<$ RingIndexTy, HwIndexMonotonic, SizeToCountOffset, useGCR $>$}!EnableProfiling@{EnableProfiling}}
+\index{EnableProfiling@{EnableProfiling}!rocr::AMD::BlitSdma$<$ RingIndexTy, HwIndexMonotonic, SizeToCountOffset, useGCR $>$@{rocr::AMD::BlitSdma$<$ RingIndexTy, HwIndexMonotonic, SizeToCountOffset, useGCR $>$}}
+\doxysubsubsection{\texorpdfstring{EnableProfiling()}{EnableProfiling()}}
+{\footnotesize\ttfamily template$<$typename Ring\+Index\+Ty , bool Hw\+Index\+Monotonic, int Size\+To\+Count\+Offset, bool use\+GCR$>$ \\
+\mbox{\hyperlink{group__status_gad755322e7ff95456520e8abdbe90d225}{hsa\+\_\+status\+\_\+t}} \mbox{\hyperlink{classrocr_1_1AMD_1_1BlitSdma}{rocr\+::\+AMD\+::\+Blit\+Sdma}}$<$ Ring\+Index\+Ty, Hw\+Index\+Monotonic, Size\+To\+Count\+Offset, use\+GCR $>$\+::Enable\+Profiling (\begin{DoxyParamCaption}\item[{bool}]{enable }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Enable profiling of the asynchronous copy command. The timestamp of each copy request will be stored in the completion signal structure. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em enable} & True to enable profiling. False to disable profiling.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+HSA\+\_\+\+STATUS\+\_\+\+SUCCESS if the request to enable/disable profiling is successful. 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{classrocr_1_1core_1_1Blit_acfaa5aa7f95d0720a49cad4e95ffffb9}{rocr\+::core\+::\+Blit}}.
+
+\mbox{\Hypertarget{classrocr_1_1AMD_1_1BlitSdma_a6286a7eb9777667539cbcdc14cce8571}\label{classrocr_1_1AMD_1_1BlitSdma_a6286a7eb9777667539cbcdc14cce8571}} 
+\index{rocr::AMD::BlitSdma$<$ RingIndexTy, HwIndexMonotonic, SizeToCountOffset, useGCR $>$@{rocr::AMD::BlitSdma$<$ RingIndexTy, HwIndexMonotonic, SizeToCountOffset, useGCR $>$}!Initialize@{Initialize}}
+\index{Initialize@{Initialize}!rocr::AMD::BlitSdma$<$ RingIndexTy, HwIndexMonotonic, SizeToCountOffset, useGCR $>$@{rocr::AMD::BlitSdma$<$ RingIndexTy, HwIndexMonotonic, SizeToCountOffset, useGCR $>$}}
+\doxysubsubsection{\texorpdfstring{Initialize()}{Initialize()}}
+{\footnotesize\ttfamily template$<$typename Ring\+Index\+Ty , bool Hw\+Index\+Monotonic, int Size\+To\+Count\+Offset, bool use\+GCR$>$ \\
+\mbox{\hyperlink{group__status_gad755322e7ff95456520e8abdbe90d225}{hsa\+\_\+status\+\_\+t}} \mbox{\hyperlink{classrocr_1_1AMD_1_1BlitSdma}{rocr\+::\+AMD\+::\+Blit\+Sdma}}$<$ Ring\+Index\+Ty, Hw\+Index\+Monotonic, Size\+To\+Count\+Offset, use\+GCR $>$\+::Initialize (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classrocr_1_1core_1_1Agent}{core\+::\+Agent}} \&}]{agent,  }\item[{bool}]{use\+\_\+xgmi }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Initialize a User Mode SDMA Queue object. Input parameters specify properties of queue being created. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em agent} & Pointer to the agent that will execute the PM4 commands.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+hsa\+\_\+status\+\_\+t 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{classrocr_1_1AMD_1_1BlitSdmaBase_a3932da0020a97a84a9b3f5979edef962}{rocr\+::\+AMD\+::\+Blit\+Sdma\+Base}}.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classrocr_1_1AMD_1_1BlitSdma_a6286a7eb9777667539cbcdc14cce8571_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classrocr_1_1AMD_1_1BlitSdma_a92fa4c687f75bfc42fc2423960adb212}\label{classrocr_1_1AMD_1_1BlitSdma_a92fa4c687f75bfc42fc2423960adb212}} 
+\index{rocr::AMD::BlitSdma$<$ RingIndexTy, HwIndexMonotonic, SizeToCountOffset, useGCR $>$@{rocr::AMD::BlitSdma$<$ RingIndexTy, HwIndexMonotonic, SizeToCountOffset, useGCR $>$}!PadRingToEnd@{PadRingToEnd}}
+\index{PadRingToEnd@{PadRingToEnd}!rocr::AMD::BlitSdma$<$ RingIndexTy, HwIndexMonotonic, SizeToCountOffset, useGCR $>$@{rocr::AMD::BlitSdma$<$ RingIndexTy, HwIndexMonotonic, SizeToCountOffset, useGCR $>$}}
+\doxysubsubsection{\texorpdfstring{PadRingToEnd()}{PadRingToEnd()}}
+{\footnotesize\ttfamily template$<$typename Ring\+Index\+Ty , bool Hw\+Index\+Monotonic, int Size\+To\+Count\+Offset, bool use\+GCR$>$ \\
+void \mbox{\hyperlink{classrocr_1_1AMD_1_1BlitSdma}{rocr\+::\+AMD\+::\+Blit\+Sdma}}$<$ Ring\+Index\+Ty, Hw\+Index\+Monotonic, Size\+To\+Count\+Offset, use\+GCR $>$\+::Pad\+Ring\+To\+End (\begin{DoxyParamCaption}\item[{Ring\+Index\+Ty}]{curr\+\_\+index }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Writes NO-\/\+OP words into queue buffer in case writing a command causes the queue buffer to wrap. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em curr\+\_\+index} & Index to begin padding from. \\
+\hline
+\end{DoxyParams}
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classrocr_1_1AMD_1_1BlitSdma_a92fa4c687f75bfc42fc2423960adb212_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classrocr_1_1AMD_1_1BlitSdma_a5fbbc0b083bd80310a41e6ab4ce2ccef}\label{classrocr_1_1AMD_1_1BlitSdma_a5fbbc0b083bd80310a41e6ab4ce2ccef}} 
+\index{rocr::AMD::BlitSdma$<$ RingIndexTy, HwIndexMonotonic, SizeToCountOffset, useGCR $>$@{rocr::AMD::BlitSdma$<$ RingIndexTy, HwIndexMonotonic, SizeToCountOffset, useGCR $>$}!PendingBytes@{PendingBytes}}
+\index{PendingBytes@{PendingBytes}!rocr::AMD::BlitSdma$<$ RingIndexTy, HwIndexMonotonic, SizeToCountOffset, useGCR $>$@{rocr::AMD::BlitSdma$<$ RingIndexTy, HwIndexMonotonic, SizeToCountOffset, useGCR $>$}}
+\doxysubsubsection{\texorpdfstring{PendingBytes()}{PendingBytes()}}
+{\footnotesize\ttfamily template$<$typename Ring\+Index\+Ty , bool Hw\+Index\+Monotonic, int Size\+To\+Count\+Offset, bool use\+GCR$>$ \\
+uint64\+\_\+t \mbox{\hyperlink{classrocr_1_1AMD_1_1BlitSdma}{rocr\+::\+AMD\+::\+Blit\+Sdma}}$<$ Ring\+Index\+Ty, Hw\+Index\+Monotonic, Size\+To\+Count\+Offset, use\+GCR $>$\+::Pending\+Bytes (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+@\+Brief Reports the approximate number of remaining bytes to copy or fill. Any return of zero must be exact. 
+
+Implements \mbox{\hyperlink{classrocr_1_1core_1_1Blit_a15ad3362fcca65a5bb183e4eb02df785}{rocr\+::core\+::\+Blit}}.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classrocr_1_1AMD_1_1BlitSdma_a5fbbc0b083bd80310a41e6ab4ce2ccef_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classrocr_1_1AMD_1_1BlitSdma_aba1a4c73e16ae7a6b25b5c02760d403c}\label{classrocr_1_1AMD_1_1BlitSdma_aba1a4c73e16ae7a6b25b5c02760d403c}} 
+\index{rocr::AMD::BlitSdma$<$ RingIndexTy, HwIndexMonotonic, SizeToCountOffset, useGCR $>$@{rocr::AMD::BlitSdma$<$ RingIndexTy, HwIndexMonotonic, SizeToCountOffset, useGCR $>$}!ReleaseWriteAddress@{ReleaseWriteAddress}}
+\index{ReleaseWriteAddress@{ReleaseWriteAddress}!rocr::AMD::BlitSdma$<$ RingIndexTy, HwIndexMonotonic, SizeToCountOffset, useGCR $>$@{rocr::AMD::BlitSdma$<$ RingIndexTy, HwIndexMonotonic, SizeToCountOffset, useGCR $>$}}
+\doxysubsubsection{\texorpdfstring{ReleaseWriteAddress()}{ReleaseWriteAddress()}}
+{\footnotesize\ttfamily template$<$typename Ring\+Index\+Ty , bool Hw\+Index\+Monotonic, int Size\+To\+Count\+Offset, bool use\+GCR$>$ \\
+void \mbox{\hyperlink{classrocr_1_1AMD_1_1BlitSdma}{rocr\+::\+AMD\+::\+Blit\+Sdma}}$<$ Ring\+Index\+Ty, Hw\+Index\+Monotonic, Size\+To\+Count\+Offset, use\+GCR $>$\+::Release\+Write\+Address (\begin{DoxyParamCaption}\item[{Ring\+Index\+Ty}]{curr\+\_\+index,  }\item[{uint32\+\_\+t}]{cmd\+\_\+size }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Updates the Write Register of compute device to the end of SDMA packet written into queue buffer. The update to Write Register will be safe under multi-\/threaded usage scenario. Furthermore, updates to Write Register are blocking until all prior updates are completed i.\+e. if two threads T1 \& T2 were to call release, then updates by T2 will block until T1 has completed its update (assumes T1 acquired the write address first). 
+
+
+\begin{DoxyParams}{Parameters}
+{\em curr\+\_\+index} & Index passed back from Acquire\+Write\+Address.\\
+\hline
+{\em cmd\+\_\+size} & Command packet size in bytes. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classrocr_1_1AMD_1_1BlitSdma_a18330d99c8f29bd3d662a34881b2cc63}\label{classrocr_1_1AMD_1_1BlitSdma_a18330d99c8f29bd3d662a34881b2cc63}} 
+\index{rocr::AMD::BlitSdma$<$ RingIndexTy, HwIndexMonotonic, SizeToCountOffset, useGCR $>$@{rocr::AMD::BlitSdma$<$ RingIndexTy, HwIndexMonotonic, SizeToCountOffset, useGCR $>$}!SubmitBlockingCommand@{SubmitBlockingCommand}}
+\index{SubmitBlockingCommand@{SubmitBlockingCommand}!rocr::AMD::BlitSdma$<$ RingIndexTy, HwIndexMonotonic, SizeToCountOffset, useGCR $>$@{rocr::AMD::BlitSdma$<$ RingIndexTy, HwIndexMonotonic, SizeToCountOffset, useGCR $>$}}
+\doxysubsubsection{\texorpdfstring{SubmitBlockingCommand()}{SubmitBlockingCommand()}}
+{\footnotesize\ttfamily template$<$typename Ring\+Index\+Ty , bool Hw\+Index\+Monotonic, int Size\+To\+Count\+Offset, bool use\+GCR$>$ \\
+\mbox{\hyperlink{group__status_gad755322e7ff95456520e8abdbe90d225}{hsa\+\_\+status\+\_\+t}} \mbox{\hyperlink{classrocr_1_1AMD_1_1BlitSdma}{rocr\+::\+AMD\+::\+Blit\+Sdma}}$<$ Ring\+Index\+Ty, Hw\+Index\+Monotonic, Size\+To\+Count\+Offset, use\+GCR $>$\+::Submit\+Blocking\+Command (\begin{DoxyParamCaption}\item[{const void $\ast$}]{cmds,  }\item[{size\+\_\+t}]{cmd\+\_\+size,  }\item[{uint64\+\_\+t}]{size }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classrocr_1_1AMD_1_1BlitSdma_a18330d99c8f29bd3d662a34881b2cc63_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classrocr_1_1AMD_1_1BlitSdma_a76b4706c6bb70f6bb7b2afee88540baf}\label{classrocr_1_1AMD_1_1BlitSdma_a76b4706c6bb70f6bb7b2afee88540baf}} 
+\index{rocr::AMD::BlitSdma$<$ RingIndexTy, HwIndexMonotonic, SizeToCountOffset, useGCR $>$@{rocr::AMD::BlitSdma$<$ RingIndexTy, HwIndexMonotonic, SizeToCountOffset, useGCR $>$}!SubmitCommand@{SubmitCommand}}
+\index{SubmitCommand@{SubmitCommand}!rocr::AMD::BlitSdma$<$ RingIndexTy, HwIndexMonotonic, SizeToCountOffset, useGCR $>$@{rocr::AMD::BlitSdma$<$ RingIndexTy, HwIndexMonotonic, SizeToCountOffset, useGCR $>$}}
+\doxysubsubsection{\texorpdfstring{SubmitCommand()}{SubmitCommand()}}
+{\footnotesize\ttfamily template$<$typename Ring\+Index\+Ty , bool Hw\+Index\+Monotonic, int Size\+To\+Count\+Offset, bool use\+GCR$>$ \\
+\mbox{\hyperlink{group__status_gad755322e7ff95456520e8abdbe90d225}{hsa\+\_\+status\+\_\+t}} \mbox{\hyperlink{classrocr_1_1AMD_1_1BlitSdma}{rocr\+::\+AMD\+::\+Blit\+Sdma}}$<$ Ring\+Index\+Ty, Hw\+Index\+Monotonic, Size\+To\+Count\+Offset, use\+GCR $>$\+::Submit\+Command (\begin{DoxyParamCaption}\item[{const void $\ast$}]{cmds,  }\item[{size\+\_\+t}]{cmd\+\_\+size,  }\item[{uint64\+\_\+t}]{size,  }\item[{const std\+::vector$<$ \mbox{\hyperlink{classrocr_1_1core_1_1Signal}{core\+::\+Signal}} $\ast$ $>$ \&}]{dep\+\_\+signals,  }\item[{\mbox{\hyperlink{classrocr_1_1core_1_1Signal}{core\+::\+Signal}} \&}]{out\+\_\+signal }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classrocr_1_1AMD_1_1BlitSdma_a76b4706c6bb70f6bb7b2afee88540baf_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classrocr_1_1AMD_1_1BlitSdma_a1e37affff838b3752e5f06d8d25cdc69}\label{classrocr_1_1AMD_1_1BlitSdma_a1e37affff838b3752e5f06d8d25cdc69}} 
+\index{rocr::AMD::BlitSdma$<$ RingIndexTy, HwIndexMonotonic, SizeToCountOffset, useGCR $>$@{rocr::AMD::BlitSdma$<$ RingIndexTy, HwIndexMonotonic, SizeToCountOffset, useGCR $>$}!SubmitCopyRectCommand@{SubmitCopyRectCommand}}
+\index{SubmitCopyRectCommand@{SubmitCopyRectCommand}!rocr::AMD::BlitSdma$<$ RingIndexTy, HwIndexMonotonic, SizeToCountOffset, useGCR $>$@{rocr::AMD::BlitSdma$<$ RingIndexTy, HwIndexMonotonic, SizeToCountOffset, useGCR $>$}}
+\doxysubsubsection{\texorpdfstring{SubmitCopyRectCommand()}{SubmitCopyRectCommand()}}
+{\footnotesize\ttfamily template$<$typename Ring\+Index\+Ty , bool Hw\+Index\+Monotonic, int Size\+To\+Count\+Offset, bool use\+GCR$>$ \\
+\mbox{\hyperlink{group__status_gad755322e7ff95456520e8abdbe90d225}{hsa\+\_\+status\+\_\+t}} \mbox{\hyperlink{classrocr_1_1AMD_1_1BlitSdma}{rocr\+::\+AMD\+::\+Blit\+Sdma}}$<$ Ring\+Index\+Ty, Hw\+Index\+Monotonic, Size\+To\+Count\+Offset, use\+GCR $>$\+::Submit\+Copy\+Rect\+Command (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{inc_2hsa__ext__amd_8h_ad8d9a26d5d34727e5c8d648d0ad6ea38}{hsa\+\_\+pitched\+\_\+ptr\+\_\+t}} $\ast$}]{dst,  }\item[{const \mbox{\hyperlink{group__common_gae460d1df8c508a9c889d4550ea4eea30}{hsa\+\_\+dim3\+\_\+t}} $\ast$}]{dst\+\_\+offset,  }\item[{const \mbox{\hyperlink{inc_2hsa__ext__amd_8h_ad8d9a26d5d34727e5c8d648d0ad6ea38}{hsa\+\_\+pitched\+\_\+ptr\+\_\+t}} $\ast$}]{src,  }\item[{const \mbox{\hyperlink{group__common_gae460d1df8c508a9c889d4550ea4eea30}{hsa\+\_\+dim3\+\_\+t}} $\ast$}]{src\+\_\+offset,  }\item[{const \mbox{\hyperlink{group__common_gae460d1df8c508a9c889d4550ea4eea30}{hsa\+\_\+dim3\+\_\+t}} $\ast$}]{range,  }\item[{std\+::vector$<$ \mbox{\hyperlink{classrocr_1_1core_1_1Signal}{core\+::\+Signal}} $\ast$ $>$ \&}]{dep\+\_\+signals,  }\item[{\mbox{\hyperlink{classrocr_1_1core_1_1Signal}{core\+::\+Signal}} \&}]{out\+\_\+signal }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Implements \mbox{\hyperlink{classrocr_1_1AMD_1_1BlitSdmaBase_ae43faf8c69461fb05d14b7251b07b1a8}{rocr\+::\+AMD\+::\+Blit\+Sdma\+Base}}.
+
+\mbox{\Hypertarget{classrocr_1_1AMD_1_1BlitSdma_a9690cbe59a296be1b7a93b7bc0462979}\label{classrocr_1_1AMD_1_1BlitSdma_a9690cbe59a296be1b7a93b7bc0462979}} 
+\index{rocr::AMD::BlitSdma$<$ RingIndexTy, HwIndexMonotonic, SizeToCountOffset, useGCR $>$@{rocr::AMD::BlitSdma$<$ RingIndexTy, HwIndexMonotonic, SizeToCountOffset, useGCR $>$}!SubmitLinearCopyCommand@{SubmitLinearCopyCommand}}
+\index{SubmitLinearCopyCommand@{SubmitLinearCopyCommand}!rocr::AMD::BlitSdma$<$ RingIndexTy, HwIndexMonotonic, SizeToCountOffset, useGCR $>$@{rocr::AMD::BlitSdma$<$ RingIndexTy, HwIndexMonotonic, SizeToCountOffset, useGCR $>$}}
+\doxysubsubsection{\texorpdfstring{SubmitLinearCopyCommand()}{SubmitLinearCopyCommand()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily template$<$typename Ring\+Index\+Ty , bool Hw\+Index\+Monotonic, int Size\+To\+Count\+Offset, bool use\+GCR$>$ \\
+\mbox{\hyperlink{group__status_gad755322e7ff95456520e8abdbe90d225}{hsa\+\_\+status\+\_\+t}} \mbox{\hyperlink{classrocr_1_1AMD_1_1BlitSdma}{rocr\+::\+AMD\+::\+Blit\+Sdma}}$<$ Ring\+Index\+Ty, Hw\+Index\+Monotonic, Size\+To\+Count\+Offset, use\+GCR $>$\+::Submit\+Linear\+Copy\+Command (\begin{DoxyParamCaption}\item[{void $\ast$}]{dst,  }\item[{const void $\ast$}]{src,  }\item[{size\+\_\+t}]{size }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Submit a linear copy command to the queue buffer. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em dst} & Memory address of the copy destination. \\
+\hline
+{\em src} & Memory address of the copy source. \\
+\hline
+{\em size} & Size of the data to be copied. \\
+\hline
+\end{DoxyParams}
+
+
+Implements \mbox{\hyperlink{classrocr_1_1core_1_1Blit_a0220cb0a78cd3626060a62301193ea96}{rocr\+::core\+::\+Blit}}.
+
+\mbox{\Hypertarget{classrocr_1_1AMD_1_1BlitSdma_ad43be8123cacdbfd90e283ae9fbbbc8b}\label{classrocr_1_1AMD_1_1BlitSdma_ad43be8123cacdbfd90e283ae9fbbbc8b}} 
+\index{rocr::AMD::BlitSdma$<$ RingIndexTy, HwIndexMonotonic, SizeToCountOffset, useGCR $>$@{rocr::AMD::BlitSdma$<$ RingIndexTy, HwIndexMonotonic, SizeToCountOffset, useGCR $>$}!SubmitLinearCopyCommand@{SubmitLinearCopyCommand}}
+\index{SubmitLinearCopyCommand@{SubmitLinearCopyCommand}!rocr::AMD::BlitSdma$<$ RingIndexTy, HwIndexMonotonic, SizeToCountOffset, useGCR $>$@{rocr::AMD::BlitSdma$<$ RingIndexTy, HwIndexMonotonic, SizeToCountOffset, useGCR $>$}}
+\doxysubsubsection{\texorpdfstring{SubmitLinearCopyCommand()}{SubmitLinearCopyCommand()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily template$<$typename Ring\+Index\+Ty , bool Hw\+Index\+Monotonic, int Size\+To\+Count\+Offset, bool use\+GCR$>$ \\
+\mbox{\hyperlink{group__status_gad755322e7ff95456520e8abdbe90d225}{hsa\+\_\+status\+\_\+t}} \mbox{\hyperlink{classrocr_1_1AMD_1_1BlitSdma}{rocr\+::\+AMD\+::\+Blit\+Sdma}}$<$ Ring\+Index\+Ty, Hw\+Index\+Monotonic, Size\+To\+Count\+Offset, use\+GCR $>$\+::Submit\+Linear\+Copy\+Command (\begin{DoxyParamCaption}\item[{void $\ast$}]{dst,  }\item[{const void $\ast$}]{src,  }\item[{size\+\_\+t}]{size,  }\item[{std\+::vector$<$ \mbox{\hyperlink{classrocr_1_1core_1_1Signal}{core\+::\+Signal}} $\ast$ $>$ \&}]{dep\+\_\+signals,  }\item[{\mbox{\hyperlink{classrocr_1_1core_1_1Signal}{core\+::\+Signal}} \&}]{out\+\_\+signal }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Submit a linear copy command to the the underlying compute device\textquotesingle{}s control block. The call is non blocking. The memory transfer will start after all dependent signals are satisfied. After the transfer is completed, the out signal will be decremented. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em dst} & Memory address of the copy destination. \\
+\hline
+{\em src} & Memory address of the copy source. \\
+\hline
+{\em size} & Size of the data to be copied. \\
+\hline
+{\em dep\+\_\+signals} & Arrays of dependent signal. \\
+\hline
+{\em out\+\_\+signal} & Output signal. \\
+\hline
+\end{DoxyParams}
+
+
+Implements \mbox{\hyperlink{classrocr_1_1core_1_1Blit_af966aecf9b06ecbe1e2d8eaabf6012b0}{rocr\+::core\+::\+Blit}}.
+
+\mbox{\Hypertarget{classrocr_1_1AMD_1_1BlitSdma_a7a64bdca7bce149a20ec39fd9c0f14da}\label{classrocr_1_1AMD_1_1BlitSdma_a7a64bdca7bce149a20ec39fd9c0f14da}} 
+\index{rocr::AMD::BlitSdma$<$ RingIndexTy, HwIndexMonotonic, SizeToCountOffset, useGCR $>$@{rocr::AMD::BlitSdma$<$ RingIndexTy, HwIndexMonotonic, SizeToCountOffset, useGCR $>$}!SubmitLinearFillCommand@{SubmitLinearFillCommand}}
+\index{SubmitLinearFillCommand@{SubmitLinearFillCommand}!rocr::AMD::BlitSdma$<$ RingIndexTy, HwIndexMonotonic, SizeToCountOffset, useGCR $>$@{rocr::AMD::BlitSdma$<$ RingIndexTy, HwIndexMonotonic, SizeToCountOffset, useGCR $>$}}
+\doxysubsubsection{\texorpdfstring{SubmitLinearFillCommand()}{SubmitLinearFillCommand()}}
+{\footnotesize\ttfamily template$<$typename Ring\+Index\+Ty , bool Hw\+Index\+Monotonic, int Size\+To\+Count\+Offset, bool use\+GCR$>$ \\
+\mbox{\hyperlink{group__status_gad755322e7ff95456520e8abdbe90d225}{hsa\+\_\+status\+\_\+t}} \mbox{\hyperlink{classrocr_1_1AMD_1_1BlitSdma}{rocr\+::\+AMD\+::\+Blit\+Sdma}}$<$ Ring\+Index\+Ty, Hw\+Index\+Monotonic, Size\+To\+Count\+Offset, use\+GCR $>$\+::Submit\+Linear\+Fill\+Command (\begin{DoxyParamCaption}\item[{void $\ast$}]{ptr,  }\item[{uint32\+\_\+t}]{value,  }\item[{size\+\_\+t}]{count }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Submit a linear fill command to the queue buffer. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em ptr} & Memory address of the fill destination. \\
+\hline
+{\em value} & Value to be set. \\
+\hline
+{\em count} & Number of uint32\+\_\+t element to be set to the value. \\
+\hline
+\end{DoxyParams}
+
+
+Implements \mbox{\hyperlink{classrocr_1_1core_1_1Blit_a22a436a79221d0fc05b9cd24a74d87bf}{rocr\+::core\+::\+Blit}}.
+
+\mbox{\Hypertarget{classrocr_1_1AMD_1_1BlitSdma_ac181b3e4b83cef4f580424c2a89f4c05}\label{classrocr_1_1AMD_1_1BlitSdma_ac181b3e4b83cef4f580424c2a89f4c05}} 
+\index{rocr::AMD::BlitSdma$<$ RingIndexTy, HwIndexMonotonic, SizeToCountOffset, useGCR $>$@{rocr::AMD::BlitSdma$<$ RingIndexTy, HwIndexMonotonic, SizeToCountOffset, useGCR $>$}!UpdateWriteAndDoorbellRegister@{UpdateWriteAndDoorbellRegister}}
+\index{UpdateWriteAndDoorbellRegister@{UpdateWriteAndDoorbellRegister}!rocr::AMD::BlitSdma$<$ RingIndexTy, HwIndexMonotonic, SizeToCountOffset, useGCR $>$@{rocr::AMD::BlitSdma$<$ RingIndexTy, HwIndexMonotonic, SizeToCountOffset, useGCR $>$}}
+\doxysubsubsection{\texorpdfstring{UpdateWriteAndDoorbellRegister()}{UpdateWriteAndDoorbellRegister()}}
+{\footnotesize\ttfamily template$<$typename Ring\+Index\+Ty , bool Hw\+Index\+Monotonic, int Size\+To\+Count\+Offset, bool use\+GCR$>$ \\
+void \mbox{\hyperlink{classrocr_1_1AMD_1_1BlitSdma}{rocr\+::\+AMD\+::\+Blit\+Sdma}}$<$ Ring\+Index\+Ty, Hw\+Index\+Monotonic, Size\+To\+Count\+Offset, use\+GCR $>$\+::Update\+Write\+And\+Doorbell\+Register (\begin{DoxyParamCaption}\item[{Ring\+Index\+Ty}]{curr\+\_\+index,  }\item[{Ring\+Index\+Ty}]{new\+\_\+index }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classrocr_1_1AMD_1_1BlitSdma_ac181b3e4b83cef4f580424c2a89f4c05_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classrocr_1_1AMD_1_1BlitSdma_a5ff03ae7bde699b792531f4532324ea4}\label{classrocr_1_1AMD_1_1BlitSdma_a5ff03ae7bde699b792531f4532324ea4}} 
+\index{rocr::AMD::BlitSdma$<$ RingIndexTy, HwIndexMonotonic, SizeToCountOffset, useGCR $>$@{rocr::AMD::BlitSdma$<$ RingIndexTy, HwIndexMonotonic, SizeToCountOffset, useGCR $>$}!WrapIntoRing@{WrapIntoRing}}
+\index{WrapIntoRing@{WrapIntoRing}!rocr::AMD::BlitSdma$<$ RingIndexTy, HwIndexMonotonic, SizeToCountOffset, useGCR $>$@{rocr::AMD::BlitSdma$<$ RingIndexTy, HwIndexMonotonic, SizeToCountOffset, useGCR $>$}}
+\doxysubsubsection{\texorpdfstring{WrapIntoRing()}{WrapIntoRing()}}
+{\footnotesize\ttfamily template$<$typename Ring\+Index\+Ty , bool Hw\+Index\+Monotonic, int Size\+To\+Count\+Offset, bool use\+GCR$>$ \\
+uint32\+\_\+t \mbox{\hyperlink{classrocr_1_1AMD_1_1BlitSdma}{rocr\+::\+AMD\+::\+Blit\+Sdma}}$<$ Ring\+Index\+Ty, Hw\+Index\+Monotonic, Size\+To\+Count\+Offset, use\+GCR $>$\+::Wrap\+Into\+Ring (\begin{DoxyParamCaption}\item[{Ring\+Index\+Ty}]{index }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{classrocr_1_1AMD_1_1BlitSdma_a4be493d9d605a64651a69c7067843cce}\label{classrocr_1_1AMD_1_1BlitSdma_a4be493d9d605a64651a69c7067843cce}} 
+\index{rocr::AMD::BlitSdma$<$ RingIndexTy, HwIndexMonotonic, SizeToCountOffset, useGCR $>$@{rocr::AMD::BlitSdma$<$ RingIndexTy, HwIndexMonotonic, SizeToCountOffset, useGCR $>$}!agent\_@{agent\_}}
+\index{agent\_@{agent\_}!rocr::AMD::BlitSdma$<$ RingIndexTy, HwIndexMonotonic, SizeToCountOffset, useGCR $>$@{rocr::AMD::BlitSdma$<$ RingIndexTy, HwIndexMonotonic, SizeToCountOffset, useGCR $>$}}
+\doxysubsubsection{\texorpdfstring{agent\_}{agent\_}}
+{\footnotesize\ttfamily template$<$typename Ring\+Index\+Ty , bool Hw\+Index\+Monotonic, int Size\+To\+Count\+Offset, bool use\+GCR$>$ \\
+\mbox{\hyperlink{classrocr_1_1AMD_1_1GpuAgent}{Gpu\+Agent}}$\ast$ \mbox{\hyperlink{classrocr_1_1AMD_1_1BlitSdma}{rocr\+::\+AMD\+::\+Blit\+Sdma}}$<$ Ring\+Index\+Ty, Hw\+Index\+Monotonic, Size\+To\+Count\+Offset, use\+GCR $>$\+::agent\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classrocr_1_1AMD_1_1BlitSdma_ae50e3343cfd85b2ce84e21c9211782d8}\label{classrocr_1_1AMD_1_1BlitSdma_ae50e3343cfd85b2ce84e21c9211782d8}} 
+\index{rocr::AMD::BlitSdma$<$ RingIndexTy, HwIndexMonotonic, SizeToCountOffset, useGCR $>$@{rocr::AMD::BlitSdma$<$ RingIndexTy, HwIndexMonotonic, SizeToCountOffset, useGCR $>$}!atomic\_command\_size\_@{atomic\_command\_size\_}}
+\index{atomic\_command\_size\_@{atomic\_command\_size\_}!rocr::AMD::BlitSdma$<$ RingIndexTy, HwIndexMonotonic, SizeToCountOffset, useGCR $>$@{rocr::AMD::BlitSdma$<$ RingIndexTy, HwIndexMonotonic, SizeToCountOffset, useGCR $>$}}
+\doxysubsubsection{\texorpdfstring{atomic\_command\_size\_}{atomic\_command\_size\_}}
+{\footnotesize\ttfamily template$<$typename Ring\+Index\+Ty , bool Hw\+Index\+Monotonic, int Size\+To\+Count\+Offset, bool use\+GCR$>$ \\
+const uint32\+\_\+t \mbox{\hyperlink{classrocr_1_1AMD_1_1BlitSdma}{rocr\+::\+AMD\+::\+Blit\+Sdma}}$<$ Ring\+Index\+Ty, Hw\+Index\+Monotonic, Size\+To\+Count\+Offset, use\+GCR $>$\+::atomic\+\_\+command\+\_\+size\+\_\+ = sizeof(\mbox{\hyperlink{namespacerocr_1_1AMD_a01854aeb637817faffa3eb5652f4ebb9}{SDMA\+\_\+\+PKT\+\_\+\+ATOMIC}})\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [private]}}
+
+\mbox{\Hypertarget{classrocr_1_1AMD_1_1BlitSdma_a354a70e9c982640de6b164bde6256d2b}\label{classrocr_1_1AMD_1_1BlitSdma_a354a70e9c982640de6b164bde6256d2b}} 
+\index{rocr::AMD::BlitSdma$<$ RingIndexTy, HwIndexMonotonic, SizeToCountOffset, useGCR $>$@{rocr::AMD::BlitSdma$<$ RingIndexTy, HwIndexMonotonic, SizeToCountOffset, useGCR $>$}!bytes\_queued\_@{bytes\_queued\_}}
+\index{bytes\_queued\_@{bytes\_queued\_}!rocr::AMD::BlitSdma$<$ RingIndexTy, HwIndexMonotonic, SizeToCountOffset, useGCR $>$@{rocr::AMD::BlitSdma$<$ RingIndexTy, HwIndexMonotonic, SizeToCountOffset, useGCR $>$}}
+\doxysubsubsection{\texorpdfstring{bytes\_queued\_}{bytes\_queued\_}}
+{\footnotesize\ttfamily template$<$typename Ring\+Index\+Ty , bool Hw\+Index\+Monotonic, int Size\+To\+Count\+Offset, bool use\+GCR$>$ \\
+uint64\+\_\+t \mbox{\hyperlink{classrocr_1_1AMD_1_1BlitSdma}{rocr\+::\+AMD\+::\+Blit\+Sdma}}$<$ Ring\+Index\+Ty, Hw\+Index\+Monotonic, Size\+To\+Count\+Offset, use\+GCR $>$\+::bytes\+\_\+queued\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classrocr_1_1AMD_1_1BlitSdma_affc54d835f73fb6c8944cc99d91a93c0}\label{classrocr_1_1AMD_1_1BlitSdma_affc54d835f73fb6c8944cc99d91a93c0}} 
+\index{rocr::AMD::BlitSdma$<$ RingIndexTy, HwIndexMonotonic, SizeToCountOffset, useGCR $>$@{rocr::AMD::BlitSdma$<$ RingIndexTy, HwIndexMonotonic, SizeToCountOffset, useGCR $>$}!bytes\_written\_@{bytes\_written\_}}
+\index{bytes\_written\_@{bytes\_written\_}!rocr::AMD::BlitSdma$<$ RingIndexTy, HwIndexMonotonic, SizeToCountOffset, useGCR $>$@{rocr::AMD::BlitSdma$<$ RingIndexTy, HwIndexMonotonic, SizeToCountOffset, useGCR $>$}}
+\doxysubsubsection{\texorpdfstring{}{}}
+{\footnotesize\ttfamily class \{ ... \}  \mbox{\hyperlink{classrocr_1_1AMD_1_1BlitSdma}{rocr\+::\+AMD\+::\+Blit\+Sdma}}$<$ Ring\+Index\+Ty, Hw\+Index\+Monotonic, Size\+To\+Count\+Offset, use\+GCR $>$\+::bytes\+\_\+written\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classrocr_1_1AMD_1_1BlitSdma_ad9b98764dccfdcbf70f399cb4162b3d6}\label{classrocr_1_1AMD_1_1BlitSdma_ad9b98764dccfdcbf70f399cb4162b3d6}} 
+\index{rocr::AMD::BlitSdma$<$ RingIndexTy, HwIndexMonotonic, SizeToCountOffset, useGCR $>$@{rocr::AMD::BlitSdma$<$ RingIndexTy, HwIndexMonotonic, SizeToCountOffset, useGCR $>$}!cached\_commit\_index\_@{cached\_commit\_index\_}}
+\index{cached\_commit\_index\_@{cached\_commit\_index\_}!rocr::AMD::BlitSdma$<$ RingIndexTy, HwIndexMonotonic, SizeToCountOffset, useGCR $>$@{rocr::AMD::BlitSdma$<$ RingIndexTy, HwIndexMonotonic, SizeToCountOffset, useGCR $>$}}
+\doxysubsubsection{\texorpdfstring{cached\_commit\_index\_}{cached\_commit\_index\_}}
+{\footnotesize\ttfamily template$<$typename Ring\+Index\+Ty , bool Hw\+Index\+Monotonic, int Size\+To\+Count\+Offset, bool use\+GCR$>$ \\
+Ring\+Index\+Ty \mbox{\hyperlink{classrocr_1_1AMD_1_1BlitSdma}{rocr\+::\+AMD\+::\+Blit\+Sdma}}$<$ Ring\+Index\+Ty, Hw\+Index\+Monotonic, Size\+To\+Count\+Offset, use\+GCR $>$\+::cached\+\_\+commit\+\_\+index\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classrocr_1_1AMD_1_1BlitSdma_aae2960d09693db358992fcd243b2e45d}\label{classrocr_1_1AMD_1_1BlitSdma_aae2960d09693db358992fcd243b2e45d}} 
+\index{rocr::AMD::BlitSdma$<$ RingIndexTy, HwIndexMonotonic, SizeToCountOffset, useGCR $>$@{rocr::AMD::BlitSdma$<$ RingIndexTy, HwIndexMonotonic, SizeToCountOffset, useGCR $>$}!cached\_reserve\_index\_@{cached\_reserve\_index\_}}
+\index{cached\_reserve\_index\_@{cached\_reserve\_index\_}!rocr::AMD::BlitSdma$<$ RingIndexTy, HwIndexMonotonic, SizeToCountOffset, useGCR $>$@{rocr::AMD::BlitSdma$<$ RingIndexTy, HwIndexMonotonic, SizeToCountOffset, useGCR $>$}}
+\doxysubsubsection{\texorpdfstring{cached\_reserve\_index\_}{cached\_reserve\_index\_}}
+{\footnotesize\ttfamily template$<$typename Ring\+Index\+Ty , bool Hw\+Index\+Monotonic, int Size\+To\+Count\+Offset, bool use\+GCR$>$ \\
+Ring\+Index\+Ty \mbox{\hyperlink{classrocr_1_1AMD_1_1BlitSdma}{rocr\+::\+AMD\+::\+Blit\+Sdma}}$<$ Ring\+Index\+Ty, Hw\+Index\+Monotonic, Size\+To\+Count\+Offset, use\+GCR $>$\+::cached\+\_\+reserve\+\_\+index\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classrocr_1_1AMD_1_1BlitSdma_a4030d4b5bc35c08c8ea0f4d943bc7d08}\label{classrocr_1_1AMD_1_1BlitSdma_a4030d4b5bc35c08c8ea0f4d943bc7d08}} 
+\index{rocr::AMD::BlitSdma$<$ RingIndexTy, HwIndexMonotonic, SizeToCountOffset, useGCR $>$@{rocr::AMD::BlitSdma$<$ RingIndexTy, HwIndexMonotonic, SizeToCountOffset, useGCR $>$}!data\_@{data\_}}
+\index{data\_@{data\_}!rocr::AMD::BlitSdma$<$ RingIndexTy, HwIndexMonotonic, SizeToCountOffset, useGCR $>$@{rocr::AMD::BlitSdma$<$ RingIndexTy, HwIndexMonotonic, SizeToCountOffset, useGCR $>$}}
+\doxysubsubsection{\texorpdfstring{data\_}{data\_}}
+{\footnotesize\ttfamily template$<$typename Ring\+Index\+Ty , bool Hw\+Index\+Monotonic, int Size\+To\+Count\+Offset, bool use\+GCR$>$ \\
+std\+::vector$<$uint64\+\_\+t$>$ \mbox{\hyperlink{classrocr_1_1AMD_1_1BlitSdma}{rocr\+::\+AMD\+::\+Blit\+Sdma}}$<$ Ring\+Index\+Ty, Hw\+Index\+Monotonic, Size\+To\+Count\+Offset, use\+GCR $>$\+::data\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classrocr_1_1AMD_1_1BlitSdma_ac3062bdd372e06dc2da88aefb61dbdfa}\label{classrocr_1_1AMD_1_1BlitSdma_ac3062bdd372e06dc2da88aefb61dbdfa}} 
+\index{rocr::AMD::BlitSdma$<$ RingIndexTy, HwIndexMonotonic, SizeToCountOffset, useGCR $>$@{rocr::AMD::BlitSdma$<$ RingIndexTy, HwIndexMonotonic, SizeToCountOffset, useGCR $>$}!fence\_command\_size\_@{fence\_command\_size\_}}
+\index{fence\_command\_size\_@{fence\_command\_size\_}!rocr::AMD::BlitSdma$<$ RingIndexTy, HwIndexMonotonic, SizeToCountOffset, useGCR $>$@{rocr::AMD::BlitSdma$<$ RingIndexTy, HwIndexMonotonic, SizeToCountOffset, useGCR $>$}}
+\doxysubsubsection{\texorpdfstring{fence\_command\_size\_}{fence\_command\_size\_}}
+{\footnotesize\ttfamily template$<$typename Ring\+Index\+Ty , bool Hw\+Index\+Monotonic, int Size\+To\+Count\+Offset, bool use\+GCR$>$ \\
+const uint32\+\_\+t \mbox{\hyperlink{classrocr_1_1AMD_1_1BlitSdma}{rocr\+::\+AMD\+::\+Blit\+Sdma}}$<$ Ring\+Index\+Ty, Hw\+Index\+Monotonic, Size\+To\+Count\+Offset, use\+GCR $>$\+::fence\+\_\+command\+\_\+size\+\_\+ = sizeof(\mbox{\hyperlink{namespacerocr_1_1AMD_ac1d56bfe68590d699342cdbb409e06cd}{SDMA\+\_\+\+PKT\+\_\+\+FENCE}})\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [private]}}
+
+\mbox{\Hypertarget{classrocr_1_1AMD_1_1BlitSdma_aa44c499a1d685eb5b84ce49acab820a1}\label{classrocr_1_1AMD_1_1BlitSdma_aa44c499a1d685eb5b84ce49acab820a1}} 
+\index{rocr::AMD::BlitSdma$<$ RingIndexTy, HwIndexMonotonic, SizeToCountOffset, useGCR $>$@{rocr::AMD::BlitSdma$<$ RingIndexTy, HwIndexMonotonic, SizeToCountOffset, useGCR $>$}!fill\_command\_size\_@{fill\_command\_size\_}}
+\index{fill\_command\_size\_@{fill\_command\_size\_}!rocr::AMD::BlitSdma$<$ RingIndexTy, HwIndexMonotonic, SizeToCountOffset, useGCR $>$@{rocr::AMD::BlitSdma$<$ RingIndexTy, HwIndexMonotonic, SizeToCountOffset, useGCR $>$}}
+\doxysubsubsection{\texorpdfstring{fill\_command\_size\_}{fill\_command\_size\_}}
+{\footnotesize\ttfamily template$<$typename Ring\+Index\+Ty , bool Hw\+Index\+Monotonic, int Size\+To\+Count\+Offset, bool use\+GCR$>$ \\
+const uint32\+\_\+t \mbox{\hyperlink{classrocr_1_1AMD_1_1BlitSdma}{rocr\+::\+AMD\+::\+Blit\+Sdma}}$<$ Ring\+Index\+Ty, Hw\+Index\+Monotonic, Size\+To\+Count\+Offset, use\+GCR $>$\+::fill\+\_\+command\+\_\+size\+\_\+ = sizeof(\mbox{\hyperlink{namespacerocr_1_1AMD_abbaf537f4103cf134a983e382b2a0f38}{SDMA\+\_\+\+PKT\+\_\+\+CONSTANT\+\_\+\+FILL}})\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [private]}}
+
+\mbox{\Hypertarget{classrocr_1_1AMD_1_1BlitSdma_ab0c5ecaa03a11310e020df8d7495bb99}\label{classrocr_1_1AMD_1_1BlitSdma_ab0c5ecaa03a11310e020df8d7495bb99}} 
+\index{rocr::AMD::BlitSdma$<$ RingIndexTy, HwIndexMonotonic, SizeToCountOffset, useGCR $>$@{rocr::AMD::BlitSdma$<$ RingIndexTy, HwIndexMonotonic, SizeToCountOffset, useGCR $>$}!flush\_command\_size\_@{flush\_command\_size\_}}
+\index{flush\_command\_size\_@{flush\_command\_size\_}!rocr::AMD::BlitSdma$<$ RingIndexTy, HwIndexMonotonic, SizeToCountOffset, useGCR $>$@{rocr::AMD::BlitSdma$<$ RingIndexTy, HwIndexMonotonic, SizeToCountOffset, useGCR $>$}}
+\doxysubsubsection{\texorpdfstring{flush\_command\_size\_}{flush\_command\_size\_}}
+{\footnotesize\ttfamily template$<$typename Ring\+Index\+Ty , bool Hw\+Index\+Monotonic, int Size\+To\+Count\+Offset, bool use\+GCR$>$ \\
+const uint32\+\_\+t \mbox{\hyperlink{classrocr_1_1AMD_1_1BlitSdma}{rocr\+::\+AMD\+::\+Blit\+Sdma}}$<$ Ring\+Index\+Ty, Hw\+Index\+Monotonic, Size\+To\+Count\+Offset, use\+GCR $>$\+::flush\+\_\+command\+\_\+size\+\_\+ = sizeof(\mbox{\hyperlink{namespacerocr_1_1AMD_ae499fe17ffe680f17fa1ea4ec03f1f26}{SDMA\+\_\+\+PKT\+\_\+\+POLL\+\_\+\+REGMEM}})\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [private]}}
+
+\mbox{\Hypertarget{classrocr_1_1AMD_1_1BlitSdma_a71edca33cf4620c6f288a7a16e798e3e}\label{classrocr_1_1AMD_1_1BlitSdma_a71edca33cf4620c6f288a7a16e798e3e}} 
+\index{rocr::AMD::BlitSdma$<$ RingIndexTy, HwIndexMonotonic, SizeToCountOffset, useGCR $>$@{rocr::AMD::BlitSdma$<$ RingIndexTy, HwIndexMonotonic, SizeToCountOffset, useGCR $>$}!gcr\_command\_size\_@{gcr\_command\_size\_}}
+\index{gcr\_command\_size\_@{gcr\_command\_size\_}!rocr::AMD::BlitSdma$<$ RingIndexTy, HwIndexMonotonic, SizeToCountOffset, useGCR $>$@{rocr::AMD::BlitSdma$<$ RingIndexTy, HwIndexMonotonic, SizeToCountOffset, useGCR $>$}}
+\doxysubsubsection{\texorpdfstring{gcr\_command\_size\_}{gcr\_command\_size\_}}
+{\footnotesize\ttfamily template$<$typename Ring\+Index\+Ty , bool Hw\+Index\+Monotonic, int Size\+To\+Count\+Offset, bool use\+GCR$>$ \\
+const uint32\+\_\+t \mbox{\hyperlink{classrocr_1_1AMD_1_1BlitSdma}{rocr\+::\+AMD\+::\+Blit\+Sdma}}$<$ Ring\+Index\+Ty, Hw\+Index\+Monotonic, Size\+To\+Count\+Offset, use\+GCR $>$\+::gcr\+\_\+command\+\_\+size\+\_\+ = sizeof(\mbox{\hyperlink{namespacerocr_1_1AMD_a7ebe80605df8c4dd771c1265f3efb234}{SDMA\+\_\+\+PKT\+\_\+\+GCR}})\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [private]}}
+
+\mbox{\Hypertarget{classrocr_1_1AMD_1_1BlitSdma_a8ff9fd65597dc6d73f24a8770d222a71}\label{classrocr_1_1AMD_1_1BlitSdma_a8ff9fd65597dc6d73f24a8770d222a71}} 
+\index{rocr::AMD::BlitSdma$<$ RingIndexTy, HwIndexMonotonic, SizeToCountOffset, useGCR $>$@{rocr::AMD::BlitSdma$<$ RingIndexTy, HwIndexMonotonic, SizeToCountOffset, useGCR $>$}!hdp\_flush\_support\_@{hdp\_flush\_support\_}}
+\index{hdp\_flush\_support\_@{hdp\_flush\_support\_}!rocr::AMD::BlitSdma$<$ RingIndexTy, HwIndexMonotonic, SizeToCountOffset, useGCR $>$@{rocr::AMD::BlitSdma$<$ RingIndexTy, HwIndexMonotonic, SizeToCountOffset, useGCR $>$}}
+\doxysubsubsection{\texorpdfstring{hdp\_flush\_support\_}{hdp\_flush\_support\_}}
+{\footnotesize\ttfamily template$<$typename Ring\+Index\+Ty , bool Hw\+Index\+Monotonic, int Size\+To\+Count\+Offset, bool use\+GCR$>$ \\
+bool \mbox{\hyperlink{classrocr_1_1AMD_1_1BlitSdma}{rocr\+::\+AMD\+::\+Blit\+Sdma}}$<$ Ring\+Index\+Ty, Hw\+Index\+Monotonic, Size\+To\+Count\+Offset, use\+GCR $>$\+::hdp\+\_\+flush\+\_\+support\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+True if s\+DMA supports HDP flush. 
+
+\mbox{\Hypertarget{classrocr_1_1AMD_1_1BlitSdma_a506f55e6c159d393f541abfc5640ebeb}\label{classrocr_1_1AMD_1_1BlitSdma_a506f55e6c159d393f541abfc5640ebeb}} 
+\index{rocr::AMD::BlitSdma$<$ RingIndexTy, HwIndexMonotonic, SizeToCountOffset, useGCR $>$@{rocr::AMD::BlitSdma$<$ RingIndexTy, HwIndexMonotonic, SizeToCountOffset, useGCR $>$}!linear\_copy\_command\_size\_@{linear\_copy\_command\_size\_}}
+\index{linear\_copy\_command\_size\_@{linear\_copy\_command\_size\_}!rocr::AMD::BlitSdma$<$ RingIndexTy, HwIndexMonotonic, SizeToCountOffset, useGCR $>$@{rocr::AMD::BlitSdma$<$ RingIndexTy, HwIndexMonotonic, SizeToCountOffset, useGCR $>$}}
+\doxysubsubsection{\texorpdfstring{linear\_copy\_command\_size\_}{linear\_copy\_command\_size\_}}
+{\footnotesize\ttfamily template$<$typename Ring\+Index\+Ty , bool Hw\+Index\+Monotonic, int Size\+To\+Count\+Offset, bool use\+GCR$>$ \\
+const uint32\+\_\+t \mbox{\hyperlink{classrocr_1_1AMD_1_1BlitSdma}{rocr\+::\+AMD\+::\+Blit\+Sdma}}$<$ Ring\+Index\+Ty, Hw\+Index\+Monotonic, Size\+To\+Count\+Offset, use\+GCR $>$\+::linear\+\_\+copy\+\_\+command\+\_\+size\+\_\+ = sizeof(\mbox{\hyperlink{namespacerocr_1_1AMD_a4009cd6a6987d35d9ecd2b71ed4ab657}{SDMA\+\_\+\+PKT\+\_\+\+COPY\+\_\+\+LINEAR}})\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [private]}}
+
+\mbox{\Hypertarget{classrocr_1_1AMD_1_1BlitSdma_ae40d486a68e1b9ad8d62886aed77a31f}\label{classrocr_1_1AMD_1_1BlitSdma_ae40d486a68e1b9ad8d62886aed77a31f}} 
+\index{rocr::AMD::BlitSdma$<$ RingIndexTy, HwIndexMonotonic, SizeToCountOffset, useGCR $>$@{rocr::AMD::BlitSdma$<$ RingIndexTy, HwIndexMonotonic, SizeToCountOffset, useGCR $>$}!lock\_@{lock\_}}
+\index{lock\_@{lock\_}!rocr::AMD::BlitSdma$<$ RingIndexTy, HwIndexMonotonic, SizeToCountOffset, useGCR $>$@{rocr::AMD::BlitSdma$<$ RingIndexTy, HwIndexMonotonic, SizeToCountOffset, useGCR $>$}}
+\doxysubsubsection{\texorpdfstring{lock\_}{lock\_}}
+{\footnotesize\ttfamily template$<$typename Ring\+Index\+Ty , bool Hw\+Index\+Monotonic, int Size\+To\+Count\+Offset, bool use\+GCR$>$ \\
+\mbox{\hyperlink{classrocr_1_1KernelMutex}{Kernel\+Mutex}} \mbox{\hyperlink{classrocr_1_1AMD_1_1BlitSdma}{rocr\+::\+AMD\+::\+Blit\+Sdma}}$<$ Ring\+Index\+Ty, Hw\+Index\+Monotonic, Size\+To\+Count\+Offset, use\+GCR $>$\+::lock\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classrocr_1_1AMD_1_1BlitSdma_a6af9ad3bcd745c53c1b4e1320caf4cbb}\label{classrocr_1_1AMD_1_1BlitSdma_a6af9ad3bcd745c53c1b4e1320caf4cbb}} 
+\index{rocr::AMD::BlitSdma$<$ RingIndexTy, HwIndexMonotonic, SizeToCountOffset, useGCR $>$@{rocr::AMD::BlitSdma$<$ RingIndexTy, HwIndexMonotonic, SizeToCountOffset, useGCR $>$}!max\_single\_fill\_size\_@{max\_single\_fill\_size\_}}
+\index{max\_single\_fill\_size\_@{max\_single\_fill\_size\_}!rocr::AMD::BlitSdma$<$ RingIndexTy, HwIndexMonotonic, SizeToCountOffset, useGCR $>$@{rocr::AMD::BlitSdma$<$ RingIndexTy, HwIndexMonotonic, SizeToCountOffset, useGCR $>$}}
+\doxysubsubsection{\texorpdfstring{max\_single\_fill\_size\_}{max\_single\_fill\_size\_}}
+{\footnotesize\ttfamily template$<$typename Ring\+Index\+Ty , bool Hw\+Index\+Monotonic, int Size\+To\+Count\+Offset, bool use\+GCR$>$ \\
+size\+\_\+t \mbox{\hyperlink{classrocr_1_1AMD_1_1BlitSdma}{rocr\+::\+AMD\+::\+Blit\+Sdma}}$<$ Ring\+Index\+Ty, Hw\+Index\+Monotonic, Size\+To\+Count\+Offset, use\+GCR $>$\+::max\+\_\+single\+\_\+fill\+\_\+size\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Max count of uint32\+\_\+t of a single fill command packet. 
+
+\mbox{\Hypertarget{classrocr_1_1AMD_1_1BlitSdma_a97e9eae15e0757c5109509786bbbdd8a}\label{classrocr_1_1AMD_1_1BlitSdma_a97e9eae15e0757c5109509786bbbdd8a}} 
+\index{rocr::AMD::BlitSdma$<$ RingIndexTy, HwIndexMonotonic, SizeToCountOffset, useGCR $>$@{rocr::AMD::BlitSdma$<$ RingIndexTy, HwIndexMonotonic, SizeToCountOffset, useGCR $>$}!max\_single\_linear\_copy\_size\_@{max\_single\_linear\_copy\_size\_}}
+\index{max\_single\_linear\_copy\_size\_@{max\_single\_linear\_copy\_size\_}!rocr::AMD::BlitSdma$<$ RingIndexTy, HwIndexMonotonic, SizeToCountOffset, useGCR $>$@{rocr::AMD::BlitSdma$<$ RingIndexTy, HwIndexMonotonic, SizeToCountOffset, useGCR $>$}}
+\doxysubsubsection{\texorpdfstring{max\_single\_linear\_copy\_size\_}{max\_single\_linear\_copy\_size\_}}
+{\footnotesize\ttfamily template$<$typename Ring\+Index\+Ty , bool Hw\+Index\+Monotonic, int Size\+To\+Count\+Offset, bool use\+GCR$>$ \\
+size\+\_\+t \mbox{\hyperlink{classrocr_1_1AMD_1_1BlitSdma}{rocr\+::\+AMD\+::\+Blit\+Sdma}}$<$ Ring\+Index\+Ty, Hw\+Index\+Monotonic, Size\+To\+Count\+Offset, use\+GCR $>$\+::max\+\_\+single\+\_\+linear\+\_\+copy\+\_\+size\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classrocr_1_1AMD_1_1BlitSdma_a49c44e06efff093602b856eab16a89f3}\label{classrocr_1_1AMD_1_1BlitSdma_a49c44e06efff093602b856eab16a89f3}} 
+\index{rocr::AMD::BlitSdma$<$ RingIndexTy, HwIndexMonotonic, SizeToCountOffset, useGCR $>$@{rocr::AMD::BlitSdma$<$ RingIndexTy, HwIndexMonotonic, SizeToCountOffset, useGCR $>$}!max\_total\_fill\_size\_@{max\_total\_fill\_size\_}}
+\index{max\_total\_fill\_size\_@{max\_total\_fill\_size\_}!rocr::AMD::BlitSdma$<$ RingIndexTy, HwIndexMonotonic, SizeToCountOffset, useGCR $>$@{rocr::AMD::BlitSdma$<$ RingIndexTy, HwIndexMonotonic, SizeToCountOffset, useGCR $>$}}
+\doxysubsubsection{\texorpdfstring{max\_total\_fill\_size\_}{max\_total\_fill\_size\_}}
+{\footnotesize\ttfamily template$<$typename Ring\+Index\+Ty , bool Hw\+Index\+Monotonic, int Size\+To\+Count\+Offset, bool use\+GCR$>$ \\
+size\+\_\+t \mbox{\hyperlink{classrocr_1_1AMD_1_1BlitSdma}{rocr\+::\+AMD\+::\+Blit\+Sdma}}$<$ Ring\+Index\+Ty, Hw\+Index\+Monotonic, Size\+To\+Count\+Offset, use\+GCR $>$\+::max\+\_\+total\+\_\+fill\+\_\+size\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Max total fill count supported by the queue. 
+
+\mbox{\Hypertarget{classrocr_1_1AMD_1_1BlitSdma_a70544598fbe5daa6b07359663f6d1fa7}\label{classrocr_1_1AMD_1_1BlitSdma_a70544598fbe5daa6b07359663f6d1fa7}} 
+\index{rocr::AMD::BlitSdma$<$ RingIndexTy, HwIndexMonotonic, SizeToCountOffset, useGCR $>$@{rocr::AMD::BlitSdma$<$ RingIndexTy, HwIndexMonotonic, SizeToCountOffset, useGCR $>$}!max\_total\_linear\_copy\_size\_@{max\_total\_linear\_copy\_size\_}}
+\index{max\_total\_linear\_copy\_size\_@{max\_total\_linear\_copy\_size\_}!rocr::AMD::BlitSdma$<$ RingIndexTy, HwIndexMonotonic, SizeToCountOffset, useGCR $>$@{rocr::AMD::BlitSdma$<$ RingIndexTy, HwIndexMonotonic, SizeToCountOffset, useGCR $>$}}
+\doxysubsubsection{\texorpdfstring{max\_total\_linear\_copy\_size\_}{max\_total\_linear\_copy\_size\_}}
+{\footnotesize\ttfamily template$<$typename Ring\+Index\+Ty , bool Hw\+Index\+Monotonic, int Size\+To\+Count\+Offset, bool use\+GCR$>$ \\
+size\+\_\+t \mbox{\hyperlink{classrocr_1_1AMD_1_1BlitSdma}{rocr\+::\+AMD\+::\+Blit\+Sdma}}$<$ Ring\+Index\+Ty, Hw\+Index\+Monotonic, Size\+To\+Count\+Offset, use\+GCR $>$\+::max\+\_\+total\+\_\+linear\+\_\+copy\+\_\+size\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Max total copy size supported by the queue. 
+
+\mbox{\Hypertarget{classrocr_1_1AMD_1_1BlitSdma_a290a6f52bdae16e4a96be35626189fb8}\label{classrocr_1_1AMD_1_1BlitSdma_a290a6f52bdae16e4a96be35626189fb8}} 
+\index{rocr::AMD::BlitSdma$<$ RingIndexTy, HwIndexMonotonic, SizeToCountOffset, useGCR $>$@{rocr::AMD::BlitSdma$<$ RingIndexTy, HwIndexMonotonic, SizeToCountOffset, useGCR $>$}!parity\_@{parity\_}}
+\index{parity\_@{parity\_}!rocr::AMD::BlitSdma$<$ RingIndexTy, HwIndexMonotonic, SizeToCountOffset, useGCR $>$@{rocr::AMD::BlitSdma$<$ RingIndexTy, HwIndexMonotonic, SizeToCountOffset, useGCR $>$}}
+\doxysubsubsection{\texorpdfstring{parity\_}{parity\_}}
+{\footnotesize\ttfamily template$<$typename Ring\+Index\+Ty , bool Hw\+Index\+Monotonic, int Size\+To\+Count\+Offset, bool use\+GCR$>$ \\
+bool \mbox{\hyperlink{classrocr_1_1AMD_1_1BlitSdma}{rocr\+::\+AMD\+::\+Blit\+Sdma}}$<$ Ring\+Index\+Ty, Hw\+Index\+Monotonic, Size\+To\+Count\+Offset, use\+GCR $>$\+::parity\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classrocr_1_1AMD_1_1BlitSdma_a96c1987acd70c201810d6e898f444be5}\label{classrocr_1_1AMD_1_1BlitSdma_a96c1987acd70c201810d6e898f444be5}} 
+\index{rocr::AMD::BlitSdma$<$ RingIndexTy, HwIndexMonotonic, SizeToCountOffset, useGCR $>$@{rocr::AMD::BlitSdma$<$ RingIndexTy, HwIndexMonotonic, SizeToCountOffset, useGCR $>$}!platform\_atomic\_support\_@{platform\_atomic\_support\_}}
+\index{platform\_atomic\_support\_@{platform\_atomic\_support\_}!rocr::AMD::BlitSdma$<$ RingIndexTy, HwIndexMonotonic, SizeToCountOffset, useGCR $>$@{rocr::AMD::BlitSdma$<$ RingIndexTy, HwIndexMonotonic, SizeToCountOffset, useGCR $>$}}
+\doxysubsubsection{\texorpdfstring{platform\_atomic\_support\_}{platform\_atomic\_support\_}}
+{\footnotesize\ttfamily template$<$typename Ring\+Index\+Ty , bool Hw\+Index\+Monotonic, int Size\+To\+Count\+Offset, bool use\+GCR$>$ \\
+bool \mbox{\hyperlink{classrocr_1_1AMD_1_1BlitSdma}{rocr\+::\+AMD\+::\+Blit\+Sdma}}$<$ Ring\+Index\+Ty, Hw\+Index\+Monotonic, Size\+To\+Count\+Offset, use\+GCR $>$\+::platform\+\_\+atomic\+\_\+support\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+True if platform atomic is supported. 
+
+\mbox{\Hypertarget{classrocr_1_1AMD_1_1BlitSdma_a40a78e1eae78c3a571983a6b5ef19b2e}\label{classrocr_1_1AMD_1_1BlitSdma_a40a78e1eae78c3a571983a6b5ef19b2e}} 
+\index{rocr::AMD::BlitSdma$<$ RingIndexTy, HwIndexMonotonic, SizeToCountOffset, useGCR $>$@{rocr::AMD::BlitSdma$<$ RingIndexTy, HwIndexMonotonic, SizeToCountOffset, useGCR $>$}!poll\_command\_size\_@{poll\_command\_size\_}}
+\index{poll\_command\_size\_@{poll\_command\_size\_}!rocr::AMD::BlitSdma$<$ RingIndexTy, HwIndexMonotonic, SizeToCountOffset, useGCR $>$@{rocr::AMD::BlitSdma$<$ RingIndexTy, HwIndexMonotonic, SizeToCountOffset, useGCR $>$}}
+\doxysubsubsection{\texorpdfstring{poll\_command\_size\_}{poll\_command\_size\_}}
+{\footnotesize\ttfamily template$<$typename Ring\+Index\+Ty , bool Hw\+Index\+Monotonic, int Size\+To\+Count\+Offset, bool use\+GCR$>$ \\
+const uint32\+\_\+t \mbox{\hyperlink{classrocr_1_1AMD_1_1BlitSdma}{rocr\+::\+AMD\+::\+Blit\+Sdma}}$<$ Ring\+Index\+Ty, Hw\+Index\+Monotonic, Size\+To\+Count\+Offset, use\+GCR $>$\+::poll\+\_\+command\+\_\+size\+\_\+ = sizeof(\mbox{\hyperlink{namespacerocr_1_1AMD_ae499fe17ffe680f17fa1ea4ec03f1f26}{SDMA\+\_\+\+PKT\+\_\+\+POLL\+\_\+\+REGMEM}})\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [private]}}
+
+\mbox{\Hypertarget{classrocr_1_1AMD_1_1BlitSdma_a30c8d52b2f3b56302efa5bc667132d1f}\label{classrocr_1_1AMD_1_1BlitSdma_a30c8d52b2f3b56302efa5bc667132d1f}} 
+\index{rocr::AMD::BlitSdma$<$ RingIndexTy, HwIndexMonotonic, SizeToCountOffset, useGCR $>$@{rocr::AMD::BlitSdma$<$ RingIndexTy, HwIndexMonotonic, SizeToCountOffset, useGCR $>$}!queue\_resource\_@{queue\_resource\_}}
+\index{queue\_resource\_@{queue\_resource\_}!rocr::AMD::BlitSdma$<$ RingIndexTy, HwIndexMonotonic, SizeToCountOffset, useGCR $>$@{rocr::AMD::BlitSdma$<$ RingIndexTy, HwIndexMonotonic, SizeToCountOffset, useGCR $>$}}
+\doxysubsubsection{\texorpdfstring{queue\_resource\_}{queue\_resource\_}}
+{\footnotesize\ttfamily template$<$typename Ring\+Index\+Ty , bool Hw\+Index\+Monotonic, int Size\+To\+Count\+Offset, bool use\+GCR$>$ \\
+Hsa\+Queue\+Resource \mbox{\hyperlink{classrocr_1_1AMD_1_1BlitSdma}{rocr\+::\+AMD\+::\+Blit\+Sdma}}$<$ Ring\+Index\+Ty, Hw\+Index\+Monotonic, Size\+To\+Count\+Offset, use\+GCR $>$\+::queue\+\_\+resource\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
+
+Queue resource descriptor for doorbell, read and write indices \mbox{\Hypertarget{classrocr_1_1AMD_1_1BlitSdma_af11dd8d17a629442dd2ac410f5ea011a}\label{classrocr_1_1AMD_1_1BlitSdma_af11dd8d17a629442dd2ac410f5ea011a}} 
+\index{rocr::AMD::BlitSdma$<$ RingIndexTy, HwIndexMonotonic, SizeToCountOffset, useGCR $>$@{rocr::AMD::BlitSdma$<$ RingIndexTy, HwIndexMonotonic, SizeToCountOffset, useGCR $>$}!queue\_start\_addr\_@{queue\_start\_addr\_}}
+\index{queue\_start\_addr\_@{queue\_start\_addr\_}!rocr::AMD::BlitSdma$<$ RingIndexTy, HwIndexMonotonic, SizeToCountOffset, useGCR $>$@{rocr::AMD::BlitSdma$<$ RingIndexTy, HwIndexMonotonic, SizeToCountOffset, useGCR $>$}}
+\doxysubsubsection{\texorpdfstring{queue\_start\_addr\_}{queue\_start\_addr\_}}
+{\footnotesize\ttfamily template$<$typename Ring\+Index\+Ty , bool Hw\+Index\+Monotonic, int Size\+To\+Count\+Offset, bool use\+GCR$>$ \\
+char$\ast$ \mbox{\hyperlink{classrocr_1_1AMD_1_1BlitSdma}{rocr\+::\+AMD\+::\+Blit\+Sdma}}$<$ Ring\+Index\+Ty, Hw\+Index\+Monotonic, Size\+To\+Count\+Offset, use\+GCR $>$\+::queue\+\_\+start\+\_\+addr\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Base address of the Queue buffer at construction time. 
+
+\mbox{\Hypertarget{classrocr_1_1AMD_1_1BlitSdma_a3ff311f1fb680925114015f74f03c8e9}\label{classrocr_1_1AMD_1_1BlitSdma_a3ff311f1fb680925114015f74f03c8e9}} 
+\index{rocr::AMD::BlitSdma$<$ RingIndexTy, HwIndexMonotonic, SizeToCountOffset, useGCR $>$@{rocr::AMD::BlitSdma$<$ RingIndexTy, HwIndexMonotonic, SizeToCountOffset, useGCR $>$}!reservation\_lock\_@{reservation\_lock\_}}
+\index{reservation\_lock\_@{reservation\_lock\_}!rocr::AMD::BlitSdma$<$ RingIndexTy, HwIndexMonotonic, SizeToCountOffset, useGCR $>$@{rocr::AMD::BlitSdma$<$ RingIndexTy, HwIndexMonotonic, SizeToCountOffset, useGCR $>$}}
+\doxysubsubsection{\texorpdfstring{reservation\_lock\_}{reservation\_lock\_}}
+{\footnotesize\ttfamily template$<$typename Ring\+Index\+Ty , bool Hw\+Index\+Monotonic, int Size\+To\+Count\+Offset, bool use\+GCR$>$ \\
+std\+::mutex \mbox{\hyperlink{classrocr_1_1AMD_1_1BlitSdma}{rocr\+::\+AMD\+::\+Blit\+Sdma}}$<$ Ring\+Index\+Ty, Hw\+Index\+Monotonic, Size\+To\+Count\+Offset, use\+GCR $>$\+::reservation\+\_\+lock\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classrocr_1_1AMD_1_1BlitSdma_aa326ce8cb54feac1a3b0d2fec77bf8b7}\label{classrocr_1_1AMD_1_1BlitSdma_aa326ce8cb54feac1a3b0d2fec77bf8b7}} 
+\index{rocr::AMD::BlitSdma$<$ RingIndexTy, HwIndexMonotonic, SizeToCountOffset, useGCR $>$@{rocr::AMD::BlitSdma$<$ RingIndexTy, HwIndexMonotonic, SizeToCountOffset, useGCR $>$}!signals\_@{signals\_}}
+\index{signals\_@{signals\_}!rocr::AMD::BlitSdma$<$ RingIndexTy, HwIndexMonotonic, SizeToCountOffset, useGCR $>$@{rocr::AMD::BlitSdma$<$ RingIndexTy, HwIndexMonotonic, SizeToCountOffset, useGCR $>$}}
+\doxysubsubsection{\texorpdfstring{signals\_}{signals\_}}
+{\footnotesize\ttfamily template$<$typename Ring\+Index\+Ty , bool Hw\+Index\+Monotonic, int Size\+To\+Count\+Offset, bool use\+GCR$>$ \\
+\mbox{\hyperlink{namespacerocr_1_1core_a6e717c0b3cb9239a37ef236c53b52796}{core\+::unique\+\_\+signal\+\_\+ptr}} \mbox{\hyperlink{classrocr_1_1AMD_1_1BlitSdma}{rocr\+::\+AMD\+::\+Blit\+Sdma}}$<$ Ring\+Index\+Ty, Hw\+Index\+Monotonic, Size\+To\+Count\+Offset, use\+GCR $>$\+::signals\+\_\+\mbox{[}2\mbox{]}\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classrocr_1_1AMD_1_1BlitSdma_a952c7fc9b0be87b5068dc628da651b86}\label{classrocr_1_1AMD_1_1BlitSdma_a952c7fc9b0be87b5068dc628da651b86}} 
+\index{rocr::AMD::BlitSdma$<$ RingIndexTy, HwIndexMonotonic, SizeToCountOffset, useGCR $>$@{rocr::AMD::BlitSdma$<$ RingIndexTy, HwIndexMonotonic, SizeToCountOffset, useGCR $>$}!timestamp\_command\_size\_@{timestamp\_command\_size\_}}
+\index{timestamp\_command\_size\_@{timestamp\_command\_size\_}!rocr::AMD::BlitSdma$<$ RingIndexTy, HwIndexMonotonic, SizeToCountOffset, useGCR $>$@{rocr::AMD::BlitSdma$<$ RingIndexTy, HwIndexMonotonic, SizeToCountOffset, useGCR $>$}}
+\doxysubsubsection{\texorpdfstring{timestamp\_command\_size\_}{timestamp\_command\_size\_}}
+{\footnotesize\ttfamily template$<$typename Ring\+Index\+Ty , bool Hw\+Index\+Monotonic, int Size\+To\+Count\+Offset, bool use\+GCR$>$ \\
+const uint32\+\_\+t \mbox{\hyperlink{classrocr_1_1AMD_1_1BlitSdma}{rocr\+::\+AMD\+::\+Blit\+Sdma}}$<$ Ring\+Index\+Ty, Hw\+Index\+Monotonic, Size\+To\+Count\+Offset, use\+GCR $>$\+::timestamp\+\_\+command\+\_\+size\+\_\+ = sizeof(\mbox{\hyperlink{namespacerocr_1_1AMD_aebe33e20a952bb995379a6fc47e16dba}{SDMA\+\_\+\+PKT\+\_\+\+TIMESTAMP}})\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [private]}}
+
+\mbox{\Hypertarget{classrocr_1_1AMD_1_1BlitSdma_a286ee4c2862e467c092a0e901eaf35c7}\label{classrocr_1_1AMD_1_1BlitSdma_a286ee4c2862e467c092a0e901eaf35c7}} 
+\index{rocr::AMD::BlitSdma$<$ RingIndexTy, HwIndexMonotonic, SizeToCountOffset, useGCR $>$@{rocr::AMD::BlitSdma$<$ RingIndexTy, HwIndexMonotonic, SizeToCountOffset, useGCR $>$}!trap\_command\_size\_@{trap\_command\_size\_}}
+\index{trap\_command\_size\_@{trap\_command\_size\_}!rocr::AMD::BlitSdma$<$ RingIndexTy, HwIndexMonotonic, SizeToCountOffset, useGCR $>$@{rocr::AMD::BlitSdma$<$ RingIndexTy, HwIndexMonotonic, SizeToCountOffset, useGCR $>$}}
+\doxysubsubsection{\texorpdfstring{trap\_command\_size\_}{trap\_command\_size\_}}
+{\footnotesize\ttfamily template$<$typename Ring\+Index\+Ty , bool Hw\+Index\+Monotonic, int Size\+To\+Count\+Offset, bool use\+GCR$>$ \\
+const uint32\+\_\+t \mbox{\hyperlink{classrocr_1_1AMD_1_1BlitSdma}{rocr\+::\+AMD\+::\+Blit\+Sdma}}$<$ Ring\+Index\+Ty, Hw\+Index\+Monotonic, Size\+To\+Count\+Offset, use\+GCR $>$\+::trap\+\_\+command\+\_\+size\+\_\+ = sizeof(\mbox{\hyperlink{namespacerocr_1_1AMD_abb50473366b126865356c111e1103aae}{SDMA\+\_\+\+PKT\+\_\+\+TRAP}})\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [private]}}
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+src/core/inc/\mbox{\hyperlink{amd__blit__sdma_8h}{amd\+\_\+blit\+\_\+sdma.\+h}}\item 
+src/core/runtime/\mbox{\hyperlink{amd__blit__sdma_8cpp}{amd\+\_\+blit\+\_\+sdma.\+cpp}}\end{DoxyCompactItemize}

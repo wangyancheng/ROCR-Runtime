@@ -1,0 +1,684 @@
+\hypertarget{addrinterface_8h}{}\doxysection{src/image/addrlib/inc/addrinterface.h File Reference}
+\label{addrinterface_8h}\index{src/image/addrlib/inc/addrinterface.h@{src/image/addrlib/inc/addrinterface.h}}
+
+
+Contains the addrlib interfaces declaration and parameter defines.  
+
+
+{\ttfamily \#include \char`\"{}addrtypes.\+h\char`\"{}}\newline
+Include dependency graph for addrinterface.\+h\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=187pt]{addrinterface_8h__incl}
+\end{center}
+\end{figure}
+This graph shows which files directly or indirectly include this file\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{addrinterface_8h__dep__incl}
+\end{center}
+\end{figure}
+\doxysubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+union \mbox{\hyperlink{unionrocr_1_1__ADDR__CHANNEL__SETTING}{rocr\+::\+\_\+\+ADDR\+\_\+\+CHANNEL\+\_\+\+SETTING}}
+\begin{DoxyCompactList}\small\item\em channel setting structure \end{DoxyCompactList}\item 
+union \mbox{\hyperlink{unionrocr_1_1__ADDR__EQUATION__KEY}{rocr\+::\+\_\+\+ADDR\+\_\+\+EQUATION\+\_\+\+KEY}}
+\begin{DoxyCompactList}\small\item\em address equation key structure \end{DoxyCompactList}\item 
+struct \mbox{\hyperlink{structrocr_1_1__ADDR__EQUATION}{rocr\+::\+\_\+\+ADDR\+\_\+\+EQUATION}}
+\item 
+union \mbox{\hyperlink{unionrocr_1_1__ADDR__ALLOCSYSMEM__FLAGS}{rocr\+::\+\_\+\+ADDR\+\_\+\+ALLOCSYSMEM\+\_\+\+FLAGS}}
+\begin{DoxyCompactList}\small\item\em Alloc system memory flags. \end{DoxyCompactList}\item 
+struct \mbox{\hyperlink{structrocr_1_1__ADDR__ALLOCSYSMEM__INPUT}{rocr\+::\+\_\+\+ADDR\+\_\+\+ALLOCSYSMEM\+\_\+\+INPUT}}
+\begin{DoxyCompactList}\small\item\em Alloc system memory input structure. \end{DoxyCompactList}\item 
+struct \mbox{\hyperlink{structrocr_1_1__ADDR__FREESYSMEM__INPUT}{rocr\+::\+\_\+\+ADDR\+\_\+\+FREESYSMEM\+\_\+\+INPUT}}
+\begin{DoxyCompactList}\small\item\em Free system memory input structure. \end{DoxyCompactList}\item 
+struct \mbox{\hyperlink{structrocr_1_1__ADDR__DEBUGPRINT__INPUT}{rocr\+::\+\_\+\+ADDR\+\_\+\+DEBUGPRINT\+\_\+\+INPUT}}
+\begin{DoxyCompactList}\small\item\em Print debug message input structure. \end{DoxyCompactList}\item 
+struct \mbox{\hyperlink{structrocr_1_1__ADDR__CALLBACKS}{rocr\+::\+\_\+\+ADDR\+\_\+\+CALLBACKS}}
+\begin{DoxyCompactList}\small\item\em Address Library needs client to provide system memory alloc/free routines. \end{DoxyCompactList}\item 
+union \mbox{\hyperlink{unionrocr_1_1__ADDR__CREATE__FLAGS}{rocr\+::\+\_\+\+ADDR\+\_\+\+CREATE\+\_\+\+FLAGS}}
+\begin{DoxyCompactList}\small\item\em This structure is used to pass some setup in creation of Addr\+Lib. \end{DoxyCompactList}\item 
+struct \mbox{\hyperlink{structrocr_1_1__ADDR__REGISTER__VALUE}{rocr\+::\+\_\+\+ADDR\+\_\+\+REGISTER\+\_\+\+VALUE}}
+\begin{DoxyCompactList}\small\item\em Data from registers to setup Addr\+Lib global data, used in Addr\+Create. \end{DoxyCompactList}\item 
+struct \mbox{\hyperlink{structrocr_1_1__ADDR__CREATE__INPUT}{rocr\+::\+\_\+\+ADDR\+\_\+\+CREATE\+\_\+\+INPUT}}
+\begin{DoxyCompactList}\small\item\em Parameters use to create an Addr\+Lib Object. Caller must provide all fields. \end{DoxyCompactList}\item 
+struct \mbox{\hyperlink{structrocr_1_1__ADDR__CREATE__OUTPUT}{rocr\+::\+\_\+\+ADDR\+\_\+\+CREATE\+\_\+\+OUTPUT}}
+\begin{DoxyCompactList}\small\item\em Return Addr\+Lib handle to client driver. \end{DoxyCompactList}\item 
+struct \mbox{\hyperlink{structrocr_1_1__ADDR__TILEINFO}{rocr\+::\+\_\+\+ADDR\+\_\+\+TILEINFO}}
+\begin{DoxyCompactList}\small\item\em Bank/tiling parameters. On function input, these can be set as desired or left 0 for Addr\+Lib to calculate/default. On function output, these are the actual parameters used. \end{DoxyCompactList}\item 
+struct \mbox{\hyperlink{structrocr_1_1__ADDR__QBSTEREOINFO}{rocr\+::\+\_\+\+ADDR\+\_\+\+QBSTEREOINFO}}
+\begin{DoxyCompactList}\small\item\em Information needed by quad buffer stereo support. \end{DoxyCompactList}\item 
+union \mbox{\hyperlink{unionrocr_1_1__ADDR__SURFACE__FLAGS}{rocr\+::\+\_\+\+ADDR\+\_\+\+SURFACE\+\_\+\+FLAGS}}
+\begin{DoxyCompactList}\small\item\em Surface flags. \end{DoxyCompactList}\item 
+struct \mbox{\hyperlink{structrocr_1_1__ADDR__COMPUTE__SURFACE__INFO__INPUT}{rocr\+::\+\_\+\+ADDR\+\_\+\+COMPUTE\+\_\+\+SURFACE\+\_\+\+INFO\+\_\+\+INPUT}}
+\begin{DoxyCompactList}\small\item\em Input structure for Addr\+Compute\+Surface\+Info. \end{DoxyCompactList}\item 
+struct \mbox{\hyperlink{structrocr_1_1__ADDR__COMPUTE__SURFACE__INFO__OUTPUT}{rocr\+::\+\_\+\+ADDR\+\_\+\+COMPUTE\+\_\+\+SURFACE\+\_\+\+INFO\+\_\+\+OUTPUT}}
+\begin{DoxyCompactList}\small\item\em Output structure for Addr\+Compute\+Surf\+Info. \end{DoxyCompactList}\item 
+struct \mbox{\hyperlink{structrocr_1_1__ADDR__COMPUTE__SURFACE__ADDRFROMCOORD__INPUT}{rocr\+::\+\_\+\+ADDR\+\_\+\+COMPUTE\+\_\+\+SURFACE\+\_\+\+ADDRFROMCOORD\+\_\+\+INPUT}}
+\begin{DoxyCompactList}\small\item\em Input structure for Addr\+Compute\+Surface\+Addr\+From\+Coord. \end{DoxyCompactList}\item 
+struct \mbox{\hyperlink{structrocr_1_1__ADDR__COMPUTE__SURFACE__ADDRFROMCOORD__OUTPUT}{rocr\+::\+\_\+\+ADDR\+\_\+\+COMPUTE\+\_\+\+SURFACE\+\_\+\+ADDRFROMCOORD\+\_\+\+OUTPUT}}
+\begin{DoxyCompactList}\small\item\em Output structure for Addr\+Compute\+Surface\+Addr\+From\+Coord. \end{DoxyCompactList}\item 
+struct \mbox{\hyperlink{structrocr_1_1__ADDR__COMPUTE__SURFACE__COORDFROMADDR__INPUT}{rocr\+::\+\_\+\+ADDR\+\_\+\+COMPUTE\+\_\+\+SURFACE\+\_\+\+COORDFROMADDR\+\_\+\+INPUT}}
+\begin{DoxyCompactList}\small\item\em Input structure for Addr\+Compute\+Surface\+Coord\+From\+Addr. \end{DoxyCompactList}\item 
+struct \mbox{\hyperlink{structrocr_1_1__ADDR__COMPUTE__SURFACE__COORDFROMADDR__OUTPUT}{rocr\+::\+\_\+\+ADDR\+\_\+\+COMPUTE\+\_\+\+SURFACE\+\_\+\+COORDFROMADDR\+\_\+\+OUTPUT}}
+\begin{DoxyCompactList}\small\item\em Output structure for Addr\+Compute\+Surface\+Coord\+From\+Addr. \end{DoxyCompactList}\item 
+union \mbox{\hyperlink{unionrocr_1_1__ADDR__HTILE__FLAGS}{rocr\+::\+\_\+\+ADDR\+\_\+\+HTILE\+\_\+\+FLAGS}}
+\begin{DoxyCompactList}\small\item\em HTILE flags. \end{DoxyCompactList}\item 
+struct \mbox{\hyperlink{structrocr_1_1__ADDR__COMPUTE__HTILE__INFO__INPUT}{rocr\+::\+\_\+\+ADDR\+\_\+\+COMPUTE\+\_\+\+HTILE\+\_\+\+INFO\+\_\+\+INPUT}}
+\begin{DoxyCompactList}\small\item\em Input structure of Addr\+Compute\+Htile\+Info. \end{DoxyCompactList}\item 
+struct \mbox{\hyperlink{structrocr_1_1__ADDR__COMPUTE__HTILE__INFO__OUTPUT}{rocr\+::\+\_\+\+ADDR\+\_\+\+COMPUTE\+\_\+\+HTILE\+\_\+\+INFO\+\_\+\+OUTPUT}}
+\begin{DoxyCompactList}\small\item\em Output structure of Addr\+Compute\+Htile\+Info. \end{DoxyCompactList}\item 
+struct \mbox{\hyperlink{structrocr_1_1__ADDR__COMPUTE__HTILE__ADDRFROMCOORD__INPUT}{rocr\+::\+\_\+\+ADDR\+\_\+\+COMPUTE\+\_\+\+HTILE\+\_\+\+ADDRFROMCOORD\+\_\+\+INPUT}}
+\begin{DoxyCompactList}\small\item\em Input structure for Addr\+Compute\+Htile\+Addr\+From\+Coord. \end{DoxyCompactList}\item 
+struct \mbox{\hyperlink{structrocr_1_1__ADDR__COMPUTE__HTILE__ADDRFROMCOORD__OUTPUT}{rocr\+::\+\_\+\+ADDR\+\_\+\+COMPUTE\+\_\+\+HTILE\+\_\+\+ADDRFROMCOORD\+\_\+\+OUTPUT}}
+\begin{DoxyCompactList}\small\item\em Output structure for Addr\+Compute\+Htile\+Addr\+From\+Coord. \end{DoxyCompactList}\item 
+struct \mbox{\hyperlink{structrocr_1_1__ADDR__COMPUTE__HTILE__COORDFROMADDR__INPUT}{rocr\+::\+\_\+\+ADDR\+\_\+\+COMPUTE\+\_\+\+HTILE\+\_\+\+COORDFROMADDR\+\_\+\+INPUT}}
+\begin{DoxyCompactList}\small\item\em Input structure for Addr\+Compute\+Htile\+Coord\+From\+Addr. \end{DoxyCompactList}\item 
+struct \mbox{\hyperlink{structrocr_1_1__ADDR__COMPUTE__HTILE__COORDFROMADDR__OUTPUT}{rocr\+::\+\_\+\+ADDR\+\_\+\+COMPUTE\+\_\+\+HTILE\+\_\+\+COORDFROMADDR\+\_\+\+OUTPUT}}
+\begin{DoxyCompactList}\small\item\em Output structure for Addr\+Compute\+Htile\+Coord\+From\+Addr. \end{DoxyCompactList}\item 
+union \mbox{\hyperlink{unionrocr_1_1__ADDR__CMASK__FLAGS}{rocr\+::\+\_\+\+ADDR\+\_\+\+CMASK\+\_\+\+FLAGS}}
+\begin{DoxyCompactList}\small\item\em CMASK flags. \end{DoxyCompactList}\item 
+struct \mbox{\hyperlink{structrocr_1_1__ADDR__COMPUTE__CMASKINFO__INPUT}{rocr\+::\+\_\+\+ADDR\+\_\+\+COMPUTE\+\_\+\+CMASKINFO\+\_\+\+INPUT}}
+\begin{DoxyCompactList}\small\item\em Input structure of Addr\+Compute\+Cmask\+Info. \end{DoxyCompactList}\item 
+struct \mbox{\hyperlink{structrocr_1_1__ADDR__COMPUTE__CMASK__INFO__OUTPUT}{rocr\+::\+\_\+\+ADDR\+\_\+\+COMPUTE\+\_\+\+CMASK\+\_\+\+INFO\+\_\+\+OUTPUT}}
+\begin{DoxyCompactList}\small\item\em Output structure of Addr\+Compute\+Cmask\+Info. \end{DoxyCompactList}\item 
+struct \mbox{\hyperlink{structrocr_1_1__ADDR__COMPUTE__CMASK__ADDRFROMCOORD__INPUT}{rocr\+::\+\_\+\+ADDR\+\_\+\+COMPUTE\+\_\+\+CMASK\+\_\+\+ADDRFROMCOORD\+\_\+\+INPUT}}
+\begin{DoxyCompactList}\small\item\em Input structure for Addr\+Compute\+Cmask\+Addr\+From\+Coord. \end{DoxyCompactList}\item 
+struct \mbox{\hyperlink{structrocr_1_1__ADDR__COMPUTE__CMASK__ADDRFROMCOORD__OUTPUT}{rocr\+::\+\_\+\+ADDR\+\_\+\+COMPUTE\+\_\+\+CMASK\+\_\+\+ADDRFROMCOORD\+\_\+\+OUTPUT}}
+\begin{DoxyCompactList}\small\item\em Output structure for Addr\+Compute\+Cmask\+Addr\+From\+Coord. \end{DoxyCompactList}\item 
+struct \mbox{\hyperlink{structrocr_1_1__ADDR__COMPUTE__CMASK__COORDFROMADDR__INPUT}{rocr\+::\+\_\+\+ADDR\+\_\+\+COMPUTE\+\_\+\+CMASK\+\_\+\+COORDFROMADDR\+\_\+\+INPUT}}
+\begin{DoxyCompactList}\small\item\em Input structure for Addr\+Compute\+Cmask\+Coord\+From\+Addr. \end{DoxyCompactList}\item 
+struct \mbox{\hyperlink{structrocr_1_1__ADDR__COMPUTE__CMASK__COORDFROMADDR__OUTPUT}{rocr\+::\+\_\+\+ADDR\+\_\+\+COMPUTE\+\_\+\+CMASK\+\_\+\+COORDFROMADDR\+\_\+\+OUTPUT}}
+\begin{DoxyCompactList}\small\item\em Output structure for Addr\+Compute\+Cmask\+Coord\+From\+Addr. \end{DoxyCompactList}\item 
+struct \mbox{\hyperlink{structrocr_1_1__ADDR__COMPUTE__FMASK__INFO__INPUT}{rocr\+::\+\_\+\+ADDR\+\_\+\+COMPUTE\+\_\+\+FMASK\+\_\+\+INFO\+\_\+\+INPUT}}
+\begin{DoxyCompactList}\small\item\em Input structure for Addr\+Compute\+Fmask\+Info. \end{DoxyCompactList}\item 
+struct \mbox{\hyperlink{structrocr_1_1__ADDR__COMPUTE__FMASK__INFO__OUTPUT}{rocr\+::\+\_\+\+ADDR\+\_\+\+COMPUTE\+\_\+\+FMASK\+\_\+\+INFO\+\_\+\+OUTPUT}}
+\begin{DoxyCompactList}\small\item\em Output structure for Addr\+Compute\+Fmask\+Info. \end{DoxyCompactList}\item 
+struct \mbox{\hyperlink{structrocr_1_1__ADDR__COMPUTE__FMASK__ADDRFROMCOORD__INPUT}{rocr\+::\+\_\+\+ADDR\+\_\+\+COMPUTE\+\_\+\+FMASK\+\_\+\+ADDRFROMCOORD\+\_\+\+INPUT}}
+\begin{DoxyCompactList}\small\item\em Input structure for Addr\+Compute\+Fmask\+Addr\+From\+Coord. \end{DoxyCompactList}\item 
+struct \mbox{\hyperlink{structrocr_1_1__ADDR__COMPUTE__FMASK__ADDRFROMCOORD__OUTPUT}{rocr\+::\+\_\+\+ADDR\+\_\+\+COMPUTE\+\_\+\+FMASK\+\_\+\+ADDRFROMCOORD\+\_\+\+OUTPUT}}
+\begin{DoxyCompactList}\small\item\em Output structure for Addr\+Compute\+Fmask\+Addr\+From\+Coord. \end{DoxyCompactList}\item 
+struct \mbox{\hyperlink{structrocr_1_1__ADDR__COMPUTE__FMASK__COORDFROMADDR__INPUT}{rocr\+::\+\_\+\+ADDR\+\_\+\+COMPUTE\+\_\+\+FMASK\+\_\+\+COORDFROMADDR\+\_\+\+INPUT}}
+\begin{DoxyCompactList}\small\item\em Input structure for Addr\+Compute\+Fmask\+Coord\+From\+Addr. \end{DoxyCompactList}\item 
+struct \mbox{\hyperlink{structrocr_1_1__ADDR__COMPUTE__FMASK__COORDFROMADDR__OUTPUT}{rocr\+::\+\_\+\+ADDR\+\_\+\+COMPUTE\+\_\+\+FMASK\+\_\+\+COORDFROMADDR\+\_\+\+OUTPUT}}
+\begin{DoxyCompactList}\small\item\em Output structure for Addr\+Compute\+Fmask\+Coord\+From\+Addr. \end{DoxyCompactList}\item 
+struct \mbox{\hyperlink{structrocr_1_1__ADDR__EXTRACT__BANKPIPE__SWIZZLE__INPUT}{rocr\+::\+\_\+\+ADDR\+\_\+\+EXTRACT\+\_\+\+BANKPIPE\+\_\+\+SWIZZLE\+\_\+\+INPUT}}
+\begin{DoxyCompactList}\small\item\em Input structure of Addr\+Extract\+Bank\+Pipe\+Swizzle. \end{DoxyCompactList}\item 
+struct \mbox{\hyperlink{structrocr_1_1__ADDR__EXTRACT__BANKPIPE__SWIZZLE__OUTPUT}{rocr\+::\+\_\+\+ADDR\+\_\+\+EXTRACT\+\_\+\+BANKPIPE\+\_\+\+SWIZZLE\+\_\+\+OUTPUT}}
+\begin{DoxyCompactList}\small\item\em Output structure of Addr\+Extract\+Bank\+Pipe\+Swizzle. \end{DoxyCompactList}\item 
+struct \mbox{\hyperlink{structrocr_1_1__ADDR__COMBINE__BANKPIPE__SWIZZLE__INPUT}{rocr\+::\+\_\+\+ADDR\+\_\+\+COMBINE\+\_\+\+BANKPIPE\+\_\+\+SWIZZLE\+\_\+\+INPUT}}
+\begin{DoxyCompactList}\small\item\em Input structure of Addr\+Combine\+Bank\+Pipe\+Swizzle. \end{DoxyCompactList}\item 
+struct \mbox{\hyperlink{structrocr_1_1__ADDR__COMBINE__BANKPIPE__SWIZZLE__OUTPUT}{rocr\+::\+\_\+\+ADDR\+\_\+\+COMBINE\+\_\+\+BANKPIPE\+\_\+\+SWIZZLE\+\_\+\+OUTPUT}}
+\begin{DoxyCompactList}\small\item\em Output structure of Addr\+Combine\+Bank\+Pipe\+Swizzle. \end{DoxyCompactList}\item 
+struct \mbox{\hyperlink{structrocr_1_1__ADDR__COMPUTE__SLICESWIZZLE__INPUT}{rocr\+::\+\_\+\+ADDR\+\_\+\+COMPUTE\+\_\+\+SLICESWIZZLE\+\_\+\+INPUT}}
+\begin{DoxyCompactList}\small\item\em Input structure of Addr\+Compute\+Slice\+Swizzle. \end{DoxyCompactList}\item 
+struct \mbox{\hyperlink{structrocr_1_1__ADDR__COMPUTE__SLICESWIZZLE__OUTPUT}{rocr\+::\+\_\+\+ADDR\+\_\+\+COMPUTE\+\_\+\+SLICESWIZZLE\+\_\+\+OUTPUT}}
+\begin{DoxyCompactList}\small\item\em Output structure of Addr\+Compute\+Slice\+Swizzle. \end{DoxyCompactList}\item 
+union \mbox{\hyperlink{unionrocr_1_1__ADDR__SWIZZLE__OPTION}{rocr\+::\+\_\+\+ADDR\+\_\+\+SWIZZLE\+\_\+\+OPTION}}
+\begin{DoxyCompactList}\small\item\em Controls how swizzle is generated. \end{DoxyCompactList}\item 
+struct \mbox{\hyperlink{structrocr_1_1__ADDR__COMPUTE__BASE__SWIZZLE__INPUT}{rocr\+::\+\_\+\+ADDR\+\_\+\+COMPUTE\+\_\+\+BASE\+\_\+\+SWIZZLE\+\_\+\+INPUT}}
+\begin{DoxyCompactList}\small\item\em Input structure of Addr\+Compute\+Base\+Swizzle. \end{DoxyCompactList}\item 
+struct \mbox{\hyperlink{structrocr_1_1__ADDR__COMPUTE__BASE__SWIZZLE__OUTPUT}{rocr\+::\+\_\+\+ADDR\+\_\+\+COMPUTE\+\_\+\+BASE\+\_\+\+SWIZZLE\+\_\+\+OUTPUT}}
+\begin{DoxyCompactList}\small\item\em Output structure of Addr\+Compute\+Base\+Swizzle. \end{DoxyCompactList}\item 
+struct \mbox{\hyperlink{structrocr_1_1__ELEM__GETEXPORTNORM__INPUT}{rocr\+::\+\_\+\+ELEM\+\_\+\+GETEXPORTNORM\+\_\+\+INPUT}}
+\begin{DoxyCompactList}\small\item\em Input structure for Elem\+Get\+Export\+Norm. \end{DoxyCompactList}\item 
+struct \mbox{\hyperlink{structrocr_1_1__ELEM__FLT32TODEPTHPIXEL__INPUT}{rocr\+::\+\_\+\+ELEM\+\_\+\+FLT32\+TODEPTHPIXEL\+\_\+\+INPUT}}
+\begin{DoxyCompactList}\small\item\em Input structure for addr\+Flt32\+To\+Depth\+Pixel. \end{DoxyCompactList}\item 
+struct \mbox{\hyperlink{structrocr_1_1__ELEM__FLT32TODEPTHPIXEL__OUTPUT}{rocr\+::\+\_\+\+ELEM\+\_\+\+FLT32\+TODEPTHPIXEL\+\_\+\+OUTPUT}}
+\begin{DoxyCompactList}\small\item\em Output structure for Elem\+Flt32\+To\+Depth\+Pixel. \end{DoxyCompactList}\item 
+struct \mbox{\hyperlink{structrocr_1_1__ELEM__FLT32TOCOLORPIXEL__INPUT}{rocr\+::\+\_\+\+ELEM\+\_\+\+FLT32\+TOCOLORPIXEL\+\_\+\+INPUT}}
+\begin{DoxyCompactList}\small\item\em Input structure for addr\+Flt32\+To\+Color\+Pixel. \end{DoxyCompactList}\item 
+struct \mbox{\hyperlink{structrocr_1_1__ELEM__FLT32TOCOLORPIXEL__OUTPUT}{rocr\+::\+\_\+\+ELEM\+\_\+\+FLT32\+TOCOLORPIXEL\+\_\+\+OUTPUT}}
+\begin{DoxyCompactList}\small\item\em Output structure for Elem\+Flt32\+To\+Color\+Pixel. \end{DoxyCompactList}\item 
+struct \mbox{\hyperlink{structrocr_1_1__ADDR__CONVERT__TILEINFOTOHW__INPUT}{rocr\+::\+\_\+\+ADDR\+\_\+\+CONVERT\+\_\+\+TILEINFOTOHW\+\_\+\+INPUT}}
+\begin{DoxyCompactList}\small\item\em Input structure for Addr\+Convert\+Tile\+Info\+To\+HW. \end{DoxyCompactList}\item 
+struct \mbox{\hyperlink{structrocr_1_1__ADDR__CONVERT__TILEINFOTOHW__OUTPUT}{rocr\+::\+\_\+\+ADDR\+\_\+\+CONVERT\+\_\+\+TILEINFOTOHW\+\_\+\+OUTPUT}}
+\begin{DoxyCompactList}\small\item\em Output structure for Addr\+Convert\+Tile\+Info\+To\+HW. \end{DoxyCompactList}\item 
+struct \mbox{\hyperlink{structrocr_1_1__ADDR__CONVERT__TILEINDEX__INPUT}{rocr\+::\+\_\+\+ADDR\+\_\+\+CONVERT\+\_\+\+TILEINDEX\+\_\+\+INPUT}}
+\begin{DoxyCompactList}\small\item\em Input structure for Addr\+Convert\+Tile\+Index. \end{DoxyCompactList}\item 
+struct \mbox{\hyperlink{structrocr_1_1__ADDR__CONVERT__TILEINDEX__OUTPUT}{rocr\+::\+\_\+\+ADDR\+\_\+\+CONVERT\+\_\+\+TILEINDEX\+\_\+\+OUTPUT}}
+\begin{DoxyCompactList}\small\item\em Output structure for Addr\+Convert\+Tile\+Index. \end{DoxyCompactList}\item 
+struct \mbox{\hyperlink{structrocr_1_1__ADDR__GET__MACROMODEINDEX__INPUT}{rocr\+::\+\_\+\+ADDR\+\_\+\+GET\+\_\+\+MACROMODEINDEX\+\_\+\+INPUT}}
+\begin{DoxyCompactList}\small\item\em Input structure for Addr\+Get\+Macro\+Mode\+Index. \end{DoxyCompactList}\item 
+struct \mbox{\hyperlink{structrocr_1_1__ADDR__GET__MACROMODEINDEX__OUTPUT}{rocr\+::\+\_\+\+ADDR\+\_\+\+GET\+\_\+\+MACROMODEINDEX\+\_\+\+OUTPUT}}
+\begin{DoxyCompactList}\small\item\em Output structure for Addr\+Get\+Macro\+Mode\+Index. \end{DoxyCompactList}\item 
+struct \mbox{\hyperlink{structrocr_1_1__ADDR__CONVERT__TILEINDEX1__INPUT}{rocr\+::\+\_\+\+ADDR\+\_\+\+CONVERT\+\_\+\+TILEINDEX1\+\_\+\+INPUT}}
+\begin{DoxyCompactList}\small\item\em Input structure for Addr\+Convert\+Tile\+Index1 (without macro mode index) \end{DoxyCompactList}\item 
+struct \mbox{\hyperlink{structrocr_1_1__ADDR__GET__TILEINDEX__INPUT}{rocr\+::\+\_\+\+ADDR\+\_\+\+GET\+\_\+\+TILEINDEX\+\_\+\+INPUT}}
+\begin{DoxyCompactList}\small\item\em Input structure for Addr\+Get\+Tile\+Index. \end{DoxyCompactList}\item 
+struct \mbox{\hyperlink{structrocr_1_1__ADDR__GET__TILEINDEX__OUTPUT}{rocr\+::\+\_\+\+ADDR\+\_\+\+GET\+\_\+\+TILEINDEX\+\_\+\+OUTPUT}}
+\begin{DoxyCompactList}\small\item\em Output structure for Addr\+Get\+Tile\+Index. \end{DoxyCompactList}\item 
+struct \mbox{\hyperlink{structrocr_1_1__ADDR__PRT__INFO__INPUT}{rocr\+::\+\_\+\+ADDR\+\_\+\+PRT\+\_\+\+INFO\+\_\+\+INPUT}}
+\begin{DoxyCompactList}\small\item\em Input structure for Addr\+Compute\+Prt\+Info. \end{DoxyCompactList}\item 
+struct \mbox{\hyperlink{structrocr_1_1__ADDR__PRT__INFO__OUTPUT}{rocr\+::\+\_\+\+ADDR\+\_\+\+PRT\+\_\+\+INFO\+\_\+\+OUTPUT}}
+\begin{DoxyCompactList}\small\item\em Input structure for Addr\+Compute\+Prt\+Info. \end{DoxyCompactList}\item 
+struct \mbox{\hyperlink{structrocr_1_1__ADDR__COMPUTE__DCCINFO__INPUT}{rocr\+::\+\_\+\+ADDR\+\_\+\+COMPUTE\+\_\+\+DCCINFO\+\_\+\+INPUT}}
+\begin{DoxyCompactList}\small\item\em Input structure of Addr\+Compute\+Dcc\+Info. \end{DoxyCompactList}\item 
+struct \mbox{\hyperlink{structrocr_1_1__ADDR__COMPUTE__DCCINFO__OUTPUT}{rocr\+::\+\_\+\+ADDR\+\_\+\+COMPUTE\+\_\+\+DCCINFO\+\_\+\+OUTPUT}}
+\begin{DoxyCompactList}\small\item\em Output structure of Addr\+Compute\+Dcc\+Info. \end{DoxyCompactList}\item 
+struct \mbox{\hyperlink{structrocr_1_1ADDR__GET__MAX__ALINGMENTS__OUTPUT}{rocr\+::\+ADDR\+\_\+\+GET\+\_\+\+MAX\+\_\+\+ALINGMENTS\+\_\+\+OUTPUT}}
+\begin{DoxyCompactList}\small\item\em Output structure of Addr\+Get\+Max\+Alignments. \end{DoxyCompactList}\item 
+union \mbox{\hyperlink{unionrocr_1_1__ADDR2__SURFACE__FLAGS}{rocr\+::\+\_\+\+ADDR2\+\_\+\+SURFACE\+\_\+\+FLAGS}}
+\begin{DoxyCompactList}\small\item\em Surface flags. \end{DoxyCompactList}\item 
+struct \mbox{\hyperlink{structrocr_1_1__ADDR2__COMPUTE__SURFACE__INFO__INPUT}{rocr\+::\+\_\+\+ADDR2\+\_\+\+COMPUTE\+\_\+\+SURFACE\+\_\+\+INFO\+\_\+\+INPUT}}
+\begin{DoxyCompactList}\small\item\em Input structure for Addr2\+Compute\+Surface\+Info. \end{DoxyCompactList}\item 
+struct \mbox{\hyperlink{structrocr_1_1__ADDR2__MIP__INFO}{rocr\+::\+\_\+\+ADDR2\+\_\+\+MIP\+\_\+\+INFO}}
+\begin{DoxyCompactList}\small\item\em Structure that contains information for mip level. \end{DoxyCompactList}\item 
+struct \mbox{\hyperlink{structrocr_1_1__ADDR2__COMPUTE__SURFACE__INFO__OUTPUT}{rocr\+::\+\_\+\+ADDR2\+\_\+\+COMPUTE\+\_\+\+SURFACE\+\_\+\+INFO\+\_\+\+OUTPUT}}
+\begin{DoxyCompactList}\small\item\em Output structure for Addr2\+Compute\+Surf\+Info. \end{DoxyCompactList}\item 
+struct \mbox{\hyperlink{structrocr_1_1__ADDR2__COMPUTE__SURFACE__ADDRFROMCOORD__INPUT}{rocr\+::\+\_\+\+ADDR2\+\_\+\+COMPUTE\+\_\+\+SURFACE\+\_\+\+ADDRFROMCOORD\+\_\+\+INPUT}}
+\begin{DoxyCompactList}\small\item\em Input structure for Addr2\+Compute\+Surface\+Addr\+From\+Coord. \end{DoxyCompactList}\item 
+struct \mbox{\hyperlink{structrocr_1_1__ADDR2__COMPUTE__SURFACE__ADDRFROMCOORD__OUTPUT}{rocr\+::\+\_\+\+ADDR2\+\_\+\+COMPUTE\+\_\+\+SURFACE\+\_\+\+ADDRFROMCOORD\+\_\+\+OUTPUT}}
+\begin{DoxyCompactList}\small\item\em Output structure for Addr2\+Compute\+Surface\+Addr\+From\+Coord. \end{DoxyCompactList}\item 
+struct \mbox{\hyperlink{structrocr_1_1__ADDR2__COMPUTE__SURFACE__COORDFROMADDR__INPUT}{rocr\+::\+\_\+\+ADDR2\+\_\+\+COMPUTE\+\_\+\+SURFACE\+\_\+\+COORDFROMADDR\+\_\+\+INPUT}}
+\begin{DoxyCompactList}\small\item\em Input structure for Addr2\+Compute\+Surface\+Coord\+From\+Addr. \end{DoxyCompactList}\item 
+struct \mbox{\hyperlink{structrocr_1_1__ADDR2__COMPUTE__SURFACE__COORDFROMADDR__OUTPUT}{rocr\+::\+\_\+\+ADDR2\+\_\+\+COMPUTE\+\_\+\+SURFACE\+\_\+\+COORDFROMADDR\+\_\+\+OUTPUT}}
+\begin{DoxyCompactList}\small\item\em Output structure for Addr2\+Compute\+Surface\+Coord\+From\+Addr. \end{DoxyCompactList}\item 
+union \mbox{\hyperlink{unionrocr_1_1__ADDR2__META__FLAGS}{rocr\+::\+\_\+\+ADDR2\+\_\+\+META\+\_\+\+FLAGS}}
+\begin{DoxyCompactList}\small\item\em Metadata flags. \end{DoxyCompactList}\item 
+struct \mbox{\hyperlink{structrocr_1_1__ADDR2__META__MIP__INFO}{rocr\+::\+\_\+\+ADDR2\+\_\+\+META\+\_\+\+MIP\+\_\+\+INFO}}
+\begin{DoxyCompactList}\small\item\em Structure to store per mip metadata information. \end{DoxyCompactList}\item 
+struct \mbox{\hyperlink{structrocr_1_1__ADDR2__COMPUTE__HTILE__INFO__INPUT}{rocr\+::\+\_\+\+ADDR2\+\_\+\+COMPUTE\+\_\+\+HTILE\+\_\+\+INFO\+\_\+\+INPUT}}
+\begin{DoxyCompactList}\small\item\em Input structure of Addr2\+Compute\+Htile\+Info. \end{DoxyCompactList}\item 
+struct \mbox{\hyperlink{structrocr_1_1__ADDR2__COMPUTE__HTILE__INFO__OUTPUT}{rocr\+::\+\_\+\+ADDR2\+\_\+\+COMPUTE\+\_\+\+HTILE\+\_\+\+INFO\+\_\+\+OUTPUT}}
+\begin{DoxyCompactList}\small\item\em Output structure of Addr2\+Compute\+Htile\+Info. \end{DoxyCompactList}\item 
+struct \mbox{\hyperlink{structrocr_1_1__ADDR2__COMPUTE__HTILE__ADDRFROMCOORD__INPUT}{rocr\+::\+\_\+\+ADDR2\+\_\+\+COMPUTE\+\_\+\+HTILE\+\_\+\+ADDRFROMCOORD\+\_\+\+INPUT}}
+\begin{DoxyCompactList}\small\item\em Input structure for Addr2\+Compute\+Htile\+Addr\+From\+Coord. \end{DoxyCompactList}\item 
+struct \mbox{\hyperlink{structrocr_1_1__ADDR2__COMPUTE__HTILE__ADDRFROMCOORD__OUTPUT}{rocr\+::\+\_\+\+ADDR2\+\_\+\+COMPUTE\+\_\+\+HTILE\+\_\+\+ADDRFROMCOORD\+\_\+\+OUTPUT}}
+\begin{DoxyCompactList}\small\item\em Output structure for Addr2\+Compute\+Htile\+Addr\+From\+Coord. \end{DoxyCompactList}\item 
+struct \mbox{\hyperlink{structrocr_1_1__ADDR2__COMPUTE__HTILE__COORDFROMADDR__INPUT}{rocr\+::\+\_\+\+ADDR2\+\_\+\+COMPUTE\+\_\+\+HTILE\+\_\+\+COORDFROMADDR\+\_\+\+INPUT}}
+\begin{DoxyCompactList}\small\item\em Input structure for Addr2\+Compute\+Htile\+Coord\+From\+Addr. \end{DoxyCompactList}\item 
+struct \mbox{\hyperlink{structrocr_1_1__ADDR2__COMPUTE__HTILE__COORDFROMADDR__OUTPUT}{rocr\+::\+\_\+\+ADDR2\+\_\+\+COMPUTE\+\_\+\+HTILE\+\_\+\+COORDFROMADDR\+\_\+\+OUTPUT}}
+\begin{DoxyCompactList}\small\item\em Output structure for Addr2\+Compute\+Htile\+Coord\+From\+Addr. \end{DoxyCompactList}\item 
+struct \mbox{\hyperlink{structrocr_1_1__ADDR2__COMPUTE__CMASKINFO__INPUT}{rocr\+::\+\_\+\+ADDR2\+\_\+\+COMPUTE\+\_\+\+CMASKINFO\+\_\+\+INPUT}}
+\begin{DoxyCompactList}\small\item\em Input structure of Addr2\+Compute\+Cmask\+Info. \end{DoxyCompactList}\item 
+struct \mbox{\hyperlink{structrocr_1_1gfx9__addr__meta__equation}{rocr\+::gfx9\+\_\+addr\+\_\+meta\+\_\+equation}}
+\item 
+struct \mbox{\hyperlink{structrocr_1_1__ADDR2__COMPUTE__CMASK__INFO__OUTPUT}{rocr\+::\+\_\+\+ADDR2\+\_\+\+COMPUTE\+\_\+\+CMASK\+\_\+\+INFO\+\_\+\+OUTPUT}}
+\begin{DoxyCompactList}\small\item\em Output structure of Addr2\+Compute\+Cmask\+Info. \end{DoxyCompactList}\item 
+struct \mbox{\hyperlink{structrocr_1_1__ADDR2__COMPUTE__CMASK__ADDRFROMCOORD__INPUT}{rocr\+::\+\_\+\+ADDR2\+\_\+\+COMPUTE\+\_\+\+CMASK\+\_\+\+ADDRFROMCOORD\+\_\+\+INPUT}}
+\begin{DoxyCompactList}\small\item\em Input structure for Addr2\+Compute\+Cmask\+Addr\+From\+Coord. \end{DoxyCompactList}\item 
+struct \mbox{\hyperlink{structrocr_1_1__ADDR2__COMPUTE__CMASK__ADDRFROMCOORD__OUTPUT}{rocr\+::\+\_\+\+ADDR2\+\_\+\+COMPUTE\+\_\+\+CMASK\+\_\+\+ADDRFROMCOORD\+\_\+\+OUTPUT}}
+\begin{DoxyCompactList}\small\item\em Output structure for Addr2\+Compute\+Cmask\+Addr\+From\+Coord. \end{DoxyCompactList}\item 
+struct \mbox{\hyperlink{structrocr_1_1__ADDR2__COMPUTE__CMASK__COORDFROMADDR__INPUT}{rocr\+::\+\_\+\+ADDR2\+\_\+\+COMPUTE\+\_\+\+CMASK\+\_\+\+COORDFROMADDR\+\_\+\+INPUT}}
+\begin{DoxyCompactList}\small\item\em Input structure for Addr2\+Compute\+Cmask\+Coord\+From\+Addr. \end{DoxyCompactList}\item 
+struct \mbox{\hyperlink{structrocr_1_1__ADDR2__COMPUTE__CMASK__COORDFROMADDR__OUTPUT}{rocr\+::\+\_\+\+ADDR2\+\_\+\+COMPUTE\+\_\+\+CMASK\+\_\+\+COORDFROMADDR\+\_\+\+OUTPUT}}
+\begin{DoxyCompactList}\small\item\em Output structure for Addr2\+Compute\+Cmask\+Coord\+From\+Addr. \end{DoxyCompactList}\item 
+union \mbox{\hyperlink{unionrocr_1_1__ADDR2__FMASK__FLAGS}{rocr\+::\+\_\+\+ADDR2\+\_\+\+FMASK\+\_\+\+FLAGS}}
+\begin{DoxyCompactList}\small\item\em FMASK flags. \end{DoxyCompactList}\item 
+struct \mbox{\hyperlink{structrocr_1_1__ADDR2__COMPUTE__FMASK__INFO__INPUT}{rocr\+::\+\_\+\+ADDR2\+\_\+\+COMPUTE\+\_\+\+FMASK\+\_\+\+INFO\+\_\+\+INPUT}}
+\begin{DoxyCompactList}\small\item\em Input structure for Addr2\+Compute\+Fmask\+Info. \end{DoxyCompactList}\item 
+struct \mbox{\hyperlink{structrocr_1_1__ADDR2__COMPUTE__FMASK__INFO__OUTPUT}{rocr\+::\+\_\+\+ADDR2\+\_\+\+COMPUTE\+\_\+\+FMASK\+\_\+\+INFO\+\_\+\+OUTPUT}}
+\begin{DoxyCompactList}\small\item\em Output structure for Addr2\+Compute\+Fmask\+Info. \end{DoxyCompactList}\item 
+struct \mbox{\hyperlink{structrocr_1_1__ADDR2__COMPUTE__FMASK__ADDRFROMCOORD__INPUT}{rocr\+::\+\_\+\+ADDR2\+\_\+\+COMPUTE\+\_\+\+FMASK\+\_\+\+ADDRFROMCOORD\+\_\+\+INPUT}}
+\begin{DoxyCompactList}\small\item\em Input structure for Addr2\+Compute\+Fmask\+Addr\+From\+Coord. \end{DoxyCompactList}\item 
+struct \mbox{\hyperlink{structrocr_1_1__ADDR2__COMPUTE__FMASK__ADDRFROMCOORD__OUTPUT}{rocr\+::\+\_\+\+ADDR2\+\_\+\+COMPUTE\+\_\+\+FMASK\+\_\+\+ADDRFROMCOORD\+\_\+\+OUTPUT}}
+\begin{DoxyCompactList}\small\item\em Output structure for Addr2\+Compute\+Fmask\+Addr\+From\+Coord. \end{DoxyCompactList}\item 
+struct \mbox{\hyperlink{structrocr_1_1__ADDR2__COMPUTE__FMASK__COORDFROMADDR__INPUT}{rocr\+::\+\_\+\+ADDR2\+\_\+\+COMPUTE\+\_\+\+FMASK\+\_\+\+COORDFROMADDR\+\_\+\+INPUT}}
+\begin{DoxyCompactList}\small\item\em Input structure for Addr2\+Compute\+Fmask\+Coord\+From\+Addr. \end{DoxyCompactList}\item 
+struct \mbox{\hyperlink{structrocr_1_1__ADDR2__COMPUTE__FMASK__COORDFROMADDR__OUTPUT}{rocr\+::\+\_\+\+ADDR2\+\_\+\+COMPUTE\+\_\+\+FMASK\+\_\+\+COORDFROMADDR\+\_\+\+OUTPUT}}
+\begin{DoxyCompactList}\small\item\em Output structure for Addr2\+Compute\+Fmask\+Coord\+From\+Addr. \end{DoxyCompactList}\item 
+struct \mbox{\hyperlink{structrocr_1_1__ADDR2__COMPUTE__DCCINFO__INPUT}{rocr\+::\+\_\+\+ADDR2\+\_\+\+COMPUTE\+\_\+\+DCCINFO\+\_\+\+INPUT}}
+\begin{DoxyCompactList}\small\item\em Input structure of Addr2\+Compute\+Dcc\+Info. \end{DoxyCompactList}\item 
+struct \mbox{\hyperlink{structrocr_1_1__ADDR2__COMPUTE__DCCINFO__OUTPUT}{rocr\+::\+\_\+\+ADDR2\+\_\+\+COMPUTE\+\_\+\+DCCINFO\+\_\+\+OUTPUT}}
+\begin{DoxyCompactList}\small\item\em Output structure of Addr2\+Compute\+Dcc\+Info. \end{DoxyCompactList}\item 
+struct \mbox{\hyperlink{structrocr_1_1__ADDR2__COMPUTE__DCC__ADDRFROMCOORD__INPUT}{rocr\+::\+\_\+\+ADDR2\+\_\+\+COMPUTE\+\_\+\+DCC\+\_\+\+ADDRFROMCOORD\+\_\+\+INPUT}}
+\begin{DoxyCompactList}\small\item\em Input structure for Addr2\+Compute\+Dcc\+Addr\+From\+Coord. \end{DoxyCompactList}\item 
+struct \mbox{\hyperlink{structrocr_1_1__ADDR2__COMPUTE__DCC__ADDRFROMCOORD__OUTPUT}{rocr\+::\+\_\+\+ADDR2\+\_\+\+COMPUTE\+\_\+\+DCC\+\_\+\+ADDRFROMCOORD\+\_\+\+OUTPUT}}
+\begin{DoxyCompactList}\small\item\em Output structure for Addr2\+Compute\+Dcc\+Addr\+From\+Coord. \end{DoxyCompactList}\item 
+struct \mbox{\hyperlink{structrocr_1_1__ADDR2__COMPUTE__PIPEBANKXOR__INPUT}{rocr\+::\+\_\+\+ADDR2\+\_\+\+COMPUTE\+\_\+\+PIPEBANKXOR\+\_\+\+INPUT}}
+\begin{DoxyCompactList}\small\item\em Input structure of Addr2\+Compute\+Pipebank\+Xor. \end{DoxyCompactList}\item 
+struct \mbox{\hyperlink{structrocr_1_1__ADDR2__COMPUTE__PIPEBANKXOR__OUTPUT}{rocr\+::\+\_\+\+ADDR2\+\_\+\+COMPUTE\+\_\+\+PIPEBANKXOR\+\_\+\+OUTPUT}}
+\begin{DoxyCompactList}\small\item\em Output structure of Addr2\+Compute\+Pipebank\+Xor. \end{DoxyCompactList}\item 
+struct \mbox{\hyperlink{structrocr_1_1__ADDR2__COMPUTE__SLICE__PIPEBANKXOR__INPUT}{rocr\+::\+\_\+\+ADDR2\+\_\+\+COMPUTE\+\_\+\+SLICE\+\_\+\+PIPEBANKXOR\+\_\+\+INPUT}}
+\begin{DoxyCompactList}\small\item\em Input structure of Addr2\+Compute\+Slice\+Pipe\+Bank\+Xor. \end{DoxyCompactList}\item 
+struct \mbox{\hyperlink{structrocr_1_1__ADDR2__COMPUTE__SLICE__PIPEBANKXOR__OUTPUT}{rocr\+::\+\_\+\+ADDR2\+\_\+\+COMPUTE\+\_\+\+SLICE\+\_\+\+PIPEBANKXOR\+\_\+\+OUTPUT}}
+\begin{DoxyCompactList}\small\item\em Output structure of Addr2\+Compute\+Slice\+Pipe\+Bank\+Xor. \end{DoxyCompactList}\item 
+struct \mbox{\hyperlink{structrocr_1_1__ADDR2__COMPUTE__SUBRESOURCE__OFFSET__FORSWIZZLEPATTERN__INPUT}{rocr\+::\+\_\+\+ADDR2\+\_\+\+COMPUTE\+\_\+\+SUBRESOURCE\+\_\+\+OFFSET\+\_\+\+FORSWIZZLEPATTERN\+\_\+\+INPUT}}
+\begin{DoxyCompactList}\small\item\em Input structure of Addr2\+Compute\+Sub\+Resource\+Offset\+For\+Swizzle\+Pattern. \end{DoxyCompactList}\item 
+struct \mbox{\hyperlink{structrocr_1_1__ADDR2__COMPUTE__SUBRESOURCE__OFFSET__FORSWIZZLEPATTERN__OUTPUT}{rocr\+::\+\_\+\+ADDR2\+\_\+\+COMPUTE\+\_\+\+SUBRESOURCE\+\_\+\+OFFSET\+\_\+\+FORSWIZZLEPATTERN\+\_\+\+OUTPUT}}
+\begin{DoxyCompactList}\small\item\em Output structure of Addr2\+Compute\+Sub\+Resource\+Offset\+For\+Swizzle\+Pattern. \end{DoxyCompactList}\item 
+struct \mbox{\hyperlink{structrocr_1_1__ADDR2__COMPUTE__NONBLOCKCOMPRESSEDVIEW__INPUT}{rocr\+::\+\_\+\+ADDR2\+\_\+\+COMPUTE\+\_\+\+NONBLOCKCOMPRESSEDVIEW\+\_\+\+INPUT}}
+\begin{DoxyCompactList}\small\item\em Input structure of Addr2\+Compute\+Non\+Block\+Compressed\+View. \end{DoxyCompactList}\item 
+struct \mbox{\hyperlink{structrocr_1_1__ADDR2__COMPUTE__NONBLOCKCOMPRESSEDVIEW__OUTPUT}{rocr\+::\+\_\+\+ADDR2\+\_\+\+COMPUTE\+\_\+\+NONBLOCKCOMPRESSEDVIEW\+\_\+\+OUTPUT}}
+\begin{DoxyCompactList}\small\item\em Output structure of Addr2\+Compute\+Non\+Block\+Compressed\+View. \end{DoxyCompactList}\item 
+union \mbox{\hyperlink{unionrocr_1_1__ADDR2__BLOCK__SET}{rocr\+::\+\_\+\+ADDR2\+\_\+\+BLOCK\+\_\+\+SET}}
+\begin{DoxyCompactList}\small\item\em Bit field that defines block type. \end{DoxyCompactList}\item 
+union \mbox{\hyperlink{unionrocr_1_1__ADDR2__SWTYPE__SET}{rocr\+::\+\_\+\+ADDR2\+\_\+\+SWTYPE\+\_\+\+SET}}
+\begin{DoxyCompactList}\small\item\em Bit field that defines swizzle type. \end{DoxyCompactList}\item 
+union \mbox{\hyperlink{unionrocr_1_1__ADDR2__SWMODE__SET}{rocr\+::\+\_\+\+ADDR2\+\_\+\+SWMODE\+\_\+\+SET}}
+\begin{DoxyCompactList}\small\item\em Bit field that defines swizzle type. \end{DoxyCompactList}\item 
+struct \mbox{\hyperlink{structrocr_1_1__ADDR2__GET__PREFERRED__SURF__SETTING__INPUT}{rocr\+::\+\_\+\+ADDR2\+\_\+\+GET\+\_\+\+PREFERRED\+\_\+\+SURF\+\_\+\+SETTING\+\_\+\+INPUT}}
+\begin{DoxyCompactList}\small\item\em Input structure of Addr2\+Get\+Preferred\+Surface\+Setting. \end{DoxyCompactList}\item 
+struct \mbox{\hyperlink{structrocr_1_1__ADDR2__GET__PREFERRED__SURF__SETTING__OUTPUT}{rocr\+::\+\_\+\+ADDR2\+\_\+\+GET\+\_\+\+PREFERRED\+\_\+\+SURF\+\_\+\+SETTING\+\_\+\+OUTPUT}}
+\begin{DoxyCompactList}\small\item\em Output structure of Addr2\+Get\+Preferred\+Surface\+Setting. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Namespaces}
+\begin{DoxyCompactItemize}
+\item 
+ \mbox{\hyperlink{namespacerocr}{rocr}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \mbox{\hyperlink{addrinterface_8h_a0acb687dfd4896a443de5b4b51efdb3d}{ADDRLIB\+\_\+\+VERSION\+\_\+\+MAJOR}}~6
+\item 
+\#define \mbox{\hyperlink{addrinterface_8h_a3b9a2710c4064af6716c5cc1a8ec261f}{ADDRLIB\+\_\+\+VERSION\+\_\+\+MINOR}}~2
+\item 
+\#define \mbox{\hyperlink{addrinterface_8h_aed36fd3ec6e2af2d41ab89d0333f0472}{ADDRLIB\+\_\+\+VERSION}}~((\mbox{\hyperlink{addrinterface_8h_a0acb687dfd4896a443de5b4b51efdb3d}{ADDRLIB\+\_\+\+VERSION\+\_\+\+MAJOR}} $<$$<$ 16) $\vert$ \mbox{\hyperlink{addrinterface_8h_a3b9a2710c4064af6716c5cc1a8ec261f}{ADDRLIB\+\_\+\+VERSION\+\_\+\+MINOR}})
+\item 
+\#define \mbox{\hyperlink{addrinterface_8h_adeb655b3667773af1ce3638828970727}{ADDR\+\_\+\+MAX\+\_\+\+EQUATION\+\_\+\+BIT}}~20u
+\begin{DoxyCompactList}\small\item\em address equation structure \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{addrinterface_8h_a7d58849ffad57c47b375f1e57f572838}{ADDR\+\_\+\+INVALID\+\_\+\+EQUATION\+\_\+\+INDEX}}~0x\+FFFFFFFF
+\end{DoxyCompactItemize}
+\doxysubsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+typedef \mbox{\hyperlink{addrtypes_8h_a7927e087749615dae3114cc27b91c86d}{VOID}} $\ast$ \mbox{\hyperlink{namespacerocr_a72a6f757ec9a36c10bb8974c1cf205f4}{rocr\+::\+ADDR\+\_\+\+HANDLE}}
+\begin{DoxyCompactList}\small\item\em Virtually all interface functions need ADDR\+\_\+\+HANDLE as first parameter. \end{DoxyCompactList}\item 
+typedef \mbox{\hyperlink{addrtypes_8h_a7927e087749615dae3114cc27b91c86d}{VOID}} $\ast$ \mbox{\hyperlink{namespacerocr_a76a0e753d2e2aee0d369ba58d86d5b44}{rocr\+::\+ADDR\+\_\+\+CLIENT\+\_\+\+HANDLE}}
+\begin{DoxyCompactList}\small\item\em Client handle used in callbacks. \end{DoxyCompactList}\item 
+typedef union \mbox{\hyperlink{unionrocr_1_1__ADDR__CHANNEL__SETTING}{rocr\+::\+\_\+\+ADDR\+\_\+\+CHANNEL\+\_\+\+SETTING}} \mbox{\hyperlink{namespacerocr_afe75e972942d670db53328fa0e640e8a}{rocr\+::\+ADDR\+\_\+\+CHANNEL\+\_\+\+SETTING}}
+\begin{DoxyCompactList}\small\item\em channel setting structure \end{DoxyCompactList}\item 
+typedef union \mbox{\hyperlink{unionrocr_1_1__ADDR__EQUATION__KEY}{rocr\+::\+\_\+\+ADDR\+\_\+\+EQUATION\+\_\+\+KEY}} \mbox{\hyperlink{namespacerocr_a97b764488ed0831c97380443e5325287}{rocr\+::\+ADDR\+\_\+\+EQUATION\+\_\+\+KEY}}
+\begin{DoxyCompactList}\small\item\em address equation key structure \end{DoxyCompactList}\item 
+typedef struct \mbox{\hyperlink{structrocr_1_1__ADDR__EQUATION}{rocr\+::\+\_\+\+ADDR\+\_\+\+EQUATION}} \mbox{\hyperlink{namespacerocr_a9d269a2f79e2b96962f79909f5e1643c}{rocr\+::\+ADDR\+\_\+\+EQUATION}}
+\item 
+typedef union \mbox{\hyperlink{unionrocr_1_1__ADDR__ALLOCSYSMEM__FLAGS}{rocr\+::\+\_\+\+ADDR\+\_\+\+ALLOCSYSMEM\+\_\+\+FLAGS}} \mbox{\hyperlink{namespacerocr_a0011306d4d2ad85dbdf418d18c189ff6}{rocr\+::\+ADDR\+\_\+\+ALLOCSYSMEM\+\_\+\+FLAGS}}
+\begin{DoxyCompactList}\small\item\em Alloc system memory flags. \end{DoxyCompactList}\item 
+typedef struct \mbox{\hyperlink{structrocr_1_1__ADDR__ALLOCSYSMEM__INPUT}{rocr\+::\+\_\+\+ADDR\+\_\+\+ALLOCSYSMEM\+\_\+\+INPUT}} \mbox{\hyperlink{namespacerocr_a525666cdbe2dd7bb6a9812c7f518a799}{rocr\+::\+ADDR\+\_\+\+ALLOCSYSMEM\+\_\+\+INPUT}}
+\begin{DoxyCompactList}\small\item\em Alloc system memory input structure. \end{DoxyCompactList}\item 
+typedef \mbox{\hyperlink{addrtypes_8h_a7927e087749615dae3114cc27b91c86d}{VOID}} $\ast$(\mbox{\hyperlink{addrtypes_8h_a7e5b4b484f48088afb71df13773755a5}{ADDR\+\_\+\+API}} $\ast$ \mbox{\hyperlink{namespacerocr_a7ffb4e13e29c82d4fa0cca71544a84ae}{rocr\+::\+ADDR\+\_\+\+ALLOCSYSMEM}}) (const ADDR\+\_\+\+ALLOCSYSMEM\+\_\+\+INPUT $\ast$p\+Input)
+\begin{DoxyCompactList}\small\item\em Allocate system memory callback function. Returns valid pointer on success. \end{DoxyCompactList}\item 
+typedef struct \mbox{\hyperlink{structrocr_1_1__ADDR__FREESYSMEM__INPUT}{rocr\+::\+\_\+\+ADDR\+\_\+\+FREESYSMEM\+\_\+\+INPUT}} \mbox{\hyperlink{namespacerocr_a009ad3f3ee5a72527b3f32d48f091b9a}{rocr\+::\+ADDR\+\_\+\+FREESYSMEM\+\_\+\+INPUT}}
+\begin{DoxyCompactList}\small\item\em Free system memory input structure. \end{DoxyCompactList}\item 
+typedef \mbox{\hyperlink{addrtypes_8h_a45468f108457c1977c8684dea3df88c7}{ADDR\+\_\+\+E\+\_\+\+RETURNCODE}}(\mbox{\hyperlink{addrtypes_8h_a7e5b4b484f48088afb71df13773755a5}{ADDR\+\_\+\+API}} $\ast$ \mbox{\hyperlink{namespacerocr_acef70b777913ce3e537a7b481347ac55}{rocr\+::\+ADDR\+\_\+\+FREESYSMEM}}) (const ADDR\+\_\+\+FREESYSMEM\+\_\+\+INPUT $\ast$p\+Input)
+\begin{DoxyCompactList}\small\item\em Free system memory callback function. Returns ADDR\+\_\+\+OK on success. \end{DoxyCompactList}\item 
+typedef struct \mbox{\hyperlink{structrocr_1_1__ADDR__DEBUGPRINT__INPUT}{rocr\+::\+\_\+\+ADDR\+\_\+\+DEBUGPRINT\+\_\+\+INPUT}} \mbox{\hyperlink{namespacerocr_a666ac67a5e671287c95b97dd93a11be9}{rocr\+::\+ADDR\+\_\+\+DEBUGPRINT\+\_\+\+INPUT}}
+\begin{DoxyCompactList}\small\item\em Print debug message input structure. \end{DoxyCompactList}\item 
+typedef \mbox{\hyperlink{addrtypes_8h_a45468f108457c1977c8684dea3df88c7}{ADDR\+\_\+\+E\+\_\+\+RETURNCODE}}(\mbox{\hyperlink{addrtypes_8h_a7e5b4b484f48088afb71df13773755a5}{ADDR\+\_\+\+API}} $\ast$ \mbox{\hyperlink{namespacerocr_abecf02ffa464d78d8e600897c9c5835f}{rocr\+::\+ADDR\+\_\+\+DEBUGPRINT}}) (const ADDR\+\_\+\+DEBUGPRINT\+\_\+\+INPUT $\ast$p\+Input)
+\begin{DoxyCompactList}\small\item\em Print debug message callback function. Returns ADDR\+\_\+\+OK on success. \end{DoxyCompactList}\item 
+typedef struct \mbox{\hyperlink{structrocr_1_1__ADDR__CALLBACKS}{rocr\+::\+\_\+\+ADDR\+\_\+\+CALLBACKS}} \mbox{\hyperlink{namespacerocr_a969a06a139d64b076ae85ca91a2796ac}{rocr\+::\+ADDR\+\_\+\+CALLBACKS}}
+\begin{DoxyCompactList}\small\item\em Address Library needs client to provide system memory alloc/free routines. \end{DoxyCompactList}\item 
+typedef union \mbox{\hyperlink{unionrocr_1_1__ADDR__CREATE__FLAGS}{rocr\+::\+\_\+\+ADDR\+\_\+\+CREATE\+\_\+\+FLAGS}} \mbox{\hyperlink{namespacerocr_a89190a253e116d6f62199709a7ee11d2}{rocr\+::\+ADDR\+\_\+\+CREATE\+\_\+\+FLAGS}}
+\begin{DoxyCompactList}\small\item\em This structure is used to pass some setup in creation of Addr\+Lib. \end{DoxyCompactList}\item 
+typedef struct \mbox{\hyperlink{structrocr_1_1__ADDR__REGISTER__VALUE}{rocr\+::\+\_\+\+ADDR\+\_\+\+REGISTER\+\_\+\+VALUE}} \mbox{\hyperlink{namespacerocr_a2e064cc7acf2bffc02af9535dfad17e9}{rocr\+::\+ADDR\+\_\+\+REGISTER\+\_\+\+VALUE}}
+\begin{DoxyCompactList}\small\item\em Data from registers to setup Addr\+Lib global data, used in Addr\+Create. \end{DoxyCompactList}\item 
+typedef struct \mbox{\hyperlink{structrocr_1_1__ADDR__CREATE__INPUT}{rocr\+::\+\_\+\+ADDR\+\_\+\+CREATE\+\_\+\+INPUT}} \mbox{\hyperlink{namespacerocr_aa6951cc0839e1ebafba4f88da2c31c6d}{rocr\+::\+ADDR\+\_\+\+CREATE\+\_\+\+INPUT}}
+\begin{DoxyCompactList}\small\item\em Parameters use to create an Addr\+Lib Object. Caller must provide all fields. \end{DoxyCompactList}\item 
+typedef struct \mbox{\hyperlink{structrocr_1_1__ADDR__CREATE__OUTPUT}{rocr\+::\+\_\+\+ADDR\+\_\+\+CREATE\+\_\+\+OUTPUT}} \mbox{\hyperlink{namespacerocr_a2a1ef43663e35042fe01cc0041fc36f4}{rocr\+::\+ADDR\+\_\+\+CREATE\+\_\+\+OUTPUT}}
+\begin{DoxyCompactList}\small\item\em Return Addr\+Lib handle to client driver. \end{DoxyCompactList}\item 
+typedef struct \mbox{\hyperlink{structrocr_1_1__ADDR__TILEINFO}{rocr\+::\+\_\+\+ADDR\+\_\+\+TILEINFO}} \mbox{\hyperlink{namespacerocr_a22dcb0c31be418f31f99d0311c45522c}{rocr\+::\+ADDR\+\_\+\+TILEINFO}}
+\begin{DoxyCompactList}\small\item\em Bank/tiling parameters. On function input, these can be set as desired or left 0 for Addr\+Lib to calculate/default. On function output, these are the actual parameters used. \end{DoxyCompactList}\item 
+typedef ADDR\+\_\+\+TILEINFO \mbox{\hyperlink{namespacerocr_aa81c2f89a6b411c28fa97fa3874dece4}{rocr\+::\+ADDR\+\_\+\+R800\+\_\+\+TILEINFO}}
+\item 
+typedef struct \mbox{\hyperlink{structrocr_1_1__ADDR__QBSTEREOINFO}{rocr\+::\+\_\+\+ADDR\+\_\+\+QBSTEREOINFO}} \mbox{\hyperlink{namespacerocr_a4a5750966ab60451cf4c70ba18e6fab2}{rocr\+::\+ADDR\+\_\+\+QBSTEREOINFO}}
+\begin{DoxyCompactList}\small\item\em Information needed by quad buffer stereo support. \end{DoxyCompactList}\item 
+typedef union \mbox{\hyperlink{unionrocr_1_1__ADDR__SURFACE__FLAGS}{rocr\+::\+\_\+\+ADDR\+\_\+\+SURFACE\+\_\+\+FLAGS}} \mbox{\hyperlink{namespacerocr_ac2c13231249e1687b3bd1c434b92ba06}{rocr\+::\+ADDR\+\_\+\+SURFACE\+\_\+\+FLAGS}}
+\begin{DoxyCompactList}\small\item\em Surface flags. \end{DoxyCompactList}\item 
+typedef struct \mbox{\hyperlink{structrocr_1_1__ADDR__COMPUTE__SURFACE__INFO__INPUT}{rocr\+::\+\_\+\+ADDR\+\_\+\+COMPUTE\+\_\+\+SURFACE\+\_\+\+INFO\+\_\+\+INPUT}} \mbox{\hyperlink{namespacerocr_aabe299f90f529964589111a303e92f63}{rocr\+::\+ADDR\+\_\+\+COMPUTE\+\_\+\+SURFACE\+\_\+\+INFO\+\_\+\+INPUT}}
+\begin{DoxyCompactList}\small\item\em Input structure for Addr\+Compute\+Surface\+Info. \end{DoxyCompactList}\item 
+typedef struct \mbox{\hyperlink{structrocr_1_1__ADDR__COMPUTE__SURFACE__INFO__OUTPUT}{rocr\+::\+\_\+\+ADDR\+\_\+\+COMPUTE\+\_\+\+SURFACE\+\_\+\+INFO\+\_\+\+OUTPUT}} \mbox{\hyperlink{namespacerocr_af4aaf1d98a76006d4fca9a8c40fdd1d9}{rocr\+::\+ADDR\+\_\+\+COMPUTE\+\_\+\+SURFACE\+\_\+\+INFO\+\_\+\+OUTPUT}}
+\begin{DoxyCompactList}\small\item\em Output structure for Addr\+Compute\+Surf\+Info. \end{DoxyCompactList}\item 
+typedef struct \mbox{\hyperlink{structrocr_1_1__ADDR__COMPUTE__SURFACE__ADDRFROMCOORD__INPUT}{rocr\+::\+\_\+\+ADDR\+\_\+\+COMPUTE\+\_\+\+SURFACE\+\_\+\+ADDRFROMCOORD\+\_\+\+INPUT}} \mbox{\hyperlink{namespacerocr_a4250048b56d0190672905462c24807a0}{rocr\+::\+ADDR\+\_\+\+COMPUTE\+\_\+\+SURFACE\+\_\+\+ADDRFROMCOORD\+\_\+\+INPUT}}
+\begin{DoxyCompactList}\small\item\em Input structure for Addr\+Compute\+Surface\+Addr\+From\+Coord. \end{DoxyCompactList}\item 
+typedef struct \mbox{\hyperlink{structrocr_1_1__ADDR__COMPUTE__SURFACE__ADDRFROMCOORD__OUTPUT}{rocr\+::\+\_\+\+ADDR\+\_\+\+COMPUTE\+\_\+\+SURFACE\+\_\+\+ADDRFROMCOORD\+\_\+\+OUTPUT}} \mbox{\hyperlink{namespacerocr_ab0ac30d4034fe64dd8852b0439f714ce}{rocr\+::\+ADDR\+\_\+\+COMPUTE\+\_\+\+SURFACE\+\_\+\+ADDRFROMCOORD\+\_\+\+OUTPUT}}
+\begin{DoxyCompactList}\small\item\em Output structure for Addr\+Compute\+Surface\+Addr\+From\+Coord. \end{DoxyCompactList}\item 
+typedef struct \mbox{\hyperlink{structrocr_1_1__ADDR__COMPUTE__SURFACE__COORDFROMADDR__INPUT}{rocr\+::\+\_\+\+ADDR\+\_\+\+COMPUTE\+\_\+\+SURFACE\+\_\+\+COORDFROMADDR\+\_\+\+INPUT}} \mbox{\hyperlink{namespacerocr_a55ade3c6c26c94ea37df435ab0f795f1}{rocr\+::\+ADDR\+\_\+\+COMPUTE\+\_\+\+SURFACE\+\_\+\+COORDFROMADDR\+\_\+\+INPUT}}
+\begin{DoxyCompactList}\small\item\em Input structure for Addr\+Compute\+Surface\+Coord\+From\+Addr. \end{DoxyCompactList}\item 
+typedef struct \mbox{\hyperlink{structrocr_1_1__ADDR__COMPUTE__SURFACE__COORDFROMADDR__OUTPUT}{rocr\+::\+\_\+\+ADDR\+\_\+\+COMPUTE\+\_\+\+SURFACE\+\_\+\+COORDFROMADDR\+\_\+\+OUTPUT}} \mbox{\hyperlink{namespacerocr_af0d02b53ce48b65aa55384a54fa09a94}{rocr\+::\+ADDR\+\_\+\+COMPUTE\+\_\+\+SURFACE\+\_\+\+COORDFROMADDR\+\_\+\+OUTPUT}}
+\begin{DoxyCompactList}\small\item\em Output structure for Addr\+Compute\+Surface\+Coord\+From\+Addr. \end{DoxyCompactList}\item 
+typedef union \mbox{\hyperlink{unionrocr_1_1__ADDR__HTILE__FLAGS}{rocr\+::\+\_\+\+ADDR\+\_\+\+HTILE\+\_\+\+FLAGS}} \mbox{\hyperlink{namespacerocr_aa260b2225901a8c1e0341851fb0a67c0}{rocr\+::\+ADDR\+\_\+\+HTILE\+\_\+\+FLAGS}}
+\begin{DoxyCompactList}\small\item\em HTILE flags. \end{DoxyCompactList}\item 
+typedef struct \mbox{\hyperlink{structrocr_1_1__ADDR__COMPUTE__HTILE__INFO__INPUT}{rocr\+::\+\_\+\+ADDR\+\_\+\+COMPUTE\+\_\+\+HTILE\+\_\+\+INFO\+\_\+\+INPUT}} \mbox{\hyperlink{namespacerocr_a1fb92b15faf30bc77a1be420f6b7f1ab}{rocr\+::\+ADDR\+\_\+\+COMPUTE\+\_\+\+HTILE\+\_\+\+INFO\+\_\+\+INPUT}}
+\begin{DoxyCompactList}\small\item\em Input structure of Addr\+Compute\+Htile\+Info. \end{DoxyCompactList}\item 
+typedef struct \mbox{\hyperlink{structrocr_1_1__ADDR__COMPUTE__HTILE__INFO__OUTPUT}{rocr\+::\+\_\+\+ADDR\+\_\+\+COMPUTE\+\_\+\+HTILE\+\_\+\+INFO\+\_\+\+OUTPUT}} \mbox{\hyperlink{namespacerocr_ac70b739e5342c7229b313992ee57dbc7}{rocr\+::\+ADDR\+\_\+\+COMPUTE\+\_\+\+HTILE\+\_\+\+INFO\+\_\+\+OUTPUT}}
+\begin{DoxyCompactList}\small\item\em Output structure of Addr\+Compute\+Htile\+Info. \end{DoxyCompactList}\item 
+typedef struct \mbox{\hyperlink{structrocr_1_1__ADDR__COMPUTE__HTILE__ADDRFROMCOORD__INPUT}{rocr\+::\+\_\+\+ADDR\+\_\+\+COMPUTE\+\_\+\+HTILE\+\_\+\+ADDRFROMCOORD\+\_\+\+INPUT}} \mbox{\hyperlink{namespacerocr_a5684eb49fb134bb8b1b4d280b880729c}{rocr\+::\+ADDR\+\_\+\+COMPUTE\+\_\+\+HTILE\+\_\+\+ADDRFROMCOORD\+\_\+\+INPUT}}
+\begin{DoxyCompactList}\small\item\em Input structure for Addr\+Compute\+Htile\+Addr\+From\+Coord. \end{DoxyCompactList}\item 
+typedef struct \mbox{\hyperlink{structrocr_1_1__ADDR__COMPUTE__HTILE__ADDRFROMCOORD__OUTPUT}{rocr\+::\+\_\+\+ADDR\+\_\+\+COMPUTE\+\_\+\+HTILE\+\_\+\+ADDRFROMCOORD\+\_\+\+OUTPUT}} \mbox{\hyperlink{namespacerocr_a30f3e960d25f6855a2201773fc02ebad}{rocr\+::\+ADDR\+\_\+\+COMPUTE\+\_\+\+HTILE\+\_\+\+ADDRFROMCOORD\+\_\+\+OUTPUT}}
+\begin{DoxyCompactList}\small\item\em Output structure for Addr\+Compute\+Htile\+Addr\+From\+Coord. \end{DoxyCompactList}\item 
+typedef struct \mbox{\hyperlink{structrocr_1_1__ADDR__COMPUTE__HTILE__COORDFROMADDR__INPUT}{rocr\+::\+\_\+\+ADDR\+\_\+\+COMPUTE\+\_\+\+HTILE\+\_\+\+COORDFROMADDR\+\_\+\+INPUT}} \mbox{\hyperlink{namespacerocr_a605b5e66060d715d8794a9b089622306}{rocr\+::\+ADDR\+\_\+\+COMPUTE\+\_\+\+HTILE\+\_\+\+COORDFROMADDR\+\_\+\+INPUT}}
+\begin{DoxyCompactList}\small\item\em Input structure for Addr\+Compute\+Htile\+Coord\+From\+Addr. \end{DoxyCompactList}\item 
+typedef struct \mbox{\hyperlink{structrocr_1_1__ADDR__COMPUTE__HTILE__COORDFROMADDR__OUTPUT}{rocr\+::\+\_\+\+ADDR\+\_\+\+COMPUTE\+\_\+\+HTILE\+\_\+\+COORDFROMADDR\+\_\+\+OUTPUT}} \mbox{\hyperlink{namespacerocr_a11cf7bdc70e52b166ee82254165ee1cf}{rocr\+::\+ADDR\+\_\+\+COMPUTE\+\_\+\+HTILE\+\_\+\+COORDFROMADDR\+\_\+\+OUTPUT}}
+\begin{DoxyCompactList}\small\item\em Output structure for Addr\+Compute\+Htile\+Coord\+From\+Addr. \end{DoxyCompactList}\item 
+typedef union \mbox{\hyperlink{unionrocr_1_1__ADDR__CMASK__FLAGS}{rocr\+::\+\_\+\+ADDR\+\_\+\+CMASK\+\_\+\+FLAGS}} \mbox{\hyperlink{namespacerocr_a899ce5c459413cfcd48bcc26667378cb}{rocr\+::\+ADDR\+\_\+\+CMASK\+\_\+\+FLAGS}}
+\begin{DoxyCompactList}\small\item\em CMASK flags. \end{DoxyCompactList}\item 
+typedef struct \mbox{\hyperlink{structrocr_1_1__ADDR__COMPUTE__CMASKINFO__INPUT}{rocr\+::\+\_\+\+ADDR\+\_\+\+COMPUTE\+\_\+\+CMASKINFO\+\_\+\+INPUT}} \mbox{\hyperlink{namespacerocr_ae75d671dcda175a436c2d16ed24fbdb4}{rocr\+::\+ADDR\+\_\+\+COMPUTE\+\_\+\+CMASK\+\_\+\+INFO\+\_\+\+INPUT}}
+\begin{DoxyCompactList}\small\item\em Input structure of Addr\+Compute\+Cmask\+Info. \end{DoxyCompactList}\item 
+typedef struct \mbox{\hyperlink{structrocr_1_1__ADDR__COMPUTE__CMASK__INFO__OUTPUT}{rocr\+::\+\_\+\+ADDR\+\_\+\+COMPUTE\+\_\+\+CMASK\+\_\+\+INFO\+\_\+\+OUTPUT}} \mbox{\hyperlink{namespacerocr_a0bdb144b6ffea2149ddf32b4dab3f4b1}{rocr\+::\+ADDR\+\_\+\+COMPUTE\+\_\+\+CMASK\+\_\+\+INFO\+\_\+\+OUTPUT}}
+\begin{DoxyCompactList}\small\item\em Output structure of Addr\+Compute\+Cmask\+Info. \end{DoxyCompactList}\item 
+typedef struct \mbox{\hyperlink{structrocr_1_1__ADDR__COMPUTE__CMASK__ADDRFROMCOORD__INPUT}{rocr\+::\+\_\+\+ADDR\+\_\+\+COMPUTE\+\_\+\+CMASK\+\_\+\+ADDRFROMCOORD\+\_\+\+INPUT}} \mbox{\hyperlink{namespacerocr_afd1566bae79c4baa5bd7ae0a5d4442be}{rocr\+::\+ADDR\+\_\+\+COMPUTE\+\_\+\+CMASK\+\_\+\+ADDRFROMCOORD\+\_\+\+INPUT}}
+\begin{DoxyCompactList}\small\item\em Input structure for Addr\+Compute\+Cmask\+Addr\+From\+Coord. \end{DoxyCompactList}\item 
+typedef struct \mbox{\hyperlink{structrocr_1_1__ADDR__COMPUTE__CMASK__ADDRFROMCOORD__OUTPUT}{rocr\+::\+\_\+\+ADDR\+\_\+\+COMPUTE\+\_\+\+CMASK\+\_\+\+ADDRFROMCOORD\+\_\+\+OUTPUT}} \mbox{\hyperlink{namespacerocr_a26da2ffc665112cc4921a00b1033b513}{rocr\+::\+ADDR\+\_\+\+COMPUTE\+\_\+\+CMASK\+\_\+\+ADDRFROMCOORD\+\_\+\+OUTPUT}}
+\begin{DoxyCompactList}\small\item\em Output structure for Addr\+Compute\+Cmask\+Addr\+From\+Coord. \end{DoxyCompactList}\item 
+typedef struct \mbox{\hyperlink{structrocr_1_1__ADDR__COMPUTE__CMASK__COORDFROMADDR__INPUT}{rocr\+::\+\_\+\+ADDR\+\_\+\+COMPUTE\+\_\+\+CMASK\+\_\+\+COORDFROMADDR\+\_\+\+INPUT}} \mbox{\hyperlink{namespacerocr_a26891e071d80c451a777fe6f29a17406}{rocr\+::\+ADDR\+\_\+\+COMPUTE\+\_\+\+CMASK\+\_\+\+COORDFROMADDR\+\_\+\+INPUT}}
+\begin{DoxyCompactList}\small\item\em Input structure for Addr\+Compute\+Cmask\+Coord\+From\+Addr. \end{DoxyCompactList}\item 
+typedef struct \mbox{\hyperlink{structrocr_1_1__ADDR__COMPUTE__CMASK__COORDFROMADDR__OUTPUT}{rocr\+::\+\_\+\+ADDR\+\_\+\+COMPUTE\+\_\+\+CMASK\+\_\+\+COORDFROMADDR\+\_\+\+OUTPUT}} \mbox{\hyperlink{namespacerocr_a758c1b388b4cb822a163c02a31e06af2}{rocr\+::\+ADDR\+\_\+\+COMPUTE\+\_\+\+CMASK\+\_\+\+COORDFROMADDR\+\_\+\+OUTPUT}}
+\begin{DoxyCompactList}\small\item\em Output structure for Addr\+Compute\+Cmask\+Coord\+From\+Addr. \end{DoxyCompactList}\item 
+typedef struct \mbox{\hyperlink{structrocr_1_1__ADDR__COMPUTE__FMASK__INFO__INPUT}{rocr\+::\+\_\+\+ADDR\+\_\+\+COMPUTE\+\_\+\+FMASK\+\_\+\+INFO\+\_\+\+INPUT}} \mbox{\hyperlink{namespacerocr_a0161899bfcda042cc0abf6dcedbc06cf}{rocr\+::\+ADDR\+\_\+\+COMPUTE\+\_\+\+FMASK\+\_\+\+INFO\+\_\+\+INPUT}}
+\begin{DoxyCompactList}\small\item\em Input structure for Addr\+Compute\+Fmask\+Info. \end{DoxyCompactList}\item 
+typedef struct \mbox{\hyperlink{structrocr_1_1__ADDR__COMPUTE__FMASK__INFO__OUTPUT}{rocr\+::\+\_\+\+ADDR\+\_\+\+COMPUTE\+\_\+\+FMASK\+\_\+\+INFO\+\_\+\+OUTPUT}} \mbox{\hyperlink{namespacerocr_a0cd42c483bd6dbd6209d16396e199344}{rocr\+::\+ADDR\+\_\+\+COMPUTE\+\_\+\+FMASK\+\_\+\+INFO\+\_\+\+OUTPUT}}
+\begin{DoxyCompactList}\small\item\em Output structure for Addr\+Compute\+Fmask\+Info. \end{DoxyCompactList}\item 
+typedef struct \mbox{\hyperlink{structrocr_1_1__ADDR__COMPUTE__FMASK__ADDRFROMCOORD__INPUT}{rocr\+::\+\_\+\+ADDR\+\_\+\+COMPUTE\+\_\+\+FMASK\+\_\+\+ADDRFROMCOORD\+\_\+\+INPUT}} \mbox{\hyperlink{namespacerocr_a1e7c80260d2526ef0a6bd42a2105d24e}{rocr\+::\+ADDR\+\_\+\+COMPUTE\+\_\+\+FMASK\+\_\+\+ADDRFROMCOORD\+\_\+\+INPUT}}
+\begin{DoxyCompactList}\small\item\em Input structure for Addr\+Compute\+Fmask\+Addr\+From\+Coord. \end{DoxyCompactList}\item 
+typedef struct \mbox{\hyperlink{structrocr_1_1__ADDR__COMPUTE__FMASK__ADDRFROMCOORD__OUTPUT}{rocr\+::\+\_\+\+ADDR\+\_\+\+COMPUTE\+\_\+\+FMASK\+\_\+\+ADDRFROMCOORD\+\_\+\+OUTPUT}} \mbox{\hyperlink{namespacerocr_aab05d1333854474e1efc4156ba1e1b53}{rocr\+::\+ADDR\+\_\+\+COMPUTE\+\_\+\+FMASK\+\_\+\+ADDRFROMCOORD\+\_\+\+OUTPUT}}
+\begin{DoxyCompactList}\small\item\em Output structure for Addr\+Compute\+Fmask\+Addr\+From\+Coord. \end{DoxyCompactList}\item 
+typedef struct \mbox{\hyperlink{structrocr_1_1__ADDR__COMPUTE__FMASK__COORDFROMADDR__INPUT}{rocr\+::\+\_\+\+ADDR\+\_\+\+COMPUTE\+\_\+\+FMASK\+\_\+\+COORDFROMADDR\+\_\+\+INPUT}} \mbox{\hyperlink{namespacerocr_a4666bb92de98abff9057a6ce9bccade3}{rocr\+::\+ADDR\+\_\+\+COMPUTE\+\_\+\+FMASK\+\_\+\+COORDFROMADDR\+\_\+\+INPUT}}
+\begin{DoxyCompactList}\small\item\em Input structure for Addr\+Compute\+Fmask\+Coord\+From\+Addr. \end{DoxyCompactList}\item 
+typedef struct \mbox{\hyperlink{structrocr_1_1__ADDR__COMPUTE__FMASK__COORDFROMADDR__OUTPUT}{rocr\+::\+\_\+\+ADDR\+\_\+\+COMPUTE\+\_\+\+FMASK\+\_\+\+COORDFROMADDR\+\_\+\+OUTPUT}} \mbox{\hyperlink{namespacerocr_a4e65e40358ac8fa00b789f6b591feb1e}{rocr\+::\+ADDR\+\_\+\+COMPUTE\+\_\+\+FMASK\+\_\+\+COORDFROMADDR\+\_\+\+OUTPUT}}
+\begin{DoxyCompactList}\small\item\em Output structure for Addr\+Compute\+Fmask\+Coord\+From\+Addr. \end{DoxyCompactList}\item 
+typedef struct \mbox{\hyperlink{structrocr_1_1__ADDR__EXTRACT__BANKPIPE__SWIZZLE__INPUT}{rocr\+::\+\_\+\+ADDR\+\_\+\+EXTRACT\+\_\+\+BANKPIPE\+\_\+\+SWIZZLE\+\_\+\+INPUT}} \mbox{\hyperlink{namespacerocr_a8e13948437c50504637102bd2a165adf}{rocr\+::\+ADDR\+\_\+\+EXTRACT\+\_\+\+BANKPIPE\+\_\+\+SWIZZLE\+\_\+\+INPUT}}
+\begin{DoxyCompactList}\small\item\em Input structure of Addr\+Extract\+Bank\+Pipe\+Swizzle. \end{DoxyCompactList}\item 
+typedef struct \mbox{\hyperlink{structrocr_1_1__ADDR__EXTRACT__BANKPIPE__SWIZZLE__OUTPUT}{rocr\+::\+\_\+\+ADDR\+\_\+\+EXTRACT\+\_\+\+BANKPIPE\+\_\+\+SWIZZLE\+\_\+\+OUTPUT}} \mbox{\hyperlink{namespacerocr_a3bed09d0454a0cfccbb08e3fcfe91744}{rocr\+::\+ADDR\+\_\+\+EXTRACT\+\_\+\+BANKPIPE\+\_\+\+SWIZZLE\+\_\+\+OUTPUT}}
+\begin{DoxyCompactList}\small\item\em Output structure of Addr\+Extract\+Bank\+Pipe\+Swizzle. \end{DoxyCompactList}\item 
+typedef struct \mbox{\hyperlink{structrocr_1_1__ADDR__COMBINE__BANKPIPE__SWIZZLE__INPUT}{rocr\+::\+\_\+\+ADDR\+\_\+\+COMBINE\+\_\+\+BANKPIPE\+\_\+\+SWIZZLE\+\_\+\+INPUT}} \mbox{\hyperlink{namespacerocr_a0e3a7cae0c469c323b948d3a387990da}{rocr\+::\+ADDR\+\_\+\+COMBINE\+\_\+\+BANKPIPE\+\_\+\+SWIZZLE\+\_\+\+INPUT}}
+\begin{DoxyCompactList}\small\item\em Input structure of Addr\+Combine\+Bank\+Pipe\+Swizzle. \end{DoxyCompactList}\item 
+typedef struct \mbox{\hyperlink{structrocr_1_1__ADDR__COMBINE__BANKPIPE__SWIZZLE__OUTPUT}{rocr\+::\+\_\+\+ADDR\+\_\+\+COMBINE\+\_\+\+BANKPIPE\+\_\+\+SWIZZLE\+\_\+\+OUTPUT}} \mbox{\hyperlink{namespacerocr_a967c2eea4fe63916dd5cddf8fbe8f701}{rocr\+::\+ADDR\+\_\+\+COMBINE\+\_\+\+BANKPIPE\+\_\+\+SWIZZLE\+\_\+\+OUTPUT}}
+\begin{DoxyCompactList}\small\item\em Output structure of Addr\+Combine\+Bank\+Pipe\+Swizzle. \end{DoxyCompactList}\item 
+typedef struct \mbox{\hyperlink{structrocr_1_1__ADDR__COMPUTE__SLICESWIZZLE__INPUT}{rocr\+::\+\_\+\+ADDR\+\_\+\+COMPUTE\+\_\+\+SLICESWIZZLE\+\_\+\+INPUT}} \mbox{\hyperlink{namespacerocr_a234f57a735300f9e42bdf900583633f6}{rocr\+::\+ADDR\+\_\+\+COMPUTE\+\_\+\+SLICESWIZZLE\+\_\+\+INPUT}}
+\begin{DoxyCompactList}\small\item\em Input structure of Addr\+Compute\+Slice\+Swizzle. \end{DoxyCompactList}\item 
+typedef struct \mbox{\hyperlink{structrocr_1_1__ADDR__COMPUTE__SLICESWIZZLE__OUTPUT}{rocr\+::\+\_\+\+ADDR\+\_\+\+COMPUTE\+\_\+\+SLICESWIZZLE\+\_\+\+OUTPUT}} \mbox{\hyperlink{namespacerocr_a8070b67b42828332988a4b69915406a1}{rocr\+::\+ADDR\+\_\+\+COMPUTE\+\_\+\+SLICESWIZZLE\+\_\+\+OUTPUT}}
+\begin{DoxyCompactList}\small\item\em Output structure of Addr\+Compute\+Slice\+Swizzle. \end{DoxyCompactList}\item 
+typedef enum \mbox{\hyperlink{namespacerocr_ac8e3a17d31b73bc4b308aab0987962f5}{rocr\+::\+\_\+\+Addr\+Swizzle\+Gen\+Option}} \mbox{\hyperlink{namespacerocr_a0aead2b3578575d4645d78ac2c0c72a4}{rocr\+::\+Addr\+Swizzle\+Gen\+Option}}
+\begin{DoxyCompactList}\small\item\em Which swizzle generating options\+: legacy or linear. \end{DoxyCompactList}\item 
+typedef union \mbox{\hyperlink{unionrocr_1_1__ADDR__SWIZZLE__OPTION}{rocr\+::\+\_\+\+ADDR\+\_\+\+SWIZZLE\+\_\+\+OPTION}} \mbox{\hyperlink{namespacerocr_a46abbd1657de74a3cf25743d17af6703}{rocr\+::\+ADDR\+\_\+\+SWIZZLE\+\_\+\+OPTION}}
+\begin{DoxyCompactList}\small\item\em Controls how swizzle is generated. \end{DoxyCompactList}\item 
+typedef struct \mbox{\hyperlink{structrocr_1_1__ADDR__COMPUTE__BASE__SWIZZLE__INPUT}{rocr\+::\+\_\+\+ADDR\+\_\+\+COMPUTE\+\_\+\+BASE\+\_\+\+SWIZZLE\+\_\+\+INPUT}} \mbox{\hyperlink{namespacerocr_a0c83b1771b9994240fda9898e0de1892}{rocr\+::\+ADDR\+\_\+\+COMPUTE\+\_\+\+BASE\+\_\+\+SWIZZLE\+\_\+\+INPUT}}
+\begin{DoxyCompactList}\small\item\em Input structure of Addr\+Compute\+Base\+Swizzle. \end{DoxyCompactList}\item 
+typedef struct \mbox{\hyperlink{structrocr_1_1__ADDR__COMPUTE__BASE__SWIZZLE__OUTPUT}{rocr\+::\+\_\+\+ADDR\+\_\+\+COMPUTE\+\_\+\+BASE\+\_\+\+SWIZZLE\+\_\+\+OUTPUT}} \mbox{\hyperlink{namespacerocr_a3f292aa2d5d640e62b183542e9cfc4d9}{rocr\+::\+ADDR\+\_\+\+COMPUTE\+\_\+\+BASE\+\_\+\+SWIZZLE\+\_\+\+OUTPUT}}
+\begin{DoxyCompactList}\small\item\em Output structure of Addr\+Compute\+Base\+Swizzle. \end{DoxyCompactList}\item 
+typedef struct \mbox{\hyperlink{structrocr_1_1__ELEM__GETEXPORTNORM__INPUT}{rocr\+::\+\_\+\+ELEM\+\_\+\+GETEXPORTNORM\+\_\+\+INPUT}} \mbox{\hyperlink{namespacerocr_a9ef648bdfd08b86ffa30914871875e37}{rocr\+::\+ELEM\+\_\+\+GETEXPORTNORM\+\_\+\+INPUT}}
+\begin{DoxyCompactList}\small\item\em Input structure for Elem\+Get\+Export\+Norm. \end{DoxyCompactList}\item 
+typedef struct \mbox{\hyperlink{structrocr_1_1__ELEM__FLT32TODEPTHPIXEL__INPUT}{rocr\+::\+\_\+\+ELEM\+\_\+\+FLT32\+TODEPTHPIXEL\+\_\+\+INPUT}} \mbox{\hyperlink{namespacerocr_aef5049420a89bfa62a68fd69c1bec273}{rocr\+::\+ELEM\+\_\+\+FLT32\+TODEPTHPIXEL\+\_\+\+INPUT}}
+\begin{DoxyCompactList}\small\item\em Input structure for addr\+Flt32\+To\+Depth\+Pixel. \end{DoxyCompactList}\item 
+typedef struct \mbox{\hyperlink{structrocr_1_1__ELEM__FLT32TODEPTHPIXEL__OUTPUT}{rocr\+::\+\_\+\+ELEM\+\_\+\+FLT32\+TODEPTHPIXEL\+\_\+\+OUTPUT}} \mbox{\hyperlink{namespacerocr_afd97c8fb7773bd5c53acac6be2450748}{rocr\+::\+ELEM\+\_\+\+FLT32\+TODEPTHPIXEL\+\_\+\+OUTPUT}}
+\begin{DoxyCompactList}\small\item\em Output structure for Elem\+Flt32\+To\+Depth\+Pixel. \end{DoxyCompactList}\item 
+typedef struct \mbox{\hyperlink{structrocr_1_1__ELEM__FLT32TOCOLORPIXEL__INPUT}{rocr\+::\+\_\+\+ELEM\+\_\+\+FLT32\+TOCOLORPIXEL\+\_\+\+INPUT}} \mbox{\hyperlink{namespacerocr_ad2f0bc9e4f1e17e020d6ea6783689ba9}{rocr\+::\+ELEM\+\_\+\+FLT32\+TOCOLORPIXEL\+\_\+\+INPUT}}
+\begin{DoxyCompactList}\small\item\em Input structure for addr\+Flt32\+To\+Color\+Pixel. \end{DoxyCompactList}\item 
+typedef struct \mbox{\hyperlink{structrocr_1_1__ELEM__FLT32TOCOLORPIXEL__OUTPUT}{rocr\+::\+\_\+\+ELEM\+\_\+\+FLT32\+TOCOLORPIXEL\+\_\+\+OUTPUT}} \mbox{\hyperlink{namespacerocr_a01f7f74ea207c1385a64c7291c92edb5}{rocr\+::\+ELEM\+\_\+\+FLT32\+TOCOLORPIXEL\+\_\+\+OUTPUT}}
+\begin{DoxyCompactList}\small\item\em Output structure for Elem\+Flt32\+To\+Color\+Pixel. \end{DoxyCompactList}\item 
+typedef struct \mbox{\hyperlink{structrocr_1_1__ADDR__CONVERT__TILEINFOTOHW__INPUT}{rocr\+::\+\_\+\+ADDR\+\_\+\+CONVERT\+\_\+\+TILEINFOTOHW\+\_\+\+INPUT}} \mbox{\hyperlink{namespacerocr_a43d53d0c852446811165e411346d94e2}{rocr\+::\+ADDR\+\_\+\+CONVERT\+\_\+\+TILEINFOTOHW\+\_\+\+INPUT}}
+\begin{DoxyCompactList}\small\item\em Input structure for Addr\+Convert\+Tile\+Info\+To\+HW. \end{DoxyCompactList}\item 
+typedef struct \mbox{\hyperlink{structrocr_1_1__ADDR__CONVERT__TILEINFOTOHW__OUTPUT}{rocr\+::\+\_\+\+ADDR\+\_\+\+CONVERT\+\_\+\+TILEINFOTOHW\+\_\+\+OUTPUT}} \mbox{\hyperlink{namespacerocr_a234ab06cbb34905ea2f15c850ffec2d2}{rocr\+::\+ADDR\+\_\+\+CONVERT\+\_\+\+TILEINFOTOHW\+\_\+\+OUTPUT}}
+\begin{DoxyCompactList}\small\item\em Output structure for Addr\+Convert\+Tile\+Info\+To\+HW. \end{DoxyCompactList}\item 
+typedef struct \mbox{\hyperlink{structrocr_1_1__ADDR__CONVERT__TILEINDEX__INPUT}{rocr\+::\+\_\+\+ADDR\+\_\+\+CONVERT\+\_\+\+TILEINDEX\+\_\+\+INPUT}} \mbox{\hyperlink{namespacerocr_a2f994a50c1b31a01445643fe247ef934}{rocr\+::\+ADDR\+\_\+\+CONVERT\+\_\+\+TILEINDEX\+\_\+\+INPUT}}
+\begin{DoxyCompactList}\small\item\em Input structure for Addr\+Convert\+Tile\+Index. \end{DoxyCompactList}\item 
+typedef struct \mbox{\hyperlink{structrocr_1_1__ADDR__CONVERT__TILEINDEX__OUTPUT}{rocr\+::\+\_\+\+ADDR\+\_\+\+CONVERT\+\_\+\+TILEINDEX\+\_\+\+OUTPUT}} \mbox{\hyperlink{namespacerocr_abd4bcaa82459a1524dcc221d9f3c806a}{rocr\+::\+ADDR\+\_\+\+CONVERT\+\_\+\+TILEINDEX\+\_\+\+OUTPUT}}
+\begin{DoxyCompactList}\small\item\em Output structure for Addr\+Convert\+Tile\+Index. \end{DoxyCompactList}\item 
+typedef struct \mbox{\hyperlink{structrocr_1_1__ADDR__GET__MACROMODEINDEX__INPUT}{rocr\+::\+\_\+\+ADDR\+\_\+\+GET\+\_\+\+MACROMODEINDEX\+\_\+\+INPUT}} \mbox{\hyperlink{namespacerocr_ae5641848fb837ff6ae7b47c7e5424f52}{rocr\+::\+ADDR\+\_\+\+GET\+\_\+\+MACROMODEINDEX\+\_\+\+INPUT}}
+\begin{DoxyCompactList}\small\item\em Input structure for Addr\+Get\+Macro\+Mode\+Index. \end{DoxyCompactList}\item 
+typedef struct \mbox{\hyperlink{structrocr_1_1__ADDR__GET__MACROMODEINDEX__OUTPUT}{rocr\+::\+\_\+\+ADDR\+\_\+\+GET\+\_\+\+MACROMODEINDEX\+\_\+\+OUTPUT}} \mbox{\hyperlink{namespacerocr_ad7fce58cf009daf78c1cdbab8ef73be9}{rocr\+::\+ADDR\+\_\+\+GET\+\_\+\+MACROMODEINDEX\+\_\+\+OUTPUT}}
+\begin{DoxyCompactList}\small\item\em Output structure for Addr\+Get\+Macro\+Mode\+Index. \end{DoxyCompactList}\item 
+typedef struct \mbox{\hyperlink{structrocr_1_1__ADDR__CONVERT__TILEINDEX1__INPUT}{rocr\+::\+\_\+\+ADDR\+\_\+\+CONVERT\+\_\+\+TILEINDEX1\+\_\+\+INPUT}} \mbox{\hyperlink{namespacerocr_a09b0e57f4bb4570e115b986d5a13f792}{rocr\+::\+ADDR\+\_\+\+CONVERT\+\_\+\+TILEINDEX1\+\_\+\+INPUT}}
+\begin{DoxyCompactList}\small\item\em Input structure for Addr\+Convert\+Tile\+Index1 (without macro mode index) \end{DoxyCompactList}\item 
+typedef struct \mbox{\hyperlink{structrocr_1_1__ADDR__GET__TILEINDEX__INPUT}{rocr\+::\+\_\+\+ADDR\+\_\+\+GET\+\_\+\+TILEINDEX\+\_\+\+INPUT}} \mbox{\hyperlink{namespacerocr_ae5ddc3fd7b364c2b0aec73f1464d42e3}{rocr\+::\+ADDR\+\_\+\+GET\+\_\+\+TILEINDEX\+\_\+\+INPUT}}
+\begin{DoxyCompactList}\small\item\em Input structure for Addr\+Get\+Tile\+Index. \end{DoxyCompactList}\item 
+typedef struct \mbox{\hyperlink{structrocr_1_1__ADDR__GET__TILEINDEX__OUTPUT}{rocr\+::\+\_\+\+ADDR\+\_\+\+GET\+\_\+\+TILEINDEX\+\_\+\+OUTPUT}} \mbox{\hyperlink{namespacerocr_a7d2b06938bd70794a397db7873adde20}{rocr\+::\+ADDR\+\_\+\+GET\+\_\+\+TILEINDEX\+\_\+\+OUTPUT}}
+\begin{DoxyCompactList}\small\item\em Output structure for Addr\+Get\+Tile\+Index. \end{DoxyCompactList}\item 
+typedef struct \mbox{\hyperlink{structrocr_1_1__ADDR__PRT__INFO__INPUT}{rocr\+::\+\_\+\+ADDR\+\_\+\+PRT\+\_\+\+INFO\+\_\+\+INPUT}} \mbox{\hyperlink{namespacerocr_ae56145650c6c08ea3e0b1e76a25201b8}{rocr\+::\+ADDR\+\_\+\+PRT\+\_\+\+INFO\+\_\+\+INPUT}}
+\begin{DoxyCompactList}\small\item\em Input structure for Addr\+Compute\+Prt\+Info. \end{DoxyCompactList}\item 
+typedef struct \mbox{\hyperlink{structrocr_1_1__ADDR__PRT__INFO__OUTPUT}{rocr\+::\+\_\+\+ADDR\+\_\+\+PRT\+\_\+\+INFO\+\_\+\+OUTPUT}} \mbox{\hyperlink{namespacerocr_a1aea46476a64f45eb153d07b15a4e242}{rocr\+::\+ADDR\+\_\+\+PRT\+\_\+\+INFO\+\_\+\+OUTPUT}}
+\begin{DoxyCompactList}\small\item\em Input structure for Addr\+Compute\+Prt\+Info. \end{DoxyCompactList}\item 
+typedef struct \mbox{\hyperlink{structrocr_1_1__ADDR__COMPUTE__DCCINFO__INPUT}{rocr\+::\+\_\+\+ADDR\+\_\+\+COMPUTE\+\_\+\+DCCINFO\+\_\+\+INPUT}} \mbox{\hyperlink{namespacerocr_a2e6f0f78cac1532f40fe25e14fdd77ae}{rocr\+::\+ADDR\+\_\+\+COMPUTE\+\_\+\+DCCINFO\+\_\+\+INPUT}}
+\begin{DoxyCompactList}\small\item\em Input structure of Addr\+Compute\+Dcc\+Info. \end{DoxyCompactList}\item 
+typedef struct \mbox{\hyperlink{structrocr_1_1__ADDR__COMPUTE__DCCINFO__OUTPUT}{rocr\+::\+\_\+\+ADDR\+\_\+\+COMPUTE\+\_\+\+DCCINFO\+\_\+\+OUTPUT}} \mbox{\hyperlink{namespacerocr_a4e0a9ae30a478efedc615ed54e98b4a0}{rocr\+::\+ADDR\+\_\+\+COMPUTE\+\_\+\+DCCINFO\+\_\+\+OUTPUT}}
+\begin{DoxyCompactList}\small\item\em Output structure of Addr\+Compute\+Dcc\+Info. \end{DoxyCompactList}\item 
+typedef struct \mbox{\hyperlink{structrocr_1_1ADDR__GET__MAX__ALINGMENTS__OUTPUT}{rocr\+::\+ADDR\+\_\+\+GET\+\_\+\+MAX\+\_\+\+ALINGMENTS\+\_\+\+OUTPUT}} \mbox{\hyperlink{namespacerocr_a8996d2b70f0579ca4901a5049bb5e1ac}{rocr\+::\+ADDR\+\_\+\+GET\+\_\+\+MAX\+\_\+\+ALIGNMENTS\+\_\+\+OUTPUT}}
+\begin{DoxyCompactList}\small\item\em Output structure of Addr\+Get\+Max\+Alignments. \end{DoxyCompactList}\item 
+typedef union \mbox{\hyperlink{unionrocr_1_1__ADDR2__SURFACE__FLAGS}{rocr\+::\+\_\+\+ADDR2\+\_\+\+SURFACE\+\_\+\+FLAGS}} \mbox{\hyperlink{namespacerocr_a1ccbb30a0cdf922e9903f9d96b252570}{rocr\+::\+ADDR2\+\_\+\+SURFACE\+\_\+\+FLAGS}}
+\begin{DoxyCompactList}\small\item\em Surface flags. \end{DoxyCompactList}\item 
+typedef struct \mbox{\hyperlink{structrocr_1_1__ADDR2__COMPUTE__SURFACE__INFO__INPUT}{rocr\+::\+\_\+\+ADDR2\+\_\+\+COMPUTE\+\_\+\+SURFACE\+\_\+\+INFO\+\_\+\+INPUT}} \mbox{\hyperlink{namespacerocr_a8c8793265a5c744be40efbbaef407074}{rocr\+::\+ADDR2\+\_\+\+COMPUTE\+\_\+\+SURFACE\+\_\+\+INFO\+\_\+\+INPUT}}
+\begin{DoxyCompactList}\small\item\em Input structure for Addr2\+Compute\+Surface\+Info. \end{DoxyCompactList}\item 
+typedef struct \mbox{\hyperlink{structrocr_1_1__ADDR2__MIP__INFO}{rocr\+::\+\_\+\+ADDR2\+\_\+\+MIP\+\_\+\+INFO}} \mbox{\hyperlink{namespacerocr_a098f2841041d6e050e0c21fb824d0230}{rocr\+::\+ADDR2\+\_\+\+MIP\+\_\+\+INFO}}
+\begin{DoxyCompactList}\small\item\em Structure that contains information for mip level. \end{DoxyCompactList}\item 
+typedef struct \mbox{\hyperlink{structrocr_1_1__ADDR2__COMPUTE__SURFACE__INFO__OUTPUT}{rocr\+::\+\_\+\+ADDR2\+\_\+\+COMPUTE\+\_\+\+SURFACE\+\_\+\+INFO\+\_\+\+OUTPUT}} \mbox{\hyperlink{namespacerocr_aa64211e3cee652bcca905fc7cfea8e7b}{rocr\+::\+ADDR2\+\_\+\+COMPUTE\+\_\+\+SURFACE\+\_\+\+INFO\+\_\+\+OUTPUT}}
+\begin{DoxyCompactList}\small\item\em Output structure for Addr2\+Compute\+Surf\+Info. \end{DoxyCompactList}\item 
+typedef struct \mbox{\hyperlink{structrocr_1_1__ADDR2__COMPUTE__SURFACE__ADDRFROMCOORD__INPUT}{rocr\+::\+\_\+\+ADDR2\+\_\+\+COMPUTE\+\_\+\+SURFACE\+\_\+\+ADDRFROMCOORD\+\_\+\+INPUT}} \mbox{\hyperlink{namespacerocr_a21fad763bf2d5b88e8ec080eaaacdb59}{rocr\+::\+ADDR2\+\_\+\+COMPUTE\+\_\+\+SURFACE\+\_\+\+ADDRFROMCOORD\+\_\+\+INPUT}}
+\begin{DoxyCompactList}\small\item\em Input structure for Addr2\+Compute\+Surface\+Addr\+From\+Coord. \end{DoxyCompactList}\item 
+typedef struct \mbox{\hyperlink{structrocr_1_1__ADDR2__COMPUTE__SURFACE__ADDRFROMCOORD__OUTPUT}{rocr\+::\+\_\+\+ADDR2\+\_\+\+COMPUTE\+\_\+\+SURFACE\+\_\+\+ADDRFROMCOORD\+\_\+\+OUTPUT}} \mbox{\hyperlink{namespacerocr_a140bf521eaf847698bb9900f1292b963}{rocr\+::\+ADDR2\+\_\+\+COMPUTE\+\_\+\+SURFACE\+\_\+\+ADDRFROMCOORD\+\_\+\+OUTPUT}}
+\begin{DoxyCompactList}\small\item\em Output structure for Addr2\+Compute\+Surface\+Addr\+From\+Coord. \end{DoxyCompactList}\item 
+typedef struct \mbox{\hyperlink{structrocr_1_1__ADDR2__COMPUTE__SURFACE__COORDFROMADDR__INPUT}{rocr\+::\+\_\+\+ADDR2\+\_\+\+COMPUTE\+\_\+\+SURFACE\+\_\+\+COORDFROMADDR\+\_\+\+INPUT}} \mbox{\hyperlink{namespacerocr_a4fefa13973199743211a9bbaa0acbe95}{rocr\+::\+ADDR2\+\_\+\+COMPUTE\+\_\+\+SURFACE\+\_\+\+COORDFROMADDR\+\_\+\+INPUT}}
+\begin{DoxyCompactList}\small\item\em Input structure for Addr2\+Compute\+Surface\+Coord\+From\+Addr. \end{DoxyCompactList}\item 
+typedef struct \mbox{\hyperlink{structrocr_1_1__ADDR2__COMPUTE__SURFACE__COORDFROMADDR__OUTPUT}{rocr\+::\+\_\+\+ADDR2\+\_\+\+COMPUTE\+\_\+\+SURFACE\+\_\+\+COORDFROMADDR\+\_\+\+OUTPUT}} \mbox{\hyperlink{namespacerocr_a399ff91d1e634f288cba555d86750f4c}{rocr\+::\+ADDR2\+\_\+\+COMPUTE\+\_\+\+SURFACE\+\_\+\+COORDFROMADDR\+\_\+\+OUTPUT}}
+\begin{DoxyCompactList}\small\item\em Output structure for Addr2\+Compute\+Surface\+Coord\+From\+Addr. \end{DoxyCompactList}\item 
+typedef union \mbox{\hyperlink{unionrocr_1_1__ADDR2__META__FLAGS}{rocr\+::\+\_\+\+ADDR2\+\_\+\+META\+\_\+\+FLAGS}} \mbox{\hyperlink{namespacerocr_aaff883bb0b4912cad2a1cbacfef70a00}{rocr\+::\+ADDR2\+\_\+\+META\+\_\+\+FLAGS}}
+\begin{DoxyCompactList}\small\item\em Metadata flags. \end{DoxyCompactList}\item 
+typedef struct \mbox{\hyperlink{structrocr_1_1__ADDR2__META__MIP__INFO}{rocr\+::\+\_\+\+ADDR2\+\_\+\+META\+\_\+\+MIP\+\_\+\+INFO}} \mbox{\hyperlink{namespacerocr_a4e1c8854853d86794e7b257976b68831}{rocr\+::\+ADDR2\+\_\+\+META\+\_\+\+MIP\+\_\+\+INFO}}
+\begin{DoxyCompactList}\small\item\em Structure to store per mip metadata information. \end{DoxyCompactList}\item 
+typedef struct \mbox{\hyperlink{structrocr_1_1__ADDR2__COMPUTE__HTILE__INFO__INPUT}{rocr\+::\+\_\+\+ADDR2\+\_\+\+COMPUTE\+\_\+\+HTILE\+\_\+\+INFO\+\_\+\+INPUT}} \mbox{\hyperlink{namespacerocr_aea7281daa9ee2da30b24414f6b88386c}{rocr\+::\+ADDR2\+\_\+\+COMPUTE\+\_\+\+HTILE\+\_\+\+INFO\+\_\+\+INPUT}}
+\begin{DoxyCompactList}\small\item\em Input structure of Addr2\+Compute\+Htile\+Info. \end{DoxyCompactList}\item 
+typedef struct \mbox{\hyperlink{structrocr_1_1__ADDR2__COMPUTE__HTILE__INFO__OUTPUT}{rocr\+::\+\_\+\+ADDR2\+\_\+\+COMPUTE\+\_\+\+HTILE\+\_\+\+INFO\+\_\+\+OUTPUT}} \mbox{\hyperlink{namespacerocr_a8dcd76da66a46cba78e346cddf0e0c98}{rocr\+::\+ADDR2\+\_\+\+COMPUTE\+\_\+\+HTILE\+\_\+\+INFO\+\_\+\+OUTPUT}}
+\begin{DoxyCompactList}\small\item\em Output structure of Addr2\+Compute\+Htile\+Info. \end{DoxyCompactList}\item 
+typedef struct \mbox{\hyperlink{structrocr_1_1__ADDR2__COMPUTE__HTILE__ADDRFROMCOORD__INPUT}{rocr\+::\+\_\+\+ADDR2\+\_\+\+COMPUTE\+\_\+\+HTILE\+\_\+\+ADDRFROMCOORD\+\_\+\+INPUT}} \mbox{\hyperlink{namespacerocr_a7bb3c10eeebe23f4a027891b22705b63}{rocr\+::\+ADDR2\+\_\+\+COMPUTE\+\_\+\+HTILE\+\_\+\+ADDRFROMCOORD\+\_\+\+INPUT}}
+\begin{DoxyCompactList}\small\item\em Input structure for Addr2\+Compute\+Htile\+Addr\+From\+Coord. \end{DoxyCompactList}\item 
+typedef struct \mbox{\hyperlink{structrocr_1_1__ADDR2__COMPUTE__HTILE__ADDRFROMCOORD__OUTPUT}{rocr\+::\+\_\+\+ADDR2\+\_\+\+COMPUTE\+\_\+\+HTILE\+\_\+\+ADDRFROMCOORD\+\_\+\+OUTPUT}} \mbox{\hyperlink{namespacerocr_ad62134b2544240e4f12901540156f02f}{rocr\+::\+ADDR2\+\_\+\+COMPUTE\+\_\+\+HTILE\+\_\+\+ADDRFROMCOORD\+\_\+\+OUTPUT}}
+\begin{DoxyCompactList}\small\item\em Output structure for Addr2\+Compute\+Htile\+Addr\+From\+Coord. \end{DoxyCompactList}\item 
+typedef struct \mbox{\hyperlink{structrocr_1_1__ADDR2__COMPUTE__HTILE__COORDFROMADDR__INPUT}{rocr\+::\+\_\+\+ADDR2\+\_\+\+COMPUTE\+\_\+\+HTILE\+\_\+\+COORDFROMADDR\+\_\+\+INPUT}} \mbox{\hyperlink{namespacerocr_ac2a3d653ade6287dcc992d48d05dca7b}{rocr\+::\+ADDR2\+\_\+\+COMPUTE\+\_\+\+HTILE\+\_\+\+COORDFROMADDR\+\_\+\+INPUT}}
+\begin{DoxyCompactList}\small\item\em Input structure for Addr2\+Compute\+Htile\+Coord\+From\+Addr. \end{DoxyCompactList}\item 
+typedef struct \mbox{\hyperlink{structrocr_1_1__ADDR2__COMPUTE__HTILE__COORDFROMADDR__OUTPUT}{rocr\+::\+\_\+\+ADDR2\+\_\+\+COMPUTE\+\_\+\+HTILE\+\_\+\+COORDFROMADDR\+\_\+\+OUTPUT}} \mbox{\hyperlink{namespacerocr_ac73ec3fa4a7ddace3c4a6a203123bc91}{rocr\+::\+ADDR2\+\_\+\+COMPUTE\+\_\+\+HTILE\+\_\+\+COORDFROMADDR\+\_\+\+OUTPUT}}
+\begin{DoxyCompactList}\small\item\em Output structure for Addr2\+Compute\+Htile\+Coord\+From\+Addr. \end{DoxyCompactList}\item 
+typedef struct \mbox{\hyperlink{structrocr_1_1__ADDR2__COMPUTE__CMASKINFO__INPUT}{rocr\+::\+\_\+\+ADDR2\+\_\+\+COMPUTE\+\_\+\+CMASKINFO\+\_\+\+INPUT}} \mbox{\hyperlink{namespacerocr_abc9b7593fe01908121d05b6b55655a25}{rocr\+::\+ADDR2\+\_\+\+COMPUTE\+\_\+\+CMASK\+\_\+\+INFO\+\_\+\+INPUT}}
+\begin{DoxyCompactList}\small\item\em Input structure of Addr2\+Compute\+Cmask\+Info. \end{DoxyCompactList}\item 
+typedef struct \mbox{\hyperlink{structrocr_1_1__ADDR2__COMPUTE__CMASK__INFO__OUTPUT}{rocr\+::\+\_\+\+ADDR2\+\_\+\+COMPUTE\+\_\+\+CMASK\+\_\+\+INFO\+\_\+\+OUTPUT}} \mbox{\hyperlink{namespacerocr_a5f7e3f2455cbb5a5020ccf2de85bae94}{rocr\+::\+ADDR2\+\_\+\+COMPUTE\+\_\+\+CMASK\+\_\+\+INFO\+\_\+\+OUTPUT}}
+\begin{DoxyCompactList}\small\item\em Output structure of Addr2\+Compute\+Cmask\+Info. \end{DoxyCompactList}\item 
+typedef struct \mbox{\hyperlink{structrocr_1_1__ADDR2__COMPUTE__CMASK__ADDRFROMCOORD__INPUT}{rocr\+::\+\_\+\+ADDR2\+\_\+\+COMPUTE\+\_\+\+CMASK\+\_\+\+ADDRFROMCOORD\+\_\+\+INPUT}} \mbox{\hyperlink{namespacerocr_adc7d56e43c1bd7d592f42b2797877c7d}{rocr\+::\+ADDR2\+\_\+\+COMPUTE\+\_\+\+CMASK\+\_\+\+ADDRFROMCOORD\+\_\+\+INPUT}}
+\begin{DoxyCompactList}\small\item\em Input structure for Addr2\+Compute\+Cmask\+Addr\+From\+Coord. \end{DoxyCompactList}\item 
+typedef struct \mbox{\hyperlink{structrocr_1_1__ADDR2__COMPUTE__CMASK__ADDRFROMCOORD__OUTPUT}{rocr\+::\+\_\+\+ADDR2\+\_\+\+COMPUTE\+\_\+\+CMASK\+\_\+\+ADDRFROMCOORD\+\_\+\+OUTPUT}} \mbox{\hyperlink{namespacerocr_aaa50929ec7bb12aa1a348c5b6d13eed6}{rocr\+::\+ADDR2\+\_\+\+COMPUTE\+\_\+\+CMASK\+\_\+\+ADDRFROMCOORD\+\_\+\+OUTPUT}}
+\begin{DoxyCompactList}\small\item\em Output structure for Addr2\+Compute\+Cmask\+Addr\+From\+Coord. \end{DoxyCompactList}\item 
+typedef struct \mbox{\hyperlink{structrocr_1_1__ADDR2__COMPUTE__CMASK__COORDFROMADDR__INPUT}{rocr\+::\+\_\+\+ADDR2\+\_\+\+COMPUTE\+\_\+\+CMASK\+\_\+\+COORDFROMADDR\+\_\+\+INPUT}} \mbox{\hyperlink{namespacerocr_a691afb8e0baa20e2a3c0baa40ef3463e}{rocr\+::\+ADDR2\+\_\+\+COMPUTE\+\_\+\+CMASK\+\_\+\+COORDFROMADDR\+\_\+\+INPUT}}
+\begin{DoxyCompactList}\small\item\em Input structure for Addr2\+Compute\+Cmask\+Coord\+From\+Addr. \end{DoxyCompactList}\item 
+typedef struct \mbox{\hyperlink{structrocr_1_1__ADDR2__COMPUTE__CMASK__COORDFROMADDR__OUTPUT}{rocr\+::\+\_\+\+ADDR2\+\_\+\+COMPUTE\+\_\+\+CMASK\+\_\+\+COORDFROMADDR\+\_\+\+OUTPUT}} \mbox{\hyperlink{namespacerocr_ae393705dbc879f333c7f668152f94014}{rocr\+::\+ADDR2\+\_\+\+COMPUTE\+\_\+\+CMASK\+\_\+\+COORDFROMADDR\+\_\+\+OUTPUT}}
+\begin{DoxyCompactList}\small\item\em Output structure for Addr2\+Compute\+Cmask\+Coord\+From\+Addr. \end{DoxyCompactList}\item 
+typedef union \mbox{\hyperlink{unionrocr_1_1__ADDR2__FMASK__FLAGS}{rocr\+::\+\_\+\+ADDR2\+\_\+\+FMASK\+\_\+\+FLAGS}} \mbox{\hyperlink{namespacerocr_a26d717c4879c0dcb5206952a11e060d2}{rocr\+::\+ADDR2\+\_\+\+FMASK\+\_\+\+FLAGS}}
+\begin{DoxyCompactList}\small\item\em FMASK flags. \end{DoxyCompactList}\item 
+typedef struct \mbox{\hyperlink{structrocr_1_1__ADDR2__COMPUTE__FMASK__INFO__INPUT}{rocr\+::\+\_\+\+ADDR2\+\_\+\+COMPUTE\+\_\+\+FMASK\+\_\+\+INFO\+\_\+\+INPUT}} \mbox{\hyperlink{namespacerocr_a45d5ff470bc68f68cee4f7286bfc5074}{rocr\+::\+ADDR2\+\_\+\+COMPUTE\+\_\+\+FMASK\+\_\+\+INFO\+\_\+\+INPUT}}
+\begin{DoxyCompactList}\small\item\em Input structure for Addr2\+Compute\+Fmask\+Info. \end{DoxyCompactList}\item 
+typedef struct \mbox{\hyperlink{structrocr_1_1__ADDR2__COMPUTE__FMASK__INFO__OUTPUT}{rocr\+::\+\_\+\+ADDR2\+\_\+\+COMPUTE\+\_\+\+FMASK\+\_\+\+INFO\+\_\+\+OUTPUT}} \mbox{\hyperlink{namespacerocr_a1905401bff7503c302d5e45b1a332bba}{rocr\+::\+ADDR2\+\_\+\+COMPUTE\+\_\+\+FMASK\+\_\+\+INFO\+\_\+\+OUTPUT}}
+\begin{DoxyCompactList}\small\item\em Output structure for Addr2\+Compute\+Fmask\+Info. \end{DoxyCompactList}\item 
+typedef struct \mbox{\hyperlink{structrocr_1_1__ADDR2__COMPUTE__FMASK__ADDRFROMCOORD__INPUT}{rocr\+::\+\_\+\+ADDR2\+\_\+\+COMPUTE\+\_\+\+FMASK\+\_\+\+ADDRFROMCOORD\+\_\+\+INPUT}} \mbox{\hyperlink{namespacerocr_aa5a0861e7cdb975a2735443af7d06f3e}{rocr\+::\+ADDR2\+\_\+\+COMPUTE\+\_\+\+FMASK\+\_\+\+ADDRFROMCOORD\+\_\+\+INPUT}}
+\begin{DoxyCompactList}\small\item\em Input structure for Addr2\+Compute\+Fmask\+Addr\+From\+Coord. \end{DoxyCompactList}\item 
+typedef struct \mbox{\hyperlink{structrocr_1_1__ADDR2__COMPUTE__FMASK__ADDRFROMCOORD__OUTPUT}{rocr\+::\+\_\+\+ADDR2\+\_\+\+COMPUTE\+\_\+\+FMASK\+\_\+\+ADDRFROMCOORD\+\_\+\+OUTPUT}} \mbox{\hyperlink{namespacerocr_a808dee95a3bbf31e99e9cd88a0312d4c}{rocr\+::\+ADDR2\+\_\+\+COMPUTE\+\_\+\+FMASK\+\_\+\+ADDRFROMCOORD\+\_\+\+OUTPUT}}
+\begin{DoxyCompactList}\small\item\em Output structure for Addr2\+Compute\+Fmask\+Addr\+From\+Coord. \end{DoxyCompactList}\item 
+typedef struct \mbox{\hyperlink{structrocr_1_1__ADDR2__COMPUTE__FMASK__COORDFROMADDR__INPUT}{rocr\+::\+\_\+\+ADDR2\+\_\+\+COMPUTE\+\_\+\+FMASK\+\_\+\+COORDFROMADDR\+\_\+\+INPUT}} \mbox{\hyperlink{namespacerocr_a7ef6a6bbba89f8f2135f6c8c30cd5aa3}{rocr\+::\+ADDR2\+\_\+\+COMPUTE\+\_\+\+FMASK\+\_\+\+COORDFROMADDR\+\_\+\+INPUT}}
+\begin{DoxyCompactList}\small\item\em Input structure for Addr2\+Compute\+Fmask\+Coord\+From\+Addr. \end{DoxyCompactList}\item 
+typedef struct \mbox{\hyperlink{structrocr_1_1__ADDR2__COMPUTE__FMASK__COORDFROMADDR__OUTPUT}{rocr\+::\+\_\+\+ADDR2\+\_\+\+COMPUTE\+\_\+\+FMASK\+\_\+\+COORDFROMADDR\+\_\+\+OUTPUT}} \mbox{\hyperlink{namespacerocr_a8319360a1dd774cd9d22dbc9d31c7c5a}{rocr\+::\+ADDR2\+\_\+\+COMPUTE\+\_\+\+FMASK\+\_\+\+COORDFROMADDR\+\_\+\+OUTPUT}}
+\begin{DoxyCompactList}\small\item\em Output structure for Addr2\+Compute\+Fmask\+Coord\+From\+Addr. \end{DoxyCompactList}\item 
+typedef struct \mbox{\hyperlink{structrocr_1_1__ADDR2__COMPUTE__DCCINFO__INPUT}{rocr\+::\+\_\+\+ADDR2\+\_\+\+COMPUTE\+\_\+\+DCCINFO\+\_\+\+INPUT}} \mbox{\hyperlink{namespacerocr_a18e9a04c69fb4dcc9846449325cd23d9}{rocr\+::\+ADDR2\+\_\+\+COMPUTE\+\_\+\+DCCINFO\+\_\+\+INPUT}}
+\begin{DoxyCompactList}\small\item\em Input structure of Addr2\+Compute\+Dcc\+Info. \end{DoxyCompactList}\item 
+typedef struct \mbox{\hyperlink{structrocr_1_1__ADDR2__COMPUTE__DCCINFO__OUTPUT}{rocr\+::\+\_\+\+ADDR2\+\_\+\+COMPUTE\+\_\+\+DCCINFO\+\_\+\+OUTPUT}} \mbox{\hyperlink{namespacerocr_a63d989e6c98e7baff9daa676709f8be6}{rocr\+::\+ADDR2\+\_\+\+COMPUTE\+\_\+\+DCCINFO\+\_\+\+OUTPUT}}
+\begin{DoxyCompactList}\small\item\em Output structure of Addr2\+Compute\+Dcc\+Info. \end{DoxyCompactList}\item 
+typedef struct \mbox{\hyperlink{structrocr_1_1__ADDR2__COMPUTE__DCC__ADDRFROMCOORD__INPUT}{rocr\+::\+\_\+\+ADDR2\+\_\+\+COMPUTE\+\_\+\+DCC\+\_\+\+ADDRFROMCOORD\+\_\+\+INPUT}} \mbox{\hyperlink{namespacerocr_a692bcd0d2b453fe8457ae94243a77e6a}{rocr\+::\+ADDR2\+\_\+\+COMPUTE\+\_\+\+DCC\+\_\+\+ADDRFROMCOORD\+\_\+\+INPUT}}
+\begin{DoxyCompactList}\small\item\em Input structure for Addr2\+Compute\+Dcc\+Addr\+From\+Coord. \end{DoxyCompactList}\item 
+typedef struct \mbox{\hyperlink{structrocr_1_1__ADDR2__COMPUTE__DCC__ADDRFROMCOORD__OUTPUT}{rocr\+::\+\_\+\+ADDR2\+\_\+\+COMPUTE\+\_\+\+DCC\+\_\+\+ADDRFROMCOORD\+\_\+\+OUTPUT}} \mbox{\hyperlink{namespacerocr_a5fead5e0166c854966cbde3bb0c85ef4}{rocr\+::\+ADDR2\+\_\+\+COMPUTE\+\_\+\+DCC\+\_\+\+ADDRFROMCOORD\+\_\+\+OUTPUT}}
+\begin{DoxyCompactList}\small\item\em Output structure for Addr2\+Compute\+Dcc\+Addr\+From\+Coord. \end{DoxyCompactList}\item 
+typedef struct \mbox{\hyperlink{structrocr_1_1__ADDR2__COMPUTE__PIPEBANKXOR__INPUT}{rocr\+::\+\_\+\+ADDR2\+\_\+\+COMPUTE\+\_\+\+PIPEBANKXOR\+\_\+\+INPUT}} \mbox{\hyperlink{namespacerocr_a4f27a7a5b14903f135b9978909945fbf}{rocr\+::\+ADDR2\+\_\+\+COMPUTE\+\_\+\+PIPEBANKXOR\+\_\+\+INPUT}}
+\begin{DoxyCompactList}\small\item\em Input structure of Addr2\+Compute\+Pipebank\+Xor. \end{DoxyCompactList}\item 
+typedef struct \mbox{\hyperlink{structrocr_1_1__ADDR2__COMPUTE__PIPEBANKXOR__OUTPUT}{rocr\+::\+\_\+\+ADDR2\+\_\+\+COMPUTE\+\_\+\+PIPEBANKXOR\+\_\+\+OUTPUT}} \mbox{\hyperlink{namespacerocr_a3976bd7e6e45d52c3cd7569c76a3b1b6}{rocr\+::\+ADDR2\+\_\+\+COMPUTE\+\_\+\+PIPEBANKXOR\+\_\+\+OUTPUT}}
+\begin{DoxyCompactList}\small\item\em Output structure of Addr2\+Compute\+Pipebank\+Xor. \end{DoxyCompactList}\item 
+typedef struct \mbox{\hyperlink{structrocr_1_1__ADDR2__COMPUTE__SLICE__PIPEBANKXOR__INPUT}{rocr\+::\+\_\+\+ADDR2\+\_\+\+COMPUTE\+\_\+\+SLICE\+\_\+\+PIPEBANKXOR\+\_\+\+INPUT}} \mbox{\hyperlink{namespacerocr_a03c086b14c7befe9589b281574d09206}{rocr\+::\+ADDR2\+\_\+\+COMPUTE\+\_\+\+SLICE\+\_\+\+PIPEBANKXOR\+\_\+\+INPUT}}
+\begin{DoxyCompactList}\small\item\em Input structure of Addr2\+Compute\+Slice\+Pipe\+Bank\+Xor. \end{DoxyCompactList}\item 
+typedef struct \mbox{\hyperlink{structrocr_1_1__ADDR2__COMPUTE__SLICE__PIPEBANKXOR__OUTPUT}{rocr\+::\+\_\+\+ADDR2\+\_\+\+COMPUTE\+\_\+\+SLICE\+\_\+\+PIPEBANKXOR\+\_\+\+OUTPUT}} \mbox{\hyperlink{namespacerocr_ac715a526ab9f7dd452aaf78ab3b20976}{rocr\+::\+ADDR2\+\_\+\+COMPUTE\+\_\+\+SLICE\+\_\+\+PIPEBANKXOR\+\_\+\+OUTPUT}}
+\begin{DoxyCompactList}\small\item\em Output structure of Addr2\+Compute\+Slice\+Pipe\+Bank\+Xor. \end{DoxyCompactList}\item 
+typedef struct \mbox{\hyperlink{structrocr_1_1__ADDR2__COMPUTE__SUBRESOURCE__OFFSET__FORSWIZZLEPATTERN__INPUT}{rocr\+::\+\_\+\+ADDR2\+\_\+\+COMPUTE\+\_\+\+SUBRESOURCE\+\_\+\+OFFSET\+\_\+\+FORSWIZZLEPATTERN\+\_\+\+INPUT}} \mbox{\hyperlink{namespacerocr_a0afb8cd2dfd96beb6f30660962d9150f}{rocr\+::\+ADDR2\+\_\+\+COMPUTE\+\_\+\+SUBRESOURCE\+\_\+\+OFFSET\+\_\+\+FORSWIZZLEPATTERN\+\_\+\+INPUT}}
+\begin{DoxyCompactList}\small\item\em Input structure of Addr2\+Compute\+Sub\+Resource\+Offset\+For\+Swizzle\+Pattern. \end{DoxyCompactList}\item 
+typedef struct \mbox{\hyperlink{structrocr_1_1__ADDR2__COMPUTE__SUBRESOURCE__OFFSET__FORSWIZZLEPATTERN__OUTPUT}{rocr\+::\+\_\+\+ADDR2\+\_\+\+COMPUTE\+\_\+\+SUBRESOURCE\+\_\+\+OFFSET\+\_\+\+FORSWIZZLEPATTERN\+\_\+\+OUTPUT}} \mbox{\hyperlink{namespacerocr_aff3b7e71f3f199a98099d9657722514c}{rocr\+::\+ADDR2\+\_\+\+COMPUTE\+\_\+\+SUBRESOURCE\+\_\+\+OFFSET\+\_\+\+FORSWIZZLEPATTERN\+\_\+\+OUTPUT}}
+\begin{DoxyCompactList}\small\item\em Output structure of Addr2\+Compute\+Sub\+Resource\+Offset\+For\+Swizzle\+Pattern. \end{DoxyCompactList}\item 
+typedef struct \mbox{\hyperlink{structrocr_1_1__ADDR2__COMPUTE__NONBLOCKCOMPRESSEDVIEW__INPUT}{rocr\+::\+\_\+\+ADDR2\+\_\+\+COMPUTE\+\_\+\+NONBLOCKCOMPRESSEDVIEW\+\_\+\+INPUT}} \mbox{\hyperlink{namespacerocr_a32a42a0264b6489a84c56456b5495459}{rocr\+::\+ADDR2\+\_\+\+COMPUTE\+\_\+\+NONBLOCKCOMPRESSEDVIEW\+\_\+\+INPUT}}
+\begin{DoxyCompactList}\small\item\em Input structure of Addr2\+Compute\+Non\+Block\+Compressed\+View. \end{DoxyCompactList}\item 
+typedef struct \mbox{\hyperlink{structrocr_1_1__ADDR2__COMPUTE__NONBLOCKCOMPRESSEDVIEW__OUTPUT}{rocr\+::\+\_\+\+ADDR2\+\_\+\+COMPUTE\+\_\+\+NONBLOCKCOMPRESSEDVIEW\+\_\+\+OUTPUT}} \mbox{\hyperlink{namespacerocr_a1556a4278a5dc1d0706ee0e4570c6194}{rocr\+::\+ADDR2\+\_\+\+COMPUTE\+\_\+\+NONBLOCKCOMPRESSEDVIEW\+\_\+\+OUTPUT}}
+\begin{DoxyCompactList}\small\item\em Output structure of Addr2\+Compute\+Non\+Block\+Compressed\+View. \end{DoxyCompactList}\item 
+typedef union \mbox{\hyperlink{unionrocr_1_1__ADDR2__BLOCK__SET}{rocr\+::\+\_\+\+ADDR2\+\_\+\+BLOCK\+\_\+\+SET}} \mbox{\hyperlink{namespacerocr_ad723c5daa0ba0a358ce336c36949ded4}{rocr\+::\+ADDR2\+\_\+\+BLOCK\+\_\+\+SET}}
+\begin{DoxyCompactList}\small\item\em Bit field that defines block type. \end{DoxyCompactList}\item 
+typedef union \mbox{\hyperlink{unionrocr_1_1__ADDR2__SWTYPE__SET}{rocr\+::\+\_\+\+ADDR2\+\_\+\+SWTYPE\+\_\+\+SET}} \mbox{\hyperlink{namespacerocr_a8c696d63861e5537049e3938deb6bd7b}{rocr\+::\+ADDR2\+\_\+\+SWTYPE\+\_\+\+SET}}
+\begin{DoxyCompactList}\small\item\em Bit field that defines swizzle type. \end{DoxyCompactList}\item 
+typedef union \mbox{\hyperlink{unionrocr_1_1__ADDR2__SWMODE__SET}{rocr\+::\+\_\+\+ADDR2\+\_\+\+SWMODE\+\_\+\+SET}} \mbox{\hyperlink{namespacerocr_a045bd0087db5582ee20cde85aefe2957}{rocr\+::\+ADDR2\+\_\+\+SWMODE\+\_\+\+SET}}
+\begin{DoxyCompactList}\small\item\em Bit field that defines swizzle type. \end{DoxyCompactList}\item 
+typedef struct \mbox{\hyperlink{structrocr_1_1__ADDR2__GET__PREFERRED__SURF__SETTING__INPUT}{rocr\+::\+\_\+\+ADDR2\+\_\+\+GET\+\_\+\+PREFERRED\+\_\+\+SURF\+\_\+\+SETTING\+\_\+\+INPUT}} \mbox{\hyperlink{namespacerocr_a945c3184ba671c5d044ff7d6dc0a1910}{rocr\+::\+ADDR2\+\_\+\+GET\+\_\+\+PREFERRED\+\_\+\+SURF\+\_\+\+SETTING\+\_\+\+INPUT}}
+\begin{DoxyCompactList}\small\item\em Input structure of Addr2\+Get\+Preferred\+Surface\+Setting. \end{DoxyCompactList}\item 
+typedef struct \mbox{\hyperlink{structrocr_1_1__ADDR2__GET__PREFERRED__SURF__SETTING__OUTPUT}{rocr\+::\+\_\+\+ADDR2\+\_\+\+GET\+\_\+\+PREFERRED\+\_\+\+SURF\+\_\+\+SETTING\+\_\+\+OUTPUT}} \mbox{\hyperlink{namespacerocr_a5f4f8e1ece6b248b799f7296af42ae3e}{rocr\+::\+ADDR2\+\_\+\+GET\+\_\+\+PREFERRED\+\_\+\+SURF\+\_\+\+SETTING\+\_\+\+OUTPUT}}
+\begin{DoxyCompactList}\small\item\em Output structure of Addr2\+Get\+Preferred\+Surface\+Setting. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Enumerations}
+\begin{DoxyCompactItemize}
+\item 
+enum \mbox{\hyperlink{namespacerocr_ac8e3a17d31b73bc4b308aab0987962f5}{rocr\+::\+\_\+\+Addr\+Swizzle\+Gen\+Option}} \{ \mbox{\hyperlink{namespacerocr_ac8e3a17d31b73bc4b308aab0987962f5a3d62a841df0959d107bfa24fd43b5ef3}{rocr\+::\+ADDR\+\_\+\+SWIZZLE\+\_\+\+GEN\+\_\+\+DEFAULT}} = 0
+, \mbox{\hyperlink{namespacerocr_ac8e3a17d31b73bc4b308aab0987962f5ade10bf7d399b5ab54c035c64857768f0}{rocr\+::\+ADDR\+\_\+\+SWIZZLE\+\_\+\+GEN\+\_\+\+LINEAR}} = 1
+ \}
+\begin{DoxyCompactList}\small\item\em Which swizzle generating options\+: legacy or linear. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{addrtypes_8h_a45468f108457c1977c8684dea3df88c7}{ADDR\+\_\+\+E\+\_\+\+RETURNCODE}} \mbox{\hyperlink{addrtypes_8h_a7e5b4b484f48088afb71df13773755a5}{ADDR\+\_\+\+API}} \mbox{\hyperlink{namespacerocr_a2ea9aba46a657779c75948763925cfd5}{rocr\+::\+Addr\+Create}} (const ADDR\+\_\+\+CREATE\+\_\+\+INPUT $\ast$p\+Addr\+Create\+In, ADDR\+\_\+\+CREATE\+\_\+\+OUTPUT $\ast$p\+Addr\+Create\+Out)
+\begin{DoxyCompactList}\small\item\em Create Addr\+Lib object, must be called before any interface calls. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{addrtypes_8h_a45468f108457c1977c8684dea3df88c7}{ADDR\+\_\+\+E\+\_\+\+RETURNCODE}} \mbox{\hyperlink{addrtypes_8h_a7e5b4b484f48088afb71df13773755a5}{ADDR\+\_\+\+API}} \mbox{\hyperlink{namespacerocr_a30991be09792482c1016296210ca71d3}{rocr\+::\+Addr\+Destroy}} (ADDR\+\_\+\+HANDLE h\+Lib)
+\begin{DoxyCompactList}\small\item\em Destroy Addr\+Lib object, must be called to free internally allocated resources. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{addrtypes_8h_a45468f108457c1977c8684dea3df88c7}{ADDR\+\_\+\+E\+\_\+\+RETURNCODE}} \mbox{\hyperlink{addrtypes_8h_a7e5b4b484f48088afb71df13773755a5}{ADDR\+\_\+\+API}} \mbox{\hyperlink{namespacerocr_a5309c2e36a0cc98ea2eefbd89a2427fd}{rocr\+::\+Addr\+Compute\+Surface\+Info}} (ADDR\+\_\+\+HANDLE h\+Lib, const ADDR\+\_\+\+COMPUTE\+\_\+\+SURFACE\+\_\+\+INFO\+\_\+\+INPUT $\ast$p\+In, ADDR\+\_\+\+COMPUTE\+\_\+\+SURFACE\+\_\+\+INFO\+\_\+\+OUTPUT $\ast$p\+Out)
+\begin{DoxyCompactList}\small\item\em Compute surface width/height/depth/alignments and suitable tiling mode. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{addrtypes_8h_a45468f108457c1977c8684dea3df88c7}{ADDR\+\_\+\+E\+\_\+\+RETURNCODE}} \mbox{\hyperlink{addrtypes_8h_a7e5b4b484f48088afb71df13773755a5}{ADDR\+\_\+\+API}} \mbox{\hyperlink{namespacerocr_a5fc201c7133c190d71d5fca90aa0a2d4}{rocr\+::\+Addr\+Compute\+Surface\+Addr\+From\+Coord}} (ADDR\+\_\+\+HANDLE h\+Lib, const ADDR\+\_\+\+COMPUTE\+\_\+\+SURFACE\+\_\+\+ADDRFROMCOORD\+\_\+\+INPUT $\ast$p\+In, ADDR\+\_\+\+COMPUTE\+\_\+\+SURFACE\+\_\+\+ADDRFROMCOORD\+\_\+\+OUTPUT $\ast$p\+Out)
+\begin{DoxyCompactList}\small\item\em Compute surface address from a given coordinate. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{addrtypes_8h_a45468f108457c1977c8684dea3df88c7}{ADDR\+\_\+\+E\+\_\+\+RETURNCODE}} \mbox{\hyperlink{addrtypes_8h_a7e5b4b484f48088afb71df13773755a5}{ADDR\+\_\+\+API}} \mbox{\hyperlink{namespacerocr_ae5cc1b63f76279232b10b48e74e22900}{rocr\+::\+Addr\+Compute\+Surface\+Coord\+From\+Addr}} (ADDR\+\_\+\+HANDLE h\+Lib, const ADDR\+\_\+\+COMPUTE\+\_\+\+SURFACE\+\_\+\+COORDFROMADDR\+\_\+\+INPUT $\ast$p\+In, ADDR\+\_\+\+COMPUTE\+\_\+\+SURFACE\+\_\+\+COORDFROMADDR\+\_\+\+OUTPUT $\ast$p\+Out)
+\begin{DoxyCompactList}\small\item\em Compute coordinate from a given surface address. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{addrtypes_8h_a45468f108457c1977c8684dea3df88c7}{ADDR\+\_\+\+E\+\_\+\+RETURNCODE}} \mbox{\hyperlink{addrtypes_8h_a7e5b4b484f48088afb71df13773755a5}{ADDR\+\_\+\+API}} \mbox{\hyperlink{namespacerocr_a1ad2713e173258e7bbbfcb1dc75517e2}{rocr\+::\+Addr\+Compute\+Htile\+Info}} (ADDR\+\_\+\+HANDLE h\+Lib, const ADDR\+\_\+\+COMPUTE\+\_\+\+HTILE\+\_\+\+INFO\+\_\+\+INPUT $\ast$p\+In, ADDR\+\_\+\+COMPUTE\+\_\+\+HTILE\+\_\+\+INFO\+\_\+\+OUTPUT $\ast$p\+Out)
+\begin{DoxyCompactList}\small\item\em Compute Htile pitch, height, base alignment and size in bytes. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{addrtypes_8h_a45468f108457c1977c8684dea3df88c7}{ADDR\+\_\+\+E\+\_\+\+RETURNCODE}} \mbox{\hyperlink{addrtypes_8h_a7e5b4b484f48088afb71df13773755a5}{ADDR\+\_\+\+API}} \mbox{\hyperlink{namespacerocr_a68b73df27d1974b573dd40f0ff17cbe1}{rocr\+::\+Addr\+Compute\+Htile\+Addr\+From\+Coord}} (ADDR\+\_\+\+HANDLE h\+Lib, const ADDR\+\_\+\+COMPUTE\+\_\+\+HTILE\+\_\+\+ADDRFROMCOORD\+\_\+\+INPUT $\ast$p\+In, ADDR\+\_\+\+COMPUTE\+\_\+\+HTILE\+\_\+\+ADDRFROMCOORD\+\_\+\+OUTPUT $\ast$p\+Out)
+\begin{DoxyCompactList}\small\item\em Compute Htile address according to coordinates (of depth buffer) \end{DoxyCompactList}\item 
+\mbox{\hyperlink{addrtypes_8h_a45468f108457c1977c8684dea3df88c7}{ADDR\+\_\+\+E\+\_\+\+RETURNCODE}} \mbox{\hyperlink{addrtypes_8h_a7e5b4b484f48088afb71df13773755a5}{ADDR\+\_\+\+API}} \mbox{\hyperlink{namespacerocr_a37da9f5af4e140c3eadf9d43d236920c}{rocr\+::\+Addr\+Compute\+Htile\+Coord\+From\+Addr}} (ADDR\+\_\+\+HANDLE h\+Lib, const ADDR\+\_\+\+COMPUTE\+\_\+\+HTILE\+\_\+\+COORDFROMADDR\+\_\+\+INPUT $\ast$p\+In, ADDR\+\_\+\+COMPUTE\+\_\+\+HTILE\+\_\+\+COORDFROMADDR\+\_\+\+OUTPUT $\ast$p\+Out)
+\begin{DoxyCompactList}\small\item\em Compute coordinates within depth buffer (1st pixel of a micro tile) according to Htile address. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{addrtypes_8h_a45468f108457c1977c8684dea3df88c7}{ADDR\+\_\+\+E\+\_\+\+RETURNCODE}} \mbox{\hyperlink{addrtypes_8h_a7e5b4b484f48088afb71df13773755a5}{ADDR\+\_\+\+API}} \mbox{\hyperlink{namespacerocr_a3a8f91d7c5dc30023a736de05a3fd7fb}{rocr\+::\+Addr\+Compute\+Cmask\+Info}} (ADDR\+\_\+\+HANDLE h\+Lib, const ADDR\+\_\+\+COMPUTE\+\_\+\+CMASK\+\_\+\+INFO\+\_\+\+INPUT $\ast$p\+In, ADDR\+\_\+\+COMPUTE\+\_\+\+CMASK\+\_\+\+INFO\+\_\+\+OUTPUT $\ast$p\+Out)
+\begin{DoxyCompactList}\small\item\em Compute Cmask pitch, height, base alignment and size in bytes from color buffer info. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{addrtypes_8h_a45468f108457c1977c8684dea3df88c7}{ADDR\+\_\+\+E\+\_\+\+RETURNCODE}} \mbox{\hyperlink{addrtypes_8h_a7e5b4b484f48088afb71df13773755a5}{ADDR\+\_\+\+API}} \mbox{\hyperlink{namespacerocr_a1575539fbf1b04e0ddfe7ba2b8cfed5c}{rocr\+::\+Addr\+Compute\+Cmask\+Addr\+From\+Coord}} (ADDR\+\_\+\+HANDLE h\+Lib, const ADDR\+\_\+\+COMPUTE\+\_\+\+CMASK\+\_\+\+ADDRFROMCOORD\+\_\+\+INPUT $\ast$p\+In, ADDR\+\_\+\+COMPUTE\+\_\+\+CMASK\+\_\+\+ADDRFROMCOORD\+\_\+\+OUTPUT $\ast$p\+Out)
+\begin{DoxyCompactList}\small\item\em Compute Cmask address according to coordinates (of MSAA color buffer) \end{DoxyCompactList}\item 
+\mbox{\hyperlink{addrtypes_8h_a45468f108457c1977c8684dea3df88c7}{ADDR\+\_\+\+E\+\_\+\+RETURNCODE}} \mbox{\hyperlink{addrtypes_8h_a7e5b4b484f48088afb71df13773755a5}{ADDR\+\_\+\+API}} \mbox{\hyperlink{namespacerocr_a47da3b0b3ace731e73809fdc0b520de2}{rocr\+::\+Addr\+Compute\+Cmask\+Coord\+From\+Addr}} (ADDR\+\_\+\+HANDLE h\+Lib, const ADDR\+\_\+\+COMPUTE\+\_\+\+CMASK\+\_\+\+COORDFROMADDR\+\_\+\+INPUT $\ast$p\+In, ADDR\+\_\+\+COMPUTE\+\_\+\+CMASK\+\_\+\+COORDFROMADDR\+\_\+\+OUTPUT $\ast$p\+Out)
+\begin{DoxyCompactList}\small\item\em Compute coordinates within color buffer (1st pixel of a micro tile) according to Cmask address. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{addrtypes_8h_a45468f108457c1977c8684dea3df88c7}{ADDR\+\_\+\+E\+\_\+\+RETURNCODE}} \mbox{\hyperlink{addrtypes_8h_a7e5b4b484f48088afb71df13773755a5}{ADDR\+\_\+\+API}} \mbox{\hyperlink{namespacerocr_aebd89e543be139c434040f5375380236}{rocr\+::\+Addr\+Compute\+Fmask\+Info}} (ADDR\+\_\+\+HANDLE h\+Lib, const ADDR\+\_\+\+COMPUTE\+\_\+\+FMASK\+\_\+\+INFO\+\_\+\+INPUT $\ast$p\+In, ADDR\+\_\+\+COMPUTE\+\_\+\+FMASK\+\_\+\+INFO\+\_\+\+OUTPUT $\ast$p\+Out)
+\begin{DoxyCompactList}\small\item\em Compute Fmask pitch/height/depth/alignments and size in bytes. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{addrtypes_8h_a45468f108457c1977c8684dea3df88c7}{ADDR\+\_\+\+E\+\_\+\+RETURNCODE}} \mbox{\hyperlink{addrtypes_8h_a7e5b4b484f48088afb71df13773755a5}{ADDR\+\_\+\+API}} \mbox{\hyperlink{namespacerocr_a91e730b61a682c173fe11beccf4b449a}{rocr\+::\+Addr\+Compute\+Fmask\+Addr\+From\+Coord}} (ADDR\+\_\+\+HANDLE h\+Lib, const ADDR\+\_\+\+COMPUTE\+\_\+\+FMASK\+\_\+\+ADDRFROMCOORD\+\_\+\+INPUT $\ast$p\+In, ADDR\+\_\+\+COMPUTE\+\_\+\+FMASK\+\_\+\+ADDRFROMCOORD\+\_\+\+OUTPUT $\ast$p\+Out)
+\begin{DoxyCompactList}\small\item\em Compute Fmask address according to coordinates (x,y,slice,sample,plane) \end{DoxyCompactList}\item 
+\mbox{\hyperlink{addrtypes_8h_a45468f108457c1977c8684dea3df88c7}{ADDR\+\_\+\+E\+\_\+\+RETURNCODE}} \mbox{\hyperlink{addrtypes_8h_a7e5b4b484f48088afb71df13773755a5}{ADDR\+\_\+\+API}} \mbox{\hyperlink{namespacerocr_a840e72635338c20cacf4066531309780}{rocr\+::\+Addr\+Compute\+Fmask\+Coord\+From\+Addr}} (ADDR\+\_\+\+HANDLE h\+Lib, const ADDR\+\_\+\+COMPUTE\+\_\+\+FMASK\+\_\+\+COORDFROMADDR\+\_\+\+INPUT $\ast$p\+In, ADDR\+\_\+\+COMPUTE\+\_\+\+FMASK\+\_\+\+COORDFROMADDR\+\_\+\+OUTPUT $\ast$p\+Out)
+\begin{DoxyCompactList}\small\item\em Compute FMASK coordinate from an given address. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{addrtypes_8h_af5a2be58a28390f9a494538f34054637}{UINT\+\_\+32}} \mbox{\hyperlink{addrtypes_8h_a7e5b4b484f48088afb71df13773755a5}{ADDR\+\_\+\+API}} \mbox{\hyperlink{namespacerocr_abbc675826392c381ad94298b8427688a}{rocr\+::\+Addr\+Get\+Version}} (ADDR\+\_\+\+HANDLE h\+Lib)
+\begin{DoxyCompactList}\small\item\em Get Addr\+Lib version number. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{addrtypes_8h_ac4225671b7e87c943146915461c9b2f4}{BOOL\+\_\+32}} \mbox{\hyperlink{addrtypes_8h_a7e5b4b484f48088afb71df13773755a5}{ADDR\+\_\+\+API}} \mbox{\hyperlink{namespacerocr_a0cac8d819b7b6cd9d257e8bb2df1dcc4}{rocr\+::\+Addr\+Use\+Tile\+Index}} (ADDR\+\_\+\+HANDLE h\+Lib)
+\begin{DoxyCompactList}\small\item\em Return TRUE if tile\+Index is enabled in this address library. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{addrtypes_8h_ac4225671b7e87c943146915461c9b2f4}{BOOL\+\_\+32}} \mbox{\hyperlink{addrtypes_8h_a7e5b4b484f48088afb71df13773755a5}{ADDR\+\_\+\+API}} \mbox{\hyperlink{namespacerocr_a8562daf223667f0c2eafe9c2e176e587}{rocr\+::\+Addr\+Use\+Combined\+Swizzle}} (ADDR\+\_\+\+HANDLE h\+Lib)
+\begin{DoxyCompactList}\small\item\em Return TRUE if combined swizzle is enabled in this address library. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{addrtypes_8h_a45468f108457c1977c8684dea3df88c7}{ADDR\+\_\+\+E\+\_\+\+RETURNCODE}} \mbox{\hyperlink{addrtypes_8h_a7e5b4b484f48088afb71df13773755a5}{ADDR\+\_\+\+API}} \mbox{\hyperlink{namespacerocr_a6e0f55a1b8ab1f39176932b81cd1a6e3}{rocr\+::\+Addr\+Extract\+Bank\+Pipe\+Swizzle}} (ADDR\+\_\+\+HANDLE h\+Lib, const ADDR\+\_\+\+EXTRACT\+\_\+\+BANKPIPE\+\_\+\+SWIZZLE\+\_\+\+INPUT $\ast$p\+In, ADDR\+\_\+\+EXTRACT\+\_\+\+BANKPIPE\+\_\+\+SWIZZLE\+\_\+\+OUTPUT $\ast$p\+Out)
+\begin{DoxyCompactList}\small\item\em Extract Bank and Pipe swizzle from base256b. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{addrtypes_8h_a45468f108457c1977c8684dea3df88c7}{ADDR\+\_\+\+E\+\_\+\+RETURNCODE}} \mbox{\hyperlink{addrtypes_8h_a7e5b4b484f48088afb71df13773755a5}{ADDR\+\_\+\+API}} \mbox{\hyperlink{namespacerocr_ad53cf72811c80ec494cb01a20ac2eb17}{rocr\+::\+Addr\+Combine\+Bank\+Pipe\+Swizzle}} (ADDR\+\_\+\+HANDLE h\+Lib, const ADDR\+\_\+\+COMBINE\+\_\+\+BANKPIPE\+\_\+\+SWIZZLE\+\_\+\+INPUT $\ast$p\+In, ADDR\+\_\+\+COMBINE\+\_\+\+BANKPIPE\+\_\+\+SWIZZLE\+\_\+\+OUTPUT $\ast$p\+Out)
+\begin{DoxyCompactList}\small\item\em Combine Bank and Pipe swizzle. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{addrtypes_8h_a45468f108457c1977c8684dea3df88c7}{ADDR\+\_\+\+E\+\_\+\+RETURNCODE}} \mbox{\hyperlink{addrtypes_8h_a7e5b4b484f48088afb71df13773755a5}{ADDR\+\_\+\+API}} \mbox{\hyperlink{namespacerocr_aa869f17f2ed8d0ae9fa03ab0a3c88b6a}{rocr\+::\+Addr\+Compute\+Slice\+Swizzle}} (ADDR\+\_\+\+HANDLE h\+Lib, const ADDR\+\_\+\+COMPUTE\+\_\+\+SLICESWIZZLE\+\_\+\+INPUT $\ast$p\+In, ADDR\+\_\+\+COMPUTE\+\_\+\+SLICESWIZZLE\+\_\+\+OUTPUT $\ast$p\+Out)
+\begin{DoxyCompactList}\small\item\em Extract Bank and Pipe swizzle from base256b. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{addrtypes_8h_a45468f108457c1977c8684dea3df88c7}{ADDR\+\_\+\+E\+\_\+\+RETURNCODE}} \mbox{\hyperlink{addrtypes_8h_a7e5b4b484f48088afb71df13773755a5}{ADDR\+\_\+\+API}} \mbox{\hyperlink{namespacerocr_acfbf6c9a5fb37fc2b7bc3f49f43d01d9}{rocr\+::\+Addr\+Compute\+Base\+Swizzle}} (ADDR\+\_\+\+HANDLE h\+Lib, const ADDR\+\_\+\+COMPUTE\+\_\+\+BASE\+\_\+\+SWIZZLE\+\_\+\+INPUT $\ast$p\+In, ADDR\+\_\+\+COMPUTE\+\_\+\+BASE\+\_\+\+SWIZZLE\+\_\+\+OUTPUT $\ast$p\+Out)
+\begin{DoxyCompactList}\small\item\em Return a Combined Bank and Pipe swizzle base on surface based on surface type/index. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{addrtypes_8h_ac4225671b7e87c943146915461c9b2f4}{BOOL\+\_\+32}} \mbox{\hyperlink{addrtypes_8h_a7e5b4b484f48088afb71df13773755a5}{ADDR\+\_\+\+API}} \mbox{\hyperlink{namespacerocr_af354f606f7f4d7a937ed70d2480db485}{rocr\+::\+Elem\+Get\+Export\+Norm}} (ADDR\+\_\+\+HANDLE h\+Lib, const ELEM\+\_\+\+GETEXPORTNORM\+\_\+\+INPUT $\ast$p\+In)
+\begin{DoxyCompactList}\small\item\em Helper function to check one format can be EXPORT\+\_\+\+NUM, which is a register CB\+\_\+\+COLOR\+\_\+\+INFO.\+SURFACE\+\_\+\+FORMAT. FP16 can be reported as EXPORT\+\_\+\+NORM for rv770 in r600 family. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{addrtypes_8h_a45468f108457c1977c8684dea3df88c7}{ADDR\+\_\+\+E\+\_\+\+RETURNCODE}} \mbox{\hyperlink{addrtypes_8h_a7e5b4b484f48088afb71df13773755a5}{ADDR\+\_\+\+API}} \mbox{\hyperlink{namespacerocr_a68458642aa33a935c40fe207625b6482}{rocr\+::\+Elem\+Flt32\+To\+Depth\+Pixel}} (ADDR\+\_\+\+HANDLE h\+Lib, const ELEM\+\_\+\+FLT32\+TODEPTHPIXEL\+\_\+\+INPUT $\ast$p\+In, ELEM\+\_\+\+FLT32\+TODEPTHPIXEL\+\_\+\+OUTPUT $\ast$p\+Out)
+\begin{DoxyCompactList}\small\item\em Convert a FLT\+\_\+32 value to a depth/stencil pixel value. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{addrtypes_8h_a45468f108457c1977c8684dea3df88c7}{ADDR\+\_\+\+E\+\_\+\+RETURNCODE}} \mbox{\hyperlink{addrtypes_8h_a7e5b4b484f48088afb71df13773755a5}{ADDR\+\_\+\+API}} \mbox{\hyperlink{namespacerocr_aa973a11227ef97312f1ff7a0ec3bb874}{rocr\+::\+Elem\+Flt32\+To\+Color\+Pixel}} (ADDR\+\_\+\+HANDLE h\+Lib, const ELEM\+\_\+\+FLT32\+TOCOLORPIXEL\+\_\+\+INPUT $\ast$p\+In, ELEM\+\_\+\+FLT32\+TOCOLORPIXEL\+\_\+\+OUTPUT $\ast$p\+Out)
+\begin{DoxyCompactList}\small\item\em Convert a FLT\+\_\+32 value to a red/green/blue/alpha pixel value. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{addrtypes_8h_af5a2be58a28390f9a494538f34054637}{UINT\+\_\+32}} \mbox{\hyperlink{addrtypes_8h_a7e5b4b484f48088afb71df13773755a5}{ADDR\+\_\+\+API}} \mbox{\hyperlink{namespacerocr_a989084cba6b110459ab2b3edeca3b417}{rocr\+::\+Elem\+Size}} (ADDR\+\_\+\+HANDLE h\+Lib, \mbox{\hyperlink{addrtypes_8h_a8fc6a73edd8bf8b4163a32b2b2d15475}{Addr\+Format}} format)
+\begin{DoxyCompactList}\small\item\em Get bits-\/per-\/element for specified format. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{addrtypes_8h_a45468f108457c1977c8684dea3df88c7}{ADDR\+\_\+\+E\+\_\+\+RETURNCODE}} \mbox{\hyperlink{addrtypes_8h_a7e5b4b484f48088afb71df13773755a5}{ADDR\+\_\+\+API}} \mbox{\hyperlink{namespacerocr_ab1acc01212fe4f2c81f64c4c3b3922f3}{rocr\+::\+Addr\+Convert\+Tile\+Info\+To\+HW}} (ADDR\+\_\+\+HANDLE h\+Lib, const ADDR\+\_\+\+CONVERT\+\_\+\+TILEINFOTOHW\+\_\+\+INPUT $\ast$p\+In, ADDR\+\_\+\+CONVERT\+\_\+\+TILEINFOTOHW\+\_\+\+OUTPUT $\ast$p\+Out)
+\begin{DoxyCompactList}\small\item\em Convert tile info from real value to hardware register value. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{addrtypes_8h_a45468f108457c1977c8684dea3df88c7}{ADDR\+\_\+\+E\+\_\+\+RETURNCODE}} \mbox{\hyperlink{addrtypes_8h_a7e5b4b484f48088afb71df13773755a5}{ADDR\+\_\+\+API}} \mbox{\hyperlink{namespacerocr_a3e61ba69947b4c9c010377eb880b43cb}{rocr\+::\+Addr\+Convert\+Tile\+Index}} (ADDR\+\_\+\+HANDLE h\+Lib, const ADDR\+\_\+\+CONVERT\+\_\+\+TILEINDEX\+\_\+\+INPUT $\ast$p\+In, ADDR\+\_\+\+CONVERT\+\_\+\+TILEINDEX\+\_\+\+OUTPUT $\ast$p\+Out)
+\begin{DoxyCompactList}\small\item\em Convert tile index to tile mode/type/info. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{addrtypes_8h_a45468f108457c1977c8684dea3df88c7}{ADDR\+\_\+\+E\+\_\+\+RETURNCODE}} \mbox{\hyperlink{addrtypes_8h_a7e5b4b484f48088afb71df13773755a5}{ADDR\+\_\+\+API}} \mbox{\hyperlink{namespacerocr_ae3f30d6a75e54e3d6e98cb2f8728a335}{rocr\+::\+Addr\+Get\+Macro\+Mode\+Index}} (ADDR\+\_\+\+HANDLE h\+Lib, const ADDR\+\_\+\+GET\+\_\+\+MACROMODEINDEX\+\_\+\+INPUT $\ast$p\+In, ADDR\+\_\+\+GET\+\_\+\+MACROMODEINDEX\+\_\+\+OUTPUT $\ast$p\+Out)
+\begin{DoxyCompactList}\small\item\em Get macro mode index based on input parameters. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{addrtypes_8h_a45468f108457c1977c8684dea3df88c7}{ADDR\+\_\+\+E\+\_\+\+RETURNCODE}} \mbox{\hyperlink{addrtypes_8h_a7e5b4b484f48088afb71df13773755a5}{ADDR\+\_\+\+API}} \mbox{\hyperlink{namespacerocr_a9b3a1eb2e4ed83426880b32c22c58dff}{rocr\+::\+Addr\+Convert\+Tile\+Index1}} (ADDR\+\_\+\+HANDLE h\+Lib, const ADDR\+\_\+\+CONVERT\+\_\+\+TILEINDEX1\+\_\+\+INPUT $\ast$p\+In, ADDR\+\_\+\+CONVERT\+\_\+\+TILEINDEX\+\_\+\+OUTPUT $\ast$p\+Out)
+\begin{DoxyCompactList}\small\item\em Convert tile index to tile mode/type/info. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{addrtypes_8h_a45468f108457c1977c8684dea3df88c7}{ADDR\+\_\+\+E\+\_\+\+RETURNCODE}} \mbox{\hyperlink{addrtypes_8h_a7e5b4b484f48088afb71df13773755a5}{ADDR\+\_\+\+API}} \mbox{\hyperlink{namespacerocr_a56842cfd889c0eb856d89adbe89b38dd}{rocr\+::\+Addr\+Get\+Tile\+Index}} (ADDR\+\_\+\+HANDLE h\+Lib, const ADDR\+\_\+\+GET\+\_\+\+TILEINDEX\+\_\+\+INPUT $\ast$p\+In, ADDR\+\_\+\+GET\+\_\+\+TILEINDEX\+\_\+\+OUTPUT $\ast$p\+Out)
+\begin{DoxyCompactList}\small\item\em Get the tiling mode index in table. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{addrtypes_8h_a45468f108457c1977c8684dea3df88c7}{ADDR\+\_\+\+E\+\_\+\+RETURNCODE}} \mbox{\hyperlink{addrtypes_8h_a7e5b4b484f48088afb71df13773755a5}{ADDR\+\_\+\+API}} \mbox{\hyperlink{namespacerocr_acf7dcf3175b3c2284a49fbc478b3b816}{rocr\+::\+Addr\+Compute\+Prt\+Info}} (ADDR\+\_\+\+HANDLE h\+Lib, const ADDR\+\_\+\+PRT\+\_\+\+INFO\+\_\+\+INPUT $\ast$p\+In, ADDR\+\_\+\+PRT\+\_\+\+INFO\+\_\+\+OUTPUT $\ast$p\+Out)
+\begin{DoxyCompactList}\small\item\em Compute prt surface related information. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{addrtypes_8h_a45468f108457c1977c8684dea3df88c7}{ADDR\+\_\+\+E\+\_\+\+RETURNCODE}} \mbox{\hyperlink{addrtypes_8h_a7e5b4b484f48088afb71df13773755a5}{ADDR\+\_\+\+API}} \mbox{\hyperlink{namespacerocr_a22d722bb067d2c1614827a77b52c695d}{rocr\+::\+Addr\+Compute\+Dcc\+Info}} (ADDR\+\_\+\+HANDLE h\+Lib, const ADDR\+\_\+\+COMPUTE\+\_\+\+DCCINFO\+\_\+\+INPUT $\ast$p\+In, ADDR\+\_\+\+COMPUTE\+\_\+\+DCCINFO\+\_\+\+OUTPUT $\ast$p\+Out)
+\begin{DoxyCompactList}\small\item\em Compute DCC key size, base alignment info. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{addrtypes_8h_a45468f108457c1977c8684dea3df88c7}{ADDR\+\_\+\+E\+\_\+\+RETURNCODE}} \mbox{\hyperlink{addrtypes_8h_a7e5b4b484f48088afb71df13773755a5}{ADDR\+\_\+\+API}} \mbox{\hyperlink{namespacerocr_a28ad9ccdf836e856957027c0ff081075}{rocr\+::\+Addr\+Get\+Max\+Alignments}} (ADDR\+\_\+\+HANDLE h\+Lib, ADDR\+\_\+\+GET\+\_\+\+MAX\+\_\+\+ALIGNMENTS\+\_\+\+OUTPUT $\ast$p\+Out)
+\begin{DoxyCompactList}\small\item\em Gets maximnum alignments. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{addrtypes_8h_a45468f108457c1977c8684dea3df88c7}{ADDR\+\_\+\+E\+\_\+\+RETURNCODE}} \mbox{\hyperlink{addrtypes_8h_a7e5b4b484f48088afb71df13773755a5}{ADDR\+\_\+\+API}} \mbox{\hyperlink{namespacerocr_aceb017ed42b1cf85e60c7f2efea1fdea}{rocr\+::\+Addr\+Get\+Max\+Meta\+Alignments}} (ADDR\+\_\+\+HANDLE h\+Lib, ADDR\+\_\+\+GET\+\_\+\+MAX\+\_\+\+ALIGNMENTS\+\_\+\+OUTPUT $\ast$p\+Out)
+\begin{DoxyCompactList}\small\item\em Gets maximnum alignments for metadata. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{addrtypes_8h_a45468f108457c1977c8684dea3df88c7}{ADDR\+\_\+\+E\+\_\+\+RETURNCODE}} \mbox{\hyperlink{addrtypes_8h_a7e5b4b484f48088afb71df13773755a5}{ADDR\+\_\+\+API}} \mbox{\hyperlink{namespacerocr_a64075ccc977a4a53b79222b721ebfdeb}{rocr\+::\+Addr2\+Compute\+Surface\+Info}} (ADDR\+\_\+\+HANDLE h\+Lib, const ADDR2\+\_\+\+COMPUTE\+\_\+\+SURFACE\+\_\+\+INFO\+\_\+\+INPUT $\ast$p\+In, ADDR2\+\_\+\+COMPUTE\+\_\+\+SURFACE\+\_\+\+INFO\+\_\+\+OUTPUT $\ast$p\+Out)
+\begin{DoxyCompactList}\small\item\em Compute surface width/height/slices/alignments and suitable tiling mode. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{addrtypes_8h_a45468f108457c1977c8684dea3df88c7}{ADDR\+\_\+\+E\+\_\+\+RETURNCODE}} \mbox{\hyperlink{addrtypes_8h_a7e5b4b484f48088afb71df13773755a5}{ADDR\+\_\+\+API}} \mbox{\hyperlink{namespacerocr_a6917b2c62aa7763d294d2dc13f22d688}{rocr\+::\+Addr2\+Compute\+Surface\+Addr\+From\+Coord}} (ADDR\+\_\+\+HANDLE h\+Lib, const ADDR2\+\_\+\+COMPUTE\+\_\+\+SURFACE\+\_\+\+ADDRFROMCOORD\+\_\+\+INPUT $\ast$p\+In, ADDR2\+\_\+\+COMPUTE\+\_\+\+SURFACE\+\_\+\+ADDRFROMCOORD\+\_\+\+OUTPUT $\ast$p\+Out)
+\begin{DoxyCompactList}\small\item\em Compute surface address from a given coordinate. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{addrtypes_8h_a45468f108457c1977c8684dea3df88c7}{ADDR\+\_\+\+E\+\_\+\+RETURNCODE}} \mbox{\hyperlink{addrtypes_8h_a7e5b4b484f48088afb71df13773755a5}{ADDR\+\_\+\+API}} \mbox{\hyperlink{namespacerocr_a9ba73f9a955c32548f7d32485ef9b2bb}{rocr\+::\+Addr2\+Compute\+Surface\+Coord\+From\+Addr}} (ADDR\+\_\+\+HANDLE h\+Lib, const ADDR2\+\_\+\+COMPUTE\+\_\+\+SURFACE\+\_\+\+COORDFROMADDR\+\_\+\+INPUT $\ast$p\+In, ADDR2\+\_\+\+COMPUTE\+\_\+\+SURFACE\+\_\+\+COORDFROMADDR\+\_\+\+OUTPUT $\ast$p\+Out)
+\begin{DoxyCompactList}\small\item\em Compute coordinate from a given surface address. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{addrtypes_8h_a45468f108457c1977c8684dea3df88c7}{ADDR\+\_\+\+E\+\_\+\+RETURNCODE}} \mbox{\hyperlink{addrtypes_8h_a7e5b4b484f48088afb71df13773755a5}{ADDR\+\_\+\+API}} \mbox{\hyperlink{namespacerocr_aeb403e8e9bc08e7d53ca9ad8f1b125a6}{rocr\+::\+Addr2\+Compute\+Htile\+Info}} (ADDR\+\_\+\+HANDLE h\+Lib, const ADDR2\+\_\+\+COMPUTE\+\_\+\+HTILE\+\_\+\+INFO\+\_\+\+INPUT $\ast$p\+In, ADDR2\+\_\+\+COMPUTE\+\_\+\+HTILE\+\_\+\+INFO\+\_\+\+OUTPUT $\ast$p\+Out)
+\begin{DoxyCompactList}\small\item\em Compute Htile pitch, height, base alignment and size in bytes. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{addrtypes_8h_a45468f108457c1977c8684dea3df88c7}{ADDR\+\_\+\+E\+\_\+\+RETURNCODE}} \mbox{\hyperlink{addrtypes_8h_a7e5b4b484f48088afb71df13773755a5}{ADDR\+\_\+\+API}} \mbox{\hyperlink{namespacerocr_af9ed19fa36b59e87fb29ac34d7c439fc}{rocr\+::\+Addr2\+Compute\+Htile\+Addr\+From\+Coord}} (ADDR\+\_\+\+HANDLE h\+Lib, const ADDR2\+\_\+\+COMPUTE\+\_\+\+HTILE\+\_\+\+ADDRFROMCOORD\+\_\+\+INPUT $\ast$p\+In, ADDR2\+\_\+\+COMPUTE\+\_\+\+HTILE\+\_\+\+ADDRFROMCOORD\+\_\+\+OUTPUT $\ast$p\+Out)
+\begin{DoxyCompactList}\small\item\em Compute Htile address according to coordinates (of depth buffer) \end{DoxyCompactList}\item 
+\mbox{\hyperlink{addrtypes_8h_a45468f108457c1977c8684dea3df88c7}{ADDR\+\_\+\+E\+\_\+\+RETURNCODE}} \mbox{\hyperlink{addrtypes_8h_a7e5b4b484f48088afb71df13773755a5}{ADDR\+\_\+\+API}} \mbox{\hyperlink{namespacerocr_afcaa8a290afe0fb87232cb091e003797}{rocr\+::\+Addr2\+Compute\+Htile\+Coord\+From\+Addr}} (ADDR\+\_\+\+HANDLE h\+Lib, const ADDR2\+\_\+\+COMPUTE\+\_\+\+HTILE\+\_\+\+COORDFROMADDR\+\_\+\+INPUT $\ast$p\+In, ADDR2\+\_\+\+COMPUTE\+\_\+\+HTILE\+\_\+\+COORDFROMADDR\+\_\+\+OUTPUT $\ast$p\+Out)
+\begin{DoxyCompactList}\small\item\em Compute coordinates within depth buffer (1st pixel of a micro tile) according to Htile address. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{addrtypes_8h_a45468f108457c1977c8684dea3df88c7}{ADDR\+\_\+\+E\+\_\+\+RETURNCODE}} \mbox{\hyperlink{addrtypes_8h_a7e5b4b484f48088afb71df13773755a5}{ADDR\+\_\+\+API}} \mbox{\hyperlink{namespacerocr_a6079e0efcf17c9829b35a155428858f6}{rocr\+::\+Addr2\+Compute\+Cmask\+Info}} (ADDR\+\_\+\+HANDLE h\+Lib, const ADDR2\+\_\+\+COMPUTE\+\_\+\+CMASK\+\_\+\+INFO\+\_\+\+INPUT $\ast$p\+In, ADDR2\+\_\+\+COMPUTE\+\_\+\+CMASK\+\_\+\+INFO\+\_\+\+OUTPUT $\ast$p\+Out)
+\begin{DoxyCompactList}\small\item\em Compute Cmask pitch, height, base alignment and size in bytes from color buffer info. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{addrtypes_8h_a45468f108457c1977c8684dea3df88c7}{ADDR\+\_\+\+E\+\_\+\+RETURNCODE}} \mbox{\hyperlink{addrtypes_8h_a7e5b4b484f48088afb71df13773755a5}{ADDR\+\_\+\+API}} \mbox{\hyperlink{namespacerocr_acc030e21901ac9c41b993d5fb76efd12}{rocr\+::\+Addr2\+Compute\+Cmask\+Addr\+From\+Coord}} (ADDR\+\_\+\+HANDLE h\+Lib, const ADDR2\+\_\+\+COMPUTE\+\_\+\+CMASK\+\_\+\+ADDRFROMCOORD\+\_\+\+INPUT $\ast$p\+In, ADDR2\+\_\+\+COMPUTE\+\_\+\+CMASK\+\_\+\+ADDRFROMCOORD\+\_\+\+OUTPUT $\ast$p\+Out)
+\begin{DoxyCompactList}\small\item\em Compute Cmask address according to coordinates (of MSAA color buffer) \end{DoxyCompactList}\item 
+\mbox{\hyperlink{addrtypes_8h_a45468f108457c1977c8684dea3df88c7}{ADDR\+\_\+\+E\+\_\+\+RETURNCODE}} \mbox{\hyperlink{addrtypes_8h_a7e5b4b484f48088afb71df13773755a5}{ADDR\+\_\+\+API}} \mbox{\hyperlink{namespacerocr_af18ca97b9d0cbbba1803ad2b649eb229}{rocr\+::\+Addr2\+Compute\+Cmask\+Coord\+From\+Addr}} (ADDR\+\_\+\+HANDLE h\+Lib, const ADDR2\+\_\+\+COMPUTE\+\_\+\+CMASK\+\_\+\+COORDFROMADDR\+\_\+\+INPUT $\ast$p\+In, ADDR2\+\_\+\+COMPUTE\+\_\+\+CMASK\+\_\+\+COORDFROMADDR\+\_\+\+OUTPUT $\ast$p\+Out)
+\begin{DoxyCompactList}\small\item\em Compute coordinates within color buffer (1st pixel of a micro tile) according to Cmask address. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{addrtypes_8h_a45468f108457c1977c8684dea3df88c7}{ADDR\+\_\+\+E\+\_\+\+RETURNCODE}} \mbox{\hyperlink{addrtypes_8h_a7e5b4b484f48088afb71df13773755a5}{ADDR\+\_\+\+API}} \mbox{\hyperlink{namespacerocr_a9deab409eb987d53da1ad2071f6675e5}{rocr\+::\+Addr2\+Compute\+Fmask\+Info}} (ADDR\+\_\+\+HANDLE h\+Lib, const ADDR2\+\_\+\+COMPUTE\+\_\+\+FMASK\+\_\+\+INFO\+\_\+\+INPUT $\ast$p\+In, ADDR2\+\_\+\+COMPUTE\+\_\+\+FMASK\+\_\+\+INFO\+\_\+\+OUTPUT $\ast$p\+Out)
+\begin{DoxyCompactList}\small\item\em Compute Fmask pitch/height/slices/alignments and size in bytes. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{addrtypes_8h_a45468f108457c1977c8684dea3df88c7}{ADDR\+\_\+\+E\+\_\+\+RETURNCODE}} \mbox{\hyperlink{addrtypes_8h_a7e5b4b484f48088afb71df13773755a5}{ADDR\+\_\+\+API}} \mbox{\hyperlink{namespacerocr_aa13404c92ae620418b57088123a993c9}{rocr\+::\+Addr2\+Compute\+Fmask\+Addr\+From\+Coord}} (ADDR\+\_\+\+HANDLE h\+Lib, const ADDR2\+\_\+\+COMPUTE\+\_\+\+FMASK\+\_\+\+ADDRFROMCOORD\+\_\+\+INPUT $\ast$p\+In, ADDR2\+\_\+\+COMPUTE\+\_\+\+FMASK\+\_\+\+ADDRFROMCOORD\+\_\+\+OUTPUT $\ast$p\+Out)
+\begin{DoxyCompactList}\small\item\em Compute Fmask address according to coordinates (x,y,slice,sample,plane) \end{DoxyCompactList}\item 
+\mbox{\hyperlink{addrtypes_8h_a45468f108457c1977c8684dea3df88c7}{ADDR\+\_\+\+E\+\_\+\+RETURNCODE}} \mbox{\hyperlink{addrtypes_8h_a7e5b4b484f48088afb71df13773755a5}{ADDR\+\_\+\+API}} \mbox{\hyperlink{namespacerocr_ada7f10ae0b30f54d2eb93dcdf2ca08d0}{rocr\+::\+Addr2\+Compute\+Fmask\+Coord\+From\+Addr}} (ADDR\+\_\+\+HANDLE h\+Lib, const ADDR2\+\_\+\+COMPUTE\+\_\+\+FMASK\+\_\+\+COORDFROMADDR\+\_\+\+INPUT $\ast$p\+In, ADDR2\+\_\+\+COMPUTE\+\_\+\+FMASK\+\_\+\+COORDFROMADDR\+\_\+\+OUTPUT $\ast$p\+Out)
+\begin{DoxyCompactList}\small\item\em Compute FMASK coordinate from an given address. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{addrtypes_8h_a45468f108457c1977c8684dea3df88c7}{ADDR\+\_\+\+E\+\_\+\+RETURNCODE}} \mbox{\hyperlink{addrtypes_8h_a7e5b4b484f48088afb71df13773755a5}{ADDR\+\_\+\+API}} \mbox{\hyperlink{namespacerocr_a5c0f9b532773ef45ae4fda9668de1a59}{rocr\+::\+Addr2\+Compute\+Dcc\+Info}} (ADDR\+\_\+\+HANDLE h\+Lib, const ADDR2\+\_\+\+COMPUTE\+\_\+\+DCCINFO\+\_\+\+INPUT $\ast$p\+In, ADDR2\+\_\+\+COMPUTE\+\_\+\+DCCINFO\+\_\+\+OUTPUT $\ast$p\+Out)
+\begin{DoxyCompactList}\small\item\em Compute DCC key size, base alignment info. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{addrtypes_8h_a45468f108457c1977c8684dea3df88c7}{ADDR\+\_\+\+E\+\_\+\+RETURNCODE}} \mbox{\hyperlink{addrtypes_8h_a7e5b4b484f48088afb71df13773755a5}{ADDR\+\_\+\+API}} \mbox{\hyperlink{namespacerocr_a7e4cd29bc702ada3391cdb6a0fc92d18}{rocr\+::\+Addr2\+Compute\+Dcc\+Addr\+From\+Coord}} (ADDR\+\_\+\+HANDLE h\+Lib, const ADDR2\+\_\+\+COMPUTE\+\_\+\+DCC\+\_\+\+ADDRFROMCOORD\+\_\+\+INPUT $\ast$p\+In, ADDR2\+\_\+\+COMPUTE\+\_\+\+DCC\+\_\+\+ADDRFROMCOORD\+\_\+\+OUTPUT $\ast$p\+Out)
+\begin{DoxyCompactList}\small\item\em Compute DCC address according to coordinates (of MSAA color buffer) \end{DoxyCompactList}\item 
+\mbox{\hyperlink{addrtypes_8h_a45468f108457c1977c8684dea3df88c7}{ADDR\+\_\+\+E\+\_\+\+RETURNCODE}} \mbox{\hyperlink{addrtypes_8h_a7e5b4b484f48088afb71df13773755a5}{ADDR\+\_\+\+API}} \mbox{\hyperlink{namespacerocr_a7d73896cb79c6e53cb955496e082f6d7}{rocr\+::\+Addr2\+Compute\+Pipe\+Bank\+Xor}} (ADDR\+\_\+\+HANDLE h\+Lib, const ADDR2\+\_\+\+COMPUTE\+\_\+\+PIPEBANKXOR\+\_\+\+INPUT $\ast$p\+In, ADDR2\+\_\+\+COMPUTE\+\_\+\+PIPEBANKXOR\+\_\+\+OUTPUT $\ast$p\+Out)
+\begin{DoxyCompactList}\small\item\em Calculate a valid bank pipe xor value for client to use. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{addrtypes_8h_a45468f108457c1977c8684dea3df88c7}{ADDR\+\_\+\+E\+\_\+\+RETURNCODE}} \mbox{\hyperlink{addrtypes_8h_a7e5b4b484f48088afb71df13773755a5}{ADDR\+\_\+\+API}} \mbox{\hyperlink{namespacerocr_ac35dff7f98b7cb5a64169a10fa73478f}{rocr\+::\+Addr2\+Compute\+Slice\+Pipe\+Bank\+Xor}} (ADDR\+\_\+\+HANDLE h\+Lib, const ADDR2\+\_\+\+COMPUTE\+\_\+\+SLICE\+\_\+\+PIPEBANKXOR\+\_\+\+INPUT $\ast$p\+In, ADDR2\+\_\+\+COMPUTE\+\_\+\+SLICE\+\_\+\+PIPEBANKXOR\+\_\+\+OUTPUT $\ast$p\+Out)
+\begin{DoxyCompactList}\small\item\em Calculate slice pipe bank xor value based on base pipe bank xor and slice id. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{addrtypes_8h_a45468f108457c1977c8684dea3df88c7}{ADDR\+\_\+\+E\+\_\+\+RETURNCODE}} \mbox{\hyperlink{addrtypes_8h_a7e5b4b484f48088afb71df13773755a5}{ADDR\+\_\+\+API}} \mbox{\hyperlink{namespacerocr_adeb9297778a3eb6e66625a5fc1feac70}{rocr\+::\+Addr2\+Compute\+Sub\+Resource\+Offset\+For\+Swizzle\+Pattern}} (ADDR\+\_\+\+HANDLE h\+Lib, const ADDR2\+\_\+\+COMPUTE\+\_\+\+SUBRESOURCE\+\_\+\+OFFSET\+\_\+\+FORSWIZZLEPATTERN\+\_\+\+INPUT $\ast$p\+In, ADDR2\+\_\+\+COMPUTE\+\_\+\+SUBRESOURCE\+\_\+\+OFFSET\+\_\+\+FORSWIZZLEPATTERN\+\_\+\+OUTPUT $\ast$p\+Out)
+\begin{DoxyCompactList}\small\item\em Calculate sub resource offset to support swizzle pattern. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{addrtypes_8h_a45468f108457c1977c8684dea3df88c7}{ADDR\+\_\+\+E\+\_\+\+RETURNCODE}} \mbox{\hyperlink{addrtypes_8h_a7e5b4b484f48088afb71df13773755a5}{ADDR\+\_\+\+API}} \mbox{\hyperlink{namespacerocr_a5115e9030e3026631eb90bce2833f1cc}{rocr\+::\+Addr2\+Compute\+Non\+Block\+Compressed\+View}} (ADDR\+\_\+\+HANDLE h\+Lib, const ADDR2\+\_\+\+COMPUTE\+\_\+\+NONBLOCKCOMPRESSEDVIEW\+\_\+\+INPUT $\ast$p\+In, ADDR2\+\_\+\+COMPUTE\+\_\+\+NONBLOCKCOMPRESSEDVIEW\+\_\+\+OUTPUT $\ast$p\+Out)
+\begin{DoxyCompactList}\small\item\em Compute non-\/block-\/compressed view for a given mipmap level/slice. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{addrtypes_8h_a45468f108457c1977c8684dea3df88c7}{ADDR\+\_\+\+E\+\_\+\+RETURNCODE}} \mbox{\hyperlink{addrtypes_8h_a7e5b4b484f48088afb71df13773755a5}{ADDR\+\_\+\+API}} \mbox{\hyperlink{namespacerocr_abcf52068ad684774da9d79915e15ea90}{rocr\+::\+Addr2\+Get\+Preferred\+Surface\+Setting}} (ADDR\+\_\+\+HANDLE h\+Lib, const ADDR2\+\_\+\+GET\+\_\+\+PREFERRED\+\_\+\+SURF\+\_\+\+SETTING\+\_\+\+INPUT $\ast$p\+In, ADDR2\+\_\+\+GET\+\_\+\+PREFERRED\+\_\+\+SURF\+\_\+\+SETTING\+\_\+\+OUTPUT $\ast$p\+Out)
+\begin{DoxyCompactList}\small\item\em Suggest a preferred setting for client driver to program HW register. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{addrtypes_8h_a45468f108457c1977c8684dea3df88c7}{ADDR\+\_\+\+E\+\_\+\+RETURNCODE}} \mbox{\hyperlink{addrtypes_8h_a7e5b4b484f48088afb71df13773755a5}{ADDR\+\_\+\+API}} \mbox{\hyperlink{namespacerocr_ac8b4bf98b7be5173658616034c4356dc}{rocr\+::\+Addr2\+Is\+Valid\+Display\+Swizzle\+Mode}} (ADDR\+\_\+\+HANDLE h\+Lib, \mbox{\hyperlink{addrtypes_8h_af64a81eb4c83301dba12714f6f0aefed}{Addr\+Swizzle\+Mode}} swizzle\+Mode, \mbox{\hyperlink{addrtypes_8h_af5a2be58a28390f9a494538f34054637}{UINT\+\_\+32}} bpp, \mbox{\hyperlink{addrtypes_8h_ac4225671b7e87c943146915461c9b2f4}{BOOL\+\_\+32}} $\ast$p\+Result)
+\begin{DoxyCompactList}\small\item\em Return whether the swizzle mode is supported by display engine. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Contains the addrlib interfaces declaration and parameter defines. 
+
+
+
+\doxysubsection{Macro Definition Documentation}
+\mbox{\Hypertarget{addrinterface_8h_a7d58849ffad57c47b375f1e57f572838}\label{addrinterface_8h_a7d58849ffad57c47b375f1e57f572838}} 
+\index{addrinterface.h@{addrinterface.h}!ADDR\_INVALID\_EQUATION\_INDEX@{ADDR\_INVALID\_EQUATION\_INDEX}}
+\index{ADDR\_INVALID\_EQUATION\_INDEX@{ADDR\_INVALID\_EQUATION\_INDEX}!addrinterface.h@{addrinterface.h}}
+\doxysubsubsection{\texorpdfstring{ADDR\_INVALID\_EQUATION\_INDEX}{ADDR\_INVALID\_EQUATION\_INDEX}}
+{\footnotesize\ttfamily \#define ADDR\+\_\+\+INVALID\+\_\+\+EQUATION\+\_\+\+INDEX~0x\+FFFFFFFF}
+
+\mbox{\Hypertarget{addrinterface_8h_adeb655b3667773af1ce3638828970727}\label{addrinterface_8h_adeb655b3667773af1ce3638828970727}} 
+\index{addrinterface.h@{addrinterface.h}!ADDR\_MAX\_EQUATION\_BIT@{ADDR\_MAX\_EQUATION\_BIT}}
+\index{ADDR\_MAX\_EQUATION\_BIT@{ADDR\_MAX\_EQUATION\_BIT}!addrinterface.h@{addrinterface.h}}
+\doxysubsubsection{\texorpdfstring{ADDR\_MAX\_EQUATION\_BIT}{ADDR\_MAX\_EQUATION\_BIT}}
+{\footnotesize\ttfamily \#define ADDR\+\_\+\+MAX\+\_\+\+EQUATION\+\_\+\+BIT~20u}
+
+
+
+address equation structure 
+
+\mbox{\Hypertarget{addrinterface_8h_aed36fd3ec6e2af2d41ab89d0333f0472}\label{addrinterface_8h_aed36fd3ec6e2af2d41ab89d0333f0472}} 
+\index{addrinterface.h@{addrinterface.h}!ADDRLIB\_VERSION@{ADDRLIB\_VERSION}}
+\index{ADDRLIB\_VERSION@{ADDRLIB\_VERSION}!addrinterface.h@{addrinterface.h}}
+\doxysubsubsection{\texorpdfstring{ADDRLIB\_VERSION}{ADDRLIB\_VERSION}}
+{\footnotesize\ttfamily \#define ADDRLIB\+\_\+\+VERSION~((\mbox{\hyperlink{addrinterface_8h_a0acb687dfd4896a443de5b4b51efdb3d}{ADDRLIB\+\_\+\+VERSION\+\_\+\+MAJOR}} $<$$<$ 16) $\vert$ \mbox{\hyperlink{addrinterface_8h_a3b9a2710c4064af6716c5cc1a8ec261f}{ADDRLIB\+\_\+\+VERSION\+\_\+\+MINOR}})}
+
+\mbox{\Hypertarget{addrinterface_8h_a0acb687dfd4896a443de5b4b51efdb3d}\label{addrinterface_8h_a0acb687dfd4896a443de5b4b51efdb3d}} 
+\index{addrinterface.h@{addrinterface.h}!ADDRLIB\_VERSION\_MAJOR@{ADDRLIB\_VERSION\_MAJOR}}
+\index{ADDRLIB\_VERSION\_MAJOR@{ADDRLIB\_VERSION\_MAJOR}!addrinterface.h@{addrinterface.h}}
+\doxysubsubsection{\texorpdfstring{ADDRLIB\_VERSION\_MAJOR}{ADDRLIB\_VERSION\_MAJOR}}
+{\footnotesize\ttfamily \#define ADDRLIB\+\_\+\+VERSION\+\_\+\+MAJOR~6}
+
+\mbox{\Hypertarget{addrinterface_8h_a3b9a2710c4064af6716c5cc1a8ec261f}\label{addrinterface_8h_a3b9a2710c4064af6716c5cc1a8ec261f}} 
+\index{addrinterface.h@{addrinterface.h}!ADDRLIB\_VERSION\_MINOR@{ADDRLIB\_VERSION\_MINOR}}
+\index{ADDRLIB\_VERSION\_MINOR@{ADDRLIB\_VERSION\_MINOR}!addrinterface.h@{addrinterface.h}}
+\doxysubsubsection{\texorpdfstring{ADDRLIB\_VERSION\_MINOR}{ADDRLIB\_VERSION\_MINOR}}
+{\footnotesize\ttfamily \#define ADDRLIB\+\_\+\+VERSION\+\_\+\+MINOR~2}
+

@@ -1,0 +1,117 @@
+\hypertarget{classrocr_1_1amd_1_1elf_1_1RelocationSection}{}\doxysection{rocr\+::amd\+::elf\+::Relocation\+Section Class Reference}
+\label{classrocr_1_1amd_1_1elf_1_1RelocationSection}\index{rocr::amd::elf::RelocationSection@{rocr::amd::elf::RelocationSection}}
+
+
+{\ttfamily \#include $<$amd\+\_\+elf\+\_\+image.\+hpp$>$}
+
+
+
+Inheritance diagram for rocr\+::amd\+::elf\+::Relocation\+Section\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=226pt]{classrocr_1_1amd_1_1elf_1_1RelocationSection__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for rocr\+::amd\+::elf\+::Relocation\+Section\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=207pt]{classrocr_1_1amd_1_1elf_1_1RelocationSection__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+virtual \mbox{\hyperlink{classrocr_1_1amd_1_1elf_1_1Relocation}{Relocation}} $\ast$ \mbox{\hyperlink{classrocr_1_1amd_1_1elf_1_1RelocationSection_aebd71d5bf44b89ae0ccf8051f7e5bbc0}{add\+Relocation}} (uint32\+\_\+t \mbox{\hyperlink{classrocr_1_1amd_1_1elf_1_1Section_a8da41829a622a287e270bdf74d956c6c}{type}}, \mbox{\hyperlink{classrocr_1_1amd_1_1elf_1_1Symbol}{Symbol}} $\ast$symbol, uint64\+\_\+t \mbox{\hyperlink{classrocr_1_1amd_1_1elf_1_1Section_a9c63b3ac322043ab5d56adfe2fd8f9dc}{offset}}, int64\+\_\+t addend)=0
+\item 
+virtual size\+\_\+t \mbox{\hyperlink{classrocr_1_1amd_1_1elf_1_1RelocationSection_a0804a17a3bd48b1a9b2890b370047448}{relocation\+Count}} () const =0
+\item 
+virtual \mbox{\hyperlink{classrocr_1_1amd_1_1elf_1_1Relocation}{Relocation}} $\ast$ \mbox{\hyperlink{classrocr_1_1amd_1_1elf_1_1RelocationSection_a5bc0a689ddafa87fc202845b4af0a835}{relocation}} (size\+\_\+t i)=0
+\item 
+virtual \mbox{\hyperlink{classrocr_1_1amd_1_1elf_1_1Section}{Section}} $\ast$ \mbox{\hyperlink{classrocr_1_1amd_1_1elf_1_1RelocationSection_a26b04eb449d7a43ffa81c2534f8713c1}{target\+Section}} ()=0
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classrocr_1_1amd_1_1elf_1_1RelocationSection_aebd71d5bf44b89ae0ccf8051f7e5bbc0}\label{classrocr_1_1amd_1_1elf_1_1RelocationSection_aebd71d5bf44b89ae0ccf8051f7e5bbc0}} 
+\index{rocr::amd::elf::RelocationSection@{rocr::amd::elf::RelocationSection}!addRelocation@{addRelocation}}
+\index{addRelocation@{addRelocation}!rocr::amd::elf::RelocationSection@{rocr::amd::elf::RelocationSection}}
+\doxysubsubsection{\texorpdfstring{addRelocation()}{addRelocation()}}
+{\footnotesize\ttfamily virtual \mbox{\hyperlink{classrocr_1_1amd_1_1elf_1_1Relocation}{Relocation}}$\ast$ rocr\+::amd\+::elf\+::\+Relocation\+Section\+::add\+Relocation (\begin{DoxyParamCaption}\item[{uint32\+\_\+t}]{type,  }\item[{\mbox{\hyperlink{classrocr_1_1amd_1_1elf_1_1Symbol}{Symbol}} $\ast$}]{symbol,  }\item[{uint64\+\_\+t}]{offset,  }\item[{int64\+\_\+t}]{addend }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Implemented in \mbox{\hyperlink{classrocr_1_1amd_1_1elf_1_1GElfRelocationSection_a581f4673de465ba77f2a171e7c23d00b}{rocr\+::amd\+::elf\+::\+GElf\+Relocation\+Section}}.
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classrocr_1_1amd_1_1elf_1_1RelocationSection_aebd71d5bf44b89ae0ccf8051f7e5bbc0_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classrocr_1_1amd_1_1elf_1_1RelocationSection_a5bc0a689ddafa87fc202845b4af0a835}\label{classrocr_1_1amd_1_1elf_1_1RelocationSection_a5bc0a689ddafa87fc202845b4af0a835}} 
+\index{rocr::amd::elf::RelocationSection@{rocr::amd::elf::RelocationSection}!relocation@{relocation}}
+\index{relocation@{relocation}!rocr::amd::elf::RelocationSection@{rocr::amd::elf::RelocationSection}}
+\doxysubsubsection{\texorpdfstring{relocation()}{relocation()}}
+{\footnotesize\ttfamily virtual \mbox{\hyperlink{classrocr_1_1amd_1_1elf_1_1Relocation}{Relocation}}$\ast$ rocr\+::amd\+::elf\+::\+Relocation\+Section\+::relocation (\begin{DoxyParamCaption}\item[{size\+\_\+t}]{i }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Implemented in \mbox{\hyperlink{classrocr_1_1amd_1_1elf_1_1GElfRelocationSection_aa797e0d1f7f50b0ea93247eb9bd8ddaf}{rocr\+::amd\+::elf\+::\+GElf\+Relocation\+Section}}.
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classrocr_1_1amd_1_1elf_1_1RelocationSection_a5bc0a689ddafa87fc202845b4af0a835_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classrocr_1_1amd_1_1elf_1_1RelocationSection_a0804a17a3bd48b1a9b2890b370047448}\label{classrocr_1_1amd_1_1elf_1_1RelocationSection_a0804a17a3bd48b1a9b2890b370047448}} 
+\index{rocr::amd::elf::RelocationSection@{rocr::amd::elf::RelocationSection}!relocationCount@{relocationCount}}
+\index{relocationCount@{relocationCount}!rocr::amd::elf::RelocationSection@{rocr::amd::elf::RelocationSection}}
+\doxysubsubsection{\texorpdfstring{relocationCount()}{relocationCount()}}
+{\footnotesize\ttfamily virtual size\+\_\+t rocr\+::amd\+::elf\+::\+Relocation\+Section\+::relocation\+Count (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Implemented in \mbox{\hyperlink{classrocr_1_1amd_1_1elf_1_1GElfRelocationSection_a6285508867b020acf59d7949a8c9acc4}{rocr\+::amd\+::elf\+::\+GElf\+Relocation\+Section}}.
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classrocr_1_1amd_1_1elf_1_1RelocationSection_a0804a17a3bd48b1a9b2890b370047448_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classrocr_1_1amd_1_1elf_1_1RelocationSection_a26b04eb449d7a43ffa81c2534f8713c1}\label{classrocr_1_1amd_1_1elf_1_1RelocationSection_a26b04eb449d7a43ffa81c2534f8713c1}} 
+\index{rocr::amd::elf::RelocationSection@{rocr::amd::elf::RelocationSection}!targetSection@{targetSection}}
+\index{targetSection@{targetSection}!rocr::amd::elf::RelocationSection@{rocr::amd::elf::RelocationSection}}
+\doxysubsubsection{\texorpdfstring{targetSection()}{targetSection()}}
+{\footnotesize\ttfamily virtual \mbox{\hyperlink{classrocr_1_1amd_1_1elf_1_1Section}{Section}}$\ast$ rocr\+::amd\+::elf\+::\+Relocation\+Section\+::target\+Section (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Implemented in \mbox{\hyperlink{classrocr_1_1amd_1_1elf_1_1GElfRelocationSection_a763678d17b558369bedded403f92afe1}{rocr\+::amd\+::elf\+::\+GElf\+Relocation\+Section}}.
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classrocr_1_1amd_1_1elf_1_1RelocationSection_a26b04eb449d7a43ffa81c2534f8713c1_icgraph}
+\end{center}
+\end{figure}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+src/core/inc/\mbox{\hyperlink{amd__elf__image_8hpp}{amd\+\_\+elf\+\_\+image.\+hpp}}\end{DoxyCompactItemize}

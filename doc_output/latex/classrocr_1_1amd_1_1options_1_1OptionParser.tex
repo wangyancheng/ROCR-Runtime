@@ -1,0 +1,230 @@
+\hypertarget{classrocr_1_1amd_1_1options_1_1OptionParser}{}\doxysection{rocr\+::amd\+::options\+::Option\+Parser Class Reference}
+\label{classrocr_1_1amd_1_1options_1_1OptionParser}\index{rocr::amd::options::OptionParser@{rocr::amd::options::OptionParser}}
+
+
+{\ttfamily \#include $<$amd\+\_\+options.\+hpp$>$}
+
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classrocr_1_1amd_1_1options_1_1OptionParser_a0dc2027cb0ca67b7635a942318426c36}{Option\+Parser}} (bool collect\+Unknown=false, std\+::ostream \&\mbox{\hyperlink{classrocr_1_1amd_1_1options_1_1OptionParser_a5cf03c61a992a120c919b6c697b72a25}{error}}=std\+::cerr)
+\item 
+\mbox{\hyperlink{classrocr_1_1amd_1_1options_1_1OptionParser_aec88d225b7e4948b82dffd87511660cf}{$\sim$\+Option\+Parser}} ()
+\item 
+bool \mbox{\hyperlink{classrocr_1_1amd_1_1options_1_1OptionParser_a871470d1afb46c686a55bb929b9234a3}{Add\+Option}} (\mbox{\hyperlink{classrocr_1_1amd_1_1options_1_1OptionBase}{Option\+Base}} $\ast$option)
+\item 
+bool \mbox{\hyperlink{classrocr_1_1amd_1_1options_1_1OptionParser_a2d9b75f4d017ef8f353890c13ea5d6ac}{Parse\+Options}} (const char $\ast$options)
+\item 
+const std\+::string \& \mbox{\hyperlink{classrocr_1_1amd_1_1options_1_1OptionParser_aeafe101c485903e9ee88446e3e4b37a2}{Unknown}} () const
+\item 
+void \mbox{\hyperlink{classrocr_1_1amd_1_1options_1_1OptionParser_a328484b9fee45e44e6bc04760a39fc55}{Collect\+Unknown}} (bool b)
+\item 
+void \mbox{\hyperlink{classrocr_1_1amd_1_1options_1_1OptionParser_ac671df010aade6d536c9797e1b92a8bc}{Print\+Help}} (std\+::ostream \&out, const std\+::string \&addition=\char`\"{}\char`\"{}) const
+\item 
+void \mbox{\hyperlink{classrocr_1_1amd_1_1options_1_1OptionParser_a37d37f81110b1b84e51bdb8b0a5a2209}{Reset}} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classrocr_1_1amd_1_1options_1_1OptionParser_ace004e3a3c97f399bc68557adb229be8}{Option\+Parser}} (const \mbox{\hyperlink{classrocr_1_1amd_1_1options_1_1OptionParser}{Option\+Parser}} \&op)
+\begin{DoxyCompactList}\small\item\em Not copy-\/constructible. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classrocr_1_1amd_1_1options_1_1OptionParser}{Option\+Parser}} \& \mbox{\hyperlink{classrocr_1_1amd_1_1options_1_1OptionParser_a9fd5cdc2b59c8db6bf40e0d791d3fbe2}{operator=}} (const \mbox{\hyperlink{classrocr_1_1amd_1_1options_1_1OptionParser}{Option\+Parser}} \&op)
+\begin{DoxyCompactList}\small\item\em Not copy-\/assignable. \end{DoxyCompactList}\item 
+std\+::ostream \& \mbox{\hyperlink{classrocr_1_1amd_1_1options_1_1OptionParser_a5cf03c61a992a120c919b6c697b72a25}{error}} ()
+\item 
+std\+::vector$<$ \mbox{\hyperlink{classrocr_1_1amd_1_1options_1_1OptionBase}{Option\+Base}} $\ast$ $>$\+::iterator \mbox{\hyperlink{classrocr_1_1amd_1_1options_1_1OptionParser_ad34ab8d7f819adb763be280bed8891fb}{Find\+Option}} (const std\+::string \&name)
+\end{DoxyCompactItemize}
+\doxysubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+std\+::vector$<$ \mbox{\hyperlink{classrocr_1_1amd_1_1options_1_1OptionBase}{Option\+Base}} $\ast$ $>$ \mbox{\hyperlink{classrocr_1_1amd_1_1options_1_1OptionParser_a22491c10cb362f264017309fd64dce8e}{options\+\_\+}}
+\item 
+std\+::string \mbox{\hyperlink{classrocr_1_1amd_1_1options_1_1OptionParser_a660322a24c96ef8d1595a7df56b1e252}{unknown\+Options\+\_\+}}
+\item 
+bool \mbox{\hyperlink{classrocr_1_1amd_1_1options_1_1OptionParser_a31ad4fa1cd7dc564ce1a4aa499eaa02a}{collect\+Unknown\+\_\+}}
+\item 
+std\+::ostream $\ast$ \mbox{\hyperlink{classrocr_1_1amd_1_1options_1_1OptionParser_a1723cb5ea1181a0bb91f99997dbad3c6}{error\+\_\+}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classrocr_1_1amd_1_1options_1_1OptionParser_a0dc2027cb0ca67b7635a942318426c36}\label{classrocr_1_1amd_1_1options_1_1OptionParser_a0dc2027cb0ca67b7635a942318426c36}} 
+\index{rocr::amd::options::OptionParser@{rocr::amd::options::OptionParser}!OptionParser@{OptionParser}}
+\index{OptionParser@{OptionParser}!rocr::amd::options::OptionParser@{rocr::amd::options::OptionParser}}
+\doxysubsubsection{\texorpdfstring{OptionParser()}{OptionParser()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily rocr\+::amd\+::options\+::\+Option\+Parser\+::\+Option\+Parser (\begin{DoxyParamCaption}\item[{bool}]{collect\+Unknown = {\ttfamily false},  }\item[{std\+::ostream \&}]{error = {\ttfamily std\+:\+:cerr} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [explicit]}}
+
+\mbox{\Hypertarget{classrocr_1_1amd_1_1options_1_1OptionParser_aec88d225b7e4948b82dffd87511660cf}\label{classrocr_1_1amd_1_1options_1_1OptionParser_aec88d225b7e4948b82dffd87511660cf}} 
+\index{rocr::amd::options::OptionParser@{rocr::amd::options::OptionParser}!````~OptionParser@{$\sim$OptionParser}}
+\index{````~OptionParser@{$\sim$OptionParser}!rocr::amd::options::OptionParser@{rocr::amd::options::OptionParser}}
+\doxysubsubsection{\texorpdfstring{$\sim$OptionParser()}{~OptionParser()}}
+{\footnotesize\ttfamily rocr\+::amd\+::options\+::\+Option\+Parser\+::$\sim$\+Option\+Parser (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{classrocr_1_1amd_1_1options_1_1OptionParser_ace004e3a3c97f399bc68557adb229be8}\label{classrocr_1_1amd_1_1options_1_1OptionParser_ace004e3a3c97f399bc68557adb229be8}} 
+\index{rocr::amd::options::OptionParser@{rocr::amd::options::OptionParser}!OptionParser@{OptionParser}}
+\index{OptionParser@{OptionParser}!rocr::amd::options::OptionParser@{rocr::amd::options::OptionParser}}
+\doxysubsubsection{\texorpdfstring{OptionParser()}{OptionParser()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily rocr\+::amd\+::options\+::\+Option\+Parser\+::\+Option\+Parser (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classrocr_1_1amd_1_1options_1_1OptionParser}{Option\+Parser}} \&}]{op }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Not copy-\/constructible. 
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classrocr_1_1amd_1_1options_1_1OptionParser_a871470d1afb46c686a55bb929b9234a3}\label{classrocr_1_1amd_1_1options_1_1OptionParser_a871470d1afb46c686a55bb929b9234a3}} 
+\index{rocr::amd::options::OptionParser@{rocr::amd::options::OptionParser}!AddOption@{AddOption}}
+\index{AddOption@{AddOption}!rocr::amd::options::OptionParser@{rocr::amd::options::OptionParser}}
+\doxysubsubsection{\texorpdfstring{AddOption()}{AddOption()}}
+{\footnotesize\ttfamily bool rocr\+::amd\+::options\+::\+Option\+Parser\+::\+Add\+Option (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classrocr_1_1amd_1_1options_1_1OptionBase}{Option\+Base}} $\ast$}]{option }\end{DoxyParamCaption})}
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classrocr_1_1amd_1_1options_1_1OptionParser_a871470d1afb46c686a55bb929b9234a3_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classrocr_1_1amd_1_1options_1_1OptionParser_a871470d1afb46c686a55bb929b9234a3_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classrocr_1_1amd_1_1options_1_1OptionParser_a328484b9fee45e44e6bc04760a39fc55}\label{classrocr_1_1amd_1_1options_1_1OptionParser_a328484b9fee45e44e6bc04760a39fc55}} 
+\index{rocr::amd::options::OptionParser@{rocr::amd::options::OptionParser}!CollectUnknown@{CollectUnknown}}
+\index{CollectUnknown@{CollectUnknown}!rocr::amd::options::OptionParser@{rocr::amd::options::OptionParser}}
+\doxysubsubsection{\texorpdfstring{CollectUnknown()}{CollectUnknown()}}
+{\footnotesize\ttfamily void rocr\+::amd\+::options\+::\+Option\+Parser\+::\+Collect\+Unknown (\begin{DoxyParamCaption}\item[{bool}]{b }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{classrocr_1_1amd_1_1options_1_1OptionParser_a5cf03c61a992a120c919b6c697b72a25}\label{classrocr_1_1amd_1_1options_1_1OptionParser_a5cf03c61a992a120c919b6c697b72a25}} 
+\index{rocr::amd::options::OptionParser@{rocr::amd::options::OptionParser}!error@{error}}
+\index{error@{error}!rocr::amd::options::OptionParser@{rocr::amd::options::OptionParser}}
+\doxysubsubsection{\texorpdfstring{error()}{error()}}
+{\footnotesize\ttfamily std\+::ostream\& rocr\+::amd\+::options\+::\+Option\+Parser\+::error (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [private]}}
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classrocr_1_1amd_1_1options_1_1OptionParser_a5cf03c61a992a120c919b6c697b72a25_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classrocr_1_1amd_1_1options_1_1OptionParser_ad34ab8d7f819adb763be280bed8891fb}\label{classrocr_1_1amd_1_1options_1_1OptionParser_ad34ab8d7f819adb763be280bed8891fb}} 
+\index{rocr::amd::options::OptionParser@{rocr::amd::options::OptionParser}!FindOption@{FindOption}}
+\index{FindOption@{FindOption}!rocr::amd::options::OptionParser@{rocr::amd::options::OptionParser}}
+\doxysubsubsection{\texorpdfstring{FindOption()}{FindOption()}}
+{\footnotesize\ttfamily std\+::vector$<$ \mbox{\hyperlink{classrocr_1_1amd_1_1options_1_1OptionBase}{Option\+Base}} $\ast$ $>$\+::iterator rocr\+::amd\+::options\+::\+Option\+Parser\+::\+Find\+Option (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{name }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classrocr_1_1amd_1_1options_1_1OptionParser_ad34ab8d7f819adb763be280bed8891fb_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classrocr_1_1amd_1_1options_1_1OptionParser_a9fd5cdc2b59c8db6bf40e0d791d3fbe2}\label{classrocr_1_1amd_1_1options_1_1OptionParser_a9fd5cdc2b59c8db6bf40e0d791d3fbe2}} 
+\index{rocr::amd::options::OptionParser@{rocr::amd::options::OptionParser}!operator=@{operator=}}
+\index{operator=@{operator=}!rocr::amd::options::OptionParser@{rocr::amd::options::OptionParser}}
+\doxysubsubsection{\texorpdfstring{operator=()}{operator=()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classrocr_1_1amd_1_1options_1_1OptionParser}{Option\+Parser}}\& rocr\+::amd\+::options\+::\+Option\+Parser\+::operator= (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classrocr_1_1amd_1_1options_1_1OptionParser}{Option\+Parser}} \&}]{op }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Not copy-\/assignable. 
+
+\mbox{\Hypertarget{classrocr_1_1amd_1_1options_1_1OptionParser_a2d9b75f4d017ef8f353890c13ea5d6ac}\label{classrocr_1_1amd_1_1options_1_1OptionParser_a2d9b75f4d017ef8f353890c13ea5d6ac}} 
+\index{rocr::amd::options::OptionParser@{rocr::amd::options::OptionParser}!ParseOptions@{ParseOptions}}
+\index{ParseOptions@{ParseOptions}!rocr::amd::options::OptionParser@{rocr::amd::options::OptionParser}}
+\doxysubsubsection{\texorpdfstring{ParseOptions()}{ParseOptions()}}
+{\footnotesize\ttfamily bool rocr\+::amd\+::options\+::\+Option\+Parser\+::\+Parse\+Options (\begin{DoxyParamCaption}\item[{const char $\ast$}]{options }\end{DoxyParamCaption})}
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classrocr_1_1amd_1_1options_1_1OptionParser_a2d9b75f4d017ef8f353890c13ea5d6ac_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classrocr_1_1amd_1_1options_1_1OptionParser_a2d9b75f4d017ef8f353890c13ea5d6ac_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classrocr_1_1amd_1_1options_1_1OptionParser_ac671df010aade6d536c9797e1b92a8bc}\label{classrocr_1_1amd_1_1options_1_1OptionParser_ac671df010aade6d536c9797e1b92a8bc}} 
+\index{rocr::amd::options::OptionParser@{rocr::amd::options::OptionParser}!PrintHelp@{PrintHelp}}
+\index{PrintHelp@{PrintHelp}!rocr::amd::options::OptionParser@{rocr::amd::options::OptionParser}}
+\doxysubsubsection{\texorpdfstring{PrintHelp()}{PrintHelp()}}
+{\footnotesize\ttfamily void rocr\+::amd\+::options\+::\+Option\+Parser\+::\+Print\+Help (\begin{DoxyParamCaption}\item[{std\+::ostream \&}]{out,  }\item[{const std\+::string \&}]{addition = {\ttfamily \char`\"{}\char`\"{}} }\end{DoxyParamCaption}) const}
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classrocr_1_1amd_1_1options_1_1OptionParser_ac671df010aade6d536c9797e1b92a8bc_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classrocr_1_1amd_1_1options_1_1OptionParser_a37d37f81110b1b84e51bdb8b0a5a2209}\label{classrocr_1_1amd_1_1options_1_1OptionParser_a37d37f81110b1b84e51bdb8b0a5a2209}} 
+\index{rocr::amd::options::OptionParser@{rocr::amd::options::OptionParser}!Reset@{Reset}}
+\index{Reset@{Reset}!rocr::amd::options::OptionParser@{rocr::amd::options::OptionParser}}
+\doxysubsubsection{\texorpdfstring{Reset()}{Reset()}}
+{\footnotesize\ttfamily void rocr\+::amd\+::options\+::\+Option\+Parser\+::\+Reset (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classrocr_1_1amd_1_1options_1_1OptionParser_a37d37f81110b1b84e51bdb8b0a5a2209_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classrocr_1_1amd_1_1options_1_1OptionParser_aeafe101c485903e9ee88446e3e4b37a2}\label{classrocr_1_1amd_1_1options_1_1OptionParser_aeafe101c485903e9ee88446e3e4b37a2}} 
+\index{rocr::amd::options::OptionParser@{rocr::amd::options::OptionParser}!Unknown@{Unknown}}
+\index{Unknown@{Unknown}!rocr::amd::options::OptionParser@{rocr::amd::options::OptionParser}}
+\doxysubsubsection{\texorpdfstring{Unknown()}{Unknown()}}
+{\footnotesize\ttfamily const std\+::string \& rocr\+::amd\+::options\+::\+Option\+Parser\+::\+Unknown (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{classrocr_1_1amd_1_1options_1_1OptionParser_a31ad4fa1cd7dc564ce1a4aa499eaa02a}\label{classrocr_1_1amd_1_1options_1_1OptionParser_a31ad4fa1cd7dc564ce1a4aa499eaa02a}} 
+\index{rocr::amd::options::OptionParser@{rocr::amd::options::OptionParser}!collectUnknown\_@{collectUnknown\_}}
+\index{collectUnknown\_@{collectUnknown\_}!rocr::amd::options::OptionParser@{rocr::amd::options::OptionParser}}
+\doxysubsubsection{\texorpdfstring{collectUnknown\_}{collectUnknown\_}}
+{\footnotesize\ttfamily bool rocr\+::amd\+::options\+::\+Option\+Parser\+::collect\+Unknown\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classrocr_1_1amd_1_1options_1_1OptionParser_a1723cb5ea1181a0bb91f99997dbad3c6}\label{classrocr_1_1amd_1_1options_1_1OptionParser_a1723cb5ea1181a0bb91f99997dbad3c6}} 
+\index{rocr::amd::options::OptionParser@{rocr::amd::options::OptionParser}!error\_@{error\_}}
+\index{error\_@{error\_}!rocr::amd::options::OptionParser@{rocr::amd::options::OptionParser}}
+\doxysubsubsection{\texorpdfstring{error\_}{error\_}}
+{\footnotesize\ttfamily std\+::ostream$\ast$ rocr\+::amd\+::options\+::\+Option\+Parser\+::error\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classrocr_1_1amd_1_1options_1_1OptionParser_a22491c10cb362f264017309fd64dce8e}\label{classrocr_1_1amd_1_1options_1_1OptionParser_a22491c10cb362f264017309fd64dce8e}} 
+\index{rocr::amd::options::OptionParser@{rocr::amd::options::OptionParser}!options\_@{options\_}}
+\index{options\_@{options\_}!rocr::amd::options::OptionParser@{rocr::amd::options::OptionParser}}
+\doxysubsubsection{\texorpdfstring{options\_}{options\_}}
+{\footnotesize\ttfamily std\+::vector$<$\mbox{\hyperlink{classrocr_1_1amd_1_1options_1_1OptionBase}{Option\+Base}}$\ast$$>$ rocr\+::amd\+::options\+::\+Option\+Parser\+::options\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classrocr_1_1amd_1_1options_1_1OptionParser_a660322a24c96ef8d1595a7df56b1e252}\label{classrocr_1_1amd_1_1options_1_1OptionParser_a660322a24c96ef8d1595a7df56b1e252}} 
+\index{rocr::amd::options::OptionParser@{rocr::amd::options::OptionParser}!unknownOptions\_@{unknownOptions\_}}
+\index{unknownOptions\_@{unknownOptions\_}!rocr::amd::options::OptionParser@{rocr::amd::options::OptionParser}}
+\doxysubsubsection{\texorpdfstring{unknownOptions\_}{unknownOptions\_}}
+{\footnotesize\ttfamily std\+::string rocr\+::amd\+::options\+::\+Option\+Parser\+::unknown\+Options\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+src/libamdhsacode/\mbox{\hyperlink{amd__options_8hpp}{amd\+\_\+options.\+hpp}}\item 
+src/libamdhsacode/\mbox{\hyperlink{amd__options_8cpp}{amd\+\_\+options.\+cpp}}\end{DoxyCompactItemize}

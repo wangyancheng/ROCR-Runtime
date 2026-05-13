@@ -1,0 +1,363 @@
+\hypertarget{classrocr_1_1AMD_1_1CpuAgent}{}\doxysection{rocr\+::AMD\+::Cpu\+Agent Class Reference}
+\label{classrocr_1_1AMD_1_1CpuAgent}\index{rocr::AMD::CpuAgent@{rocr::AMD::CpuAgent}}
+
+
+{\ttfamily \#include $<$amd\+\_\+cpu\+\_\+agent.\+h$>$}
+
+
+
+Inheritance diagram for rocr\+::AMD\+::Cpu\+Agent\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=219pt]{classrocr_1_1AMD_1_1CpuAgent__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for rocr\+::AMD\+::Cpu\+Agent\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classrocr_1_1AMD_1_1CpuAgent__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classrocr_1_1AMD_1_1CpuAgent_a348ca4ee3f09ec7c127e4cc0ddc6c901}{Cpu\+Agent}} (HSAuint32 node, const Hsa\+Node\+Properties \&node\+\_\+props)
+\item 
+\mbox{\hyperlink{classrocr_1_1AMD_1_1CpuAgent_aeb0b1ccc8a2a4cfaa6b5c212d3c971cc}{$\sim$\+Cpu\+Agent}} ()
+\item 
+\mbox{\hyperlink{group__status_gad755322e7ff95456520e8abdbe90d225}{hsa\+\_\+status\+\_\+t}} \mbox{\hyperlink{classrocr_1_1AMD_1_1CpuAgent_ab13ea7ec25b71fe15da2d6f70854c7a2}{Visit\+Region}} (bool include\+\_\+peer, \mbox{\hyperlink{group__status_gad755322e7ff95456520e8abdbe90d225}{hsa\+\_\+status\+\_\+t}}($\ast$callback)(\mbox{\hyperlink{group__memory_ga9c649e7034e53233198aaa1b58e9d79b}{hsa\+\_\+region\+\_\+t}} region, void $\ast$data), void $\ast$data) const
+\item 
+\mbox{\hyperlink{group__status_gad755322e7ff95456520e8abdbe90d225}{hsa\+\_\+status\+\_\+t}} \mbox{\hyperlink{classrocr_1_1AMD_1_1CpuAgent_aab84046cc44cfcdb8add7acdd7743079}{Iterate\+Region}} (\mbox{\hyperlink{group__status_gad755322e7ff95456520e8abdbe90d225}{hsa\+\_\+status\+\_\+t}}($\ast$callback)(\mbox{\hyperlink{group__memory_ga9c649e7034e53233198aaa1b58e9d79b}{hsa\+\_\+region\+\_\+t}} region, void $\ast$data), void $\ast$data) const override
+\item 
+\mbox{\hyperlink{group__status_gad755322e7ff95456520e8abdbe90d225}{hsa\+\_\+status\+\_\+t}} \mbox{\hyperlink{classrocr_1_1AMD_1_1CpuAgent_ab3f323eaee65729ee4e55c06091eb308}{Iterate\+Cache}} (\mbox{\hyperlink{group__status_gad755322e7ff95456520e8abdbe90d225}{hsa\+\_\+status\+\_\+t}}($\ast$callback)(\mbox{\hyperlink{group__agentinfo_gaf095bbd42403c50be520db2a73e7ee8d}{hsa\+\_\+cache\+\_\+t}} cache, void $\ast$data), void $\ast$value) const override
+\item 
+\mbox{\hyperlink{group__status_gad755322e7ff95456520e8abdbe90d225}{hsa\+\_\+status\+\_\+t}} \mbox{\hyperlink{classrocr_1_1AMD_1_1CpuAgent_a036bac7f25df9c1f3562e508966e71ff}{Get\+Info}} (\mbox{\hyperlink{group__agentinfo_ga39d0684207d95717d96319573b3e4a42}{hsa\+\_\+agent\+\_\+info\+\_\+t}} attribute, void $\ast$value) const override
+\item 
+\mbox{\hyperlink{group__status_gad755322e7ff95456520e8abdbe90d225}{hsa\+\_\+status\+\_\+t}} \mbox{\hyperlink{classrocr_1_1AMD_1_1CpuAgent_af239f220ec3e79712a4766f538e5b41f}{Queue\+Create}} (size\+\_\+t size, \mbox{\hyperlink{group__queue_ga4ca8f732dfceaf6b88dcfeec168d82ae}{hsa\+\_\+queue\+\_\+type32\+\_\+t}} queue\+\_\+type, \mbox{\hyperlink{namespacerocr_1_1core_aa60ad090079a2e4917c75124c7a8de54}{core\+::\+Hsa\+Event\+Callback}} event\+\_\+callback, void $\ast$data, uint32\+\_\+t private\+\_\+segment\+\_\+size, uint32\+\_\+t group\+\_\+segment\+\_\+size, \mbox{\hyperlink{classrocr_1_1core_1_1Queue}{core\+::\+Queue}} $\ast$$\ast$queue) override
+\item 
+\mbox{\hyperlink{group__status_gad755322e7ff95456520e8abdbe90d225}{hsa\+\_\+status\+\_\+t}} \mbox{\hyperlink{classrocr_1_1AMD_1_1CpuAgent_a7c49f9b30bce7ab05c45ffbab9a25b42}{Dma\+Copy}} (void $\ast$dst, \mbox{\hyperlink{classrocr_1_1core_1_1Agent}{core\+::\+Agent}} \&dst\+\_\+agent, const void $\ast$src, \mbox{\hyperlink{classrocr_1_1core_1_1Agent}{core\+::\+Agent}} \&src\+\_\+agent, size\+\_\+t size, std\+::vector$<$ \mbox{\hyperlink{classrocr_1_1core_1_1Signal}{core\+::\+Signal}} $\ast$ $>$ \&dep\+\_\+signals, \mbox{\hyperlink{classrocr_1_1core_1_1Signal}{core\+::\+Signal}} \&out\+\_\+signal) override
+\item 
+\+\_\+\+\_\+forceinline size\+\_\+t \mbox{\hyperlink{classrocr_1_1AMD_1_1CpuAgent_a4d5493aae3cecdf9a64a779ef7c0c392}{num\+\_\+cache}} () const
+\item 
+\+\_\+\+\_\+forceinline uint64\+\_\+t \mbox{\hyperlink{classrocr_1_1AMD_1_1CpuAgent_a336213e2fb24dbb590d01b97642d17a5}{Hive\+Id}} () const override
+\item 
+\+\_\+\+\_\+forceinline const Hsa\+Cache\+Properties \& \mbox{\hyperlink{classrocr_1_1AMD_1_1CpuAgent_acbc964e780e3e6fb25cf550cc8d32b79}{cache\+\_\+prop}} (int idx) const
+\item 
+const std\+::vector$<$ const \mbox{\hyperlink{classrocr_1_1core_1_1MemoryRegion}{core\+::\+Memory\+Region}} $\ast$ $>$ \& \mbox{\hyperlink{classrocr_1_1AMD_1_1CpuAgent_ab8b2509f5010ed0f372c1764e44f597d}{regions}} () const override
+\item 
+const \mbox{\hyperlink{classrocr_1_1core_1_1Isa}{core\+::\+Isa}} $\ast$ \mbox{\hyperlink{classrocr_1_1AMD_1_1CpuAgent_a2ddac4842dbbaabd2274d5fc5a0f1d6c}{isa}} () const override
+\end{DoxyCompactItemize}
+\doxysubsection*{Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{classrocr_1_1AMD_1_1CpuAgent_a1e5a13c0d40241296ef59fe375d7ac91}{Init\+Region\+List}} ()
+\item 
+void \mbox{\hyperlink{classrocr_1_1AMD_1_1CpuAgent_aee58b36c32fefb3d07433a96bf19d97a}{Init\+Cache\+List}} ()
+\item 
+\mbox{\hyperlink{group__status_gad755322e7ff95456520e8abdbe90d225}{hsa\+\_\+status\+\_\+t}} \mbox{\hyperlink{classrocr_1_1AMD_1_1CpuAgent_a9e934f036e1365a170790c209165de19}{Visit\+Region}} (const std\+::vector$<$ const \mbox{\hyperlink{classrocr_1_1core_1_1MemoryRegion}{core\+::\+Memory\+Region}} $\ast$ $>$ \&\mbox{\hyperlink{classrocr_1_1AMD_1_1CpuAgent_ab8b2509f5010ed0f372c1764e44f597d}{regions}}, \mbox{\hyperlink{group__status_gad755322e7ff95456520e8abdbe90d225}{hsa\+\_\+status\+\_\+t}}($\ast$callback)(\mbox{\hyperlink{group__memory_ga9c649e7034e53233198aaa1b58e9d79b}{hsa\+\_\+region\+\_\+t}} region, void $\ast$data), void $\ast$data) const
+\item 
+\mbox{\hyperlink{classrocr_1_1AMD_1_1CpuAgent_a8d32a03d037b6dde9eae8937d35e5965}{DISALLOW\+\_\+\+COPY\+\_\+\+AND\+\_\+\+ASSIGN}} (\mbox{\hyperlink{classrocr_1_1AMD_1_1CpuAgent}{Cpu\+Agent}})
+\end{DoxyCompactItemize}
+\doxysubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+const Hsa\+Node\+Properties \mbox{\hyperlink{classrocr_1_1AMD_1_1CpuAgent_a34542a7154c9841ac19a6a34b19acc8b}{properties\+\_\+}}
+\item 
+std\+::vector$<$ Hsa\+Cache\+Properties $>$ \mbox{\hyperlink{classrocr_1_1AMD_1_1CpuAgent_a06f1b24b72eaac65ff8face0e8359ff9}{cache\+\_\+props\+\_\+}}
+\item 
+std\+::vector$<$ std\+::unique\+\_\+ptr$<$ \mbox{\hyperlink{classrocr_1_1core_1_1Cache}{core\+::\+Cache}} $>$ $>$ \mbox{\hyperlink{classrocr_1_1AMD_1_1CpuAgent_af9d72124701f79895b6f4f92c64a0f1f}{caches\+\_\+}}
+\item 
+std\+::vector$<$ const \mbox{\hyperlink{classrocr_1_1core_1_1MemoryRegion}{core\+::\+Memory\+Region}} $\ast$ $>$ \mbox{\hyperlink{classrocr_1_1AMD_1_1CpuAgent_abbaffe59a45cb3bea8b267ef68585e5e}{regions\+\_\+}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Additional Inherited Members}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classrocr_1_1AMD_1_1CpuAgent_a348ca4ee3f09ec7c127e4cc0ddc6c901}\label{classrocr_1_1AMD_1_1CpuAgent_a348ca4ee3f09ec7c127e4cc0ddc6c901}} 
+\index{rocr::AMD::CpuAgent@{rocr::AMD::CpuAgent}!CpuAgent@{CpuAgent}}
+\index{CpuAgent@{CpuAgent}!rocr::AMD::CpuAgent@{rocr::AMD::CpuAgent}}
+\doxysubsubsection{\texorpdfstring{CpuAgent()}{CpuAgent()}}
+{\footnotesize\ttfamily rocr\+::\+AMD\+::\+Cpu\+Agent\+::\+Cpu\+Agent (\begin{DoxyParamCaption}\item[{HSAuint32}]{node,  }\item[{const Hsa\+Node\+Properties \&}]{node\+\_\+props }\end{DoxyParamCaption})}
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classrocr_1_1AMD_1_1CpuAgent_a348ca4ee3f09ec7c127e4cc0ddc6c901_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classrocr_1_1AMD_1_1CpuAgent_aeb0b1ccc8a2a4cfaa6b5c212d3c971cc}\label{classrocr_1_1AMD_1_1CpuAgent_aeb0b1ccc8a2a4cfaa6b5c212d3c971cc}} 
+\index{rocr::AMD::CpuAgent@{rocr::AMD::CpuAgent}!````~CpuAgent@{$\sim$CpuAgent}}
+\index{````~CpuAgent@{$\sim$CpuAgent}!rocr::AMD::CpuAgent@{rocr::AMD::CpuAgent}}
+\doxysubsubsection{\texorpdfstring{$\sim$CpuAgent()}{~CpuAgent()}}
+{\footnotesize\ttfamily rocr\+::\+AMD\+::\+Cpu\+Agent\+::$\sim$\+Cpu\+Agent (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classrocr_1_1AMD_1_1CpuAgent_acbc964e780e3e6fb25cf550cc8d32b79}\label{classrocr_1_1AMD_1_1CpuAgent_acbc964e780e3e6fb25cf550cc8d32b79}} 
+\index{rocr::AMD::CpuAgent@{rocr::AMD::CpuAgent}!cache\_prop@{cache\_prop}}
+\index{cache\_prop@{cache\_prop}!rocr::AMD::CpuAgent@{rocr::AMD::CpuAgent}}
+\doxysubsubsection{\texorpdfstring{cache\_prop()}{cache\_prop()}}
+{\footnotesize\ttfamily \+\_\+\+\_\+forceinline const Hsa\+Cache\+Properties\& rocr\+::\+AMD\+::\+Cpu\+Agent\+::cache\+\_\+prop (\begin{DoxyParamCaption}\item[{int}]{idx }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{classrocr_1_1AMD_1_1CpuAgent_a8d32a03d037b6dde9eae8937d35e5965}\label{classrocr_1_1AMD_1_1CpuAgent_a8d32a03d037b6dde9eae8937d35e5965}} 
+\index{rocr::AMD::CpuAgent@{rocr::AMD::CpuAgent}!DISALLOW\_COPY\_AND\_ASSIGN@{DISALLOW\_COPY\_AND\_ASSIGN}}
+\index{DISALLOW\_COPY\_AND\_ASSIGN@{DISALLOW\_COPY\_AND\_ASSIGN}!rocr::AMD::CpuAgent@{rocr::AMD::CpuAgent}}
+\doxysubsubsection{\texorpdfstring{DISALLOW\_COPY\_AND\_ASSIGN()}{DISALLOW\_COPY\_AND\_ASSIGN()}}
+{\footnotesize\ttfamily rocr\+::\+AMD\+::\+Cpu\+Agent\+::\+DISALLOW\+\_\+\+COPY\+\_\+\+AND\+\_\+\+ASSIGN (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classrocr_1_1AMD_1_1CpuAgent}{Cpu\+Agent}}}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classrocr_1_1AMD_1_1CpuAgent_a7c49f9b30bce7ab05c45ffbab9a25b42}\label{classrocr_1_1AMD_1_1CpuAgent_a7c49f9b30bce7ab05c45ffbab9a25b42}} 
+\index{rocr::AMD::CpuAgent@{rocr::AMD::CpuAgent}!DmaCopy@{DmaCopy}}
+\index{DmaCopy@{DmaCopy}!rocr::AMD::CpuAgent@{rocr::AMD::CpuAgent}}
+\doxysubsubsection{\texorpdfstring{DmaCopy()}{DmaCopy()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{group__status_gad755322e7ff95456520e8abdbe90d225}{hsa\+\_\+status\+\_\+t}} rocr\+::\+AMD\+::\+Cpu\+Agent\+::\+Dma\+Copy (\begin{DoxyParamCaption}\item[{void $\ast$}]{dst,  }\item[{\mbox{\hyperlink{classrocr_1_1core_1_1Agent}{core\+::\+Agent}} \&}]{dst\+\_\+agent,  }\item[{const void $\ast$}]{src,  }\item[{\mbox{\hyperlink{classrocr_1_1core_1_1Agent}{core\+::\+Agent}} \&}]{src\+\_\+agent,  }\item[{size\+\_\+t}]{size,  }\item[{std\+::vector$<$ \mbox{\hyperlink{classrocr_1_1core_1_1Signal}{core\+::\+Signal}} $\ast$ $>$ \&}]{dep\+\_\+signals,  }\item[{\mbox{\hyperlink{classrocr_1_1core_1_1Signal}{core\+::\+Signal}} \&}]{out\+\_\+signal }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Reimplemented from \mbox{\hyperlink{classrocr_1_1core_1_1Agent_acdcf2cfdb2027d554f10ced1747b0039}{rocr\+::core\+::\+Agent}}.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classrocr_1_1AMD_1_1CpuAgent_a7c49f9b30bce7ab05c45ffbab9a25b42_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classrocr_1_1AMD_1_1CpuAgent_a036bac7f25df9c1f3562e508966e71ff}\label{classrocr_1_1AMD_1_1CpuAgent_a036bac7f25df9c1f3562e508966e71ff}} 
+\index{rocr::AMD::CpuAgent@{rocr::AMD::CpuAgent}!GetInfo@{GetInfo}}
+\index{GetInfo@{GetInfo}!rocr::AMD::CpuAgent@{rocr::AMD::CpuAgent}}
+\doxysubsubsection{\texorpdfstring{GetInfo()}{GetInfo()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{group__status_gad755322e7ff95456520e8abdbe90d225}{hsa\+\_\+status\+\_\+t}} rocr\+::\+AMD\+::\+Cpu\+Agent\+::\+Get\+Info (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{group__agentinfo_ga39d0684207d95717d96319573b3e4a42}{hsa\+\_\+agent\+\_\+info\+\_\+t}}}]{attribute,  }\item[{void $\ast$}]{value }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Implements \mbox{\hyperlink{classrocr_1_1core_1_1Agent_a79308b02368ad26469247e5c1d527550}{rocr\+::core\+::\+Agent}}.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classrocr_1_1AMD_1_1CpuAgent_a036bac7f25df9c1f3562e508966e71ff_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classrocr_1_1AMD_1_1CpuAgent_a036bac7f25df9c1f3562e508966e71ff_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classrocr_1_1AMD_1_1CpuAgent_a336213e2fb24dbb590d01b97642d17a5}\label{classrocr_1_1AMD_1_1CpuAgent_a336213e2fb24dbb590d01b97642d17a5}} 
+\index{rocr::AMD::CpuAgent@{rocr::AMD::CpuAgent}!HiveId@{HiveId}}
+\index{HiveId@{HiveId}!rocr::AMD::CpuAgent@{rocr::AMD::CpuAgent}}
+\doxysubsubsection{\texorpdfstring{HiveId()}{HiveId()}}
+{\footnotesize\ttfamily \+\_\+\+\_\+forceinline uint64\+\_\+t rocr\+::\+AMD\+::\+Cpu\+Agent\+::\+Hive\+Id (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Reimplemented from \mbox{\hyperlink{classrocr_1_1core_1_1Agent_a65fa3b3ad06df60d5d9a21fa4b7f7056}{rocr\+::core\+::\+Agent}}.
+
+\mbox{\Hypertarget{classrocr_1_1AMD_1_1CpuAgent_aee58b36c32fefb3d07433a96bf19d97a}\label{classrocr_1_1AMD_1_1CpuAgent_aee58b36c32fefb3d07433a96bf19d97a}} 
+\index{rocr::AMD::CpuAgent@{rocr::AMD::CpuAgent}!InitCacheList@{InitCacheList}}
+\index{InitCacheList@{InitCacheList}!rocr::AMD::CpuAgent@{rocr::AMD::CpuAgent}}
+\doxysubsubsection{\texorpdfstring{InitCacheList()}{InitCacheList()}}
+{\footnotesize\ttfamily void rocr\+::\+AMD\+::\+Cpu\+Agent\+::\+Init\+Cache\+List (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classrocr_1_1AMD_1_1CpuAgent_aee58b36c32fefb3d07433a96bf19d97a_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=338pt]{classrocr_1_1AMD_1_1CpuAgent_aee58b36c32fefb3d07433a96bf19d97a_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classrocr_1_1AMD_1_1CpuAgent_a1e5a13c0d40241296ef59fe375d7ac91}\label{classrocr_1_1AMD_1_1CpuAgent_a1e5a13c0d40241296ef59fe375d7ac91}} 
+\index{rocr::AMD::CpuAgent@{rocr::AMD::CpuAgent}!InitRegionList@{InitRegionList}}
+\index{InitRegionList@{InitRegionList}!rocr::AMD::CpuAgent@{rocr::AMD::CpuAgent}}
+\doxysubsubsection{\texorpdfstring{InitRegionList()}{InitRegionList()}}
+{\footnotesize\ttfamily void rocr\+::\+AMD\+::\+Cpu\+Agent\+::\+Init\+Region\+List (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=322pt]{classrocr_1_1AMD_1_1CpuAgent_a1e5a13c0d40241296ef59fe375d7ac91_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=338pt]{classrocr_1_1AMD_1_1CpuAgent_a1e5a13c0d40241296ef59fe375d7ac91_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classrocr_1_1AMD_1_1CpuAgent_a2ddac4842dbbaabd2274d5fc5a0f1d6c}\label{classrocr_1_1AMD_1_1CpuAgent_a2ddac4842dbbaabd2274d5fc5a0f1d6c}} 
+\index{rocr::AMD::CpuAgent@{rocr::AMD::CpuAgent}!isa@{isa}}
+\index{isa@{isa}!rocr::AMD::CpuAgent@{rocr::AMD::CpuAgent}}
+\doxysubsubsection{\texorpdfstring{isa()}{isa()}}
+{\footnotesize\ttfamily const \mbox{\hyperlink{classrocr_1_1core_1_1Isa}{core\+::\+Isa}}$\ast$ rocr\+::\+AMD\+::\+Cpu\+Agent\+::isa (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Implements \mbox{\hyperlink{classrocr_1_1core_1_1Agent_a069a568ac27ab22d0ac03f80bfa7c386}{rocr\+::core\+::\+Agent}}.
+
+\mbox{\Hypertarget{classrocr_1_1AMD_1_1CpuAgent_ab3f323eaee65729ee4e55c06091eb308}\label{classrocr_1_1AMD_1_1CpuAgent_ab3f323eaee65729ee4e55c06091eb308}} 
+\index{rocr::AMD::CpuAgent@{rocr::AMD::CpuAgent}!IterateCache@{IterateCache}}
+\index{IterateCache@{IterateCache}!rocr::AMD::CpuAgent@{rocr::AMD::CpuAgent}}
+\doxysubsubsection{\texorpdfstring{IterateCache()}{IterateCache()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{group__status_gad755322e7ff95456520e8abdbe90d225}{hsa\+\_\+status\+\_\+t}} rocr\+::\+AMD\+::\+Cpu\+Agent\+::\+Iterate\+Cache (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{group__status_gad755322e7ff95456520e8abdbe90d225}{hsa\+\_\+status\+\_\+t}}($\ast$)(\mbox{\hyperlink{group__agentinfo_gaf095bbd42403c50be520db2a73e7ee8d}{hsa\+\_\+cache\+\_\+t}} cache, void $\ast$data)}]{callback,  }\item[{void $\ast$}]{value }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Implements \mbox{\hyperlink{classrocr_1_1core_1_1Agent_a7f312fb524e239f0801b419de5161f95}{rocr\+::core\+::\+Agent}}.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=325pt]{classrocr_1_1AMD_1_1CpuAgent_ab3f323eaee65729ee4e55c06091eb308_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classrocr_1_1AMD_1_1CpuAgent_aab84046cc44cfcdb8add7acdd7743079}\label{classrocr_1_1AMD_1_1CpuAgent_aab84046cc44cfcdb8add7acdd7743079}} 
+\index{rocr::AMD::CpuAgent@{rocr::AMD::CpuAgent}!IterateRegion@{IterateRegion}}
+\index{IterateRegion@{IterateRegion}!rocr::AMD::CpuAgent@{rocr::AMD::CpuAgent}}
+\doxysubsubsection{\texorpdfstring{IterateRegion()}{IterateRegion()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{group__status_gad755322e7ff95456520e8abdbe90d225}{hsa\+\_\+status\+\_\+t}} rocr\+::\+AMD\+::\+Cpu\+Agent\+::\+Iterate\+Region (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{group__status_gad755322e7ff95456520e8abdbe90d225}{hsa\+\_\+status\+\_\+t}}($\ast$)(\mbox{\hyperlink{group__memory_ga9c649e7034e53233198aaa1b58e9d79b}{hsa\+\_\+region\+\_\+t}} region, void $\ast$data)}]{callback,  }\item[{void $\ast$}]{data }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Implements \mbox{\hyperlink{classrocr_1_1core_1_1Agent_a15a6380dddfd4eee8e7b71725cd2680e}{rocr\+::core\+::\+Agent}}.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=338pt]{classrocr_1_1AMD_1_1CpuAgent_aab84046cc44cfcdb8add7acdd7743079_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classrocr_1_1AMD_1_1CpuAgent_a4d5493aae3cecdf9a64a779ef7c0c392}\label{classrocr_1_1AMD_1_1CpuAgent_a4d5493aae3cecdf9a64a779ef7c0c392}} 
+\index{rocr::AMD::CpuAgent@{rocr::AMD::CpuAgent}!num\_cache@{num\_cache}}
+\index{num\_cache@{num\_cache}!rocr::AMD::CpuAgent@{rocr::AMD::CpuAgent}}
+\doxysubsubsection{\texorpdfstring{num\_cache()}{num\_cache()}}
+{\footnotesize\ttfamily \+\_\+\+\_\+forceinline size\+\_\+t rocr\+::\+AMD\+::\+Cpu\+Agent\+::num\+\_\+cache (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classrocr_1_1AMD_1_1CpuAgent_a4d5493aae3cecdf9a64a779ef7c0c392_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classrocr_1_1AMD_1_1CpuAgent_af239f220ec3e79712a4766f538e5b41f}\label{classrocr_1_1AMD_1_1CpuAgent_af239f220ec3e79712a4766f538e5b41f}} 
+\index{rocr::AMD::CpuAgent@{rocr::AMD::CpuAgent}!QueueCreate@{QueueCreate}}
+\index{QueueCreate@{QueueCreate}!rocr::AMD::CpuAgent@{rocr::AMD::CpuAgent}}
+\doxysubsubsection{\texorpdfstring{QueueCreate()}{QueueCreate()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{group__status_gad755322e7ff95456520e8abdbe90d225}{hsa\+\_\+status\+\_\+t}} rocr\+::\+AMD\+::\+Cpu\+Agent\+::\+Queue\+Create (\begin{DoxyParamCaption}\item[{size\+\_\+t}]{size,  }\item[{\mbox{\hyperlink{group__queue_ga4ca8f732dfceaf6b88dcfeec168d82ae}{hsa\+\_\+queue\+\_\+type32\+\_\+t}}}]{queue\+\_\+type,  }\item[{\mbox{\hyperlink{namespacerocr_1_1core_aa60ad090079a2e4917c75124c7a8de54}{core\+::\+Hsa\+Event\+Callback}}}]{event\+\_\+callback,  }\item[{void $\ast$}]{data,  }\item[{uint32\+\_\+t}]{private\+\_\+segment\+\_\+size,  }\item[{uint32\+\_\+t}]{group\+\_\+segment\+\_\+size,  }\item[{\mbox{\hyperlink{classrocr_1_1core_1_1Queue}{core\+::\+Queue}} $\ast$$\ast$}]{queue }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Implements \mbox{\hyperlink{classrocr_1_1core_1_1Agent_ab93b25c2de0a2036d0955cc91786b980}{rocr\+::core\+::\+Agent}}.
+
+\mbox{\Hypertarget{classrocr_1_1AMD_1_1CpuAgent_ab8b2509f5010ed0f372c1764e44f597d}\label{classrocr_1_1AMD_1_1CpuAgent_ab8b2509f5010ed0f372c1764e44f597d}} 
+\index{rocr::AMD::CpuAgent@{rocr::AMD::CpuAgent}!regions@{regions}}
+\index{regions@{regions}!rocr::AMD::CpuAgent@{rocr::AMD::CpuAgent}}
+\doxysubsubsection{\texorpdfstring{regions()}{regions()}}
+{\footnotesize\ttfamily const std\+::vector$<$const \mbox{\hyperlink{classrocr_1_1core_1_1MemoryRegion}{core\+::\+Memory\+Region}}$\ast$$>$\& rocr\+::\+AMD\+::\+Cpu\+Agent\+::regions (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Implements \mbox{\hyperlink{classrocr_1_1core_1_1Agent_aa868fb759ab3150e7fd588ddb94b0612}{rocr\+::core\+::\+Agent}}.
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=338pt]{classrocr_1_1AMD_1_1CpuAgent_ab8b2509f5010ed0f372c1764e44f597d_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classrocr_1_1AMD_1_1CpuAgent_ab13ea7ec25b71fe15da2d6f70854c7a2}\label{classrocr_1_1AMD_1_1CpuAgent_ab13ea7ec25b71fe15da2d6f70854c7a2}} 
+\index{rocr::AMD::CpuAgent@{rocr::AMD::CpuAgent}!VisitRegion@{VisitRegion}}
+\index{VisitRegion@{VisitRegion}!rocr::AMD::CpuAgent@{rocr::AMD::CpuAgent}}
+\doxysubsubsection{\texorpdfstring{VisitRegion()}{VisitRegion()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{group__status_gad755322e7ff95456520e8abdbe90d225}{hsa\+\_\+status\+\_\+t}} rocr\+::\+AMD\+::\+Cpu\+Agent\+::\+Visit\+Region (\begin{DoxyParamCaption}\item[{bool}]{include\+\_\+peer,  }\item[{\mbox{\hyperlink{group__status_gad755322e7ff95456520e8abdbe90d225}{hsa\+\_\+status\+\_\+t}}($\ast$)(\mbox{\hyperlink{group__memory_ga9c649e7034e53233198aaa1b58e9d79b}{hsa\+\_\+region\+\_\+t}} region, void $\ast$data)}]{callback,  }\item[{void $\ast$}]{data }\end{DoxyParamCaption}) const}
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=338pt]{classrocr_1_1AMD_1_1CpuAgent_ab13ea7ec25b71fe15da2d6f70854c7a2_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classrocr_1_1AMD_1_1CpuAgent_a9e934f036e1365a170790c209165de19}\label{classrocr_1_1AMD_1_1CpuAgent_a9e934f036e1365a170790c209165de19}} 
+\index{rocr::AMD::CpuAgent@{rocr::AMD::CpuAgent}!VisitRegion@{VisitRegion}}
+\index{VisitRegion@{VisitRegion}!rocr::AMD::CpuAgent@{rocr::AMD::CpuAgent}}
+\doxysubsubsection{\texorpdfstring{VisitRegion()}{VisitRegion()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{group__status_gad755322e7ff95456520e8abdbe90d225}{hsa\+\_\+status\+\_\+t}} rocr\+::\+AMD\+::\+Cpu\+Agent\+::\+Visit\+Region (\begin{DoxyParamCaption}\item[{const std\+::vector$<$ const \mbox{\hyperlink{classrocr_1_1core_1_1MemoryRegion}{core\+::\+Memory\+Region}} $\ast$ $>$ \&}]{regions,  }\item[{\mbox{\hyperlink{group__status_gad755322e7ff95456520e8abdbe90d225}{hsa\+\_\+status\+\_\+t}}($\ast$)(\mbox{\hyperlink{group__memory_ga9c649e7034e53233198aaa1b58e9d79b}{hsa\+\_\+region\+\_\+t}} region, void $\ast$data)}]{callback,  }\item[{void $\ast$}]{data }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [private]}}
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classrocr_1_1AMD_1_1CpuAgent_a9e934f036e1365a170790c209165de19_cgraph}
+\end{center}
+\end{figure}
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{classrocr_1_1AMD_1_1CpuAgent_a06f1b24b72eaac65ff8face0e8359ff9}\label{classrocr_1_1AMD_1_1CpuAgent_a06f1b24b72eaac65ff8face0e8359ff9}} 
+\index{rocr::AMD::CpuAgent@{rocr::AMD::CpuAgent}!cache\_props\_@{cache\_props\_}}
+\index{cache\_props\_@{cache\_props\_}!rocr::AMD::CpuAgent@{rocr::AMD::CpuAgent}}
+\doxysubsubsection{\texorpdfstring{cache\_props\_}{cache\_props\_}}
+{\footnotesize\ttfamily std\+::vector$<$Hsa\+Cache\+Properties$>$ rocr\+::\+AMD\+::\+Cpu\+Agent\+::cache\+\_\+props\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classrocr_1_1AMD_1_1CpuAgent_af9d72124701f79895b6f4f92c64a0f1f}\label{classrocr_1_1AMD_1_1CpuAgent_af9d72124701f79895b6f4f92c64a0f1f}} 
+\index{rocr::AMD::CpuAgent@{rocr::AMD::CpuAgent}!caches\_@{caches\_}}
+\index{caches\_@{caches\_}!rocr::AMD::CpuAgent@{rocr::AMD::CpuAgent}}
+\doxysubsubsection{\texorpdfstring{caches\_}{caches\_}}
+{\footnotesize\ttfamily std\+::vector$<$std\+::unique\+\_\+ptr$<$\mbox{\hyperlink{classrocr_1_1core_1_1Cache}{core\+::\+Cache}}$>$ $>$ rocr\+::\+AMD\+::\+Cpu\+Agent\+::caches\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classrocr_1_1AMD_1_1CpuAgent_a34542a7154c9841ac19a6a34b19acc8b}\label{classrocr_1_1AMD_1_1CpuAgent_a34542a7154c9841ac19a6a34b19acc8b}} 
+\index{rocr::AMD::CpuAgent@{rocr::AMD::CpuAgent}!properties\_@{properties\_}}
+\index{properties\_@{properties\_}!rocr::AMD::CpuAgent@{rocr::AMD::CpuAgent}}
+\doxysubsubsection{\texorpdfstring{properties\_}{properties\_}}
+{\footnotesize\ttfamily const Hsa\+Node\+Properties rocr\+::\+AMD\+::\+Cpu\+Agent\+::properties\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classrocr_1_1AMD_1_1CpuAgent_abbaffe59a45cb3bea8b267ef68585e5e}\label{classrocr_1_1AMD_1_1CpuAgent_abbaffe59a45cb3bea8b267ef68585e5e}} 
+\index{rocr::AMD::CpuAgent@{rocr::AMD::CpuAgent}!regions\_@{regions\_}}
+\index{regions\_@{regions\_}!rocr::AMD::CpuAgent@{rocr::AMD::CpuAgent}}
+\doxysubsubsection{\texorpdfstring{regions\_}{regions\_}}
+{\footnotesize\ttfamily std\+::vector$<$const \mbox{\hyperlink{classrocr_1_1core_1_1MemoryRegion}{core\+::\+Memory\+Region}}$\ast$$>$ rocr\+::\+AMD\+::\+Cpu\+Agent\+::regions\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+src/core/inc/\mbox{\hyperlink{amd__cpu__agent_8h}{amd\+\_\+cpu\+\_\+agent.\+h}}\item 
+src/core/runtime/\mbox{\hyperlink{amd__cpu__agent_8cpp}{amd\+\_\+cpu\+\_\+agent.\+cpp}}\end{DoxyCompactItemize}

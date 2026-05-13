@@ -1,0 +1,184 @@
+\hypertarget{addrlib_8h}{}\doxysection{src/image/addrlib/src/core/addrlib.h File Reference}
+\label{addrlib_8h}\index{src/image/addrlib/src/core/addrlib.h@{src/image/addrlib/src/core/addrlib.h}}
+
+
+Contains the Addr\+::\+Lib base class definition.  
+
+
+{\ttfamily \#include \char`\"{}addrinterface.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}addrobject.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}addrelemlib.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}amdgpu\+\_\+asic\+\_\+addr.\+h\char`\"{}}\newline
+Include dependency graph for addrlib.\+h\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{addrlib_8h__incl}
+\end{center}
+\end{figure}
+This graph shows which files directly or indirectly include this file\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{addrlib_8h__dep__incl}
+\end{center}
+\end{figure}
+\doxysubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class \mbox{\hyperlink{classrocr_1_1Addr_1_1Lib}{rocr\+::\+Addr\+::\+Lib}}
+\begin{DoxyCompactList}\small\item\em This class contains asic independent address lib functionalities. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Namespaces}
+\begin{DoxyCompactItemize}
+\item 
+ \mbox{\hyperlink{namespacerocr}{rocr}}
+\item 
+ \mbox{\hyperlink{namespacerocr_1_1Addr}{rocr\+::\+Addr}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \mbox{\hyperlink{addrlib_8h_a3501419e19a1e0a5e39050636eaa714f}{CIASICIDGFXENGINE\+\_\+\+R600}}~0x00000006
+\item 
+\#define \mbox{\hyperlink{addrlib_8h_ae1fc3d03906e722527e29b1501f18f60}{CIASICIDGFXENGINE\+\_\+\+R800}}~0x00000008
+\item 
+\#define \mbox{\hyperlink{addrlib_8h_af15e7c37b1e3b03993610dc3c74579e5}{CIASICIDGFXENGINE\+\_\+\+SOUTHERNISLAND}}~0x0000000A
+\item 
+\#define \mbox{\hyperlink{addrlib_8h_af4ab7a2edf51f4f20a4797efe7a869b9}{CIASICIDGFXENGINE\+\_\+\+ARCTICISLAND}}~0x0000000D
+\end{DoxyCompactItemize}
+\doxysubsection*{Enumerations}
+\begin{DoxyCompactItemize}
+\item 
+enum \mbox{\hyperlink{namespacerocr_1_1Addr_ad4480aec2572dd57f56f34f91571c74a}{rocr\+::\+Addr\+::\+Pipe\+Interleave}} \{ \mbox{\hyperlink{namespacerocr_1_1Addr_ad4480aec2572dd57f56f34f91571c74aa184a3cc3d9343f115b3838a53e1cbfd7}{rocr\+::\+Addr\+::\+ADDR\+\_\+\+PIPEINTERLEAVE\+\_\+256B}} = 256
+, \mbox{\hyperlink{namespacerocr_1_1Addr_ad4480aec2572dd57f56f34f91571c74aaca656a43abbccc3bd0dbc02f1bad4fce}{rocr\+::\+Addr\+::\+ADDR\+\_\+\+PIPEINTERLEAVE\+\_\+512B}} = 512
+, \mbox{\hyperlink{namespacerocr_1_1Addr_ad4480aec2572dd57f56f34f91571c74aa2ec91f1be9528fffcb018d9ed80292e3}{rocr\+::\+Addr\+::\+ADDR\+\_\+\+PIPEINTERLEAVE\+\_\+1\+KB}} = 1024
+, \mbox{\hyperlink{namespacerocr_1_1Addr_ad4480aec2572dd57f56f34f91571c74aadc5f711f89a161c75868985dfa413220}{rocr\+::\+Addr\+::\+ADDR\+\_\+\+PIPEINTERLEAVE\+\_\+2\+KB}} = 2048
+ \}
+\begin{DoxyCompactList}\small\item\em Neutral enums that define pipeinterleave. \end{DoxyCompactList}\item 
+enum \mbox{\hyperlink{namespacerocr_1_1Addr_adfce313f4524500d0a9fd0db4a50e555}{rocr\+::\+Addr\+::\+Row\+Size}} \{ \mbox{\hyperlink{namespacerocr_1_1Addr_adfce313f4524500d0a9fd0db4a50e555a7b36490995e736f0fa1abca0e3d216e1}{rocr\+::\+Addr\+::\+ADDR\+\_\+\+ROWSIZE\+\_\+1\+KB}} = 1024
+, \mbox{\hyperlink{namespacerocr_1_1Addr_adfce313f4524500d0a9fd0db4a50e555ae471ea7a747b0a1d5ab8f1e3cf22084d}{rocr\+::\+Addr\+::\+ADDR\+\_\+\+ROWSIZE\+\_\+2\+KB}} = 2048
+, \mbox{\hyperlink{namespacerocr_1_1Addr_adfce313f4524500d0a9fd0db4a50e555a2619aafef2142cac95e24ff8410e2e66}{rocr\+::\+Addr\+::\+ADDR\+\_\+\+ROWSIZE\+\_\+4\+KB}} = 4096
+, \mbox{\hyperlink{namespacerocr_1_1Addr_adfce313f4524500d0a9fd0db4a50e555a2238333ec381c9846f0b2535f8526202}{rocr\+::\+Addr\+::\+ADDR\+\_\+\+ROWSIZE\+\_\+8\+KB}} = 8192
+ \}
+\begin{DoxyCompactList}\small\item\em Neutral enums that define DRAM row size. \end{DoxyCompactList}\item 
+enum \mbox{\hyperlink{namespacerocr_1_1Addr_a1929212eecda2740cdf72974c035aa10}{rocr\+::\+Addr\+::\+Bank\+Interleave}} \{ \mbox{\hyperlink{namespacerocr_1_1Addr_a1929212eecda2740cdf72974c035aa10a5acc729cf364a2ae43a692dc47799746}{rocr\+::\+Addr\+::\+ADDR\+\_\+\+BANKINTERLEAVE\+\_\+1}} = 1
+, \mbox{\hyperlink{namespacerocr_1_1Addr_a1929212eecda2740cdf72974c035aa10a5f16c873244df1db22bf96ebcf3294a4}{rocr\+::\+Addr\+::\+ADDR\+\_\+\+BANKINTERLEAVE\+\_\+2}} = 2
+, \mbox{\hyperlink{namespacerocr_1_1Addr_a1929212eecda2740cdf72974c035aa10ae0f0fed467c598785cafe0fc278151f3}{rocr\+::\+Addr\+::\+ADDR\+\_\+\+BANKINTERLEAVE\+\_\+4}} = 4
+, \mbox{\hyperlink{namespacerocr_1_1Addr_a1929212eecda2740cdf72974c035aa10a31565c03b12c92a5ceb435f03363c325}{rocr\+::\+Addr\+::\+ADDR\+\_\+\+BANKINTERLEAVE\+\_\+8}} = 8
+ \}
+\begin{DoxyCompactList}\small\item\em Neutral enums that define bank interleave. \end{DoxyCompactList}\item 
+enum \mbox{\hyperlink{namespacerocr_1_1Addr_ae92e45c5549bbc87023a4ea976b607c9}{rocr\+::\+Addr\+::\+Shader\+Engine\+Tile\+Size}} \{ \mbox{\hyperlink{namespacerocr_1_1Addr_ae92e45c5549bbc87023a4ea976b607c9af447302115272b476a61f829a04d346d}{rocr\+::\+Addr\+::\+ADDR\+\_\+\+SE\+\_\+\+TILESIZE\+\_\+16}} = 16
+, \mbox{\hyperlink{namespacerocr_1_1Addr_ae92e45c5549bbc87023a4ea976b607c9ab0c639b7814fe80fc13eab2ca6848671}{rocr\+::\+Addr\+::\+ADDR\+\_\+\+SE\+\_\+\+TILESIZE\+\_\+32}} = 32
+ \}
+\begin{DoxyCompactList}\small\item\em Neutral enums that define shader engine tile size. \end{DoxyCompactList}\item 
+enum \mbox{\hyperlink{namespacerocr_1_1Addr_abf27b79b3a48f0155935cadd527bd9d9}{rocr\+::\+Addr\+::\+Bank\+Swap\+Size}} \{ \mbox{\hyperlink{namespacerocr_1_1Addr_abf27b79b3a48f0155935cadd527bd9d9a46254724ca295752bcc526e8ea1227c5}{rocr\+::\+Addr\+::\+ADDR\+\_\+\+BANKSWAP\+\_\+128B}} = 128
+, \mbox{\hyperlink{namespacerocr_1_1Addr_abf27b79b3a48f0155935cadd527bd9d9a3ce7767d8be54773017291839a8e345c}{rocr\+::\+Addr\+::\+ADDR\+\_\+\+BANKSWAP\+\_\+256B}} = 256
+, \mbox{\hyperlink{namespacerocr_1_1Addr_abf27b79b3a48f0155935cadd527bd9d9a5ca6345606112b7cbc3a7a06f1874fc0}{rocr\+::\+Addr\+::\+ADDR\+\_\+\+BANKSWAP\+\_\+512B}} = 512
+, \mbox{\hyperlink{namespacerocr_1_1Addr_abf27b79b3a48f0155935cadd527bd9d9a46736d9a9faac022659e5fc688f7b958}{rocr\+::\+Addr\+::\+ADDR\+\_\+\+BANKSWAP\+\_\+1\+KB}} = 1024
+ \}
+\begin{DoxyCompactList}\small\item\em Neutral enums that define bank swap size. \end{DoxyCompactList}\item 
+enum \mbox{\hyperlink{namespacerocr_1_1Addr_ac60856c92488f70830a646d7e43e39fc}{rocr\+::\+Addr\+::\+Num\+Max\+Compressed\+Fragments\+Config}} \{ \mbox{\hyperlink{namespacerocr_1_1Addr_ac60856c92488f70830a646d7e43e39fca3ea47504b72c4ab3413a697eda708021}{rocr\+::\+Addr\+::\+ADDR\+\_\+\+CONFIG\+\_\+1\+\_\+\+MAX\+\_\+\+COMPRESSED\+\_\+\+FRAGMENTS}} = 0x00000000
+, \mbox{\hyperlink{namespacerocr_1_1Addr_ac60856c92488f70830a646d7e43e39fca95cf6b235902b8e8403c65de92699473}{rocr\+::\+Addr\+::\+ADDR\+\_\+\+CONFIG\+\_\+2\+\_\+\+MAX\+\_\+\+COMPRESSED\+\_\+\+FRAGMENTS}} = 0x00000001
+, \mbox{\hyperlink{namespacerocr_1_1Addr_ac60856c92488f70830a646d7e43e39fcac8321fe539aae5f643ad92f6704b67e4}{rocr\+::\+Addr\+::\+ADDR\+\_\+\+CONFIG\+\_\+4\+\_\+\+MAX\+\_\+\+COMPRESSED\+\_\+\+FRAGMENTS}} = 0x00000002
+, \mbox{\hyperlink{namespacerocr_1_1Addr_ac60856c92488f70830a646d7e43e39fcabfc67e7b5fe3b66dae4ad32a9f2833b6}{rocr\+::\+Addr\+::\+ADDR\+\_\+\+CONFIG\+\_\+8\+\_\+\+MAX\+\_\+\+COMPRESSED\+\_\+\+FRAGMENTS}} = 0x00000003
+ \}
+\begin{DoxyCompactList}\small\item\em Enums that define max compressed fragments config. \end{DoxyCompactList}\item 
+enum \mbox{\hyperlink{namespacerocr_1_1Addr_a8d26f0c323acaf95b3acf9323f1b561d}{rocr\+::\+Addr\+::\+Num\+Pipes\+Config}} \{ \newline
+\mbox{\hyperlink{namespacerocr_1_1Addr_a8d26f0c323acaf95b3acf9323f1b561daa4d3431134e19a5fb4ffbacd3b490202}{rocr\+::\+Addr\+::\+ADDR\+\_\+\+CONFIG\+\_\+1\+\_\+\+PIPE}} = 0x00000000
+, \mbox{\hyperlink{namespacerocr_1_1Addr_a8d26f0c323acaf95b3acf9323f1b561daad49e53a546d8d78fd0c859193e7c319}{rocr\+::\+Addr\+::\+ADDR\+\_\+\+CONFIG\+\_\+2\+\_\+\+PIPE}} = 0x00000001
+, \mbox{\hyperlink{namespacerocr_1_1Addr_a8d26f0c323acaf95b3acf9323f1b561da55b3992e7234acfd443c3a6a369c04a2}{rocr\+::\+Addr\+::\+ADDR\+\_\+\+CONFIG\+\_\+4\+\_\+\+PIPE}} = 0x00000002
+, \mbox{\hyperlink{namespacerocr_1_1Addr_a8d26f0c323acaf95b3acf9323f1b561daa3f0e0748593da225dfcef6841d0a1dd}{rocr\+::\+Addr\+::\+ADDR\+\_\+\+CONFIG\+\_\+8\+\_\+\+PIPE}} = 0x00000003
+, \newline
+\mbox{\hyperlink{namespacerocr_1_1Addr_a8d26f0c323acaf95b3acf9323f1b561da6bb6fcf4d19dba43ba0ea7da304c7e12}{rocr\+::\+Addr\+::\+ADDR\+\_\+\+CONFIG\+\_\+16\+\_\+\+PIPE}} = 0x00000004
+, \mbox{\hyperlink{namespacerocr_1_1Addr_a8d26f0c323acaf95b3acf9323f1b561dafc7b36eea1d8bcdd092814272432204d}{rocr\+::\+Addr\+::\+ADDR\+\_\+\+CONFIG\+\_\+32\+\_\+\+PIPE}} = 0x00000005
+, \mbox{\hyperlink{namespacerocr_1_1Addr_a8d26f0c323acaf95b3acf9323f1b561dac0df0f2f410bcf7dcb214735ca94084e}{rocr\+::\+Addr\+::\+ADDR\+\_\+\+CONFIG\+\_\+64\+\_\+\+PIPE}} = 0x00000006
+ \}
+\begin{DoxyCompactList}\small\item\em Enums that define num pipes config. \end{DoxyCompactList}\item 
+enum \mbox{\hyperlink{namespacerocr_1_1Addr_adcb6b92d5b579ec2cefb56afe259292b}{rocr\+::\+Addr\+::\+Num\+Banks\+Config}} \{ \newline
+\mbox{\hyperlink{namespacerocr_1_1Addr_adcb6b92d5b579ec2cefb56afe259292ba77925ef3948409cf24e14aef957b0e0e}{rocr\+::\+Addr\+::\+ADDR\+\_\+\+CONFIG\+\_\+1\+\_\+\+BANK}} = 0x00000000
+, \mbox{\hyperlink{namespacerocr_1_1Addr_adcb6b92d5b579ec2cefb56afe259292baede79725bc8fab31ae2bc1ed40354866}{rocr\+::\+Addr\+::\+ADDR\+\_\+\+CONFIG\+\_\+2\+\_\+\+BANK}} = 0x00000001
+, \mbox{\hyperlink{namespacerocr_1_1Addr_adcb6b92d5b579ec2cefb56afe259292ba8283a3b4053c130a84476d6151d7c88a}{rocr\+::\+Addr\+::\+ADDR\+\_\+\+CONFIG\+\_\+4\+\_\+\+BANK}} = 0x00000002
+, \mbox{\hyperlink{namespacerocr_1_1Addr_adcb6b92d5b579ec2cefb56afe259292ba8b2ada0cfa7a05f5553f45a4011bc94d}{rocr\+::\+Addr\+::\+ADDR\+\_\+\+CONFIG\+\_\+8\+\_\+\+BANK}} = 0x00000003
+, \newline
+\mbox{\hyperlink{namespacerocr_1_1Addr_adcb6b92d5b579ec2cefb56afe259292bab89cc1c68daca7e1e979b7c03714a282}{rocr\+::\+Addr\+::\+ADDR\+\_\+\+CONFIG\+\_\+16\+\_\+\+BANK}} = 0x00000004
+ \}
+\begin{DoxyCompactList}\small\item\em Enums that define num banks config. \end{DoxyCompactList}\item 
+enum \mbox{\hyperlink{namespacerocr_1_1Addr_a42743f276070681400405bcff023ce04}{rocr\+::\+Addr\+::\+Num\+Rb\+Per\+Shader\+Engine\+Config}} \{ \mbox{\hyperlink{namespacerocr_1_1Addr_a42743f276070681400405bcff023ce04a83712f94f68ffc7cc01800f3795e5ede}{rocr\+::\+Addr\+::\+ADDR\+\_\+\+CONFIG\+\_\+1\+\_\+\+RB\+\_\+\+PER\+\_\+\+SHADER\+\_\+\+ENGINE}} = 0x00000000
+, \mbox{\hyperlink{namespacerocr_1_1Addr_a42743f276070681400405bcff023ce04a45d6fe9434c4e6e60df161d032dbdafe}{rocr\+::\+Addr\+::\+ADDR\+\_\+\+CONFIG\+\_\+2\+\_\+\+RB\+\_\+\+PER\+\_\+\+SHADER\+\_\+\+ENGINE}} = 0x00000001
+, \mbox{\hyperlink{namespacerocr_1_1Addr_a42743f276070681400405bcff023ce04ac0b5ffb6884d12faffd5f0c09329b4dc}{rocr\+::\+Addr\+::\+ADDR\+\_\+\+CONFIG\+\_\+4\+\_\+\+RB\+\_\+\+PER\+\_\+\+SHADER\+\_\+\+ENGINE}} = 0x00000002
+ \}
+\begin{DoxyCompactList}\small\item\em Enums that define num rb per shader engine config. \end{DoxyCompactList}\item 
+enum \mbox{\hyperlink{namespacerocr_1_1Addr_ac83c6fde1f10158a47137ac4b9bbf95b}{rocr\+::\+Addr\+::\+Num\+Shader\+Engines\+Config}} \{ \mbox{\hyperlink{namespacerocr_1_1Addr_ac83c6fde1f10158a47137ac4b9bbf95baace997ac5ffe0827453668d9e9c34cfe}{rocr\+::\+Addr\+::\+ADDR\+\_\+\+CONFIG\+\_\+1\+\_\+\+SHADER\+\_\+\+ENGINE}} = 0x00000000
+, \mbox{\hyperlink{namespacerocr_1_1Addr_ac83c6fde1f10158a47137ac4b9bbf95ba6024134818bc758e59f69e2e96e100c9}{rocr\+::\+Addr\+::\+ADDR\+\_\+\+CONFIG\+\_\+2\+\_\+\+SHADER\+\_\+\+ENGINE}} = 0x00000001
+, \mbox{\hyperlink{namespacerocr_1_1Addr_ac83c6fde1f10158a47137ac4b9bbf95ba22a1f2dee5e1a356874c216426235136}{rocr\+::\+Addr\+::\+ADDR\+\_\+\+CONFIG\+\_\+4\+\_\+\+SHADER\+\_\+\+ENGINE}} = 0x00000002
+, \mbox{\hyperlink{namespacerocr_1_1Addr_ac83c6fde1f10158a47137ac4b9bbf95bac24265adbf90b55bf9af917835b1bc1e}{rocr\+::\+Addr\+::\+ADDR\+\_\+\+CONFIG\+\_\+8\+\_\+\+SHADER\+\_\+\+ENGINE}} = 0x00000003
+ \}
+\begin{DoxyCompactList}\small\item\em Enums that define num shader engines config. \end{DoxyCompactList}\item 
+enum \mbox{\hyperlink{namespacerocr_1_1Addr_a680dc1c96a52a86705f2506f8a229937}{rocr\+::\+Addr\+::\+Pipe\+Interleave\+Size\+Config}} \{ \mbox{\hyperlink{namespacerocr_1_1Addr_a680dc1c96a52a86705f2506f8a229937a1fb80181c77a0ba097bd3c6393b18179}{rocr\+::\+Addr\+::\+ADDR\+\_\+\+CONFIG\+\_\+\+PIPE\+\_\+\+INTERLEAVE\+\_\+256B}} = 0x00000000
+, \mbox{\hyperlink{namespacerocr_1_1Addr_a680dc1c96a52a86705f2506f8a229937ad0726113a9f7a80b6ce4f46654a216ab}{rocr\+::\+Addr\+::\+ADDR\+\_\+\+CONFIG\+\_\+\+PIPE\+\_\+\+INTERLEAVE\+\_\+512B}} = 0x00000001
+, \mbox{\hyperlink{namespacerocr_1_1Addr_a680dc1c96a52a86705f2506f8a229937ac80c8a94950705eb35db34f3efa59eeb}{rocr\+::\+Addr\+::\+ADDR\+\_\+\+CONFIG\+\_\+\+PIPE\+\_\+\+INTERLEAVE\+\_\+1\+KB}} = 0x00000002
+, \mbox{\hyperlink{namespacerocr_1_1Addr_a680dc1c96a52a86705f2506f8a229937af89ce08fab589fbcc0c12b98aabc55af}{rocr\+::\+Addr\+::\+ADDR\+\_\+\+CONFIG\+\_\+\+PIPE\+\_\+\+INTERLEAVE\+\_\+2\+KB}} = 0x00000003
+ \}
+\begin{DoxyCompactList}\small\item\em Enums that define pipe interleave size config. \end{DoxyCompactList}\item 
+enum \mbox{\hyperlink{namespacerocr_1_1Addr_acecdf369ec165e5ffa61ed827c5ed7fb}{rocr\+::\+Addr\+::\+Row\+Size\+Config}} \{ \mbox{\hyperlink{namespacerocr_1_1Addr_acecdf369ec165e5ffa61ed827c5ed7fba2336d2780d1aac85244c9705f41ee72b}{rocr\+::\+Addr\+::\+ADDR\+\_\+\+CONFIG\+\_\+1\+KB\+\_\+\+ROW}} = 0x00000000
+, \mbox{\hyperlink{namespacerocr_1_1Addr_acecdf369ec165e5ffa61ed827c5ed7fbad65f4b854867b5664a323eb2b14d0966}{rocr\+::\+Addr\+::\+ADDR\+\_\+\+CONFIG\+\_\+2\+KB\+\_\+\+ROW}} = 0x00000001
+, \mbox{\hyperlink{namespacerocr_1_1Addr_acecdf369ec165e5ffa61ed827c5ed7fba3bd065391da9a006f7e9977349fd1647}{rocr\+::\+Addr\+::\+ADDR\+\_\+\+CONFIG\+\_\+4\+KB\+\_\+\+ROW}} = 0x00000002
+ \}
+\begin{DoxyCompactList}\small\item\em Enums that define row size config. \end{DoxyCompactList}\item 
+enum \mbox{\hyperlink{namespacerocr_1_1Addr_a4b102935935d20c9f36bbbbfddbe9d22}{rocr\+::\+Addr\+::\+Bank\+Interleave\+Size\+Config}} \{ \mbox{\hyperlink{namespacerocr_1_1Addr_a4b102935935d20c9f36bbbbfddbe9d22a6dddac01dee4414cc50cd914fb9f8d50}{rocr\+::\+Addr\+::\+ADDR\+\_\+\+CONFIG\+\_\+\+BANK\+\_\+\+INTERLEAVE\+\_\+1}} = 0x00000000
+, \mbox{\hyperlink{namespacerocr_1_1Addr_a4b102935935d20c9f36bbbbfddbe9d22a49b87f95ba02e12ba3966a167b20250c}{rocr\+::\+Addr\+::\+ADDR\+\_\+\+CONFIG\+\_\+\+BANK\+\_\+\+INTERLEAVE\+\_\+2}} = 0x00000001
+, \mbox{\hyperlink{namespacerocr_1_1Addr_a4b102935935d20c9f36bbbbfddbe9d22af17aab6cf7ba032bfa64493d5cdfd10c}{rocr\+::\+Addr\+::\+ADDR\+\_\+\+CONFIG\+\_\+\+BANK\+\_\+\+INTERLEAVE\+\_\+4}} = 0x00000002
+, \mbox{\hyperlink{namespacerocr_1_1Addr_a4b102935935d20c9f36bbbbfddbe9d22a81d55df1d698365ddce236e325509bf6}{rocr\+::\+Addr\+::\+ADDR\+\_\+\+CONFIG\+\_\+\+BANK\+\_\+\+INTERLEAVE\+\_\+8}} = 0x00000003
+ \}
+\begin{DoxyCompactList}\small\item\em Enums that define bank interleave size config. \end{DoxyCompactList}\item 
+enum \mbox{\hyperlink{namespacerocr_1_1Addr_a457dd834e5b79ed6374f877872439005}{rocr\+::\+Addr\+::\+Shader\+Engine\+Tile\+Size\+Config}} \{ \mbox{\hyperlink{namespacerocr_1_1Addr_a457dd834e5b79ed6374f877872439005af4bdcf7ecb6ca7401ed1a099f0ebba56}{rocr\+::\+Addr\+::\+ADDR\+\_\+\+CONFIG\+\_\+\+SE\+\_\+\+TILE\+\_\+16}} = 0x00000000
+, \mbox{\hyperlink{namespacerocr_1_1Addr_a457dd834e5b79ed6374f877872439005ae2f646c562660d35e798023f1493e9a8}{rocr\+::\+Addr\+::\+ADDR\+\_\+\+CONFIG\+\_\+\+SE\+\_\+\+TILE\+\_\+32}} = 0x00000001
+ \}
+\begin{DoxyCompactList}\small\item\em Enums that define engine tile size config. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+Lib $\ast$ \mbox{\hyperlink{namespacerocr_1_1Addr_a2eea13cc12281136db7823a10df104fe}{rocr\+::\+Addr\+::\+Si\+Hwl\+Init}} (const Client $\ast$p\+Client)
+\begin{DoxyCompactList}\small\item\em Creates an Si\+Lib object. \end{DoxyCompactList}\item 
+Lib $\ast$ \mbox{\hyperlink{namespacerocr_1_1Addr_a2a97e48ccda595dc514506c65a050685}{rocr\+::\+Addr\+::\+Ci\+Hwl\+Init}} (const Client $\ast$p\+Client)
+\begin{DoxyCompactList}\small\item\em Creates an Ci\+Lib object. \end{DoxyCompactList}\item 
+Lib $\ast$ \mbox{\hyperlink{namespacerocr_1_1Addr_a769add892e97a54dd03946e531f9bc50}{rocr\+::\+Addr\+::\+Gfx9\+Hwl\+Init}} (const Client $\ast$p\+Client)
+\begin{DoxyCompactList}\small\item\em Creates an Gfx9\+Lib object. \end{DoxyCompactList}\item 
+Lib $\ast$ \mbox{\hyperlink{namespacerocr_1_1Addr_a4e7e348c5a8fa900178713ef4c380337}{rocr\+::\+Addr\+::\+Gfx10\+Hwl\+Init}} (const Client $\ast$p\+Client)
+\begin{DoxyCompactList}\small\item\em Creates an Gfx10\+Lib object. \end{DoxyCompactList}\item 
+Lib $\ast$ \mbox{\hyperlink{namespacerocr_1_1Addr_aa177032c08cf7a2413c6bc8b404dfb65}{rocr\+::\+Addr\+::\+Gfx11\+Hwl\+Init}} (const Client $\ast$p\+Client)
+\begin{DoxyCompactList}\small\item\em Creates an Gfx11\+Lib object. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Contains the Addr\+::\+Lib base class definition. 
+
+
+
+\doxysubsection{Macro Definition Documentation}
+\mbox{\Hypertarget{addrlib_8h_af4ab7a2edf51f4f20a4797efe7a869b9}\label{addrlib_8h_af4ab7a2edf51f4f20a4797efe7a869b9}} 
+\index{addrlib.h@{addrlib.h}!CIASICIDGFXENGINE\_ARCTICISLAND@{CIASICIDGFXENGINE\_ARCTICISLAND}}
+\index{CIASICIDGFXENGINE\_ARCTICISLAND@{CIASICIDGFXENGINE\_ARCTICISLAND}!addrlib.h@{addrlib.h}}
+\doxysubsubsection{\texorpdfstring{CIASICIDGFXENGINE\_ARCTICISLAND}{CIASICIDGFXENGINE\_ARCTICISLAND}}
+{\footnotesize\ttfamily \#define CIASICIDGFXENGINE\+\_\+\+ARCTICISLAND~0x0000000D}
+
+\mbox{\Hypertarget{addrlib_8h_a3501419e19a1e0a5e39050636eaa714f}\label{addrlib_8h_a3501419e19a1e0a5e39050636eaa714f}} 
+\index{addrlib.h@{addrlib.h}!CIASICIDGFXENGINE\_R600@{CIASICIDGFXENGINE\_R600}}
+\index{CIASICIDGFXENGINE\_R600@{CIASICIDGFXENGINE\_R600}!addrlib.h@{addrlib.h}}
+\doxysubsubsection{\texorpdfstring{CIASICIDGFXENGINE\_R600}{CIASICIDGFXENGINE\_R600}}
+{\footnotesize\ttfamily \#define CIASICIDGFXENGINE\+\_\+\+R600~0x00000006}
+
+\mbox{\Hypertarget{addrlib_8h_ae1fc3d03906e722527e29b1501f18f60}\label{addrlib_8h_ae1fc3d03906e722527e29b1501f18f60}} 
+\index{addrlib.h@{addrlib.h}!CIASICIDGFXENGINE\_R800@{CIASICIDGFXENGINE\_R800}}
+\index{CIASICIDGFXENGINE\_R800@{CIASICIDGFXENGINE\_R800}!addrlib.h@{addrlib.h}}
+\doxysubsubsection{\texorpdfstring{CIASICIDGFXENGINE\_R800}{CIASICIDGFXENGINE\_R800}}
+{\footnotesize\ttfamily \#define CIASICIDGFXENGINE\+\_\+\+R800~0x00000008}
+
+\mbox{\Hypertarget{addrlib_8h_af15e7c37b1e3b03993610dc3c74579e5}\label{addrlib_8h_af15e7c37b1e3b03993610dc3c74579e5}} 
+\index{addrlib.h@{addrlib.h}!CIASICIDGFXENGINE\_SOUTHERNISLAND@{CIASICIDGFXENGINE\_SOUTHERNISLAND}}
+\index{CIASICIDGFXENGINE\_SOUTHERNISLAND@{CIASICIDGFXENGINE\_SOUTHERNISLAND}!addrlib.h@{addrlib.h}}
+\doxysubsubsection{\texorpdfstring{CIASICIDGFXENGINE\_SOUTHERNISLAND}{CIASICIDGFXENGINE\_SOUTHERNISLAND}}
+{\footnotesize\ttfamily \#define CIASICIDGFXENGINE\+\_\+\+SOUTHERNISLAND~0x0000000A}
+

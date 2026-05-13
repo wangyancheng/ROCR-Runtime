@@ -1,0 +1,250 @@
+\hypertarget{amd__gpu__pm4_8h}{}\doxysection{src/core/inc/amd\+\_\+gpu\+\_\+pm4.h File Reference}
+\label{amd__gpu__pm4_8h}\index{src/core/inc/amd\_gpu\_pm4.h@{src/core/inc/amd\_gpu\_pm4.h}}
+This graph shows which files directly or indirectly include this file\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=316pt]{amd__gpu__pm4_8h__dep__incl}
+\end{center}
+\end{figure}
+\doxysubsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \mbox{\hyperlink{amd__gpu__pm4_8h_a30cd0cee30ac91e912fc503d75d407b4}{PM4\+\_\+\+HDR\+\_\+\+IT\+\_\+\+OPCODE\+\_\+\+NOP}}~0x10
+\item 
+\#define \mbox{\hyperlink{amd__gpu__pm4_8h_a225188248b7522fd5d0a5cadbc386ee5}{PM4\+\_\+\+HDR\+\_\+\+IT\+\_\+\+OPCODE\+\_\+\+INDIRECT\+\_\+\+BUFFER}}~0x3F
+\item 
+\#define \mbox{\hyperlink{amd__gpu__pm4_8h_ae2bca7e00262d7fe1b4d2137a317f1ff}{PM4\+\_\+\+HDR\+\_\+\+IT\+\_\+\+OPCODE\+\_\+\+RELEASE\+\_\+\+MEM}}~0x49
+\item 
+\#define \mbox{\hyperlink{amd__gpu__pm4_8h_a1e7f3039978ee1741f8fa5098e958e82}{PM4\+\_\+\+HDR\+\_\+\+IT\+\_\+\+OPCODE\+\_\+\+ACQUIRE\+\_\+\+MEM}}~0x58
+\item 
+\#define \mbox{\hyperlink{amd__gpu__pm4_8h_ad792dc8e413f18385f3a9455c046b9b1}{PM4\+\_\+\+HDR\+\_\+\+SHADER\+\_\+\+TYPE}}(x)~(((x) \& 0x1) $<$$<$ 1)
+\item 
+\#define \mbox{\hyperlink{amd__gpu__pm4_8h_a16c2855e17dc9729dd792a3fd7938251}{PM4\+\_\+\+HDR\+\_\+\+IT\+\_\+\+OPCODE}}(x)~(((x) \& 0x\+FF) $<$$<$ 8)
+\item 
+\#define \mbox{\hyperlink{amd__gpu__pm4_8h_abfdb1c274c9a109bc9afa069cef46b9e}{PM4\+\_\+\+HDR\+\_\+\+COUNT}}(x)~(((x) \& 0x3\+FFF) $<$$<$ 16)
+\item 
+\#define \mbox{\hyperlink{amd__gpu__pm4_8h_a76c1ad527e188c4247676f1289a5df32}{PM4\+\_\+\+HDR\+\_\+\+TYPE}}(x)~(((x) \& 0x3) $<$$<$ 30)
+\item 
+\#define \mbox{\hyperlink{amd__gpu__pm4_8h_a5ecde2f390814a03546b0c94f0b951de}{PM4\+\_\+\+HDR}}(it\+\_\+opcode,  pkt\+\_\+size\+\_\+dw,  gfxip\+\_\+ver)
+\item 
+\#define \mbox{\hyperlink{amd__gpu__pm4_8h_af724d4da9c477a9c78d681d93e7f686a}{PM4\+\_\+\+INDIRECT\+\_\+\+BUFFER\+\_\+\+DW1\+\_\+\+IB\+\_\+\+BASE\+\_\+\+LO}}(x)~(((x) \& 0x3\+FFFFFFF) $<$$<$ 2)
+\item 
+\#define \mbox{\hyperlink{amd__gpu__pm4_8h_a65db7932e0e9e865f0098d1433b811d1}{PM4\+\_\+\+INDIRECT\+\_\+\+BUFFER\+\_\+\+DW2\+\_\+\+IB\+\_\+\+BASE\+\_\+\+HI}}(x)~(((x) \& 0x\+FFFF) $<$$<$ 0)
+\item 
+\#define \mbox{\hyperlink{amd__gpu__pm4_8h_a79533e9747fbf17d6815fa4315d46fe7}{PM4\+\_\+\+INDIRECT\+\_\+\+BUFFER\+\_\+\+DW3\+\_\+\+IB\+\_\+\+SIZE}}(x)~(((x) \& 0x\+FFFFF) $<$$<$ 0)
+\item 
+\#define \mbox{\hyperlink{amd__gpu__pm4_8h_a2ffe0ddbc6755cd6c220fe87f69289fa}{PM4\+\_\+\+INDIRECT\+\_\+\+BUFFER\+\_\+\+DW3\+\_\+\+IB\+\_\+\+VALID}}(x)~(((x) \& 0x1) $<$$<$ 23)
+\item 
+\#define \mbox{\hyperlink{amd__gpu__pm4_8h_ae684d1b37652f1c85de7b493fc29d8b6}{PM4\+\_\+\+ACQUIRE\+\_\+\+MEM\+\_\+\+DW1\+\_\+\+COHER\+\_\+\+CNTL}}(x)~(((x) \& 0x7\+FFFFFFF) $<$$<$ 0)
+\item 
+\#define \mbox{\hyperlink{amd__gpu__pm4_8h_abf35f72526fe03ed90484a2b0ad0d681}{PM4\+\_\+\+ACQUIRE\+\_\+\+MEM\+\_\+\+COHER\+\_\+\+CNTL\+\_\+\+TC\+\_\+\+WB\+\_\+\+ACTION\+\_\+\+ENA}}~(1 $<$$<$ 18)
+\item 
+\#define \mbox{\hyperlink{amd__gpu__pm4_8h_a2efb721cae2d0316b7455e20ae926a73}{PM4\+\_\+\+ACQUIRE\+\_\+\+MEM\+\_\+\+COHER\+\_\+\+CNTL\+\_\+\+TC\+\_\+\+ACTION\+\_\+\+ENA}}~(1 $<$$<$ 23)
+\item 
+\#define \mbox{\hyperlink{amd__gpu__pm4_8h_a9ab2667b3aa984e08a6bbbd1772afffb}{PM4\+\_\+\+ACQUIRE\+\_\+\+MEM\+\_\+\+COHER\+\_\+\+CNTL\+\_\+\+SH\+\_\+\+KCACHE\+\_\+\+ACTION\+\_\+\+ENA}}~(1 $<$$<$ 27)
+\item 
+\#define \mbox{\hyperlink{amd__gpu__pm4_8h_aa328cbad6d0209dd466be5991499f636}{PM4\+\_\+\+ACQUIRE\+\_\+\+MEM\+\_\+\+COHER\+\_\+\+CNTL\+\_\+\+SH\+\_\+\+ICACHE\+\_\+\+ACTION\+\_\+\+ENA}}~(1 $<$$<$ 29)
+\item 
+\#define \mbox{\hyperlink{amd__gpu__pm4_8h_a2cd1d0111203c826c93be22dd6c9dfb6}{PM4\+\_\+\+ACQUIRE\+\_\+\+MEM\+\_\+\+DW2\+\_\+\+COHER\+\_\+\+SIZE}}(x)~(((x) \& 0x\+FFFFFFFF) $<$$<$ 0)
+\item 
+\#define \mbox{\hyperlink{amd__gpu__pm4_8h_a7d368f5290a118ec81272edd80d226e0}{PM4\+\_\+\+ACQUIRE\+\_\+\+MEM\+\_\+\+DW3\+\_\+\+COHER\+\_\+\+SIZE\+\_\+\+HI}}(x)~(((x) \& 0x\+FF) $<$$<$ 0)
+\item 
+\#define \mbox{\hyperlink{amd__gpu__pm4_8h_aa3f93436a970b8522dc66425168f65d2}{PM4\+\_\+\+ACQUIRE\+\_\+\+MEM\+\_\+\+DW7\+\_\+\+GCR\+\_\+\+CNTL}}(x)~(((x) \& 0x7\+FFFF) $<$$<$ 0)
+\item 
+\#define \mbox{\hyperlink{amd__gpu__pm4_8h_a829cc830e1fc239c6f90ac89e8aeb0db}{PM4\+\_\+\+ACQUIRE\+\_\+\+MEM\+\_\+\+GCR\+\_\+\+CNTL\+\_\+\+GLI\+\_\+\+INV}}(x)~(((x) \& 0x3) $<$$<$ 0)
+\item 
+\#define \mbox{\hyperlink{amd__gpu__pm4_8h_ac5b7f8bc732a5ff4e142bd8fde80ba5e}{PM4\+\_\+\+ACQUIRE\+\_\+\+MEM\+\_\+\+GCR\+\_\+\+CNTL\+\_\+\+GLK\+\_\+\+INV}}~(1 $<$$<$ 7)
+\item 
+\#define \mbox{\hyperlink{amd__gpu__pm4_8h_aa708b08c08d4c3bb33f3dde788cbd312}{PM4\+\_\+\+ACQUIRE\+\_\+\+MEM\+\_\+\+GCR\+\_\+\+CNTL\+\_\+\+GLV\+\_\+\+INV}}~(1 $<$$<$ 8)
+\item 
+\#define \mbox{\hyperlink{amd__gpu__pm4_8h_ada8820330917feef7a9f81ac4037b7c9}{PM4\+\_\+\+ACQUIRE\+\_\+\+MEM\+\_\+\+GCR\+\_\+\+CNTL\+\_\+\+GL1\+\_\+\+INV}}~(1 $<$$<$ 9)
+\item 
+\#define \mbox{\hyperlink{amd__gpu__pm4_8h_ab8785288cb90a58d032dd6f645f857b7}{PM4\+\_\+\+ACQUIRE\+\_\+\+MEM\+\_\+\+GCR\+\_\+\+CNTL\+\_\+\+GL2\+\_\+\+INV}}~(1 $<$$<$ 14)
+\item 
+\#define \mbox{\hyperlink{amd__gpu__pm4_8h_aa0f0f302180f8c8dac17120d5736d326}{PM4\+\_\+\+RELEASE\+\_\+\+MEM\+\_\+\+DW1\+\_\+\+EVENT\+\_\+\+INDEX}}(x)~(((x) \& 0xF) $<$$<$ 8)
+\item 
+\#define \mbox{\hyperlink{amd__gpu__pm4_8h_aa7dd4140b29cb942804b31d8916e5e77}{PM4\+\_\+\+RELEASE\+\_\+\+MEM\+\_\+\+EVENT\+\_\+\+INDEX\+\_\+\+AQL}}~0x7
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Macro Definition Documentation}
+\mbox{\Hypertarget{amd__gpu__pm4_8h_aa328cbad6d0209dd466be5991499f636}\label{amd__gpu__pm4_8h_aa328cbad6d0209dd466be5991499f636}} 
+\index{amd\_gpu\_pm4.h@{amd\_gpu\_pm4.h}!PM4\_ACQUIRE\_MEM\_COHER\_CNTL\_SH\_ICACHE\_ACTION\_ENA@{PM4\_ACQUIRE\_MEM\_COHER\_CNTL\_SH\_ICACHE\_ACTION\_ENA}}
+\index{PM4\_ACQUIRE\_MEM\_COHER\_CNTL\_SH\_ICACHE\_ACTION\_ENA@{PM4\_ACQUIRE\_MEM\_COHER\_CNTL\_SH\_ICACHE\_ACTION\_ENA}!amd\_gpu\_pm4.h@{amd\_gpu\_pm4.h}}
+\doxysubsubsection{\texorpdfstring{PM4\_ACQUIRE\_MEM\_COHER\_CNTL\_SH\_ICACHE\_ACTION\_ENA}{PM4\_ACQUIRE\_MEM\_COHER\_CNTL\_SH\_ICACHE\_ACTION\_ENA}}
+{\footnotesize\ttfamily \#define PM4\+\_\+\+ACQUIRE\+\_\+\+MEM\+\_\+\+COHER\+\_\+\+CNTL\+\_\+\+SH\+\_\+\+ICACHE\+\_\+\+ACTION\+\_\+\+ENA~(1 $<$$<$ 29)}
+
+\mbox{\Hypertarget{amd__gpu__pm4_8h_a9ab2667b3aa984e08a6bbbd1772afffb}\label{amd__gpu__pm4_8h_a9ab2667b3aa984e08a6bbbd1772afffb}} 
+\index{amd\_gpu\_pm4.h@{amd\_gpu\_pm4.h}!PM4\_ACQUIRE\_MEM\_COHER\_CNTL\_SH\_KCACHE\_ACTION\_ENA@{PM4\_ACQUIRE\_MEM\_COHER\_CNTL\_SH\_KCACHE\_ACTION\_ENA}}
+\index{PM4\_ACQUIRE\_MEM\_COHER\_CNTL\_SH\_KCACHE\_ACTION\_ENA@{PM4\_ACQUIRE\_MEM\_COHER\_CNTL\_SH\_KCACHE\_ACTION\_ENA}!amd\_gpu\_pm4.h@{amd\_gpu\_pm4.h}}
+\doxysubsubsection{\texorpdfstring{PM4\_ACQUIRE\_MEM\_COHER\_CNTL\_SH\_KCACHE\_ACTION\_ENA}{PM4\_ACQUIRE\_MEM\_COHER\_CNTL\_SH\_KCACHE\_ACTION\_ENA}}
+{\footnotesize\ttfamily \#define PM4\+\_\+\+ACQUIRE\+\_\+\+MEM\+\_\+\+COHER\+\_\+\+CNTL\+\_\+\+SH\+\_\+\+KCACHE\+\_\+\+ACTION\+\_\+\+ENA~(1 $<$$<$ 27)}
+
+\mbox{\Hypertarget{amd__gpu__pm4_8h_a2efb721cae2d0316b7455e20ae926a73}\label{amd__gpu__pm4_8h_a2efb721cae2d0316b7455e20ae926a73}} 
+\index{amd\_gpu\_pm4.h@{amd\_gpu\_pm4.h}!PM4\_ACQUIRE\_MEM\_COHER\_CNTL\_TC\_ACTION\_ENA@{PM4\_ACQUIRE\_MEM\_COHER\_CNTL\_TC\_ACTION\_ENA}}
+\index{PM4\_ACQUIRE\_MEM\_COHER\_CNTL\_TC\_ACTION\_ENA@{PM4\_ACQUIRE\_MEM\_COHER\_CNTL\_TC\_ACTION\_ENA}!amd\_gpu\_pm4.h@{amd\_gpu\_pm4.h}}
+\doxysubsubsection{\texorpdfstring{PM4\_ACQUIRE\_MEM\_COHER\_CNTL\_TC\_ACTION\_ENA}{PM4\_ACQUIRE\_MEM\_COHER\_CNTL\_TC\_ACTION\_ENA}}
+{\footnotesize\ttfamily \#define PM4\+\_\+\+ACQUIRE\+\_\+\+MEM\+\_\+\+COHER\+\_\+\+CNTL\+\_\+\+TC\+\_\+\+ACTION\+\_\+\+ENA~(1 $<$$<$ 23)}
+
+\mbox{\Hypertarget{amd__gpu__pm4_8h_abf35f72526fe03ed90484a2b0ad0d681}\label{amd__gpu__pm4_8h_abf35f72526fe03ed90484a2b0ad0d681}} 
+\index{amd\_gpu\_pm4.h@{amd\_gpu\_pm4.h}!PM4\_ACQUIRE\_MEM\_COHER\_CNTL\_TC\_WB\_ACTION\_ENA@{PM4\_ACQUIRE\_MEM\_COHER\_CNTL\_TC\_WB\_ACTION\_ENA}}
+\index{PM4\_ACQUIRE\_MEM\_COHER\_CNTL\_TC\_WB\_ACTION\_ENA@{PM4\_ACQUIRE\_MEM\_COHER\_CNTL\_TC\_WB\_ACTION\_ENA}!amd\_gpu\_pm4.h@{amd\_gpu\_pm4.h}}
+\doxysubsubsection{\texorpdfstring{PM4\_ACQUIRE\_MEM\_COHER\_CNTL\_TC\_WB\_ACTION\_ENA}{PM4\_ACQUIRE\_MEM\_COHER\_CNTL\_TC\_WB\_ACTION\_ENA}}
+{\footnotesize\ttfamily \#define PM4\+\_\+\+ACQUIRE\+\_\+\+MEM\+\_\+\+COHER\+\_\+\+CNTL\+\_\+\+TC\+\_\+\+WB\+\_\+\+ACTION\+\_\+\+ENA~(1 $<$$<$ 18)}
+
+\mbox{\Hypertarget{amd__gpu__pm4_8h_ae684d1b37652f1c85de7b493fc29d8b6}\label{amd__gpu__pm4_8h_ae684d1b37652f1c85de7b493fc29d8b6}} 
+\index{amd\_gpu\_pm4.h@{amd\_gpu\_pm4.h}!PM4\_ACQUIRE\_MEM\_DW1\_COHER\_CNTL@{PM4\_ACQUIRE\_MEM\_DW1\_COHER\_CNTL}}
+\index{PM4\_ACQUIRE\_MEM\_DW1\_COHER\_CNTL@{PM4\_ACQUIRE\_MEM\_DW1\_COHER\_CNTL}!amd\_gpu\_pm4.h@{amd\_gpu\_pm4.h}}
+\doxysubsubsection{\texorpdfstring{PM4\_ACQUIRE\_MEM\_DW1\_COHER\_CNTL}{PM4\_ACQUIRE\_MEM\_DW1\_COHER\_CNTL}}
+{\footnotesize\ttfamily \#define PM4\+\_\+\+ACQUIRE\+\_\+\+MEM\+\_\+\+DW1\+\_\+\+COHER\+\_\+\+CNTL(\begin{DoxyParamCaption}\item[{}]{x }\end{DoxyParamCaption})~(((x) \& 0x7\+FFFFFFF) $<$$<$ 0)}
+
+\mbox{\Hypertarget{amd__gpu__pm4_8h_a2cd1d0111203c826c93be22dd6c9dfb6}\label{amd__gpu__pm4_8h_a2cd1d0111203c826c93be22dd6c9dfb6}} 
+\index{amd\_gpu\_pm4.h@{amd\_gpu\_pm4.h}!PM4\_ACQUIRE\_MEM\_DW2\_COHER\_SIZE@{PM4\_ACQUIRE\_MEM\_DW2\_COHER\_SIZE}}
+\index{PM4\_ACQUIRE\_MEM\_DW2\_COHER\_SIZE@{PM4\_ACQUIRE\_MEM\_DW2\_COHER\_SIZE}!amd\_gpu\_pm4.h@{amd\_gpu\_pm4.h}}
+\doxysubsubsection{\texorpdfstring{PM4\_ACQUIRE\_MEM\_DW2\_COHER\_SIZE}{PM4\_ACQUIRE\_MEM\_DW2\_COHER\_SIZE}}
+{\footnotesize\ttfamily \#define PM4\+\_\+\+ACQUIRE\+\_\+\+MEM\+\_\+\+DW2\+\_\+\+COHER\+\_\+\+SIZE(\begin{DoxyParamCaption}\item[{}]{x }\end{DoxyParamCaption})~(((x) \& 0x\+FFFFFFFF) $<$$<$ 0)}
+
+\mbox{\Hypertarget{amd__gpu__pm4_8h_a7d368f5290a118ec81272edd80d226e0}\label{amd__gpu__pm4_8h_a7d368f5290a118ec81272edd80d226e0}} 
+\index{amd\_gpu\_pm4.h@{amd\_gpu\_pm4.h}!PM4\_ACQUIRE\_MEM\_DW3\_COHER\_SIZE\_HI@{PM4\_ACQUIRE\_MEM\_DW3\_COHER\_SIZE\_HI}}
+\index{PM4\_ACQUIRE\_MEM\_DW3\_COHER\_SIZE\_HI@{PM4\_ACQUIRE\_MEM\_DW3\_COHER\_SIZE\_HI}!amd\_gpu\_pm4.h@{amd\_gpu\_pm4.h}}
+\doxysubsubsection{\texorpdfstring{PM4\_ACQUIRE\_MEM\_DW3\_COHER\_SIZE\_HI}{PM4\_ACQUIRE\_MEM\_DW3\_COHER\_SIZE\_HI}}
+{\footnotesize\ttfamily \#define PM4\+\_\+\+ACQUIRE\+\_\+\+MEM\+\_\+\+DW3\+\_\+\+COHER\+\_\+\+SIZE\+\_\+\+HI(\begin{DoxyParamCaption}\item[{}]{x }\end{DoxyParamCaption})~(((x) \& 0x\+FF) $<$$<$ 0)}
+
+\mbox{\Hypertarget{amd__gpu__pm4_8h_aa3f93436a970b8522dc66425168f65d2}\label{amd__gpu__pm4_8h_aa3f93436a970b8522dc66425168f65d2}} 
+\index{amd\_gpu\_pm4.h@{amd\_gpu\_pm4.h}!PM4\_ACQUIRE\_MEM\_DW7\_GCR\_CNTL@{PM4\_ACQUIRE\_MEM\_DW7\_GCR\_CNTL}}
+\index{PM4\_ACQUIRE\_MEM\_DW7\_GCR\_CNTL@{PM4\_ACQUIRE\_MEM\_DW7\_GCR\_CNTL}!amd\_gpu\_pm4.h@{amd\_gpu\_pm4.h}}
+\doxysubsubsection{\texorpdfstring{PM4\_ACQUIRE\_MEM\_DW7\_GCR\_CNTL}{PM4\_ACQUIRE\_MEM\_DW7\_GCR\_CNTL}}
+{\footnotesize\ttfamily \#define PM4\+\_\+\+ACQUIRE\+\_\+\+MEM\+\_\+\+DW7\+\_\+\+GCR\+\_\+\+CNTL(\begin{DoxyParamCaption}\item[{}]{x }\end{DoxyParamCaption})~(((x) \& 0x7\+FFFF) $<$$<$ 0)}
+
+\mbox{\Hypertarget{amd__gpu__pm4_8h_ada8820330917feef7a9f81ac4037b7c9}\label{amd__gpu__pm4_8h_ada8820330917feef7a9f81ac4037b7c9}} 
+\index{amd\_gpu\_pm4.h@{amd\_gpu\_pm4.h}!PM4\_ACQUIRE\_MEM\_GCR\_CNTL\_GL1\_INV@{PM4\_ACQUIRE\_MEM\_GCR\_CNTL\_GL1\_INV}}
+\index{PM4\_ACQUIRE\_MEM\_GCR\_CNTL\_GL1\_INV@{PM4\_ACQUIRE\_MEM\_GCR\_CNTL\_GL1\_INV}!amd\_gpu\_pm4.h@{amd\_gpu\_pm4.h}}
+\doxysubsubsection{\texorpdfstring{PM4\_ACQUIRE\_MEM\_GCR\_CNTL\_GL1\_INV}{PM4\_ACQUIRE\_MEM\_GCR\_CNTL\_GL1\_INV}}
+{\footnotesize\ttfamily \#define PM4\+\_\+\+ACQUIRE\+\_\+\+MEM\+\_\+\+GCR\+\_\+\+CNTL\+\_\+\+GL1\+\_\+\+INV~(1 $<$$<$ 9)}
+
+\mbox{\Hypertarget{amd__gpu__pm4_8h_ab8785288cb90a58d032dd6f645f857b7}\label{amd__gpu__pm4_8h_ab8785288cb90a58d032dd6f645f857b7}} 
+\index{amd\_gpu\_pm4.h@{amd\_gpu\_pm4.h}!PM4\_ACQUIRE\_MEM\_GCR\_CNTL\_GL2\_INV@{PM4\_ACQUIRE\_MEM\_GCR\_CNTL\_GL2\_INV}}
+\index{PM4\_ACQUIRE\_MEM\_GCR\_CNTL\_GL2\_INV@{PM4\_ACQUIRE\_MEM\_GCR\_CNTL\_GL2\_INV}!amd\_gpu\_pm4.h@{amd\_gpu\_pm4.h}}
+\doxysubsubsection{\texorpdfstring{PM4\_ACQUIRE\_MEM\_GCR\_CNTL\_GL2\_INV}{PM4\_ACQUIRE\_MEM\_GCR\_CNTL\_GL2\_INV}}
+{\footnotesize\ttfamily \#define PM4\+\_\+\+ACQUIRE\+\_\+\+MEM\+\_\+\+GCR\+\_\+\+CNTL\+\_\+\+GL2\+\_\+\+INV~(1 $<$$<$ 14)}
+
+\mbox{\Hypertarget{amd__gpu__pm4_8h_a829cc830e1fc239c6f90ac89e8aeb0db}\label{amd__gpu__pm4_8h_a829cc830e1fc239c6f90ac89e8aeb0db}} 
+\index{amd\_gpu\_pm4.h@{amd\_gpu\_pm4.h}!PM4\_ACQUIRE\_MEM\_GCR\_CNTL\_GLI\_INV@{PM4\_ACQUIRE\_MEM\_GCR\_CNTL\_GLI\_INV}}
+\index{PM4\_ACQUIRE\_MEM\_GCR\_CNTL\_GLI\_INV@{PM4\_ACQUIRE\_MEM\_GCR\_CNTL\_GLI\_INV}!amd\_gpu\_pm4.h@{amd\_gpu\_pm4.h}}
+\doxysubsubsection{\texorpdfstring{PM4\_ACQUIRE\_MEM\_GCR\_CNTL\_GLI\_INV}{PM4\_ACQUIRE\_MEM\_GCR\_CNTL\_GLI\_INV}}
+{\footnotesize\ttfamily \#define PM4\+\_\+\+ACQUIRE\+\_\+\+MEM\+\_\+\+GCR\+\_\+\+CNTL\+\_\+\+GLI\+\_\+\+INV(\begin{DoxyParamCaption}\item[{}]{x }\end{DoxyParamCaption})~(((x) \& 0x3) $<$$<$ 0)}
+
+\mbox{\Hypertarget{amd__gpu__pm4_8h_ac5b7f8bc732a5ff4e142bd8fde80ba5e}\label{amd__gpu__pm4_8h_ac5b7f8bc732a5ff4e142bd8fde80ba5e}} 
+\index{amd\_gpu\_pm4.h@{amd\_gpu\_pm4.h}!PM4\_ACQUIRE\_MEM\_GCR\_CNTL\_GLK\_INV@{PM4\_ACQUIRE\_MEM\_GCR\_CNTL\_GLK\_INV}}
+\index{PM4\_ACQUIRE\_MEM\_GCR\_CNTL\_GLK\_INV@{PM4\_ACQUIRE\_MEM\_GCR\_CNTL\_GLK\_INV}!amd\_gpu\_pm4.h@{amd\_gpu\_pm4.h}}
+\doxysubsubsection{\texorpdfstring{PM4\_ACQUIRE\_MEM\_GCR\_CNTL\_GLK\_INV}{PM4\_ACQUIRE\_MEM\_GCR\_CNTL\_GLK\_INV}}
+{\footnotesize\ttfamily \#define PM4\+\_\+\+ACQUIRE\+\_\+\+MEM\+\_\+\+GCR\+\_\+\+CNTL\+\_\+\+GLK\+\_\+\+INV~(1 $<$$<$ 7)}
+
+\mbox{\Hypertarget{amd__gpu__pm4_8h_aa708b08c08d4c3bb33f3dde788cbd312}\label{amd__gpu__pm4_8h_aa708b08c08d4c3bb33f3dde788cbd312}} 
+\index{amd\_gpu\_pm4.h@{amd\_gpu\_pm4.h}!PM4\_ACQUIRE\_MEM\_GCR\_CNTL\_GLV\_INV@{PM4\_ACQUIRE\_MEM\_GCR\_CNTL\_GLV\_INV}}
+\index{PM4\_ACQUIRE\_MEM\_GCR\_CNTL\_GLV\_INV@{PM4\_ACQUIRE\_MEM\_GCR\_CNTL\_GLV\_INV}!amd\_gpu\_pm4.h@{amd\_gpu\_pm4.h}}
+\doxysubsubsection{\texorpdfstring{PM4\_ACQUIRE\_MEM\_GCR\_CNTL\_GLV\_INV}{PM4\_ACQUIRE\_MEM\_GCR\_CNTL\_GLV\_INV}}
+{\footnotesize\ttfamily \#define PM4\+\_\+\+ACQUIRE\+\_\+\+MEM\+\_\+\+GCR\+\_\+\+CNTL\+\_\+\+GLV\+\_\+\+INV~(1 $<$$<$ 8)}
+
+\mbox{\Hypertarget{amd__gpu__pm4_8h_a5ecde2f390814a03546b0c94f0b951de}\label{amd__gpu__pm4_8h_a5ecde2f390814a03546b0c94f0b951de}} 
+\index{amd\_gpu\_pm4.h@{amd\_gpu\_pm4.h}!PM4\_HDR@{PM4\_HDR}}
+\index{PM4\_HDR@{PM4\_HDR}!amd\_gpu\_pm4.h@{amd\_gpu\_pm4.h}}
+\doxysubsubsection{\texorpdfstring{PM4\_HDR}{PM4\_HDR}}
+{\footnotesize\ttfamily \#define PM4\+\_\+\+HDR(\begin{DoxyParamCaption}\item[{}]{it\+\_\+opcode,  }\item[{}]{pkt\+\_\+size\+\_\+dw,  }\item[{}]{gfxip\+\_\+ver }\end{DoxyParamCaption})}
+
+{\bfseries Value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{  (  \(\backslash\)}
+\DoxyCodeLine{  PM4\_HDR\_SHADER\_TYPE((gfxip\_ver) == 7 ? 1 : 0)    |  \(\backslash\)}
+\DoxyCodeLine{  PM4\_HDR\_IT\_OPCODE(it\_opcode)                     |  \(\backslash\)}
+\DoxyCodeLine{  PM4\_HDR\_COUNT(pkt\_size\_dw -\/ 2)                   |  \(\backslash\)}
+\DoxyCodeLine{  PM4\_HDR\_TYPE(3)                                     \(\backslash\)}
+\DoxyCodeLine{)}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{amd__gpu__pm4_8h_abfdb1c274c9a109bc9afa069cef46b9e}\label{amd__gpu__pm4_8h_abfdb1c274c9a109bc9afa069cef46b9e}} 
+\index{amd\_gpu\_pm4.h@{amd\_gpu\_pm4.h}!PM4\_HDR\_COUNT@{PM4\_HDR\_COUNT}}
+\index{PM4\_HDR\_COUNT@{PM4\_HDR\_COUNT}!amd\_gpu\_pm4.h@{amd\_gpu\_pm4.h}}
+\doxysubsubsection{\texorpdfstring{PM4\_HDR\_COUNT}{PM4\_HDR\_COUNT}}
+{\footnotesize\ttfamily \#define PM4\+\_\+\+HDR\+\_\+\+COUNT(\begin{DoxyParamCaption}\item[{}]{x }\end{DoxyParamCaption})~(((x) \& 0x3\+FFF) $<$$<$ 16)}
+
+\mbox{\Hypertarget{amd__gpu__pm4_8h_a16c2855e17dc9729dd792a3fd7938251}\label{amd__gpu__pm4_8h_a16c2855e17dc9729dd792a3fd7938251}} 
+\index{amd\_gpu\_pm4.h@{amd\_gpu\_pm4.h}!PM4\_HDR\_IT\_OPCODE@{PM4\_HDR\_IT\_OPCODE}}
+\index{PM4\_HDR\_IT\_OPCODE@{PM4\_HDR\_IT\_OPCODE}!amd\_gpu\_pm4.h@{amd\_gpu\_pm4.h}}
+\doxysubsubsection{\texorpdfstring{PM4\_HDR\_IT\_OPCODE}{PM4\_HDR\_IT\_OPCODE}}
+{\footnotesize\ttfamily \#define PM4\+\_\+\+HDR\+\_\+\+IT\+\_\+\+OPCODE(\begin{DoxyParamCaption}\item[{}]{x }\end{DoxyParamCaption})~(((x) \& 0x\+FF) $<$$<$ 8)}
+
+\mbox{\Hypertarget{amd__gpu__pm4_8h_a1e7f3039978ee1741f8fa5098e958e82}\label{amd__gpu__pm4_8h_a1e7f3039978ee1741f8fa5098e958e82}} 
+\index{amd\_gpu\_pm4.h@{amd\_gpu\_pm4.h}!PM4\_HDR\_IT\_OPCODE\_ACQUIRE\_MEM@{PM4\_HDR\_IT\_OPCODE\_ACQUIRE\_MEM}}
+\index{PM4\_HDR\_IT\_OPCODE\_ACQUIRE\_MEM@{PM4\_HDR\_IT\_OPCODE\_ACQUIRE\_MEM}!amd\_gpu\_pm4.h@{amd\_gpu\_pm4.h}}
+\doxysubsubsection{\texorpdfstring{PM4\_HDR\_IT\_OPCODE\_ACQUIRE\_MEM}{PM4\_HDR\_IT\_OPCODE\_ACQUIRE\_MEM}}
+{\footnotesize\ttfamily \#define PM4\+\_\+\+HDR\+\_\+\+IT\+\_\+\+OPCODE\+\_\+\+ACQUIRE\+\_\+\+MEM~0x58}
+
+\mbox{\Hypertarget{amd__gpu__pm4_8h_a225188248b7522fd5d0a5cadbc386ee5}\label{amd__gpu__pm4_8h_a225188248b7522fd5d0a5cadbc386ee5}} 
+\index{amd\_gpu\_pm4.h@{amd\_gpu\_pm4.h}!PM4\_HDR\_IT\_OPCODE\_INDIRECT\_BUFFER@{PM4\_HDR\_IT\_OPCODE\_INDIRECT\_BUFFER}}
+\index{PM4\_HDR\_IT\_OPCODE\_INDIRECT\_BUFFER@{PM4\_HDR\_IT\_OPCODE\_INDIRECT\_BUFFER}!amd\_gpu\_pm4.h@{amd\_gpu\_pm4.h}}
+\doxysubsubsection{\texorpdfstring{PM4\_HDR\_IT\_OPCODE\_INDIRECT\_BUFFER}{PM4\_HDR\_IT\_OPCODE\_INDIRECT\_BUFFER}}
+{\footnotesize\ttfamily \#define PM4\+\_\+\+HDR\+\_\+\+IT\+\_\+\+OPCODE\+\_\+\+INDIRECT\+\_\+\+BUFFER~0x3F}
+
+\mbox{\Hypertarget{amd__gpu__pm4_8h_a30cd0cee30ac91e912fc503d75d407b4}\label{amd__gpu__pm4_8h_a30cd0cee30ac91e912fc503d75d407b4}} 
+\index{amd\_gpu\_pm4.h@{amd\_gpu\_pm4.h}!PM4\_HDR\_IT\_OPCODE\_NOP@{PM4\_HDR\_IT\_OPCODE\_NOP}}
+\index{PM4\_HDR\_IT\_OPCODE\_NOP@{PM4\_HDR\_IT\_OPCODE\_NOP}!amd\_gpu\_pm4.h@{amd\_gpu\_pm4.h}}
+\doxysubsubsection{\texorpdfstring{PM4\_HDR\_IT\_OPCODE\_NOP}{PM4\_HDR\_IT\_OPCODE\_NOP}}
+{\footnotesize\ttfamily \#define PM4\+\_\+\+HDR\+\_\+\+IT\+\_\+\+OPCODE\+\_\+\+NOP~0x10}
+
+\mbox{\Hypertarget{amd__gpu__pm4_8h_ae2bca7e00262d7fe1b4d2137a317f1ff}\label{amd__gpu__pm4_8h_ae2bca7e00262d7fe1b4d2137a317f1ff}} 
+\index{amd\_gpu\_pm4.h@{amd\_gpu\_pm4.h}!PM4\_HDR\_IT\_OPCODE\_RELEASE\_MEM@{PM4\_HDR\_IT\_OPCODE\_RELEASE\_MEM}}
+\index{PM4\_HDR\_IT\_OPCODE\_RELEASE\_MEM@{PM4\_HDR\_IT\_OPCODE\_RELEASE\_MEM}!amd\_gpu\_pm4.h@{amd\_gpu\_pm4.h}}
+\doxysubsubsection{\texorpdfstring{PM4\_HDR\_IT\_OPCODE\_RELEASE\_MEM}{PM4\_HDR\_IT\_OPCODE\_RELEASE\_MEM}}
+{\footnotesize\ttfamily \#define PM4\+\_\+\+HDR\+\_\+\+IT\+\_\+\+OPCODE\+\_\+\+RELEASE\+\_\+\+MEM~0x49}
+
+\mbox{\Hypertarget{amd__gpu__pm4_8h_ad792dc8e413f18385f3a9455c046b9b1}\label{amd__gpu__pm4_8h_ad792dc8e413f18385f3a9455c046b9b1}} 
+\index{amd\_gpu\_pm4.h@{amd\_gpu\_pm4.h}!PM4\_HDR\_SHADER\_TYPE@{PM4\_HDR\_SHADER\_TYPE}}
+\index{PM4\_HDR\_SHADER\_TYPE@{PM4\_HDR\_SHADER\_TYPE}!amd\_gpu\_pm4.h@{amd\_gpu\_pm4.h}}
+\doxysubsubsection{\texorpdfstring{PM4\_HDR\_SHADER\_TYPE}{PM4\_HDR\_SHADER\_TYPE}}
+{\footnotesize\ttfamily \#define PM4\+\_\+\+HDR\+\_\+\+SHADER\+\_\+\+TYPE(\begin{DoxyParamCaption}\item[{}]{x }\end{DoxyParamCaption})~(((x) \& 0x1) $<$$<$ 1)}
+
+\mbox{\Hypertarget{amd__gpu__pm4_8h_a76c1ad527e188c4247676f1289a5df32}\label{amd__gpu__pm4_8h_a76c1ad527e188c4247676f1289a5df32}} 
+\index{amd\_gpu\_pm4.h@{amd\_gpu\_pm4.h}!PM4\_HDR\_TYPE@{PM4\_HDR\_TYPE}}
+\index{PM4\_HDR\_TYPE@{PM4\_HDR\_TYPE}!amd\_gpu\_pm4.h@{amd\_gpu\_pm4.h}}
+\doxysubsubsection{\texorpdfstring{PM4\_HDR\_TYPE}{PM4\_HDR\_TYPE}}
+{\footnotesize\ttfamily \#define PM4\+\_\+\+HDR\+\_\+\+TYPE(\begin{DoxyParamCaption}\item[{}]{x }\end{DoxyParamCaption})~(((x) \& 0x3) $<$$<$ 30)}
+
+\mbox{\Hypertarget{amd__gpu__pm4_8h_af724d4da9c477a9c78d681d93e7f686a}\label{amd__gpu__pm4_8h_af724d4da9c477a9c78d681d93e7f686a}} 
+\index{amd\_gpu\_pm4.h@{amd\_gpu\_pm4.h}!PM4\_INDIRECT\_BUFFER\_DW1\_IB\_BASE\_LO@{PM4\_INDIRECT\_BUFFER\_DW1\_IB\_BASE\_LO}}
+\index{PM4\_INDIRECT\_BUFFER\_DW1\_IB\_BASE\_LO@{PM4\_INDIRECT\_BUFFER\_DW1\_IB\_BASE\_LO}!amd\_gpu\_pm4.h@{amd\_gpu\_pm4.h}}
+\doxysubsubsection{\texorpdfstring{PM4\_INDIRECT\_BUFFER\_DW1\_IB\_BASE\_LO}{PM4\_INDIRECT\_BUFFER\_DW1\_IB\_BASE\_LO}}
+{\footnotesize\ttfamily \#define PM4\+\_\+\+INDIRECT\+\_\+\+BUFFER\+\_\+\+DW1\+\_\+\+IB\+\_\+\+BASE\+\_\+\+LO(\begin{DoxyParamCaption}\item[{}]{x }\end{DoxyParamCaption})~(((x) \& 0x3\+FFFFFFF) $<$$<$ 2)}
+
+\mbox{\Hypertarget{amd__gpu__pm4_8h_a65db7932e0e9e865f0098d1433b811d1}\label{amd__gpu__pm4_8h_a65db7932e0e9e865f0098d1433b811d1}} 
+\index{amd\_gpu\_pm4.h@{amd\_gpu\_pm4.h}!PM4\_INDIRECT\_BUFFER\_DW2\_IB\_BASE\_HI@{PM4\_INDIRECT\_BUFFER\_DW2\_IB\_BASE\_HI}}
+\index{PM4\_INDIRECT\_BUFFER\_DW2\_IB\_BASE\_HI@{PM4\_INDIRECT\_BUFFER\_DW2\_IB\_BASE\_HI}!amd\_gpu\_pm4.h@{amd\_gpu\_pm4.h}}
+\doxysubsubsection{\texorpdfstring{PM4\_INDIRECT\_BUFFER\_DW2\_IB\_BASE\_HI}{PM4\_INDIRECT\_BUFFER\_DW2\_IB\_BASE\_HI}}
+{\footnotesize\ttfamily \#define PM4\+\_\+\+INDIRECT\+\_\+\+BUFFER\+\_\+\+DW2\+\_\+\+IB\+\_\+\+BASE\+\_\+\+HI(\begin{DoxyParamCaption}\item[{}]{x }\end{DoxyParamCaption})~(((x) \& 0x\+FFFF) $<$$<$ 0)}
+
+\mbox{\Hypertarget{amd__gpu__pm4_8h_a79533e9747fbf17d6815fa4315d46fe7}\label{amd__gpu__pm4_8h_a79533e9747fbf17d6815fa4315d46fe7}} 
+\index{amd\_gpu\_pm4.h@{amd\_gpu\_pm4.h}!PM4\_INDIRECT\_BUFFER\_DW3\_IB\_SIZE@{PM4\_INDIRECT\_BUFFER\_DW3\_IB\_SIZE}}
+\index{PM4\_INDIRECT\_BUFFER\_DW3\_IB\_SIZE@{PM4\_INDIRECT\_BUFFER\_DW3\_IB\_SIZE}!amd\_gpu\_pm4.h@{amd\_gpu\_pm4.h}}
+\doxysubsubsection{\texorpdfstring{PM4\_INDIRECT\_BUFFER\_DW3\_IB\_SIZE}{PM4\_INDIRECT\_BUFFER\_DW3\_IB\_SIZE}}
+{\footnotesize\ttfamily \#define PM4\+\_\+\+INDIRECT\+\_\+\+BUFFER\+\_\+\+DW3\+\_\+\+IB\+\_\+\+SIZE(\begin{DoxyParamCaption}\item[{}]{x }\end{DoxyParamCaption})~(((x) \& 0x\+FFFFF) $<$$<$ 0)}
+
+\mbox{\Hypertarget{amd__gpu__pm4_8h_a2ffe0ddbc6755cd6c220fe87f69289fa}\label{amd__gpu__pm4_8h_a2ffe0ddbc6755cd6c220fe87f69289fa}} 
+\index{amd\_gpu\_pm4.h@{amd\_gpu\_pm4.h}!PM4\_INDIRECT\_BUFFER\_DW3\_IB\_VALID@{PM4\_INDIRECT\_BUFFER\_DW3\_IB\_VALID}}
+\index{PM4\_INDIRECT\_BUFFER\_DW3\_IB\_VALID@{PM4\_INDIRECT\_BUFFER\_DW3\_IB\_VALID}!amd\_gpu\_pm4.h@{amd\_gpu\_pm4.h}}
+\doxysubsubsection{\texorpdfstring{PM4\_INDIRECT\_BUFFER\_DW3\_IB\_VALID}{PM4\_INDIRECT\_BUFFER\_DW3\_IB\_VALID}}
+{\footnotesize\ttfamily \#define PM4\+\_\+\+INDIRECT\+\_\+\+BUFFER\+\_\+\+DW3\+\_\+\+IB\+\_\+\+VALID(\begin{DoxyParamCaption}\item[{}]{x }\end{DoxyParamCaption})~(((x) \& 0x1) $<$$<$ 23)}
+
+\mbox{\Hypertarget{amd__gpu__pm4_8h_aa0f0f302180f8c8dac17120d5736d326}\label{amd__gpu__pm4_8h_aa0f0f302180f8c8dac17120d5736d326}} 
+\index{amd\_gpu\_pm4.h@{amd\_gpu\_pm4.h}!PM4\_RELEASE\_MEM\_DW1\_EVENT\_INDEX@{PM4\_RELEASE\_MEM\_DW1\_EVENT\_INDEX}}
+\index{PM4\_RELEASE\_MEM\_DW1\_EVENT\_INDEX@{PM4\_RELEASE\_MEM\_DW1\_EVENT\_INDEX}!amd\_gpu\_pm4.h@{amd\_gpu\_pm4.h}}
+\doxysubsubsection{\texorpdfstring{PM4\_RELEASE\_MEM\_DW1\_EVENT\_INDEX}{PM4\_RELEASE\_MEM\_DW1\_EVENT\_INDEX}}
+{\footnotesize\ttfamily \#define PM4\+\_\+\+RELEASE\+\_\+\+MEM\+\_\+\+DW1\+\_\+\+EVENT\+\_\+\+INDEX(\begin{DoxyParamCaption}\item[{}]{x }\end{DoxyParamCaption})~(((x) \& 0xF) $<$$<$ 8)}
+
+\mbox{\Hypertarget{amd__gpu__pm4_8h_aa7dd4140b29cb942804b31d8916e5e77}\label{amd__gpu__pm4_8h_aa7dd4140b29cb942804b31d8916e5e77}} 
+\index{amd\_gpu\_pm4.h@{amd\_gpu\_pm4.h}!PM4\_RELEASE\_MEM\_EVENT\_INDEX\_AQL@{PM4\_RELEASE\_MEM\_EVENT\_INDEX\_AQL}}
+\index{PM4\_RELEASE\_MEM\_EVENT\_INDEX\_AQL@{PM4\_RELEASE\_MEM\_EVENT\_INDEX\_AQL}!amd\_gpu\_pm4.h@{amd\_gpu\_pm4.h}}
+\doxysubsubsection{\texorpdfstring{PM4\_RELEASE\_MEM\_EVENT\_INDEX\_AQL}{PM4\_RELEASE\_MEM\_EVENT\_INDEX\_AQL}}
+{\footnotesize\ttfamily \#define PM4\+\_\+\+RELEASE\+\_\+\+MEM\+\_\+\+EVENT\+\_\+\+INDEX\+\_\+\+AQL~0x7}
+

@@ -1,0 +1,148 @@
+\hypertarget{resource_8h}{}\doxysection{src/image/resource.h File Reference}
+\label{resource_8h}\index{src/image/resource.h@{src/image/resource.h}}
+{\ttfamily \#include $<$stdint.\+h$>$}\newline
+{\ttfamily \#include $<$cstring$>$}\newline
+{\ttfamily \#include \char`\"{}inc/hsa.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}inc/hsa\+\_\+ext\+\_\+image.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}util.\+h\char`\"{}}\newline
+Include dependency graph for resource.\+h\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{resource_8h__incl}
+\end{center}
+\end{figure}
+This graph shows which files directly or indirectly include this file\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{resource_8h__dep__incl}
+\end{center}
+\end{figure}
+\doxysubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{structrocr_1_1image_1_1metadata__amd__s}{rocr\+::image\+::metadata\+\_\+amd\+\_\+s}}
+\item 
+struct \mbox{\hyperlink{structrocr_1_1image_1_1Swizzle}{rocr\+::image\+::\+Swizzle}}
+\begin{DoxyCompactList}\small\item\em Structure to represent image access component. \end{DoxyCompactList}\item 
+struct \mbox{\hyperlink{structrocr_1_1image_1_1ImageProperty}{rocr\+::image\+::\+Image\+Property}}
+\begin{DoxyCompactList}\small\item\em Structure to contain the property of an image with a particular format and geometry. \end{DoxyCompactList}\item 
+struct \mbox{\hyperlink{structrocr_1_1image_1_1Image}{rocr\+::image\+::\+Image}}
+\begin{DoxyCompactList}\small\item\em Structure to represent an \mbox{\hyperlink{namespacerocr_1_1HSA}{HSA}} image object. \end{DoxyCompactList}\item 
+struct \mbox{\hyperlink{structrocr_1_1image_1_1Sampler}{rocr\+::image\+::\+Sampler}}
+\begin{DoxyCompactList}\small\item\em Structure to represent an \mbox{\hyperlink{namespacerocr_1_1HSA}{HSA}} sampler object. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Namespaces}
+\begin{DoxyCompactItemize}
+\item 
+ \mbox{\hyperlink{namespacerocr}{rocr}}
+\item 
+ \mbox{\hyperlink{namespacerocr_1_1image}{rocr\+::image}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \mbox{\hyperlink{resource_8h_aec61695ba4594b82c2e52073942d9946}{HSA\+\_\+\+IMAGE\+\_\+\+OBJECT\+\_\+\+SIZE\+\_\+\+DWORD}}~12
+\item 
+\#define \mbox{\hyperlink{resource_8h_a70c167ce8a090612b7736135fe83cb33}{HSA\+\_\+\+IMAGE\+\_\+\+OBJECT\+\_\+\+ALIGNMENT}}~16
+\item 
+\#define \mbox{\hyperlink{resource_8h_a8d53acad1e3c218d9a8d764f533a24ec}{HSA\+\_\+\+SAMPLER\+\_\+\+OBJECT\+\_\+\+SIZE\+\_\+\+DWORD}}~8
+\item 
+\#define \mbox{\hyperlink{resource_8h_a0a9944680994efaa8b6d63ec720f61c0}{HSA\+\_\+\+SAMPLER\+\_\+\+OBJECT\+\_\+\+ALIGNMENT}}~16
+\item 
+\#define \mbox{\hyperlink{resource_8h_a502e9982290253dc2176212ecbc90d5b}{GEOMETRY\+\_\+\+COUNT}}~8
+\item 
+\#define \mbox{\hyperlink{resource_8h_a03336e833aaf4c96d1b59e9801d38b6a}{ORDER\+\_\+\+COUNT}}~20
+\item 
+\#define \mbox{\hyperlink{resource_8h_a5aa140c2c2e64a57331d450a98077834}{TYPE\+\_\+\+COUNT}}~16
+\item 
+\#define \mbox{\hyperlink{resource_8h_a628642b04c07236ae1e986c248a79ae5}{RO}}~\mbox{\hyperlink{group__ext-images_ggab3d3401883f796b3f2d8dfad14f90568add60b4b84820b05474e9431f85954e93}{HSA\+\_\+\+EXT\+\_\+\+IMAGE\+\_\+\+CAPABILITY\+\_\+\+READ\+\_\+\+ONLY}}
+\item 
+\#define \mbox{\hyperlink{resource_8h_a51bdca228555d0435022c4da61f3dad3}{ROWO}}~  (\mbox{\hyperlink{group__ext-images_ggab3d3401883f796b3f2d8dfad14f90568add60b4b84820b05474e9431f85954e93}{HSA\+\_\+\+EXT\+\_\+\+IMAGE\+\_\+\+CAPABILITY\+\_\+\+READ\+\_\+\+ONLY}} $\vert$ \mbox{\hyperlink{group__ext-images_ggab3d3401883f796b3f2d8dfad14f90568a01a4d914c62d2f7505c002e3d0510d22}{HSA\+\_\+\+EXT\+\_\+\+IMAGE\+\_\+\+CAPABILITY\+\_\+\+WRITE\+\_\+\+ONLY}})
+\item 
+\#define \mbox{\hyperlink{resource_8h_afc4ded33ac0ca43defcce639e965748a}{RW}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+typedef struct \mbox{\hyperlink{structrocr_1_1image_1_1metadata__amd__s}{rocr\+::image\+::metadata\+\_\+amd\+\_\+s}} \mbox{\hyperlink{namespacerocr_1_1image_ac638806459b7dc8cb5ebd2230c81bd60}{rocr\+::image\+::metadata\+\_\+amd\+\_\+t}}
+\item 
+typedef struct \mbox{\hyperlink{structrocr_1_1image_1_1Swizzle}{rocr\+::image\+::\+Swizzle}} \mbox{\hyperlink{namespacerocr_1_1image_a0aa1689a1de36778212affd36d8c93cf}{rocr\+::image\+::\+Swizzle}}
+\begin{DoxyCompactList}\small\item\em Structure to represent image access component. \end{DoxyCompactList}\item 
+typedef struct \mbox{\hyperlink{structrocr_1_1image_1_1ImageProperty}{rocr\+::image\+::\+Image\+Property}} \mbox{\hyperlink{namespacerocr_1_1image_a1104fa9d1872e03156b687c854fa9b78}{rocr\+::image\+::\+Image\+Property}}
+\begin{DoxyCompactList}\small\item\em Structure to contain the property of an image with a particular format and geometry. \end{DoxyCompactList}\item 
+typedef struct \mbox{\hyperlink{structrocr_1_1image_1_1Image}{rocr\+::image\+::\+Image}} \mbox{\hyperlink{namespacerocr_1_1image_a4d73841fba3ac5deade959c59c605520}{rocr\+::image\+::\+Image}}
+\begin{DoxyCompactList}\small\item\em Structure to represent an \mbox{\hyperlink{namespacerocr_1_1HSA}{HSA}} image object. \end{DoxyCompactList}\item 
+typedef struct \mbox{\hyperlink{structrocr_1_1image_1_1Sampler}{rocr\+::image\+::\+Sampler}} \mbox{\hyperlink{namespacerocr_1_1image_aeb7a3d2e475c8a2c56b0bcac13b15f3c}{rocr\+::image\+::\+Sampler}}
+\begin{DoxyCompactList}\small\item\em Structure to represent an \mbox{\hyperlink{namespacerocr_1_1HSA}{HSA}} sampler object. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Macro Definition Documentation}
+\mbox{\Hypertarget{resource_8h_a502e9982290253dc2176212ecbc90d5b}\label{resource_8h_a502e9982290253dc2176212ecbc90d5b}} 
+\index{resource.h@{resource.h}!GEOMETRY\_COUNT@{GEOMETRY\_COUNT}}
+\index{GEOMETRY\_COUNT@{GEOMETRY\_COUNT}!resource.h@{resource.h}}
+\doxysubsubsection{\texorpdfstring{GEOMETRY\_COUNT}{GEOMETRY\_COUNT}}
+{\footnotesize\ttfamily \#define GEOMETRY\+\_\+\+COUNT~8}
+
+\mbox{\Hypertarget{resource_8h_a70c167ce8a090612b7736135fe83cb33}\label{resource_8h_a70c167ce8a090612b7736135fe83cb33}} 
+\index{resource.h@{resource.h}!HSA\_IMAGE\_OBJECT\_ALIGNMENT@{HSA\_IMAGE\_OBJECT\_ALIGNMENT}}
+\index{HSA\_IMAGE\_OBJECT\_ALIGNMENT@{HSA\_IMAGE\_OBJECT\_ALIGNMENT}!resource.h@{resource.h}}
+\doxysubsubsection{\texorpdfstring{HSA\_IMAGE\_OBJECT\_ALIGNMENT}{HSA\_IMAGE\_OBJECT\_ALIGNMENT}}
+{\footnotesize\ttfamily \#define HSA\+\_\+\+IMAGE\+\_\+\+OBJECT\+\_\+\+ALIGNMENT~16}
+
+\mbox{\Hypertarget{resource_8h_aec61695ba4594b82c2e52073942d9946}\label{resource_8h_aec61695ba4594b82c2e52073942d9946}} 
+\index{resource.h@{resource.h}!HSA\_IMAGE\_OBJECT\_SIZE\_DWORD@{HSA\_IMAGE\_OBJECT\_SIZE\_DWORD}}
+\index{HSA\_IMAGE\_OBJECT\_SIZE\_DWORD@{HSA\_IMAGE\_OBJECT\_SIZE\_DWORD}!resource.h@{resource.h}}
+\doxysubsubsection{\texorpdfstring{HSA\_IMAGE\_OBJECT\_SIZE\_DWORD}{HSA\_IMAGE\_OBJECT\_SIZE\_DWORD}}
+{\footnotesize\ttfamily \#define HSA\+\_\+\+IMAGE\+\_\+\+OBJECT\+\_\+\+SIZE\+\_\+\+DWORD~12}
+
+\mbox{\Hypertarget{resource_8h_a0a9944680994efaa8b6d63ec720f61c0}\label{resource_8h_a0a9944680994efaa8b6d63ec720f61c0}} 
+\index{resource.h@{resource.h}!HSA\_SAMPLER\_OBJECT\_ALIGNMENT@{HSA\_SAMPLER\_OBJECT\_ALIGNMENT}}
+\index{HSA\_SAMPLER\_OBJECT\_ALIGNMENT@{HSA\_SAMPLER\_OBJECT\_ALIGNMENT}!resource.h@{resource.h}}
+\doxysubsubsection{\texorpdfstring{HSA\_SAMPLER\_OBJECT\_ALIGNMENT}{HSA\_SAMPLER\_OBJECT\_ALIGNMENT}}
+{\footnotesize\ttfamily \#define HSA\+\_\+\+SAMPLER\+\_\+\+OBJECT\+\_\+\+ALIGNMENT~16}
+
+\mbox{\Hypertarget{resource_8h_a8d53acad1e3c218d9a8d764f533a24ec}\label{resource_8h_a8d53acad1e3c218d9a8d764f533a24ec}} 
+\index{resource.h@{resource.h}!HSA\_SAMPLER\_OBJECT\_SIZE\_DWORD@{HSA\_SAMPLER\_OBJECT\_SIZE\_DWORD}}
+\index{HSA\_SAMPLER\_OBJECT\_SIZE\_DWORD@{HSA\_SAMPLER\_OBJECT\_SIZE\_DWORD}!resource.h@{resource.h}}
+\doxysubsubsection{\texorpdfstring{HSA\_SAMPLER\_OBJECT\_SIZE\_DWORD}{HSA\_SAMPLER\_OBJECT\_SIZE\_DWORD}}
+{\footnotesize\ttfamily \#define HSA\+\_\+\+SAMPLER\+\_\+\+OBJECT\+\_\+\+SIZE\+\_\+\+DWORD~8}
+
+\mbox{\Hypertarget{resource_8h_a03336e833aaf4c96d1b59e9801d38b6a}\label{resource_8h_a03336e833aaf4c96d1b59e9801d38b6a}} 
+\index{resource.h@{resource.h}!ORDER\_COUNT@{ORDER\_COUNT}}
+\index{ORDER\_COUNT@{ORDER\_COUNT}!resource.h@{resource.h}}
+\doxysubsubsection{\texorpdfstring{ORDER\_COUNT}{ORDER\_COUNT}}
+{\footnotesize\ttfamily \#define ORDER\+\_\+\+COUNT~20}
+
+\mbox{\Hypertarget{resource_8h_a628642b04c07236ae1e986c248a79ae5}\label{resource_8h_a628642b04c07236ae1e986c248a79ae5}} 
+\index{resource.h@{resource.h}!RO@{RO}}
+\index{RO@{RO}!resource.h@{resource.h}}
+\doxysubsubsection{\texorpdfstring{RO}{RO}}
+{\footnotesize\ttfamily \#define RO~\mbox{\hyperlink{group__ext-images_ggab3d3401883f796b3f2d8dfad14f90568add60b4b84820b05474e9431f85954e93}{HSA\+\_\+\+EXT\+\_\+\+IMAGE\+\_\+\+CAPABILITY\+\_\+\+READ\+\_\+\+ONLY}}}
+
+\mbox{\Hypertarget{resource_8h_a51bdca228555d0435022c4da61f3dad3}\label{resource_8h_a51bdca228555d0435022c4da61f3dad3}} 
+\index{resource.h@{resource.h}!ROWO@{ROWO}}
+\index{ROWO@{ROWO}!resource.h@{resource.h}}
+\doxysubsubsection{\texorpdfstring{ROWO}{ROWO}}
+{\footnotesize\ttfamily \#define ROWO~  (\mbox{\hyperlink{group__ext-images_ggab3d3401883f796b3f2d8dfad14f90568add60b4b84820b05474e9431f85954e93}{HSA\+\_\+\+EXT\+\_\+\+IMAGE\+\_\+\+CAPABILITY\+\_\+\+READ\+\_\+\+ONLY}} $\vert$ \mbox{\hyperlink{group__ext-images_ggab3d3401883f796b3f2d8dfad14f90568a01a4d914c62d2f7505c002e3d0510d22}{HSA\+\_\+\+EXT\+\_\+\+IMAGE\+\_\+\+CAPABILITY\+\_\+\+WRITE\+\_\+\+ONLY}})}
+
+\mbox{\Hypertarget{resource_8h_afc4ded33ac0ca43defcce639e965748a}\label{resource_8h_afc4ded33ac0ca43defcce639e965748a}} 
+\index{resource.h@{resource.h}!RW@{RW}}
+\index{RW@{RW}!resource.h@{resource.h}}
+\doxysubsubsection{\texorpdfstring{RW}{RW}}
+{\footnotesize\ttfamily \#define RW}
+
+{\bfseries Value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{  (\mbox{\hyperlink{group__ext-images_ggab3d3401883f796b3f2d8dfad14f90568add60b4b84820b05474e9431f85954e93}{HSA\_EXT\_IMAGE\_CAPABILITY\_READ\_ONLY}} | \mbox{\hyperlink{group__ext-images_ggab3d3401883f796b3f2d8dfad14f90568a01a4d914c62d2f7505c002e3d0510d22}{HSA\_EXT\_IMAGE\_CAPABILITY\_WRITE\_ONLY}} | \(\backslash\)}
+\DoxyCodeLine{  HSA\_EXT\_IMAGE\_CAPABILITY\_READ\_WRITE)}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{resource_8h_a5aa140c2c2e64a57331d450a98077834}\label{resource_8h_a5aa140c2c2e64a57331d450a98077834}} 
+\index{resource.h@{resource.h}!TYPE\_COUNT@{TYPE\_COUNT}}
+\index{TYPE\_COUNT@{TYPE\_COUNT}!resource.h@{resource.h}}
+\doxysubsubsection{\texorpdfstring{TYPE\_COUNT}{TYPE\_COUNT}}
+{\footnotesize\ttfamily \#define TYPE\+\_\+\+COUNT~16}
+

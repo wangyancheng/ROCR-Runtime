@@ -1,0 +1,73 @@
+\hypertarget{classrocr_1_1amd_1_1elf_1_1SymbolTable}{}\doxysection{rocr\+::amd\+::elf\+::Symbol\+Table Class Reference}
+\label{classrocr_1_1amd_1_1elf_1_1SymbolTable}\index{rocr::amd::elf::SymbolTable@{rocr::amd::elf::SymbolTable}}
+
+
+{\ttfamily \#include $<$amd\+\_\+elf\+\_\+image.\+hpp$>$}
+
+
+
+Inheritance diagram for rocr\+::amd\+::elf\+::Symbol\+Table\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=217pt]{classrocr_1_1amd_1_1elf_1_1SymbolTable__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for rocr\+::amd\+::elf\+::Symbol\+Table\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=217pt]{classrocr_1_1amd_1_1elf_1_1SymbolTable__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+virtual \mbox{\hyperlink{classrocr_1_1amd_1_1elf_1_1Symbol}{Symbol}} $\ast$ \mbox{\hyperlink{classrocr_1_1amd_1_1elf_1_1SymbolTable_a2e94b70799f4cebc55b88fcf098d6922}{add\+Symbol}} (\mbox{\hyperlink{classrocr_1_1amd_1_1elf_1_1Section}{Section}} $\ast$section, const std\+::string \&name, uint64\+\_\+t value, uint64\+\_\+t \mbox{\hyperlink{classrocr_1_1amd_1_1elf_1_1Section_a3cd9dfea07c237bad70a682b642afa6a}{size}}, unsigned char \mbox{\hyperlink{classrocr_1_1amd_1_1elf_1_1Section_a8da41829a622a287e270bdf74d956c6c}{type}}, unsigned char binding, unsigned char other=0)=0
+\item 
+virtual size\+\_\+t \mbox{\hyperlink{classrocr_1_1amd_1_1elf_1_1SymbolTable_a66b5e9d320f7d1aa7243aea63833cc0a}{symbol\+Count}} ()=0
+\item 
+virtual \mbox{\hyperlink{classrocr_1_1amd_1_1elf_1_1Symbol}{Symbol}} $\ast$ \mbox{\hyperlink{classrocr_1_1amd_1_1elf_1_1SymbolTable_ab91e86526a632d0eb6d2042142bfd79b}{symbol}} (size\+\_\+t i)=0
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classrocr_1_1amd_1_1elf_1_1SymbolTable_a2e94b70799f4cebc55b88fcf098d6922}\label{classrocr_1_1amd_1_1elf_1_1SymbolTable_a2e94b70799f4cebc55b88fcf098d6922}} 
+\index{rocr::amd::elf::SymbolTable@{rocr::amd::elf::SymbolTable}!addSymbol@{addSymbol}}
+\index{addSymbol@{addSymbol}!rocr::amd::elf::SymbolTable@{rocr::amd::elf::SymbolTable}}
+\doxysubsubsection{\texorpdfstring{addSymbol()}{addSymbol()}}
+{\footnotesize\ttfamily virtual \mbox{\hyperlink{classrocr_1_1amd_1_1elf_1_1Symbol}{Symbol}}$\ast$ rocr\+::amd\+::elf\+::\+Symbol\+Table\+::add\+Symbol (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classrocr_1_1amd_1_1elf_1_1Section}{Section}} $\ast$}]{section,  }\item[{const std\+::string \&}]{name,  }\item[{uint64\+\_\+t}]{value,  }\item[{uint64\+\_\+t}]{size,  }\item[{unsigned char}]{type,  }\item[{unsigned char}]{binding,  }\item[{unsigned char}]{other = {\ttfamily 0} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Implemented in \mbox{\hyperlink{classrocr_1_1amd_1_1elf_1_1GElfSymbolTable_aee88e1173811f9f295b94337c8f2164d}{rocr\+::amd\+::elf\+::\+GElf\+Symbol\+Table}}.
+
+\mbox{\Hypertarget{classrocr_1_1amd_1_1elf_1_1SymbolTable_ab91e86526a632d0eb6d2042142bfd79b}\label{classrocr_1_1amd_1_1elf_1_1SymbolTable_ab91e86526a632d0eb6d2042142bfd79b}} 
+\index{rocr::amd::elf::SymbolTable@{rocr::amd::elf::SymbolTable}!symbol@{symbol}}
+\index{symbol@{symbol}!rocr::amd::elf::SymbolTable@{rocr::amd::elf::SymbolTable}}
+\doxysubsubsection{\texorpdfstring{symbol()}{symbol()}}
+{\footnotesize\ttfamily virtual \mbox{\hyperlink{classrocr_1_1amd_1_1elf_1_1Symbol}{Symbol}}$\ast$ rocr\+::amd\+::elf\+::\+Symbol\+Table\+::symbol (\begin{DoxyParamCaption}\item[{size\+\_\+t}]{i }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Implemented in \mbox{\hyperlink{classrocr_1_1amd_1_1elf_1_1GElfSymbolTable_a6d1f73d7d0a5685ef8f99c60dcc303c5}{rocr\+::amd\+::elf\+::\+GElf\+Symbol\+Table}}.
+
+\mbox{\Hypertarget{classrocr_1_1amd_1_1elf_1_1SymbolTable_a66b5e9d320f7d1aa7243aea63833cc0a}\label{classrocr_1_1amd_1_1elf_1_1SymbolTable_a66b5e9d320f7d1aa7243aea63833cc0a}} 
+\index{rocr::amd::elf::SymbolTable@{rocr::amd::elf::SymbolTable}!symbolCount@{symbolCount}}
+\index{symbolCount@{symbolCount}!rocr::amd::elf::SymbolTable@{rocr::amd::elf::SymbolTable}}
+\doxysubsubsection{\texorpdfstring{symbolCount()}{symbolCount()}}
+{\footnotesize\ttfamily virtual size\+\_\+t rocr\+::amd\+::elf\+::\+Symbol\+Table\+::symbol\+Count (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Implemented in \mbox{\hyperlink{classrocr_1_1amd_1_1elf_1_1GElfSymbolTable_afccd0f1891e907caca09256e636fa2de}{rocr\+::amd\+::elf\+::\+GElf\+Symbol\+Table}}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+src/core/inc/\mbox{\hyperlink{amd__elf__image_8hpp}{amd\+\_\+elf\+\_\+image.\+hpp}}\end{DoxyCompactItemize}

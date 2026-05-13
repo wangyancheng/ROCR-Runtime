@@ -1,0 +1,337 @@
+\hypertarget{macros_8h}{}\doxysection{src/image/addrlib/util/macros.h File Reference}
+\label{macros_8h}\index{src/image/addrlib/util/macros.h@{src/image/addrlib/util/macros.h}}
+{\ttfamily \#include $<$assert.\+h$>$}\newline
+Include dependency graph for macros.\+h\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=187pt]{macros_8h__incl}
+\end{center}
+\end{figure}
+\doxysubsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \mbox{\hyperlink{macros_8h_a6242a25f9d996f0cc4f4cdb911218b75}{ARRAY\+\_\+\+SIZE}}(x)~(sizeof(x) / sizeof((x)\mbox{[}0\mbox{]}))
+\item 
+\#define \mbox{\hyperlink{macros_8h_a447121dcab4275b7839a56082b7a1ab8}{\+\_\+\+\_\+has\+\_\+builtin}}(x)~0
+\item 
+\#define \mbox{\hyperlink{macros_8h_aba2c383ab3c9a9de1309569d309c389e}{\+\_\+\+\_\+builtin\+\_\+expect}}(x,  y)~(x)
+\item 
+\#define \mbox{\hyperlink{macros_8h_a217a0bd562b98ae8c2ffce44935351e1}{likely}}(x)~(x)
+\item 
+\#define \mbox{\hyperlink{macros_8h_ac6c45889010c1bd68631771b64f18101}{unlikely}}(x)~(x)
+\item 
+\#define \mbox{\hyperlink{macros_8h_acc50ef4ce0524e39710b222ec6b2cbba}{STATIC\+\_\+\+ASSERT}}(COND)
+\item 
+\#define \mbox{\hyperlink{macros_8h_ab7b8df050c171259dea13b400e92522f}{unreachable}}(str)~assert(!str)
+\item 
+\#define \mbox{\hyperlink{macros_8h_a6d2a12963fa078b782fdb6fa4a25e348}{assume}}(expr)~assert(expr)
+\item 
+\#define \mbox{\hyperlink{macros_8h_a1c21ce9a091d34f5cadf367d0b392605}{ATTRIBUTE\+\_\+\+CONST}}
+\item 
+\#define \mbox{\hyperlink{macros_8h_a6a773bfa1b51b07b48f12443aedaa989}{FLATTEN}}
+\item 
+\#define \mbox{\hyperlink{macros_8h_a6b7b10843d715a29cdb2b4b4a6817401}{PRINTFLIKE}}(f,  a)
+\item 
+\#define \mbox{\hyperlink{macros_8h_a7581f7a8822dc43157690ade5c88f8b2}{MALLOCLIKE}}
+\item 
+\#define \mbox{\hyperlink{macros_8h_aa1dec568e79152c892dcf63f445cbd7a}{ALWAYS\+\_\+\+INLINE}}~inline
+\item 
+\#define \mbox{\hyperlink{macros_8h_a36d525cf4d116b2fe4ecc00222b256f1}{PACKED}}
+\item 
+\#define \mbox{\hyperlink{macros_8h_a063d99576e40e396cd73eedc079a2bf1}{ATTRIBUTE\+\_\+\+PURE}}
+\item 
+\#define \mbox{\hyperlink{macros_8h_a6895279823e7157cda6b432d750d53d9}{ATTRIBUTE\+\_\+\+RETURNS\+\_\+\+NONNULL}}
+\item 
+\#define \mbox{\hyperlink{macros_8h_aa1728270d73c5d1598de1fd691762eb1}{NORETURN}}
+\item 
+\#define \mbox{\hyperlink{macros_8h_ad17d551e31d1828c68acf40684849b7e}{PUBLIC}}
+\item 
+\#define \mbox{\hyperlink{macros_8h_abcd0a22ee4346cad5706adb6d2119429}{USED}}
+\item 
+\#define \mbox{\hyperlink{macros_8h_addf5ec070e9499d36b7f2009ce736076}{UNUSED}}
+\item 
+\#define \mbox{\hyperlink{macros_8h_a1bc5ebb9c9afff5c2fdd25d1de926db1}{ASSERTED}}
+\item 
+\#define \mbox{\hyperlink{macros_8h_ab0cf3933150f135c72968579037f7ae8}{MUST\+\_\+\+CHECK}}
+\item 
+\#define \mbox{\hyperlink{macros_8h_a4611a2ff86f137a40238505f0df60c27}{ATTRIBUTE\+\_\+\+NOINLINE}}
+\item 
+\#define \mbox{\hyperlink{macros_8h_a38b23a8a99e865201042cd8e957f3925}{ASSERT\+\_\+\+BITFIELD\+\_\+\+SIZE}}(STRUCT,  FIELD,  MAXVAL)
+\item 
+\#define \mbox{\hyperlink{macros_8h_a9a6d52c4d441a59360ee0b2f43912aa4}{DIV\+\_\+\+ROUND\+\_\+\+UP}}(A,  B)~( ((A) + (B) -\/ 1) / (B) )
+\item 
+\#define \mbox{\hyperlink{macros_8h_aef6b95b4a34b714269c30f831c117896}{CLAMP}}(X,  MIN,  MAX)~( (X)$>$(MIN) ? ((X)$>$(MAX) ? (MAX) \+: (X)) \+: (MIN) )
+\item 
+\#define \mbox{\hyperlink{macros_8h_ae0b9cd0ce090bd69b951aa73e8fa4f7d}{MIN2}}(A,  B)~( (A)$<$(B) ? (A) \+: (B) )
+\item 
+\#define \mbox{\hyperlink{macros_8h_a33297b3679c713b0c4d897cd0fe3b122}{MAX2}}(A,  B)~( (A)$>$(B) ? (A) \+: (B) )
+\item 
+\#define \mbox{\hyperlink{macros_8h_a721b8d5f3abef17f10293f1f7f8c958e}{MIN3}}(A,  B,  C)~((A) $<$ (B) ? \mbox{\hyperlink{macros_8h_ae0b9cd0ce090bd69b951aa73e8fa4f7d}{MIN2}}(A, C) \+: \mbox{\hyperlink{macros_8h_ae0b9cd0ce090bd69b951aa73e8fa4f7d}{MIN2}}(B, C))
+\item 
+\#define \mbox{\hyperlink{macros_8h_a8d577123d2e66d2b7d0bf9af6e172b93}{MAX3}}(A,  B,  C)~((A) $>$ (B) ? \mbox{\hyperlink{macros_8h_a33297b3679c713b0c4d897cd0fe3b122}{MAX2}}(A, C) \+: \mbox{\hyperlink{macros_8h_a33297b3679c713b0c4d897cd0fe3b122}{MAX2}}(B, C))
+\item 
+\#define \mbox{\hyperlink{macros_8h_a0a84bedd0f30102bf01a51d1bb06b3c5}{ALIGN\+\_\+\+POT}}(x,  pot\+\_\+align)~(((x) + (pot\+\_\+align) -\/ 1) \& $\sim$((pot\+\_\+align) -\/ 1))
+\item 
+\#define \mbox{\hyperlink{macros_8h_af836cc16bd704ddafa7be106cd418ec1}{BITFIELD\+\_\+\+BIT}}(b)~(1u $<$$<$ (b))
+\item 
+\#define \mbox{\hyperlink{macros_8h_af338ba0a95e82f87350c4eb7f83d064d}{BITFIELD\+\_\+\+MASK}}(b)~   ((b) == 32 ? ($\sim$0u) \+: \mbox{\hyperlink{macros_8h_af836cc16bd704ddafa7be106cd418ec1}{BITFIELD\+\_\+\+BIT}}((b) \% 32) -\/ 1)
+\item 
+\#define \mbox{\hyperlink{macros_8h_a0ecade5a3b3c74a629327aadc862b9c8}{BITFIELD\+\_\+\+RANGE}}(b,  count)~   (\mbox{\hyperlink{macros_8h_af338ba0a95e82f87350c4eb7f83d064d}{BITFIELD\+\_\+\+MASK}}((b) + (count)) \& $\sim$\mbox{\hyperlink{macros_8h_af338ba0a95e82f87350c4eb7f83d064d}{BITFIELD\+\_\+\+MASK}}(b))
+\item 
+\#define \mbox{\hyperlink{macros_8h_aa3c52543248cf4ffa3caf1e6b7e82a79}{BITFIELD64\+\_\+\+BIT}}(b)~(1ull $<$$<$ (b))
+\item 
+\#define \mbox{\hyperlink{macros_8h_aa896e1f029c7dbec4990f68fbdc2eaf9}{BITFIELD64\+\_\+\+MASK}}(b)~   ((b) == 64 ? ($\sim$0ull) \+: \mbox{\hyperlink{macros_8h_aa3c52543248cf4ffa3caf1e6b7e82a79}{BITFIELD64\+\_\+\+BIT}}(b) -\/ 1)
+\item 
+\#define \mbox{\hyperlink{macros_8h_a703f9cf6c4d1dcc2216f32131d21e8d8}{BITFIELD64\+\_\+\+RANGE}}(b,  count)~   (\mbox{\hyperlink{macros_8h_aa896e1f029c7dbec4990f68fbdc2eaf9}{BITFIELD64\+\_\+\+MASK}}((b) + (count)) \& $\sim$\mbox{\hyperlink{macros_8h_aa896e1f029c7dbec4990f68fbdc2eaf9}{BITFIELD64\+\_\+\+MASK}}(b))
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Macro Definition Documentation}
+\mbox{\Hypertarget{macros_8h_aba2c383ab3c9a9de1309569d309c389e}\label{macros_8h_aba2c383ab3c9a9de1309569d309c389e}} 
+\index{macros.h@{macros.h}!\_\_builtin\_expect@{\_\_builtin\_expect}}
+\index{\_\_builtin\_expect@{\_\_builtin\_expect}!macros.h@{macros.h}}
+\doxysubsubsection{\texorpdfstring{\_\_builtin\_expect}{\_\_builtin\_expect}}
+{\footnotesize\ttfamily \#define \+\_\+\+\_\+builtin\+\_\+expect(\begin{DoxyParamCaption}\item[{}]{x,  }\item[{}]{y }\end{DoxyParamCaption})~(x)}
+
+\+\_\+\+\_\+builtin\+\_\+expect macros \mbox{\Hypertarget{macros_8h_a447121dcab4275b7839a56082b7a1ab8}\label{macros_8h_a447121dcab4275b7839a56082b7a1ab8}} 
+\index{macros.h@{macros.h}!\_\_has\_builtin@{\_\_has\_builtin}}
+\index{\_\_has\_builtin@{\_\_has\_builtin}!macros.h@{macros.h}}
+\doxysubsubsection{\texorpdfstring{\_\_has\_builtin}{\_\_has\_builtin}}
+{\footnotesize\ttfamily \#define \+\_\+\+\_\+has\+\_\+builtin(\begin{DoxyParamCaption}\item[{}]{x }\end{DoxyParamCaption})~0}
+
+\mbox{\Hypertarget{macros_8h_a0a84bedd0f30102bf01a51d1bb06b3c5}\label{macros_8h_a0a84bedd0f30102bf01a51d1bb06b3c5}} 
+\index{macros.h@{macros.h}!ALIGN\_POT@{ALIGN\_POT}}
+\index{ALIGN\_POT@{ALIGN\_POT}!macros.h@{macros.h}}
+\doxysubsubsection{\texorpdfstring{ALIGN\_POT}{ALIGN\_POT}}
+{\footnotesize\ttfamily \#define ALIGN\+\_\+\+POT(\begin{DoxyParamCaption}\item[{}]{x,  }\item[{}]{pot\+\_\+align }\end{DoxyParamCaption})~(((x) + (pot\+\_\+align) -\/ 1) \& $\sim$((pot\+\_\+align) -\/ 1))}
+
+Align a value to a power of two \mbox{\Hypertarget{macros_8h_aa1dec568e79152c892dcf63f445cbd7a}\label{macros_8h_aa1dec568e79152c892dcf63f445cbd7a}} 
+\index{macros.h@{macros.h}!ALWAYS\_INLINE@{ALWAYS\_INLINE}}
+\index{ALWAYS\_INLINE@{ALWAYS\_INLINE}!macros.h@{macros.h}}
+\doxysubsubsection{\texorpdfstring{ALWAYS\_INLINE}{ALWAYS\_INLINE}}
+{\footnotesize\ttfamily \#define ALWAYS\+\_\+\+INLINE~inline}
+
+\mbox{\Hypertarget{macros_8h_a6242a25f9d996f0cc4f4cdb911218b75}\label{macros_8h_a6242a25f9d996f0cc4f4cdb911218b75}} 
+\index{macros.h@{macros.h}!ARRAY\_SIZE@{ARRAY\_SIZE}}
+\index{ARRAY\_SIZE@{ARRAY\_SIZE}!macros.h@{macros.h}}
+\doxysubsubsection{\texorpdfstring{ARRAY\_SIZE}{ARRAY\_SIZE}}
+{\footnotesize\ttfamily \#define ARRAY\+\_\+\+SIZE(\begin{DoxyParamCaption}\item[{}]{x }\end{DoxyParamCaption})~(sizeof(x) / sizeof((x)\mbox{[}0\mbox{]}))}
+
+\mbox{\Hypertarget{macros_8h_a38b23a8a99e865201042cd8e957f3925}\label{macros_8h_a38b23a8a99e865201042cd8e957f3925}} 
+\index{macros.h@{macros.h}!ASSERT\_BITFIELD\_SIZE@{ASSERT\_BITFIELD\_SIZE}}
+\index{ASSERT\_BITFIELD\_SIZE@{ASSERT\_BITFIELD\_SIZE}!macros.h@{macros.h}}
+\doxysubsubsection{\texorpdfstring{ASSERT\_BITFIELD\_SIZE}{ASSERT\_BITFIELD\_SIZE}}
+{\footnotesize\ttfamily \#define ASSERT\+\_\+\+BITFIELD\+\_\+\+SIZE(\begin{DoxyParamCaption}\item[{}]{STRUCT,  }\item[{}]{FIELD,  }\item[{}]{MAXVAL }\end{DoxyParamCaption})}
+
+{\bfseries Value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{   \textcolor{keywordflow}{do} \{ \(\backslash\)}
+\DoxyCodeLine{      ASSERTED STRUCT s; \(\backslash\)}
+\DoxyCodeLine{      s.FIELD = (MAXVAL); \(\backslash\)}
+\DoxyCodeLine{      assert((\textcolor{keywordtype}{int}) s.FIELD == (MAXVAL) \&\& \textcolor{stringliteral}{"{}Insufficient bitfield size!"{}}); \(\backslash\)}
+\DoxyCodeLine{   \} \textcolor{keywordflow}{while} (0)}
+
+\end{DoxyCode}
+Check that STRUCT\+::\+FIELD can hold MAXVAL. We use a lot of bitfields in Mesa/gallium. We have to be sure they\textquotesingle{}re of sufficient size to hold the largest expected value. Note that with MSVC, enums are signed and enum bitfields need one extra high bit (always zero) to ensure the max value is handled correctly. This macro will detect that with MSVC, but not GCC. \mbox{\Hypertarget{macros_8h_a1bc5ebb9c9afff5c2fdd25d1de926db1}\label{macros_8h_a1bc5ebb9c9afff5c2fdd25d1de926db1}} 
+\index{macros.h@{macros.h}!ASSERTED@{ASSERTED}}
+\index{ASSERTED@{ASSERTED}!macros.h@{macros.h}}
+\doxysubsubsection{\texorpdfstring{ASSERTED}{ASSERTED}}
+{\footnotesize\ttfamily \#define ASSERTED}
+
+Use ASSERTED to indicate that an identifier is unused outside of an {\ttfamily assert()}, so that assert-\/free builds don\textquotesingle{}t get \char`\"{}unused variable\char`\"{} warnings. \mbox{\Hypertarget{macros_8h_a6d2a12963fa078b782fdb6fa4a25e348}\label{macros_8h_a6d2a12963fa078b782fdb6fa4a25e348}} 
+\index{macros.h@{macros.h}!assume@{assume}}
+\index{assume@{assume}!macros.h@{macros.h}}
+\doxysubsubsection{\texorpdfstring{assume}{assume}}
+{\footnotesize\ttfamily \#define assume(\begin{DoxyParamCaption}\item[{}]{expr }\end{DoxyParamCaption})~assert(expr)}
+
+Assume macro. Useful for expressing our assumptions to the compiler, typically for purposes of silencing warnings. \mbox{\Hypertarget{macros_8h_a1c21ce9a091d34f5cadf367d0b392605}\label{macros_8h_a1c21ce9a091d34f5cadf367d0b392605}} 
+\index{macros.h@{macros.h}!ATTRIBUTE\_CONST@{ATTRIBUTE\_CONST}}
+\index{ATTRIBUTE\_CONST@{ATTRIBUTE\_CONST}!macros.h@{macros.h}}
+\doxysubsubsection{\texorpdfstring{ATTRIBUTE\_CONST}{ATTRIBUTE\_CONST}}
+{\footnotesize\ttfamily \#define ATTRIBUTE\+\_\+\+CONST}
+
+\mbox{\Hypertarget{macros_8h_a4611a2ff86f137a40238505f0df60c27}\label{macros_8h_a4611a2ff86f137a40238505f0df60c27}} 
+\index{macros.h@{macros.h}!ATTRIBUTE\_NOINLINE@{ATTRIBUTE\_NOINLINE}}
+\index{ATTRIBUTE\_NOINLINE@{ATTRIBUTE\_NOINLINE}!macros.h@{macros.h}}
+\doxysubsubsection{\texorpdfstring{ATTRIBUTE\_NOINLINE}{ATTRIBUTE\_NOINLINE}}
+{\footnotesize\ttfamily \#define ATTRIBUTE\+\_\+\+NOINLINE}
+
+\mbox{\Hypertarget{macros_8h_a063d99576e40e396cd73eedc079a2bf1}\label{macros_8h_a063d99576e40e396cd73eedc079a2bf1}} 
+\index{macros.h@{macros.h}!ATTRIBUTE\_PURE@{ATTRIBUTE\_PURE}}
+\index{ATTRIBUTE\_PURE@{ATTRIBUTE\_PURE}!macros.h@{macros.h}}
+\doxysubsubsection{\texorpdfstring{ATTRIBUTE\_PURE}{ATTRIBUTE\_PURE}}
+{\footnotesize\ttfamily \#define ATTRIBUTE\+\_\+\+PURE}
+
+\mbox{\Hypertarget{macros_8h_a6895279823e7157cda6b432d750d53d9}\label{macros_8h_a6895279823e7157cda6b432d750d53d9}} 
+\index{macros.h@{macros.h}!ATTRIBUTE\_RETURNS\_NONNULL@{ATTRIBUTE\_RETURNS\_NONNULL}}
+\index{ATTRIBUTE\_RETURNS\_NONNULL@{ATTRIBUTE\_RETURNS\_NONNULL}!macros.h@{macros.h}}
+\doxysubsubsection{\texorpdfstring{ATTRIBUTE\_RETURNS\_NONNULL}{ATTRIBUTE\_RETURNS\_NONNULL}}
+{\footnotesize\ttfamily \#define ATTRIBUTE\+\_\+\+RETURNS\+\_\+\+NONNULL}
+
+\mbox{\Hypertarget{macros_8h_aa3c52543248cf4ffa3caf1e6b7e82a79}\label{macros_8h_aa3c52543248cf4ffa3caf1e6b7e82a79}} 
+\index{macros.h@{macros.h}!BITFIELD64\_BIT@{BITFIELD64\_BIT}}
+\index{BITFIELD64\_BIT@{BITFIELD64\_BIT}!macros.h@{macros.h}}
+\doxysubsubsection{\texorpdfstring{BITFIELD64\_BIT}{BITFIELD64\_BIT}}
+{\footnotesize\ttfamily \#define BITFIELD64\+\_\+\+BIT(\begin{DoxyParamCaption}\item[{}]{b }\end{DoxyParamCaption})~(1ull $<$$<$ (b))}
+
+Set a single bit \mbox{\Hypertarget{macros_8h_aa896e1f029c7dbec4990f68fbdc2eaf9}\label{macros_8h_aa896e1f029c7dbec4990f68fbdc2eaf9}} 
+\index{macros.h@{macros.h}!BITFIELD64\_MASK@{BITFIELD64\_MASK}}
+\index{BITFIELD64\_MASK@{BITFIELD64\_MASK}!macros.h@{macros.h}}
+\doxysubsubsection{\texorpdfstring{BITFIELD64\_MASK}{BITFIELD64\_MASK}}
+{\footnotesize\ttfamily \#define BITFIELD64\+\_\+\+MASK(\begin{DoxyParamCaption}\item[{}]{b }\end{DoxyParamCaption})~   ((b) == 64 ? ($\sim$0ull) \+: \mbox{\hyperlink{macros_8h_aa3c52543248cf4ffa3caf1e6b7e82a79}{BITFIELD64\+\_\+\+BIT}}(b) -\/ 1)}
+
+Set all bits up to excluding bit b \mbox{\Hypertarget{macros_8h_a703f9cf6c4d1dcc2216f32131d21e8d8}\label{macros_8h_a703f9cf6c4d1dcc2216f32131d21e8d8}} 
+\index{macros.h@{macros.h}!BITFIELD64\_RANGE@{BITFIELD64\_RANGE}}
+\index{BITFIELD64\_RANGE@{BITFIELD64\_RANGE}!macros.h@{macros.h}}
+\doxysubsubsection{\texorpdfstring{BITFIELD64\_RANGE}{BITFIELD64\_RANGE}}
+{\footnotesize\ttfamily \#define BITFIELD64\+\_\+\+RANGE(\begin{DoxyParamCaption}\item[{}]{b,  }\item[{}]{count }\end{DoxyParamCaption})~   (\mbox{\hyperlink{macros_8h_aa896e1f029c7dbec4990f68fbdc2eaf9}{BITFIELD64\+\_\+\+MASK}}((b) + (count)) \& $\sim$\mbox{\hyperlink{macros_8h_aa896e1f029c7dbec4990f68fbdc2eaf9}{BITFIELD64\+\_\+\+MASK}}(b))}
+
+Set count bits starting from bit b ~\newline
+ \mbox{\Hypertarget{macros_8h_af836cc16bd704ddafa7be106cd418ec1}\label{macros_8h_af836cc16bd704ddafa7be106cd418ec1}} 
+\index{macros.h@{macros.h}!BITFIELD\_BIT@{BITFIELD\_BIT}}
+\index{BITFIELD\_BIT@{BITFIELD\_BIT}!macros.h@{macros.h}}
+\doxysubsubsection{\texorpdfstring{BITFIELD\_BIT}{BITFIELD\_BIT}}
+{\footnotesize\ttfamily \#define BITFIELD\+\_\+\+BIT(\begin{DoxyParamCaption}\item[{}]{b }\end{DoxyParamCaption})~(1u $<$$<$ (b))}
+
+Macro for declaring an explicit conversion operator. Defaults to an implicit conversion if C++11 is not supported. Set a single bit \mbox{\Hypertarget{macros_8h_af338ba0a95e82f87350c4eb7f83d064d}\label{macros_8h_af338ba0a95e82f87350c4eb7f83d064d}} 
+\index{macros.h@{macros.h}!BITFIELD\_MASK@{BITFIELD\_MASK}}
+\index{BITFIELD\_MASK@{BITFIELD\_MASK}!macros.h@{macros.h}}
+\doxysubsubsection{\texorpdfstring{BITFIELD\_MASK}{BITFIELD\_MASK}}
+{\footnotesize\ttfamily \#define BITFIELD\+\_\+\+MASK(\begin{DoxyParamCaption}\item[{}]{b }\end{DoxyParamCaption})~   ((b) == 32 ? ($\sim$0u) \+: \mbox{\hyperlink{macros_8h_af836cc16bd704ddafa7be106cd418ec1}{BITFIELD\+\_\+\+BIT}}((b) \% 32) -\/ 1)}
+
+Set all bits up to excluding bit b \mbox{\Hypertarget{macros_8h_a0ecade5a3b3c74a629327aadc862b9c8}\label{macros_8h_a0ecade5a3b3c74a629327aadc862b9c8}} 
+\index{macros.h@{macros.h}!BITFIELD\_RANGE@{BITFIELD\_RANGE}}
+\index{BITFIELD\_RANGE@{BITFIELD\_RANGE}!macros.h@{macros.h}}
+\doxysubsubsection{\texorpdfstring{BITFIELD\_RANGE}{BITFIELD\_RANGE}}
+{\footnotesize\ttfamily \#define BITFIELD\+\_\+\+RANGE(\begin{DoxyParamCaption}\item[{}]{b,  }\item[{}]{count }\end{DoxyParamCaption})~   (\mbox{\hyperlink{macros_8h_af338ba0a95e82f87350c4eb7f83d064d}{BITFIELD\+\_\+\+MASK}}((b) + (count)) \& $\sim$\mbox{\hyperlink{macros_8h_af338ba0a95e82f87350c4eb7f83d064d}{BITFIELD\+\_\+\+MASK}}(b))}
+
+Set count bits starting from bit b ~\newline
+ \mbox{\Hypertarget{macros_8h_aef6b95b4a34b714269c30f831c117896}\label{macros_8h_aef6b95b4a34b714269c30f831c117896}} 
+\index{macros.h@{macros.h}!CLAMP@{CLAMP}}
+\index{CLAMP@{CLAMP}!macros.h@{macros.h}}
+\doxysubsubsection{\texorpdfstring{CLAMP}{CLAMP}}
+{\footnotesize\ttfamily \#define CLAMP(\begin{DoxyParamCaption}\item[{}]{X,  }\item[{}]{MIN,  }\item[{}]{MAX }\end{DoxyParamCaption})~( (X)$>$(MIN) ? ((X)$>$(MAX) ? (MAX) \+: (X)) \+: (MIN) )}
+
+Clamp X to \mbox{[}MIN,MAX\mbox{]}. Turn NaN into MIN, arbitrarily. \mbox{\Hypertarget{macros_8h_a9a6d52c4d441a59360ee0b2f43912aa4}\label{macros_8h_a9a6d52c4d441a59360ee0b2f43912aa4}} 
+\index{macros.h@{macros.h}!DIV\_ROUND\_UP@{DIV\_ROUND\_UP}}
+\index{DIV\_ROUND\_UP@{DIV\_ROUND\_UP}!macros.h@{macros.h}}
+\doxysubsubsection{\texorpdfstring{DIV\_ROUND\_UP}{DIV\_ROUND\_UP}}
+{\footnotesize\ttfamily \#define DIV\+\_\+\+ROUND\+\_\+\+UP(\begin{DoxyParamCaption}\item[{}]{A,  }\item[{}]{B }\end{DoxyParamCaption})~( ((A) + (B) -\/ 1) / (B) )}
+
+Compute ceiling of integer quotient of A divided by B. \mbox{\Hypertarget{macros_8h_a6a773bfa1b51b07b48f12443aedaa989}\label{macros_8h_a6a773bfa1b51b07b48f12443aedaa989}} 
+\index{macros.h@{macros.h}!FLATTEN@{FLATTEN}}
+\index{FLATTEN@{FLATTEN}!macros.h@{macros.h}}
+\doxysubsubsection{\texorpdfstring{FLATTEN}{FLATTEN}}
+{\footnotesize\ttfamily \#define FLATTEN}
+
+\mbox{\Hypertarget{macros_8h_a217a0bd562b98ae8c2ffce44935351e1}\label{macros_8h_a217a0bd562b98ae8c2ffce44935351e1}} 
+\index{macros.h@{macros.h}!likely@{likely}}
+\index{likely@{likely}!macros.h@{macros.h}}
+\doxysubsubsection{\texorpdfstring{likely}{likely}}
+{\footnotesize\ttfamily \#define likely(\begin{DoxyParamCaption}\item[{}]{x }\end{DoxyParamCaption})~(x)}
+
+\mbox{\Hypertarget{macros_8h_a7581f7a8822dc43157690ade5c88f8b2}\label{macros_8h_a7581f7a8822dc43157690ade5c88f8b2}} 
+\index{macros.h@{macros.h}!MALLOCLIKE@{MALLOCLIKE}}
+\index{MALLOCLIKE@{MALLOCLIKE}!macros.h@{macros.h}}
+\doxysubsubsection{\texorpdfstring{MALLOCLIKE}{MALLOCLIKE}}
+{\footnotesize\ttfamily \#define MALLOCLIKE}
+
+\mbox{\Hypertarget{macros_8h_a33297b3679c713b0c4d897cd0fe3b122}\label{macros_8h_a33297b3679c713b0c4d897cd0fe3b122}} 
+\index{macros.h@{macros.h}!MAX2@{MAX2}}
+\index{MAX2@{MAX2}!macros.h@{macros.h}}
+\doxysubsubsection{\texorpdfstring{MAX2}{MAX2}}
+{\footnotesize\ttfamily \#define MAX2(\begin{DoxyParamCaption}\item[{}]{A,  }\item[{}]{B }\end{DoxyParamCaption})~( (A)$>$(B) ? (A) \+: (B) )}
+
+Maximum of two values\+: \mbox{\Hypertarget{macros_8h_a8d577123d2e66d2b7d0bf9af6e172b93}\label{macros_8h_a8d577123d2e66d2b7d0bf9af6e172b93}} 
+\index{macros.h@{macros.h}!MAX3@{MAX3}}
+\index{MAX3@{MAX3}!macros.h@{macros.h}}
+\doxysubsubsection{\texorpdfstring{MAX3}{MAX3}}
+{\footnotesize\ttfamily \#define MAX3(\begin{DoxyParamCaption}\item[{}]{A,  }\item[{}]{B,  }\item[{}]{C }\end{DoxyParamCaption})~((A) $>$ (B) ? \mbox{\hyperlink{macros_8h_a33297b3679c713b0c4d897cd0fe3b122}{MAX2}}(A, C) \+: \mbox{\hyperlink{macros_8h_a33297b3679c713b0c4d897cd0fe3b122}{MAX2}}(B, C))}
+
+\mbox{\Hypertarget{macros_8h_ae0b9cd0ce090bd69b951aa73e8fa4f7d}\label{macros_8h_ae0b9cd0ce090bd69b951aa73e8fa4f7d}} 
+\index{macros.h@{macros.h}!MIN2@{MIN2}}
+\index{MIN2@{MIN2}!macros.h@{macros.h}}
+\doxysubsubsection{\texorpdfstring{MIN2}{MIN2}}
+{\footnotesize\ttfamily \#define MIN2(\begin{DoxyParamCaption}\item[{}]{A,  }\item[{}]{B }\end{DoxyParamCaption})~( (A)$<$(B) ? (A) \+: (B) )}
+
+Minimum of two values\+: \mbox{\Hypertarget{macros_8h_a721b8d5f3abef17f10293f1f7f8c958e}\label{macros_8h_a721b8d5f3abef17f10293f1f7f8c958e}} 
+\index{macros.h@{macros.h}!MIN3@{MIN3}}
+\index{MIN3@{MIN3}!macros.h@{macros.h}}
+\doxysubsubsection{\texorpdfstring{MIN3}{MIN3}}
+{\footnotesize\ttfamily \#define MIN3(\begin{DoxyParamCaption}\item[{}]{A,  }\item[{}]{B,  }\item[{}]{C }\end{DoxyParamCaption})~((A) $<$ (B) ? \mbox{\hyperlink{macros_8h_ae0b9cd0ce090bd69b951aa73e8fa4f7d}{MIN2}}(A, C) \+: \mbox{\hyperlink{macros_8h_ae0b9cd0ce090bd69b951aa73e8fa4f7d}{MIN2}}(B, C))}
+
+Minimum and maximum of three values\+: \mbox{\Hypertarget{macros_8h_ab0cf3933150f135c72968579037f7ae8}\label{macros_8h_ab0cf3933150f135c72968579037f7ae8}} 
+\index{macros.h@{macros.h}!MUST\_CHECK@{MUST\_CHECK}}
+\index{MUST\_CHECK@{MUST\_CHECK}!macros.h@{macros.h}}
+\doxysubsubsection{\texorpdfstring{MUST\_CHECK}{MUST\_CHECK}}
+{\footnotesize\ttfamily \#define MUST\+\_\+\+CHECK}
+
+\mbox{\Hypertarget{macros_8h_aa1728270d73c5d1598de1fd691762eb1}\label{macros_8h_aa1728270d73c5d1598de1fd691762eb1}} 
+\index{macros.h@{macros.h}!NORETURN@{NORETURN}}
+\index{NORETURN@{NORETURN}!macros.h@{macros.h}}
+\doxysubsubsection{\texorpdfstring{NORETURN}{NORETURN}}
+{\footnotesize\ttfamily \#define NORETURN}
+
+\mbox{\Hypertarget{macros_8h_a36d525cf4d116b2fe4ecc00222b256f1}\label{macros_8h_a36d525cf4d116b2fe4ecc00222b256f1}} 
+\index{macros.h@{macros.h}!PACKED@{PACKED}}
+\index{PACKED@{PACKED}!macros.h@{macros.h}}
+\doxysubsubsection{\texorpdfstring{PACKED}{PACKED}}
+{\footnotesize\ttfamily \#define PACKED}
+
+\mbox{\Hypertarget{macros_8h_a6b7b10843d715a29cdb2b4b4a6817401}\label{macros_8h_a6b7b10843d715a29cdb2b4b4a6817401}} 
+\index{macros.h@{macros.h}!PRINTFLIKE@{PRINTFLIKE}}
+\index{PRINTFLIKE@{PRINTFLIKE}!macros.h@{macros.h}}
+\doxysubsubsection{\texorpdfstring{PRINTFLIKE}{PRINTFLIKE}}
+{\footnotesize\ttfamily \#define PRINTFLIKE(\begin{DoxyParamCaption}\item[{}]{f,  }\item[{}]{a }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{macros_8h_ad17d551e31d1828c68acf40684849b7e}\label{macros_8h_ad17d551e31d1828c68acf40684849b7e}} 
+\index{macros.h@{macros.h}!PUBLIC@{PUBLIC}}
+\index{PUBLIC@{PUBLIC}!macros.h@{macros.h}}
+\doxysubsubsection{\texorpdfstring{PUBLIC}{PUBLIC}}
+{\footnotesize\ttfamily \#define PUBLIC}
+
+PUBLIC/\+USED macros
+
+If we build the library with gcc\textquotesingle{}s -\/fvisibility=hidden flag, we\textquotesingle{}ll use the PUBLIC macro to mark functions that are to be exported.
+
+We also need to define a USED attribute, so the optimizer doesn\textquotesingle{}t inline a static function that we later use in an alias. -\/ ajax \mbox{\Hypertarget{macros_8h_acc50ef4ce0524e39710b222ec6b2cbba}\label{macros_8h_acc50ef4ce0524e39710b222ec6b2cbba}} 
+\index{macros.h@{macros.h}!STATIC\_ASSERT@{STATIC\_ASSERT}}
+\index{STATIC\_ASSERT@{STATIC\_ASSERT}!macros.h@{macros.h}}
+\doxysubsubsection{\texorpdfstring{STATIC\_ASSERT}{STATIC\_ASSERT}}
+{\footnotesize\ttfamily \#define STATIC\+\_\+\+ASSERT(\begin{DoxyParamCaption}\item[{}]{COND }\end{DoxyParamCaption})}
+
+{\bfseries Value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{  \textcolor{keywordflow}{do} \{                                \(\backslash\)}
+\DoxyCodeLine{  static\_assert(COND, \textcolor{stringliteral}{"{}Addrlib legacy static\_assert failure."{}}); \(\backslash\)}
+\DoxyCodeLine{\} \textcolor{keywordflow}{while}(\textcolor{keyword}{false})}
+
+\end{DoxyCode}
+Static (compile-\/time) assertion. \mbox{\Hypertarget{macros_8h_ac6c45889010c1bd68631771b64f18101}\label{macros_8h_ac6c45889010c1bd68631771b64f18101}} 
+\index{macros.h@{macros.h}!unlikely@{unlikely}}
+\index{unlikely@{unlikely}!macros.h@{macros.h}}
+\doxysubsubsection{\texorpdfstring{unlikely}{unlikely}}
+{\footnotesize\ttfamily \#define unlikely(\begin{DoxyParamCaption}\item[{}]{x }\end{DoxyParamCaption})~(x)}
+
+\mbox{\Hypertarget{macros_8h_ab7b8df050c171259dea13b400e92522f}\label{macros_8h_ab7b8df050c171259dea13b400e92522f}} 
+\index{macros.h@{macros.h}!unreachable@{unreachable}}
+\index{unreachable@{unreachable}!macros.h@{macros.h}}
+\doxysubsubsection{\texorpdfstring{unreachable}{unreachable}}
+{\footnotesize\ttfamily \#define unreachable(\begin{DoxyParamCaption}\item[{}]{str }\end{DoxyParamCaption})~assert(!str)}
+
+Unreachable macro. Useful for suppressing \char`\"{}control reaches end of non-\/void function\char`\"{} warnings. \mbox{\Hypertarget{macros_8h_addf5ec070e9499d36b7f2009ce736076}\label{macros_8h_addf5ec070e9499d36b7f2009ce736076}} 
+\index{macros.h@{macros.h}!UNUSED@{UNUSED}}
+\index{UNUSED@{UNUSED}!macros.h@{macros.h}}
+\doxysubsubsection{\texorpdfstring{UNUSED}{UNUSED}}
+{\footnotesize\ttfamily \#define UNUSED}
+
+UNUSED marks variables (or sometimes functions) that have to be defined, but are sometimes (or always) unused beyond that. A common case is for a function parameter to be used in some build configurations but not others. Another case is fallback vfuncs that don\textquotesingle{}t do anything with their params.
+
+Note that this should not be used for identifiers used in {\ttfamily assert()}; see ASSERTED below. \mbox{\Hypertarget{macros_8h_abcd0a22ee4346cad5706adb6d2119429}\label{macros_8h_abcd0a22ee4346cad5706adb6d2119429}} 
+\index{macros.h@{macros.h}!USED@{USED}}
+\index{USED@{USED}!macros.h@{macros.h}}
+\doxysubsubsection{\texorpdfstring{USED}{USED}}
+{\footnotesize\ttfamily \#define USED}
+

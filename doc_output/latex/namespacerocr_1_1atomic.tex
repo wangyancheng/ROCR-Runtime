@@ -1,0 +1,876 @@
+\hypertarget{namespacerocr_1_1atomic}{}\doxysection{rocr\+::atomic Namespace Reference}
+\label{namespacerocr_1_1atomic}\index{rocr::atomic@{rocr::atomic}}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+static constexpr int \mbox{\hyperlink{namespacerocr_1_1atomic_af0043f0bfb54e6714a36b3af92848671}{c11\+To\+Built\+In\+Flags}} (std\+::memory\+\_\+order order)
+\item 
+static \+\_\+\+\_\+forceinline void \mbox{\hyperlink{namespacerocr_1_1atomic_aac775b102f017d9de079ca4f1b9e5c01}{Pre\+Fence}} (std\+::memory\+\_\+order order)
+\item 
+static \+\_\+\+\_\+forceinline void \mbox{\hyperlink{namespacerocr_1_1atomic_a8f80b5e9887be0b33255beff388f59b7}{Post\+Fence}} (std\+::memory\+\_\+order order)
+\item 
+static \+\_\+\+\_\+forceinline void \mbox{\hyperlink{namespacerocr_1_1atomic_aa24d64d8435f6e90e9e07dfa83d2d471}{Fence}} (std\+::memory\+\_\+order order=std\+::memory\+\_\+order\+\_\+seq\+\_\+cst)
+\item 
+{\footnotesize template$<$class T $>$ }\\static \+\_\+\+\_\+forceinline void \mbox{\hyperlink{namespacerocr_1_1atomic_a6707f0e2f53a1a3faf0b6eca174308e9}{Basic\+Check}} (const T $\ast$ptr)
+\item 
+{\footnotesize template$<$class T $>$ }\\static \+\_\+\+\_\+forceinline void \mbox{\hyperlink{namespacerocr_1_1atomic_af93a65c47fda9809b69d00a70af39ed2}{Basic\+Check}} (const volatile T $\ast$ptr)
+\item 
+{\footnotesize template$<$class T $>$ }\\static \+\_\+\+\_\+forceinline T \mbox{\hyperlink{namespacerocr_1_1atomic_a2d4659b703b5221813bad7f957be5b44}{Load}} (const T $\ast$ptr, std\+::memory\+\_\+order order=std\+::memory\+\_\+order\+\_\+relaxed)
+\begin{DoxyCompactList}\small\item\em \+: Load value of type T atomically with specified memory order. \end{DoxyCompactList}\item 
+{\footnotesize template$<$class T $>$ }\\static \+\_\+\+\_\+forceinline T \mbox{\hyperlink{namespacerocr_1_1atomic_a947200ac90a55991c090eba75fe4f57b}{Load}} (const volatile T $\ast$ptr, std\+::memory\+\_\+order order=std\+::memory\+\_\+order\+\_\+relaxed)
+\begin{DoxyCompactList}\small\item\em \+: function overloading, for more info, see previous one. \end{DoxyCompactList}\item 
+{\footnotesize template$<$class T $>$ }\\static \+\_\+\+\_\+forceinline void \mbox{\hyperlink{namespacerocr_1_1atomic_ae9307c0cd1f6370c71ab4c7e3ecd3b9c}{Store}} (T $\ast$ptr, T val, std\+::memory\+\_\+order order=std\+::memory\+\_\+order\+\_\+relaxed)
+\begin{DoxyCompactList}\small\item\em \+: Store value of type T with specified memory order. \end{DoxyCompactList}\item 
+{\footnotesize template$<$class T $>$ }\\static \+\_\+\+\_\+forceinline void \mbox{\hyperlink{namespacerocr_1_1atomic_ae5a7cef107b908af918e272b60ab1a7f}{Store}} (volatile T $\ast$ptr, T val, std\+::memory\+\_\+order order=std\+::memory\+\_\+order\+\_\+relaxed)
+\begin{DoxyCompactList}\small\item\em \+: Function overloading, for more info, see previous one. \end{DoxyCompactList}\item 
+{\footnotesize template$<$class T $>$ }\\static \+\_\+\+\_\+forceinline T \mbox{\hyperlink{namespacerocr_1_1atomic_a5eaf927d1a4e790021e5366d8567f5e9}{Cas}} (T $\ast$ptr, T val, T expected, std\+::memory\+\_\+order order=std\+::memory\+\_\+order\+\_\+relaxed)
+\begin{DoxyCompactList}\small\item\em \+: Compare and swap value atomically with specified memory order. \end{DoxyCompactList}\item 
+{\footnotesize template$<$class T $>$ }\\static \+\_\+\+\_\+forceinline T \mbox{\hyperlink{namespacerocr_1_1atomic_ac5b05892c0c3686f877b419dd4931ad9}{Cas}} (volatile T $\ast$ptr, T val, T expected, std\+::memory\+\_\+order order=std\+::memory\+\_\+order\+\_\+relaxed)
+\begin{DoxyCompactList}\small\item\em \+: Function overloading, for more info, see previous one. \end{DoxyCompactList}\item 
+{\footnotesize template$<$class T $>$ }\\static \+\_\+\+\_\+forceinline T \mbox{\hyperlink{namespacerocr_1_1atomic_ae8dd1fd489f55d8e223d3ffc721ac8b4}{Exchange}} (T $\ast$ptr, T val, std\+::memory\+\_\+order order=std\+::memory\+\_\+order\+\_\+relaxed)
+\begin{DoxyCompactList}\small\item\em \+: Exchange the value atomically with specified memory order. \end{DoxyCompactList}\item 
+{\footnotesize template$<$class T $>$ }\\static \+\_\+\+\_\+forceinline T \mbox{\hyperlink{namespacerocr_1_1atomic_a6d204d1a8aa2fc42bb87ec3c4606db24}{Exchange}} (volatile T $\ast$ptr, T val, std\+::memory\+\_\+order order=std\+::memory\+\_\+order\+\_\+relaxed)
+\begin{DoxyCompactList}\small\item\em \+: Function overloading, for more info, see previous one. \end{DoxyCompactList}\item 
+{\footnotesize template$<$class T $>$ }\\static \+\_\+\+\_\+forceinline T \mbox{\hyperlink{namespacerocr_1_1atomic_a3f3866c4b0e364e1dc2d0aabfc1027e3}{Add}} (T $\ast$ptr, T val, std\+::memory\+\_\+order order=std\+::memory\+\_\+order\+\_\+relaxed)
+\begin{DoxyCompactList}\small\item\em \+: Add value to variable atomically with specified memory order. \end{DoxyCompactList}\item 
+{\footnotesize template$<$class T $>$ }\\static \+\_\+\+\_\+forceinline T \mbox{\hyperlink{namespacerocr_1_1atomic_ab8f9d2cdbc87d74a4e0b53f2d2f75271}{Sub}} (T $\ast$ptr, T val, std\+::memory\+\_\+order order=std\+::memory\+\_\+order\+\_\+relaxed)
+\begin{DoxyCompactList}\small\item\em \+: Subtract value from the variable atomically with specified memory order. \end{DoxyCompactList}\item 
+{\footnotesize template$<$class T $>$ }\\static \+\_\+\+\_\+forceinline T \mbox{\hyperlink{namespacerocr_1_1atomic_aeeacf6bbab974b09d801f4cb003edb59}{And}} (T $\ast$ptr, T val, std\+::memory\+\_\+order order=std\+::memory\+\_\+order\+\_\+relaxed)
+\begin{DoxyCompactList}\small\item\em \+: Bit And operation on variable atomically with specified memory order. \end{DoxyCompactList}\item 
+{\footnotesize template$<$class T $>$ }\\static \+\_\+\+\_\+forceinline T \mbox{\hyperlink{namespacerocr_1_1atomic_a986dd90bf44abc4f229fa5cf889a0d25}{Or}} (T $\ast$ptr, T val, std\+::memory\+\_\+order order=std\+::memory\+\_\+order\+\_\+relaxed)
+\begin{DoxyCompactList}\small\item\em \+: Bit Or operation on variable atomically with specified memory order. \end{DoxyCompactList}\item 
+{\footnotesize template$<$class T $>$ }\\static \+\_\+\+\_\+forceinline T \mbox{\hyperlink{namespacerocr_1_1atomic_a933f7d42d217a4b2427bb8fc804178b1}{Xor}} (T $\ast$ptr, T val, std\+::memory\+\_\+order order=std\+::memory\+\_\+order\+\_\+relaxed)
+\begin{DoxyCompactList}\small\item\em \+: Bit Xor operation on variable atomically with specified memory order. \end{DoxyCompactList}\item 
+{\footnotesize template$<$class T $>$ }\\static \+\_\+\+\_\+forceinline T \mbox{\hyperlink{namespacerocr_1_1atomic_a89b0cca63e81343a7c1c44ef2a6ed54d}{Increment}} (T $\ast$ptr, std\+::memory\+\_\+order order=std\+::memory\+\_\+order\+\_\+relaxed)
+\begin{DoxyCompactList}\small\item\em \+: Increase the value of variable atomically with specified memory order. \end{DoxyCompactList}\item 
+{\footnotesize template$<$class T $>$ }\\static \+\_\+\+\_\+forceinline T \mbox{\hyperlink{namespacerocr_1_1atomic_a784704cf3463dc497f9f39f561dc4534}{Decrement}} (T $\ast$ptr, std\+::memory\+\_\+order order=std\+::memory\+\_\+order\+\_\+relaxed)
+\begin{DoxyCompactList}\small\item\em \+: Decrease the value of the variable atomically with specified memory order. \end{DoxyCompactList}\item 
+{\footnotesize template$<$class T $>$ }\\static \+\_\+\+\_\+forceinline T \mbox{\hyperlink{namespacerocr_1_1atomic_a89c5da228297520f994c3a76765d1991}{Add}} (volatile T $\ast$ptr, T val, std\+::memory\+\_\+order order=std\+::memory\+\_\+order\+\_\+relaxed)
+\begin{DoxyCompactList}\small\item\em \+: Add value to variable atomically with specified memory order. \end{DoxyCompactList}\item 
+{\footnotesize template$<$class T $>$ }\\static \+\_\+\+\_\+forceinline T \mbox{\hyperlink{namespacerocr_1_1atomic_a385ec5c4139ca6459cb9425152c107f6}{Sub}} (volatile T $\ast$ptr, T val, std\+::memory\+\_\+order order=std\+::memory\+\_\+order\+\_\+relaxed)
+\begin{DoxyCompactList}\small\item\em \+: Subtract value from the variable atomically with specified memory order. \end{DoxyCompactList}\item 
+{\footnotesize template$<$class T $>$ }\\static \+\_\+\+\_\+forceinline T \mbox{\hyperlink{namespacerocr_1_1atomic_a5f17d2463623af23d854ee7ccebb0bd9}{And}} (volatile T $\ast$ptr, T val, std\+::memory\+\_\+order order=std\+::memory\+\_\+order\+\_\+relaxed)
+\begin{DoxyCompactList}\small\item\em \+: Bit And operation on variable atomically with specified memory order. \end{DoxyCompactList}\item 
+{\footnotesize template$<$class T $>$ }\\static \+\_\+\+\_\+forceinline T \mbox{\hyperlink{namespacerocr_1_1atomic_a0b4c44c620adc81e13ba4a3e593176b2}{Or}} (volatile T $\ast$ptr, T val, std\+::memory\+\_\+order order=std\+::memory\+\_\+order\+\_\+relaxed)
+\begin{DoxyCompactList}\small\item\em \+: Bit Or operation on variable atomically with specified memory order. \end{DoxyCompactList}\item 
+{\footnotesize template$<$class T $>$ }\\static \+\_\+\+\_\+forceinline T \mbox{\hyperlink{namespacerocr_1_1atomic_ab20aed341180dc9b5630504f4664baee}{Xor}} (volatile T $\ast$ptr, T val, std\+::memory\+\_\+order order=std\+::memory\+\_\+order\+\_\+relaxed)
+\begin{DoxyCompactList}\small\item\em \+: Bit Xor operation on variable atomically with specified memory order. \end{DoxyCompactList}\item 
+{\footnotesize template$<$class T $>$ }\\static \+\_\+\+\_\+forceinline T \mbox{\hyperlink{namespacerocr_1_1atomic_a205faefd647bd73e0aeb50eb729d6b36}{Increment}} (volatile T $\ast$ptr, std\+::memory\+\_\+order order=std\+::memory\+\_\+order\+\_\+relaxed)
+\begin{DoxyCompactList}\small\item\em \+: Increase the value of variable atomically with specified memory order. \end{DoxyCompactList}\item 
+{\footnotesize template$<$class T $>$ }\\static \+\_\+\+\_\+forceinline T \mbox{\hyperlink{namespacerocr_1_1atomic_a896c29b8c549b7253b0fd2ce6b9b84ff}{Decrement}} (volatile T $\ast$ptr, std\+::memory\+\_\+order order=std\+::memory\+\_\+order\+\_\+relaxed)
+\begin{DoxyCompactList}\small\item\em \+: Decrease the value of the variable atomically with specified memory order. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{namespacerocr_1_1atomic_a3f3866c4b0e364e1dc2d0aabfc1027e3}\label{namespacerocr_1_1atomic_a3f3866c4b0e364e1dc2d0aabfc1027e3}} 
+\index{rocr::atomic@{rocr::atomic}!Add@{Add}}
+\index{Add@{Add}!rocr::atomic@{rocr::atomic}}
+\doxysubsubsection{\texorpdfstring{Add()}{Add()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily template$<$class T $>$ \\
+static \+\_\+\+\_\+forceinline T rocr\+::atomic\+::\+Add (\begin{DoxyParamCaption}\item[{T $\ast$}]{ptr,  }\item[{T}]{val,  }\item[{std\+::memory\+\_\+order}]{order = {\ttfamily std\+:\+:memory\+\_\+order\+\_\+relaxed} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+\+: Add value to variable atomically with specified memory order. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em } & ptr(\+Input), a pointer to variable which is operated on. \\
+\hline
+{\em } & val(\+Input), value to be added. \\
+\hline
+{\em } & order(\+Input), memory order which is relaxed by default. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\+: T, the value of the variable prior to the addition. 
+\end{DoxyReturn}
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=330pt]{namespacerocr_1_1atomic_a3f3866c4b0e364e1dc2d0aabfc1027e3_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=550pt]{namespacerocr_1_1atomic_a3f3866c4b0e364e1dc2d0aabfc1027e3_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{namespacerocr_1_1atomic_a89c5da228297520f994c3a76765d1991}\label{namespacerocr_1_1atomic_a89c5da228297520f994c3a76765d1991}} 
+\index{rocr::atomic@{rocr::atomic}!Add@{Add}}
+\index{Add@{Add}!rocr::atomic@{rocr::atomic}}
+\doxysubsubsection{\texorpdfstring{Add()}{Add()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily template$<$class T $>$ \\
+static \+\_\+\+\_\+forceinline T rocr\+::atomic\+::\+Add (\begin{DoxyParamCaption}\item[{volatile T $\ast$}]{ptr,  }\item[{T}]{val,  }\item[{std\+::memory\+\_\+order}]{order = {\ttfamily std\+:\+:memory\+\_\+order\+\_\+relaxed} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+\+: Add value to variable atomically with specified memory order. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em } & ptr(\+Input), a pointer to volatile variable which is operated on. \\
+\hline
+{\em } & val(\+Input), value to be added. \\
+\hline
+{\em } & order(\+Input), memory order which is relaxed by default. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\+: T, the value of the variable prior to the addition. 
+\end{DoxyReturn}
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=330pt]{namespacerocr_1_1atomic_a89c5da228297520f994c3a76765d1991_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{namespacerocr_1_1atomic_aeeacf6bbab974b09d801f4cb003edb59}\label{namespacerocr_1_1atomic_aeeacf6bbab974b09d801f4cb003edb59}} 
+\index{rocr::atomic@{rocr::atomic}!And@{And}}
+\index{And@{And}!rocr::atomic@{rocr::atomic}}
+\doxysubsubsection{\texorpdfstring{And()}{And()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily template$<$class T $>$ \\
+static \+\_\+\+\_\+forceinline T rocr\+::atomic\+::\+And (\begin{DoxyParamCaption}\item[{T $\ast$}]{ptr,  }\item[{T}]{val,  }\item[{std\+::memory\+\_\+order}]{order = {\ttfamily std\+:\+:memory\+\_\+order\+\_\+relaxed} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+\+: Bit And operation on variable atomically with specified memory order. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em } & ptr(\+Input), a pointer to variable which is operated on. \\
+\hline
+{\em } & val(\+Input), value which is ANDed with variable. \\
+\hline
+{\em } & order(\+Input), memory order which is relaxed by default. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\+: T, value of variable prior to the operation. 
+\end{DoxyReturn}
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=330pt]{namespacerocr_1_1atomic_aeeacf6bbab974b09d801f4cb003edb59_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=341pt]{namespacerocr_1_1atomic_aeeacf6bbab974b09d801f4cb003edb59_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{namespacerocr_1_1atomic_a5f17d2463623af23d854ee7ccebb0bd9}\label{namespacerocr_1_1atomic_a5f17d2463623af23d854ee7ccebb0bd9}} 
+\index{rocr::atomic@{rocr::atomic}!And@{And}}
+\index{And@{And}!rocr::atomic@{rocr::atomic}}
+\doxysubsubsection{\texorpdfstring{And()}{And()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily template$<$class T $>$ \\
+static \+\_\+\+\_\+forceinline T rocr\+::atomic\+::\+And (\begin{DoxyParamCaption}\item[{volatile T $\ast$}]{ptr,  }\item[{T}]{val,  }\item[{std\+::memory\+\_\+order}]{order = {\ttfamily std\+:\+:memory\+\_\+order\+\_\+relaxed} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+\+: Bit And operation on variable atomically with specified memory order. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em } & ptr(\+Input), a pointer to volatile variable which is operated on. \\
+\hline
+{\em } & val(\+Input), value which is ANDed with variable. \\
+\hline
+{\em } & order(\+Input), memory order which is relaxed by default. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\+: T, value of variable prior to the operation. 
+\end{DoxyReturn}
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=330pt]{namespacerocr_1_1atomic_a5f17d2463623af23d854ee7ccebb0bd9_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{namespacerocr_1_1atomic_a6707f0e2f53a1a3faf0b6eca174308e9}\label{namespacerocr_1_1atomic_a6707f0e2f53a1a3faf0b6eca174308e9}} 
+\index{rocr::atomic@{rocr::atomic}!BasicCheck@{BasicCheck}}
+\index{BasicCheck@{BasicCheck}!rocr::atomic@{rocr::atomic}}
+\doxysubsubsection{\texorpdfstring{BasicCheck()}{BasicCheck()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily template$<$class T $>$ \\
+static \+\_\+\+\_\+forceinline void rocr\+::atomic\+::\+Basic\+Check (\begin{DoxyParamCaption}\item[{const T $\ast$}]{ptr }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+\mbox{\Hypertarget{namespacerocr_1_1atomic_af93a65c47fda9809b69d00a70af39ed2}\label{namespacerocr_1_1atomic_af93a65c47fda9809b69d00a70af39ed2}} 
+\index{rocr::atomic@{rocr::atomic}!BasicCheck@{BasicCheck}}
+\index{BasicCheck@{BasicCheck}!rocr::atomic@{rocr::atomic}}
+\doxysubsubsection{\texorpdfstring{BasicCheck()}{BasicCheck()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily template$<$class T $>$ \\
+static \+\_\+\+\_\+forceinline void rocr\+::atomic\+::\+Basic\+Check (\begin{DoxyParamCaption}\item[{const volatile T $\ast$}]{ptr }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+\mbox{\Hypertarget{namespacerocr_1_1atomic_af0043f0bfb54e6714a36b3af92848671}\label{namespacerocr_1_1atomic_af0043f0bfb54e6714a36b3af92848671}} 
+\index{rocr::atomic@{rocr::atomic}!c11ToBuiltInFlags@{c11ToBuiltInFlags}}
+\index{c11ToBuiltInFlags@{c11ToBuiltInFlags}!rocr::atomic@{rocr::atomic}}
+\doxysubsubsection{\texorpdfstring{c11ToBuiltInFlags()}{c11ToBuiltInFlags()}}
+{\footnotesize\ttfamily static constexpr int rocr\+::atomic\+::c11\+To\+Built\+In\+Flags (\begin{DoxyParamCaption}\item[{std\+::memory\+\_\+order}]{order }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [constexpr]}}
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=550pt]{namespacerocr_1_1atomic_af0043f0bfb54e6714a36b3af92848671_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{namespacerocr_1_1atomic_a5eaf927d1a4e790021e5366d8567f5e9}\label{namespacerocr_1_1atomic_a5eaf927d1a4e790021e5366d8567f5e9}} 
+\index{rocr::atomic@{rocr::atomic}!Cas@{Cas}}
+\index{Cas@{Cas}!rocr::atomic@{rocr::atomic}}
+\doxysubsubsection{\texorpdfstring{Cas()}{Cas()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily template$<$class T $>$ \\
+static \+\_\+\+\_\+forceinline T rocr\+::atomic\+::\+Cas (\begin{DoxyParamCaption}\item[{T $\ast$}]{ptr,  }\item[{T}]{val,  }\item[{T}]{expected,  }\item[{std\+::memory\+\_\+order}]{order = {\ttfamily std\+:\+:memory\+\_\+order\+\_\+relaxed} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+\+: Compare and swap value atomically with specified memory order. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em } & ptr(\+Input), a pointer to variable which is operated on. \\
+\hline
+{\em } & val(\+Input), value to be stored if condition is satisfied. \\
+\hline
+{\em } & expected(\+Input), value which is expected. \\
+\hline
+{\em } & order(\+Input), memory order with atomic operation. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\+: T, observed value of type T. 
+\end{DoxyReturn}
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=330pt]{namespacerocr_1_1atomic_a5eaf927d1a4e790021e5366d8567f5e9_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=550pt]{namespacerocr_1_1atomic_a5eaf927d1a4e790021e5366d8567f5e9_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{namespacerocr_1_1atomic_ac5b05892c0c3686f877b419dd4931ad9}\label{namespacerocr_1_1atomic_ac5b05892c0c3686f877b419dd4931ad9}} 
+\index{rocr::atomic@{rocr::atomic}!Cas@{Cas}}
+\index{Cas@{Cas}!rocr::atomic@{rocr::atomic}}
+\doxysubsubsection{\texorpdfstring{Cas()}{Cas()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily template$<$class T $>$ \\
+static \+\_\+\+\_\+forceinline T rocr\+::atomic\+::\+Cas (\begin{DoxyParamCaption}\item[{volatile T $\ast$}]{ptr,  }\item[{T}]{val,  }\item[{T}]{expected,  }\item[{std\+::memory\+\_\+order}]{order = {\ttfamily std\+:\+:memory\+\_\+order\+\_\+relaxed} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+\+: Function overloading, for more info, see previous one. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em } & ptr(\+Input), a pointer to volatile variable which is operated on. \\
+\hline
+{\em } & val(\+Input), value to be stored if condition is satisfied. \\
+\hline
+{\em } & expected(\+Input), value which is expected. \\
+\hline
+{\em } & order(\+Input), memory order which is relaxed by default. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\+: T, observed value of type T. 
+\end{DoxyReturn}
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=330pt]{namespacerocr_1_1atomic_ac5b05892c0c3686f877b419dd4931ad9_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{namespacerocr_1_1atomic_a784704cf3463dc497f9f39f561dc4534}\label{namespacerocr_1_1atomic_a784704cf3463dc497f9f39f561dc4534}} 
+\index{rocr::atomic@{rocr::atomic}!Decrement@{Decrement}}
+\index{Decrement@{Decrement}!rocr::atomic@{rocr::atomic}}
+\doxysubsubsection{\texorpdfstring{Decrement()}{Decrement()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily template$<$class T $>$ \\
+static \+\_\+\+\_\+forceinline T rocr\+::atomic\+::\+Decrement (\begin{DoxyParamCaption}\item[{T $\ast$}]{ptr,  }\item[{std\+::memory\+\_\+order}]{order = {\ttfamily std\+:\+:memory\+\_\+order\+\_\+relaxed} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+\+: Decrease the value of the variable atomically with specified memory order. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em } & ptr(\+Input), a pointer to variable which is operated on. \\
+\hline
+{\em } & order(\+Input), memory order which is relaxed by default. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\+: T, value of variable prior to the operation. 
+\end{DoxyReturn}
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{namespacerocr_1_1atomic_a784704cf3463dc497f9f39f561dc4534_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{namespacerocr_1_1atomic_a896c29b8c549b7253b0fd2ce6b9b84ff}\label{namespacerocr_1_1atomic_a896c29b8c549b7253b0fd2ce6b9b84ff}} 
+\index{rocr::atomic@{rocr::atomic}!Decrement@{Decrement}}
+\index{Decrement@{Decrement}!rocr::atomic@{rocr::atomic}}
+\doxysubsubsection{\texorpdfstring{Decrement()}{Decrement()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily template$<$class T $>$ \\
+static \+\_\+\+\_\+forceinline T rocr\+::atomic\+::\+Decrement (\begin{DoxyParamCaption}\item[{volatile T $\ast$}]{ptr,  }\item[{std\+::memory\+\_\+order}]{order = {\ttfamily std\+:\+:memory\+\_\+order\+\_\+relaxed} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+\+: Decrease the value of the variable atomically with specified memory order. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em } & ptr(\+Input), a pointer to volatile variable which is operated on. \\
+\hline
+{\em } & order(\+Input), memory order which is relaxed by default. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\+: T, value of variable prior to the operation. 
+\end{DoxyReturn}
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{namespacerocr_1_1atomic_a896c29b8c549b7253b0fd2ce6b9b84ff_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{namespacerocr_1_1atomic_ae8dd1fd489f55d8e223d3ffc721ac8b4}\label{namespacerocr_1_1atomic_ae8dd1fd489f55d8e223d3ffc721ac8b4}} 
+\index{rocr::atomic@{rocr::atomic}!Exchange@{Exchange}}
+\index{Exchange@{Exchange}!rocr::atomic@{rocr::atomic}}
+\doxysubsubsection{\texorpdfstring{Exchange()}{Exchange()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily template$<$class T $>$ \\
+static \+\_\+\+\_\+forceinline T rocr\+::atomic\+::\+Exchange (\begin{DoxyParamCaption}\item[{T $\ast$}]{ptr,  }\item[{T}]{val,  }\item[{std\+::memory\+\_\+order}]{order = {\ttfamily std\+:\+:memory\+\_\+order\+\_\+relaxed} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+\+: Exchange the value atomically with specified memory order. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em } & ptr(\+Input), a pointer to variable which is operated on. \\
+\hline
+{\em } & val(\+Input), value to be stored. \\
+\hline
+{\em } & order(\+Input), memory order which is relaxed by default. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\+: T, the value prior to the exchange. 
+\end{DoxyReturn}
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{namespacerocr_1_1atomic_ae8dd1fd489f55d8e223d3ffc721ac8b4_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{namespacerocr_1_1atomic_ae8dd1fd489f55d8e223d3ffc721ac8b4_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{namespacerocr_1_1atomic_a6d204d1a8aa2fc42bb87ec3c4606db24}\label{namespacerocr_1_1atomic_a6d204d1a8aa2fc42bb87ec3c4606db24}} 
+\index{rocr::atomic@{rocr::atomic}!Exchange@{Exchange}}
+\index{Exchange@{Exchange}!rocr::atomic@{rocr::atomic}}
+\doxysubsubsection{\texorpdfstring{Exchange()}{Exchange()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily template$<$class T $>$ \\
+static \+\_\+\+\_\+forceinline T rocr\+::atomic\+::\+Exchange (\begin{DoxyParamCaption}\item[{volatile T $\ast$}]{ptr,  }\item[{T}]{val,  }\item[{std\+::memory\+\_\+order}]{order = {\ttfamily std\+:\+:memory\+\_\+order\+\_\+relaxed} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+\+: Function overloading, for more info, see previous one. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em } & ptr(\+Input), a pointer to variable which is operated on. \\
+\hline
+{\em } & val(\+Input), value to be stored. \\
+\hline
+{\em } & order(\+Input), memory order which is relaxed by default. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\+: T, the value prior to the exchange. 
+\end{DoxyReturn}
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{namespacerocr_1_1atomic_a6d204d1a8aa2fc42bb87ec3c4606db24_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{namespacerocr_1_1atomic_aa24d64d8435f6e90e9e07dfa83d2d471}\label{namespacerocr_1_1atomic_aa24d64d8435f6e90e9e07dfa83d2d471}} 
+\index{rocr::atomic@{rocr::atomic}!Fence@{Fence}}
+\index{Fence@{Fence}!rocr::atomic@{rocr::atomic}}
+\doxysubsubsection{\texorpdfstring{Fence()}{Fence()}}
+{\footnotesize\ttfamily static \+\_\+\+\_\+forceinline void rocr\+::atomic\+::\+Fence (\begin{DoxyParamCaption}\item[{std\+::memory\+\_\+order}]{order = {\ttfamily std\+:\+:memory\+\_\+order\+\_\+seq\+\_\+cst} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{namespacerocr_1_1atomic_aa24d64d8435f6e90e9e07dfa83d2d471_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{namespacerocr_1_1atomic_a89b0cca63e81343a7c1c44ef2a6ed54d}\label{namespacerocr_1_1atomic_a89b0cca63e81343a7c1c44ef2a6ed54d}} 
+\index{rocr::atomic@{rocr::atomic}!Increment@{Increment}}
+\index{Increment@{Increment}!rocr::atomic@{rocr::atomic}}
+\doxysubsubsection{\texorpdfstring{Increment()}{Increment()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily template$<$class T $>$ \\
+static \+\_\+\+\_\+forceinline T rocr\+::atomic\+::\+Increment (\begin{DoxyParamCaption}\item[{T $\ast$}]{ptr,  }\item[{std\+::memory\+\_\+order}]{order = {\ttfamily std\+:\+:memory\+\_\+order\+\_\+relaxed} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+\+: Increase the value of variable atomically with specified memory order. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em } & ptr(\+Input), a pointer to variable which is operated on. \\
+\hline
+{\em } & order(\+Input), memory order which is relaxed by default. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\+: T, value of variable prior to the operation. 
+\end{DoxyReturn}
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{namespacerocr_1_1atomic_a89b0cca63e81343a7c1c44ef2a6ed54d_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{namespacerocr_1_1atomic_a205faefd647bd73e0aeb50eb729d6b36}\label{namespacerocr_1_1atomic_a205faefd647bd73e0aeb50eb729d6b36}} 
+\index{rocr::atomic@{rocr::atomic}!Increment@{Increment}}
+\index{Increment@{Increment}!rocr::atomic@{rocr::atomic}}
+\doxysubsubsection{\texorpdfstring{Increment()}{Increment()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily template$<$class T $>$ \\
+static \+\_\+\+\_\+forceinline T rocr\+::atomic\+::\+Increment (\begin{DoxyParamCaption}\item[{volatile T $\ast$}]{ptr,  }\item[{std\+::memory\+\_\+order}]{order = {\ttfamily std\+:\+:memory\+\_\+order\+\_\+relaxed} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+\+: Increase the value of variable atomically with specified memory order. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em } & ptr(\+Input), a pointer to volatile variable which is operated on. \\
+\hline
+{\em } & order(\+Input), memory order which is relaxed by default. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\+: T, value of variable prior to the operation. 
+\end{DoxyReturn}
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{namespacerocr_1_1atomic_a205faefd647bd73e0aeb50eb729d6b36_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{namespacerocr_1_1atomic_a2d4659b703b5221813bad7f957be5b44}\label{namespacerocr_1_1atomic_a2d4659b703b5221813bad7f957be5b44}} 
+\index{rocr::atomic@{rocr::atomic}!Load@{Load}}
+\index{Load@{Load}!rocr::atomic@{rocr::atomic}}
+\doxysubsubsection{\texorpdfstring{Load()}{Load()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily template$<$class T $>$ \\
+static \+\_\+\+\_\+forceinline T rocr\+::atomic\+::\+Load (\begin{DoxyParamCaption}\item[{const T $\ast$}]{ptr,  }\item[{std\+::memory\+\_\+order}]{order = {\ttfamily std\+:\+:memory\+\_\+order\+\_\+relaxed} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+\+: Load value of type T atomically with specified memory order. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em } & ptr(\+Input), a pointer to type T. \\
+\hline
+{\em } & order(\+Input), memory order with atomic load, relaxed by default. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\+: T, loaded value. 
+\end{DoxyReturn}
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=333pt]{namespacerocr_1_1atomic_a2d4659b703b5221813bad7f957be5b44_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{namespacerocr_1_1atomic_a2d4659b703b5221813bad7f957be5b44_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{namespacerocr_1_1atomic_a947200ac90a55991c090eba75fe4f57b}\label{namespacerocr_1_1atomic_a947200ac90a55991c090eba75fe4f57b}} 
+\index{rocr::atomic@{rocr::atomic}!Load@{Load}}
+\index{Load@{Load}!rocr::atomic@{rocr::atomic}}
+\doxysubsubsection{\texorpdfstring{Load()}{Load()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily template$<$class T $>$ \\
+static \+\_\+\+\_\+forceinline T rocr\+::atomic\+::\+Load (\begin{DoxyParamCaption}\item[{const volatile T $\ast$}]{ptr,  }\item[{std\+::memory\+\_\+order}]{order = {\ttfamily std\+:\+:memory\+\_\+order\+\_\+relaxed} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+\+: function overloading, for more info, see previous one. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em } & ptr(\+Input), a pointer to volatile type T. \\
+\hline
+{\em } & order(\+Input), memory order with atomic load, relaxed by default. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\+: T, loaded value. 
+\end{DoxyReturn}
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=333pt]{namespacerocr_1_1atomic_a947200ac90a55991c090eba75fe4f57b_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{namespacerocr_1_1atomic_a986dd90bf44abc4f229fa5cf889a0d25}\label{namespacerocr_1_1atomic_a986dd90bf44abc4f229fa5cf889a0d25}} 
+\index{rocr::atomic@{rocr::atomic}!Or@{Or}}
+\index{Or@{Or}!rocr::atomic@{rocr::atomic}}
+\doxysubsubsection{\texorpdfstring{Or()}{Or()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily template$<$class T $>$ \\
+static \+\_\+\+\_\+forceinline T rocr\+::atomic\+::\+Or (\begin{DoxyParamCaption}\item[{T $\ast$}]{ptr,  }\item[{T}]{val,  }\item[{std\+::memory\+\_\+order}]{order = {\ttfamily std\+:\+:memory\+\_\+order\+\_\+relaxed} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+\+: Bit Or operation on variable atomically with specified memory order. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em } & ptr(\+Input), a pointer to variable which is operated on. \\
+\hline
+{\em } & val(\+Input), value which is ORed with variable. \\
+\hline
+{\em } & order(\+Input), memory order which is relaxed by default. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\+: T, value of variable prior to the operation. 
+\end{DoxyReturn}
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=323pt]{namespacerocr_1_1atomic_a986dd90bf44abc4f229fa5cf889a0d25_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=334pt]{namespacerocr_1_1atomic_a986dd90bf44abc4f229fa5cf889a0d25_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{namespacerocr_1_1atomic_a0b4c44c620adc81e13ba4a3e593176b2}\label{namespacerocr_1_1atomic_a0b4c44c620adc81e13ba4a3e593176b2}} 
+\index{rocr::atomic@{rocr::atomic}!Or@{Or}}
+\index{Or@{Or}!rocr::atomic@{rocr::atomic}}
+\doxysubsubsection{\texorpdfstring{Or()}{Or()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily template$<$class T $>$ \\
+static \+\_\+\+\_\+forceinline T rocr\+::atomic\+::\+Or (\begin{DoxyParamCaption}\item[{volatile T $\ast$}]{ptr,  }\item[{T}]{val,  }\item[{std\+::memory\+\_\+order}]{order = {\ttfamily std\+:\+:memory\+\_\+order\+\_\+relaxed} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+\+: Bit Or operation on variable atomically with specified memory order. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em } & ptr(\+Input), a pointer to volatile variable which is operated on. \\
+\hline
+{\em } & val(\+Input), value which is ORed with variable. \\
+\hline
+{\em } & order(\+Input), memory order which is relaxed by default. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\+: T, value of variable prior to the operation. 
+\end{DoxyReturn}
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=323pt]{namespacerocr_1_1atomic_a0b4c44c620adc81e13ba4a3e593176b2_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{namespacerocr_1_1atomic_a8f80b5e9887be0b33255beff388f59b7}\label{namespacerocr_1_1atomic_a8f80b5e9887be0b33255beff388f59b7}} 
+\index{rocr::atomic@{rocr::atomic}!PostFence@{PostFence}}
+\index{PostFence@{PostFence}!rocr::atomic@{rocr::atomic}}
+\doxysubsubsection{\texorpdfstring{PostFence()}{PostFence()}}
+{\footnotesize\ttfamily static \+\_\+\+\_\+forceinline void rocr\+::atomic\+::\+Post\+Fence (\begin{DoxyParamCaption}\item[{std\+::memory\+\_\+order}]{order }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=550pt]{namespacerocr_1_1atomic_a8f80b5e9887be0b33255beff388f59b7_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{namespacerocr_1_1atomic_aac775b102f017d9de079ca4f1b9e5c01}\label{namespacerocr_1_1atomic_aac775b102f017d9de079ca4f1b9e5c01}} 
+\index{rocr::atomic@{rocr::atomic}!PreFence@{PreFence}}
+\index{PreFence@{PreFence}!rocr::atomic@{rocr::atomic}}
+\doxysubsubsection{\texorpdfstring{PreFence()}{PreFence()}}
+{\footnotesize\ttfamily static \+\_\+\+\_\+forceinline void rocr\+::atomic\+::\+Pre\+Fence (\begin{DoxyParamCaption}\item[{std\+::memory\+\_\+order}]{order }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=550pt]{namespacerocr_1_1atomic_aac775b102f017d9de079ca4f1b9e5c01_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{namespacerocr_1_1atomic_ae9307c0cd1f6370c71ab4c7e3ecd3b9c}\label{namespacerocr_1_1atomic_ae9307c0cd1f6370c71ab4c7e3ecd3b9c}} 
+\index{rocr::atomic@{rocr::atomic}!Store@{Store}}
+\index{Store@{Store}!rocr::atomic@{rocr::atomic}}
+\doxysubsubsection{\texorpdfstring{Store()}{Store()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily template$<$class T $>$ \\
+static \+\_\+\+\_\+forceinline void rocr\+::atomic\+::\+Store (\begin{DoxyParamCaption}\item[{T $\ast$}]{ptr,  }\item[{T}]{val,  }\item[{std\+::memory\+\_\+order}]{order = {\ttfamily std\+:\+:memory\+\_\+order\+\_\+relaxed} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+\+: Store value of type T with specified memory order. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em } & ptr(\+Input), a pointer to instance which will be stored. \\
+\hline
+{\em } & val(\+Input), value to be stored. \\
+\hline
+{\em } & order(\+Input), memory order with atomic store, relaxed by default. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\+: void. 
+\end{DoxyReturn}
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=336pt]{namespacerocr_1_1atomic_ae9307c0cd1f6370c71ab4c7e3ecd3b9c_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{namespacerocr_1_1atomic_ae9307c0cd1f6370c71ab4c7e3ecd3b9c_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{namespacerocr_1_1atomic_ae5a7cef107b908af918e272b60ab1a7f}\label{namespacerocr_1_1atomic_ae5a7cef107b908af918e272b60ab1a7f}} 
+\index{rocr::atomic@{rocr::atomic}!Store@{Store}}
+\index{Store@{Store}!rocr::atomic@{rocr::atomic}}
+\doxysubsubsection{\texorpdfstring{Store()}{Store()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily template$<$class T $>$ \\
+static \+\_\+\+\_\+forceinline void rocr\+::atomic\+::\+Store (\begin{DoxyParamCaption}\item[{volatile T $\ast$}]{ptr,  }\item[{T}]{val,  }\item[{std\+::memory\+\_\+order}]{order = {\ttfamily std\+:\+:memory\+\_\+order\+\_\+relaxed} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+\+: Function overloading, for more info, see previous one. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em } & ptr(\+Input), a pointer to volatile instance which will be stored. \\
+\hline
+{\em } & val(\+Input), value to be stored. \\
+\hline
+{\em } & order(\+Input), memory order with atomic store, relaxed by default. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\+: void. 
+\end{DoxyReturn}
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=336pt]{namespacerocr_1_1atomic_ae5a7cef107b908af918e272b60ab1a7f_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{namespacerocr_1_1atomic_ab8f9d2cdbc87d74a4e0b53f2d2f75271}\label{namespacerocr_1_1atomic_ab8f9d2cdbc87d74a4e0b53f2d2f75271}} 
+\index{rocr::atomic@{rocr::atomic}!Sub@{Sub}}
+\index{Sub@{Sub}!rocr::atomic@{rocr::atomic}}
+\doxysubsubsection{\texorpdfstring{Sub()}{Sub()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily template$<$class T $>$ \\
+static \+\_\+\+\_\+forceinline T rocr\+::atomic\+::\+Sub (\begin{DoxyParamCaption}\item[{T $\ast$}]{ptr,  }\item[{T}]{val,  }\item[{std\+::memory\+\_\+order}]{order = {\ttfamily std\+:\+:memory\+\_\+order\+\_\+relaxed} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+\+: Subtract value from the variable atomically with specified memory order. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em } & ptr(\+Input), a pointer to variable which is operated on. \\
+\hline
+{\em } & val(\+Input), value to be subtraced. \\
+\hline
+{\em } & order(\+Input), memory order which is relaxed by default. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\+: T, value of the variable prior to the subtraction. 
+\end{DoxyReturn}
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=330pt]{namespacerocr_1_1atomic_ab8f9d2cdbc87d74a4e0b53f2d2f75271_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=341pt]{namespacerocr_1_1atomic_ab8f9d2cdbc87d74a4e0b53f2d2f75271_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{namespacerocr_1_1atomic_a385ec5c4139ca6459cb9425152c107f6}\label{namespacerocr_1_1atomic_a385ec5c4139ca6459cb9425152c107f6}} 
+\index{rocr::atomic@{rocr::atomic}!Sub@{Sub}}
+\index{Sub@{Sub}!rocr::atomic@{rocr::atomic}}
+\doxysubsubsection{\texorpdfstring{Sub()}{Sub()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily template$<$class T $>$ \\
+static \+\_\+\+\_\+forceinline T rocr\+::atomic\+::\+Sub (\begin{DoxyParamCaption}\item[{volatile T $\ast$}]{ptr,  }\item[{T}]{val,  }\item[{std\+::memory\+\_\+order}]{order = {\ttfamily std\+:\+:memory\+\_\+order\+\_\+relaxed} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+\+: Subtract value from the variable atomically with specified memory order. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em } & ptr(\+Input), a pointer to volatile variable which is operated on. \\
+\hline
+{\em } & val(\+Input), value to be subtraced. \\
+\hline
+{\em } & order(\+Input), memory order which is relaxed by default. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\+: T, value of the variable prior to the subtraction. 
+\end{DoxyReturn}
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=330pt]{namespacerocr_1_1atomic_a385ec5c4139ca6459cb9425152c107f6_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{namespacerocr_1_1atomic_a933f7d42d217a4b2427bb8fc804178b1}\label{namespacerocr_1_1atomic_a933f7d42d217a4b2427bb8fc804178b1}} 
+\index{rocr::atomic@{rocr::atomic}!Xor@{Xor}}
+\index{Xor@{Xor}!rocr::atomic@{rocr::atomic}}
+\doxysubsubsection{\texorpdfstring{Xor()}{Xor()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily template$<$class T $>$ \\
+static \+\_\+\+\_\+forceinline T rocr\+::atomic\+::\+Xor (\begin{DoxyParamCaption}\item[{T $\ast$}]{ptr,  }\item[{T}]{val,  }\item[{std\+::memory\+\_\+order}]{order = {\ttfamily std\+:\+:memory\+\_\+order\+\_\+relaxed} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+\+: Bit Xor operation on variable atomically with specified memory order. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em } & ptr(\+Input), a pointer to variable which is operated on. \\
+\hline
+{\em } & val(\+Input), value which is XORed with variable. @order\+: order(\+Input), memory order which is relaxed by default. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\+: T, valud of variable prior to the opertaion. 
+\end{DoxyReturn}
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=327pt]{namespacerocr_1_1atomic_a933f7d42d217a4b2427bb8fc804178b1_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=338pt]{namespacerocr_1_1atomic_a933f7d42d217a4b2427bb8fc804178b1_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{namespacerocr_1_1atomic_ab20aed341180dc9b5630504f4664baee}\label{namespacerocr_1_1atomic_ab20aed341180dc9b5630504f4664baee}} 
+\index{rocr::atomic@{rocr::atomic}!Xor@{Xor}}
+\index{Xor@{Xor}!rocr::atomic@{rocr::atomic}}
+\doxysubsubsection{\texorpdfstring{Xor()}{Xor()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily template$<$class T $>$ \\
+static \+\_\+\+\_\+forceinline T rocr\+::atomic\+::\+Xor (\begin{DoxyParamCaption}\item[{volatile T $\ast$}]{ptr,  }\item[{T}]{val,  }\item[{std\+::memory\+\_\+order}]{order = {\ttfamily std\+:\+:memory\+\_\+order\+\_\+relaxed} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+\+: Bit Xor operation on variable atomically with specified memory order. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em } & ptr(\+Input), a pointer to volatile variable which is operated on. \\
+\hline
+{\em } & val(\+Input), value which is XORed with variable. @order\+: order(\+Input), memory order which is relaxed by default. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\+: T, valud of variable prior to the opertaion. 
+\end{DoxyReturn}
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=327pt]{namespacerocr_1_1atomic_ab20aed341180dc9b5630504f4664baee_cgraph}
+\end{center}
+\end{figure}

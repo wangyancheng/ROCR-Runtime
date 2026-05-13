@@ -1,0 +1,145 @@
+\hypertarget{structhsa__ext__control__directives__s}{}\doxysection{hsa\+\_\+ext\+\_\+control\+\_\+directives\+\_\+s Struct Reference}
+\label{structhsa__ext__control__directives__s}\index{hsa\_ext\_control\_directives\_s@{hsa\_ext\_control\_directives\_s}}
+
+
+Control directives specify low-\/level information about the finalization process.  
+
+
+
+
+{\ttfamily \#include $<$hsa\+\_\+ext\+\_\+finalize.\+h$>$}
+
+
+
+Collaboration diagram for hsa\+\_\+ext\+\_\+control\+\_\+directives\+\_\+s\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=264pt]{structhsa__ext__control__directives__s__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+uint64\+\_\+t \mbox{\hyperlink{structhsa__ext__control__directives__s_af3a214450802cbf610487a020f9dd5ca}{control\+\_\+directives\+\_\+mask}}
+\item 
+uint16\+\_\+t \mbox{\hyperlink{structhsa__ext__control__directives__s_afe5751814b1432b067fb063d94fecb37}{break\+\_\+exceptions\+\_\+mask}}
+\item 
+uint16\+\_\+t \mbox{\hyperlink{structhsa__ext__control__directives__s_aaa715607b6371598b1fe6abb44ab19e9}{detect\+\_\+exceptions\+\_\+mask}}
+\item 
+uint32\+\_\+t \mbox{\hyperlink{structhsa__ext__control__directives__s_a39a5f04876f5b09c1f27a550d370c11b}{max\+\_\+dynamic\+\_\+group\+\_\+size}}
+\item 
+uint64\+\_\+t \mbox{\hyperlink{structhsa__ext__control__directives__s_a474019e69919e0339e5810c0846e96a0}{max\+\_\+flat\+\_\+grid\+\_\+size}}
+\item 
+uint32\+\_\+t \mbox{\hyperlink{structhsa__ext__control__directives__s_af3cc87d5c7c7509e8ca0a34d5cae5cac}{max\+\_\+flat\+\_\+workgroup\+\_\+size}}
+\item 
+uint32\+\_\+t \mbox{\hyperlink{structhsa__ext__control__directives__s_a62ded1ed7e9561e5bbe9c8bce1752611}{reserved1}}
+\item 
+uint64\+\_\+t \mbox{\hyperlink{structhsa__ext__control__directives__s_aac5b4e76981c07815f5d644dfdcf59ce}{required\+\_\+grid\+\_\+size}} \mbox{[}3\mbox{]}
+\item 
+\mbox{\hyperlink{group__common_gae460d1df8c508a9c889d4550ea4eea30}{hsa\+\_\+dim3\+\_\+t}} \mbox{\hyperlink{structhsa__ext__control__directives__s_aafa76308e79d007eb024a85e1dbd445c}{required\+\_\+workgroup\+\_\+size}}
+\item 
+uint8\+\_\+t \mbox{\hyperlink{structhsa__ext__control__directives__s_ac8012e3727779504aee5326dc8dc11a3}{required\+\_\+dim}}
+\item 
+uint8\+\_\+t \mbox{\hyperlink{structhsa__ext__control__directives__s_aebb9cd24882c2bd28350b5b2d3545b20}{reserved2}} \mbox{[}75\mbox{]}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Control directives specify low-\/level information about the finalization process. 
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{structhsa__ext__control__directives__s_afe5751814b1432b067fb063d94fecb37}\label{structhsa__ext__control__directives__s_afe5751814b1432b067fb063d94fecb37}} 
+\index{hsa\_ext\_control\_directives\_s@{hsa\_ext\_control\_directives\_s}!break\_exceptions\_mask@{break\_exceptions\_mask}}
+\index{break\_exceptions\_mask@{break\_exceptions\_mask}!hsa\_ext\_control\_directives\_s@{hsa\_ext\_control\_directives\_s}}
+\doxysubsubsection{\texorpdfstring{break\_exceptions\_mask}{break\_exceptions\_mask}}
+{\footnotesize\ttfamily uint16\+\_\+t hsa\+\_\+ext\+\_\+control\+\_\+directives\+\_\+s\+::break\+\_\+exceptions\+\_\+mask}
+
+Bitset of HSAIL exceptions that must have the BREAK policy enabled. The bit assigned to an HSAIL exception is determined by the corresponding value in Brig\+Exceptions\+Mask. If the kernel contains a enablebreakexceptions control directive, the finalizer uses the union of the two masks. \mbox{\Hypertarget{structhsa__ext__control__directives__s_af3a214450802cbf610487a020f9dd5ca}\label{structhsa__ext__control__directives__s_af3a214450802cbf610487a020f9dd5ca}} 
+\index{hsa\_ext\_control\_directives\_s@{hsa\_ext\_control\_directives\_s}!control\_directives\_mask@{control\_directives\_mask}}
+\index{control\_directives\_mask@{control\_directives\_mask}!hsa\_ext\_control\_directives\_s@{hsa\_ext\_control\_directives\_s}}
+\doxysubsubsection{\texorpdfstring{control\_directives\_mask}{control\_directives\_mask}}
+{\footnotesize\ttfamily uint64\+\_\+t hsa\+\_\+ext\+\_\+control\+\_\+directives\+\_\+s\+::control\+\_\+directives\+\_\+mask}
+
+Bitset indicating which control directives are enabled. The bit assigned to a control directive is determined by the corresponding value in Brig\+Control\+Directive.
+
+If a control directive is disabled, its corresponding field value (if any) must be 0. Control directives that are only present or absent (such as partial workgroups) have no corresponding field as the presence of the bit in this mask is sufficient. \mbox{\Hypertarget{structhsa__ext__control__directives__s_aaa715607b6371598b1fe6abb44ab19e9}\label{structhsa__ext__control__directives__s_aaa715607b6371598b1fe6abb44ab19e9}} 
+\index{hsa\_ext\_control\_directives\_s@{hsa\_ext\_control\_directives\_s}!detect\_exceptions\_mask@{detect\_exceptions\_mask}}
+\index{detect\_exceptions\_mask@{detect\_exceptions\_mask}!hsa\_ext\_control\_directives\_s@{hsa\_ext\_control\_directives\_s}}
+\doxysubsubsection{\texorpdfstring{detect\_exceptions\_mask}{detect\_exceptions\_mask}}
+{\footnotesize\ttfamily uint16\+\_\+t hsa\+\_\+ext\+\_\+control\+\_\+directives\+\_\+s\+::detect\+\_\+exceptions\+\_\+mask}
+
+Bitset of HSAIL exceptions that must have the DETECT policy enabled. The bit assigned to an HSAIL exception is determined by the corresponding value in Brig\+Exceptions\+Mask. If the kernel contains a enabledetectexceptions control directive, the finalizer uses the union of the two masks. \mbox{\Hypertarget{structhsa__ext__control__directives__s_a39a5f04876f5b09c1f27a550d370c11b}\label{structhsa__ext__control__directives__s_a39a5f04876f5b09c1f27a550d370c11b}} 
+\index{hsa\_ext\_control\_directives\_s@{hsa\_ext\_control\_directives\_s}!max\_dynamic\_group\_size@{max\_dynamic\_group\_size}}
+\index{max\_dynamic\_group\_size@{max\_dynamic\_group\_size}!hsa\_ext\_control\_directives\_s@{hsa\_ext\_control\_directives\_s}}
+\doxysubsubsection{\texorpdfstring{max\_dynamic\_group\_size}{max\_dynamic\_group\_size}}
+{\footnotesize\ttfamily uint32\+\_\+t hsa\+\_\+ext\+\_\+control\+\_\+directives\+\_\+s\+::max\+\_\+dynamic\+\_\+group\+\_\+size}
+
+Maximum size (in bytes) of dynamic group memory that will be allocated by the application for any dispatch of the kernel. If the kernel contains a maxdynamicsize control directive, the two values should match. \mbox{\Hypertarget{structhsa__ext__control__directives__s_a474019e69919e0339e5810c0846e96a0}\label{structhsa__ext__control__directives__s_a474019e69919e0339e5810c0846e96a0}} 
+\index{hsa\_ext\_control\_directives\_s@{hsa\_ext\_control\_directives\_s}!max\_flat\_grid\_size@{max\_flat\_grid\_size}}
+\index{max\_flat\_grid\_size@{max\_flat\_grid\_size}!hsa\_ext\_control\_directives\_s@{hsa\_ext\_control\_directives\_s}}
+\doxysubsubsection{\texorpdfstring{max\_flat\_grid\_size}{max\_flat\_grid\_size}}
+{\footnotesize\ttfamily uint64\+\_\+t hsa\+\_\+ext\+\_\+control\+\_\+directives\+\_\+s\+::max\+\_\+flat\+\_\+grid\+\_\+size}
+
+Maximum number of grid work-\/items that will be used by the application to launch the kernel. If the kernel contains a maxflatgridsize control directive, the value of {\itshape max\+\_\+flat\+\_\+grid\+\_\+size} must not be greater than the value of the directive, and takes precedence.
+
+The value specified for maximum absolute grid size must be greater than or equal to the product of the values specified by {\itshape required\+\_\+grid\+\_\+size}.
+
+If the bit at position BRIG\+\_\+\+CONTROL\+\_\+\+MAXFLATGRIDSIZE is set in {\itshape control\+\_\+directives\+\_\+mask}, this field must be greater than 0. \mbox{\Hypertarget{structhsa__ext__control__directives__s_af3cc87d5c7c7509e8ca0a34d5cae5cac}\label{structhsa__ext__control__directives__s_af3cc87d5c7c7509e8ca0a34d5cae5cac}} 
+\index{hsa\_ext\_control\_directives\_s@{hsa\_ext\_control\_directives\_s}!max\_flat\_workgroup\_size@{max\_flat\_workgroup\_size}}
+\index{max\_flat\_workgroup\_size@{max\_flat\_workgroup\_size}!hsa\_ext\_control\_directives\_s@{hsa\_ext\_control\_directives\_s}}
+\doxysubsubsection{\texorpdfstring{max\_flat\_workgroup\_size}{max\_flat\_workgroup\_size}}
+{\footnotesize\ttfamily uint32\+\_\+t hsa\+\_\+ext\+\_\+control\+\_\+directives\+\_\+s\+::max\+\_\+flat\+\_\+workgroup\+\_\+size}
+
+Maximum number of work-\/group work-\/items that will be used by the application to launch the kernel. If the kernel contains a maxflatworkgroupsize control directive, the value of {\itshape max\+\_\+flat\+\_\+workgroup\+\_\+size} must not be greater than the value of the directive, and takes precedence.
+
+The value specified for maximum absolute grid size must be greater than or equal to the product of the values specified by {\itshape required\+\_\+workgroup\+\_\+size}.
+
+If the bit at position BRIG\+\_\+\+CONTROL\+\_\+\+MAXFLATWORKGROUPSIZE is set in {\itshape control\+\_\+directives\+\_\+mask}, this field must be greater than 0. \mbox{\Hypertarget{structhsa__ext__control__directives__s_ac8012e3727779504aee5326dc8dc11a3}\label{structhsa__ext__control__directives__s_ac8012e3727779504aee5326dc8dc11a3}} 
+\index{hsa\_ext\_control\_directives\_s@{hsa\_ext\_control\_directives\_s}!required\_dim@{required\_dim}}
+\index{required\_dim@{required\_dim}!hsa\_ext\_control\_directives\_s@{hsa\_ext\_control\_directives\_s}}
+\doxysubsubsection{\texorpdfstring{required\_dim}{required\_dim}}
+{\footnotesize\ttfamily uint8\+\_\+t hsa\+\_\+ext\+\_\+control\+\_\+directives\+\_\+s\+::required\+\_\+dim}
+
+Number of dimensions that will be used by the application to launch the kernel. If the kernel contains a requireddim control directive, the two values should match.
+
+The specified dimensions must be consistent with {\itshape required\+\_\+grid\+\_\+size} and {\itshape required\+\_\+workgroup\+\_\+size}. This invariant must hold only if all the corresponding control directives are enabled.
+
+If the bit at position BRIG\+\_\+\+CONTROL\+\_\+\+REQUIREDDIM is set in {\itshape control\+\_\+directives\+\_\+mask}, this field must be 1, 2, or 3. \mbox{\Hypertarget{structhsa__ext__control__directives__s_aac5b4e76981c07815f5d644dfdcf59ce}\label{structhsa__ext__control__directives__s_aac5b4e76981c07815f5d644dfdcf59ce}} 
+\index{hsa\_ext\_control\_directives\_s@{hsa\_ext\_control\_directives\_s}!required\_grid\_size@{required\_grid\_size}}
+\index{required\_grid\_size@{required\_grid\_size}!hsa\_ext\_control\_directives\_s@{hsa\_ext\_control\_directives\_s}}
+\doxysubsubsection{\texorpdfstring{required\_grid\_size}{required\_grid\_size}}
+{\footnotesize\ttfamily uint64\+\_\+t hsa\+\_\+ext\+\_\+control\+\_\+directives\+\_\+s\+::required\+\_\+grid\+\_\+size\mbox{[}3\mbox{]}}
+
+Grid size that will be used by the application in any dispatch of the kernel. If the kernel contains a requiredgridsize control directive, the dimensions should match.
+
+The specified grid size must be consistent with {\itshape required\+\_\+workgroup\+\_\+size} and {\itshape required\+\_\+dim}. Also, the product of the three dimensions must not exceed {\itshape max\+\_\+flat\+\_\+grid\+\_\+size}. Note that the listed invariants must hold only if all the corresponding control directives are enabled.
+
+If the bit at position BRIG\+\_\+\+CONTROL\+\_\+\+REQUIREDGRIDSIZE is set in {\itshape control\+\_\+directives\+\_\+mask}, the three dimension values must be greater than 0. \mbox{\Hypertarget{structhsa__ext__control__directives__s_aafa76308e79d007eb024a85e1dbd445c}\label{structhsa__ext__control__directives__s_aafa76308e79d007eb024a85e1dbd445c}} 
+\index{hsa\_ext\_control\_directives\_s@{hsa\_ext\_control\_directives\_s}!required\_workgroup\_size@{required\_workgroup\_size}}
+\index{required\_workgroup\_size@{required\_workgroup\_size}!hsa\_ext\_control\_directives\_s@{hsa\_ext\_control\_directives\_s}}
+\doxysubsubsection{\texorpdfstring{required\_workgroup\_size}{required\_workgroup\_size}}
+{\footnotesize\ttfamily \mbox{\hyperlink{group__common_gae460d1df8c508a9c889d4550ea4eea30}{hsa\+\_\+dim3\+\_\+t}} hsa\+\_\+ext\+\_\+control\+\_\+directives\+\_\+s\+::required\+\_\+workgroup\+\_\+size}
+
+Work-\/group size that will be used by the application in any dispatch of the kernel. If the kernel contains a requiredworkgroupsize control directive, the dimensions should match.
+
+The specified work-\/group size must be consistent with {\itshape required\+\_\+grid\+\_\+size} and {\itshape required\+\_\+dim}. Also, the product of the three dimensions must not exceed {\itshape max\+\_\+flat\+\_\+workgroup\+\_\+size}. Note that the listed invariants must hold only if all the corresponding control directives are enabled.
+
+If the bit at position BRIG\+\_\+\+CONTROL\+\_\+\+REQUIREDWORKGROUPSIZE is set in {\itshape control\+\_\+directives\+\_\+mask}, the three dimension values must be greater than 0. \mbox{\Hypertarget{structhsa__ext__control__directives__s_a62ded1ed7e9561e5bbe9c8bce1752611}\label{structhsa__ext__control__directives__s_a62ded1ed7e9561e5bbe9c8bce1752611}} 
+\index{hsa\_ext\_control\_directives\_s@{hsa\_ext\_control\_directives\_s}!reserved1@{reserved1}}
+\index{reserved1@{reserved1}!hsa\_ext\_control\_directives\_s@{hsa\_ext\_control\_directives\_s}}
+\doxysubsubsection{\texorpdfstring{reserved1}{reserved1}}
+{\footnotesize\ttfamily uint32\+\_\+t hsa\+\_\+ext\+\_\+control\+\_\+directives\+\_\+s\+::reserved1}
+
+Reserved. Must be 0. \mbox{\Hypertarget{structhsa__ext__control__directives__s_aebb9cd24882c2bd28350b5b2d3545b20}\label{structhsa__ext__control__directives__s_aebb9cd24882c2bd28350b5b2d3545b20}} 
+\index{hsa\_ext\_control\_directives\_s@{hsa\_ext\_control\_directives\_s}!reserved2@{reserved2}}
+\index{reserved2@{reserved2}!hsa\_ext\_control\_directives\_s@{hsa\_ext\_control\_directives\_s}}
+\doxysubsubsection{\texorpdfstring{reserved2}{reserved2}}
+{\footnotesize\ttfamily uint8\+\_\+t hsa\+\_\+ext\+\_\+control\+\_\+directives\+\_\+s\+::reserved2\mbox{[}75\mbox{]}}
+
+Reserved. Must be 0. 
+
+The documentation for this struct was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+src/inc/\mbox{\hyperlink{inc_2hsa__ext__finalize_8h}{hsa\+\_\+ext\+\_\+finalize.\+h}}\end{DoxyCompactItemize}

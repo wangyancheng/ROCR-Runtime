@@ -1,0 +1,276 @@
+\hypertarget{inc_2hsa__api__trace_8h}{}\doxysection{src/inc/hsa\+\_\+api\+\_\+trace.h File Reference}
+\label{inc_2hsa__api__trace_8h}\index{src/inc/hsa\_api\_trace.h@{src/inc/hsa\_api\_trace.h}}
+{\ttfamily \#include \char`\"{}hsa.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}inc/hsa\+\_\+ext\+\_\+image.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}inc/hsa\+\_\+ext\+\_\+amd.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}inc/hsa\+\_\+ext\+\_\+finalize.\+h\char`\"{}}\newline
+{\ttfamily \#include $<$string.\+h$>$}\newline
+{\ttfamily \#include $<$assert.\+h$>$}\newline
+{\ttfamily \#include $<$stddef.\+h$>$}\newline
+Include dependency graph for hsa\+\_\+api\+\_\+trace.\+h\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{inc_2hsa__api__trace_8h__incl}
+\end{center}
+\end{figure}
+This graph shows which files directly or indirectly include this file\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{inc_2hsa__api__trace_8h__dep__incl}
+\end{center}
+\end{figure}
+\doxysubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{structApiTableVersion}{Api\+Table\+Version}}
+\item 
+struct \mbox{\hyperlink{structFinalizerExtTable}{Finalizer\+Ext\+Table}}
+\item 
+struct \mbox{\hyperlink{structImageExtTable}{Image\+Ext\+Table}}
+\item 
+struct \mbox{\hyperlink{structAmdExtTable}{Amd\+Ext\+Table}}
+\item 
+struct \mbox{\hyperlink{structCoreApiTable}{Core\+Api\+Table}}
+\item 
+struct \mbox{\hyperlink{structHsaApiTable}{Hsa\+Api\+Table}}
+\item 
+struct \mbox{\hyperlink{structHsaApiTableContainer}{Hsa\+Api\+Table\+Container}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \mbox{\hyperlink{inc_2hsa__api__trace_8h_aaaf4132315c91a60d73de4d93fac1514}{HSA\+\_\+\+API\+\_\+\+TABLE\+\_\+\+MAJOR\+\_\+\+VERSION}}~0x01
+\item 
+\#define \mbox{\hyperlink{inc_2hsa__api__trace_8h_a5c2ff15389751109796777ae0759cb19}{HSA\+\_\+\+CORE\+\_\+\+API\+\_\+\+TABLE\+\_\+\+MAJOR\+\_\+\+VERSION}}~0x01
+\item 
+\#define \mbox{\hyperlink{inc_2hsa__api__trace_8h_a22bc0e01c6301ec08366f565d236ada0}{HSA\+\_\+\+AMD\+\_\+\+EXT\+\_\+\+API\+\_\+\+TABLE\+\_\+\+MAJOR\+\_\+\+VERSION}}~0x01
+\item 
+\#define \mbox{\hyperlink{inc_2hsa__api__trace_8h_aeba7a7016ea4bfd004873f1372d26765}{HSA\+\_\+\+FINALIZER\+\_\+\+API\+\_\+\+TABLE\+\_\+\+MAJOR\+\_\+\+VERSION}}~0x01
+\item 
+\#define \mbox{\hyperlink{inc_2hsa__api__trace_8h_a415f96f1ecf51eb2343da349ee307ba8}{HSA\+\_\+\+IMAGE\+\_\+\+API\+\_\+\+TABLE\+\_\+\+MAJOR\+\_\+\+VERSION}}~0x01
+\item 
+\#define \mbox{\hyperlink{inc_2hsa__api__trace_8h_a36b34689dc3cf2a027a3712220e5aa74}{HSA\+\_\+\+AQLPROFILE\+\_\+\+API\+\_\+\+TABLE\+\_\+\+MAJOR\+\_\+\+VERSION}}~0x01
+\item 
+\#define \mbox{\hyperlink{inc_2hsa__api__trace_8h_a4c2bfbf465fb2010c84f9a2efde3b958}{HSA\+\_\+\+API\+\_\+\+TABLE\+\_\+\+STEP\+\_\+\+VERSION}}~0x00
+\item 
+\#define \mbox{\hyperlink{inc_2hsa__api__trace_8h_a12e945352952893c03d4ff6c61751900}{HSA\+\_\+\+CORE\+\_\+\+API\+\_\+\+TABLE\+\_\+\+STEP\+\_\+\+VERSION}}~0x00
+\item 
+\#define \mbox{\hyperlink{inc_2hsa__api__trace_8h_ad98431e1b5b859c34e8440a143f4c239}{HSA\+\_\+\+AMD\+\_\+\+EXT\+\_\+\+API\+\_\+\+TABLE\+\_\+\+STEP\+\_\+\+VERSION}}~0x00
+\item 
+\#define \mbox{\hyperlink{inc_2hsa__api__trace_8h_a8d74ce674fe35a46a09d85efe3740d8c}{HSA\+\_\+\+FINALIZER\+\_\+\+API\+\_\+\+TABLE\+\_\+\+STEP\+\_\+\+VERSION}}~0x00
+\item 
+\#define \mbox{\hyperlink{inc_2hsa__api__trace_8h_aab8c5ff67e93c97164df5bcdc10b5f20}{HSA\+\_\+\+IMAGE\+\_\+\+API\+\_\+\+TABLE\+\_\+\+STEP\+\_\+\+VERSION}}~0x00
+\item 
+\#define \mbox{\hyperlink{inc_2hsa__api__trace_8h_af4bc59f970e2dd659bec08c00265f056}{HSA\+\_\+\+AQLPROFILE\+\_\+\+API\+\_\+\+TABLE\+\_\+\+STEP\+\_\+\+VERSION}}~0x00
+\end{DoxyCompactItemize}
+\doxysubsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+typedef void($\ast$ \mbox{\hyperlink{inc_2hsa__api__trace_8h_a17da7688514181d0918ea51956d1c181}{hsa\+\_\+amd\+\_\+queue\+\_\+intercept\+\_\+packet\+\_\+writer}}) (const void $\ast$pkts, uint64\+\_\+t pkt\+\_\+count)
+\item 
+typedef void($\ast$ \mbox{\hyperlink{inc_2hsa__api__trace_8h_acb1a21c5319f0581a0eb74f78c20c348}{hsa\+\_\+amd\+\_\+queue\+\_\+intercept\+\_\+handler}}) (const void $\ast$pkts, uint64\+\_\+t pkt\+\_\+count, uint64\+\_\+t user\+\_\+pkt\+\_\+index, void $\ast$data, \mbox{\hyperlink{inc_2hsa__api__trace_8h_a17da7688514181d0918ea51956d1c181}{hsa\+\_\+amd\+\_\+queue\+\_\+intercept\+\_\+packet\+\_\+writer}} writer)
+\item 
+typedef void($\ast$ \mbox{\hyperlink{inc_2hsa__api__trace_8h_aaeabee3afcec44007529028ae7b1e40b}{hsa\+\_\+amd\+\_\+runtime\+\_\+queue\+\_\+notifier}}) (const \mbox{\hyperlink{group__queue_ga9e74fdf8d39c8bc42508c534316185f8}{hsa\+\_\+queue\+\_\+t}} $\ast$queue, \mbox{\hyperlink{group__agentinfo_ga9ce217ef08e7d5e89c8e83ce7b6ef22b}{hsa\+\_\+agent\+\_\+t}} agent, void $\ast$data)
+\end{DoxyCompactItemize}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+static uint32\+\_\+t \mbox{\hyperlink{inc_2hsa__api__trace_8h_a17f2876daf2222b8cb1823dc0d798549}{Min}} (const uint32\+\_\+t a, const uint32\+\_\+t b)
+\item 
+\mbox{\hyperlink{group__status_gad755322e7ff95456520e8abdbe90d225}{hsa\+\_\+status\+\_\+t}} \mbox{\hyperlink{inc_2hsa__api__trace_8h_aa96764fc991e2eca3ad40be509b19396}{hsa\+\_\+amd\+\_\+queue\+\_\+intercept\+\_\+register}} (\mbox{\hyperlink{group__queue_ga9e74fdf8d39c8bc42508c534316185f8}{hsa\+\_\+queue\+\_\+t}} $\ast$queue, \mbox{\hyperlink{inc_2hsa__api__trace_8h_acb1a21c5319f0581a0eb74f78c20c348}{hsa\+\_\+amd\+\_\+queue\+\_\+intercept\+\_\+handler}} callback, void $\ast$user\+\_\+data)
+\item 
+\mbox{\hyperlink{group__status_gad755322e7ff95456520e8abdbe90d225}{hsa\+\_\+status\+\_\+t}} \mbox{\hyperlink{inc_2hsa__api__trace_8h_aac239d5b37e9e6e00c5af8bd628d5fc8}{hsa\+\_\+amd\+\_\+queue\+\_\+intercept\+\_\+create}} (\mbox{\hyperlink{group__agentinfo_ga9ce217ef08e7d5e89c8e83ce7b6ef22b}{hsa\+\_\+agent\+\_\+t}} agent\+\_\+handle, uint32\+\_\+t size, \mbox{\hyperlink{group__queue_ga4ca8f732dfceaf6b88dcfeec168d82ae}{hsa\+\_\+queue\+\_\+type32\+\_\+t}} type, void($\ast$callback)(\mbox{\hyperlink{group__status_gad755322e7ff95456520e8abdbe90d225}{hsa\+\_\+status\+\_\+t}} status, \mbox{\hyperlink{group__queue_ga9e74fdf8d39c8bc42508c534316185f8}{hsa\+\_\+queue\+\_\+t}} $\ast$source, void $\ast$data), void $\ast$data, uint32\+\_\+t private\+\_\+segment\+\_\+size, uint32\+\_\+t group\+\_\+segment\+\_\+size, \mbox{\hyperlink{group__queue_ga9e74fdf8d39c8bc42508c534316185f8}{hsa\+\_\+queue\+\_\+t}} $\ast$$\ast$queue)
+\item 
+\mbox{\hyperlink{group__status_gad755322e7ff95456520e8abdbe90d225}{hsa\+\_\+status\+\_\+t}} \mbox{\hyperlink{inc_2hsa__api__trace_8h_a386faa6d5eebe34d786454eadf213724}{hsa\+\_\+amd\+\_\+runtime\+\_\+queue\+\_\+create\+\_\+register}} (\mbox{\hyperlink{inc_2hsa__api__trace_8h_aaeabee3afcec44007529028ae7b1e40b}{hsa\+\_\+amd\+\_\+runtime\+\_\+queue\+\_\+notifier}} callback, void $\ast$user\+\_\+data)
+\item 
+static void \mbox{\hyperlink{inc_2hsa__api__trace_8h_ac1b78a44ee5fffcd226be0c2966bb4b0}{copy\+Api}} (void $\ast$src, void $\ast$dest, size\+\_\+t size)
+\item 
+static void \mbox{\hyperlink{inc_2hsa__api__trace_8h_ab017f22b60a0921eb707d1218553320e}{copy\+Element}} (\mbox{\hyperlink{structApiTableVersion}{Api\+Table\+Version}} $\ast$dest, \mbox{\hyperlink{structApiTableVersion}{Api\+Table\+Version}} $\ast$src)
+\item 
+static void \mbox{\hyperlink{inc_2hsa__api__trace_8h_a7793ad9c1f1e897c55495c960ce48ddf}{copy\+Tables}} (const \mbox{\hyperlink{structHsaApiTable}{Hsa\+Api\+Table}} $\ast$src, \mbox{\hyperlink{structHsaApiTable}{Hsa\+Api\+Table}} $\ast$dest)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Macro Definition Documentation}
+\mbox{\Hypertarget{inc_2hsa__api__trace_8h_a22bc0e01c6301ec08366f565d236ada0}\label{inc_2hsa__api__trace_8h_a22bc0e01c6301ec08366f565d236ada0}} 
+\index{hsa\_api\_trace.h@{hsa\_api\_trace.h}!HSA\_AMD\_EXT\_API\_TABLE\_MAJOR\_VERSION@{HSA\_AMD\_EXT\_API\_TABLE\_MAJOR\_VERSION}}
+\index{HSA\_AMD\_EXT\_API\_TABLE\_MAJOR\_VERSION@{HSA\_AMD\_EXT\_API\_TABLE\_MAJOR\_VERSION}!hsa\_api\_trace.h@{hsa\_api\_trace.h}}
+\doxysubsubsection{\texorpdfstring{HSA\_AMD\_EXT\_API\_TABLE\_MAJOR\_VERSION}{HSA\_AMD\_EXT\_API\_TABLE\_MAJOR\_VERSION}}
+{\footnotesize\ttfamily \#define HSA\+\_\+\+AMD\+\_\+\+EXT\+\_\+\+API\+\_\+\+TABLE\+\_\+\+MAJOR\+\_\+\+VERSION~0x01}
+
+\mbox{\Hypertarget{inc_2hsa__api__trace_8h_ad98431e1b5b859c34e8440a143f4c239}\label{inc_2hsa__api__trace_8h_ad98431e1b5b859c34e8440a143f4c239}} 
+\index{hsa\_api\_trace.h@{hsa\_api\_trace.h}!HSA\_AMD\_EXT\_API\_TABLE\_STEP\_VERSION@{HSA\_AMD\_EXT\_API\_TABLE\_STEP\_VERSION}}
+\index{HSA\_AMD\_EXT\_API\_TABLE\_STEP\_VERSION@{HSA\_AMD\_EXT\_API\_TABLE\_STEP\_VERSION}!hsa\_api\_trace.h@{hsa\_api\_trace.h}}
+\doxysubsubsection{\texorpdfstring{HSA\_AMD\_EXT\_API\_TABLE\_STEP\_VERSION}{HSA\_AMD\_EXT\_API\_TABLE\_STEP\_VERSION}}
+{\footnotesize\ttfamily \#define HSA\+\_\+\+AMD\+\_\+\+EXT\+\_\+\+API\+\_\+\+TABLE\+\_\+\+STEP\+\_\+\+VERSION~0x00}
+
+\mbox{\Hypertarget{inc_2hsa__api__trace_8h_aaaf4132315c91a60d73de4d93fac1514}\label{inc_2hsa__api__trace_8h_aaaf4132315c91a60d73de4d93fac1514}} 
+\index{hsa\_api\_trace.h@{hsa\_api\_trace.h}!HSA\_API\_TABLE\_MAJOR\_VERSION@{HSA\_API\_TABLE\_MAJOR\_VERSION}}
+\index{HSA\_API\_TABLE\_MAJOR\_VERSION@{HSA\_API\_TABLE\_MAJOR\_VERSION}!hsa\_api\_trace.h@{hsa\_api\_trace.h}}
+\doxysubsubsection{\texorpdfstring{HSA\_API\_TABLE\_MAJOR\_VERSION}{HSA\_API\_TABLE\_MAJOR\_VERSION}}
+{\footnotesize\ttfamily \#define HSA\+\_\+\+API\+\_\+\+TABLE\+\_\+\+MAJOR\+\_\+\+VERSION~0x01}
+
+\mbox{\Hypertarget{inc_2hsa__api__trace_8h_a4c2bfbf465fb2010c84f9a2efde3b958}\label{inc_2hsa__api__trace_8h_a4c2bfbf465fb2010c84f9a2efde3b958}} 
+\index{hsa\_api\_trace.h@{hsa\_api\_trace.h}!HSA\_API\_TABLE\_STEP\_VERSION@{HSA\_API\_TABLE\_STEP\_VERSION}}
+\index{HSA\_API\_TABLE\_STEP\_VERSION@{HSA\_API\_TABLE\_STEP\_VERSION}!hsa\_api\_trace.h@{hsa\_api\_trace.h}}
+\doxysubsubsection{\texorpdfstring{HSA\_API\_TABLE\_STEP\_VERSION}{HSA\_API\_TABLE\_STEP\_VERSION}}
+{\footnotesize\ttfamily \#define HSA\+\_\+\+API\+\_\+\+TABLE\+\_\+\+STEP\+\_\+\+VERSION~0x00}
+
+\mbox{\Hypertarget{inc_2hsa__api__trace_8h_a36b34689dc3cf2a027a3712220e5aa74}\label{inc_2hsa__api__trace_8h_a36b34689dc3cf2a027a3712220e5aa74}} 
+\index{hsa\_api\_trace.h@{hsa\_api\_trace.h}!HSA\_AQLPROFILE\_API\_TABLE\_MAJOR\_VERSION@{HSA\_AQLPROFILE\_API\_TABLE\_MAJOR\_VERSION}}
+\index{HSA\_AQLPROFILE\_API\_TABLE\_MAJOR\_VERSION@{HSA\_AQLPROFILE\_API\_TABLE\_MAJOR\_VERSION}!hsa\_api\_trace.h@{hsa\_api\_trace.h}}
+\doxysubsubsection{\texorpdfstring{HSA\_AQLPROFILE\_API\_TABLE\_MAJOR\_VERSION}{HSA\_AQLPROFILE\_API\_TABLE\_MAJOR\_VERSION}}
+{\footnotesize\ttfamily \#define HSA\+\_\+\+AQLPROFILE\+\_\+\+API\+\_\+\+TABLE\+\_\+\+MAJOR\+\_\+\+VERSION~0x01}
+
+\mbox{\Hypertarget{inc_2hsa__api__trace_8h_af4bc59f970e2dd659bec08c00265f056}\label{inc_2hsa__api__trace_8h_af4bc59f970e2dd659bec08c00265f056}} 
+\index{hsa\_api\_trace.h@{hsa\_api\_trace.h}!HSA\_AQLPROFILE\_API\_TABLE\_STEP\_VERSION@{HSA\_AQLPROFILE\_API\_TABLE\_STEP\_VERSION}}
+\index{HSA\_AQLPROFILE\_API\_TABLE\_STEP\_VERSION@{HSA\_AQLPROFILE\_API\_TABLE\_STEP\_VERSION}!hsa\_api\_trace.h@{hsa\_api\_trace.h}}
+\doxysubsubsection{\texorpdfstring{HSA\_AQLPROFILE\_API\_TABLE\_STEP\_VERSION}{HSA\_AQLPROFILE\_API\_TABLE\_STEP\_VERSION}}
+{\footnotesize\ttfamily \#define HSA\+\_\+\+AQLPROFILE\+\_\+\+API\+\_\+\+TABLE\+\_\+\+STEP\+\_\+\+VERSION~0x00}
+
+\mbox{\Hypertarget{inc_2hsa__api__trace_8h_a5c2ff15389751109796777ae0759cb19}\label{inc_2hsa__api__trace_8h_a5c2ff15389751109796777ae0759cb19}} 
+\index{hsa\_api\_trace.h@{hsa\_api\_trace.h}!HSA\_CORE\_API\_TABLE\_MAJOR\_VERSION@{HSA\_CORE\_API\_TABLE\_MAJOR\_VERSION}}
+\index{HSA\_CORE\_API\_TABLE\_MAJOR\_VERSION@{HSA\_CORE\_API\_TABLE\_MAJOR\_VERSION}!hsa\_api\_trace.h@{hsa\_api\_trace.h}}
+\doxysubsubsection{\texorpdfstring{HSA\_CORE\_API\_TABLE\_MAJOR\_VERSION}{HSA\_CORE\_API\_TABLE\_MAJOR\_VERSION}}
+{\footnotesize\ttfamily \#define HSA\+\_\+\+CORE\+\_\+\+API\+\_\+\+TABLE\+\_\+\+MAJOR\+\_\+\+VERSION~0x01}
+
+\mbox{\Hypertarget{inc_2hsa__api__trace_8h_a12e945352952893c03d4ff6c61751900}\label{inc_2hsa__api__trace_8h_a12e945352952893c03d4ff6c61751900}} 
+\index{hsa\_api\_trace.h@{hsa\_api\_trace.h}!HSA\_CORE\_API\_TABLE\_STEP\_VERSION@{HSA\_CORE\_API\_TABLE\_STEP\_VERSION}}
+\index{HSA\_CORE\_API\_TABLE\_STEP\_VERSION@{HSA\_CORE\_API\_TABLE\_STEP\_VERSION}!hsa\_api\_trace.h@{hsa\_api\_trace.h}}
+\doxysubsubsection{\texorpdfstring{HSA\_CORE\_API\_TABLE\_STEP\_VERSION}{HSA\_CORE\_API\_TABLE\_STEP\_VERSION}}
+{\footnotesize\ttfamily \#define HSA\+\_\+\+CORE\+\_\+\+API\+\_\+\+TABLE\+\_\+\+STEP\+\_\+\+VERSION~0x00}
+
+\mbox{\Hypertarget{inc_2hsa__api__trace_8h_aeba7a7016ea4bfd004873f1372d26765}\label{inc_2hsa__api__trace_8h_aeba7a7016ea4bfd004873f1372d26765}} 
+\index{hsa\_api\_trace.h@{hsa\_api\_trace.h}!HSA\_FINALIZER\_API\_TABLE\_MAJOR\_VERSION@{HSA\_FINALIZER\_API\_TABLE\_MAJOR\_VERSION}}
+\index{HSA\_FINALIZER\_API\_TABLE\_MAJOR\_VERSION@{HSA\_FINALIZER\_API\_TABLE\_MAJOR\_VERSION}!hsa\_api\_trace.h@{hsa\_api\_trace.h}}
+\doxysubsubsection{\texorpdfstring{HSA\_FINALIZER\_API\_TABLE\_MAJOR\_VERSION}{HSA\_FINALIZER\_API\_TABLE\_MAJOR\_VERSION}}
+{\footnotesize\ttfamily \#define HSA\+\_\+\+FINALIZER\+\_\+\+API\+\_\+\+TABLE\+\_\+\+MAJOR\+\_\+\+VERSION~0x01}
+
+\mbox{\Hypertarget{inc_2hsa__api__trace_8h_a8d74ce674fe35a46a09d85efe3740d8c}\label{inc_2hsa__api__trace_8h_a8d74ce674fe35a46a09d85efe3740d8c}} 
+\index{hsa\_api\_trace.h@{hsa\_api\_trace.h}!HSA\_FINALIZER\_API\_TABLE\_STEP\_VERSION@{HSA\_FINALIZER\_API\_TABLE\_STEP\_VERSION}}
+\index{HSA\_FINALIZER\_API\_TABLE\_STEP\_VERSION@{HSA\_FINALIZER\_API\_TABLE\_STEP\_VERSION}!hsa\_api\_trace.h@{hsa\_api\_trace.h}}
+\doxysubsubsection{\texorpdfstring{HSA\_FINALIZER\_API\_TABLE\_STEP\_VERSION}{HSA\_FINALIZER\_API\_TABLE\_STEP\_VERSION}}
+{\footnotesize\ttfamily \#define HSA\+\_\+\+FINALIZER\+\_\+\+API\+\_\+\+TABLE\+\_\+\+STEP\+\_\+\+VERSION~0x00}
+
+\mbox{\Hypertarget{inc_2hsa__api__trace_8h_a415f96f1ecf51eb2343da349ee307ba8}\label{inc_2hsa__api__trace_8h_a415f96f1ecf51eb2343da349ee307ba8}} 
+\index{hsa\_api\_trace.h@{hsa\_api\_trace.h}!HSA\_IMAGE\_API\_TABLE\_MAJOR\_VERSION@{HSA\_IMAGE\_API\_TABLE\_MAJOR\_VERSION}}
+\index{HSA\_IMAGE\_API\_TABLE\_MAJOR\_VERSION@{HSA\_IMAGE\_API\_TABLE\_MAJOR\_VERSION}!hsa\_api\_trace.h@{hsa\_api\_trace.h}}
+\doxysubsubsection{\texorpdfstring{HSA\_IMAGE\_API\_TABLE\_MAJOR\_VERSION}{HSA\_IMAGE\_API\_TABLE\_MAJOR\_VERSION}}
+{\footnotesize\ttfamily \#define HSA\+\_\+\+IMAGE\+\_\+\+API\+\_\+\+TABLE\+\_\+\+MAJOR\+\_\+\+VERSION~0x01}
+
+\mbox{\Hypertarget{inc_2hsa__api__trace_8h_aab8c5ff67e93c97164df5bcdc10b5f20}\label{inc_2hsa__api__trace_8h_aab8c5ff67e93c97164df5bcdc10b5f20}} 
+\index{hsa\_api\_trace.h@{hsa\_api\_trace.h}!HSA\_IMAGE\_API\_TABLE\_STEP\_VERSION@{HSA\_IMAGE\_API\_TABLE\_STEP\_VERSION}}
+\index{HSA\_IMAGE\_API\_TABLE\_STEP\_VERSION@{HSA\_IMAGE\_API\_TABLE\_STEP\_VERSION}!hsa\_api\_trace.h@{hsa\_api\_trace.h}}
+\doxysubsubsection{\texorpdfstring{HSA\_IMAGE\_API\_TABLE\_STEP\_VERSION}{HSA\_IMAGE\_API\_TABLE\_STEP\_VERSION}}
+{\footnotesize\ttfamily \#define HSA\+\_\+\+IMAGE\+\_\+\+API\+\_\+\+TABLE\+\_\+\+STEP\+\_\+\+VERSION~0x00}
+
+
+
+\doxysubsection{Typedef Documentation}
+\mbox{\Hypertarget{inc_2hsa__api__trace_8h_acb1a21c5319f0581a0eb74f78c20c348}\label{inc_2hsa__api__trace_8h_acb1a21c5319f0581a0eb74f78c20c348}} 
+\index{hsa\_api\_trace.h@{hsa\_api\_trace.h}!hsa\_amd\_queue\_intercept\_handler@{hsa\_amd\_queue\_intercept\_handler}}
+\index{hsa\_amd\_queue\_intercept\_handler@{hsa\_amd\_queue\_intercept\_handler}!hsa\_api\_trace.h@{hsa\_api\_trace.h}}
+\doxysubsubsection{\texorpdfstring{hsa\_amd\_queue\_intercept\_handler}{hsa\_amd\_queue\_intercept\_handler}}
+{\footnotesize\ttfamily typedef void($\ast$ hsa\+\_\+amd\+\_\+queue\+\_\+intercept\+\_\+handler) (const void $\ast$pkts, uint64\+\_\+t pkt\+\_\+count, uint64\+\_\+t user\+\_\+pkt\+\_\+index, void $\ast$data, \mbox{\hyperlink{inc_2hsa__api__trace_8h_a17da7688514181d0918ea51956d1c181}{hsa\+\_\+amd\+\_\+queue\+\_\+intercept\+\_\+packet\+\_\+writer}} writer)}
+
+\mbox{\Hypertarget{inc_2hsa__api__trace_8h_a17da7688514181d0918ea51956d1c181}\label{inc_2hsa__api__trace_8h_a17da7688514181d0918ea51956d1c181}} 
+\index{hsa\_api\_trace.h@{hsa\_api\_trace.h}!hsa\_amd\_queue\_intercept\_packet\_writer@{hsa\_amd\_queue\_intercept\_packet\_writer}}
+\index{hsa\_amd\_queue\_intercept\_packet\_writer@{hsa\_amd\_queue\_intercept\_packet\_writer}!hsa\_api\_trace.h@{hsa\_api\_trace.h}}
+\doxysubsubsection{\texorpdfstring{hsa\_amd\_queue\_intercept\_packet\_writer}{hsa\_amd\_queue\_intercept\_packet\_writer}}
+{\footnotesize\ttfamily typedef void($\ast$ hsa\+\_\+amd\+\_\+queue\+\_\+intercept\+\_\+packet\+\_\+writer) (const void $\ast$pkts, uint64\+\_\+t pkt\+\_\+count)}
+
+\mbox{\Hypertarget{inc_2hsa__api__trace_8h_aaeabee3afcec44007529028ae7b1e40b}\label{inc_2hsa__api__trace_8h_aaeabee3afcec44007529028ae7b1e40b}} 
+\index{hsa\_api\_trace.h@{hsa\_api\_trace.h}!hsa\_amd\_runtime\_queue\_notifier@{hsa\_amd\_runtime\_queue\_notifier}}
+\index{hsa\_amd\_runtime\_queue\_notifier@{hsa\_amd\_runtime\_queue\_notifier}!hsa\_api\_trace.h@{hsa\_api\_trace.h}}
+\doxysubsubsection{\texorpdfstring{hsa\_amd\_runtime\_queue\_notifier}{hsa\_amd\_runtime\_queue\_notifier}}
+{\footnotesize\ttfamily typedef void($\ast$ hsa\+\_\+amd\+\_\+runtime\+\_\+queue\+\_\+notifier) (const \mbox{\hyperlink{group__queue_ga9e74fdf8d39c8bc42508c534316185f8}{hsa\+\_\+queue\+\_\+t}} $\ast$queue, \mbox{\hyperlink{group__agentinfo_ga9ce217ef08e7d5e89c8e83ce7b6ef22b}{hsa\+\_\+agent\+\_\+t}} agent, void $\ast$data)}
+
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{inc_2hsa__api__trace_8h_ac1b78a44ee5fffcd226be0c2966bb4b0}\label{inc_2hsa__api__trace_8h_ac1b78a44ee5fffcd226be0c2966bb4b0}} 
+\index{hsa\_api\_trace.h@{hsa\_api\_trace.h}!copyApi@{copyApi}}
+\index{copyApi@{copyApi}!hsa\_api\_trace.h@{hsa\_api\_trace.h}}
+\doxysubsubsection{\texorpdfstring{copyApi()}{copyApi()}}
+{\footnotesize\ttfamily static void copy\+Api (\begin{DoxyParamCaption}\item[{void $\ast$}]{src,  }\item[{void $\ast$}]{dest,  }\item[{size\+\_\+t}]{size }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=344pt]{inc_2hsa__api__trace_8h_ac1b78a44ee5fffcd226be0c2966bb4b0_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{inc_2hsa__api__trace_8h_ab017f22b60a0921eb707d1218553320e}\label{inc_2hsa__api__trace_8h_ab017f22b60a0921eb707d1218553320e}} 
+\index{hsa\_api\_trace.h@{hsa\_api\_trace.h}!copyElement@{copyElement}}
+\index{copyElement@{copyElement}!hsa\_api\_trace.h@{hsa\_api\_trace.h}}
+\doxysubsubsection{\texorpdfstring{copyElement()}{copyElement()}}
+{\footnotesize\ttfamily static void copy\+Element (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structApiTableVersion}{Api\+Table\+Version}} $\ast$}]{dest,  }\item[{\mbox{\hyperlink{structApiTableVersion}{Api\+Table\+Version}} $\ast$}]{src }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=242pt]{inc_2hsa__api__trace_8h_ab017f22b60a0921eb707d1218553320e_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=256pt]{inc_2hsa__api__trace_8h_ab017f22b60a0921eb707d1218553320e_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{inc_2hsa__api__trace_8h_a7793ad9c1f1e897c55495c960ce48ddf}\label{inc_2hsa__api__trace_8h_a7793ad9c1f1e897c55495c960ce48ddf}} 
+\index{hsa\_api\_trace.h@{hsa\_api\_trace.h}!copyTables@{copyTables}}
+\index{copyTables@{copyTables}!hsa\_api\_trace.h@{hsa\_api\_trace.h}}
+\doxysubsubsection{\texorpdfstring{copyTables()}{copyTables()}}
+{\footnotesize\ttfamily static void copy\+Tables (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{structHsaApiTable}{Hsa\+Api\+Table}} $\ast$}]{src,  }\item[{\mbox{\hyperlink{structHsaApiTable}{Hsa\+Api\+Table}} $\ast$}]{dest }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=344pt]{inc_2hsa__api__trace_8h_a7793ad9c1f1e897c55495c960ce48ddf_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{inc_2hsa__api__trace_8h_aac239d5b37e9e6e00c5af8bd628d5fc8}\label{inc_2hsa__api__trace_8h_aac239d5b37e9e6e00c5af8bd628d5fc8}} 
+\index{hsa\_api\_trace.h@{hsa\_api\_trace.h}!hsa\_amd\_queue\_intercept\_create@{hsa\_amd\_queue\_intercept\_create}}
+\index{hsa\_amd\_queue\_intercept\_create@{hsa\_amd\_queue\_intercept\_create}!hsa\_api\_trace.h@{hsa\_api\_trace.h}}
+\doxysubsubsection{\texorpdfstring{hsa\_amd\_queue\_intercept\_create()}{hsa\_amd\_queue\_intercept\_create()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{group__status_gad755322e7ff95456520e8abdbe90d225}{hsa\+\_\+status\+\_\+t}} hsa\+\_\+amd\+\_\+queue\+\_\+intercept\+\_\+create (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{group__agentinfo_ga9ce217ef08e7d5e89c8e83ce7b6ef22b}{hsa\+\_\+agent\+\_\+t}}}]{agent\+\_\+handle,  }\item[{uint32\+\_\+t}]{size,  }\item[{\mbox{\hyperlink{group__queue_ga4ca8f732dfceaf6b88dcfeec168d82ae}{hsa\+\_\+queue\+\_\+type32\+\_\+t}}}]{type,  }\item[{void($\ast$)(\mbox{\hyperlink{group__status_gad755322e7ff95456520e8abdbe90d225}{hsa\+\_\+status\+\_\+t}} status, \mbox{\hyperlink{group__queue_ga9e74fdf8d39c8bc42508c534316185f8}{hsa\+\_\+queue\+\_\+t}} $\ast$source, void $\ast$data)}]{callback,  }\item[{void $\ast$}]{data,  }\item[{uint32\+\_\+t}]{private\+\_\+segment\+\_\+size,  }\item[{uint32\+\_\+t}]{group\+\_\+segment\+\_\+size,  }\item[{\mbox{\hyperlink{group__queue_ga9e74fdf8d39c8bc42508c534316185f8}{hsa\+\_\+queue\+\_\+t}} $\ast$$\ast$}]{queue }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{inc_2hsa__api__trace_8h_aa96764fc991e2eca3ad40be509b19396}\label{inc_2hsa__api__trace_8h_aa96764fc991e2eca3ad40be509b19396}} 
+\index{hsa\_api\_trace.h@{hsa\_api\_trace.h}!hsa\_amd\_queue\_intercept\_register@{hsa\_amd\_queue\_intercept\_register}}
+\index{hsa\_amd\_queue\_intercept\_register@{hsa\_amd\_queue\_intercept\_register}!hsa\_api\_trace.h@{hsa\_api\_trace.h}}
+\doxysubsubsection{\texorpdfstring{hsa\_amd\_queue\_intercept\_register()}{hsa\_amd\_queue\_intercept\_register()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{group__status_gad755322e7ff95456520e8abdbe90d225}{hsa\+\_\+status\+\_\+t}} hsa\+\_\+amd\+\_\+queue\+\_\+intercept\+\_\+register (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{group__queue_ga9e74fdf8d39c8bc42508c534316185f8}{hsa\+\_\+queue\+\_\+t}} $\ast$}]{queue,  }\item[{\mbox{\hyperlink{inc_2hsa__api__trace_8h_acb1a21c5319f0581a0eb74f78c20c348}{hsa\+\_\+amd\+\_\+queue\+\_\+intercept\+\_\+handler}}}]{callback,  }\item[{void $\ast$}]{user\+\_\+data }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{inc_2hsa__api__trace_8h_a386faa6d5eebe34d786454eadf213724}\label{inc_2hsa__api__trace_8h_a386faa6d5eebe34d786454eadf213724}} 
+\index{hsa\_api\_trace.h@{hsa\_api\_trace.h}!hsa\_amd\_runtime\_queue\_create\_register@{hsa\_amd\_runtime\_queue\_create\_register}}
+\index{hsa\_amd\_runtime\_queue\_create\_register@{hsa\_amd\_runtime\_queue\_create\_register}!hsa\_api\_trace.h@{hsa\_api\_trace.h}}
+\doxysubsubsection{\texorpdfstring{hsa\_amd\_runtime\_queue\_create\_register()}{hsa\_amd\_runtime\_queue\_create\_register()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{group__status_gad755322e7ff95456520e8abdbe90d225}{hsa\+\_\+status\+\_\+t}} hsa\+\_\+amd\+\_\+runtime\+\_\+queue\+\_\+create\+\_\+register (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{inc_2hsa__api__trace_8h_aaeabee3afcec44007529028ae7b1e40b}{hsa\+\_\+amd\+\_\+runtime\+\_\+queue\+\_\+notifier}}}]{callback,  }\item[{void $\ast$}]{user\+\_\+data }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{inc_2hsa__api__trace_8h_a17f2876daf2222b8cb1823dc0d798549}\label{inc_2hsa__api__trace_8h_a17f2876daf2222b8cb1823dc0d798549}} 
+\index{hsa\_api\_trace.h@{hsa\_api\_trace.h}!Min@{Min}}
+\index{Min@{Min}!hsa\_api\_trace.h@{hsa\_api\_trace.h}}
+\doxysubsubsection{\texorpdfstring{Min()}{Min()}}
+{\footnotesize\ttfamily static uint32\+\_\+t Min (\begin{DoxyParamCaption}\item[{const uint32\+\_\+t}]{a,  }\item[{const uint32\+\_\+t}]{b }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=324pt]{inc_2hsa__api__trace_8h_a17f2876daf2222b8cb1823dc0d798549_icgraph}
+\end{center}
+\end{figure}

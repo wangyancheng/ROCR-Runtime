@@ -1,0 +1,149 @@
+\hypertarget{classrocr_1_1amd_1_1options_1_1Option}{}\doxysection{rocr\+::amd\+::options\+::Option$<$ T $>$ Class Template Reference}
+\label{classrocr_1_1amd_1_1options_1_1Option}\index{rocr::amd::options::Option$<$ T $>$@{rocr::amd::options::Option$<$ T $>$}}
+
+
+{\ttfamily \#include $<$amd\+\_\+options.\+hpp$>$}
+
+
+
+Inheritance diagram for rocr\+::amd\+::options\+::Option$<$ T $>$\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=175pt]{classrocr_1_1amd_1_1options_1_1Option__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for rocr\+::amd\+::options\+::Option$<$ T $>$\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=175pt]{classrocr_1_1amd_1_1options_1_1Option__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classrocr_1_1amd_1_1options_1_1Option_a21b807ce9e2f4881541af8abf7f39c79}{Option}} (const std\+::string \&\mbox{\hyperlink{classrocr_1_1amd_1_1options_1_1OptionBase_a82e2e7b46c7cd92c4f1b127304651710}{name}}, const std\+::string \&help=\char`\"{}\char`\"{}, std\+::ostream \&\mbox{\hyperlink{classrocr_1_1amd_1_1options_1_1OptionBase_ae5735acf7fccf2b89bc53c9ff0a2d6e7}{error}}=std\+::cerr)
+\item 
+\mbox{\hyperlink{classrocr_1_1amd_1_1options_1_1Option_abeba3fa8397ec5b29b98b4fed98e8daf}{$\sim$\+Option}} ()
+\item 
+const std\+::list$<$ T $>$ \& \mbox{\hyperlink{classrocr_1_1amd_1_1options_1_1Option_af2aa5eb0e2d2ebfdc643ddad18678dd9}{values}} () const
+\end{DoxyCompactItemize}
+\doxysubsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+virtual void \mbox{\hyperlink{classrocr_1_1amd_1_1options_1_1Option_aacf5ed0c918c5d59cb57f3463f9c992f}{Print\+Help}} (\mbox{\hyperlink{classrocr_1_1amd_1_1options_1_1HelpPrinter}{Help\+Printer}} \&printer) const override
+\end{DoxyCompactItemize}
+\doxysubsection*{Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classrocr_1_1amd_1_1options_1_1Option_a075f8f38187d908ec734027d79b67037}{Option}} (const \mbox{\hyperlink{classrocr_1_1amd_1_1options_1_1Option}{Option}} \&o)
+\begin{DoxyCompactList}\small\item\em Not copy-\/constructible. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classrocr_1_1amd_1_1options_1_1Option}{Option}} \& \mbox{\hyperlink{classrocr_1_1amd_1_1options_1_1Option_a1dae64549868891cad8f4d6a374676c3}{operator=}} (const \mbox{\hyperlink{classrocr_1_1amd_1_1options_1_1Option}{Option}} \&o)
+\begin{DoxyCompactList}\small\item\em Not copy-\/assignable. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classrocr_1_1amd_1_1options_1_1Option_a50f3ba68abf691e41ab41df5c5650750}{Process\+Tokens}} (std\+::list$<$ std\+::string $>$ \&tokens)
+\end{DoxyCompactItemize}
+\doxysubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+std\+::list$<$ T $>$ \mbox{\hyperlink{classrocr_1_1amd_1_1options_1_1Option_aa08f4d515c316fb0b4f1e236276a5f3b}{values\+\_\+}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Additional Inherited Members}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classrocr_1_1amd_1_1options_1_1Option_a21b807ce9e2f4881541af8abf7f39c79}\label{classrocr_1_1amd_1_1options_1_1Option_a21b807ce9e2f4881541af8abf7f39c79}} 
+\index{rocr::amd::options::Option$<$ T $>$@{rocr::amd::options::Option$<$ T $>$}!Option@{Option}}
+\index{Option@{Option}!rocr::amd::options::Option$<$ T $>$@{rocr::amd::options::Option$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{Option()}{Option()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+\mbox{\hyperlink{classrocr_1_1amd_1_1options_1_1Option}{rocr\+::amd\+::options\+::\+Option}}$<$ T $>$\+::\mbox{\hyperlink{classrocr_1_1amd_1_1options_1_1Option}{Option}} (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{name,  }\item[{const std\+::string \&}]{help = {\ttfamily \char`\"{}\char`\"{}},  }\item[{std\+::ostream \&}]{error = {\ttfamily std\+:\+:cerr} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [explicit]}}
+
+\mbox{\Hypertarget{classrocr_1_1amd_1_1options_1_1Option_abeba3fa8397ec5b29b98b4fed98e8daf}\label{classrocr_1_1amd_1_1options_1_1Option_abeba3fa8397ec5b29b98b4fed98e8daf}} 
+\index{rocr::amd::options::Option$<$ T $>$@{rocr::amd::options::Option$<$ T $>$}!````~Option@{$\sim$Option}}
+\index{````~Option@{$\sim$Option}!rocr::amd::options::Option$<$ T $>$@{rocr::amd::options::Option$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{$\sim$Option()}{~Option()}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+\mbox{\hyperlink{classrocr_1_1amd_1_1options_1_1Option}{rocr\+::amd\+::options\+::\+Option}}$<$ T $>$\+::$\sim$\mbox{\hyperlink{classrocr_1_1amd_1_1options_1_1Option}{Option}} (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{classrocr_1_1amd_1_1options_1_1Option_a075f8f38187d908ec734027d79b67037}\label{classrocr_1_1amd_1_1options_1_1Option_a075f8f38187d908ec734027d79b67037}} 
+\index{rocr::amd::options::Option$<$ T $>$@{rocr::amd::options::Option$<$ T $>$}!Option@{Option}}
+\index{Option@{Option}!rocr::amd::options::Option$<$ T $>$@{rocr::amd::options::Option$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{Option()}{Option()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+\mbox{\hyperlink{classrocr_1_1amd_1_1options_1_1Option}{rocr\+::amd\+::options\+::\+Option}}$<$ T $>$\+::\mbox{\hyperlink{classrocr_1_1amd_1_1options_1_1Option}{Option}} (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classrocr_1_1amd_1_1options_1_1Option}{Option}}$<$ T $>$ \&}]{o }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Not copy-\/constructible. 
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classrocr_1_1amd_1_1options_1_1Option_a1dae64549868891cad8f4d6a374676c3}\label{classrocr_1_1amd_1_1options_1_1Option_a1dae64549868891cad8f4d6a374676c3}} 
+\index{rocr::amd::options::Option$<$ T $>$@{rocr::amd::options::Option$<$ T $>$}!operator=@{operator=}}
+\index{operator=@{operator=}!rocr::amd::options::Option$<$ T $>$@{rocr::amd::options::Option$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{operator=()}{operator=()}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+\mbox{\hyperlink{classrocr_1_1amd_1_1options_1_1Option}{Option}}\& \mbox{\hyperlink{classrocr_1_1amd_1_1options_1_1Option}{rocr\+::amd\+::options\+::\+Option}}$<$ T $>$\+::operator= (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classrocr_1_1amd_1_1options_1_1Option}{Option}}$<$ T $>$ \&}]{o }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Not copy-\/assignable. 
+
+\mbox{\Hypertarget{classrocr_1_1amd_1_1options_1_1Option_aacf5ed0c918c5d59cb57f3463f9c992f}\label{classrocr_1_1amd_1_1options_1_1Option_aacf5ed0c918c5d59cb57f3463f9c992f}} 
+\index{rocr::amd::options::Option$<$ T $>$@{rocr::amd::options::Option$<$ T $>$}!PrintHelp@{PrintHelp}}
+\index{PrintHelp@{PrintHelp}!rocr::amd::options::Option$<$ T $>$@{rocr::amd::options::Option$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{PrintHelp()}{PrintHelp()}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+void \mbox{\hyperlink{classrocr_1_1amd_1_1options_1_1Option}{rocr\+::amd\+::options\+::\+Option}}$<$ T $>$\+::Print\+Help (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classrocr_1_1amd_1_1options_1_1HelpPrinter}{Help\+Printer}} \&}]{printer }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [protected]}, {\ttfamily [virtual]}}
+
+
+
+Implements \mbox{\hyperlink{classrocr_1_1amd_1_1options_1_1OptionBase_afbdc835a3b6409246902cf0ff50cb9b9}{rocr\+::amd\+::options\+::\+Option\+Base}}.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classrocr_1_1amd_1_1options_1_1Option_aacf5ed0c918c5d59cb57f3463f9c992f_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classrocr_1_1amd_1_1options_1_1Option_a50f3ba68abf691e41ab41df5c5650750}\label{classrocr_1_1amd_1_1options_1_1Option_a50f3ba68abf691e41ab41df5c5650750}} 
+\index{rocr::amd::options::Option$<$ T $>$@{rocr::amd::options::Option$<$ T $>$}!ProcessTokens@{ProcessTokens}}
+\index{ProcessTokens@{ProcessTokens}!rocr::amd::options::Option$<$ T $>$@{rocr::amd::options::Option$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{ProcessTokens()}{ProcessTokens()}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+bool \mbox{\hyperlink{classrocr_1_1amd_1_1options_1_1Option}{rocr\+::amd\+::options\+::\+Option}}$<$ T $>$\+::Process\+Tokens (\begin{DoxyParamCaption}\item[{std\+::list$<$ std\+::string $>$ \&}]{tokens }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}, {\ttfamily [virtual]}}
+
+
+
+Implements \mbox{\hyperlink{classrocr_1_1amd_1_1options_1_1OptionBase_a83cb1b034b6970f497984ebefee4fc1c}{rocr\+::amd\+::options\+::\+Option\+Base}}.
+
+\mbox{\Hypertarget{classrocr_1_1amd_1_1options_1_1Option_af2aa5eb0e2d2ebfdc643ddad18678dd9}\label{classrocr_1_1amd_1_1options_1_1Option_af2aa5eb0e2d2ebfdc643ddad18678dd9}} 
+\index{rocr::amd::options::Option$<$ T $>$@{rocr::amd::options::Option$<$ T $>$}!values@{values}}
+\index{values@{values}!rocr::amd::options::Option$<$ T $>$@{rocr::amd::options::Option$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{values()}{values()}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+const std\+::list$<$T$>$\& \mbox{\hyperlink{classrocr_1_1amd_1_1options_1_1Option}{rocr\+::amd\+::options\+::\+Option}}$<$ T $>$\+::values (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{classrocr_1_1amd_1_1options_1_1Option_aa08f4d515c316fb0b4f1e236276a5f3b}\label{classrocr_1_1amd_1_1options_1_1Option_aa08f4d515c316fb0b4f1e236276a5f3b}} 
+\index{rocr::amd::options::Option$<$ T $>$@{rocr::amd::options::Option$<$ T $>$}!values\_@{values\_}}
+\index{values\_@{values\_}!rocr::amd::options::Option$<$ T $>$@{rocr::amd::options::Option$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{values\_}{values\_}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+std\+::list$<$T$>$ \mbox{\hyperlink{classrocr_1_1amd_1_1options_1_1Option}{rocr\+::amd\+::options\+::\+Option}}$<$ T $>$\+::values\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+src/libamdhsacode/\mbox{\hyperlink{amd__options_8hpp}{amd\+\_\+options.\+hpp}}\end{DoxyCompactItemize}

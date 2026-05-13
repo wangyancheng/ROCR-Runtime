@@ -1,0 +1,212 @@
+\hypertarget{classrocr_1_1core_1_1Blit}{}\doxysection{rocr\+::core\+::Blit Class Reference}
+\label{classrocr_1_1core_1_1Blit}\index{rocr::core::Blit@{rocr::core::Blit}}
+
+
+{\ttfamily \#include $<$blit.\+h$>$}
+
+
+
+Inheritance diagram for rocr\+::core\+::Blit\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classrocr_1_1core_1_1Blit__inherit__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classrocr_1_1core_1_1Blit_a0d0c7dad0022c463b8e51fa4881bcc3d}{Blit}} ()
+\item 
+virtual \mbox{\hyperlink{classrocr_1_1core_1_1Blit_a7e9803eb798062fe14a97d4691a78dc8}{$\sim$\+Blit}} ()
+\item 
+virtual \mbox{\hyperlink{group__status_gad755322e7ff95456520e8abdbe90d225}{hsa\+\_\+status\+\_\+t}} \mbox{\hyperlink{classrocr_1_1core_1_1Blit_ad2007f050a453aaabc1227f0895f567f}{Destroy}} (const \mbox{\hyperlink{classrocr_1_1core_1_1Agent}{core\+::\+Agent}} \&agent)=0
+\begin{DoxyCompactList}\small\item\em Marks the blit object as invalid and uncouples its link with the underlying compute device\textquotesingle{}s control block. Use of blit object once it has been release is illegal and any behavior is indeterminate. \end{DoxyCompactList}\item 
+virtual \mbox{\hyperlink{group__status_gad755322e7ff95456520e8abdbe90d225}{hsa\+\_\+status\+\_\+t}} \mbox{\hyperlink{classrocr_1_1core_1_1Blit_a0220cb0a78cd3626060a62301193ea96}{Submit\+Linear\+Copy\+Command}} (void $\ast$dst, const void $\ast$src, size\+\_\+t size)=0
+\begin{DoxyCompactList}\small\item\em Submit a linear copy command to the the underlying compute device\textquotesingle{}s control block. The call is blocking until the command execution is finished. \end{DoxyCompactList}\item 
+virtual \mbox{\hyperlink{group__status_gad755322e7ff95456520e8abdbe90d225}{hsa\+\_\+status\+\_\+t}} \mbox{\hyperlink{classrocr_1_1core_1_1Blit_af966aecf9b06ecbe1e2d8eaabf6012b0}{Submit\+Linear\+Copy\+Command}} (void $\ast$dst, const void $\ast$src, size\+\_\+t size, std\+::vector$<$ \mbox{\hyperlink{classrocr_1_1core_1_1Signal}{core\+::\+Signal}} $\ast$ $>$ \&dep\+\_\+signals, \mbox{\hyperlink{classrocr_1_1core_1_1Signal}{core\+::\+Signal}} \&out\+\_\+signal)=0
+\begin{DoxyCompactList}\small\item\em Submit a linear copy command to the the underlying compute device\textquotesingle{}s control block. The call is non blocking. The memory transfer will start after all dependent signals are satisfied. After the transfer is completed, the out signal will be decremented. \end{DoxyCompactList}\item 
+virtual \mbox{\hyperlink{group__status_gad755322e7ff95456520e8abdbe90d225}{hsa\+\_\+status\+\_\+t}} \mbox{\hyperlink{classrocr_1_1core_1_1Blit_a22a436a79221d0fc05b9cd24a74d87bf}{Submit\+Linear\+Fill\+Command}} (void $\ast$ptr, uint32\+\_\+t value, size\+\_\+t num)=0
+\begin{DoxyCompactList}\small\item\em Submit a linear fill command to the the underlying compute device\textquotesingle{}s control block. The call is blocking until the command execution is finished. \end{DoxyCompactList}\item 
+virtual \mbox{\hyperlink{group__status_gad755322e7ff95456520e8abdbe90d225}{hsa\+\_\+status\+\_\+t}} \mbox{\hyperlink{classrocr_1_1core_1_1Blit_acfaa5aa7f95d0720a49cad4e95ffffb9}{Enable\+Profiling}} (bool enable)=0
+\begin{DoxyCompactList}\small\item\em Enable profiling of the asynchronous copy command. The timestamp of each copy request will be stored in the completion signal structure. \end{DoxyCompactList}\item 
+virtual bool \mbox{\hyperlink{classrocr_1_1core_1_1Blit_ad4633fec3312954858c4c3b40ff96f62}{is\+SDMA}} () const
+\begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{classrocr_1_1core_1_1Blit}{Blit}} operations use SDMA. \end{DoxyCompactList}\item 
+virtual uint64\+\_\+t \mbox{\hyperlink{classrocr_1_1core_1_1Blit_a15ad3362fcca65a5bb183e4eb02df785}{Pending\+Bytes}} ()=0
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classrocr_1_1core_1_1Blit_a0d0c7dad0022c463b8e51fa4881bcc3d}\label{classrocr_1_1core_1_1Blit_a0d0c7dad0022c463b8e51fa4881bcc3d}} 
+\index{rocr::core::Blit@{rocr::core::Blit}!Blit@{Blit}}
+\index{Blit@{Blit}!rocr::core::Blit@{rocr::core::Blit}}
+\doxysubsubsection{\texorpdfstring{Blit()}{Blit()}}
+{\footnotesize\ttfamily rocr\+::core\+::\+Blit\+::\+Blit (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [explicit]}}
+
+\mbox{\Hypertarget{classrocr_1_1core_1_1Blit_a7e9803eb798062fe14a97d4691a78dc8}\label{classrocr_1_1core_1_1Blit_a7e9803eb798062fe14a97d4691a78dc8}} 
+\index{rocr::core::Blit@{rocr::core::Blit}!````~Blit@{$\sim$Blit}}
+\index{````~Blit@{$\sim$Blit}!rocr::core::Blit@{rocr::core::Blit}}
+\doxysubsubsection{\texorpdfstring{$\sim$Blit()}{~Blit()}}
+{\footnotesize\ttfamily virtual rocr\+::core\+::\+Blit\+::$\sim$\+Blit (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classrocr_1_1core_1_1Blit_ad2007f050a453aaabc1227f0895f567f}\label{classrocr_1_1core_1_1Blit_ad2007f050a453aaabc1227f0895f567f}} 
+\index{rocr::core::Blit@{rocr::core::Blit}!Destroy@{Destroy}}
+\index{Destroy@{Destroy}!rocr::core::Blit@{rocr::core::Blit}}
+\doxysubsubsection{\texorpdfstring{Destroy()}{Destroy()}}
+{\footnotesize\ttfamily virtual \mbox{\hyperlink{group__status_gad755322e7ff95456520e8abdbe90d225}{hsa\+\_\+status\+\_\+t}} rocr\+::core\+::\+Blit\+::\+Destroy (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classrocr_1_1core_1_1Agent}{core\+::\+Agent}} \&}]{agent }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Marks the blit object as invalid and uncouples its link with the underlying compute device\textquotesingle{}s control block. Use of blit object once it has been release is illegal and any behavior is indeterminate. 
+
+\begin{DoxyNote}{Note}
+\+: The call will block until all commands have executed.
+\end{DoxyNote}
+
+\begin{DoxyParams}{Parameters}
+{\em agent} & \mbox{\hyperlink{classrocr_1_1core_1_1Agent}{Agent}} passed to Initialize.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+hsa\+\_\+status\+\_\+t 
+\end{DoxyReturn}
+
+
+Implemented in \mbox{\hyperlink{classrocr_1_1AMD_1_1BlitSdma_a97a4457fe681bdbb6c71a2afa2f551dc}{rocr\+::\+AMD\+::\+Blit\+Sdma$<$ Ring\+Index\+Ty, Hw\+Index\+Monotonic, Size\+To\+Count\+Offset, use\+GCR $>$}}, and \mbox{\hyperlink{classrocr_1_1AMD_1_1BlitKernel_a863f654b0818e249dcc147b3e89a988f}{rocr\+::\+AMD\+::\+Blit\+Kernel}}.
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classrocr_1_1core_1_1Blit_ad2007f050a453aaabc1227f0895f567f_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classrocr_1_1core_1_1Blit_acfaa5aa7f95d0720a49cad4e95ffffb9}\label{classrocr_1_1core_1_1Blit_acfaa5aa7f95d0720a49cad4e95ffffb9}} 
+\index{rocr::core::Blit@{rocr::core::Blit}!EnableProfiling@{EnableProfiling}}
+\index{EnableProfiling@{EnableProfiling}!rocr::core::Blit@{rocr::core::Blit}}
+\doxysubsubsection{\texorpdfstring{EnableProfiling()}{EnableProfiling()}}
+{\footnotesize\ttfamily virtual \mbox{\hyperlink{group__status_gad755322e7ff95456520e8abdbe90d225}{hsa\+\_\+status\+\_\+t}} rocr\+::core\+::\+Blit\+::\+Enable\+Profiling (\begin{DoxyParamCaption}\item[{bool}]{enable }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Enable profiling of the asynchronous copy command. The timestamp of each copy request will be stored in the completion signal structure. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em enable} & True to enable profiling. False to disable profiling.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+HSA\+\_\+\+STATUS\+\_\+\+SUCCESS if the request to enable/disable profiling is successful. 
+\end{DoxyReturn}
+
+
+Implemented in \mbox{\hyperlink{classrocr_1_1AMD_1_1BlitSdma_a0da9208dc13c1dbd65ebff3e9ff26344}{rocr\+::\+AMD\+::\+Blit\+Sdma$<$ Ring\+Index\+Ty, Hw\+Index\+Monotonic, Size\+To\+Count\+Offset, use\+GCR $>$}}, and \mbox{\hyperlink{classrocr_1_1AMD_1_1BlitKernel_aeea6067b4ad1d1843685fd531a210f4d}{rocr\+::\+AMD\+::\+Blit\+Kernel}}.
+
+\mbox{\Hypertarget{classrocr_1_1core_1_1Blit_ad4633fec3312954858c4c3b40ff96f62}\label{classrocr_1_1core_1_1Blit_ad4633fec3312954858c4c3b40ff96f62}} 
+\index{rocr::core::Blit@{rocr::core::Blit}!isSDMA@{isSDMA}}
+\index{isSDMA@{isSDMA}!rocr::core::Blit@{rocr::core::Blit}}
+\doxysubsubsection{\texorpdfstring{isSDMA()}{isSDMA()}}
+{\footnotesize\ttfamily virtual bool rocr\+::core\+::\+Blit\+::is\+SDMA (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+\mbox{\hyperlink{classrocr_1_1core_1_1Blit}{Blit}} operations use SDMA. 
+
+
+
+Reimplemented in \mbox{\hyperlink{classrocr_1_1AMD_1_1BlitSdmaBase_a3ed3257ffcac164b63ebf9a4b51767d4}{rocr\+::\+AMD\+::\+Blit\+Sdma\+Base}}.
+
+\mbox{\Hypertarget{classrocr_1_1core_1_1Blit_a15ad3362fcca65a5bb183e4eb02df785}\label{classrocr_1_1core_1_1Blit_a15ad3362fcca65a5bb183e4eb02df785}} 
+\index{rocr::core::Blit@{rocr::core::Blit}!PendingBytes@{PendingBytes}}
+\index{PendingBytes@{PendingBytes}!rocr::core::Blit@{rocr::core::Blit}}
+\doxysubsubsection{\texorpdfstring{PendingBytes()}{PendingBytes()}}
+{\footnotesize\ttfamily virtual uint64\+\_\+t rocr\+::core\+::\+Blit\+::\+Pending\+Bytes (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+@\+Brief Reports the approximate number of remaining bytes to copy or fill. Any return of zero must be exact. 
+
+Implemented in \mbox{\hyperlink{classrocr_1_1AMD_1_1BlitSdma_a5fbbc0b083bd80310a41e6ab4ce2ccef}{rocr\+::\+AMD\+::\+Blit\+Sdma$<$ Ring\+Index\+Ty, Hw\+Index\+Monotonic, Size\+To\+Count\+Offset, use\+GCR $>$}}, and \mbox{\hyperlink{classrocr_1_1AMD_1_1BlitKernel_a9f84c112b7c9ca2fe9a83991d5174896}{rocr\+::\+AMD\+::\+Blit\+Kernel}}.
+
+\mbox{\Hypertarget{classrocr_1_1core_1_1Blit_a0220cb0a78cd3626060a62301193ea96}\label{classrocr_1_1core_1_1Blit_a0220cb0a78cd3626060a62301193ea96}} 
+\index{rocr::core::Blit@{rocr::core::Blit}!SubmitLinearCopyCommand@{SubmitLinearCopyCommand}}
+\index{SubmitLinearCopyCommand@{SubmitLinearCopyCommand}!rocr::core::Blit@{rocr::core::Blit}}
+\doxysubsubsection{\texorpdfstring{SubmitLinearCopyCommand()}{SubmitLinearCopyCommand()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily virtual \mbox{\hyperlink{group__status_gad755322e7ff95456520e8abdbe90d225}{hsa\+\_\+status\+\_\+t}} rocr\+::core\+::\+Blit\+::\+Submit\+Linear\+Copy\+Command (\begin{DoxyParamCaption}\item[{void $\ast$}]{dst,  }\item[{const void $\ast$}]{src,  }\item[{size\+\_\+t}]{size }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Submit a linear copy command to the the underlying compute device\textquotesingle{}s control block. The call is blocking until the command execution is finished. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em dst} & Memory address of the copy destination. \\
+\hline
+{\em src} & Memory address of the copy source. \\
+\hline
+{\em size} & Size of the data to be copied. \\
+\hline
+\end{DoxyParams}
+
+
+Implemented in \mbox{\hyperlink{classrocr_1_1AMD_1_1BlitSdma_a9690cbe59a296be1b7a93b7bc0462979}{rocr\+::\+AMD\+::\+Blit\+Sdma$<$ Ring\+Index\+Ty, Hw\+Index\+Monotonic, Size\+To\+Count\+Offset, use\+GCR $>$}}, and \mbox{\hyperlink{classrocr_1_1AMD_1_1BlitKernel_a16a967fdf34ab966edfd66acf007b9e9}{rocr\+::\+AMD\+::\+Blit\+Kernel}}.
+
+\mbox{\Hypertarget{classrocr_1_1core_1_1Blit_af966aecf9b06ecbe1e2d8eaabf6012b0}\label{classrocr_1_1core_1_1Blit_af966aecf9b06ecbe1e2d8eaabf6012b0}} 
+\index{rocr::core::Blit@{rocr::core::Blit}!SubmitLinearCopyCommand@{SubmitLinearCopyCommand}}
+\index{SubmitLinearCopyCommand@{SubmitLinearCopyCommand}!rocr::core::Blit@{rocr::core::Blit}}
+\doxysubsubsection{\texorpdfstring{SubmitLinearCopyCommand()}{SubmitLinearCopyCommand()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily virtual \mbox{\hyperlink{group__status_gad755322e7ff95456520e8abdbe90d225}{hsa\+\_\+status\+\_\+t}} rocr\+::core\+::\+Blit\+::\+Submit\+Linear\+Copy\+Command (\begin{DoxyParamCaption}\item[{void $\ast$}]{dst,  }\item[{const void $\ast$}]{src,  }\item[{size\+\_\+t}]{size,  }\item[{std\+::vector$<$ \mbox{\hyperlink{classrocr_1_1core_1_1Signal}{core\+::\+Signal}} $\ast$ $>$ \&}]{dep\+\_\+signals,  }\item[{\mbox{\hyperlink{classrocr_1_1core_1_1Signal}{core\+::\+Signal}} \&}]{out\+\_\+signal }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Submit a linear copy command to the the underlying compute device\textquotesingle{}s control block. The call is non blocking. The memory transfer will start after all dependent signals are satisfied. After the transfer is completed, the out signal will be decremented. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em dst} & Memory address of the copy destination. \\
+\hline
+{\em src} & Memory address of the copy source. \\
+\hline
+{\em size} & Size of the data to be copied. \\
+\hline
+{\em dep\+\_\+signals} & Arrays of dependent signal. \\
+\hline
+{\em out\+\_\+signal} & Output signal. \\
+\hline
+\end{DoxyParams}
+
+
+Implemented in \mbox{\hyperlink{classrocr_1_1AMD_1_1BlitSdma_ad43be8123cacdbfd90e283ae9fbbbc8b}{rocr\+::\+AMD\+::\+Blit\+Sdma$<$ Ring\+Index\+Ty, Hw\+Index\+Monotonic, Size\+To\+Count\+Offset, use\+GCR $>$}}, and \mbox{\hyperlink{classrocr_1_1AMD_1_1BlitKernel_ac7936b75214200cedb0502185cd34d8d}{rocr\+::\+AMD\+::\+Blit\+Kernel}}.
+
+\mbox{\Hypertarget{classrocr_1_1core_1_1Blit_a22a436a79221d0fc05b9cd24a74d87bf}\label{classrocr_1_1core_1_1Blit_a22a436a79221d0fc05b9cd24a74d87bf}} 
+\index{rocr::core::Blit@{rocr::core::Blit}!SubmitLinearFillCommand@{SubmitLinearFillCommand}}
+\index{SubmitLinearFillCommand@{SubmitLinearFillCommand}!rocr::core::Blit@{rocr::core::Blit}}
+\doxysubsubsection{\texorpdfstring{SubmitLinearFillCommand()}{SubmitLinearFillCommand()}}
+{\footnotesize\ttfamily virtual \mbox{\hyperlink{group__status_gad755322e7ff95456520e8abdbe90d225}{hsa\+\_\+status\+\_\+t}} rocr\+::core\+::\+Blit\+::\+Submit\+Linear\+Fill\+Command (\begin{DoxyParamCaption}\item[{void $\ast$}]{ptr,  }\item[{uint32\+\_\+t}]{value,  }\item[{size\+\_\+t}]{num }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Submit a linear fill command to the the underlying compute device\textquotesingle{}s control block. The call is blocking until the command execution is finished. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em ptr} & Memory address of the fill destination. \\
+\hline
+{\em value} & Value to be set. \\
+\hline
+{\em num} & Number of uint32\+\_\+t element to be set to the value. \\
+\hline
+\end{DoxyParams}
+
+
+Implemented in \mbox{\hyperlink{classrocr_1_1AMD_1_1BlitSdma_a7a64bdca7bce149a20ec39fd9c0f14da}{rocr\+::\+AMD\+::\+Blit\+Sdma$<$ Ring\+Index\+Ty, Hw\+Index\+Monotonic, Size\+To\+Count\+Offset, use\+GCR $>$}}, and \mbox{\hyperlink{classrocr_1_1AMD_1_1BlitKernel_acc416c459d89b03318df4d82297d871b}{rocr\+::\+AMD\+::\+Blit\+Kernel}}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+src/core/inc/\mbox{\hyperlink{blit_8h}{blit.\+h}}\end{DoxyCompactItemize}

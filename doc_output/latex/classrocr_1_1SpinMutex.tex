@@ -1,0 +1,97 @@
+\hypertarget{classrocr_1_1SpinMutex}{}\doxysection{rocr\+::Spin\+Mutex Class Reference}
+\label{classrocr_1_1SpinMutex}\index{rocr::SpinMutex@{rocr::SpinMutex}}
+
+
+\+: represents a spin lock. For very short hold durations on the order of the thread scheduling quanta or less.  
+
+
+
+
+{\ttfamily \#include $<$locks.\+h$>$}
+
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classrocr_1_1SpinMutex_ac901db655c5d189ae0e6b037940de4d2}{Spin\+Mutex}} ()
+\item 
+bool \mbox{\hyperlink{classrocr_1_1SpinMutex_a9a7e71e108a83f40230f1321b7c48cb7}{Try}} ()
+\item 
+bool \mbox{\hyperlink{classrocr_1_1SpinMutex_a0ead200818a2e4ab41699d321246e81a}{Acquire}} ()
+\item 
+void \mbox{\hyperlink{classrocr_1_1SpinMutex_a3dec8de771dd3184a098c8d39c971834}{Release}} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classrocr_1_1SpinMutex_a0deefe052b9578b690d57bd9d486a526}{DISALLOW\+\_\+\+COPY\+\_\+\+AND\+\_\+\+ASSIGN}} (\mbox{\hyperlink{classrocr_1_1SpinMutex}{Spin\+Mutex}})
+\begin{DoxyCompactList}\small\item\em \+: Disable copiable and assignable ability. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+std\+::atomic$<$ int $>$ \mbox{\hyperlink{classrocr_1_1SpinMutex_af89d963c5b38522353c1bd3fe391f8e0}{lock\+\_\+}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+\+: represents a spin lock. For very short hold durations on the order of the thread scheduling quanta or less. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classrocr_1_1SpinMutex_ac901db655c5d189ae0e6b037940de4d2}\label{classrocr_1_1SpinMutex_ac901db655c5d189ae0e6b037940de4d2}} 
+\index{rocr::SpinMutex@{rocr::SpinMutex}!SpinMutex@{SpinMutex}}
+\index{SpinMutex@{SpinMutex}!rocr::SpinMutex@{rocr::SpinMutex}}
+\doxysubsubsection{\texorpdfstring{SpinMutex()}{SpinMutex()}}
+{\footnotesize\ttfamily rocr\+::\+Spin\+Mutex\+::\+Spin\+Mutex (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classrocr_1_1SpinMutex_a0ead200818a2e4ab41699d321246e81a}\label{classrocr_1_1SpinMutex_a0ead200818a2e4ab41699d321246e81a}} 
+\index{rocr::SpinMutex@{rocr::SpinMutex}!Acquire@{Acquire}}
+\index{Acquire@{Acquire}!rocr::SpinMutex@{rocr::SpinMutex}}
+\doxysubsubsection{\texorpdfstring{Acquire()}{Acquire()}}
+{\footnotesize\ttfamily bool rocr\+::\+Spin\+Mutex\+::\+Acquire (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=348pt]{classrocr_1_1SpinMutex_a0ead200818a2e4ab41699d321246e81a_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classrocr_1_1SpinMutex_a0deefe052b9578b690d57bd9d486a526}\label{classrocr_1_1SpinMutex_a0deefe052b9578b690d57bd9d486a526}} 
+\index{rocr::SpinMutex@{rocr::SpinMutex}!DISALLOW\_COPY\_AND\_ASSIGN@{DISALLOW\_COPY\_AND\_ASSIGN}}
+\index{DISALLOW\_COPY\_AND\_ASSIGN@{DISALLOW\_COPY\_AND\_ASSIGN}!rocr::SpinMutex@{rocr::SpinMutex}}
+\doxysubsubsection{\texorpdfstring{DISALLOW\_COPY\_AND\_ASSIGN()}{DISALLOW\_COPY\_AND\_ASSIGN()}}
+{\footnotesize\ttfamily rocr\+::\+Spin\+Mutex\+::\+DISALLOW\+\_\+\+COPY\+\_\+\+AND\+\_\+\+ASSIGN (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classrocr_1_1SpinMutex}{Spin\+Mutex}}}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+\+: Disable copiable and assignable ability. 
+
+\mbox{\Hypertarget{classrocr_1_1SpinMutex_a3dec8de771dd3184a098c8d39c971834}\label{classrocr_1_1SpinMutex_a3dec8de771dd3184a098c8d39c971834}} 
+\index{rocr::SpinMutex@{rocr::SpinMutex}!Release@{Release}}
+\index{Release@{Release}!rocr::SpinMutex@{rocr::SpinMutex}}
+\doxysubsubsection{\texorpdfstring{Release()}{Release()}}
+{\footnotesize\ttfamily void rocr\+::\+Spin\+Mutex\+::\+Release (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{classrocr_1_1SpinMutex_a9a7e71e108a83f40230f1321b7c48cb7}\label{classrocr_1_1SpinMutex_a9a7e71e108a83f40230f1321b7c48cb7}} 
+\index{rocr::SpinMutex@{rocr::SpinMutex}!Try@{Try}}
+\index{Try@{Try}!rocr::SpinMutex@{rocr::SpinMutex}}
+\doxysubsubsection{\texorpdfstring{Try()}{Try()}}
+{\footnotesize\ttfamily bool rocr\+::\+Spin\+Mutex\+::\+Try (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{classrocr_1_1SpinMutex_af89d963c5b38522353c1bd3fe391f8e0}\label{classrocr_1_1SpinMutex_af89d963c5b38522353c1bd3fe391f8e0}} 
+\index{rocr::SpinMutex@{rocr::SpinMutex}!lock\_@{lock\_}}
+\index{lock\_@{lock\_}!rocr::SpinMutex@{rocr::SpinMutex}}
+\doxysubsubsection{\texorpdfstring{lock\_}{lock\_}}
+{\footnotesize\ttfamily std\+::atomic$<$int$>$ rocr\+::\+Spin\+Mutex\+::lock\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+src/core/util/\mbox{\hyperlink{locks_8h}{locks.\+h}}\end{DoxyCompactItemize}

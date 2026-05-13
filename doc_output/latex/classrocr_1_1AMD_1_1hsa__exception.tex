@@ -1,0 +1,110 @@
+\hypertarget{classrocr_1_1AMD_1_1hsa__exception}{}\doxysection{rocr\+::AMD\+::hsa\+\_\+exception Class Reference}
+\label{classrocr_1_1AMD_1_1hsa__exception}\index{rocr::AMD::hsa\_exception@{rocr::AMD::hsa\_exception}}
+
+
+Exception type which carries an error code to return to the user.  
+
+
+
+
+{\ttfamily \#include $<$exceptions.\+h$>$}
+
+
+
+Inheritance diagram for rocr\+::AMD\+::hsa\+\_\+exception\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=211pt]{classrocr_1_1AMD_1_1hsa__exception__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for rocr\+::AMD\+::hsa\+\_\+exception\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=211pt]{classrocr_1_1AMD_1_1hsa__exception__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classrocr_1_1AMD_1_1hsa__exception_ae65f3f9d74293214974b85f92f618d0a}{hsa\+\_\+exception}} (\mbox{\hyperlink{group__status_gad755322e7ff95456520e8abdbe90d225}{hsa\+\_\+status\+\_\+t}} error, const char $\ast$description)
+\item 
+\mbox{\hyperlink{group__status_gad755322e7ff95456520e8abdbe90d225}{hsa\+\_\+status\+\_\+t}} \mbox{\hyperlink{classrocr_1_1AMD_1_1hsa__exception_a7488bfbee59c55fd09ab27b06eb28e96}{error\+\_\+code}} () const noexcept
+\item 
+const char $\ast$ \mbox{\hyperlink{classrocr_1_1AMD_1_1hsa__exception_a9017aea01115d7d97bb971f00b8b5f34}{what}} () const noexcept override
+\end{DoxyCompactItemize}
+\doxysubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{group__status_gad755322e7ff95456520e8abdbe90d225}{hsa\+\_\+status\+\_\+t}} \mbox{\hyperlink{classrocr_1_1AMD_1_1hsa__exception_a752ae3a236704edd882f31668ce0102f}{err\+\_\+}}
+\item 
+std\+::string \mbox{\hyperlink{classrocr_1_1AMD_1_1hsa__exception_a4cf82ed51c95df50353355ab6679df8a}{desc\+\_\+}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Exception type which carries an error code to return to the user. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classrocr_1_1AMD_1_1hsa__exception_ae65f3f9d74293214974b85f92f618d0a}\label{classrocr_1_1AMD_1_1hsa__exception_ae65f3f9d74293214974b85f92f618d0a}} 
+\index{rocr::AMD::hsa\_exception@{rocr::AMD::hsa\_exception}!hsa\_exception@{hsa\_exception}}
+\index{hsa\_exception@{hsa\_exception}!rocr::AMD::hsa\_exception@{rocr::AMD::hsa\_exception}}
+\doxysubsubsection{\texorpdfstring{hsa\_exception()}{hsa\_exception()}}
+{\footnotesize\ttfamily rocr\+::\+AMD\+::hsa\+\_\+exception\+::hsa\+\_\+exception (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{group__status_gad755322e7ff95456520e8abdbe90d225}{hsa\+\_\+status\+\_\+t}}}]{error,  }\item[{const char $\ast$}]{description }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classrocr_1_1AMD_1_1hsa__exception_a7488bfbee59c55fd09ab27b06eb28e96}\label{classrocr_1_1AMD_1_1hsa__exception_a7488bfbee59c55fd09ab27b06eb28e96}} 
+\index{rocr::AMD::hsa\_exception@{rocr::AMD::hsa\_exception}!error\_code@{error\_code}}
+\index{error\_code@{error\_code}!rocr::AMD::hsa\_exception@{rocr::AMD::hsa\_exception}}
+\doxysubsubsection{\texorpdfstring{error\_code()}{error\_code()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{group__status_gad755322e7ff95456520e8abdbe90d225}{hsa\+\_\+status\+\_\+t}} rocr\+::\+AMD\+::hsa\+\_\+exception\+::error\+\_\+code (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [noexcept]}}
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classrocr_1_1AMD_1_1hsa__exception_a7488bfbee59c55fd09ab27b06eb28e96_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classrocr_1_1AMD_1_1hsa__exception_a9017aea01115d7d97bb971f00b8b5f34}\label{classrocr_1_1AMD_1_1hsa__exception_a9017aea01115d7d97bb971f00b8b5f34}} 
+\index{rocr::AMD::hsa\_exception@{rocr::AMD::hsa\_exception}!what@{what}}
+\index{what@{what}!rocr::AMD::hsa\_exception@{rocr::AMD::hsa\_exception}}
+\doxysubsubsection{\texorpdfstring{what()}{what()}}
+{\footnotesize\ttfamily const char$\ast$ rocr\+::\+AMD\+::hsa\+\_\+exception\+::what (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}, {\ttfamily [noexcept]}}
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classrocr_1_1AMD_1_1hsa__exception_a9017aea01115d7d97bb971f00b8b5f34_icgraph}
+\end{center}
+\end{figure}
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{classrocr_1_1AMD_1_1hsa__exception_a4cf82ed51c95df50353355ab6679df8a}\label{classrocr_1_1AMD_1_1hsa__exception_a4cf82ed51c95df50353355ab6679df8a}} 
+\index{rocr::AMD::hsa\_exception@{rocr::AMD::hsa\_exception}!desc\_@{desc\_}}
+\index{desc\_@{desc\_}!rocr::AMD::hsa\_exception@{rocr::AMD::hsa\_exception}}
+\doxysubsubsection{\texorpdfstring{desc\_}{desc\_}}
+{\footnotesize\ttfamily std\+::string rocr\+::\+AMD\+::hsa\+\_\+exception\+::desc\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classrocr_1_1AMD_1_1hsa__exception_a752ae3a236704edd882f31668ce0102f}\label{classrocr_1_1AMD_1_1hsa__exception_a752ae3a236704edd882f31668ce0102f}} 
+\index{rocr::AMD::hsa\_exception@{rocr::AMD::hsa\_exception}!err\_@{err\_}}
+\index{err\_@{err\_}!rocr::AMD::hsa\_exception@{rocr::AMD::hsa\_exception}}
+\doxysubsubsection{\texorpdfstring{err\_}{err\_}}
+{\footnotesize\ttfamily \mbox{\hyperlink{group__status_gad755322e7ff95456520e8abdbe90d225}{hsa\+\_\+status\+\_\+t}} rocr\+::\+AMD\+::hsa\+\_\+exception\+::err\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+src/core/inc/\mbox{\hyperlink{exceptions_8h}{exceptions.\+h}}\end{DoxyCompactItemize}

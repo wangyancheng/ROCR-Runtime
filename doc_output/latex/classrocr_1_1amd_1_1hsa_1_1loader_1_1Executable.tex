@@ -1,0 +1,446 @@
+\hypertarget{classrocr_1_1amd_1_1hsa_1_1loader_1_1Executable}{}\doxysection{rocr\+::amd\+::hsa\+::loader\+::Executable Class Reference}
+\label{classrocr_1_1amd_1_1hsa_1_1loader_1_1Executable}\index{rocr::amd::hsa::loader::Executable@{rocr::amd::hsa::loader::Executable}}
+
+
+{\ttfamily \#include $<$amd\+\_\+hsa\+\_\+loader.\+hpp$>$}
+
+
+
+Inheritance diagram for rocr\+::amd\+::hsa\+::loader\+::Executable\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=192pt]{classrocr_1_1amd_1_1hsa_1_1loader_1_1Executable__inherit__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+typedef \mbox{\hyperlink{group__status_gad755322e7ff95456520e8abdbe90d225}{hsa\+\_\+status\+\_\+t}}($\ast$ \mbox{\hyperlink{classrocr_1_1amd_1_1hsa_1_1loader_1_1Executable_abf9b27090478f6993f215f03a87c6190}{iterate\+\_\+symbols\+\_\+f}}) (\mbox{\hyperlink{group__executable_ga4a4281d636cb6048c4d7a015e1fa3baa}{hsa\+\_\+executable\+\_\+t}} executable, \mbox{\hyperlink{amd__hsa__loader_8hpp_a40d726b346cc8092c1e701a2b7c26d16}{hsa\+\_\+symbol\+\_\+t}} symbol\+\_\+handle, void $\ast$data)
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+virtual \mbox{\hyperlink{classrocr_1_1amd_1_1hsa_1_1loader_1_1Executable_ac1d5bd86607f475972b67313d45e663c}{$\sim$\+Executable}} ()
+\item 
+virtual \mbox{\hyperlink{group__status_gad755322e7ff95456520e8abdbe90d225}{hsa\+\_\+status\+\_\+t}} \mbox{\hyperlink{classrocr_1_1amd_1_1hsa_1_1loader_1_1Executable_ad8578f78aef56a7f9599b4cfcf040985}{Get\+Info}} (\mbox{\hyperlink{group__executable_ga1f9ab4ca027c77a2fff6deb096e8c298}{hsa\+\_\+executable\+\_\+info\+\_\+t}} executable\+\_\+info, void $\ast$value)=0
+\item 
+virtual \mbox{\hyperlink{group__status_gad755322e7ff95456520e8abdbe90d225}{hsa\+\_\+status\+\_\+t}} \mbox{\hyperlink{classrocr_1_1amd_1_1hsa_1_1loader_1_1Executable_af93f12df2dce3422a7c0c5d2bdf4815c}{Define\+Program\+External\+Variable}} (const char $\ast$name, void $\ast$address)=0
+\item 
+virtual \mbox{\hyperlink{group__status_gad755322e7ff95456520e8abdbe90d225}{hsa\+\_\+status\+\_\+t}} \mbox{\hyperlink{classrocr_1_1amd_1_1hsa_1_1loader_1_1Executable_a2dbe28783c5dcf28ebef441993af8697}{Define\+Agent\+External\+Variable}} (const char $\ast$name, \mbox{\hyperlink{group__agentinfo_ga9ce217ef08e7d5e89c8e83ce7b6ef22b}{hsa\+\_\+agent\+\_\+t}} agent, \mbox{\hyperlink{group__executable_ga7fb2a9fe278f7ab892eb158277e2dd8c}{hsa\+\_\+variable\+\_\+segment\+\_\+t}} segment, void $\ast$address)=0
+\item 
+virtual \mbox{\hyperlink{group__status_gad755322e7ff95456520e8abdbe90d225}{hsa\+\_\+status\+\_\+t}} \mbox{\hyperlink{classrocr_1_1amd_1_1hsa_1_1loader_1_1Executable_ac117488982e4aeeee97ae4315e5c714f}{Load\+Code\+Object}} (\mbox{\hyperlink{group__agentinfo_ga9ce217ef08e7d5e89c8e83ce7b6ef22b}{hsa\+\_\+agent\+\_\+t}} agent, \mbox{\hyperlink{group__code-object_gafae7c731c8bfc39b3050ef08ae8bb3e3}{hsa\+\_\+code\+\_\+object\+\_\+t}} code\+\_\+object, const char $\ast$options, const std\+::string \&uri, \mbox{\hyperlink{group__executable_ga352150abd29df5b8cfa891bd51d1d714}{hsa\+\_\+loaded\+\_\+code\+\_\+object\+\_\+t}} $\ast$loaded\+\_\+code\+\_\+object=nullptr)=0
+\item 
+virtual \mbox{\hyperlink{group__status_gad755322e7ff95456520e8abdbe90d225}{hsa\+\_\+status\+\_\+t}} \mbox{\hyperlink{classrocr_1_1amd_1_1hsa_1_1loader_1_1Executable_a0060fa4c3fe8879ab80aac2e17dda68c}{Load\+Code\+Object}} (\mbox{\hyperlink{group__agentinfo_ga9ce217ef08e7d5e89c8e83ce7b6ef22b}{hsa\+\_\+agent\+\_\+t}} agent, \mbox{\hyperlink{group__code-object_gafae7c731c8bfc39b3050ef08ae8bb3e3}{hsa\+\_\+code\+\_\+object\+\_\+t}} code\+\_\+object, size\+\_\+t code\+\_\+object\+\_\+size, const char $\ast$options, const std\+::string \&uri, \mbox{\hyperlink{group__executable_ga352150abd29df5b8cfa891bd51d1d714}{hsa\+\_\+loaded\+\_\+code\+\_\+object\+\_\+t}} $\ast$loaded\+\_\+code\+\_\+object=nullptr)=0
+\item 
+virtual \mbox{\hyperlink{group__status_gad755322e7ff95456520e8abdbe90d225}{hsa\+\_\+status\+\_\+t}} \mbox{\hyperlink{classrocr_1_1amd_1_1hsa_1_1loader_1_1Executable_a232de35e1ada9626ed8e4c077f35f3d5}{Freeze}} (const char $\ast$options)=0
+\item 
+virtual \mbox{\hyperlink{group__status_gad755322e7ff95456520e8abdbe90d225}{hsa\+\_\+status\+\_\+t}} \mbox{\hyperlink{classrocr_1_1amd_1_1hsa_1_1loader_1_1Executable_a50eee2ed729c1706e499991899d82871}{Validate}} (uint32\+\_\+t $\ast$result)=0
+\item 
+virtual bool \mbox{\hyperlink{classrocr_1_1amd_1_1hsa_1_1loader_1_1Executable_aeac0f6a3991f7f581aa9427cc29024a9}{Is\+Program\+Symbol}} (const char $\ast$symbol\+\_\+name)=0
+\item 
+virtual \mbox{\hyperlink{classrocr_1_1amd_1_1hsa_1_1loader_1_1Symbol}{Symbol}} $\ast$ \mbox{\hyperlink{classrocr_1_1amd_1_1hsa_1_1loader_1_1Executable_af570e8d4e9ab4925cd9b96ca4d35bf23}{Get\+Symbol}} (const char $\ast$symbol\+\_\+name, const \mbox{\hyperlink{group__agentinfo_ga9ce217ef08e7d5e89c8e83ce7b6ef22b}{hsa\+\_\+agent\+\_\+t}} $\ast$agent)=0
+\item 
+virtual \mbox{\hyperlink{group__status_gad755322e7ff95456520e8abdbe90d225}{hsa\+\_\+status\+\_\+t}} \mbox{\hyperlink{classrocr_1_1amd_1_1hsa_1_1loader_1_1Executable_a3405813666c91f1bee100ff64907d3ab}{Iterate\+Symbols}} (\mbox{\hyperlink{classrocr_1_1amd_1_1hsa_1_1loader_1_1Executable_abf9b27090478f6993f215f03a87c6190}{iterate\+\_\+symbols\+\_\+f}} callback, void $\ast$data)=0
+\item 
+virtual \mbox{\hyperlink{group__status_gad755322e7ff95456520e8abdbe90d225}{hsa\+\_\+status\+\_\+t}} \mbox{\hyperlink{classrocr_1_1amd_1_1hsa_1_1loader_1_1Executable_aa4aedd1dd07b7481ba8385860e62ba44}{Iterate\+Agent\+Symbols}} (\mbox{\hyperlink{group__agentinfo_ga9ce217ef08e7d5e89c8e83ce7b6ef22b}{hsa\+\_\+agent\+\_\+t}} agent, \mbox{\hyperlink{group__status_gad755322e7ff95456520e8abdbe90d225}{hsa\+\_\+status\+\_\+t}}($\ast$callback)(\mbox{\hyperlink{group__executable_ga4a4281d636cb6048c4d7a015e1fa3baa}{hsa\+\_\+executable\+\_\+t}} exec, \mbox{\hyperlink{group__agentinfo_ga9ce217ef08e7d5e89c8e83ce7b6ef22b}{hsa\+\_\+agent\+\_\+t}} agent, \mbox{\hyperlink{group__executable_gac6b342e0224ea2ddef549b3626e8ccc1}{hsa\+\_\+executable\+\_\+symbol\+\_\+t}} symbol, void $\ast$data), void $\ast$data)=0
+\item 
+virtual \mbox{\hyperlink{group__status_gad755322e7ff95456520e8abdbe90d225}{hsa\+\_\+status\+\_\+t}} \mbox{\hyperlink{classrocr_1_1amd_1_1hsa_1_1loader_1_1Executable_abc6ccc7ad025cc371881b1c98191f271}{Iterate\+Program\+Symbols}} (\mbox{\hyperlink{group__status_gad755322e7ff95456520e8abdbe90d225}{hsa\+\_\+status\+\_\+t}}($\ast$callback)(\mbox{\hyperlink{group__executable_ga4a4281d636cb6048c4d7a015e1fa3baa}{hsa\+\_\+executable\+\_\+t}} exec, \mbox{\hyperlink{group__executable_gac6b342e0224ea2ddef549b3626e8ccc1}{hsa\+\_\+executable\+\_\+symbol\+\_\+t}} symbol, void $\ast$data), void $\ast$data)=0
+\item 
+virtual \mbox{\hyperlink{group__status_gad755322e7ff95456520e8abdbe90d225}{hsa\+\_\+status\+\_\+t}} \mbox{\hyperlink{classrocr_1_1amd_1_1hsa_1_1loader_1_1Executable_a1fb2846a54d7c1ab9517760803be8f0b}{Iterate\+Loaded\+Code\+Objects}} (\mbox{\hyperlink{group__status_gad755322e7ff95456520e8abdbe90d225}{hsa\+\_\+status\+\_\+t}}($\ast$callback)(\mbox{\hyperlink{group__executable_ga4a4281d636cb6048c4d7a015e1fa3baa}{hsa\+\_\+executable\+\_\+t}} executable, \mbox{\hyperlink{group__executable_ga352150abd29df5b8cfa891bd51d1d714}{hsa\+\_\+loaded\+\_\+code\+\_\+object\+\_\+t}} loaded\+\_\+code\+\_\+object, void $\ast$data), void $\ast$data)=0
+\item 
+virtual size\+\_\+t \mbox{\hyperlink{classrocr_1_1amd_1_1hsa_1_1loader_1_1Executable_a7e0e97ee6016dbd213a9ce10fc5c5894}{Get\+Num\+Segment\+Descriptors}} ()=0
+\item 
+virtual size\+\_\+t \mbox{\hyperlink{classrocr_1_1amd_1_1hsa_1_1loader_1_1Executable_a4196e898e95417b4418b9bb59bbe06d7}{Query\+Segment\+Descriptors}} (\mbox{\hyperlink{inc_2hsa__ven__amd__loader_8h_acb66ca48865e62642b604bfe4ede86c7}{hsa\+\_\+ven\+\_\+amd\+\_\+loader\+\_\+segment\+\_\+descriptor\+\_\+t}} $\ast$segment\+\_\+descriptors, size\+\_\+t total\+\_\+num\+\_\+segment\+\_\+descriptors, size\+\_\+t first\+\_\+empty\+\_\+segment\+\_\+descriptor)=0
+\item 
+virtual uint64\+\_\+t \mbox{\hyperlink{classrocr_1_1amd_1_1hsa_1_1loader_1_1Executable_a0b2e12c8bc30a36428d8a1b5f054dbc6}{Find\+Host\+Address}} (uint64\+\_\+t device\+\_\+address)=0
+\item 
+virtual void \mbox{\hyperlink{classrocr_1_1amd_1_1hsa_1_1loader_1_1Executable_aa206c14394c5fb3117b6f1846cbdc9d9}{Print}} (std\+::ostream \&out)=0
+\item 
+virtual bool \mbox{\hyperlink{classrocr_1_1amd_1_1hsa_1_1loader_1_1Executable_ad7a03ec33621da5cf4b8f360795bc873}{Print\+To\+File}} (const std\+::string \&filename)=0
+\end{DoxyCompactItemize}
+\doxysubsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static \mbox{\hyperlink{group__executable_ga4a4281d636cb6048c4d7a015e1fa3baa}{hsa\+\_\+executable\+\_\+t}} \mbox{\hyperlink{classrocr_1_1amd_1_1hsa_1_1loader_1_1Executable_afde7d60d77872295c6aeda143bfa2e97}{Handle}} (\mbox{\hyperlink{classrocr_1_1amd_1_1hsa_1_1loader_1_1Executable}{Executable}} $\ast$executable)
+\item 
+static \mbox{\hyperlink{classrocr_1_1amd_1_1hsa_1_1loader_1_1Executable}{Executable}} $\ast$ \mbox{\hyperlink{classrocr_1_1amd_1_1hsa_1_1loader_1_1Executable_a01121c96c20af2e23abca35109bf40a3}{Object}} (\mbox{\hyperlink{group__executable_ga4a4281d636cb6048c4d7a015e1fa3baa}{hsa\+\_\+executable\+\_\+t}} executable\+\_\+handle)
+\end{DoxyCompactItemize}
+\doxysubsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classrocr_1_1amd_1_1hsa_1_1loader_1_1Executable_a3fd6718e9188c88b4f5ee3bf41a299ea}{Executable}} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classrocr_1_1amd_1_1hsa_1_1loader_1_1Executable_a60434499fdb1a743a82693148a7c1f4c}{Executable}} (const \mbox{\hyperlink{classrocr_1_1amd_1_1hsa_1_1loader_1_1Executable}{Executable}} \&e)
+\item 
+\mbox{\hyperlink{classrocr_1_1amd_1_1hsa_1_1loader_1_1Executable}{Executable}} \& \mbox{\hyperlink{classrocr_1_1amd_1_1hsa_1_1loader_1_1Executable_a3639fec00ecdadf638eeed9dd3e00ee3}{operator=}} (const \mbox{\hyperlink{classrocr_1_1amd_1_1hsa_1_1loader_1_1Executable}{Executable}} \&e)
+\end{DoxyCompactItemize}
+\doxysubsection*{Static Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+static std\+::vector$<$ \mbox{\hyperlink{classrocr_1_1amd_1_1hsa_1_1loader_1_1Executable}{Executable}} $\ast$ $>$ \mbox{\hyperlink{classrocr_1_1amd_1_1hsa_1_1loader_1_1Executable_a257c373cc10169b4cba084e0c86e6c7c}{executables}}
+\item 
+static std\+::mutex \mbox{\hyperlink{classrocr_1_1amd_1_1hsa_1_1loader_1_1Executable_a0910876ba3194ca83cd0954b61aeb58f}{executables\+\_\+mutex}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Member Typedef Documentation}
+\mbox{\Hypertarget{classrocr_1_1amd_1_1hsa_1_1loader_1_1Executable_abf9b27090478f6993f215f03a87c6190}\label{classrocr_1_1amd_1_1hsa_1_1loader_1_1Executable_abf9b27090478f6993f215f03a87c6190}} 
+\index{rocr::amd::hsa::loader::Executable@{rocr::amd::hsa::loader::Executable}!iterate\_symbols\_f@{iterate\_symbols\_f}}
+\index{iterate\_symbols\_f@{iterate\_symbols\_f}!rocr::amd::hsa::loader::Executable@{rocr::amd::hsa::loader::Executable}}
+\doxysubsubsection{\texorpdfstring{iterate\_symbols\_f}{iterate\_symbols\_f}}
+{\footnotesize\ttfamily typedef \mbox{\hyperlink{group__status_gad755322e7ff95456520e8abdbe90d225}{hsa\+\_\+status\+\_\+t}}($\ast$ rocr\+::amd\+::hsa\+::loader\+::\+Executable\+::iterate\+\_\+symbols\+\_\+f) (\mbox{\hyperlink{group__executable_ga4a4281d636cb6048c4d7a015e1fa3baa}{hsa\+\_\+executable\+\_\+t}} executable, \mbox{\hyperlink{amd__hsa__loader_8hpp_a40d726b346cc8092c1e701a2b7c26d16}{hsa\+\_\+symbol\+\_\+t}} symbol\+\_\+handle, void $\ast$data)}
+
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classrocr_1_1amd_1_1hsa_1_1loader_1_1Executable_ac1d5bd86607f475972b67313d45e663c}\label{classrocr_1_1amd_1_1hsa_1_1loader_1_1Executable_ac1d5bd86607f475972b67313d45e663c}} 
+\index{rocr::amd::hsa::loader::Executable@{rocr::amd::hsa::loader::Executable}!````~Executable@{$\sim$Executable}}
+\index{````~Executable@{$\sim$Executable}!rocr::amd::hsa::loader::Executable@{rocr::amd::hsa::loader::Executable}}
+\doxysubsubsection{\texorpdfstring{$\sim$Executable()}{~Executable()}}
+{\footnotesize\ttfamily virtual rocr\+::amd\+::hsa\+::loader\+::\+Executable\+::$\sim$\+Executable (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+\mbox{\Hypertarget{classrocr_1_1amd_1_1hsa_1_1loader_1_1Executable_a3fd6718e9188c88b4f5ee3bf41a299ea}\label{classrocr_1_1amd_1_1hsa_1_1loader_1_1Executable_a3fd6718e9188c88b4f5ee3bf41a299ea}} 
+\index{rocr::amd::hsa::loader::Executable@{rocr::amd::hsa::loader::Executable}!Executable@{Executable}}
+\index{Executable@{Executable}!rocr::amd::hsa::loader::Executable@{rocr::amd::hsa::loader::Executable}}
+\doxysubsubsection{\texorpdfstring{Executable()}{Executable()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily rocr\+::amd\+::hsa\+::loader\+::\+Executable\+::\+Executable (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [protected]}}
+
+\mbox{\Hypertarget{classrocr_1_1amd_1_1hsa_1_1loader_1_1Executable_a60434499fdb1a743a82693148a7c1f4c}\label{classrocr_1_1amd_1_1hsa_1_1loader_1_1Executable_a60434499fdb1a743a82693148a7c1f4c}} 
+\index{rocr::amd::hsa::loader::Executable@{rocr::amd::hsa::loader::Executable}!Executable@{Executable}}
+\index{Executable@{Executable}!rocr::amd::hsa::loader::Executable@{rocr::amd::hsa::loader::Executable}}
+\doxysubsubsection{\texorpdfstring{Executable()}{Executable()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily rocr\+::amd\+::hsa\+::loader\+::\+Executable\+::\+Executable (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classrocr_1_1amd_1_1hsa_1_1loader_1_1Executable}{Executable}} \&}]{e }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classrocr_1_1amd_1_1hsa_1_1loader_1_1Executable_a2dbe28783c5dcf28ebef441993af8697}\label{classrocr_1_1amd_1_1hsa_1_1loader_1_1Executable_a2dbe28783c5dcf28ebef441993af8697}} 
+\index{rocr::amd::hsa::loader::Executable@{rocr::amd::hsa::loader::Executable}!DefineAgentExternalVariable@{DefineAgentExternalVariable}}
+\index{DefineAgentExternalVariable@{DefineAgentExternalVariable}!rocr::amd::hsa::loader::Executable@{rocr::amd::hsa::loader::Executable}}
+\doxysubsubsection{\texorpdfstring{DefineAgentExternalVariable()}{DefineAgentExternalVariable()}}
+{\footnotesize\ttfamily virtual \mbox{\hyperlink{group__status_gad755322e7ff95456520e8abdbe90d225}{hsa\+\_\+status\+\_\+t}} rocr\+::amd\+::hsa\+::loader\+::\+Executable\+::\+Define\+Agent\+External\+Variable (\begin{DoxyParamCaption}\item[{const char $\ast$}]{name,  }\item[{\mbox{\hyperlink{group__agentinfo_ga9ce217ef08e7d5e89c8e83ce7b6ef22b}{hsa\+\_\+agent\+\_\+t}}}]{agent,  }\item[{\mbox{\hyperlink{group__executable_ga7fb2a9fe278f7ab892eb158277e2dd8c}{hsa\+\_\+variable\+\_\+segment\+\_\+t}}}]{segment,  }\item[{void $\ast$}]{address }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Implemented in \mbox{\hyperlink{classrocr_1_1amd_1_1hsa_1_1loader_1_1ExecutableImpl_aa8ad93d8c7bb007d46ce22955b41bd4b}{rocr\+::amd\+::hsa\+::loader\+::\+Executable\+Impl}}.
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classrocr_1_1amd_1_1hsa_1_1loader_1_1Executable_a2dbe28783c5dcf28ebef441993af8697_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classrocr_1_1amd_1_1hsa_1_1loader_1_1Executable_af93f12df2dce3422a7c0c5d2bdf4815c}\label{classrocr_1_1amd_1_1hsa_1_1loader_1_1Executable_af93f12df2dce3422a7c0c5d2bdf4815c}} 
+\index{rocr::amd::hsa::loader::Executable@{rocr::amd::hsa::loader::Executable}!DefineProgramExternalVariable@{DefineProgramExternalVariable}}
+\index{DefineProgramExternalVariable@{DefineProgramExternalVariable}!rocr::amd::hsa::loader::Executable@{rocr::amd::hsa::loader::Executable}}
+\doxysubsubsection{\texorpdfstring{DefineProgramExternalVariable()}{DefineProgramExternalVariable()}}
+{\footnotesize\ttfamily virtual \mbox{\hyperlink{group__status_gad755322e7ff95456520e8abdbe90d225}{hsa\+\_\+status\+\_\+t}} rocr\+::amd\+::hsa\+::loader\+::\+Executable\+::\+Define\+Program\+External\+Variable (\begin{DoxyParamCaption}\item[{const char $\ast$}]{name,  }\item[{void $\ast$}]{address }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Implemented in \mbox{\hyperlink{classrocr_1_1amd_1_1hsa_1_1loader_1_1ExecutableImpl_a04270ee64465c52a6664c0794512b463}{rocr\+::amd\+::hsa\+::loader\+::\+Executable\+Impl}}.
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classrocr_1_1amd_1_1hsa_1_1loader_1_1Executable_af93f12df2dce3422a7c0c5d2bdf4815c_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classrocr_1_1amd_1_1hsa_1_1loader_1_1Executable_a0b2e12c8bc30a36428d8a1b5f054dbc6}\label{classrocr_1_1amd_1_1hsa_1_1loader_1_1Executable_a0b2e12c8bc30a36428d8a1b5f054dbc6}} 
+\index{rocr::amd::hsa::loader::Executable@{rocr::amd::hsa::loader::Executable}!FindHostAddress@{FindHostAddress}}
+\index{FindHostAddress@{FindHostAddress}!rocr::amd::hsa::loader::Executable@{rocr::amd::hsa::loader::Executable}}
+\doxysubsubsection{\texorpdfstring{FindHostAddress()}{FindHostAddress()}}
+{\footnotesize\ttfamily virtual uint64\+\_\+t rocr\+::amd\+::hsa\+::loader\+::\+Executable\+::\+Find\+Host\+Address (\begin{DoxyParamCaption}\item[{uint64\+\_\+t}]{device\+\_\+address }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Implemented in \mbox{\hyperlink{classrocr_1_1amd_1_1hsa_1_1loader_1_1ExecutableImpl_a45e57bcee5796ecbe0150a448c8f52c7}{rocr\+::amd\+::hsa\+::loader\+::\+Executable\+Impl}}.
+
+\mbox{\Hypertarget{classrocr_1_1amd_1_1hsa_1_1loader_1_1Executable_a232de35e1ada9626ed8e4c077f35f3d5}\label{classrocr_1_1amd_1_1hsa_1_1loader_1_1Executable_a232de35e1ada9626ed8e4c077f35f3d5}} 
+\index{rocr::amd::hsa::loader::Executable@{rocr::amd::hsa::loader::Executable}!Freeze@{Freeze}}
+\index{Freeze@{Freeze}!rocr::amd::hsa::loader::Executable@{rocr::amd::hsa::loader::Executable}}
+\doxysubsubsection{\texorpdfstring{Freeze()}{Freeze()}}
+{\footnotesize\ttfamily virtual \mbox{\hyperlink{group__status_gad755322e7ff95456520e8abdbe90d225}{hsa\+\_\+status\+\_\+t}} rocr\+::amd\+::hsa\+::loader\+::\+Executable\+::\+Freeze (\begin{DoxyParamCaption}\item[{const char $\ast$}]{options }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Implemented in \mbox{\hyperlink{classrocr_1_1amd_1_1hsa_1_1loader_1_1ExecutableImpl_a247b3c1da2ccde9bd3768ad101877aa0}{rocr\+::amd\+::hsa\+::loader\+::\+Executable\+Impl}}.
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classrocr_1_1amd_1_1hsa_1_1loader_1_1Executable_a232de35e1ada9626ed8e4c077f35f3d5_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classrocr_1_1amd_1_1hsa_1_1loader_1_1Executable_ad8578f78aef56a7f9599b4cfcf040985}\label{classrocr_1_1amd_1_1hsa_1_1loader_1_1Executable_ad8578f78aef56a7f9599b4cfcf040985}} 
+\index{rocr::amd::hsa::loader::Executable@{rocr::amd::hsa::loader::Executable}!GetInfo@{GetInfo}}
+\index{GetInfo@{GetInfo}!rocr::amd::hsa::loader::Executable@{rocr::amd::hsa::loader::Executable}}
+\doxysubsubsection{\texorpdfstring{GetInfo()}{GetInfo()}}
+{\footnotesize\ttfamily virtual \mbox{\hyperlink{group__status_gad755322e7ff95456520e8abdbe90d225}{hsa\+\_\+status\+\_\+t}} rocr\+::amd\+::hsa\+::loader\+::\+Executable\+::\+Get\+Info (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{group__executable_ga1f9ab4ca027c77a2fff6deb096e8c298}{hsa\+\_\+executable\+\_\+info\+\_\+t}}}]{executable\+\_\+info,  }\item[{void $\ast$}]{value }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Implemented in \mbox{\hyperlink{classrocr_1_1amd_1_1hsa_1_1loader_1_1ExecutableImpl_a9c3b6c2f1b2af2c539f23c6f895dc0a0}{rocr\+::amd\+::hsa\+::loader\+::\+Executable\+Impl}}.
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classrocr_1_1amd_1_1hsa_1_1loader_1_1Executable_ad8578f78aef56a7f9599b4cfcf040985_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classrocr_1_1amd_1_1hsa_1_1loader_1_1Executable_a7e0e97ee6016dbd213a9ce10fc5c5894}\label{classrocr_1_1amd_1_1hsa_1_1loader_1_1Executable_a7e0e97ee6016dbd213a9ce10fc5c5894}} 
+\index{rocr::amd::hsa::loader::Executable@{rocr::amd::hsa::loader::Executable}!GetNumSegmentDescriptors@{GetNumSegmentDescriptors}}
+\index{GetNumSegmentDescriptors@{GetNumSegmentDescriptors}!rocr::amd::hsa::loader::Executable@{rocr::amd::hsa::loader::Executable}}
+\doxysubsubsection{\texorpdfstring{GetNumSegmentDescriptors()}{GetNumSegmentDescriptors()}}
+{\footnotesize\ttfamily virtual size\+\_\+t rocr\+::amd\+::hsa\+::loader\+::\+Executable\+::\+Get\+Num\+Segment\+Descriptors (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Implemented in \mbox{\hyperlink{classrocr_1_1amd_1_1hsa_1_1loader_1_1ExecutableImpl_af219be8e89eea2d56508fe19cec17583}{rocr\+::amd\+::hsa\+::loader\+::\+Executable\+Impl}}.
+
+\mbox{\Hypertarget{classrocr_1_1amd_1_1hsa_1_1loader_1_1Executable_af570e8d4e9ab4925cd9b96ca4d35bf23}\label{classrocr_1_1amd_1_1hsa_1_1loader_1_1Executable_af570e8d4e9ab4925cd9b96ca4d35bf23}} 
+\index{rocr::amd::hsa::loader::Executable@{rocr::amd::hsa::loader::Executable}!GetSymbol@{GetSymbol}}
+\index{GetSymbol@{GetSymbol}!rocr::amd::hsa::loader::Executable@{rocr::amd::hsa::loader::Executable}}
+\doxysubsubsection{\texorpdfstring{GetSymbol()}{GetSymbol()}}
+{\footnotesize\ttfamily virtual \mbox{\hyperlink{classrocr_1_1amd_1_1hsa_1_1loader_1_1Symbol}{Symbol}}$\ast$ rocr\+::amd\+::hsa\+::loader\+::\+Executable\+::\+Get\+Symbol (\begin{DoxyParamCaption}\item[{const char $\ast$}]{symbol\+\_\+name,  }\item[{const \mbox{\hyperlink{group__agentinfo_ga9ce217ef08e7d5e89c8e83ce7b6ef22b}{hsa\+\_\+agent\+\_\+t}} $\ast$}]{agent }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Implemented in \mbox{\hyperlink{classrocr_1_1amd_1_1hsa_1_1loader_1_1ExecutableImpl_ae41055a177ae3e70c69bde9676399b87}{rocr\+::amd\+::hsa\+::loader\+::\+Executable\+Impl}}.
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classrocr_1_1amd_1_1hsa_1_1loader_1_1Executable_af570e8d4e9ab4925cd9b96ca4d35bf23_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classrocr_1_1amd_1_1hsa_1_1loader_1_1Executable_afde7d60d77872295c6aeda143bfa2e97}\label{classrocr_1_1amd_1_1hsa_1_1loader_1_1Executable_afde7d60d77872295c6aeda143bfa2e97}} 
+\index{rocr::amd::hsa::loader::Executable@{rocr::amd::hsa::loader::Executable}!Handle@{Handle}}
+\index{Handle@{Handle}!rocr::amd::hsa::loader::Executable@{rocr::amd::hsa::loader::Executable}}
+\doxysubsubsection{\texorpdfstring{Handle()}{Handle()}}
+{\footnotesize\ttfamily static \mbox{\hyperlink{group__executable_ga4a4281d636cb6048c4d7a015e1fa3baa}{hsa\+\_\+executable\+\_\+t}} rocr\+::amd\+::hsa\+::loader\+::\+Executable\+::\+Handle (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classrocr_1_1amd_1_1hsa_1_1loader_1_1Executable}{Executable}} $\ast$}]{executable }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classrocr_1_1amd_1_1hsa_1_1loader_1_1Executable_afde7d60d77872295c6aeda143bfa2e97_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classrocr_1_1amd_1_1hsa_1_1loader_1_1Executable_aeac0f6a3991f7f581aa9427cc29024a9}\label{classrocr_1_1amd_1_1hsa_1_1loader_1_1Executable_aeac0f6a3991f7f581aa9427cc29024a9}} 
+\index{rocr::amd::hsa::loader::Executable@{rocr::amd::hsa::loader::Executable}!IsProgramSymbol@{IsProgramSymbol}}
+\index{IsProgramSymbol@{IsProgramSymbol}!rocr::amd::hsa::loader::Executable@{rocr::amd::hsa::loader::Executable}}
+\doxysubsubsection{\texorpdfstring{IsProgramSymbol()}{IsProgramSymbol()}}
+{\footnotesize\ttfamily virtual bool rocr\+::amd\+::hsa\+::loader\+::\+Executable\+::\+Is\+Program\+Symbol (\begin{DoxyParamCaption}\item[{const char $\ast$}]{symbol\+\_\+name }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+\begin{DoxyNote}{Note}
+needed for hsa v1.\+0. 
+\end{DoxyNote}
+\begin{DoxyRefDesc}{Todo}
+\item[\mbox{\hyperlink{todo__todo000001}{Todo}}]remove during loader refactoring. \end{DoxyRefDesc}
+
+
+Implemented in \mbox{\hyperlink{classrocr_1_1amd_1_1hsa_1_1loader_1_1ExecutableImpl_a34bcf65bf32f5390956a2b9c5f1da5eb}{rocr\+::amd\+::hsa\+::loader\+::\+Executable\+Impl}}.
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classrocr_1_1amd_1_1hsa_1_1loader_1_1Executable_aeac0f6a3991f7f581aa9427cc29024a9_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classrocr_1_1amd_1_1hsa_1_1loader_1_1Executable_aa4aedd1dd07b7481ba8385860e62ba44}\label{classrocr_1_1amd_1_1hsa_1_1loader_1_1Executable_aa4aedd1dd07b7481ba8385860e62ba44}} 
+\index{rocr::amd::hsa::loader::Executable@{rocr::amd::hsa::loader::Executable}!IterateAgentSymbols@{IterateAgentSymbols}}
+\index{IterateAgentSymbols@{IterateAgentSymbols}!rocr::amd::hsa::loader::Executable@{rocr::amd::hsa::loader::Executable}}
+\doxysubsubsection{\texorpdfstring{IterateAgentSymbols()}{IterateAgentSymbols()}}
+{\footnotesize\ttfamily virtual \mbox{\hyperlink{group__status_gad755322e7ff95456520e8abdbe90d225}{hsa\+\_\+status\+\_\+t}} rocr\+::amd\+::hsa\+::loader\+::\+Executable\+::\+Iterate\+Agent\+Symbols (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{group__agentinfo_ga9ce217ef08e7d5e89c8e83ce7b6ef22b}{hsa\+\_\+agent\+\_\+t}}}]{agent,  }\item[{\mbox{\hyperlink{group__status_gad755322e7ff95456520e8abdbe90d225}{hsa\+\_\+status\+\_\+t}}($\ast$)(\mbox{\hyperlink{group__executable_ga4a4281d636cb6048c4d7a015e1fa3baa}{hsa\+\_\+executable\+\_\+t}} exec, \mbox{\hyperlink{group__agentinfo_ga9ce217ef08e7d5e89c8e83ce7b6ef22b}{hsa\+\_\+agent\+\_\+t}} agent, \mbox{\hyperlink{group__executable_gac6b342e0224ea2ddef549b3626e8ccc1}{hsa\+\_\+executable\+\_\+symbol\+\_\+t}} symbol, void $\ast$data)}]{callback,  }\item[{void $\ast$}]{data }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+\begin{DoxySince}{Since}
+hsa v1.\+1. 
+\end{DoxySince}
+
+
+Implemented in \mbox{\hyperlink{classrocr_1_1amd_1_1hsa_1_1loader_1_1ExecutableImpl_a7811504adc1712c25803b6efb40797b7}{rocr\+::amd\+::hsa\+::loader\+::\+Executable\+Impl}}.
+
+\mbox{\Hypertarget{classrocr_1_1amd_1_1hsa_1_1loader_1_1Executable_a1fb2846a54d7c1ab9517760803be8f0b}\label{classrocr_1_1amd_1_1hsa_1_1loader_1_1Executable_a1fb2846a54d7c1ab9517760803be8f0b}} 
+\index{rocr::amd::hsa::loader::Executable@{rocr::amd::hsa::loader::Executable}!IterateLoadedCodeObjects@{IterateLoadedCodeObjects}}
+\index{IterateLoadedCodeObjects@{IterateLoadedCodeObjects}!rocr::amd::hsa::loader::Executable@{rocr::amd::hsa::loader::Executable}}
+\doxysubsubsection{\texorpdfstring{IterateLoadedCodeObjects()}{IterateLoadedCodeObjects()}}
+{\footnotesize\ttfamily virtual \mbox{\hyperlink{group__status_gad755322e7ff95456520e8abdbe90d225}{hsa\+\_\+status\+\_\+t}} rocr\+::amd\+::hsa\+::loader\+::\+Executable\+::\+Iterate\+Loaded\+Code\+Objects (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{group__status_gad755322e7ff95456520e8abdbe90d225}{hsa\+\_\+status\+\_\+t}}($\ast$)(\mbox{\hyperlink{group__executable_ga4a4281d636cb6048c4d7a015e1fa3baa}{hsa\+\_\+executable\+\_\+t}} executable, \mbox{\hyperlink{group__executable_ga352150abd29df5b8cfa891bd51d1d714}{hsa\+\_\+loaded\+\_\+code\+\_\+object\+\_\+t}} loaded\+\_\+code\+\_\+object, void $\ast$data)}]{callback,  }\item[{void $\ast$}]{data }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Implemented in \mbox{\hyperlink{classrocr_1_1amd_1_1hsa_1_1loader_1_1ExecutableImpl_abcfeea05715803616aed934120f08a7d}{rocr\+::amd\+::hsa\+::loader\+::\+Executable\+Impl}}.
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classrocr_1_1amd_1_1hsa_1_1loader_1_1Executable_a1fb2846a54d7c1ab9517760803be8f0b_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classrocr_1_1amd_1_1hsa_1_1loader_1_1Executable_abc6ccc7ad025cc371881b1c98191f271}\label{classrocr_1_1amd_1_1hsa_1_1loader_1_1Executable_abc6ccc7ad025cc371881b1c98191f271}} 
+\index{rocr::amd::hsa::loader::Executable@{rocr::amd::hsa::loader::Executable}!IterateProgramSymbols@{IterateProgramSymbols}}
+\index{IterateProgramSymbols@{IterateProgramSymbols}!rocr::amd::hsa::loader::Executable@{rocr::amd::hsa::loader::Executable}}
+\doxysubsubsection{\texorpdfstring{IterateProgramSymbols()}{IterateProgramSymbols()}}
+{\footnotesize\ttfamily virtual \mbox{\hyperlink{group__status_gad755322e7ff95456520e8abdbe90d225}{hsa\+\_\+status\+\_\+t}} rocr\+::amd\+::hsa\+::loader\+::\+Executable\+::\+Iterate\+Program\+Symbols (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{group__status_gad755322e7ff95456520e8abdbe90d225}{hsa\+\_\+status\+\_\+t}}($\ast$)(\mbox{\hyperlink{group__executable_ga4a4281d636cb6048c4d7a015e1fa3baa}{hsa\+\_\+executable\+\_\+t}} exec, \mbox{\hyperlink{group__executable_gac6b342e0224ea2ddef549b3626e8ccc1}{hsa\+\_\+executable\+\_\+symbol\+\_\+t}} symbol, void $\ast$data)}]{callback,  }\item[{void $\ast$}]{data }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+\begin{DoxySince}{Since}
+hsa v1.\+1. 
+\end{DoxySince}
+
+
+Implemented in \mbox{\hyperlink{classrocr_1_1amd_1_1hsa_1_1loader_1_1ExecutableImpl_a25e8c91c8de7e71729cf18e1b2f624f4}{rocr\+::amd\+::hsa\+::loader\+::\+Executable\+Impl}}.
+
+\mbox{\Hypertarget{classrocr_1_1amd_1_1hsa_1_1loader_1_1Executable_a3405813666c91f1bee100ff64907d3ab}\label{classrocr_1_1amd_1_1hsa_1_1loader_1_1Executable_a3405813666c91f1bee100ff64907d3ab}} 
+\index{rocr::amd::hsa::loader::Executable@{rocr::amd::hsa::loader::Executable}!IterateSymbols@{IterateSymbols}}
+\index{IterateSymbols@{IterateSymbols}!rocr::amd::hsa::loader::Executable@{rocr::amd::hsa::loader::Executable}}
+\doxysubsubsection{\texorpdfstring{IterateSymbols()}{IterateSymbols()}}
+{\footnotesize\ttfamily virtual \mbox{\hyperlink{group__status_gad755322e7ff95456520e8abdbe90d225}{hsa\+\_\+status\+\_\+t}} rocr\+::amd\+::hsa\+::loader\+::\+Executable\+::\+Iterate\+Symbols (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classrocr_1_1amd_1_1hsa_1_1loader_1_1Executable_abf9b27090478f6993f215f03a87c6190}{iterate\+\_\+symbols\+\_\+f}}}]{callback,  }\item[{void $\ast$}]{data }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Implemented in \mbox{\hyperlink{classrocr_1_1amd_1_1hsa_1_1loader_1_1ExecutableImpl_a67cbdbc3b8ac248a730a4e84e074bebf}{rocr\+::amd\+::hsa\+::loader\+::\+Executable\+Impl}}.
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classrocr_1_1amd_1_1hsa_1_1loader_1_1Executable_a3405813666c91f1bee100ff64907d3ab_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classrocr_1_1amd_1_1hsa_1_1loader_1_1Executable_ac117488982e4aeeee97ae4315e5c714f}\label{classrocr_1_1amd_1_1hsa_1_1loader_1_1Executable_ac117488982e4aeeee97ae4315e5c714f}} 
+\index{rocr::amd::hsa::loader::Executable@{rocr::amd::hsa::loader::Executable}!LoadCodeObject@{LoadCodeObject}}
+\index{LoadCodeObject@{LoadCodeObject}!rocr::amd::hsa::loader::Executable@{rocr::amd::hsa::loader::Executable}}
+\doxysubsubsection{\texorpdfstring{LoadCodeObject()}{LoadCodeObject()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily virtual \mbox{\hyperlink{group__status_gad755322e7ff95456520e8abdbe90d225}{hsa\+\_\+status\+\_\+t}} rocr\+::amd\+::hsa\+::loader\+::\+Executable\+::\+Load\+Code\+Object (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{group__agentinfo_ga9ce217ef08e7d5e89c8e83ce7b6ef22b}{hsa\+\_\+agent\+\_\+t}}}]{agent,  }\item[{\mbox{\hyperlink{group__code-object_gafae7c731c8bfc39b3050ef08ae8bb3e3}{hsa\+\_\+code\+\_\+object\+\_\+t}}}]{code\+\_\+object,  }\item[{const char $\ast$}]{options,  }\item[{const std\+::string \&}]{uri,  }\item[{\mbox{\hyperlink{group__executable_ga352150abd29df5b8cfa891bd51d1d714}{hsa\+\_\+loaded\+\_\+code\+\_\+object\+\_\+t}} $\ast$}]{loaded\+\_\+code\+\_\+object = {\ttfamily nullptr} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Implemented in \mbox{\hyperlink{classrocr_1_1amd_1_1hsa_1_1loader_1_1ExecutableImpl_a2a809bf4da3f9c7e83d5360337fb2d29}{rocr\+::amd\+::hsa\+::loader\+::\+Executable\+Impl}}.
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classrocr_1_1amd_1_1hsa_1_1loader_1_1Executable_ac117488982e4aeeee97ae4315e5c714f_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classrocr_1_1amd_1_1hsa_1_1loader_1_1Executable_a0060fa4c3fe8879ab80aac2e17dda68c}\label{classrocr_1_1amd_1_1hsa_1_1loader_1_1Executable_a0060fa4c3fe8879ab80aac2e17dda68c}} 
+\index{rocr::amd::hsa::loader::Executable@{rocr::amd::hsa::loader::Executable}!LoadCodeObject@{LoadCodeObject}}
+\index{LoadCodeObject@{LoadCodeObject}!rocr::amd::hsa::loader::Executable@{rocr::amd::hsa::loader::Executable}}
+\doxysubsubsection{\texorpdfstring{LoadCodeObject()}{LoadCodeObject()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily virtual \mbox{\hyperlink{group__status_gad755322e7ff95456520e8abdbe90d225}{hsa\+\_\+status\+\_\+t}} rocr\+::amd\+::hsa\+::loader\+::\+Executable\+::\+Load\+Code\+Object (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{group__agentinfo_ga9ce217ef08e7d5e89c8e83ce7b6ef22b}{hsa\+\_\+agent\+\_\+t}}}]{agent,  }\item[{\mbox{\hyperlink{group__code-object_gafae7c731c8bfc39b3050ef08ae8bb3e3}{hsa\+\_\+code\+\_\+object\+\_\+t}}}]{code\+\_\+object,  }\item[{size\+\_\+t}]{code\+\_\+object\+\_\+size,  }\item[{const char $\ast$}]{options,  }\item[{const std\+::string \&}]{uri,  }\item[{\mbox{\hyperlink{group__executable_ga352150abd29df5b8cfa891bd51d1d714}{hsa\+\_\+loaded\+\_\+code\+\_\+object\+\_\+t}} $\ast$}]{loaded\+\_\+code\+\_\+object = {\ttfamily nullptr} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Implemented in \mbox{\hyperlink{classrocr_1_1amd_1_1hsa_1_1loader_1_1ExecutableImpl_ae42fd5240f8ecf0b936f863a85ea3872}{rocr\+::amd\+::hsa\+::loader\+::\+Executable\+Impl}}.
+
+\mbox{\Hypertarget{classrocr_1_1amd_1_1hsa_1_1loader_1_1Executable_a01121c96c20af2e23abca35109bf40a3}\label{classrocr_1_1amd_1_1hsa_1_1loader_1_1Executable_a01121c96c20af2e23abca35109bf40a3}} 
+\index{rocr::amd::hsa::loader::Executable@{rocr::amd::hsa::loader::Executable}!Object@{Object}}
+\index{Object@{Object}!rocr::amd::hsa::loader::Executable@{rocr::amd::hsa::loader::Executable}}
+\doxysubsubsection{\texorpdfstring{Object()}{Object()}}
+{\footnotesize\ttfamily static \mbox{\hyperlink{classrocr_1_1amd_1_1hsa_1_1loader_1_1Executable}{Executable}}$\ast$ rocr\+::amd\+::hsa\+::loader\+::\+Executable\+::\+Object (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{group__executable_ga4a4281d636cb6048c4d7a015e1fa3baa}{hsa\+\_\+executable\+\_\+t}}}]{executable\+\_\+handle }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classrocr_1_1amd_1_1hsa_1_1loader_1_1Executable_a01121c96c20af2e23abca35109bf40a3_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classrocr_1_1amd_1_1hsa_1_1loader_1_1Executable_a3639fec00ecdadf638eeed9dd3e00ee3}\label{classrocr_1_1amd_1_1hsa_1_1loader_1_1Executable_a3639fec00ecdadf638eeed9dd3e00ee3}} 
+\index{rocr::amd::hsa::loader::Executable@{rocr::amd::hsa::loader::Executable}!operator=@{operator=}}
+\index{operator=@{operator=}!rocr::amd::hsa::loader::Executable@{rocr::amd::hsa::loader::Executable}}
+\doxysubsubsection{\texorpdfstring{operator=()}{operator=()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classrocr_1_1amd_1_1hsa_1_1loader_1_1Executable}{Executable}}\& rocr\+::amd\+::hsa\+::loader\+::\+Executable\+::operator= (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classrocr_1_1amd_1_1hsa_1_1loader_1_1Executable}{Executable}} \&}]{e }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classrocr_1_1amd_1_1hsa_1_1loader_1_1Executable_aa206c14394c5fb3117b6f1846cbdc9d9}\label{classrocr_1_1amd_1_1hsa_1_1loader_1_1Executable_aa206c14394c5fb3117b6f1846cbdc9d9}} 
+\index{rocr::amd::hsa::loader::Executable@{rocr::amd::hsa::loader::Executable}!Print@{Print}}
+\index{Print@{Print}!rocr::amd::hsa::loader::Executable@{rocr::amd::hsa::loader::Executable}}
+\doxysubsubsection{\texorpdfstring{Print()}{Print()}}
+{\footnotesize\ttfamily virtual void rocr\+::amd\+::hsa\+::loader\+::\+Executable\+::\+Print (\begin{DoxyParamCaption}\item[{std\+::ostream \&}]{out }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Implemented in \mbox{\hyperlink{classrocr_1_1amd_1_1hsa_1_1loader_1_1ExecutableImpl_a2d4b6fe222a9aefb20314dc3c48f4a57}{rocr\+::amd\+::hsa\+::loader\+::\+Executable\+Impl}}.
+
+\mbox{\Hypertarget{classrocr_1_1amd_1_1hsa_1_1loader_1_1Executable_ad7a03ec33621da5cf4b8f360795bc873}\label{classrocr_1_1amd_1_1hsa_1_1loader_1_1Executable_ad7a03ec33621da5cf4b8f360795bc873}} 
+\index{rocr::amd::hsa::loader::Executable@{rocr::amd::hsa::loader::Executable}!PrintToFile@{PrintToFile}}
+\index{PrintToFile@{PrintToFile}!rocr::amd::hsa::loader::Executable@{rocr::amd::hsa::loader::Executable}}
+\doxysubsubsection{\texorpdfstring{PrintToFile()}{PrintToFile()}}
+{\footnotesize\ttfamily virtual bool rocr\+::amd\+::hsa\+::loader\+::\+Executable\+::\+Print\+To\+File (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{filename }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Implemented in \mbox{\hyperlink{classrocr_1_1amd_1_1hsa_1_1loader_1_1ExecutableImpl_ac45fd6ad249936b4e95d8440bc3d9d0d}{rocr\+::amd\+::hsa\+::loader\+::\+Executable\+Impl}}.
+
+\mbox{\Hypertarget{classrocr_1_1amd_1_1hsa_1_1loader_1_1Executable_a4196e898e95417b4418b9bb59bbe06d7}\label{classrocr_1_1amd_1_1hsa_1_1loader_1_1Executable_a4196e898e95417b4418b9bb59bbe06d7}} 
+\index{rocr::amd::hsa::loader::Executable@{rocr::amd::hsa::loader::Executable}!QuerySegmentDescriptors@{QuerySegmentDescriptors}}
+\index{QuerySegmentDescriptors@{QuerySegmentDescriptors}!rocr::amd::hsa::loader::Executable@{rocr::amd::hsa::loader::Executable}}
+\doxysubsubsection{\texorpdfstring{QuerySegmentDescriptors()}{QuerySegmentDescriptors()}}
+{\footnotesize\ttfamily virtual size\+\_\+t rocr\+::amd\+::hsa\+::loader\+::\+Executable\+::\+Query\+Segment\+Descriptors (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{inc_2hsa__ven__amd__loader_8h_acb66ca48865e62642b604bfe4ede86c7}{hsa\+\_\+ven\+\_\+amd\+\_\+loader\+\_\+segment\+\_\+descriptor\+\_\+t}} $\ast$}]{segment\+\_\+descriptors,  }\item[{size\+\_\+t}]{total\+\_\+num\+\_\+segment\+\_\+descriptors,  }\item[{size\+\_\+t}]{first\+\_\+empty\+\_\+segment\+\_\+descriptor }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Implemented in \mbox{\hyperlink{classrocr_1_1amd_1_1hsa_1_1loader_1_1ExecutableImpl_ac1be318e35e84af6c969a6acbfc682aa}{rocr\+::amd\+::hsa\+::loader\+::\+Executable\+Impl}}.
+
+\mbox{\Hypertarget{classrocr_1_1amd_1_1hsa_1_1loader_1_1Executable_a50eee2ed729c1706e499991899d82871}\label{classrocr_1_1amd_1_1hsa_1_1loader_1_1Executable_a50eee2ed729c1706e499991899d82871}} 
+\index{rocr::amd::hsa::loader::Executable@{rocr::amd::hsa::loader::Executable}!Validate@{Validate}}
+\index{Validate@{Validate}!rocr::amd::hsa::loader::Executable@{rocr::amd::hsa::loader::Executable}}
+\doxysubsubsection{\texorpdfstring{Validate()}{Validate()}}
+{\footnotesize\ttfamily virtual \mbox{\hyperlink{group__status_gad755322e7ff95456520e8abdbe90d225}{hsa\+\_\+status\+\_\+t}} rocr\+::amd\+::hsa\+::loader\+::\+Executable\+::\+Validate (\begin{DoxyParamCaption}\item[{uint32\+\_\+t $\ast$}]{result }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Implemented in \mbox{\hyperlink{classrocr_1_1amd_1_1hsa_1_1loader_1_1ExecutableImpl_ad5092f4a689d42b5dc427a27b702dd22}{rocr\+::amd\+::hsa\+::loader\+::\+Executable\+Impl}}.
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classrocr_1_1amd_1_1hsa_1_1loader_1_1Executable_a50eee2ed729c1706e499991899d82871_icgraph}
+\end{center}
+\end{figure}
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{classrocr_1_1amd_1_1hsa_1_1loader_1_1Executable_a257c373cc10169b4cba084e0c86e6c7c}\label{classrocr_1_1amd_1_1hsa_1_1loader_1_1Executable_a257c373cc10169b4cba084e0c86e6c7c}} 
+\index{rocr::amd::hsa::loader::Executable@{rocr::amd::hsa::loader::Executable}!executables@{executables}}
+\index{executables@{executables}!rocr::amd::hsa::loader::Executable@{rocr::amd::hsa::loader::Executable}}
+\doxysubsubsection{\texorpdfstring{executables}{executables}}
+{\footnotesize\ttfamily std\+::vector$<$\mbox{\hyperlink{classrocr_1_1amd_1_1hsa_1_1loader_1_1Executable}{Executable}}$\ast$$>$ rocr\+::amd\+::hsa\+::loader\+::\+Executable\+::executables\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [private]}}
+
+\mbox{\Hypertarget{classrocr_1_1amd_1_1hsa_1_1loader_1_1Executable_a0910876ba3194ca83cd0954b61aeb58f}\label{classrocr_1_1amd_1_1hsa_1_1loader_1_1Executable_a0910876ba3194ca83cd0954b61aeb58f}} 
+\index{rocr::amd::hsa::loader::Executable@{rocr::amd::hsa::loader::Executable}!executables\_mutex@{executables\_mutex}}
+\index{executables\_mutex@{executables\_mutex}!rocr::amd::hsa::loader::Executable@{rocr::amd::hsa::loader::Executable}}
+\doxysubsubsection{\texorpdfstring{executables\_mutex}{executables\_mutex}}
+{\footnotesize\ttfamily std\+::mutex rocr\+::amd\+::hsa\+::loader\+::\+Executable\+::executables\+\_\+mutex\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [private]}}
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+src/core/inc/\mbox{\hyperlink{amd__hsa__loader_8hpp}{amd\+\_\+hsa\+\_\+loader.\+hpp}}\end{DoxyCompactItemize}

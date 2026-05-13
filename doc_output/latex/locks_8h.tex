@@ -1,0 +1,52 @@
+\hypertarget{locks_8h}{}\doxysection{src/core/util/locks.h File Reference}
+\label{locks_8h}\index{src/core/util/locks.h@{src/core/util/locks.h}}
+{\ttfamily \#include \char`\"{}utils.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}os.\+h\char`\"{}}\newline
+Include dependency graph for locks.\+h\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{locks_8h__incl}
+\end{center}
+\end{figure}
+This graph shows which files directly or indirectly include this file\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{locks_8h__dep__incl}
+\end{center}
+\end{figure}
+\doxysubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class \mbox{\hyperlink{classrocr_1_1KernelMutex}{rocr\+::\+Kernel\+Mutex}}
+\begin{DoxyCompactList}\small\item\em \+: a class represents a kernel mutex. Uses the kernel\textquotesingle{}s scheduler to keep the waiting thread from being scheduled until the lock is released (Best for long waits, though anything using a kernel object is a long wait). \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{classrocr_1_1SpinMutex}{rocr\+::\+Spin\+Mutex}}
+\begin{DoxyCompactList}\small\item\em \+: represents a spin lock. For very short hold durations on the order of the thread scheduling quanta or less. \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{classrocr_1_1KernelEvent}{rocr\+::\+Kernel\+Event}}
+\item 
+class \mbox{\hyperlink{classrocr_1_1KernelSharedMutex}{rocr\+::\+Kernel\+Shared\+Mutex}}
+\begin{DoxyCompactList}\small\item\em \+: represents a yielding shared mutex. aka read/write mutex \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{classrocr_1_1KernelSharedMutex_1_1Shared}{rocr\+::\+Kernel\+Shared\+Mutex\+::\+Shared}}
+\begin{DoxyCompactList}\small\item\em \+: Interfaces \mbox{\hyperlink{classrocr_1_1ScopedAcquire}{Scoped\+Acquire}} to shared operations. \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{classrocr_1_1isMutex}{rocr\+::is\+Mutex$<$ T $>$}}
+\begin{DoxyCompactList}\small\item\em \+: Type trait to identify mutex types \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{classrocr_1_1isMutex_3_01KernelMutex_01_4}{rocr\+::is\+Mutex$<$ Kernel\+Mutex $>$}}
+\item 
+class \mbox{\hyperlink{classrocr_1_1isMutex_3_01SpinMutex_01_4}{rocr\+::is\+Mutex$<$ Spin\+Mutex $>$}}
+\item 
+class \mbox{\hyperlink{classrocr_1_1isMutex_3_01KernelSharedMutex_01_4}{rocr\+::is\+Mutex$<$ Kernel\+Shared\+Mutex $>$}}
+\item 
+class \mbox{\hyperlink{classrocr_1_1ScopedAcquire}{rocr\+::\+Scoped\+Acquire$<$ Lock\+Type $>$}}
+\begin{DoxyCompactList}\small\item\em \+: A class behaves as a lock in a scope. When trying to enter into the critical section, creat a object of this class. After the control path goes out of the scope, it will release the lock automatically. \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{classrocr_1_1ScopedAcquire_1_1container}{rocr\+::\+Scoped\+Acquire$<$ Lock\+Type $>$\+::container$<$ T, B $>$}}
+\begin{DoxyCompactList}\small\item\em \+: Adapts between pointers to mutex types and mutex pointer types. \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{classrocr_1_1ScopedAcquire_1_1container_3_01T_00_01false_01_4}{rocr\+::\+Scoped\+Acquire$<$ Lock\+Type $>$\+::container$<$ T, false $>$}}
+\begin{DoxyCompactList}\small\item\em \+: Specialization for mutex pointer types. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Namespaces}
+\begin{DoxyCompactItemize}
+\item 
+ \mbox{\hyperlink{namespacerocr}{rocr}}
+\end{DoxyCompactItemize}

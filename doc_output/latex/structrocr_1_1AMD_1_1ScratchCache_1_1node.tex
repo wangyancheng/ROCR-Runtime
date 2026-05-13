@@ -1,0 +1,174 @@
+\hypertarget{structrocr_1_1AMD_1_1ScratchCache_1_1node}{}\doxysection{rocr\+::AMD\+::Scratch\+Cache\+::node Struct Reference}
+\label{structrocr_1_1AMD_1_1ScratchCache_1_1node}\index{rocr::AMD::ScratchCache::node@{rocr::AMD::ScratchCache::node}}
+
+
+{\ttfamily \#include $<$scratch\+\_\+cache.\+h$>$}
+
+\doxysubsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+enum \mbox{\hyperlink{structrocr_1_1AMD_1_1ScratchCache_1_1node_add7b84a9700c3a85b5a6a005d0677d6e}{STATE}} \{ \mbox{\hyperlink{structrocr_1_1AMD_1_1ScratchCache_1_1node_add7b84a9700c3a85b5a6a005d0677d6ea78ce4f5783771a5e97b8c9f012e0a60c}{FREE}} = 0
+, \mbox{\hyperlink{structrocr_1_1AMD_1_1ScratchCache_1_1node_add7b84a9700c3a85b5a6a005d0677d6eae435f80866469c5c50939b9a41a45270}{ALLOC}} = 1
+, \mbox{\hyperlink{structrocr_1_1AMD_1_1ScratchCache_1_1node_add7b84a9700c3a85b5a6a005d0677d6ea64dc6ab00e2d4129bbcb40af3855fe7c}{TRIM}} = 2
+, \mbox{\hyperlink{structrocr_1_1AMD_1_1ScratchCache_1_1node_add7b84a9700c3a85b5a6a005d0677d6ea465bab69949b71d3684a7bfd12961673}{STEAL}} = 4
+ \}
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{structrocr_1_1AMD_1_1ScratchCache_1_1node_ac27f5abee1952c2b96b8ff710ea72f4d}{node}} ()
+\item 
+bool \mbox{\hyperlink{structrocr_1_1AMD_1_1ScratchCache_1_1node_a9424425d543280e7d376417fbc19d443}{is\+Free}} () const
+\item 
+bool \mbox{\hyperlink{structrocr_1_1AMD_1_1ScratchCache_1_1node_a5edf7cecb2ed9df00270ff207b785dce}{trim\+Pending}} () const
+\item 
+void \mbox{\hyperlink{structrocr_1_1AMD_1_1ScratchCache_1_1node_aedad6fd1c1e23c269940763c97d8ebed}{trim}} ()
+\item 
+void \mbox{\hyperlink{structrocr_1_1AMD_1_1ScratchCache_1_1node_a6b1d94d5cbee4ea412bce6f11fcc5b7a}{free}} ()
+\item 
+void \mbox{\hyperlink{structrocr_1_1AMD_1_1ScratchCache_1_1node_ac05b5eda054b1f272a877458b8baa1c4}{alloc}} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+void $\ast$ \mbox{\hyperlink{structrocr_1_1AMD_1_1ScratchCache_1_1node_a280619a9198da8976492724a1ea5fd03}{base}}
+\item 
+bool \mbox{\hyperlink{structrocr_1_1AMD_1_1ScratchCache_1_1node_adc47198054df66e3062f53dc11fc22af}{large}}
+\item 
+uint32\+\_\+t \mbox{\hyperlink{structrocr_1_1AMD_1_1ScratchCache_1_1node_a0630f0b508a9ee7df85807f488302a70}{state}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Member Enumeration Documentation}
+\mbox{\Hypertarget{structrocr_1_1AMD_1_1ScratchCache_1_1node_add7b84a9700c3a85b5a6a005d0677d6e}\label{structrocr_1_1AMD_1_1ScratchCache_1_1node_add7b84a9700c3a85b5a6a005d0677d6e}} 
+\index{rocr::AMD::ScratchCache::node@{rocr::AMD::ScratchCache::node}!STATE@{STATE}}
+\index{STATE@{STATE}!rocr::AMD::ScratchCache::node@{rocr::AMD::ScratchCache::node}}
+\doxysubsubsection{\texorpdfstring{STATE}{STATE}}
+{\footnotesize\ttfamily enum \mbox{\hyperlink{structrocr_1_1AMD_1_1ScratchCache_1_1node_add7b84a9700c3a85b5a6a005d0677d6e}{rocr\+::\+AMD\+::\+Scratch\+Cache\+::node\+::\+STATE}}}
+
+\begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{FREE@{FREE}!rocr::AMD::ScratchCache::node@{rocr::AMD::ScratchCache::node}}\index{rocr::AMD::ScratchCache::node@{rocr::AMD::ScratchCache::node}!FREE@{FREE}}}\mbox{\Hypertarget{structrocr_1_1AMD_1_1ScratchCache_1_1node_add7b84a9700c3a85b5a6a005d0677d6ea78ce4f5783771a5e97b8c9f012e0a60c}\label{structrocr_1_1AMD_1_1ScratchCache_1_1node_add7b84a9700c3a85b5a6a005d0677d6ea78ce4f5783771a5e97b8c9f012e0a60c}} 
+FREE&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{ALLOC@{ALLOC}!rocr::AMD::ScratchCache::node@{rocr::AMD::ScratchCache::node}}\index{rocr::AMD::ScratchCache::node@{rocr::AMD::ScratchCache::node}!ALLOC@{ALLOC}}}\mbox{\Hypertarget{structrocr_1_1AMD_1_1ScratchCache_1_1node_add7b84a9700c3a85b5a6a005d0677d6eae435f80866469c5c50939b9a41a45270}\label{structrocr_1_1AMD_1_1ScratchCache_1_1node_add7b84a9700c3a85b5a6a005d0677d6eae435f80866469c5c50939b9a41a45270}} 
+ALLOC&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{TRIM@{TRIM}!rocr::AMD::ScratchCache::node@{rocr::AMD::ScratchCache::node}}\index{rocr::AMD::ScratchCache::node@{rocr::AMD::ScratchCache::node}!TRIM@{TRIM}}}\mbox{\Hypertarget{structrocr_1_1AMD_1_1ScratchCache_1_1node_add7b84a9700c3a85b5a6a005d0677d6ea64dc6ab00e2d4129bbcb40af3855fe7c}\label{structrocr_1_1AMD_1_1ScratchCache_1_1node_add7b84a9700c3a85b5a6a005d0677d6ea64dc6ab00e2d4129bbcb40af3855fe7c}} 
+TRIM&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{STEAL@{STEAL}!rocr::AMD::ScratchCache::node@{rocr::AMD::ScratchCache::node}}\index{rocr::AMD::ScratchCache::node@{rocr::AMD::ScratchCache::node}!STEAL@{STEAL}}}\mbox{\Hypertarget{structrocr_1_1AMD_1_1ScratchCache_1_1node_add7b84a9700c3a85b5a6a005d0677d6ea465bab69949b71d3684a7bfd12961673}\label{structrocr_1_1AMD_1_1ScratchCache_1_1node_add7b84a9700c3a85b5a6a005d0677d6ea465bab69949b71d3684a7bfd12961673}} 
+STEAL&\\
+\hline
+
+\end{DoxyEnumFields}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{structrocr_1_1AMD_1_1ScratchCache_1_1node_ac27f5abee1952c2b96b8ff710ea72f4d}\label{structrocr_1_1AMD_1_1ScratchCache_1_1node_ac27f5abee1952c2b96b8ff710ea72f4d}} 
+\index{rocr::AMD::ScratchCache::node@{rocr::AMD::ScratchCache::node}!node@{node}}
+\index{node@{node}!rocr::AMD::ScratchCache::node@{rocr::AMD::ScratchCache::node}}
+\doxysubsubsection{\texorpdfstring{node()}{node()}}
+{\footnotesize\ttfamily rocr\+::\+AMD\+::\+Scratch\+Cache\+::node\+::node (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{structrocr_1_1AMD_1_1ScratchCache_1_1node_ac05b5eda054b1f272a877458b8baa1c4}\label{structrocr_1_1AMD_1_1ScratchCache_1_1node_ac05b5eda054b1f272a877458b8baa1c4}} 
+\index{rocr::AMD::ScratchCache::node@{rocr::AMD::ScratchCache::node}!alloc@{alloc}}
+\index{alloc@{alloc}!rocr::AMD::ScratchCache::node@{rocr::AMD::ScratchCache::node}}
+\doxysubsubsection{\texorpdfstring{alloc()}{alloc()}}
+{\footnotesize\ttfamily void rocr\+::\+AMD\+::\+Scratch\+Cache\+::node\+::alloc (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{structrocr_1_1AMD_1_1ScratchCache_1_1node_ac05b5eda054b1f272a877458b8baa1c4_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{structrocr_1_1AMD_1_1ScratchCache_1_1node_ac05b5eda054b1f272a877458b8baa1c4_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{structrocr_1_1AMD_1_1ScratchCache_1_1node_a6b1d94d5cbee4ea412bce6f11fcc5b7a}\label{structrocr_1_1AMD_1_1ScratchCache_1_1node_a6b1d94d5cbee4ea412bce6f11fcc5b7a}} 
+\index{rocr::AMD::ScratchCache::node@{rocr::AMD::ScratchCache::node}!free@{free}}
+\index{free@{free}!rocr::AMD::ScratchCache::node@{rocr::AMD::ScratchCache::node}}
+\doxysubsubsection{\texorpdfstring{free()}{free()}}
+{\footnotesize\ttfamily void rocr\+::\+AMD\+::\+Scratch\+Cache\+::node\+::free (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{structrocr_1_1AMD_1_1ScratchCache_1_1node_a6b1d94d5cbee4ea412bce6f11fcc5b7a_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{structrocr_1_1AMD_1_1ScratchCache_1_1node_a9424425d543280e7d376417fbc19d443}\label{structrocr_1_1AMD_1_1ScratchCache_1_1node_a9424425d543280e7d376417fbc19d443}} 
+\index{rocr::AMD::ScratchCache::node@{rocr::AMD::ScratchCache::node}!isFree@{isFree}}
+\index{isFree@{isFree}!rocr::AMD::ScratchCache::node@{rocr::AMD::ScratchCache::node}}
+\doxysubsubsection{\texorpdfstring{isFree()}{isFree()}}
+{\footnotesize\ttfamily bool rocr\+::\+AMD\+::\+Scratch\+Cache\+::node\+::is\+Free (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{structrocr_1_1AMD_1_1ScratchCache_1_1node_a9424425d543280e7d376417fbc19d443_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{structrocr_1_1AMD_1_1ScratchCache_1_1node_aedad6fd1c1e23c269940763c97d8ebed}\label{structrocr_1_1AMD_1_1ScratchCache_1_1node_aedad6fd1c1e23c269940763c97d8ebed}} 
+\index{rocr::AMD::ScratchCache::node@{rocr::AMD::ScratchCache::node}!trim@{trim}}
+\index{trim@{trim}!rocr::AMD::ScratchCache::node@{rocr::AMD::ScratchCache::node}}
+\doxysubsubsection{\texorpdfstring{trim()}{trim()}}
+{\footnotesize\ttfamily void rocr\+::\+AMD\+::\+Scratch\+Cache\+::node\+::trim (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{structrocr_1_1AMD_1_1ScratchCache_1_1node_aedad6fd1c1e23c269940763c97d8ebed_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{structrocr_1_1AMD_1_1ScratchCache_1_1node_a5edf7cecb2ed9df00270ff207b785dce}\label{structrocr_1_1AMD_1_1ScratchCache_1_1node_a5edf7cecb2ed9df00270ff207b785dce}} 
+\index{rocr::AMD::ScratchCache::node@{rocr::AMD::ScratchCache::node}!trimPending@{trimPending}}
+\index{trimPending@{trimPending}!rocr::AMD::ScratchCache::node@{rocr::AMD::ScratchCache::node}}
+\doxysubsubsection{\texorpdfstring{trimPending()}{trimPending()}}
+{\footnotesize\ttfamily bool rocr\+::\+AMD\+::\+Scratch\+Cache\+::node\+::trim\+Pending (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{structrocr_1_1AMD_1_1ScratchCache_1_1node_a280619a9198da8976492724a1ea5fd03}\label{structrocr_1_1AMD_1_1ScratchCache_1_1node_a280619a9198da8976492724a1ea5fd03}} 
+\index{rocr::AMD::ScratchCache::node@{rocr::AMD::ScratchCache::node}!base@{base}}
+\index{base@{base}!rocr::AMD::ScratchCache::node@{rocr::AMD::ScratchCache::node}}
+\doxysubsubsection{\texorpdfstring{base}{base}}
+{\footnotesize\ttfamily void$\ast$ rocr\+::\+AMD\+::\+Scratch\+Cache\+::node\+::base}
+
+\mbox{\Hypertarget{structrocr_1_1AMD_1_1ScratchCache_1_1node_adc47198054df66e3062f53dc11fc22af}\label{structrocr_1_1AMD_1_1ScratchCache_1_1node_adc47198054df66e3062f53dc11fc22af}} 
+\index{rocr::AMD::ScratchCache::node@{rocr::AMD::ScratchCache::node}!large@{large}}
+\index{large@{large}!rocr::AMD::ScratchCache::node@{rocr::AMD::ScratchCache::node}}
+\doxysubsubsection{\texorpdfstring{large}{large}}
+{\footnotesize\ttfamily bool rocr\+::\+AMD\+::\+Scratch\+Cache\+::node\+::large}
+
+\mbox{\Hypertarget{structrocr_1_1AMD_1_1ScratchCache_1_1node_a0630f0b508a9ee7df85807f488302a70}\label{structrocr_1_1AMD_1_1ScratchCache_1_1node_a0630f0b508a9ee7df85807f488302a70}} 
+\index{rocr::AMD::ScratchCache::node@{rocr::AMD::ScratchCache::node}!state@{state}}
+\index{state@{state}!rocr::AMD::ScratchCache::node@{rocr::AMD::ScratchCache::node}}
+\doxysubsubsection{\texorpdfstring{state}{state}}
+{\footnotesize\ttfamily uint32\+\_\+t rocr\+::\+AMD\+::\+Scratch\+Cache\+::node\+::state}
+
+
+
+The documentation for this struct was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+src/core/inc/\mbox{\hyperlink{scratch__cache_8h}{scratch\+\_\+cache.\+h}}\end{DoxyCompactItemize}

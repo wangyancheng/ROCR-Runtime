@@ -1,0 +1,243 @@
+\hypertarget{structrocr_1_1__ADDR__COMPUTE__FMASK__COORDFROMADDR__INPUT}{}\doxysection{rocr\+::\+\_\+\+ADDR\+\_\+\+COMPUTE\+\_\+\+FMASK\+\_\+\+COORDFROMADDR\+\_\+\+INPUT Struct Reference}
+\label{structrocr_1_1__ADDR__COMPUTE__FMASK__COORDFROMADDR__INPUT}\index{rocr::\_ADDR\_COMPUTE\_FMASK\_COORDFROMADDR\_INPUT@{rocr::\_ADDR\_COMPUTE\_FMASK\_COORDFROMADDR\_INPUT}}
+
+
+Input structure for Addr\+Compute\+Fmask\+Coord\+From\+Addr.  
+
+
+
+
+{\ttfamily \#include $<$addrinterface.\+h$>$}
+
+
+
+Collaboration diagram for rocr\+::\+\_\+\+ADDR\+\_\+\+COMPUTE\+\_\+\+FMASK\+\_\+\+COORDFROMADDR\+\_\+\+INPUT\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=274pt]{structrocr_1_1__ADDR__COMPUTE__FMASK__COORDFROMADDR__INPUT__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{addrtypes_8h_af5a2be58a28390f9a494538f34054637}{UINT\+\_\+32}} \mbox{\hyperlink{structrocr_1_1__ADDR__COMPUTE__FMASK__COORDFROMADDR__INPUT_afe2b18c92ac7a69c29e4c8455f212fd0}{size}}
+\begin{DoxyCompactList}\small\item\em Size of this structure in bytes. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{addrtypes_8h_ac4116bb9a5e80b5cb845d4f2674c160f}{UINT\+\_\+64}} \mbox{\hyperlink{structrocr_1_1__ADDR__COMPUTE__FMASK__COORDFROMADDR__INPUT_a1a52c24ebeea10e452bf47e4d91c4d16}{addr}}
+\begin{DoxyCompactList}\small\item\em Address. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{addrtypes_8h_af5a2be58a28390f9a494538f34054637}{UINT\+\_\+32}} \mbox{\hyperlink{structrocr_1_1__ADDR__COMPUTE__FMASK__COORDFROMADDR__INPUT_a7c05c5252a16c3fb378f6d83afc27bc8}{bit\+Position}}
+\begin{DoxyCompactList}\small\item\em Bit position within addr, 0-\/7. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{addrtypes_8h_af5a2be58a28390f9a494538f34054637}{UINT\+\_\+32}} \mbox{\hyperlink{structrocr_1_1__ADDR__COMPUTE__FMASK__COORDFROMADDR__INPUT_acde880aca755e97a5054d78bb6860254}{pitch}}
+\begin{DoxyCompactList}\small\item\em Pitch, in pixels. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{addrtypes_8h_af5a2be58a28390f9a494538f34054637}{UINT\+\_\+32}} \mbox{\hyperlink{structrocr_1_1__ADDR__COMPUTE__FMASK__COORDFROMADDR__INPUT_a7427e04bb24bd4db9db6406998a82f46}{height}}
+\begin{DoxyCompactList}\small\item\em Height in pixels. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{addrtypes_8h_af5a2be58a28390f9a494538f34054637}{UINT\+\_\+32}} \mbox{\hyperlink{structrocr_1_1__ADDR__COMPUTE__FMASK__COORDFROMADDR__INPUT_a687305ab99a6e60abf18633aa93925f1}{num\+Samples}}
+\begin{DoxyCompactList}\small\item\em Number of samples. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{addrtypes_8h_af5a2be58a28390f9a494538f34054637}{UINT\+\_\+32}} \mbox{\hyperlink{structrocr_1_1__ADDR__COMPUTE__FMASK__COORDFROMADDR__INPUT_ac4f220cf5a20ac2aa6a76d2a7c2f524a}{num\+Frags}}
+\begin{DoxyCompactList}\small\item\em Number of fragments. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{addrtypes_8h_a9dffa8321911d7791c03fe3a233a34e7}{Addr\+Tile\+Mode}} \mbox{\hyperlink{structrocr_1_1__ADDR__COMPUTE__FMASK__COORDFROMADDR__INPUT_a153aff565c777a1e70822ace9d349362}{tile\+Mode}}
+\begin{DoxyCompactList}\small\item\em Tile mode. \end{DoxyCompactList}\item 
+\begin{tabbing}
+xx\=xx\=xx\=xx\=xx\=xx\=xx\=xx\=xx\=\kill
+union \{\\
+\>struct \{\\
+\>\>\mbox{\hyperlink{addrtypes_8h_af5a2be58a28390f9a494538f34054637}{UINT\_32}} \mbox{\hyperlink{structrocr_1_1__ADDR__COMPUTE__FMASK__COORDFROMADDR__INPUT_a525198bb4f3b507cd3bf234fdca204ea}{bankSwizzle}}\\
+\>\>\>{\em Bank swizzle. }\\
+\>\>\mbox{\hyperlink{addrtypes_8h_af5a2be58a28390f9a494538f34054637}{UINT\_32}} \mbox{\hyperlink{structrocr_1_1__ADDR__COMPUTE__FMASK__COORDFROMADDR__INPUT_a6db73badd03df5b5c9362637ddebbc61}{pipeSwizzle}}\\
+\>\>\>{\em Pipe swizzle. }\\
+\>\} \\
+\>\mbox{\hyperlink{addrtypes_8h_af5a2be58a28390f9a494538f34054637}{UINT\_32}} \mbox{\hyperlink{structrocr_1_1__ADDR__COMPUTE__FMASK__COORDFROMADDR__INPUT_a245777ec13207c110429202377fb46de}{tileSwizzle}}\\
+\>\>\>{\em Combined swizzle, if useCombinedSwizzle is TRUE. }\\
+\}; \\
+
+\end{tabbing}\item 
+\begin{tabbing}
+xx\=xx\=xx\=xx\=xx\=xx\=xx\=xx\=xx\=\kill
+struct \{\\
+\>\mbox{\hyperlink{addrtypes_8h_af5a2be58a28390f9a494538f34054637}{UINT\_32}} \mbox{\hyperlink{structrocr_1_1__ADDR__COMPUTE__FMASK__COORDFROMADDR__INPUT_afed855f5f265c9aac8b78e292e7d91a1}{resolved}}: 1\\
+\>\>{\em TRUE if this is a resolved fmask, used by HW components. }\\
+\>\mbox{\hyperlink{addrtypes_8h_af5a2be58a28390f9a494538f34054637}{UINT\_32}} \mbox{\hyperlink{structrocr_1_1__ADDR__COMPUTE__FMASK__COORDFROMADDR__INPUT_a60633c476dff4ffcc1c1696033ca433e}{ignoreSE}}: 1\\
+\>\>{\em TRUE if shader engines are ignored. }\\
+\>\mbox{\hyperlink{addrtypes_8h_af5a2be58a28390f9a494538f34054637}{UINT\_32}} \mbox{\hyperlink{structrocr_1_1__ADDR__COMPUTE__FMASK__COORDFROMADDR__INPUT_a74168ea137efa45b1547e16d25e058c9}{reserved}}: 30\\
+\>\>{\em Reserved for future use. }\\
+\}; \\
+
+\end{tabbing}\begin{DoxyCompactList}\small\item\em r800 and later HWL parameters \end{DoxyCompactList}\item 
+\mbox{\hyperlink{namespacerocr_a22dcb0c31be418f31f99d0311c45522c}{ADDR\+\_\+\+TILEINFO}} $\ast$ \mbox{\hyperlink{structrocr_1_1__ADDR__COMPUTE__FMASK__COORDFROMADDR__INPUT_a54ee81422d530320f4d1ef9797bd3efd}{p\+Tile\+Info}}
+\begin{DoxyCompactList}\small\item\em 2D tile parameters. Client must provide all data \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Input structure for Addr\+Compute\+Fmask\+Coord\+From\+Addr. 
+
+ADDR\+\_\+\+COMPUTE\+\_\+\+FMASK\+\_\+\+COORDFROMADDR\+\_\+\+INPUT 
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{structrocr_1_1__ADDR__COMPUTE__FMASK__COORDFROMADDR__INPUT_ac183a7f9a84e417910bf71e310720c64}\label{structrocr_1_1__ADDR__COMPUTE__FMASK__COORDFROMADDR__INPUT_ac183a7f9a84e417910bf71e310720c64}} 
+\doxysubsubsection{\texorpdfstring{}{}}
+{\footnotesize\ttfamily union \{ ... \} }
+
+\mbox{\Hypertarget{structrocr_1_1__ADDR__COMPUTE__FMASK__COORDFROMADDR__INPUT_afb2630c8aa6b2ad320c545fae7ce7e04}\label{structrocr_1_1__ADDR__COMPUTE__FMASK__COORDFROMADDR__INPUT_afb2630c8aa6b2ad320c545fae7ce7e04}} 
+\doxysubsubsection{\texorpdfstring{}{}}
+{\footnotesize\ttfamily struct \{ ... \} }
+
+
+
+r800 and later HWL parameters 
+
+\mbox{\Hypertarget{structrocr_1_1__ADDR__COMPUTE__FMASK__COORDFROMADDR__INPUT_a1a52c24ebeea10e452bf47e4d91c4d16}\label{structrocr_1_1__ADDR__COMPUTE__FMASK__COORDFROMADDR__INPUT_a1a52c24ebeea10e452bf47e4d91c4d16}} 
+\index{rocr::\_ADDR\_COMPUTE\_FMASK\_COORDFROMADDR\_INPUT@{rocr::\_ADDR\_COMPUTE\_FMASK\_COORDFROMADDR\_INPUT}!addr@{addr}}
+\index{addr@{addr}!rocr::\_ADDR\_COMPUTE\_FMASK\_COORDFROMADDR\_INPUT@{rocr::\_ADDR\_COMPUTE\_FMASK\_COORDFROMADDR\_INPUT}}
+\doxysubsubsection{\texorpdfstring{addr}{addr}}
+{\footnotesize\ttfamily \mbox{\hyperlink{addrtypes_8h_ac4116bb9a5e80b5cb845d4f2674c160f}{UINT\+\_\+64}} rocr\+::\+\_\+\+ADDR\+\_\+\+COMPUTE\+\_\+\+FMASK\+\_\+\+COORDFROMADDR\+\_\+\+INPUT\+::addr}
+
+
+
+Address. 
+
+\mbox{\Hypertarget{structrocr_1_1__ADDR__COMPUTE__FMASK__COORDFROMADDR__INPUT_a525198bb4f3b507cd3bf234fdca204ea}\label{structrocr_1_1__ADDR__COMPUTE__FMASK__COORDFROMADDR__INPUT_a525198bb4f3b507cd3bf234fdca204ea}} 
+\index{rocr::\_ADDR\_COMPUTE\_FMASK\_COORDFROMADDR\_INPUT@{rocr::\_ADDR\_COMPUTE\_FMASK\_COORDFROMADDR\_INPUT}!bankSwizzle@{bankSwizzle}}
+\index{bankSwizzle@{bankSwizzle}!rocr::\_ADDR\_COMPUTE\_FMASK\_COORDFROMADDR\_INPUT@{rocr::\_ADDR\_COMPUTE\_FMASK\_COORDFROMADDR\_INPUT}}
+\doxysubsubsection{\texorpdfstring{bankSwizzle}{bankSwizzle}}
+{\footnotesize\ttfamily \mbox{\hyperlink{addrtypes_8h_af5a2be58a28390f9a494538f34054637}{UINT\+\_\+32}} rocr\+::\+\_\+\+ADDR\+\_\+\+COMPUTE\+\_\+\+FMASK\+\_\+\+COORDFROMADDR\+\_\+\+INPUT\+::bank\+Swizzle}
+
+
+
+Bank swizzle. 
+
+\mbox{\Hypertarget{structrocr_1_1__ADDR__COMPUTE__FMASK__COORDFROMADDR__INPUT_a7c05c5252a16c3fb378f6d83afc27bc8}\label{structrocr_1_1__ADDR__COMPUTE__FMASK__COORDFROMADDR__INPUT_a7c05c5252a16c3fb378f6d83afc27bc8}} 
+\index{rocr::\_ADDR\_COMPUTE\_FMASK\_COORDFROMADDR\_INPUT@{rocr::\_ADDR\_COMPUTE\_FMASK\_COORDFROMADDR\_INPUT}!bitPosition@{bitPosition}}
+\index{bitPosition@{bitPosition}!rocr::\_ADDR\_COMPUTE\_FMASK\_COORDFROMADDR\_INPUT@{rocr::\_ADDR\_COMPUTE\_FMASK\_COORDFROMADDR\_INPUT}}
+\doxysubsubsection{\texorpdfstring{bitPosition}{bitPosition}}
+{\footnotesize\ttfamily \mbox{\hyperlink{addrtypes_8h_af5a2be58a28390f9a494538f34054637}{UINT\+\_\+32}} rocr\+::\+\_\+\+ADDR\+\_\+\+COMPUTE\+\_\+\+FMASK\+\_\+\+COORDFROMADDR\+\_\+\+INPUT\+::bit\+Position}
+
+
+
+Bit position within addr, 0-\/7. 
+
+\mbox{\Hypertarget{structrocr_1_1__ADDR__COMPUTE__FMASK__COORDFROMADDR__INPUT_a7427e04bb24bd4db9db6406998a82f46}\label{structrocr_1_1__ADDR__COMPUTE__FMASK__COORDFROMADDR__INPUT_a7427e04bb24bd4db9db6406998a82f46}} 
+\index{rocr::\_ADDR\_COMPUTE\_FMASK\_COORDFROMADDR\_INPUT@{rocr::\_ADDR\_COMPUTE\_FMASK\_COORDFROMADDR\_INPUT}!height@{height}}
+\index{height@{height}!rocr::\_ADDR\_COMPUTE\_FMASK\_COORDFROMADDR\_INPUT@{rocr::\_ADDR\_COMPUTE\_FMASK\_COORDFROMADDR\_INPUT}}
+\doxysubsubsection{\texorpdfstring{height}{height}}
+{\footnotesize\ttfamily \mbox{\hyperlink{addrtypes_8h_af5a2be58a28390f9a494538f34054637}{UINT\+\_\+32}} rocr\+::\+\_\+\+ADDR\+\_\+\+COMPUTE\+\_\+\+FMASK\+\_\+\+COORDFROMADDR\+\_\+\+INPUT\+::height}
+
+
+
+Height in pixels. 
+
+\mbox{\Hypertarget{structrocr_1_1__ADDR__COMPUTE__FMASK__COORDFROMADDR__INPUT_a60633c476dff4ffcc1c1696033ca433e}\label{structrocr_1_1__ADDR__COMPUTE__FMASK__COORDFROMADDR__INPUT_a60633c476dff4ffcc1c1696033ca433e}} 
+\index{rocr::\_ADDR\_COMPUTE\_FMASK\_COORDFROMADDR\_INPUT@{rocr::\_ADDR\_COMPUTE\_FMASK\_COORDFROMADDR\_INPUT}!ignoreSE@{ignoreSE}}
+\index{ignoreSE@{ignoreSE}!rocr::\_ADDR\_COMPUTE\_FMASK\_COORDFROMADDR\_INPUT@{rocr::\_ADDR\_COMPUTE\_FMASK\_COORDFROMADDR\_INPUT}}
+\doxysubsubsection{\texorpdfstring{ignoreSE}{ignoreSE}}
+{\footnotesize\ttfamily \mbox{\hyperlink{addrtypes_8h_af5a2be58a28390f9a494538f34054637}{UINT\+\_\+32}} rocr\+::\+\_\+\+ADDR\+\_\+\+COMPUTE\+\_\+\+FMASK\+\_\+\+COORDFROMADDR\+\_\+\+INPUT\+::ignore\+SE}
+
+
+
+TRUE if shader engines are ignored. 
+
+\mbox{\Hypertarget{structrocr_1_1__ADDR__COMPUTE__FMASK__COORDFROMADDR__INPUT_ac4f220cf5a20ac2aa6a76d2a7c2f524a}\label{structrocr_1_1__ADDR__COMPUTE__FMASK__COORDFROMADDR__INPUT_ac4f220cf5a20ac2aa6a76d2a7c2f524a}} 
+\index{rocr::\_ADDR\_COMPUTE\_FMASK\_COORDFROMADDR\_INPUT@{rocr::\_ADDR\_COMPUTE\_FMASK\_COORDFROMADDR\_INPUT}!numFrags@{numFrags}}
+\index{numFrags@{numFrags}!rocr::\_ADDR\_COMPUTE\_FMASK\_COORDFROMADDR\_INPUT@{rocr::\_ADDR\_COMPUTE\_FMASK\_COORDFROMADDR\_INPUT}}
+\doxysubsubsection{\texorpdfstring{numFrags}{numFrags}}
+{\footnotesize\ttfamily \mbox{\hyperlink{addrtypes_8h_af5a2be58a28390f9a494538f34054637}{UINT\+\_\+32}} rocr\+::\+\_\+\+ADDR\+\_\+\+COMPUTE\+\_\+\+FMASK\+\_\+\+COORDFROMADDR\+\_\+\+INPUT\+::num\+Frags}
+
+
+
+Number of fragments. 
+
+\mbox{\Hypertarget{structrocr_1_1__ADDR__COMPUTE__FMASK__COORDFROMADDR__INPUT_a687305ab99a6e60abf18633aa93925f1}\label{structrocr_1_1__ADDR__COMPUTE__FMASK__COORDFROMADDR__INPUT_a687305ab99a6e60abf18633aa93925f1}} 
+\index{rocr::\_ADDR\_COMPUTE\_FMASK\_COORDFROMADDR\_INPUT@{rocr::\_ADDR\_COMPUTE\_FMASK\_COORDFROMADDR\_INPUT}!numSamples@{numSamples}}
+\index{numSamples@{numSamples}!rocr::\_ADDR\_COMPUTE\_FMASK\_COORDFROMADDR\_INPUT@{rocr::\_ADDR\_COMPUTE\_FMASK\_COORDFROMADDR\_INPUT}}
+\doxysubsubsection{\texorpdfstring{numSamples}{numSamples}}
+{\footnotesize\ttfamily \mbox{\hyperlink{addrtypes_8h_af5a2be58a28390f9a494538f34054637}{UINT\+\_\+32}} rocr\+::\+\_\+\+ADDR\+\_\+\+COMPUTE\+\_\+\+FMASK\+\_\+\+COORDFROMADDR\+\_\+\+INPUT\+::num\+Samples}
+
+
+
+Number of samples. 
+
+\mbox{\Hypertarget{structrocr_1_1__ADDR__COMPUTE__FMASK__COORDFROMADDR__INPUT_a6db73badd03df5b5c9362637ddebbc61}\label{structrocr_1_1__ADDR__COMPUTE__FMASK__COORDFROMADDR__INPUT_a6db73badd03df5b5c9362637ddebbc61}} 
+\index{rocr::\_ADDR\_COMPUTE\_FMASK\_COORDFROMADDR\_INPUT@{rocr::\_ADDR\_COMPUTE\_FMASK\_COORDFROMADDR\_INPUT}!pipeSwizzle@{pipeSwizzle}}
+\index{pipeSwizzle@{pipeSwizzle}!rocr::\_ADDR\_COMPUTE\_FMASK\_COORDFROMADDR\_INPUT@{rocr::\_ADDR\_COMPUTE\_FMASK\_COORDFROMADDR\_INPUT}}
+\doxysubsubsection{\texorpdfstring{pipeSwizzle}{pipeSwizzle}}
+{\footnotesize\ttfamily \mbox{\hyperlink{addrtypes_8h_af5a2be58a28390f9a494538f34054637}{UINT\+\_\+32}} rocr\+::\+\_\+\+ADDR\+\_\+\+COMPUTE\+\_\+\+FMASK\+\_\+\+COORDFROMADDR\+\_\+\+INPUT\+::pipe\+Swizzle}
+
+
+
+Pipe swizzle. 
+
+\mbox{\Hypertarget{structrocr_1_1__ADDR__COMPUTE__FMASK__COORDFROMADDR__INPUT_acde880aca755e97a5054d78bb6860254}\label{structrocr_1_1__ADDR__COMPUTE__FMASK__COORDFROMADDR__INPUT_acde880aca755e97a5054d78bb6860254}} 
+\index{rocr::\_ADDR\_COMPUTE\_FMASK\_COORDFROMADDR\_INPUT@{rocr::\_ADDR\_COMPUTE\_FMASK\_COORDFROMADDR\_INPUT}!pitch@{pitch}}
+\index{pitch@{pitch}!rocr::\_ADDR\_COMPUTE\_FMASK\_COORDFROMADDR\_INPUT@{rocr::\_ADDR\_COMPUTE\_FMASK\_COORDFROMADDR\_INPUT}}
+\doxysubsubsection{\texorpdfstring{pitch}{pitch}}
+{\footnotesize\ttfamily \mbox{\hyperlink{addrtypes_8h_af5a2be58a28390f9a494538f34054637}{UINT\+\_\+32}} rocr\+::\+\_\+\+ADDR\+\_\+\+COMPUTE\+\_\+\+FMASK\+\_\+\+COORDFROMADDR\+\_\+\+INPUT\+::pitch}
+
+
+
+Pitch, in pixels. 
+
+\mbox{\Hypertarget{structrocr_1_1__ADDR__COMPUTE__FMASK__COORDFROMADDR__INPUT_a54ee81422d530320f4d1ef9797bd3efd}\label{structrocr_1_1__ADDR__COMPUTE__FMASK__COORDFROMADDR__INPUT_a54ee81422d530320f4d1ef9797bd3efd}} 
+\index{rocr::\_ADDR\_COMPUTE\_FMASK\_COORDFROMADDR\_INPUT@{rocr::\_ADDR\_COMPUTE\_FMASK\_COORDFROMADDR\_INPUT}!pTileInfo@{pTileInfo}}
+\index{pTileInfo@{pTileInfo}!rocr::\_ADDR\_COMPUTE\_FMASK\_COORDFROMADDR\_INPUT@{rocr::\_ADDR\_COMPUTE\_FMASK\_COORDFROMADDR\_INPUT}}
+\doxysubsubsection{\texorpdfstring{pTileInfo}{pTileInfo}}
+{\footnotesize\ttfamily \mbox{\hyperlink{namespacerocr_a22dcb0c31be418f31f99d0311c45522c}{ADDR\+\_\+\+TILEINFO}}$\ast$ rocr\+::\+\_\+\+ADDR\+\_\+\+COMPUTE\+\_\+\+FMASK\+\_\+\+COORDFROMADDR\+\_\+\+INPUT\+::p\+Tile\+Info}
+
+
+
+2D tile parameters. Client must provide all data 
+
+\mbox{\Hypertarget{structrocr_1_1__ADDR__COMPUTE__FMASK__COORDFROMADDR__INPUT_a74168ea137efa45b1547e16d25e058c9}\label{structrocr_1_1__ADDR__COMPUTE__FMASK__COORDFROMADDR__INPUT_a74168ea137efa45b1547e16d25e058c9}} 
+\index{rocr::\_ADDR\_COMPUTE\_FMASK\_COORDFROMADDR\_INPUT@{rocr::\_ADDR\_COMPUTE\_FMASK\_COORDFROMADDR\_INPUT}!reserved@{reserved}}
+\index{reserved@{reserved}!rocr::\_ADDR\_COMPUTE\_FMASK\_COORDFROMADDR\_INPUT@{rocr::\_ADDR\_COMPUTE\_FMASK\_COORDFROMADDR\_INPUT}}
+\doxysubsubsection{\texorpdfstring{reserved}{reserved}}
+{\footnotesize\ttfamily \mbox{\hyperlink{addrtypes_8h_af5a2be58a28390f9a494538f34054637}{UINT\+\_\+32}} rocr\+::\+\_\+\+ADDR\+\_\+\+COMPUTE\+\_\+\+FMASK\+\_\+\+COORDFROMADDR\+\_\+\+INPUT\+::reserved}
+
+
+
+Reserved for future use. 
+
+\mbox{\Hypertarget{structrocr_1_1__ADDR__COMPUTE__FMASK__COORDFROMADDR__INPUT_afed855f5f265c9aac8b78e292e7d91a1}\label{structrocr_1_1__ADDR__COMPUTE__FMASK__COORDFROMADDR__INPUT_afed855f5f265c9aac8b78e292e7d91a1}} 
+\index{rocr::\_ADDR\_COMPUTE\_FMASK\_COORDFROMADDR\_INPUT@{rocr::\_ADDR\_COMPUTE\_FMASK\_COORDFROMADDR\_INPUT}!resolved@{resolved}}
+\index{resolved@{resolved}!rocr::\_ADDR\_COMPUTE\_FMASK\_COORDFROMADDR\_INPUT@{rocr::\_ADDR\_COMPUTE\_FMASK\_COORDFROMADDR\_INPUT}}
+\doxysubsubsection{\texorpdfstring{resolved}{resolved}}
+{\footnotesize\ttfamily \mbox{\hyperlink{addrtypes_8h_af5a2be58a28390f9a494538f34054637}{UINT\+\_\+32}} rocr\+::\+\_\+\+ADDR\+\_\+\+COMPUTE\+\_\+\+FMASK\+\_\+\+COORDFROMADDR\+\_\+\+INPUT\+::resolved}
+
+
+
+TRUE if this is a resolved fmask, used by HW components. 
+
+\mbox{\Hypertarget{structrocr_1_1__ADDR__COMPUTE__FMASK__COORDFROMADDR__INPUT_afe2b18c92ac7a69c29e4c8455f212fd0}\label{structrocr_1_1__ADDR__COMPUTE__FMASK__COORDFROMADDR__INPUT_afe2b18c92ac7a69c29e4c8455f212fd0}} 
+\index{rocr::\_ADDR\_COMPUTE\_FMASK\_COORDFROMADDR\_INPUT@{rocr::\_ADDR\_COMPUTE\_FMASK\_COORDFROMADDR\_INPUT}!size@{size}}
+\index{size@{size}!rocr::\_ADDR\_COMPUTE\_FMASK\_COORDFROMADDR\_INPUT@{rocr::\_ADDR\_COMPUTE\_FMASK\_COORDFROMADDR\_INPUT}}
+\doxysubsubsection{\texorpdfstring{size}{size}}
+{\footnotesize\ttfamily \mbox{\hyperlink{addrtypes_8h_af5a2be58a28390f9a494538f34054637}{UINT\+\_\+32}} rocr\+::\+\_\+\+ADDR\+\_\+\+COMPUTE\+\_\+\+FMASK\+\_\+\+COORDFROMADDR\+\_\+\+INPUT\+::size}
+
+
+
+Size of this structure in bytes. 
+
+\mbox{\Hypertarget{structrocr_1_1__ADDR__COMPUTE__FMASK__COORDFROMADDR__INPUT_a153aff565c777a1e70822ace9d349362}\label{structrocr_1_1__ADDR__COMPUTE__FMASK__COORDFROMADDR__INPUT_a153aff565c777a1e70822ace9d349362}} 
+\index{rocr::\_ADDR\_COMPUTE\_FMASK\_COORDFROMADDR\_INPUT@{rocr::\_ADDR\_COMPUTE\_FMASK\_COORDFROMADDR\_INPUT}!tileMode@{tileMode}}
+\index{tileMode@{tileMode}!rocr::\_ADDR\_COMPUTE\_FMASK\_COORDFROMADDR\_INPUT@{rocr::\_ADDR\_COMPUTE\_FMASK\_COORDFROMADDR\_INPUT}}
+\doxysubsubsection{\texorpdfstring{tileMode}{tileMode}}
+{\footnotesize\ttfamily \mbox{\hyperlink{addrtypes_8h_a9dffa8321911d7791c03fe3a233a34e7}{Addr\+Tile\+Mode}} rocr\+::\+\_\+\+ADDR\+\_\+\+COMPUTE\+\_\+\+FMASK\+\_\+\+COORDFROMADDR\+\_\+\+INPUT\+::tile\+Mode}
+
+
+
+Tile mode. 
+
+\mbox{\Hypertarget{structrocr_1_1__ADDR__COMPUTE__FMASK__COORDFROMADDR__INPUT_a245777ec13207c110429202377fb46de}\label{structrocr_1_1__ADDR__COMPUTE__FMASK__COORDFROMADDR__INPUT_a245777ec13207c110429202377fb46de}} 
+\index{rocr::\_ADDR\_COMPUTE\_FMASK\_COORDFROMADDR\_INPUT@{rocr::\_ADDR\_COMPUTE\_FMASK\_COORDFROMADDR\_INPUT}!tileSwizzle@{tileSwizzle}}
+\index{tileSwizzle@{tileSwizzle}!rocr::\_ADDR\_COMPUTE\_FMASK\_COORDFROMADDR\_INPUT@{rocr::\_ADDR\_COMPUTE\_FMASK\_COORDFROMADDR\_INPUT}}
+\doxysubsubsection{\texorpdfstring{tileSwizzle}{tileSwizzle}}
+{\footnotesize\ttfamily \mbox{\hyperlink{addrtypes_8h_af5a2be58a28390f9a494538f34054637}{UINT\+\_\+32}} rocr\+::\+\_\+\+ADDR\+\_\+\+COMPUTE\+\_\+\+FMASK\+\_\+\+COORDFROMADDR\+\_\+\+INPUT\+::tile\+Swizzle}
+
+
+
+Combined swizzle, if use\+Combined\+Swizzle is TRUE. 
+
+
+
+The documentation for this struct was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+src/image/addrlib/inc/\mbox{\hyperlink{addrinterface_8h}{addrinterface.\+h}}\end{DoxyCompactItemize}

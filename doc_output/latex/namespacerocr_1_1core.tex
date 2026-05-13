@@ -1,0 +1,297 @@
+\hypertarget{namespacerocr_1_1core}{}\doxysection{rocr\+::core Namespace Reference}
+\label{namespacerocr_1_1core}\index{rocr::core@{rocr::core}}
+\doxysubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class \mbox{\hyperlink{classrocr_1_1core_1_1BaseShared}{Base\+Shared}}
+\begin{DoxyCompactList}\small\item\em Base class encapsulating the allocator and deallocator for shared shared object. As used this will allocate GPU visible host memory mapped to all GPUs. \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{classrocr_1_1core_1_1PageAllocator}{Page\+Allocator}}
+\begin{DoxyCompactList}\small\item\em Default Allocator for \mbox{\hyperlink{classrocr_1_1core_1_1Shared}{Shared}}. Ensures allocations are whole pages. \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{classrocr_1_1core_1_1Shared}{Shared}}
+\begin{DoxyCompactList}\small\item\em Container for object located in GPU visible host memory. If a custom allocator is not given then data will be placed in dedicated pages. \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{classrocr_1_1core_1_1Shared_3_01T_00_01PageAllocator_3_01T_01_4_01_4}{Shared$<$ T, Page\+Allocator$<$ T $>$ $>$}}
+\item 
+class \mbox{\hyperlink{classrocr_1_1core_1_1SharedArray}{Shared\+Array}}
+\begin{DoxyCompactList}\small\item\em Container for array located in GPU visible host memory. Alignment defaults to \+\_\+\+\_\+alignof(\+T) but may be increased. \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{classrocr_1_1core_1_1Agent}{Agent}}
+\item 
+class \mbox{\hyperlink{classrocr_1_1core_1_1Blit}{Blit}}
+\item 
+class \mbox{\hyperlink{classrocr_1_1core_1_1Cache}{Cache}}
+\item 
+class \mbox{\hyperlink{classrocr_1_1core_1_1Check}{Check}}
+\begin{DoxyCompactList}\small\item\em Compares type codes and pointers to check object validity. Used for cast validation. \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{classrocr_1_1core_1_1Check_3_01code_00_01true_01_4}{Check$<$ code, true $>$}}
+\item 
+class \mbox{\hyperlink{classrocr_1_1core_1_1Checked}{Checked}}
+\begin{DoxyCompactList}\small\item\em Base class for validating objects. \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{classrocr_1_1core_1_1BusyWaitSignal}{Busy\+Wait\+Signal}}
+\begin{DoxyCompactList}\small\item\em Operations for a simple pure memory based signal. \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{classrocr_1_1core_1_1DefaultSignal}{Default\+Signal}}
+\begin{DoxyCompactList}\small\item\em Simple memory only signal using a new ABI block. \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{classrocr_1_1core_1_1HostQueue}{Host\+Queue}}
+\item 
+struct \mbox{\hyperlink{structrocr_1_1core_1_1HsaApiTable}{Hsa\+Api\+Table}}
+\item 
+struct \mbox{\hyperlink{structrocr_1_1core_1_1ImageExtTableInternal}{Image\+Ext\+Table\+Internal}}
+\item 
+class \mbox{\hyperlink{classrocr_1_1core_1_1ExtensionEntryPoints}{Extension\+Entry\+Points}}
+\item 
+class \mbox{\hyperlink{classrocr_1_1core_1_1QueueWrapper}{Queue\+Wrapper}}
+\item 
+class \mbox{\hyperlink{classrocr_1_1core_1_1QueueProxy}{Queue\+Proxy}}
+\item 
+class \mbox{\hyperlink{classrocr_1_1core_1_1InterceptQueue}{Intercept\+Queue}}
+\item 
+class \mbox{\hyperlink{classrocr_1_1core_1_1InterruptSignal}{Interrupt\+Signal}}
+\begin{DoxyCompactList}\small\item\em A \mbox{\hyperlink{classrocr_1_1core_1_1Signal}{Signal}} implementation using interrupts versus plain memory based. Also see base class \mbox{\hyperlink{classrocr_1_1core_1_1Signal}{Signal}}. \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{classrocr_1_1core_1_1SharedMemory}{Shared\+Memory}}
+\begin{DoxyCompactList}\small\item\em Container for ipc shared memory. \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{classrocr_1_1core_1_1SharedMemorySignal}{Shared\+Memory\+Signal}}
+\begin{DoxyCompactList}\small\item\em Container for ipc signal abi block. \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{classrocr_1_1core_1_1IPCSignal}{IPCSignal}}
+\begin{DoxyCompactList}\small\item\em Memory only signal using a shared memory ABI block. \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{classrocr_1_1core_1_1Wavefront}{Wavefront}}
+\begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{classrocr_1_1core_1_1Wavefront}{Wavefront}}. \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{classrocr_1_1core_1_1Isa}{Isa}}
+\begin{DoxyCompactList}\small\item\em Instruction Set Architecture. \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{classrocr_1_1core_1_1IsaRegistry}{Isa\+Registry}}
+\begin{DoxyCompactList}\small\item\em Instruction Set Architecture Registry. \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{classrocr_1_1core_1_1MemoryRegion}{Memory\+Region}}
+\item 
+struct \mbox{\hyperlink{structrocr_1_1core_1_1AqlPacket}{Aql\+Packet}}
+\item 
+struct \mbox{\hyperlink{structrocr_1_1core_1_1SharedQueue}{Shared\+Queue}}
+\begin{DoxyCompactList}\small\item\em Helper structure to simplify conversion of amd\+\_\+queue\+\_\+t and \mbox{\hyperlink{classrocr_1_1core_1_1Queue}{core\+::\+Queue}} object. \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{classrocr_1_1core_1_1LocalQueue}{Local\+Queue}}
+\item 
+class \mbox{\hyperlink{classrocr_1_1core_1_1Queue}{Queue}}
+\begin{DoxyCompactList}\small\item\em Class \mbox{\hyperlink{classrocr_1_1core_1_1Queue}{Queue}} which encapsulate user mode queues and provides Api to access its Read, Write indices using Acquire, Release and Relaxed semantics. \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{classrocr_1_1core_1_1Runtime}{Runtime}}
+\begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{classrocr_1_1core_1_1Runtime}{Runtime}} class provides the following functions\+: \end{DoxyCompactList}\item 
+struct \mbox{\hyperlink{structrocr_1_1core_1_1SharedSignal}{Shared\+Signal}}
+\begin{DoxyCompactList}\small\item\em ABI and object conversion struct for signals. May be shared between processes. \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{classrocr_1_1core_1_1SharedSignalPool__t}{Shared\+Signal\+Pool\+\_\+t}}
+\begin{DoxyCompactList}\small\item\em Pool class for \mbox{\hyperlink{structrocr_1_1core_1_1SharedSignal}{Shared\+Signal}} suitable for use with \mbox{\hyperlink{classrocr_1_1core_1_1Shared}{Shared}}. \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{classrocr_1_1core_1_1LocalSignal}{Local\+Signal}}
+\item 
+class \mbox{\hyperlink{classrocr_1_1core_1_1Signal}{Signal}}
+\begin{DoxyCompactList}\small\item\em An abstract base class which helps implement the public hsa\+\_\+signal\+\_\+t type (an opaque handle) and its associated APIs. At its core, signal uses a 32 or 64 bit value. This value can be waitied on or signaled atomically using specified memory ordering semantics. \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{classrocr_1_1core_1_1DoorbellSignal}{Doorbell\+Signal}}
+\begin{DoxyCompactList}\small\item\em Handle signal operations which are not for use on doorbells. \end{DoxyCompactList}\item 
+struct \mbox{\hyperlink{structrocr_1_1core_1_1hsa__signal__handle}{hsa\+\_\+signal\+\_\+handle}}
+\item 
+class \mbox{\hyperlink{classrocr_1_1core_1_1SignalGroup}{Signal\+Group}}
+\item 
+class \mbox{\hyperlink{classrocr_1_1core_1_1SignalDeleter}{Signal\+Deleter}}
+\item 
+struct \mbox{\hyperlink{structrocr_1_1core_1_1InterceptFrame}{Intercept\+Frame}}
+\item 
+class \mbox{\hyperlink{classrocr_1_1core_1_1RuntimeCleanup}{Runtime\+Cleanup}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+typedef void($\ast$ \mbox{\hyperlink{namespacerocr_1_1core_aa60ad090079a2e4917c75124c7a8de54}{Hsa\+Event\+Callback}}) (\mbox{\hyperlink{group__status_gad755322e7ff95456520e8abdbe90d225}{hsa\+\_\+status\+\_\+t}} status, \mbox{\hyperlink{group__queue_ga9e74fdf8d39c8bc42508c534316185f8}{hsa\+\_\+queue\+\_\+t}} $\ast$source, void $\ast$data)
+\item 
+using \mbox{\hyperlink{namespacerocr_1_1core_a6e717c0b3cb9239a37ef236c53b52796}{unique\+\_\+signal\+\_\+ptr}} = \+::std\+::unique\+\_\+ptr$<$ \mbox{\hyperlink{classrocr_1_1core_1_1Signal}{core\+::\+Signal}}, \mbox{\hyperlink{classrocr_1_1core_1_1SignalDeleter}{Signal\+Deleter}} $>$
+\end{DoxyCompactItemize}
+\doxysubsection*{Enumerations}
+\begin{DoxyCompactItemize}
+\item 
+enum class \mbox{\hyperlink{namespacerocr_1_1core_a4faf1bc0974ed98e5acbdee2892fd12a}{Isa\+Feature}} \+: uint8\+\_\+t \{ \mbox{\hyperlink{namespacerocr_1_1core_a4faf1bc0974ed98e5acbdee2892fd12aab4080bdf74febf04d578ff105cce9d3f}{Unsupported}}
+, \mbox{\hyperlink{namespacerocr_1_1core_a4faf1bc0974ed98e5acbdee2892fd12aaed36a1ef76a59ee3f15180e0441188ad}{Any}}
+, \mbox{\hyperlink{namespacerocr_1_1core_a4faf1bc0974ed98e5acbdee2892fd12aab9f5c797ebbf55adccdd8539a65a0241}{Disabled}}
+, \mbox{\hyperlink{namespacerocr_1_1core_a4faf1bc0974ed98e5acbdee2892fd12aa00d23a76e43b46dae9ec7aa9dcbebb32}{Enabled}}
+ \}
+\end{DoxyCompactItemize}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{namespacerocr_1_1core_a4a23776064850eebcc85de2469509d07}{Load\+Initial\+Hsa\+Api\+Table}} ()
+\item 
+static std\+::vector$<$ std\+::string $>$ \mbox{\hyperlink{namespacerocr_1_1core_ab8e28fc0d63a8e3302fcb11db7378a05}{parse\+\_\+tool\+\_\+names}} (std\+::string tool\+\_\+names)
+\end{DoxyCompactItemize}
+\doxysubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{structrocr_1_1core_1_1HsaApiTable}{Hsa\+Api\+Table}} \mbox{\hyperlink{namespacerocr_1_1core_ac5b5d8d2c6bf7252920f9da025d53b57}{hsa\+\_\+api\+\_\+table\+\_\+}}
+\item 
+\mbox{\hyperlink{structrocr_1_1core_1_1HsaApiTable}{Hsa\+Api\+Table}} \mbox{\hyperlink{namespacerocr_1_1core_ab4b1b9a846738b837a7f0137cbef816f}{hsa\+\_\+internal\+\_\+api\+\_\+table\+\_\+}}
+\item 
+bool \mbox{\hyperlink{namespacerocr_1_1core_adc112d5305ba1c3ca2fb32b212b215c1}{g\+\_\+use\+\_\+interrupt\+\_\+wait}} = true
+\item 
+bool \mbox{\hyperlink{namespacerocr_1_1core_a8504eb91b5feb44aa01aa71ee4fae274}{g\+\_\+use\+\_\+mwaitx}} = true
+\item 
+static thread\+\_\+local \mbox{\hyperlink{structrocr_1_1core_1_1InterceptFrame}{Intercept\+Frame}} \mbox{\hyperlink{namespacerocr_1_1core_a09051a29ba745c34aae552627f32c590}{Cursor}} = \{nullptr, 0, 0\}
+\item 
+static const uint16\+\_\+t \mbox{\hyperlink{namespacerocr_1_1core_a2d8d465011f82b8d8e37185047b2024e}{k\+Invalid\+Header}}
+\item 
+static const uint16\+\_\+t \mbox{\hyperlink{namespacerocr_1_1core_ac510c963a8c3ba549e89e8967caf4351}{k\+Barrier\+Header}}
+\item 
+static const \mbox{\hyperlink{group__aql_gac999acb47a0e9232b4958c0a873bfacc}{hsa\+\_\+barrier\+\_\+and\+\_\+packet\+\_\+t}} \mbox{\hyperlink{namespacerocr_1_1core_a4bec339944675de2da681b0f22af98f6}{k\+Barrier\+Packet}} = \{\mbox{\hyperlink{namespacerocr_1_1core_a2d8d465011f82b8d8e37185047b2024e}{k\+Invalid\+Header}}, 0, 0, \{\}, 0, \{\}\}
+\item 
+static bool \mbox{\hyperlink{namespacerocr_1_1core_a965737fa2d41c6ef01b879cc3d36bcc8}{loaded}} = true
+\item 
+static \mbox{\hyperlink{classrocr_1_1core_1_1RuntimeCleanup}{Runtime\+Cleanup}} \mbox{\hyperlink{namespacerocr_1_1core_ab33d6773fe520d94070c38068602fd9a}{cleanup\+\_\+at\+\_\+unload\+\_\+}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Typedef Documentation}
+\mbox{\Hypertarget{namespacerocr_1_1core_aa60ad090079a2e4917c75124c7a8de54}\label{namespacerocr_1_1core_aa60ad090079a2e4917c75124c7a8de54}} 
+\index{rocr::core@{rocr::core}!HsaEventCallback@{HsaEventCallback}}
+\index{HsaEventCallback@{HsaEventCallback}!rocr::core@{rocr::core}}
+\doxysubsubsection{\texorpdfstring{HsaEventCallback}{HsaEventCallback}}
+{\footnotesize\ttfamily typedef void($\ast$ rocr\+::core\+::\+Hsa\+Event\+Callback) (\mbox{\hyperlink{group__status_gad755322e7ff95456520e8abdbe90d225}{hsa\+\_\+status\+\_\+t}} status, \mbox{\hyperlink{group__queue_ga9e74fdf8d39c8bc42508c534316185f8}{hsa\+\_\+queue\+\_\+t}} $\ast$source, void $\ast$data)}
+
+\mbox{\Hypertarget{namespacerocr_1_1core_a6e717c0b3cb9239a37ef236c53b52796}\label{namespacerocr_1_1core_a6e717c0b3cb9239a37ef236c53b52796}} 
+\index{rocr::core@{rocr::core}!unique\_signal\_ptr@{unique\_signal\_ptr}}
+\index{unique\_signal\_ptr@{unique\_signal\_ptr}!rocr::core@{rocr::core}}
+\doxysubsubsection{\texorpdfstring{unique\_signal\_ptr}{unique\_signal\_ptr}}
+{\footnotesize\ttfamily using \mbox{\hyperlink{namespacerocr_1_1core_a6e717c0b3cb9239a37ef236c53b52796}{rocr\+::core\+::unique\+\_\+signal\+\_\+ptr}} = typedef \+::std\+::unique\+\_\+ptr$<$\mbox{\hyperlink{classrocr_1_1core_1_1Signal}{core\+::\+Signal}}, \mbox{\hyperlink{classrocr_1_1core_1_1SignalDeleter}{Signal\+Deleter}}$>$}
+
+
+
+\doxysubsection{Enumeration Type Documentation}
+\mbox{\Hypertarget{namespacerocr_1_1core_a4faf1bc0974ed98e5acbdee2892fd12a}\label{namespacerocr_1_1core_a4faf1bc0974ed98e5acbdee2892fd12a}} 
+\index{rocr::core@{rocr::core}!IsaFeature@{IsaFeature}}
+\index{IsaFeature@{IsaFeature}!rocr::core@{rocr::core}}
+\doxysubsubsection{\texorpdfstring{IsaFeature}{IsaFeature}}
+{\footnotesize\ttfamily enum \mbox{\hyperlink{namespacerocr_1_1core_a4faf1bc0974ed98e5acbdee2892fd12a}{rocr\+::core\+::\+Isa\+Feature}} \+: uint8\+\_\+t\hspace{0.3cm}{\ttfamily [strong]}}
+
+\begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Unsupported@{Unsupported}!rocr::core@{rocr::core}}\index{rocr::core@{rocr::core}!Unsupported@{Unsupported}}}\mbox{\Hypertarget{namespacerocr_1_1core_a4faf1bc0974ed98e5acbdee2892fd12aab4080bdf74febf04d578ff105cce9d3f}\label{namespacerocr_1_1core_a4faf1bc0974ed98e5acbdee2892fd12aab4080bdf74febf04d578ff105cce9d3f}} 
+Unsupported&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Any@{Any}!rocr::core@{rocr::core}}\index{rocr::core@{rocr::core}!Any@{Any}}}\mbox{\Hypertarget{namespacerocr_1_1core_a4faf1bc0974ed98e5acbdee2892fd12aaed36a1ef76a59ee3f15180e0441188ad}\label{namespacerocr_1_1core_a4faf1bc0974ed98e5acbdee2892fd12aaed36a1ef76a59ee3f15180e0441188ad}} 
+Any&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Disabled@{Disabled}!rocr::core@{rocr::core}}\index{rocr::core@{rocr::core}!Disabled@{Disabled}}}\mbox{\Hypertarget{namespacerocr_1_1core_a4faf1bc0974ed98e5acbdee2892fd12aab9f5c797ebbf55adccdd8539a65a0241}\label{namespacerocr_1_1core_a4faf1bc0974ed98e5acbdee2892fd12aab9f5c797ebbf55adccdd8539a65a0241}} 
+Disabled&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Enabled@{Enabled}!rocr::core@{rocr::core}}\index{rocr::core@{rocr::core}!Enabled@{Enabled}}}\mbox{\Hypertarget{namespacerocr_1_1core_a4faf1bc0974ed98e5acbdee2892fd12aa00d23a76e43b46dae9ec7aa9dcbebb32}\label{namespacerocr_1_1core_a4faf1bc0974ed98e5acbdee2892fd12aa00d23a76e43b46dae9ec7aa9dcbebb32}} 
+Enabled&\\
+\hline
+
+\end{DoxyEnumFields}
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{namespacerocr_1_1core_a4a23776064850eebcc85de2469509d07}\label{namespacerocr_1_1core_a4a23776064850eebcc85de2469509d07}} 
+\index{rocr::core@{rocr::core}!LoadInitialHsaApiTable@{LoadInitialHsaApiTable}}
+\index{LoadInitialHsaApiTable@{LoadInitialHsaApiTable}!rocr::core@{rocr::core}}
+\doxysubsubsection{\texorpdfstring{LoadInitialHsaApiTable()}{LoadInitialHsaApiTable()}}
+{\footnotesize\ttfamily void rocr\+::core\+::\+Load\+Initial\+Hsa\+Api\+Table (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{namespacerocr_1_1core_a4a23776064850eebcc85de2469509d07_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=292pt]{namespacerocr_1_1core_a4a23776064850eebcc85de2469509d07_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{namespacerocr_1_1core_ab8e28fc0d63a8e3302fcb11db7378a05}\label{namespacerocr_1_1core_ab8e28fc0d63a8e3302fcb11db7378a05}} 
+\index{rocr::core@{rocr::core}!parse\_tool\_names@{parse\_tool\_names}}
+\index{parse\_tool\_names@{parse\_tool\_names}!rocr::core@{rocr::core}}
+\doxysubsubsection{\texorpdfstring{parse\_tool\_names()}{parse\_tool\_names()}}
+{\footnotesize\ttfamily static std\+::vector$<$std\+::string$>$ rocr\+::core\+::parse\+\_\+tool\+\_\+names (\begin{DoxyParamCaption}\item[{std\+::string}]{tool\+\_\+names }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{namespacerocr_1_1core_ab8e28fc0d63a8e3302fcb11db7378a05_icgraph}
+\end{center}
+\end{figure}
+
+
+\doxysubsection{Variable Documentation}
+\mbox{\Hypertarget{namespacerocr_1_1core_ab33d6773fe520d94070c38068602fd9a}\label{namespacerocr_1_1core_ab33d6773fe520d94070c38068602fd9a}} 
+\index{rocr::core@{rocr::core}!cleanup\_at\_unload\_@{cleanup\_at\_unload\_}}
+\index{cleanup\_at\_unload\_@{cleanup\_at\_unload\_}!rocr::core@{rocr::core}}
+\doxysubsubsection{\texorpdfstring{cleanup\_at\_unload\_}{cleanup\_at\_unload\_}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classrocr_1_1core_1_1RuntimeCleanup}{Runtime\+Cleanup}} rocr\+::core\+::cleanup\+\_\+at\+\_\+unload\+\_\+\hspace{0.3cm}{\ttfamily [static]}}
+
+\mbox{\Hypertarget{namespacerocr_1_1core_a09051a29ba745c34aae552627f32c590}\label{namespacerocr_1_1core_a09051a29ba745c34aae552627f32c590}} 
+\index{rocr::core@{rocr::core}!Cursor@{Cursor}}
+\index{Cursor@{Cursor}!rocr::core@{rocr::core}}
+\doxysubsubsection{\texorpdfstring{Cursor}{Cursor}}
+{\footnotesize\ttfamily thread\+\_\+local \mbox{\hyperlink{structrocr_1_1core_1_1InterceptFrame}{Intercept\+Frame}} rocr\+::core\+::\+Cursor = \{nullptr, 0, 0\}\hspace{0.3cm}{\ttfamily [static]}}
+
+\mbox{\Hypertarget{namespacerocr_1_1core_adc112d5305ba1c3ca2fb32b212b215c1}\label{namespacerocr_1_1core_adc112d5305ba1c3ca2fb32b212b215c1}} 
+\index{rocr::core@{rocr::core}!g\_use\_interrupt\_wait@{g\_use\_interrupt\_wait}}
+\index{g\_use\_interrupt\_wait@{g\_use\_interrupt\_wait}!rocr::core@{rocr::core}}
+\doxysubsubsection{\texorpdfstring{g\_use\_interrupt\_wait}{g\_use\_interrupt\_wait}}
+{\footnotesize\ttfamily bool rocr\+::core\+::g\+\_\+use\+\_\+interrupt\+\_\+wait = true}
+
+\mbox{\Hypertarget{namespacerocr_1_1core_a8504eb91b5feb44aa01aa71ee4fae274}\label{namespacerocr_1_1core_a8504eb91b5feb44aa01aa71ee4fae274}} 
+\index{rocr::core@{rocr::core}!g\_use\_mwaitx@{g\_use\_mwaitx}}
+\index{g\_use\_mwaitx@{g\_use\_mwaitx}!rocr::core@{rocr::core}}
+\doxysubsubsection{\texorpdfstring{g\_use\_mwaitx}{g\_use\_mwaitx}}
+{\footnotesize\ttfamily bool rocr\+::core\+::g\+\_\+use\+\_\+mwaitx = true}
+
+\mbox{\Hypertarget{namespacerocr_1_1core_ac5b5d8d2c6bf7252920f9da025d53b57}\label{namespacerocr_1_1core_ac5b5d8d2c6bf7252920f9da025d53b57}} 
+\index{rocr::core@{rocr::core}!hsa\_api\_table\_@{hsa\_api\_table\_}}
+\index{hsa\_api\_table\_@{hsa\_api\_table\_}!rocr::core@{rocr::core}}
+\doxysubsubsection{\texorpdfstring{hsa\_api\_table\_}{hsa\_api\_table\_}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structrocr_1_1core_1_1HsaApiTable}{Hsa\+Api\+Table}} rocr\+::core\+::hsa\+\_\+api\+\_\+table\+\_\+}
+
+\mbox{\Hypertarget{namespacerocr_1_1core_ab4b1b9a846738b837a7f0137cbef816f}\label{namespacerocr_1_1core_ab4b1b9a846738b837a7f0137cbef816f}} 
+\index{rocr::core@{rocr::core}!hsa\_internal\_api\_table\_@{hsa\_internal\_api\_table\_}}
+\index{hsa\_internal\_api\_table\_@{hsa\_internal\_api\_table\_}!rocr::core@{rocr::core}}
+\doxysubsubsection{\texorpdfstring{hsa\_internal\_api\_table\_}{hsa\_internal\_api\_table\_}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structrocr_1_1core_1_1HsaApiTable}{Hsa\+Api\+Table}} rocr\+::core\+::hsa\+\_\+internal\+\_\+api\+\_\+table\+\_\+}
+
+\mbox{\Hypertarget{namespacerocr_1_1core_ac510c963a8c3ba549e89e8967caf4351}\label{namespacerocr_1_1core_ac510c963a8c3ba549e89e8967caf4351}} 
+\index{rocr::core@{rocr::core}!kBarrierHeader@{kBarrierHeader}}
+\index{kBarrierHeader@{kBarrierHeader}!rocr::core@{rocr::core}}
+\doxysubsubsection{\texorpdfstring{kBarrierHeader}{kBarrierHeader}}
+{\footnotesize\ttfamily const uint16\+\_\+t rocr\+::core\+::k\+Barrier\+Header\hspace{0.3cm}{\ttfamily [static]}}
+
+{\bfseries Initial value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{= (\mbox{\hyperlink{group__aql_gga35a04bfe654a1c980ac904cafd6373a1a015bb0b76eccde0f58f27a570ada6b56}{HSA\_PACKET\_TYPE\_BARRIER\_AND}} << \mbox{\hyperlink{group__aql_gga2f03beef9c37e464b3837f2646d30870a28b2f227c66db4ddcefb5856e7958e6c}{HSA\_PACKET\_HEADER\_TYPE}}) |}
+\DoxyCodeLine{    (1 << \mbox{\hyperlink{group__aql_gga2f03beef9c37e464b3837f2646d30870aa967f75e5d6ad03f764a1db4bb8351a4}{HSA\_PACKET\_HEADER\_BARRIER}}) |}
+\DoxyCodeLine{    (\mbox{\hyperlink{group__aql_gga6c1a86878de5b0f980202ad7e4e8d42aa5dc7b942cd56f91094a088435027be2c}{HSA\_FENCE\_SCOPE\_NONE}} << \mbox{\hyperlink{group__aql_gga2f03beef9c37e464b3837f2646d30870ac601d1e724c4e367bc55e4c4c204dd93}{HSA\_PACKET\_HEADER\_ACQUIRE\_FENCE\_SCOPE}}) |}
+\DoxyCodeLine{    (\mbox{\hyperlink{group__aql_gga6c1a86878de5b0f980202ad7e4e8d42aa5dc7b942cd56f91094a088435027be2c}{HSA\_FENCE\_SCOPE\_NONE}} << \mbox{\hyperlink{group__aql_gga2f03beef9c37e464b3837f2646d30870a1249cac1bb408dc724f22362ded245c6}{HSA\_PACKET\_HEADER\_RELEASE\_FENCE\_SCOPE}})}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{namespacerocr_1_1core_a4bec339944675de2da681b0f22af98f6}\label{namespacerocr_1_1core_a4bec339944675de2da681b0f22af98f6}} 
+\index{rocr::core@{rocr::core}!kBarrierPacket@{kBarrierPacket}}
+\index{kBarrierPacket@{kBarrierPacket}!rocr::core@{rocr::core}}
+\doxysubsubsection{\texorpdfstring{kBarrierPacket}{kBarrierPacket}}
+{\footnotesize\ttfamily const \mbox{\hyperlink{group__aql_gac999acb47a0e9232b4958c0a873bfacc}{hsa\+\_\+barrier\+\_\+and\+\_\+packet\+\_\+t}} rocr\+::core\+::k\+Barrier\+Packet = \{\mbox{\hyperlink{namespacerocr_1_1core_a2d8d465011f82b8d8e37185047b2024e}{k\+Invalid\+Header}}, 0, 0, \{\}, 0, \{\}\}\hspace{0.3cm}{\ttfamily [static]}}
+
+\mbox{\Hypertarget{namespacerocr_1_1core_a2d8d465011f82b8d8e37185047b2024e}\label{namespacerocr_1_1core_a2d8d465011f82b8d8e37185047b2024e}} 
+\index{rocr::core@{rocr::core}!kInvalidHeader@{kInvalidHeader}}
+\index{kInvalidHeader@{kInvalidHeader}!rocr::core@{rocr::core}}
+\doxysubsubsection{\texorpdfstring{kInvalidHeader}{kInvalidHeader}}
+{\footnotesize\ttfamily const uint16\+\_\+t rocr\+::core\+::k\+Invalid\+Header\hspace{0.3cm}{\ttfamily [static]}}
+
+{\bfseries Initial value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{= (\mbox{\hyperlink{group__aql_gga35a04bfe654a1c980ac904cafd6373a1a9030931b8fe80fb9add8c796cd8886c5}{HSA\_PACKET\_TYPE\_INVALID}} << \mbox{\hyperlink{group__aql_gga2f03beef9c37e464b3837f2646d30870a28b2f227c66db4ddcefb5856e7958e6c}{HSA\_PACKET\_HEADER\_TYPE}}) |}
+\DoxyCodeLine{    (1 << \mbox{\hyperlink{group__aql_gga2f03beef9c37e464b3837f2646d30870aa967f75e5d6ad03f764a1db4bb8351a4}{HSA\_PACKET\_HEADER\_BARRIER}}) |}
+\DoxyCodeLine{    (\mbox{\hyperlink{group__aql_gga6c1a86878de5b0f980202ad7e4e8d42aa5dc7b942cd56f91094a088435027be2c}{HSA\_FENCE\_SCOPE\_NONE}} << \mbox{\hyperlink{group__aql_gga2f03beef9c37e464b3837f2646d30870ac601d1e724c4e367bc55e4c4c204dd93}{HSA\_PACKET\_HEADER\_ACQUIRE\_FENCE\_SCOPE}}) |}
+\DoxyCodeLine{    (\mbox{\hyperlink{group__aql_gga6c1a86878de5b0f980202ad7e4e8d42aa5dc7b942cd56f91094a088435027be2c}{HSA\_FENCE\_SCOPE\_NONE}} << \mbox{\hyperlink{group__aql_gga2f03beef9c37e464b3837f2646d30870a1249cac1bb408dc724f22362ded245c6}{HSA\_PACKET\_HEADER\_RELEASE\_FENCE\_SCOPE}})}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{namespacerocr_1_1core_a965737fa2d41c6ef01b879cc3d36bcc8}\label{namespacerocr_1_1core_a965737fa2d41c6ef01b879cc3d36bcc8}} 
+\index{rocr::core@{rocr::core}!loaded@{loaded}}
+\index{loaded@{loaded}!rocr::core@{rocr::core}}
+\doxysubsubsection{\texorpdfstring{loaded}{loaded}}
+{\footnotesize\ttfamily bool rocr\+::core\+::loaded = true\hspace{0.3cm}{\ttfamily [static]}}
+

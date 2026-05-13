@@ -1,0 +1,473 @@
+\hypertarget{classrocr_1_1SmallHeap}{}\doxysection{rocr\+::Small\+Heap Class Reference}
+\label{classrocr_1_1SmallHeap}\index{rocr::SmallHeap@{rocr::SmallHeap}}
+
+
+{\ttfamily \#include $<$small\+\_\+heap.\+h$>$}
+
+\doxysubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{structrocr_1_1SmallHeap_1_1Node}{Node}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classrocr_1_1SmallHeap_a0d23de6128f0f26accbb851bb1b34cc1}{Small\+Heap}} ()
+\item 
+\mbox{\hyperlink{classrocr_1_1SmallHeap_a5573cc26c476215c802a7604b865a817}{Small\+Heap}} (void $\ast$\mbox{\hyperlink{classrocr_1_1SmallHeap_ac3a946f3d0073b90b812c4f913f44496}{base}}, size\+\_\+t \mbox{\hyperlink{classrocr_1_1SmallHeap_a666f504ee68b8bccb28e83ddc0a3fef1}{length}})
+\item 
+void $\ast$ \mbox{\hyperlink{classrocr_1_1SmallHeap_afbfcba38ac04448580a02a92c766311e}{alloc}} (size\+\_\+t bytes)
+\item 
+void $\ast$ \mbox{\hyperlink{classrocr_1_1SmallHeap_a81fcf5ab779d512dd4b4d6e47ad929e9}{alloc\+\_\+high}} (size\+\_\+t bytes)
+\item 
+void \mbox{\hyperlink{classrocr_1_1SmallHeap_a182c95e2aa598371dc884838a7b8e8bb}{free}} (void $\ast$ptr)
+\item 
+void $\ast$ \mbox{\hyperlink{classrocr_1_1SmallHeap_ac3a946f3d0073b90b812c4f913f44496}{base}} () const
+\item 
+size\+\_\+t \mbox{\hyperlink{classrocr_1_1SmallHeap_af38e11ded284749c655854fd275e84b4}{size}} () const
+\item 
+size\+\_\+t \mbox{\hyperlink{classrocr_1_1SmallHeap_a80f8829d58b2cd5f4c8ea8585ec35734}{remaining}} () const
+\item 
+void $\ast$ \mbox{\hyperlink{classrocr_1_1SmallHeap_a0326ecc44437315da738991ec0a5ac07}{high\+\_\+split}} () const
+\end{DoxyCompactItemize}
+\doxysubsection*{Private Types}
+\begin{DoxyCompactItemize}
+\item 
+typedef std\+::map$<$ void $\ast$, \mbox{\hyperlink{structrocr_1_1SmallHeap_1_1Node}{Node}} $>$ \mbox{\hyperlink{classrocr_1_1SmallHeap_a92b7ddb11d045c8ee69c536614e63f63}{memory\+\_\+t}}
+\item 
+typedef memory\+\_\+t\+::iterator \mbox{\hyperlink{classrocr_1_1SmallHeap_a3e5c4041b41a5116f79f10988f2c7b45}{iterator\+\_\+t}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classrocr_1_1SmallHeap_a69524933a3a0c54bae473f75116f2aff}{Small\+Heap}} (const \mbox{\hyperlink{classrocr_1_1SmallHeap}{Small\+Heap}} \&rhs)=delete
+\item 
+\mbox{\hyperlink{classrocr_1_1SmallHeap}{Small\+Heap}} \& \mbox{\hyperlink{classrocr_1_1SmallHeap_a015c7be6bef0eef454e182f8b282e3ee}{operator=}} (const \mbox{\hyperlink{classrocr_1_1SmallHeap}{Small\+Heap}} \&rhs)=delete
+\item 
+\+\_\+\+\_\+forceinline bool \mbox{\hyperlink{classrocr_1_1SmallHeap_a5520f780f38f94126c315738f2211252}{isfree}} (const \mbox{\hyperlink{structrocr_1_1SmallHeap_1_1Node}{Node}} \&node) const
+\item 
+\+\_\+\+\_\+forceinline bool \mbox{\hyperlink{classrocr_1_1SmallHeap_af6dcb79c7bc7d76dafb34f3bc26c6bcb}{islastfree}} (const \mbox{\hyperlink{structrocr_1_1SmallHeap_1_1Node}{Node}} \&node) const
+\item 
+\+\_\+\+\_\+forceinline bool \mbox{\hyperlink{classrocr_1_1SmallHeap_a80fead7e2280cf954263ae9b6bcfe6cf}{isfirstfree}} (const \mbox{\hyperlink{structrocr_1_1SmallHeap_1_1Node}{Node}} \&node) const
+\item 
+\+\_\+\+\_\+forceinline void \mbox{\hyperlink{classrocr_1_1SmallHeap_a44aa5bd603402e60ac14bcce82ce7f04}{setlastfree}} (\mbox{\hyperlink{structrocr_1_1SmallHeap_1_1Node}{Node}} \&node)
+\item 
+\+\_\+\+\_\+forceinline void \mbox{\hyperlink{classrocr_1_1SmallHeap_a8f71cd85ecd8fea97789e1c6a75e9940}{setfirstfree}} (\mbox{\hyperlink{structrocr_1_1SmallHeap_1_1Node}{Node}} \&node)
+\item 
+\+\_\+\+\_\+forceinline void \mbox{\hyperlink{classrocr_1_1SmallHeap_a79eefffe10044f5e7a714dbc00ec87dc}{setused}} (\mbox{\hyperlink{structrocr_1_1SmallHeap_1_1Node}{Node}} \&node)
+\item 
+\+\_\+\+\_\+forceinline \mbox{\hyperlink{classrocr_1_1SmallHeap_a3e5c4041b41a5116f79f10988f2c7b45}{iterator\+\_\+t}} \mbox{\hyperlink{classrocr_1_1SmallHeap_a0f83faeaedae52b832738541e12e3899}{firstfree}} ()
+\item 
+\+\_\+\+\_\+forceinline \mbox{\hyperlink{classrocr_1_1SmallHeap_a3e5c4041b41a5116f79f10988f2c7b45}{iterator\+\_\+t}} \mbox{\hyperlink{classrocr_1_1SmallHeap_aa18d0e936d57c835227eceb96b5ce366}{lastfree}} ()
+\item 
+void \mbox{\hyperlink{classrocr_1_1SmallHeap_a89f954a06ffd89b5974f9c04f3edab39}{insertafter}} (\mbox{\hyperlink{classrocr_1_1SmallHeap_a3e5c4041b41a5116f79f10988f2c7b45}{iterator\+\_\+t}} place, \mbox{\hyperlink{classrocr_1_1SmallHeap_a3e5c4041b41a5116f79f10988f2c7b45}{iterator\+\_\+t}} node)
+\item 
+void \mbox{\hyperlink{classrocr_1_1SmallHeap_ac445d985cb98836f8037da2d2bca0250}{remove}} (\mbox{\hyperlink{classrocr_1_1SmallHeap_a3e5c4041b41a5116f79f10988f2c7b45}{iterator\+\_\+t}} node)
+\item 
+\mbox{\hyperlink{classrocr_1_1SmallHeap_a3e5c4041b41a5116f79f10988f2c7b45}{iterator\+\_\+t}} \mbox{\hyperlink{classrocr_1_1SmallHeap_a61c1fd857191a465e152c5f7643155be}{merge}} (\mbox{\hyperlink{classrocr_1_1SmallHeap_a3e5c4041b41a5116f79f10988f2c7b45}{iterator\+\_\+t}} low, \mbox{\hyperlink{classrocr_1_1SmallHeap_a3e5c4041b41a5116f79f10988f2c7b45}{iterator\+\_\+t}} \mbox{\hyperlink{classrocr_1_1SmallHeap_ac31a0499c4b3dc998716ae723621feb2}{high}})
+\end{DoxyCompactItemize}
+\doxysubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+void $\ast$const \mbox{\hyperlink{classrocr_1_1SmallHeap_a4a52d1f1eaff2274970b3c98a46c277c}{pool}}
+\item 
+const size\+\_\+t \mbox{\hyperlink{classrocr_1_1SmallHeap_a666f504ee68b8bccb28e83ddc0a3fef1}{length}}
+\item 
+size\+\_\+t \mbox{\hyperlink{classrocr_1_1SmallHeap_af1be2e01f05cafeeba183405ebe46a63}{total\+\_\+free}}
+\item 
+\mbox{\hyperlink{classrocr_1_1SmallHeap_a92b7ddb11d045c8ee69c536614e63f63}{memory\+\_\+t}} \mbox{\hyperlink{classrocr_1_1SmallHeap_a71312b53604e48cffbdd9a2ef6e108df}{memory}}
+\item 
+std\+::set$<$ void $\ast$ $>$ \mbox{\hyperlink{classrocr_1_1SmallHeap_ac31a0499c4b3dc998716ae723621feb2}{high}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Member Typedef Documentation}
+\mbox{\Hypertarget{classrocr_1_1SmallHeap_a3e5c4041b41a5116f79f10988f2c7b45}\label{classrocr_1_1SmallHeap_a3e5c4041b41a5116f79f10988f2c7b45}} 
+\index{rocr::SmallHeap@{rocr::SmallHeap}!iterator\_t@{iterator\_t}}
+\index{iterator\_t@{iterator\_t}!rocr::SmallHeap@{rocr::SmallHeap}}
+\doxysubsubsection{\texorpdfstring{iterator\_t}{iterator\_t}}
+{\footnotesize\ttfamily typedef memory\+\_\+t\+::iterator \mbox{\hyperlink{classrocr_1_1SmallHeap_a3e5c4041b41a5116f79f10988f2c7b45}{rocr\+::\+Small\+Heap\+::iterator\+\_\+t}}\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classrocr_1_1SmallHeap_a92b7ddb11d045c8ee69c536614e63f63}\label{classrocr_1_1SmallHeap_a92b7ddb11d045c8ee69c536614e63f63}} 
+\index{rocr::SmallHeap@{rocr::SmallHeap}!memory\_t@{memory\_t}}
+\index{memory\_t@{memory\_t}!rocr::SmallHeap@{rocr::SmallHeap}}
+\doxysubsubsection{\texorpdfstring{memory\_t}{memory\_t}}
+{\footnotesize\ttfamily typedef std\+::map$<$void$\ast$, \mbox{\hyperlink{structrocr_1_1SmallHeap_1_1Node}{Node}}$>$ \mbox{\hyperlink{classrocr_1_1SmallHeap_a92b7ddb11d045c8ee69c536614e63f63}{rocr\+::\+Small\+Heap\+::memory\+\_\+t}}\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classrocr_1_1SmallHeap_a69524933a3a0c54bae473f75116f2aff}\label{classrocr_1_1SmallHeap_a69524933a3a0c54bae473f75116f2aff}} 
+\index{rocr::SmallHeap@{rocr::SmallHeap}!SmallHeap@{SmallHeap}}
+\index{SmallHeap@{SmallHeap}!rocr::SmallHeap@{rocr::SmallHeap}}
+\doxysubsubsection{\texorpdfstring{SmallHeap()}{SmallHeap()}\hspace{0.1cm}{\footnotesize\ttfamily [1/3]}}
+{\footnotesize\ttfamily rocr\+::\+Small\+Heap\+::\+Small\+Heap (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classrocr_1_1SmallHeap}{Small\+Heap}} \&}]{rhs }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}, {\ttfamily [delete]}}
+
+\mbox{\Hypertarget{classrocr_1_1SmallHeap_a0d23de6128f0f26accbb851bb1b34cc1}\label{classrocr_1_1SmallHeap_a0d23de6128f0f26accbb851bb1b34cc1}} 
+\index{rocr::SmallHeap@{rocr::SmallHeap}!SmallHeap@{SmallHeap}}
+\index{SmallHeap@{SmallHeap}!rocr::SmallHeap@{rocr::SmallHeap}}
+\doxysubsubsection{\texorpdfstring{SmallHeap()}{SmallHeap()}\hspace{0.1cm}{\footnotesize\ttfamily [2/3]}}
+{\footnotesize\ttfamily rocr\+::\+Small\+Heap\+::\+Small\+Heap (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{classrocr_1_1SmallHeap_a5573cc26c476215c802a7604b865a817}\label{classrocr_1_1SmallHeap_a5573cc26c476215c802a7604b865a817}} 
+\index{rocr::SmallHeap@{rocr::SmallHeap}!SmallHeap@{SmallHeap}}
+\index{SmallHeap@{SmallHeap}!rocr::SmallHeap@{rocr::SmallHeap}}
+\doxysubsubsection{\texorpdfstring{SmallHeap()}{SmallHeap()}\hspace{0.1cm}{\footnotesize\ttfamily [3/3]}}
+{\footnotesize\ttfamily rocr\+::\+Small\+Heap\+::\+Small\+Heap (\begin{DoxyParamCaption}\item[{void $\ast$}]{base,  }\item[{size\+\_\+t}]{length }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classrocr_1_1SmallHeap_a5573cc26c476215c802a7604b865a817_cgraph}
+\end{center}
+\end{figure}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classrocr_1_1SmallHeap_afbfcba38ac04448580a02a92c766311e}\label{classrocr_1_1SmallHeap_afbfcba38ac04448580a02a92c766311e}} 
+\index{rocr::SmallHeap@{rocr::SmallHeap}!alloc@{alloc}}
+\index{alloc@{alloc}!rocr::SmallHeap@{rocr::SmallHeap}}
+\doxysubsubsection{\texorpdfstring{alloc()}{alloc()}}
+{\footnotesize\ttfamily void $\ast$ rocr\+::\+Small\+Heap\+::alloc (\begin{DoxyParamCaption}\item[{size\+\_\+t}]{bytes }\end{DoxyParamCaption})}
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classrocr_1_1SmallHeap_afbfcba38ac04448580a02a92c766311e_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classrocr_1_1SmallHeap_afbfcba38ac04448580a02a92c766311e_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classrocr_1_1SmallHeap_a81fcf5ab779d512dd4b4d6e47ad929e9}\label{classrocr_1_1SmallHeap_a81fcf5ab779d512dd4b4d6e47ad929e9}} 
+\index{rocr::SmallHeap@{rocr::SmallHeap}!alloc\_high@{alloc\_high}}
+\index{alloc\_high@{alloc\_high}!rocr::SmallHeap@{rocr::SmallHeap}}
+\doxysubsubsection{\texorpdfstring{alloc\_high()}{alloc\_high()}}
+{\footnotesize\ttfamily void $\ast$ rocr\+::\+Small\+Heap\+::alloc\+\_\+high (\begin{DoxyParamCaption}\item[{size\+\_\+t}]{bytes }\end{DoxyParamCaption})}
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classrocr_1_1SmallHeap_a81fcf5ab779d512dd4b4d6e47ad929e9_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classrocr_1_1SmallHeap_a81fcf5ab779d512dd4b4d6e47ad929e9_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classrocr_1_1SmallHeap_ac3a946f3d0073b90b812c4f913f44496}\label{classrocr_1_1SmallHeap_ac3a946f3d0073b90b812c4f913f44496}} 
+\index{rocr::SmallHeap@{rocr::SmallHeap}!base@{base}}
+\index{base@{base}!rocr::SmallHeap@{rocr::SmallHeap}}
+\doxysubsubsection{\texorpdfstring{base()}{base()}}
+{\footnotesize\ttfamily void$\ast$ rocr\+::\+Small\+Heap\+::base (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classrocr_1_1SmallHeap_ac3a946f3d0073b90b812c4f913f44496_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classrocr_1_1SmallHeap_a0f83faeaedae52b832738541e12e3899}\label{classrocr_1_1SmallHeap_a0f83faeaedae52b832738541e12e3899}} 
+\index{rocr::SmallHeap@{rocr::SmallHeap}!firstfree@{firstfree}}
+\index{firstfree@{firstfree}!rocr::SmallHeap@{rocr::SmallHeap}}
+\doxysubsubsection{\texorpdfstring{firstfree()}{firstfree()}}
+{\footnotesize\ttfamily \+\_\+\+\_\+forceinline \mbox{\hyperlink{classrocr_1_1SmallHeap_a3e5c4041b41a5116f79f10988f2c7b45}{iterator\+\_\+t}} rocr\+::\+Small\+Heap\+::firstfree (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [private]}}
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classrocr_1_1SmallHeap_a0f83faeaedae52b832738541e12e3899_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classrocr_1_1SmallHeap_a182c95e2aa598371dc884838a7b8e8bb}\label{classrocr_1_1SmallHeap_a182c95e2aa598371dc884838a7b8e8bb}} 
+\index{rocr::SmallHeap@{rocr::SmallHeap}!free@{free}}
+\index{free@{free}!rocr::SmallHeap@{rocr::SmallHeap}}
+\doxysubsubsection{\texorpdfstring{free()}{free()}}
+{\footnotesize\ttfamily void rocr\+::\+Small\+Heap\+::free (\begin{DoxyParamCaption}\item[{void $\ast$}]{ptr }\end{DoxyParamCaption})}
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classrocr_1_1SmallHeap_a182c95e2aa598371dc884838a7b8e8bb_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classrocr_1_1SmallHeap_a182c95e2aa598371dc884838a7b8e8bb_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classrocr_1_1SmallHeap_a0326ecc44437315da738991ec0a5ac07}\label{classrocr_1_1SmallHeap_a0326ecc44437315da738991ec0a5ac07}} 
+\index{rocr::SmallHeap@{rocr::SmallHeap}!high\_split@{high\_split}}
+\index{high\_split@{high\_split}!rocr::SmallHeap@{rocr::SmallHeap}}
+\doxysubsubsection{\texorpdfstring{high\_split()}{high\_split()}}
+{\footnotesize\ttfamily void$\ast$ rocr\+::\+Small\+Heap\+::high\+\_\+split (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classrocr_1_1SmallHeap_a0326ecc44437315da738991ec0a5ac07_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classrocr_1_1SmallHeap_a89f954a06ffd89b5974f9c04f3edab39}\label{classrocr_1_1SmallHeap_a89f954a06ffd89b5974f9c04f3edab39}} 
+\index{rocr::SmallHeap@{rocr::SmallHeap}!insertafter@{insertafter}}
+\index{insertafter@{insertafter}!rocr::SmallHeap@{rocr::SmallHeap}}
+\doxysubsubsection{\texorpdfstring{insertafter()}{insertafter()}}
+{\footnotesize\ttfamily void rocr\+::\+Small\+Heap\+::insertafter (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classrocr_1_1SmallHeap_a3e5c4041b41a5116f79f10988f2c7b45}{Small\+Heap\+::iterator\+\_\+t}}}]{place,  }\item[{\mbox{\hyperlink{classrocr_1_1SmallHeap_a3e5c4041b41a5116f79f10988f2c7b45}{Small\+Heap\+::iterator\+\_\+t}}}]{node }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classrocr_1_1SmallHeap_a89f954a06ffd89b5974f9c04f3edab39_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classrocr_1_1SmallHeap_a89f954a06ffd89b5974f9c04f3edab39_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classrocr_1_1SmallHeap_a80fead7e2280cf954263ae9b6bcfe6cf}\label{classrocr_1_1SmallHeap_a80fead7e2280cf954263ae9b6bcfe6cf}} 
+\index{rocr::SmallHeap@{rocr::SmallHeap}!isfirstfree@{isfirstfree}}
+\index{isfirstfree@{isfirstfree}!rocr::SmallHeap@{rocr::SmallHeap}}
+\doxysubsubsection{\texorpdfstring{isfirstfree()}{isfirstfree()}}
+{\footnotesize\ttfamily \+\_\+\+\_\+forceinline bool rocr\+::\+Small\+Heap\+::isfirstfree (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{structrocr_1_1SmallHeap_1_1Node}{Node}} \&}]{node }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [private]}}
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classrocr_1_1SmallHeap_a80fead7e2280cf954263ae9b6bcfe6cf_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classrocr_1_1SmallHeap_a5520f780f38f94126c315738f2211252}\label{classrocr_1_1SmallHeap_a5520f780f38f94126c315738f2211252}} 
+\index{rocr::SmallHeap@{rocr::SmallHeap}!isfree@{isfree}}
+\index{isfree@{isfree}!rocr::SmallHeap@{rocr::SmallHeap}}
+\doxysubsubsection{\texorpdfstring{isfree()}{isfree()}}
+{\footnotesize\ttfamily \+\_\+\+\_\+forceinline bool rocr\+::\+Small\+Heap\+::isfree (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{structrocr_1_1SmallHeap_1_1Node}{Node}} \&}]{node }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [private]}}
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classrocr_1_1SmallHeap_a5520f780f38f94126c315738f2211252_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classrocr_1_1SmallHeap_af6dcb79c7bc7d76dafb34f3bc26c6bcb}\label{classrocr_1_1SmallHeap_af6dcb79c7bc7d76dafb34f3bc26c6bcb}} 
+\index{rocr::SmallHeap@{rocr::SmallHeap}!islastfree@{islastfree}}
+\index{islastfree@{islastfree}!rocr::SmallHeap@{rocr::SmallHeap}}
+\doxysubsubsection{\texorpdfstring{islastfree()}{islastfree()}}
+{\footnotesize\ttfamily \+\_\+\+\_\+forceinline bool rocr\+::\+Small\+Heap\+::islastfree (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{structrocr_1_1SmallHeap_1_1Node}{Node}} \&}]{node }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [private]}}
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classrocr_1_1SmallHeap_af6dcb79c7bc7d76dafb34f3bc26c6bcb_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classrocr_1_1SmallHeap_aa18d0e936d57c835227eceb96b5ce366}\label{classrocr_1_1SmallHeap_aa18d0e936d57c835227eceb96b5ce366}} 
+\index{rocr::SmallHeap@{rocr::SmallHeap}!lastfree@{lastfree}}
+\index{lastfree@{lastfree}!rocr::SmallHeap@{rocr::SmallHeap}}
+\doxysubsubsection{\texorpdfstring{lastfree()}{lastfree()}}
+{\footnotesize\ttfamily \+\_\+\+\_\+forceinline \mbox{\hyperlink{classrocr_1_1SmallHeap_a3e5c4041b41a5116f79f10988f2c7b45}{iterator\+\_\+t}} rocr\+::\+Small\+Heap\+::lastfree (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [private]}}
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classrocr_1_1SmallHeap_aa18d0e936d57c835227eceb96b5ce366_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classrocr_1_1SmallHeap_a61c1fd857191a465e152c5f7643155be}\label{classrocr_1_1SmallHeap_a61c1fd857191a465e152c5f7643155be}} 
+\index{rocr::SmallHeap@{rocr::SmallHeap}!merge@{merge}}
+\index{merge@{merge}!rocr::SmallHeap@{rocr::SmallHeap}}
+\doxysubsubsection{\texorpdfstring{merge()}{merge()}}
+{\footnotesize\ttfamily Small\+Heap\+::memory\+\_\+t\+::iterator rocr\+::\+Small\+Heap\+::merge (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classrocr_1_1SmallHeap_a3e5c4041b41a5116f79f10988f2c7b45}{iterator\+\_\+t}}}]{low,  }\item[{\mbox{\hyperlink{classrocr_1_1SmallHeap_a3e5c4041b41a5116f79f10988f2c7b45}{iterator\+\_\+t}}}]{high }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classrocr_1_1SmallHeap_a61c1fd857191a465e152c5f7643155be_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classrocr_1_1SmallHeap_a61c1fd857191a465e152c5f7643155be_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classrocr_1_1SmallHeap_a015c7be6bef0eef454e182f8b282e3ee}\label{classrocr_1_1SmallHeap_a015c7be6bef0eef454e182f8b282e3ee}} 
+\index{rocr::SmallHeap@{rocr::SmallHeap}!operator=@{operator=}}
+\index{operator=@{operator=}!rocr::SmallHeap@{rocr::SmallHeap}}
+\doxysubsubsection{\texorpdfstring{operator=()}{operator=()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classrocr_1_1SmallHeap}{Small\+Heap}}\& rocr\+::\+Small\+Heap\+::operator= (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classrocr_1_1SmallHeap}{Small\+Heap}} \&}]{rhs }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}, {\ttfamily [delete]}}
+
+\mbox{\Hypertarget{classrocr_1_1SmallHeap_a80f8829d58b2cd5f4c8ea8585ec35734}\label{classrocr_1_1SmallHeap_a80f8829d58b2cd5f4c8ea8585ec35734}} 
+\index{rocr::SmallHeap@{rocr::SmallHeap}!remaining@{remaining}}
+\index{remaining@{remaining}!rocr::SmallHeap@{rocr::SmallHeap}}
+\doxysubsubsection{\texorpdfstring{remaining()}{remaining()}}
+{\footnotesize\ttfamily size\+\_\+t rocr\+::\+Small\+Heap\+::remaining (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classrocr_1_1SmallHeap_a80f8829d58b2cd5f4c8ea8585ec35734_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classrocr_1_1SmallHeap_ac445d985cb98836f8037da2d2bca0250}\label{classrocr_1_1SmallHeap_ac445d985cb98836f8037da2d2bca0250}} 
+\index{rocr::SmallHeap@{rocr::SmallHeap}!remove@{remove}}
+\index{remove@{remove}!rocr::SmallHeap@{rocr::SmallHeap}}
+\doxysubsubsection{\texorpdfstring{remove()}{remove()}}
+{\footnotesize\ttfamily void rocr\+::\+Small\+Heap\+::remove (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classrocr_1_1SmallHeap_a3e5c4041b41a5116f79f10988f2c7b45}{Small\+Heap\+::iterator\+\_\+t}}}]{node }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classrocr_1_1SmallHeap_ac445d985cb98836f8037da2d2bca0250_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classrocr_1_1SmallHeap_ac445d985cb98836f8037da2d2bca0250_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classrocr_1_1SmallHeap_a8f71cd85ecd8fea97789e1c6a75e9940}\label{classrocr_1_1SmallHeap_a8f71cd85ecd8fea97789e1c6a75e9940}} 
+\index{rocr::SmallHeap@{rocr::SmallHeap}!setfirstfree@{setfirstfree}}
+\index{setfirstfree@{setfirstfree}!rocr::SmallHeap@{rocr::SmallHeap}}
+\doxysubsubsection{\texorpdfstring{setfirstfree()}{setfirstfree()}}
+{\footnotesize\ttfamily \+\_\+\+\_\+forceinline void rocr\+::\+Small\+Heap\+::setfirstfree (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structrocr_1_1SmallHeap_1_1Node}{Node}} \&}]{node }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [private]}}
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classrocr_1_1SmallHeap_a8f71cd85ecd8fea97789e1c6a75e9940_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classrocr_1_1SmallHeap_a44aa5bd603402e60ac14bcce82ce7f04}\label{classrocr_1_1SmallHeap_a44aa5bd603402e60ac14bcce82ce7f04}} 
+\index{rocr::SmallHeap@{rocr::SmallHeap}!setlastfree@{setlastfree}}
+\index{setlastfree@{setlastfree}!rocr::SmallHeap@{rocr::SmallHeap}}
+\doxysubsubsection{\texorpdfstring{setlastfree()}{setlastfree()}}
+{\footnotesize\ttfamily \+\_\+\+\_\+forceinline void rocr\+::\+Small\+Heap\+::setlastfree (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structrocr_1_1SmallHeap_1_1Node}{Node}} \&}]{node }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [private]}}
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classrocr_1_1SmallHeap_a44aa5bd603402e60ac14bcce82ce7f04_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classrocr_1_1SmallHeap_a79eefffe10044f5e7a714dbc00ec87dc}\label{classrocr_1_1SmallHeap_a79eefffe10044f5e7a714dbc00ec87dc}} 
+\index{rocr::SmallHeap@{rocr::SmallHeap}!setused@{setused}}
+\index{setused@{setused}!rocr::SmallHeap@{rocr::SmallHeap}}
+\doxysubsubsection{\texorpdfstring{setused()}{setused()}}
+{\footnotesize\ttfamily \+\_\+\+\_\+forceinline void rocr\+::\+Small\+Heap\+::setused (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structrocr_1_1SmallHeap_1_1Node}{Node}} \&}]{node }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [private]}}
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classrocr_1_1SmallHeap_a79eefffe10044f5e7a714dbc00ec87dc_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classrocr_1_1SmallHeap_af38e11ded284749c655854fd275e84b4}\label{classrocr_1_1SmallHeap_af38e11ded284749c655854fd275e84b4}} 
+\index{rocr::SmallHeap@{rocr::SmallHeap}!size@{size}}
+\index{size@{size}!rocr::SmallHeap@{rocr::SmallHeap}}
+\doxysubsubsection{\texorpdfstring{size()}{size()}}
+{\footnotesize\ttfamily size\+\_\+t rocr\+::\+Small\+Heap\+::size (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classrocr_1_1SmallHeap_af38e11ded284749c655854fd275e84b4_icgraph}
+\end{center}
+\end{figure}
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{classrocr_1_1SmallHeap_ac31a0499c4b3dc998716ae723621feb2}\label{classrocr_1_1SmallHeap_ac31a0499c4b3dc998716ae723621feb2}} 
+\index{rocr::SmallHeap@{rocr::SmallHeap}!high@{high}}
+\index{high@{high}!rocr::SmallHeap@{rocr::SmallHeap}}
+\doxysubsubsection{\texorpdfstring{high}{high}}
+{\footnotesize\ttfamily std\+::set$<$void$\ast$$>$ rocr\+::\+Small\+Heap\+::high\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classrocr_1_1SmallHeap_a666f504ee68b8bccb28e83ddc0a3fef1}\label{classrocr_1_1SmallHeap_a666f504ee68b8bccb28e83ddc0a3fef1}} 
+\index{rocr::SmallHeap@{rocr::SmallHeap}!length@{length}}
+\index{length@{length}!rocr::SmallHeap@{rocr::SmallHeap}}
+\doxysubsubsection{\texorpdfstring{length}{length}}
+{\footnotesize\ttfamily const size\+\_\+t rocr\+::\+Small\+Heap\+::length\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classrocr_1_1SmallHeap_a71312b53604e48cffbdd9a2ef6e108df}\label{classrocr_1_1SmallHeap_a71312b53604e48cffbdd9a2ef6e108df}} 
+\index{rocr::SmallHeap@{rocr::SmallHeap}!memory@{memory}}
+\index{memory@{memory}!rocr::SmallHeap@{rocr::SmallHeap}}
+\doxysubsubsection{\texorpdfstring{memory}{memory}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classrocr_1_1SmallHeap_a92b7ddb11d045c8ee69c536614e63f63}{memory\+\_\+t}} rocr\+::\+Small\+Heap\+::memory\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classrocr_1_1SmallHeap_a4a52d1f1eaff2274970b3c98a46c277c}\label{classrocr_1_1SmallHeap_a4a52d1f1eaff2274970b3c98a46c277c}} 
+\index{rocr::SmallHeap@{rocr::SmallHeap}!pool@{pool}}
+\index{pool@{pool}!rocr::SmallHeap@{rocr::SmallHeap}}
+\doxysubsubsection{\texorpdfstring{pool}{pool}}
+{\footnotesize\ttfamily void$\ast$ const rocr\+::\+Small\+Heap\+::pool\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classrocr_1_1SmallHeap_af1be2e01f05cafeeba183405ebe46a63}\label{classrocr_1_1SmallHeap_af1be2e01f05cafeeba183405ebe46a63}} 
+\index{rocr::SmallHeap@{rocr::SmallHeap}!total\_free@{total\_free}}
+\index{total\_free@{total\_free}!rocr::SmallHeap@{rocr::SmallHeap}}
+\doxysubsubsection{\texorpdfstring{total\_free}{total\_free}}
+{\footnotesize\ttfamily size\+\_\+t rocr\+::\+Small\+Heap\+::total\+\_\+free\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+src/core/util/\mbox{\hyperlink{small__heap_8h}{small\+\_\+heap.\+h}}\item 
+src/core/util/\mbox{\hyperlink{small__heap_8cpp}{small\+\_\+heap.\+cpp}}\end{DoxyCompactItemize}

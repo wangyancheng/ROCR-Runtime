@@ -1,0 +1,370 @@
+\hypertarget{namespaceELF}{}\doxysection{ELF Namespace Reference}
+\label{namespaceELF}\index{ELF@{ELF}}
+\doxysubsection*{Enumerations}
+\begin{DoxyCompactItemize}
+\item 
+enum \{ \mbox{\hyperlink{namespaceELF_ad6f7df35e679e12be27a61a23c43cb55aec06c09fd8aeb53a838f6c7ae636ae2a}{EM\+\_\+\+AMDGPU}} = 224
+ \}
+\item 
+enum \{ \mbox{\hyperlink{namespaceELF_ae395c2f9c07cd3456b01fba55ad659f1a091547c6fec437967af97c3a05d30f03}{ELFOSABI\+\_\+\+AMDGPU\+\_\+\+HSA}} = 64
+ \}
+\item 
+enum \{ \mbox{\hyperlink{namespaceELF_aee643d5be42e224f97f7d784ef463aaeaa97705f4e12fb613b4b581c2772f9061}{ELFABIVERSION\+\_\+\+AMDGPU\+\_\+\+HSA\+\_\+\+V2}} = 0
+, \mbox{\hyperlink{namespaceELF_aee643d5be42e224f97f7d784ef463aaea4cb2df581eb1be3c9911371833d96989}{ELFABIVERSION\+\_\+\+AMDGPU\+\_\+\+HSA\+\_\+\+V3}} = 1
+, \mbox{\hyperlink{namespaceELF_aee643d5be42e224f97f7d784ef463aaea8ef710e7518792d152ee688741fd9457}{ELFABIVERSION\+\_\+\+AMDGPU\+\_\+\+HSA\+\_\+\+V4}} = 2
+, \mbox{\hyperlink{namespaceELF_aee643d5be42e224f97f7d784ef463aaea3ca250459947f0c82cb49077e0aa0d28}{ELFABIVERSION\+\_\+\+AMDGPU\+\_\+\+HSA\+\_\+\+V5}} = 3
+ \}
+\item 
+enum \+: unsigned \{ \newline
+\mbox{\hyperlink{namespaceELF_aeb894793aba0984e354a4789a84593c1a938bc227127afef34c5e7ce9a582c508}{EF\+\_\+\+AMDGPU\+\_\+\+MACH}} = 0x0ff
+, \mbox{\hyperlink{namespaceELF_aeb894793aba0984e354a4789a84593c1ac44b2cd6e0d2745955713e5384c59d67}{EF\+\_\+\+AMDGPU\+\_\+\+MACH\+\_\+\+NONE}} = 0x000
+, \mbox{\hyperlink{namespaceELF_aeb894793aba0984e354a4789a84593c1a88256a217191af92ed99af2bd43dee01}{EF\+\_\+\+AMDGPU\+\_\+\+MACH\+\_\+\+AMDGCN\+\_\+\+GFX600}} = 0x020
+, \mbox{\hyperlink{namespaceELF_aeb894793aba0984e354a4789a84593c1ac7e4242d5b17a61f785c173faf51b6c6}{EF\+\_\+\+AMDGPU\+\_\+\+MACH\+\_\+\+AMDGCN\+\_\+\+GFX601}} = 0x021
+, \newline
+\mbox{\hyperlink{namespaceELF_aeb894793aba0984e354a4789a84593c1a698dd70ee0480b22b312e440d0dace16}{EF\+\_\+\+AMDGPU\+\_\+\+MACH\+\_\+\+AMDGCN\+\_\+\+GFX700}} = 0x022
+, \mbox{\hyperlink{namespaceELF_aeb894793aba0984e354a4789a84593c1af495d1e6dd365c1591707f46dc9a2223}{EF\+\_\+\+AMDGPU\+\_\+\+MACH\+\_\+\+AMDGCN\+\_\+\+GFX701}} = 0x023
+, \mbox{\hyperlink{namespaceELF_aeb894793aba0984e354a4789a84593c1ad23f1486cbf165cbce0dd1de80a14a78}{EF\+\_\+\+AMDGPU\+\_\+\+MACH\+\_\+\+AMDGCN\+\_\+\+GFX702}} = 0x024
+, \mbox{\hyperlink{namespaceELF_aeb894793aba0984e354a4789a84593c1a1afb4b9c7f6526e35a6262d8438deb50}{EF\+\_\+\+AMDGPU\+\_\+\+MACH\+\_\+\+AMDGCN\+\_\+\+GFX703}} = 0x025
+, \newline
+\mbox{\hyperlink{namespaceELF_aeb894793aba0984e354a4789a84593c1aa2becf85a30cc0f918558902df1df917}{EF\+\_\+\+AMDGPU\+\_\+\+MACH\+\_\+\+AMDGCN\+\_\+\+GFX704}} = 0x026
+, \mbox{\hyperlink{namespaceELF_aeb894793aba0984e354a4789a84593c1abc95e5334a35a770b64b7ca55ad1216e}{EF\+\_\+\+AMDGPU\+\_\+\+MACH\+\_\+\+AMDGCN\+\_\+\+RESERVED\+\_\+0\+X27}} = 0x027
+, \mbox{\hyperlink{namespaceELF_aeb894793aba0984e354a4789a84593c1a2ada7f83364eddecdc3491710a5e7f91}{EF\+\_\+\+AMDGPU\+\_\+\+MACH\+\_\+\+AMDGCN\+\_\+\+GFX801}} = 0x028
+, \mbox{\hyperlink{namespaceELF_aeb894793aba0984e354a4789a84593c1a7da2845092841699a4795adcd15609bc}{EF\+\_\+\+AMDGPU\+\_\+\+MACH\+\_\+\+AMDGCN\+\_\+\+GFX802}} = 0x029
+, \newline
+\mbox{\hyperlink{namespaceELF_aeb894793aba0984e354a4789a84593c1a820673f644bdd641b9c1977276985760}{EF\+\_\+\+AMDGPU\+\_\+\+MACH\+\_\+\+AMDGCN\+\_\+\+GFX803}} = 0x02a
+, \mbox{\hyperlink{namespaceELF_aeb894793aba0984e354a4789a84593c1a97447fdf881e04b4d98f0f910b1cd864}{EF\+\_\+\+AMDGPU\+\_\+\+MACH\+\_\+\+AMDGCN\+\_\+\+GFX810}} = 0x02b
+, \mbox{\hyperlink{namespaceELF_aeb894793aba0984e354a4789a84593c1a16a5e0519ee0ff34b2bb9b148f8455a3}{EF\+\_\+\+AMDGPU\+\_\+\+MACH\+\_\+\+AMDGCN\+\_\+\+GFX900}} = 0x02c
+, \mbox{\hyperlink{namespaceELF_aeb894793aba0984e354a4789a84593c1ac4c7eaa1acde9491772cc0f9356af419}{EF\+\_\+\+AMDGPU\+\_\+\+MACH\+\_\+\+AMDGCN\+\_\+\+GFX902}} = 0x02d
+, \newline
+\mbox{\hyperlink{namespaceELF_aeb894793aba0984e354a4789a84593c1a8774238ea18ed5f14517c88b54f6bc7d}{EF\+\_\+\+AMDGPU\+\_\+\+MACH\+\_\+\+AMDGCN\+\_\+\+GFX904}} = 0x02e
+, \mbox{\hyperlink{namespaceELF_aeb894793aba0984e354a4789a84593c1af5a59adaadc26ca22cb2eee7938e50f7}{EF\+\_\+\+AMDGPU\+\_\+\+MACH\+\_\+\+AMDGCN\+\_\+\+GFX906}} = 0x02f
+, \mbox{\hyperlink{namespaceELF_aeb894793aba0984e354a4789a84593c1a1918c173d4ea7d9a0d196d229b7962d2}{EF\+\_\+\+AMDGPU\+\_\+\+MACH\+\_\+\+AMDGCN\+\_\+\+GFX908}} = 0x030
+, \mbox{\hyperlink{namespaceELF_aeb894793aba0984e354a4789a84593c1a2848a6de2d84330a4d1d0e8b53c5a1e3}{EF\+\_\+\+AMDGPU\+\_\+\+MACH\+\_\+\+AMDGCN\+\_\+\+GFX909}} = 0x031
+, \newline
+\mbox{\hyperlink{namespaceELF_aeb894793aba0984e354a4789a84593c1a446fe2ca100d9a47c5d2cda6de802769}{EF\+\_\+\+AMDGPU\+\_\+\+MACH\+\_\+\+AMDGCN\+\_\+\+GFX90C}} = 0x032
+, \mbox{\hyperlink{namespaceELF_aeb894793aba0984e354a4789a84593c1a7c6e67ee428b903f9a3622c85ab0a65a}{EF\+\_\+\+AMDGPU\+\_\+\+MACH\+\_\+\+AMDGCN\+\_\+\+GFX1010}} = 0x033
+, \mbox{\hyperlink{namespaceELF_aeb894793aba0984e354a4789a84593c1a9087bf5adea6b3879e84051f70122dad}{EF\+\_\+\+AMDGPU\+\_\+\+MACH\+\_\+\+AMDGCN\+\_\+\+GFX1011}} = 0x034
+, \mbox{\hyperlink{namespaceELF_aeb894793aba0984e354a4789a84593c1a360e2929a47f1f15d2429c5343222980}{EF\+\_\+\+AMDGPU\+\_\+\+MACH\+\_\+\+AMDGCN\+\_\+\+GFX1012}} = 0x035
+, \newline
+\mbox{\hyperlink{namespaceELF_aeb894793aba0984e354a4789a84593c1a05130238255b3640c39e8971345a0c5a}{EF\+\_\+\+AMDGPU\+\_\+\+MACH\+\_\+\+AMDGCN\+\_\+\+GFX1030}} = 0x036
+, \mbox{\hyperlink{namespaceELF_aeb894793aba0984e354a4789a84593c1acab961a20e78f369e196189ceb375a3a}{EF\+\_\+\+AMDGPU\+\_\+\+MACH\+\_\+\+AMDGCN\+\_\+\+GFX1031}} = 0x037
+, \mbox{\hyperlink{namespaceELF_aeb894793aba0984e354a4789a84593c1a13ed0e47f1f346374b4aed927c10cbb5}{EF\+\_\+\+AMDGPU\+\_\+\+MACH\+\_\+\+AMDGCN\+\_\+\+GFX1032}} = 0x038
+, \mbox{\hyperlink{namespaceELF_aeb894793aba0984e354a4789a84593c1a9f5e8c97ada479bab856820f15d0a410}{EF\+\_\+\+AMDGPU\+\_\+\+MACH\+\_\+\+AMDGCN\+\_\+\+GFX1033}} = 0x039
+, \newline
+\mbox{\hyperlink{namespaceELF_aeb894793aba0984e354a4789a84593c1a9ea90ec52574ecfeb436833a674b64f0}{EF\+\_\+\+AMDGPU\+\_\+\+MACH\+\_\+\+AMDGCN\+\_\+\+GFX602}} = 0x03a
+, \mbox{\hyperlink{namespaceELF_aeb894793aba0984e354a4789a84593c1ae5efc697012c68e638f90e5f2b08d4e4}{EF\+\_\+\+AMDGPU\+\_\+\+MACH\+\_\+\+AMDGCN\+\_\+\+GFX705}} = 0x03b
+, \mbox{\hyperlink{namespaceELF_aeb894793aba0984e354a4789a84593c1a0e951662458dd644cd2b5ee64e6b1d95}{EF\+\_\+\+AMDGPU\+\_\+\+MACH\+\_\+\+AMDGCN\+\_\+\+GFX805}} = 0x03c
+, \mbox{\hyperlink{namespaceELF_aeb894793aba0984e354a4789a84593c1aec32236d4536fe3b6f17835ddea26513}{EF\+\_\+\+AMDGPU\+\_\+\+MACH\+\_\+\+AMDGCN\+\_\+\+GFX1035}} = 0x03d
+, \newline
+\mbox{\hyperlink{namespaceELF_aeb894793aba0984e354a4789a84593c1ac083ff1f321798ba7f8dba32f35d103d}{EF\+\_\+\+AMDGPU\+\_\+\+MACH\+\_\+\+AMDGCN\+\_\+\+GFX1034}} = 0x03e
+, \mbox{\hyperlink{namespaceELF_aeb894793aba0984e354a4789a84593c1a5e8270aa2ce2bc66bfad2a59b7ab0f58}{EF\+\_\+\+AMDGPU\+\_\+\+MACH\+\_\+\+AMDGCN\+\_\+\+GFX90A}} = 0x03f
+, \mbox{\hyperlink{namespaceELF_aeb894793aba0984e354a4789a84593c1a9dc7aad10a2928d8edfe4ca4f5737487}{EF\+\_\+\+AMDGPU\+\_\+\+MACH\+\_\+\+AMDGCN\+\_\+\+RESERVED\+\_\+0\+X40}} = 0x040
+, \mbox{\hyperlink{namespaceELF_aeb894793aba0984e354a4789a84593c1aff940bc08ea23f968df040818f64ecd0}{EF\+\_\+\+AMDGPU\+\_\+\+MACH\+\_\+\+AMDGCN\+\_\+\+GFX1100}} = 0x041
+, \newline
+\mbox{\hyperlink{namespaceELF_aeb894793aba0984e354a4789a84593c1ab68cc1bc031c885831f5fc275379f7ad}{EF\+\_\+\+AMDGPU\+\_\+\+MACH\+\_\+\+AMDGCN\+\_\+\+GFX1013}} = 0x042
+, \mbox{\hyperlink{namespaceELF_aeb894793aba0984e354a4789a84593c1ab812c0c0aa85c1251a3807e24a9c5a5c}{EF\+\_\+\+AMDGPU\+\_\+\+MACH\+\_\+\+AMDGCN\+\_\+\+GFX1103}} = 0x044
+, \mbox{\hyperlink{namespaceELF_aeb894793aba0984e354a4789a84593c1ab83d81163c018537dc38a78ea2c96430}{EF\+\_\+\+AMDGPU\+\_\+\+MACH\+\_\+\+AMDGCN\+\_\+\+GFX1036}} = 0x045
+, \mbox{\hyperlink{namespaceELF_aeb894793aba0984e354a4789a84593c1af3b6b0073aa116d98612319af3c18176}{EF\+\_\+\+AMDGPU\+\_\+\+MACH\+\_\+\+AMDGCN\+\_\+\+GFX1101}} = 0x046
+, \newline
+\mbox{\hyperlink{namespaceELF_aeb894793aba0984e354a4789a84593c1a6247f9deaf4bd8a3b748cc44e6109675}{EF\+\_\+\+AMDGPU\+\_\+\+MACH\+\_\+\+AMDGCN\+\_\+\+GFX1102}} = 0x047
+, \mbox{\hyperlink{namespaceELF_aeb894793aba0984e354a4789a84593c1ade40460f8d97e7cfdad0514c1ab46368}{EF\+\_\+\+AMDGPU\+\_\+\+MACH\+\_\+\+AMDGCN\+\_\+\+FIRST}} = EF\+\_\+\+AMDGPU\+\_\+\+MACH\+\_\+\+AMDGCN\+\_\+\+GFX600
+, \mbox{\hyperlink{namespaceELF_aeb894793aba0984e354a4789a84593c1a18ff62e38d2471ccc2fb560629ab8e75}{EF\+\_\+\+AMDGPU\+\_\+\+MACH\+\_\+\+AMDGCN\+\_\+\+LAST}} = EF\+\_\+\+AMDGPU\+\_\+\+MACH\+\_\+\+AMDGCN\+\_\+\+GFX1102
+, \mbox{\hyperlink{namespaceELF_aeb894793aba0984e354a4789a84593c1a4803db894f5b01c480e6052ce93c82e5}{EF\+\_\+\+AMDGPU\+\_\+\+FEATURE\+\_\+\+XNACK\+\_\+\+V2}} = 0x01
+, \newline
+\mbox{\hyperlink{namespaceELF_aeb894793aba0984e354a4789a84593c1ac1725d80789c8bf2292284c57bc46b0e}{EF\+\_\+\+AMDGPU\+\_\+\+FEATURE\+\_\+\+TRAP\+\_\+\+HANDLER\+\_\+\+V2}} = 0x02
+, \mbox{\hyperlink{namespaceELF_aeb894793aba0984e354a4789a84593c1a1fcd17527f015607dd7bca415220d4a3}{EF\+\_\+\+AMDGPU\+\_\+\+FEATURE\+\_\+\+XNACK\+\_\+\+V3}} = 0x100
+, \mbox{\hyperlink{namespaceELF_aeb894793aba0984e354a4789a84593c1ac6e18f351a41b2e534d9a832bb8cc7fb}{EF\+\_\+\+AMDGPU\+\_\+\+FEATURE\+\_\+\+SRAMECC\+\_\+\+V3}} = 0x200
+, \mbox{\hyperlink{namespaceELF_aeb894793aba0984e354a4789a84593c1a582f97272f656273b66a365934c44c8e}{EF\+\_\+\+AMDGPU\+\_\+\+FEATURE\+\_\+\+XNACK\+\_\+\+V4}} = 0x300
+, \newline
+\mbox{\hyperlink{namespaceELF_aeb894793aba0984e354a4789a84593c1aeabd46867c03a4081d33faa5fb7ea446}{EF\+\_\+\+AMDGPU\+\_\+\+FEATURE\+\_\+\+XNACK\+\_\+\+UNSUPPORTED\+\_\+\+V4}} = 0x000
+, \mbox{\hyperlink{namespaceELF_aeb894793aba0984e354a4789a84593c1a225c42793376d7f87089a4bb4dfc4979}{EF\+\_\+\+AMDGPU\+\_\+\+FEATURE\+\_\+\+XNACK\+\_\+\+ANY\+\_\+\+V4}} = 0x100
+, \mbox{\hyperlink{namespaceELF_aeb894793aba0984e354a4789a84593c1a0aff611cefe1fdc9021a0a7c56097f48}{EF\+\_\+\+AMDGPU\+\_\+\+FEATURE\+\_\+\+XNACK\+\_\+\+OFF\+\_\+\+V4}} = 0x200
+, \mbox{\hyperlink{namespaceELF_aeb894793aba0984e354a4789a84593c1a831b9aa1c084abcce187b86e4364f9fe}{EF\+\_\+\+AMDGPU\+\_\+\+FEATURE\+\_\+\+XNACK\+\_\+\+ON\+\_\+\+V4}} = 0x300
+, \newline
+\mbox{\hyperlink{namespaceELF_aeb894793aba0984e354a4789a84593c1a58eb5afe0562dd7e800746fd1885a756}{EF\+\_\+\+AMDGPU\+\_\+\+FEATURE\+\_\+\+SRAMECC\+\_\+\+V4}} = 0xc00
+, \mbox{\hyperlink{namespaceELF_aeb894793aba0984e354a4789a84593c1a3d676e3f1e24801432861ed2bd18710f}{EF\+\_\+\+AMDGPU\+\_\+\+FEATURE\+\_\+\+SRAMECC\+\_\+\+UNSUPPORTED\+\_\+\+V4}} = 0x000
+, \mbox{\hyperlink{namespaceELF_aeb894793aba0984e354a4789a84593c1a80e23c8523b619030f138e1f1159f68d}{EF\+\_\+\+AMDGPU\+\_\+\+FEATURE\+\_\+\+SRAMECC\+\_\+\+ANY\+\_\+\+V4}} = 0x400
+, \mbox{\hyperlink{namespaceELF_aeb894793aba0984e354a4789a84593c1ae3789a70d0231f331d9d0bdd2880cae4}{EF\+\_\+\+AMDGPU\+\_\+\+FEATURE\+\_\+\+SRAMECC\+\_\+\+OFF\+\_\+\+V4}} = 0x800
+, \newline
+\mbox{\hyperlink{namespaceELF_aeb894793aba0984e354a4789a84593c1a3679cc8c3c5e8e49408385daaa51a0c4}{EF\+\_\+\+AMDGPU\+\_\+\+FEATURE\+\_\+\+SRAMECC\+\_\+\+ON\+\_\+\+V4}} = 0xc00
+ \}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Enumeration Type Documentation}
+\mbox{\Hypertarget{namespaceELF_ad6f7df35e679e12be27a61a23c43cb55}\label{namespaceELF_ad6f7df35e679e12be27a61a23c43cb55}} 
+\doxysubsubsection{\texorpdfstring{anonymous enum}{anonymous enum}}
+{\footnotesize\ttfamily anonymous enum}
+
+\begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{EM\_AMDGPU@{EM\_AMDGPU}!ELF@{ELF}}\index{ELF@{ELF}!EM\_AMDGPU@{EM\_AMDGPU}}}\mbox{\Hypertarget{namespaceELF_ad6f7df35e679e12be27a61a23c43cb55aec06c09fd8aeb53a838f6c7ae636ae2a}\label{namespaceELF_ad6f7df35e679e12be27a61a23c43cb55aec06c09fd8aeb53a838f6c7ae636ae2a}} 
+EM\+\_\+\+AMDGPU&\\
+\hline
+
+\end{DoxyEnumFields}
+\mbox{\Hypertarget{namespaceELF_ae395c2f9c07cd3456b01fba55ad659f1}\label{namespaceELF_ae395c2f9c07cd3456b01fba55ad659f1}} 
+\doxysubsubsection{\texorpdfstring{anonymous enum}{anonymous enum}}
+{\footnotesize\ttfamily anonymous enum}
+
+\begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{ELFOSABI\_AMDGPU\_HSA@{ELFOSABI\_AMDGPU\_HSA}!ELF@{ELF}}\index{ELF@{ELF}!ELFOSABI\_AMDGPU\_HSA@{ELFOSABI\_AMDGPU\_HSA}}}\mbox{\Hypertarget{namespaceELF_ae395c2f9c07cd3456b01fba55ad659f1a091547c6fec437967af97c3a05d30f03}\label{namespaceELF_ae395c2f9c07cd3456b01fba55ad659f1a091547c6fec437967af97c3a05d30f03}} 
+ELFOSABI\+\_\+\+AMDGPU\+\_\+\+HSA&\\
+\hline
+
+\end{DoxyEnumFields}
+\mbox{\Hypertarget{namespaceELF_aee643d5be42e224f97f7d784ef463aae}\label{namespaceELF_aee643d5be42e224f97f7d784ef463aae}} 
+\doxysubsubsection{\texorpdfstring{anonymous enum}{anonymous enum}}
+{\footnotesize\ttfamily anonymous enum}
+
+\begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{ELFABIVERSION\_AMDGPU\_HSA\_V2@{ELFABIVERSION\_AMDGPU\_HSA\_V2}!ELF@{ELF}}\index{ELF@{ELF}!ELFABIVERSION\_AMDGPU\_HSA\_V2@{ELFABIVERSION\_AMDGPU\_HSA\_V2}}}\mbox{\Hypertarget{namespaceELF_aee643d5be42e224f97f7d784ef463aaeaa97705f4e12fb613b4b581c2772f9061}\label{namespaceELF_aee643d5be42e224f97f7d784ef463aaeaa97705f4e12fb613b4b581c2772f9061}} 
+ELFABIVERSION\+\_\+\+AMDGPU\+\_\+\+HSA\+\_\+\+V2&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{ELFABIVERSION\_AMDGPU\_HSA\_V3@{ELFABIVERSION\_AMDGPU\_HSA\_V3}!ELF@{ELF}}\index{ELF@{ELF}!ELFABIVERSION\_AMDGPU\_HSA\_V3@{ELFABIVERSION\_AMDGPU\_HSA\_V3}}}\mbox{\Hypertarget{namespaceELF_aee643d5be42e224f97f7d784ef463aaea4cb2df581eb1be3c9911371833d96989}\label{namespaceELF_aee643d5be42e224f97f7d784ef463aaea4cb2df581eb1be3c9911371833d96989}} 
+ELFABIVERSION\+\_\+\+AMDGPU\+\_\+\+HSA\+\_\+\+V3&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{ELFABIVERSION\_AMDGPU\_HSA\_V4@{ELFABIVERSION\_AMDGPU\_HSA\_V4}!ELF@{ELF}}\index{ELF@{ELF}!ELFABIVERSION\_AMDGPU\_HSA\_V4@{ELFABIVERSION\_AMDGPU\_HSA\_V4}}}\mbox{\Hypertarget{namespaceELF_aee643d5be42e224f97f7d784ef463aaea8ef710e7518792d152ee688741fd9457}\label{namespaceELF_aee643d5be42e224f97f7d784ef463aaea8ef710e7518792d152ee688741fd9457}} 
+ELFABIVERSION\+\_\+\+AMDGPU\+\_\+\+HSA\+\_\+\+V4&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{ELFABIVERSION\_AMDGPU\_HSA\_V5@{ELFABIVERSION\_AMDGPU\_HSA\_V5}!ELF@{ELF}}\index{ELF@{ELF}!ELFABIVERSION\_AMDGPU\_HSA\_V5@{ELFABIVERSION\_AMDGPU\_HSA\_V5}}}\mbox{\Hypertarget{namespaceELF_aee643d5be42e224f97f7d784ef463aaea3ca250459947f0c82cb49077e0aa0d28}\label{namespaceELF_aee643d5be42e224f97f7d784ef463aaea3ca250459947f0c82cb49077e0aa0d28}} 
+ELFABIVERSION\+\_\+\+AMDGPU\+\_\+\+HSA\+\_\+\+V5&\\
+\hline
+
+\end{DoxyEnumFields}
+\mbox{\Hypertarget{namespaceELF_aeb894793aba0984e354a4789a84593c1}\label{namespaceELF_aeb894793aba0984e354a4789a84593c1}} 
+\doxysubsubsection{\texorpdfstring{anonymous enum}{anonymous enum}}
+{\footnotesize\ttfamily anonymous enum \+: unsigned}
+
+\begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{EF\_AMDGPU\_MACH@{EF\_AMDGPU\_MACH}!ELF@{ELF}}\index{ELF@{ELF}!EF\_AMDGPU\_MACH@{EF\_AMDGPU\_MACH}}}\mbox{\Hypertarget{namespaceELF_aeb894793aba0984e354a4789a84593c1a938bc227127afef34c5e7ce9a582c508}\label{namespaceELF_aeb894793aba0984e354a4789a84593c1a938bc227127afef34c5e7ce9a582c508}} 
+EF\+\_\+\+AMDGPU\+\_\+\+MACH&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{EF\_AMDGPU\_MACH\_NONE@{EF\_AMDGPU\_MACH\_NONE}!ELF@{ELF}}\index{ELF@{ELF}!EF\_AMDGPU\_MACH\_NONE@{EF\_AMDGPU\_MACH\_NONE}}}\mbox{\Hypertarget{namespaceELF_aeb894793aba0984e354a4789a84593c1ac44b2cd6e0d2745955713e5384c59d67}\label{namespaceELF_aeb894793aba0984e354a4789a84593c1ac44b2cd6e0d2745955713e5384c59d67}} 
+EF\+\_\+\+AMDGPU\+\_\+\+MACH\+\_\+\+NONE&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{EF\_AMDGPU\_MACH\_AMDGCN\_GFX600@{EF\_AMDGPU\_MACH\_AMDGCN\_GFX600}!ELF@{ELF}}\index{ELF@{ELF}!EF\_AMDGPU\_MACH\_AMDGCN\_GFX600@{EF\_AMDGPU\_MACH\_AMDGCN\_GFX600}}}\mbox{\Hypertarget{namespaceELF_aeb894793aba0984e354a4789a84593c1a88256a217191af92ed99af2bd43dee01}\label{namespaceELF_aeb894793aba0984e354a4789a84593c1a88256a217191af92ed99af2bd43dee01}} 
+EF\+\_\+\+AMDGPU\+\_\+\+MACH\+\_\+\+AMDGCN\+\_\+\+GFX600&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{EF\_AMDGPU\_MACH\_AMDGCN\_GFX601@{EF\_AMDGPU\_MACH\_AMDGCN\_GFX601}!ELF@{ELF}}\index{ELF@{ELF}!EF\_AMDGPU\_MACH\_AMDGCN\_GFX601@{EF\_AMDGPU\_MACH\_AMDGCN\_GFX601}}}\mbox{\Hypertarget{namespaceELF_aeb894793aba0984e354a4789a84593c1ac7e4242d5b17a61f785c173faf51b6c6}\label{namespaceELF_aeb894793aba0984e354a4789a84593c1ac7e4242d5b17a61f785c173faf51b6c6}} 
+EF\+\_\+\+AMDGPU\+\_\+\+MACH\+\_\+\+AMDGCN\+\_\+\+GFX601&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{EF\_AMDGPU\_MACH\_AMDGCN\_GFX700@{EF\_AMDGPU\_MACH\_AMDGCN\_GFX700}!ELF@{ELF}}\index{ELF@{ELF}!EF\_AMDGPU\_MACH\_AMDGCN\_GFX700@{EF\_AMDGPU\_MACH\_AMDGCN\_GFX700}}}\mbox{\Hypertarget{namespaceELF_aeb894793aba0984e354a4789a84593c1a698dd70ee0480b22b312e440d0dace16}\label{namespaceELF_aeb894793aba0984e354a4789a84593c1a698dd70ee0480b22b312e440d0dace16}} 
+EF\+\_\+\+AMDGPU\+\_\+\+MACH\+\_\+\+AMDGCN\+\_\+\+GFX700&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{EF\_AMDGPU\_MACH\_AMDGCN\_GFX701@{EF\_AMDGPU\_MACH\_AMDGCN\_GFX701}!ELF@{ELF}}\index{ELF@{ELF}!EF\_AMDGPU\_MACH\_AMDGCN\_GFX701@{EF\_AMDGPU\_MACH\_AMDGCN\_GFX701}}}\mbox{\Hypertarget{namespaceELF_aeb894793aba0984e354a4789a84593c1af495d1e6dd365c1591707f46dc9a2223}\label{namespaceELF_aeb894793aba0984e354a4789a84593c1af495d1e6dd365c1591707f46dc9a2223}} 
+EF\+\_\+\+AMDGPU\+\_\+\+MACH\+\_\+\+AMDGCN\+\_\+\+GFX701&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{EF\_AMDGPU\_MACH\_AMDGCN\_GFX702@{EF\_AMDGPU\_MACH\_AMDGCN\_GFX702}!ELF@{ELF}}\index{ELF@{ELF}!EF\_AMDGPU\_MACH\_AMDGCN\_GFX702@{EF\_AMDGPU\_MACH\_AMDGCN\_GFX702}}}\mbox{\Hypertarget{namespaceELF_aeb894793aba0984e354a4789a84593c1ad23f1486cbf165cbce0dd1de80a14a78}\label{namespaceELF_aeb894793aba0984e354a4789a84593c1ad23f1486cbf165cbce0dd1de80a14a78}} 
+EF\+\_\+\+AMDGPU\+\_\+\+MACH\+\_\+\+AMDGCN\+\_\+\+GFX702&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{EF\_AMDGPU\_MACH\_AMDGCN\_GFX703@{EF\_AMDGPU\_MACH\_AMDGCN\_GFX703}!ELF@{ELF}}\index{ELF@{ELF}!EF\_AMDGPU\_MACH\_AMDGCN\_GFX703@{EF\_AMDGPU\_MACH\_AMDGCN\_GFX703}}}\mbox{\Hypertarget{namespaceELF_aeb894793aba0984e354a4789a84593c1a1afb4b9c7f6526e35a6262d8438deb50}\label{namespaceELF_aeb894793aba0984e354a4789a84593c1a1afb4b9c7f6526e35a6262d8438deb50}} 
+EF\+\_\+\+AMDGPU\+\_\+\+MACH\+\_\+\+AMDGCN\+\_\+\+GFX703&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{EF\_AMDGPU\_MACH\_AMDGCN\_GFX704@{EF\_AMDGPU\_MACH\_AMDGCN\_GFX704}!ELF@{ELF}}\index{ELF@{ELF}!EF\_AMDGPU\_MACH\_AMDGCN\_GFX704@{EF\_AMDGPU\_MACH\_AMDGCN\_GFX704}}}\mbox{\Hypertarget{namespaceELF_aeb894793aba0984e354a4789a84593c1aa2becf85a30cc0f918558902df1df917}\label{namespaceELF_aeb894793aba0984e354a4789a84593c1aa2becf85a30cc0f918558902df1df917}} 
+EF\+\_\+\+AMDGPU\+\_\+\+MACH\+\_\+\+AMDGCN\+\_\+\+GFX704&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{EF\_AMDGPU\_MACH\_AMDGCN\_RESERVED\_0X27@{EF\_AMDGPU\_MACH\_AMDGCN\_RESERVED\_0X27}!ELF@{ELF}}\index{ELF@{ELF}!EF\_AMDGPU\_MACH\_AMDGCN\_RESERVED\_0X27@{EF\_AMDGPU\_MACH\_AMDGCN\_RESERVED\_0X27}}}\mbox{\Hypertarget{namespaceELF_aeb894793aba0984e354a4789a84593c1abc95e5334a35a770b64b7ca55ad1216e}\label{namespaceELF_aeb894793aba0984e354a4789a84593c1abc95e5334a35a770b64b7ca55ad1216e}} 
+EF\+\_\+\+AMDGPU\+\_\+\+MACH\+\_\+\+AMDGCN\+\_\+\+RESERVED\+\_\+0\+X27&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{EF\_AMDGPU\_MACH\_AMDGCN\_GFX801@{EF\_AMDGPU\_MACH\_AMDGCN\_GFX801}!ELF@{ELF}}\index{ELF@{ELF}!EF\_AMDGPU\_MACH\_AMDGCN\_GFX801@{EF\_AMDGPU\_MACH\_AMDGCN\_GFX801}}}\mbox{\Hypertarget{namespaceELF_aeb894793aba0984e354a4789a84593c1a2ada7f83364eddecdc3491710a5e7f91}\label{namespaceELF_aeb894793aba0984e354a4789a84593c1a2ada7f83364eddecdc3491710a5e7f91}} 
+EF\+\_\+\+AMDGPU\+\_\+\+MACH\+\_\+\+AMDGCN\+\_\+\+GFX801&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{EF\_AMDGPU\_MACH\_AMDGCN\_GFX802@{EF\_AMDGPU\_MACH\_AMDGCN\_GFX802}!ELF@{ELF}}\index{ELF@{ELF}!EF\_AMDGPU\_MACH\_AMDGCN\_GFX802@{EF\_AMDGPU\_MACH\_AMDGCN\_GFX802}}}\mbox{\Hypertarget{namespaceELF_aeb894793aba0984e354a4789a84593c1a7da2845092841699a4795adcd15609bc}\label{namespaceELF_aeb894793aba0984e354a4789a84593c1a7da2845092841699a4795adcd15609bc}} 
+EF\+\_\+\+AMDGPU\+\_\+\+MACH\+\_\+\+AMDGCN\+\_\+\+GFX802&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{EF\_AMDGPU\_MACH\_AMDGCN\_GFX803@{EF\_AMDGPU\_MACH\_AMDGCN\_GFX803}!ELF@{ELF}}\index{ELF@{ELF}!EF\_AMDGPU\_MACH\_AMDGCN\_GFX803@{EF\_AMDGPU\_MACH\_AMDGCN\_GFX803}}}\mbox{\Hypertarget{namespaceELF_aeb894793aba0984e354a4789a84593c1a820673f644bdd641b9c1977276985760}\label{namespaceELF_aeb894793aba0984e354a4789a84593c1a820673f644bdd641b9c1977276985760}} 
+EF\+\_\+\+AMDGPU\+\_\+\+MACH\+\_\+\+AMDGCN\+\_\+\+GFX803&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{EF\_AMDGPU\_MACH\_AMDGCN\_GFX810@{EF\_AMDGPU\_MACH\_AMDGCN\_GFX810}!ELF@{ELF}}\index{ELF@{ELF}!EF\_AMDGPU\_MACH\_AMDGCN\_GFX810@{EF\_AMDGPU\_MACH\_AMDGCN\_GFX810}}}\mbox{\Hypertarget{namespaceELF_aeb894793aba0984e354a4789a84593c1a97447fdf881e04b4d98f0f910b1cd864}\label{namespaceELF_aeb894793aba0984e354a4789a84593c1a97447fdf881e04b4d98f0f910b1cd864}} 
+EF\+\_\+\+AMDGPU\+\_\+\+MACH\+\_\+\+AMDGCN\+\_\+\+GFX810&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{EF\_AMDGPU\_MACH\_AMDGCN\_GFX900@{EF\_AMDGPU\_MACH\_AMDGCN\_GFX900}!ELF@{ELF}}\index{ELF@{ELF}!EF\_AMDGPU\_MACH\_AMDGCN\_GFX900@{EF\_AMDGPU\_MACH\_AMDGCN\_GFX900}}}\mbox{\Hypertarget{namespaceELF_aeb894793aba0984e354a4789a84593c1a16a5e0519ee0ff34b2bb9b148f8455a3}\label{namespaceELF_aeb894793aba0984e354a4789a84593c1a16a5e0519ee0ff34b2bb9b148f8455a3}} 
+EF\+\_\+\+AMDGPU\+\_\+\+MACH\+\_\+\+AMDGCN\+\_\+\+GFX900&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{EF\_AMDGPU\_MACH\_AMDGCN\_GFX902@{EF\_AMDGPU\_MACH\_AMDGCN\_GFX902}!ELF@{ELF}}\index{ELF@{ELF}!EF\_AMDGPU\_MACH\_AMDGCN\_GFX902@{EF\_AMDGPU\_MACH\_AMDGCN\_GFX902}}}\mbox{\Hypertarget{namespaceELF_aeb894793aba0984e354a4789a84593c1ac4c7eaa1acde9491772cc0f9356af419}\label{namespaceELF_aeb894793aba0984e354a4789a84593c1ac4c7eaa1acde9491772cc0f9356af419}} 
+EF\+\_\+\+AMDGPU\+\_\+\+MACH\+\_\+\+AMDGCN\+\_\+\+GFX902&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{EF\_AMDGPU\_MACH\_AMDGCN\_GFX904@{EF\_AMDGPU\_MACH\_AMDGCN\_GFX904}!ELF@{ELF}}\index{ELF@{ELF}!EF\_AMDGPU\_MACH\_AMDGCN\_GFX904@{EF\_AMDGPU\_MACH\_AMDGCN\_GFX904}}}\mbox{\Hypertarget{namespaceELF_aeb894793aba0984e354a4789a84593c1a8774238ea18ed5f14517c88b54f6bc7d}\label{namespaceELF_aeb894793aba0984e354a4789a84593c1a8774238ea18ed5f14517c88b54f6bc7d}} 
+EF\+\_\+\+AMDGPU\+\_\+\+MACH\+\_\+\+AMDGCN\+\_\+\+GFX904&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{EF\_AMDGPU\_MACH\_AMDGCN\_GFX906@{EF\_AMDGPU\_MACH\_AMDGCN\_GFX906}!ELF@{ELF}}\index{ELF@{ELF}!EF\_AMDGPU\_MACH\_AMDGCN\_GFX906@{EF\_AMDGPU\_MACH\_AMDGCN\_GFX906}}}\mbox{\Hypertarget{namespaceELF_aeb894793aba0984e354a4789a84593c1af5a59adaadc26ca22cb2eee7938e50f7}\label{namespaceELF_aeb894793aba0984e354a4789a84593c1af5a59adaadc26ca22cb2eee7938e50f7}} 
+EF\+\_\+\+AMDGPU\+\_\+\+MACH\+\_\+\+AMDGCN\+\_\+\+GFX906&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{EF\_AMDGPU\_MACH\_AMDGCN\_GFX908@{EF\_AMDGPU\_MACH\_AMDGCN\_GFX908}!ELF@{ELF}}\index{ELF@{ELF}!EF\_AMDGPU\_MACH\_AMDGCN\_GFX908@{EF\_AMDGPU\_MACH\_AMDGCN\_GFX908}}}\mbox{\Hypertarget{namespaceELF_aeb894793aba0984e354a4789a84593c1a1918c173d4ea7d9a0d196d229b7962d2}\label{namespaceELF_aeb894793aba0984e354a4789a84593c1a1918c173d4ea7d9a0d196d229b7962d2}} 
+EF\+\_\+\+AMDGPU\+\_\+\+MACH\+\_\+\+AMDGCN\+\_\+\+GFX908&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{EF\_AMDGPU\_MACH\_AMDGCN\_GFX909@{EF\_AMDGPU\_MACH\_AMDGCN\_GFX909}!ELF@{ELF}}\index{ELF@{ELF}!EF\_AMDGPU\_MACH\_AMDGCN\_GFX909@{EF\_AMDGPU\_MACH\_AMDGCN\_GFX909}}}\mbox{\Hypertarget{namespaceELF_aeb894793aba0984e354a4789a84593c1a2848a6de2d84330a4d1d0e8b53c5a1e3}\label{namespaceELF_aeb894793aba0984e354a4789a84593c1a2848a6de2d84330a4d1d0e8b53c5a1e3}} 
+EF\+\_\+\+AMDGPU\+\_\+\+MACH\+\_\+\+AMDGCN\+\_\+\+GFX909&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{EF\_AMDGPU\_MACH\_AMDGCN\_GFX90C@{EF\_AMDGPU\_MACH\_AMDGCN\_GFX90C}!ELF@{ELF}}\index{ELF@{ELF}!EF\_AMDGPU\_MACH\_AMDGCN\_GFX90C@{EF\_AMDGPU\_MACH\_AMDGCN\_GFX90C}}}\mbox{\Hypertarget{namespaceELF_aeb894793aba0984e354a4789a84593c1a446fe2ca100d9a47c5d2cda6de802769}\label{namespaceELF_aeb894793aba0984e354a4789a84593c1a446fe2ca100d9a47c5d2cda6de802769}} 
+EF\+\_\+\+AMDGPU\+\_\+\+MACH\+\_\+\+AMDGCN\+\_\+\+GFX90C&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{EF\_AMDGPU\_MACH\_AMDGCN\_GFX1010@{EF\_AMDGPU\_MACH\_AMDGCN\_GFX1010}!ELF@{ELF}}\index{ELF@{ELF}!EF\_AMDGPU\_MACH\_AMDGCN\_GFX1010@{EF\_AMDGPU\_MACH\_AMDGCN\_GFX1010}}}\mbox{\Hypertarget{namespaceELF_aeb894793aba0984e354a4789a84593c1a7c6e67ee428b903f9a3622c85ab0a65a}\label{namespaceELF_aeb894793aba0984e354a4789a84593c1a7c6e67ee428b903f9a3622c85ab0a65a}} 
+EF\+\_\+\+AMDGPU\+\_\+\+MACH\+\_\+\+AMDGCN\+\_\+\+GFX1010&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{EF\_AMDGPU\_MACH\_AMDGCN\_GFX1011@{EF\_AMDGPU\_MACH\_AMDGCN\_GFX1011}!ELF@{ELF}}\index{ELF@{ELF}!EF\_AMDGPU\_MACH\_AMDGCN\_GFX1011@{EF\_AMDGPU\_MACH\_AMDGCN\_GFX1011}}}\mbox{\Hypertarget{namespaceELF_aeb894793aba0984e354a4789a84593c1a9087bf5adea6b3879e84051f70122dad}\label{namespaceELF_aeb894793aba0984e354a4789a84593c1a9087bf5adea6b3879e84051f70122dad}} 
+EF\+\_\+\+AMDGPU\+\_\+\+MACH\+\_\+\+AMDGCN\+\_\+\+GFX1011&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{EF\_AMDGPU\_MACH\_AMDGCN\_GFX1012@{EF\_AMDGPU\_MACH\_AMDGCN\_GFX1012}!ELF@{ELF}}\index{ELF@{ELF}!EF\_AMDGPU\_MACH\_AMDGCN\_GFX1012@{EF\_AMDGPU\_MACH\_AMDGCN\_GFX1012}}}\mbox{\Hypertarget{namespaceELF_aeb894793aba0984e354a4789a84593c1a360e2929a47f1f15d2429c5343222980}\label{namespaceELF_aeb894793aba0984e354a4789a84593c1a360e2929a47f1f15d2429c5343222980}} 
+EF\+\_\+\+AMDGPU\+\_\+\+MACH\+\_\+\+AMDGCN\+\_\+\+GFX1012&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{EF\_AMDGPU\_MACH\_AMDGCN\_GFX1030@{EF\_AMDGPU\_MACH\_AMDGCN\_GFX1030}!ELF@{ELF}}\index{ELF@{ELF}!EF\_AMDGPU\_MACH\_AMDGCN\_GFX1030@{EF\_AMDGPU\_MACH\_AMDGCN\_GFX1030}}}\mbox{\Hypertarget{namespaceELF_aeb894793aba0984e354a4789a84593c1a05130238255b3640c39e8971345a0c5a}\label{namespaceELF_aeb894793aba0984e354a4789a84593c1a05130238255b3640c39e8971345a0c5a}} 
+EF\+\_\+\+AMDGPU\+\_\+\+MACH\+\_\+\+AMDGCN\+\_\+\+GFX1030&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{EF\_AMDGPU\_MACH\_AMDGCN\_GFX1031@{EF\_AMDGPU\_MACH\_AMDGCN\_GFX1031}!ELF@{ELF}}\index{ELF@{ELF}!EF\_AMDGPU\_MACH\_AMDGCN\_GFX1031@{EF\_AMDGPU\_MACH\_AMDGCN\_GFX1031}}}\mbox{\Hypertarget{namespaceELF_aeb894793aba0984e354a4789a84593c1acab961a20e78f369e196189ceb375a3a}\label{namespaceELF_aeb894793aba0984e354a4789a84593c1acab961a20e78f369e196189ceb375a3a}} 
+EF\+\_\+\+AMDGPU\+\_\+\+MACH\+\_\+\+AMDGCN\+\_\+\+GFX1031&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{EF\_AMDGPU\_MACH\_AMDGCN\_GFX1032@{EF\_AMDGPU\_MACH\_AMDGCN\_GFX1032}!ELF@{ELF}}\index{ELF@{ELF}!EF\_AMDGPU\_MACH\_AMDGCN\_GFX1032@{EF\_AMDGPU\_MACH\_AMDGCN\_GFX1032}}}\mbox{\Hypertarget{namespaceELF_aeb894793aba0984e354a4789a84593c1a13ed0e47f1f346374b4aed927c10cbb5}\label{namespaceELF_aeb894793aba0984e354a4789a84593c1a13ed0e47f1f346374b4aed927c10cbb5}} 
+EF\+\_\+\+AMDGPU\+\_\+\+MACH\+\_\+\+AMDGCN\+\_\+\+GFX1032&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{EF\_AMDGPU\_MACH\_AMDGCN\_GFX1033@{EF\_AMDGPU\_MACH\_AMDGCN\_GFX1033}!ELF@{ELF}}\index{ELF@{ELF}!EF\_AMDGPU\_MACH\_AMDGCN\_GFX1033@{EF\_AMDGPU\_MACH\_AMDGCN\_GFX1033}}}\mbox{\Hypertarget{namespaceELF_aeb894793aba0984e354a4789a84593c1a9f5e8c97ada479bab856820f15d0a410}\label{namespaceELF_aeb894793aba0984e354a4789a84593c1a9f5e8c97ada479bab856820f15d0a410}} 
+EF\+\_\+\+AMDGPU\+\_\+\+MACH\+\_\+\+AMDGCN\+\_\+\+GFX1033&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{EF\_AMDGPU\_MACH\_AMDGCN\_GFX602@{EF\_AMDGPU\_MACH\_AMDGCN\_GFX602}!ELF@{ELF}}\index{ELF@{ELF}!EF\_AMDGPU\_MACH\_AMDGCN\_GFX602@{EF\_AMDGPU\_MACH\_AMDGCN\_GFX602}}}\mbox{\Hypertarget{namespaceELF_aeb894793aba0984e354a4789a84593c1a9ea90ec52574ecfeb436833a674b64f0}\label{namespaceELF_aeb894793aba0984e354a4789a84593c1a9ea90ec52574ecfeb436833a674b64f0}} 
+EF\+\_\+\+AMDGPU\+\_\+\+MACH\+\_\+\+AMDGCN\+\_\+\+GFX602&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{EF\_AMDGPU\_MACH\_AMDGCN\_GFX705@{EF\_AMDGPU\_MACH\_AMDGCN\_GFX705}!ELF@{ELF}}\index{ELF@{ELF}!EF\_AMDGPU\_MACH\_AMDGCN\_GFX705@{EF\_AMDGPU\_MACH\_AMDGCN\_GFX705}}}\mbox{\Hypertarget{namespaceELF_aeb894793aba0984e354a4789a84593c1ae5efc697012c68e638f90e5f2b08d4e4}\label{namespaceELF_aeb894793aba0984e354a4789a84593c1ae5efc697012c68e638f90e5f2b08d4e4}} 
+EF\+\_\+\+AMDGPU\+\_\+\+MACH\+\_\+\+AMDGCN\+\_\+\+GFX705&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{EF\_AMDGPU\_MACH\_AMDGCN\_GFX805@{EF\_AMDGPU\_MACH\_AMDGCN\_GFX805}!ELF@{ELF}}\index{ELF@{ELF}!EF\_AMDGPU\_MACH\_AMDGCN\_GFX805@{EF\_AMDGPU\_MACH\_AMDGCN\_GFX805}}}\mbox{\Hypertarget{namespaceELF_aeb894793aba0984e354a4789a84593c1a0e951662458dd644cd2b5ee64e6b1d95}\label{namespaceELF_aeb894793aba0984e354a4789a84593c1a0e951662458dd644cd2b5ee64e6b1d95}} 
+EF\+\_\+\+AMDGPU\+\_\+\+MACH\+\_\+\+AMDGCN\+\_\+\+GFX805&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{EF\_AMDGPU\_MACH\_AMDGCN\_GFX1035@{EF\_AMDGPU\_MACH\_AMDGCN\_GFX1035}!ELF@{ELF}}\index{ELF@{ELF}!EF\_AMDGPU\_MACH\_AMDGCN\_GFX1035@{EF\_AMDGPU\_MACH\_AMDGCN\_GFX1035}}}\mbox{\Hypertarget{namespaceELF_aeb894793aba0984e354a4789a84593c1aec32236d4536fe3b6f17835ddea26513}\label{namespaceELF_aeb894793aba0984e354a4789a84593c1aec32236d4536fe3b6f17835ddea26513}} 
+EF\+\_\+\+AMDGPU\+\_\+\+MACH\+\_\+\+AMDGCN\+\_\+\+GFX1035&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{EF\_AMDGPU\_MACH\_AMDGCN\_GFX1034@{EF\_AMDGPU\_MACH\_AMDGCN\_GFX1034}!ELF@{ELF}}\index{ELF@{ELF}!EF\_AMDGPU\_MACH\_AMDGCN\_GFX1034@{EF\_AMDGPU\_MACH\_AMDGCN\_GFX1034}}}\mbox{\Hypertarget{namespaceELF_aeb894793aba0984e354a4789a84593c1ac083ff1f321798ba7f8dba32f35d103d}\label{namespaceELF_aeb894793aba0984e354a4789a84593c1ac083ff1f321798ba7f8dba32f35d103d}} 
+EF\+\_\+\+AMDGPU\+\_\+\+MACH\+\_\+\+AMDGCN\+\_\+\+GFX1034&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{EF\_AMDGPU\_MACH\_AMDGCN\_GFX90A@{EF\_AMDGPU\_MACH\_AMDGCN\_GFX90A}!ELF@{ELF}}\index{ELF@{ELF}!EF\_AMDGPU\_MACH\_AMDGCN\_GFX90A@{EF\_AMDGPU\_MACH\_AMDGCN\_GFX90A}}}\mbox{\Hypertarget{namespaceELF_aeb894793aba0984e354a4789a84593c1a5e8270aa2ce2bc66bfad2a59b7ab0f58}\label{namespaceELF_aeb894793aba0984e354a4789a84593c1a5e8270aa2ce2bc66bfad2a59b7ab0f58}} 
+EF\+\_\+\+AMDGPU\+\_\+\+MACH\+\_\+\+AMDGCN\+\_\+\+GFX90A&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{EF\_AMDGPU\_MACH\_AMDGCN\_RESERVED\_0X40@{EF\_AMDGPU\_MACH\_AMDGCN\_RESERVED\_0X40}!ELF@{ELF}}\index{ELF@{ELF}!EF\_AMDGPU\_MACH\_AMDGCN\_RESERVED\_0X40@{EF\_AMDGPU\_MACH\_AMDGCN\_RESERVED\_0X40}}}\mbox{\Hypertarget{namespaceELF_aeb894793aba0984e354a4789a84593c1a9dc7aad10a2928d8edfe4ca4f5737487}\label{namespaceELF_aeb894793aba0984e354a4789a84593c1a9dc7aad10a2928d8edfe4ca4f5737487}} 
+EF\+\_\+\+AMDGPU\+\_\+\+MACH\+\_\+\+AMDGCN\+\_\+\+RESERVED\+\_\+0\+X40&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{EF\_AMDGPU\_MACH\_AMDGCN\_GFX1100@{EF\_AMDGPU\_MACH\_AMDGCN\_GFX1100}!ELF@{ELF}}\index{ELF@{ELF}!EF\_AMDGPU\_MACH\_AMDGCN\_GFX1100@{EF\_AMDGPU\_MACH\_AMDGCN\_GFX1100}}}\mbox{\Hypertarget{namespaceELF_aeb894793aba0984e354a4789a84593c1aff940bc08ea23f968df040818f64ecd0}\label{namespaceELF_aeb894793aba0984e354a4789a84593c1aff940bc08ea23f968df040818f64ecd0}} 
+EF\+\_\+\+AMDGPU\+\_\+\+MACH\+\_\+\+AMDGCN\+\_\+\+GFX1100&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{EF\_AMDGPU\_MACH\_AMDGCN\_GFX1013@{EF\_AMDGPU\_MACH\_AMDGCN\_GFX1013}!ELF@{ELF}}\index{ELF@{ELF}!EF\_AMDGPU\_MACH\_AMDGCN\_GFX1013@{EF\_AMDGPU\_MACH\_AMDGCN\_GFX1013}}}\mbox{\Hypertarget{namespaceELF_aeb894793aba0984e354a4789a84593c1ab68cc1bc031c885831f5fc275379f7ad}\label{namespaceELF_aeb894793aba0984e354a4789a84593c1ab68cc1bc031c885831f5fc275379f7ad}} 
+EF\+\_\+\+AMDGPU\+\_\+\+MACH\+\_\+\+AMDGCN\+\_\+\+GFX1013&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{EF\_AMDGPU\_MACH\_AMDGCN\_GFX1103@{EF\_AMDGPU\_MACH\_AMDGCN\_GFX1103}!ELF@{ELF}}\index{ELF@{ELF}!EF\_AMDGPU\_MACH\_AMDGCN\_GFX1103@{EF\_AMDGPU\_MACH\_AMDGCN\_GFX1103}}}\mbox{\Hypertarget{namespaceELF_aeb894793aba0984e354a4789a84593c1ab812c0c0aa85c1251a3807e24a9c5a5c}\label{namespaceELF_aeb894793aba0984e354a4789a84593c1ab812c0c0aa85c1251a3807e24a9c5a5c}} 
+EF\+\_\+\+AMDGPU\+\_\+\+MACH\+\_\+\+AMDGCN\+\_\+\+GFX1103&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{EF\_AMDGPU\_MACH\_AMDGCN\_GFX1036@{EF\_AMDGPU\_MACH\_AMDGCN\_GFX1036}!ELF@{ELF}}\index{ELF@{ELF}!EF\_AMDGPU\_MACH\_AMDGCN\_GFX1036@{EF\_AMDGPU\_MACH\_AMDGCN\_GFX1036}}}\mbox{\Hypertarget{namespaceELF_aeb894793aba0984e354a4789a84593c1ab83d81163c018537dc38a78ea2c96430}\label{namespaceELF_aeb894793aba0984e354a4789a84593c1ab83d81163c018537dc38a78ea2c96430}} 
+EF\+\_\+\+AMDGPU\+\_\+\+MACH\+\_\+\+AMDGCN\+\_\+\+GFX1036&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{EF\_AMDGPU\_MACH\_AMDGCN\_GFX1101@{EF\_AMDGPU\_MACH\_AMDGCN\_GFX1101}!ELF@{ELF}}\index{ELF@{ELF}!EF\_AMDGPU\_MACH\_AMDGCN\_GFX1101@{EF\_AMDGPU\_MACH\_AMDGCN\_GFX1101}}}\mbox{\Hypertarget{namespaceELF_aeb894793aba0984e354a4789a84593c1af3b6b0073aa116d98612319af3c18176}\label{namespaceELF_aeb894793aba0984e354a4789a84593c1af3b6b0073aa116d98612319af3c18176}} 
+EF\+\_\+\+AMDGPU\+\_\+\+MACH\+\_\+\+AMDGCN\+\_\+\+GFX1101&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{EF\_AMDGPU\_MACH\_AMDGCN\_GFX1102@{EF\_AMDGPU\_MACH\_AMDGCN\_GFX1102}!ELF@{ELF}}\index{ELF@{ELF}!EF\_AMDGPU\_MACH\_AMDGCN\_GFX1102@{EF\_AMDGPU\_MACH\_AMDGCN\_GFX1102}}}\mbox{\Hypertarget{namespaceELF_aeb894793aba0984e354a4789a84593c1a6247f9deaf4bd8a3b748cc44e6109675}\label{namespaceELF_aeb894793aba0984e354a4789a84593c1a6247f9deaf4bd8a3b748cc44e6109675}} 
+EF\+\_\+\+AMDGPU\+\_\+\+MACH\+\_\+\+AMDGCN\+\_\+\+GFX1102&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{EF\_AMDGPU\_MACH\_AMDGCN\_FIRST@{EF\_AMDGPU\_MACH\_AMDGCN\_FIRST}!ELF@{ELF}}\index{ELF@{ELF}!EF\_AMDGPU\_MACH\_AMDGCN\_FIRST@{EF\_AMDGPU\_MACH\_AMDGCN\_FIRST}}}\mbox{\Hypertarget{namespaceELF_aeb894793aba0984e354a4789a84593c1ade40460f8d97e7cfdad0514c1ab46368}\label{namespaceELF_aeb894793aba0984e354a4789a84593c1ade40460f8d97e7cfdad0514c1ab46368}} 
+EF\+\_\+\+AMDGPU\+\_\+\+MACH\+\_\+\+AMDGCN\+\_\+\+FIRST&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{EF\_AMDGPU\_MACH\_AMDGCN\_LAST@{EF\_AMDGPU\_MACH\_AMDGCN\_LAST}!ELF@{ELF}}\index{ELF@{ELF}!EF\_AMDGPU\_MACH\_AMDGCN\_LAST@{EF\_AMDGPU\_MACH\_AMDGCN\_LAST}}}\mbox{\Hypertarget{namespaceELF_aeb894793aba0984e354a4789a84593c1a18ff62e38d2471ccc2fb560629ab8e75}\label{namespaceELF_aeb894793aba0984e354a4789a84593c1a18ff62e38d2471ccc2fb560629ab8e75}} 
+EF\+\_\+\+AMDGPU\+\_\+\+MACH\+\_\+\+AMDGCN\+\_\+\+LAST&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{EF\_AMDGPU\_FEATURE\_XNACK\_V2@{EF\_AMDGPU\_FEATURE\_XNACK\_V2}!ELF@{ELF}}\index{ELF@{ELF}!EF\_AMDGPU\_FEATURE\_XNACK\_V2@{EF\_AMDGPU\_FEATURE\_XNACK\_V2}}}\mbox{\Hypertarget{namespaceELF_aeb894793aba0984e354a4789a84593c1a4803db894f5b01c480e6052ce93c82e5}\label{namespaceELF_aeb894793aba0984e354a4789a84593c1a4803db894f5b01c480e6052ce93c82e5}} 
+EF\+\_\+\+AMDGPU\+\_\+\+FEATURE\+\_\+\+XNACK\+\_\+\+V2&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{EF\_AMDGPU\_FEATURE\_TRAP\_HANDLER\_V2@{EF\_AMDGPU\_FEATURE\_TRAP\_HANDLER\_V2}!ELF@{ELF}}\index{ELF@{ELF}!EF\_AMDGPU\_FEATURE\_TRAP\_HANDLER\_V2@{EF\_AMDGPU\_FEATURE\_TRAP\_HANDLER\_V2}}}\mbox{\Hypertarget{namespaceELF_aeb894793aba0984e354a4789a84593c1ac1725d80789c8bf2292284c57bc46b0e}\label{namespaceELF_aeb894793aba0984e354a4789a84593c1ac1725d80789c8bf2292284c57bc46b0e}} 
+EF\+\_\+\+AMDGPU\+\_\+\+FEATURE\+\_\+\+TRAP\+\_\+\+HANDLER\+\_\+\+V2&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{EF\_AMDGPU\_FEATURE\_XNACK\_V3@{EF\_AMDGPU\_FEATURE\_XNACK\_V3}!ELF@{ELF}}\index{ELF@{ELF}!EF\_AMDGPU\_FEATURE\_XNACK\_V3@{EF\_AMDGPU\_FEATURE\_XNACK\_V3}}}\mbox{\Hypertarget{namespaceELF_aeb894793aba0984e354a4789a84593c1a1fcd17527f015607dd7bca415220d4a3}\label{namespaceELF_aeb894793aba0984e354a4789a84593c1a1fcd17527f015607dd7bca415220d4a3}} 
+EF\+\_\+\+AMDGPU\+\_\+\+FEATURE\+\_\+\+XNACK\+\_\+\+V3&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{EF\_AMDGPU\_FEATURE\_SRAMECC\_V3@{EF\_AMDGPU\_FEATURE\_SRAMECC\_V3}!ELF@{ELF}}\index{ELF@{ELF}!EF\_AMDGPU\_FEATURE\_SRAMECC\_V3@{EF\_AMDGPU\_FEATURE\_SRAMECC\_V3}}}\mbox{\Hypertarget{namespaceELF_aeb894793aba0984e354a4789a84593c1ac6e18f351a41b2e534d9a832bb8cc7fb}\label{namespaceELF_aeb894793aba0984e354a4789a84593c1ac6e18f351a41b2e534d9a832bb8cc7fb}} 
+EF\+\_\+\+AMDGPU\+\_\+\+FEATURE\+\_\+\+SRAMECC\+\_\+\+V3&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{EF\_AMDGPU\_FEATURE\_XNACK\_V4@{EF\_AMDGPU\_FEATURE\_XNACK\_V4}!ELF@{ELF}}\index{ELF@{ELF}!EF\_AMDGPU\_FEATURE\_XNACK\_V4@{EF\_AMDGPU\_FEATURE\_XNACK\_V4}}}\mbox{\Hypertarget{namespaceELF_aeb894793aba0984e354a4789a84593c1a582f97272f656273b66a365934c44c8e}\label{namespaceELF_aeb894793aba0984e354a4789a84593c1a582f97272f656273b66a365934c44c8e}} 
+EF\+\_\+\+AMDGPU\+\_\+\+FEATURE\+\_\+\+XNACK\+\_\+\+V4&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{EF\_AMDGPU\_FEATURE\_XNACK\_UNSUPPORTED\_V4@{EF\_AMDGPU\_FEATURE\_XNACK\_UNSUPPORTED\_V4}!ELF@{ELF}}\index{ELF@{ELF}!EF\_AMDGPU\_FEATURE\_XNACK\_UNSUPPORTED\_V4@{EF\_AMDGPU\_FEATURE\_XNACK\_UNSUPPORTED\_V4}}}\mbox{\Hypertarget{namespaceELF_aeb894793aba0984e354a4789a84593c1aeabd46867c03a4081d33faa5fb7ea446}\label{namespaceELF_aeb894793aba0984e354a4789a84593c1aeabd46867c03a4081d33faa5fb7ea446}} 
+EF\+\_\+\+AMDGPU\+\_\+\+FEATURE\+\_\+\+XNACK\+\_\+\+UNSUPPORTED\+\_\+\+V4&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{EF\_AMDGPU\_FEATURE\_XNACK\_ANY\_V4@{EF\_AMDGPU\_FEATURE\_XNACK\_ANY\_V4}!ELF@{ELF}}\index{ELF@{ELF}!EF\_AMDGPU\_FEATURE\_XNACK\_ANY\_V4@{EF\_AMDGPU\_FEATURE\_XNACK\_ANY\_V4}}}\mbox{\Hypertarget{namespaceELF_aeb894793aba0984e354a4789a84593c1a225c42793376d7f87089a4bb4dfc4979}\label{namespaceELF_aeb894793aba0984e354a4789a84593c1a225c42793376d7f87089a4bb4dfc4979}} 
+EF\+\_\+\+AMDGPU\+\_\+\+FEATURE\+\_\+\+XNACK\+\_\+\+ANY\+\_\+\+V4&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{EF\_AMDGPU\_FEATURE\_XNACK\_OFF\_V4@{EF\_AMDGPU\_FEATURE\_XNACK\_OFF\_V4}!ELF@{ELF}}\index{ELF@{ELF}!EF\_AMDGPU\_FEATURE\_XNACK\_OFF\_V4@{EF\_AMDGPU\_FEATURE\_XNACK\_OFF\_V4}}}\mbox{\Hypertarget{namespaceELF_aeb894793aba0984e354a4789a84593c1a0aff611cefe1fdc9021a0a7c56097f48}\label{namespaceELF_aeb894793aba0984e354a4789a84593c1a0aff611cefe1fdc9021a0a7c56097f48}} 
+EF\+\_\+\+AMDGPU\+\_\+\+FEATURE\+\_\+\+XNACK\+\_\+\+OFF\+\_\+\+V4&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{EF\_AMDGPU\_FEATURE\_XNACK\_ON\_V4@{EF\_AMDGPU\_FEATURE\_XNACK\_ON\_V4}!ELF@{ELF}}\index{ELF@{ELF}!EF\_AMDGPU\_FEATURE\_XNACK\_ON\_V4@{EF\_AMDGPU\_FEATURE\_XNACK\_ON\_V4}}}\mbox{\Hypertarget{namespaceELF_aeb894793aba0984e354a4789a84593c1a831b9aa1c084abcce187b86e4364f9fe}\label{namespaceELF_aeb894793aba0984e354a4789a84593c1a831b9aa1c084abcce187b86e4364f9fe}} 
+EF\+\_\+\+AMDGPU\+\_\+\+FEATURE\+\_\+\+XNACK\+\_\+\+ON\+\_\+\+V4&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{EF\_AMDGPU\_FEATURE\_SRAMECC\_V4@{EF\_AMDGPU\_FEATURE\_SRAMECC\_V4}!ELF@{ELF}}\index{ELF@{ELF}!EF\_AMDGPU\_FEATURE\_SRAMECC\_V4@{EF\_AMDGPU\_FEATURE\_SRAMECC\_V4}}}\mbox{\Hypertarget{namespaceELF_aeb894793aba0984e354a4789a84593c1a58eb5afe0562dd7e800746fd1885a756}\label{namespaceELF_aeb894793aba0984e354a4789a84593c1a58eb5afe0562dd7e800746fd1885a756}} 
+EF\+\_\+\+AMDGPU\+\_\+\+FEATURE\+\_\+\+SRAMECC\+\_\+\+V4&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{EF\_AMDGPU\_FEATURE\_SRAMECC\_UNSUPPORTED\_V4@{EF\_AMDGPU\_FEATURE\_SRAMECC\_UNSUPPORTED\_V4}!ELF@{ELF}}\index{ELF@{ELF}!EF\_AMDGPU\_FEATURE\_SRAMECC\_UNSUPPORTED\_V4@{EF\_AMDGPU\_FEATURE\_SRAMECC\_UNSUPPORTED\_V4}}}\mbox{\Hypertarget{namespaceELF_aeb894793aba0984e354a4789a84593c1a3d676e3f1e24801432861ed2bd18710f}\label{namespaceELF_aeb894793aba0984e354a4789a84593c1a3d676e3f1e24801432861ed2bd18710f}} 
+EF\+\_\+\+AMDGPU\+\_\+\+FEATURE\+\_\+\+SRAMECC\+\_\+\+UNSUPPORTED\+\_\+\+V4&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{EF\_AMDGPU\_FEATURE\_SRAMECC\_ANY\_V4@{EF\_AMDGPU\_FEATURE\_SRAMECC\_ANY\_V4}!ELF@{ELF}}\index{ELF@{ELF}!EF\_AMDGPU\_FEATURE\_SRAMECC\_ANY\_V4@{EF\_AMDGPU\_FEATURE\_SRAMECC\_ANY\_V4}}}\mbox{\Hypertarget{namespaceELF_aeb894793aba0984e354a4789a84593c1a80e23c8523b619030f138e1f1159f68d}\label{namespaceELF_aeb894793aba0984e354a4789a84593c1a80e23c8523b619030f138e1f1159f68d}} 
+EF\+\_\+\+AMDGPU\+\_\+\+FEATURE\+\_\+\+SRAMECC\+\_\+\+ANY\+\_\+\+V4&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{EF\_AMDGPU\_FEATURE\_SRAMECC\_OFF\_V4@{EF\_AMDGPU\_FEATURE\_SRAMECC\_OFF\_V4}!ELF@{ELF}}\index{ELF@{ELF}!EF\_AMDGPU\_FEATURE\_SRAMECC\_OFF\_V4@{EF\_AMDGPU\_FEATURE\_SRAMECC\_OFF\_V4}}}\mbox{\Hypertarget{namespaceELF_aeb894793aba0984e354a4789a84593c1ae3789a70d0231f331d9d0bdd2880cae4}\label{namespaceELF_aeb894793aba0984e354a4789a84593c1ae3789a70d0231f331d9d0bdd2880cae4}} 
+EF\+\_\+\+AMDGPU\+\_\+\+FEATURE\+\_\+\+SRAMECC\+\_\+\+OFF\+\_\+\+V4&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{EF\_AMDGPU\_FEATURE\_SRAMECC\_ON\_V4@{EF\_AMDGPU\_FEATURE\_SRAMECC\_ON\_V4}!ELF@{ELF}}\index{ELF@{ELF}!EF\_AMDGPU\_FEATURE\_SRAMECC\_ON\_V4@{EF\_AMDGPU\_FEATURE\_SRAMECC\_ON\_V4}}}\mbox{\Hypertarget{namespaceELF_aeb894793aba0984e354a4789a84593c1a3679cc8c3c5e8e49408385daaa51a0c4}\label{namespaceELF_aeb894793aba0984e354a4789a84593c1a3679cc8c3c5e8e49408385daaa51a0c4}} 
+EF\+\_\+\+AMDGPU\+\_\+\+FEATURE\+\_\+\+SRAMECC\+\_\+\+ON\+\_\+\+V4&\\
+\hline
+
+\end{DoxyEnumFields}

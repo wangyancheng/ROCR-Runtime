@@ -1,0 +1,390 @@
+\hypertarget{classrocr_1_1SimpleHeap}{}\doxysection{rocr\+::Simple\+Heap$<$ Allocator $>$ Class Template Reference}
+\label{classrocr_1_1SimpleHeap}\index{rocr::SimpleHeap$<$ Allocator $>$@{rocr::SimpleHeap$<$ Allocator $>$}}
+
+
+{\ttfamily \#include $<$simple\+\_\+heap.\+h$>$}
+
+\doxysubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{structrocr_1_1SimpleHeap_1_1Block}{Block}}
+\item 
+struct \mbox{\hyperlink{structrocr_1_1SimpleHeap_1_1Fragment__T}{Fragment\+\_\+T}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classrocr_1_1SimpleHeap_ac52a664b3e8a1457b612f9c273f4c6d2}{Simple\+Heap}} (const Allocator \&Block\+Allocator=Allocator())
+\item 
+\mbox{\hyperlink{classrocr_1_1SimpleHeap_a56597cbe0e1c79b1ec53f49bf998c1da}{$\sim$\+Simple\+Heap}} ()
+\item 
+\mbox{\hyperlink{classrocr_1_1SimpleHeap_ada2c97f409481f4a4871f8835fccf949}{Simple\+Heap}} (const \mbox{\hyperlink{classrocr_1_1SimpleHeap}{Simple\+Heap}} \&rhs)=delete
+\item 
+\mbox{\hyperlink{classrocr_1_1SimpleHeap_a2c7683bf9c8fb937c627d652c2655321}{Simple\+Heap}} (\mbox{\hyperlink{classrocr_1_1SimpleHeap}{Simple\+Heap}} \&\&rhs)=delete
+\item 
+\mbox{\hyperlink{classrocr_1_1SimpleHeap}{Simple\+Heap}} \& \mbox{\hyperlink{classrocr_1_1SimpleHeap_a84688ab3850f2d643b8dd1594ca0bcf1}{operator=}} (const \mbox{\hyperlink{classrocr_1_1SimpleHeap}{Simple\+Heap}} \&rhs)=delete
+\item 
+\mbox{\hyperlink{classrocr_1_1SimpleHeap}{Simple\+Heap}} \& \mbox{\hyperlink{classrocr_1_1SimpleHeap_a252c90ca655be4ae591ed15ccf891085}{operator=}} (\mbox{\hyperlink{classrocr_1_1SimpleHeap}{Simple\+Heap}} \&\&rhs)=delete
+\item 
+void $\ast$ \mbox{\hyperlink{classrocr_1_1SimpleHeap_a885913a43067442dc2d901175d89b1e6}{alloc}} (size\+\_\+t bytes)
+\item 
+bool \mbox{\hyperlink{classrocr_1_1SimpleHeap_a3ce5c3db1ac53a1036bef5e9ed699db8}{free}} (void $\ast$ptr)
+\item 
+void \mbox{\hyperlink{classrocr_1_1SimpleHeap_a01953c5e61cabe99c281166be55f2ca7}{balance}} ()
+\item 
+void \mbox{\hyperlink{classrocr_1_1SimpleHeap_a8952dc4e41c8f0a76297eb7712bc137b}{trim}} ()
+\item 
+size\+\_\+t \mbox{\hyperlink{classrocr_1_1SimpleHeap_a57d84172aa3d60416fe82d2149a6315f}{cache\+\_\+size}} () const
+\item 
+size\+\_\+t \mbox{\hyperlink{classrocr_1_1SimpleHeap_a40ea3e2d9c0b01593ce559e3022c2ba7}{default\+\_\+block\+\_\+size}} () const
+\item 
+bool \mbox{\hyperlink{classrocr_1_1SimpleHeap_a1e201fff77d4bd1cb2c3fbcdc0a6f627}{discard\+Block}} (void $\ast$ptr)
+\end{DoxyCompactItemize}
+\doxysubsection*{Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\+\_\+\+\_\+forceinline bool \mbox{\hyperlink{classrocr_1_1SimpleHeap_a7a95400f950f1b20cee5a1a204deda6a}{is\+Free}} (const \mbox{\hyperlink{structrocr_1_1SimpleHeap_1_1Fragment__T}{Fragment\+\_\+T}} \&node)
+\item 
+\+\_\+\+\_\+forceinline void \mbox{\hyperlink{classrocr_1_1SimpleHeap_adf56d754084b4a51d28b689c5d0270cb}{set\+Used}} (\mbox{\hyperlink{structrocr_1_1SimpleHeap_1_1Fragment__T}{Fragment\+\_\+T}} \&node)
+\item 
+\+\_\+\+\_\+forceinline void \mbox{\hyperlink{classrocr_1_1SimpleHeap_a79749d6576fb088767e4ae9739e2db09}{set\+Free}} (\mbox{\hyperlink{structrocr_1_1SimpleHeap_1_1Fragment__T}{Fragment\+\_\+T}} \&node, typename \mbox{\hyperlink{structrocr_1_1SimpleHeap_1_1Fragment__T_a3aac9fe4bd06f96cd4a7759cb3423e37}{Fragment\+\_\+\+T\+::ptr\+\_\+t}} Iterator)
+\item 
+\+\_\+\+\_\+forceinline \mbox{\hyperlink{structrocr_1_1SimpleHeap_1_1Fragment__T}{Fragment\+\_\+T}} \mbox{\hyperlink{classrocr_1_1SimpleHeap_a43d2ba1317327166681e67b8e5496269}{make\+Fragment}} (size\+\_\+t Len)
+\item 
+\+\_\+\+\_\+forceinline \mbox{\hyperlink{structrocr_1_1SimpleHeap_1_1Fragment__T}{Fragment\+\_\+T}} \mbox{\hyperlink{classrocr_1_1SimpleHeap_af81656b2b2d2f2713371060976d6f042}{make\+Fragment}} (typename \mbox{\hyperlink{structrocr_1_1SimpleHeap_1_1Fragment__T_a3aac9fe4bd06f96cd4a7759cb3423e37}{Fragment\+\_\+\+T\+::ptr\+\_\+t}} Iterator, size\+\_\+t Len)
+\item 
+\+\_\+\+\_\+forceinline void \mbox{\hyperlink{classrocr_1_1SimpleHeap_ac8d967f6b1cbfd90f75153eae82073ab}{remove\+Free\+List\+Entry}} (\mbox{\hyperlink{structrocr_1_1SimpleHeap_1_1Fragment__T}{Fragment\+\_\+T}} \&node)
+\item 
+\+\_\+\+\_\+forceinline void \mbox{\hyperlink{classrocr_1_1SimpleHeap_ac9c202efbe9d8c296e2a5f91e10fe7f2}{discard}} (\mbox{\hyperlink{structrocr_1_1SimpleHeap_1_1Fragment__T}{Fragment\+\_\+T}} \&node)
+\end{DoxyCompactItemize}
+\doxysubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+Allocator \mbox{\hyperlink{classrocr_1_1SimpleHeap_a905a1836e283cfd1099aa7a975331380}{block\+\_\+allocator\+\_\+}}
+\item 
+std\+::multimap$<$ size\+\_\+t, uintptr\+\_\+t $>$ \mbox{\hyperlink{classrocr_1_1SimpleHeap_a0a193446d8fc4934e8e425a82b889545}{free\+\_\+list\+\_\+}}
+\item 
+std\+::map$<$ uintptr\+\_\+t, std\+::map$<$ uintptr\+\_\+t, \mbox{\hyperlink{structrocr_1_1SimpleHeap_1_1Fragment__T}{Fragment\+\_\+T}} $>$ $>$ \mbox{\hyperlink{classrocr_1_1SimpleHeap_aac696dadebdd9730c6b54f76dec7321c}{block\+\_\+list\+\_\+}}
+\item 
+std\+::deque$<$ \mbox{\hyperlink{structrocr_1_1SimpleHeap_1_1Block}{Block}} $>$ \mbox{\hyperlink{classrocr_1_1SimpleHeap_a8a8b90ee660269a6649e407c53ea0fe1}{block\+\_\+cache\+\_\+}}
+\item 
+size\+\_\+t \mbox{\hyperlink{classrocr_1_1SimpleHeap_adbc01c61fa01597edb91a6a3b6f815f4}{in\+\_\+use\+\_\+size\+\_\+}}
+\item 
+size\+\_\+t \mbox{\hyperlink{classrocr_1_1SimpleHeap_a16922292ed49c6bc4983292cef75f1c7}{cache\+\_\+size\+\_\+}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classrocr_1_1SimpleHeap_ac52a664b3e8a1457b612f9c273f4c6d2}\label{classrocr_1_1SimpleHeap_ac52a664b3e8a1457b612f9c273f4c6d2}} 
+\index{rocr::SimpleHeap$<$ Allocator $>$@{rocr::SimpleHeap$<$ Allocator $>$}!SimpleHeap@{SimpleHeap}}
+\index{SimpleHeap@{SimpleHeap}!rocr::SimpleHeap$<$ Allocator $>$@{rocr::SimpleHeap$<$ Allocator $>$}}
+\doxysubsubsection{\texorpdfstring{SimpleHeap()}{SimpleHeap()}\hspace{0.1cm}{\footnotesize\ttfamily [1/3]}}
+{\footnotesize\ttfamily template$<$typename Allocator $>$ \\
+\mbox{\hyperlink{classrocr_1_1SimpleHeap}{rocr\+::\+Simple\+Heap}}$<$ Allocator $>$\+::\mbox{\hyperlink{classrocr_1_1SimpleHeap}{Simple\+Heap}} (\begin{DoxyParamCaption}\item[{const Allocator \&}]{Block\+Allocator = {\ttfamily Allocator()} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [explicit]}}
+
+\mbox{\Hypertarget{classrocr_1_1SimpleHeap_a56597cbe0e1c79b1ec53f49bf998c1da}\label{classrocr_1_1SimpleHeap_a56597cbe0e1c79b1ec53f49bf998c1da}} 
+\index{rocr::SimpleHeap$<$ Allocator $>$@{rocr::SimpleHeap$<$ Allocator $>$}!````~SimpleHeap@{$\sim$SimpleHeap}}
+\index{````~SimpleHeap@{$\sim$SimpleHeap}!rocr::SimpleHeap$<$ Allocator $>$@{rocr::SimpleHeap$<$ Allocator $>$}}
+\doxysubsubsection{\texorpdfstring{$\sim$SimpleHeap()}{~SimpleHeap()}}
+{\footnotesize\ttfamily template$<$typename Allocator $>$ \\
+\mbox{\hyperlink{classrocr_1_1SimpleHeap}{rocr\+::\+Simple\+Heap}}$<$ Allocator $>$\+::$\sim$\mbox{\hyperlink{classrocr_1_1SimpleHeap}{Simple\+Heap}} (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=329pt]{classrocr_1_1SimpleHeap_a56597cbe0e1c79b1ec53f49bf998c1da_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classrocr_1_1SimpleHeap_ada2c97f409481f4a4871f8835fccf949}\label{classrocr_1_1SimpleHeap_ada2c97f409481f4a4871f8835fccf949}} 
+\index{rocr::SimpleHeap$<$ Allocator $>$@{rocr::SimpleHeap$<$ Allocator $>$}!SimpleHeap@{SimpleHeap}}
+\index{SimpleHeap@{SimpleHeap}!rocr::SimpleHeap$<$ Allocator $>$@{rocr::SimpleHeap$<$ Allocator $>$}}
+\doxysubsubsection{\texorpdfstring{SimpleHeap()}{SimpleHeap()}\hspace{0.1cm}{\footnotesize\ttfamily [2/3]}}
+{\footnotesize\ttfamily template$<$typename Allocator $>$ \\
+\mbox{\hyperlink{classrocr_1_1SimpleHeap}{rocr\+::\+Simple\+Heap}}$<$ Allocator $>$\+::\mbox{\hyperlink{classrocr_1_1SimpleHeap}{Simple\+Heap}} (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classrocr_1_1SimpleHeap}{Simple\+Heap}}$<$ Allocator $>$ \&}]{rhs }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [delete]}}
+
+\mbox{\Hypertarget{classrocr_1_1SimpleHeap_a2c7683bf9c8fb937c627d652c2655321}\label{classrocr_1_1SimpleHeap_a2c7683bf9c8fb937c627d652c2655321}} 
+\index{rocr::SimpleHeap$<$ Allocator $>$@{rocr::SimpleHeap$<$ Allocator $>$}!SimpleHeap@{SimpleHeap}}
+\index{SimpleHeap@{SimpleHeap}!rocr::SimpleHeap$<$ Allocator $>$@{rocr::SimpleHeap$<$ Allocator $>$}}
+\doxysubsubsection{\texorpdfstring{SimpleHeap()}{SimpleHeap()}\hspace{0.1cm}{\footnotesize\ttfamily [3/3]}}
+{\footnotesize\ttfamily template$<$typename Allocator $>$ \\
+\mbox{\hyperlink{classrocr_1_1SimpleHeap}{rocr\+::\+Simple\+Heap}}$<$ Allocator $>$\+::\mbox{\hyperlink{classrocr_1_1SimpleHeap}{Simple\+Heap}} (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classrocr_1_1SimpleHeap}{Simple\+Heap}}$<$ Allocator $>$ \&\&}]{rhs }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [delete]}}
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classrocr_1_1SimpleHeap_a885913a43067442dc2d901175d89b1e6}\label{classrocr_1_1SimpleHeap_a885913a43067442dc2d901175d89b1e6}} 
+\index{rocr::SimpleHeap$<$ Allocator $>$@{rocr::SimpleHeap$<$ Allocator $>$}!alloc@{alloc}}
+\index{alloc@{alloc}!rocr::SimpleHeap$<$ Allocator $>$@{rocr::SimpleHeap$<$ Allocator $>$}}
+\doxysubsubsection{\texorpdfstring{alloc()}{alloc()}}
+{\footnotesize\ttfamily template$<$typename Allocator $>$ \\
+void$\ast$ \mbox{\hyperlink{classrocr_1_1SimpleHeap}{rocr\+::\+Simple\+Heap}}$<$ Allocator $>$\+::alloc (\begin{DoxyParamCaption}\item[{size\+\_\+t}]{bytes }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classrocr_1_1SimpleHeap_a885913a43067442dc2d901175d89b1e6_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classrocr_1_1SimpleHeap_a01953c5e61cabe99c281166be55f2ca7}\label{classrocr_1_1SimpleHeap_a01953c5e61cabe99c281166be55f2ca7}} 
+\index{rocr::SimpleHeap$<$ Allocator $>$@{rocr::SimpleHeap$<$ Allocator $>$}!balance@{balance}}
+\index{balance@{balance}!rocr::SimpleHeap$<$ Allocator $>$@{rocr::SimpleHeap$<$ Allocator $>$}}
+\doxysubsubsection{\texorpdfstring{balance()}{balance()}}
+{\footnotesize\ttfamily template$<$typename Allocator $>$ \\
+void \mbox{\hyperlink{classrocr_1_1SimpleHeap}{rocr\+::\+Simple\+Heap}}$<$ Allocator $>$\+::balance (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classrocr_1_1SimpleHeap_a01953c5e61cabe99c281166be55f2ca7_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classrocr_1_1SimpleHeap_a57d84172aa3d60416fe82d2149a6315f}\label{classrocr_1_1SimpleHeap_a57d84172aa3d60416fe82d2149a6315f}} 
+\index{rocr::SimpleHeap$<$ Allocator $>$@{rocr::SimpleHeap$<$ Allocator $>$}!cache\_size@{cache\_size}}
+\index{cache\_size@{cache\_size}!rocr::SimpleHeap$<$ Allocator $>$@{rocr::SimpleHeap$<$ Allocator $>$}}
+\doxysubsubsection{\texorpdfstring{cache\_size()}{cache\_size()}}
+{\footnotesize\ttfamily template$<$typename Allocator $>$ \\
+size\+\_\+t \mbox{\hyperlink{classrocr_1_1SimpleHeap}{rocr\+::\+Simple\+Heap}}$<$ Allocator $>$\+::cache\+\_\+size (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{classrocr_1_1SimpleHeap_a40ea3e2d9c0b01593ce559e3022c2ba7}\label{classrocr_1_1SimpleHeap_a40ea3e2d9c0b01593ce559e3022c2ba7}} 
+\index{rocr::SimpleHeap$<$ Allocator $>$@{rocr::SimpleHeap$<$ Allocator $>$}!default\_block\_size@{default\_block\_size}}
+\index{default\_block\_size@{default\_block\_size}!rocr::SimpleHeap$<$ Allocator $>$@{rocr::SimpleHeap$<$ Allocator $>$}}
+\doxysubsubsection{\texorpdfstring{default\_block\_size()}{default\_block\_size()}}
+{\footnotesize\ttfamily template$<$typename Allocator $>$ \\
+size\+\_\+t \mbox{\hyperlink{classrocr_1_1SimpleHeap}{rocr\+::\+Simple\+Heap}}$<$ Allocator $>$\+::default\+\_\+block\+\_\+size (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classrocr_1_1SimpleHeap_a40ea3e2d9c0b01593ce559e3022c2ba7_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classrocr_1_1SimpleHeap_ac9c202efbe9d8c296e2a5f91e10fe7f2}\label{classrocr_1_1SimpleHeap_ac9c202efbe9d8c296e2a5f91e10fe7f2}} 
+\index{rocr::SimpleHeap$<$ Allocator $>$@{rocr::SimpleHeap$<$ Allocator $>$}!discard@{discard}}
+\index{discard@{discard}!rocr::SimpleHeap$<$ Allocator $>$@{rocr::SimpleHeap$<$ Allocator $>$}}
+\doxysubsubsection{\texorpdfstring{discard()}{discard()}}
+{\footnotesize\ttfamily template$<$typename Allocator $>$ \\
+\+\_\+\+\_\+forceinline void \mbox{\hyperlink{classrocr_1_1SimpleHeap}{rocr\+::\+Simple\+Heap}}$<$ Allocator $>$\+::discard (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structrocr_1_1SimpleHeap_1_1Fragment__T}{Fragment\+\_\+T}} \&}]{node }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [private]}}
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classrocr_1_1SimpleHeap_ac9c202efbe9d8c296e2a5f91e10fe7f2_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classrocr_1_1SimpleHeap_ac9c202efbe9d8c296e2a5f91e10fe7f2_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classrocr_1_1SimpleHeap_a1e201fff77d4bd1cb2c3fbcdc0a6f627}\label{classrocr_1_1SimpleHeap_a1e201fff77d4bd1cb2c3fbcdc0a6f627}} 
+\index{rocr::SimpleHeap$<$ Allocator $>$@{rocr::SimpleHeap$<$ Allocator $>$}!discardBlock@{discardBlock}}
+\index{discardBlock@{discardBlock}!rocr::SimpleHeap$<$ Allocator $>$@{rocr::SimpleHeap$<$ Allocator $>$}}
+\doxysubsubsection{\texorpdfstring{discardBlock()}{discardBlock()}}
+{\footnotesize\ttfamily template$<$typename Allocator $>$ \\
+bool \mbox{\hyperlink{classrocr_1_1SimpleHeap}{rocr\+::\+Simple\+Heap}}$<$ Allocator $>$\+::discard\+Block (\begin{DoxyParamCaption}\item[{void $\ast$}]{ptr }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classrocr_1_1SimpleHeap_a1e201fff77d4bd1cb2c3fbcdc0a6f627_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classrocr_1_1SimpleHeap_a1e201fff77d4bd1cb2c3fbcdc0a6f627_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classrocr_1_1SimpleHeap_a3ce5c3db1ac53a1036bef5e9ed699db8}\label{classrocr_1_1SimpleHeap_a3ce5c3db1ac53a1036bef5e9ed699db8}} 
+\index{rocr::SimpleHeap$<$ Allocator $>$@{rocr::SimpleHeap$<$ Allocator $>$}!free@{free}}
+\index{free@{free}!rocr::SimpleHeap$<$ Allocator $>$@{rocr::SimpleHeap$<$ Allocator $>$}}
+\doxysubsubsection{\texorpdfstring{free()}{free()}}
+{\footnotesize\ttfamily template$<$typename Allocator $>$ \\
+bool \mbox{\hyperlink{classrocr_1_1SimpleHeap}{rocr\+::\+Simple\+Heap}}$<$ Allocator $>$\+::free (\begin{DoxyParamCaption}\item[{void $\ast$}]{ptr }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classrocr_1_1SimpleHeap_a3ce5c3db1ac53a1036bef5e9ed699db8_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classrocr_1_1SimpleHeap_a7a95400f950f1b20cee5a1a204deda6a}\label{classrocr_1_1SimpleHeap_a7a95400f950f1b20cee5a1a204deda6a}} 
+\index{rocr::SimpleHeap$<$ Allocator $>$@{rocr::SimpleHeap$<$ Allocator $>$}!isFree@{isFree}}
+\index{isFree@{isFree}!rocr::SimpleHeap$<$ Allocator $>$@{rocr::SimpleHeap$<$ Allocator $>$}}
+\doxysubsubsection{\texorpdfstring{isFree()}{isFree()}}
+{\footnotesize\ttfamily template$<$typename Allocator $>$ \\
+\+\_\+\+\_\+forceinline bool \mbox{\hyperlink{classrocr_1_1SimpleHeap}{rocr\+::\+Simple\+Heap}}$<$ Allocator $>$\+::is\+Free (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{structrocr_1_1SimpleHeap_1_1Fragment__T}{Fragment\+\_\+T}} \&}]{node }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [private]}}
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classrocr_1_1SimpleHeap_a7a95400f950f1b20cee5a1a204deda6a_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classrocr_1_1SimpleHeap_a43d2ba1317327166681e67b8e5496269}\label{classrocr_1_1SimpleHeap_a43d2ba1317327166681e67b8e5496269}} 
+\index{rocr::SimpleHeap$<$ Allocator $>$@{rocr::SimpleHeap$<$ Allocator $>$}!makeFragment@{makeFragment}}
+\index{makeFragment@{makeFragment}!rocr::SimpleHeap$<$ Allocator $>$@{rocr::SimpleHeap$<$ Allocator $>$}}
+\doxysubsubsection{\texorpdfstring{makeFragment()}{makeFragment()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily template$<$typename Allocator $>$ \\
+\+\_\+\+\_\+forceinline \mbox{\hyperlink{structrocr_1_1SimpleHeap_1_1Fragment__T}{Fragment\+\_\+T}} \mbox{\hyperlink{classrocr_1_1SimpleHeap}{rocr\+::\+Simple\+Heap}}$<$ Allocator $>$\+::make\+Fragment (\begin{DoxyParamCaption}\item[{size\+\_\+t}]{Len }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [private]}}
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classrocr_1_1SimpleHeap_a43d2ba1317327166681e67b8e5496269_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classrocr_1_1SimpleHeap_af81656b2b2d2f2713371060976d6f042}\label{classrocr_1_1SimpleHeap_af81656b2b2d2f2713371060976d6f042}} 
+\index{rocr::SimpleHeap$<$ Allocator $>$@{rocr::SimpleHeap$<$ Allocator $>$}!makeFragment@{makeFragment}}
+\index{makeFragment@{makeFragment}!rocr::SimpleHeap$<$ Allocator $>$@{rocr::SimpleHeap$<$ Allocator $>$}}
+\doxysubsubsection{\texorpdfstring{makeFragment()}{makeFragment()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily template$<$typename Allocator $>$ \\
+\+\_\+\+\_\+forceinline \mbox{\hyperlink{structrocr_1_1SimpleHeap_1_1Fragment__T}{Fragment\+\_\+T}} \mbox{\hyperlink{classrocr_1_1SimpleHeap}{rocr\+::\+Simple\+Heap}}$<$ Allocator $>$\+::make\+Fragment (\begin{DoxyParamCaption}\item[{typename \mbox{\hyperlink{structrocr_1_1SimpleHeap_1_1Fragment__T_a3aac9fe4bd06f96cd4a7759cb3423e37}{Fragment\+\_\+\+T\+::ptr\+\_\+t}}}]{Iterator,  }\item[{size\+\_\+t}]{Len }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [private]}}
+
+\mbox{\Hypertarget{classrocr_1_1SimpleHeap_a84688ab3850f2d643b8dd1594ca0bcf1}\label{classrocr_1_1SimpleHeap_a84688ab3850f2d643b8dd1594ca0bcf1}} 
+\index{rocr::SimpleHeap$<$ Allocator $>$@{rocr::SimpleHeap$<$ Allocator $>$}!operator=@{operator=}}
+\index{operator=@{operator=}!rocr::SimpleHeap$<$ Allocator $>$@{rocr::SimpleHeap$<$ Allocator $>$}}
+\doxysubsubsection{\texorpdfstring{operator=()}{operator=()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily template$<$typename Allocator $>$ \\
+\mbox{\hyperlink{classrocr_1_1SimpleHeap}{Simple\+Heap}}\& \mbox{\hyperlink{classrocr_1_1SimpleHeap}{rocr\+::\+Simple\+Heap}}$<$ Allocator $>$\+::operator= (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classrocr_1_1SimpleHeap}{Simple\+Heap}}$<$ Allocator $>$ \&}]{rhs }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [delete]}}
+
+\mbox{\Hypertarget{classrocr_1_1SimpleHeap_a252c90ca655be4ae591ed15ccf891085}\label{classrocr_1_1SimpleHeap_a252c90ca655be4ae591ed15ccf891085}} 
+\index{rocr::SimpleHeap$<$ Allocator $>$@{rocr::SimpleHeap$<$ Allocator $>$}!operator=@{operator=}}
+\index{operator=@{operator=}!rocr::SimpleHeap$<$ Allocator $>$@{rocr::SimpleHeap$<$ Allocator $>$}}
+\doxysubsubsection{\texorpdfstring{operator=()}{operator=()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily template$<$typename Allocator $>$ \\
+\mbox{\hyperlink{classrocr_1_1SimpleHeap}{Simple\+Heap}}\& \mbox{\hyperlink{classrocr_1_1SimpleHeap}{rocr\+::\+Simple\+Heap}}$<$ Allocator $>$\+::operator= (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classrocr_1_1SimpleHeap}{Simple\+Heap}}$<$ Allocator $>$ \&\&}]{rhs }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [delete]}}
+
+\mbox{\Hypertarget{classrocr_1_1SimpleHeap_ac8d967f6b1cbfd90f75153eae82073ab}\label{classrocr_1_1SimpleHeap_ac8d967f6b1cbfd90f75153eae82073ab}} 
+\index{rocr::SimpleHeap$<$ Allocator $>$@{rocr::SimpleHeap$<$ Allocator $>$}!removeFreeListEntry@{removeFreeListEntry}}
+\index{removeFreeListEntry@{removeFreeListEntry}!rocr::SimpleHeap$<$ Allocator $>$@{rocr::SimpleHeap$<$ Allocator $>$}}
+\doxysubsubsection{\texorpdfstring{removeFreeListEntry()}{removeFreeListEntry()}}
+{\footnotesize\ttfamily template$<$typename Allocator $>$ \\
+\+\_\+\+\_\+forceinline void \mbox{\hyperlink{classrocr_1_1SimpleHeap}{rocr\+::\+Simple\+Heap}}$<$ Allocator $>$\+::remove\+Free\+List\+Entry (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structrocr_1_1SimpleHeap_1_1Fragment__T}{Fragment\+\_\+T}} \&}]{node }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [private]}}
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classrocr_1_1SimpleHeap_ac8d967f6b1cbfd90f75153eae82073ab_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classrocr_1_1SimpleHeap_a79749d6576fb088767e4ae9739e2db09}\label{classrocr_1_1SimpleHeap_a79749d6576fb088767e4ae9739e2db09}} 
+\index{rocr::SimpleHeap$<$ Allocator $>$@{rocr::SimpleHeap$<$ Allocator $>$}!setFree@{setFree}}
+\index{setFree@{setFree}!rocr::SimpleHeap$<$ Allocator $>$@{rocr::SimpleHeap$<$ Allocator $>$}}
+\doxysubsubsection{\texorpdfstring{setFree()}{setFree()}}
+{\footnotesize\ttfamily template$<$typename Allocator $>$ \\
+\+\_\+\+\_\+forceinline void \mbox{\hyperlink{classrocr_1_1SimpleHeap}{rocr\+::\+Simple\+Heap}}$<$ Allocator $>$\+::set\+Free (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structrocr_1_1SimpleHeap_1_1Fragment__T}{Fragment\+\_\+T}} \&}]{node,  }\item[{typename \mbox{\hyperlink{structrocr_1_1SimpleHeap_1_1Fragment__T_a3aac9fe4bd06f96cd4a7759cb3423e37}{Fragment\+\_\+\+T\+::ptr\+\_\+t}}}]{Iterator }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [private]}}
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classrocr_1_1SimpleHeap_a79749d6576fb088767e4ae9739e2db09_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classrocr_1_1SimpleHeap_adf56d754084b4a51d28b689c5d0270cb}\label{classrocr_1_1SimpleHeap_adf56d754084b4a51d28b689c5d0270cb}} 
+\index{rocr::SimpleHeap$<$ Allocator $>$@{rocr::SimpleHeap$<$ Allocator $>$}!setUsed@{setUsed}}
+\index{setUsed@{setUsed}!rocr::SimpleHeap$<$ Allocator $>$@{rocr::SimpleHeap$<$ Allocator $>$}}
+\doxysubsubsection{\texorpdfstring{setUsed()}{setUsed()}}
+{\footnotesize\ttfamily template$<$typename Allocator $>$ \\
+\+\_\+\+\_\+forceinline void \mbox{\hyperlink{classrocr_1_1SimpleHeap}{rocr\+::\+Simple\+Heap}}$<$ Allocator $>$\+::set\+Used (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structrocr_1_1SimpleHeap_1_1Fragment__T}{Fragment\+\_\+T}} \&}]{node }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [private]}}
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classrocr_1_1SimpleHeap_adf56d754084b4a51d28b689c5d0270cb_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classrocr_1_1SimpleHeap_a8952dc4e41c8f0a76297eb7712bc137b}\label{classrocr_1_1SimpleHeap_a8952dc4e41c8f0a76297eb7712bc137b}} 
+\index{rocr::SimpleHeap$<$ Allocator $>$@{rocr::SimpleHeap$<$ Allocator $>$}!trim@{trim}}
+\index{trim@{trim}!rocr::SimpleHeap$<$ Allocator $>$@{rocr::SimpleHeap$<$ Allocator $>$}}
+\doxysubsubsection{\texorpdfstring{trim()}{trim()}}
+{\footnotesize\ttfamily template$<$typename Allocator $>$ \\
+void \mbox{\hyperlink{classrocr_1_1SimpleHeap}{rocr\+::\+Simple\+Heap}}$<$ Allocator $>$\+::trim (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=329pt]{classrocr_1_1SimpleHeap_a8952dc4e41c8f0a76297eb7712bc137b_icgraph}
+\end{center}
+\end{figure}
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{classrocr_1_1SimpleHeap_a905a1836e283cfd1099aa7a975331380}\label{classrocr_1_1SimpleHeap_a905a1836e283cfd1099aa7a975331380}} 
+\index{rocr::SimpleHeap$<$ Allocator $>$@{rocr::SimpleHeap$<$ Allocator $>$}!block\_allocator\_@{block\_allocator\_}}
+\index{block\_allocator\_@{block\_allocator\_}!rocr::SimpleHeap$<$ Allocator $>$@{rocr::SimpleHeap$<$ Allocator $>$}}
+\doxysubsubsection{\texorpdfstring{block\_allocator\_}{block\_allocator\_}}
+{\footnotesize\ttfamily template$<$typename Allocator $>$ \\
+Allocator \mbox{\hyperlink{classrocr_1_1SimpleHeap}{rocr\+::\+Simple\+Heap}}$<$ Allocator $>$\+::block\+\_\+allocator\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classrocr_1_1SimpleHeap_a8a8b90ee660269a6649e407c53ea0fe1}\label{classrocr_1_1SimpleHeap_a8a8b90ee660269a6649e407c53ea0fe1}} 
+\index{rocr::SimpleHeap$<$ Allocator $>$@{rocr::SimpleHeap$<$ Allocator $>$}!block\_cache\_@{block\_cache\_}}
+\index{block\_cache\_@{block\_cache\_}!rocr::SimpleHeap$<$ Allocator $>$@{rocr::SimpleHeap$<$ Allocator $>$}}
+\doxysubsubsection{\texorpdfstring{block\_cache\_}{block\_cache\_}}
+{\footnotesize\ttfamily template$<$typename Allocator $>$ \\
+std\+::deque$<$\mbox{\hyperlink{structrocr_1_1SimpleHeap_1_1Block}{Block}}$>$ \mbox{\hyperlink{classrocr_1_1SimpleHeap}{rocr\+::\+Simple\+Heap}}$<$ Allocator $>$\+::block\+\_\+cache\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classrocr_1_1SimpleHeap_aac696dadebdd9730c6b54f76dec7321c}\label{classrocr_1_1SimpleHeap_aac696dadebdd9730c6b54f76dec7321c}} 
+\index{rocr::SimpleHeap$<$ Allocator $>$@{rocr::SimpleHeap$<$ Allocator $>$}!block\_list\_@{block\_list\_}}
+\index{block\_list\_@{block\_list\_}!rocr::SimpleHeap$<$ Allocator $>$@{rocr::SimpleHeap$<$ Allocator $>$}}
+\doxysubsubsection{\texorpdfstring{block\_list\_}{block\_list\_}}
+{\footnotesize\ttfamily template$<$typename Allocator $>$ \\
+std\+::map$<$uintptr\+\_\+t, std\+::map$<$uintptr\+\_\+t, \mbox{\hyperlink{structrocr_1_1SimpleHeap_1_1Fragment__T}{Fragment\+\_\+T}}$>$ $>$ \mbox{\hyperlink{classrocr_1_1SimpleHeap}{rocr\+::\+Simple\+Heap}}$<$ Allocator $>$\+::block\+\_\+list\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classrocr_1_1SimpleHeap_a16922292ed49c6bc4983292cef75f1c7}\label{classrocr_1_1SimpleHeap_a16922292ed49c6bc4983292cef75f1c7}} 
+\index{rocr::SimpleHeap$<$ Allocator $>$@{rocr::SimpleHeap$<$ Allocator $>$}!cache\_size\_@{cache\_size\_}}
+\index{cache\_size\_@{cache\_size\_}!rocr::SimpleHeap$<$ Allocator $>$@{rocr::SimpleHeap$<$ Allocator $>$}}
+\doxysubsubsection{\texorpdfstring{cache\_size\_}{cache\_size\_}}
+{\footnotesize\ttfamily template$<$typename Allocator $>$ \\
+size\+\_\+t \mbox{\hyperlink{classrocr_1_1SimpleHeap}{rocr\+::\+Simple\+Heap}}$<$ Allocator $>$\+::cache\+\_\+size\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classrocr_1_1SimpleHeap_a0a193446d8fc4934e8e425a82b889545}\label{classrocr_1_1SimpleHeap_a0a193446d8fc4934e8e425a82b889545}} 
+\index{rocr::SimpleHeap$<$ Allocator $>$@{rocr::SimpleHeap$<$ Allocator $>$}!free\_list\_@{free\_list\_}}
+\index{free\_list\_@{free\_list\_}!rocr::SimpleHeap$<$ Allocator $>$@{rocr::SimpleHeap$<$ Allocator $>$}}
+\doxysubsubsection{\texorpdfstring{free\_list\_}{free\_list\_}}
+{\footnotesize\ttfamily template$<$typename Allocator $>$ \\
+std\+::multimap$<$size\+\_\+t, uintptr\+\_\+t$>$ \mbox{\hyperlink{classrocr_1_1SimpleHeap}{rocr\+::\+Simple\+Heap}}$<$ Allocator $>$\+::free\+\_\+list\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classrocr_1_1SimpleHeap_adbc01c61fa01597edb91a6a3b6f815f4}\label{classrocr_1_1SimpleHeap_adbc01c61fa01597edb91a6a3b6f815f4}} 
+\index{rocr::SimpleHeap$<$ Allocator $>$@{rocr::SimpleHeap$<$ Allocator $>$}!in\_use\_size\_@{in\_use\_size\_}}
+\index{in\_use\_size\_@{in\_use\_size\_}!rocr::SimpleHeap$<$ Allocator $>$@{rocr::SimpleHeap$<$ Allocator $>$}}
+\doxysubsubsection{\texorpdfstring{in\_use\_size\_}{in\_use\_size\_}}
+{\footnotesize\ttfamily template$<$typename Allocator $>$ \\
+size\+\_\+t \mbox{\hyperlink{classrocr_1_1SimpleHeap}{rocr\+::\+Simple\+Heap}}$<$ Allocator $>$\+::in\+\_\+use\+\_\+size\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+src/core/util/\mbox{\hyperlink{simple__heap_8h}{simple\+\_\+heap.\+h}}\end{DoxyCompactItemize}

@@ -1,0 +1,105 @@
+\hypertarget{hsa__ext__interface_8cpp}{}\doxysection{src/core/runtime/hsa\+\_\+ext\+\_\+interface.cpp File Reference}
+\label{hsa__ext__interface_8cpp}\index{src/core/runtime/hsa\_ext\_interface.cpp@{src/core/runtime/hsa\_ext\_interface.cpp}}
+{\ttfamily \#include \char`\"{}image/inc/hsa\+\_\+ext\+\_\+image\+\_\+impl.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}core/inc/hsa\+\_\+ext\+\_\+interface.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}core/inc/runtime.\+h\char`\"{}}\newline
+{\ttfamily \#include $<$string$>$}\newline
+Include dependency graph for hsa\+\_\+ext\+\_\+interface.\+cpp\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{hsa__ext__interface_8cpp__incl}
+\end{center}
+\end{figure}
+\doxysubsection*{Namespaces}
+\begin{DoxyCompactItemize}
+\item 
+ \mbox{\hyperlink{namespacerocr}{rocr}}
+\item 
+ \mbox{\hyperlink{namespacerocr_1_1core}{rocr\+::core}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+{\footnotesize template$<$class R , class... ARGS$>$ }\\static R \mbox{\hyperlink{namespacerocr_a14b5018423505777129f799da5809120}{rocr\+::hsa\+\_\+ext\+\_\+null}} (ARGS...)
+\item 
+\mbox{\hyperlink{group__status_gad755322e7ff95456520e8abdbe90d225}{hsa\+\_\+status\+\_\+t}} \mbox{\hyperlink{group__ext-alt-finalizer-program_gadbbd7d39587a6c353ef3de58fd056125}{hsa\+\_\+ext\+\_\+program\+\_\+create}} (\mbox{\hyperlink{group__agentinfo_ga4d45919fd6f6e8dbb8ae2f4030870e11}{hsa\+\_\+machine\+\_\+model\+\_\+t}} machine\+\_\+model, \mbox{\hyperlink{group__agentinfo_gacafd4247e2a04cbe0ac0b3998c127532}{hsa\+\_\+profile\+\_\+t}} profile, \mbox{\hyperlink{group__agentinfo_gaac56321e4596fe10a90b5bb3fedc4b73}{hsa\+\_\+default\+\_\+float\+\_\+rounding\+\_\+mode\+\_\+t}} default\+\_\+float\+\_\+rounding\+\_\+mode, const char $\ast$options, \mbox{\hyperlink{group__ext-alt-finalizer-program_ga73a4db77f5c8e683576ee14bf3b3cd99}{hsa\+\_\+ext\+\_\+program\+\_\+t}} $\ast$program)
+\begin{DoxyCompactList}\small\item\em Create an empty HSAIL program. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{group__status_gad755322e7ff95456520e8abdbe90d225}{hsa\+\_\+status\+\_\+t}} \mbox{\hyperlink{group__ext-alt-finalizer-program_ga56289fba751ef7495061c812db029a57}{hsa\+\_\+ext\+\_\+program\+\_\+destroy}} (\mbox{\hyperlink{group__ext-alt-finalizer-program_ga73a4db77f5c8e683576ee14bf3b3cd99}{hsa\+\_\+ext\+\_\+program\+\_\+t}} program)
+\begin{DoxyCompactList}\small\item\em Destroy a HSAIL program. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{group__status_gad755322e7ff95456520e8abdbe90d225}{hsa\+\_\+status\+\_\+t}} \mbox{\hyperlink{group__ext-alt-finalizer-program_gad6dd70e610e9a4b0a9173cd7ee7ac575}{hsa\+\_\+ext\+\_\+program\+\_\+add\+\_\+module}} (\mbox{\hyperlink{group__ext-alt-finalizer-program_ga73a4db77f5c8e683576ee14bf3b3cd99}{hsa\+\_\+ext\+\_\+program\+\_\+t}} program, \mbox{\hyperlink{group__ext-alt-finalizer-program_gafc31798efdd1873a6ebe29d5b6bb3e88}{hsa\+\_\+ext\+\_\+module\+\_\+t}} module)
+\begin{DoxyCompactList}\small\item\em Add a HSAIL module to an existing HSAIL program. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{group__status_gad755322e7ff95456520e8abdbe90d225}{hsa\+\_\+status\+\_\+t}} \mbox{\hyperlink{group__ext-alt-finalizer-program_ga290e0760731512ba4ac37f541ca7c97e}{hsa\+\_\+ext\+\_\+program\+\_\+iterate\+\_\+modules}} (\mbox{\hyperlink{group__ext-alt-finalizer-program_ga73a4db77f5c8e683576ee14bf3b3cd99}{hsa\+\_\+ext\+\_\+program\+\_\+t}} program, \mbox{\hyperlink{group__status_gad755322e7ff95456520e8abdbe90d225}{hsa\+\_\+status\+\_\+t}}($\ast$callback)(\mbox{\hyperlink{group__ext-alt-finalizer-program_ga73a4db77f5c8e683576ee14bf3b3cd99}{hsa\+\_\+ext\+\_\+program\+\_\+t}} program, \mbox{\hyperlink{group__ext-alt-finalizer-program_gafc31798efdd1873a6ebe29d5b6bb3e88}{hsa\+\_\+ext\+\_\+module\+\_\+t}} module, void $\ast$data), void $\ast$data)
+\begin{DoxyCompactList}\small\item\em Iterate over the HSAIL modules in a program, and invoke an application-\/defined callback on every iteration. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{group__status_gad755322e7ff95456520e8abdbe90d225}{hsa\+\_\+status\+\_\+t}} \mbox{\hyperlink{group__ext-alt-finalizer-program_gae29b7984c3cfaabfb1d42940cda1ee53}{hsa\+\_\+ext\+\_\+program\+\_\+get\+\_\+info}} (\mbox{\hyperlink{group__ext-alt-finalizer-program_ga73a4db77f5c8e683576ee14bf3b3cd99}{hsa\+\_\+ext\+\_\+program\+\_\+t}} program, \mbox{\hyperlink{group__ext-alt-finalizer-program_gae88cde13c62f92f7c6b58b24dfe8d731}{hsa\+\_\+ext\+\_\+program\+\_\+info\+\_\+t}} attribute, void $\ast$value)
+\begin{DoxyCompactList}\small\item\em Get the current value of an attribute for a given HSAIL program. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{group__status_gad755322e7ff95456520e8abdbe90d225}{hsa\+\_\+status\+\_\+t}} \mbox{\hyperlink{group__ext-alt-finalizer-program_ga2c653f76c850b193c28932ee98d02b8c}{hsa\+\_\+ext\+\_\+program\+\_\+finalize}} (\mbox{\hyperlink{group__ext-alt-finalizer-program_ga73a4db77f5c8e683576ee14bf3b3cd99}{hsa\+\_\+ext\+\_\+program\+\_\+t}} program, \mbox{\hyperlink{group__instruction-set-architecture_ga459b132d062bba98dd1870f38b6ab721}{hsa\+\_\+isa\+\_\+t}} isa, int32\+\_\+t call\+\_\+convention, \mbox{\hyperlink{group__ext-alt-finalizer-program_gaea4f3ae95cc082cd39e20252669439b7}{hsa\+\_\+ext\+\_\+control\+\_\+directives\+\_\+t}} control\+\_\+directives, const char $\ast$options, \mbox{\hyperlink{group__code-object_gaf769fe79f88bec884909567e6a941f06}{hsa\+\_\+code\+\_\+object\+\_\+type\+\_\+t}} code\+\_\+object\+\_\+type, \mbox{\hyperlink{group__code-object_gafae7c731c8bfc39b3050ef08ae8bb3e3}{hsa\+\_\+code\+\_\+object\+\_\+t}} $\ast$code\+\_\+object)
+\begin{DoxyCompactList}\small\item\em Finalize an HSAIL program for a given instruction set architecture. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{group__status_gad755322e7ff95456520e8abdbe90d225}{hsa\+\_\+status\+\_\+t}} \mbox{\hyperlink{group__ext-images_ga12a909df33851b76afa2850abc7086f1}{hsa\+\_\+ext\+\_\+image\+\_\+get\+\_\+capability}} (\mbox{\hyperlink{group__agentinfo_ga9ce217ef08e7d5e89c8e83ce7b6ef22b}{hsa\+\_\+agent\+\_\+t}} agent, \mbox{\hyperlink{group__ext-images_gac61587d98a80d1660378e3904a66fc9c}{hsa\+\_\+ext\+\_\+image\+\_\+geometry\+\_\+t}} geometry, const \mbox{\hyperlink{group__ext-images_ga37a5b98dd984766026174b4d6d486b29}{hsa\+\_\+ext\+\_\+image\+\_\+format\+\_\+t}} $\ast$image\+\_\+format, uint32\+\_\+t $\ast$capability\+\_\+mask)
+\begin{DoxyCompactList}\small\item\em Retrieve the supported image capabilities for a given combination of agent, geometry, and image format for an image created with an opaque image data layout. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{group__status_gad755322e7ff95456520e8abdbe90d225}{hsa\+\_\+status\+\_\+t}} \mbox{\hyperlink{group__ext-images_gad8e2426d1829f772af6e603ff226f65a}{hsa\+\_\+ext\+\_\+image\+\_\+data\+\_\+get\+\_\+info}} (\mbox{\hyperlink{group__agentinfo_ga9ce217ef08e7d5e89c8e83ce7b6ef22b}{hsa\+\_\+agent\+\_\+t}} agent, const \mbox{\hyperlink{group__ext-images_ga7ccf44400f9bbb459c8e52f54a3c5eb0}{hsa\+\_\+ext\+\_\+image\+\_\+descriptor\+\_\+t}} $\ast$image\+\_\+descriptor, \mbox{\hyperlink{group__common_gacef73774a0af1d1df56fdcd9e04bb708}{hsa\+\_\+access\+\_\+permission\+\_\+t}} access\+\_\+permission, \mbox{\hyperlink{group__ext-images_gada32050df34dc3f6c0b9124706d8984b}{hsa\+\_\+ext\+\_\+image\+\_\+data\+\_\+info\+\_\+t}} $\ast$image\+\_\+data\+\_\+info)
+\begin{DoxyCompactList}\small\item\em Retrieve the image data requirements for a given combination of agent, image descriptor, and access permission for an image created with an opaque image data layout. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{group__status_gad755322e7ff95456520e8abdbe90d225}{hsa\+\_\+status\+\_\+t}} \mbox{\hyperlink{group__ext-images_ga985562c68508d4d8b0edcfd0729b6d49}{hsa\+\_\+ext\+\_\+image\+\_\+create}} (\mbox{\hyperlink{group__agentinfo_ga9ce217ef08e7d5e89c8e83ce7b6ef22b}{hsa\+\_\+agent\+\_\+t}} agent, const \mbox{\hyperlink{group__ext-images_ga7ccf44400f9bbb459c8e52f54a3c5eb0}{hsa\+\_\+ext\+\_\+image\+\_\+descriptor\+\_\+t}} $\ast$image\+\_\+descriptor, const void $\ast$image\+\_\+data, \mbox{\hyperlink{group__common_gacef73774a0af1d1df56fdcd9e04bb708}{hsa\+\_\+access\+\_\+permission\+\_\+t}} access\+\_\+permission, \mbox{\hyperlink{group__ext-images_ga4e192988bd0b5abe2a57e248934e6dc6}{hsa\+\_\+ext\+\_\+image\+\_\+t}} $\ast$image)
+\begin{DoxyCompactList}\small\item\em Creates an agent specific image handle to an image with an opaque image data layout. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{group__status_gad755322e7ff95456520e8abdbe90d225}{hsa\+\_\+status\+\_\+t}} \mbox{\hyperlink{group__ext-images_gaea7edbc97a6758a71eaf4160c133802f}{hsa\+\_\+ext\+\_\+image\+\_\+import}} (\mbox{\hyperlink{group__agentinfo_ga9ce217ef08e7d5e89c8e83ce7b6ef22b}{hsa\+\_\+agent\+\_\+t}} agent, const void $\ast$src\+\_\+memory, size\+\_\+t src\+\_\+row\+\_\+pitch, size\+\_\+t src\+\_\+slice\+\_\+pitch, \mbox{\hyperlink{group__ext-images_ga4e192988bd0b5abe2a57e248934e6dc6}{hsa\+\_\+ext\+\_\+image\+\_\+t}} dst\+\_\+image, const \mbox{\hyperlink{group__ext-images_gaa407e3fb8aa43d59f8e8560294d1c702}{hsa\+\_\+ext\+\_\+image\+\_\+region\+\_\+t}} $\ast$image\+\_\+region)
+\begin{DoxyCompactList}\small\item\em Import a linearly organized image data from memory directly to an image handle. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{group__status_gad755322e7ff95456520e8abdbe90d225}{hsa\+\_\+status\+\_\+t}} \mbox{\hyperlink{group__ext-images_ga2187349ce5a986c7292c70ce61437666}{hsa\+\_\+ext\+\_\+image\+\_\+export}} (\mbox{\hyperlink{group__agentinfo_ga9ce217ef08e7d5e89c8e83ce7b6ef22b}{hsa\+\_\+agent\+\_\+t}} agent, \mbox{\hyperlink{group__ext-images_ga4e192988bd0b5abe2a57e248934e6dc6}{hsa\+\_\+ext\+\_\+image\+\_\+t}} src\+\_\+image, void $\ast$dst\+\_\+memory, size\+\_\+t dst\+\_\+row\+\_\+pitch, size\+\_\+t dst\+\_\+slice\+\_\+pitch, const \mbox{\hyperlink{group__ext-images_gaa407e3fb8aa43d59f8e8560294d1c702}{hsa\+\_\+ext\+\_\+image\+\_\+region\+\_\+t}} $\ast$image\+\_\+region)
+\begin{DoxyCompactList}\small\item\em Export the image data to linearly organized memory. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{group__status_gad755322e7ff95456520e8abdbe90d225}{hsa\+\_\+status\+\_\+t}} \mbox{\hyperlink{group__ext-images_ga3c8f7cdc2f8f5fc7aa4ad3f845a3dc8d}{hsa\+\_\+ext\+\_\+image\+\_\+copy}} (\mbox{\hyperlink{group__agentinfo_ga9ce217ef08e7d5e89c8e83ce7b6ef22b}{hsa\+\_\+agent\+\_\+t}} agent, \mbox{\hyperlink{group__ext-images_ga4e192988bd0b5abe2a57e248934e6dc6}{hsa\+\_\+ext\+\_\+image\+\_\+t}} src\+\_\+image, const \mbox{\hyperlink{group__common_gae460d1df8c508a9c889d4550ea4eea30}{hsa\+\_\+dim3\+\_\+t}} $\ast$src\+\_\+offset, \mbox{\hyperlink{group__ext-images_ga4e192988bd0b5abe2a57e248934e6dc6}{hsa\+\_\+ext\+\_\+image\+\_\+t}} dst\+\_\+image, const \mbox{\hyperlink{group__common_gae460d1df8c508a9c889d4550ea4eea30}{hsa\+\_\+dim3\+\_\+t}} $\ast$dst\+\_\+offset, const \mbox{\hyperlink{group__common_gae460d1df8c508a9c889d4550ea4eea30}{hsa\+\_\+dim3\+\_\+t}} $\ast$range)
+\begin{DoxyCompactList}\small\item\em Copies a portion of one image (the source) to another image (the destination). \end{DoxyCompactList}\item 
+\mbox{\hyperlink{group__status_gad755322e7ff95456520e8abdbe90d225}{hsa\+\_\+status\+\_\+t}} \mbox{\hyperlink{group__ext-images_gacc311188d2d5c9182e4a07bfceabbd99}{hsa\+\_\+ext\+\_\+image\+\_\+clear}} (\mbox{\hyperlink{group__agentinfo_ga9ce217ef08e7d5e89c8e83ce7b6ef22b}{hsa\+\_\+agent\+\_\+t}} agent, \mbox{\hyperlink{group__ext-images_ga4e192988bd0b5abe2a57e248934e6dc6}{hsa\+\_\+ext\+\_\+image\+\_\+t}} image, const void $\ast$data, const \mbox{\hyperlink{group__ext-images_gaa407e3fb8aa43d59f8e8560294d1c702}{hsa\+\_\+ext\+\_\+image\+\_\+region\+\_\+t}} $\ast$image\+\_\+region)
+\begin{DoxyCompactList}\small\item\em Clear a region of an image so that every image element has the specified value. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{group__status_gad755322e7ff95456520e8abdbe90d225}{hsa\+\_\+status\+\_\+t}} \mbox{\hyperlink{group__ext-images_ga7fdb9d51ec1916b0eeb6fc6742dc7572}{hsa\+\_\+ext\+\_\+image\+\_\+destroy}} (\mbox{\hyperlink{group__agentinfo_ga9ce217ef08e7d5e89c8e83ce7b6ef22b}{hsa\+\_\+agent\+\_\+t}} agent, \mbox{\hyperlink{group__ext-images_ga4e192988bd0b5abe2a57e248934e6dc6}{hsa\+\_\+ext\+\_\+image\+\_\+t}} image)
+\begin{DoxyCompactList}\small\item\em Destroy an image handle previously created using \mbox{\hyperlink{group__ext-images_ga985562c68508d4d8b0edcfd0729b6d49}{hsa\+\_\+ext\+\_\+image\+\_\+create}} or \mbox{\hyperlink{group__ext-images_ga7de92e8bde1496761b7dd00d1e03186e}{hsa\+\_\+ext\+\_\+image\+\_\+create\+\_\+with\+\_\+layout}}. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{group__status_gad755322e7ff95456520e8abdbe90d225}{hsa\+\_\+status\+\_\+t}} \mbox{\hyperlink{group__ext-images_gaf3b5567510870cf0130efd69d5af3c07}{hsa\+\_\+ext\+\_\+sampler\+\_\+create}} (\mbox{\hyperlink{group__agentinfo_ga9ce217ef08e7d5e89c8e83ce7b6ef22b}{hsa\+\_\+agent\+\_\+t}} agent, const \mbox{\hyperlink{group__ext-images_gabed3b941e5a41287f2240f366797bda2}{hsa\+\_\+ext\+\_\+sampler\+\_\+descriptor\+\_\+t}} $\ast$sampler\+\_\+descriptor, \mbox{\hyperlink{group__ext-images_ga41c5c0a2cbd7c9020ef8ce2afc1c6101}{hsa\+\_\+ext\+\_\+sampler\+\_\+t}} $\ast$sampler)
+\begin{DoxyCompactList}\small\item\em Create an agent specific sampler handle for a given agent independent sampler descriptor and agent. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{group__status_gad755322e7ff95456520e8abdbe90d225}{hsa\+\_\+status\+\_\+t}} \mbox{\hyperlink{group__ext-images_gaae9e9552761238b093b4197dadf3ef70}{hsa\+\_\+ext\+\_\+sampler\+\_\+destroy}} (\mbox{\hyperlink{group__agentinfo_ga9ce217ef08e7d5e89c8e83ce7b6ef22b}{hsa\+\_\+agent\+\_\+t}} agent, \mbox{\hyperlink{group__ext-images_ga41c5c0a2cbd7c9020ef8ce2afc1c6101}{hsa\+\_\+ext\+\_\+sampler\+\_\+t}} sampler)
+\begin{DoxyCompactList}\small\item\em Destroy a sampler handle previously created using \mbox{\hyperlink{group__ext-images_gaf3b5567510870cf0130efd69d5af3c07}{hsa\+\_\+ext\+\_\+sampler\+\_\+create}}. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{group__status_gad755322e7ff95456520e8abdbe90d225}{hsa\+\_\+status\+\_\+t}} \mbox{\hyperlink{group__ext-images_ga65fc81035fd8c70c3229ce8f5285e5e6}{hsa\+\_\+ext\+\_\+image\+\_\+get\+\_\+capability\+\_\+with\+\_\+layout}} (\mbox{\hyperlink{group__agentinfo_ga9ce217ef08e7d5e89c8e83ce7b6ef22b}{hsa\+\_\+agent\+\_\+t}} agent, \mbox{\hyperlink{group__ext-images_gac61587d98a80d1660378e3904a66fc9c}{hsa\+\_\+ext\+\_\+image\+\_\+geometry\+\_\+t}} geometry, const \mbox{\hyperlink{group__ext-images_ga37a5b98dd984766026174b4d6d486b29}{hsa\+\_\+ext\+\_\+image\+\_\+format\+\_\+t}} $\ast$image\+\_\+format, \mbox{\hyperlink{group__ext-images_ga102222a1420a2434d9b50100350305e4}{hsa\+\_\+ext\+\_\+image\+\_\+data\+\_\+layout\+\_\+t}} image\+\_\+data\+\_\+layout, uint32\+\_\+t $\ast$capability\+\_\+mask)
+\begin{DoxyCompactList}\small\item\em Retrieve the supported image capabilities for a given combination of agent, geometry, image format, and image layout for an image created with an explicit image data layout. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{group__status_gad755322e7ff95456520e8abdbe90d225}{hsa\+\_\+status\+\_\+t}} \mbox{\hyperlink{group__ext-images_ga2d3f7ebd674fe267e608b3f1c1a89965}{hsa\+\_\+ext\+\_\+image\+\_\+data\+\_\+get\+\_\+info\+\_\+with\+\_\+layout}} (\mbox{\hyperlink{group__agentinfo_ga9ce217ef08e7d5e89c8e83ce7b6ef22b}{hsa\+\_\+agent\+\_\+t}} agent, const \mbox{\hyperlink{group__ext-images_ga7ccf44400f9bbb459c8e52f54a3c5eb0}{hsa\+\_\+ext\+\_\+image\+\_\+descriptor\+\_\+t}} $\ast$image\+\_\+descriptor, \mbox{\hyperlink{group__common_gacef73774a0af1d1df56fdcd9e04bb708}{hsa\+\_\+access\+\_\+permission\+\_\+t}} access\+\_\+permission, \mbox{\hyperlink{group__ext-images_ga102222a1420a2434d9b50100350305e4}{hsa\+\_\+ext\+\_\+image\+\_\+data\+\_\+layout\+\_\+t}} image\+\_\+data\+\_\+layout, size\+\_\+t image\+\_\+data\+\_\+row\+\_\+pitch, size\+\_\+t image\+\_\+data\+\_\+slice\+\_\+pitch, \mbox{\hyperlink{group__ext-images_gada32050df34dc3f6c0b9124706d8984b}{hsa\+\_\+ext\+\_\+image\+\_\+data\+\_\+info\+\_\+t}} $\ast$image\+\_\+data\+\_\+info)
+\begin{DoxyCompactList}\small\item\em Retrieve the image data requirements for a given combination of image descriptor, access permission, image data layout, image data row pitch, and image data slice pitch for an image created with an explicit image data layout. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{group__status_gad755322e7ff95456520e8abdbe90d225}{hsa\+\_\+status\+\_\+t}} \mbox{\hyperlink{group__ext-images_ga7de92e8bde1496761b7dd00d1e03186e}{hsa\+\_\+ext\+\_\+image\+\_\+create\+\_\+with\+\_\+layout}} (\mbox{\hyperlink{group__agentinfo_ga9ce217ef08e7d5e89c8e83ce7b6ef22b}{hsa\+\_\+agent\+\_\+t}} agent, const \mbox{\hyperlink{group__ext-images_ga7ccf44400f9bbb459c8e52f54a3c5eb0}{hsa\+\_\+ext\+\_\+image\+\_\+descriptor\+\_\+t}} $\ast$image\+\_\+descriptor, const void $\ast$image\+\_\+data, \mbox{\hyperlink{group__common_gacef73774a0af1d1df56fdcd9e04bb708}{hsa\+\_\+access\+\_\+permission\+\_\+t}} access\+\_\+permission, \mbox{\hyperlink{group__ext-images_ga102222a1420a2434d9b50100350305e4}{hsa\+\_\+ext\+\_\+image\+\_\+data\+\_\+layout\+\_\+t}} image\+\_\+data\+\_\+layout, size\+\_\+t image\+\_\+data\+\_\+row\+\_\+pitch, size\+\_\+t image\+\_\+data\+\_\+slice\+\_\+pitch, \mbox{\hyperlink{group__ext-images_ga4e192988bd0b5abe2a57e248934e6dc6}{hsa\+\_\+ext\+\_\+image\+\_\+t}} $\ast$image)
+\begin{DoxyCompactList}\small\item\em Creates an agent specific image handle to an image with an explicit image data layout. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{group__status_gad755322e7ff95456520e8abdbe90d225}{hsa\+\_\+status\+\_\+t}} \mbox{\hyperlink{hsa__ext__interface_8cpp_a74c429b2b3981d325c4aec4ec9c2577c}{hsa\+\_\+amd\+\_\+image\+\_\+get\+\_\+info\+\_\+max\+\_\+dim}} (\mbox{\hyperlink{group__agentinfo_ga9ce217ef08e7d5e89c8e83ce7b6ef22b}{hsa\+\_\+agent\+\_\+t}} component, \mbox{\hyperlink{group__agentinfo_ga39d0684207d95717d96319573b3e4a42}{hsa\+\_\+agent\+\_\+info\+\_\+t}} attribute, void $\ast$value)
+\begin{DoxyCompactList}\small\item\em Query image limits. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{hsa__ext__interface_8cpp_a74c429b2b3981d325c4aec4ec9c2577c}\label{hsa__ext__interface_8cpp_a74c429b2b3981d325c4aec4ec9c2577c}} 
+\index{hsa\_ext\_interface.cpp@{hsa\_ext\_interface.cpp}!hsa\_amd\_image\_get\_info\_max\_dim@{hsa\_amd\_image\_get\_info\_max\_dim}}
+\index{hsa\_amd\_image\_get\_info\_max\_dim@{hsa\_amd\_image\_get\_info\_max\_dim}!hsa\_ext\_interface.cpp@{hsa\_ext\_interface.cpp}}
+\doxysubsubsection{\texorpdfstring{hsa\_amd\_image\_get\_info\_max\_dim()}{hsa\_amd\_image\_get\_info\_max\_dim()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{group__status_gad755322e7ff95456520e8abdbe90d225}{hsa\+\_\+status\+\_\+t}} hsa\+\_\+amd\+\_\+image\+\_\+get\+\_\+info\+\_\+max\+\_\+dim (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{group__agentinfo_ga9ce217ef08e7d5e89c8e83ce7b6ef22b}{hsa\+\_\+agent\+\_\+t}}}]{agent,  }\item[{\mbox{\hyperlink{group__agentinfo_ga39d0684207d95717d96319573b3e4a42}{hsa\+\_\+agent\+\_\+info\+\_\+t}}}]{attribute,  }\item[{void $\ast$}]{value }\end{DoxyParamCaption})}
+
+
+
+Query image limits. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em agent} & A valid agent.\\
+\hline
+\mbox{\texttt{ in}}  & {\em attribute} & HSA image info attribute to query.\\
+\hline
+\mbox{\texttt{ out}}  & {\em value} & Pointer to an application-\/allocated buffer where to store the value of the attribute. If the buffer passed by the application is not large enough to hold the value of {\ttfamily attribute}, the behavior is undefined.\\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em \mbox{\hyperlink{group__status_ggad755322e7ff95456520e8abdbe90d225ae382ea0c9c05cce5a60d0317375159cc}{HSA\+\_\+\+STATUS\+\_\+\+SUCCESS}}} & The function has been executed successfully.\\
+\hline
+{\em \mbox{\hyperlink{group__status_ggad755322e7ff95456520e8abdbe90d225a34ea59ade5bfce95eee935238a99f5b5}{HSA\+\_\+\+STATUS\+\_\+\+ERROR\+\_\+\+NOT\+\_\+\+INITIALIZED}}} & The HSA runtime has not been initialized.\\
+\hline
+{\em \mbox{\hyperlink{group__status_ggad755322e7ff95456520e8abdbe90d225aa3c762eb6a61b358702b45259d1686c4}{HSA\+\_\+\+STATUS\+\_\+\+ERROR\+\_\+\+INVALID\+\_\+\+QUEUE}}} & {\ttfamily value} is NULL or {\ttfamily attribute} $<$ HSA\+\_\+\+EXT\+\_\+\+AGENT\+\_\+\+INFO\+\_\+\+IMAGE\+\_\+1\+D\+\_\+\+MAX\+\_\+\+ELEMENTS or {\ttfamily attribute} $>$ HSA\+\_\+\+EXT\+\_\+\+AGENT\+\_\+\+INFO\+\_\+\+IMAGE\+\_\+\+ARRAY\+\_\+\+MAX\+\_\+\+LAYERS. \\
+\hline
+\end{DoxyRetVals}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{hsa__ext__interface_8cpp_a74c429b2b3981d325c4aec4ec9c2577c_icgraph}
+\end{center}
+\end{figure}

@@ -1,0 +1,56 @@
+\hypertarget{timer_8h}{}\doxysection{src/core/util/timer.h File Reference}
+\label{timer_8h}\index{src/core/util/timer.h@{src/core/util/timer.h}}
+{\ttfamily \#include \char`\"{}core/util/utils.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}core/util/os.\+h\char`\"{}}\newline
+{\ttfamily \#include $<$chrono$>$}\newline
+{\ttfamily \#include $<$time.\+h$>$}\newline
+{\ttfamily \#include $<$type\+\_\+traits$>$}\newline
+Include dependency graph for timer.\+h\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{timer_8h__incl}
+\end{center}
+\end{figure}
+This graph shows which files directly or indirectly include this file\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{timer_8h__dep__incl}
+\end{center}
+\end{figure}
+\doxysubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{structrocr_1_1timer_1_1wide__type}{rocr\+::timer\+::wide\+\_\+type$<$ is\+Float, is\+Signed $>$}}
+\item 
+struct \mbox{\hyperlink{structrocr_1_1timer_1_1wide__type_3_01false_00_01false_01_4}{rocr\+::timer\+::wide\+\_\+type$<$ false, false $>$}}
+\item 
+struct \mbox{\hyperlink{structrocr_1_1timer_1_1wide__type_3_01false_00_01true_01_4}{rocr\+::timer\+::wide\+\_\+type$<$ false, true $>$}}
+\item 
+class \mbox{\hyperlink{classrocr_1_1timer_1_1accurate__clock}{rocr\+::timer\+::accurate\+\_\+clock}}
+\item 
+class \mbox{\hyperlink{classrocr_1_1timer_1_1accurate__clock_1_1init}{rocr\+::timer\+::accurate\+\_\+clock\+::init}}
+\item 
+class \mbox{\hyperlink{classrocr_1_1timer_1_1fast__clock}{rocr\+::timer\+::fast\+\_\+clock}}
+\item 
+class \mbox{\hyperlink{classrocr_1_1timer_1_1fast__clock_1_1init}{rocr\+::timer\+::fast\+\_\+clock\+::init}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Namespaces}
+\begin{DoxyCompactItemize}
+\item 
+ \mbox{\hyperlink{namespacerocr}{rocr}}
+\item 
+ \mbox{\hyperlink{namespacerocr_1_1timer}{rocr\+::timer}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+{\footnotesize template$<$typename To , typename Rep , typename Period $>$ }\\static \+\_\+\+\_\+forceinline To \mbox{\hyperlink{namespacerocr_1_1timer_afd6da7643fd6742cbb91b9cd64872485}{rocr\+::timer\+::duration\+\_\+cast}} (const std\+::chrono\+::duration$<$ Rep, Period $>$ \&d)
+\item 
+{\footnotesize template$<$typename Rep , typename Period $>$ }\\static \+\_\+\+\_\+forceinline double \mbox{\hyperlink{namespacerocr_1_1timer_a581c5dfb18593d0a62e47e5ec668b8d8}{rocr\+::timer\+::duration\+\_\+in\+\_\+seconds}} (std\+::chrono\+::duration$<$ Rep, Period $>$ delta)
+\item 
+{\footnotesize template$<$typename rep $>$ }\\static \+\_\+\+\_\+forceinline rep \mbox{\hyperlink{namespacerocr_1_1timer_a618b9f8a7151df9c1a23c1580f6e6854}{rocr\+::timer\+::duration\+\_\+from\+\_\+seconds}} (double delta)
+\end{DoxyCompactItemize}

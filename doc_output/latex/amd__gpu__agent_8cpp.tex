@@ -1,0 +1,74 @@
+\hypertarget{amd__gpu__agent_8cpp}{}\doxysection{src/core/runtime/amd\+\_\+gpu\+\_\+agent.cpp File Reference}
+\label{amd__gpu__agent_8cpp}\index{src/core/runtime/amd\_gpu\_agent.cpp@{src/core/runtime/amd\_gpu\_agent.cpp}}
+{\ttfamily \#include \char`\"{}core/inc/amd\+\_\+gpu\+\_\+agent.\+h\char`\"{}}\newline
+{\ttfamily \#include $<$algorithm$>$}\newline
+{\ttfamily \#include $<$atomic$>$}\newline
+{\ttfamily \#include $<$cstring$>$}\newline
+{\ttfamily \#include $<$climits$>$}\newline
+{\ttfamily \#include $<$map$>$}\newline
+{\ttfamily \#include $<$string$>$}\newline
+{\ttfamily \#include $<$vector$>$}\newline
+{\ttfamily \#include $<$memory$>$}\newline
+{\ttfamily \#include $<$utility$>$}\newline
+{\ttfamily \#include $<$iomanip$>$}\newline
+{\ttfamily \#include \char`\"{}core/inc/amd\+\_\+aql\+\_\+queue.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}core/inc/amd\+\_\+blit\+\_\+kernel.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}core/inc/amd\+\_\+blit\+\_\+sdma.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}core/inc/amd\+\_\+gpu\+\_\+pm4.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}core/inc/amd\+\_\+memory\+\_\+region.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}core/inc/interrupt\+\_\+signal.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}core/inc/isa.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}core/inc/runtime.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}core/util/os.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}inc/hsa\+\_\+ext\+\_\+image.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}inc/hsa\+\_\+ven\+\_\+amd\+\_\+aqlprofile.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}core/inc/amd\+\_\+trap\+\_\+handler\+\_\+v1.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}core/inc/amd\+\_\+blit\+\_\+shaders.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}amd\+\_\+trap\+\_\+handler\+\_\+v2.\+h\char`\"{}}\newline
+Include dependency graph for amd\+\_\+gpu\+\_\+agent.\+cpp\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{amd__gpu__agent_8cpp__incl}
+\end{center}
+\end{figure}
+\doxysubsection*{Namespaces}
+\begin{DoxyCompactItemize}
+\item 
+ \mbox{\hyperlink{namespacerocr}{rocr}}
+\item 
+ \mbox{\hyperlink{namespacerocr_1_1core}{rocr\+::core}}
+\item 
+ \mbox{\hyperlink{namespacerocr_1_1AMD}{rocr\+::\+AMD}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \mbox{\hyperlink{amd__gpu__agent_8cpp_ab3912d25802903c118653651ffc5ddf2}{DEFAULT\+\_\+\+SCRATCH\+\_\+\+BYTES\+\_\+\+PER\+\_\+\+THREAD}}~2048
+\item 
+\#define \mbox{\hyperlink{amd__gpu__agent_8cpp_abaade37c06a3d357a920a831b0afe0a9}{MAX\+\_\+\+WAVE\+\_\+\+SCRATCH}}~8387584
+\item 
+\#define \mbox{\hyperlink{amd__gpu__agent_8cpp_aa7259999cc1e420961c8a0685b23f5dc}{MAX\+\_\+\+NUM\+\_\+\+DOORBELLS}}~0x400
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Macro Definition Documentation}
+\mbox{\Hypertarget{amd__gpu__agent_8cpp_ab3912d25802903c118653651ffc5ddf2}\label{amd__gpu__agent_8cpp_ab3912d25802903c118653651ffc5ddf2}} 
+\index{amd\_gpu\_agent.cpp@{amd\_gpu\_agent.cpp}!DEFAULT\_SCRATCH\_BYTES\_PER\_THREAD@{DEFAULT\_SCRATCH\_BYTES\_PER\_THREAD}}
+\index{DEFAULT\_SCRATCH\_BYTES\_PER\_THREAD@{DEFAULT\_SCRATCH\_BYTES\_PER\_THREAD}!amd\_gpu\_agent.cpp@{amd\_gpu\_agent.cpp}}
+\doxysubsubsection{\texorpdfstring{DEFAULT\_SCRATCH\_BYTES\_PER\_THREAD}{DEFAULT\_SCRATCH\_BYTES\_PER\_THREAD}}
+{\footnotesize\ttfamily \#define DEFAULT\+\_\+\+SCRATCH\+\_\+\+BYTES\+\_\+\+PER\+\_\+\+THREAD~2048}
+
+\mbox{\Hypertarget{amd__gpu__agent_8cpp_aa7259999cc1e420961c8a0685b23f5dc}\label{amd__gpu__agent_8cpp_aa7259999cc1e420961c8a0685b23f5dc}} 
+\index{amd\_gpu\_agent.cpp@{amd\_gpu\_agent.cpp}!MAX\_NUM\_DOORBELLS@{MAX\_NUM\_DOORBELLS}}
+\index{MAX\_NUM\_DOORBELLS@{MAX\_NUM\_DOORBELLS}!amd\_gpu\_agent.cpp@{amd\_gpu\_agent.cpp}}
+\doxysubsubsection{\texorpdfstring{MAX\_NUM\_DOORBELLS}{MAX\_NUM\_DOORBELLS}}
+{\footnotesize\ttfamily \#define MAX\+\_\+\+NUM\+\_\+\+DOORBELLS~0x400}
+
+\mbox{\Hypertarget{amd__gpu__agent_8cpp_abaade37c06a3d357a920a831b0afe0a9}\label{amd__gpu__agent_8cpp_abaade37c06a3d357a920a831b0afe0a9}} 
+\index{amd\_gpu\_agent.cpp@{amd\_gpu\_agent.cpp}!MAX\_WAVE\_SCRATCH@{MAX\_WAVE\_SCRATCH}}
+\index{MAX\_WAVE\_SCRATCH@{MAX\_WAVE\_SCRATCH}!amd\_gpu\_agent.cpp@{amd\_gpu\_agent.cpp}}
+\doxysubsubsection{\texorpdfstring{MAX\_WAVE\_SCRATCH}{MAX\_WAVE\_SCRATCH}}
+{\footnotesize\ttfamily \#define MAX\+\_\+\+WAVE\+\_\+\+SCRATCH~8387584}
+

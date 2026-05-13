@@ -1,0 +1,158 @@
+\hypertarget{classrocr_1_1amd_1_1hsa_1_1common_1_1ReaderWriterLock}{}\doxysection{rocr\+::amd\+::hsa\+::common\+::Reader\+Writer\+Lock Class Reference}
+\label{classrocr_1_1amd_1_1hsa_1_1common_1_1ReaderWriterLock}\index{rocr::amd::hsa::common::ReaderWriterLock@{rocr::amd::hsa::common::ReaderWriterLock}}
+
+
+{\ttfamily \#include $<$amd\+\_\+hsa\+\_\+locks.\+hpp$>$}
+
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classrocr_1_1amd_1_1hsa_1_1common_1_1ReaderWriterLock_aa4496717c075b81d948fa580f7f88c34}{Reader\+Writer\+Lock}} ()
+\item 
+\mbox{\hyperlink{classrocr_1_1amd_1_1hsa_1_1common_1_1ReaderWriterLock_a33c25b20778eb680da64072749ee2ef4}{$\sim$\+Reader\+Writer\+Lock}} ()
+\item 
+void \mbox{\hyperlink{classrocr_1_1amd_1_1hsa_1_1common_1_1ReaderWriterLock_ad19412a3e1a973ecd21cf61eb0263181}{Reader\+Lock}} ()
+\item 
+void \mbox{\hyperlink{classrocr_1_1amd_1_1hsa_1_1common_1_1ReaderWriterLock_ace62ec0536613810c290a6bfc170c1ea}{Reader\+Unlock}} ()
+\item 
+void \mbox{\hyperlink{classrocr_1_1amd_1_1hsa_1_1common_1_1ReaderWriterLock_ae88d2cfef8eb624825ea9707174569aa}{Writer\+Lock}} ()
+\item 
+void \mbox{\hyperlink{classrocr_1_1amd_1_1hsa_1_1common_1_1ReaderWriterLock_a9376d2d91a7b32b3ee9ef16e2253c3c4}{Writer\+Unlock}} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classrocr_1_1amd_1_1hsa_1_1common_1_1ReaderWriterLock_a8612651538d1a57f64addedd2bc45fd5}{Reader\+Writer\+Lock}} (const \mbox{\hyperlink{classrocr_1_1amd_1_1hsa_1_1common_1_1ReaderWriterLock}{Reader\+Writer\+Lock}} \&)
+\item 
+\mbox{\hyperlink{classrocr_1_1amd_1_1hsa_1_1common_1_1ReaderWriterLock}{Reader\+Writer\+Lock}} \& \mbox{\hyperlink{classrocr_1_1amd_1_1hsa_1_1common_1_1ReaderWriterLock_a0fa0687cb7c8e19a08b4e68e332d89d8}{operator=}} (const \mbox{\hyperlink{classrocr_1_1amd_1_1hsa_1_1common_1_1ReaderWriterLock}{Reader\+Writer\+Lock}} \&)
+\end{DoxyCompactItemize}
+\doxysubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+size\+\_\+t \mbox{\hyperlink{classrocr_1_1amd_1_1hsa_1_1common_1_1ReaderWriterLock_a38a4e0b78402fa3141369cb932b66be9}{readers\+\_\+count\+\_\+}}
+\item 
+size\+\_\+t \mbox{\hyperlink{classrocr_1_1amd_1_1hsa_1_1common_1_1ReaderWriterLock_a8e5973bebd84049b54aa892bfd6fceb2}{writers\+\_\+count\+\_\+}}
+\item 
+size\+\_\+t \mbox{\hyperlink{classrocr_1_1amd_1_1hsa_1_1common_1_1ReaderWriterLock_a5cd102dd25b92382deb74f9327b77f1b}{writers\+\_\+waiting\+\_\+}}
+\item 
+std\+::mutex \mbox{\hyperlink{classrocr_1_1amd_1_1hsa_1_1common_1_1ReaderWriterLock_a93d387829899c1bd286beb69cd144cd2}{internal\+\_\+lock\+\_\+}}
+\item 
+std\+::condition\+\_\+variable\+\_\+any \mbox{\hyperlink{classrocr_1_1amd_1_1hsa_1_1common_1_1ReaderWriterLock_a05c3e670d694b9a85cd3cdf96b9d3362}{readers\+\_\+condition\+\_\+}}
+\item 
+std\+::condition\+\_\+variable\+\_\+any \mbox{\hyperlink{classrocr_1_1amd_1_1hsa_1_1common_1_1ReaderWriterLock_ad594ce3edce4d80caa76b0dcec63e98a}{writers\+\_\+condition\+\_\+}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classrocr_1_1amd_1_1hsa_1_1common_1_1ReaderWriterLock_aa4496717c075b81d948fa580f7f88c34}\label{classrocr_1_1amd_1_1hsa_1_1common_1_1ReaderWriterLock_aa4496717c075b81d948fa580f7f88c34}} 
+\index{rocr::amd::hsa::common::ReaderWriterLock@{rocr::amd::hsa::common::ReaderWriterLock}!ReaderWriterLock@{ReaderWriterLock}}
+\index{ReaderWriterLock@{ReaderWriterLock}!rocr::amd::hsa::common::ReaderWriterLock@{rocr::amd::hsa::common::ReaderWriterLock}}
+\doxysubsubsection{\texorpdfstring{ReaderWriterLock()}{ReaderWriterLock()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily rocr\+::amd\+::hsa\+::common\+::\+Reader\+Writer\+Lock\+::\+Reader\+Writer\+Lock (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{classrocr_1_1amd_1_1hsa_1_1common_1_1ReaderWriterLock_a33c25b20778eb680da64072749ee2ef4}\label{classrocr_1_1amd_1_1hsa_1_1common_1_1ReaderWriterLock_a33c25b20778eb680da64072749ee2ef4}} 
+\index{rocr::amd::hsa::common::ReaderWriterLock@{rocr::amd::hsa::common::ReaderWriterLock}!````~ReaderWriterLock@{$\sim$ReaderWriterLock}}
+\index{````~ReaderWriterLock@{$\sim$ReaderWriterLock}!rocr::amd::hsa::common::ReaderWriterLock@{rocr::amd::hsa::common::ReaderWriterLock}}
+\doxysubsubsection{\texorpdfstring{$\sim$ReaderWriterLock()}{~ReaderWriterLock()}}
+{\footnotesize\ttfamily rocr\+::amd\+::hsa\+::common\+::\+Reader\+Writer\+Lock\+::$\sim$\+Reader\+Writer\+Lock (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{classrocr_1_1amd_1_1hsa_1_1common_1_1ReaderWriterLock_a8612651538d1a57f64addedd2bc45fd5}\label{classrocr_1_1amd_1_1hsa_1_1common_1_1ReaderWriterLock_a8612651538d1a57f64addedd2bc45fd5}} 
+\index{rocr::amd::hsa::common::ReaderWriterLock@{rocr::amd::hsa::common::ReaderWriterLock}!ReaderWriterLock@{ReaderWriterLock}}
+\index{ReaderWriterLock@{ReaderWriterLock}!rocr::amd::hsa::common::ReaderWriterLock@{rocr::amd::hsa::common::ReaderWriterLock}}
+\doxysubsubsection{\texorpdfstring{ReaderWriterLock()}{ReaderWriterLock()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily rocr\+::amd\+::hsa\+::common\+::\+Reader\+Writer\+Lock\+::\+Reader\+Writer\+Lock (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classrocr_1_1amd_1_1hsa_1_1common_1_1ReaderWriterLock}{Reader\+Writer\+Lock}} \&}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classrocr_1_1amd_1_1hsa_1_1common_1_1ReaderWriterLock_a0fa0687cb7c8e19a08b4e68e332d89d8}\label{classrocr_1_1amd_1_1hsa_1_1common_1_1ReaderWriterLock_a0fa0687cb7c8e19a08b4e68e332d89d8}} 
+\index{rocr::amd::hsa::common::ReaderWriterLock@{rocr::amd::hsa::common::ReaderWriterLock}!operator=@{operator=}}
+\index{operator=@{operator=}!rocr::amd::hsa::common::ReaderWriterLock@{rocr::amd::hsa::common::ReaderWriterLock}}
+\doxysubsubsection{\texorpdfstring{operator=()}{operator=()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classrocr_1_1amd_1_1hsa_1_1common_1_1ReaderWriterLock}{Reader\+Writer\+Lock}}\& rocr\+::amd\+::hsa\+::common\+::\+Reader\+Writer\+Lock\+::operator= (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classrocr_1_1amd_1_1hsa_1_1common_1_1ReaderWriterLock}{Reader\+Writer\+Lock}} \&}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classrocr_1_1amd_1_1hsa_1_1common_1_1ReaderWriterLock_ad19412a3e1a973ecd21cf61eb0263181}\label{classrocr_1_1amd_1_1hsa_1_1common_1_1ReaderWriterLock_ad19412a3e1a973ecd21cf61eb0263181}} 
+\index{rocr::amd::hsa::common::ReaderWriterLock@{rocr::amd::hsa::common::ReaderWriterLock}!ReaderLock@{ReaderLock}}
+\index{ReaderLock@{ReaderLock}!rocr::amd::hsa::common::ReaderWriterLock@{rocr::amd::hsa::common::ReaderWriterLock}}
+\doxysubsubsection{\texorpdfstring{ReaderLock()}{ReaderLock()}}
+{\footnotesize\ttfamily void rocr\+::amd\+::hsa\+::common\+::\+Reader\+Writer\+Lock\+::\+Reader\+Lock (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classrocr_1_1amd_1_1hsa_1_1common_1_1ReaderWriterLock_ad19412a3e1a973ecd21cf61eb0263181_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classrocr_1_1amd_1_1hsa_1_1common_1_1ReaderWriterLock_ace62ec0536613810c290a6bfc170c1ea}\label{classrocr_1_1amd_1_1hsa_1_1common_1_1ReaderWriterLock_ace62ec0536613810c290a6bfc170c1ea}} 
+\index{rocr::amd::hsa::common::ReaderWriterLock@{rocr::amd::hsa::common::ReaderWriterLock}!ReaderUnlock@{ReaderUnlock}}
+\index{ReaderUnlock@{ReaderUnlock}!rocr::amd::hsa::common::ReaderWriterLock@{rocr::amd::hsa::common::ReaderWriterLock}}
+\doxysubsubsection{\texorpdfstring{ReaderUnlock()}{ReaderUnlock()}}
+{\footnotesize\ttfamily void rocr\+::amd\+::hsa\+::common\+::\+Reader\+Writer\+Lock\+::\+Reader\+Unlock (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classrocr_1_1amd_1_1hsa_1_1common_1_1ReaderWriterLock_ace62ec0536613810c290a6bfc170c1ea_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classrocr_1_1amd_1_1hsa_1_1common_1_1ReaderWriterLock_ae88d2cfef8eb624825ea9707174569aa}\label{classrocr_1_1amd_1_1hsa_1_1common_1_1ReaderWriterLock_ae88d2cfef8eb624825ea9707174569aa}} 
+\index{rocr::amd::hsa::common::ReaderWriterLock@{rocr::amd::hsa::common::ReaderWriterLock}!WriterLock@{WriterLock}}
+\index{WriterLock@{WriterLock}!rocr::amd::hsa::common::ReaderWriterLock@{rocr::amd::hsa::common::ReaderWriterLock}}
+\doxysubsubsection{\texorpdfstring{WriterLock()}{WriterLock()}}
+{\footnotesize\ttfamily void rocr\+::amd\+::hsa\+::common\+::\+Reader\+Writer\+Lock\+::\+Writer\+Lock (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classrocr_1_1amd_1_1hsa_1_1common_1_1ReaderWriterLock_a9376d2d91a7b32b3ee9ef16e2253c3c4}\label{classrocr_1_1amd_1_1hsa_1_1common_1_1ReaderWriterLock_a9376d2d91a7b32b3ee9ef16e2253c3c4}} 
+\index{rocr::amd::hsa::common::ReaderWriterLock@{rocr::amd::hsa::common::ReaderWriterLock}!WriterUnlock@{WriterUnlock}}
+\index{WriterUnlock@{WriterUnlock}!rocr::amd::hsa::common::ReaderWriterLock@{rocr::amd::hsa::common::ReaderWriterLock}}
+\doxysubsubsection{\texorpdfstring{WriterUnlock()}{WriterUnlock()}}
+{\footnotesize\ttfamily void rocr\+::amd\+::hsa\+::common\+::\+Reader\+Writer\+Lock\+::\+Writer\+Unlock (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{classrocr_1_1amd_1_1hsa_1_1common_1_1ReaderWriterLock_a93d387829899c1bd286beb69cd144cd2}\label{classrocr_1_1amd_1_1hsa_1_1common_1_1ReaderWriterLock_a93d387829899c1bd286beb69cd144cd2}} 
+\index{rocr::amd::hsa::common::ReaderWriterLock@{rocr::amd::hsa::common::ReaderWriterLock}!internal\_lock\_@{internal\_lock\_}}
+\index{internal\_lock\_@{internal\_lock\_}!rocr::amd::hsa::common::ReaderWriterLock@{rocr::amd::hsa::common::ReaderWriterLock}}
+\doxysubsubsection{\texorpdfstring{internal\_lock\_}{internal\_lock\_}}
+{\footnotesize\ttfamily std\+::mutex rocr\+::amd\+::hsa\+::common\+::\+Reader\+Writer\+Lock\+::internal\+\_\+lock\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classrocr_1_1amd_1_1hsa_1_1common_1_1ReaderWriterLock_a05c3e670d694b9a85cd3cdf96b9d3362}\label{classrocr_1_1amd_1_1hsa_1_1common_1_1ReaderWriterLock_a05c3e670d694b9a85cd3cdf96b9d3362}} 
+\index{rocr::amd::hsa::common::ReaderWriterLock@{rocr::amd::hsa::common::ReaderWriterLock}!readers\_condition\_@{readers\_condition\_}}
+\index{readers\_condition\_@{readers\_condition\_}!rocr::amd::hsa::common::ReaderWriterLock@{rocr::amd::hsa::common::ReaderWriterLock}}
+\doxysubsubsection{\texorpdfstring{readers\_condition\_}{readers\_condition\_}}
+{\footnotesize\ttfamily std\+::condition\+\_\+variable\+\_\+any rocr\+::amd\+::hsa\+::common\+::\+Reader\+Writer\+Lock\+::readers\+\_\+condition\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classrocr_1_1amd_1_1hsa_1_1common_1_1ReaderWriterLock_a38a4e0b78402fa3141369cb932b66be9}\label{classrocr_1_1amd_1_1hsa_1_1common_1_1ReaderWriterLock_a38a4e0b78402fa3141369cb932b66be9}} 
+\index{rocr::amd::hsa::common::ReaderWriterLock@{rocr::amd::hsa::common::ReaderWriterLock}!readers\_count\_@{readers\_count\_}}
+\index{readers\_count\_@{readers\_count\_}!rocr::amd::hsa::common::ReaderWriterLock@{rocr::amd::hsa::common::ReaderWriterLock}}
+\doxysubsubsection{\texorpdfstring{readers\_count\_}{readers\_count\_}}
+{\footnotesize\ttfamily size\+\_\+t rocr\+::amd\+::hsa\+::common\+::\+Reader\+Writer\+Lock\+::readers\+\_\+count\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classrocr_1_1amd_1_1hsa_1_1common_1_1ReaderWriterLock_ad594ce3edce4d80caa76b0dcec63e98a}\label{classrocr_1_1amd_1_1hsa_1_1common_1_1ReaderWriterLock_ad594ce3edce4d80caa76b0dcec63e98a}} 
+\index{rocr::amd::hsa::common::ReaderWriterLock@{rocr::amd::hsa::common::ReaderWriterLock}!writers\_condition\_@{writers\_condition\_}}
+\index{writers\_condition\_@{writers\_condition\_}!rocr::amd::hsa::common::ReaderWriterLock@{rocr::amd::hsa::common::ReaderWriterLock}}
+\doxysubsubsection{\texorpdfstring{writers\_condition\_}{writers\_condition\_}}
+{\footnotesize\ttfamily std\+::condition\+\_\+variable\+\_\+any rocr\+::amd\+::hsa\+::common\+::\+Reader\+Writer\+Lock\+::writers\+\_\+condition\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classrocr_1_1amd_1_1hsa_1_1common_1_1ReaderWriterLock_a8e5973bebd84049b54aa892bfd6fceb2}\label{classrocr_1_1amd_1_1hsa_1_1common_1_1ReaderWriterLock_a8e5973bebd84049b54aa892bfd6fceb2}} 
+\index{rocr::amd::hsa::common::ReaderWriterLock@{rocr::amd::hsa::common::ReaderWriterLock}!writers\_count\_@{writers\_count\_}}
+\index{writers\_count\_@{writers\_count\_}!rocr::amd::hsa::common::ReaderWriterLock@{rocr::amd::hsa::common::ReaderWriterLock}}
+\doxysubsubsection{\texorpdfstring{writers\_count\_}{writers\_count\_}}
+{\footnotesize\ttfamily size\+\_\+t rocr\+::amd\+::hsa\+::common\+::\+Reader\+Writer\+Lock\+::writers\+\_\+count\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classrocr_1_1amd_1_1hsa_1_1common_1_1ReaderWriterLock_a5cd102dd25b92382deb74f9327b77f1b}\label{classrocr_1_1amd_1_1hsa_1_1common_1_1ReaderWriterLock_a5cd102dd25b92382deb74f9327b77f1b}} 
+\index{rocr::amd::hsa::common::ReaderWriterLock@{rocr::amd::hsa::common::ReaderWriterLock}!writers\_waiting\_@{writers\_waiting\_}}
+\index{writers\_waiting\_@{writers\_waiting\_}!rocr::amd::hsa::common::ReaderWriterLock@{rocr::amd::hsa::common::ReaderWriterLock}}
+\doxysubsubsection{\texorpdfstring{writers\_waiting\_}{writers\_waiting\_}}
+{\footnotesize\ttfamily size\+\_\+t rocr\+::amd\+::hsa\+::common\+::\+Reader\+Writer\+Lock\+::writers\+\_\+waiting\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+src/libamdhsacode/\mbox{\hyperlink{amd__hsa__locks_8hpp}{amd\+\_\+hsa\+\_\+locks.\+hpp}}\item 
+src/libamdhsacode/\mbox{\hyperlink{amd__hsa__locks_8cpp}{amd\+\_\+hsa\+\_\+locks.\+cpp}}\end{DoxyCompactItemize}

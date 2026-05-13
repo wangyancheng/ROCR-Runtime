@@ -1,0 +1,251 @@
+\hypertarget{classrocr_1_1amd_1_1options_1_1OptionBase}{}\doxysection{rocr\+::amd\+::options\+::Option\+Base Class Reference}
+\label{classrocr_1_1amd_1_1options_1_1OptionBase}\index{rocr::amd::options::OptionBase@{rocr::amd::options::OptionBase}}
+
+
+{\ttfamily \#include $<$amd\+\_\+options.\+hpp$>$}
+
+
+
+Inheritance diagram for rocr\+::amd\+::options\+::Option\+Base\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=315pt]{classrocr_1_1amd_1_1options_1_1OptionBase__inherit__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+virtual \mbox{\hyperlink{classrocr_1_1amd_1_1options_1_1OptionBase_a40f5e719ecb9f67471d5a9e7d6b42f2d}{$\sim$\+Option\+Base}} ()
+\item 
+const std\+::string \& \mbox{\hyperlink{classrocr_1_1amd_1_1options_1_1OptionBase_a82e2e7b46c7cd92c4f1b127304651710}{name}} () const
+\item 
+const bool \& \mbox{\hyperlink{classrocr_1_1amd_1_1options_1_1OptionBase_a976e7bc8d787e407361f0ec4df8ac854}{is\+\_\+set}} () const
+\item 
+virtual bool \mbox{\hyperlink{classrocr_1_1amd_1_1options_1_1OptionBase_ab9fc36a862db4cd07870340843ea16d2}{Is\+Valid}} () const
+\end{DoxyCompactItemize}
+\doxysubsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classrocr_1_1amd_1_1options_1_1OptionBase_a402b1bcb7187fddd0284b9c37209d02b}{Option\+Base}} (const std\+::string \&\mbox{\hyperlink{classrocr_1_1amd_1_1options_1_1OptionBase_a82e2e7b46c7cd92c4f1b127304651710}{name}}, const std\+::string \&help=\char`\"{}\char`\"{}, std\+::ostream \&\mbox{\hyperlink{classrocr_1_1amd_1_1options_1_1OptionBase_ae5735acf7fccf2b89bc53c9ff0a2d6e7}{error}}=std\+::cerr)
+\item 
+virtual void \mbox{\hyperlink{classrocr_1_1amd_1_1options_1_1OptionBase_afbdc835a3b6409246902cf0ff50cb9b9}{Print\+Help}} (\mbox{\hyperlink{classrocr_1_1amd_1_1options_1_1HelpPrinter}{Help\+Printer}} \&printer) const =0
+\item 
+virtual bool \mbox{\hyperlink{classrocr_1_1amd_1_1options_1_1OptionBase_a5d5be787f4b8f6732c5a83dae74a3ea0}{Accept}} (const std\+::string \&\mbox{\hyperlink{classrocr_1_1amd_1_1options_1_1OptionBase_a82e2e7b46c7cd92c4f1b127304651710}{name}}) const
+\item 
+std\+::ostream \& \mbox{\hyperlink{classrocr_1_1amd_1_1options_1_1OptionBase_ae5735acf7fccf2b89bc53c9ff0a2d6e7}{error}} () const
+\end{DoxyCompactItemize}
+\doxysubsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+const std\+::string \mbox{\hyperlink{classrocr_1_1amd_1_1options_1_1OptionBase_aa2c71d7927b4957fbc2889fc137e5f36}{name\+\_\+}}
+\item 
+const std\+::string \mbox{\hyperlink{classrocr_1_1amd_1_1options_1_1OptionBase_a104c1281f5039299d4c2acdec22c45be}{help\+\_\+}}
+\item 
+bool \mbox{\hyperlink{classrocr_1_1amd_1_1options_1_1OptionBase_a141cbb0a084ea40a86140ad98b470a55}{is\+\_\+set\+\_\+}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classrocr_1_1amd_1_1options_1_1OptionBase_a841ba97c4db3fea741d1d0cd54dcd4ac}{Option\+Base}} (const \mbox{\hyperlink{classrocr_1_1amd_1_1options_1_1OptionBase}{Option\+Base}} \&ob)
+\begin{DoxyCompactList}\small\item\em Not copy-\/constructible. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classrocr_1_1amd_1_1options_1_1OptionBase}{Option\+Base}} \& \mbox{\hyperlink{classrocr_1_1amd_1_1options_1_1OptionBase_a0f06719eb8e33041368328d5de148c2b}{operator=}} (const \mbox{\hyperlink{classrocr_1_1amd_1_1options_1_1OptionBase}{Option\+Base}} \&ob)
+\begin{DoxyCompactList}\small\item\em Not copy-\/assignable. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classrocr_1_1amd_1_1options_1_1OptionBase_aff8c5c023d51f444e13aecb528be0425}{Reset}} ()
+\item 
+virtual bool \mbox{\hyperlink{classrocr_1_1amd_1_1options_1_1OptionBase_a83cb1b034b6970f497984ebefee4fc1c}{Process\+Tokens}} (std\+::list$<$ std\+::string $>$ \&tokens)=0
+\end{DoxyCompactItemize}
+\doxysubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+std\+::ostream $\ast$ \mbox{\hyperlink{classrocr_1_1amd_1_1options_1_1OptionBase_aa648beea83f2ec13fa8b9cf6c1479deb}{error\+\_\+}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Friends}
+\begin{DoxyCompactItemize}
+\item 
+class \mbox{\hyperlink{classrocr_1_1amd_1_1options_1_1OptionBase_abfd5482e3827b031cfe42cb142f8fd84}{Option\+Parser}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classrocr_1_1amd_1_1options_1_1OptionBase_a40f5e719ecb9f67471d5a9e7d6b42f2d}\label{classrocr_1_1amd_1_1options_1_1OptionBase_a40f5e719ecb9f67471d5a9e7d6b42f2d}} 
+\index{rocr::amd::options::OptionBase@{rocr::amd::options::OptionBase}!````~OptionBase@{$\sim$OptionBase}}
+\index{````~OptionBase@{$\sim$OptionBase}!rocr::amd::options::OptionBase@{rocr::amd::options::OptionBase}}
+\doxysubsubsection{\texorpdfstring{$\sim$OptionBase()}{~OptionBase()}}
+{\footnotesize\ttfamily virtual rocr\+::amd\+::options\+::\+Option\+Base\+::$\sim$\+Option\+Base (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+\mbox{\Hypertarget{classrocr_1_1amd_1_1options_1_1OptionBase_a402b1bcb7187fddd0284b9c37209d02b}\label{classrocr_1_1amd_1_1options_1_1OptionBase_a402b1bcb7187fddd0284b9c37209d02b}} 
+\index{rocr::amd::options::OptionBase@{rocr::amd::options::OptionBase}!OptionBase@{OptionBase}}
+\index{OptionBase@{OptionBase}!rocr::amd::options::OptionBase@{rocr::amd::options::OptionBase}}
+\doxysubsubsection{\texorpdfstring{OptionBase()}{OptionBase()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily rocr\+::amd\+::options\+::\+Option\+Base\+::\+Option\+Base (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{name,  }\item[{const std\+::string \&}]{help = {\ttfamily \char`\"{}\char`\"{}},  }\item[{std\+::ostream \&}]{error = {\ttfamily std\+:\+:cerr} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [explicit]}, {\ttfamily [protected]}}
+
+\mbox{\Hypertarget{classrocr_1_1amd_1_1options_1_1OptionBase_a841ba97c4db3fea741d1d0cd54dcd4ac}\label{classrocr_1_1amd_1_1options_1_1OptionBase_a841ba97c4db3fea741d1d0cd54dcd4ac}} 
+\index{rocr::amd::options::OptionBase@{rocr::amd::options::OptionBase}!OptionBase@{OptionBase}}
+\index{OptionBase@{OptionBase}!rocr::amd::options::OptionBase@{rocr::amd::options::OptionBase}}
+\doxysubsubsection{\texorpdfstring{OptionBase()}{OptionBase()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily rocr\+::amd\+::options\+::\+Option\+Base\+::\+Option\+Base (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classrocr_1_1amd_1_1options_1_1OptionBase}{Option\+Base}} \&}]{ob }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Not copy-\/constructible. 
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classrocr_1_1amd_1_1options_1_1OptionBase_a5d5be787f4b8f6732c5a83dae74a3ea0}\label{classrocr_1_1amd_1_1options_1_1OptionBase_a5d5be787f4b8f6732c5a83dae74a3ea0}} 
+\index{rocr::amd::options::OptionBase@{rocr::amd::options::OptionBase}!Accept@{Accept}}
+\index{Accept@{Accept}!rocr::amd::options::OptionBase@{rocr::amd::options::OptionBase}}
+\doxysubsubsection{\texorpdfstring{Accept()}{Accept()}}
+{\footnotesize\ttfamily virtual bool rocr\+::amd\+::options\+::\+Option\+Base\+::\+Accept (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{name }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [protected]}, {\ttfamily [virtual]}}
+
+
+
+Reimplemented in \mbox{\hyperlink{classrocr_1_1amd_1_1options_1_1PrefixOption_a65ba0ac3d61eff8132a32d473b43a89e}{rocr\+::amd\+::options\+::\+Prefix\+Option}}.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=330pt]{classrocr_1_1amd_1_1options_1_1OptionBase_a5d5be787f4b8f6732c5a83dae74a3ea0_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classrocr_1_1amd_1_1options_1_1OptionBase_ae5735acf7fccf2b89bc53c9ff0a2d6e7}\label{classrocr_1_1amd_1_1options_1_1OptionBase_ae5735acf7fccf2b89bc53c9ff0a2d6e7}} 
+\index{rocr::amd::options::OptionBase@{rocr::amd::options::OptionBase}!error@{error}}
+\index{error@{error}!rocr::amd::options::OptionBase@{rocr::amd::options::OptionBase}}
+\doxysubsubsection{\texorpdfstring{error()}{error()}}
+{\footnotesize\ttfamily std\+::ostream\& rocr\+::amd\+::options\+::\+Option\+Base\+::error (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [protected]}}
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classrocr_1_1amd_1_1options_1_1OptionBase_ae5735acf7fccf2b89bc53c9ff0a2d6e7_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classrocr_1_1amd_1_1options_1_1OptionBase_a976e7bc8d787e407361f0ec4df8ac854}\label{classrocr_1_1amd_1_1options_1_1OptionBase_a976e7bc8d787e407361f0ec4df8ac854}} 
+\index{rocr::amd::options::OptionBase@{rocr::amd::options::OptionBase}!is\_set@{is\_set}}
+\index{is\_set@{is\_set}!rocr::amd::options::OptionBase@{rocr::amd::options::OptionBase}}
+\doxysubsubsection{\texorpdfstring{is\_set()}{is\_set()}}
+{\footnotesize\ttfamily const bool\& rocr\+::amd\+::options\+::\+Option\+Base\+::is\+\_\+set (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classrocr_1_1amd_1_1options_1_1OptionBase_a976e7bc8d787e407361f0ec4df8ac854_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classrocr_1_1amd_1_1options_1_1OptionBase_ab9fc36a862db4cd07870340843ea16d2}\label{classrocr_1_1amd_1_1options_1_1OptionBase_ab9fc36a862db4cd07870340843ea16d2}} 
+\index{rocr::amd::options::OptionBase@{rocr::amd::options::OptionBase}!IsValid@{IsValid}}
+\index{IsValid@{IsValid}!rocr::amd::options::OptionBase@{rocr::amd::options::OptionBase}}
+\doxysubsubsection{\texorpdfstring{IsValid()}{IsValid()}}
+{\footnotesize\ttfamily virtual bool rocr\+::amd\+::options\+::\+Option\+Base\+::\+Is\+Valid (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+Reimplemented in \mbox{\hyperlink{classrocr_1_1amd_1_1options_1_1PrefixOption_a3b17313344f8be424a113d73faa478fd}{rocr\+::amd\+::options\+::\+Prefix\+Option}}.
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classrocr_1_1amd_1_1options_1_1OptionBase_ab9fc36a862db4cd07870340843ea16d2_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classrocr_1_1amd_1_1options_1_1OptionBase_a82e2e7b46c7cd92c4f1b127304651710}\label{classrocr_1_1amd_1_1options_1_1OptionBase_a82e2e7b46c7cd92c4f1b127304651710}} 
+\index{rocr::amd::options::OptionBase@{rocr::amd::options::OptionBase}!name@{name}}
+\index{name@{name}!rocr::amd::options::OptionBase@{rocr::amd::options::OptionBase}}
+\doxysubsubsection{\texorpdfstring{name()}{name()}}
+{\footnotesize\ttfamily const std\+::string\& rocr\+::amd\+::options\+::\+Option\+Base\+::name (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classrocr_1_1amd_1_1options_1_1OptionBase_a82e2e7b46c7cd92c4f1b127304651710_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classrocr_1_1amd_1_1options_1_1OptionBase_a0f06719eb8e33041368328d5de148c2b}\label{classrocr_1_1amd_1_1options_1_1OptionBase_a0f06719eb8e33041368328d5de148c2b}} 
+\index{rocr::amd::options::OptionBase@{rocr::amd::options::OptionBase}!operator=@{operator=}}
+\index{operator=@{operator=}!rocr::amd::options::OptionBase@{rocr::amd::options::OptionBase}}
+\doxysubsubsection{\texorpdfstring{operator=()}{operator=()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classrocr_1_1amd_1_1options_1_1OptionBase}{Option\+Base}}\& rocr\+::amd\+::options\+::\+Option\+Base\+::operator= (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classrocr_1_1amd_1_1options_1_1OptionBase}{Option\+Base}} \&}]{ob }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Not copy-\/assignable. 
+
+\mbox{\Hypertarget{classrocr_1_1amd_1_1options_1_1OptionBase_afbdc835a3b6409246902cf0ff50cb9b9}\label{classrocr_1_1amd_1_1options_1_1OptionBase_afbdc835a3b6409246902cf0ff50cb9b9}} 
+\index{rocr::amd::options::OptionBase@{rocr::amd::options::OptionBase}!PrintHelp@{PrintHelp}}
+\index{PrintHelp@{PrintHelp}!rocr::amd::options::OptionBase@{rocr::amd::options::OptionBase}}
+\doxysubsubsection{\texorpdfstring{PrintHelp()}{PrintHelp()}}
+{\footnotesize\ttfamily virtual void rocr\+::amd\+::options\+::\+Option\+Base\+::\+Print\+Help (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classrocr_1_1amd_1_1options_1_1HelpPrinter}{Help\+Printer}} \&}]{printer }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [pure virtual]}}
+
+
+
+Implemented in \mbox{\hyperlink{classrocr_1_1amd_1_1options_1_1PrefixOption_a7ac1d90de56fcb9853b0986c61f5bd16}{rocr\+::amd\+::options\+::\+Prefix\+Option}}, \mbox{\hyperlink{classrocr_1_1amd_1_1options_1_1NoArgOption_ab98d969ba67e5ddca1c019f58f3c9671}{rocr\+::amd\+::options\+::\+No\+Arg\+Option}}, \mbox{\hyperlink{classrocr_1_1amd_1_1options_1_1ChoiceOption_a3ef061313858041a6ddfd5668d0db7f4}{rocr\+::amd\+::options\+::\+Choice\+Option}}, \mbox{\hyperlink{classrocr_1_1amd_1_1options_1_1ValueOption_a0226d54cd7f05014624c2adedcdf6d0d}{rocr\+::amd\+::options\+::\+Value\+Option$<$ T $>$}}, \mbox{\hyperlink{classrocr_1_1amd_1_1options_1_1ValueOption_a0226d54cd7f05014624c2adedcdf6d0d}{rocr\+::amd\+::options\+::\+Value\+Option$<$ std\+::string $>$}}, and \mbox{\hyperlink{classrocr_1_1amd_1_1options_1_1Option_aacf5ed0c918c5d59cb57f3463f9c992f}{rocr\+::amd\+::options\+::\+Option$<$ T $>$}}.
+
+\mbox{\Hypertarget{classrocr_1_1amd_1_1options_1_1OptionBase_a83cb1b034b6970f497984ebefee4fc1c}\label{classrocr_1_1amd_1_1options_1_1OptionBase_a83cb1b034b6970f497984ebefee4fc1c}} 
+\index{rocr::amd::options::OptionBase@{rocr::amd::options::OptionBase}!ProcessTokens@{ProcessTokens}}
+\index{ProcessTokens@{ProcessTokens}!rocr::amd::options::OptionBase@{rocr::amd::options::OptionBase}}
+\doxysubsubsection{\texorpdfstring{ProcessTokens()}{ProcessTokens()}}
+{\footnotesize\ttfamily virtual bool rocr\+::amd\+::options\+::\+Option\+Base\+::\+Process\+Tokens (\begin{DoxyParamCaption}\item[{std\+::list$<$ std\+::string $>$ \&}]{tokens }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}, {\ttfamily [pure virtual]}}
+
+
+
+Implemented in \mbox{\hyperlink{classrocr_1_1amd_1_1options_1_1PrefixOption_a41784ada4b692ce86b212191046d12a4}{rocr\+::amd\+::options\+::\+Prefix\+Option}}, \mbox{\hyperlink{classrocr_1_1amd_1_1options_1_1NoArgOption_a495a37799d0ce5fcf7c8a7856761cd4d}{rocr\+::amd\+::options\+::\+No\+Arg\+Option}}, \mbox{\hyperlink{classrocr_1_1amd_1_1options_1_1ChoiceOption_a709b1bae0f89bd937b96c93038844921}{rocr\+::amd\+::options\+::\+Choice\+Option}}, \mbox{\hyperlink{classrocr_1_1amd_1_1options_1_1ValueOption_a8bf8886aad19922bb6ba331e26d8b773}{rocr\+::amd\+::options\+::\+Value\+Option$<$ T $>$}}, \mbox{\hyperlink{classrocr_1_1amd_1_1options_1_1ValueOption_a8bf8886aad19922bb6ba331e26d8b773}{rocr\+::amd\+::options\+::\+Value\+Option$<$ std\+::string $>$}}, and \mbox{\hyperlink{classrocr_1_1amd_1_1options_1_1Option_a50f3ba68abf691e41ab41df5c5650750}{rocr\+::amd\+::options\+::\+Option$<$ T $>$}}.
+
+\mbox{\Hypertarget{classrocr_1_1amd_1_1options_1_1OptionBase_aff8c5c023d51f444e13aecb528be0425}\label{classrocr_1_1amd_1_1options_1_1OptionBase_aff8c5c023d51f444e13aecb528be0425}} 
+\index{rocr::amd::options::OptionBase@{rocr::amd::options::OptionBase}!Reset@{Reset}}
+\index{Reset@{Reset}!rocr::amd::options::OptionBase@{rocr::amd::options::OptionBase}}
+\doxysubsubsection{\texorpdfstring{Reset()}{Reset()}}
+{\footnotesize\ttfamily void rocr\+::amd\+::options\+::\+Option\+Base\+::\+Reset (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [private]}}
+
+
+
+\doxysubsection{Friends And Related Function Documentation}
+\mbox{\Hypertarget{classrocr_1_1amd_1_1options_1_1OptionBase_abfd5482e3827b031cfe42cb142f8fd84}\label{classrocr_1_1amd_1_1options_1_1OptionBase_abfd5482e3827b031cfe42cb142f8fd84}} 
+\index{rocr::amd::options::OptionBase@{rocr::amd::options::OptionBase}!OptionParser@{OptionParser}}
+\index{OptionParser@{OptionParser}!rocr::amd::options::OptionBase@{rocr::amd::options::OptionBase}}
+\doxysubsubsection{\texorpdfstring{OptionParser}{OptionParser}}
+{\footnotesize\ttfamily friend class \mbox{\hyperlink{classrocr_1_1amd_1_1options_1_1OptionParser}{Option\+Parser}}\hspace{0.3cm}{\ttfamily [friend]}}
+
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{classrocr_1_1amd_1_1options_1_1OptionBase_aa648beea83f2ec13fa8b9cf6c1479deb}\label{classrocr_1_1amd_1_1options_1_1OptionBase_aa648beea83f2ec13fa8b9cf6c1479deb}} 
+\index{rocr::amd::options::OptionBase@{rocr::amd::options::OptionBase}!error\_@{error\_}}
+\index{error\_@{error\_}!rocr::amd::options::OptionBase@{rocr::amd::options::OptionBase}}
+\doxysubsubsection{\texorpdfstring{error\_}{error\_}}
+{\footnotesize\ttfamily std\+::ostream$\ast$ rocr\+::amd\+::options\+::\+Option\+Base\+::error\+\_\+\hspace{0.3cm}{\ttfamily [mutable]}, {\ttfamily [private]}}
+
+\mbox{\Hypertarget{classrocr_1_1amd_1_1options_1_1OptionBase_a104c1281f5039299d4c2acdec22c45be}\label{classrocr_1_1amd_1_1options_1_1OptionBase_a104c1281f5039299d4c2acdec22c45be}} 
+\index{rocr::amd::options::OptionBase@{rocr::amd::options::OptionBase}!help\_@{help\_}}
+\index{help\_@{help\_}!rocr::amd::options::OptionBase@{rocr::amd::options::OptionBase}}
+\doxysubsubsection{\texorpdfstring{help\_}{help\_}}
+{\footnotesize\ttfamily const std\+::string rocr\+::amd\+::options\+::\+Option\+Base\+::help\+\_\+\hspace{0.3cm}{\ttfamily [protected]}}
+
+\mbox{\Hypertarget{classrocr_1_1amd_1_1options_1_1OptionBase_a141cbb0a084ea40a86140ad98b470a55}\label{classrocr_1_1amd_1_1options_1_1OptionBase_a141cbb0a084ea40a86140ad98b470a55}} 
+\index{rocr::amd::options::OptionBase@{rocr::amd::options::OptionBase}!is\_set\_@{is\_set\_}}
+\index{is\_set\_@{is\_set\_}!rocr::amd::options::OptionBase@{rocr::amd::options::OptionBase}}
+\doxysubsubsection{\texorpdfstring{is\_set\_}{is\_set\_}}
+{\footnotesize\ttfamily bool rocr\+::amd\+::options\+::\+Option\+Base\+::is\+\_\+set\+\_\+\hspace{0.3cm}{\ttfamily [protected]}}
+
+\mbox{\Hypertarget{classrocr_1_1amd_1_1options_1_1OptionBase_aa2c71d7927b4957fbc2889fc137e5f36}\label{classrocr_1_1amd_1_1options_1_1OptionBase_aa2c71d7927b4957fbc2889fc137e5f36}} 
+\index{rocr::amd::options::OptionBase@{rocr::amd::options::OptionBase}!name\_@{name\_}}
+\index{name\_@{name\_}!rocr::amd::options::OptionBase@{rocr::amd::options::OptionBase}}
+\doxysubsubsection{\texorpdfstring{name\_}{name\_}}
+{\footnotesize\ttfamily const std\+::string rocr\+::amd\+::options\+::\+Option\+Base\+::name\+\_\+\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+src/libamdhsacode/\mbox{\hyperlink{amd__options_8hpp}{amd\+\_\+options.\+hpp}}\end{DoxyCompactItemize}

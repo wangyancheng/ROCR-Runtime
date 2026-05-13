@@ -1,0 +1,319 @@
+\hypertarget{classrocr_1_1amd_1_1hsa_1_1loader_1_1AmdHsaCodeLoader}{}\doxysection{rocr\+::amd\+::hsa\+::loader\+::Amd\+Hsa\+Code\+Loader Class Reference}
+\label{classrocr_1_1amd_1_1hsa_1_1loader_1_1AmdHsaCodeLoader}\index{rocr::amd::hsa::loader::AmdHsaCodeLoader@{rocr::amd::hsa::loader::AmdHsaCodeLoader}}
+
+
+{\ttfamily \#include $<$executable.\+hpp$>$}
+
+
+
+Inheritance diagram for rocr\+::amd\+::hsa\+::loader\+::Amd\+Hsa\+Code\+Loader\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=193pt]{classrocr_1_1amd_1_1hsa_1_1loader_1_1AmdHsaCodeLoader__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for rocr\+::amd\+::hsa\+::loader\+::Amd\+Hsa\+Code\+Loader\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classrocr_1_1amd_1_1hsa_1_1loader_1_1AmdHsaCodeLoader__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classrocr_1_1amd_1_1hsa_1_1loader_1_1AmdHsaCodeLoader_a952e77d39deb7637b72be6d8825c45fc}{Amd\+Hsa\+Code\+Loader}} (\mbox{\hyperlink{classrocr_1_1amd_1_1hsa_1_1loader_1_1Context}{Context}} $\ast$context\+\_\+)
+\item 
+\mbox{\hyperlink{classrocr_1_1amd_1_1hsa_1_1loader_1_1Context}{Context}} $\ast$ \mbox{\hyperlink{classrocr_1_1amd_1_1hsa_1_1loader_1_1AmdHsaCodeLoader_a6f3ab8a6ed6bb30031b44556c3d049e2}{Get\+Context}} () const override
+\item 
+\mbox{\hyperlink{classrocr_1_1amd_1_1hsa_1_1loader_1_1Executable}{Executable}} $\ast$ \mbox{\hyperlink{classrocr_1_1amd_1_1hsa_1_1loader_1_1AmdHsaCodeLoader_a71612b30fd9f32c084818014f132c855}{Create\+Executable}} (\mbox{\hyperlink{group__agentinfo_gacafd4247e2a04cbe0ac0b3998c127532}{hsa\+\_\+profile\+\_\+t}} profile, const char $\ast$options, \mbox{\hyperlink{group__agentinfo_gaac56321e4596fe10a90b5bb3fedc4b73}{hsa\+\_\+default\+\_\+float\+\_\+rounding\+\_\+mode\+\_\+t}} default\+\_\+float\+\_\+rounding\+\_\+mode=\mbox{\hyperlink{group__agentinfo_ggaac56321e4596fe10a90b5bb3fedc4b73a51bef81c634ce06d57f57a6622051f96}{HSA\+\_\+\+DEFAULT\+\_\+\+FLOAT\+\_\+\+ROUNDING\+\_\+\+MODE\+\_\+\+DEFAULT}}) override
+\begin{DoxyCompactList}\small\item\em Creates empty \mbox{\hyperlink{namespacerocr_1_1AMD}{AMD}} \mbox{\hyperlink{namespacerocr_1_1HSA}{HSA}} \mbox{\hyperlink{classrocr_1_1amd_1_1hsa_1_1loader_1_1Executable}{Executable}} with specified {\ttfamily profile}, {\ttfamily options}. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{group__status_gad755322e7ff95456520e8abdbe90d225}{hsa\+\_\+status\+\_\+t}} \mbox{\hyperlink{classrocr_1_1amd_1_1hsa_1_1loader_1_1AmdHsaCodeLoader_a5cfd0aa4bfeb5a6f9215ae97d526cbb6}{Freeze\+Executable}} (\mbox{\hyperlink{classrocr_1_1amd_1_1hsa_1_1loader_1_1Executable}{Executable}} $\ast$executable, const char $\ast$options) override
+\begin{DoxyCompactList}\small\item\em Freezes {\ttfamily executable}. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classrocr_1_1amd_1_1hsa_1_1loader_1_1AmdHsaCodeLoader_a6c67e6664cae5358511276620d0d01d9}{Destroy\+Executable}} (\mbox{\hyperlink{classrocr_1_1amd_1_1hsa_1_1loader_1_1Executable}{Executable}} $\ast$executable) override
+\begin{DoxyCompactList}\small\item\em Destroys {\ttfamily executable}. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{group__status_gad755322e7ff95456520e8abdbe90d225}{hsa\+\_\+status\+\_\+t}} \mbox{\hyperlink{classrocr_1_1amd_1_1hsa_1_1loader_1_1AmdHsaCodeLoader_ad2a3ce6a85b6e5068f72e5a8a3a19b2a}{Iterate\+Executables}} (\mbox{\hyperlink{group__status_gad755322e7ff95456520e8abdbe90d225}{hsa\+\_\+status\+\_\+t}}($\ast$callback)(\mbox{\hyperlink{group__executable_ga4a4281d636cb6048c4d7a015e1fa3baa}{hsa\+\_\+executable\+\_\+t}} executable, void $\ast$data), void $\ast$data) override
+\begin{DoxyCompactList}\small\item\em Invokes {\ttfamily callback} for each created executable. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{group__status_gad755322e7ff95456520e8abdbe90d225}{hsa\+\_\+status\+\_\+t}} \mbox{\hyperlink{classrocr_1_1amd_1_1hsa_1_1loader_1_1AmdHsaCodeLoader_a6a36eb9d783fac914dfe73fc75541bdb}{Query\+Segment\+Descriptors}} (\mbox{\hyperlink{inc_2hsa__ven__amd__loader_8h_acb66ca48865e62642b604bfe4ede86c7}{hsa\+\_\+ven\+\_\+amd\+\_\+loader\+\_\+segment\+\_\+descriptor\+\_\+t}} $\ast$segment\+\_\+descriptors, size\+\_\+t $\ast$num\+\_\+segment\+\_\+descriptors) override
+\begin{DoxyCompactList}\small\item\em same as hsa\+\_\+ven\+\_\+amd\+\_\+loader\+\_\+query\+\_\+segment\+\_\+descriptors. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{group__executable_ga4a4281d636cb6048c4d7a015e1fa3baa}{hsa\+\_\+executable\+\_\+t}} \mbox{\hyperlink{classrocr_1_1amd_1_1hsa_1_1loader_1_1AmdHsaCodeLoader_a36a6199609d6ddd4748d5da36f651e3f}{Find\+Executable}} (uint64\+\_\+t device\+\_\+address) override
+\begin{DoxyCompactList}\small\item\em Finds the handle of executable to which {\ttfamily device\+\_\+address} belongs. Return NULL handle if device address is invalid. \end{DoxyCompactList}\item 
+uint64\+\_\+t \mbox{\hyperlink{classrocr_1_1amd_1_1hsa_1_1loader_1_1AmdHsaCodeLoader_a8a2d851961ef373090e6e252140376f9}{Find\+Host\+Address}} (uint64\+\_\+t device\+\_\+address) override
+\begin{DoxyCompactList}\small\item\em Returns host address given {\ttfamily device\+\_\+address}. If {\ttfamily device\+\_\+address} is already host address, returns null pointer. If {\ttfamily device\+\_\+address} is invalid address, returns null pointer. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classrocr_1_1amd_1_1hsa_1_1loader_1_1AmdHsaCodeLoader_a4c415a9e8a9b49acbaf2dbc31695f7e9}{Print\+Help}} (std\+::ostream \&out) override
+\begin{DoxyCompactList}\small\item\em Print loader help. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classrocr_1_1amd_1_1hsa_1_1loader_1_1AmdHsaCodeLoader_a183c9ff32d7da5638cca17af05217174}{Enable\+Read\+Only\+Mode}} ()
+\item 
+void \mbox{\hyperlink{classrocr_1_1amd_1_1hsa_1_1loader_1_1AmdHsaCodeLoader_a519170be97d4246f1e23171b89728c45}{Disable\+Read\+Only\+Mode}} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classrocr_1_1amd_1_1hsa_1_1loader_1_1Context}{Context}} $\ast$ \mbox{\hyperlink{classrocr_1_1amd_1_1hsa_1_1loader_1_1AmdHsaCodeLoader_a527662db2bc884c5e0165cbf7cf78689}{context}}
+\item 
+std\+::vector$<$ \mbox{\hyperlink{classrocr_1_1amd_1_1hsa_1_1loader_1_1Executable}{Executable}} $\ast$ $>$ \mbox{\hyperlink{classrocr_1_1amd_1_1hsa_1_1loader_1_1AmdHsaCodeLoader_a2a76439bf54faac01942ab4aae0aed81}{executables}}
+\item 
+\mbox{\hyperlink{classrocr_1_1amd_1_1hsa_1_1common_1_1ReaderWriterLock}{amd\+::hsa\+::common\+::\+Reader\+Writer\+Lock}} \mbox{\hyperlink{classrocr_1_1amd_1_1hsa_1_1loader_1_1AmdHsaCodeLoader_a39aa38e37dfcd90c97e5fb65c48e0319}{rw\+\_\+lock\+\_\+}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Additional Inherited Members}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classrocr_1_1amd_1_1hsa_1_1loader_1_1AmdHsaCodeLoader_a952e77d39deb7637b72be6d8825c45fc}\label{classrocr_1_1amd_1_1hsa_1_1loader_1_1AmdHsaCodeLoader_a952e77d39deb7637b72be6d8825c45fc}} 
+\index{rocr::amd::hsa::loader::AmdHsaCodeLoader@{rocr::amd::hsa::loader::AmdHsaCodeLoader}!AmdHsaCodeLoader@{AmdHsaCodeLoader}}
+\index{AmdHsaCodeLoader@{AmdHsaCodeLoader}!rocr::amd::hsa::loader::AmdHsaCodeLoader@{rocr::amd::hsa::loader::AmdHsaCodeLoader}}
+\doxysubsubsection{\texorpdfstring{AmdHsaCodeLoader()}{AmdHsaCodeLoader()}}
+{\footnotesize\ttfamily rocr\+::amd\+::hsa\+::loader\+::\+Amd\+Hsa\+Code\+Loader\+::\+Amd\+Hsa\+Code\+Loader (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classrocr_1_1amd_1_1hsa_1_1loader_1_1Context}{Context}} $\ast$}]{context\+\_\+ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classrocr_1_1amd_1_1hsa_1_1loader_1_1AmdHsaCodeLoader_a71612b30fd9f32c084818014f132c855}\label{classrocr_1_1amd_1_1hsa_1_1loader_1_1AmdHsaCodeLoader_a71612b30fd9f32c084818014f132c855}} 
+\index{rocr::amd::hsa::loader::AmdHsaCodeLoader@{rocr::amd::hsa::loader::AmdHsaCodeLoader}!CreateExecutable@{CreateExecutable}}
+\index{CreateExecutable@{CreateExecutable}!rocr::amd::hsa::loader::AmdHsaCodeLoader@{rocr::amd::hsa::loader::AmdHsaCodeLoader}}
+\doxysubsubsection{\texorpdfstring{CreateExecutable()}{CreateExecutable()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classrocr_1_1amd_1_1hsa_1_1loader_1_1Executable}{Executable}} $\ast$ rocr\+::amd\+::hsa\+::loader\+::\+Amd\+Hsa\+Code\+Loader\+::\+Create\+Executable (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{group__agentinfo_gacafd4247e2a04cbe0ac0b3998c127532}{hsa\+\_\+profile\+\_\+t}}}]{profile,  }\item[{const char $\ast$}]{options,  }\item[{\mbox{\hyperlink{group__agentinfo_gaac56321e4596fe10a90b5bb3fedc4b73}{hsa\+\_\+default\+\_\+float\+\_\+rounding\+\_\+mode\+\_\+t}}}]{default\+\_\+float\+\_\+rounding\+\_\+mode = {\ttfamily \mbox{\hyperlink{group__agentinfo_ggaac56321e4596fe10a90b5bb3fedc4b73a51bef81c634ce06d57f57a6622051f96}{HSA\+\_\+\+DEFAULT\+\_\+\+FLOAT\+\_\+\+ROUNDING\+\_\+\+MODE\+\_\+\+DEFAULT}}} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Creates empty \mbox{\hyperlink{namespacerocr_1_1AMD}{AMD}} \mbox{\hyperlink{namespacerocr_1_1HSA}{HSA}} \mbox{\hyperlink{classrocr_1_1amd_1_1hsa_1_1loader_1_1Executable}{Executable}} with specified {\ttfamily profile}, {\ttfamily options}. 
+
+
+
+Implements \mbox{\hyperlink{classrocr_1_1amd_1_1hsa_1_1loader_1_1Loader_a5ca9872a2b68e224a9ec5e11d9605db1}{rocr\+::amd\+::hsa\+::loader\+::\+Loader}}.
+
+\mbox{\Hypertarget{classrocr_1_1amd_1_1hsa_1_1loader_1_1AmdHsaCodeLoader_a6c67e6664cae5358511276620d0d01d9}\label{classrocr_1_1amd_1_1hsa_1_1loader_1_1AmdHsaCodeLoader_a6c67e6664cae5358511276620d0d01d9}} 
+\index{rocr::amd::hsa::loader::AmdHsaCodeLoader@{rocr::amd::hsa::loader::AmdHsaCodeLoader}!DestroyExecutable@{DestroyExecutable}}
+\index{DestroyExecutable@{DestroyExecutable}!rocr::amd::hsa::loader::AmdHsaCodeLoader@{rocr::amd::hsa::loader::AmdHsaCodeLoader}}
+\doxysubsubsection{\texorpdfstring{DestroyExecutable()}{DestroyExecutable()}}
+{\footnotesize\ttfamily void rocr\+::amd\+::hsa\+::loader\+::\+Amd\+Hsa\+Code\+Loader\+::\+Destroy\+Executable (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classrocr_1_1amd_1_1hsa_1_1loader_1_1Executable}{Executable}} $\ast$}]{executable }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Destroys {\ttfamily executable}. 
+
+
+
+Implements \mbox{\hyperlink{classrocr_1_1amd_1_1hsa_1_1loader_1_1Loader_af8234ff89ffe800afbced2d052ab48b2}{rocr\+::amd\+::hsa\+::loader\+::\+Loader}}.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classrocr_1_1amd_1_1hsa_1_1loader_1_1AmdHsaCodeLoader_a6c67e6664cae5358511276620d0d01d9_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classrocr_1_1amd_1_1hsa_1_1loader_1_1AmdHsaCodeLoader_a519170be97d4246f1e23171b89728c45}\label{classrocr_1_1amd_1_1hsa_1_1loader_1_1AmdHsaCodeLoader_a519170be97d4246f1e23171b89728c45}} 
+\index{rocr::amd::hsa::loader::AmdHsaCodeLoader@{rocr::amd::hsa::loader::AmdHsaCodeLoader}!DisableReadOnlyMode@{DisableReadOnlyMode}}
+\index{DisableReadOnlyMode@{DisableReadOnlyMode}!rocr::amd::hsa::loader::AmdHsaCodeLoader@{rocr::amd::hsa::loader::AmdHsaCodeLoader}}
+\doxysubsubsection{\texorpdfstring{DisableReadOnlyMode()}{DisableReadOnlyMode()}}
+{\footnotesize\ttfamily void rocr\+::amd\+::hsa\+::loader\+::\+Amd\+Hsa\+Code\+Loader\+::\+Disable\+Read\+Only\+Mode (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classrocr_1_1amd_1_1hsa_1_1loader_1_1AmdHsaCodeLoader_a519170be97d4246f1e23171b89728c45_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classrocr_1_1amd_1_1hsa_1_1loader_1_1AmdHsaCodeLoader_a519170be97d4246f1e23171b89728c45_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classrocr_1_1amd_1_1hsa_1_1loader_1_1AmdHsaCodeLoader_a183c9ff32d7da5638cca17af05217174}\label{classrocr_1_1amd_1_1hsa_1_1loader_1_1AmdHsaCodeLoader_a183c9ff32d7da5638cca17af05217174}} 
+\index{rocr::amd::hsa::loader::AmdHsaCodeLoader@{rocr::amd::hsa::loader::AmdHsaCodeLoader}!EnableReadOnlyMode@{EnableReadOnlyMode}}
+\index{EnableReadOnlyMode@{EnableReadOnlyMode}!rocr::amd::hsa::loader::AmdHsaCodeLoader@{rocr::amd::hsa::loader::AmdHsaCodeLoader}}
+\doxysubsubsection{\texorpdfstring{EnableReadOnlyMode()}{EnableReadOnlyMode()}}
+{\footnotesize\ttfamily void rocr\+::amd\+::hsa\+::loader\+::\+Amd\+Hsa\+Code\+Loader\+::\+Enable\+Read\+Only\+Mode (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classrocr_1_1amd_1_1hsa_1_1loader_1_1AmdHsaCodeLoader_a183c9ff32d7da5638cca17af05217174_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classrocr_1_1amd_1_1hsa_1_1loader_1_1AmdHsaCodeLoader_a183c9ff32d7da5638cca17af05217174_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classrocr_1_1amd_1_1hsa_1_1loader_1_1AmdHsaCodeLoader_a36a6199609d6ddd4748d5da36f651e3f}\label{classrocr_1_1amd_1_1hsa_1_1loader_1_1AmdHsaCodeLoader_a36a6199609d6ddd4748d5da36f651e3f}} 
+\index{rocr::amd::hsa::loader::AmdHsaCodeLoader@{rocr::amd::hsa::loader::AmdHsaCodeLoader}!FindExecutable@{FindExecutable}}
+\index{FindExecutable@{FindExecutable}!rocr::amd::hsa::loader::AmdHsaCodeLoader@{rocr::amd::hsa::loader::AmdHsaCodeLoader}}
+\doxysubsubsection{\texorpdfstring{FindExecutable()}{FindExecutable()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{group__executable_ga4a4281d636cb6048c4d7a015e1fa3baa}{hsa\+\_\+executable\+\_\+t}} rocr\+::amd\+::hsa\+::loader\+::\+Amd\+Hsa\+Code\+Loader\+::\+Find\+Executable (\begin{DoxyParamCaption}\item[{uint64\+\_\+t}]{device\+\_\+address }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Finds the handle of executable to which {\ttfamily device\+\_\+address} belongs. Return NULL handle if device address is invalid. 
+
+
+
+Implements \mbox{\hyperlink{classrocr_1_1amd_1_1hsa_1_1loader_1_1Loader_a76566555ff9a8913bad40196f33c65b4}{rocr\+::amd\+::hsa\+::loader\+::\+Loader}}.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classrocr_1_1amd_1_1hsa_1_1loader_1_1AmdHsaCodeLoader_a36a6199609d6ddd4748d5da36f651e3f_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classrocr_1_1amd_1_1hsa_1_1loader_1_1AmdHsaCodeLoader_a8a2d851961ef373090e6e252140376f9}\label{classrocr_1_1amd_1_1hsa_1_1loader_1_1AmdHsaCodeLoader_a8a2d851961ef373090e6e252140376f9}} 
+\index{rocr::amd::hsa::loader::AmdHsaCodeLoader@{rocr::amd::hsa::loader::AmdHsaCodeLoader}!FindHostAddress@{FindHostAddress}}
+\index{FindHostAddress@{FindHostAddress}!rocr::amd::hsa::loader::AmdHsaCodeLoader@{rocr::amd::hsa::loader::AmdHsaCodeLoader}}
+\doxysubsubsection{\texorpdfstring{FindHostAddress()}{FindHostAddress()}}
+{\footnotesize\ttfamily uint64\+\_\+t rocr\+::amd\+::hsa\+::loader\+::\+Amd\+Hsa\+Code\+Loader\+::\+Find\+Host\+Address (\begin{DoxyParamCaption}\item[{uint64\+\_\+t}]{device\+\_\+address }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Returns host address given {\ttfamily device\+\_\+address}. If {\ttfamily device\+\_\+address} is already host address, returns null pointer. If {\ttfamily device\+\_\+address} is invalid address, returns null pointer. 
+
+
+
+Implements \mbox{\hyperlink{classrocr_1_1amd_1_1hsa_1_1loader_1_1Loader_a85704e4e76e1a1716956ba2f22993607}{rocr\+::amd\+::hsa\+::loader\+::\+Loader}}.
+
+\mbox{\Hypertarget{classrocr_1_1amd_1_1hsa_1_1loader_1_1AmdHsaCodeLoader_a5cfd0aa4bfeb5a6f9215ae97d526cbb6}\label{classrocr_1_1amd_1_1hsa_1_1loader_1_1AmdHsaCodeLoader_a5cfd0aa4bfeb5a6f9215ae97d526cbb6}} 
+\index{rocr::amd::hsa::loader::AmdHsaCodeLoader@{rocr::amd::hsa::loader::AmdHsaCodeLoader}!FreezeExecutable@{FreezeExecutable}}
+\index{FreezeExecutable@{FreezeExecutable}!rocr::amd::hsa::loader::AmdHsaCodeLoader@{rocr::amd::hsa::loader::AmdHsaCodeLoader}}
+\doxysubsubsection{\texorpdfstring{FreezeExecutable()}{FreezeExecutable()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{group__status_gad755322e7ff95456520e8abdbe90d225}{hsa\+\_\+status\+\_\+t}} rocr\+::amd\+::hsa\+::loader\+::\+Amd\+Hsa\+Code\+Loader\+::\+Freeze\+Executable (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classrocr_1_1amd_1_1hsa_1_1loader_1_1Executable}{Executable}} $\ast$}]{executable,  }\item[{const char $\ast$}]{options }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Freezes {\ttfamily executable}. 
+
+
+
+Implements \mbox{\hyperlink{classrocr_1_1amd_1_1hsa_1_1loader_1_1Loader_aa1830fe75ea19fc4ab45b00d4f5bad8e}{rocr\+::amd\+::hsa\+::loader\+::\+Loader}}.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classrocr_1_1amd_1_1hsa_1_1loader_1_1AmdHsaCodeLoader_a5cfd0aa4bfeb5a6f9215ae97d526cbb6_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classrocr_1_1amd_1_1hsa_1_1loader_1_1AmdHsaCodeLoader_a6f3ab8a6ed6bb30031b44556c3d049e2}\label{classrocr_1_1amd_1_1hsa_1_1loader_1_1AmdHsaCodeLoader_a6f3ab8a6ed6bb30031b44556c3d049e2}} 
+\index{rocr::amd::hsa::loader::AmdHsaCodeLoader@{rocr::amd::hsa::loader::AmdHsaCodeLoader}!GetContext@{GetContext}}
+\index{GetContext@{GetContext}!rocr::amd::hsa::loader::AmdHsaCodeLoader@{rocr::amd::hsa::loader::AmdHsaCodeLoader}}
+\doxysubsubsection{\texorpdfstring{GetContext()}{GetContext()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classrocr_1_1amd_1_1hsa_1_1loader_1_1Context}{Context}}$\ast$ rocr\+::amd\+::hsa\+::loader\+::\+Amd\+Hsa\+Code\+Loader\+::\+Get\+Context (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}, {\ttfamily [virtual]}}
+
+\begin{DoxyReturn}{Returns}
+\mbox{\hyperlink{classrocr_1_1amd_1_1hsa_1_1loader_1_1Context}{Context}} associated with \mbox{\hyperlink{classrocr_1_1amd_1_1hsa_1_1loader_1_1Loader}{Loader}}. 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{classrocr_1_1amd_1_1hsa_1_1loader_1_1Loader_a5705973521aeed2b6f2bb08403e63c76}{rocr\+::amd\+::hsa\+::loader\+::\+Loader}}.
+
+\mbox{\Hypertarget{classrocr_1_1amd_1_1hsa_1_1loader_1_1AmdHsaCodeLoader_ad2a3ce6a85b6e5068f72e5a8a3a19b2a}\label{classrocr_1_1amd_1_1hsa_1_1loader_1_1AmdHsaCodeLoader_ad2a3ce6a85b6e5068f72e5a8a3a19b2a}} 
+\index{rocr::amd::hsa::loader::AmdHsaCodeLoader@{rocr::amd::hsa::loader::AmdHsaCodeLoader}!IterateExecutables@{IterateExecutables}}
+\index{IterateExecutables@{IterateExecutables}!rocr::amd::hsa::loader::AmdHsaCodeLoader@{rocr::amd::hsa::loader::AmdHsaCodeLoader}}
+\doxysubsubsection{\texorpdfstring{IterateExecutables()}{IterateExecutables()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{group__status_gad755322e7ff95456520e8abdbe90d225}{hsa\+\_\+status\+\_\+t}} rocr\+::amd\+::hsa\+::loader\+::\+Amd\+Hsa\+Code\+Loader\+::\+Iterate\+Executables (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{group__status_gad755322e7ff95456520e8abdbe90d225}{hsa\+\_\+status\+\_\+t}}($\ast$)(\mbox{\hyperlink{group__executable_ga4a4281d636cb6048c4d7a015e1fa3baa}{hsa\+\_\+executable\+\_\+t}} executable, void $\ast$data)}]{callback,  }\item[{void $\ast$}]{data }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Invokes {\ttfamily callback} for each created executable. 
+
+
+
+Implements \mbox{\hyperlink{classrocr_1_1amd_1_1hsa_1_1loader_1_1Loader_a9aadfe011a47b1129754fab969cf77ec}{rocr\+::amd\+::hsa\+::loader\+::\+Loader}}.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classrocr_1_1amd_1_1hsa_1_1loader_1_1AmdHsaCodeLoader_ad2a3ce6a85b6e5068f72e5a8a3a19b2a_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classrocr_1_1amd_1_1hsa_1_1loader_1_1AmdHsaCodeLoader_a4c415a9e8a9b49acbaf2dbc31695f7e9}\label{classrocr_1_1amd_1_1hsa_1_1loader_1_1AmdHsaCodeLoader_a4c415a9e8a9b49acbaf2dbc31695f7e9}} 
+\index{rocr::amd::hsa::loader::AmdHsaCodeLoader@{rocr::amd::hsa::loader::AmdHsaCodeLoader}!PrintHelp@{PrintHelp}}
+\index{PrintHelp@{PrintHelp}!rocr::amd::hsa::loader::AmdHsaCodeLoader@{rocr::amd::hsa::loader::AmdHsaCodeLoader}}
+\doxysubsubsection{\texorpdfstring{PrintHelp()}{PrintHelp()}}
+{\footnotesize\ttfamily void rocr\+::amd\+::hsa\+::loader\+::\+Amd\+Hsa\+Code\+Loader\+::\+Print\+Help (\begin{DoxyParamCaption}\item[{std\+::ostream \&}]{out }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Print loader help. 
+
+
+
+Implements \mbox{\hyperlink{classrocr_1_1amd_1_1hsa_1_1loader_1_1Loader_a18c013782a7d030da958e846d1484c9f}{rocr\+::amd\+::hsa\+::loader\+::\+Loader}}.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classrocr_1_1amd_1_1hsa_1_1loader_1_1AmdHsaCodeLoader_a4c415a9e8a9b49acbaf2dbc31695f7e9_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classrocr_1_1amd_1_1hsa_1_1loader_1_1AmdHsaCodeLoader_a6a36eb9d783fac914dfe73fc75541bdb}\label{classrocr_1_1amd_1_1hsa_1_1loader_1_1AmdHsaCodeLoader_a6a36eb9d783fac914dfe73fc75541bdb}} 
+\index{rocr::amd::hsa::loader::AmdHsaCodeLoader@{rocr::amd::hsa::loader::AmdHsaCodeLoader}!QuerySegmentDescriptors@{QuerySegmentDescriptors}}
+\index{QuerySegmentDescriptors@{QuerySegmentDescriptors}!rocr::amd::hsa::loader::AmdHsaCodeLoader@{rocr::amd::hsa::loader::AmdHsaCodeLoader}}
+\doxysubsubsection{\texorpdfstring{QuerySegmentDescriptors()}{QuerySegmentDescriptors()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{group__status_gad755322e7ff95456520e8abdbe90d225}{hsa\+\_\+status\+\_\+t}} rocr\+::amd\+::hsa\+::loader\+::\+Amd\+Hsa\+Code\+Loader\+::\+Query\+Segment\+Descriptors (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{inc_2hsa__ven__amd__loader_8h_acb66ca48865e62642b604bfe4ede86c7}{hsa\+\_\+ven\+\_\+amd\+\_\+loader\+\_\+segment\+\_\+descriptor\+\_\+t}} $\ast$}]{segment\+\_\+descriptors,  }\item[{size\+\_\+t $\ast$}]{num\+\_\+segment\+\_\+descriptors }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+same as hsa\+\_\+ven\+\_\+amd\+\_\+loader\+\_\+query\+\_\+segment\+\_\+descriptors. 
+
+
+
+Implements \mbox{\hyperlink{classrocr_1_1amd_1_1hsa_1_1loader_1_1Loader_af6190ee2c4c8a52a1a93e73776969bbe}{rocr\+::amd\+::hsa\+::loader\+::\+Loader}}.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classrocr_1_1amd_1_1hsa_1_1loader_1_1AmdHsaCodeLoader_a6a36eb9d783fac914dfe73fc75541bdb_cgraph}
+\end{center}
+\end{figure}
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{classrocr_1_1amd_1_1hsa_1_1loader_1_1AmdHsaCodeLoader_a527662db2bc884c5e0165cbf7cf78689}\label{classrocr_1_1amd_1_1hsa_1_1loader_1_1AmdHsaCodeLoader_a527662db2bc884c5e0165cbf7cf78689}} 
+\index{rocr::amd::hsa::loader::AmdHsaCodeLoader@{rocr::amd::hsa::loader::AmdHsaCodeLoader}!context@{context}}
+\index{context@{context}!rocr::amd::hsa::loader::AmdHsaCodeLoader@{rocr::amd::hsa::loader::AmdHsaCodeLoader}}
+\doxysubsubsection{\texorpdfstring{context}{context}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classrocr_1_1amd_1_1hsa_1_1loader_1_1Context}{Context}}$\ast$ rocr\+::amd\+::hsa\+::loader\+::\+Amd\+Hsa\+Code\+Loader\+::context\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classrocr_1_1amd_1_1hsa_1_1loader_1_1AmdHsaCodeLoader_a2a76439bf54faac01942ab4aae0aed81}\label{classrocr_1_1amd_1_1hsa_1_1loader_1_1AmdHsaCodeLoader_a2a76439bf54faac01942ab4aae0aed81}} 
+\index{rocr::amd::hsa::loader::AmdHsaCodeLoader@{rocr::amd::hsa::loader::AmdHsaCodeLoader}!executables@{executables}}
+\index{executables@{executables}!rocr::amd::hsa::loader::AmdHsaCodeLoader@{rocr::amd::hsa::loader::AmdHsaCodeLoader}}
+\doxysubsubsection{\texorpdfstring{executables}{executables}}
+{\footnotesize\ttfamily std\+::vector$<$\mbox{\hyperlink{classrocr_1_1amd_1_1hsa_1_1loader_1_1Executable}{Executable}}$\ast$$>$ rocr\+::amd\+::hsa\+::loader\+::\+Amd\+Hsa\+Code\+Loader\+::executables\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classrocr_1_1amd_1_1hsa_1_1loader_1_1AmdHsaCodeLoader_a39aa38e37dfcd90c97e5fb65c48e0319}\label{classrocr_1_1amd_1_1hsa_1_1loader_1_1AmdHsaCodeLoader_a39aa38e37dfcd90c97e5fb65c48e0319}} 
+\index{rocr::amd::hsa::loader::AmdHsaCodeLoader@{rocr::amd::hsa::loader::AmdHsaCodeLoader}!rw\_lock\_@{rw\_lock\_}}
+\index{rw\_lock\_@{rw\_lock\_}!rocr::amd::hsa::loader::AmdHsaCodeLoader@{rocr::amd::hsa::loader::AmdHsaCodeLoader}}
+\doxysubsubsection{\texorpdfstring{rw\_lock\_}{rw\_lock\_}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classrocr_1_1amd_1_1hsa_1_1common_1_1ReaderWriterLock}{amd\+::hsa\+::common\+::\+Reader\+Writer\+Lock}} rocr\+::amd\+::hsa\+::loader\+::\+Amd\+Hsa\+Code\+Loader\+::rw\+\_\+lock\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+src/loader/\mbox{\hyperlink{executable_8hpp}{executable.\+hpp}}\item 
+src/loader/\mbox{\hyperlink{executable_8cpp}{executable.\+cpp}}\end{DoxyCompactItemize}

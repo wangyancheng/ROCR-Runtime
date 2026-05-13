@@ -1,0 +1,20 @@
+var searchData=
+[
+  ['unknown_10603',['Unknown',['../classrocr_1_1amd_1_1options_1_1OptionParser.html#aeafe101c485903e9ee88446e3e4b37a2',1,'rocr::amd::options::OptionParser']]],
+  ['unload_10604',['Unload',['../classrocr_1_1core_1_1ExtensionEntryPoints.html#ad7490ee4f6869478c4601d0885795aaa',1,'rocr::core::ExtensionEntryPoints::Unload()'],['../classrocr_1_1core_1_1Runtime.html#a2b01b40b9c077b5b8bdaa05ca3a3f66f',1,'rocr::core::Runtime::Unload()'],['../namespacerocr_1_1AMD.html#a659a435757283a34ae1e3eb874933acf',1,'rocr::AMD::Unload()']]],
+  ['unloadextensions_10605',['UnloadExtensions',['../classrocr_1_1core_1_1Runtime.html#a0435900c4d6662b7e5b1d284d7b4e154',1,'rocr::core::Runtime']]],
+  ['unloadimage_10606',['UnloadImage',['../classrocr_1_1core_1_1ExtensionEntryPoints.html#ab0291c89d4e7bedd941fb0a38e9cde5c',1,'rocr::core::ExtensionEntryPoints']]],
+  ['unloadtools_10607',['UnloadTools',['../classrocr_1_1core_1_1Runtime.html#a0b5be796af0c1a5e35cfd1a5f00196fa',1,'rocr::core::Runtime']]],
+  ['unlock_10608',['Unlock',['../classrocr_1_1AMD_1_1MemoryRegion.html#a64e3ca65628cc234f35f650024d10a95',1,'rocr::AMD::MemoryRegion']]],
+  ['updateaddr_10609',['updateAddr',['../classrocr_1_1amd_1_1elf_1_1GElfRelocationSection.html#a38215f8663a6ba644460607afcb26b9d',1,'rocr::amd::elf::GElfRelocationSection::updateAddr()'],['../classrocr_1_1amd_1_1elf_1_1GElfNoteSection.html#a57b664f6433e09838af14c91411e922a',1,'rocr::amd::elf::GElfNoteSection::updateAddr()'],['../classrocr_1_1amd_1_1elf_1_1GElfSymbolTable.html#a8bb14710a3bbf2415417f043f17ea793',1,'rocr::amd::elf::GElfSymbolTable::updateAddr()'],['../classrocr_1_1amd_1_1elf_1_1GElfStringTable.html#af199af8765aafaa434c1c5c057f4fcad',1,'rocr::amd::elf::GElfStringTable::updateAddr()'],['../classrocr_1_1amd_1_1elf_1_1GElfSection.html#ade9ddc388f7c46ff1b450dac9f35f714',1,'rocr::amd::elf::GElfSection::updateAddr()'],['../classrocr_1_1amd_1_1elf_1_1Section.html#acb7fbee1b0e78be767177c484de6322f',1,'rocr::amd::elf::Section::updateAddr()']]],
+  ['updateaddsection_10610',['updateAddSection',['../classrocr_1_1amd_1_1elf_1_1Segment.html#a7fd7d6db54894b7124f03cb42e0fc353',1,'rocr::amd::elf::Segment::updateAddSection()'],['../classrocr_1_1amd_1_1elf_1_1GElfSegment.html#a2ac578f4322c35064ea78816ccdb05be',1,'rocr::amd::elf::GElfSegment::updateAddSection()']]],
+  ['updateamdexts_10611',['UpdateAmdExts',['../structrocr_1_1core_1_1HsaApiTable.html#ac84e545bb3e763231d6bd40a04ce5e21',1,'rocr::core::HsaApiTable']]],
+  ['updateamdexttable_10612',['UpdateAmdExtTable',['../classrocr_1_1core_1_1ExtensionEntryPoints.html#a21b153ae720a0f1aa240e3c7abffbd95',1,'rocr::core::ExtensionEntryPoints']]],
+  ['updatecore_10613',['UpdateCore',['../structrocr_1_1core_1_1HsaApiTable.html#aa644f1565705debac4fb4953a3c6282d',1,'rocr::core::HsaApiTable']]],
+  ['updatewriteanddoorbellregister_10614',['UpdateWriteAndDoorbellRegister',['../classrocr_1_1AMD_1_1BlitSdma.html#ac181b3e4b83cef4f580424c2a89f4c05',1,'rocr::AMD::BlitSdma']]],
+  ['use_5freserved_10615',['use_reserved',['../classrocr_1_1AMD_1_1ScratchCache.html#a8ad91831c6e320fe003281876b8d3105',1,'rocr::AMD::ScratchCache']]],
+  ['usecombinedswizzle_10616',['UseCombinedSwizzle',['../classrocr_1_1Addr_1_1V1_1_1Lib.html#a5175750a16f1dc0d45d9636e0331a1fa',1,'rocr::Addr::V1::Lib']]],
+  ['usetileindex_10617',['UseTileIndex',['../classrocr_1_1Addr_1_1V1_1_1Lib.html#a95c683eccc5b66a34568f1621fb28b76',1,'rocr::Addr::V1::Lib']]],
+  ['usetileinfo_10618',['UseTileInfo',['../classrocr_1_1Addr_1_1V1_1_1Lib.html#a3d187e65fd95286d1c39ed68a09b849f',1,'rocr::Addr::V1::Lib']]],
+  ['usleep_10619',['uSleep',['../namespacerocr_1_1os.html#a792b6b1effdea52cf0449b53c4ed7094',1,'rocr::os']]]
+];

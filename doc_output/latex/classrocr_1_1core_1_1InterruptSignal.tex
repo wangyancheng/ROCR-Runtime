@@ -1,0 +1,1003 @@
+\hypertarget{classrocr_1_1core_1_1InterruptSignal}{}\doxysection{rocr\+::core\+::Interrupt\+Signal Class Reference}
+\label{classrocr_1_1core_1_1InterruptSignal}\index{rocr::core::InterruptSignal@{rocr::core::InterruptSignal}}
+
+
+A \mbox{\hyperlink{classrocr_1_1core_1_1Signal}{Signal}} implementation using interrupts versus plain memory based. Also see base class \mbox{\hyperlink{classrocr_1_1core_1_1Signal}{Signal}}.  
+
+
+
+
+{\ttfamily \#include $<$interrupt\+\_\+signal.\+h$>$}
+
+
+
+Inheritance diagram for rocr\+::core\+::Interrupt\+Signal\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=304pt]{classrocr_1_1core_1_1InterruptSignal__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for rocr\+::core\+::Interrupt\+Signal\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classrocr_1_1core_1_1InterruptSignal__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class \mbox{\hyperlink{classrocr_1_1core_1_1InterruptSignal_1_1EventPool}{Event\+Pool}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classrocr_1_1core_1_1InterruptSignal_a0e21b614da47ca671384fb77b0ab44da}{Interrupt\+Signal}} (\mbox{\hyperlink{group__signals_ga67ca2818879c9990e1b5f1b14ce7ed27}{hsa\+\_\+signal\+\_\+value\+\_\+t}} initial\+\_\+value, Hsa\+Event $\ast$use\+\_\+event=\mbox{\hyperlink{addrtypes_8h_a070d2ce7b6bb7e5c05602aa8c308d0c4}{NULL}})
+\item 
+\mbox{\hyperlink{classrocr_1_1core_1_1InterruptSignal_abdac0b28de7e73a9fb3c2b926d1f3fad}{$\sim$\+Interrupt\+Signal}} ()
+\item 
+\mbox{\hyperlink{group__signals_ga67ca2818879c9990e1b5f1b14ce7ed27}{hsa\+\_\+signal\+\_\+value\+\_\+t}} \mbox{\hyperlink{classrocr_1_1core_1_1InterruptSignal_a64057f24753cf49cb47103392df34bf9}{Load\+Relaxed}} ()
+\item 
+\mbox{\hyperlink{group__signals_ga67ca2818879c9990e1b5f1b14ce7ed27}{hsa\+\_\+signal\+\_\+value\+\_\+t}} \mbox{\hyperlink{classrocr_1_1core_1_1InterruptSignal_a6e50e4da4ac6aec716de31baf0a5f508}{Load\+Acquire}} ()
+\item 
+void \mbox{\hyperlink{classrocr_1_1core_1_1InterruptSignal_a03486faa5343fb5d83280638102a722c}{Store\+Relaxed}} (\mbox{\hyperlink{group__signals_ga67ca2818879c9990e1b5f1b14ce7ed27}{hsa\+\_\+signal\+\_\+value\+\_\+t}} value)
+\item 
+void \mbox{\hyperlink{classrocr_1_1core_1_1InterruptSignal_a1293c7e6b7330773107403595fee785a}{Store\+Release}} (\mbox{\hyperlink{group__signals_ga67ca2818879c9990e1b5f1b14ce7ed27}{hsa\+\_\+signal\+\_\+value\+\_\+t}} value)
+\item 
+\mbox{\hyperlink{group__signals_ga67ca2818879c9990e1b5f1b14ce7ed27}{hsa\+\_\+signal\+\_\+value\+\_\+t}} \mbox{\hyperlink{classrocr_1_1core_1_1InterruptSignal_ada9da891867a624647067f4dfd5ba185}{Wait\+Relaxed}} (\mbox{\hyperlink{group__signals_gab7190fcff48c6dbeded341389ed17c8d}{hsa\+\_\+signal\+\_\+condition\+\_\+t}} condition, \mbox{\hyperlink{group__signals_ga67ca2818879c9990e1b5f1b14ce7ed27}{hsa\+\_\+signal\+\_\+value\+\_\+t}} compare\+\_\+value, uint64\+\_\+t timeout, \mbox{\hyperlink{group__signals_gac0d2ec14d7a58c6cccc259943a03c569}{hsa\+\_\+wait\+\_\+state\+\_\+t}} wait\+\_\+hint)
+\item 
+\mbox{\hyperlink{group__signals_ga67ca2818879c9990e1b5f1b14ce7ed27}{hsa\+\_\+signal\+\_\+value\+\_\+t}} \mbox{\hyperlink{classrocr_1_1core_1_1InterruptSignal_a2679c3c335acaaed3e26ebb31370aa78}{Wait\+Acquire}} (\mbox{\hyperlink{group__signals_gab7190fcff48c6dbeded341389ed17c8d}{hsa\+\_\+signal\+\_\+condition\+\_\+t}} condition, \mbox{\hyperlink{group__signals_ga67ca2818879c9990e1b5f1b14ce7ed27}{hsa\+\_\+signal\+\_\+value\+\_\+t}} compare\+\_\+value, uint64\+\_\+t timeout, \mbox{\hyperlink{group__signals_gac0d2ec14d7a58c6cccc259943a03c569}{hsa\+\_\+wait\+\_\+state\+\_\+t}} wait\+\_\+hint)
+\item 
+void \mbox{\hyperlink{classrocr_1_1core_1_1InterruptSignal_a5cba5b55336a588e002e5222806ed2d1}{And\+Relaxed}} (\mbox{\hyperlink{group__signals_ga67ca2818879c9990e1b5f1b14ce7ed27}{hsa\+\_\+signal\+\_\+value\+\_\+t}} value)
+\item 
+void \mbox{\hyperlink{classrocr_1_1core_1_1InterruptSignal_a09413b97763194f4fa2068534a083d83}{And\+Acquire}} (\mbox{\hyperlink{group__signals_ga67ca2818879c9990e1b5f1b14ce7ed27}{hsa\+\_\+signal\+\_\+value\+\_\+t}} value)
+\item 
+void \mbox{\hyperlink{classrocr_1_1core_1_1InterruptSignal_a9fc791900f2fbc8a66467e6f46aa06a3}{And\+Release}} (\mbox{\hyperlink{group__signals_ga67ca2818879c9990e1b5f1b14ce7ed27}{hsa\+\_\+signal\+\_\+value\+\_\+t}} value)
+\item 
+void \mbox{\hyperlink{classrocr_1_1core_1_1InterruptSignal_a3493a24cefb898c405ef70c19ce0bc06}{And\+Acq\+Rel}} (\mbox{\hyperlink{group__signals_ga67ca2818879c9990e1b5f1b14ce7ed27}{hsa\+\_\+signal\+\_\+value\+\_\+t}} value)
+\item 
+void \mbox{\hyperlink{classrocr_1_1core_1_1InterruptSignal_ad420e4331eb11f611b9618297550c149}{Or\+Relaxed}} (\mbox{\hyperlink{group__signals_ga67ca2818879c9990e1b5f1b14ce7ed27}{hsa\+\_\+signal\+\_\+value\+\_\+t}} value)
+\item 
+void \mbox{\hyperlink{classrocr_1_1core_1_1InterruptSignal_af1c3f5385ea254ef6ed528fa769020b4}{Or\+Acquire}} (\mbox{\hyperlink{group__signals_ga67ca2818879c9990e1b5f1b14ce7ed27}{hsa\+\_\+signal\+\_\+value\+\_\+t}} value)
+\item 
+void \mbox{\hyperlink{classrocr_1_1core_1_1InterruptSignal_aee54fb0e079b2b77c2d17c92db0c2092}{Or\+Release}} (\mbox{\hyperlink{group__signals_ga67ca2818879c9990e1b5f1b14ce7ed27}{hsa\+\_\+signal\+\_\+value\+\_\+t}} value)
+\item 
+void \mbox{\hyperlink{classrocr_1_1core_1_1InterruptSignal_ae7b113b36e4a9cd7421ab30ce178403c}{Or\+Acq\+Rel}} (\mbox{\hyperlink{group__signals_ga67ca2818879c9990e1b5f1b14ce7ed27}{hsa\+\_\+signal\+\_\+value\+\_\+t}} value)
+\item 
+void \mbox{\hyperlink{classrocr_1_1core_1_1InterruptSignal_ad90fededb927a6efb242ca21a39e4da7}{Xor\+Relaxed}} (\mbox{\hyperlink{group__signals_ga67ca2818879c9990e1b5f1b14ce7ed27}{hsa\+\_\+signal\+\_\+value\+\_\+t}} value)
+\item 
+void \mbox{\hyperlink{classrocr_1_1core_1_1InterruptSignal_a63417fdeb3dbc40b3c35a45f446ad168}{Xor\+Acquire}} (\mbox{\hyperlink{group__signals_ga67ca2818879c9990e1b5f1b14ce7ed27}{hsa\+\_\+signal\+\_\+value\+\_\+t}} value)
+\item 
+void \mbox{\hyperlink{classrocr_1_1core_1_1InterruptSignal_a4694c3dd9d30af6fdd36018f173194a3}{Xor\+Release}} (\mbox{\hyperlink{group__signals_ga67ca2818879c9990e1b5f1b14ce7ed27}{hsa\+\_\+signal\+\_\+value\+\_\+t}} value)
+\item 
+void \mbox{\hyperlink{classrocr_1_1core_1_1InterruptSignal_a495a6b21efa4daccc1bb41b3eb88320d}{Xor\+Acq\+Rel}} (\mbox{\hyperlink{group__signals_ga67ca2818879c9990e1b5f1b14ce7ed27}{hsa\+\_\+signal\+\_\+value\+\_\+t}} value)
+\item 
+void \mbox{\hyperlink{classrocr_1_1core_1_1InterruptSignal_aafeb1b327d7a8c16aec711343a586e66}{Add\+Relaxed}} (\mbox{\hyperlink{group__signals_ga67ca2818879c9990e1b5f1b14ce7ed27}{hsa\+\_\+signal\+\_\+value\+\_\+t}} value)
+\item 
+void \mbox{\hyperlink{classrocr_1_1core_1_1InterruptSignal_abbbb67d5a711bcc0e1f99ff175dd1d73}{Add\+Acquire}} (\mbox{\hyperlink{group__signals_ga67ca2818879c9990e1b5f1b14ce7ed27}{hsa\+\_\+signal\+\_\+value\+\_\+t}} value)
+\item 
+void \mbox{\hyperlink{classrocr_1_1core_1_1InterruptSignal_abbf805af6f28367ec48f52e11cb087ec}{Add\+Release}} (\mbox{\hyperlink{group__signals_ga67ca2818879c9990e1b5f1b14ce7ed27}{hsa\+\_\+signal\+\_\+value\+\_\+t}} value)
+\item 
+void \mbox{\hyperlink{classrocr_1_1core_1_1InterruptSignal_ad2932f1542b03025828134a9913abbf8}{Add\+Acq\+Rel}} (\mbox{\hyperlink{group__signals_ga67ca2818879c9990e1b5f1b14ce7ed27}{hsa\+\_\+signal\+\_\+value\+\_\+t}} value)
+\item 
+void \mbox{\hyperlink{classrocr_1_1core_1_1InterruptSignal_a3c29ec655753295ff1a13ec64fdc2d51}{Sub\+Relaxed}} (\mbox{\hyperlink{group__signals_ga67ca2818879c9990e1b5f1b14ce7ed27}{hsa\+\_\+signal\+\_\+value\+\_\+t}} value)
+\item 
+void \mbox{\hyperlink{classrocr_1_1core_1_1InterruptSignal_a9d3264b8976e58e38189520c5938b0e4}{Sub\+Acquire}} (\mbox{\hyperlink{group__signals_ga67ca2818879c9990e1b5f1b14ce7ed27}{hsa\+\_\+signal\+\_\+value\+\_\+t}} value)
+\item 
+void \mbox{\hyperlink{classrocr_1_1core_1_1InterruptSignal_acfd4df23c1199228cb55143867517cf6}{Sub\+Release}} (\mbox{\hyperlink{group__signals_ga67ca2818879c9990e1b5f1b14ce7ed27}{hsa\+\_\+signal\+\_\+value\+\_\+t}} value)
+\item 
+void \mbox{\hyperlink{classrocr_1_1core_1_1InterruptSignal_ad8e378bc04f8f92f85a5aa0b4c08e2e6}{Sub\+Acq\+Rel}} (\mbox{\hyperlink{group__signals_ga67ca2818879c9990e1b5f1b14ce7ed27}{hsa\+\_\+signal\+\_\+value\+\_\+t}} value)
+\item 
+\mbox{\hyperlink{group__signals_ga67ca2818879c9990e1b5f1b14ce7ed27}{hsa\+\_\+signal\+\_\+value\+\_\+t}} \mbox{\hyperlink{classrocr_1_1core_1_1InterruptSignal_a6fdf265ddbed0cfd991ff439b89323a9}{Exch\+Relaxed}} (\mbox{\hyperlink{group__signals_ga67ca2818879c9990e1b5f1b14ce7ed27}{hsa\+\_\+signal\+\_\+value\+\_\+t}} value)
+\item 
+\mbox{\hyperlink{group__signals_ga67ca2818879c9990e1b5f1b14ce7ed27}{hsa\+\_\+signal\+\_\+value\+\_\+t}} \mbox{\hyperlink{classrocr_1_1core_1_1InterruptSignal_a02182bafe1825f025b22883a0fb6a2eb}{Exch\+Acquire}} (\mbox{\hyperlink{group__signals_ga67ca2818879c9990e1b5f1b14ce7ed27}{hsa\+\_\+signal\+\_\+value\+\_\+t}} value)
+\item 
+\mbox{\hyperlink{group__signals_ga67ca2818879c9990e1b5f1b14ce7ed27}{hsa\+\_\+signal\+\_\+value\+\_\+t}} \mbox{\hyperlink{classrocr_1_1core_1_1InterruptSignal_aa956736413de81a2817397a453a772f4}{Exch\+Release}} (\mbox{\hyperlink{group__signals_ga67ca2818879c9990e1b5f1b14ce7ed27}{hsa\+\_\+signal\+\_\+value\+\_\+t}} value)
+\item 
+\mbox{\hyperlink{group__signals_ga67ca2818879c9990e1b5f1b14ce7ed27}{hsa\+\_\+signal\+\_\+value\+\_\+t}} \mbox{\hyperlink{classrocr_1_1core_1_1InterruptSignal_a303a13fbb9e5ed87677318519fb23630}{Exch\+Acq\+Rel}} (\mbox{\hyperlink{group__signals_ga67ca2818879c9990e1b5f1b14ce7ed27}{hsa\+\_\+signal\+\_\+value\+\_\+t}} value)
+\item 
+\mbox{\hyperlink{group__signals_ga67ca2818879c9990e1b5f1b14ce7ed27}{hsa\+\_\+signal\+\_\+value\+\_\+t}} \mbox{\hyperlink{classrocr_1_1core_1_1InterruptSignal_ac2f303c456fbb5ec93542e87f03e25cd}{Cas\+Relaxed}} (\mbox{\hyperlink{group__signals_ga67ca2818879c9990e1b5f1b14ce7ed27}{hsa\+\_\+signal\+\_\+value\+\_\+t}} expected, \mbox{\hyperlink{group__signals_ga67ca2818879c9990e1b5f1b14ce7ed27}{hsa\+\_\+signal\+\_\+value\+\_\+t}} value)
+\item 
+\mbox{\hyperlink{group__signals_ga67ca2818879c9990e1b5f1b14ce7ed27}{hsa\+\_\+signal\+\_\+value\+\_\+t}} \mbox{\hyperlink{classrocr_1_1core_1_1InterruptSignal_a43964dbac5a43ec5a5ac5fcf6108f2c6}{Cas\+Acquire}} (\mbox{\hyperlink{group__signals_ga67ca2818879c9990e1b5f1b14ce7ed27}{hsa\+\_\+signal\+\_\+value\+\_\+t}} expected, \mbox{\hyperlink{group__signals_ga67ca2818879c9990e1b5f1b14ce7ed27}{hsa\+\_\+signal\+\_\+value\+\_\+t}} value)
+\item 
+\mbox{\hyperlink{group__signals_ga67ca2818879c9990e1b5f1b14ce7ed27}{hsa\+\_\+signal\+\_\+value\+\_\+t}} \mbox{\hyperlink{classrocr_1_1core_1_1InterruptSignal_a526a99e4f076028f94b74fc9b55ae478}{Cas\+Release}} (\mbox{\hyperlink{group__signals_ga67ca2818879c9990e1b5f1b14ce7ed27}{hsa\+\_\+signal\+\_\+value\+\_\+t}} expected, \mbox{\hyperlink{group__signals_ga67ca2818879c9990e1b5f1b14ce7ed27}{hsa\+\_\+signal\+\_\+value\+\_\+t}} value)
+\item 
+\mbox{\hyperlink{group__signals_ga67ca2818879c9990e1b5f1b14ce7ed27}{hsa\+\_\+signal\+\_\+value\+\_\+t}} \mbox{\hyperlink{classrocr_1_1core_1_1InterruptSignal_ade2306d531e9fbb013754cea4e3d0489}{Cas\+Acq\+Rel}} (\mbox{\hyperlink{group__signals_ga67ca2818879c9990e1b5f1b14ce7ed27}{hsa\+\_\+signal\+\_\+value\+\_\+t}} expected, \mbox{\hyperlink{group__signals_ga67ca2818879c9990e1b5f1b14ce7ed27}{hsa\+\_\+signal\+\_\+value\+\_\+t}} value)
+\item 
+\+\_\+\+\_\+forceinline \mbox{\hyperlink{group__signals_ga67ca2818879c9990e1b5f1b14ce7ed27}{hsa\+\_\+signal\+\_\+value\+\_\+t}} $\ast$ \mbox{\hyperlink{classrocr_1_1core_1_1InterruptSignal_a18e29df4a39de8c6d51b94b884cb02d5}{Value\+Location}} () const
+\begin{DoxyCompactList}\small\item\em See base class \mbox{\hyperlink{classrocr_1_1core_1_1Signal}{Signal}}. \end{DoxyCompactList}\item 
+\+\_\+\+\_\+forceinline Hsa\+Event $\ast$ \mbox{\hyperlink{classrocr_1_1core_1_1InterruptSignal_a90db7b985296680ff31997d456be980d}{Eop\+Event}} ()
+\begin{DoxyCompactList}\small\item\em See base class \mbox{\hyperlink{classrocr_1_1core_1_1Signal}{Signal}}. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static Hsa\+Event $\ast$ \mbox{\hyperlink{classrocr_1_1core_1_1InterruptSignal_ad17ce43542772da5d42ca66645d01f84}{Create\+Event}} (HSA\+\_\+\+EVENTTYPE type, bool manual\+\_\+reset)
+\item 
+static void \mbox{\hyperlink{classrocr_1_1core_1_1InterruptSignal_a726be934de1e6574cf8cc056755f0cc9}{Destroy\+Event}} (Hsa\+Event $\ast$evt)
+\item 
+static \+\_\+\+\_\+forceinline bool \mbox{\hyperlink{classrocr_1_1core_1_1InterruptSignal_a22e8078fc15da1ef4a4660ffd0a353a8}{Is\+Type}} (\mbox{\hyperlink{classrocr_1_1core_1_1Signal}{Signal}} $\ast$ptr)
+\begin{DoxyCompactList}\small\item\em Determines if a Signal$\ast$ can be safely converted to an Interrupt\+Signal$\ast$ via static\+\_\+cast. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+bool \mbox{\hyperlink{classrocr_1_1core_1_1InterruptSignal_a16044888e43f3c58d257428577285ec3}{\+\_\+\+IsA}} (\mbox{\hyperlink{classrocr_1_1core_1_1Signal_a72da3ee567e1cbb30a07292e8be69bc6}{rtti\+\_\+t}} id) const
+\begin{DoxyCompactList}\small\item\em Simple RTTI type checking helper Returns true if the object can be converted to the query type via static\+\_\+cast. Do not use directly. Use Is\+Type in the desired derived type instead. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\+\_\+\+\_\+forceinline void \mbox{\hyperlink{classrocr_1_1core_1_1InterruptSignal_afabb4edeaa5f73a4fec226123850fe2a}{Set\+Event}} ()
+\begin{DoxyCompactList}\small\item\em Notify driver of signal value change if necessary. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classrocr_1_1core_1_1InterruptSignal_ac0664592028b4fc9d0b800f07346a5a7}{DISALLOW\+\_\+\+COPY\+\_\+\+AND\+\_\+\+ASSIGN}} (\mbox{\hyperlink{classrocr_1_1core_1_1InterruptSignal}{Interrupt\+Signal}})
+\end{DoxyCompactItemize}
+\doxysubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+Hsa\+Event $\ast$ \mbox{\hyperlink{classrocr_1_1core_1_1InterruptSignal_a971233d3c277046bb457fad0bcd37fb7}{event\+\_\+}}
+\begin{DoxyCompactList}\small\item\em @variable KFD event on which the interrupt signal is based on. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classrocr_1_1core_1_1InterruptSignal_a67182071c24836645506d3c000ae208f}{free\+\_\+event\+\_\+}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Static Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+static int \mbox{\hyperlink{classrocr_1_1core_1_1InterruptSignal_a5ea5e7e8416690e20bd079651123b648}{rtti\+\_\+id\+\_\+}} = 0
+\begin{DoxyCompactList}\small\item\em Used to obtain a globally unique value (address) for rtti. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Additional Inherited Members}
+
+
+\doxysubsection{Detailed Description}
+A \mbox{\hyperlink{classrocr_1_1core_1_1Signal}{Signal}} implementation using interrupts versus plain memory based. Also see base class \mbox{\hyperlink{classrocr_1_1core_1_1Signal}{Signal}}. 
+
+Breaks common/vendor separation -\/ signals in general needs to be re-\/worked at the foundation level to make sense in a multi-\/device system. Supports only one waiter for now. KFD changes are needed to support multiple waiters and have device signaling. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classrocr_1_1core_1_1InterruptSignal_a0e21b614da47ca671384fb77b0ab44da}\label{classrocr_1_1core_1_1InterruptSignal_a0e21b614da47ca671384fb77b0ab44da}} 
+\index{rocr::core::InterruptSignal@{rocr::core::InterruptSignal}!InterruptSignal@{InterruptSignal}}
+\index{InterruptSignal@{InterruptSignal}!rocr::core::InterruptSignal@{rocr::core::InterruptSignal}}
+\doxysubsubsection{\texorpdfstring{InterruptSignal()}{InterruptSignal()}}
+{\footnotesize\ttfamily rocr\+::core\+::\+Interrupt\+Signal\+::\+Interrupt\+Signal (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{group__signals_ga67ca2818879c9990e1b5f1b14ce7ed27}{hsa\+\_\+signal\+\_\+value\+\_\+t}}}]{initial\+\_\+value,  }\item[{Hsa\+Event $\ast$}]{use\+\_\+event = {\ttfamily \mbox{\hyperlink{addrtypes_8h_a070d2ce7b6bb7e5c05602aa8c308d0c4}{NULL}}} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [explicit]}}
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classrocr_1_1core_1_1InterruptSignal_a0e21b614da47ca671384fb77b0ab44da_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classrocr_1_1core_1_1InterruptSignal_abdac0b28de7e73a9fb3c2b926d1f3fad}\label{classrocr_1_1core_1_1InterruptSignal_abdac0b28de7e73a9fb3c2b926d1f3fad}} 
+\index{rocr::core::InterruptSignal@{rocr::core::InterruptSignal}!````~InterruptSignal@{$\sim$InterruptSignal}}
+\index{````~InterruptSignal@{$\sim$InterruptSignal}!rocr::core::InterruptSignal@{rocr::core::InterruptSignal}}
+\doxysubsubsection{\texorpdfstring{$\sim$InterruptSignal()}{~InterruptSignal()}}
+{\footnotesize\ttfamily rocr\+::core\+::\+Interrupt\+Signal\+::$\sim$\+Interrupt\+Signal (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classrocr_1_1core_1_1InterruptSignal_abdac0b28de7e73a9fb3c2b926d1f3fad_cgraph}
+\end{center}
+\end{figure}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classrocr_1_1core_1_1InterruptSignal_a16044888e43f3c58d257428577285ec3}\label{classrocr_1_1core_1_1InterruptSignal_a16044888e43f3c58d257428577285ec3}} 
+\index{rocr::core::InterruptSignal@{rocr::core::InterruptSignal}!\_IsA@{\_IsA}}
+\index{\_IsA@{\_IsA}!rocr::core::InterruptSignal@{rocr::core::InterruptSignal}}
+\doxysubsubsection{\texorpdfstring{\_IsA()}{\_IsA()}}
+{\footnotesize\ttfamily bool rocr\+::core\+::\+Interrupt\+Signal\+::\+\_\+\+IsA (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classrocr_1_1core_1_1Signal_a72da3ee567e1cbb30a07292e8be69bc6}{rtti\+\_\+t}}}]{id }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [protected]}, {\ttfamily [virtual]}}
+
+
+
+Simple RTTI type checking helper Returns true if the object can be converted to the query type via static\+\_\+cast. Do not use directly. Use Is\+Type in the desired derived type instead. 
+
+
+
+Implements \mbox{\hyperlink{classrocr_1_1core_1_1Signal_a6918573f0a2b353118566bdde8e096d7}{rocr\+::core\+::\+Signal}}.
+
+\mbox{\Hypertarget{classrocr_1_1core_1_1InterruptSignal_ad2932f1542b03025828134a9913abbf8}\label{classrocr_1_1core_1_1InterruptSignal_ad2932f1542b03025828134a9913abbf8}} 
+\index{rocr::core::InterruptSignal@{rocr::core::InterruptSignal}!AddAcqRel@{AddAcqRel}}
+\index{AddAcqRel@{AddAcqRel}!rocr::core::InterruptSignal@{rocr::core::InterruptSignal}}
+\doxysubsubsection{\texorpdfstring{AddAcqRel()}{AddAcqRel()}}
+{\footnotesize\ttfamily void rocr\+::core\+::\+Interrupt\+Signal\+::\+Add\+Acq\+Rel (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{group__signals_ga67ca2818879c9990e1b5f1b14ce7ed27}{hsa\+\_\+signal\+\_\+value\+\_\+t}}}]{value }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Implements \mbox{\hyperlink{classrocr_1_1core_1_1Signal_ad134f4624cf1496c47e8641e99198cd8}{rocr\+::core\+::\+Signal}}.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classrocr_1_1core_1_1InterruptSignal_ad2932f1542b03025828134a9913abbf8_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classrocr_1_1core_1_1InterruptSignal_abbbb67d5a711bcc0e1f99ff175dd1d73}\label{classrocr_1_1core_1_1InterruptSignal_abbbb67d5a711bcc0e1f99ff175dd1d73}} 
+\index{rocr::core::InterruptSignal@{rocr::core::InterruptSignal}!AddAcquire@{AddAcquire}}
+\index{AddAcquire@{AddAcquire}!rocr::core::InterruptSignal@{rocr::core::InterruptSignal}}
+\doxysubsubsection{\texorpdfstring{AddAcquire()}{AddAcquire()}}
+{\footnotesize\ttfamily void rocr\+::core\+::\+Interrupt\+Signal\+::\+Add\+Acquire (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{group__signals_ga67ca2818879c9990e1b5f1b14ce7ed27}{hsa\+\_\+signal\+\_\+value\+\_\+t}}}]{value }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Implements \mbox{\hyperlink{classrocr_1_1core_1_1Signal_a4632c0d225c11d90dfb8443810ffb373}{rocr\+::core\+::\+Signal}}.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classrocr_1_1core_1_1InterruptSignal_abbbb67d5a711bcc0e1f99ff175dd1d73_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classrocr_1_1core_1_1InterruptSignal_aafeb1b327d7a8c16aec711343a586e66}\label{classrocr_1_1core_1_1InterruptSignal_aafeb1b327d7a8c16aec711343a586e66}} 
+\index{rocr::core::InterruptSignal@{rocr::core::InterruptSignal}!AddRelaxed@{AddRelaxed}}
+\index{AddRelaxed@{AddRelaxed}!rocr::core::InterruptSignal@{rocr::core::InterruptSignal}}
+\doxysubsubsection{\texorpdfstring{AddRelaxed()}{AddRelaxed()}}
+{\footnotesize\ttfamily void rocr\+::core\+::\+Interrupt\+Signal\+::\+Add\+Relaxed (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{group__signals_ga67ca2818879c9990e1b5f1b14ce7ed27}{hsa\+\_\+signal\+\_\+value\+\_\+t}}}]{value }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Implements \mbox{\hyperlink{classrocr_1_1core_1_1Signal_af6a56eff3893809502c8287fabba5e86}{rocr\+::core\+::\+Signal}}.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classrocr_1_1core_1_1InterruptSignal_aafeb1b327d7a8c16aec711343a586e66_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classrocr_1_1core_1_1InterruptSignal_abbf805af6f28367ec48f52e11cb087ec}\label{classrocr_1_1core_1_1InterruptSignal_abbf805af6f28367ec48f52e11cb087ec}} 
+\index{rocr::core::InterruptSignal@{rocr::core::InterruptSignal}!AddRelease@{AddRelease}}
+\index{AddRelease@{AddRelease}!rocr::core::InterruptSignal@{rocr::core::InterruptSignal}}
+\doxysubsubsection{\texorpdfstring{AddRelease()}{AddRelease()}}
+{\footnotesize\ttfamily void rocr\+::core\+::\+Interrupt\+Signal\+::\+Add\+Release (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{group__signals_ga67ca2818879c9990e1b5f1b14ce7ed27}{hsa\+\_\+signal\+\_\+value\+\_\+t}}}]{value }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Implements \mbox{\hyperlink{classrocr_1_1core_1_1Signal_a6df797ecba2c0fb4dd2fb035ea0900c3}{rocr\+::core\+::\+Signal}}.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classrocr_1_1core_1_1InterruptSignal_abbf805af6f28367ec48f52e11cb087ec_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classrocr_1_1core_1_1InterruptSignal_a3493a24cefb898c405ef70c19ce0bc06}\label{classrocr_1_1core_1_1InterruptSignal_a3493a24cefb898c405ef70c19ce0bc06}} 
+\index{rocr::core::InterruptSignal@{rocr::core::InterruptSignal}!AndAcqRel@{AndAcqRel}}
+\index{AndAcqRel@{AndAcqRel}!rocr::core::InterruptSignal@{rocr::core::InterruptSignal}}
+\doxysubsubsection{\texorpdfstring{AndAcqRel()}{AndAcqRel()}}
+{\footnotesize\ttfamily void rocr\+::core\+::\+Interrupt\+Signal\+::\+And\+Acq\+Rel (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{group__signals_ga67ca2818879c9990e1b5f1b14ce7ed27}{hsa\+\_\+signal\+\_\+value\+\_\+t}}}]{value }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Implements \mbox{\hyperlink{classrocr_1_1core_1_1Signal_a33116394e16f356c52fc663e0e3ccbc2}{rocr\+::core\+::\+Signal}}.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classrocr_1_1core_1_1InterruptSignal_a3493a24cefb898c405ef70c19ce0bc06_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classrocr_1_1core_1_1InterruptSignal_a09413b97763194f4fa2068534a083d83}\label{classrocr_1_1core_1_1InterruptSignal_a09413b97763194f4fa2068534a083d83}} 
+\index{rocr::core::InterruptSignal@{rocr::core::InterruptSignal}!AndAcquire@{AndAcquire}}
+\index{AndAcquire@{AndAcquire}!rocr::core::InterruptSignal@{rocr::core::InterruptSignal}}
+\doxysubsubsection{\texorpdfstring{AndAcquire()}{AndAcquire()}}
+{\footnotesize\ttfamily void rocr\+::core\+::\+Interrupt\+Signal\+::\+And\+Acquire (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{group__signals_ga67ca2818879c9990e1b5f1b14ce7ed27}{hsa\+\_\+signal\+\_\+value\+\_\+t}}}]{value }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Implements \mbox{\hyperlink{classrocr_1_1core_1_1Signal_a14b32ed865887890f288cd1b1519758c}{rocr\+::core\+::\+Signal}}.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classrocr_1_1core_1_1InterruptSignal_a09413b97763194f4fa2068534a083d83_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classrocr_1_1core_1_1InterruptSignal_a5cba5b55336a588e002e5222806ed2d1}\label{classrocr_1_1core_1_1InterruptSignal_a5cba5b55336a588e002e5222806ed2d1}} 
+\index{rocr::core::InterruptSignal@{rocr::core::InterruptSignal}!AndRelaxed@{AndRelaxed}}
+\index{AndRelaxed@{AndRelaxed}!rocr::core::InterruptSignal@{rocr::core::InterruptSignal}}
+\doxysubsubsection{\texorpdfstring{AndRelaxed()}{AndRelaxed()}}
+{\footnotesize\ttfamily void rocr\+::core\+::\+Interrupt\+Signal\+::\+And\+Relaxed (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{group__signals_ga67ca2818879c9990e1b5f1b14ce7ed27}{hsa\+\_\+signal\+\_\+value\+\_\+t}}}]{value }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Implements \mbox{\hyperlink{classrocr_1_1core_1_1Signal_a9f4e5fb92345424b30d911f5935e0d54}{rocr\+::core\+::\+Signal}}.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classrocr_1_1core_1_1InterruptSignal_a5cba5b55336a588e002e5222806ed2d1_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classrocr_1_1core_1_1InterruptSignal_a9fc791900f2fbc8a66467e6f46aa06a3}\label{classrocr_1_1core_1_1InterruptSignal_a9fc791900f2fbc8a66467e6f46aa06a3}} 
+\index{rocr::core::InterruptSignal@{rocr::core::InterruptSignal}!AndRelease@{AndRelease}}
+\index{AndRelease@{AndRelease}!rocr::core::InterruptSignal@{rocr::core::InterruptSignal}}
+\doxysubsubsection{\texorpdfstring{AndRelease()}{AndRelease()}}
+{\footnotesize\ttfamily void rocr\+::core\+::\+Interrupt\+Signal\+::\+And\+Release (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{group__signals_ga67ca2818879c9990e1b5f1b14ce7ed27}{hsa\+\_\+signal\+\_\+value\+\_\+t}}}]{value }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Implements \mbox{\hyperlink{classrocr_1_1core_1_1Signal_aa13caac083cdebe94797834dfca15f73}{rocr\+::core\+::\+Signal}}.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classrocr_1_1core_1_1InterruptSignal_a9fc791900f2fbc8a66467e6f46aa06a3_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classrocr_1_1core_1_1InterruptSignal_ade2306d531e9fbb013754cea4e3d0489}\label{classrocr_1_1core_1_1InterruptSignal_ade2306d531e9fbb013754cea4e3d0489}} 
+\index{rocr::core::InterruptSignal@{rocr::core::InterruptSignal}!CasAcqRel@{CasAcqRel}}
+\index{CasAcqRel@{CasAcqRel}!rocr::core::InterruptSignal@{rocr::core::InterruptSignal}}
+\doxysubsubsection{\texorpdfstring{CasAcqRel()}{CasAcqRel()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{group__signals_ga67ca2818879c9990e1b5f1b14ce7ed27}{hsa\+\_\+signal\+\_\+value\+\_\+t}} rocr\+::core\+::\+Interrupt\+Signal\+::\+Cas\+Acq\+Rel (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{group__signals_ga67ca2818879c9990e1b5f1b14ce7ed27}{hsa\+\_\+signal\+\_\+value\+\_\+t}}}]{expected,  }\item[{\mbox{\hyperlink{group__signals_ga67ca2818879c9990e1b5f1b14ce7ed27}{hsa\+\_\+signal\+\_\+value\+\_\+t}}}]{value }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Implements \mbox{\hyperlink{classrocr_1_1core_1_1Signal_a256e73e076e538dcb1d5dc5a83172ae5}{rocr\+::core\+::\+Signal}}.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classrocr_1_1core_1_1InterruptSignal_ade2306d531e9fbb013754cea4e3d0489_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classrocr_1_1core_1_1InterruptSignal_a43964dbac5a43ec5a5ac5fcf6108f2c6}\label{classrocr_1_1core_1_1InterruptSignal_a43964dbac5a43ec5a5ac5fcf6108f2c6}} 
+\index{rocr::core::InterruptSignal@{rocr::core::InterruptSignal}!CasAcquire@{CasAcquire}}
+\index{CasAcquire@{CasAcquire}!rocr::core::InterruptSignal@{rocr::core::InterruptSignal}}
+\doxysubsubsection{\texorpdfstring{CasAcquire()}{CasAcquire()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{group__signals_ga67ca2818879c9990e1b5f1b14ce7ed27}{hsa\+\_\+signal\+\_\+value\+\_\+t}} rocr\+::core\+::\+Interrupt\+Signal\+::\+Cas\+Acquire (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{group__signals_ga67ca2818879c9990e1b5f1b14ce7ed27}{hsa\+\_\+signal\+\_\+value\+\_\+t}}}]{expected,  }\item[{\mbox{\hyperlink{group__signals_ga67ca2818879c9990e1b5f1b14ce7ed27}{hsa\+\_\+signal\+\_\+value\+\_\+t}}}]{value }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Implements \mbox{\hyperlink{classrocr_1_1core_1_1Signal_a2aa2f44d0da2f76b0fbbf39be0ea985b}{rocr\+::core\+::\+Signal}}.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classrocr_1_1core_1_1InterruptSignal_a43964dbac5a43ec5a5ac5fcf6108f2c6_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classrocr_1_1core_1_1InterruptSignal_ac2f303c456fbb5ec93542e87f03e25cd}\label{classrocr_1_1core_1_1InterruptSignal_ac2f303c456fbb5ec93542e87f03e25cd}} 
+\index{rocr::core::InterruptSignal@{rocr::core::InterruptSignal}!CasRelaxed@{CasRelaxed}}
+\index{CasRelaxed@{CasRelaxed}!rocr::core::InterruptSignal@{rocr::core::InterruptSignal}}
+\doxysubsubsection{\texorpdfstring{CasRelaxed()}{CasRelaxed()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{group__signals_ga67ca2818879c9990e1b5f1b14ce7ed27}{hsa\+\_\+signal\+\_\+value\+\_\+t}} rocr\+::core\+::\+Interrupt\+Signal\+::\+Cas\+Relaxed (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{group__signals_ga67ca2818879c9990e1b5f1b14ce7ed27}{hsa\+\_\+signal\+\_\+value\+\_\+t}}}]{expected,  }\item[{\mbox{\hyperlink{group__signals_ga67ca2818879c9990e1b5f1b14ce7ed27}{hsa\+\_\+signal\+\_\+value\+\_\+t}}}]{value }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Implements \mbox{\hyperlink{classrocr_1_1core_1_1Signal_ad84771824e206d0acffb1f80b5032206}{rocr\+::core\+::\+Signal}}.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classrocr_1_1core_1_1InterruptSignal_ac2f303c456fbb5ec93542e87f03e25cd_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classrocr_1_1core_1_1InterruptSignal_a526a99e4f076028f94b74fc9b55ae478}\label{classrocr_1_1core_1_1InterruptSignal_a526a99e4f076028f94b74fc9b55ae478}} 
+\index{rocr::core::InterruptSignal@{rocr::core::InterruptSignal}!CasRelease@{CasRelease}}
+\index{CasRelease@{CasRelease}!rocr::core::InterruptSignal@{rocr::core::InterruptSignal}}
+\doxysubsubsection{\texorpdfstring{CasRelease()}{CasRelease()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{group__signals_ga67ca2818879c9990e1b5f1b14ce7ed27}{hsa\+\_\+signal\+\_\+value\+\_\+t}} rocr\+::core\+::\+Interrupt\+Signal\+::\+Cas\+Release (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{group__signals_ga67ca2818879c9990e1b5f1b14ce7ed27}{hsa\+\_\+signal\+\_\+value\+\_\+t}}}]{expected,  }\item[{\mbox{\hyperlink{group__signals_ga67ca2818879c9990e1b5f1b14ce7ed27}{hsa\+\_\+signal\+\_\+value\+\_\+t}}}]{value }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Implements \mbox{\hyperlink{classrocr_1_1core_1_1Signal_af68025df1101edf66e2ee61fbebb098f}{rocr\+::core\+::\+Signal}}.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classrocr_1_1core_1_1InterruptSignal_a526a99e4f076028f94b74fc9b55ae478_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classrocr_1_1core_1_1InterruptSignal_ad17ce43542772da5d42ca66645d01f84}\label{classrocr_1_1core_1_1InterruptSignal_ad17ce43542772da5d42ca66645d01f84}} 
+\index{rocr::core::InterruptSignal@{rocr::core::InterruptSignal}!CreateEvent@{CreateEvent}}
+\index{CreateEvent@{CreateEvent}!rocr::core::InterruptSignal@{rocr::core::InterruptSignal}}
+\doxysubsubsection{\texorpdfstring{CreateEvent()}{CreateEvent()}}
+{\footnotesize\ttfamily Hsa\+Event $\ast$ rocr\+::core\+::\+Interrupt\+Signal\+::\+Create\+Event (\begin{DoxyParamCaption}\item[{HSA\+\_\+\+EVENTTYPE}]{type,  }\item[{bool}]{manual\+\_\+reset }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classrocr_1_1core_1_1InterruptSignal_ad17ce43542772da5d42ca66645d01f84_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classrocr_1_1core_1_1InterruptSignal_a726be934de1e6574cf8cc056755f0cc9}\label{classrocr_1_1core_1_1InterruptSignal_a726be934de1e6574cf8cc056755f0cc9}} 
+\index{rocr::core::InterruptSignal@{rocr::core::InterruptSignal}!DestroyEvent@{DestroyEvent}}
+\index{DestroyEvent@{DestroyEvent}!rocr::core::InterruptSignal@{rocr::core::InterruptSignal}}
+\doxysubsubsection{\texorpdfstring{DestroyEvent()}{DestroyEvent()}}
+{\footnotesize\ttfamily void rocr\+::core\+::\+Interrupt\+Signal\+::\+Destroy\+Event (\begin{DoxyParamCaption}\item[{Hsa\+Event $\ast$}]{evt }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classrocr_1_1core_1_1InterruptSignal_a726be934de1e6574cf8cc056755f0cc9_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classrocr_1_1core_1_1InterruptSignal_ac0664592028b4fc9d0b800f07346a5a7}\label{classrocr_1_1core_1_1InterruptSignal_ac0664592028b4fc9d0b800f07346a5a7}} 
+\index{rocr::core::InterruptSignal@{rocr::core::InterruptSignal}!DISALLOW\_COPY\_AND\_ASSIGN@{DISALLOW\_COPY\_AND\_ASSIGN}}
+\index{DISALLOW\_COPY\_AND\_ASSIGN@{DISALLOW\_COPY\_AND\_ASSIGN}!rocr::core::InterruptSignal@{rocr::core::InterruptSignal}}
+\doxysubsubsection{\texorpdfstring{DISALLOW\_COPY\_AND\_ASSIGN()}{DISALLOW\_COPY\_AND\_ASSIGN()}}
+{\footnotesize\ttfamily rocr\+::core\+::\+Interrupt\+Signal\+::\+DISALLOW\+\_\+\+COPY\+\_\+\+AND\+\_\+\+ASSIGN (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classrocr_1_1core_1_1InterruptSignal}{Interrupt\+Signal}}}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classrocr_1_1core_1_1InterruptSignal_a90db7b985296680ff31997d456be980d}\label{classrocr_1_1core_1_1InterruptSignal_a90db7b985296680ff31997d456be980d}} 
+\index{rocr::core::InterruptSignal@{rocr::core::InterruptSignal}!EopEvent@{EopEvent}}
+\index{EopEvent@{EopEvent}!rocr::core::InterruptSignal@{rocr::core::InterruptSignal}}
+\doxysubsubsection{\texorpdfstring{EopEvent()}{EopEvent()}}
+{\footnotesize\ttfamily \+\_\+\+\_\+forceinline Hsa\+Event$\ast$ rocr\+::core\+::\+Interrupt\+Signal\+::\+Eop\+Event (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+See base class \mbox{\hyperlink{classrocr_1_1core_1_1Signal}{Signal}}. 
+
+
+
+Implements \mbox{\hyperlink{classrocr_1_1core_1_1Signal_a1b424f6c65ed443666cf3a66c9adf3d6}{rocr\+::core\+::\+Signal}}.
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classrocr_1_1core_1_1InterruptSignal_a90db7b985296680ff31997d456be980d_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classrocr_1_1core_1_1InterruptSignal_a303a13fbb9e5ed87677318519fb23630}\label{classrocr_1_1core_1_1InterruptSignal_a303a13fbb9e5ed87677318519fb23630}} 
+\index{rocr::core::InterruptSignal@{rocr::core::InterruptSignal}!ExchAcqRel@{ExchAcqRel}}
+\index{ExchAcqRel@{ExchAcqRel}!rocr::core::InterruptSignal@{rocr::core::InterruptSignal}}
+\doxysubsubsection{\texorpdfstring{ExchAcqRel()}{ExchAcqRel()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{group__signals_ga67ca2818879c9990e1b5f1b14ce7ed27}{hsa\+\_\+signal\+\_\+value\+\_\+t}} rocr\+::core\+::\+Interrupt\+Signal\+::\+Exch\+Acq\+Rel (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{group__signals_ga67ca2818879c9990e1b5f1b14ce7ed27}{hsa\+\_\+signal\+\_\+value\+\_\+t}}}]{value }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Implements \mbox{\hyperlink{classrocr_1_1core_1_1Signal_a4e5d6dc15235d431bce608ff2ce2207f}{rocr\+::core\+::\+Signal}}.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classrocr_1_1core_1_1InterruptSignal_a303a13fbb9e5ed87677318519fb23630_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classrocr_1_1core_1_1InterruptSignal_a02182bafe1825f025b22883a0fb6a2eb}\label{classrocr_1_1core_1_1InterruptSignal_a02182bafe1825f025b22883a0fb6a2eb}} 
+\index{rocr::core::InterruptSignal@{rocr::core::InterruptSignal}!ExchAcquire@{ExchAcquire}}
+\index{ExchAcquire@{ExchAcquire}!rocr::core::InterruptSignal@{rocr::core::InterruptSignal}}
+\doxysubsubsection{\texorpdfstring{ExchAcquire()}{ExchAcquire()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{group__signals_ga67ca2818879c9990e1b5f1b14ce7ed27}{hsa\+\_\+signal\+\_\+value\+\_\+t}} rocr\+::core\+::\+Interrupt\+Signal\+::\+Exch\+Acquire (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{group__signals_ga67ca2818879c9990e1b5f1b14ce7ed27}{hsa\+\_\+signal\+\_\+value\+\_\+t}}}]{value }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Implements \mbox{\hyperlink{classrocr_1_1core_1_1Signal_a874543a58ed0ec265cb868433e8045cc}{rocr\+::core\+::\+Signal}}.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classrocr_1_1core_1_1InterruptSignal_a02182bafe1825f025b22883a0fb6a2eb_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classrocr_1_1core_1_1InterruptSignal_a6fdf265ddbed0cfd991ff439b89323a9}\label{classrocr_1_1core_1_1InterruptSignal_a6fdf265ddbed0cfd991ff439b89323a9}} 
+\index{rocr::core::InterruptSignal@{rocr::core::InterruptSignal}!ExchRelaxed@{ExchRelaxed}}
+\index{ExchRelaxed@{ExchRelaxed}!rocr::core::InterruptSignal@{rocr::core::InterruptSignal}}
+\doxysubsubsection{\texorpdfstring{ExchRelaxed()}{ExchRelaxed()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{group__signals_ga67ca2818879c9990e1b5f1b14ce7ed27}{hsa\+\_\+signal\+\_\+value\+\_\+t}} rocr\+::core\+::\+Interrupt\+Signal\+::\+Exch\+Relaxed (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{group__signals_ga67ca2818879c9990e1b5f1b14ce7ed27}{hsa\+\_\+signal\+\_\+value\+\_\+t}}}]{value }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Implements \mbox{\hyperlink{classrocr_1_1core_1_1Signal_a911686302b2f5b1c046623846d7516ce}{rocr\+::core\+::\+Signal}}.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classrocr_1_1core_1_1InterruptSignal_a6fdf265ddbed0cfd991ff439b89323a9_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classrocr_1_1core_1_1InterruptSignal_a6fdf265ddbed0cfd991ff439b89323a9_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classrocr_1_1core_1_1InterruptSignal_aa956736413de81a2817397a453a772f4}\label{classrocr_1_1core_1_1InterruptSignal_aa956736413de81a2817397a453a772f4}} 
+\index{rocr::core::InterruptSignal@{rocr::core::InterruptSignal}!ExchRelease@{ExchRelease}}
+\index{ExchRelease@{ExchRelease}!rocr::core::InterruptSignal@{rocr::core::InterruptSignal}}
+\doxysubsubsection{\texorpdfstring{ExchRelease()}{ExchRelease()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{group__signals_ga67ca2818879c9990e1b5f1b14ce7ed27}{hsa\+\_\+signal\+\_\+value\+\_\+t}} rocr\+::core\+::\+Interrupt\+Signal\+::\+Exch\+Release (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{group__signals_ga67ca2818879c9990e1b5f1b14ce7ed27}{hsa\+\_\+signal\+\_\+value\+\_\+t}}}]{value }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Implements \mbox{\hyperlink{classrocr_1_1core_1_1Signal_a02a1567d1d8e89823cc0f64895896da0}{rocr\+::core\+::\+Signal}}.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classrocr_1_1core_1_1InterruptSignal_aa956736413de81a2817397a453a772f4_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classrocr_1_1core_1_1InterruptSignal_a22e8078fc15da1ef4a4660ffd0a353a8}\label{classrocr_1_1core_1_1InterruptSignal_a22e8078fc15da1ef4a4660ffd0a353a8}} 
+\index{rocr::core::InterruptSignal@{rocr::core::InterruptSignal}!IsType@{IsType}}
+\index{IsType@{IsType}!rocr::core::InterruptSignal@{rocr::core::InterruptSignal}}
+\doxysubsubsection{\texorpdfstring{IsType()}{IsType()}}
+{\footnotesize\ttfamily static \+\_\+\+\_\+forceinline bool rocr\+::core\+::\+Interrupt\+Signal\+::\+Is\+Type (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classrocr_1_1core_1_1Signal}{Signal}} $\ast$}]{ptr }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+
+
+Determines if a Signal$\ast$ can be safely converted to an Interrupt\+Signal$\ast$ via static\+\_\+cast. 
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classrocr_1_1core_1_1InterruptSignal_a22e8078fc15da1ef4a4660ffd0a353a8_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classrocr_1_1core_1_1InterruptSignal_a22e8078fc15da1ef4a4660ffd0a353a8_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classrocr_1_1core_1_1InterruptSignal_a6e50e4da4ac6aec716de31baf0a5f508}\label{classrocr_1_1core_1_1InterruptSignal_a6e50e4da4ac6aec716de31baf0a5f508}} 
+\index{rocr::core::InterruptSignal@{rocr::core::InterruptSignal}!LoadAcquire@{LoadAcquire}}
+\index{LoadAcquire@{LoadAcquire}!rocr::core::InterruptSignal@{rocr::core::InterruptSignal}}
+\doxysubsubsection{\texorpdfstring{LoadAcquire()}{LoadAcquire()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{group__signals_ga67ca2818879c9990e1b5f1b14ce7ed27}{hsa\+\_\+signal\+\_\+value\+\_\+t}} rocr\+::core\+::\+Interrupt\+Signal\+::\+Load\+Acquire (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Implements \mbox{\hyperlink{classrocr_1_1core_1_1Signal_a498995c67619426c5bf2320c5d465e94}{rocr\+::core\+::\+Signal}}.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classrocr_1_1core_1_1InterruptSignal_a6e50e4da4ac6aec716de31baf0a5f508_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classrocr_1_1core_1_1InterruptSignal_a64057f24753cf49cb47103392df34bf9}\label{classrocr_1_1core_1_1InterruptSignal_a64057f24753cf49cb47103392df34bf9}} 
+\index{rocr::core::InterruptSignal@{rocr::core::InterruptSignal}!LoadRelaxed@{LoadRelaxed}}
+\index{LoadRelaxed@{LoadRelaxed}!rocr::core::InterruptSignal@{rocr::core::InterruptSignal}}
+\doxysubsubsection{\texorpdfstring{LoadRelaxed()}{LoadRelaxed()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{group__signals_ga67ca2818879c9990e1b5f1b14ce7ed27}{hsa\+\_\+signal\+\_\+value\+\_\+t}} rocr\+::core\+::\+Interrupt\+Signal\+::\+Load\+Relaxed (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Implements \mbox{\hyperlink{classrocr_1_1core_1_1Signal_a33c337151057b04364054ed085e9791b}{rocr\+::core\+::\+Signal}}.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classrocr_1_1core_1_1InterruptSignal_a64057f24753cf49cb47103392df34bf9_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classrocr_1_1core_1_1InterruptSignal_a64057f24753cf49cb47103392df34bf9_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classrocr_1_1core_1_1InterruptSignal_ae7b113b36e4a9cd7421ab30ce178403c}\label{classrocr_1_1core_1_1InterruptSignal_ae7b113b36e4a9cd7421ab30ce178403c}} 
+\index{rocr::core::InterruptSignal@{rocr::core::InterruptSignal}!OrAcqRel@{OrAcqRel}}
+\index{OrAcqRel@{OrAcqRel}!rocr::core::InterruptSignal@{rocr::core::InterruptSignal}}
+\doxysubsubsection{\texorpdfstring{OrAcqRel()}{OrAcqRel()}}
+{\footnotesize\ttfamily void rocr\+::core\+::\+Interrupt\+Signal\+::\+Or\+Acq\+Rel (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{group__signals_ga67ca2818879c9990e1b5f1b14ce7ed27}{hsa\+\_\+signal\+\_\+value\+\_\+t}}}]{value }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Implements \mbox{\hyperlink{classrocr_1_1core_1_1Signal_aed897a6d874638c76eb390fc50dabfb1}{rocr\+::core\+::\+Signal}}.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classrocr_1_1core_1_1InterruptSignal_ae7b113b36e4a9cd7421ab30ce178403c_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classrocr_1_1core_1_1InterruptSignal_af1c3f5385ea254ef6ed528fa769020b4}\label{classrocr_1_1core_1_1InterruptSignal_af1c3f5385ea254ef6ed528fa769020b4}} 
+\index{rocr::core::InterruptSignal@{rocr::core::InterruptSignal}!OrAcquire@{OrAcquire}}
+\index{OrAcquire@{OrAcquire}!rocr::core::InterruptSignal@{rocr::core::InterruptSignal}}
+\doxysubsubsection{\texorpdfstring{OrAcquire()}{OrAcquire()}}
+{\footnotesize\ttfamily void rocr\+::core\+::\+Interrupt\+Signal\+::\+Or\+Acquire (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{group__signals_ga67ca2818879c9990e1b5f1b14ce7ed27}{hsa\+\_\+signal\+\_\+value\+\_\+t}}}]{value }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Implements \mbox{\hyperlink{classrocr_1_1core_1_1Signal_a331483464e18b975a72c26daae007cac}{rocr\+::core\+::\+Signal}}.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classrocr_1_1core_1_1InterruptSignal_af1c3f5385ea254ef6ed528fa769020b4_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classrocr_1_1core_1_1InterruptSignal_ad420e4331eb11f611b9618297550c149}\label{classrocr_1_1core_1_1InterruptSignal_ad420e4331eb11f611b9618297550c149}} 
+\index{rocr::core::InterruptSignal@{rocr::core::InterruptSignal}!OrRelaxed@{OrRelaxed}}
+\index{OrRelaxed@{OrRelaxed}!rocr::core::InterruptSignal@{rocr::core::InterruptSignal}}
+\doxysubsubsection{\texorpdfstring{OrRelaxed()}{OrRelaxed()}}
+{\footnotesize\ttfamily void rocr\+::core\+::\+Interrupt\+Signal\+::\+Or\+Relaxed (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{group__signals_ga67ca2818879c9990e1b5f1b14ce7ed27}{hsa\+\_\+signal\+\_\+value\+\_\+t}}}]{value }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Implements \mbox{\hyperlink{classrocr_1_1core_1_1Signal_a5579f82c58948d6b6a6497df755e2ee0}{rocr\+::core\+::\+Signal}}.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classrocr_1_1core_1_1InterruptSignal_ad420e4331eb11f611b9618297550c149_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classrocr_1_1core_1_1InterruptSignal_aee54fb0e079b2b77c2d17c92db0c2092}\label{classrocr_1_1core_1_1InterruptSignal_aee54fb0e079b2b77c2d17c92db0c2092}} 
+\index{rocr::core::InterruptSignal@{rocr::core::InterruptSignal}!OrRelease@{OrRelease}}
+\index{OrRelease@{OrRelease}!rocr::core::InterruptSignal@{rocr::core::InterruptSignal}}
+\doxysubsubsection{\texorpdfstring{OrRelease()}{OrRelease()}}
+{\footnotesize\ttfamily void rocr\+::core\+::\+Interrupt\+Signal\+::\+Or\+Release (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{group__signals_ga67ca2818879c9990e1b5f1b14ce7ed27}{hsa\+\_\+signal\+\_\+value\+\_\+t}}}]{value }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Implements \mbox{\hyperlink{classrocr_1_1core_1_1Signal_a042d2fc7403eefc204d52d0dfd32f667}{rocr\+::core\+::\+Signal}}.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classrocr_1_1core_1_1InterruptSignal_aee54fb0e079b2b77c2d17c92db0c2092_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classrocr_1_1core_1_1InterruptSignal_afabb4edeaa5f73a4fec226123850fe2a}\label{classrocr_1_1core_1_1InterruptSignal_afabb4edeaa5f73a4fec226123850fe2a}} 
+\index{rocr::core::InterruptSignal@{rocr::core::InterruptSignal}!SetEvent@{SetEvent}}
+\index{SetEvent@{SetEvent}!rocr::core::InterruptSignal@{rocr::core::InterruptSignal}}
+\doxysubsubsection{\texorpdfstring{SetEvent()}{SetEvent()}}
+{\footnotesize\ttfamily \+\_\+\+\_\+forceinline void rocr\+::core\+::\+Interrupt\+Signal\+::\+Set\+Event (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [private]}}
+
+
+
+Notify driver of signal value change if necessary. 
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=334pt]{classrocr_1_1core_1_1InterruptSignal_afabb4edeaa5f73a4fec226123850fe2a_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=550pt]{classrocr_1_1core_1_1InterruptSignal_afabb4edeaa5f73a4fec226123850fe2a_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classrocr_1_1core_1_1InterruptSignal_a03486faa5343fb5d83280638102a722c}\label{classrocr_1_1core_1_1InterruptSignal_a03486faa5343fb5d83280638102a722c}} 
+\index{rocr::core::InterruptSignal@{rocr::core::InterruptSignal}!StoreRelaxed@{StoreRelaxed}}
+\index{StoreRelaxed@{StoreRelaxed}!rocr::core::InterruptSignal@{rocr::core::InterruptSignal}}
+\doxysubsubsection{\texorpdfstring{StoreRelaxed()}{StoreRelaxed()}}
+{\footnotesize\ttfamily void rocr\+::core\+::\+Interrupt\+Signal\+::\+Store\+Relaxed (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{group__signals_ga67ca2818879c9990e1b5f1b14ce7ed27}{hsa\+\_\+signal\+\_\+value\+\_\+t}}}]{value }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Implements \mbox{\hyperlink{classrocr_1_1core_1_1Signal_a9c6fc8df6ed40dc6838099a9ea11a33b}{rocr\+::core\+::\+Signal}}.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classrocr_1_1core_1_1InterruptSignal_a03486faa5343fb5d83280638102a722c_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classrocr_1_1core_1_1InterruptSignal_a03486faa5343fb5d83280638102a722c_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classrocr_1_1core_1_1InterruptSignal_a1293c7e6b7330773107403595fee785a}\label{classrocr_1_1core_1_1InterruptSignal_a1293c7e6b7330773107403595fee785a}} 
+\index{rocr::core::InterruptSignal@{rocr::core::InterruptSignal}!StoreRelease@{StoreRelease}}
+\index{StoreRelease@{StoreRelease}!rocr::core::InterruptSignal@{rocr::core::InterruptSignal}}
+\doxysubsubsection{\texorpdfstring{StoreRelease()}{StoreRelease()}}
+{\footnotesize\ttfamily void rocr\+::core\+::\+Interrupt\+Signal\+::\+Store\+Release (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{group__signals_ga67ca2818879c9990e1b5f1b14ce7ed27}{hsa\+\_\+signal\+\_\+value\+\_\+t}}}]{value }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Implements \mbox{\hyperlink{classrocr_1_1core_1_1Signal_a90026d695f31e3e9f79bdbf0ecfb78f7}{rocr\+::core\+::\+Signal}}.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classrocr_1_1core_1_1InterruptSignal_a1293c7e6b7330773107403595fee785a_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classrocr_1_1core_1_1InterruptSignal_ad8e378bc04f8f92f85a5aa0b4c08e2e6}\label{classrocr_1_1core_1_1InterruptSignal_ad8e378bc04f8f92f85a5aa0b4c08e2e6}} 
+\index{rocr::core::InterruptSignal@{rocr::core::InterruptSignal}!SubAcqRel@{SubAcqRel}}
+\index{SubAcqRel@{SubAcqRel}!rocr::core::InterruptSignal@{rocr::core::InterruptSignal}}
+\doxysubsubsection{\texorpdfstring{SubAcqRel()}{SubAcqRel()}}
+{\footnotesize\ttfamily void rocr\+::core\+::\+Interrupt\+Signal\+::\+Sub\+Acq\+Rel (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{group__signals_ga67ca2818879c9990e1b5f1b14ce7ed27}{hsa\+\_\+signal\+\_\+value\+\_\+t}}}]{value }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Implements \mbox{\hyperlink{classrocr_1_1core_1_1Signal_a30263b276c91563ca341aa2fdf486367}{rocr\+::core\+::\+Signal}}.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classrocr_1_1core_1_1InterruptSignal_ad8e378bc04f8f92f85a5aa0b4c08e2e6_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classrocr_1_1core_1_1InterruptSignal_a9d3264b8976e58e38189520c5938b0e4}\label{classrocr_1_1core_1_1InterruptSignal_a9d3264b8976e58e38189520c5938b0e4}} 
+\index{rocr::core::InterruptSignal@{rocr::core::InterruptSignal}!SubAcquire@{SubAcquire}}
+\index{SubAcquire@{SubAcquire}!rocr::core::InterruptSignal@{rocr::core::InterruptSignal}}
+\doxysubsubsection{\texorpdfstring{SubAcquire()}{SubAcquire()}}
+{\footnotesize\ttfamily void rocr\+::core\+::\+Interrupt\+Signal\+::\+Sub\+Acquire (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{group__signals_ga67ca2818879c9990e1b5f1b14ce7ed27}{hsa\+\_\+signal\+\_\+value\+\_\+t}}}]{value }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Implements \mbox{\hyperlink{classrocr_1_1core_1_1Signal_acd01c804aea41704c49269bece05a778}{rocr\+::core\+::\+Signal}}.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classrocr_1_1core_1_1InterruptSignal_a9d3264b8976e58e38189520c5938b0e4_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classrocr_1_1core_1_1InterruptSignal_a3c29ec655753295ff1a13ec64fdc2d51}\label{classrocr_1_1core_1_1InterruptSignal_a3c29ec655753295ff1a13ec64fdc2d51}} 
+\index{rocr::core::InterruptSignal@{rocr::core::InterruptSignal}!SubRelaxed@{SubRelaxed}}
+\index{SubRelaxed@{SubRelaxed}!rocr::core::InterruptSignal@{rocr::core::InterruptSignal}}
+\doxysubsubsection{\texorpdfstring{SubRelaxed()}{SubRelaxed()}}
+{\footnotesize\ttfamily void rocr\+::core\+::\+Interrupt\+Signal\+::\+Sub\+Relaxed (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{group__signals_ga67ca2818879c9990e1b5f1b14ce7ed27}{hsa\+\_\+signal\+\_\+value\+\_\+t}}}]{value }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Implements \mbox{\hyperlink{classrocr_1_1core_1_1Signal_ac31e1c7b834c9d4b840a25566f173d44}{rocr\+::core\+::\+Signal}}.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classrocr_1_1core_1_1InterruptSignal_a3c29ec655753295ff1a13ec64fdc2d51_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classrocr_1_1core_1_1InterruptSignal_acfd4df23c1199228cb55143867517cf6}\label{classrocr_1_1core_1_1InterruptSignal_acfd4df23c1199228cb55143867517cf6}} 
+\index{rocr::core::InterruptSignal@{rocr::core::InterruptSignal}!SubRelease@{SubRelease}}
+\index{SubRelease@{SubRelease}!rocr::core::InterruptSignal@{rocr::core::InterruptSignal}}
+\doxysubsubsection{\texorpdfstring{SubRelease()}{SubRelease()}}
+{\footnotesize\ttfamily void rocr\+::core\+::\+Interrupt\+Signal\+::\+Sub\+Release (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{group__signals_ga67ca2818879c9990e1b5f1b14ce7ed27}{hsa\+\_\+signal\+\_\+value\+\_\+t}}}]{value }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Implements \mbox{\hyperlink{classrocr_1_1core_1_1Signal_a3dc38a6f48b0eb411798de513e181d20}{rocr\+::core\+::\+Signal}}.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classrocr_1_1core_1_1InterruptSignal_acfd4df23c1199228cb55143867517cf6_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classrocr_1_1core_1_1InterruptSignal_a18e29df4a39de8c6d51b94b884cb02d5}\label{classrocr_1_1core_1_1InterruptSignal_a18e29df4a39de8c6d51b94b884cb02d5}} 
+\index{rocr::core::InterruptSignal@{rocr::core::InterruptSignal}!ValueLocation@{ValueLocation}}
+\index{ValueLocation@{ValueLocation}!rocr::core::InterruptSignal@{rocr::core::InterruptSignal}}
+\doxysubsubsection{\texorpdfstring{ValueLocation()}{ValueLocation()}}
+{\footnotesize\ttfamily \+\_\+\+\_\+forceinline \mbox{\hyperlink{group__signals_ga67ca2818879c9990e1b5f1b14ce7ed27}{hsa\+\_\+signal\+\_\+value\+\_\+t}}$\ast$ rocr\+::core\+::\+Interrupt\+Signal\+::\+Value\+Location (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+See base class \mbox{\hyperlink{classrocr_1_1core_1_1Signal}{Signal}}. 
+
+
+
+Implements \mbox{\hyperlink{classrocr_1_1core_1_1Signal_a51541931e51f917dec267bb53654ed94}{rocr\+::core\+::\+Signal}}.
+
+\mbox{\Hypertarget{classrocr_1_1core_1_1InterruptSignal_a2679c3c335acaaed3e26ebb31370aa78}\label{classrocr_1_1core_1_1InterruptSignal_a2679c3c335acaaed3e26ebb31370aa78}} 
+\index{rocr::core::InterruptSignal@{rocr::core::InterruptSignal}!WaitAcquire@{WaitAcquire}}
+\index{WaitAcquire@{WaitAcquire}!rocr::core::InterruptSignal@{rocr::core::InterruptSignal}}
+\doxysubsubsection{\texorpdfstring{WaitAcquire()}{WaitAcquire()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{group__signals_ga67ca2818879c9990e1b5f1b14ce7ed27}{hsa\+\_\+signal\+\_\+value\+\_\+t}} rocr\+::core\+::\+Interrupt\+Signal\+::\+Wait\+Acquire (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{group__signals_gab7190fcff48c6dbeded341389ed17c8d}{hsa\+\_\+signal\+\_\+condition\+\_\+t}}}]{condition,  }\item[{\mbox{\hyperlink{group__signals_ga67ca2818879c9990e1b5f1b14ce7ed27}{hsa\+\_\+signal\+\_\+value\+\_\+t}}}]{compare\+\_\+value,  }\item[{uint64\+\_\+t}]{timeout,  }\item[{\mbox{\hyperlink{group__signals_gac0d2ec14d7a58c6cccc259943a03c569}{hsa\+\_\+wait\+\_\+state\+\_\+t}}}]{wait\+\_\+hint }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Implements \mbox{\hyperlink{classrocr_1_1core_1_1Signal_ac62c734fbabf57579773429e54c99ae1}{rocr\+::core\+::\+Signal}}.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classrocr_1_1core_1_1InterruptSignal_a2679c3c335acaaed3e26ebb31370aa78_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classrocr_1_1core_1_1InterruptSignal_ada9da891867a624647067f4dfd5ba185}\label{classrocr_1_1core_1_1InterruptSignal_ada9da891867a624647067f4dfd5ba185}} 
+\index{rocr::core::InterruptSignal@{rocr::core::InterruptSignal}!WaitRelaxed@{WaitRelaxed}}
+\index{WaitRelaxed@{WaitRelaxed}!rocr::core::InterruptSignal@{rocr::core::InterruptSignal}}
+\doxysubsubsection{\texorpdfstring{WaitRelaxed()}{WaitRelaxed()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{group__signals_ga67ca2818879c9990e1b5f1b14ce7ed27}{hsa\+\_\+signal\+\_\+value\+\_\+t}} rocr\+::core\+::\+Interrupt\+Signal\+::\+Wait\+Relaxed (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{group__signals_gab7190fcff48c6dbeded341389ed17c8d}{hsa\+\_\+signal\+\_\+condition\+\_\+t}}}]{condition,  }\item[{\mbox{\hyperlink{group__signals_ga67ca2818879c9990e1b5f1b14ce7ed27}{hsa\+\_\+signal\+\_\+value\+\_\+t}}}]{compare\+\_\+value,  }\item[{uint64\+\_\+t}]{timeout,  }\item[{\mbox{\hyperlink{group__signals_gac0d2ec14d7a58c6cccc259943a03c569}{hsa\+\_\+wait\+\_\+state\+\_\+t}}}]{wait\+\_\+hint }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Implements \mbox{\hyperlink{classrocr_1_1core_1_1Signal_aaea3cab59d6258988eae45b1e62ae232}{rocr\+::core\+::\+Signal}}.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classrocr_1_1core_1_1InterruptSignal_ada9da891867a624647067f4dfd5ba185_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classrocr_1_1core_1_1InterruptSignal_ada9da891867a624647067f4dfd5ba185_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classrocr_1_1core_1_1InterruptSignal_a495a6b21efa4daccc1bb41b3eb88320d}\label{classrocr_1_1core_1_1InterruptSignal_a495a6b21efa4daccc1bb41b3eb88320d}} 
+\index{rocr::core::InterruptSignal@{rocr::core::InterruptSignal}!XorAcqRel@{XorAcqRel}}
+\index{XorAcqRel@{XorAcqRel}!rocr::core::InterruptSignal@{rocr::core::InterruptSignal}}
+\doxysubsubsection{\texorpdfstring{XorAcqRel()}{XorAcqRel()}}
+{\footnotesize\ttfamily void rocr\+::core\+::\+Interrupt\+Signal\+::\+Xor\+Acq\+Rel (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{group__signals_ga67ca2818879c9990e1b5f1b14ce7ed27}{hsa\+\_\+signal\+\_\+value\+\_\+t}}}]{value }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Implements \mbox{\hyperlink{classrocr_1_1core_1_1Signal_abcc1d4c5ec7bd1f39139198748af8265}{rocr\+::core\+::\+Signal}}.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classrocr_1_1core_1_1InterruptSignal_a495a6b21efa4daccc1bb41b3eb88320d_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classrocr_1_1core_1_1InterruptSignal_a63417fdeb3dbc40b3c35a45f446ad168}\label{classrocr_1_1core_1_1InterruptSignal_a63417fdeb3dbc40b3c35a45f446ad168}} 
+\index{rocr::core::InterruptSignal@{rocr::core::InterruptSignal}!XorAcquire@{XorAcquire}}
+\index{XorAcquire@{XorAcquire}!rocr::core::InterruptSignal@{rocr::core::InterruptSignal}}
+\doxysubsubsection{\texorpdfstring{XorAcquire()}{XorAcquire()}}
+{\footnotesize\ttfamily void rocr\+::core\+::\+Interrupt\+Signal\+::\+Xor\+Acquire (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{group__signals_ga67ca2818879c9990e1b5f1b14ce7ed27}{hsa\+\_\+signal\+\_\+value\+\_\+t}}}]{value }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Implements \mbox{\hyperlink{classrocr_1_1core_1_1Signal_a6842319df76837054d677028e067f0c8}{rocr\+::core\+::\+Signal}}.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classrocr_1_1core_1_1InterruptSignal_a63417fdeb3dbc40b3c35a45f446ad168_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classrocr_1_1core_1_1InterruptSignal_ad90fededb927a6efb242ca21a39e4da7}\label{classrocr_1_1core_1_1InterruptSignal_ad90fededb927a6efb242ca21a39e4da7}} 
+\index{rocr::core::InterruptSignal@{rocr::core::InterruptSignal}!XorRelaxed@{XorRelaxed}}
+\index{XorRelaxed@{XorRelaxed}!rocr::core::InterruptSignal@{rocr::core::InterruptSignal}}
+\doxysubsubsection{\texorpdfstring{XorRelaxed()}{XorRelaxed()}}
+{\footnotesize\ttfamily void rocr\+::core\+::\+Interrupt\+Signal\+::\+Xor\+Relaxed (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{group__signals_ga67ca2818879c9990e1b5f1b14ce7ed27}{hsa\+\_\+signal\+\_\+value\+\_\+t}}}]{value }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Implements \mbox{\hyperlink{classrocr_1_1core_1_1Signal_ab7cb8b7b60413d7c17f2d17f0fdf2a8a}{rocr\+::core\+::\+Signal}}.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classrocr_1_1core_1_1InterruptSignal_ad90fededb927a6efb242ca21a39e4da7_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classrocr_1_1core_1_1InterruptSignal_a4694c3dd9d30af6fdd36018f173194a3}\label{classrocr_1_1core_1_1InterruptSignal_a4694c3dd9d30af6fdd36018f173194a3}} 
+\index{rocr::core::InterruptSignal@{rocr::core::InterruptSignal}!XorRelease@{XorRelease}}
+\index{XorRelease@{XorRelease}!rocr::core::InterruptSignal@{rocr::core::InterruptSignal}}
+\doxysubsubsection{\texorpdfstring{XorRelease()}{XorRelease()}}
+{\footnotesize\ttfamily void rocr\+::core\+::\+Interrupt\+Signal\+::\+Xor\+Release (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{group__signals_ga67ca2818879c9990e1b5f1b14ce7ed27}{hsa\+\_\+signal\+\_\+value\+\_\+t}}}]{value }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Implements \mbox{\hyperlink{classrocr_1_1core_1_1Signal_ad383c21b7260a6c87bd402a5980cfa61}{rocr\+::core\+::\+Signal}}.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classrocr_1_1core_1_1InterruptSignal_a4694c3dd9d30af6fdd36018f173194a3_cgraph}
+\end{center}
+\end{figure}
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{classrocr_1_1core_1_1InterruptSignal_a971233d3c277046bb457fad0bcd37fb7}\label{classrocr_1_1core_1_1InterruptSignal_a971233d3c277046bb457fad0bcd37fb7}} 
+\index{rocr::core::InterruptSignal@{rocr::core::InterruptSignal}!event\_@{event\_}}
+\index{event\_@{event\_}!rocr::core::InterruptSignal@{rocr::core::InterruptSignal}}
+\doxysubsubsection{\texorpdfstring{event\_}{event\_}}
+{\footnotesize\ttfamily Hsa\+Event$\ast$ rocr\+::core\+::\+Interrupt\+Signal\+::event\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+@variable KFD event on which the interrupt signal is based on. 
+
+\mbox{\Hypertarget{classrocr_1_1core_1_1InterruptSignal_a67182071c24836645506d3c000ae208f}\label{classrocr_1_1core_1_1InterruptSignal_a67182071c24836645506d3c000ae208f}} 
+\index{rocr::core::InterruptSignal@{rocr::core::InterruptSignal}!free\_event\_@{free\_event\_}}
+\index{free\_event\_@{free\_event\_}!rocr::core::InterruptSignal@{rocr::core::InterruptSignal}}
+\doxysubsubsection{\texorpdfstring{free\_event\_}{free\_event\_}}
+{\footnotesize\ttfamily bool rocr\+::core\+::\+Interrupt\+Signal\+::free\+\_\+event\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
+
+@variable Indicates whether the signal should release the event when it closes or not. \mbox{\Hypertarget{classrocr_1_1core_1_1InterruptSignal_a5ea5e7e8416690e20bd079651123b648}\label{classrocr_1_1core_1_1InterruptSignal_a5ea5e7e8416690e20bd079651123b648}} 
+\index{rocr::core::InterruptSignal@{rocr::core::InterruptSignal}!rtti\_id\_@{rtti\_id\_}}
+\index{rtti\_id\_@{rtti\_id\_}!rocr::core::InterruptSignal@{rocr::core::InterruptSignal}}
+\doxysubsubsection{\texorpdfstring{rtti\_id\_}{rtti\_id\_}}
+{\footnotesize\ttfamily int rocr\+::core\+::\+Interrupt\+Signal\+::rtti\+\_\+id\+\_\+ = 0\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [private]}}
+
+
+
+Used to obtain a globally unique value (address) for rtti. 
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+src/core/inc/\mbox{\hyperlink{interrupt__signal_8h}{interrupt\+\_\+signal.\+h}}\item 
+src/core/runtime/\mbox{\hyperlink{interrupt__signal_8cpp}{interrupt\+\_\+signal.\+cpp}}\end{DoxyCompactItemize}

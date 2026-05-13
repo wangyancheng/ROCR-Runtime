@@ -1,0 +1,161 @@
+\hypertarget{classrocr_1_1core_1_1Shared}{}\doxysection{rocr\+::core\+::Shared$<$ T, Allocator $>$ Class Template Reference}
+\label{classrocr_1_1core_1_1Shared}\index{rocr::core::Shared$<$ T, Allocator $>$@{rocr::core::Shared$<$ T, Allocator $>$}}
+
+
+Container for object located in GPU visible host memory. If a custom allocator is not given then data will be placed in dedicated pages.  
+
+
+
+
+{\ttfamily \#include $<$shared.\+h$>$}
+
+
+
+Inheritance diagram for rocr\+::core\+::Shared$<$ T, Allocator $>$\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=197pt]{classrocr_1_1core_1_1Shared__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for rocr\+::core\+::Shared$<$ T, Allocator $>$\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=197pt]{classrocr_1_1core_1_1Shared__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classrocr_1_1core_1_1Shared_ab340ec01c618e06ab5353e9bda0fd845}{Shared}} (Allocator $\ast$pool=nullptr, int flags=0)
+\item 
+\mbox{\hyperlink{classrocr_1_1core_1_1Shared_a33a16e643293efae5c8db59a0ce73ef9}{$\sim$\+Shared}} ()
+\item 
+\mbox{\hyperlink{classrocr_1_1core_1_1Shared_a6e1ddd30c336b425205475c358040c5e}{Shared}} (\mbox{\hyperlink{classrocr_1_1core_1_1Shared}{Shared}} \&\&rhs)
+\item 
+\mbox{\hyperlink{classrocr_1_1core_1_1Shared}{Shared}} \& \mbox{\hyperlink{classrocr_1_1core_1_1Shared_a89d5204caaf725d241deee9ccdb2566a}{operator=}} (\mbox{\hyperlink{classrocr_1_1core_1_1Shared}{Shared}} \&\&rhs)
+\item 
+T $\ast$ \mbox{\hyperlink{classrocr_1_1core_1_1Shared_a4b2f95d65ed5b66723a5c920366fa0a1}{shared\+\_\+object}} () const
+\end{DoxyCompactItemize}
+\doxysubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+T $\ast$ \mbox{\hyperlink{classrocr_1_1core_1_1Shared_a49626ef16a6d11b6a6b35b43ace2468c}{shared\+\_\+object\+\_\+}}
+\item 
+Allocator $\ast$ \mbox{\hyperlink{classrocr_1_1core_1_1Shared_ae9dcc54f8c414848fb5053eccf1db1a2}{pool\+\_\+}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Additional Inherited Members}
+
+
+\doxysubsection{Detailed Description}
+\subsubsection*{template$<$typename T, typename Allocator = Page\+Allocator$<$\+T$>$$>$\newline
+class rocr\+::core\+::\+Shared$<$ T, Allocator $>$}
+
+Container for object located in GPU visible host memory. If a custom allocator is not given then data will be placed in dedicated pages. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classrocr_1_1core_1_1Shared_ab340ec01c618e06ab5353e9bda0fd845}\label{classrocr_1_1core_1_1Shared_ab340ec01c618e06ab5353e9bda0fd845}} 
+\index{rocr::core::Shared$<$ T, Allocator $>$@{rocr::core::Shared$<$ T, Allocator $>$}!Shared@{Shared}}
+\index{Shared@{Shared}!rocr::core::Shared$<$ T, Allocator $>$@{rocr::core::Shared$<$ T, Allocator $>$}}
+\doxysubsubsection{\texorpdfstring{Shared()}{Shared()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily template$<$typename T , typename Allocator  = Page\+Allocator$<$\+T$>$$>$ \\
+\mbox{\hyperlink{classrocr_1_1core_1_1Shared}{rocr\+::core\+::\+Shared}}$<$ T, Allocator $>$\+::\mbox{\hyperlink{classrocr_1_1core_1_1Shared}{Shared}} (\begin{DoxyParamCaption}\item[{Allocator $\ast$}]{pool = {\ttfamily nullptr},  }\item[{int}]{flags = {\ttfamily 0} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [explicit]}}
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classrocr_1_1core_1_1Shared_ab340ec01c618e06ab5353e9bda0fd845_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classrocr_1_1core_1_1Shared_a33a16e643293efae5c8db59a0ce73ef9}\label{classrocr_1_1core_1_1Shared_a33a16e643293efae5c8db59a0ce73ef9}} 
+\index{rocr::core::Shared$<$ T, Allocator $>$@{rocr::core::Shared$<$ T, Allocator $>$}!````~Shared@{$\sim$Shared}}
+\index{````~Shared@{$\sim$Shared}!rocr::core::Shared$<$ T, Allocator $>$@{rocr::core::Shared$<$ T, Allocator $>$}}
+\doxysubsubsection{\texorpdfstring{$\sim$Shared()}{~Shared()}}
+{\footnotesize\ttfamily template$<$typename T , typename Allocator  = Page\+Allocator$<$\+T$>$$>$ \\
+\mbox{\hyperlink{classrocr_1_1core_1_1Shared}{rocr\+::core\+::\+Shared}}$<$ T, Allocator $>$\+::$\sim$\mbox{\hyperlink{classrocr_1_1core_1_1Shared}{Shared}} (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=336pt]{classrocr_1_1core_1_1Shared_a33a16e643293efae5c8db59a0ce73ef9_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=314pt]{classrocr_1_1core_1_1Shared_a33a16e643293efae5c8db59a0ce73ef9_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classrocr_1_1core_1_1Shared_a6e1ddd30c336b425205475c358040c5e}\label{classrocr_1_1core_1_1Shared_a6e1ddd30c336b425205475c358040c5e}} 
+\index{rocr::core::Shared$<$ T, Allocator $>$@{rocr::core::Shared$<$ T, Allocator $>$}!Shared@{Shared}}
+\index{Shared@{Shared}!rocr::core::Shared$<$ T, Allocator $>$@{rocr::core::Shared$<$ T, Allocator $>$}}
+\doxysubsubsection{\texorpdfstring{Shared()}{Shared()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily template$<$typename T , typename Allocator  = Page\+Allocator$<$\+T$>$$>$ \\
+\mbox{\hyperlink{classrocr_1_1core_1_1Shared}{rocr\+::core\+::\+Shared}}$<$ T, Allocator $>$\+::\mbox{\hyperlink{classrocr_1_1core_1_1Shared}{Shared}} (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classrocr_1_1core_1_1Shared}{Shared}}$<$ T, Allocator $>$ \&\&}]{rhs }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classrocr_1_1core_1_1Shared_a6e1ddd30c336b425205475c358040c5e_cgraph}
+\end{center}
+\end{figure}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classrocr_1_1core_1_1Shared_a89d5204caaf725d241deee9ccdb2566a}\label{classrocr_1_1core_1_1Shared_a89d5204caaf725d241deee9ccdb2566a}} 
+\index{rocr::core::Shared$<$ T, Allocator $>$@{rocr::core::Shared$<$ T, Allocator $>$}!operator=@{operator=}}
+\index{operator=@{operator=}!rocr::core::Shared$<$ T, Allocator $>$@{rocr::core::Shared$<$ T, Allocator $>$}}
+\doxysubsubsection{\texorpdfstring{operator=()}{operator=()}}
+{\footnotesize\ttfamily template$<$typename T , typename Allocator  = Page\+Allocator$<$\+T$>$$>$ \\
+\mbox{\hyperlink{classrocr_1_1core_1_1Shared}{Shared}}\& \mbox{\hyperlink{classrocr_1_1core_1_1Shared}{rocr\+::core\+::\+Shared}}$<$ T, Allocator $>$\+::operator= (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classrocr_1_1core_1_1Shared}{Shared}}$<$ T, Allocator $>$ \&\&}]{rhs }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classrocr_1_1core_1_1Shared_a89d5204caaf725d241deee9ccdb2566a_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classrocr_1_1core_1_1Shared_a4b2f95d65ed5b66723a5c920366fa0a1}\label{classrocr_1_1core_1_1Shared_a4b2f95d65ed5b66723a5c920366fa0a1}} 
+\index{rocr::core::Shared$<$ T, Allocator $>$@{rocr::core::Shared$<$ T, Allocator $>$}!shared\_object@{shared\_object}}
+\index{shared\_object@{shared\_object}!rocr::core::Shared$<$ T, Allocator $>$@{rocr::core::Shared$<$ T, Allocator $>$}}
+\doxysubsubsection{\texorpdfstring{shared\_object()}{shared\_object()}}
+{\footnotesize\ttfamily template$<$typename T , typename Allocator  = Page\+Allocator$<$\+T$>$$>$ \\
+T$\ast$ \mbox{\hyperlink{classrocr_1_1core_1_1Shared}{rocr\+::core\+::\+Shared}}$<$ T, Allocator $>$\+::shared\+\_\+object (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{classrocr_1_1core_1_1Shared_ae9dcc54f8c414848fb5053eccf1db1a2}\label{classrocr_1_1core_1_1Shared_ae9dcc54f8c414848fb5053eccf1db1a2}} 
+\index{rocr::core::Shared$<$ T, Allocator $>$@{rocr::core::Shared$<$ T, Allocator $>$}!pool\_@{pool\_}}
+\index{pool\_@{pool\_}!rocr::core::Shared$<$ T, Allocator $>$@{rocr::core::Shared$<$ T, Allocator $>$}}
+\doxysubsubsection{\texorpdfstring{pool\_}{pool\_}}
+{\footnotesize\ttfamily template$<$typename T , typename Allocator  = Page\+Allocator$<$\+T$>$$>$ \\
+Allocator$\ast$ \mbox{\hyperlink{classrocr_1_1core_1_1Shared}{rocr\+::core\+::\+Shared}}$<$ T, Allocator $>$\+::pool\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classrocr_1_1core_1_1Shared_a49626ef16a6d11b6a6b35b43ace2468c}\label{classrocr_1_1core_1_1Shared_a49626ef16a6d11b6a6b35b43ace2468c}} 
+\index{rocr::core::Shared$<$ T, Allocator $>$@{rocr::core::Shared$<$ T, Allocator $>$}!shared\_object\_@{shared\_object\_}}
+\index{shared\_object\_@{shared\_object\_}!rocr::core::Shared$<$ T, Allocator $>$@{rocr::core::Shared$<$ T, Allocator $>$}}
+\doxysubsubsection{\texorpdfstring{shared\_object\_}{shared\_object\_}}
+{\footnotesize\ttfamily template$<$typename T , typename Allocator  = Page\+Allocator$<$\+T$>$$>$ \\
+T$\ast$ \mbox{\hyperlink{classrocr_1_1core_1_1Shared}{rocr\+::core\+::\+Shared}}$<$ T, Allocator $>$\+::shared\+\_\+object\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+src/core/common/\mbox{\hyperlink{shared_8h}{shared.\+h}}\end{DoxyCompactItemize}

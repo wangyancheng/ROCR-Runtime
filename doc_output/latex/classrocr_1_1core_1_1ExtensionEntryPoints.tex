@@ -1,0 +1,297 @@
+\hypertarget{classrocr_1_1core_1_1ExtensionEntryPoints}{}\doxysection{rocr\+::core\+::Extension\+Entry\+Points Class Reference}
+\label{classrocr_1_1core_1_1ExtensionEntryPoints}\index{rocr::core::ExtensionEntryPoints@{rocr::core::ExtensionEntryPoints}}
+
+
+{\ttfamily \#include $<$hsa\+\_\+ext\+\_\+interface.\+h$>$}
+
+
+
+Collaboration diagram for rocr\+::core\+::Extension\+Entry\+Points\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=297pt]{classrocr_1_1core_1_1ExtensionEntryPoints__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classrocr_1_1core_1_1ExtensionEntryPoints_a8571c535eff786f4a5759c59b55e4baa}{Extension\+Entry\+Points}} ()
+\item 
+bool \mbox{\hyperlink{classrocr_1_1core_1_1ExtensionEntryPoints_adf6e171028de4bdf07b869d95906d257}{Load\+Finalizer}} (std\+::string library\+\_\+name)
+\item 
+void \mbox{\hyperlink{classrocr_1_1core_1_1ExtensionEntryPoints_ad7490ee4f6869478c4601d0885795aaa}{Unload}} ()
+\item 
+bool \mbox{\hyperlink{classrocr_1_1core_1_1ExtensionEntryPoints_a329f0c329e1bbf0f5fd09629dbc74d62}{Load\+Image}} ()
+\item 
+void \mbox{\hyperlink{classrocr_1_1core_1_1ExtensionEntryPoints_ab0291c89d4e7bedd941fb0a38e9cde5c}{Unload\+Image}} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{structrocr_1_1core_1_1ImageExtTableInternal}{Image\+Ext\+Table\+Internal}} \mbox{\hyperlink{classrocr_1_1core_1_1ExtensionEntryPoints_a89ab984ed4648c7b8a1fd82e1250d316}{image\+\_\+api}}
+\item 
+\mbox{\hyperlink{structFinalizerExtTable}{Finalizer\+Ext\+Table}} \mbox{\hyperlink{classrocr_1_1core_1_1ExtensionEntryPoints_aa4169e50af89a23ec48593ad77ad8fc2}{finalizer\+\_\+api}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Private Types}
+\begin{DoxyCompactItemize}
+\item 
+typedef void($\ast$ \mbox{\hyperlink{classrocr_1_1core_1_1ExtensionEntryPoints_ab90244f845b119aa1760630388566ba0}{Load\+\_\+t}}) (const \+::\mbox{\hyperlink{structrocr_1_1core_1_1HsaApiTable}{Hsa\+Api\+Table}} $\ast$table)
+\item 
+typedef void($\ast$ \mbox{\hyperlink{classrocr_1_1core_1_1ExtensionEntryPoints_aef764502f6d581a44873ce59c18d60d2}{Unload\+\_\+t}}) ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{classrocr_1_1core_1_1ExtensionEntryPoints_ae2da3af13c052a37595d9683f4c5b4a9}{Init\+Finalizer\+Ext\+Table}} ()
+\item 
+void \mbox{\hyperlink{classrocr_1_1core_1_1ExtensionEntryPoints_af84478ab1a814f354d688958fdcd732c}{Init\+Image\+Ext\+Table}} ()
+\item 
+void \mbox{\hyperlink{classrocr_1_1core_1_1ExtensionEntryPoints_a61d53745c06732d2ec7c90e4e07a3405}{Init\+Amd\+Ext\+Table}} ()
+\item 
+void \mbox{\hyperlink{classrocr_1_1core_1_1ExtensionEntryPoints_a21b153ae720a0f1aa240e3c7abffbd95}{Update\+Amd\+Ext\+Table}} (decltype(\+::\mbox{\hyperlink{inc_2hsa__ext__amd_8h_a88865352a85a861af31041d1376ee8ea}{hsa\+\_\+amd\+\_\+image\+\_\+create}}) $\ast$func\+\_\+ptr)
+\item 
+\mbox{\hyperlink{classrocr_1_1core_1_1ExtensionEntryPoints_a697199b0b541554083eea0e7f55636f4}{DISALLOW\+\_\+\+COPY\+\_\+\+AND\+\_\+\+ASSIGN}} (\mbox{\hyperlink{classrocr_1_1core_1_1ExtensionEntryPoints}{Extension\+Entry\+Points}})
+\end{DoxyCompactItemize}
+\doxysubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+std\+::vector$<$ \mbox{\hyperlink{namespacerocr_1_1os_a3be69e560dfb1309df3f4b0d1037bc2d}{os\+::\+Lib\+Handle}} $>$ \mbox{\hyperlink{classrocr_1_1core_1_1ExtensionEntryPoints_a31793154dfd51f4c7c105347fd7cce57}{libs\+\_\+}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Member Typedef Documentation}
+\mbox{\Hypertarget{classrocr_1_1core_1_1ExtensionEntryPoints_ab90244f845b119aa1760630388566ba0}\label{classrocr_1_1core_1_1ExtensionEntryPoints_ab90244f845b119aa1760630388566ba0}} 
+\index{rocr::core::ExtensionEntryPoints@{rocr::core::ExtensionEntryPoints}!Load\_t@{Load\_t}}
+\index{Load\_t@{Load\_t}!rocr::core::ExtensionEntryPoints@{rocr::core::ExtensionEntryPoints}}
+\doxysubsubsection{\texorpdfstring{Load\_t}{Load\_t}}
+{\footnotesize\ttfamily typedef void($\ast$ rocr\+::core\+::\+Extension\+Entry\+Points\+::\+Load\+\_\+t) (const \+::\mbox{\hyperlink{structrocr_1_1core_1_1HsaApiTable}{Hsa\+Api\+Table}} $\ast$table)\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classrocr_1_1core_1_1ExtensionEntryPoints_aef764502f6d581a44873ce59c18d60d2}\label{classrocr_1_1core_1_1ExtensionEntryPoints_aef764502f6d581a44873ce59c18d60d2}} 
+\index{rocr::core::ExtensionEntryPoints@{rocr::core::ExtensionEntryPoints}!Unload\_t@{Unload\_t}}
+\index{Unload\_t@{Unload\_t}!rocr::core::ExtensionEntryPoints@{rocr::core::ExtensionEntryPoints}}
+\doxysubsubsection{\texorpdfstring{Unload\_t}{Unload\_t}}
+{\footnotesize\ttfamily typedef void($\ast$ rocr\+::core\+::\+Extension\+Entry\+Points\+::\+Unload\+\_\+t) ()\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classrocr_1_1core_1_1ExtensionEntryPoints_a8571c535eff786f4a5759c59b55e4baa}\label{classrocr_1_1core_1_1ExtensionEntryPoints_a8571c535eff786f4a5759c59b55e4baa}} 
+\index{rocr::core::ExtensionEntryPoints@{rocr::core::ExtensionEntryPoints}!ExtensionEntryPoints@{ExtensionEntryPoints}}
+\index{ExtensionEntryPoints@{ExtensionEntryPoints}!rocr::core::ExtensionEntryPoints@{rocr::core::ExtensionEntryPoints}}
+\doxysubsubsection{\texorpdfstring{ExtensionEntryPoints()}{ExtensionEntryPoints()}}
+{\footnotesize\ttfamily rocr\+::core\+::\+Extension\+Entry\+Points\+::\+Extension\+Entry\+Points (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classrocr_1_1core_1_1ExtensionEntryPoints_a8571c535eff786f4a5759c59b55e4baa_cgraph}
+\end{center}
+\end{figure}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classrocr_1_1core_1_1ExtensionEntryPoints_a697199b0b541554083eea0e7f55636f4}\label{classrocr_1_1core_1_1ExtensionEntryPoints_a697199b0b541554083eea0e7f55636f4}} 
+\index{rocr::core::ExtensionEntryPoints@{rocr::core::ExtensionEntryPoints}!DISALLOW\_COPY\_AND\_ASSIGN@{DISALLOW\_COPY\_AND\_ASSIGN}}
+\index{DISALLOW\_COPY\_AND\_ASSIGN@{DISALLOW\_COPY\_AND\_ASSIGN}!rocr::core::ExtensionEntryPoints@{rocr::core::ExtensionEntryPoints}}
+\doxysubsubsection{\texorpdfstring{DISALLOW\_COPY\_AND\_ASSIGN()}{DISALLOW\_COPY\_AND\_ASSIGN()}}
+{\footnotesize\ttfamily rocr\+::core\+::\+Extension\+Entry\+Points\+::\+DISALLOW\+\_\+\+COPY\+\_\+\+AND\+\_\+\+ASSIGN (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classrocr_1_1core_1_1ExtensionEntryPoints}{Extension\+Entry\+Points}}}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classrocr_1_1core_1_1ExtensionEntryPoints_a61d53745c06732d2ec7c90e4e07a3405}\label{classrocr_1_1core_1_1ExtensionEntryPoints_a61d53745c06732d2ec7c90e4e07a3405}} 
+\index{rocr::core::ExtensionEntryPoints@{rocr::core::ExtensionEntryPoints}!InitAmdExtTable@{InitAmdExtTable}}
+\index{InitAmdExtTable@{InitAmdExtTable}!rocr::core::ExtensionEntryPoints@{rocr::core::ExtensionEntryPoints}}
+\doxysubsubsection{\texorpdfstring{InitAmdExtTable()}{InitAmdExtTable()}}
+{\footnotesize\ttfamily void rocr\+::core\+::\+Extension\+Entry\+Points\+::\+Init\+Amd\+Ext\+Table (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=341pt]{classrocr_1_1core_1_1ExtensionEntryPoints_a61d53745c06732d2ec7c90e4e07a3405_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classrocr_1_1core_1_1ExtensionEntryPoints_a61d53745c06732d2ec7c90e4e07a3405_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classrocr_1_1core_1_1ExtensionEntryPoints_ae2da3af13c052a37595d9683f4c5b4a9}\label{classrocr_1_1core_1_1ExtensionEntryPoints_ae2da3af13c052a37595d9683f4c5b4a9}} 
+\index{rocr::core::ExtensionEntryPoints@{rocr::core::ExtensionEntryPoints}!InitFinalizerExtTable@{InitFinalizerExtTable}}
+\index{InitFinalizerExtTable@{InitFinalizerExtTable}!rocr::core::ExtensionEntryPoints@{rocr::core::ExtensionEntryPoints}}
+\doxysubsubsection{\texorpdfstring{InitFinalizerExtTable()}{InitFinalizerExtTable()}}
+{\footnotesize\ttfamily void rocr\+::core\+::\+Extension\+Entry\+Points\+::\+Init\+Finalizer\+Ext\+Table (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=349pt]{classrocr_1_1core_1_1ExtensionEntryPoints_ae2da3af13c052a37595d9683f4c5b4a9_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classrocr_1_1core_1_1ExtensionEntryPoints_ae2da3af13c052a37595d9683f4c5b4a9_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classrocr_1_1core_1_1ExtensionEntryPoints_af84478ab1a814f354d688958fdcd732c}\label{classrocr_1_1core_1_1ExtensionEntryPoints_af84478ab1a814f354d688958fdcd732c}} 
+\index{rocr::core::ExtensionEntryPoints@{rocr::core::ExtensionEntryPoints}!InitImageExtTable@{InitImageExtTable}}
+\index{InitImageExtTable@{InitImageExtTable}!rocr::core::ExtensionEntryPoints@{rocr::core::ExtensionEntryPoints}}
+\doxysubsubsection{\texorpdfstring{InitImageExtTable()}{InitImageExtTable()}}
+{\footnotesize\ttfamily void rocr\+::core\+::\+Extension\+Entry\+Points\+::\+Init\+Image\+Ext\+Table (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=341pt]{classrocr_1_1core_1_1ExtensionEntryPoints_af84478ab1a814f354d688958fdcd732c_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classrocr_1_1core_1_1ExtensionEntryPoints_af84478ab1a814f354d688958fdcd732c_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classrocr_1_1core_1_1ExtensionEntryPoints_adf6e171028de4bdf07b869d95906d257}\label{classrocr_1_1core_1_1ExtensionEntryPoints_adf6e171028de4bdf07b869d95906d257}} 
+\index{rocr::core::ExtensionEntryPoints@{rocr::core::ExtensionEntryPoints}!LoadFinalizer@{LoadFinalizer}}
+\index{LoadFinalizer@{LoadFinalizer}!rocr::core::ExtensionEntryPoints@{rocr::core::ExtensionEntryPoints}}
+\doxysubsubsection{\texorpdfstring{LoadFinalizer()}{LoadFinalizer()}}
+{\footnotesize\ttfamily bool rocr\+::core\+::\+Extension\+Entry\+Points\+::\+Load\+Finalizer (\begin{DoxyParamCaption}\item[{std\+::string}]{library\+\_\+name }\end{DoxyParamCaption})}
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classrocr_1_1core_1_1ExtensionEntryPoints_adf6e171028de4bdf07b869d95906d257_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classrocr_1_1core_1_1ExtensionEntryPoints_a329f0c329e1bbf0f5fd09629dbc74d62}\label{classrocr_1_1core_1_1ExtensionEntryPoints_a329f0c329e1bbf0f5fd09629dbc74d62}} 
+\index{rocr::core::ExtensionEntryPoints@{rocr::core::ExtensionEntryPoints}!LoadImage@{LoadImage}}
+\index{LoadImage@{LoadImage}!rocr::core::ExtensionEntryPoints@{rocr::core::ExtensionEntryPoints}}
+\doxysubsubsection{\texorpdfstring{LoadImage()}{LoadImage()}}
+{\footnotesize\ttfamily bool rocr\+::core\+::\+Extension\+Entry\+Points\+::\+Load\+Image (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classrocr_1_1core_1_1ExtensionEntryPoints_a329f0c329e1bbf0f5fd09629dbc74d62_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classrocr_1_1core_1_1ExtensionEntryPoints_a329f0c329e1bbf0f5fd09629dbc74d62_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classrocr_1_1core_1_1ExtensionEntryPoints_ad7490ee4f6869478c4601d0885795aaa}\label{classrocr_1_1core_1_1ExtensionEntryPoints_ad7490ee4f6869478c4601d0885795aaa}} 
+\index{rocr::core::ExtensionEntryPoints@{rocr::core::ExtensionEntryPoints}!Unload@{Unload}}
+\index{Unload@{Unload}!rocr::core::ExtensionEntryPoints@{rocr::core::ExtensionEntryPoints}}
+\doxysubsubsection{\texorpdfstring{Unload()}{Unload()}}
+{\footnotesize\ttfamily void rocr\+::core\+::\+Extension\+Entry\+Points\+::\+Unload (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=550pt]{classrocr_1_1core_1_1ExtensionEntryPoints_ad7490ee4f6869478c4601d0885795aaa_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classrocr_1_1core_1_1ExtensionEntryPoints_ad7490ee4f6869478c4601d0885795aaa_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classrocr_1_1core_1_1ExtensionEntryPoints_ab0291c89d4e7bedd941fb0a38e9cde5c}\label{classrocr_1_1core_1_1ExtensionEntryPoints_ab0291c89d4e7bedd941fb0a38e9cde5c}} 
+\index{rocr::core::ExtensionEntryPoints@{rocr::core::ExtensionEntryPoints}!UnloadImage@{UnloadImage}}
+\index{UnloadImage@{UnloadImage}!rocr::core::ExtensionEntryPoints@{rocr::core::ExtensionEntryPoints}}
+\doxysubsubsection{\texorpdfstring{UnloadImage()}{UnloadImage()}}
+{\footnotesize\ttfamily void rocr\+::core\+::\+Extension\+Entry\+Points\+::\+Unload\+Image (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=550pt]{classrocr_1_1core_1_1ExtensionEntryPoints_ab0291c89d4e7bedd941fb0a38e9cde5c_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classrocr_1_1core_1_1ExtensionEntryPoints_ab0291c89d4e7bedd941fb0a38e9cde5c_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classrocr_1_1core_1_1ExtensionEntryPoints_a21b153ae720a0f1aa240e3c7abffbd95}\label{classrocr_1_1core_1_1ExtensionEntryPoints_a21b153ae720a0f1aa240e3c7abffbd95}} 
+\index{rocr::core::ExtensionEntryPoints@{rocr::core::ExtensionEntryPoints}!UpdateAmdExtTable@{UpdateAmdExtTable}}
+\index{UpdateAmdExtTable@{UpdateAmdExtTable}!rocr::core::ExtensionEntryPoints@{rocr::core::ExtensionEntryPoints}}
+\doxysubsubsection{\texorpdfstring{UpdateAmdExtTable()}{UpdateAmdExtTable()}}
+{\footnotesize\ttfamily void rocr\+::core\+::\+Extension\+Entry\+Points\+::\+Update\+Amd\+Ext\+Table (\begin{DoxyParamCaption}\item[{decltype(\+::\mbox{\hyperlink{inc_2hsa__ext__amd_8h_a88865352a85a861af31041d1376ee8ea}{hsa\+\_\+amd\+\_\+image\+\_\+create}}) $\ast$}]{func\+\_\+ptr }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classrocr_1_1core_1_1ExtensionEntryPoints_a21b153ae720a0f1aa240e3c7abffbd95_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classrocr_1_1core_1_1ExtensionEntryPoints_a21b153ae720a0f1aa240e3c7abffbd95_icgraph}
+\end{center}
+\end{figure}
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{classrocr_1_1core_1_1ExtensionEntryPoints_aa4169e50af89a23ec48593ad77ad8fc2}\label{classrocr_1_1core_1_1ExtensionEntryPoints_aa4169e50af89a23ec48593ad77ad8fc2}} 
+\index{rocr::core::ExtensionEntryPoints@{rocr::core::ExtensionEntryPoints}!finalizer\_api@{finalizer\_api}}
+\index{finalizer\_api@{finalizer\_api}!rocr::core::ExtensionEntryPoints@{rocr::core::ExtensionEntryPoints}}
+\doxysubsubsection{\texorpdfstring{finalizer\_api}{finalizer\_api}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structFinalizerExtTable}{Finalizer\+Ext\+Table}} rocr\+::core\+::\+Extension\+Entry\+Points\+::finalizer\+\_\+api}
+
+\mbox{\Hypertarget{classrocr_1_1core_1_1ExtensionEntryPoints_a89ab984ed4648c7b8a1fd82e1250d316}\label{classrocr_1_1core_1_1ExtensionEntryPoints_a89ab984ed4648c7b8a1fd82e1250d316}} 
+\index{rocr::core::ExtensionEntryPoints@{rocr::core::ExtensionEntryPoints}!image\_api@{image\_api}}
+\index{image\_api@{image\_api}!rocr::core::ExtensionEntryPoints@{rocr::core::ExtensionEntryPoints}}
+\doxysubsubsection{\texorpdfstring{image\_api}{image\_api}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structrocr_1_1core_1_1ImageExtTableInternal}{Image\+Ext\+Table\+Internal}} rocr\+::core\+::\+Extension\+Entry\+Points\+::image\+\_\+api}
+
+\mbox{\Hypertarget{classrocr_1_1core_1_1ExtensionEntryPoints_a31793154dfd51f4c7c105347fd7cce57}\label{classrocr_1_1core_1_1ExtensionEntryPoints_a31793154dfd51f4c7c105347fd7cce57}} 
+\index{rocr::core::ExtensionEntryPoints@{rocr::core::ExtensionEntryPoints}!libs\_@{libs\_}}
+\index{libs\_@{libs\_}!rocr::core::ExtensionEntryPoints@{rocr::core::ExtensionEntryPoints}}
+\doxysubsubsection{\texorpdfstring{libs\_}{libs\_}}
+{\footnotesize\ttfamily std\+::vector$<$\mbox{\hyperlink{namespacerocr_1_1os_a3be69e560dfb1309df3f4b0d1037bc2d}{os\+::\+Lib\+Handle}}$>$ rocr\+::core\+::\+Extension\+Entry\+Points\+::libs\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+src/core/inc/\mbox{\hyperlink{hsa__ext__interface_8h}{hsa\+\_\+ext\+\_\+interface.\+h}}\item 
+src/core/runtime/\mbox{\hyperlink{hsa__ext__interface_8cpp}{hsa\+\_\+ext\+\_\+interface.\+cpp}}\end{DoxyCompactItemize}

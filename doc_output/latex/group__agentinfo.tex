@@ -1,0 +1,1061 @@
+\hypertarget{group__agentinfo}{}\doxysection{System and Agent Information}
+\label{group__agentinfo}\index{System and Agent Information@{System and Agent Information}}
+\doxysubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{structhsa__agent__s}{hsa\+\_\+agent\+\_\+s}}
+\begin{DoxyCompactList}\small\item\em Struct containing an opaque handle to an agent, a device that participates in the HSA memory model. An agent can submit AQL packets for execution, and may also accept AQL packets for execution (agent dispatch packets or kernel dispatch packets launching HSAIL-\/derived binaries). \end{DoxyCompactList}\item 
+struct \mbox{\hyperlink{structhsa__cache__s}{hsa\+\_\+cache\+\_\+s}}
+\begin{DoxyCompactList}\small\item\em Cache handle. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+typedef struct \mbox{\hyperlink{structhsa__agent__s}{hsa\+\_\+agent\+\_\+s}} \mbox{\hyperlink{group__agentinfo_ga9ce217ef08e7d5e89c8e83ce7b6ef22b}{hsa\+\_\+agent\+\_\+t}}
+\begin{DoxyCompactList}\small\item\em Struct containing an opaque handle to an agent, a device that participates in the HSA memory model. An agent can submit AQL packets for execution, and may also accept AQL packets for execution (agent dispatch packets or kernel dispatch packets launching HSAIL-\/derived binaries). \end{DoxyCompactList}\item 
+typedef struct \mbox{\hyperlink{structhsa__cache__s}{hsa\+\_\+cache\+\_\+s}} \mbox{\hyperlink{group__agentinfo_gaf095bbd42403c50be520db2a73e7ee8d}{hsa\+\_\+cache\+\_\+t}}
+\begin{DoxyCompactList}\small\item\em Cache handle. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Enumerations}
+\begin{DoxyCompactItemize}
+\item 
+enum \mbox{\hyperlink{group__agentinfo_ga44cf02813960c252edfeeec6e0b6c848}{hsa\+\_\+endianness\+\_\+t}} \{ \mbox{\hyperlink{group__agentinfo_gga44cf02813960c252edfeeec6e0b6c848a90198fa4ce36d331675ce5c4f10e376e}{HSA\+\_\+\+ENDIANNESS\+\_\+\+LITTLE}} = 0
+, \mbox{\hyperlink{group__agentinfo_gga44cf02813960c252edfeeec6e0b6c848a8d9bbe18762dfa8cd3dc23c0c07c9178}{HSA\+\_\+\+ENDIANNESS\+\_\+\+BIG}} = 1
+ \}
+\begin{DoxyCompactList}\small\item\em Endianness. A convention used to interpret the bytes making up a data word. \end{DoxyCompactList}\item 
+enum \mbox{\hyperlink{group__agentinfo_ga4d45919fd6f6e8dbb8ae2f4030870e11}{hsa\+\_\+machine\+\_\+model\+\_\+t}} \{ \mbox{\hyperlink{group__agentinfo_gga4d45919fd6f6e8dbb8ae2f4030870e11a5e49fab73802d5f94ee043350e6336ef}{HSA\+\_\+\+MACHINE\+\_\+\+MODEL\+\_\+\+SMALL}} = 0
+, \mbox{\hyperlink{group__agentinfo_gga4d45919fd6f6e8dbb8ae2f4030870e11a53190aaa0a3c717fc1b7987faa59b705}{HSA\+\_\+\+MACHINE\+\_\+\+MODEL\+\_\+\+LARGE}} = 1
+ \}
+\begin{DoxyCompactList}\small\item\em Machine model. A machine model determines the size of certain data types in HSA runtime and an agent. \end{DoxyCompactList}\item 
+enum \mbox{\hyperlink{group__agentinfo_gacafd4247e2a04cbe0ac0b3998c127532}{hsa\+\_\+profile\+\_\+t}} \{ \mbox{\hyperlink{group__agentinfo_ggacafd4247e2a04cbe0ac0b3998c127532aa72d9bb0182593b99af4c3444c792695}{HSA\+\_\+\+PROFILE\+\_\+\+BASE}} = 0
+, \mbox{\hyperlink{group__agentinfo_ggacafd4247e2a04cbe0ac0b3998c127532a852b05a668a760fd970ff0a59e46b269}{HSA\+\_\+\+PROFILE\+\_\+\+FULL}} = 1
+ \}
+\begin{DoxyCompactList}\small\item\em Profile. A profile indicates a particular level of feature support. For example, in the base profile the application must use the HSA runtime allocator to reserve shared virtual memory, while in the full profile any host pointer can be shared across all the agents. \end{DoxyCompactList}\item 
+enum \mbox{\hyperlink{group__agentinfo_ga5358716e320ad8a78b78ef44d8783b0b}{hsa\+\_\+system\+\_\+info\+\_\+t}} \{ \newline
+\mbox{\hyperlink{group__agentinfo_gga5358716e320ad8a78b78ef44d8783b0bac33519a29a9fa32f1dd179b9f8af8243}{HSA\+\_\+\+SYSTEM\+\_\+\+INFO\+\_\+\+VERSION\+\_\+\+MAJOR}} = 0
+, \mbox{\hyperlink{group__agentinfo_gga5358716e320ad8a78b78ef44d8783b0ba0ac419f557187a4cfcdeb604f37bb4ae}{HSA\+\_\+\+SYSTEM\+\_\+\+INFO\+\_\+\+VERSION\+\_\+\+MINOR}} = 1
+, \mbox{\hyperlink{group__agentinfo_gga5358716e320ad8a78b78ef44d8783b0bac9043678e4c1dd887fcf71cabee228f6}{HSA\+\_\+\+SYSTEM\+\_\+\+INFO\+\_\+\+TIMESTAMP}} = 2
+, \mbox{\hyperlink{group__agentinfo_gga5358716e320ad8a78b78ef44d8783b0bae2a8bb2c1322968a95b8ed49c34d54f5}{HSA\+\_\+\+SYSTEM\+\_\+\+INFO\+\_\+\+TIMESTAMP\+\_\+\+FREQUENCY}} = 3
+, \newline
+\mbox{\hyperlink{group__agentinfo_gga5358716e320ad8a78b78ef44d8783b0ba851f3f7745ed5524352598d2a0f02e9a}{HSA\+\_\+\+SYSTEM\+\_\+\+INFO\+\_\+\+SIGNAL\+\_\+\+MAX\+\_\+\+WAIT}} = 4
+, \mbox{\hyperlink{group__agentinfo_gga5358716e320ad8a78b78ef44d8783b0baa03b4fd983e67ce6d3c8a63dceb9134a}{HSA\+\_\+\+SYSTEM\+\_\+\+INFO\+\_\+\+ENDIANNESS}} = 5
+, \mbox{\hyperlink{group__agentinfo_gga5358716e320ad8a78b78ef44d8783b0ba967398d64a854866b896e1709c222568}{HSA\+\_\+\+SYSTEM\+\_\+\+INFO\+\_\+\+MACHINE\+\_\+\+MODEL}} = 6
+, \mbox{\hyperlink{group__agentinfo_gga5358716e320ad8a78b78ef44d8783b0ba7e873d31af73c552272aad520d8dcbef}{HSA\+\_\+\+SYSTEM\+\_\+\+INFO\+\_\+\+EXTENSIONS}} = 7
+, \newline
+\mbox{\hyperlink{group__agentinfo_gga5358716e320ad8a78b78ef44d8783b0bae98a361310d5264f9b435c51c1fdcfff}{HSA\+\_\+\+AMD\+\_\+\+SYSTEM\+\_\+\+INFO\+\_\+\+BUILD\+\_\+\+VERSION}} = 0x200
+, \mbox{\hyperlink{group__agentinfo_gga5358716e320ad8a78b78ef44d8783b0baf487b468dfc9fb7e4b9db71680749de0}{HSA\+\_\+\+AMD\+\_\+\+SYSTEM\+\_\+\+INFO\+\_\+\+SVM\+\_\+\+SUPPORTED}} = 0x201
+, \mbox{\hyperlink{group__agentinfo_gga5358716e320ad8a78b78ef44d8783b0ba0864a3d74d61f57bd3f7afacb77f7647}{HSA\+\_\+\+AMD\+\_\+\+SYSTEM\+\_\+\+INFO\+\_\+\+SVM\+\_\+\+ACCESSIBLE\+\_\+\+BY\+\_\+\+DEFAULT}} = 0x202
+, \mbox{\hyperlink{group__agentinfo_gga5358716e320ad8a78b78ef44d8783b0baf87134715ae5191e4a79e2e61da9c2c7}{HSA\+\_\+\+AMD\+\_\+\+SYSTEM\+\_\+\+INFO\+\_\+\+MWAITX\+\_\+\+ENABLED}} = 0x203
+, \newline
+\mbox{\hyperlink{group__agentinfo_gga5358716e320ad8a78b78ef44d8783b0ba588aacf2ace4cd11df4535c84e881aca}{HSA\+\_\+\+AMD\+\_\+\+SYSTEM\+\_\+\+INFO\+\_\+\+DMABUF\+\_\+\+SUPPORTED}} = 0x204
+ \}
+\begin{DoxyCompactList}\small\item\em System attributes. \end{DoxyCompactList}\item 
+enum \mbox{\hyperlink{group__agentinfo_ga6a8dade2a7681dbd98a88029b1dbb5f3}{hsa\+\_\+extension\+\_\+t}} \{ \newline
+\mbox{\hyperlink{group__agentinfo_gga6a8dade2a7681dbd98a88029b1dbb5f3a2170699c6d6a1f7b81baba3659c55288}{HSA\+\_\+\+EXTENSION\+\_\+\+FINALIZER}} = 0
+, \mbox{\hyperlink{group__agentinfo_gga6a8dade2a7681dbd98a88029b1dbb5f3a7d8b1a34c2dcc9aff3797a499aac9c55}{HSA\+\_\+\+EXTENSION\+\_\+\+IMAGES}} = 1
+, \mbox{\hyperlink{group__agentinfo_gga6a8dade2a7681dbd98a88029b1dbb5f3ab6285996ad0b3c8c04b69990859e5d66}{HSA\+\_\+\+EXTENSION\+\_\+\+PERFORMANCE\+\_\+\+COUNTERS}} = 2
+, \mbox{\hyperlink{group__agentinfo_gga6a8dade2a7681dbd98a88029b1dbb5f3a4e040098a876280cb349f8057b1509c2}{HSA\+\_\+\+EXTENSION\+\_\+\+PROFILING\+\_\+\+EVENTS}} = 3
+, \newline
+\mbox{\hyperlink{group__agentinfo_gga6a8dade2a7681dbd98a88029b1dbb5f3a045c0bdc17f95d0c2148ed2701dd67aa}{HSA\+\_\+\+EXTENSION\+\_\+\+STD\+\_\+\+LAST}} = 3
+, \mbox{\hyperlink{group__agentinfo_gga6a8dade2a7681dbd98a88029b1dbb5f3a48f31076893788400d3338e830797a90}{HSA\+\_\+\+AMD\+\_\+\+FIRST\+\_\+\+EXTENSION}} = 0x200
+, \mbox{\hyperlink{group__agentinfo_gga6a8dade2a7681dbd98a88029b1dbb5f3af94f8a42a46c4d4bb43ca16c1c3d24e5}{HSA\+\_\+\+EXTENSION\+\_\+\+AMD\+\_\+\+PROFILER}} = 0x200
+, \mbox{\hyperlink{group__agentinfo_gga6a8dade2a7681dbd98a88029b1dbb5f3a6fd3ca1a89a426a4d96fbbb8e632fecf}{HSA\+\_\+\+EXTENSION\+\_\+\+AMD\+\_\+\+LOADER}} = 0x201
+, \newline
+\mbox{\hyperlink{group__agentinfo_gga6a8dade2a7681dbd98a88029b1dbb5f3ad14c50cfd324fb9546dc419b733e3cea}{HSA\+\_\+\+EXTENSION\+\_\+\+AMD\+\_\+\+AQLPROFILE}} = 0x202
+, \mbox{\hyperlink{group__agentinfo_gga6a8dade2a7681dbd98a88029b1dbb5f3a7b04f145540e0234a0963142944d8419}{HSA\+\_\+\+AMD\+\_\+\+LAST\+\_\+\+EXTENSION}} = 0x202
+ \}
+\begin{DoxyCompactList}\small\item\em HSA extensions. \end{DoxyCompactList}\item 
+enum \mbox{\hyperlink{group__agentinfo_gadf226614ab6da93b301f100cfd58e504}{hsa\+\_\+agent\+\_\+feature\+\_\+t}} \{ \mbox{\hyperlink{group__agentinfo_ggadf226614ab6da93b301f100cfd58e504a3871d5113bb59b14c9274e137b209f04}{HSA\+\_\+\+AGENT\+\_\+\+FEATURE\+\_\+\+KERNEL\+\_\+\+DISPATCH}} = 1
+, \mbox{\hyperlink{group__agentinfo_ggadf226614ab6da93b301f100cfd58e504a12b2ba8c7b09e76817346b74152dbfae}{HSA\+\_\+\+AGENT\+\_\+\+FEATURE\+\_\+\+AGENT\+\_\+\+DISPATCH}} = 2
+ \}
+\begin{DoxyCompactList}\small\item\em Agent features. \end{DoxyCompactList}\item 
+enum \mbox{\hyperlink{group__agentinfo_ga5e6c855643435ea1c2c7dc3fa2a123f0}{hsa\+\_\+device\+\_\+type\+\_\+t}} \{ \mbox{\hyperlink{group__agentinfo_gga5e6c855643435ea1c2c7dc3fa2a123f0a6bfae0e3fb143527bc36ea49f561bc43}{HSA\+\_\+\+DEVICE\+\_\+\+TYPE\+\_\+\+CPU}} = 0
+, \mbox{\hyperlink{group__agentinfo_gga5e6c855643435ea1c2c7dc3fa2a123f0ac9d0546c1a7a452bb70f7aa940dc0042}{HSA\+\_\+\+DEVICE\+\_\+\+TYPE\+\_\+\+GPU}} = 1
+, \mbox{\hyperlink{group__agentinfo_gga5e6c855643435ea1c2c7dc3fa2a123f0a4ebd7b468fed7371223dee1633596051}{HSA\+\_\+\+DEVICE\+\_\+\+TYPE\+\_\+\+DSP}} = 2
+ \}
+\begin{DoxyCompactList}\small\item\em Hardware device type. \end{DoxyCompactList}\item 
+enum \mbox{\hyperlink{group__agentinfo_gaac56321e4596fe10a90b5bb3fedc4b73}{hsa\+\_\+default\+\_\+float\+\_\+rounding\+\_\+mode\+\_\+t}} \{ \mbox{\hyperlink{group__agentinfo_ggaac56321e4596fe10a90b5bb3fedc4b73a51bef81c634ce06d57f57a6622051f96}{HSA\+\_\+\+DEFAULT\+\_\+\+FLOAT\+\_\+\+ROUNDING\+\_\+\+MODE\+\_\+\+DEFAULT}} = 0
+, \mbox{\hyperlink{group__agentinfo_ggaac56321e4596fe10a90b5bb3fedc4b73a728ca37667c6479e2e397cfcf3795a02}{HSA\+\_\+\+DEFAULT\+\_\+\+FLOAT\+\_\+\+ROUNDING\+\_\+\+MODE\+\_\+\+ZERO}} = 1
+, \mbox{\hyperlink{group__agentinfo_ggaac56321e4596fe10a90b5bb3fedc4b73a4bc4d1ee70e140a1820755762bf4186c}{HSA\+\_\+\+DEFAULT\+\_\+\+FLOAT\+\_\+\+ROUNDING\+\_\+\+MODE\+\_\+\+NEAR}} = 2
+ \}
+\begin{DoxyCompactList}\small\item\em Default floating-\/point rounding mode. \end{DoxyCompactList}\item 
+enum \mbox{\hyperlink{group__agentinfo_ga39d0684207d95717d96319573b3e4a42}{hsa\+\_\+agent\+\_\+info\+\_\+t}} \{ \newline
+\mbox{\hyperlink{group__agentinfo_gga39d0684207d95717d96319573b3e4a42a06b3ca6080e3bfd4d5b07db91d766e4c}{HSA\+\_\+\+AGENT\+\_\+\+INFO\+\_\+\+NAME}} = 0
+, \mbox{\hyperlink{group__agentinfo_gga39d0684207d95717d96319573b3e4a42ac9e0c3d4f881d6de12ff8792eb92292c}{HSA\+\_\+\+AGENT\+\_\+\+INFO\+\_\+\+VENDOR\+\_\+\+NAME}} = 1
+, \mbox{\hyperlink{group__agentinfo_gga39d0684207d95717d96319573b3e4a42a4ce35a53f20e53b76c7cc7697f08ea04}{HSA\+\_\+\+AGENT\+\_\+\+INFO\+\_\+\+FEATURE}} = 2
+, \mbox{\hyperlink{group__agentinfo_gga39d0684207d95717d96319573b3e4a42a5f62c238148161421e91c90552a39f46}{HSA\+\_\+\+AGENT\+\_\+\+INFO\+\_\+\+MACHINE\+\_\+\+MODEL}} = 3
+, \newline
+\mbox{\hyperlink{group__agentinfo_gga39d0684207d95717d96319573b3e4a42acc8a260a87cb3fb811e29b8b13fabc4f}{HSA\+\_\+\+AGENT\+\_\+\+INFO\+\_\+\+PROFILE}} = 4
+, \mbox{\hyperlink{group__agentinfo_gga39d0684207d95717d96319573b3e4a42aa43711135cff370be22a717d0cae97e5}{HSA\+\_\+\+AGENT\+\_\+\+INFO\+\_\+\+DEFAULT\+\_\+\+FLOAT\+\_\+\+ROUNDING\+\_\+\+MODE}} = 5
+, \mbox{\hyperlink{group__agentinfo_gga39d0684207d95717d96319573b3e4a42a042093edf4aca614608bda8efbcbcf5a}{HSA\+\_\+\+AGENT\+\_\+\+INFO\+\_\+\+BASE\+\_\+\+PROFILE\+\_\+\+DEFAULT\+\_\+\+FLOAT\+\_\+\+ROUNDING\+\_\+\+MODES}} = 23
+, \mbox{\hyperlink{group__agentinfo_gga39d0684207d95717d96319573b3e4a42a24a0540e814290a4058700bab43cc321}{HSA\+\_\+\+AGENT\+\_\+\+INFO\+\_\+\+FAST\+\_\+\+F16\+\_\+\+OPERATION}} = 24
+, \newline
+\mbox{\hyperlink{group__agentinfo_gga39d0684207d95717d96319573b3e4a42a2474a5a57ecbf494156769f408ded8fd}{HSA\+\_\+\+AGENT\+\_\+\+INFO\+\_\+\+WAVEFRONT\+\_\+\+SIZE}} = 6
+, \mbox{\hyperlink{group__agentinfo_gga39d0684207d95717d96319573b3e4a42a595eea133327c6c6110c02a0661a06d6}{HSA\+\_\+\+AGENT\+\_\+\+INFO\+\_\+\+WORKGROUP\+\_\+\+MAX\+\_\+\+DIM}} = 7
+, \mbox{\hyperlink{group__agentinfo_gga39d0684207d95717d96319573b3e4a42ade0ccd571bdc023d644d2337621e91f6}{HSA\+\_\+\+AGENT\+\_\+\+INFO\+\_\+\+WORKGROUP\+\_\+\+MAX\+\_\+\+SIZE}} = 8
+, \mbox{\hyperlink{group__agentinfo_gga39d0684207d95717d96319573b3e4a42a512597f1fd2c2e6baee29f364ccd924f}{HSA\+\_\+\+AGENT\+\_\+\+INFO\+\_\+\+GRID\+\_\+\+MAX\+\_\+\+DIM}} = 9
+, \newline
+\mbox{\hyperlink{group__agentinfo_gga39d0684207d95717d96319573b3e4a42a16cd0e9d2e75ee3db1c22738b2cad8f6}{HSA\+\_\+\+AGENT\+\_\+\+INFO\+\_\+\+GRID\+\_\+\+MAX\+\_\+\+SIZE}} = 10
+, \mbox{\hyperlink{group__agentinfo_gga39d0684207d95717d96319573b3e4a42a81f9780e49dd38b4f836289fd3647bad}{HSA\+\_\+\+AGENT\+\_\+\+INFO\+\_\+\+FBARRIER\+\_\+\+MAX\+\_\+\+SIZE}} = 11
+, \mbox{\hyperlink{group__agentinfo_gga39d0684207d95717d96319573b3e4a42a06ac2144155abb87646396b0ac2c61f4}{HSA\+\_\+\+AGENT\+\_\+\+INFO\+\_\+\+QUEUES\+\_\+\+MAX}} = 12
+, \mbox{\hyperlink{group__agentinfo_gga39d0684207d95717d96319573b3e4a42ad5e6be0580d2865dced7a87a2fe14147}{HSA\+\_\+\+AGENT\+\_\+\+INFO\+\_\+\+QUEUE\+\_\+\+MIN\+\_\+\+SIZE}} = 13
+, \newline
+\mbox{\hyperlink{group__agentinfo_gga39d0684207d95717d96319573b3e4a42acc88a2cb095e69df180ebee7aeb68c81}{HSA\+\_\+\+AGENT\+\_\+\+INFO\+\_\+\+QUEUE\+\_\+\+MAX\+\_\+\+SIZE}} = 14
+, \mbox{\hyperlink{group__agentinfo_gga39d0684207d95717d96319573b3e4a42a46149fa502a210835171e0b66e16f988}{HSA\+\_\+\+AGENT\+\_\+\+INFO\+\_\+\+QUEUE\+\_\+\+TYPE}} = 15
+, \mbox{\hyperlink{group__agentinfo_gga39d0684207d95717d96319573b3e4a42a7e08d2bf6acfce669da4e810d3f7f28a}{HSA\+\_\+\+AGENT\+\_\+\+INFO\+\_\+\+NODE}} = 16
+, \mbox{\hyperlink{group__agentinfo_gga39d0684207d95717d96319573b3e4a42a04660b9d69768cad7a7474310436ce88}{HSA\+\_\+\+AGENT\+\_\+\+INFO\+\_\+\+DEVICE}} = 17
+, \newline
+\mbox{\hyperlink{group__agentinfo_gga39d0684207d95717d96319573b3e4a42ae7fe21528c215249472e5836631759f4}{HSA\+\_\+\+AGENT\+\_\+\+INFO\+\_\+\+CACHE\+\_\+\+SIZE}} = 18
+, \mbox{\hyperlink{group__agentinfo_gga39d0684207d95717d96319573b3e4a42a10ffd1f47f50e9b76d1b411c24ad9267}{HSA\+\_\+\+AGENT\+\_\+\+INFO\+\_\+\+ISA}} = 19
+, \mbox{\hyperlink{group__agentinfo_gga39d0684207d95717d96319573b3e4a42a2a3da3ec47bc8b70ff26c2ea8fc7696a}{HSA\+\_\+\+AGENT\+\_\+\+INFO\+\_\+\+EXTENSIONS}} = 20
+, \mbox{\hyperlink{group__agentinfo_gga39d0684207d95717d96319573b3e4a42a0487bf8cd59f97278c662fec66e09091}{HSA\+\_\+\+AGENT\+\_\+\+INFO\+\_\+\+VERSION\+\_\+\+MAJOR}} = 21
+, \newline
+\mbox{\hyperlink{group__agentinfo_gga39d0684207d95717d96319573b3e4a42a95b6b728e12552653a3980f9dde58628}{HSA\+\_\+\+AGENT\+\_\+\+INFO\+\_\+\+VERSION\+\_\+\+MINOR}} = 22
+, \mbox{\hyperlink{group__agentinfo_gga39d0684207d95717d96319573b3e4a42a622861915d7c5879338745943caf1771}{HSA\+\_\+\+AGENT\+\_\+\+INFO\+\_\+\+LAST}} = INT32\+\_\+\+MAX
+ \}
+\begin{DoxyCompactList}\small\item\em Agent attributes. \end{DoxyCompactList}\item 
+enum \mbox{\hyperlink{group__agentinfo_gadaa0623d4a3fb29ba3fa4a6eb2a74c80}{hsa\+\_\+exception\+\_\+policy\+\_\+t}} \{ \mbox{\hyperlink{group__agentinfo_ggadaa0623d4a3fb29ba3fa4a6eb2a74c80abb658932003f9578f13ab0c28830cfd6}{HSA\+\_\+\+EXCEPTION\+\_\+\+POLICY\+\_\+\+BREAK}} = 1
+, \mbox{\hyperlink{group__agentinfo_ggadaa0623d4a3fb29ba3fa4a6eb2a74c80a219b3c9b41ed3abd4f9b20f026b533d5}{HSA\+\_\+\+EXCEPTION\+\_\+\+POLICY\+\_\+\+DETECT}} = 2
+ \}
+\begin{DoxyCompactList}\small\item\em Exception policies applied in the presence of hardware exceptions. \end{DoxyCompactList}\item 
+enum \mbox{\hyperlink{group__agentinfo_ga401184d269316319bca5287b9d5da093}{hsa\+\_\+cache\+\_\+info\+\_\+t}} \{ \mbox{\hyperlink{group__agentinfo_gga401184d269316319bca5287b9d5da093a64ef542b4e6adc6df6713ade5b6ef525}{HSA\+\_\+\+CACHE\+\_\+\+INFO\+\_\+\+NAME\+\_\+\+LENGTH}} = 0
+, \mbox{\hyperlink{group__agentinfo_gga401184d269316319bca5287b9d5da093a629291ff0bdf55534dd0a6f75e77065a}{HSA\+\_\+\+CACHE\+\_\+\+INFO\+\_\+\+NAME}} = 1
+, \mbox{\hyperlink{group__agentinfo_gga401184d269316319bca5287b9d5da093a9b7b7f1166dda8c87f150f9d83617149}{HSA\+\_\+\+CACHE\+\_\+\+INFO\+\_\+\+LEVEL}} = 2
+, \mbox{\hyperlink{group__agentinfo_gga401184d269316319bca5287b9d5da093aaf850f91cbc50114c7730aa15959cc41}{HSA\+\_\+\+CACHE\+\_\+\+INFO\+\_\+\+SIZE}} = 3
+ \}
+\begin{DoxyCompactList}\small\item\em Cache attributes. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{group__status_gad755322e7ff95456520e8abdbe90d225}{hsa\+\_\+status\+\_\+t}} \mbox{\hyperlink{inc_2hsa__ext__image_8h_a64216765b98b62ee87deb50fd2899836}{HSA\+\_\+\+API}} \mbox{\hyperlink{group__agentinfo_gaab2916fb980fbafdcea712ba6a99d46d}{hsa\+\_\+system\+\_\+get\+\_\+info}} (\mbox{\hyperlink{group__agentinfo_ga5358716e320ad8a78b78ef44d8783b0b}{hsa\+\_\+system\+\_\+info\+\_\+t}} attribute, void $\ast$value)
+\begin{DoxyCompactList}\small\item\em Get the current value of a system attribute. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{group__status_gad755322e7ff95456520e8abdbe90d225}{hsa\+\_\+status\+\_\+t}} \mbox{\hyperlink{inc_2hsa__ext__image_8h_a64216765b98b62ee87deb50fd2899836}{HSA\+\_\+\+API}} \mbox{\hyperlink{group__agentinfo_gad5e5337b0d7761113cdde167dae35b74}{hsa\+\_\+extension\+\_\+get\+\_\+name}} (uint16\+\_\+t extension, const char $\ast$$\ast$name)
+\begin{DoxyCompactList}\small\item\em Query the name of a given extension. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{group__status_gad755322e7ff95456520e8abdbe90d225}{hsa\+\_\+status\+\_\+t}} \mbox{\hyperlink{inc_2hsa__ext__image_8h_a64216765b98b62ee87deb50fd2899836}{HSA\+\_\+\+API}} \mbox{\hyperlink{inc_2hsa_8h_a2321f8ca7d706cada4f617b191a478b0}{HSA\+\_\+\+DEPRECATED}} \mbox{\hyperlink{group__agentinfo_ga2f6543316cac6dae789af416e75ecbba}{hsa\+\_\+system\+\_\+extension\+\_\+supported}} (uint16\+\_\+t extension, uint16\+\_\+t version\+\_\+major, uint16\+\_\+t version\+\_\+minor, bool $\ast$result)
+\begin{DoxyCompactList}\small\item\em Query if a given version of an extension is supported by the HSA implementation. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{group__status_gad755322e7ff95456520e8abdbe90d225}{hsa\+\_\+status\+\_\+t}} \mbox{\hyperlink{inc_2hsa__ext__image_8h_a64216765b98b62ee87deb50fd2899836}{HSA\+\_\+\+API}} \mbox{\hyperlink{group__agentinfo_ga93e4a879101b98dd3da76cd36f38a58e}{hsa\+\_\+system\+\_\+major\+\_\+extension\+\_\+supported}} (uint16\+\_\+t extension, uint16\+\_\+t version\+\_\+major, uint16\+\_\+t $\ast$version\+\_\+minor, bool $\ast$result)
+\begin{DoxyCompactList}\small\item\em Query if a given version of an extension is supported by the HSA implementation. All minor versions from 0 up to the returned {\ttfamily version\+\_\+minor} must be supported by the implementation. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{group__status_gad755322e7ff95456520e8abdbe90d225}{hsa\+\_\+status\+\_\+t}} \mbox{\hyperlink{inc_2hsa__ext__image_8h_a64216765b98b62ee87deb50fd2899836}{HSA\+\_\+\+API}} \mbox{\hyperlink{inc_2hsa_8h_a2321f8ca7d706cada4f617b191a478b0}{HSA\+\_\+\+DEPRECATED}} \mbox{\hyperlink{group__agentinfo_gaf5f1a0e5884522f692c13525205978bb}{hsa\+\_\+system\+\_\+get\+\_\+extension\+\_\+table}} (uint16\+\_\+t extension, uint16\+\_\+t version\+\_\+major, uint16\+\_\+t version\+\_\+minor, void $\ast$table)
+\begin{DoxyCompactList}\small\item\em Retrieve the function pointers corresponding to a given version of an extension. Portable applications are expected to invoke the extension API using the returned function pointers. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{group__status_gad755322e7ff95456520e8abdbe90d225}{hsa\+\_\+status\+\_\+t}} \mbox{\hyperlink{inc_2hsa__ext__image_8h_a64216765b98b62ee87deb50fd2899836}{HSA\+\_\+\+API}} \mbox{\hyperlink{group__agentinfo_ga728cb3122cea1f40ad9dbc2822d2e431}{hsa\+\_\+system\+\_\+get\+\_\+major\+\_\+extension\+\_\+table}} (uint16\+\_\+t extension, uint16\+\_\+t version\+\_\+major, size\+\_\+t table\+\_\+length, void $\ast$table)
+\begin{DoxyCompactList}\small\item\em Retrieve the function pointers corresponding to a given major version of an extension. Portable applications are expected to invoke the extension API using the returned function pointers. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{group__status_gad755322e7ff95456520e8abdbe90d225}{hsa\+\_\+status\+\_\+t}} \mbox{\hyperlink{inc_2hsa__ext__image_8h_a64216765b98b62ee87deb50fd2899836}{HSA\+\_\+\+API}} \mbox{\hyperlink{group__agentinfo_gae717192f8854259cb6392d92f2351712}{hsa\+\_\+agent\+\_\+get\+\_\+info}} (\mbox{\hyperlink{group__agentinfo_ga9ce217ef08e7d5e89c8e83ce7b6ef22b}{hsa\+\_\+agent\+\_\+t}} agent, \mbox{\hyperlink{group__agentinfo_ga39d0684207d95717d96319573b3e4a42}{hsa\+\_\+agent\+\_\+info\+\_\+t}} attribute, void $\ast$value)
+\begin{DoxyCompactList}\small\item\em Get the current value of an attribute for a given agent. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{group__status_gad755322e7ff95456520e8abdbe90d225}{hsa\+\_\+status\+\_\+t}} \mbox{\hyperlink{inc_2hsa__ext__image_8h_a64216765b98b62ee87deb50fd2899836}{HSA\+\_\+\+API}} \mbox{\hyperlink{group__agentinfo_ga6acfdfdbf8977d4de38b37b8ade6156a}{hsa\+\_\+iterate\+\_\+agents}} (\mbox{\hyperlink{group__status_gad755322e7ff95456520e8abdbe90d225}{hsa\+\_\+status\+\_\+t}}($\ast$callback)(\mbox{\hyperlink{group__agentinfo_ga9ce217ef08e7d5e89c8e83ce7b6ef22b}{hsa\+\_\+agent\+\_\+t}} agent, void $\ast$data), void $\ast$data)
+\begin{DoxyCompactList}\small\item\em Iterate over the available agents, and invoke an application-\/defined callback on every iteration. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{group__status_gad755322e7ff95456520e8abdbe90d225}{hsa\+\_\+status\+\_\+t}} \mbox{\hyperlink{inc_2hsa__ext__image_8h_a64216765b98b62ee87deb50fd2899836}{HSA\+\_\+\+API}} \mbox{\hyperlink{inc_2hsa_8h_a2321f8ca7d706cada4f617b191a478b0}{HSA\+\_\+\+DEPRECATED}} \mbox{\hyperlink{group__agentinfo_ga83ecf617b44a2efb5e2730374be839f3}{hsa\+\_\+agent\+\_\+get\+\_\+exception\+\_\+policies}} (\mbox{\hyperlink{group__agentinfo_ga9ce217ef08e7d5e89c8e83ce7b6ef22b}{hsa\+\_\+agent\+\_\+t}} agent, \mbox{\hyperlink{group__agentinfo_gacafd4247e2a04cbe0ac0b3998c127532}{hsa\+\_\+profile\+\_\+t}} profile, uint16\+\_\+t $\ast$mask)
+\begin{DoxyCompactList}\small\item\em Retrieve the exception policy support for a given combination of agent and profile. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{group__status_gad755322e7ff95456520e8abdbe90d225}{hsa\+\_\+status\+\_\+t}} \mbox{\hyperlink{inc_2hsa__ext__image_8h_a64216765b98b62ee87deb50fd2899836}{HSA\+\_\+\+API}} \mbox{\hyperlink{group__agentinfo_ga1700444416fe8d5bae8298a47e3de941}{hsa\+\_\+cache\+\_\+get\+\_\+info}} (\mbox{\hyperlink{group__agentinfo_gaf095bbd42403c50be520db2a73e7ee8d}{hsa\+\_\+cache\+\_\+t}} cache, \mbox{\hyperlink{group__agentinfo_ga401184d269316319bca5287b9d5da093}{hsa\+\_\+cache\+\_\+info\+\_\+t}} attribute, void $\ast$value)
+\begin{DoxyCompactList}\small\item\em Get the current value of an attribute for a given cache object. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{group__status_gad755322e7ff95456520e8abdbe90d225}{hsa\+\_\+status\+\_\+t}} \mbox{\hyperlink{inc_2hsa__ext__image_8h_a64216765b98b62ee87deb50fd2899836}{HSA\+\_\+\+API}} \mbox{\hyperlink{group__agentinfo_ga637e44fad99135dcf4e3143109af7c45}{hsa\+\_\+agent\+\_\+iterate\+\_\+caches}} (\mbox{\hyperlink{group__agentinfo_ga9ce217ef08e7d5e89c8e83ce7b6ef22b}{hsa\+\_\+agent\+\_\+t}} agent, \mbox{\hyperlink{group__status_gad755322e7ff95456520e8abdbe90d225}{hsa\+\_\+status\+\_\+t}}($\ast$callback)(\mbox{\hyperlink{group__agentinfo_gaf095bbd42403c50be520db2a73e7ee8d}{hsa\+\_\+cache\+\_\+t}} cache, void $\ast$data), void $\ast$data)
+\begin{DoxyCompactList}\small\item\em Iterate over the memory caches of a given agent, and invoke an application-\/defined callback on every iteration. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{group__status_gad755322e7ff95456520e8abdbe90d225}{hsa\+\_\+status\+\_\+t}} \mbox{\hyperlink{inc_2hsa__ext__image_8h_a64216765b98b62ee87deb50fd2899836}{HSA\+\_\+\+API}} \mbox{\hyperlink{inc_2hsa_8h_a2321f8ca7d706cada4f617b191a478b0}{HSA\+\_\+\+DEPRECATED}} \mbox{\hyperlink{group__agentinfo_gaae016fd154b2a29c8ba6dc95d1a6d63b}{hsa\+\_\+agent\+\_\+extension\+\_\+supported}} (uint16\+\_\+t extension, \mbox{\hyperlink{group__agentinfo_ga9ce217ef08e7d5e89c8e83ce7b6ef22b}{hsa\+\_\+agent\+\_\+t}} agent, uint16\+\_\+t version\+\_\+major, uint16\+\_\+t version\+\_\+minor, bool $\ast$result)
+\begin{DoxyCompactList}\small\item\em Query if a given version of an extension is supported by an agent. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{group__status_gad755322e7ff95456520e8abdbe90d225}{hsa\+\_\+status\+\_\+t}} \mbox{\hyperlink{inc_2hsa__ext__image_8h_a64216765b98b62ee87deb50fd2899836}{HSA\+\_\+\+API}} \mbox{\hyperlink{group__agentinfo_gab92bb1c9e1d393fd407ecff4fa225ba3}{hsa\+\_\+agent\+\_\+major\+\_\+extension\+\_\+supported}} (uint16\+\_\+t extension, \mbox{\hyperlink{group__agentinfo_ga9ce217ef08e7d5e89c8e83ce7b6ef22b}{hsa\+\_\+agent\+\_\+t}} agent, uint16\+\_\+t version\+\_\+major, uint16\+\_\+t $\ast$version\+\_\+minor, bool $\ast$result)
+\begin{DoxyCompactList}\small\item\em Query if a given version of an extension is supported by an agent. All minor versions from 0 up to the returned {\ttfamily version\+\_\+minor} must be supported. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+
+
+\doxysubsection{Typedef Documentation}
+\mbox{\Hypertarget{group__agentinfo_ga9ce217ef08e7d5e89c8e83ce7b6ef22b}\label{group__agentinfo_ga9ce217ef08e7d5e89c8e83ce7b6ef22b}} 
+\index{System and Agent Information@{System and Agent Information}!hsa\_agent\_t@{hsa\_agent\_t}}
+\index{hsa\_agent\_t@{hsa\_agent\_t}!System and Agent Information@{System and Agent Information}}
+\doxysubsubsection{\texorpdfstring{hsa\_agent\_t}{hsa\_agent\_t}}
+{\footnotesize\ttfamily typedef struct \mbox{\hyperlink{structhsa__agent__s}{hsa\+\_\+agent\+\_\+s}} \mbox{\hyperlink{group__agentinfo_ga9ce217ef08e7d5e89c8e83ce7b6ef22b}{hsa\+\_\+agent\+\_\+t}}}
+
+
+
+Struct containing an opaque handle to an agent, a device that participates in the HSA memory model. An agent can submit AQL packets for execution, and may also accept AQL packets for execution (agent dispatch packets or kernel dispatch packets launching HSAIL-\/derived binaries). 
+
+\mbox{\Hypertarget{group__agentinfo_gaf095bbd42403c50be520db2a73e7ee8d}\label{group__agentinfo_gaf095bbd42403c50be520db2a73e7ee8d}} 
+\index{System and Agent Information@{System and Agent Information}!hsa\_cache\_t@{hsa\_cache\_t}}
+\index{hsa\_cache\_t@{hsa\_cache\_t}!System and Agent Information@{System and Agent Information}}
+\doxysubsubsection{\texorpdfstring{hsa\_cache\_t}{hsa\_cache\_t}}
+{\footnotesize\ttfamily typedef struct \mbox{\hyperlink{structhsa__cache__s}{hsa\+\_\+cache\+\_\+s}} \mbox{\hyperlink{group__agentinfo_gaf095bbd42403c50be520db2a73e7ee8d}{hsa\+\_\+cache\+\_\+t}}}
+
+
+
+Cache handle. 
+
+
+
+\doxysubsection{Enumeration Type Documentation}
+\mbox{\Hypertarget{group__agentinfo_gadf226614ab6da93b301f100cfd58e504}\label{group__agentinfo_gadf226614ab6da93b301f100cfd58e504}} 
+\index{System and Agent Information@{System and Agent Information}!hsa\_agent\_feature\_t@{hsa\_agent\_feature\_t}}
+\index{hsa\_agent\_feature\_t@{hsa\_agent\_feature\_t}!System and Agent Information@{System and Agent Information}}
+\doxysubsubsection{\texorpdfstring{hsa\_agent\_feature\_t}{hsa\_agent\_feature\_t}}
+{\footnotesize\ttfamily enum \mbox{\hyperlink{group__agentinfo_gadf226614ab6da93b301f100cfd58e504}{hsa\+\_\+agent\+\_\+feature\+\_\+t}}}
+
+
+
+Agent features. 
+
+\begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{HSA\_AGENT\_FEATURE\_KERNEL\_DISPATCH@{HSA\_AGENT\_FEATURE\_KERNEL\_DISPATCH}!System and Agent Information@{System and Agent Information}}\index{System and Agent Information@{System and Agent Information}!HSA\_AGENT\_FEATURE\_KERNEL\_DISPATCH@{HSA\_AGENT\_FEATURE\_KERNEL\_DISPATCH}}}\mbox{\Hypertarget{group__agentinfo_ggadf226614ab6da93b301f100cfd58e504a3871d5113bb59b14c9274e137b209f04}\label{group__agentinfo_ggadf226614ab6da93b301f100cfd58e504a3871d5113bb59b14c9274e137b209f04}} 
+HSA\+\_\+\+AGENT\+\_\+\+FEATURE\+\_\+\+KERNEL\+\_\+\+DISPATCH&The agent supports AQL packets of kernel dispatch type. If this feature is enabled, the agent is also a kernel agent. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{HSA\_AGENT\_FEATURE\_AGENT\_DISPATCH@{HSA\_AGENT\_FEATURE\_AGENT\_DISPATCH}!System and Agent Information@{System and Agent Information}}\index{System and Agent Information@{System and Agent Information}!HSA\_AGENT\_FEATURE\_AGENT\_DISPATCH@{HSA\_AGENT\_FEATURE\_AGENT\_DISPATCH}}}\mbox{\Hypertarget{group__agentinfo_ggadf226614ab6da93b301f100cfd58e504a12b2ba8c7b09e76817346b74152dbfae}\label{group__agentinfo_ggadf226614ab6da93b301f100cfd58e504a12b2ba8c7b09e76817346b74152dbfae}} 
+HSA\+\_\+\+AGENT\+\_\+\+FEATURE\+\_\+\+AGENT\+\_\+\+DISPATCH&The agent supports AQL packets of agent dispatch type. \\
+\hline
+
+\end{DoxyEnumFields}
+\mbox{\Hypertarget{group__agentinfo_ga39d0684207d95717d96319573b3e4a42}\label{group__agentinfo_ga39d0684207d95717d96319573b3e4a42}} 
+\index{System and Agent Information@{System and Agent Information}!hsa\_agent\_info\_t@{hsa\_agent\_info\_t}}
+\index{hsa\_agent\_info\_t@{hsa\_agent\_info\_t}!System and Agent Information@{System and Agent Information}}
+\doxysubsubsection{\texorpdfstring{hsa\_agent\_info\_t}{hsa\_agent\_info\_t}}
+{\footnotesize\ttfamily enum \mbox{\hyperlink{group__agentinfo_ga39d0684207d95717d96319573b3e4a42}{hsa\+\_\+agent\+\_\+info\+\_\+t}}}
+
+
+
+Agent attributes. 
+
+\begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{HSA\_AGENT\_INFO\_NAME@{HSA\_AGENT\_INFO\_NAME}!System and Agent Information@{System and Agent Information}}\index{System and Agent Information@{System and Agent Information}!HSA\_AGENT\_INFO\_NAME@{HSA\_AGENT\_INFO\_NAME}}}\mbox{\Hypertarget{group__agentinfo_gga39d0684207d95717d96319573b3e4a42a06b3ca6080e3bfd4d5b07db91d766e4c}\label{group__agentinfo_gga39d0684207d95717d96319573b3e4a42a06b3ca6080e3bfd4d5b07db91d766e4c}} 
+HSA\+\_\+\+AGENT\+\_\+\+INFO\+\_\+\+NAME&Agent name. The type of this attribute is a NUL-\/terminated char\mbox{[}64\mbox{]}. The name must be at most 63 characters long (not including the NUL terminator) and all array elements not used for the name must be NUL. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{HSA\_AGENT\_INFO\_VENDOR\_NAME@{HSA\_AGENT\_INFO\_VENDOR\_NAME}!System and Agent Information@{System and Agent Information}}\index{System and Agent Information@{System and Agent Information}!HSA\_AGENT\_INFO\_VENDOR\_NAME@{HSA\_AGENT\_INFO\_VENDOR\_NAME}}}\mbox{\Hypertarget{group__agentinfo_gga39d0684207d95717d96319573b3e4a42ac9e0c3d4f881d6de12ff8792eb92292c}\label{group__agentinfo_gga39d0684207d95717d96319573b3e4a42ac9e0c3d4f881d6de12ff8792eb92292c}} 
+HSA\+\_\+\+AGENT\+\_\+\+INFO\+\_\+\+VENDOR\+\_\+\+NAME&Name of vendor. The type of this attribute is a NUL-\/terminated char\mbox{[}64\mbox{]}. The name must be at most 63 characters long (not including the NUL terminator) and all array elements not used for the name must be NUL. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{HSA\_AGENT\_INFO\_FEATURE@{HSA\_AGENT\_INFO\_FEATURE}!System and Agent Information@{System and Agent Information}}\index{System and Agent Information@{System and Agent Information}!HSA\_AGENT\_INFO\_FEATURE@{HSA\_AGENT\_INFO\_FEATURE}}}\mbox{\Hypertarget{group__agentinfo_gga39d0684207d95717d96319573b3e4a42a4ce35a53f20e53b76c7cc7697f08ea04}\label{group__agentinfo_gga39d0684207d95717d96319573b3e4a42a4ce35a53f20e53b76c7cc7697f08ea04}} 
+HSA\+\_\+\+AGENT\+\_\+\+INFO\+\_\+\+FEATURE&Agent capability. The type of this attribute is \mbox{\hyperlink{group__agentinfo_gadf226614ab6da93b301f100cfd58e504}{hsa\+\_\+agent\+\_\+feature\+\_\+t}}. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{HSA\_AGENT\_INFO\_MACHINE\_MODEL@{HSA\_AGENT\_INFO\_MACHINE\_MODEL}!System and Agent Information@{System and Agent Information}}\index{System and Agent Information@{System and Agent Information}!HSA\_AGENT\_INFO\_MACHINE\_MODEL@{HSA\_AGENT\_INFO\_MACHINE\_MODEL}}}\mbox{\Hypertarget{group__agentinfo_gga39d0684207d95717d96319573b3e4a42a5f62c238148161421e91c90552a39f46}\label{group__agentinfo_gga39d0684207d95717d96319573b3e4a42a5f62c238148161421e91c90552a39f46}} 
+HSA\+\_\+\+AGENT\+\_\+\+INFO\+\_\+\+MACHINE\+\_\+\+MODEL&\begin{DoxyRefDesc}{Deprecated}
+\item[\mbox{\hyperlink{deprecated__deprecated000059}{Deprecated}}]Query \mbox{\hyperlink{group__instruction-set-architecture_ggaa8a09719dffad53bb3908b11ed25c1e4a4c6576d085e48f922da100f01ed6b1ef}{HSA\+\_\+\+ISA\+\_\+\+INFO\+\_\+\+MACHINE\+\_\+\+MODELS}} for a given intruction set architecture supported by the agent instead. If more than one ISA is supported by the agent, the returned value corresponds to the first ISA enumerated by \mbox{\hyperlink{group__instruction-set-architecture_gaa624c390f2cfec064bc1b4d9c9303ed4}{hsa\+\_\+agent\+\_\+iterate\+\_\+isas}}.\end{DoxyRefDesc}
+
+
+Machine model supported by the agent. The type of this attribute is \mbox{\hyperlink{group__agentinfo_ga4d45919fd6f6e8dbb8ae2f4030870e11}{hsa\+\_\+machine\+\_\+model\+\_\+t}}. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{HSA\_AGENT\_INFO\_PROFILE@{HSA\_AGENT\_INFO\_PROFILE}!System and Agent Information@{System and Agent Information}}\index{System and Agent Information@{System and Agent Information}!HSA\_AGENT\_INFO\_PROFILE@{HSA\_AGENT\_INFO\_PROFILE}}}\mbox{\Hypertarget{group__agentinfo_gga39d0684207d95717d96319573b3e4a42acc8a260a87cb3fb811e29b8b13fabc4f}\label{group__agentinfo_gga39d0684207d95717d96319573b3e4a42acc8a260a87cb3fb811e29b8b13fabc4f}} 
+HSA\+\_\+\+AGENT\+\_\+\+INFO\+\_\+\+PROFILE&\begin{DoxyRefDesc}{Deprecated}
+\item[\mbox{\hyperlink{deprecated__deprecated000060}{Deprecated}}]Query \mbox{\hyperlink{group__instruction-set-architecture_ggaa8a09719dffad53bb3908b11ed25c1e4acdb85a23d05ef213bbbe041f5d49d6ec}{HSA\+\_\+\+ISA\+\_\+\+INFO\+\_\+\+PROFILES}} for a given intruction set architecture supported by the agent instead. If more than one ISA is supported by the agent, the returned value corresponds to the first ISA enumerated by \mbox{\hyperlink{group__instruction-set-architecture_gaa624c390f2cfec064bc1b4d9c9303ed4}{hsa\+\_\+agent\+\_\+iterate\+\_\+isas}}.\end{DoxyRefDesc}
+
+
+Profile supported by the agent. The type of this attribute is \mbox{\hyperlink{group__agentinfo_gacafd4247e2a04cbe0ac0b3998c127532}{hsa\+\_\+profile\+\_\+t}}. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{HSA\_AGENT\_INFO\_DEFAULT\_FLOAT\_ROUNDING\_MODE@{HSA\_AGENT\_INFO\_DEFAULT\_FLOAT\_ROUNDING\_MODE}!System and Agent Information@{System and Agent Information}}\index{System and Agent Information@{System and Agent Information}!HSA\_AGENT\_INFO\_DEFAULT\_FLOAT\_ROUNDING\_MODE@{HSA\_AGENT\_INFO\_DEFAULT\_FLOAT\_ROUNDING\_MODE}}}\mbox{\Hypertarget{group__agentinfo_gga39d0684207d95717d96319573b3e4a42aa43711135cff370be22a717d0cae97e5}\label{group__agentinfo_gga39d0684207d95717d96319573b3e4a42aa43711135cff370be22a717d0cae97e5}} 
+HSA\+\_\+\+AGENT\+\_\+\+INFO\+\_\+\+DEFAULT\+\_\+\+FLOAT\+\_\+\+ROUNDING\+\_\+\+MODE&\begin{DoxyRefDesc}{Deprecated}
+\item[\mbox{\hyperlink{deprecated__deprecated000061}{Deprecated}}]Query \mbox{\hyperlink{group__instruction-set-architecture_ggaa8a09719dffad53bb3908b11ed25c1e4a2b3ecf16a9ab3b3ad54737231c65597f}{HSA\+\_\+\+ISA\+\_\+\+INFO\+\_\+\+DEFAULT\+\_\+\+FLOAT\+\_\+\+ROUNDING\+\_\+\+MODES}} for a given intruction set architecture supported by the agent instead. If more than one ISA is supported by the agent, the returned value corresponds to the first ISA enumerated by \mbox{\hyperlink{group__instruction-set-architecture_gaa624c390f2cfec064bc1b4d9c9303ed4}{hsa\+\_\+agent\+\_\+iterate\+\_\+isas}}.\end{DoxyRefDesc}
+
+
+Default floating-\/point rounding mode. The type of this attribute is \mbox{\hyperlink{group__agentinfo_gaac56321e4596fe10a90b5bb3fedc4b73}{hsa\+\_\+default\+\_\+float\+\_\+rounding\+\_\+mode\+\_\+t}}, but the value \mbox{\hyperlink{group__agentinfo_ggaac56321e4596fe10a90b5bb3fedc4b73a51bef81c634ce06d57f57a6622051f96}{HSA\+\_\+\+DEFAULT\+\_\+\+FLOAT\+\_\+\+ROUNDING\+\_\+\+MODE\+\_\+\+DEFAULT}} is not allowed. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{HSA\_AGENT\_INFO\_BASE\_PROFILE\_DEFAULT\_FLOAT\_ROUNDING\_MODES@{HSA\_AGENT\_INFO\_BASE\_PROFILE\_DEFAULT\_FLOAT\_ROUNDING\_MODES}!System and Agent Information@{System and Agent Information}}\index{System and Agent Information@{System and Agent Information}!HSA\_AGENT\_INFO\_BASE\_PROFILE\_DEFAULT\_FLOAT\_ROUNDING\_MODES@{HSA\_AGENT\_INFO\_BASE\_PROFILE\_DEFAULT\_FLOAT\_ROUNDING\_MODES}}}\mbox{\Hypertarget{group__agentinfo_gga39d0684207d95717d96319573b3e4a42a042093edf4aca614608bda8efbcbcf5a}\label{group__agentinfo_gga39d0684207d95717d96319573b3e4a42a042093edf4aca614608bda8efbcbcf5a}} 
+HSA\+\_\+\+AGENT\+\_\+\+INFO\+\_\+\+BASE\+\_\+\+PROFILE\+\_\+\+DEFAULT\+\_\+\+FLOAT\+\_\+\+ROUNDING\+\_\+\+MODES&\begin{DoxyRefDesc}{Deprecated}
+\item[\mbox{\hyperlink{deprecated__deprecated000062}{Deprecated}}]Query \mbox{\hyperlink{group__instruction-set-architecture_ggaa8a09719dffad53bb3908b11ed25c1e4a2c954a4c554d354340518348c65a18a0}{HSA\+\_\+\+ISA\+\_\+\+INFO\+\_\+\+BASE\+\_\+\+PROFILE\+\_\+\+DEFAULT\+\_\+\+FLOAT\+\_\+\+ROUNDING\+\_\+\+MODES}} for a given intruction set architecture supported by the agent instead. If more than one ISA is supported by the agent, the returned value corresponds to the first ISA enumerated by \mbox{\hyperlink{group__instruction-set-architecture_gaa624c390f2cfec064bc1b4d9c9303ed4}{hsa\+\_\+agent\+\_\+iterate\+\_\+isas}}.\end{DoxyRefDesc}
+
+
+A bit-\/mask of \mbox{\hyperlink{group__agentinfo_gaac56321e4596fe10a90b5bb3fedc4b73}{hsa\+\_\+default\+\_\+float\+\_\+rounding\+\_\+mode\+\_\+t}} values, representing the default floating-\/point rounding modes supported by the agent in the Base profile. The type of this attribute is uint32\+\_\+t. The default floating-\/point rounding mode (\mbox{\hyperlink{group__agentinfo_gga39d0684207d95717d96319573b3e4a42aa43711135cff370be22a717d0cae97e5}{HSA\+\_\+\+AGENT\+\_\+\+INFO\+\_\+\+DEFAULT\+\_\+\+FLOAT\+\_\+\+ROUNDING\+\_\+\+MODE}}) bit must not be set. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{HSA\_AGENT\_INFO\_FAST\_F16\_OPERATION@{HSA\_AGENT\_INFO\_FAST\_F16\_OPERATION}!System and Agent Information@{System and Agent Information}}\index{System and Agent Information@{System and Agent Information}!HSA\_AGENT\_INFO\_FAST\_F16\_OPERATION@{HSA\_AGENT\_INFO\_FAST\_F16\_OPERATION}}}\mbox{\Hypertarget{group__agentinfo_gga39d0684207d95717d96319573b3e4a42a24a0540e814290a4058700bab43cc321}\label{group__agentinfo_gga39d0684207d95717d96319573b3e4a42a24a0540e814290a4058700bab43cc321}} 
+HSA\+\_\+\+AGENT\+\_\+\+INFO\+\_\+\+FAST\+\_\+\+F16\+\_\+\+OPERATION&\begin{DoxyRefDesc}{Deprecated}
+\item[\mbox{\hyperlink{deprecated__deprecated000063}{Deprecated}}]Query \mbox{\hyperlink{group__instruction-set-architecture_ggaa8a09719dffad53bb3908b11ed25c1e4a25ea781e5bf0e215df3852f99f509a81}{HSA\+\_\+\+ISA\+\_\+\+INFO\+\_\+\+FAST\+\_\+\+F16\+\_\+\+OPERATION}} for a given intruction set architecture supported by the agent instead. If more than one ISA is supported by the agent, the returned value corresponds to the first ISA enumerated by \mbox{\hyperlink{group__instruction-set-architecture_gaa624c390f2cfec064bc1b4d9c9303ed4}{hsa\+\_\+agent\+\_\+iterate\+\_\+isas}}.\end{DoxyRefDesc}
+
+
+Flag indicating that the f16 HSAIL operation is at least as fast as the f32 operation in the current agent. The value of this attribute is undefined if the agent is not a kernel agent. The type of this attribute is bool. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{HSA\_AGENT\_INFO\_WAVEFRONT\_SIZE@{HSA\_AGENT\_INFO\_WAVEFRONT\_SIZE}!System and Agent Information@{System and Agent Information}}\index{System and Agent Information@{System and Agent Information}!HSA\_AGENT\_INFO\_WAVEFRONT\_SIZE@{HSA\_AGENT\_INFO\_WAVEFRONT\_SIZE}}}\mbox{\Hypertarget{group__agentinfo_gga39d0684207d95717d96319573b3e4a42a2474a5a57ecbf494156769f408ded8fd}\label{group__agentinfo_gga39d0684207d95717d96319573b3e4a42a2474a5a57ecbf494156769f408ded8fd}} 
+HSA\+\_\+\+AGENT\+\_\+\+INFO\+\_\+\+WAVEFRONT\+\_\+\+SIZE&\begin{DoxyRefDesc}{Deprecated}
+\item[\mbox{\hyperlink{deprecated__deprecated000064}{Deprecated}}]Query \mbox{\hyperlink{group__instruction-set-architecture_gga18048e15c5756d68df8b66ddfd0b1754a8e1b3070a581459b9b1417dcaa8b0641}{HSA\+\_\+\+WAVEFRONT\+\_\+\+INFO\+\_\+\+SIZE}} for a given wavefront and intruction set architecture supported by the agent instead. If more than one ISA is supported by the agent, the returned value corresponds to the first ISA enumerated by \mbox{\hyperlink{group__instruction-set-architecture_gaa624c390f2cfec064bc1b4d9c9303ed4}{hsa\+\_\+agent\+\_\+iterate\+\_\+isas}} and the first wavefront enumerated by \mbox{\hyperlink{group__instruction-set-architecture_gab06dc0d43c91a75a9e14bf52d9be1079}{hsa\+\_\+isa\+\_\+iterate\+\_\+wavefronts}} for that ISA.\end{DoxyRefDesc}
+
+
+Number of work-\/items in a wavefront. Must be a power of 2 in the range \mbox{[}1,256\mbox{]}. The value of this attribute is undefined if the agent is not a kernel agent. The type of this attribute is uint32\+\_\+t. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{HSA\_AGENT\_INFO\_WORKGROUP\_MAX\_DIM@{HSA\_AGENT\_INFO\_WORKGROUP\_MAX\_DIM}!System and Agent Information@{System and Agent Information}}\index{System and Agent Information@{System and Agent Information}!HSA\_AGENT\_INFO\_WORKGROUP\_MAX\_DIM@{HSA\_AGENT\_INFO\_WORKGROUP\_MAX\_DIM}}}\mbox{\Hypertarget{group__agentinfo_gga39d0684207d95717d96319573b3e4a42a595eea133327c6c6110c02a0661a06d6}\label{group__agentinfo_gga39d0684207d95717d96319573b3e4a42a595eea133327c6c6110c02a0661a06d6}} 
+HSA\+\_\+\+AGENT\+\_\+\+INFO\+\_\+\+WORKGROUP\+\_\+\+MAX\+\_\+\+DIM&\begin{DoxyRefDesc}{Deprecated}
+\item[\mbox{\hyperlink{deprecated__deprecated000065}{Deprecated}}]Query \mbox{\hyperlink{group__instruction-set-architecture_ggaa8a09719dffad53bb3908b11ed25c1e4a9e506d282bf8670bd7b190145c6e57af}{HSA\+\_\+\+ISA\+\_\+\+INFO\+\_\+\+WORKGROUP\+\_\+\+MAX\+\_\+\+DIM}} for a given intruction set architecture supported by the agent instead. If more than one ISA is supported by the agent, the returned value corresponds to the first ISA enumerated by \mbox{\hyperlink{group__instruction-set-architecture_gaa624c390f2cfec064bc1b4d9c9303ed4}{hsa\+\_\+agent\+\_\+iterate\+\_\+isas}}.\end{DoxyRefDesc}
+
+
+Maximum number of work-\/items of each dimension of a work-\/group. Each maximum must be greater than 0. No maximum can exceed the value of \mbox{\hyperlink{group__agentinfo_gga39d0684207d95717d96319573b3e4a42ade0ccd571bdc023d644d2337621e91f6}{HSA\+\_\+\+AGENT\+\_\+\+INFO\+\_\+\+WORKGROUP\+\_\+\+MAX\+\_\+\+SIZE}}. The value of this attribute is undefined if the agent is not a kernel agent. The type of this attribute is uint16\+\_\+t\mbox{[}3\mbox{]}. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{HSA\_AGENT\_INFO\_WORKGROUP\_MAX\_SIZE@{HSA\_AGENT\_INFO\_WORKGROUP\_MAX\_SIZE}!System and Agent Information@{System and Agent Information}}\index{System and Agent Information@{System and Agent Information}!HSA\_AGENT\_INFO\_WORKGROUP\_MAX\_SIZE@{HSA\_AGENT\_INFO\_WORKGROUP\_MAX\_SIZE}}}\mbox{\Hypertarget{group__agentinfo_gga39d0684207d95717d96319573b3e4a42ade0ccd571bdc023d644d2337621e91f6}\label{group__agentinfo_gga39d0684207d95717d96319573b3e4a42ade0ccd571bdc023d644d2337621e91f6}} 
+HSA\+\_\+\+AGENT\+\_\+\+INFO\+\_\+\+WORKGROUP\+\_\+\+MAX\+\_\+\+SIZE&\begin{DoxyRefDesc}{Deprecated}
+\item[\mbox{\hyperlink{deprecated__deprecated000066}{Deprecated}}]Query \mbox{\hyperlink{group__instruction-set-architecture_ggaa8a09719dffad53bb3908b11ed25c1e4a6d67d9695339fe28ac98122d93c33538}{HSA\+\_\+\+ISA\+\_\+\+INFO\+\_\+\+WORKGROUP\+\_\+\+MAX\+\_\+\+SIZE}} for a given intruction set architecture supported by the agent instead. If more than one ISA is supported by the agent, the returned value corresponds to the first ISA enumerated by \mbox{\hyperlink{group__instruction-set-architecture_gaa624c390f2cfec064bc1b4d9c9303ed4}{hsa\+\_\+agent\+\_\+iterate\+\_\+isas}}.\end{DoxyRefDesc}
+
+
+Maximum total number of work-\/items in a work-\/group. The value of this attribute is undefined if the agent is not a kernel agent. The type of this attribute is uint32\+\_\+t. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{HSA\_AGENT\_INFO\_GRID\_MAX\_DIM@{HSA\_AGENT\_INFO\_GRID\_MAX\_DIM}!System and Agent Information@{System and Agent Information}}\index{System and Agent Information@{System and Agent Information}!HSA\_AGENT\_INFO\_GRID\_MAX\_DIM@{HSA\_AGENT\_INFO\_GRID\_MAX\_DIM}}}\mbox{\Hypertarget{group__agentinfo_gga39d0684207d95717d96319573b3e4a42a512597f1fd2c2e6baee29f364ccd924f}\label{group__agentinfo_gga39d0684207d95717d96319573b3e4a42a512597f1fd2c2e6baee29f364ccd924f}} 
+HSA\+\_\+\+AGENT\+\_\+\+INFO\+\_\+\+GRID\+\_\+\+MAX\+\_\+\+DIM&\begin{DoxyRefDesc}{Deprecated}
+\item[\mbox{\hyperlink{deprecated__deprecated000067}{Deprecated}}]Query \mbox{\hyperlink{group__instruction-set-architecture_ggaa8a09719dffad53bb3908b11ed25c1e4a74d19d354befd5137d1fa9b76fb65701}{HSA\+\_\+\+ISA\+\_\+\+INFO\+\_\+\+GRID\+\_\+\+MAX\+\_\+\+DIM}} for a given intruction set architecture supported by the agent instead.\end{DoxyRefDesc}
+
+
+Maximum number of work-\/items of each dimension of a grid. Each maximum must be greater than 0, and must not be smaller than the corresponding value in \mbox{\hyperlink{group__agentinfo_gga39d0684207d95717d96319573b3e4a42a595eea133327c6c6110c02a0661a06d6}{HSA\+\_\+\+AGENT\+\_\+\+INFO\+\_\+\+WORKGROUP\+\_\+\+MAX\+\_\+\+DIM}}. No maximum can exceed the value of \mbox{\hyperlink{group__agentinfo_gga39d0684207d95717d96319573b3e4a42a16cd0e9d2e75ee3db1c22738b2cad8f6}{HSA\+\_\+\+AGENT\+\_\+\+INFO\+\_\+\+GRID\+\_\+\+MAX\+\_\+\+SIZE}}. The value of this attribute is undefined if the agent is not a kernel agent. The type of this attribute is \mbox{\hyperlink{group__common_gae460d1df8c508a9c889d4550ea4eea30}{hsa\+\_\+dim3\+\_\+t}}. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{HSA\_AGENT\_INFO\_GRID\_MAX\_SIZE@{HSA\_AGENT\_INFO\_GRID\_MAX\_SIZE}!System and Agent Information@{System and Agent Information}}\index{System and Agent Information@{System and Agent Information}!HSA\_AGENT\_INFO\_GRID\_MAX\_SIZE@{HSA\_AGENT\_INFO\_GRID\_MAX\_SIZE}}}\mbox{\Hypertarget{group__agentinfo_gga39d0684207d95717d96319573b3e4a42a16cd0e9d2e75ee3db1c22738b2cad8f6}\label{group__agentinfo_gga39d0684207d95717d96319573b3e4a42a16cd0e9d2e75ee3db1c22738b2cad8f6}} 
+HSA\+\_\+\+AGENT\+\_\+\+INFO\+\_\+\+GRID\+\_\+\+MAX\+\_\+\+SIZE&\begin{DoxyRefDesc}{Deprecated}
+\item[\mbox{\hyperlink{deprecated__deprecated000068}{Deprecated}}]Query \mbox{\hyperlink{group__instruction-set-architecture_ggaa8a09719dffad53bb3908b11ed25c1e4a10539ad11e71308ad3e2e47237233cb6}{HSA\+\_\+\+ISA\+\_\+\+INFO\+\_\+\+GRID\+\_\+\+MAX\+\_\+\+SIZE}} for a given intruction set architecture supported by the agent instead. If more than one ISA is supported by the agent, the returned value corresponds to the first ISA enumerated by \mbox{\hyperlink{group__instruction-set-architecture_gaa624c390f2cfec064bc1b4d9c9303ed4}{hsa\+\_\+agent\+\_\+iterate\+\_\+isas}}.\end{DoxyRefDesc}
+
+
+Maximum total number of work-\/items in a grid. The value of this attribute is undefined if the agent is not a kernel agent. The type of this attribute is uint32\+\_\+t. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{HSA\_AGENT\_INFO\_FBARRIER\_MAX\_SIZE@{HSA\_AGENT\_INFO\_FBARRIER\_MAX\_SIZE}!System and Agent Information@{System and Agent Information}}\index{System and Agent Information@{System and Agent Information}!HSA\_AGENT\_INFO\_FBARRIER\_MAX\_SIZE@{HSA\_AGENT\_INFO\_FBARRIER\_MAX\_SIZE}}}\mbox{\Hypertarget{group__agentinfo_gga39d0684207d95717d96319573b3e4a42a81f9780e49dd38b4f836289fd3647bad}\label{group__agentinfo_gga39d0684207d95717d96319573b3e4a42a81f9780e49dd38b4f836289fd3647bad}} 
+HSA\+\_\+\+AGENT\+\_\+\+INFO\+\_\+\+FBARRIER\+\_\+\+MAX\+\_\+\+SIZE&\begin{DoxyRefDesc}{Deprecated}
+\item[\mbox{\hyperlink{deprecated__deprecated000069}{Deprecated}}]Query \mbox{\hyperlink{group__instruction-set-architecture_ggaa8a09719dffad53bb3908b11ed25c1e4aa0679ff582693a037b5523330ed25e3f}{HSA\+\_\+\+ISA\+\_\+\+INFO\+\_\+\+FBARRIER\+\_\+\+MAX\+\_\+\+SIZE}} for a given intruction set architecture supported by the agent instead. If more than one ISA is supported by the agent, the returned value corresponds to the first ISA enumerated by \mbox{\hyperlink{group__instruction-set-architecture_gaa624c390f2cfec064bc1b4d9c9303ed4}{hsa\+\_\+agent\+\_\+iterate\+\_\+isas}}.\end{DoxyRefDesc}
+
+
+Maximum number of fbarriers per work-\/group. Must be at least 32. The value of this attribute is undefined if the agent is not a kernel agent. The type of this attribute is uint32\+\_\+t. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{HSA\_AGENT\_INFO\_QUEUES\_MAX@{HSA\_AGENT\_INFO\_QUEUES\_MAX}!System and Agent Information@{System and Agent Information}}\index{System and Agent Information@{System and Agent Information}!HSA\_AGENT\_INFO\_QUEUES\_MAX@{HSA\_AGENT\_INFO\_QUEUES\_MAX}}}\mbox{\Hypertarget{group__agentinfo_gga39d0684207d95717d96319573b3e4a42a06ac2144155abb87646396b0ac2c61f4}\label{group__agentinfo_gga39d0684207d95717d96319573b3e4a42a06ac2144155abb87646396b0ac2c61f4}} 
+HSA\+\_\+\+AGENT\+\_\+\+INFO\+\_\+\+QUEUES\+\_\+\+MAX&\begin{DoxyRefDesc}{Deprecated}
+\item[\mbox{\hyperlink{deprecated__deprecated000070}{Deprecated}}]The maximum number of queues is not statically determined.\end{DoxyRefDesc}
+
+
+Maximum number of queues that can be active (created but not destroyed) at one time in the agent. The type of this attribute is uint32\+\_\+t. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{HSA\_AGENT\_INFO\_QUEUE\_MIN\_SIZE@{HSA\_AGENT\_INFO\_QUEUE\_MIN\_SIZE}!System and Agent Information@{System and Agent Information}}\index{System and Agent Information@{System and Agent Information}!HSA\_AGENT\_INFO\_QUEUE\_MIN\_SIZE@{HSA\_AGENT\_INFO\_QUEUE\_MIN\_SIZE}}}\mbox{\Hypertarget{group__agentinfo_gga39d0684207d95717d96319573b3e4a42ad5e6be0580d2865dced7a87a2fe14147}\label{group__agentinfo_gga39d0684207d95717d96319573b3e4a42ad5e6be0580d2865dced7a87a2fe14147}} 
+HSA\+\_\+\+AGENT\+\_\+\+INFO\+\_\+\+QUEUE\+\_\+\+MIN\+\_\+\+SIZE&Minimum number of packets that a queue created in the agent can hold. Must be a power of 2 greater than 0. Must not exceed the value of \mbox{\hyperlink{group__agentinfo_gga39d0684207d95717d96319573b3e4a42acc88a2cb095e69df180ebee7aeb68c81}{HSA\+\_\+\+AGENT\+\_\+\+INFO\+\_\+\+QUEUE\+\_\+\+MAX\+\_\+\+SIZE}}. The type of this attribute is uint32\+\_\+t. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{HSA\_AGENT\_INFO\_QUEUE\_MAX\_SIZE@{HSA\_AGENT\_INFO\_QUEUE\_MAX\_SIZE}!System and Agent Information@{System and Agent Information}}\index{System and Agent Information@{System and Agent Information}!HSA\_AGENT\_INFO\_QUEUE\_MAX\_SIZE@{HSA\_AGENT\_INFO\_QUEUE\_MAX\_SIZE}}}\mbox{\Hypertarget{group__agentinfo_gga39d0684207d95717d96319573b3e4a42acc88a2cb095e69df180ebee7aeb68c81}\label{group__agentinfo_gga39d0684207d95717d96319573b3e4a42acc88a2cb095e69df180ebee7aeb68c81}} 
+HSA\+\_\+\+AGENT\+\_\+\+INFO\+\_\+\+QUEUE\+\_\+\+MAX\+\_\+\+SIZE&Maximum number of packets that a queue created in the agent can hold. Must be a power of 2 greater than 0. The type of this attribute is uint32\+\_\+t. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{HSA\_AGENT\_INFO\_QUEUE\_TYPE@{HSA\_AGENT\_INFO\_QUEUE\_TYPE}!System and Agent Information@{System and Agent Information}}\index{System and Agent Information@{System and Agent Information}!HSA\_AGENT\_INFO\_QUEUE\_TYPE@{HSA\_AGENT\_INFO\_QUEUE\_TYPE}}}\mbox{\Hypertarget{group__agentinfo_gga39d0684207d95717d96319573b3e4a42a46149fa502a210835171e0b66e16f988}\label{group__agentinfo_gga39d0684207d95717d96319573b3e4a42a46149fa502a210835171e0b66e16f988}} 
+HSA\+\_\+\+AGENT\+\_\+\+INFO\+\_\+\+QUEUE\+\_\+\+TYPE&Type of a queue created in the agent. The type of this attribute is \mbox{\hyperlink{group__queue_ga4ca8f732dfceaf6b88dcfeec168d82ae}{hsa\+\_\+queue\+\_\+type32\+\_\+t}}. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{HSA\_AGENT\_INFO\_NODE@{HSA\_AGENT\_INFO\_NODE}!System and Agent Information@{System and Agent Information}}\index{System and Agent Information@{System and Agent Information}!HSA\_AGENT\_INFO\_NODE@{HSA\_AGENT\_INFO\_NODE}}}\mbox{\Hypertarget{group__agentinfo_gga39d0684207d95717d96319573b3e4a42a7e08d2bf6acfce669da4e810d3f7f28a}\label{group__agentinfo_gga39d0684207d95717d96319573b3e4a42a7e08d2bf6acfce669da4e810d3f7f28a}} 
+HSA\+\_\+\+AGENT\+\_\+\+INFO\+\_\+\+NODE&\begin{DoxyRefDesc}{Deprecated}
+\item[\mbox{\hyperlink{deprecated__deprecated000071}{Deprecated}}]NUMA information is not exposed anywhere else in the API.\end{DoxyRefDesc}
+
+
+Identifier of the NUMA node associated with the agent. The type of this attribute is uint32\+\_\+t. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{HSA\_AGENT\_INFO\_DEVICE@{HSA\_AGENT\_INFO\_DEVICE}!System and Agent Information@{System and Agent Information}}\index{System and Agent Information@{System and Agent Information}!HSA\_AGENT\_INFO\_DEVICE@{HSA\_AGENT\_INFO\_DEVICE}}}\mbox{\Hypertarget{group__agentinfo_gga39d0684207d95717d96319573b3e4a42a04660b9d69768cad7a7474310436ce88}\label{group__agentinfo_gga39d0684207d95717d96319573b3e4a42a04660b9d69768cad7a7474310436ce88}} 
+HSA\+\_\+\+AGENT\+\_\+\+INFO\+\_\+\+DEVICE&Type of hardware device associated with the agent. The type of this attribute is \mbox{\hyperlink{group__agentinfo_ga5e6c855643435ea1c2c7dc3fa2a123f0}{hsa\+\_\+device\+\_\+type\+\_\+t}}. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{HSA\_AGENT\_INFO\_CACHE\_SIZE@{HSA\_AGENT\_INFO\_CACHE\_SIZE}!System and Agent Information@{System and Agent Information}}\index{System and Agent Information@{System and Agent Information}!HSA\_AGENT\_INFO\_CACHE\_SIZE@{HSA\_AGENT\_INFO\_CACHE\_SIZE}}}\mbox{\Hypertarget{group__agentinfo_gga39d0684207d95717d96319573b3e4a42ae7fe21528c215249472e5836631759f4}\label{group__agentinfo_gga39d0684207d95717d96319573b3e4a42ae7fe21528c215249472e5836631759f4}} 
+HSA\+\_\+\+AGENT\+\_\+\+INFO\+\_\+\+CACHE\+\_\+\+SIZE&\begin{DoxyRefDesc}{Deprecated}
+\item[\mbox{\hyperlink{deprecated__deprecated000072}{Deprecated}}]Query \mbox{\hyperlink{group__agentinfo_ga637e44fad99135dcf4e3143109af7c45}{hsa\+\_\+agent\+\_\+iterate\+\_\+caches}} to retrieve information about the caches present in a given agent.\end{DoxyRefDesc}
+
+
+Array of data cache sizes (L1..L4). Each size is expressed in bytes. A size of 0 for a particular level indicates that there is no cache information for that level. The type of this attribute is uint32\+\_\+t\mbox{[}4\mbox{]}. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{HSA\_AGENT\_INFO\_ISA@{HSA\_AGENT\_INFO\_ISA}!System and Agent Information@{System and Agent Information}}\index{System and Agent Information@{System and Agent Information}!HSA\_AGENT\_INFO\_ISA@{HSA\_AGENT\_INFO\_ISA}}}\mbox{\Hypertarget{group__agentinfo_gga39d0684207d95717d96319573b3e4a42a10ffd1f47f50e9b76d1b411c24ad9267}\label{group__agentinfo_gga39d0684207d95717d96319573b3e4a42a10ffd1f47f50e9b76d1b411c24ad9267}} 
+HSA\+\_\+\+AGENT\+\_\+\+INFO\+\_\+\+ISA&\begin{DoxyRefDesc}{Deprecated}
+\item[\mbox{\hyperlink{deprecated__deprecated000073}{Deprecated}}]An agent may support multiple instruction set architectures. See \mbox{\hyperlink{group__instruction-set-architecture_gaa624c390f2cfec064bc1b4d9c9303ed4}{hsa\+\_\+agent\+\_\+iterate\+\_\+isas}}. If more than one ISA is supported by the agent, the returned value corresponds to the first ISA enumerated by \mbox{\hyperlink{group__instruction-set-architecture_gaa624c390f2cfec064bc1b4d9c9303ed4}{hsa\+\_\+agent\+\_\+iterate\+\_\+isas}}.\end{DoxyRefDesc}
+
+
+Instruction set architecture of the agent. The type of this attribute is \mbox{\hyperlink{group__instruction-set-architecture_ga459b132d062bba98dd1870f38b6ab721}{hsa\+\_\+isa\+\_\+t}}. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{HSA\_AGENT\_INFO\_EXTENSIONS@{HSA\_AGENT\_INFO\_EXTENSIONS}!System and Agent Information@{System and Agent Information}}\index{System and Agent Information@{System and Agent Information}!HSA\_AGENT\_INFO\_EXTENSIONS@{HSA\_AGENT\_INFO\_EXTENSIONS}}}\mbox{\Hypertarget{group__agentinfo_gga39d0684207d95717d96319573b3e4a42a2a3da3ec47bc8b70ff26c2ea8fc7696a}\label{group__agentinfo_gga39d0684207d95717d96319573b3e4a42a2a3da3ec47bc8b70ff26c2ea8fc7696a}} 
+HSA\+\_\+\+AGENT\+\_\+\+INFO\+\_\+\+EXTENSIONS&Bit-\/mask indicating which extensions are supported by the agent. An extension with an ID of {\ttfamily i} is supported if the bit at position {\ttfamily i} is set. The type of this attribute is uint8\+\_\+t\mbox{[}128\mbox{]}. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{HSA\_AGENT\_INFO\_VERSION\_MAJOR@{HSA\_AGENT\_INFO\_VERSION\_MAJOR}!System and Agent Information@{System and Agent Information}}\index{System and Agent Information@{System and Agent Information}!HSA\_AGENT\_INFO\_VERSION\_MAJOR@{HSA\_AGENT\_INFO\_VERSION\_MAJOR}}}\mbox{\Hypertarget{group__agentinfo_gga39d0684207d95717d96319573b3e4a42a0487bf8cd59f97278c662fec66e09091}\label{group__agentinfo_gga39d0684207d95717d96319573b3e4a42a0487bf8cd59f97278c662fec66e09091}} 
+HSA\+\_\+\+AGENT\+\_\+\+INFO\+\_\+\+VERSION\+\_\+\+MAJOR&Major version of the HSA runtime specification supported by the agent. The type of this attribute is uint16\+\_\+t. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{HSA\_AGENT\_INFO\_VERSION\_MINOR@{HSA\_AGENT\_INFO\_VERSION\_MINOR}!System and Agent Information@{System and Agent Information}}\index{System and Agent Information@{System and Agent Information}!HSA\_AGENT\_INFO\_VERSION\_MINOR@{HSA\_AGENT\_INFO\_VERSION\_MINOR}}}\mbox{\Hypertarget{group__agentinfo_gga39d0684207d95717d96319573b3e4a42a95b6b728e12552653a3980f9dde58628}\label{group__agentinfo_gga39d0684207d95717d96319573b3e4a42a95b6b728e12552653a3980f9dde58628}} 
+HSA\+\_\+\+AGENT\+\_\+\+INFO\+\_\+\+VERSION\+\_\+\+MINOR&Minor version of the HSA runtime specification supported by the agent. The type of this attribute is uint16\+\_\+t. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{HSA\_AGENT\_INFO\_LAST@{HSA\_AGENT\_INFO\_LAST}!System and Agent Information@{System and Agent Information}}\index{System and Agent Information@{System and Agent Information}!HSA\_AGENT\_INFO\_LAST@{HSA\_AGENT\_INFO\_LAST}}}\mbox{\Hypertarget{group__agentinfo_gga39d0684207d95717d96319573b3e4a42a622861915d7c5879338745943caf1771}\label{group__agentinfo_gga39d0684207d95717d96319573b3e4a42a622861915d7c5879338745943caf1771}} 
+HSA\+\_\+\+AGENT\+\_\+\+INFO\+\_\+\+LAST&This enum does not have a fixed underlying type, thus in C++ post D2338\+: If the enumeration type does not have a fixed underlying type, the value is unchanged if the original value is within the range of the enumeration values (9.\+7.\+1 \mbox{[}dcl.\+enum\mbox{]}), and otherwise, the behavior is undefined. Thus increase the range of this enum to encompass vendor extensions. \\
+\hline
+
+\end{DoxyEnumFields}
+\mbox{\Hypertarget{group__agentinfo_ga401184d269316319bca5287b9d5da093}\label{group__agentinfo_ga401184d269316319bca5287b9d5da093}} 
+\index{System and Agent Information@{System and Agent Information}!hsa\_cache\_info\_t@{hsa\_cache\_info\_t}}
+\index{hsa\_cache\_info\_t@{hsa\_cache\_info\_t}!System and Agent Information@{System and Agent Information}}
+\doxysubsubsection{\texorpdfstring{hsa\_cache\_info\_t}{hsa\_cache\_info\_t}}
+{\footnotesize\ttfamily enum \mbox{\hyperlink{group__agentinfo_ga401184d269316319bca5287b9d5da093}{hsa\+\_\+cache\+\_\+info\+\_\+t}}}
+
+
+
+Cache attributes. 
+
+\begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{HSA\_CACHE\_INFO\_NAME\_LENGTH@{HSA\_CACHE\_INFO\_NAME\_LENGTH}!System and Agent Information@{System and Agent Information}}\index{System and Agent Information@{System and Agent Information}!HSA\_CACHE\_INFO\_NAME\_LENGTH@{HSA\_CACHE\_INFO\_NAME\_LENGTH}}}\mbox{\Hypertarget{group__agentinfo_gga401184d269316319bca5287b9d5da093a64ef542b4e6adc6df6713ade5b6ef525}\label{group__agentinfo_gga401184d269316319bca5287b9d5da093a64ef542b4e6adc6df6713ade5b6ef525}} 
+HSA\+\_\+\+CACHE\+\_\+\+INFO\+\_\+\+NAME\+\_\+\+LENGTH&The length of the cache name in bytes, not including the NUL terminator. The type of this attribute is uint32\+\_\+t. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{HSA\_CACHE\_INFO\_NAME@{HSA\_CACHE\_INFO\_NAME}!System and Agent Information@{System and Agent Information}}\index{System and Agent Information@{System and Agent Information}!HSA\_CACHE\_INFO\_NAME@{HSA\_CACHE\_INFO\_NAME}}}\mbox{\Hypertarget{group__agentinfo_gga401184d269316319bca5287b9d5da093a629291ff0bdf55534dd0a6f75e77065a}\label{group__agentinfo_gga401184d269316319bca5287b9d5da093a629291ff0bdf55534dd0a6f75e77065a}} 
+HSA\+\_\+\+CACHE\+\_\+\+INFO\+\_\+\+NAME&Human-\/readable description. The type of this attribute is a NUL-\/terminated character array with the length equal to the value of \mbox{\hyperlink{group__agentinfo_gga401184d269316319bca5287b9d5da093a64ef542b4e6adc6df6713ade5b6ef525}{HSA\+\_\+\+CACHE\+\_\+\+INFO\+\_\+\+NAME\+\_\+\+LENGTH}} attribute. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{HSA\_CACHE\_INFO\_LEVEL@{HSA\_CACHE\_INFO\_LEVEL}!System and Agent Information@{System and Agent Information}}\index{System and Agent Information@{System and Agent Information}!HSA\_CACHE\_INFO\_LEVEL@{HSA\_CACHE\_INFO\_LEVEL}}}\mbox{\Hypertarget{group__agentinfo_gga401184d269316319bca5287b9d5da093a9b7b7f1166dda8c87f150f9d83617149}\label{group__agentinfo_gga401184d269316319bca5287b9d5da093a9b7b7f1166dda8c87f150f9d83617149}} 
+HSA\+\_\+\+CACHE\+\_\+\+INFO\+\_\+\+LEVEL&Cache level. A L1 cache must return a value of 1, a L2 must return a value of 2, and so on. The type of this attribute is uint8\+\_\+t. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{HSA\_CACHE\_INFO\_SIZE@{HSA\_CACHE\_INFO\_SIZE}!System and Agent Information@{System and Agent Information}}\index{System and Agent Information@{System and Agent Information}!HSA\_CACHE\_INFO\_SIZE@{HSA\_CACHE\_INFO\_SIZE}}}\mbox{\Hypertarget{group__agentinfo_gga401184d269316319bca5287b9d5da093aaf850f91cbc50114c7730aa15959cc41}\label{group__agentinfo_gga401184d269316319bca5287b9d5da093aaf850f91cbc50114c7730aa15959cc41}} 
+HSA\+\_\+\+CACHE\+\_\+\+INFO\+\_\+\+SIZE&Cache size, in bytes. A value of 0 indicates that there is no size information available. The type of this attribute is uint32\+\_\+t. \\
+\hline
+
+\end{DoxyEnumFields}
+\mbox{\Hypertarget{group__agentinfo_gaac56321e4596fe10a90b5bb3fedc4b73}\label{group__agentinfo_gaac56321e4596fe10a90b5bb3fedc4b73}} 
+\index{System and Agent Information@{System and Agent Information}!hsa\_default\_float\_rounding\_mode\_t@{hsa\_default\_float\_rounding\_mode\_t}}
+\index{hsa\_default\_float\_rounding\_mode\_t@{hsa\_default\_float\_rounding\_mode\_t}!System and Agent Information@{System and Agent Information}}
+\doxysubsubsection{\texorpdfstring{hsa\_default\_float\_rounding\_mode\_t}{hsa\_default\_float\_rounding\_mode\_t}}
+{\footnotesize\ttfamily enum \mbox{\hyperlink{group__agentinfo_gaac56321e4596fe10a90b5bb3fedc4b73}{hsa\+\_\+default\+\_\+float\+\_\+rounding\+\_\+mode\+\_\+t}}}
+
+
+
+Default floating-\/point rounding mode. 
+
+\begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{HSA\_DEFAULT\_FLOAT\_ROUNDING\_MODE\_DEFAULT@{HSA\_DEFAULT\_FLOAT\_ROUNDING\_MODE\_DEFAULT}!System and Agent Information@{System and Agent Information}}\index{System and Agent Information@{System and Agent Information}!HSA\_DEFAULT\_FLOAT\_ROUNDING\_MODE\_DEFAULT@{HSA\_DEFAULT\_FLOAT\_ROUNDING\_MODE\_DEFAULT}}}\mbox{\Hypertarget{group__agentinfo_ggaac56321e4596fe10a90b5bb3fedc4b73a51bef81c634ce06d57f57a6622051f96}\label{group__agentinfo_ggaac56321e4596fe10a90b5bb3fedc4b73a51bef81c634ce06d57f57a6622051f96}} 
+HSA\+\_\+\+DEFAULT\+\_\+\+FLOAT\+\_\+\+ROUNDING\+\_\+\+MODE\+\_\+\+DEFAULT&Use a default floating-\/point rounding mode specified elsewhere. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{HSA\_DEFAULT\_FLOAT\_ROUNDING\_MODE\_ZERO@{HSA\_DEFAULT\_FLOAT\_ROUNDING\_MODE\_ZERO}!System and Agent Information@{System and Agent Information}}\index{System and Agent Information@{System and Agent Information}!HSA\_DEFAULT\_FLOAT\_ROUNDING\_MODE\_ZERO@{HSA\_DEFAULT\_FLOAT\_ROUNDING\_MODE\_ZERO}}}\mbox{\Hypertarget{group__agentinfo_ggaac56321e4596fe10a90b5bb3fedc4b73a728ca37667c6479e2e397cfcf3795a02}\label{group__agentinfo_ggaac56321e4596fe10a90b5bb3fedc4b73a728ca37667c6479e2e397cfcf3795a02}} 
+HSA\+\_\+\+DEFAULT\+\_\+\+FLOAT\+\_\+\+ROUNDING\+\_\+\+MODE\+\_\+\+ZERO&Operations that specify the default floating-\/point mode are rounded to zero by default. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{HSA\_DEFAULT\_FLOAT\_ROUNDING\_MODE\_NEAR@{HSA\_DEFAULT\_FLOAT\_ROUNDING\_MODE\_NEAR}!System and Agent Information@{System and Agent Information}}\index{System and Agent Information@{System and Agent Information}!HSA\_DEFAULT\_FLOAT\_ROUNDING\_MODE\_NEAR@{HSA\_DEFAULT\_FLOAT\_ROUNDING\_MODE\_NEAR}}}\mbox{\Hypertarget{group__agentinfo_ggaac56321e4596fe10a90b5bb3fedc4b73a4bc4d1ee70e140a1820755762bf4186c}\label{group__agentinfo_ggaac56321e4596fe10a90b5bb3fedc4b73a4bc4d1ee70e140a1820755762bf4186c}} 
+HSA\+\_\+\+DEFAULT\+\_\+\+FLOAT\+\_\+\+ROUNDING\+\_\+\+MODE\+\_\+\+NEAR&Operations that specify the default floating-\/point mode are rounded to the nearest representable number and that ties should be broken by selecting the value with an even least significant bit. \\
+\hline
+
+\end{DoxyEnumFields}
+\mbox{\Hypertarget{group__agentinfo_ga5e6c855643435ea1c2c7dc3fa2a123f0}\label{group__agentinfo_ga5e6c855643435ea1c2c7dc3fa2a123f0}} 
+\index{System and Agent Information@{System and Agent Information}!hsa\_device\_type\_t@{hsa\_device\_type\_t}}
+\index{hsa\_device\_type\_t@{hsa\_device\_type\_t}!System and Agent Information@{System and Agent Information}}
+\doxysubsubsection{\texorpdfstring{hsa\_device\_type\_t}{hsa\_device\_type\_t}}
+{\footnotesize\ttfamily enum \mbox{\hyperlink{group__agentinfo_ga5e6c855643435ea1c2c7dc3fa2a123f0}{hsa\+\_\+device\+\_\+type\+\_\+t}}}
+
+
+
+Hardware device type. 
+
+\begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{HSA\_DEVICE\_TYPE\_CPU@{HSA\_DEVICE\_TYPE\_CPU}!System and Agent Information@{System and Agent Information}}\index{System and Agent Information@{System and Agent Information}!HSA\_DEVICE\_TYPE\_CPU@{HSA\_DEVICE\_TYPE\_CPU}}}\mbox{\Hypertarget{group__agentinfo_gga5e6c855643435ea1c2c7dc3fa2a123f0a6bfae0e3fb143527bc36ea49f561bc43}\label{group__agentinfo_gga5e6c855643435ea1c2c7dc3fa2a123f0a6bfae0e3fb143527bc36ea49f561bc43}} 
+HSA\+\_\+\+DEVICE\+\_\+\+TYPE\+\_\+\+CPU&CPU device. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{HSA\_DEVICE\_TYPE\_GPU@{HSA\_DEVICE\_TYPE\_GPU}!System and Agent Information@{System and Agent Information}}\index{System and Agent Information@{System and Agent Information}!HSA\_DEVICE\_TYPE\_GPU@{HSA\_DEVICE\_TYPE\_GPU}}}\mbox{\Hypertarget{group__agentinfo_gga5e6c855643435ea1c2c7dc3fa2a123f0ac9d0546c1a7a452bb70f7aa940dc0042}\label{group__agentinfo_gga5e6c855643435ea1c2c7dc3fa2a123f0ac9d0546c1a7a452bb70f7aa940dc0042}} 
+HSA\+\_\+\+DEVICE\+\_\+\+TYPE\+\_\+\+GPU&GPU device. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{HSA\_DEVICE\_TYPE\_DSP@{HSA\_DEVICE\_TYPE\_DSP}!System and Agent Information@{System and Agent Information}}\index{System and Agent Information@{System and Agent Information}!HSA\_DEVICE\_TYPE\_DSP@{HSA\_DEVICE\_TYPE\_DSP}}}\mbox{\Hypertarget{group__agentinfo_gga5e6c855643435ea1c2c7dc3fa2a123f0a4ebd7b468fed7371223dee1633596051}\label{group__agentinfo_gga5e6c855643435ea1c2c7dc3fa2a123f0a4ebd7b468fed7371223dee1633596051}} 
+HSA\+\_\+\+DEVICE\+\_\+\+TYPE\+\_\+\+DSP&DSP device. \\
+\hline
+
+\end{DoxyEnumFields}
+\mbox{\Hypertarget{group__agentinfo_ga44cf02813960c252edfeeec6e0b6c848}\label{group__agentinfo_ga44cf02813960c252edfeeec6e0b6c848}} 
+\index{System and Agent Information@{System and Agent Information}!hsa\_endianness\_t@{hsa\_endianness\_t}}
+\index{hsa\_endianness\_t@{hsa\_endianness\_t}!System and Agent Information@{System and Agent Information}}
+\doxysubsubsection{\texorpdfstring{hsa\_endianness\_t}{hsa\_endianness\_t}}
+{\footnotesize\ttfamily enum \mbox{\hyperlink{group__agentinfo_ga44cf02813960c252edfeeec6e0b6c848}{hsa\+\_\+endianness\+\_\+t}}}
+
+
+
+Endianness. A convention used to interpret the bytes making up a data word. 
+
+\begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{HSA\_ENDIANNESS\_LITTLE@{HSA\_ENDIANNESS\_LITTLE}!System and Agent Information@{System and Agent Information}}\index{System and Agent Information@{System and Agent Information}!HSA\_ENDIANNESS\_LITTLE@{HSA\_ENDIANNESS\_LITTLE}}}\mbox{\Hypertarget{group__agentinfo_gga44cf02813960c252edfeeec6e0b6c848a90198fa4ce36d331675ce5c4f10e376e}\label{group__agentinfo_gga44cf02813960c252edfeeec6e0b6c848a90198fa4ce36d331675ce5c4f10e376e}} 
+HSA\+\_\+\+ENDIANNESS\+\_\+\+LITTLE&The least significant byte is stored in the smallest address. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{HSA\_ENDIANNESS\_BIG@{HSA\_ENDIANNESS\_BIG}!System and Agent Information@{System and Agent Information}}\index{System and Agent Information@{System and Agent Information}!HSA\_ENDIANNESS\_BIG@{HSA\_ENDIANNESS\_BIG}}}\mbox{\Hypertarget{group__agentinfo_gga44cf02813960c252edfeeec6e0b6c848a8d9bbe18762dfa8cd3dc23c0c07c9178}\label{group__agentinfo_gga44cf02813960c252edfeeec6e0b6c848a8d9bbe18762dfa8cd3dc23c0c07c9178}} 
+HSA\+\_\+\+ENDIANNESS\+\_\+\+BIG&The most significant byte is stored in the smallest address. \\
+\hline
+
+\end{DoxyEnumFields}
+\mbox{\Hypertarget{group__agentinfo_gadaa0623d4a3fb29ba3fa4a6eb2a74c80}\label{group__agentinfo_gadaa0623d4a3fb29ba3fa4a6eb2a74c80}} 
+\index{System and Agent Information@{System and Agent Information}!hsa\_exception\_policy\_t@{hsa\_exception\_policy\_t}}
+\index{hsa\_exception\_policy\_t@{hsa\_exception\_policy\_t}!System and Agent Information@{System and Agent Information}}
+\doxysubsubsection{\texorpdfstring{hsa\_exception\_policy\_t}{hsa\_exception\_policy\_t}}
+{\footnotesize\ttfamily enum \mbox{\hyperlink{group__agentinfo_gadaa0623d4a3fb29ba3fa4a6eb2a74c80}{hsa\+\_\+exception\+\_\+policy\+\_\+t}}}
+
+
+
+Exception policies applied in the presence of hardware exceptions. 
+
+\begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{HSA\_EXCEPTION\_POLICY\_BREAK@{HSA\_EXCEPTION\_POLICY\_BREAK}!System and Agent Information@{System and Agent Information}}\index{System and Agent Information@{System and Agent Information}!HSA\_EXCEPTION\_POLICY\_BREAK@{HSA\_EXCEPTION\_POLICY\_BREAK}}}\mbox{\Hypertarget{group__agentinfo_ggadaa0623d4a3fb29ba3fa4a6eb2a74c80abb658932003f9578f13ab0c28830cfd6}\label{group__agentinfo_ggadaa0623d4a3fb29ba3fa4a6eb2a74c80abb658932003f9578f13ab0c28830cfd6}} 
+HSA\+\_\+\+EXCEPTION\+\_\+\+POLICY\+\_\+\+BREAK&If a hardware exception is detected, a work-\/item signals an exception. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{HSA\_EXCEPTION\_POLICY\_DETECT@{HSA\_EXCEPTION\_POLICY\_DETECT}!System and Agent Information@{System and Agent Information}}\index{System and Agent Information@{System and Agent Information}!HSA\_EXCEPTION\_POLICY\_DETECT@{HSA\_EXCEPTION\_POLICY\_DETECT}}}\mbox{\Hypertarget{group__agentinfo_ggadaa0623d4a3fb29ba3fa4a6eb2a74c80a219b3c9b41ed3abd4f9b20f026b533d5}\label{group__agentinfo_ggadaa0623d4a3fb29ba3fa4a6eb2a74c80a219b3c9b41ed3abd4f9b20f026b533d5}} 
+HSA\+\_\+\+EXCEPTION\+\_\+\+POLICY\+\_\+\+DETECT&If a hardware exception is detected, a hardware status bit is set. \\
+\hline
+
+\end{DoxyEnumFields}
+\mbox{\Hypertarget{group__agentinfo_ga6a8dade2a7681dbd98a88029b1dbb5f3}\label{group__agentinfo_ga6a8dade2a7681dbd98a88029b1dbb5f3}} 
+\index{System and Agent Information@{System and Agent Information}!hsa\_extension\_t@{hsa\_extension\_t}}
+\index{hsa\_extension\_t@{hsa\_extension\_t}!System and Agent Information@{System and Agent Information}}
+\doxysubsubsection{\texorpdfstring{hsa\_extension\_t}{hsa\_extension\_t}}
+{\footnotesize\ttfamily enum \mbox{\hyperlink{group__agentinfo_ga6a8dade2a7681dbd98a88029b1dbb5f3}{hsa\+\_\+extension\+\_\+t}}}
+
+
+
+HSA extensions. 
+
+\begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{HSA\_EXTENSION\_FINALIZER@{HSA\_EXTENSION\_FINALIZER}!System and Agent Information@{System and Agent Information}}\index{System and Agent Information@{System and Agent Information}!HSA\_EXTENSION\_FINALIZER@{HSA\_EXTENSION\_FINALIZER}}}\mbox{\Hypertarget{group__agentinfo_gga6a8dade2a7681dbd98a88029b1dbb5f3a2170699c6d6a1f7b81baba3659c55288}\label{group__agentinfo_gga6a8dade2a7681dbd98a88029b1dbb5f3a2170699c6d6a1f7b81baba3659c55288}} 
+HSA\+\_\+\+EXTENSION\+\_\+\+FINALIZER&Finalizer extension. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{HSA\_EXTENSION\_IMAGES@{HSA\_EXTENSION\_IMAGES}!System and Agent Information@{System and Agent Information}}\index{System and Agent Information@{System and Agent Information}!HSA\_EXTENSION\_IMAGES@{HSA\_EXTENSION\_IMAGES}}}\mbox{\Hypertarget{group__agentinfo_gga6a8dade2a7681dbd98a88029b1dbb5f3a7d8b1a34c2dcc9aff3797a499aac9c55}\label{group__agentinfo_gga6a8dade2a7681dbd98a88029b1dbb5f3a7d8b1a34c2dcc9aff3797a499aac9c55}} 
+HSA\+\_\+\+EXTENSION\+\_\+\+IMAGES&Images extension. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{HSA\_EXTENSION\_PERFORMANCE\_COUNTERS@{HSA\_EXTENSION\_PERFORMANCE\_COUNTERS}!System and Agent Information@{System and Agent Information}}\index{System and Agent Information@{System and Agent Information}!HSA\_EXTENSION\_PERFORMANCE\_COUNTERS@{HSA\_EXTENSION\_PERFORMANCE\_COUNTERS}}}\mbox{\Hypertarget{group__agentinfo_gga6a8dade2a7681dbd98a88029b1dbb5f3ab6285996ad0b3c8c04b69990859e5d66}\label{group__agentinfo_gga6a8dade2a7681dbd98a88029b1dbb5f3ab6285996ad0b3c8c04b69990859e5d66}} 
+HSA\+\_\+\+EXTENSION\+\_\+\+PERFORMANCE\+\_\+\+COUNTERS&Performance counter extension. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{HSA\_EXTENSION\_PROFILING\_EVENTS@{HSA\_EXTENSION\_PROFILING\_EVENTS}!System and Agent Information@{System and Agent Information}}\index{System and Agent Information@{System and Agent Information}!HSA\_EXTENSION\_PROFILING\_EVENTS@{HSA\_EXTENSION\_PROFILING\_EVENTS}}}\mbox{\Hypertarget{group__agentinfo_gga6a8dade2a7681dbd98a88029b1dbb5f3a4e040098a876280cb349f8057b1509c2}\label{group__agentinfo_gga6a8dade2a7681dbd98a88029b1dbb5f3a4e040098a876280cb349f8057b1509c2}} 
+HSA\+\_\+\+EXTENSION\+\_\+\+PROFILING\+\_\+\+EVENTS&Profiling events extension. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{HSA\_EXTENSION\_STD\_LAST@{HSA\_EXTENSION\_STD\_LAST}!System and Agent Information@{System and Agent Information}}\index{System and Agent Information@{System and Agent Information}!HSA\_EXTENSION\_STD\_LAST@{HSA\_EXTENSION\_STD\_LAST}}}\mbox{\Hypertarget{group__agentinfo_gga6a8dade2a7681dbd98a88029b1dbb5f3a045c0bdc17f95d0c2148ed2701dd67aa}\label{group__agentinfo_gga6a8dade2a7681dbd98a88029b1dbb5f3a045c0bdc17f95d0c2148ed2701dd67aa}} 
+HSA\+\_\+\+EXTENSION\+\_\+\+STD\+\_\+\+LAST&Extension count. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{HSA\_AMD\_FIRST\_EXTENSION@{HSA\_AMD\_FIRST\_EXTENSION}!System and Agent Information@{System and Agent Information}}\index{System and Agent Information@{System and Agent Information}!HSA\_AMD\_FIRST\_EXTENSION@{HSA\_AMD\_FIRST\_EXTENSION}}}\mbox{\Hypertarget{group__agentinfo_gga6a8dade2a7681dbd98a88029b1dbb5f3a48f31076893788400d3338e830797a90}\label{group__agentinfo_gga6a8dade2a7681dbd98a88029b1dbb5f3a48f31076893788400d3338e830797a90}} 
+HSA\+\_\+\+AMD\+\_\+\+FIRST\+\_\+\+EXTENSION&First AMD extension number. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{HSA\_EXTENSION\_AMD\_PROFILER@{HSA\_EXTENSION\_AMD\_PROFILER}!System and Agent Information@{System and Agent Information}}\index{System and Agent Information@{System and Agent Information}!HSA\_EXTENSION\_AMD\_PROFILER@{HSA\_EXTENSION\_AMD\_PROFILER}}}\mbox{\Hypertarget{group__agentinfo_gga6a8dade2a7681dbd98a88029b1dbb5f3af94f8a42a46c4d4bb43ca16c1c3d24e5}\label{group__agentinfo_gga6a8dade2a7681dbd98a88029b1dbb5f3af94f8a42a46c4d4bb43ca16c1c3d24e5}} 
+HSA\+\_\+\+EXTENSION\+\_\+\+AMD\+\_\+\+PROFILER&Profiler extension. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{HSA\_EXTENSION\_AMD\_LOADER@{HSA\_EXTENSION\_AMD\_LOADER}!System and Agent Information@{System and Agent Information}}\index{System and Agent Information@{System and Agent Information}!HSA\_EXTENSION\_AMD\_LOADER@{HSA\_EXTENSION\_AMD\_LOADER}}}\mbox{\Hypertarget{group__agentinfo_gga6a8dade2a7681dbd98a88029b1dbb5f3a6fd3ca1a89a426a4d96fbbb8e632fecf}\label{group__agentinfo_gga6a8dade2a7681dbd98a88029b1dbb5f3a6fd3ca1a89a426a4d96fbbb8e632fecf}} 
+HSA\+\_\+\+EXTENSION\+\_\+\+AMD\+\_\+\+LOADER&Loader extension. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{HSA\_EXTENSION\_AMD\_AQLPROFILE@{HSA\_EXTENSION\_AMD\_AQLPROFILE}!System and Agent Information@{System and Agent Information}}\index{System and Agent Information@{System and Agent Information}!HSA\_EXTENSION\_AMD\_AQLPROFILE@{HSA\_EXTENSION\_AMD\_AQLPROFILE}}}\mbox{\Hypertarget{group__agentinfo_gga6a8dade2a7681dbd98a88029b1dbb5f3ad14c50cfd324fb9546dc419b733e3cea}\label{group__agentinfo_gga6a8dade2a7681dbd98a88029b1dbb5f3ad14c50cfd324fb9546dc419b733e3cea}} 
+HSA\+\_\+\+EXTENSION\+\_\+\+AMD\+\_\+\+AQLPROFILE&Aql\+Profile extension. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{HSA\_AMD\_LAST\_EXTENSION@{HSA\_AMD\_LAST\_EXTENSION}!System and Agent Information@{System and Agent Information}}\index{System and Agent Information@{System and Agent Information}!HSA\_AMD\_LAST\_EXTENSION@{HSA\_AMD\_LAST\_EXTENSION}}}\mbox{\Hypertarget{group__agentinfo_gga6a8dade2a7681dbd98a88029b1dbb5f3a7b04f145540e0234a0963142944d8419}\label{group__agentinfo_gga6a8dade2a7681dbd98a88029b1dbb5f3a7b04f145540e0234a0963142944d8419}} 
+HSA\+\_\+\+AMD\+\_\+\+LAST\+\_\+\+EXTENSION&Last AMD extension. \\
+\hline
+
+\end{DoxyEnumFields}
+\mbox{\Hypertarget{group__agentinfo_ga4d45919fd6f6e8dbb8ae2f4030870e11}\label{group__agentinfo_ga4d45919fd6f6e8dbb8ae2f4030870e11}} 
+\index{System and Agent Information@{System and Agent Information}!hsa\_machine\_model\_t@{hsa\_machine\_model\_t}}
+\index{hsa\_machine\_model\_t@{hsa\_machine\_model\_t}!System and Agent Information@{System and Agent Information}}
+\doxysubsubsection{\texorpdfstring{hsa\_machine\_model\_t}{hsa\_machine\_model\_t}}
+{\footnotesize\ttfamily enum \mbox{\hyperlink{group__agentinfo_ga4d45919fd6f6e8dbb8ae2f4030870e11}{hsa\+\_\+machine\+\_\+model\+\_\+t}}}
+
+
+
+Machine model. A machine model determines the size of certain data types in HSA runtime and an agent. 
+
+\begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{HSA\_MACHINE\_MODEL\_SMALL@{HSA\_MACHINE\_MODEL\_SMALL}!System and Agent Information@{System and Agent Information}}\index{System and Agent Information@{System and Agent Information}!HSA\_MACHINE\_MODEL\_SMALL@{HSA\_MACHINE\_MODEL\_SMALL}}}\mbox{\Hypertarget{group__agentinfo_gga4d45919fd6f6e8dbb8ae2f4030870e11a5e49fab73802d5f94ee043350e6336ef}\label{group__agentinfo_gga4d45919fd6f6e8dbb8ae2f4030870e11a5e49fab73802d5f94ee043350e6336ef}} 
+HSA\+\_\+\+MACHINE\+\_\+\+MODEL\+\_\+\+SMALL&Small machine model. Addresses use 32 bits. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{HSA\_MACHINE\_MODEL\_LARGE@{HSA\_MACHINE\_MODEL\_LARGE}!System and Agent Information@{System and Agent Information}}\index{System and Agent Information@{System and Agent Information}!HSA\_MACHINE\_MODEL\_LARGE@{HSA\_MACHINE\_MODEL\_LARGE}}}\mbox{\Hypertarget{group__agentinfo_gga4d45919fd6f6e8dbb8ae2f4030870e11a53190aaa0a3c717fc1b7987faa59b705}\label{group__agentinfo_gga4d45919fd6f6e8dbb8ae2f4030870e11a53190aaa0a3c717fc1b7987faa59b705}} 
+HSA\+\_\+\+MACHINE\+\_\+\+MODEL\+\_\+\+LARGE&Large machine model. Addresses use 64 bits. \\
+\hline
+
+\end{DoxyEnumFields}
+\mbox{\Hypertarget{group__agentinfo_gacafd4247e2a04cbe0ac0b3998c127532}\label{group__agentinfo_gacafd4247e2a04cbe0ac0b3998c127532}} 
+\index{System and Agent Information@{System and Agent Information}!hsa\_profile\_t@{hsa\_profile\_t}}
+\index{hsa\_profile\_t@{hsa\_profile\_t}!System and Agent Information@{System and Agent Information}}
+\doxysubsubsection{\texorpdfstring{hsa\_profile\_t}{hsa\_profile\_t}}
+{\footnotesize\ttfamily enum \mbox{\hyperlink{group__agentinfo_gacafd4247e2a04cbe0ac0b3998c127532}{hsa\+\_\+profile\+\_\+t}}}
+
+
+
+Profile. A profile indicates a particular level of feature support. For example, in the base profile the application must use the HSA runtime allocator to reserve shared virtual memory, while in the full profile any host pointer can be shared across all the agents. 
+
+\begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{HSA\_PROFILE\_BASE@{HSA\_PROFILE\_BASE}!System and Agent Information@{System and Agent Information}}\index{System and Agent Information@{System and Agent Information}!HSA\_PROFILE\_BASE@{HSA\_PROFILE\_BASE}}}\mbox{\Hypertarget{group__agentinfo_ggacafd4247e2a04cbe0ac0b3998c127532aa72d9bb0182593b99af4c3444c792695}\label{group__agentinfo_ggacafd4247e2a04cbe0ac0b3998c127532aa72d9bb0182593b99af4c3444c792695}} 
+HSA\+\_\+\+PROFILE\+\_\+\+BASE&Base profile. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{HSA\_PROFILE\_FULL@{HSA\_PROFILE\_FULL}!System and Agent Information@{System and Agent Information}}\index{System and Agent Information@{System and Agent Information}!HSA\_PROFILE\_FULL@{HSA\_PROFILE\_FULL}}}\mbox{\Hypertarget{group__agentinfo_ggacafd4247e2a04cbe0ac0b3998c127532a852b05a668a760fd970ff0a59e46b269}\label{group__agentinfo_ggacafd4247e2a04cbe0ac0b3998c127532a852b05a668a760fd970ff0a59e46b269}} 
+HSA\+\_\+\+PROFILE\+\_\+\+FULL&Full profile. \\
+\hline
+
+\end{DoxyEnumFields}
+\mbox{\Hypertarget{group__agentinfo_ga5358716e320ad8a78b78ef44d8783b0b}\label{group__agentinfo_ga5358716e320ad8a78b78ef44d8783b0b}} 
+\index{System and Agent Information@{System and Agent Information}!hsa\_system\_info\_t@{hsa\_system\_info\_t}}
+\index{hsa\_system\_info\_t@{hsa\_system\_info\_t}!System and Agent Information@{System and Agent Information}}
+\doxysubsubsection{\texorpdfstring{hsa\_system\_info\_t}{hsa\_system\_info\_t}}
+{\footnotesize\ttfamily enum \mbox{\hyperlink{group__agentinfo_ga5358716e320ad8a78b78ef44d8783b0b}{hsa\+\_\+system\+\_\+info\+\_\+t}}}
+
+
+
+System attributes. 
+
+\begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{HSA\_SYSTEM\_INFO\_VERSION\_MAJOR@{HSA\_SYSTEM\_INFO\_VERSION\_MAJOR}!System and Agent Information@{System and Agent Information}}\index{System and Agent Information@{System and Agent Information}!HSA\_SYSTEM\_INFO\_VERSION\_MAJOR@{HSA\_SYSTEM\_INFO\_VERSION\_MAJOR}}}\mbox{\Hypertarget{group__agentinfo_gga5358716e320ad8a78b78ef44d8783b0bac33519a29a9fa32f1dd179b9f8af8243}\label{group__agentinfo_gga5358716e320ad8a78b78ef44d8783b0bac33519a29a9fa32f1dd179b9f8af8243}} 
+HSA\+\_\+\+SYSTEM\+\_\+\+INFO\+\_\+\+VERSION\+\_\+\+MAJOR&Major version of the HSA runtime specification supported by the implementation. The type of this attribute is uint16\+\_\+t. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{HSA\_SYSTEM\_INFO\_VERSION\_MINOR@{HSA\_SYSTEM\_INFO\_VERSION\_MINOR}!System and Agent Information@{System and Agent Information}}\index{System and Agent Information@{System and Agent Information}!HSA\_SYSTEM\_INFO\_VERSION\_MINOR@{HSA\_SYSTEM\_INFO\_VERSION\_MINOR}}}\mbox{\Hypertarget{group__agentinfo_gga5358716e320ad8a78b78ef44d8783b0ba0ac419f557187a4cfcdeb604f37bb4ae}\label{group__agentinfo_gga5358716e320ad8a78b78ef44d8783b0ba0ac419f557187a4cfcdeb604f37bb4ae}} 
+HSA\+\_\+\+SYSTEM\+\_\+\+INFO\+\_\+\+VERSION\+\_\+\+MINOR&Minor version of the HSA runtime specification supported by the implementation. The type of this attribute is uint16\+\_\+t. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{HSA\_SYSTEM\_INFO\_TIMESTAMP@{HSA\_SYSTEM\_INFO\_TIMESTAMP}!System and Agent Information@{System and Agent Information}}\index{System and Agent Information@{System and Agent Information}!HSA\_SYSTEM\_INFO\_TIMESTAMP@{HSA\_SYSTEM\_INFO\_TIMESTAMP}}}\mbox{\Hypertarget{group__agentinfo_gga5358716e320ad8a78b78ef44d8783b0bac9043678e4c1dd887fcf71cabee228f6}\label{group__agentinfo_gga5358716e320ad8a78b78ef44d8783b0bac9043678e4c1dd887fcf71cabee228f6}} 
+HSA\+\_\+\+SYSTEM\+\_\+\+INFO\+\_\+\+TIMESTAMP&Current timestamp. The value of this attribute monotonically increases at a constant rate. The type of this attribute is uint64\+\_\+t. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{HSA\_SYSTEM\_INFO\_TIMESTAMP\_FREQUENCY@{HSA\_SYSTEM\_INFO\_TIMESTAMP\_FREQUENCY}!System and Agent Information@{System and Agent Information}}\index{System and Agent Information@{System and Agent Information}!HSA\_SYSTEM\_INFO\_TIMESTAMP\_FREQUENCY@{HSA\_SYSTEM\_INFO\_TIMESTAMP\_FREQUENCY}}}\mbox{\Hypertarget{group__agentinfo_gga5358716e320ad8a78b78ef44d8783b0bae2a8bb2c1322968a95b8ed49c34d54f5}\label{group__agentinfo_gga5358716e320ad8a78b78ef44d8783b0bae2a8bb2c1322968a95b8ed49c34d54f5}} 
+HSA\+\_\+\+SYSTEM\+\_\+\+INFO\+\_\+\+TIMESTAMP\+\_\+\+FREQUENCY&Timestamp value increase rate, in Hz. The timestamp (clock) frequency is in the range 1-\/400MHz. The type of this attribute is uint64\+\_\+t. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{HSA\_SYSTEM\_INFO\_SIGNAL\_MAX\_WAIT@{HSA\_SYSTEM\_INFO\_SIGNAL\_MAX\_WAIT}!System and Agent Information@{System and Agent Information}}\index{System and Agent Information@{System and Agent Information}!HSA\_SYSTEM\_INFO\_SIGNAL\_MAX\_WAIT@{HSA\_SYSTEM\_INFO\_SIGNAL\_MAX\_WAIT}}}\mbox{\Hypertarget{group__agentinfo_gga5358716e320ad8a78b78ef44d8783b0ba851f3f7745ed5524352598d2a0f02e9a}\label{group__agentinfo_gga5358716e320ad8a78b78ef44d8783b0ba851f3f7745ed5524352598d2a0f02e9a}} 
+HSA\+\_\+\+SYSTEM\+\_\+\+INFO\+\_\+\+SIGNAL\+\_\+\+MAX\+\_\+\+WAIT&Maximum duration of a signal wait operation. Expressed as a count based on the timestamp frequency. The type of this attribute is uint64\+\_\+t. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{HSA\_SYSTEM\_INFO\_ENDIANNESS@{HSA\_SYSTEM\_INFO\_ENDIANNESS}!System and Agent Information@{System and Agent Information}}\index{System and Agent Information@{System and Agent Information}!HSA\_SYSTEM\_INFO\_ENDIANNESS@{HSA\_SYSTEM\_INFO\_ENDIANNESS}}}\mbox{\Hypertarget{group__agentinfo_gga5358716e320ad8a78b78ef44d8783b0baa03b4fd983e67ce6d3c8a63dceb9134a}\label{group__agentinfo_gga5358716e320ad8a78b78ef44d8783b0baa03b4fd983e67ce6d3c8a63dceb9134a}} 
+HSA\+\_\+\+SYSTEM\+\_\+\+INFO\+\_\+\+ENDIANNESS&Endianness of the system. The type of this attribute is \mbox{\hyperlink{group__agentinfo_ga44cf02813960c252edfeeec6e0b6c848}{hsa\+\_\+endianness\+\_\+t}}. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{HSA\_SYSTEM\_INFO\_MACHINE\_MODEL@{HSA\_SYSTEM\_INFO\_MACHINE\_MODEL}!System and Agent Information@{System and Agent Information}}\index{System and Agent Information@{System and Agent Information}!HSA\_SYSTEM\_INFO\_MACHINE\_MODEL@{HSA\_SYSTEM\_INFO\_MACHINE\_MODEL}}}\mbox{\Hypertarget{group__agentinfo_gga5358716e320ad8a78b78ef44d8783b0ba967398d64a854866b896e1709c222568}\label{group__agentinfo_gga5358716e320ad8a78b78ef44d8783b0ba967398d64a854866b896e1709c222568}} 
+HSA\+\_\+\+SYSTEM\+\_\+\+INFO\+\_\+\+MACHINE\+\_\+\+MODEL&Machine model supported by the HSA runtime. The type of this attribute is \mbox{\hyperlink{group__agentinfo_ga4d45919fd6f6e8dbb8ae2f4030870e11}{hsa\+\_\+machine\+\_\+model\+\_\+t}}. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{HSA\_SYSTEM\_INFO\_EXTENSIONS@{HSA\_SYSTEM\_INFO\_EXTENSIONS}!System and Agent Information@{System and Agent Information}}\index{System and Agent Information@{System and Agent Information}!HSA\_SYSTEM\_INFO\_EXTENSIONS@{HSA\_SYSTEM\_INFO\_EXTENSIONS}}}\mbox{\Hypertarget{group__agentinfo_gga5358716e320ad8a78b78ef44d8783b0ba7e873d31af73c552272aad520d8dcbef}\label{group__agentinfo_gga5358716e320ad8a78b78ef44d8783b0ba7e873d31af73c552272aad520d8dcbef}} 
+HSA\+\_\+\+SYSTEM\+\_\+\+INFO\+\_\+\+EXTENSIONS&Bit-\/mask indicating which extensions are supported by the implementation. An extension with an ID of {\ttfamily i} is supported if the bit at position {\ttfamily i} is set. The type of this attribute is uint8\+\_\+t\mbox{[}128\mbox{]}. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{HSA\_AMD\_SYSTEM\_INFO\_BUILD\_VERSION@{HSA\_AMD\_SYSTEM\_INFO\_BUILD\_VERSION}!System and Agent Information@{System and Agent Information}}\index{System and Agent Information@{System and Agent Information}!HSA\_AMD\_SYSTEM\_INFO\_BUILD\_VERSION@{HSA\_AMD\_SYSTEM\_INFO\_BUILD\_VERSION}}}\mbox{\Hypertarget{group__agentinfo_gga5358716e320ad8a78b78ef44d8783b0bae98a361310d5264f9b435c51c1fdcfff}\label{group__agentinfo_gga5358716e320ad8a78b78ef44d8783b0bae98a361310d5264f9b435c51c1fdcfff}} 
+HSA\+\_\+\+AMD\+\_\+\+SYSTEM\+\_\+\+INFO\+\_\+\+BUILD\+\_\+\+VERSION&String containing the ROCr build identifier. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{HSA\_AMD\_SYSTEM\_INFO\_SVM\_SUPPORTED@{HSA\_AMD\_SYSTEM\_INFO\_SVM\_SUPPORTED}!System and Agent Information@{System and Agent Information}}\index{System and Agent Information@{System and Agent Information}!HSA\_AMD\_SYSTEM\_INFO\_SVM\_SUPPORTED@{HSA\_AMD\_SYSTEM\_INFO\_SVM\_SUPPORTED}}}\mbox{\Hypertarget{group__agentinfo_gga5358716e320ad8a78b78ef44d8783b0baf487b468dfc9fb7e4b9db71680749de0}\label{group__agentinfo_gga5358716e320ad8a78b78ef44d8783b0baf487b468dfc9fb7e4b9db71680749de0}} 
+HSA\+\_\+\+AMD\+\_\+\+SYSTEM\+\_\+\+INFO\+\_\+\+SVM\+\_\+\+SUPPORTED&Returns true if hsa\+\_\+amd\+\_\+svm\+\_\+$\ast$ APIs are supported by the driver. The type of this attribute is bool. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{HSA\_AMD\_SYSTEM\_INFO\_SVM\_ACCESSIBLE\_BY\_DEFAULT@{HSA\_AMD\_SYSTEM\_INFO\_SVM\_ACCESSIBLE\_BY\_DEFAULT}!System and Agent Information@{System and Agent Information}}\index{System and Agent Information@{System and Agent Information}!HSA\_AMD\_SYSTEM\_INFO\_SVM\_ACCESSIBLE\_BY\_DEFAULT@{HSA\_AMD\_SYSTEM\_INFO\_SVM\_ACCESSIBLE\_BY\_DEFAULT}}}\mbox{\Hypertarget{group__agentinfo_gga5358716e320ad8a78b78ef44d8783b0ba0864a3d74d61f57bd3f7afacb77f7647}\label{group__agentinfo_gga5358716e320ad8a78b78ef44d8783b0ba0864a3d74d61f57bd3f7afacb77f7647}} 
+HSA\+\_\+\+AMD\+\_\+\+SYSTEM\+\_\+\+INFO\+\_\+\+SVM\+\_\+\+ACCESSIBLE\+\_\+\+BY\+\_\+\+DEFAULT&Returns true if all Agents have access to system allocated memory (such as that allocated by mmap, malloc, or new) by default. If false then system allocated memory may only be made SVM accessible to an Agent by declaration of accessibility with hsa\+\_\+amd\+\_\+svm\+\_\+set\+\_\+attributes. The type of this attribute is bool. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{HSA\_AMD\_SYSTEM\_INFO\_MWAITX\_ENABLED@{HSA\_AMD\_SYSTEM\_INFO\_MWAITX\_ENABLED}!System and Agent Information@{System and Agent Information}}\index{System and Agent Information@{System and Agent Information}!HSA\_AMD\_SYSTEM\_INFO\_MWAITX\_ENABLED@{HSA\_AMD\_SYSTEM\_INFO\_MWAITX\_ENABLED}}}\mbox{\Hypertarget{group__agentinfo_gga5358716e320ad8a78b78ef44d8783b0baf87134715ae5191e4a79e2e61da9c2c7}\label{group__agentinfo_gga5358716e320ad8a78b78ef44d8783b0baf87134715ae5191e4a79e2e61da9c2c7}} 
+HSA\+\_\+\+AMD\+\_\+\+SYSTEM\+\_\+\+INFO\+\_\+\+MWAITX\+\_\+\+ENABLED&Returns true if mwaitx is enabled on this system The type of this attribute is bool. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{HSA\_AMD\_SYSTEM\_INFO\_DMABUF\_SUPPORTED@{HSA\_AMD\_SYSTEM\_INFO\_DMABUF\_SUPPORTED}!System and Agent Information@{System and Agent Information}}\index{System and Agent Information@{System and Agent Information}!HSA\_AMD\_SYSTEM\_INFO\_DMABUF\_SUPPORTED@{HSA\_AMD\_SYSTEM\_INFO\_DMABUF\_SUPPORTED}}}\mbox{\Hypertarget{group__agentinfo_gga5358716e320ad8a78b78ef44d8783b0ba588aacf2ace4cd11df4535c84e881aca}\label{group__agentinfo_gga5358716e320ad8a78b78ef44d8783b0ba588aacf2ace4cd11df4535c84e881aca}} 
+HSA\+\_\+\+AMD\+\_\+\+SYSTEM\+\_\+\+INFO\+\_\+\+DMABUF\+\_\+\+SUPPORTED&Returns true if DMABUF APIs are supported by the driver. The type of this attribute is bool. \\
+\hline
+
+\end{DoxyEnumFields}
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{group__agentinfo_gaae016fd154b2a29c8ba6dc95d1a6d63b}\label{group__agentinfo_gaae016fd154b2a29c8ba6dc95d1a6d63b}} 
+\index{System and Agent Information@{System and Agent Information}!hsa\_agent\_extension\_supported@{hsa\_agent\_extension\_supported}}
+\index{hsa\_agent\_extension\_supported@{hsa\_agent\_extension\_supported}!System and Agent Information@{System and Agent Information}}
+\doxysubsubsection{\texorpdfstring{hsa\_agent\_extension\_supported()}{hsa\_agent\_extension\_supported()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{group__status_gad755322e7ff95456520e8abdbe90d225}{hsa\+\_\+status\+\_\+t}} \mbox{\hyperlink{inc_2hsa__ext__image_8h_a64216765b98b62ee87deb50fd2899836}{HSA\+\_\+\+API}} \mbox{\hyperlink{inc_2hsa_8h_a2321f8ca7d706cada4f617b191a478b0}{HSA\+\_\+\+DEPRECATED}} hsa\+\_\+agent\+\_\+extension\+\_\+supported (\begin{DoxyParamCaption}\item[{uint16\+\_\+t}]{extension,  }\item[{\mbox{\hyperlink{group__agentinfo_ga9ce217ef08e7d5e89c8e83ce7b6ef22b}{hsa\+\_\+agent\+\_\+t}}}]{agent,  }\item[{uint16\+\_\+t}]{version\+\_\+major,  }\item[{uint16\+\_\+t}]{version\+\_\+minor,  }\item[{bool $\ast$}]{result }\end{DoxyParamCaption})}
+
+
+
+Query if a given version of an extension is supported by an agent. 
+
+\begin{DoxyRefDesc}{Deprecated}
+\item[\mbox{\hyperlink{deprecated__deprecated000004}{Deprecated}}]\end{DoxyRefDesc}
+
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em extension} & Extension identifier.\\
+\hline
+\mbox{\texttt{ in}}  & {\em agent} & Agent.\\
+\hline
+\mbox{\texttt{ in}}  & {\em version\+\_\+major} & Major version number.\\
+\hline
+\mbox{\texttt{ in}}  & {\em version\+\_\+minor} & Minor version number.\\
+\hline
+\mbox{\texttt{ out}}  & {\em result} & Pointer to a memory location where the HSA runtime stores the result of the check. The result is true if the specified version of the extension is supported, and false otherwise. The result must be false if \mbox{\hyperlink{group__agentinfo_ga2f6543316cac6dae789af416e75ecbba}{hsa\+\_\+system\+\_\+extension\+\_\+supported}} returns false for the same extension version.\\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em \mbox{\hyperlink{group__status_ggad755322e7ff95456520e8abdbe90d225ae382ea0c9c05cce5a60d0317375159cc}{HSA\+\_\+\+STATUS\+\_\+\+SUCCESS}}} & The function has been executed successfully.\\
+\hline
+{\em \mbox{\hyperlink{group__status_ggad755322e7ff95456520e8abdbe90d225a34ea59ade5bfce95eee935238a99f5b5}{HSA\+\_\+\+STATUS\+\_\+\+ERROR\+\_\+\+NOT\+\_\+\+INITIALIZED}}} & The HSA runtime has not been initialized.\\
+\hline
+{\em \mbox{\hyperlink{group__status_ggad755322e7ff95456520e8abdbe90d225a3a5d835c109c2d0ad5b9c2771e133e5d}{HSA\+\_\+\+STATUS\+\_\+\+ERROR\+\_\+\+INVALID\+\_\+\+AGENT}}} & The agent is invalid.\\
+\hline
+{\em \mbox{\hyperlink{group__status_ggad755322e7ff95456520e8abdbe90d225ac7d3651f75107d2a6a8ba3b25683c030}{HSA\+\_\+\+STATUS\+\_\+\+ERROR\+\_\+\+INVALID\+\_\+\+ARGUMENT}}} & {\ttfamily extension} is not a valid extension, or {\ttfamily result} is NULL. \\
+\hline
+\end{DoxyRetVals}
+\mbox{\Hypertarget{group__agentinfo_ga83ecf617b44a2efb5e2730374be839f3}\label{group__agentinfo_ga83ecf617b44a2efb5e2730374be839f3}} 
+\index{System and Agent Information@{System and Agent Information}!hsa\_agent\_get\_exception\_policies@{hsa\_agent\_get\_exception\_policies}}
+\index{hsa\_agent\_get\_exception\_policies@{hsa\_agent\_get\_exception\_policies}!System and Agent Information@{System and Agent Information}}
+\doxysubsubsection{\texorpdfstring{hsa\_agent\_get\_exception\_policies()}{hsa\_agent\_get\_exception\_policies()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{group__status_gad755322e7ff95456520e8abdbe90d225}{hsa\+\_\+status\+\_\+t}} \mbox{\hyperlink{inc_2hsa__ext__image_8h_a64216765b98b62ee87deb50fd2899836}{HSA\+\_\+\+API}} \mbox{\hyperlink{inc_2hsa_8h_a2321f8ca7d706cada4f617b191a478b0}{HSA\+\_\+\+DEPRECATED}} hsa\+\_\+agent\+\_\+get\+\_\+exception\+\_\+policies (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{group__agentinfo_ga9ce217ef08e7d5e89c8e83ce7b6ef22b}{hsa\+\_\+agent\+\_\+t}}}]{agent,  }\item[{\mbox{\hyperlink{group__agentinfo_gacafd4247e2a04cbe0ac0b3998c127532}{hsa\+\_\+profile\+\_\+t}}}]{profile,  }\item[{uint16\+\_\+t $\ast$}]{mask }\end{DoxyParamCaption})}
+
+
+
+Retrieve the exception policy support for a given combination of agent and profile. 
+
+\begin{DoxyRefDesc}{Deprecated}
+\item[\mbox{\hyperlink{deprecated__deprecated000003}{Deprecated}}]Use \mbox{\hyperlink{group__instruction-set-architecture_gab478487c2d8064db32d50ef574de44ea}{hsa\+\_\+isa\+\_\+get\+\_\+exception\+\_\+policies}} for a given intruction set architecture supported by the agent instead. If more than one ISA is supported by the agent, this function uses the first value returned by \mbox{\hyperlink{group__instruction-set-architecture_gaa624c390f2cfec064bc1b4d9c9303ed4}{hsa\+\_\+agent\+\_\+iterate\+\_\+isas}}.\end{DoxyRefDesc}
+
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em agent} & Agent.\\
+\hline
+\mbox{\texttt{ in}}  & {\em profile} & Profile.\\
+\hline
+\mbox{\texttt{ out}}  & {\em mask} & Pointer to a memory location where the HSA runtime stores a mask of \mbox{\hyperlink{group__agentinfo_gadaa0623d4a3fb29ba3fa4a6eb2a74c80}{hsa\+\_\+exception\+\_\+policy\+\_\+t}} values. Must not be NULL.\\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em \mbox{\hyperlink{group__status_ggad755322e7ff95456520e8abdbe90d225ae382ea0c9c05cce5a60d0317375159cc}{HSA\+\_\+\+STATUS\+\_\+\+SUCCESS}}} & The function has been executed successfully.\\
+\hline
+{\em \mbox{\hyperlink{group__status_ggad755322e7ff95456520e8abdbe90d225a34ea59ade5bfce95eee935238a99f5b5}{HSA\+\_\+\+STATUS\+\_\+\+ERROR\+\_\+\+NOT\+\_\+\+INITIALIZED}}} & The HSA runtime has not been initialized.\\
+\hline
+{\em \mbox{\hyperlink{group__status_ggad755322e7ff95456520e8abdbe90d225a3a5d835c109c2d0ad5b9c2771e133e5d}{HSA\+\_\+\+STATUS\+\_\+\+ERROR\+\_\+\+INVALID\+\_\+\+AGENT}}} & The agent is invalid.\\
+\hline
+{\em \mbox{\hyperlink{group__status_ggad755322e7ff95456520e8abdbe90d225ac7d3651f75107d2a6a8ba3b25683c030}{HSA\+\_\+\+STATUS\+\_\+\+ERROR\+\_\+\+INVALID\+\_\+\+ARGUMENT}}} & {\ttfamily profile} is not a valid profile, or {\ttfamily mask} is NULL. \\
+\hline
+\end{DoxyRetVals}
+\mbox{\Hypertarget{group__agentinfo_gae717192f8854259cb6392d92f2351712}\label{group__agentinfo_gae717192f8854259cb6392d92f2351712}} 
+\index{System and Agent Information@{System and Agent Information}!hsa\_agent\_get\_info@{hsa\_agent\_get\_info}}
+\index{hsa\_agent\_get\_info@{hsa\_agent\_get\_info}!System and Agent Information@{System and Agent Information}}
+\doxysubsubsection{\texorpdfstring{hsa\_agent\_get\_info()}{hsa\_agent\_get\_info()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{group__status_gad755322e7ff95456520e8abdbe90d225}{hsa\+\_\+status\+\_\+t}} \mbox{\hyperlink{inc_2hsa__ext__image_8h_a64216765b98b62ee87deb50fd2899836}{HSA\+\_\+\+API}} hsa\+\_\+agent\+\_\+get\+\_\+info (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{group__agentinfo_ga9ce217ef08e7d5e89c8e83ce7b6ef22b}{hsa\+\_\+agent\+\_\+t}}}]{agent,  }\item[{\mbox{\hyperlink{group__agentinfo_ga39d0684207d95717d96319573b3e4a42}{hsa\+\_\+agent\+\_\+info\+\_\+t}}}]{attribute,  }\item[{void $\ast$}]{value }\end{DoxyParamCaption})}
+
+
+
+Get the current value of an attribute for a given agent. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em agent} & A valid agent.\\
+\hline
+\mbox{\texttt{ in}}  & {\em attribute} & Attribute to query.\\
+\hline
+\mbox{\texttt{ out}}  & {\em value} & Pointer to an application-\/allocated buffer where to store the value of the attribute. If the buffer passed by the application is not large enough to hold the value of {\ttfamily attribute}, the behavior is undefined.\\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em \mbox{\hyperlink{group__status_ggad755322e7ff95456520e8abdbe90d225ae382ea0c9c05cce5a60d0317375159cc}{HSA\+\_\+\+STATUS\+\_\+\+SUCCESS}}} & The function has been executed successfully.\\
+\hline
+{\em \mbox{\hyperlink{group__status_ggad755322e7ff95456520e8abdbe90d225a34ea59ade5bfce95eee935238a99f5b5}{HSA\+\_\+\+STATUS\+\_\+\+ERROR\+\_\+\+NOT\+\_\+\+INITIALIZED}}} & The HSA runtime has not been initialized.\\
+\hline
+{\em \mbox{\hyperlink{group__status_ggad755322e7ff95456520e8abdbe90d225a3a5d835c109c2d0ad5b9c2771e133e5d}{HSA\+\_\+\+STATUS\+\_\+\+ERROR\+\_\+\+INVALID\+\_\+\+AGENT}}} & The agent is invalid.\\
+\hline
+{\em \mbox{\hyperlink{group__status_ggad755322e7ff95456520e8abdbe90d225ac7d3651f75107d2a6a8ba3b25683c030}{HSA\+\_\+\+STATUS\+\_\+\+ERROR\+\_\+\+INVALID\+\_\+\+ARGUMENT}}} & {\ttfamily attribute} is an invalid agent attribute, or {\ttfamily value} is NULL. \\
+\hline
+\end{DoxyRetVals}
+\mbox{\Hypertarget{group__agentinfo_ga637e44fad99135dcf4e3143109af7c45}\label{group__agentinfo_ga637e44fad99135dcf4e3143109af7c45}} 
+\index{System and Agent Information@{System and Agent Information}!hsa\_agent\_iterate\_caches@{hsa\_agent\_iterate\_caches}}
+\index{hsa\_agent\_iterate\_caches@{hsa\_agent\_iterate\_caches}!System and Agent Information@{System and Agent Information}}
+\doxysubsubsection{\texorpdfstring{hsa\_agent\_iterate\_caches()}{hsa\_agent\_iterate\_caches()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{group__status_gad755322e7ff95456520e8abdbe90d225}{hsa\+\_\+status\+\_\+t}} \mbox{\hyperlink{inc_2hsa__ext__image_8h_a64216765b98b62ee87deb50fd2899836}{HSA\+\_\+\+API}} hsa\+\_\+agent\+\_\+iterate\+\_\+caches (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{group__agentinfo_ga9ce217ef08e7d5e89c8e83ce7b6ef22b}{hsa\+\_\+agent\+\_\+t}}}]{agent,  }\item[{\mbox{\hyperlink{group__status_gad755322e7ff95456520e8abdbe90d225}{hsa\+\_\+status\+\_\+t}}($\ast$)(\mbox{\hyperlink{group__agentinfo_gaf095bbd42403c50be520db2a73e7ee8d}{hsa\+\_\+cache\+\_\+t}} cache, void $\ast$data)}]{callback,  }\item[{void $\ast$}]{data }\end{DoxyParamCaption})}
+
+
+
+Iterate over the memory caches of a given agent, and invoke an application-\/defined callback on every iteration. 
+
+Caches are visited in ascending order according to the value of the \mbox{\hyperlink{group__agentinfo_gga401184d269316319bca5287b9d5da093a9b7b7f1166dda8c87f150f9d83617149}{HSA\+\_\+\+CACHE\+\_\+\+INFO\+\_\+\+LEVEL}} attribute.
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em agent} & A valid agent.\\
+\hline
+\mbox{\texttt{ in}}  & {\em callback} & Callback to be invoked once per cache that is present in the agent. The HSA runtime passes two arguments to the callback\+: the cache and the application data. If {\ttfamily callback} returns a status other than \mbox{\hyperlink{group__status_ggad755322e7ff95456520e8abdbe90d225ae382ea0c9c05cce5a60d0317375159cc}{HSA\+\_\+\+STATUS\+\_\+\+SUCCESS}} for a particular iteration, the traversal stops and that value is returned.\\
+\hline
+\mbox{\texttt{ in}}  & {\em data} & Application data that is passed to {\ttfamily callback} on every iteration. May be NULL.\\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em \mbox{\hyperlink{group__status_ggad755322e7ff95456520e8abdbe90d225ae382ea0c9c05cce5a60d0317375159cc}{HSA\+\_\+\+STATUS\+\_\+\+SUCCESS}}} & The function has been executed successfully.\\
+\hline
+{\em \mbox{\hyperlink{group__status_ggad755322e7ff95456520e8abdbe90d225a34ea59ade5bfce95eee935238a99f5b5}{HSA\+\_\+\+STATUS\+\_\+\+ERROR\+\_\+\+NOT\+\_\+\+INITIALIZED}}} & The HSA runtime has not been initialized.\\
+\hline
+{\em \mbox{\hyperlink{group__status_ggad755322e7ff95456520e8abdbe90d225a3a5d835c109c2d0ad5b9c2771e133e5d}{HSA\+\_\+\+STATUS\+\_\+\+ERROR\+\_\+\+INVALID\+\_\+\+AGENT}}} & The agent is invalid.\\
+\hline
+{\em \mbox{\hyperlink{group__status_ggad755322e7ff95456520e8abdbe90d225ac7d3651f75107d2a6a8ba3b25683c030}{HSA\+\_\+\+STATUS\+\_\+\+ERROR\+\_\+\+INVALID\+\_\+\+ARGUMENT}}} & {\ttfamily callback} is NULL. \\
+\hline
+\end{DoxyRetVals}
+\mbox{\Hypertarget{group__agentinfo_gab92bb1c9e1d393fd407ecff4fa225ba3}\label{group__agentinfo_gab92bb1c9e1d393fd407ecff4fa225ba3}} 
+\index{System and Agent Information@{System and Agent Information}!hsa\_agent\_major\_extension\_supported@{hsa\_agent\_major\_extension\_supported}}
+\index{hsa\_agent\_major\_extension\_supported@{hsa\_agent\_major\_extension\_supported}!System and Agent Information@{System and Agent Information}}
+\doxysubsubsection{\texorpdfstring{hsa\_agent\_major\_extension\_supported()}{hsa\_agent\_major\_extension\_supported()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{group__status_gad755322e7ff95456520e8abdbe90d225}{hsa\+\_\+status\+\_\+t}} \mbox{\hyperlink{inc_2hsa__ext__image_8h_a64216765b98b62ee87deb50fd2899836}{HSA\+\_\+\+API}} hsa\+\_\+agent\+\_\+major\+\_\+extension\+\_\+supported (\begin{DoxyParamCaption}\item[{uint16\+\_\+t}]{extension,  }\item[{\mbox{\hyperlink{group__agentinfo_ga9ce217ef08e7d5e89c8e83ce7b6ef22b}{hsa\+\_\+agent\+\_\+t}}}]{agent,  }\item[{uint16\+\_\+t}]{version\+\_\+major,  }\item[{uint16\+\_\+t $\ast$}]{version\+\_\+minor,  }\item[{bool $\ast$}]{result }\end{DoxyParamCaption})}
+
+
+
+Query if a given version of an extension is supported by an agent. All minor versions from 0 up to the returned {\ttfamily version\+\_\+minor} must be supported. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em extension} & Extension identifier.\\
+\hline
+\mbox{\texttt{ in}}  & {\em agent} & Agent.\\
+\hline
+\mbox{\texttt{ in}}  & {\em version\+\_\+major} & Major version number.\\
+\hline
+\mbox{\texttt{ out}}  & {\em version\+\_\+minor} & Minor version number.\\
+\hline
+\mbox{\texttt{ out}}  & {\em result} & Pointer to a memory location where the HSA runtime stores the result of the check. The result is true if the specified version of the extension is supported, and false otherwise. The result must be false if \mbox{\hyperlink{group__agentinfo_ga2f6543316cac6dae789af416e75ecbba}{hsa\+\_\+system\+\_\+extension\+\_\+supported}} returns false for the same extension version.\\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em \mbox{\hyperlink{group__status_ggad755322e7ff95456520e8abdbe90d225ae382ea0c9c05cce5a60d0317375159cc}{HSA\+\_\+\+STATUS\+\_\+\+SUCCESS}}} & The function has been executed successfully.\\
+\hline
+{\em \mbox{\hyperlink{group__status_ggad755322e7ff95456520e8abdbe90d225a34ea59ade5bfce95eee935238a99f5b5}{HSA\+\_\+\+STATUS\+\_\+\+ERROR\+\_\+\+NOT\+\_\+\+INITIALIZED}}} & The HSA runtime has not been initialized.\\
+\hline
+{\em \mbox{\hyperlink{group__status_ggad755322e7ff95456520e8abdbe90d225a3a5d835c109c2d0ad5b9c2771e133e5d}{HSA\+\_\+\+STATUS\+\_\+\+ERROR\+\_\+\+INVALID\+\_\+\+AGENT}}} & The agent is invalid.\\
+\hline
+{\em \mbox{\hyperlink{group__status_ggad755322e7ff95456520e8abdbe90d225ac7d3651f75107d2a6a8ba3b25683c030}{HSA\+\_\+\+STATUS\+\_\+\+ERROR\+\_\+\+INVALID\+\_\+\+ARGUMENT}}} & {\ttfamily extension} is not a valid extension, or {\ttfamily version\+\_\+minor} is NULL, or {\ttfamily result} is NULL. \\
+\hline
+\end{DoxyRetVals}
+\mbox{\Hypertarget{group__agentinfo_ga1700444416fe8d5bae8298a47e3de941}\label{group__agentinfo_ga1700444416fe8d5bae8298a47e3de941}} 
+\index{System and Agent Information@{System and Agent Information}!hsa\_cache\_get\_info@{hsa\_cache\_get\_info}}
+\index{hsa\_cache\_get\_info@{hsa\_cache\_get\_info}!System and Agent Information@{System and Agent Information}}
+\doxysubsubsection{\texorpdfstring{hsa\_cache\_get\_info()}{hsa\_cache\_get\_info()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{group__status_gad755322e7ff95456520e8abdbe90d225}{hsa\+\_\+status\+\_\+t}} \mbox{\hyperlink{inc_2hsa__ext__image_8h_a64216765b98b62ee87deb50fd2899836}{HSA\+\_\+\+API}} hsa\+\_\+cache\+\_\+get\+\_\+info (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{group__agentinfo_gaf095bbd42403c50be520db2a73e7ee8d}{hsa\+\_\+cache\+\_\+t}}}]{cache,  }\item[{\mbox{\hyperlink{group__agentinfo_ga401184d269316319bca5287b9d5da093}{hsa\+\_\+cache\+\_\+info\+\_\+t}}}]{attribute,  }\item[{void $\ast$}]{value }\end{DoxyParamCaption})}
+
+
+
+Get the current value of an attribute for a given cache object. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em cache} & Cache.\\
+\hline
+\mbox{\texttt{ in}}  & {\em attribute} & Attribute to query.\\
+\hline
+\mbox{\texttt{ out}}  & {\em value} & Pointer to an application-\/allocated buffer where to store the value of the attribute. If the buffer passed by the application is not large enough to hold the value of {\ttfamily attribute}, the behavior is undefined.\\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em \mbox{\hyperlink{group__status_ggad755322e7ff95456520e8abdbe90d225ae382ea0c9c05cce5a60d0317375159cc}{HSA\+\_\+\+STATUS\+\_\+\+SUCCESS}}} & The function has been executed successfully.\\
+\hline
+{\em \mbox{\hyperlink{group__status_ggad755322e7ff95456520e8abdbe90d225a34ea59ade5bfce95eee935238a99f5b5}{HSA\+\_\+\+STATUS\+\_\+\+ERROR\+\_\+\+NOT\+\_\+\+INITIALIZED}}} & The HSA runtime has not been initialized.\\
+\hline
+{\em \mbox{\hyperlink{group__status_ggad755322e7ff95456520e8abdbe90d225ad2fe1f825edb316e459e23c59e24b33c}{HSA\+\_\+\+STATUS\+\_\+\+ERROR\+\_\+\+INVALID\+\_\+\+CACHE}}} & The cache is invalid.\\
+\hline
+{\em \mbox{\hyperlink{group__status_ggad755322e7ff95456520e8abdbe90d225ac7d3651f75107d2a6a8ba3b25683c030}{HSA\+\_\+\+STATUS\+\_\+\+ERROR\+\_\+\+INVALID\+\_\+\+ARGUMENT}}} & {\ttfamily attribute} is an invalid instruction set architecture attribute, or {\ttfamily value} is NULL. \\
+\hline
+\end{DoxyRetVals}
+\mbox{\Hypertarget{group__agentinfo_gad5e5337b0d7761113cdde167dae35b74}\label{group__agentinfo_gad5e5337b0d7761113cdde167dae35b74}} 
+\index{System and Agent Information@{System and Agent Information}!hsa\_extension\_get\_name@{hsa\_extension\_get\_name}}
+\index{hsa\_extension\_get\_name@{hsa\_extension\_get\_name}!System and Agent Information@{System and Agent Information}}
+\doxysubsubsection{\texorpdfstring{hsa\_extension\_get\_name()}{hsa\_extension\_get\_name()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{group__status_gad755322e7ff95456520e8abdbe90d225}{hsa\+\_\+status\+\_\+t}} \mbox{\hyperlink{inc_2hsa__ext__image_8h_a64216765b98b62ee87deb50fd2899836}{HSA\+\_\+\+API}} hsa\+\_\+extension\+\_\+get\+\_\+name (\begin{DoxyParamCaption}\item[{uint16\+\_\+t}]{extension,  }\item[{const char $\ast$$\ast$}]{name }\end{DoxyParamCaption})}
+
+
+
+Query the name of a given extension. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em extension} & Extension identifier. If the extension is not supported by the implementation (see \mbox{\hyperlink{group__agentinfo_gga5358716e320ad8a78b78ef44d8783b0ba7e873d31af73c552272aad520d8dcbef}{HSA\+\_\+\+SYSTEM\+\_\+\+INFO\+\_\+\+EXTENSIONS}}), the behavior is undefined.\\
+\hline
+\mbox{\texttt{ out}}  & {\em name} & Pointer to a memory location where the HSA runtime stores the extension name. The extension name is a NUL-\/terminated string.\\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em \mbox{\hyperlink{group__status_ggad755322e7ff95456520e8abdbe90d225ae382ea0c9c05cce5a60d0317375159cc}{HSA\+\_\+\+STATUS\+\_\+\+SUCCESS}}} & The function has been executed successfully.\\
+\hline
+{\em \mbox{\hyperlink{group__status_ggad755322e7ff95456520e8abdbe90d225a34ea59ade5bfce95eee935238a99f5b5}{HSA\+\_\+\+STATUS\+\_\+\+ERROR\+\_\+\+NOT\+\_\+\+INITIALIZED}}} & The HSA runtime has not been initialized.\\
+\hline
+{\em \mbox{\hyperlink{group__status_ggad755322e7ff95456520e8abdbe90d225ac7d3651f75107d2a6a8ba3b25683c030}{HSA\+\_\+\+STATUS\+\_\+\+ERROR\+\_\+\+INVALID\+\_\+\+ARGUMENT}}} & {\ttfamily extension} is not a valid extension, or {\ttfamily name} is NULL. \\
+\hline
+\end{DoxyRetVals}
+\mbox{\Hypertarget{group__agentinfo_ga6acfdfdbf8977d4de38b37b8ade6156a}\label{group__agentinfo_ga6acfdfdbf8977d4de38b37b8ade6156a}} 
+\index{System and Agent Information@{System and Agent Information}!hsa\_iterate\_agents@{hsa\_iterate\_agents}}
+\index{hsa\_iterate\_agents@{hsa\_iterate\_agents}!System and Agent Information@{System and Agent Information}}
+\doxysubsubsection{\texorpdfstring{hsa\_iterate\_agents()}{hsa\_iterate\_agents()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{group__status_gad755322e7ff95456520e8abdbe90d225}{hsa\+\_\+status\+\_\+t}} \mbox{\hyperlink{inc_2hsa__ext__image_8h_a64216765b98b62ee87deb50fd2899836}{HSA\+\_\+\+API}} hsa\+\_\+iterate\+\_\+agents (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{group__status_gad755322e7ff95456520e8abdbe90d225}{hsa\+\_\+status\+\_\+t}}($\ast$)(\mbox{\hyperlink{group__agentinfo_ga9ce217ef08e7d5e89c8e83ce7b6ef22b}{hsa\+\_\+agent\+\_\+t}} agent, void $\ast$data)}]{callback,  }\item[{void $\ast$}]{data }\end{DoxyParamCaption})}
+
+
+
+Iterate over the available agents, and invoke an application-\/defined callback on every iteration. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em callback} & Callback to be invoked once per agent. The HSA runtime passes two arguments to the callback\+: the agent and the application data. If {\ttfamily callback} returns a status other than \mbox{\hyperlink{group__status_ggad755322e7ff95456520e8abdbe90d225ae382ea0c9c05cce5a60d0317375159cc}{HSA\+\_\+\+STATUS\+\_\+\+SUCCESS}} for a particular iteration, the traversal stops and \mbox{\hyperlink{group__agentinfo_ga6acfdfdbf8977d4de38b37b8ade6156a}{hsa\+\_\+iterate\+\_\+agents}} returns that status value.\\
+\hline
+\mbox{\texttt{ in}}  & {\em data} & Application data that is passed to {\ttfamily callback} on every iteration. May be NULL.\\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em \mbox{\hyperlink{group__status_ggad755322e7ff95456520e8abdbe90d225ae382ea0c9c05cce5a60d0317375159cc}{HSA\+\_\+\+STATUS\+\_\+\+SUCCESS}}} & The function has been executed successfully.\\
+\hline
+{\em \mbox{\hyperlink{group__status_ggad755322e7ff95456520e8abdbe90d225a34ea59ade5bfce95eee935238a99f5b5}{HSA\+\_\+\+STATUS\+\_\+\+ERROR\+\_\+\+NOT\+\_\+\+INITIALIZED}}} & The HSA runtime has not been initialized.\\
+\hline
+{\em \mbox{\hyperlink{group__status_ggad755322e7ff95456520e8abdbe90d225ac7d3651f75107d2a6a8ba3b25683c030}{HSA\+\_\+\+STATUS\+\_\+\+ERROR\+\_\+\+INVALID\+\_\+\+ARGUMENT}}} & {\ttfamily callback} is NULL. \\
+\hline
+\end{DoxyRetVals}
+\mbox{\Hypertarget{group__agentinfo_ga2f6543316cac6dae789af416e75ecbba}\label{group__agentinfo_ga2f6543316cac6dae789af416e75ecbba}} 
+\index{System and Agent Information@{System and Agent Information}!hsa\_system\_extension\_supported@{hsa\_system\_extension\_supported}}
+\index{hsa\_system\_extension\_supported@{hsa\_system\_extension\_supported}!System and Agent Information@{System and Agent Information}}
+\doxysubsubsection{\texorpdfstring{hsa\_system\_extension\_supported()}{hsa\_system\_extension\_supported()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{group__status_gad755322e7ff95456520e8abdbe90d225}{hsa\+\_\+status\+\_\+t}} \mbox{\hyperlink{inc_2hsa__ext__image_8h_a64216765b98b62ee87deb50fd2899836}{HSA\+\_\+\+API}} \mbox{\hyperlink{inc_2hsa_8h_a2321f8ca7d706cada4f617b191a478b0}{HSA\+\_\+\+DEPRECATED}} hsa\+\_\+system\+\_\+extension\+\_\+supported (\begin{DoxyParamCaption}\item[{uint16\+\_\+t}]{extension,  }\item[{uint16\+\_\+t}]{version\+\_\+major,  }\item[{uint16\+\_\+t}]{version\+\_\+minor,  }\item[{bool $\ast$}]{result }\end{DoxyParamCaption})}
+
+
+
+Query if a given version of an extension is supported by the HSA implementation. 
+
+\begin{DoxyRefDesc}{Deprecated}
+\item[\mbox{\hyperlink{deprecated__deprecated000001}{Deprecated}}]\end{DoxyRefDesc}
+
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em extension} & Extension identifier.\\
+\hline
+\mbox{\texttt{ in}}  & {\em version\+\_\+major} & Major version number.\\
+\hline
+\mbox{\texttt{ in}}  & {\em version\+\_\+minor} & Minor version number.\\
+\hline
+\mbox{\texttt{ out}}  & {\em result} & Pointer to a memory location where the HSA runtime stores the result of the check. The result is true if the specified version of the extension is supported, and false otherwise.\\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em \mbox{\hyperlink{group__status_ggad755322e7ff95456520e8abdbe90d225ae382ea0c9c05cce5a60d0317375159cc}{HSA\+\_\+\+STATUS\+\_\+\+SUCCESS}}} & The function has been executed successfully.\\
+\hline
+{\em \mbox{\hyperlink{group__status_ggad755322e7ff95456520e8abdbe90d225a34ea59ade5bfce95eee935238a99f5b5}{HSA\+\_\+\+STATUS\+\_\+\+ERROR\+\_\+\+NOT\+\_\+\+INITIALIZED}}} & The HSA runtime has not been initialized.\\
+\hline
+{\em \mbox{\hyperlink{group__status_ggad755322e7ff95456520e8abdbe90d225ac7d3651f75107d2a6a8ba3b25683c030}{HSA\+\_\+\+STATUS\+\_\+\+ERROR\+\_\+\+INVALID\+\_\+\+ARGUMENT}}} & {\ttfamily extension} is not a valid extension, or {\ttfamily result} is NULL. \\
+\hline
+\end{DoxyRetVals}
+\mbox{\Hypertarget{group__agentinfo_gaf5f1a0e5884522f692c13525205978bb}\label{group__agentinfo_gaf5f1a0e5884522f692c13525205978bb}} 
+\index{System and Agent Information@{System and Agent Information}!hsa\_system\_get\_extension\_table@{hsa\_system\_get\_extension\_table}}
+\index{hsa\_system\_get\_extension\_table@{hsa\_system\_get\_extension\_table}!System and Agent Information@{System and Agent Information}}
+\doxysubsubsection{\texorpdfstring{hsa\_system\_get\_extension\_table()}{hsa\_system\_get\_extension\_table()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{group__status_gad755322e7ff95456520e8abdbe90d225}{hsa\+\_\+status\+\_\+t}} \mbox{\hyperlink{inc_2hsa__ext__image_8h_a64216765b98b62ee87deb50fd2899836}{HSA\+\_\+\+API}} \mbox{\hyperlink{inc_2hsa_8h_a2321f8ca7d706cada4f617b191a478b0}{HSA\+\_\+\+DEPRECATED}} hsa\+\_\+system\+\_\+get\+\_\+extension\+\_\+table (\begin{DoxyParamCaption}\item[{uint16\+\_\+t}]{extension,  }\item[{uint16\+\_\+t}]{version\+\_\+major,  }\item[{uint16\+\_\+t}]{version\+\_\+minor,  }\item[{void $\ast$}]{table }\end{DoxyParamCaption})}
+
+
+
+Retrieve the function pointers corresponding to a given version of an extension. Portable applications are expected to invoke the extension API using the returned function pointers. 
+
+\begin{DoxyRefDesc}{Deprecated}
+\item[\mbox{\hyperlink{deprecated__deprecated000002}{Deprecated}}]\end{DoxyRefDesc}
+
+
+The application is responsible for verifying that the given version of the extension is supported by the HSA implementation (see \mbox{\hyperlink{group__agentinfo_ga2f6543316cac6dae789af416e75ecbba}{hsa\+\_\+system\+\_\+extension\+\_\+supported}}). If the given combination of extension, major version, and minor version is not supported by the implementation, the behavior is undefined.
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em extension} & Extension identifier.\\
+\hline
+\mbox{\texttt{ in}}  & {\em version\+\_\+major} & Major version number for which to retrieve the function pointer table.\\
+\hline
+\mbox{\texttt{ in}}  & {\em version\+\_\+minor} & Minor version number for which to retrieve the function pointer table.\\
+\hline
+\mbox{\texttt{ out}}  & {\em table} & Pointer to an application-\/allocated function pointer table that is populated by the HSA runtime. Must not be NULL. The memory associated with table can be reused or freed after the function returns.\\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em \mbox{\hyperlink{group__status_ggad755322e7ff95456520e8abdbe90d225ae382ea0c9c05cce5a60d0317375159cc}{HSA\+\_\+\+STATUS\+\_\+\+SUCCESS}}} & The function has been executed successfully.\\
+\hline
+{\em \mbox{\hyperlink{group__status_ggad755322e7ff95456520e8abdbe90d225a34ea59ade5bfce95eee935238a99f5b5}{HSA\+\_\+\+STATUS\+\_\+\+ERROR\+\_\+\+NOT\+\_\+\+INITIALIZED}}} & The HSA runtime has not been initialized.\\
+\hline
+{\em \mbox{\hyperlink{group__status_ggad755322e7ff95456520e8abdbe90d225ac7d3651f75107d2a6a8ba3b25683c030}{HSA\+\_\+\+STATUS\+\_\+\+ERROR\+\_\+\+INVALID\+\_\+\+ARGUMENT}}} & {\ttfamily extension} is not a valid extension, or {\ttfamily table} is NULL. \\
+\hline
+\end{DoxyRetVals}
+\mbox{\Hypertarget{group__agentinfo_gaab2916fb980fbafdcea712ba6a99d46d}\label{group__agentinfo_gaab2916fb980fbafdcea712ba6a99d46d}} 
+\index{System and Agent Information@{System and Agent Information}!hsa\_system\_get\_info@{hsa\_system\_get\_info}}
+\index{hsa\_system\_get\_info@{hsa\_system\_get\_info}!System and Agent Information@{System and Agent Information}}
+\doxysubsubsection{\texorpdfstring{hsa\_system\_get\_info()}{hsa\_system\_get\_info()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{group__status_gad755322e7ff95456520e8abdbe90d225}{hsa\+\_\+status\+\_\+t}} \mbox{\hyperlink{inc_2hsa__ext__image_8h_a64216765b98b62ee87deb50fd2899836}{HSA\+\_\+\+API}} hsa\+\_\+system\+\_\+get\+\_\+info (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{group__agentinfo_ga5358716e320ad8a78b78ef44d8783b0b}{hsa\+\_\+system\+\_\+info\+\_\+t}}}]{attribute,  }\item[{void $\ast$}]{value }\end{DoxyParamCaption})}
+
+
+
+Get the current value of a system attribute. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em attribute} & Attribute to query.\\
+\hline
+\mbox{\texttt{ out}}  & {\em value} & Pointer to an application-\/allocated buffer where to store the value of the attribute. If the buffer passed by the application is not large enough to hold the value of {\ttfamily attribute}, the behavior is undefined.\\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em \mbox{\hyperlink{group__status_ggad755322e7ff95456520e8abdbe90d225ae382ea0c9c05cce5a60d0317375159cc}{HSA\+\_\+\+STATUS\+\_\+\+SUCCESS}}} & The function has been executed successfully.\\
+\hline
+{\em \mbox{\hyperlink{group__status_ggad755322e7ff95456520e8abdbe90d225a34ea59ade5bfce95eee935238a99f5b5}{HSA\+\_\+\+STATUS\+\_\+\+ERROR\+\_\+\+NOT\+\_\+\+INITIALIZED}}} & The HSA runtime has not been initialized.\\
+\hline
+{\em \mbox{\hyperlink{group__status_ggad755322e7ff95456520e8abdbe90d225ac7d3651f75107d2a6a8ba3b25683c030}{HSA\+\_\+\+STATUS\+\_\+\+ERROR\+\_\+\+INVALID\+\_\+\+ARGUMENT}}} & {\ttfamily attribute} is an invalid system attribute, or {\ttfamily value} is NULL. \\
+\hline
+\end{DoxyRetVals}
+\mbox{\Hypertarget{group__agentinfo_ga728cb3122cea1f40ad9dbc2822d2e431}\label{group__agentinfo_ga728cb3122cea1f40ad9dbc2822d2e431}} 
+\index{System and Agent Information@{System and Agent Information}!hsa\_system\_get\_major\_extension\_table@{hsa\_system\_get\_major\_extension\_table}}
+\index{hsa\_system\_get\_major\_extension\_table@{hsa\_system\_get\_major\_extension\_table}!System and Agent Information@{System and Agent Information}}
+\doxysubsubsection{\texorpdfstring{hsa\_system\_get\_major\_extension\_table()}{hsa\_system\_get\_major\_extension\_table()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{group__status_gad755322e7ff95456520e8abdbe90d225}{hsa\+\_\+status\+\_\+t}} \mbox{\hyperlink{inc_2hsa__ext__image_8h_a64216765b98b62ee87deb50fd2899836}{HSA\+\_\+\+API}} hsa\+\_\+system\+\_\+get\+\_\+major\+\_\+extension\+\_\+table (\begin{DoxyParamCaption}\item[{uint16\+\_\+t}]{extension,  }\item[{uint16\+\_\+t}]{version\+\_\+major,  }\item[{size\+\_\+t}]{table\+\_\+length,  }\item[{void $\ast$}]{table }\end{DoxyParamCaption})}
+
+
+
+Retrieve the function pointers corresponding to a given major version of an extension. Portable applications are expected to invoke the extension API using the returned function pointers. 
+
+The application is responsible for verifying that the given major version of the extension is supported by the HSA implementation (see \mbox{\hyperlink{group__agentinfo_ga93e4a879101b98dd3da76cd36f38a58e}{hsa\+\_\+system\+\_\+major\+\_\+extension\+\_\+supported}}). If the given combination of extension and major version is not supported by the implementation, the behavior is undefined. Additionally if the length doesn\textquotesingle{}t allow space for a full minor version, it is implementation defined if only some of the function pointers for that minor version get written.
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em extension} & Extension identifier.\\
+\hline
+\mbox{\texttt{ in}}  & {\em version\+\_\+major} & Major version number for which to retrieve the function pointer table.\\
+\hline
+\mbox{\texttt{ in}}  & {\em table\+\_\+length} & Size in bytes of the function pointer table to be populated. The implementation will not write more than this many bytes to the table.\\
+\hline
+\mbox{\texttt{ out}}  & {\em table} & Pointer to an application-\/allocated function pointer table that is populated by the HSA runtime. Must not be NULL. The memory associated with table can be reused or freed after the function returns.\\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em \mbox{\hyperlink{group__status_ggad755322e7ff95456520e8abdbe90d225ae382ea0c9c05cce5a60d0317375159cc}{HSA\+\_\+\+STATUS\+\_\+\+SUCCESS}}} & The function has been executed successfully.\\
+\hline
+{\em \mbox{\hyperlink{group__status_ggad755322e7ff95456520e8abdbe90d225a34ea59ade5bfce95eee935238a99f5b5}{HSA\+\_\+\+STATUS\+\_\+\+ERROR\+\_\+\+NOT\+\_\+\+INITIALIZED}}} & The HSA runtime has not been initialized.\\
+\hline
+{\em \mbox{\hyperlink{group__status_ggad755322e7ff95456520e8abdbe90d225ac7d3651f75107d2a6a8ba3b25683c030}{HSA\+\_\+\+STATUS\+\_\+\+ERROR\+\_\+\+INVALID\+\_\+\+ARGUMENT}}} & {\ttfamily extension} is not a valid extension, or {\ttfamily table} is NULL. \\
+\hline
+\end{DoxyRetVals}
+\mbox{\Hypertarget{group__agentinfo_ga93e4a879101b98dd3da76cd36f38a58e}\label{group__agentinfo_ga93e4a879101b98dd3da76cd36f38a58e}} 
+\index{System and Agent Information@{System and Agent Information}!hsa\_system\_major\_extension\_supported@{hsa\_system\_major\_extension\_supported}}
+\index{hsa\_system\_major\_extension\_supported@{hsa\_system\_major\_extension\_supported}!System and Agent Information@{System and Agent Information}}
+\doxysubsubsection{\texorpdfstring{hsa\_system\_major\_extension\_supported()}{hsa\_system\_major\_extension\_supported()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{group__status_gad755322e7ff95456520e8abdbe90d225}{hsa\+\_\+status\+\_\+t}} \mbox{\hyperlink{inc_2hsa__ext__image_8h_a64216765b98b62ee87deb50fd2899836}{HSA\+\_\+\+API}} hsa\+\_\+system\+\_\+major\+\_\+extension\+\_\+supported (\begin{DoxyParamCaption}\item[{uint16\+\_\+t}]{extension,  }\item[{uint16\+\_\+t}]{version\+\_\+major,  }\item[{uint16\+\_\+t $\ast$}]{version\+\_\+minor,  }\item[{bool $\ast$}]{result }\end{DoxyParamCaption})}
+
+
+
+Query if a given version of an extension is supported by the HSA implementation. All minor versions from 0 up to the returned {\ttfamily version\+\_\+minor} must be supported by the implementation. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em extension} & Extension identifier.\\
+\hline
+\mbox{\texttt{ in}}  & {\em version\+\_\+major} & Major version number.\\
+\hline
+\mbox{\texttt{ out}}  & {\em version\+\_\+minor} & Minor version number.\\
+\hline
+\mbox{\texttt{ out}}  & {\em result} & Pointer to a memory location where the HSA runtime stores the result of the check. The result is true if the specified version of the extension is supported, and false otherwise.\\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em \mbox{\hyperlink{group__status_ggad755322e7ff95456520e8abdbe90d225ae382ea0c9c05cce5a60d0317375159cc}{HSA\+\_\+\+STATUS\+\_\+\+SUCCESS}}} & The function has been executed successfully.\\
+\hline
+{\em \mbox{\hyperlink{group__status_ggad755322e7ff95456520e8abdbe90d225a34ea59ade5bfce95eee935238a99f5b5}{HSA\+\_\+\+STATUS\+\_\+\+ERROR\+\_\+\+NOT\+\_\+\+INITIALIZED}}} & The HSA runtime has not been initialized.\\
+\hline
+{\em \mbox{\hyperlink{group__status_ggad755322e7ff95456520e8abdbe90d225ac7d3651f75107d2a6a8ba3b25683c030}{HSA\+\_\+\+STATUS\+\_\+\+ERROR\+\_\+\+INVALID\+\_\+\+ARGUMENT}}} & {\ttfamily extension} is not a valid extension, or {\ttfamily version\+\_\+minor} is NULL, or {\ttfamily result} is NULL. \\
+\hline
+\end{DoxyRetVals}

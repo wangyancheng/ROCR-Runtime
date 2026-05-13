@@ -1,0 +1,164 @@
+\hypertarget{amd__elf__image_8cpp}{}\doxysection{src/libamdhsacode/amd\+\_\+elf\+\_\+image.cpp File Reference}
+\label{amd__elf__image_8cpp}\index{src/libamdhsacode/amd\_elf\_image.cpp@{src/libamdhsacode/amd\_elf\_image.cpp}}
+{\ttfamily \#include \char`\"{}core/inc/amd\+\_\+elf\+\_\+image.\+hpp\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}amd\+\_\+hsa\+\_\+code\+\_\+util.\+hpp\char`\"{}}\newline
+{\ttfamily \#include $<$gelf.\+h$>$}\newline
+{\ttfamily \#include $<$errno.\+h$>$}\newline
+{\ttfamily \#include $<$cstring$>$}\newline
+{\ttfamily \#include $<$cerrno$>$}\newline
+{\ttfamily \#include $<$fstream$>$}\newline
+{\ttfamily \#include $<$memory$>$}\newline
+{\ttfamily \#include $<$cassert$>$}\newline
+{\ttfamily \#include $<$cstdlib$>$}\newline
+{\ttfamily \#include $<$algorithm$>$}\newline
+{\ttfamily \#include $<$libelf.\+h$>$}\newline
+{\ttfamily \#include $<$fcntl.\+h$>$}\newline
+{\ttfamily \#include $<$unistd.\+h$>$}\newline
+{\ttfamily \#include $<$sys/sendfile.\+h$>$}\newline
+Include dependency graph for amd\+\_\+elf\+\_\+image.\+cpp\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{amd__elf__image_8cpp__incl}
+\end{center}
+\end{figure}
+\doxysubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class \mbox{\hyperlink{classrocr_1_1amd_1_1elf_1_1FileImage}{rocr\+::amd\+::elf\+::\+File\+Image}}
+\item 
+class \mbox{\hyperlink{classrocr_1_1amd_1_1elf_1_1Buffer}{rocr\+::amd\+::elf\+::\+Buffer}}
+\item 
+class \mbox{\hyperlink{classrocr_1_1amd_1_1elf_1_1GElfSection}{rocr\+::amd\+::elf\+::\+GElf\+Section}}
+\item 
+class \mbox{\hyperlink{classrocr_1_1amd_1_1elf_1_1GElfSegment}{rocr\+::amd\+::elf\+::\+GElf\+Segment}}
+\item 
+class \mbox{\hyperlink{classrocr_1_1amd_1_1elf_1_1GElfStringTable}{rocr\+::amd\+::elf\+::\+GElf\+String\+Table}}
+\item 
+class \mbox{\hyperlink{classrocr_1_1amd_1_1elf_1_1GElfSymbol}{rocr\+::amd\+::elf\+::\+GElf\+Symbol}}
+\item 
+class \mbox{\hyperlink{classrocr_1_1amd_1_1elf_1_1GElfSymbolTable}{rocr\+::amd\+::elf\+::\+GElf\+Symbol\+Table}}
+\item 
+class \mbox{\hyperlink{classrocr_1_1amd_1_1elf_1_1GElfNoteSection}{rocr\+::amd\+::elf\+::\+GElf\+Note\+Section}}
+\item 
+class \mbox{\hyperlink{classrocr_1_1amd_1_1elf_1_1GElfRelocation}{rocr\+::amd\+::elf\+::\+GElf\+Relocation}}
+\item 
+class \mbox{\hyperlink{classrocr_1_1amd_1_1elf_1_1GElfRelocationSection}{rocr\+::amd\+::elf\+::\+GElf\+Relocation\+Section}}
+\item 
+class \mbox{\hyperlink{classrocr_1_1amd_1_1elf_1_1GElfImage}{rocr\+::amd\+::elf\+::\+GElf\+Image}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Namespaces}
+\begin{DoxyCompactItemize}
+\item 
+ \mbox{\hyperlink{namespacerocr}{rocr}}
+\item 
+ \mbox{\hyperlink{namespacerocr_1_1amd}{rocr\+::amd}}
+\item 
+ \mbox{\hyperlink{namespacerocr_1_1amd_1_1elf}{rocr\+::amd\+::elf}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \mbox{\hyperlink{amd__elf__image_8cpp_a626f6c33678008cc272f0c095476d84f}{\+\_\+open}}~open
+\item 
+\#define \mbox{\hyperlink{amd__elf__image_8cpp_a3ccbd91433ffd88ca0d6f664ca6051c1}{\+\_\+close}}~close
+\item 
+\#define \mbox{\hyperlink{amd__elf__image_8cpp_a72ad27aa963f29b5a73091e62f7090f0}{\+\_\+tempnam}}~tempnam
+\item 
+\#define \mbox{\hyperlink{amd__elf__image_8cpp_ad97c8a6a2e57b993ed30a1cac9f74907}{Open\+Temp}}(f)~amd\+::hsa\+::\+Open\+Temp\+File(f);
+\item 
+\#define \mbox{\hyperlink{amd__elf__image_8cpp_aa3ad7c658c5261cd6c209ea2a2cdb968}{Close\+Temp}}(f)~amd\+::hsa\+::\+Close\+Temp\+File(f);
+\item 
+\#define \mbox{\hyperlink{amd__elf__image_8cpp_a41184dc65e55f92522031ede71b2d93d}{\+\_\+read}}~read
+\item 
+\#define \mbox{\hyperlink{amd__elf__image_8cpp_a21a85437ca21f3f2fc6a96fe7b8e9716}{\+\_\+write}}~write
+\item 
+\#define \mbox{\hyperlink{amd__elf__image_8cpp_a1e5593909b113ed8def340ad46e7aff7}{\+\_\+lseek}}~lseek
+\item 
+\#define \mbox{\hyperlink{amd__elf__image_8cpp_a602c045983e60b42b6bd21e2c8d71a5a}{\+\_\+ftruncate}}~ftruncate
+\item 
+\#define \mbox{\hyperlink{amd__elf__image_8cpp_a6ace7c6824b6665bff7f59500ca822f5}{elf\+\_\+setshstrndx}}~elfx\+\_\+update\+\_\+shstrndx
+\item 
+\#define \mbox{\hyperlink{amd__elf__image_8cpp_ab09b620e1d3520d68674c08543d307e3}{NOTE\+\_\+\+RECORD\+\_\+\+ALIGNMENT}}~4
+\end{DoxyCompactItemize}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+Image $\ast$ \mbox{\hyperlink{namespacerocr_1_1amd_1_1elf_a347e4d1babe08961bf247140e9d9c4c6}{rocr\+::amd\+::elf\+::\+New\+Elf32\+Image}} ()
+\item 
+Image $\ast$ \mbox{\hyperlink{namespacerocr_1_1amd_1_1elf_aa602259fb26e182328c5f186645abb3c}{rocr\+::amd\+::elf\+::\+New\+Elf64\+Image}} ()
+\item 
+uint64\+\_\+t \mbox{\hyperlink{namespacerocr_1_1amd_1_1elf_a33830a7eb20027b29eb80719fd837d91}{rocr\+::amd\+::elf\+::\+Elf\+Size}} (const void $\ast$buffer)
+\item 
+std\+::string \mbox{\hyperlink{namespacerocr_1_1amd_1_1elf_a60c7c3932d45e8f064c63cbd02b25880}{rocr\+::amd\+::elf\+::\+Get\+Note\+String}} (uint32\+\_\+t s\+\_\+size, const char $\ast$s)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Macro Definition Documentation}
+\mbox{\Hypertarget{amd__elf__image_8cpp_a3ccbd91433ffd88ca0d6f664ca6051c1}\label{amd__elf__image_8cpp_a3ccbd91433ffd88ca0d6f664ca6051c1}} 
+\index{amd\_elf\_image.cpp@{amd\_elf\_image.cpp}!\_close@{\_close}}
+\index{\_close@{\_close}!amd\_elf\_image.cpp@{amd\_elf\_image.cpp}}
+\doxysubsubsection{\texorpdfstring{\_close}{\_close}}
+{\footnotesize\ttfamily \#define \+\_\+close~close}
+
+\mbox{\Hypertarget{amd__elf__image_8cpp_a602c045983e60b42b6bd21e2c8d71a5a}\label{amd__elf__image_8cpp_a602c045983e60b42b6bd21e2c8d71a5a}} 
+\index{amd\_elf\_image.cpp@{amd\_elf\_image.cpp}!\_ftruncate@{\_ftruncate}}
+\index{\_ftruncate@{\_ftruncate}!amd\_elf\_image.cpp@{amd\_elf\_image.cpp}}
+\doxysubsubsection{\texorpdfstring{\_ftruncate}{\_ftruncate}}
+{\footnotesize\ttfamily \#define \+\_\+ftruncate~ftruncate}
+
+\mbox{\Hypertarget{amd__elf__image_8cpp_a1e5593909b113ed8def340ad46e7aff7}\label{amd__elf__image_8cpp_a1e5593909b113ed8def340ad46e7aff7}} 
+\index{amd\_elf\_image.cpp@{amd\_elf\_image.cpp}!\_lseek@{\_lseek}}
+\index{\_lseek@{\_lseek}!amd\_elf\_image.cpp@{amd\_elf\_image.cpp}}
+\doxysubsubsection{\texorpdfstring{\_lseek}{\_lseek}}
+{\footnotesize\ttfamily \#define \+\_\+lseek~lseek}
+
+\mbox{\Hypertarget{amd__elf__image_8cpp_a626f6c33678008cc272f0c095476d84f}\label{amd__elf__image_8cpp_a626f6c33678008cc272f0c095476d84f}} 
+\index{amd\_elf\_image.cpp@{amd\_elf\_image.cpp}!\_open@{\_open}}
+\index{\_open@{\_open}!amd\_elf\_image.cpp@{amd\_elf\_image.cpp}}
+\doxysubsubsection{\texorpdfstring{\_open}{\_open}}
+{\footnotesize\ttfamily \#define \+\_\+open~open}
+
+\mbox{\Hypertarget{amd__elf__image_8cpp_a41184dc65e55f92522031ede71b2d93d}\label{amd__elf__image_8cpp_a41184dc65e55f92522031ede71b2d93d}} 
+\index{amd\_elf\_image.cpp@{amd\_elf\_image.cpp}!\_read@{\_read}}
+\index{\_read@{\_read}!amd\_elf\_image.cpp@{amd\_elf\_image.cpp}}
+\doxysubsubsection{\texorpdfstring{\_read}{\_read}}
+{\footnotesize\ttfamily \#define \+\_\+read~read}
+
+\mbox{\Hypertarget{amd__elf__image_8cpp_a72ad27aa963f29b5a73091e62f7090f0}\label{amd__elf__image_8cpp_a72ad27aa963f29b5a73091e62f7090f0}} 
+\index{amd\_elf\_image.cpp@{amd\_elf\_image.cpp}!\_tempnam@{\_tempnam}}
+\index{\_tempnam@{\_tempnam}!amd\_elf\_image.cpp@{amd\_elf\_image.cpp}}
+\doxysubsubsection{\texorpdfstring{\_tempnam}{\_tempnam}}
+{\footnotesize\ttfamily \#define \+\_\+tempnam~tempnam}
+
+\mbox{\Hypertarget{amd__elf__image_8cpp_a21a85437ca21f3f2fc6a96fe7b8e9716}\label{amd__elf__image_8cpp_a21a85437ca21f3f2fc6a96fe7b8e9716}} 
+\index{amd\_elf\_image.cpp@{amd\_elf\_image.cpp}!\_write@{\_write}}
+\index{\_write@{\_write}!amd\_elf\_image.cpp@{amd\_elf\_image.cpp}}
+\doxysubsubsection{\texorpdfstring{\_write}{\_write}}
+{\footnotesize\ttfamily \#define \+\_\+write~write}
+
+\mbox{\Hypertarget{amd__elf__image_8cpp_aa3ad7c658c5261cd6c209ea2a2cdb968}\label{amd__elf__image_8cpp_aa3ad7c658c5261cd6c209ea2a2cdb968}} 
+\index{amd\_elf\_image.cpp@{amd\_elf\_image.cpp}!CloseTemp@{CloseTemp}}
+\index{CloseTemp@{CloseTemp}!amd\_elf\_image.cpp@{amd\_elf\_image.cpp}}
+\doxysubsubsection{\texorpdfstring{CloseTemp}{CloseTemp}}
+{\footnotesize\ttfamily \#define Close\+Temp(\begin{DoxyParamCaption}\item[{}]{f }\end{DoxyParamCaption})~amd\+::hsa\+::\+Close\+Temp\+File(f);}
+
+\mbox{\Hypertarget{amd__elf__image_8cpp_a6ace7c6824b6665bff7f59500ca822f5}\label{amd__elf__image_8cpp_a6ace7c6824b6665bff7f59500ca822f5}} 
+\index{amd\_elf\_image.cpp@{amd\_elf\_image.cpp}!elf\_setshstrndx@{elf\_setshstrndx}}
+\index{elf\_setshstrndx@{elf\_setshstrndx}!amd\_elf\_image.cpp@{amd\_elf\_image.cpp}}
+\doxysubsubsection{\texorpdfstring{elf\_setshstrndx}{elf\_setshstrndx}}
+{\footnotesize\ttfamily \#define elf\+\_\+setshstrndx~elfx\+\_\+update\+\_\+shstrndx}
+
+\mbox{\Hypertarget{amd__elf__image_8cpp_ab09b620e1d3520d68674c08543d307e3}\label{amd__elf__image_8cpp_ab09b620e1d3520d68674c08543d307e3}} 
+\index{amd\_elf\_image.cpp@{amd\_elf\_image.cpp}!NOTE\_RECORD\_ALIGNMENT@{NOTE\_RECORD\_ALIGNMENT}}
+\index{NOTE\_RECORD\_ALIGNMENT@{NOTE\_RECORD\_ALIGNMENT}!amd\_elf\_image.cpp@{amd\_elf\_image.cpp}}
+\doxysubsubsection{\texorpdfstring{NOTE\_RECORD\_ALIGNMENT}{NOTE\_RECORD\_ALIGNMENT}}
+{\footnotesize\ttfamily \#define NOTE\+\_\+\+RECORD\+\_\+\+ALIGNMENT~4}
+
+\mbox{\Hypertarget{amd__elf__image_8cpp_ad97c8a6a2e57b993ed30a1cac9f74907}\label{amd__elf__image_8cpp_ad97c8a6a2e57b993ed30a1cac9f74907}} 
+\index{amd\_elf\_image.cpp@{amd\_elf\_image.cpp}!OpenTemp@{OpenTemp}}
+\index{OpenTemp@{OpenTemp}!amd\_elf\_image.cpp@{amd\_elf\_image.cpp}}
+\doxysubsubsection{\texorpdfstring{OpenTemp}{OpenTemp}}
+{\footnotesize\ttfamily \#define Open\+Temp(\begin{DoxyParamCaption}\item[{}]{f }\end{DoxyParamCaption})~amd\+::hsa\+::\+Open\+Temp\+File(f);}
+

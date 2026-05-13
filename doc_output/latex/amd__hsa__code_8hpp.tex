@@ -1,0 +1,79 @@
+\hypertarget{amd__hsa__code_8hpp}{}\doxysection{src/core/inc/amd\+\_\+hsa\+\_\+code.hpp File Reference}
+\label{amd__hsa__code_8hpp}\index{src/core/inc/amd\_hsa\_code.hpp@{src/core/inc/amd\_hsa\_code.hpp}}
+{\ttfamily \#include \char`\"{}core/inc/amd\+\_\+elf\+\_\+image.\+hpp\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}inc/amd\+\_\+hsa\+\_\+elf.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}inc/amd\+\_\+hsa\+\_\+kernel\+\_\+code.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}inc/hsa.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}inc/hsa\+\_\+ext\+\_\+finalize.\+h\char`\"{}}\newline
+{\ttfamily \#include $<$memory$>$}\newline
+{\ttfamily \#include $<$sstream$>$}\newline
+{\ttfamily \#include $<$cassert$>$}\newline
+{\ttfamily \#include $<$unordered\+\_\+map$>$}\newline
+Include dependency graph for amd\+\_\+hsa\+\_\+code.\+hpp\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{amd__hsa__code_8hpp__incl}
+\end{center}
+\end{figure}
+This graph shows which files directly or indirectly include this file\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{amd__hsa__code_8hpp__dep__incl}
+\end{center}
+\end{figure}
+\doxysubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class \mbox{\hyperlink{classrocr_1_1amd_1_1hsa_1_1common_1_1Signed}{rocr\+::amd\+::hsa\+::common\+::\+Signed$<$ signature $>$}}
+\item 
+class \mbox{\hyperlink{classrocr_1_1amd_1_1hsa_1_1code_1_1Symbol}{rocr\+::amd\+::hsa\+::code\+::\+Symbol}}
+\item 
+class \mbox{\hyperlink{classrocr_1_1amd_1_1hsa_1_1code_1_1KernelSymbol}{rocr\+::amd\+::hsa\+::code\+::\+Kernel\+Symbol}}
+\item 
+class \mbox{\hyperlink{classrocr_1_1amd_1_1hsa_1_1code_1_1VariableSymbol}{rocr\+::amd\+::hsa\+::code\+::\+Variable\+Symbol}}
+\item 
+class \mbox{\hyperlink{classrocr_1_1amd_1_1hsa_1_1code_1_1AmdHsaCode}{rocr\+::amd\+::hsa\+::code\+::\+Amd\+Hsa\+Code}}
+\item 
+class \mbox{\hyperlink{classrocr_1_1amd_1_1hsa_1_1code_1_1AmdHsaCodeManager}{rocr\+::amd\+::hsa\+::code\+::\+Amd\+Hsa\+Code\+Manager}}
+\item 
+class \mbox{\hyperlink{classrocr_1_1amd_1_1hsa_1_1code_1_1KernelSymbolV2}{rocr\+::amd\+::hsa\+::code\+::\+Kernel\+Symbol\+V2}}
+\item 
+class \mbox{\hyperlink{classrocr_1_1amd_1_1hsa_1_1code_1_1VariableSymbolV2}{rocr\+::amd\+::hsa\+::code\+::\+Variable\+Symbol\+V2}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Namespaces}
+\begin{DoxyCompactItemize}
+\item 
+ \mbox{\hyperlink{namespacerocr}{rocr}}
+\item 
+ \mbox{\hyperlink{namespacerocr_1_1amd}{rocr\+::amd}}
+\item 
+ \mbox{\hyperlink{namespacerocr_1_1amd_1_1hsa}{rocr\+::amd\+::hsa}}
+\item 
+ \mbox{\hyperlink{namespacerocr_1_1amd_1_1hsa_1_1common}{rocr\+::amd\+::hsa\+::common}}
+\item 
+ \mbox{\hyperlink{namespacerocr_1_1amd_1_1hsa_1_1code}{rocr\+::amd\+::hsa\+::code}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+typedef amd\+::elf\+::\+Segment \mbox{\hyperlink{namespacerocr_1_1amd_1_1hsa_1_1code_afc86f70086df55017b23c98cd0c26114}{rocr\+::amd\+::hsa\+::code\+::\+Segment}}
+\item 
+typedef amd\+::elf\+::\+Section \mbox{\hyperlink{namespacerocr_1_1amd_1_1hsa_1_1code_ad0be9e505b958dfec79ad082d5d1f996}{rocr\+::amd\+::hsa\+::code\+::\+Section}}
+\item 
+typedef amd\+::elf\+::\+Relocation\+Section \mbox{\hyperlink{namespacerocr_1_1amd_1_1hsa_1_1code_afec0797850cbb0bc71a233019081b4ee}{rocr\+::amd\+::hsa\+::code\+::\+Relocation\+Section}}
+\item 
+typedef amd\+::elf\+::\+Relocation \mbox{\hyperlink{namespacerocr_1_1amd_1_1hsa_1_1code_a12076637ec0c46ad25ba94507f77f08d}{rocr\+::amd\+::hsa\+::code\+::\+Relocation}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+bool \mbox{\hyperlink{namespacerocr_1_1amd_1_1hsa_1_1common_a82f2153a07714a6bf6618ea885e3a11a}{rocr\+::amd\+::hsa\+::common\+::\+Is\+Accessible\+Memory\+Address}} (uint64\+\_\+t address)
+\item 
+{\footnotesize template$<$typename class\+\_\+type , typename member\+\_\+type $>$ }\\size\+\_\+t \mbox{\hyperlink{namespacerocr_1_1amd_1_1hsa_1_1common_acfedd9e8d8800a7daaf95663d35e7ca3}{rocr\+::amd\+::hsa\+::common\+::\+Offset\+Of}} (member\+\_\+type class\+\_\+type\+::$\ast$member)
+\item 
+{\footnotesize template$<$typename class\+\_\+type $>$ }\\class\+\_\+type $\ast$ \mbox{\hyperlink{namespacerocr_1_1amd_1_1hsa_1_1common_ae764670298bf105e24ac49dd66e07e77}{rocr\+::amd\+::hsa\+::common\+::\+Object\+At}} (uint64\+\_\+t address)
+\end{DoxyCompactItemize}

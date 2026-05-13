@@ -1,0 +1,69 @@
+\hypertarget{amd__loader__context_8cpp}{}\doxysection{src/core/runtime/amd\+\_\+loader\+\_\+context.cpp File Reference}
+\label{amd__loader__context_8cpp}\index{src/core/runtime/amd\_loader\_context.cpp@{src/core/runtime/amd\_loader\_context.cpp}}
+{\ttfamily \#include \char`\"{}core/inc/amd\+\_\+loader\+\_\+context.\+hpp\char`\"{}}\newline
+{\ttfamily \#include $<$algorithm$>$}\newline
+{\ttfamily \#include $<$cassert$>$}\newline
+{\ttfamily \#include $<$cstring$>$}\newline
+{\ttfamily \#include \char`\"{}core/inc/amd\+\_\+gpu\+\_\+agent.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}core/inc/amd\+\_\+memory\+\_\+region.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}core/util/os.\+h\char`\"{}}\newline
+{\ttfamily \#include $<$cstdlib$>$}\newline
+{\ttfamily \#include $<$utility$>$}\newline
+{\ttfamily \#include \char`\"{}core/inc/hsa\+\_\+internal.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}core/util/utils.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}inc/hsa\+\_\+ext\+\_\+amd.\+h\char`\"{}}\newline
+{\ttfamily \#include $<$sys/mman.\+h$>$}\newline
+Include dependency graph for amd\+\_\+loader\+\_\+context.\+cpp\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{amd__loader__context_8cpp__incl}
+\end{center}
+\end{figure}
+\doxysubsection*{Namespaces}
+\begin{DoxyCompactItemize}
+\item 
+ \mbox{\hyperlink{namespacerocr}{rocr}}
+\item 
+ \mbox{\hyperlink{namespacerocr_1_1amd}{rocr\+::amd}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Variable Documentation}
+\mbox{\Hypertarget{amd__loader__context_8cpp_adff43fa3f1c80b417df9c1cf734e28ac}\label{amd__loader__context_8cpp_adff43fa3f1c80b417df9c1cf734e28ac}} 
+\index{amd\_loader\_context.cpp@{amd\_loader\_context.cpp}!host\_ptr\_@{host\_ptr\_}}
+\index{host\_ptr\_@{host\_ptr\_}!amd\_loader\_context.cpp@{amd\_loader\_context.cpp}}
+\doxysubsubsection{\texorpdfstring{host\_ptr\_}{host\_ptr\_}}
+{\footnotesize\ttfamily void$\ast$ host\+\_\+ptr\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{amd__loader__context_8cpp_aa635bd62506e018518e2753171a3c21b}\label{amd__loader__context_8cpp_aa635bd62506e018518e2753171a3c21b}} 
+\index{amd\_loader\_context.cpp@{amd\_loader\_context.cpp}!is\_code\_@{is\_code\_}}
+\index{is\_code\_@{is\_code\_}!amd\_loader\_context.cpp@{amd\_loader\_context.cpp}}
+\doxysubsubsection{\texorpdfstring{is\_code\_}{is\_code\_}}
+{\footnotesize\ttfamily bool is\+\_\+code\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{amd__loader__context_8cpp_a6209972bc3d97919b473a8be73f1b797}\label{amd__loader__context_8cpp_a6209972bc3d97919b473a8be73f1b797}} 
+\index{amd\_loader\_context.cpp@{amd\_loader\_context.cpp}!is\_kv\_@{is\_kv\_}}
+\index{is\_kv\_@{is\_kv\_}!amd\_loader\_context.cpp@{amd\_loader\_context.cpp}}
+\doxysubsubsection{\texorpdfstring{is\_kv\_}{is\_kv\_}}
+{\footnotesize\ttfamily bool is\+\_\+kv\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{amd__loader__context_8cpp_afbe2be78a3ee81b2e3c6821cec74e116}\label{amd__loader__context_8cpp_afbe2be78a3ee81b2e3c6821cec74e116}} 
+\index{amd\_loader\_context.cpp@{amd\_loader\_context.cpp}!ptr\_@{ptr\_}}
+\index{ptr\_@{ptr\_}!amd\_loader\_context.cpp@{amd\_loader\_context.cpp}}
+\doxysubsubsection{\texorpdfstring{ptr\_}{ptr\_}}
+{\footnotesize\ttfamily void$\ast$ ptr\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{amd__loader__context_8cpp_a02bf59bf9766f0fb860a3041a2804a4f}\label{amd__loader__context_8cpp_a02bf59bf9766f0fb860a3041a2804a4f}} 
+\index{amd\_loader\_context.cpp@{amd\_loader\_context.cpp}!region\_@{region\_}}
+\index{region\_@{region\_}!amd\_loader\_context.cpp@{amd\_loader\_context.cpp}}
+\doxysubsubsection{\texorpdfstring{region\_}{region\_}}
+{\footnotesize\ttfamily const core\+::\+Memory\+Region$\ast$ region\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{amd__loader__context_8cpp_a5f31775800bbb46b35b5791def1f3acc}\label{amd__loader__context_8cpp_a5f31775800bbb46b35b5791def1f3acc}} 
+\index{amd\_loader\_context.cpp@{amd\_loader\_context.cpp}!size\_@{size\_}}
+\index{size\_@{size\_}!amd\_loader\_context.cpp@{amd\_loader\_context.cpp}}
+\doxysubsubsection{\texorpdfstring{size\_}{size\_}}
+{\footnotesize\ttfamily size\+\_\+t size\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
+

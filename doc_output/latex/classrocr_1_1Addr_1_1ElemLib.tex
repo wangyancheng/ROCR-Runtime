@@ -1,0 +1,971 @@
+\hypertarget{classrocr_1_1Addr_1_1ElemLib}{}\doxysection{rocr\+::Addr\+::Elem\+Lib Class Reference}
+\label{classrocr_1_1Addr_1_1ElemLib}\index{rocr::Addr::ElemLib@{rocr::Addr::ElemLib}}
+
+
+This class contains asic indepentent element related attributes and operations.  
+
+
+
+
+{\ttfamily \#include $<$addrelemlib.\+h$>$}
+
+
+
+Inheritance diagram for rocr\+::Addr\+::Elem\+Lib\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=181pt]{classrocr_1_1Addr_1_1ElemLib__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for rocr\+::Addr\+::Elem\+Lib\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classrocr_1_1Addr_1_1ElemLib__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+virtual \mbox{\hyperlink{classrocr_1_1Addr_1_1ElemLib_a983e04fafdad167fa942adaaab8b3b7c}{$\sim$\+Elem\+Lib}} ()
+\begin{DoxyCompactList}\small\item\em Makes this class virtual. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{addrtypes_8h_ac4225671b7e87c943146915461c9b2f4}{BOOL\+\_\+32}} \mbox{\hyperlink{classrocr_1_1Addr_1_1ElemLib_af0a84eca04b1a470f7be89aec3fd867d}{Pix\+Get\+Export\+Norm}} (\mbox{\hyperlink{addrtypes_8h_afee8f2b28939846e8d009ca939a0624a}{Addr\+Color\+Format}} color\+Fmt, \mbox{\hyperlink{addrtypes_8h_a0edb0f71e6b9b2caff95523eaf3c1da2}{Addr\+Surface\+Number}} number\+Fmt, \mbox{\hyperlink{addrtypes_8h_a60c39b87bb50849c30929d3e2fdc5b5e}{Addr\+Surface\+Swap}} swap) const
+\begin{DoxyCompactList}\small\item\em The implementation is only for R6xx/\+R7xx, so make it virtual in case we need for R8xx. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{addrtypes_8h_a7927e087749615dae3114cc27b91c86d}{VOID}} \mbox{\hyperlink{classrocr_1_1Addr_1_1ElemLib_ab84a260ac1a469c398819e228ae01806}{Flt32\+To\+Depth\+Pixel}} (\mbox{\hyperlink{addrtypes_8h_ac3af474def0a095fa73cec701a2a3a3f}{Addr\+Depth\+Format}} format, const \mbox{\hyperlink{unionADDR__FLT__32}{ADDR\+\_\+\+FLT\+\_\+32}} comps\mbox{[}2\mbox{]}, \mbox{\hyperlink{addrtypes_8h_aecffebc452f5b7100c06c3e132297ac4}{UINT\+\_\+8}} $\ast$p\+Pixel) const
+\begin{DoxyCompactList}\small\item\em Convert a FLT\+\_\+32 value to a depth/stencil pixel value. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{addrtypes_8h_a7927e087749615dae3114cc27b91c86d}{VOID}} \mbox{\hyperlink{classrocr_1_1Addr_1_1ElemLib_ab6a27a9739dff85f2b6c3b07d4424d4f}{Flt32\+To\+Color\+Pixel}} (\mbox{\hyperlink{addrtypes_8h_afee8f2b28939846e8d009ca939a0624a}{Addr\+Color\+Format}} format, \mbox{\hyperlink{addrtypes_8h_a0edb0f71e6b9b2caff95523eaf3c1da2}{Addr\+Surface\+Number}} surf\+Num, \mbox{\hyperlink{addrtypes_8h_a60c39b87bb50849c30929d3e2fdc5b5e}{Addr\+Surface\+Swap}} surf\+Swap, const \mbox{\hyperlink{unionADDR__FLT__32}{ADDR\+\_\+\+FLT\+\_\+32}} comps\mbox{[}4\mbox{]}, \mbox{\hyperlink{addrtypes_8h_aecffebc452f5b7100c06c3e132297ac4}{UINT\+\_\+8}} $\ast$p\+Pixel) const
+\begin{DoxyCompactList}\small\item\em Convert a FLT\+\_\+32 value to a red/green/blue/alpha pixel value. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{addrtypes_8h_a7927e087749615dae3114cc27b91c86d}{VOID}} \mbox{\hyperlink{classrocr_1_1Addr_1_1ElemLib_a59edc5a9ba7171a606e74dbd23354b2e}{Pix\+Get\+Color\+Comp\+Info}} (\mbox{\hyperlink{addrtypes_8h_afee8f2b28939846e8d009ca939a0624a}{Addr\+Color\+Format}} format, \mbox{\hyperlink{addrtypes_8h_a0edb0f71e6b9b2caff95523eaf3c1da2}{Addr\+Surface\+Number}} number, \mbox{\hyperlink{addrtypes_8h_a60c39b87bb50849c30929d3e2fdc5b5e}{Addr\+Surface\+Swap}} swap, \mbox{\hyperlink{structrocr_1_1Addr_1_1PixelFormatInfo}{Pixel\+Format\+Info}} $\ast$p\+Info) const
+\begin{DoxyCompactList}\small\item\em Get per component info for color surface. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{addrtypes_8h_a7927e087749615dae3114cc27b91c86d}{VOID}} \mbox{\hyperlink{classrocr_1_1Addr_1_1ElemLib_af2a272d4b14130a2da597665d8f575c8}{Pix\+Get\+Depth\+Comp\+Info}} (\mbox{\hyperlink{addrtypes_8h_ac3af474def0a095fa73cec701a2a3a3f}{Addr\+Depth\+Format}} format, \mbox{\hyperlink{structrocr_1_1Addr_1_1PixelFormatInfo}{Pixel\+Format\+Info}} $\ast$p\+Info) const
+\begin{DoxyCompactList}\small\item\em Get per component info for depth surface. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{addrtypes_8h_af5a2be58a28390f9a494538f34054637}{UINT\+\_\+32}} \mbox{\hyperlink{classrocr_1_1Addr_1_1ElemLib_a7e51f98cd03d48134cda0c3ee4f93525}{Get\+Bits\+Per\+Pixel}} (\mbox{\hyperlink{addrtypes_8h_a8fc6a73edd8bf8b4163a32b2b2d15475}{Addr\+Format}} format, \mbox{\hyperlink{namespacerocr_1_1Addr_a99d88f693437a549495a2b094146c100}{Elem\+Mode}} $\ast$p\+Elem\+Mode=\mbox{\hyperlink{addrtypes_8h_a070d2ce7b6bb7e5c05602aa8c308d0c4}{NULL}}, \mbox{\hyperlink{addrtypes_8h_af5a2be58a28390f9a494538f34054637}{UINT\+\_\+32}} $\ast$p\+ExpandX=\mbox{\hyperlink{addrtypes_8h_a070d2ce7b6bb7e5c05602aa8c308d0c4}{NULL}}, \mbox{\hyperlink{addrtypes_8h_af5a2be58a28390f9a494538f34054637}{UINT\+\_\+32}} $\ast$p\+ExpandY=\mbox{\hyperlink{addrtypes_8h_a070d2ce7b6bb7e5c05602aa8c308d0c4}{NULL}}, \mbox{\hyperlink{addrtypes_8h_af5a2be58a28390f9a494538f34054637}{UINT\+\_\+32}} $\ast$p\+Bits\+Unused=\mbox{\hyperlink{addrtypes_8h_a070d2ce7b6bb7e5c05602aa8c308d0c4}{NULL}})
+\begin{DoxyCompactList}\small\item\em Compute the total bits per element according to a format code. For compressed formats, this is not the same as the number of bits per decompressed element. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{addrtypes_8h_a7927e087749615dae3114cc27b91c86d}{VOID}} \mbox{\hyperlink{classrocr_1_1Addr_1_1ElemLib_a97b1f50b571a6099322c49328c57907e}{Adjust\+Surface\+Info}} (\mbox{\hyperlink{namespacerocr_1_1Addr_a99d88f693437a549495a2b094146c100}{Elem\+Mode}} elem\+Mode, \mbox{\hyperlink{addrtypes_8h_af5a2be58a28390f9a494538f34054637}{UINT\+\_\+32}} expandX, \mbox{\hyperlink{addrtypes_8h_af5a2be58a28390f9a494538f34054637}{UINT\+\_\+32}} expandY, \mbox{\hyperlink{addrtypes_8h_af5a2be58a28390f9a494538f34054637}{UINT\+\_\+32}} $\ast$p\+Bpp, \mbox{\hyperlink{addrtypes_8h_af5a2be58a28390f9a494538f34054637}{UINT\+\_\+32}} $\ast$p\+Base\+Pitch, \mbox{\hyperlink{addrtypes_8h_af5a2be58a28390f9a494538f34054637}{UINT\+\_\+32}} $\ast$p\+Width, \mbox{\hyperlink{addrtypes_8h_af5a2be58a28390f9a494538f34054637}{UINT\+\_\+32}} $\ast$p\+Height)
+\begin{DoxyCompactList}\small\item\em Adjust bpp/base pitch/width/height according to elem\+Mode and expand\+X/Y. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{addrtypes_8h_a7927e087749615dae3114cc27b91c86d}{VOID}} \mbox{\hyperlink{classrocr_1_1Addr_1_1ElemLib_a7c69d2ec58bbf1a24f58d627d58ad0cd}{Restore\+Surface\+Info}} (\mbox{\hyperlink{namespacerocr_1_1Addr_a99d88f693437a549495a2b094146c100}{Elem\+Mode}} elem\+Mode, \mbox{\hyperlink{addrtypes_8h_af5a2be58a28390f9a494538f34054637}{UINT\+\_\+32}} expandX, \mbox{\hyperlink{addrtypes_8h_af5a2be58a28390f9a494538f34054637}{UINT\+\_\+32}} expandY, \mbox{\hyperlink{addrtypes_8h_af5a2be58a28390f9a494538f34054637}{UINT\+\_\+32}} $\ast$p\+Bpp, \mbox{\hyperlink{addrtypes_8h_af5a2be58a28390f9a494538f34054637}{UINT\+\_\+32}} $\ast$p\+Width, \mbox{\hyperlink{addrtypes_8h_af5a2be58a28390f9a494538f34054637}{UINT\+\_\+32}} $\ast$p\+Height)
+\begin{DoxyCompactList}\small\item\em Reverse operation of Adjust\+Surface\+Info. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{addrtypes_8h_ac4225671b7e87c943146915461c9b2f4}{BOOL\+\_\+32}} \mbox{\hyperlink{classrocr_1_1Addr_1_1ElemLib_a8ff85e1d30a76e38a1f6e0b7b72180e3}{Is\+Depth\+Stencil\+Tile\+Planar}} ()
+\begin{DoxyCompactList}\small\item\em Checks if depth and stencil are planar inside a tile. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{addrtypes_8h_a7927e087749615dae3114cc27b91c86d}{VOID}} \mbox{\hyperlink{classrocr_1_1Addr_1_1ElemLib_a63343d697a90ff0dbaf780f9151853b3}{Set\+Config\+Flags}} (\mbox{\hyperlink{unionrocr_1_1Addr_1_1ConfigFlags}{Config\+Flags}} flags)
+\begin{DoxyCompactList}\small\item\em Sets m\+\_\+config\+Flags, copied from Addr\+Lib. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static \mbox{\hyperlink{classrocr_1_1Addr_1_1ElemLib}{Elem\+Lib}} $\ast$ \mbox{\hyperlink{classrocr_1_1Addr_1_1ElemLib_a5f261e1b9b75fbaca4af17bff62bc5e0}{Create}} (const \mbox{\hyperlink{classrocr_1_1Addr_1_1Lib}{Lib}} $\ast$p\+Addr\+Lib)
+\begin{DoxyCompactList}\small\item\em Creates and initializes Addr\+Lib object. \end{DoxyCompactList}\item 
+static \mbox{\hyperlink{addrtypes_8h_a7927e087749615dae3114cc27b91c86d}{VOID}} \mbox{\hyperlink{classrocr_1_1Addr_1_1ElemLib_af2f51bf5a3d086a22899b55138ca4e83}{Flt32s\+To\+Int32s}} (\mbox{\hyperlink{unionADDR__FLT__32}{ADDR\+\_\+\+FLT\+\_\+32}} value, \mbox{\hyperlink{addrtypes_8h_af5a2be58a28390f9a494538f34054637}{UINT\+\_\+32}} bits, \mbox{\hyperlink{namespacerocr_1_1Addr_afc359d0926a4e5d0adf7ee6bfaf2a94a}{Number\+Type}} number\+Type, \mbox{\hyperlink{addrtypes_8h_af5a2be58a28390f9a494538f34054637}{UINT\+\_\+32}} $\ast$p\+Result)
+\item 
+static \mbox{\hyperlink{addrtypes_8h_a7927e087749615dae3114cc27b91c86d}{VOID}} \mbox{\hyperlink{classrocr_1_1Addr_1_1ElemLib_a8825553dc68bf4235ee2859cfe39db21}{Int32s\+To\+Pixel}} (\mbox{\hyperlink{addrtypes_8h_af5a2be58a28390f9a494538f34054637}{UINT\+\_\+32}} num\+Comps, \mbox{\hyperlink{addrtypes_8h_af5a2be58a28390f9a494538f34054637}{UINT\+\_\+32}} $\ast$p\+Comps, \mbox{\hyperlink{addrtypes_8h_af5a2be58a28390f9a494538f34054637}{UINT\+\_\+32}} $\ast$p\+Comp\+Bits, \mbox{\hyperlink{addrtypes_8h_af5a2be58a28390f9a494538f34054637}{UINT\+\_\+32}} $\ast$p\+Comp\+Start, \mbox{\hyperlink{unionrocr_1_1Addr_1_1ComponentFlags}{Component\+Flags}} properties, \mbox{\hyperlink{addrtypes_8h_af5a2be58a28390f9a494538f34054637}{UINT\+\_\+32}} result\+Bits, \mbox{\hyperlink{addrtypes_8h_aecffebc452f5b7100c06c3e132297ac4}{UINT\+\_\+8}} $\ast$p\+Pixel)
+\begin{DoxyCompactList}\small\item\em Pack 32-\/bit integer values into an uncompressed pixel, in the proper order. \end{DoxyCompactList}\item 
+static \mbox{\hyperlink{addrtypes_8h_a7927e087749615dae3114cc27b91c86d}{VOID}} \mbox{\hyperlink{classrocr_1_1Addr_1_1ElemLib_aba7b47a6cbf319bdde8e420fba96737c}{Set\+Clear\+Comps}} (\mbox{\hyperlink{unionADDR__FLT__32}{ADDR\+\_\+\+FLT\+\_\+32}} comps\mbox{[}4\mbox{]}, \mbox{\hyperlink{addrtypes_8h_ac4225671b7e87c943146915461c9b2f4}{BOOL\+\_\+32}} clear\+Color, \mbox{\hyperlink{addrtypes_8h_ac4225671b7e87c943146915461c9b2f4}{BOOL\+\_\+32}} float32)
+\begin{DoxyCompactList}\small\item\em Set the clear color (or clear depth/stencil) for a surface. \end{DoxyCompactList}\item 
+static \mbox{\hyperlink{addrtypes_8h_ac4225671b7e87c943146915461c9b2f4}{BOOL\+\_\+32}} \mbox{\hyperlink{classrocr_1_1Addr_1_1ElemLib_a5c891e433f26ac08aa89808a006d682a}{Is\+Compressed}} (\mbox{\hyperlink{addrtypes_8h_a8fc6a73edd8bf8b4163a32b2b2d15475}{Addr\+Format}} format)
+\begin{DoxyCompactList}\small\item\em TRUE if this is block compressed format or 1 bit format. \end{DoxyCompactList}\item 
+static \mbox{\hyperlink{addrtypes_8h_ac4225671b7e87c943146915461c9b2f4}{BOOL\+\_\+32}} \mbox{\hyperlink{classrocr_1_1Addr_1_1ElemLib_a0620437886e2f8af2f3a5b338a68911b}{Is\+Block\+Compressed}} (\mbox{\hyperlink{addrtypes_8h_a8fc6a73edd8bf8b4163a32b2b2d15475}{Addr\+Format}} format)
+\begin{DoxyCompactList}\small\item\em TRUE if this is block compressed format. \end{DoxyCompactList}\item 
+static \mbox{\hyperlink{addrtypes_8h_ac4225671b7e87c943146915461c9b2f4}{BOOL\+\_\+32}} \mbox{\hyperlink{classrocr_1_1Addr_1_1ElemLib_a47b84ca1f7c268ff320ab075de4285bd}{Is\+Expand3x}} (\mbox{\hyperlink{addrtypes_8h_a8fc6a73edd8bf8b4163a32b2b2d15475}{Addr\+Format}} format)
+\begin{DoxyCompactList}\small\item\em TRUE if this is 3x expand format. \end{DoxyCompactList}\item 
+static \mbox{\hyperlink{addrtypes_8h_ac4225671b7e87c943146915461c9b2f4}{BOOL\+\_\+32}} \mbox{\hyperlink{classrocr_1_1Addr_1_1ElemLib_ab97cd5af107084d957fc61531900c8e6}{Is\+Macro\+Pixel\+Packed}} (\mbox{\hyperlink{addrtypes_8h_a8fc6a73edd8bf8b4163a32b2b2d15475}{Addr\+Format}} format)
+\begin{DoxyCompactList}\small\item\em TRUE if this is a macro-\/pixel-\/packed format. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classrocr_1_1Addr_1_1ElemLib_ab0c87136019e19fde356cbc4ee916aa8}{Elem\+Lib}} (\mbox{\hyperlink{classrocr_1_1Addr_1_1Lib}{Lib}} $\ast$p\+Addr\+Lib)
+\begin{DoxyCompactList}\small\item\em constructor \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Static Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static \mbox{\hyperlink{addrtypes_8h_a7927e087749615dae3114cc27b91c86d}{VOID}} \mbox{\hyperlink{classrocr_1_1Addr_1_1ElemLib_a255b80a10524c908983bbae3e5b37673}{Get\+Comp\+Bits}} (\mbox{\hyperlink{addrtypes_8h_af5a2be58a28390f9a494538f34054637}{UINT\+\_\+32}} c0, \mbox{\hyperlink{addrtypes_8h_af5a2be58a28390f9a494538f34054637}{UINT\+\_\+32}} c1, \mbox{\hyperlink{addrtypes_8h_af5a2be58a28390f9a494538f34054637}{UINT\+\_\+32}} c2, \mbox{\hyperlink{addrtypes_8h_af5a2be58a28390f9a494538f34054637}{UINT\+\_\+32}} c3, \mbox{\hyperlink{structrocr_1_1Addr_1_1PixelFormatInfo}{Pixel\+Format\+Info}} $\ast$p\+Info, \mbox{\hyperlink{namespacerocr_1_1Addr_a99d88f693437a549495a2b094146c100}{Elem\+Mode}} elem\+Mode=\mbox{\hyperlink{namespacerocr_1_1Addr_a99d88f693437a549495a2b094146c100a4f5b63f8f5ed10ed8aeb70b1b62a4662}{ADDR\+\_\+\+ROUND\+\_\+\+BY\+\_\+\+HALF}})
+\begin{DoxyCompactList}\small\item\em Set each component\textquotesingle{}s bit size and bit start. And set element mode and number type. \end{DoxyCompactList}\item 
+static \mbox{\hyperlink{addrtypes_8h_a7927e087749615dae3114cc27b91c86d}{VOID}} \mbox{\hyperlink{classrocr_1_1Addr_1_1ElemLib_ab66f60ec00838d07d84cf41a231f9b1b}{Get\+Comp\+Type}} (\mbox{\hyperlink{addrtypes_8h_afee8f2b28939846e8d009ca939a0624a}{Addr\+Color\+Format}} format, \mbox{\hyperlink{addrtypes_8h_a0edb0f71e6b9b2caff95523eaf3c1da2}{Addr\+Surface\+Number}} num\+Type, \mbox{\hyperlink{structrocr_1_1Addr_1_1PixelFormatInfo}{Pixel\+Format\+Info}} $\ast$p\+Info)
+\begin{DoxyCompactList}\small\item\em Fill per component info. \end{DoxyCompactList}\item 
+static \mbox{\hyperlink{addrtypes_8h_a7927e087749615dae3114cc27b91c86d}{VOID}} \mbox{\hyperlink{classrocr_1_1Addr_1_1ElemLib_acaa9fe5a0628ebc08e74e79431e92791}{Get\+Comp\+Swap}} (\mbox{\hyperlink{addrtypes_8h_a60c39b87bb50849c30929d3e2fdc5b5e}{Addr\+Surface\+Swap}} swap, \mbox{\hyperlink{structrocr_1_1Addr_1_1PixelFormatInfo}{Pixel\+Format\+Info}} $\ast$p\+Info)
+\begin{DoxyCompactList}\small\item\em Get components swapped for color surface. \end{DoxyCompactList}\item 
+static \mbox{\hyperlink{addrtypes_8h_a7927e087749615dae3114cc27b91c86d}{VOID}} \mbox{\hyperlink{classrocr_1_1Addr_1_1ElemLib_ad105cc96db2171f434acbb85fe6a1ceb}{Swap\+Comps}} (\mbox{\hyperlink{addrtypes_8h_af5a2be58a28390f9a494538f34054637}{UINT\+\_\+32}} c0, \mbox{\hyperlink{addrtypes_8h_af5a2be58a28390f9a494538f34054637}{UINT\+\_\+32}} c1, \mbox{\hyperlink{structrocr_1_1Addr_1_1PixelFormatInfo}{Pixel\+Format\+Info}} $\ast$p\+Info)
+\begin{DoxyCompactList}\small\item\em Get components swapped for color surface. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{addrtypes_8h_af5a2be58a28390f9a494538f34054637}{UINT\+\_\+32}} \mbox{\hyperlink{classrocr_1_1Addr_1_1ElemLib_a46db5fbd4677ebc8f98247aeb2669af8}{m\+\_\+fp16\+Export\+Norm}}
+\begin{DoxyCompactList}\small\item\em If allow FP16 to be reported as EXPORT\+\_\+\+NORM. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{namespacerocr_1_1Addr_acbe90a63826f958f0fcadd37f3a99e0a}{Depth\+Planar\+Type}} \mbox{\hyperlink{classrocr_1_1Addr_1_1ElemLib_a6ca95c69cb40b61ddb01cc4a98f6d6c5}{m\+\_\+depth\+Planar\+Type}}
+\item 
+\mbox{\hyperlink{unionrocr_1_1Addr_1_1ConfigFlags}{Config\+Flags}} \mbox{\hyperlink{classrocr_1_1Addr_1_1ElemLib_a8a008e623a9a4ea847ed4eb4908b7fb8}{m\+\_\+config\+Flags}}
+\begin{DoxyCompactList}\small\item\em Copy of Addr\+Lib\textquotesingle{}s config\+Flags. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classrocr_1_1Addr_1_1Lib}{Addr\+::\+Lib}} $\ast$const \mbox{\hyperlink{classrocr_1_1Addr_1_1ElemLib_adc7b5c20acf7d8b72991113ff0183871}{m\+\_\+p\+Addr\+Lib}}
+\begin{DoxyCompactList}\small\item\em Pointer to parent addrlib instance. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Additional Inherited Members}
+
+
+\doxysubsection{Detailed Description}
+This class contains asic indepentent element related attributes and operations. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classrocr_1_1Addr_1_1ElemLib_ab0c87136019e19fde356cbc4ee916aa8}\label{classrocr_1_1Addr_1_1ElemLib_ab0c87136019e19fde356cbc4ee916aa8}} 
+\index{rocr::Addr::ElemLib@{rocr::Addr::ElemLib}!ElemLib@{ElemLib}}
+\index{ElemLib@{ElemLib}!rocr::Addr::ElemLib@{rocr::Addr::ElemLib}}
+\doxysubsubsection{\texorpdfstring{ElemLib()}{ElemLib()}}
+{\footnotesize\ttfamily rocr\+::\+Addr\+::\+Elem\+Lib\+::\+Elem\+Lib (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classrocr_1_1Addr_1_1Lib}{Lib}} $\ast$}]{p\+Addr\+Lib }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+constructor 
+
+\mbox{\hyperlink{classrocr_1_1Addr_1_1ElemLib_ab0c87136019e19fde356cbc4ee916aa8}{Elem\+Lib\+::\+Elem\+Lib}}
+
+\begin{DoxyReturn}{Returns}
+N/A 
+\end{DoxyReturn}
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em p\+Addr\+Lib} & Parent addrlib instance pointer \\
+\hline
+\end{DoxyParams}
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=337pt]{classrocr_1_1Addr_1_1ElemLib_ab0c87136019e19fde356cbc4ee916aa8_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classrocr_1_1Addr_1_1ElemLib_ab0c87136019e19fde356cbc4ee916aa8_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classrocr_1_1Addr_1_1ElemLib_a983e04fafdad167fa942adaaab8b3b7c}\label{classrocr_1_1Addr_1_1ElemLib_a983e04fafdad167fa942adaaab8b3b7c}} 
+\index{rocr::Addr::ElemLib@{rocr::Addr::ElemLib}!````~ElemLib@{$\sim$ElemLib}}
+\index{````~ElemLib@{$\sim$ElemLib}!rocr::Addr::ElemLib@{rocr::Addr::ElemLib}}
+\doxysubsubsection{\texorpdfstring{$\sim$ElemLib()}{~ElemLib()}}
+{\footnotesize\ttfamily rocr\+::\+Addr\+::\+Elem\+Lib\+::$\sim$\+Elem\+Lib (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Makes this class virtual. 
+
+destructor
+
+\mbox{\hyperlink{classrocr_1_1Addr_1_1ElemLib_a983e04fafdad167fa942adaaab8b3b7c}{Elem\+Lib\+::$\sim$\+Elem\+Lib}}
+
+\begin{DoxyReturn}{Returns}
+N/A 
+\end{DoxyReturn}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classrocr_1_1Addr_1_1ElemLib_a97b1f50b571a6099322c49328c57907e}\label{classrocr_1_1Addr_1_1ElemLib_a97b1f50b571a6099322c49328c57907e}} 
+\index{rocr::Addr::ElemLib@{rocr::Addr::ElemLib}!AdjustSurfaceInfo@{AdjustSurfaceInfo}}
+\index{AdjustSurfaceInfo@{AdjustSurfaceInfo}!rocr::Addr::ElemLib@{rocr::Addr::ElemLib}}
+\doxysubsubsection{\texorpdfstring{AdjustSurfaceInfo()}{AdjustSurfaceInfo()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{addrtypes_8h_a7927e087749615dae3114cc27b91c86d}{VOID}} rocr\+::\+Addr\+::\+Elem\+Lib\+::\+Adjust\+Surface\+Info (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{namespacerocr_1_1Addr_a99d88f693437a549495a2b094146c100}{Elem\+Mode}}}]{elem\+Mode,  }\item[{\mbox{\hyperlink{addrtypes_8h_af5a2be58a28390f9a494538f34054637}{UINT\+\_\+32}}}]{expandX,  }\item[{\mbox{\hyperlink{addrtypes_8h_af5a2be58a28390f9a494538f34054637}{UINT\+\_\+32}}}]{expandY,  }\item[{\mbox{\hyperlink{addrtypes_8h_af5a2be58a28390f9a494538f34054637}{UINT\+\_\+32}} $\ast$}]{p\+Bpp,  }\item[{\mbox{\hyperlink{addrtypes_8h_af5a2be58a28390f9a494538f34054637}{UINT\+\_\+32}} $\ast$}]{p\+Base\+Pitch,  }\item[{\mbox{\hyperlink{addrtypes_8h_af5a2be58a28390f9a494538f34054637}{UINT\+\_\+32}} $\ast$}]{p\+Width,  }\item[{\mbox{\hyperlink{addrtypes_8h_af5a2be58a28390f9a494538f34054637}{UINT\+\_\+32}} $\ast$}]{p\+Height }\end{DoxyParamCaption})}
+
+
+
+Adjust bpp/base pitch/width/height according to elem\+Mode and expand\+X/Y. 
+
+\mbox{\hyperlink{classrocr_1_1Addr_1_1ElemLib_a97b1f50b571a6099322c49328c57907e}{Elem\+Lib\+::\+Adjust\+Surface\+Info}}
+
+\begin{DoxyReturn}{Returns}
+N/A 
+\end{DoxyReturn}
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em elem\+Mode} & element mode \\
+\hline
+\mbox{\texttt{ in}}  & {\em expandX} & decompression expansion factor in X \\
+\hline
+\mbox{\texttt{ in}}  & {\em expandY} & decompression expansion factor in Y \\
+\hline
+\mbox{\texttt{ in,out}}  & {\em p\+Bpp} & bpp \\
+\hline
+\mbox{\texttt{ in,out}}  & {\em p\+Base\+Pitch} & base pitch \\
+\hline
+\mbox{\texttt{ in,out}}  & {\em p\+Width} & width \\
+\hline
+\mbox{\texttt{ in,out}}  & {\em p\+Height} & height \\
+\hline
+\end{DoxyParams}
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classrocr_1_1Addr_1_1ElemLib_a97b1f50b571a6099322c49328c57907e_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classrocr_1_1Addr_1_1ElemLib_a97b1f50b571a6099322c49328c57907e_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classrocr_1_1Addr_1_1ElemLib_a5f261e1b9b75fbaca4af17bff62bc5e0}\label{classrocr_1_1Addr_1_1ElemLib_a5f261e1b9b75fbaca4af17bff62bc5e0}} 
+\index{rocr::Addr::ElemLib@{rocr::Addr::ElemLib}!Create@{Create}}
+\index{Create@{Create}!rocr::Addr::ElemLib@{rocr::Addr::ElemLib}}
+\doxysubsubsection{\texorpdfstring{Create()}{Create()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classrocr_1_1Addr_1_1ElemLib}{Elem\+Lib}} $\ast$ rocr\+::\+Addr\+::\+Elem\+Lib\+::\+Create (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classrocr_1_1Addr_1_1Lib}{Lib}} $\ast$}]{p\+Addr\+Lib }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Creates and initializes Addr\+Lib object. 
+
+\mbox{\hyperlink{classrocr_1_1Addr_1_1ElemLib_a5f261e1b9b75fbaca4af17bff62bc5e0}{Elem\+Lib\+::\+Create}}
+
+\begin{DoxyReturn}{Returns}
+Returns point to ADDR\+\_\+\+CREATEINFO if successful. 
+\end{DoxyReturn}
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em p\+Addr\+Lib} & Pointer of parent Addr\+Lib instance \\
+\hline
+\end{DoxyParams}
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classrocr_1_1Addr_1_1ElemLib_a5f261e1b9b75fbaca4af17bff62bc5e0_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classrocr_1_1Addr_1_1ElemLib_a5f261e1b9b75fbaca4af17bff62bc5e0_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classrocr_1_1Addr_1_1ElemLib_af2f51bf5a3d086a22899b55138ca4e83}\label{classrocr_1_1Addr_1_1ElemLib_af2f51bf5a3d086a22899b55138ca4e83}} 
+\index{rocr::Addr::ElemLib@{rocr::Addr::ElemLib}!Flt32sToInt32s@{Flt32sToInt32s}}
+\index{Flt32sToInt32s@{Flt32sToInt32s}!rocr::Addr::ElemLib@{rocr::Addr::ElemLib}}
+\doxysubsubsection{\texorpdfstring{Flt32sToInt32s()}{Flt32sToInt32s()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{addrtypes_8h_a7927e087749615dae3114cc27b91c86d}{VOID}} rocr\+::\+Addr\+::\+Elem\+Lib\+::\+Flt32s\+To\+Int32s (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{unionADDR__FLT__32}{ADDR\+\_\+\+FLT\+\_\+32}}}]{value,  }\item[{\mbox{\hyperlink{addrtypes_8h_af5a2be58a28390f9a494538f34054637}{UINT\+\_\+32}}}]{bits,  }\item[{\mbox{\hyperlink{namespacerocr_1_1Addr_afc359d0926a4e5d0adf7ee6bfaf2a94a}{Number\+Type}}}]{number\+Type,  }\item[{\mbox{\hyperlink{addrtypes_8h_af5a2be58a28390f9a494538f34054637}{UINT\+\_\+32}} $\ast$}]{p\+Result }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em value} & \mbox{\hyperlink{unionADDR__FLT__32}{ADDR\+\_\+\+FLT\+\_\+32}} value \\
+\hline
+\mbox{\texttt{ in}}  & {\em bits} & nubmer of bits in value \\
+\hline
+\mbox{\texttt{ in}}  & {\em number\+Type} & the type of number \\
+\hline
+\mbox{\texttt{ out}}  & {\em p\+Result} & Int32 value \\
+\hline
+\end{DoxyParams}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classrocr_1_1Addr_1_1ElemLib_af2f51bf5a3d086a22899b55138ca4e83_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classrocr_1_1Addr_1_1ElemLib_ab6a27a9739dff85f2b6c3b07d4424d4f}\label{classrocr_1_1Addr_1_1ElemLib_ab6a27a9739dff85f2b6c3b07d4424d4f}} 
+\index{rocr::Addr::ElemLib@{rocr::Addr::ElemLib}!Flt32ToColorPixel@{Flt32ToColorPixel}}
+\index{Flt32ToColorPixel@{Flt32ToColorPixel}!rocr::Addr::ElemLib@{rocr::Addr::ElemLib}}
+\doxysubsubsection{\texorpdfstring{Flt32ToColorPixel()}{Flt32ToColorPixel()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{addrtypes_8h_a7927e087749615dae3114cc27b91c86d}{VOID}} rocr\+::\+Addr\+::\+Elem\+Lib\+::\+Flt32\+To\+Color\+Pixel (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{addrtypes_8h_afee8f2b28939846e8d009ca939a0624a}{Addr\+Color\+Format}}}]{format,  }\item[{\mbox{\hyperlink{addrtypes_8h_a0edb0f71e6b9b2caff95523eaf3c1da2}{Addr\+Surface\+Number}}}]{surf\+Num,  }\item[{\mbox{\hyperlink{addrtypes_8h_a60c39b87bb50849c30929d3e2fdc5b5e}{Addr\+Surface\+Swap}}}]{surf\+Swap,  }\item[{const \mbox{\hyperlink{unionADDR__FLT__32}{ADDR\+\_\+\+FLT\+\_\+32}}}]{comps\mbox{[}4\mbox{]},  }\item[{\mbox{\hyperlink{addrtypes_8h_aecffebc452f5b7100c06c3e132297ac4}{UINT\+\_\+8}} $\ast$}]{p\+Pixel }\end{DoxyParamCaption}) const}
+
+
+
+Convert a FLT\+\_\+32 value to a red/green/blue/alpha pixel value. 
+
+Flt32\+To\+Color\+Pixel
+
+\begin{DoxyReturn}{Returns}
+N/A 
+\end{DoxyReturn}
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em format} & Color format \\
+\hline
+\mbox{\texttt{ in}}  & {\em surf\+Num} & Surface number \\
+\hline
+\mbox{\texttt{ in}}  & {\em surf\+Swap} & Surface swap \\
+\hline
+\mbox{\texttt{ in}}  & {\em comps} & four components of color \\
+\hline
+\mbox{\texttt{ out}}  & {\em p\+Pixel} & a red/green/blue/alpha pixel value \\
+\hline
+\end{DoxyParams}
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classrocr_1_1Addr_1_1ElemLib_ab6a27a9739dff85f2b6c3b07d4424d4f_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classrocr_1_1Addr_1_1ElemLib_ab6a27a9739dff85f2b6c3b07d4424d4f_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classrocr_1_1Addr_1_1ElemLib_ab84a260ac1a469c398819e228ae01806}\label{classrocr_1_1Addr_1_1ElemLib_ab84a260ac1a469c398819e228ae01806}} 
+\index{rocr::Addr::ElemLib@{rocr::Addr::ElemLib}!Flt32ToDepthPixel@{Flt32ToDepthPixel}}
+\index{Flt32ToDepthPixel@{Flt32ToDepthPixel}!rocr::Addr::ElemLib@{rocr::Addr::ElemLib}}
+\doxysubsubsection{\texorpdfstring{Flt32ToDepthPixel()}{Flt32ToDepthPixel()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{addrtypes_8h_a7927e087749615dae3114cc27b91c86d}{VOID}} rocr\+::\+Addr\+::\+Elem\+Lib\+::\+Flt32\+To\+Depth\+Pixel (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{addrtypes_8h_ac3af474def0a095fa73cec701a2a3a3f}{Addr\+Depth\+Format}}}]{format,  }\item[{const \mbox{\hyperlink{unionADDR__FLT__32}{ADDR\+\_\+\+FLT\+\_\+32}}}]{comps\mbox{[}2\mbox{]},  }\item[{\mbox{\hyperlink{addrtypes_8h_aecffebc452f5b7100c06c3e132297ac4}{UINT\+\_\+8}} $\ast$}]{p\+Pixel }\end{DoxyParamCaption}) const}
+
+
+
+Convert a FLT\+\_\+32 value to a depth/stencil pixel value. 
+
+Below method are asic independent, so make them just static. Remove static if we need different operation in hwl.
+
+Flt32\+To\+Depth\+Pixel
+
+\begin{DoxyReturn}{Returns}
+N/A 
+\end{DoxyReturn}
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em format} & Depth format \\
+\hline
+\mbox{\texttt{ in}}  & {\em comps} & two components of depth \\
+\hline
+\mbox{\texttt{ out}}  & {\em p\+Pixel} & depth pixel value \\
+\hline
+\end{DoxyParams}
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classrocr_1_1Addr_1_1ElemLib_ab84a260ac1a469c398819e228ae01806_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classrocr_1_1Addr_1_1ElemLib_ab84a260ac1a469c398819e228ae01806_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classrocr_1_1Addr_1_1ElemLib_a7e51f98cd03d48134cda0c3ee4f93525}\label{classrocr_1_1Addr_1_1ElemLib_a7e51f98cd03d48134cda0c3ee4f93525}} 
+\index{rocr::Addr::ElemLib@{rocr::Addr::ElemLib}!GetBitsPerPixel@{GetBitsPerPixel}}
+\index{GetBitsPerPixel@{GetBitsPerPixel}!rocr::Addr::ElemLib@{rocr::Addr::ElemLib}}
+\doxysubsubsection{\texorpdfstring{GetBitsPerPixel()}{GetBitsPerPixel()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{addrtypes_8h_af5a2be58a28390f9a494538f34054637}{UINT\+\_\+32}} rocr\+::\+Addr\+::\+Elem\+Lib\+::\+Get\+Bits\+Per\+Pixel (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{addrtypes_8h_a8fc6a73edd8bf8b4163a32b2b2d15475}{Addr\+Format}}}]{format,  }\item[{\mbox{\hyperlink{namespacerocr_1_1Addr_a99d88f693437a549495a2b094146c100}{Elem\+Mode}} $\ast$}]{p\+Elem\+Mode = {\ttfamily \mbox{\hyperlink{addrtypes_8h_a070d2ce7b6bb7e5c05602aa8c308d0c4}{NULL}}},  }\item[{\mbox{\hyperlink{addrtypes_8h_af5a2be58a28390f9a494538f34054637}{UINT\+\_\+32}} $\ast$}]{p\+ExpandX = {\ttfamily \mbox{\hyperlink{addrtypes_8h_a070d2ce7b6bb7e5c05602aa8c308d0c4}{NULL}}},  }\item[{\mbox{\hyperlink{addrtypes_8h_af5a2be58a28390f9a494538f34054637}{UINT\+\_\+32}} $\ast$}]{p\+ExpandY = {\ttfamily \mbox{\hyperlink{addrtypes_8h_a070d2ce7b6bb7e5c05602aa8c308d0c4}{NULL}}},  }\item[{\mbox{\hyperlink{addrtypes_8h_af5a2be58a28390f9a494538f34054637}{UINT\+\_\+32}} $\ast$}]{p\+Unused\+Bits = {\ttfamily \mbox{\hyperlink{addrtypes_8h_a070d2ce7b6bb7e5c05602aa8c308d0c4}{NULL}}} }\end{DoxyParamCaption})}
+
+
+
+Compute the total bits per element according to a format code. For compressed formats, this is not the same as the number of bits per decompressed element. 
+
+\mbox{\hyperlink{classrocr_1_1Addr_1_1ElemLib_a7e51f98cd03d48134cda0c3ee4f93525}{Elem\+Lib\+::\+Get\+Bits\+Per\+Pixel}}
+
+\begin{DoxyReturn}{Returns}
+Bits per pixel 
+\end{DoxyReturn}
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em format} & surface format code \\
+\hline
+\mbox{\texttt{ out}}  & {\em p\+Elem\+Mode} & element mode \\
+\hline
+\mbox{\texttt{ out}}  & {\em p\+ExpandX} & decompression expansion factor in X \\
+\hline
+\mbox{\texttt{ out}}  & {\em p\+ExpandY} & decompression expansion factor in Y \\
+\hline
+\mbox{\texttt{ out}}  & {\em p\+Unused\+Bits} & bits unused \\
+\hline
+\end{DoxyParams}
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=333pt]{classrocr_1_1Addr_1_1ElemLib_a7e51f98cd03d48134cda0c3ee4f93525_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classrocr_1_1Addr_1_1ElemLib_a7e51f98cd03d48134cda0c3ee4f93525_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classrocr_1_1Addr_1_1ElemLib_a255b80a10524c908983bbae3e5b37673}\label{classrocr_1_1Addr_1_1ElemLib_a255b80a10524c908983bbae3e5b37673}} 
+\index{rocr::Addr::ElemLib@{rocr::Addr::ElemLib}!GetCompBits@{GetCompBits}}
+\index{GetCompBits@{GetCompBits}!rocr::Addr::ElemLib@{rocr::Addr::ElemLib}}
+\doxysubsubsection{\texorpdfstring{GetCompBits()}{GetCompBits()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{addrtypes_8h_a7927e087749615dae3114cc27b91c86d}{VOID}} rocr\+::\+Addr\+::\+Elem\+Lib\+::\+Get\+Comp\+Bits (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{addrtypes_8h_af5a2be58a28390f9a494538f34054637}{UINT\+\_\+32}}}]{c0,  }\item[{\mbox{\hyperlink{addrtypes_8h_af5a2be58a28390f9a494538f34054637}{UINT\+\_\+32}}}]{c1,  }\item[{\mbox{\hyperlink{addrtypes_8h_af5a2be58a28390f9a494538f34054637}{UINT\+\_\+32}}}]{c2,  }\item[{\mbox{\hyperlink{addrtypes_8h_af5a2be58a28390f9a494538f34054637}{UINT\+\_\+32}}}]{c3,  }\item[{\mbox{\hyperlink{structrocr_1_1Addr_1_1PixelFormatInfo}{Pixel\+Format\+Info}} $\ast$}]{p\+Info,  }\item[{\mbox{\hyperlink{namespacerocr_1_1Addr_a99d88f693437a549495a2b094146c100}{Elem\+Mode}}}]{elem\+Mode = {\ttfamily \mbox{\hyperlink{namespacerocr_1_1Addr_a99d88f693437a549495a2b094146c100a4f5b63f8f5ed10ed8aeb70b1b62a4662}{ADDR\+\_\+\+ROUND\+\_\+\+BY\+\_\+\+HALF}}} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [protected]}}
+
+
+
+Set each component\textquotesingle{}s bit size and bit start. And set element mode and number type. 
+
+\mbox{\hyperlink{classrocr_1_1Addr_1_1ElemLib_a255b80a10524c908983bbae3e5b37673}{Elem\+Lib\+::\+Get\+Comp\+Bits}}
+
+\begin{DoxyReturn}{Returns}
+N/A 
+\end{DoxyReturn}
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em c0} & bits of component 0 \\
+\hline
+\mbox{\texttt{ in}}  & {\em c1} & bits of component 1 \\
+\hline
+\mbox{\texttt{ in}}  & {\em c2} & bits of component 2 \\
+\hline
+\mbox{\texttt{ in}}  & {\em c3} & bits of component 3 \\
+\hline
+\mbox{\texttt{ out}}  & {\em p\+Info} & per component info out \\
+\hline
+\mbox{\texttt{ in}}  & {\em elem\+Mode} & element mode \\
+\hline
+\end{DoxyParams}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classrocr_1_1Addr_1_1ElemLib_a255b80a10524c908983bbae3e5b37673_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classrocr_1_1Addr_1_1ElemLib_acaa9fe5a0628ebc08e74e79431e92791}\label{classrocr_1_1Addr_1_1ElemLib_acaa9fe5a0628ebc08e74e79431e92791}} 
+\index{rocr::Addr::ElemLib@{rocr::Addr::ElemLib}!GetCompSwap@{GetCompSwap}}
+\index{GetCompSwap@{GetCompSwap}!rocr::Addr::ElemLib@{rocr::Addr::ElemLib}}
+\doxysubsubsection{\texorpdfstring{GetCompSwap()}{GetCompSwap()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{addrtypes_8h_a7927e087749615dae3114cc27b91c86d}{VOID}} rocr\+::\+Addr\+::\+Elem\+Lib\+::\+Get\+Comp\+Swap (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{addrtypes_8h_a60c39b87bb50849c30929d3e2fdc5b5e}{Addr\+Surface\+Swap}}}]{swap,  }\item[{\mbox{\hyperlink{structrocr_1_1Addr_1_1PixelFormatInfo}{Pixel\+Format\+Info}} $\ast$}]{p\+Info }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [protected]}}
+
+
+
+Get components swapped for color surface. 
+
+\mbox{\hyperlink{classrocr_1_1Addr_1_1ElemLib_acaa9fe5a0628ebc08e74e79431e92791}{Elem\+Lib\+::\+Get\+Comp\+Swap}}
+
+\begin{DoxyReturn}{Returns}
+N/A 
+\end{DoxyReturn}
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em swap} & swap mode \\
+\hline
+\mbox{\texttt{ in,out}}  & {\em p\+Info} & output per component info \\
+\hline
+\end{DoxyParams}
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=318pt]{classrocr_1_1Addr_1_1ElemLib_acaa9fe5a0628ebc08e74e79431e92791_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classrocr_1_1Addr_1_1ElemLib_acaa9fe5a0628ebc08e74e79431e92791_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classrocr_1_1Addr_1_1ElemLib_ab66f60ec00838d07d84cf41a231f9b1b}\label{classrocr_1_1Addr_1_1ElemLib_ab66f60ec00838d07d84cf41a231f9b1b}} 
+\index{rocr::Addr::ElemLib@{rocr::Addr::ElemLib}!GetCompType@{GetCompType}}
+\index{GetCompType@{GetCompType}!rocr::Addr::ElemLib@{rocr::Addr::ElemLib}}
+\doxysubsubsection{\texorpdfstring{GetCompType()}{GetCompType()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{addrtypes_8h_a7927e087749615dae3114cc27b91c86d}{VOID}} rocr\+::\+Addr\+::\+Elem\+Lib\+::\+Get\+Comp\+Type (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{addrtypes_8h_afee8f2b28939846e8d009ca939a0624a}{Addr\+Color\+Format}}}]{format,  }\item[{\mbox{\hyperlink{addrtypes_8h_a0edb0f71e6b9b2caff95523eaf3c1da2}{Addr\+Surface\+Number}}}]{num\+Type,  }\item[{\mbox{\hyperlink{structrocr_1_1Addr_1_1PixelFormatInfo}{Pixel\+Format\+Info}} $\ast$}]{p\+Info }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [protected]}}
+
+
+
+Fill per component info. 
+
+\mbox{\hyperlink{classrocr_1_1Addr_1_1ElemLib_ab66f60ec00838d07d84cf41a231f9b1b}{Elem\+Lib\+::\+Get\+Comp\+Type}}
+
+\begin{DoxyReturn}{Returns}
+N/A 
+\end{DoxyReturn}
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em format} & surface format \\
+\hline
+\mbox{\texttt{ in}}  & {\em num\+Type} & number type \\
+\hline
+\mbox{\texttt{ in}}  & {\em p\+Info} & \mbox{[}out\mbox{]} per component info out \\
+\hline
+\end{DoxyParams}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classrocr_1_1Addr_1_1ElemLib_ab66f60ec00838d07d84cf41a231f9b1b_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classrocr_1_1Addr_1_1ElemLib_a8825553dc68bf4235ee2859cfe39db21}\label{classrocr_1_1Addr_1_1ElemLib_a8825553dc68bf4235ee2859cfe39db21}} 
+\index{rocr::Addr::ElemLib@{rocr::Addr::ElemLib}!Int32sToPixel@{Int32sToPixel}}
+\index{Int32sToPixel@{Int32sToPixel}!rocr::Addr::ElemLib@{rocr::Addr::ElemLib}}
+\doxysubsubsection{\texorpdfstring{Int32sToPixel()}{Int32sToPixel()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{addrtypes_8h_a7927e087749615dae3114cc27b91c86d}{VOID}} rocr\+::\+Addr\+::\+Elem\+Lib\+::\+Int32s\+To\+Pixel (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{addrtypes_8h_af5a2be58a28390f9a494538f34054637}{UINT\+\_\+32}}}]{num\+Comps,  }\item[{\mbox{\hyperlink{addrtypes_8h_af5a2be58a28390f9a494538f34054637}{UINT\+\_\+32}} $\ast$}]{p\+Comps,  }\item[{\mbox{\hyperlink{addrtypes_8h_af5a2be58a28390f9a494538f34054637}{UINT\+\_\+32}} $\ast$}]{p\+Comp\+Bits,  }\item[{\mbox{\hyperlink{addrtypes_8h_af5a2be58a28390f9a494538f34054637}{UINT\+\_\+32}} $\ast$}]{p\+Comp\+Start,  }\item[{\mbox{\hyperlink{unionrocr_1_1Addr_1_1ComponentFlags}{Component\+Flags}}}]{properties,  }\item[{\mbox{\hyperlink{addrtypes_8h_af5a2be58a28390f9a494538f34054637}{UINT\+\_\+32}}}]{result\+Bits,  }\item[{\mbox{\hyperlink{addrtypes_8h_aecffebc452f5b7100c06c3e132297ac4}{UINT\+\_\+8}} $\ast$}]{p\+Pixel }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Pack 32-\/bit integer values into an uncompressed pixel, in the proper order. 
+
+\mbox{\hyperlink{classrocr_1_1Addr_1_1ElemLib_a8825553dc68bf4235ee2859cfe39db21}{Elem\+Lib\+::\+Int32s\+To\+Pixel}}
+
+\begin{DoxyReturn}{Returns}
+N/A
+\end{DoxyReturn}
+\begin{DoxyNote}{Note}
+This entry point packes four 32-\/bit integer values into an uncompressed pixel. The pixel values are specifies in standard order, e.\+g. depth/stencil. This routine asserts if called on compressed pixel. 
+\end{DoxyNote}
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em num\+Comps} & number of components \\
+\hline
+\mbox{\texttt{ in}}  & {\em p\+Comps} & compnents \\
+\hline
+\mbox{\texttt{ in}}  & {\em p\+Comp\+Bits} & total bits in each component \\
+\hline
+\mbox{\texttt{ in}}  & {\em p\+Comp\+Start} & the first bit position of each component \\
+\hline
+\mbox{\texttt{ in}}  & {\em properties} & properties about byte\+Aligned, export\+Norm \\
+\hline
+\mbox{\texttt{ in}}  & {\em result\+Bits} & result bits\+: total bpp after decompression \\
+\hline
+\mbox{\texttt{ out}}  & {\em p\+Pixel} & a depth/stencil pixel value \\
+\hline
+\end{DoxyParams}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classrocr_1_1Addr_1_1ElemLib_a8825553dc68bf4235ee2859cfe39db21_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classrocr_1_1Addr_1_1ElemLib_a0620437886e2f8af2f3a5b338a68911b}\label{classrocr_1_1Addr_1_1ElemLib_a0620437886e2f8af2f3a5b338a68911b}} 
+\index{rocr::Addr::ElemLib@{rocr::Addr::ElemLib}!IsBlockCompressed@{IsBlockCompressed}}
+\index{IsBlockCompressed@{IsBlockCompressed}!rocr::Addr::ElemLib@{rocr::Addr::ElemLib}}
+\doxysubsubsection{\texorpdfstring{IsBlockCompressed()}{IsBlockCompressed()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{addrtypes_8h_ac4225671b7e87c943146915461c9b2f4}{BOOL\+\_\+32}} rocr\+::\+Addr\+::\+Elem\+Lib\+::\+Is\+Block\+Compressed (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{addrtypes_8h_a8fc6a73edd8bf8b4163a32b2b2d15475}{Addr\+Format}}}]{format }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+TRUE if this is block compressed format. 
+
+\mbox{\hyperlink{classrocr_1_1Addr_1_1ElemLib_a0620437886e2f8af2f3a5b338a68911b}{Elem\+Lib\+::\+Is\+Block\+Compressed}}
+
+\begin{DoxyNote}{Note}
+
+\end{DoxyNote}
+\begin{DoxyReturn}{Returns}
+BOOL\+\_\+32 
+\end{DoxyReturn}
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em format} & Format \\
+\hline
+\end{DoxyParams}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classrocr_1_1Addr_1_1ElemLib_a0620437886e2f8af2f3a5b338a68911b_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classrocr_1_1Addr_1_1ElemLib_a5c891e433f26ac08aa89808a006d682a}\label{classrocr_1_1Addr_1_1ElemLib_a5c891e433f26ac08aa89808a006d682a}} 
+\index{rocr::Addr::ElemLib@{rocr::Addr::ElemLib}!IsCompressed@{IsCompressed}}
+\index{IsCompressed@{IsCompressed}!rocr::Addr::ElemLib@{rocr::Addr::ElemLib}}
+\doxysubsubsection{\texorpdfstring{IsCompressed()}{IsCompressed()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{addrtypes_8h_ac4225671b7e87c943146915461c9b2f4}{BOOL\+\_\+32}} rocr\+::\+Addr\+::\+Elem\+Lib\+::\+Is\+Compressed (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{addrtypes_8h_a8fc6a73edd8bf8b4163a32b2b2d15475}{Addr\+Format}}}]{format }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+TRUE if this is block compressed format or 1 bit format. 
+
+\mbox{\hyperlink{classrocr_1_1Addr_1_1ElemLib_a5c891e433f26ac08aa89808a006d682a}{Elem\+Lib\+::\+Is\+Compressed}}
+
+\begin{DoxyNote}{Note}
+
+\end{DoxyNote}
+\begin{DoxyReturn}{Returns}
+BOOL\+\_\+32 
+\end{DoxyReturn}
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em format} & Format \\
+\hline
+\end{DoxyParams}
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=328pt]{classrocr_1_1Addr_1_1ElemLib_a5c891e433f26ac08aa89808a006d682a_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classrocr_1_1Addr_1_1ElemLib_a8ff85e1d30a76e38a1f6e0b7b72180e3}\label{classrocr_1_1Addr_1_1ElemLib_a8ff85e1d30a76e38a1f6e0b7b72180e3}} 
+\index{rocr::Addr::ElemLib@{rocr::Addr::ElemLib}!IsDepthStencilTilePlanar@{IsDepthStencilTilePlanar}}
+\index{IsDepthStencilTilePlanar@{IsDepthStencilTilePlanar}!rocr::Addr::ElemLib@{rocr::Addr::ElemLib}}
+\doxysubsubsection{\texorpdfstring{IsDepthStencilTilePlanar()}{IsDepthStencilTilePlanar()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{addrtypes_8h_ac4225671b7e87c943146915461c9b2f4}{BOOL\+\_\+32}} rocr\+::\+Addr\+::\+Elem\+Lib\+::\+Is\+Depth\+Stencil\+Tile\+Planar (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Checks if depth and stencil are planar inside a tile. 
+
+\mbox{\Hypertarget{classrocr_1_1Addr_1_1ElemLib_a47b84ca1f7c268ff320ab075de4285bd}\label{classrocr_1_1Addr_1_1ElemLib_a47b84ca1f7c268ff320ab075de4285bd}} 
+\index{rocr::Addr::ElemLib@{rocr::Addr::ElemLib}!IsExpand3x@{IsExpand3x}}
+\index{IsExpand3x@{IsExpand3x}!rocr::Addr::ElemLib@{rocr::Addr::ElemLib}}
+\doxysubsubsection{\texorpdfstring{IsExpand3x()}{IsExpand3x()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{addrtypes_8h_ac4225671b7e87c943146915461c9b2f4}{BOOL\+\_\+32}} rocr\+::\+Addr\+::\+Elem\+Lib\+::\+Is\+Expand3x (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{addrtypes_8h_a8fc6a73edd8bf8b4163a32b2b2d15475}{Addr\+Format}}}]{format }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+TRUE if this is 3x expand format. 
+
+\mbox{\hyperlink{classrocr_1_1Addr_1_1ElemLib_a47b84ca1f7c268ff320ab075de4285bd}{Elem\+Lib\+::\+Is\+Expand3x}}
+
+\begin{DoxyNote}{Note}
+
+\end{DoxyNote}
+\begin{DoxyReturn}{Returns}
+BOOL\+\_\+32 
+\end{DoxyReturn}
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em format} & Format \\
+\hline
+\end{DoxyParams}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classrocr_1_1Addr_1_1ElemLib_a47b84ca1f7c268ff320ab075de4285bd_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classrocr_1_1Addr_1_1ElemLib_ab97cd5af107084d957fc61531900c8e6}\label{classrocr_1_1Addr_1_1ElemLib_ab97cd5af107084d957fc61531900c8e6}} 
+\index{rocr::Addr::ElemLib@{rocr::Addr::ElemLib}!IsMacroPixelPacked@{IsMacroPixelPacked}}
+\index{IsMacroPixelPacked@{IsMacroPixelPacked}!rocr::Addr::ElemLib@{rocr::Addr::ElemLib}}
+\doxysubsubsection{\texorpdfstring{IsMacroPixelPacked()}{IsMacroPixelPacked()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{addrtypes_8h_ac4225671b7e87c943146915461c9b2f4}{BOOL\+\_\+32}} rocr\+::\+Addr\+::\+Elem\+Lib\+::\+Is\+Macro\+Pixel\+Packed (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{addrtypes_8h_a8fc6a73edd8bf8b4163a32b2b2d15475}{Addr\+Format}}}]{format }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+TRUE if this is a macro-\/pixel-\/packed format. 
+
+\mbox{\hyperlink{classrocr_1_1Addr_1_1ElemLib_ab97cd5af107084d957fc61531900c8e6}{Elem\+Lib\+::\+Is\+Macro\+Pixel\+Packed}}
+
+\begin{DoxyNote}{Note}
+
+\end{DoxyNote}
+\begin{DoxyReturn}{Returns}
+BOOL\+\_\+32 
+\end{DoxyReturn}
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em format} & Format \\
+\hline
+\end{DoxyParams}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classrocr_1_1Addr_1_1ElemLib_ab97cd5af107084d957fc61531900c8e6_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classrocr_1_1Addr_1_1ElemLib_a59edc5a9ba7171a606e74dbd23354b2e}\label{classrocr_1_1Addr_1_1ElemLib_a59edc5a9ba7171a606e74dbd23354b2e}} 
+\index{rocr::Addr::ElemLib@{rocr::Addr::ElemLib}!PixGetColorCompInfo@{PixGetColorCompInfo}}
+\index{PixGetColorCompInfo@{PixGetColorCompInfo}!rocr::Addr::ElemLib@{rocr::Addr::ElemLib}}
+\doxysubsubsection{\texorpdfstring{PixGetColorCompInfo()}{PixGetColorCompInfo()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{addrtypes_8h_a7927e087749615dae3114cc27b91c86d}{VOID}} rocr\+::\+Addr\+::\+Elem\+Lib\+::\+Pix\+Get\+Color\+Comp\+Info (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{addrtypes_8h_afee8f2b28939846e8d009ca939a0624a}{Addr\+Color\+Format}}}]{format,  }\item[{\mbox{\hyperlink{addrtypes_8h_a0edb0f71e6b9b2caff95523eaf3c1da2}{Addr\+Surface\+Number}}}]{number,  }\item[{\mbox{\hyperlink{addrtypes_8h_a60c39b87bb50849c30929d3e2fdc5b5e}{Addr\+Surface\+Swap}}}]{swap,  }\item[{\mbox{\hyperlink{structrocr_1_1Addr_1_1PixelFormatInfo}{Pixel\+Format\+Info}} $\ast$}]{p\+Info }\end{DoxyParamCaption}) const}
+
+
+
+Get per component info for color surface. 
+
+\mbox{\hyperlink{classrocr_1_1Addr_1_1ElemLib_a59edc5a9ba7171a606e74dbd23354b2e}{Elem\+Lib\+::\+Pix\+Get\+Color\+Comp\+Info}}
+
+\begin{DoxyReturn}{Returns}
+N/A 
+\end{DoxyReturn}
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em format} & surface format, read from register \\
+\hline
+\mbox{\texttt{ in}}  & {\em number} & pixel number type \\
+\hline
+\mbox{\texttt{ in}}  & {\em swap} & component swap mode \\
+\hline
+\mbox{\texttt{ out}}  & {\em p\+Info} & output per component info \\
+\hline
+\end{DoxyParams}
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classrocr_1_1Addr_1_1ElemLib_a59edc5a9ba7171a606e74dbd23354b2e_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classrocr_1_1Addr_1_1ElemLib_a59edc5a9ba7171a606e74dbd23354b2e_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classrocr_1_1Addr_1_1ElemLib_af2a272d4b14130a2da597665d8f575c8}\label{classrocr_1_1Addr_1_1ElemLib_af2a272d4b14130a2da597665d8f575c8}} 
+\index{rocr::Addr::ElemLib@{rocr::Addr::ElemLib}!PixGetDepthCompInfo@{PixGetDepthCompInfo}}
+\index{PixGetDepthCompInfo@{PixGetDepthCompInfo}!rocr::Addr::ElemLib@{rocr::Addr::ElemLib}}
+\doxysubsubsection{\texorpdfstring{PixGetDepthCompInfo()}{PixGetDepthCompInfo()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{addrtypes_8h_a7927e087749615dae3114cc27b91c86d}{VOID}} rocr\+::\+Addr\+::\+Elem\+Lib\+::\+Pix\+Get\+Depth\+Comp\+Info (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{addrtypes_8h_ac3af474def0a095fa73cec701a2a3a3f}{Addr\+Depth\+Format}}}]{format,  }\item[{\mbox{\hyperlink{structrocr_1_1Addr_1_1PixelFormatInfo}{Pixel\+Format\+Info}} $\ast$}]{p\+Info }\end{DoxyParamCaption}) const}
+
+
+
+Get per component info for depth surface. 
+
+\mbox{\hyperlink{classrocr_1_1Addr_1_1ElemLib_af2a272d4b14130a2da597665d8f575c8}{Elem\+Lib\+::\+Pix\+Get\+Depth\+Comp\+Info}}
+
+\begin{DoxyReturn}{Returns}
+N/A 
+\end{DoxyReturn}
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em format} & surface format, read from register \\
+\hline
+\mbox{\texttt{ out}}  & {\em p\+Info} & output per component bits and type \\
+\hline
+\end{DoxyParams}
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=339pt]{classrocr_1_1Addr_1_1ElemLib_af2a272d4b14130a2da597665d8f575c8_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classrocr_1_1Addr_1_1ElemLib_af2a272d4b14130a2da597665d8f575c8_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classrocr_1_1Addr_1_1ElemLib_af0a84eca04b1a470f7be89aec3fd867d}\label{classrocr_1_1Addr_1_1ElemLib_af0a84eca04b1a470f7be89aec3fd867d}} 
+\index{rocr::Addr::ElemLib@{rocr::Addr::ElemLib}!PixGetExportNorm@{PixGetExportNorm}}
+\index{PixGetExportNorm@{PixGetExportNorm}!rocr::Addr::ElemLib@{rocr::Addr::ElemLib}}
+\doxysubsubsection{\texorpdfstring{PixGetExportNorm()}{PixGetExportNorm()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{addrtypes_8h_ac4225671b7e87c943146915461c9b2f4}{BOOL\+\_\+32}} rocr\+::\+Addr\+::\+Elem\+Lib\+::\+Pix\+Get\+Export\+Norm (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{addrtypes_8h_afee8f2b28939846e8d009ca939a0624a}{Addr\+Color\+Format}}}]{color\+Fmt,  }\item[{\mbox{\hyperlink{addrtypes_8h_a0edb0f71e6b9b2caff95523eaf3c1da2}{Addr\+Surface\+Number}}}]{number\+Fmt,  }\item[{\mbox{\hyperlink{addrtypes_8h_a60c39b87bb50849c30929d3e2fdc5b5e}{Addr\+Surface\+Swap}}}]{swap }\end{DoxyParamCaption}) const}
+
+
+
+The implementation is only for R6xx/\+R7xx, so make it virtual in case we need for R8xx. 
+
+Check if fp16 export norm can be enabled.
+
+\mbox{\hyperlink{classrocr_1_1Addr_1_1ElemLib_af0a84eca04b1a470f7be89aec3fd867d}{Elem\+Lib\+::\+Pix\+Get\+Export\+Norm}}
+
+\begin{DoxyReturn}{Returns}
+TRUE if this can be enabled. 
+\end{DoxyReturn}
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em color\+Fmt} & surface format, read from register \\
+\hline
+\mbox{\texttt{ in}}  & {\em number\+Fmt} & pixel number type \\
+\hline
+\mbox{\texttt{ in}}  & {\em swap} & components swap type \\
+\hline
+\end{DoxyParams}
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classrocr_1_1Addr_1_1ElemLib_af0a84eca04b1a470f7be89aec3fd867d_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classrocr_1_1Addr_1_1ElemLib_af0a84eca04b1a470f7be89aec3fd867d_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classrocr_1_1Addr_1_1ElemLib_a7c69d2ec58bbf1a24f58d627d58ad0cd}\label{classrocr_1_1Addr_1_1ElemLib_a7c69d2ec58bbf1a24f58d627d58ad0cd}} 
+\index{rocr::Addr::ElemLib@{rocr::Addr::ElemLib}!RestoreSurfaceInfo@{RestoreSurfaceInfo}}
+\index{RestoreSurfaceInfo@{RestoreSurfaceInfo}!rocr::Addr::ElemLib@{rocr::Addr::ElemLib}}
+\doxysubsubsection{\texorpdfstring{RestoreSurfaceInfo()}{RestoreSurfaceInfo()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{addrtypes_8h_a7927e087749615dae3114cc27b91c86d}{VOID}} rocr\+::\+Addr\+::\+Elem\+Lib\+::\+Restore\+Surface\+Info (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{namespacerocr_1_1Addr_a99d88f693437a549495a2b094146c100}{Elem\+Mode}}}]{elem\+Mode,  }\item[{\mbox{\hyperlink{addrtypes_8h_af5a2be58a28390f9a494538f34054637}{UINT\+\_\+32}}}]{expandX,  }\item[{\mbox{\hyperlink{addrtypes_8h_af5a2be58a28390f9a494538f34054637}{UINT\+\_\+32}}}]{expandY,  }\item[{\mbox{\hyperlink{addrtypes_8h_af5a2be58a28390f9a494538f34054637}{UINT\+\_\+32}} $\ast$}]{p\+Bpp,  }\item[{\mbox{\hyperlink{addrtypes_8h_af5a2be58a28390f9a494538f34054637}{UINT\+\_\+32}} $\ast$}]{p\+Width,  }\item[{\mbox{\hyperlink{addrtypes_8h_af5a2be58a28390f9a494538f34054637}{UINT\+\_\+32}} $\ast$}]{p\+Height }\end{DoxyParamCaption})}
+
+
+
+Reverse operation of Adjust\+Surface\+Info. 
+
+\mbox{\hyperlink{classrocr_1_1Addr_1_1ElemLib_a7c69d2ec58bbf1a24f58d627d58ad0cd}{Elem\+Lib\+::\+Restore\+Surface\+Info}}
+
+\begin{DoxyReturn}{Returns}
+N/A 
+\end{DoxyReturn}
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em elem\+Mode} & element mode \\
+\hline
+\mbox{\texttt{ in}}  & {\em expandX} & decompression expansion factor in X \\
+\hline
+\mbox{\texttt{ out}}  & {\em expandY} & decompression expansion factor in Y \\
+\hline
+\mbox{\texttt{ in,out}}  & {\em p\+Bpp} & bpp \\
+\hline
+\mbox{\texttt{ in,out}}  & {\em p\+Width} & width \\
+\hline
+\mbox{\texttt{ in,out}}  & {\em p\+Height} & height \\
+\hline
+\end{DoxyParams}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classrocr_1_1Addr_1_1ElemLib_a7c69d2ec58bbf1a24f58d627d58ad0cd_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classrocr_1_1Addr_1_1ElemLib_aba7b47a6cbf319bdde8e420fba96737c}\label{classrocr_1_1Addr_1_1ElemLib_aba7b47a6cbf319bdde8e420fba96737c}} 
+\index{rocr::Addr::ElemLib@{rocr::Addr::ElemLib}!SetClearComps@{SetClearComps}}
+\index{SetClearComps@{SetClearComps}!rocr::Addr::ElemLib@{rocr::Addr::ElemLib}}
+\doxysubsubsection{\texorpdfstring{SetClearComps()}{SetClearComps()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{addrtypes_8h_a7927e087749615dae3114cc27b91c86d}{VOID}} rocr\+::\+Addr\+::\+Elem\+Lib\+::\+Set\+Clear\+Comps (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{unionADDR__FLT__32}{ADDR\+\_\+\+FLT\+\_\+32}}}]{comps\mbox{[}4\mbox{]},  }\item[{\mbox{\hyperlink{addrtypes_8h_ac4225671b7e87c943146915461c9b2f4}{BOOL\+\_\+32}}}]{clear\+Color,  }\item[{\mbox{\hyperlink{addrtypes_8h_ac4225671b7e87c943146915461c9b2f4}{BOOL\+\_\+32}}}]{float32 }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Set the clear color (or clear depth/stencil) for a surface. 
+
+\mbox{\hyperlink{classrocr_1_1Addr_1_1ElemLib_a255b80a10524c908983bbae3e5b37673}{Elem\+Lib\+::\+Get\+Comp\+Bits}}
+
+\begin{DoxyNote}{Note}
+If clear\+Color is zero, a default clear value is used in place of comps\mbox{[}4\mbox{]}. If float32 is set, full precision is used, else the mantissa is reduced to 12-\/bits
+\end{DoxyNote}
+\begin{DoxyReturn}{Returns}
+N/A 
+\end{DoxyReturn}
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in,out}}  & {\em comps} & components \\
+\hline
+\mbox{\texttt{ in}}  & {\em clear\+Color} & TRUE if clear color is set (CLEAR\+\_\+\+COLOR) \\
+\hline
+\mbox{\texttt{ in}}  & {\em float32} & TRUE if float32 component (BLEND\+\_\+\+FLOAT32) \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classrocr_1_1Addr_1_1ElemLib_a63343d697a90ff0dbaf780f9151853b3}\label{classrocr_1_1Addr_1_1ElemLib_a63343d697a90ff0dbaf780f9151853b3}} 
+\index{rocr::Addr::ElemLib@{rocr::Addr::ElemLib}!SetConfigFlags@{SetConfigFlags}}
+\index{SetConfigFlags@{SetConfigFlags}!rocr::Addr::ElemLib@{rocr::Addr::ElemLib}}
+\doxysubsubsection{\texorpdfstring{SetConfigFlags()}{SetConfigFlags()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{addrtypes_8h_a7927e087749615dae3114cc27b91c86d}{VOID}} rocr\+::\+Addr\+::\+Elem\+Lib\+::\+Set\+Config\+Flags (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{unionrocr_1_1Addr_1_1ConfigFlags}{Config\+Flags}}}]{flags }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Sets m\+\_\+config\+Flags, copied from Addr\+Lib. 
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classrocr_1_1Addr_1_1ElemLib_a63343d697a90ff0dbaf780f9151853b3_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classrocr_1_1Addr_1_1ElemLib_ad105cc96db2171f434acbb85fe6a1ceb}\label{classrocr_1_1Addr_1_1ElemLib_ad105cc96db2171f434acbb85fe6a1ceb}} 
+\index{rocr::Addr::ElemLib@{rocr::Addr::ElemLib}!SwapComps@{SwapComps}}
+\index{SwapComps@{SwapComps}!rocr::Addr::ElemLib@{rocr::Addr::ElemLib}}
+\doxysubsubsection{\texorpdfstring{SwapComps()}{SwapComps()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{addrtypes_8h_a7927e087749615dae3114cc27b91c86d}{VOID}} rocr\+::\+Addr\+::\+Elem\+Lib\+::\+Swap\+Comps (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{addrtypes_8h_af5a2be58a28390f9a494538f34054637}{UINT\+\_\+32}}}]{c0,  }\item[{\mbox{\hyperlink{addrtypes_8h_af5a2be58a28390f9a494538f34054637}{UINT\+\_\+32}}}]{c1,  }\item[{\mbox{\hyperlink{structrocr_1_1Addr_1_1PixelFormatInfo}{Pixel\+Format\+Info}} $\ast$}]{p\+Info }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [protected]}}
+
+
+
+Get components swapped for color surface. 
+
+\mbox{\hyperlink{classrocr_1_1Addr_1_1ElemLib_acaa9fe5a0628ebc08e74e79431e92791}{Elem\+Lib\+::\+Get\+Comp\+Swap}}
+
+\begin{DoxyReturn}{Returns}
+N/A 
+\end{DoxyReturn}
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em c0} & component index 0 \\
+\hline
+\mbox{\texttt{ in}}  & {\em c1} & component index 1 \\
+\hline
+\mbox{\texttt{ in,out}}  & {\em p\+Info} & output per component info \\
+\hline
+\end{DoxyParams}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classrocr_1_1Addr_1_1ElemLib_ad105cc96db2171f434acbb85fe6a1ceb_icgraph}
+\end{center}
+\end{figure}
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{classrocr_1_1Addr_1_1ElemLib_a8a008e623a9a4ea847ed4eb4908b7fb8}\label{classrocr_1_1Addr_1_1ElemLib_a8a008e623a9a4ea847ed4eb4908b7fb8}} 
+\index{rocr::Addr::ElemLib@{rocr::Addr::ElemLib}!m\_configFlags@{m\_configFlags}}
+\index{m\_configFlags@{m\_configFlags}!rocr::Addr::ElemLib@{rocr::Addr::ElemLib}}
+\doxysubsubsection{\texorpdfstring{m\_configFlags}{m\_configFlags}}
+{\footnotesize\ttfamily \mbox{\hyperlink{unionrocr_1_1Addr_1_1ConfigFlags}{Config\+Flags}} rocr\+::\+Addr\+::\+Elem\+Lib\+::m\+\_\+config\+Flags\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Copy of Addr\+Lib\textquotesingle{}s config\+Flags. 
+
+\mbox{\Hypertarget{classrocr_1_1Addr_1_1ElemLib_a6ca95c69cb40b61ddb01cc4a98f6d6c5}\label{classrocr_1_1Addr_1_1ElemLib_a6ca95c69cb40b61ddb01cc4a98f6d6c5}} 
+\index{rocr::Addr::ElemLib@{rocr::Addr::ElemLib}!m\_depthPlanarType@{m\_depthPlanarType}}
+\index{m\_depthPlanarType@{m\_depthPlanarType}!rocr::Addr::ElemLib@{rocr::Addr::ElemLib}}
+\doxysubsubsection{\texorpdfstring{m\_depthPlanarType}{m\_depthPlanarType}}
+{\footnotesize\ttfamily \mbox{\hyperlink{namespacerocr_1_1Addr_acbe90a63826f958f0fcadd37f3a99e0a}{Depth\+Planar\+Type}} rocr\+::\+Addr\+::\+Elem\+Lib\+::m\+\_\+depth\+Planar\+Type\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classrocr_1_1Addr_1_1ElemLib_a46db5fbd4677ebc8f98247aeb2669af8}\label{classrocr_1_1Addr_1_1ElemLib_a46db5fbd4677ebc8f98247aeb2669af8}} 
+\index{rocr::Addr::ElemLib@{rocr::Addr::ElemLib}!m\_fp16ExportNorm@{m\_fp16ExportNorm}}
+\index{m\_fp16ExportNorm@{m\_fp16ExportNorm}!rocr::Addr::ElemLib@{rocr::Addr::ElemLib}}
+\doxysubsubsection{\texorpdfstring{m\_fp16ExportNorm}{m\_fp16ExportNorm}}
+{\footnotesize\ttfamily \mbox{\hyperlink{addrtypes_8h_af5a2be58a28390f9a494538f34054637}{UINT\+\_\+32}} rocr\+::\+Addr\+::\+Elem\+Lib\+::m\+\_\+fp16\+Export\+Norm\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+If allow FP16 to be reported as EXPORT\+\_\+\+NORM. 
+
+\mbox{\Hypertarget{classrocr_1_1Addr_1_1ElemLib_adc7b5c20acf7d8b72991113ff0183871}\label{classrocr_1_1Addr_1_1ElemLib_adc7b5c20acf7d8b72991113ff0183871}} 
+\index{rocr::Addr::ElemLib@{rocr::Addr::ElemLib}!m\_pAddrLib@{m\_pAddrLib}}
+\index{m\_pAddrLib@{m\_pAddrLib}!rocr::Addr::ElemLib@{rocr::Addr::ElemLib}}
+\doxysubsubsection{\texorpdfstring{m\_pAddrLib}{m\_pAddrLib}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classrocr_1_1Addr_1_1Lib}{Addr\+::\+Lib}}$\ast$ const rocr\+::\+Addr\+::\+Elem\+Lib\+::m\+\_\+p\+Addr\+Lib\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Pointer to parent addrlib instance. 
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+src/image/addrlib/src/core/\mbox{\hyperlink{addrelemlib_8h}{addrelemlib.\+h}}\item 
+src/image/addrlib/src/core/\mbox{\hyperlink{addrelemlib_8cpp}{addrelemlib.\+cpp}}\end{DoxyCompactItemize}

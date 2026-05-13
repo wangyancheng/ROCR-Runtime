@@ -1,0 +1,115 @@
+\hypertarget{structhsa__amd__barrier__value__packet__s}{}\doxysection{hsa\+\_\+amd\+\_\+barrier\+\_\+value\+\_\+packet\+\_\+s Struct Reference}
+\label{structhsa__amd__barrier__value__packet__s}\index{hsa\_amd\_barrier\_value\_packet\_s@{hsa\_amd\_barrier\_value\_packet\_s}}
+
+
+AMD barrier value packet. Halts packet processing and waits for (signal\+\_\+value \& \+::mask) \+::cond \+::value to be satisfied, where signal\+\_\+value is the value of the signal \+::signal.  
+
+
+
+
+{\ttfamily \#include $<$hsa\+\_\+ext\+\_\+amd.\+h$>$}
+
+
+
+Collaboration diagram for hsa\+\_\+amd\+\_\+barrier\+\_\+value\+\_\+packet\+\_\+s\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=331pt]{structhsa__amd__barrier__value__packet__s__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{group__aql_gaf9362e46344dd2fbfda4ac8f199db6ee}{hsa\+\_\+amd\+\_\+vendor\+\_\+packet\+\_\+header\+\_\+t}} \mbox{\hyperlink{structhsa__amd__barrier__value__packet__s_adef2f1672d84d6fdfaae80d807db82c1}{header}}
+\item 
+uint32\+\_\+t \mbox{\hyperlink{structhsa__amd__barrier__value__packet__s_a14bcc47fd41e25f9503fcbbb3d774a49}{reserved0}}
+\item 
+\mbox{\hyperlink{group__signals_ga0003af605a660e7ef4f89aa555d3b3fc}{hsa\+\_\+signal\+\_\+t}} \mbox{\hyperlink{structhsa__amd__barrier__value__packet__s_a316e8fef788d63d0db9b999010871cf7}{signal}}
+\item 
+\mbox{\hyperlink{group__signals_ga67ca2818879c9990e1b5f1b14ce7ed27}{hsa\+\_\+signal\+\_\+value\+\_\+t}} \mbox{\hyperlink{structhsa__amd__barrier__value__packet__s_ad9befc4e020662f268f99b5e7bad8457}{value}}
+\item 
+\mbox{\hyperlink{group__signals_ga67ca2818879c9990e1b5f1b14ce7ed27}{hsa\+\_\+signal\+\_\+value\+\_\+t}} \mbox{\hyperlink{structhsa__amd__barrier__value__packet__s_ad066537de2aed35835b665c75bd9ba50}{mask}}
+\item 
+\mbox{\hyperlink{group__aql_gafe7712107c07c264ebc33d22b314a1c2}{hsa\+\_\+signal\+\_\+condition32\+\_\+t}} \mbox{\hyperlink{structhsa__amd__barrier__value__packet__s_ad88b60c9da64f1bac461f0f2a313f770}{cond}}
+\item 
+uint32\+\_\+t \mbox{\hyperlink{structhsa__amd__barrier__value__packet__s_a43f4cdb1a5357cedaca0325761398ffe}{reserved1}}
+\item 
+uint64\+\_\+t \mbox{\hyperlink{structhsa__amd__barrier__value__packet__s_a3a6594af7969631a95fd371e69f7af84}{reserved2}}
+\item 
+uint64\+\_\+t \mbox{\hyperlink{structhsa__amd__barrier__value__packet__s_aa29405d1f247c1053e771612bda486cc}{reserved3}}
+\item 
+\mbox{\hyperlink{group__signals_ga0003af605a660e7ef4f89aa555d3b3fc}{hsa\+\_\+signal\+\_\+t}} \mbox{\hyperlink{structhsa__amd__barrier__value__packet__s_a6ae3c466612434890abdee22e19c12a9}{completion\+\_\+signal}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+AMD barrier value packet. Halts packet processing and waits for (signal\+\_\+value \& \+::mask) \+::cond \+::value to be satisfied, where signal\+\_\+value is the value of the signal \+::signal. 
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{structhsa__amd__barrier__value__packet__s_a6ae3c466612434890abdee22e19c12a9}\label{structhsa__amd__barrier__value__packet__s_a6ae3c466612434890abdee22e19c12a9}} 
+\index{hsa\_amd\_barrier\_value\_packet\_s@{hsa\_amd\_barrier\_value\_packet\_s}!completion\_signal@{completion\_signal}}
+\index{completion\_signal@{completion\_signal}!hsa\_amd\_barrier\_value\_packet\_s@{hsa\_amd\_barrier\_value\_packet\_s}}
+\doxysubsubsection{\texorpdfstring{completion\_signal}{completion\_signal}}
+{\footnotesize\ttfamily \mbox{\hyperlink{group__signals_ga0003af605a660e7ef4f89aa555d3b3fc}{hsa\+\_\+signal\+\_\+t}} hsa\+\_\+amd\+\_\+barrier\+\_\+value\+\_\+packet\+\_\+s\+::completion\+\_\+signal}
+
+Signal used to indicate completion of the job. The application can use the special signal handle 0 to indicate that no signal is used. \mbox{\Hypertarget{structhsa__amd__barrier__value__packet__s_ad88b60c9da64f1bac461f0f2a313f770}\label{structhsa__amd__barrier__value__packet__s_ad88b60c9da64f1bac461f0f2a313f770}} 
+\index{hsa\_amd\_barrier\_value\_packet\_s@{hsa\_amd\_barrier\_value\_packet\_s}!cond@{cond}}
+\index{cond@{cond}!hsa\_amd\_barrier\_value\_packet\_s@{hsa\_amd\_barrier\_value\_packet\_s}}
+\doxysubsubsection{\texorpdfstring{cond}{cond}}
+{\footnotesize\ttfamily \mbox{\hyperlink{group__aql_gafe7712107c07c264ebc33d22b314a1c2}{hsa\+\_\+signal\+\_\+condition32\+\_\+t}} hsa\+\_\+amd\+\_\+barrier\+\_\+value\+\_\+packet\+\_\+s\+::cond}
+
+Comparison operation. See \mbox{\hyperlink{group__signals_gab7190fcff48c6dbeded341389ed17c8d}{hsa\+\_\+signal\+\_\+condition\+\_\+t}}. \mbox{\Hypertarget{structhsa__amd__barrier__value__packet__s_adef2f1672d84d6fdfaae80d807db82c1}\label{structhsa__amd__barrier__value__packet__s_adef2f1672d84d6fdfaae80d807db82c1}} 
+\index{hsa\_amd\_barrier\_value\_packet\_s@{hsa\_amd\_barrier\_value\_packet\_s}!header@{header}}
+\index{header@{header}!hsa\_amd\_barrier\_value\_packet\_s@{hsa\_amd\_barrier\_value\_packet\_s}}
+\doxysubsubsection{\texorpdfstring{header}{header}}
+{\footnotesize\ttfamily \mbox{\hyperlink{group__aql_gaf9362e46344dd2fbfda4ac8f199db6ee}{hsa\+\_\+amd\+\_\+vendor\+\_\+packet\+\_\+header\+\_\+t}} hsa\+\_\+amd\+\_\+barrier\+\_\+value\+\_\+packet\+\_\+s\+::header}
+
+AMD vendor specific packet header. \mbox{\Hypertarget{structhsa__amd__barrier__value__packet__s_ad066537de2aed35835b665c75bd9ba50}\label{structhsa__amd__barrier__value__packet__s_ad066537de2aed35835b665c75bd9ba50}} 
+\index{hsa\_amd\_barrier\_value\_packet\_s@{hsa\_amd\_barrier\_value\_packet\_s}!mask@{mask}}
+\index{mask@{mask}!hsa\_amd\_barrier\_value\_packet\_s@{hsa\_amd\_barrier\_value\_packet\_s}}
+\doxysubsubsection{\texorpdfstring{mask}{mask}}
+{\footnotesize\ttfamily \mbox{\hyperlink{group__signals_ga67ca2818879c9990e1b5f1b14ce7ed27}{hsa\+\_\+signal\+\_\+value\+\_\+t}} hsa\+\_\+amd\+\_\+barrier\+\_\+value\+\_\+packet\+\_\+s\+::mask}
+
+Bit mask to be combined by bitwise AND with \+::signal\textquotesingle{}s value. \mbox{\Hypertarget{structhsa__amd__barrier__value__packet__s_a14bcc47fd41e25f9503fcbbb3d774a49}\label{structhsa__amd__barrier__value__packet__s_a14bcc47fd41e25f9503fcbbb3d774a49}} 
+\index{hsa\_amd\_barrier\_value\_packet\_s@{hsa\_amd\_barrier\_value\_packet\_s}!reserved0@{reserved0}}
+\index{reserved0@{reserved0}!hsa\_amd\_barrier\_value\_packet\_s@{hsa\_amd\_barrier\_value\_packet\_s}}
+\doxysubsubsection{\texorpdfstring{reserved0}{reserved0}}
+{\footnotesize\ttfamily uint32\+\_\+t hsa\+\_\+amd\+\_\+barrier\+\_\+value\+\_\+packet\+\_\+s\+::reserved0}
+
+Reserved. Must be 0. \mbox{\Hypertarget{structhsa__amd__barrier__value__packet__s_a43f4cdb1a5357cedaca0325761398ffe}\label{structhsa__amd__barrier__value__packet__s_a43f4cdb1a5357cedaca0325761398ffe}} 
+\index{hsa\_amd\_barrier\_value\_packet\_s@{hsa\_amd\_barrier\_value\_packet\_s}!reserved1@{reserved1}}
+\index{reserved1@{reserved1}!hsa\_amd\_barrier\_value\_packet\_s@{hsa\_amd\_barrier\_value\_packet\_s}}
+\doxysubsubsection{\texorpdfstring{reserved1}{reserved1}}
+{\footnotesize\ttfamily uint32\+\_\+t hsa\+\_\+amd\+\_\+barrier\+\_\+value\+\_\+packet\+\_\+s\+::reserved1}
+
+Reserved. Must be 0. \mbox{\Hypertarget{structhsa__amd__barrier__value__packet__s_a3a6594af7969631a95fd371e69f7af84}\label{structhsa__amd__barrier__value__packet__s_a3a6594af7969631a95fd371e69f7af84}} 
+\index{hsa\_amd\_barrier\_value\_packet\_s@{hsa\_amd\_barrier\_value\_packet\_s}!reserved2@{reserved2}}
+\index{reserved2@{reserved2}!hsa\_amd\_barrier\_value\_packet\_s@{hsa\_amd\_barrier\_value\_packet\_s}}
+\doxysubsubsection{\texorpdfstring{reserved2}{reserved2}}
+{\footnotesize\ttfamily uint64\+\_\+t hsa\+\_\+amd\+\_\+barrier\+\_\+value\+\_\+packet\+\_\+s\+::reserved2}
+
+Reserved. Must be 0. \mbox{\Hypertarget{structhsa__amd__barrier__value__packet__s_aa29405d1f247c1053e771612bda486cc}\label{structhsa__amd__barrier__value__packet__s_aa29405d1f247c1053e771612bda486cc}} 
+\index{hsa\_amd\_barrier\_value\_packet\_s@{hsa\_amd\_barrier\_value\_packet\_s}!reserved3@{reserved3}}
+\index{reserved3@{reserved3}!hsa\_amd\_barrier\_value\_packet\_s@{hsa\_amd\_barrier\_value\_packet\_s}}
+\doxysubsubsection{\texorpdfstring{reserved3}{reserved3}}
+{\footnotesize\ttfamily uint64\+\_\+t hsa\+\_\+amd\+\_\+barrier\+\_\+value\+\_\+packet\+\_\+s\+::reserved3}
+
+Reserved. Must be 0. \mbox{\Hypertarget{structhsa__amd__barrier__value__packet__s_a316e8fef788d63d0db9b999010871cf7}\label{structhsa__amd__barrier__value__packet__s_a316e8fef788d63d0db9b999010871cf7}} 
+\index{hsa\_amd\_barrier\_value\_packet\_s@{hsa\_amd\_barrier\_value\_packet\_s}!signal@{signal}}
+\index{signal@{signal}!hsa\_amd\_barrier\_value\_packet\_s@{hsa\_amd\_barrier\_value\_packet\_s}}
+\doxysubsubsection{\texorpdfstring{signal}{signal}}
+{\footnotesize\ttfamily \mbox{\hyperlink{group__signals_ga0003af605a660e7ef4f89aa555d3b3fc}{hsa\+\_\+signal\+\_\+t}} hsa\+\_\+amd\+\_\+barrier\+\_\+value\+\_\+packet\+\_\+s\+::signal}
+
+Dependent signal object. A signal with a handle value of 0 is allowed and is interpreted by the packet processor a satisfied dependency. \mbox{\Hypertarget{structhsa__amd__barrier__value__packet__s_ad9befc4e020662f268f99b5e7bad8457}\label{structhsa__amd__barrier__value__packet__s_ad9befc4e020662f268f99b5e7bad8457}} 
+\index{hsa\_amd\_barrier\_value\_packet\_s@{hsa\_amd\_barrier\_value\_packet\_s}!value@{value}}
+\index{value@{value}!hsa\_amd\_barrier\_value\_packet\_s@{hsa\_amd\_barrier\_value\_packet\_s}}
+\doxysubsubsection{\texorpdfstring{value}{value}}
+{\footnotesize\ttfamily \mbox{\hyperlink{group__signals_ga67ca2818879c9990e1b5f1b14ce7ed27}{hsa\+\_\+signal\+\_\+value\+\_\+t}} hsa\+\_\+amd\+\_\+barrier\+\_\+value\+\_\+packet\+\_\+s\+::value}
+
+Value to compare against. 
+
+The documentation for this struct was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+src/inc/\mbox{\hyperlink{inc_2hsa__ext__amd_8h}{hsa\+\_\+ext\+\_\+amd.\+h}}\end{DoxyCompactItemize}

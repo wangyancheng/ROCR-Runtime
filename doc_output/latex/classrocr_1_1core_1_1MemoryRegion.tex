@@ -1,0 +1,362 @@
+\hypertarget{classrocr_1_1core_1_1MemoryRegion}{}\doxysection{rocr\+::core\+::Memory\+Region Class Reference}
+\label{classrocr_1_1core_1_1MemoryRegion}\index{rocr::core::MemoryRegion@{rocr::core::MemoryRegion}}
+
+
+{\ttfamily \#include $<$memory\+\_\+region.\+h$>$}
+
+
+
+Inheritance diagram for rocr\+::core\+::Memory\+Region\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=218pt]{classrocr_1_1core_1_1MemoryRegion__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for rocr\+::core\+::Memory\+Region\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classrocr_1_1core_1_1MemoryRegion__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+enum \mbox{\hyperlink{classrocr_1_1core_1_1MemoryRegion_a90c072591da4781c4eb1d9bd8c5913fc}{Allocate\+Enum}} \{ \newline
+\mbox{\hyperlink{classrocr_1_1core_1_1MemoryRegion_a90c072591da4781c4eb1d9bd8c5913fcafdad525bb9d9b8c794df72054ae16f7a}{Allocate\+No\+Flags}} = 0
+, \mbox{\hyperlink{classrocr_1_1core_1_1MemoryRegion_a90c072591da4781c4eb1d9bd8c5913fca9c63a064fb89ddd2ec9f642ebb647490}{Allocate\+Restrict}} = (1 $<$$<$ 0)
+, \mbox{\hyperlink{classrocr_1_1core_1_1MemoryRegion_a90c072591da4781c4eb1d9bd8c5913fca905fc3d2a89f46ab119760ec4a32b732}{Allocate\+Executable}} = (1 $<$$<$ 1)
+, \mbox{\hyperlink{classrocr_1_1core_1_1MemoryRegion_a90c072591da4781c4eb1d9bd8c5913fcaac49ffbcbf1905f410e6123ab784eb46}{Allocate\+Double\+Map}} = (1 $<$$<$ 2)
+, \newline
+\mbox{\hyperlink{classrocr_1_1core_1_1MemoryRegion_a90c072591da4781c4eb1d9bd8c5913fcabf7edfca6e04de2e27fa866635473d20}{Allocate\+Direct}} = (1 $<$$<$ 3)
+, \mbox{\hyperlink{classrocr_1_1core_1_1MemoryRegion_a90c072591da4781c4eb1d9bd8c5913fca96c6f5a7f504286636d1dcf6316140c7}{Allocate\+IPC}} = (1 $<$$<$ 4)
+, \mbox{\hyperlink{classrocr_1_1core_1_1MemoryRegion_a90c072591da4781c4eb1d9bd8c5913fca066036f7d68d96d51a508cc9556778e6}{Allocate\+Non\+Paged}} = (1 $<$$<$ 4)
+, \mbox{\hyperlink{classrocr_1_1core_1_1MemoryRegion_a90c072591da4781c4eb1d9bd8c5913fcabf1fed8970268b149de278d644ca7a95}{Allocate\+PCIe\+RW}} = (1 $<$$<$ 5)
+ \}
+\item 
+typedef uint32\+\_\+t \mbox{\hyperlink{classrocr_1_1core_1_1MemoryRegion_ac293b6bdc18d9f5d5f6ac3a12021cf0f}{Allocate\+Flags}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classrocr_1_1core_1_1MemoryRegion_a12b49837efb4fbf752304b3e2a2725bd}{Memory\+Region}} (bool \mbox{\hyperlink{classrocr_1_1core_1_1MemoryRegion_a83f398f2ab808f0972d7a2cb2f588890}{fine\+\_\+grain}}, bool \mbox{\hyperlink{classrocr_1_1core_1_1MemoryRegion_a8cc2ffd44a726e0594946d6430c32ba4}{kernarg}}, bool \mbox{\hyperlink{classrocr_1_1core_1_1MemoryRegion_a66d52a58b600dda77ce783dbfeb5bca7}{full\+\_\+profile}}, \mbox{\hyperlink{classrocr_1_1core_1_1Agent}{core\+::\+Agent}} $\ast$\mbox{\hyperlink{classrocr_1_1core_1_1MemoryRegion_aada12cbf443fb16281347f155d9a8d4c}{owner}})
+\item 
+virtual \mbox{\hyperlink{classrocr_1_1core_1_1MemoryRegion_a7e0228edcb736efc5ccf5f730865626b}{$\sim$\+Memory\+Region}} ()
+\item 
+virtual \mbox{\hyperlink{group__status_gad755322e7ff95456520e8abdbe90d225}{hsa\+\_\+status\+\_\+t}} \mbox{\hyperlink{classrocr_1_1core_1_1MemoryRegion_aedd7a9cd2fbe1b0f00126e9a083dbef6}{Allocate}} (size\+\_\+t \&size, \mbox{\hyperlink{classrocr_1_1core_1_1MemoryRegion_ac293b6bdc18d9f5d5f6ac3a12021cf0f}{Allocate\+Flags}} alloc\+\_\+flags, void $\ast$$\ast$address) const =0
+\item 
+virtual \mbox{\hyperlink{group__status_gad755322e7ff95456520e8abdbe90d225}{hsa\+\_\+status\+\_\+t}} \mbox{\hyperlink{classrocr_1_1core_1_1MemoryRegion_acb4a13042d631d178ca958d505bd33e1}{Free}} (void $\ast$address, size\+\_\+t size) const =0
+\item 
+virtual \mbox{\hyperlink{group__status_gad755322e7ff95456520e8abdbe90d225}{hsa\+\_\+status\+\_\+t}} \mbox{\hyperlink{classrocr_1_1core_1_1MemoryRegion_a810928193c82d9a2b3e1e6742f32e927}{IPCFragment\+Export}} (void $\ast$address) const =0
+\item 
+virtual \mbox{\hyperlink{group__status_gad755322e7ff95456520e8abdbe90d225}{hsa\+\_\+status\+\_\+t}} \mbox{\hyperlink{classrocr_1_1core_1_1MemoryRegion_a272e065dd537531c0bfe17499e32ffcb}{Get\+Info}} (\mbox{\hyperlink{group__memory_gad35755078ff15f645c6c25e7f7ef2707}{hsa\+\_\+region\+\_\+info\+\_\+t}} attribute, void $\ast$value) const =0
+\item 
+virtual \mbox{\hyperlink{group__status_gad755322e7ff95456520e8abdbe90d225}{hsa\+\_\+status\+\_\+t}} \mbox{\hyperlink{classrocr_1_1core_1_1MemoryRegion_a943ee29cac2db638d8a2b45f67601722}{Assign\+Agent}} (void $\ast$ptr, size\+\_\+t size, const \mbox{\hyperlink{classrocr_1_1core_1_1Agent}{Agent}} \&agent, \mbox{\hyperlink{group__common_gacef73774a0af1d1df56fdcd9e04bb708}{hsa\+\_\+access\+\_\+permission\+\_\+t}} access) const =0
+\item 
+virtual void \mbox{\hyperlink{classrocr_1_1core_1_1MemoryRegion_afb734dd62d3f16a9ef4f8cd457babd35}{Trim}} () const
+\item 
+\+\_\+\+\_\+forceinline bool \mbox{\hyperlink{classrocr_1_1core_1_1MemoryRegion_a83f398f2ab808f0972d7a2cb2f588890}{fine\+\_\+grain}} () const
+\item 
+\+\_\+\+\_\+forceinline bool \mbox{\hyperlink{classrocr_1_1core_1_1MemoryRegion_a8cc2ffd44a726e0594946d6430c32ba4}{kernarg}} () const
+\item 
+\+\_\+\+\_\+forceinline bool \mbox{\hyperlink{classrocr_1_1core_1_1MemoryRegion_a66d52a58b600dda77ce783dbfeb5bca7}{full\+\_\+profile}} () const
+\item 
+\+\_\+\+\_\+forceinline \mbox{\hyperlink{classrocr_1_1core_1_1Agent}{core\+::\+Agent}} $\ast$ \mbox{\hyperlink{classrocr_1_1core_1_1MemoryRegion_aada12cbf443fb16281347f155d9a8d4c}{owner}} () const
+\end{DoxyCompactItemize}
+\doxysubsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static \+\_\+\+\_\+forceinline \mbox{\hyperlink{group__memory_ga9c649e7034e53233198aaa1b58e9d79b}{hsa\+\_\+region\+\_\+t}} \mbox{\hyperlink{classrocr_1_1core_1_1MemoryRegion_a612793f38ded50034f053da7f6257099}{Convert}} (\mbox{\hyperlink{classrocr_1_1core_1_1MemoryRegion}{Memory\+Region}} $\ast$region)
+\item 
+static \+\_\+\+\_\+forceinline const \mbox{\hyperlink{group__memory_ga9c649e7034e53233198aaa1b58e9d79b}{hsa\+\_\+region\+\_\+t}} \mbox{\hyperlink{classrocr_1_1core_1_1MemoryRegion_a6ae08e52bf2bc5b0c22129a897290d40}{Convert}} (const \mbox{\hyperlink{classrocr_1_1core_1_1MemoryRegion}{Memory\+Region}} $\ast$region)
+\item 
+static \+\_\+\+\_\+forceinline \mbox{\hyperlink{classrocr_1_1core_1_1MemoryRegion}{Memory\+Region}} $\ast$ \mbox{\hyperlink{classrocr_1_1core_1_1MemoryRegion_a945b17a9aaa63c1e4aac26cf6f68831f}{Convert}} (\mbox{\hyperlink{group__memory_ga9c649e7034e53233198aaa1b58e9d79b}{hsa\+\_\+region\+\_\+t}} region)
+\end{DoxyCompactItemize}
+\doxysubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+const bool \mbox{\hyperlink{classrocr_1_1core_1_1MemoryRegion_a5b1d21b4716aa995746c26437993c96c}{fine\+\_\+grain\+\_\+}}
+\item 
+const bool \mbox{\hyperlink{classrocr_1_1core_1_1MemoryRegion_a0b688ed612762dd829d73df4e3b846ad}{kernarg\+\_\+}}
+\item 
+const bool \mbox{\hyperlink{classrocr_1_1core_1_1MemoryRegion_a0cfcd6bcdd6854d841de96e979ff581b}{full\+\_\+profile\+\_\+}}
+\item 
+\mbox{\hyperlink{classrocr_1_1core_1_1Agent}{core\+::\+Agent}} $\ast$ \mbox{\hyperlink{classrocr_1_1core_1_1MemoryRegion_a7e6b8c6cd09d9b02f1ee0c347df67de3}{owner\+\_\+}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Member Typedef Documentation}
+\mbox{\Hypertarget{classrocr_1_1core_1_1MemoryRegion_ac293b6bdc18d9f5d5f6ac3a12021cf0f}\label{classrocr_1_1core_1_1MemoryRegion_ac293b6bdc18d9f5d5f6ac3a12021cf0f}} 
+\index{rocr::core::MemoryRegion@{rocr::core::MemoryRegion}!AllocateFlags@{AllocateFlags}}
+\index{AllocateFlags@{AllocateFlags}!rocr::core::MemoryRegion@{rocr::core::MemoryRegion}}
+\doxysubsubsection{\texorpdfstring{AllocateFlags}{AllocateFlags}}
+{\footnotesize\ttfamily typedef uint32\+\_\+t \mbox{\hyperlink{classrocr_1_1core_1_1MemoryRegion_ac293b6bdc18d9f5d5f6ac3a12021cf0f}{rocr\+::core\+::\+Memory\+Region\+::\+Allocate\+Flags}}}
+
+
+
+\doxysubsection{Member Enumeration Documentation}
+\mbox{\Hypertarget{classrocr_1_1core_1_1MemoryRegion_a90c072591da4781c4eb1d9bd8c5913fc}\label{classrocr_1_1core_1_1MemoryRegion_a90c072591da4781c4eb1d9bd8c5913fc}} 
+\index{rocr::core::MemoryRegion@{rocr::core::MemoryRegion}!AllocateEnum@{AllocateEnum}}
+\index{AllocateEnum@{AllocateEnum}!rocr::core::MemoryRegion@{rocr::core::MemoryRegion}}
+\doxysubsubsection{\texorpdfstring{AllocateEnum}{AllocateEnum}}
+{\footnotesize\ttfamily enum \mbox{\hyperlink{classrocr_1_1core_1_1MemoryRegion_a90c072591da4781c4eb1d9bd8c5913fc}{rocr\+::core\+::\+Memory\+Region\+::\+Allocate\+Enum}}}
+
+\begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{AllocateNoFlags@{AllocateNoFlags}!rocr::core::MemoryRegion@{rocr::core::MemoryRegion}}\index{rocr::core::MemoryRegion@{rocr::core::MemoryRegion}!AllocateNoFlags@{AllocateNoFlags}}}\mbox{\Hypertarget{classrocr_1_1core_1_1MemoryRegion_a90c072591da4781c4eb1d9bd8c5913fcafdad525bb9d9b8c794df72054ae16f7a}\label{classrocr_1_1core_1_1MemoryRegion_a90c072591da4781c4eb1d9bd8c5913fcafdad525bb9d9b8c794df72054ae16f7a}} 
+Allocate\+No\+Flags&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{AllocateRestrict@{AllocateRestrict}!rocr::core::MemoryRegion@{rocr::core::MemoryRegion}}\index{rocr::core::MemoryRegion@{rocr::core::MemoryRegion}!AllocateRestrict@{AllocateRestrict}}}\mbox{\Hypertarget{classrocr_1_1core_1_1MemoryRegion_a90c072591da4781c4eb1d9bd8c5913fca9c63a064fb89ddd2ec9f642ebb647490}\label{classrocr_1_1core_1_1MemoryRegion_a90c072591da4781c4eb1d9bd8c5913fca9c63a064fb89ddd2ec9f642ebb647490}} 
+Allocate\+Restrict&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{AllocateExecutable@{AllocateExecutable}!rocr::core::MemoryRegion@{rocr::core::MemoryRegion}}\index{rocr::core::MemoryRegion@{rocr::core::MemoryRegion}!AllocateExecutable@{AllocateExecutable}}}\mbox{\Hypertarget{classrocr_1_1core_1_1MemoryRegion_a90c072591da4781c4eb1d9bd8c5913fca905fc3d2a89f46ab119760ec4a32b732}\label{classrocr_1_1core_1_1MemoryRegion_a90c072591da4781c4eb1d9bd8c5913fca905fc3d2a89f46ab119760ec4a32b732}} 
+Allocate\+Executable&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{AllocateDoubleMap@{AllocateDoubleMap}!rocr::core::MemoryRegion@{rocr::core::MemoryRegion}}\index{rocr::core::MemoryRegion@{rocr::core::MemoryRegion}!AllocateDoubleMap@{AllocateDoubleMap}}}\mbox{\Hypertarget{classrocr_1_1core_1_1MemoryRegion_a90c072591da4781c4eb1d9bd8c5913fcaac49ffbcbf1905f410e6123ab784eb46}\label{classrocr_1_1core_1_1MemoryRegion_a90c072591da4781c4eb1d9bd8c5913fcaac49ffbcbf1905f410e6123ab784eb46}} 
+Allocate\+Double\+Map&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{AllocateDirect@{AllocateDirect}!rocr::core::MemoryRegion@{rocr::core::MemoryRegion}}\index{rocr::core::MemoryRegion@{rocr::core::MemoryRegion}!AllocateDirect@{AllocateDirect}}}\mbox{\Hypertarget{classrocr_1_1core_1_1MemoryRegion_a90c072591da4781c4eb1d9bd8c5913fcabf7edfca6e04de2e27fa866635473d20}\label{classrocr_1_1core_1_1MemoryRegion_a90c072591da4781c4eb1d9bd8c5913fcabf7edfca6e04de2e27fa866635473d20}} 
+Allocate\+Direct&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{AllocateIPC@{AllocateIPC}!rocr::core::MemoryRegion@{rocr::core::MemoryRegion}}\index{rocr::core::MemoryRegion@{rocr::core::MemoryRegion}!AllocateIPC@{AllocateIPC}}}\mbox{\Hypertarget{classrocr_1_1core_1_1MemoryRegion_a90c072591da4781c4eb1d9bd8c5913fca96c6f5a7f504286636d1dcf6316140c7}\label{classrocr_1_1core_1_1MemoryRegion_a90c072591da4781c4eb1d9bd8c5913fca96c6f5a7f504286636d1dcf6316140c7}} 
+Allocate\+IPC&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{AllocateNonPaged@{AllocateNonPaged}!rocr::core::MemoryRegion@{rocr::core::MemoryRegion}}\index{rocr::core::MemoryRegion@{rocr::core::MemoryRegion}!AllocateNonPaged@{AllocateNonPaged}}}\mbox{\Hypertarget{classrocr_1_1core_1_1MemoryRegion_a90c072591da4781c4eb1d9bd8c5913fca066036f7d68d96d51a508cc9556778e6}\label{classrocr_1_1core_1_1MemoryRegion_a90c072591da4781c4eb1d9bd8c5913fca066036f7d68d96d51a508cc9556778e6}} 
+Allocate\+Non\+Paged&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{AllocatePCIeRW@{AllocatePCIeRW}!rocr::core::MemoryRegion@{rocr::core::MemoryRegion}}\index{rocr::core::MemoryRegion@{rocr::core::MemoryRegion}!AllocatePCIeRW@{AllocatePCIeRW}}}\mbox{\Hypertarget{classrocr_1_1core_1_1MemoryRegion_a90c072591da4781c4eb1d9bd8c5913fcabf1fed8970268b149de278d644ca7a95}\label{classrocr_1_1core_1_1MemoryRegion_a90c072591da4781c4eb1d9bd8c5913fcabf1fed8970268b149de278d644ca7a95}} 
+Allocate\+PCIe\+RW&\\
+\hline
+
+\end{DoxyEnumFields}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classrocr_1_1core_1_1MemoryRegion_a12b49837efb4fbf752304b3e2a2725bd}\label{classrocr_1_1core_1_1MemoryRegion_a12b49837efb4fbf752304b3e2a2725bd}} 
+\index{rocr::core::MemoryRegion@{rocr::core::MemoryRegion}!MemoryRegion@{MemoryRegion}}
+\index{MemoryRegion@{MemoryRegion}!rocr::core::MemoryRegion@{rocr::core::MemoryRegion}}
+\doxysubsubsection{\texorpdfstring{MemoryRegion()}{MemoryRegion()}}
+{\footnotesize\ttfamily rocr\+::core\+::\+Memory\+Region\+::\+Memory\+Region (\begin{DoxyParamCaption}\item[{bool}]{fine\+\_\+grain,  }\item[{bool}]{kernarg,  }\item[{bool}]{full\+\_\+profile,  }\item[{\mbox{\hyperlink{classrocr_1_1core_1_1Agent}{core\+::\+Agent}} $\ast$}]{owner }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{classrocr_1_1core_1_1MemoryRegion_a7e0228edcb736efc5ccf5f730865626b}\label{classrocr_1_1core_1_1MemoryRegion_a7e0228edcb736efc5ccf5f730865626b}} 
+\index{rocr::core::MemoryRegion@{rocr::core::MemoryRegion}!````~MemoryRegion@{$\sim$MemoryRegion}}
+\index{````~MemoryRegion@{$\sim$MemoryRegion}!rocr::core::MemoryRegion@{rocr::core::MemoryRegion}}
+\doxysubsubsection{\texorpdfstring{$\sim$MemoryRegion()}{~MemoryRegion()}}
+{\footnotesize\ttfamily virtual rocr\+::core\+::\+Memory\+Region\+::$\sim$\+Memory\+Region (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+Reimplemented in \mbox{\hyperlink{classrocr_1_1AMD_1_1MemoryRegion_ab29d47de7a5f50e3ae0acf326eef02b7}{rocr\+::\+AMD\+::\+Memory\+Region}}.
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classrocr_1_1core_1_1MemoryRegion_aedd7a9cd2fbe1b0f00126e9a083dbef6}\label{classrocr_1_1core_1_1MemoryRegion_aedd7a9cd2fbe1b0f00126e9a083dbef6}} 
+\index{rocr::core::MemoryRegion@{rocr::core::MemoryRegion}!Allocate@{Allocate}}
+\index{Allocate@{Allocate}!rocr::core::MemoryRegion@{rocr::core::MemoryRegion}}
+\doxysubsubsection{\texorpdfstring{Allocate()}{Allocate()}}
+{\footnotesize\ttfamily virtual \mbox{\hyperlink{group__status_gad755322e7ff95456520e8abdbe90d225}{hsa\+\_\+status\+\_\+t}} rocr\+::core\+::\+Memory\+Region\+::\+Allocate (\begin{DoxyParamCaption}\item[{size\+\_\+t \&}]{size,  }\item[{\mbox{\hyperlink{classrocr_1_1core_1_1MemoryRegion_ac293b6bdc18d9f5d5f6ac3a12021cf0f}{Allocate\+Flags}}}]{alloc\+\_\+flags,  }\item[{void $\ast$$\ast$}]{address }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Implemented in \mbox{\hyperlink{classrocr_1_1AMD_1_1MemoryRegion_a657f95e30ad30c966883bc9b02f6c849}{rocr\+::\+AMD\+::\+Memory\+Region}}.
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classrocr_1_1core_1_1MemoryRegion_aedd7a9cd2fbe1b0f00126e9a083dbef6_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classrocr_1_1core_1_1MemoryRegion_a943ee29cac2db638d8a2b45f67601722}\label{classrocr_1_1core_1_1MemoryRegion_a943ee29cac2db638d8a2b45f67601722}} 
+\index{rocr::core::MemoryRegion@{rocr::core::MemoryRegion}!AssignAgent@{AssignAgent}}
+\index{AssignAgent@{AssignAgent}!rocr::core::MemoryRegion@{rocr::core::MemoryRegion}}
+\doxysubsubsection{\texorpdfstring{AssignAgent()}{AssignAgent()}}
+{\footnotesize\ttfamily virtual \mbox{\hyperlink{group__status_gad755322e7ff95456520e8abdbe90d225}{hsa\+\_\+status\+\_\+t}} rocr\+::core\+::\+Memory\+Region\+::\+Assign\+Agent (\begin{DoxyParamCaption}\item[{void $\ast$}]{ptr,  }\item[{size\+\_\+t}]{size,  }\item[{const \mbox{\hyperlink{classrocr_1_1core_1_1Agent}{Agent}} \&}]{agent,  }\item[{\mbox{\hyperlink{group__common_gacef73774a0af1d1df56fdcd9e04bb708}{hsa\+\_\+access\+\_\+permission\+\_\+t}}}]{access }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Implemented in \mbox{\hyperlink{classrocr_1_1AMD_1_1MemoryRegion_ad67805a8fe78d7bbf92f9c773cdedf5f}{rocr\+::\+AMD\+::\+Memory\+Region}}.
+
+\mbox{\Hypertarget{classrocr_1_1core_1_1MemoryRegion_a6ae08e52bf2bc5b0c22129a897290d40}\label{classrocr_1_1core_1_1MemoryRegion_a6ae08e52bf2bc5b0c22129a897290d40}} 
+\index{rocr::core::MemoryRegion@{rocr::core::MemoryRegion}!Convert@{Convert}}
+\index{Convert@{Convert}!rocr::core::MemoryRegion@{rocr::core::MemoryRegion}}
+\doxysubsubsection{\texorpdfstring{Convert()}{Convert()}\hspace{0.1cm}{\footnotesize\ttfamily [1/3]}}
+{\footnotesize\ttfamily static \+\_\+\+\_\+forceinline const \mbox{\hyperlink{group__memory_ga9c649e7034e53233198aaa1b58e9d79b}{hsa\+\_\+region\+\_\+t}} rocr\+::core\+::\+Memory\+Region\+::\+Convert (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classrocr_1_1core_1_1MemoryRegion}{Memory\+Region}} $\ast$}]{region }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+\mbox{\Hypertarget{classrocr_1_1core_1_1MemoryRegion_a945b17a9aaa63c1e4aac26cf6f68831f}\label{classrocr_1_1core_1_1MemoryRegion_a945b17a9aaa63c1e4aac26cf6f68831f}} 
+\index{rocr::core::MemoryRegion@{rocr::core::MemoryRegion}!Convert@{Convert}}
+\index{Convert@{Convert}!rocr::core::MemoryRegion@{rocr::core::MemoryRegion}}
+\doxysubsubsection{\texorpdfstring{Convert()}{Convert()}\hspace{0.1cm}{\footnotesize\ttfamily [2/3]}}
+{\footnotesize\ttfamily static \+\_\+\+\_\+forceinline \mbox{\hyperlink{classrocr_1_1core_1_1MemoryRegion}{Memory\+Region}}$\ast$ rocr\+::core\+::\+Memory\+Region\+::\+Convert (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{group__memory_ga9c649e7034e53233198aaa1b58e9d79b}{hsa\+\_\+region\+\_\+t}}}]{region }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+\mbox{\Hypertarget{classrocr_1_1core_1_1MemoryRegion_a612793f38ded50034f053da7f6257099}\label{classrocr_1_1core_1_1MemoryRegion_a612793f38ded50034f053da7f6257099}} 
+\index{rocr::core::MemoryRegion@{rocr::core::MemoryRegion}!Convert@{Convert}}
+\index{Convert@{Convert}!rocr::core::MemoryRegion@{rocr::core::MemoryRegion}}
+\doxysubsubsection{\texorpdfstring{Convert()}{Convert()}\hspace{0.1cm}{\footnotesize\ttfamily [3/3]}}
+{\footnotesize\ttfamily static \+\_\+\+\_\+forceinline \mbox{\hyperlink{group__memory_ga9c649e7034e53233198aaa1b58e9d79b}{hsa\+\_\+region\+\_\+t}} rocr\+::core\+::\+Memory\+Region\+::\+Convert (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classrocr_1_1core_1_1MemoryRegion}{Memory\+Region}} $\ast$}]{region }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classrocr_1_1core_1_1MemoryRegion_a612793f38ded50034f053da7f6257099_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classrocr_1_1core_1_1MemoryRegion_a83f398f2ab808f0972d7a2cb2f588890}\label{classrocr_1_1core_1_1MemoryRegion_a83f398f2ab808f0972d7a2cb2f588890}} 
+\index{rocr::core::MemoryRegion@{rocr::core::MemoryRegion}!fine\_grain@{fine\_grain}}
+\index{fine\_grain@{fine\_grain}!rocr::core::MemoryRegion@{rocr::core::MemoryRegion}}
+\doxysubsubsection{\texorpdfstring{fine\_grain()}{fine\_grain()}}
+{\footnotesize\ttfamily \+\_\+\+\_\+forceinline bool rocr\+::core\+::\+Memory\+Region\+::fine\+\_\+grain (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classrocr_1_1core_1_1MemoryRegion_a83f398f2ab808f0972d7a2cb2f588890_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classrocr_1_1core_1_1MemoryRegion_acb4a13042d631d178ca958d505bd33e1}\label{classrocr_1_1core_1_1MemoryRegion_acb4a13042d631d178ca958d505bd33e1}} 
+\index{rocr::core::MemoryRegion@{rocr::core::MemoryRegion}!Free@{Free}}
+\index{Free@{Free}!rocr::core::MemoryRegion@{rocr::core::MemoryRegion}}
+\doxysubsubsection{\texorpdfstring{Free()}{Free()}}
+{\footnotesize\ttfamily virtual \mbox{\hyperlink{group__status_gad755322e7ff95456520e8abdbe90d225}{hsa\+\_\+status\+\_\+t}} rocr\+::core\+::\+Memory\+Region\+::\+Free (\begin{DoxyParamCaption}\item[{void $\ast$}]{address,  }\item[{size\+\_\+t}]{size }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Implemented in \mbox{\hyperlink{classrocr_1_1AMD_1_1MemoryRegion_a42bc5394d3121b3966b4c2064f5a45ce}{rocr\+::\+AMD\+::\+Memory\+Region}}.
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classrocr_1_1core_1_1MemoryRegion_acb4a13042d631d178ca958d505bd33e1_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classrocr_1_1core_1_1MemoryRegion_a66d52a58b600dda77ce783dbfeb5bca7}\label{classrocr_1_1core_1_1MemoryRegion_a66d52a58b600dda77ce783dbfeb5bca7}} 
+\index{rocr::core::MemoryRegion@{rocr::core::MemoryRegion}!full\_profile@{full\_profile}}
+\index{full\_profile@{full\_profile}!rocr::core::MemoryRegion@{rocr::core::MemoryRegion}}
+\doxysubsubsection{\texorpdfstring{full\_profile()}{full\_profile()}}
+{\footnotesize\ttfamily \+\_\+\+\_\+forceinline bool rocr\+::core\+::\+Memory\+Region\+::full\+\_\+profile (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classrocr_1_1core_1_1MemoryRegion_a66d52a58b600dda77ce783dbfeb5bca7_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classrocr_1_1core_1_1MemoryRegion_a272e065dd537531c0bfe17499e32ffcb}\label{classrocr_1_1core_1_1MemoryRegion_a272e065dd537531c0bfe17499e32ffcb}} 
+\index{rocr::core::MemoryRegion@{rocr::core::MemoryRegion}!GetInfo@{GetInfo}}
+\index{GetInfo@{GetInfo}!rocr::core::MemoryRegion@{rocr::core::MemoryRegion}}
+\doxysubsubsection{\texorpdfstring{GetInfo()}{GetInfo()}}
+{\footnotesize\ttfamily virtual \mbox{\hyperlink{group__status_gad755322e7ff95456520e8abdbe90d225}{hsa\+\_\+status\+\_\+t}} rocr\+::core\+::\+Memory\+Region\+::\+Get\+Info (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{group__memory_gad35755078ff15f645c6c25e7f7ef2707}{hsa\+\_\+region\+\_\+info\+\_\+t}}}]{attribute,  }\item[{void $\ast$}]{value }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Implemented in \mbox{\hyperlink{classrocr_1_1AMD_1_1MemoryRegion_ad093dfd37c85a453060be98cd25de453}{rocr\+::\+AMD\+::\+Memory\+Region}}.
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classrocr_1_1core_1_1MemoryRegion_a272e065dd537531c0bfe17499e32ffcb_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classrocr_1_1core_1_1MemoryRegion_a810928193c82d9a2b3e1e6742f32e927}\label{classrocr_1_1core_1_1MemoryRegion_a810928193c82d9a2b3e1e6742f32e927}} 
+\index{rocr::core::MemoryRegion@{rocr::core::MemoryRegion}!IPCFragmentExport@{IPCFragmentExport}}
+\index{IPCFragmentExport@{IPCFragmentExport}!rocr::core::MemoryRegion@{rocr::core::MemoryRegion}}
+\doxysubsubsection{\texorpdfstring{IPCFragmentExport()}{IPCFragmentExport()}}
+{\footnotesize\ttfamily virtual \mbox{\hyperlink{group__status_gad755322e7ff95456520e8abdbe90d225}{hsa\+\_\+status\+\_\+t}} rocr\+::core\+::\+Memory\+Region\+::\+IPCFragment\+Export (\begin{DoxyParamCaption}\item[{void $\ast$}]{address }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Implemented in \mbox{\hyperlink{classrocr_1_1AMD_1_1MemoryRegion_a4d0b65c205a02e19ac11613039938304}{rocr\+::\+AMD\+::\+Memory\+Region}}.
+
+\mbox{\Hypertarget{classrocr_1_1core_1_1MemoryRegion_a8cc2ffd44a726e0594946d6430c32ba4}\label{classrocr_1_1core_1_1MemoryRegion_a8cc2ffd44a726e0594946d6430c32ba4}} 
+\index{rocr::core::MemoryRegion@{rocr::core::MemoryRegion}!kernarg@{kernarg}}
+\index{kernarg@{kernarg}!rocr::core::MemoryRegion@{rocr::core::MemoryRegion}}
+\doxysubsubsection{\texorpdfstring{kernarg()}{kernarg()}}
+{\footnotesize\ttfamily \+\_\+\+\_\+forceinline bool rocr\+::core\+::\+Memory\+Region\+::kernarg (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classrocr_1_1core_1_1MemoryRegion_a8cc2ffd44a726e0594946d6430c32ba4_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classrocr_1_1core_1_1MemoryRegion_aada12cbf443fb16281347f155d9a8d4c}\label{classrocr_1_1core_1_1MemoryRegion_aada12cbf443fb16281347f155d9a8d4c}} 
+\index{rocr::core::MemoryRegion@{rocr::core::MemoryRegion}!owner@{owner}}
+\index{owner@{owner}!rocr::core::MemoryRegion@{rocr::core::MemoryRegion}}
+\doxysubsubsection{\texorpdfstring{owner()}{owner()}}
+{\footnotesize\ttfamily \+\_\+\+\_\+forceinline \mbox{\hyperlink{classrocr_1_1core_1_1Agent}{core\+::\+Agent}}$\ast$ rocr\+::core\+::\+Memory\+Region\+::owner (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classrocr_1_1core_1_1MemoryRegion_aada12cbf443fb16281347f155d9a8d4c_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classrocr_1_1core_1_1MemoryRegion_afb734dd62d3f16a9ef4f8cd457babd35}\label{classrocr_1_1core_1_1MemoryRegion_afb734dd62d3f16a9ef4f8cd457babd35}} 
+\index{rocr::core::MemoryRegion@{rocr::core::MemoryRegion}!Trim@{Trim}}
+\index{Trim@{Trim}!rocr::core::MemoryRegion@{rocr::core::MemoryRegion}}
+\doxysubsubsection{\texorpdfstring{Trim()}{Trim()}}
+{\footnotesize\ttfamily virtual void rocr\+::core\+::\+Memory\+Region\+::\+Trim (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+Reimplemented in \mbox{\hyperlink{classrocr_1_1AMD_1_1MemoryRegion_a53559b7090beab3f64390d7e83855156}{rocr\+::\+AMD\+::\+Memory\+Region}}.
+
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{classrocr_1_1core_1_1MemoryRegion_a5b1d21b4716aa995746c26437993c96c}\label{classrocr_1_1core_1_1MemoryRegion_a5b1d21b4716aa995746c26437993c96c}} 
+\index{rocr::core::MemoryRegion@{rocr::core::MemoryRegion}!fine\_grain\_@{fine\_grain\_}}
+\index{fine\_grain\_@{fine\_grain\_}!rocr::core::MemoryRegion@{rocr::core::MemoryRegion}}
+\doxysubsubsection{\texorpdfstring{fine\_grain\_}{fine\_grain\_}}
+{\footnotesize\ttfamily const bool rocr\+::core\+::\+Memory\+Region\+::fine\+\_\+grain\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classrocr_1_1core_1_1MemoryRegion_a0cfcd6bcdd6854d841de96e979ff581b}\label{classrocr_1_1core_1_1MemoryRegion_a0cfcd6bcdd6854d841de96e979ff581b}} 
+\index{rocr::core::MemoryRegion@{rocr::core::MemoryRegion}!full\_profile\_@{full\_profile\_}}
+\index{full\_profile\_@{full\_profile\_}!rocr::core::MemoryRegion@{rocr::core::MemoryRegion}}
+\doxysubsubsection{\texorpdfstring{full\_profile\_}{full\_profile\_}}
+{\footnotesize\ttfamily const bool rocr\+::core\+::\+Memory\+Region\+::full\+\_\+profile\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classrocr_1_1core_1_1MemoryRegion_a0b688ed612762dd829d73df4e3b846ad}\label{classrocr_1_1core_1_1MemoryRegion_a0b688ed612762dd829d73df4e3b846ad}} 
+\index{rocr::core::MemoryRegion@{rocr::core::MemoryRegion}!kernarg\_@{kernarg\_}}
+\index{kernarg\_@{kernarg\_}!rocr::core::MemoryRegion@{rocr::core::MemoryRegion}}
+\doxysubsubsection{\texorpdfstring{kernarg\_}{kernarg\_}}
+{\footnotesize\ttfamily const bool rocr\+::core\+::\+Memory\+Region\+::kernarg\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classrocr_1_1core_1_1MemoryRegion_a7e6b8c6cd09d9b02f1ee0c347df67de3}\label{classrocr_1_1core_1_1MemoryRegion_a7e6b8c6cd09d9b02f1ee0c347df67de3}} 
+\index{rocr::core::MemoryRegion@{rocr::core::MemoryRegion}!owner\_@{owner\_}}
+\index{owner\_@{owner\_}!rocr::core::MemoryRegion@{rocr::core::MemoryRegion}}
+\doxysubsubsection{\texorpdfstring{owner\_}{owner\_}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classrocr_1_1core_1_1Agent}{core\+::\+Agent}}$\ast$ rocr\+::core\+::\+Memory\+Region\+::owner\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+src/core/inc/\mbox{\hyperlink{memory__region_8h}{memory\+\_\+region.\+h}}\end{DoxyCompactItemize}

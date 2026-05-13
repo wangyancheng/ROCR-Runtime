@@ -1,0 +1,1433 @@
+\hypertarget{group__ext-images}{}\doxysection{Images and Samplers}
+\label{group__ext-images}\index{Images and Samplers@{Images and Samplers}}
+\doxysubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{structhsa__ext__image__s}{hsa\+\_\+ext\+\_\+image\+\_\+s}}
+\begin{DoxyCompactList}\small\item\em Image handle, populated by \mbox{\hyperlink{group__ext-images_ga985562c68508d4d8b0edcfd0729b6d49}{hsa\+\_\+ext\+\_\+image\+\_\+create}} or \mbox{\hyperlink{group__ext-images_ga7de92e8bde1496761b7dd00d1e03186e}{hsa\+\_\+ext\+\_\+image\+\_\+create\+\_\+with\+\_\+layout}}. Image handles are only unique within an agent, not across agents. \end{DoxyCompactList}\item 
+struct \mbox{\hyperlink{structhsa__ext__image__format__s}{hsa\+\_\+ext\+\_\+image\+\_\+format\+\_\+s}}
+\begin{DoxyCompactList}\small\item\em Image format. \end{DoxyCompactList}\item 
+struct \mbox{\hyperlink{structhsa__ext__image__descriptor__s}{hsa\+\_\+ext\+\_\+image\+\_\+descriptor\+\_\+s}}
+\begin{DoxyCompactList}\small\item\em Implementation independent image descriptor. \end{DoxyCompactList}\item 
+struct \mbox{\hyperlink{structhsa__ext__image__data__info__s}{hsa\+\_\+ext\+\_\+image\+\_\+data\+\_\+info\+\_\+s}}
+\begin{DoxyCompactList}\small\item\em Agent specific image size and alignment requirements, populated by \mbox{\hyperlink{group__ext-images_gad8e2426d1829f772af6e603ff226f65a}{hsa\+\_\+ext\+\_\+image\+\_\+data\+\_\+get\+\_\+info}} and \mbox{\hyperlink{group__ext-images_ga2d3f7ebd674fe267e608b3f1c1a89965}{hsa\+\_\+ext\+\_\+image\+\_\+data\+\_\+get\+\_\+info\+\_\+with\+\_\+layout}}. \end{DoxyCompactList}\item 
+struct \mbox{\hyperlink{structhsa__ext__image__region__s}{hsa\+\_\+ext\+\_\+image\+\_\+region\+\_\+s}}
+\begin{DoxyCompactList}\small\item\em Image region. \end{DoxyCompactList}\item 
+struct \mbox{\hyperlink{structhsa__ext__sampler__s}{hsa\+\_\+ext\+\_\+sampler\+\_\+s}}
+\begin{DoxyCompactList}\small\item\em Sampler handle. Samplers are populated by \mbox{\hyperlink{group__ext-images_gaf3b5567510870cf0130efd69d5af3c07}{hsa\+\_\+ext\+\_\+sampler\+\_\+create}}. Sampler handles are only unique within an agent, not across agents. \end{DoxyCompactList}\item 
+struct \mbox{\hyperlink{structhsa__ext__sampler__descriptor__s}{hsa\+\_\+ext\+\_\+sampler\+\_\+descriptor\+\_\+s}}
+\begin{DoxyCompactList}\small\item\em Implementation independent sampler descriptor. \end{DoxyCompactList}\item 
+struct \mbox{\hyperlink{structhsa__ext__images__1__00__pfn__s}{hsa\+\_\+ext\+\_\+images\+\_\+1\+\_\+00\+\_\+pfn\+\_\+s}}
+\begin{DoxyCompactList}\small\item\em The function pointer table for the images v1.\+00 extension. Can be returned by \mbox{\hyperlink{group__agentinfo_gaf5f1a0e5884522f692c13525205978bb}{hsa\+\_\+system\+\_\+get\+\_\+extension\+\_\+table}} or \mbox{\hyperlink{group__agentinfo_ga728cb3122cea1f40ad9dbc2822d2e431}{hsa\+\_\+system\+\_\+get\+\_\+major\+\_\+extension\+\_\+table}}. \end{DoxyCompactList}\item 
+struct \mbox{\hyperlink{structhsa__ext__images__1__pfn__s}{hsa\+\_\+ext\+\_\+images\+\_\+1\+\_\+pfn\+\_\+s}}
+\begin{DoxyCompactList}\small\item\em The function pointer table for the images v1 extension. Can be returned by \mbox{\hyperlink{group__agentinfo_gaf5f1a0e5884522f692c13525205978bb}{hsa\+\_\+system\+\_\+get\+\_\+extension\+\_\+table}} or \mbox{\hyperlink{group__agentinfo_ga728cb3122cea1f40ad9dbc2822d2e431}{hsa\+\_\+system\+\_\+get\+\_\+major\+\_\+extension\+\_\+table}}. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \mbox{\hyperlink{group__ext-images_ga9e18e4efcfa4f7680002a3ea7cc68941}{hsa\+\_\+ext\+\_\+images\+\_\+1\+\_\+00}}
+\item 
+\#define \mbox{\hyperlink{group__ext-images_ga985c4f63e8170261949cf1f304070175}{hsa\+\_\+ext\+\_\+images\+\_\+1}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+typedef struct \mbox{\hyperlink{structhsa__ext__image__s}{hsa\+\_\+ext\+\_\+image\+\_\+s}} \mbox{\hyperlink{group__ext-images_ga4e192988bd0b5abe2a57e248934e6dc6}{hsa\+\_\+ext\+\_\+image\+\_\+t}}
+\begin{DoxyCompactList}\small\item\em Image handle, populated by \mbox{\hyperlink{group__ext-images_ga985562c68508d4d8b0edcfd0729b6d49}{hsa\+\_\+ext\+\_\+image\+\_\+create}} or \mbox{\hyperlink{group__ext-images_ga7de92e8bde1496761b7dd00d1e03186e}{hsa\+\_\+ext\+\_\+image\+\_\+create\+\_\+with\+\_\+layout}}. Image handles are only unique within an agent, not across agents. \end{DoxyCompactList}\item 
+typedef uint32\+\_\+t \mbox{\hyperlink{group__ext-images_ga001a082f110c66bc038f0aa3009f146a}{hsa\+\_\+ext\+\_\+image\+\_\+channel\+\_\+type32\+\_\+t}}
+\begin{DoxyCompactList}\small\item\em A fixed-\/size type used to represent \mbox{\hyperlink{group__ext-images_gaa143aa6feeaf24103b886c571ace568f}{hsa\+\_\+ext\+\_\+image\+\_\+channel\+\_\+type\+\_\+t}} constants. \end{DoxyCompactList}\item 
+typedef uint32\+\_\+t \mbox{\hyperlink{group__ext-images_ga0d11cab5cdf800545276a1c049a1766d}{hsa\+\_\+ext\+\_\+image\+\_\+channel\+\_\+order32\+\_\+t}}
+\begin{DoxyCompactList}\small\item\em A fixed-\/size type used to represent \mbox{\hyperlink{group__ext-images_gabaced4fb1f3b9fdaa978e143af5ff055}{hsa\+\_\+ext\+\_\+image\+\_\+channel\+\_\+order\+\_\+t}} constants. \end{DoxyCompactList}\item 
+typedef struct \mbox{\hyperlink{structhsa__ext__image__format__s}{hsa\+\_\+ext\+\_\+image\+\_\+format\+\_\+s}} \mbox{\hyperlink{group__ext-images_ga37a5b98dd984766026174b4d6d486b29}{hsa\+\_\+ext\+\_\+image\+\_\+format\+\_\+t}}
+\begin{DoxyCompactList}\small\item\em Image format. \end{DoxyCompactList}\item 
+typedef struct \mbox{\hyperlink{structhsa__ext__image__descriptor__s}{hsa\+\_\+ext\+\_\+image\+\_\+descriptor\+\_\+s}} \mbox{\hyperlink{group__ext-images_ga7ccf44400f9bbb459c8e52f54a3c5eb0}{hsa\+\_\+ext\+\_\+image\+\_\+descriptor\+\_\+t}}
+\begin{DoxyCompactList}\small\item\em Implementation independent image descriptor. \end{DoxyCompactList}\item 
+typedef struct \mbox{\hyperlink{structhsa__ext__image__data__info__s}{hsa\+\_\+ext\+\_\+image\+\_\+data\+\_\+info\+\_\+s}} \mbox{\hyperlink{group__ext-images_gada32050df34dc3f6c0b9124706d8984b}{hsa\+\_\+ext\+\_\+image\+\_\+data\+\_\+info\+\_\+t}}
+\begin{DoxyCompactList}\small\item\em Agent specific image size and alignment requirements, populated by \mbox{\hyperlink{group__ext-images_gad8e2426d1829f772af6e603ff226f65a}{hsa\+\_\+ext\+\_\+image\+\_\+data\+\_\+get\+\_\+info}} and \mbox{\hyperlink{group__ext-images_ga2d3f7ebd674fe267e608b3f1c1a89965}{hsa\+\_\+ext\+\_\+image\+\_\+data\+\_\+get\+\_\+info\+\_\+with\+\_\+layout}}. \end{DoxyCompactList}\item 
+typedef struct \mbox{\hyperlink{structhsa__ext__image__region__s}{hsa\+\_\+ext\+\_\+image\+\_\+region\+\_\+s}} \mbox{\hyperlink{group__ext-images_gaa407e3fb8aa43d59f8e8560294d1c702}{hsa\+\_\+ext\+\_\+image\+\_\+region\+\_\+t}}
+\begin{DoxyCompactList}\small\item\em Image region. \end{DoxyCompactList}\item 
+typedef struct \mbox{\hyperlink{structhsa__ext__sampler__s}{hsa\+\_\+ext\+\_\+sampler\+\_\+s}} \mbox{\hyperlink{group__ext-images_ga41c5c0a2cbd7c9020ef8ce2afc1c6101}{hsa\+\_\+ext\+\_\+sampler\+\_\+t}}
+\begin{DoxyCompactList}\small\item\em Sampler handle. Samplers are populated by \mbox{\hyperlink{group__ext-images_gaf3b5567510870cf0130efd69d5af3c07}{hsa\+\_\+ext\+\_\+sampler\+\_\+create}}. Sampler handles are only unique within an agent, not across agents. \end{DoxyCompactList}\item 
+typedef uint32\+\_\+t \mbox{\hyperlink{group__ext-images_ga2772ccb88d7ec77ef3b770d71d0750b3}{hsa\+\_\+ext\+\_\+sampler\+\_\+addressing\+\_\+mode32\+\_\+t}}
+\begin{DoxyCompactList}\small\item\em A fixed-\/size type used to represent \mbox{\hyperlink{group__ext-images_ga60a9fcdc1a1f338bd7e54445359fdf0f}{hsa\+\_\+ext\+\_\+sampler\+\_\+addressing\+\_\+mode\+\_\+t}} constants. \end{DoxyCompactList}\item 
+typedef uint32\+\_\+t \mbox{\hyperlink{group__ext-images_ga2bc1c9a8ff6599631d78775ef1b08cd6}{hsa\+\_\+ext\+\_\+sampler\+\_\+coordinate\+\_\+mode32\+\_\+t}}
+\begin{DoxyCompactList}\small\item\em A fixed-\/size type used to represent \mbox{\hyperlink{group__ext-images_gad7644f3eccb4f8ce5693313b88440d87}{hsa\+\_\+ext\+\_\+sampler\+\_\+coordinate\+\_\+mode\+\_\+t}} constants. \end{DoxyCompactList}\item 
+typedef uint32\+\_\+t \mbox{\hyperlink{group__ext-images_ga789cca3686944d15916b4e6241108146}{hsa\+\_\+ext\+\_\+sampler\+\_\+filter\+\_\+mode32\+\_\+t}}
+\begin{DoxyCompactList}\small\item\em A fixed-\/size type used to represent \mbox{\hyperlink{group__ext-images_ga0f0c16fdeea5c2a56130ecefe7cefd02}{hsa\+\_\+ext\+\_\+sampler\+\_\+filter\+\_\+mode\+\_\+t}} constants. \end{DoxyCompactList}\item 
+typedef struct \mbox{\hyperlink{structhsa__ext__sampler__descriptor__s}{hsa\+\_\+ext\+\_\+sampler\+\_\+descriptor\+\_\+s}} \mbox{\hyperlink{group__ext-images_gabed3b941e5a41287f2240f366797bda2}{hsa\+\_\+ext\+\_\+sampler\+\_\+descriptor\+\_\+t}}
+\begin{DoxyCompactList}\small\item\em Implementation independent sampler descriptor. \end{DoxyCompactList}\item 
+typedef struct \mbox{\hyperlink{structhsa__ext__images__1__00__pfn__s}{hsa\+\_\+ext\+\_\+images\+\_\+1\+\_\+00\+\_\+pfn\+\_\+s}} \mbox{\hyperlink{group__ext-images_ga4890187e1de667ab7f542c628c82481b}{hsa\+\_\+ext\+\_\+images\+\_\+1\+\_\+00\+\_\+pfn\+\_\+t}}
+\begin{DoxyCompactList}\small\item\em The function pointer table for the images v1.\+00 extension. Can be returned by \mbox{\hyperlink{group__agentinfo_gaf5f1a0e5884522f692c13525205978bb}{hsa\+\_\+system\+\_\+get\+\_\+extension\+\_\+table}} or \mbox{\hyperlink{group__agentinfo_ga728cb3122cea1f40ad9dbc2822d2e431}{hsa\+\_\+system\+\_\+get\+\_\+major\+\_\+extension\+\_\+table}}. \end{DoxyCompactList}\item 
+typedef struct \mbox{\hyperlink{structhsa__ext__images__1__pfn__s}{hsa\+\_\+ext\+\_\+images\+\_\+1\+\_\+pfn\+\_\+s}} \mbox{\hyperlink{group__ext-images_ga9ea749701480741f7d3858af9984ffbb}{hsa\+\_\+ext\+\_\+images\+\_\+1\+\_\+pfn\+\_\+t}}
+\begin{DoxyCompactList}\small\item\em The function pointer table for the images v1 extension. Can be returned by \mbox{\hyperlink{group__agentinfo_gaf5f1a0e5884522f692c13525205978bb}{hsa\+\_\+system\+\_\+get\+\_\+extension\+\_\+table}} or \mbox{\hyperlink{group__agentinfo_ga728cb3122cea1f40ad9dbc2822d2e431}{hsa\+\_\+system\+\_\+get\+\_\+major\+\_\+extension\+\_\+table}}. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Enumerations}
+\begin{DoxyCompactItemize}
+\item 
+enum \{ \mbox{\hyperlink{group__ext-images_ggae6cdb622357fec6e889e47579a078524a42108181943a2d94749d95dc7942b7d0}{HSA\+\_\+\+EXT\+\_\+\+STATUS\+\_\+\+ERROR\+\_\+\+IMAGE\+\_\+\+FORMAT\+\_\+\+UNSUPPORTED}} = 0x3000
+, \mbox{\hyperlink{group__ext-images_ggae6cdb622357fec6e889e47579a078524a3ff898da367040b1f382c14c9f0a1bab}{HSA\+\_\+\+EXT\+\_\+\+STATUS\+\_\+\+ERROR\+\_\+\+IMAGE\+\_\+\+SIZE\+\_\+\+UNSUPPORTED}} = 0x3001
+, \mbox{\hyperlink{group__ext-images_ggae6cdb622357fec6e889e47579a078524adf82d2411103b76656e8d99f0b894440}{HSA\+\_\+\+EXT\+\_\+\+STATUS\+\_\+\+ERROR\+\_\+\+IMAGE\+\_\+\+PITCH\+\_\+\+UNSUPPORTED}} = 0x3002
+, \mbox{\hyperlink{group__ext-images_ggae6cdb622357fec6e889e47579a078524a5f5858e98041ec936780edcbebd38f79}{HSA\+\_\+\+EXT\+\_\+\+STATUS\+\_\+\+ERROR\+\_\+\+SAMPLER\+\_\+\+DESCRIPTOR\+\_\+\+UNSUPPORTED}} = 0x3003
+ \}
+\begin{DoxyCompactList}\small\item\em Enumeration constants added to \mbox{\hyperlink{group__status_gad755322e7ff95456520e8abdbe90d225}{hsa\+\_\+status\+\_\+t}} by this extension. \end{DoxyCompactList}\item 
+enum \{ \newline
+\mbox{\hyperlink{group__ext-images_gga6b1af8ba72fb238659a469ca5d2ef52baec34e7fe9f6f42ecbc1e72b48956fe5e}{HSA\+\_\+\+EXT\+\_\+\+AGENT\+\_\+\+INFO\+\_\+\+IMAGE\+\_\+1\+D\+\_\+\+MAX\+\_\+\+ELEMENTS}} = 0x3000
+, \mbox{\hyperlink{group__ext-images_gga6b1af8ba72fb238659a469ca5d2ef52bab597cd205855caea8a58fbe9256a001f}{HSA\+\_\+\+EXT\+\_\+\+AGENT\+\_\+\+INFO\+\_\+\+IMAGE\+\_\+1\+DA\+\_\+\+MAX\+\_\+\+ELEMENTS}} = 0x3001
+, \mbox{\hyperlink{group__ext-images_gga6b1af8ba72fb238659a469ca5d2ef52ba145fa8a0ef85752e1e21966f88ffd85f}{HSA\+\_\+\+EXT\+\_\+\+AGENT\+\_\+\+INFO\+\_\+\+IMAGE\+\_\+1\+DB\+\_\+\+MAX\+\_\+\+ELEMENTS}} = 0x3002
+, \mbox{\hyperlink{group__ext-images_gga6b1af8ba72fb238659a469ca5d2ef52bac36ca2ff9c2b82444410acc2c05750c7}{HSA\+\_\+\+EXT\+\_\+\+AGENT\+\_\+\+INFO\+\_\+\+IMAGE\+\_\+2\+D\+\_\+\+MAX\+\_\+\+ELEMENTS}} = 0x3003
+, \newline
+\mbox{\hyperlink{group__ext-images_gga6b1af8ba72fb238659a469ca5d2ef52ba9ee2d789843a03ae02bbd8cf44465ec6}{HSA\+\_\+\+EXT\+\_\+\+AGENT\+\_\+\+INFO\+\_\+\+IMAGE\+\_\+2\+DA\+\_\+\+MAX\+\_\+\+ELEMENTS}} = 0x3004
+, \mbox{\hyperlink{group__ext-images_gga6b1af8ba72fb238659a469ca5d2ef52ba15262e3b83a1ff50af219c186b70ccde}{HSA\+\_\+\+EXT\+\_\+\+AGENT\+\_\+\+INFO\+\_\+\+IMAGE\+\_\+2\+DDEPTH\+\_\+\+MAX\+\_\+\+ELEMENTS}} = 0x3005
+, \mbox{\hyperlink{group__ext-images_gga6b1af8ba72fb238659a469ca5d2ef52babeb08bb9caae027b3d11d700aff4b306}{HSA\+\_\+\+EXT\+\_\+\+AGENT\+\_\+\+INFO\+\_\+\+IMAGE\+\_\+2\+DADEPTH\+\_\+\+MAX\+\_\+\+ELEMENTS}} = 0x3006
+, \mbox{\hyperlink{group__ext-images_gga6b1af8ba72fb238659a469ca5d2ef52ba433a88189e85f3050829d04dd07b0667}{HSA\+\_\+\+EXT\+\_\+\+AGENT\+\_\+\+INFO\+\_\+\+IMAGE\+\_\+3\+D\+\_\+\+MAX\+\_\+\+ELEMENTS}} = 0x3007
+, \newline
+\mbox{\hyperlink{group__ext-images_gga6b1af8ba72fb238659a469ca5d2ef52bab389f4eb651f13c05a01d91533b0f443}{HSA\+\_\+\+EXT\+\_\+\+AGENT\+\_\+\+INFO\+\_\+\+IMAGE\+\_\+\+ARRAY\+\_\+\+MAX\+\_\+\+LAYERS}} = 0x3008
+, \mbox{\hyperlink{group__ext-images_gga6b1af8ba72fb238659a469ca5d2ef52bae7f9af4696df6fc8f82fb80fb0c1f70e}{HSA\+\_\+\+EXT\+\_\+\+AGENT\+\_\+\+INFO\+\_\+\+MAX\+\_\+\+IMAGE\+\_\+\+RD\+\_\+\+HANDLES}} = 0x3009
+, \mbox{\hyperlink{group__ext-images_gga6b1af8ba72fb238659a469ca5d2ef52baa86fdcbb6e4a248d2b7a6d4f3146a552}{HSA\+\_\+\+EXT\+\_\+\+AGENT\+\_\+\+INFO\+\_\+\+MAX\+\_\+\+IMAGE\+\_\+\+RORW\+\_\+\+HANDLES}} = 0x300A
+, \mbox{\hyperlink{group__ext-images_gga6b1af8ba72fb238659a469ca5d2ef52ba0e620b75fff69194e05f87f17ff82994}{HSA\+\_\+\+EXT\+\_\+\+AGENT\+\_\+\+INFO\+\_\+\+MAX\+\_\+\+SAMPLER\+\_\+\+HANDLERS}} = 0x300B
+, \newline
+\mbox{\hyperlink{group__ext-images_gga6b1af8ba72fb238659a469ca5d2ef52baff1dadde6022a69baa28b63d0e638af5}{HSA\+\_\+\+EXT\+\_\+\+AGENT\+\_\+\+INFO\+\_\+\+IMAGE\+\_\+\+LINEAR\+\_\+\+ROW\+\_\+\+PITCH\+\_\+\+ALIGNMENT}} = 0x300C
+ \}
+\begin{DoxyCompactList}\small\item\em Enumeration constants added to \mbox{\hyperlink{group__agentinfo_ga39d0684207d95717d96319573b3e4a42}{hsa\+\_\+agent\+\_\+info\+\_\+t}} by this extension. \end{DoxyCompactList}\item 
+enum \mbox{\hyperlink{group__ext-images_gac61587d98a80d1660378e3904a66fc9c}{hsa\+\_\+ext\+\_\+image\+\_\+geometry\+\_\+t}} \{ \newline
+\mbox{\hyperlink{group__ext-images_ggac61587d98a80d1660378e3904a66fc9caa025ea993dbfe3101d3ff0caea2ea0cf}{HSA\+\_\+\+EXT\+\_\+\+IMAGE\+\_\+\+GEOMETRY\+\_\+1D}} = 0
+, \mbox{\hyperlink{group__ext-images_ggac61587d98a80d1660378e3904a66fc9ca4bcc28ccad5a32bd9c9dbf203da4464e}{HSA\+\_\+\+EXT\+\_\+\+IMAGE\+\_\+\+GEOMETRY\+\_\+2D}} = 1
+, \mbox{\hyperlink{group__ext-images_ggac61587d98a80d1660378e3904a66fc9ca2e749b6b96377b9a744fc837296e318c}{HSA\+\_\+\+EXT\+\_\+\+IMAGE\+\_\+\+GEOMETRY\+\_\+3D}} = 2
+, \mbox{\hyperlink{group__ext-images_ggac61587d98a80d1660378e3904a66fc9cad989c8e619b376dc98ac3950be9afa33}{HSA\+\_\+\+EXT\+\_\+\+IMAGE\+\_\+\+GEOMETRY\+\_\+1\+DA}} = 3
+, \newline
+\mbox{\hyperlink{group__ext-images_ggac61587d98a80d1660378e3904a66fc9ca90929e69cbf0b447060e1aeb23fd6dd4}{HSA\+\_\+\+EXT\+\_\+\+IMAGE\+\_\+\+GEOMETRY\+\_\+2\+DA}} = 4
+, \mbox{\hyperlink{group__ext-images_ggac61587d98a80d1660378e3904a66fc9ca47b208990ed715c37071f1fff17e812c}{HSA\+\_\+\+EXT\+\_\+\+IMAGE\+\_\+\+GEOMETRY\+\_\+1\+DB}} = 5
+, \mbox{\hyperlink{group__ext-images_ggac61587d98a80d1660378e3904a66fc9caf1f195107c114c7235275f047d2f0474}{HSA\+\_\+\+EXT\+\_\+\+IMAGE\+\_\+\+GEOMETRY\+\_\+2\+DDEPTH}} = 6
+, \mbox{\hyperlink{group__ext-images_ggac61587d98a80d1660378e3904a66fc9caf3d5440659a9dfd7892da13c1fe992bd}{HSA\+\_\+\+EXT\+\_\+\+IMAGE\+\_\+\+GEOMETRY\+\_\+2\+DADEPTH}} = 7
+ \}
+\begin{DoxyCompactList}\small\item\em Geometry associated with the image. This specifies the number of image dimensions and whether the image is an image array. See the {\itshape Image Geometry} section in the {\itshape HSA Programming Reference Manual} for definitions on each geometry. The enumeration values match the BRIG type {\ttfamily hsa\+\_\+ext\+\_\+brig\+\_\+image\+\_\+geometry\+\_\+t}. \end{DoxyCompactList}\item 
+enum \mbox{\hyperlink{group__ext-images_gaa143aa6feeaf24103b886c571ace568f}{hsa\+\_\+ext\+\_\+image\+\_\+channel\+\_\+type\+\_\+t}} \{ \newline
+\mbox{\hyperlink{group__ext-images_ggaa143aa6feeaf24103b886c571ace568fa59d72c5a5199e360e7a5773987696e42}{HSA\+\_\+\+EXT\+\_\+\+IMAGE\+\_\+\+CHANNEL\+\_\+\+TYPE\+\_\+\+SNORM\+\_\+\+INT8}} = 0
+, \mbox{\hyperlink{group__ext-images_ggaa143aa6feeaf24103b886c571ace568fa55ee5e3b2e6f3b593a9cf99f1f195b91}{HSA\+\_\+\+EXT\+\_\+\+IMAGE\+\_\+\+CHANNEL\+\_\+\+TYPE\+\_\+\+SNORM\+\_\+\+INT16}} = 1
+, \mbox{\hyperlink{group__ext-images_ggaa143aa6feeaf24103b886c571ace568fae3100c7304a6e1805711cd6965919e53}{HSA\+\_\+\+EXT\+\_\+\+IMAGE\+\_\+\+CHANNEL\+\_\+\+TYPE\+\_\+\+UNORM\+\_\+\+INT8}} = 2
+, \mbox{\hyperlink{group__ext-images_ggaa143aa6feeaf24103b886c571ace568fa9a27c2852fb86761dcbabfda391a8e73}{HSA\+\_\+\+EXT\+\_\+\+IMAGE\+\_\+\+CHANNEL\+\_\+\+TYPE\+\_\+\+UNORM\+\_\+\+INT16}} = 3
+, \newline
+\mbox{\hyperlink{group__ext-images_ggaa143aa6feeaf24103b886c571ace568fa0b12c9e8bee88608297ecd9246ebf96a}{HSA\+\_\+\+EXT\+\_\+\+IMAGE\+\_\+\+CHANNEL\+\_\+\+TYPE\+\_\+\+UNORM\+\_\+\+INT24}} = 4
+, \mbox{\hyperlink{group__ext-images_ggaa143aa6feeaf24103b886c571ace568fa40e1eb056776d35da9f1dbaf2e264a19}{HSA\+\_\+\+EXT\+\_\+\+IMAGE\+\_\+\+CHANNEL\+\_\+\+TYPE\+\_\+\+UNORM\+\_\+\+SHORT\+\_\+555}} = 5
+, \mbox{\hyperlink{group__ext-images_ggaa143aa6feeaf24103b886c571ace568fa6165cebe82d6c2b115bbce04548f5626}{HSA\+\_\+\+EXT\+\_\+\+IMAGE\+\_\+\+CHANNEL\+\_\+\+TYPE\+\_\+\+UNORM\+\_\+\+SHORT\+\_\+565}} = 6
+, \mbox{\hyperlink{group__ext-images_ggaa143aa6feeaf24103b886c571ace568fad5193853cc5321dd50b16eb9e920237f}{HSA\+\_\+\+EXT\+\_\+\+IMAGE\+\_\+\+CHANNEL\+\_\+\+TYPE\+\_\+\+UNORM\+\_\+\+SHORT\+\_\+101010}} = 7
+, \newline
+\mbox{\hyperlink{group__ext-images_ggaa143aa6feeaf24103b886c571ace568fa39b7795d032ee6afc6c701b25632b7c0}{HSA\+\_\+\+EXT\+\_\+\+IMAGE\+\_\+\+CHANNEL\+\_\+\+TYPE\+\_\+\+SIGNED\+\_\+\+INT8}} = 8
+, \mbox{\hyperlink{group__ext-images_ggaa143aa6feeaf24103b886c571ace568fa94b5591edcfac1939f541c48a6f84400}{HSA\+\_\+\+EXT\+\_\+\+IMAGE\+\_\+\+CHANNEL\+\_\+\+TYPE\+\_\+\+SIGNED\+\_\+\+INT16}} = 9
+, \mbox{\hyperlink{group__ext-images_ggaa143aa6feeaf24103b886c571ace568fab58308c224a7d513ecbf0ffd51846ff2}{HSA\+\_\+\+EXT\+\_\+\+IMAGE\+\_\+\+CHANNEL\+\_\+\+TYPE\+\_\+\+SIGNED\+\_\+\+INT32}} = 10
+, \mbox{\hyperlink{group__ext-images_ggaa143aa6feeaf24103b886c571ace568fad5a41c0a19a7cb34f4343db6cf757b7a}{HSA\+\_\+\+EXT\+\_\+\+IMAGE\+\_\+\+CHANNEL\+\_\+\+TYPE\+\_\+\+UNSIGNED\+\_\+\+INT8}} = 11
+, \newline
+\mbox{\hyperlink{group__ext-images_ggaa143aa6feeaf24103b886c571ace568fa1779271b7ca06132b05918e5a72a2a85}{HSA\+\_\+\+EXT\+\_\+\+IMAGE\+\_\+\+CHANNEL\+\_\+\+TYPE\+\_\+\+UNSIGNED\+\_\+\+INT16}} = 12
+, \mbox{\hyperlink{group__ext-images_ggaa143aa6feeaf24103b886c571ace568faf925e28a04ef0162badd74c43b324ec5}{HSA\+\_\+\+EXT\+\_\+\+IMAGE\+\_\+\+CHANNEL\+\_\+\+TYPE\+\_\+\+UNSIGNED\+\_\+\+INT32}} = 13
+, \mbox{\hyperlink{group__ext-images_ggaa143aa6feeaf24103b886c571ace568fa71200bfc55d6373e117594a624472973}{HSA\+\_\+\+EXT\+\_\+\+IMAGE\+\_\+\+CHANNEL\+\_\+\+TYPE\+\_\+\+HALF\+\_\+\+FLOAT}} = 14
+, \mbox{\hyperlink{group__ext-images_ggaa143aa6feeaf24103b886c571ace568fa4b06498e72cfae3bffd55e5c7a483576}{HSA\+\_\+\+EXT\+\_\+\+IMAGE\+\_\+\+CHANNEL\+\_\+\+TYPE\+\_\+\+FLOAT}} = 15
+ \}
+\begin{DoxyCompactList}\small\item\em Channel type associated with the elements of an image. See the {\itshape Channel Type} section in the {\itshape HSA Programming Reference Manual} for definitions on each channel type. The enumeration values and definition match the BRIG type {\ttfamily hsa\+\_\+ext\+\_\+brig\+\_\+image\+\_\+channel\+\_\+type\+\_\+t}. \end{DoxyCompactList}\item 
+enum \mbox{\hyperlink{group__ext-images_gabaced4fb1f3b9fdaa978e143af5ff055}{hsa\+\_\+ext\+\_\+image\+\_\+channel\+\_\+order\+\_\+t}} \{ \newline
+\mbox{\hyperlink{group__ext-images_ggabaced4fb1f3b9fdaa978e143af5ff055aa68ce325d9662ff1a1c78598835c8d55}{HSA\+\_\+\+EXT\+\_\+\+IMAGE\+\_\+\+CHANNEL\+\_\+\+ORDER\+\_\+A}} = 0
+, \mbox{\hyperlink{group__ext-images_ggabaced4fb1f3b9fdaa978e143af5ff055ae6f5e256120da86e073db6a996e778d7}{HSA\+\_\+\+EXT\+\_\+\+IMAGE\+\_\+\+CHANNEL\+\_\+\+ORDER\+\_\+R}} = 1
+, \mbox{\hyperlink{group__ext-images_ggabaced4fb1f3b9fdaa978e143af5ff055ad22499f0285b97596caa1a316f839ace}{HSA\+\_\+\+EXT\+\_\+\+IMAGE\+\_\+\+CHANNEL\+\_\+\+ORDER\+\_\+\+RX}} = 2
+, \mbox{\hyperlink{group__ext-images_ggabaced4fb1f3b9fdaa978e143af5ff055a49185aef99188ff46b53d4da23614798}{HSA\+\_\+\+EXT\+\_\+\+IMAGE\+\_\+\+CHANNEL\+\_\+\+ORDER\+\_\+\+RG}} = 3
+, \newline
+\mbox{\hyperlink{group__ext-images_ggabaced4fb1f3b9fdaa978e143af5ff055a59e32fe3e15c24a407c5f1e56a6935f4}{HSA\+\_\+\+EXT\+\_\+\+IMAGE\+\_\+\+CHANNEL\+\_\+\+ORDER\+\_\+\+RGX}} = 4
+, \mbox{\hyperlink{group__ext-images_ggabaced4fb1f3b9fdaa978e143af5ff055a7ec545d6291f17a9a779b6f673fad718}{HSA\+\_\+\+EXT\+\_\+\+IMAGE\+\_\+\+CHANNEL\+\_\+\+ORDER\+\_\+\+RA}} = 5
+, \mbox{\hyperlink{group__ext-images_ggabaced4fb1f3b9fdaa978e143af5ff055ae3d2eed3398c973eab1e66e1b92a8efe}{HSA\+\_\+\+EXT\+\_\+\+IMAGE\+\_\+\+CHANNEL\+\_\+\+ORDER\+\_\+\+RGB}} = 6
+, \mbox{\hyperlink{group__ext-images_ggabaced4fb1f3b9fdaa978e143af5ff055a3d93bdf6b20f6409a9d684646908bfe1}{HSA\+\_\+\+EXT\+\_\+\+IMAGE\+\_\+\+CHANNEL\+\_\+\+ORDER\+\_\+\+RGBX}} = 7
+, \newline
+\mbox{\hyperlink{group__ext-images_ggabaced4fb1f3b9fdaa978e143af5ff055a0c5e8dc0eef9af781786ef67ee3702df}{HSA\+\_\+\+EXT\+\_\+\+IMAGE\+\_\+\+CHANNEL\+\_\+\+ORDER\+\_\+\+RGBA}} = 8
+, \mbox{\hyperlink{group__ext-images_ggabaced4fb1f3b9fdaa978e143af5ff055a8f8724381ae9dfe592a15808ebe8c1d2}{HSA\+\_\+\+EXT\+\_\+\+IMAGE\+\_\+\+CHANNEL\+\_\+\+ORDER\+\_\+\+BGRA}} = 9
+, \mbox{\hyperlink{group__ext-images_ggabaced4fb1f3b9fdaa978e143af5ff055a7a49085ae07e467293c0a10d003a2356}{HSA\+\_\+\+EXT\+\_\+\+IMAGE\+\_\+\+CHANNEL\+\_\+\+ORDER\+\_\+\+ARGB}} = 10
+, \mbox{\hyperlink{group__ext-images_ggabaced4fb1f3b9fdaa978e143af5ff055a8fd833428ebe3e1428e0001115ec6880}{HSA\+\_\+\+EXT\+\_\+\+IMAGE\+\_\+\+CHANNEL\+\_\+\+ORDER\+\_\+\+ABGR}} = 11
+, \newline
+\mbox{\hyperlink{group__ext-images_ggabaced4fb1f3b9fdaa978e143af5ff055a64dbb297ed7cf48f525ffe32aa653319}{HSA\+\_\+\+EXT\+\_\+\+IMAGE\+\_\+\+CHANNEL\+\_\+\+ORDER\+\_\+\+SRGB}} = 12
+, \mbox{\hyperlink{group__ext-images_ggabaced4fb1f3b9fdaa978e143af5ff055a38d8f1c70900f6646df6a6d20746f840}{HSA\+\_\+\+EXT\+\_\+\+IMAGE\+\_\+\+CHANNEL\+\_\+\+ORDER\+\_\+\+SRGBX}} = 13
+, \mbox{\hyperlink{group__ext-images_ggabaced4fb1f3b9fdaa978e143af5ff055ae9980a3013f42e7d56f4fd28ea8c3b7c}{HSA\+\_\+\+EXT\+\_\+\+IMAGE\+\_\+\+CHANNEL\+\_\+\+ORDER\+\_\+\+SRGBA}} = 14
+, \mbox{\hyperlink{group__ext-images_ggabaced4fb1f3b9fdaa978e143af5ff055a2617e3d26bbf6dd3c136534dcf5e4594}{HSA\+\_\+\+EXT\+\_\+\+IMAGE\+\_\+\+CHANNEL\+\_\+\+ORDER\+\_\+\+SBGRA}} = 15
+, \newline
+\mbox{\hyperlink{group__ext-images_ggabaced4fb1f3b9fdaa978e143af5ff055a5fb131f53f229f55456287a009da9b6e}{HSA\+\_\+\+EXT\+\_\+\+IMAGE\+\_\+\+CHANNEL\+\_\+\+ORDER\+\_\+\+INTENSITY}} = 16
+, \mbox{\hyperlink{group__ext-images_ggabaced4fb1f3b9fdaa978e143af5ff055a5576d6ae7fd07c21fa8196c4323f1476}{HSA\+\_\+\+EXT\+\_\+\+IMAGE\+\_\+\+CHANNEL\+\_\+\+ORDER\+\_\+\+LUMINANCE}} = 17
+, \mbox{\hyperlink{group__ext-images_ggabaced4fb1f3b9fdaa978e143af5ff055ad26aef84eb00f1d1e9defc45f7508e50}{HSA\+\_\+\+EXT\+\_\+\+IMAGE\+\_\+\+CHANNEL\+\_\+\+ORDER\+\_\+\+DEPTH}} = 18
+, \mbox{\hyperlink{group__ext-images_ggabaced4fb1f3b9fdaa978e143af5ff055aa1c158a53efa2619ceefa748f3d99a99}{HSA\+\_\+\+EXT\+\_\+\+IMAGE\+\_\+\+CHANNEL\+\_\+\+ORDER\+\_\+\+DEPTH\+\_\+\+STENCIL}} = 19
+ \}
+\begin{DoxyCompactList}\small\item\em Channel order associated with the elements of an image. See the {\itshape Channel Order} section in the {\itshape HSA Programming Reference Manual} for definitions on each channel order. The enumeration values match the BRIG type {\ttfamily hsa\+\_\+ext\+\_\+brig\+\_\+image\+\_\+channel\+\_\+order\+\_\+t}. \end{DoxyCompactList}\item 
+enum \mbox{\hyperlink{group__ext-images_gab3d3401883f796b3f2d8dfad14f90568}{hsa\+\_\+ext\+\_\+image\+\_\+capability\+\_\+t}} \{ \newline
+\mbox{\hyperlink{group__ext-images_ggab3d3401883f796b3f2d8dfad14f90568acd8ea93bf52221ca2503b74dc1bf967a}{HSA\+\_\+\+EXT\+\_\+\+IMAGE\+\_\+\+CAPABILITY\+\_\+\+NOT\+\_\+\+SUPPORTED}} = 0x0
+, \mbox{\hyperlink{group__ext-images_ggab3d3401883f796b3f2d8dfad14f90568add60b4b84820b05474e9431f85954e93}{HSA\+\_\+\+EXT\+\_\+\+IMAGE\+\_\+\+CAPABILITY\+\_\+\+READ\+\_\+\+ONLY}} = 0x1
+, \mbox{\hyperlink{group__ext-images_ggab3d3401883f796b3f2d8dfad14f90568a01a4d914c62d2f7505c002e3d0510d22}{HSA\+\_\+\+EXT\+\_\+\+IMAGE\+\_\+\+CAPABILITY\+\_\+\+WRITE\+\_\+\+ONLY}} = 0x2
+, \mbox{\hyperlink{group__ext-images_ggab3d3401883f796b3f2d8dfad14f90568a46df4b1dde4bd8fe803f49bfd4cec867}{HSA\+\_\+\+EXT\+\_\+\+IMAGE\+\_\+\+CAPABILITY\+\_\+\+READ\+\_\+\+WRITE}} = 0x4
+, \newline
+\mbox{\hyperlink{group__ext-images_ggab3d3401883f796b3f2d8dfad14f90568a93c1635f2a1cf303202219cdf9a96a10}{HSA\+\_\+\+EXT\+\_\+\+IMAGE\+\_\+\+CAPABILITY\+\_\+\+READ\+\_\+\+MODIFY\+\_\+\+WRITE}} = 0x8
+, \mbox{\hyperlink{group__ext-images_ggab3d3401883f796b3f2d8dfad14f90568a7e7df436921a7ef7028281b9c12d6dc2}{HSA\+\_\+\+EXT\+\_\+\+IMAGE\+\_\+\+CAPABILITY\+\_\+\+ACCESS\+\_\+\+INVARIANT\+\_\+\+DATA\+\_\+\+LAYOUT}} = 0x10
+ \}
+\begin{DoxyCompactList}\small\item\em Image capability. \end{DoxyCompactList}\item 
+enum \mbox{\hyperlink{group__ext-images_ga102222a1420a2434d9b50100350305e4}{hsa\+\_\+ext\+\_\+image\+\_\+data\+\_\+layout\+\_\+t}} \{ \mbox{\hyperlink{group__ext-images_gga102222a1420a2434d9b50100350305e4a6d2884d8802b4696feda4dbbdc7ce86c}{HSA\+\_\+\+EXT\+\_\+\+IMAGE\+\_\+\+DATA\+\_\+\+LAYOUT\+\_\+\+OPAQUE}} = 0x0
+, \mbox{\hyperlink{group__ext-images_gga102222a1420a2434d9b50100350305e4a989b98c2fc0e31d5c434bbb946ae63d0}{HSA\+\_\+\+EXT\+\_\+\+IMAGE\+\_\+\+DATA\+\_\+\+LAYOUT\+\_\+\+LINEAR}} = 0x1
+ \}
+\begin{DoxyCompactList}\small\item\em Image data layout. \end{DoxyCompactList}\item 
+enum \mbox{\hyperlink{group__ext-images_ga60a9fcdc1a1f338bd7e54445359fdf0f}{hsa\+\_\+ext\+\_\+sampler\+\_\+addressing\+\_\+mode\+\_\+t}} \{ \newline
+\mbox{\hyperlink{group__ext-images_gga60a9fcdc1a1f338bd7e54445359fdf0fa4b02e9d069ed545eb3771b2a2c69ccb8}{HSA\+\_\+\+EXT\+\_\+\+SAMPLER\+\_\+\+ADDRESSING\+\_\+\+MODE\+\_\+\+UNDEFINED}} = 0
+, \mbox{\hyperlink{group__ext-images_gga60a9fcdc1a1f338bd7e54445359fdf0faefb1f71d8741673081efd7fbb3141533}{HSA\+\_\+\+EXT\+\_\+\+SAMPLER\+\_\+\+ADDRESSING\+\_\+\+MODE\+\_\+\+CLAMP\+\_\+\+TO\+\_\+\+EDGE}} = 1
+, \mbox{\hyperlink{group__ext-images_gga60a9fcdc1a1f338bd7e54445359fdf0faf9fe6a395063062f4b827610f0c38572}{HSA\+\_\+\+EXT\+\_\+\+SAMPLER\+\_\+\+ADDRESSING\+\_\+\+MODE\+\_\+\+CLAMP\+\_\+\+TO\+\_\+\+BORDER}} = 2
+, \mbox{\hyperlink{group__ext-images_gga60a9fcdc1a1f338bd7e54445359fdf0facbb546d8b317e2e0af9b78fbfbc36b50}{HSA\+\_\+\+EXT\+\_\+\+SAMPLER\+\_\+\+ADDRESSING\+\_\+\+MODE\+\_\+\+REPEAT}} = 3
+, \newline
+\mbox{\hyperlink{group__ext-images_gga60a9fcdc1a1f338bd7e54445359fdf0faf4172b4d90cb5296e55885c7afa14bb6}{HSA\+\_\+\+EXT\+\_\+\+SAMPLER\+\_\+\+ADDRESSING\+\_\+\+MODE\+\_\+\+MIRRORED\+\_\+\+REPEAT}} = 4
+ \}
+\begin{DoxyCompactList}\small\item\em Sampler address modes. The sampler address mode describes the processing of out-\/of-\/range image coordinates. See the {\itshape Addressing Mode} section in the {\itshape HSA Programming Reference Manual} for definitions on each address mode. The values match the BRIG type {\ttfamily hsa\+\_\+ext\+\_\+brig\+\_\+sampler\+\_\+addressing\+\_\+t}. \end{DoxyCompactList}\item 
+enum \mbox{\hyperlink{group__ext-images_gad7644f3eccb4f8ce5693313b88440d87}{hsa\+\_\+ext\+\_\+sampler\+\_\+coordinate\+\_\+mode\+\_\+t}} \{ \mbox{\hyperlink{group__ext-images_ggad7644f3eccb4f8ce5693313b88440d87a12bd33ab83e502cff3e7b8016470e97e}{HSA\+\_\+\+EXT\+\_\+\+SAMPLER\+\_\+\+COORDINATE\+\_\+\+MODE\+\_\+\+UNNORMALIZED}} = 0
+, \mbox{\hyperlink{group__ext-images_ggad7644f3eccb4f8ce5693313b88440d87a278882aec9c205d2bd184e1d0a1e6391}{HSA\+\_\+\+EXT\+\_\+\+SAMPLER\+\_\+\+COORDINATE\+\_\+\+MODE\+\_\+\+NORMALIZED}} = 1
+ \}
+\begin{DoxyCompactList}\small\item\em Sampler coordinate normalization modes. See the {\itshape Coordinate Normalization Mode} section in the {\itshape HSA Programming Reference Manual} for definitions on each coordinate normalization mode. The values match the BRIG type {\ttfamily hsa\+\_\+ext\+\_\+brig\+\_\+sampler\+\_\+coord\+\_\+normalization\+\_\+t}. \end{DoxyCompactList}\item 
+enum \mbox{\hyperlink{group__ext-images_ga0f0c16fdeea5c2a56130ecefe7cefd02}{hsa\+\_\+ext\+\_\+sampler\+\_\+filter\+\_\+mode\+\_\+t}} \{ \mbox{\hyperlink{group__ext-images_gga0f0c16fdeea5c2a56130ecefe7cefd02a48340bfcc19863880213631f47b8607e}{HSA\+\_\+\+EXT\+\_\+\+SAMPLER\+\_\+\+FILTER\+\_\+\+MODE\+\_\+\+NEAREST}} = 0
+, \mbox{\hyperlink{group__ext-images_gga0f0c16fdeea5c2a56130ecefe7cefd02a18009b32510cb5d6f890e09758b20b5e}{HSA\+\_\+\+EXT\+\_\+\+SAMPLER\+\_\+\+FILTER\+\_\+\+MODE\+\_\+\+LINEAR}} = 1
+ \}
+\begin{DoxyCompactList}\small\item\em Sampler filter modes. See the {\itshape Filter Mode} section in the {\itshape HSA Programming Reference Manual} for definitions on each address mode. The enumeration values match the BRIG type {\ttfamily hsa\+\_\+ext\+\_\+brig\+\_\+sampler\+\_\+filter\+\_\+t}. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{group__status_gad755322e7ff95456520e8abdbe90d225}{hsa\+\_\+status\+\_\+t}} \mbox{\hyperlink{inc_2hsa__ext__image_8h_a64216765b98b62ee87deb50fd2899836}{HSA\+\_\+\+API}} \mbox{\hyperlink{group__ext-images_ga12a909df33851b76afa2850abc7086f1}{hsa\+\_\+ext\+\_\+image\+\_\+get\+\_\+capability}} (\mbox{\hyperlink{group__agentinfo_ga9ce217ef08e7d5e89c8e83ce7b6ef22b}{hsa\+\_\+agent\+\_\+t}} agent, \mbox{\hyperlink{group__ext-images_gac61587d98a80d1660378e3904a66fc9c}{hsa\+\_\+ext\+\_\+image\+\_\+geometry\+\_\+t}} geometry, const \mbox{\hyperlink{group__ext-images_ga37a5b98dd984766026174b4d6d486b29}{hsa\+\_\+ext\+\_\+image\+\_\+format\+\_\+t}} $\ast$image\+\_\+format, uint32\+\_\+t $\ast$capability\+\_\+mask)
+\begin{DoxyCompactList}\small\item\em Retrieve the supported image capabilities for a given combination of agent, geometry, and image format for an image created with an opaque image data layout. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{group__status_gad755322e7ff95456520e8abdbe90d225}{hsa\+\_\+status\+\_\+t}} \mbox{\hyperlink{inc_2hsa__ext__image_8h_a64216765b98b62ee87deb50fd2899836}{HSA\+\_\+\+API}} \mbox{\hyperlink{group__ext-images_ga65fc81035fd8c70c3229ce8f5285e5e6}{hsa\+\_\+ext\+\_\+image\+\_\+get\+\_\+capability\+\_\+with\+\_\+layout}} (\mbox{\hyperlink{group__agentinfo_ga9ce217ef08e7d5e89c8e83ce7b6ef22b}{hsa\+\_\+agent\+\_\+t}} agent, \mbox{\hyperlink{group__ext-images_gac61587d98a80d1660378e3904a66fc9c}{hsa\+\_\+ext\+\_\+image\+\_\+geometry\+\_\+t}} geometry, const \mbox{\hyperlink{group__ext-images_ga37a5b98dd984766026174b4d6d486b29}{hsa\+\_\+ext\+\_\+image\+\_\+format\+\_\+t}} $\ast$image\+\_\+format, \mbox{\hyperlink{group__ext-images_ga102222a1420a2434d9b50100350305e4}{hsa\+\_\+ext\+\_\+image\+\_\+data\+\_\+layout\+\_\+t}} image\+\_\+data\+\_\+layout, uint32\+\_\+t $\ast$capability\+\_\+mask)
+\begin{DoxyCompactList}\small\item\em Retrieve the supported image capabilities for a given combination of agent, geometry, image format, and image layout for an image created with an explicit image data layout. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{group__status_gad755322e7ff95456520e8abdbe90d225}{hsa\+\_\+status\+\_\+t}} \mbox{\hyperlink{inc_2hsa__ext__image_8h_a64216765b98b62ee87deb50fd2899836}{HSA\+\_\+\+API}} \mbox{\hyperlink{group__ext-images_gad8e2426d1829f772af6e603ff226f65a}{hsa\+\_\+ext\+\_\+image\+\_\+data\+\_\+get\+\_\+info}} (\mbox{\hyperlink{group__agentinfo_ga9ce217ef08e7d5e89c8e83ce7b6ef22b}{hsa\+\_\+agent\+\_\+t}} agent, const \mbox{\hyperlink{group__ext-images_ga7ccf44400f9bbb459c8e52f54a3c5eb0}{hsa\+\_\+ext\+\_\+image\+\_\+descriptor\+\_\+t}} $\ast$image\+\_\+descriptor, \mbox{\hyperlink{group__common_gacef73774a0af1d1df56fdcd9e04bb708}{hsa\+\_\+access\+\_\+permission\+\_\+t}} access\+\_\+permission, \mbox{\hyperlink{group__ext-images_gada32050df34dc3f6c0b9124706d8984b}{hsa\+\_\+ext\+\_\+image\+\_\+data\+\_\+info\+\_\+t}} $\ast$image\+\_\+data\+\_\+info)
+\begin{DoxyCompactList}\small\item\em Retrieve the image data requirements for a given combination of agent, image descriptor, and access permission for an image created with an opaque image data layout. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{group__status_gad755322e7ff95456520e8abdbe90d225}{hsa\+\_\+status\+\_\+t}} \mbox{\hyperlink{inc_2hsa__ext__image_8h_a64216765b98b62ee87deb50fd2899836}{HSA\+\_\+\+API}} \mbox{\hyperlink{group__ext-images_ga2d3f7ebd674fe267e608b3f1c1a89965}{hsa\+\_\+ext\+\_\+image\+\_\+data\+\_\+get\+\_\+info\+\_\+with\+\_\+layout}} (\mbox{\hyperlink{group__agentinfo_ga9ce217ef08e7d5e89c8e83ce7b6ef22b}{hsa\+\_\+agent\+\_\+t}} agent, const \mbox{\hyperlink{group__ext-images_ga7ccf44400f9bbb459c8e52f54a3c5eb0}{hsa\+\_\+ext\+\_\+image\+\_\+descriptor\+\_\+t}} $\ast$image\+\_\+descriptor, \mbox{\hyperlink{group__common_gacef73774a0af1d1df56fdcd9e04bb708}{hsa\+\_\+access\+\_\+permission\+\_\+t}} access\+\_\+permission, \mbox{\hyperlink{group__ext-images_ga102222a1420a2434d9b50100350305e4}{hsa\+\_\+ext\+\_\+image\+\_\+data\+\_\+layout\+\_\+t}} image\+\_\+data\+\_\+layout, size\+\_\+t image\+\_\+data\+\_\+row\+\_\+pitch, size\+\_\+t image\+\_\+data\+\_\+slice\+\_\+pitch, \mbox{\hyperlink{group__ext-images_gada32050df34dc3f6c0b9124706d8984b}{hsa\+\_\+ext\+\_\+image\+\_\+data\+\_\+info\+\_\+t}} $\ast$image\+\_\+data\+\_\+info)
+\begin{DoxyCompactList}\small\item\em Retrieve the image data requirements for a given combination of image descriptor, access permission, image data layout, image data row pitch, and image data slice pitch for an image created with an explicit image data layout. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{group__status_gad755322e7ff95456520e8abdbe90d225}{hsa\+\_\+status\+\_\+t}} \mbox{\hyperlink{inc_2hsa__ext__image_8h_a64216765b98b62ee87deb50fd2899836}{HSA\+\_\+\+API}} \mbox{\hyperlink{group__ext-images_ga985562c68508d4d8b0edcfd0729b6d49}{hsa\+\_\+ext\+\_\+image\+\_\+create}} (\mbox{\hyperlink{group__agentinfo_ga9ce217ef08e7d5e89c8e83ce7b6ef22b}{hsa\+\_\+agent\+\_\+t}} agent, const \mbox{\hyperlink{group__ext-images_ga7ccf44400f9bbb459c8e52f54a3c5eb0}{hsa\+\_\+ext\+\_\+image\+\_\+descriptor\+\_\+t}} $\ast$image\+\_\+descriptor, const void $\ast$image\+\_\+data, \mbox{\hyperlink{group__common_gacef73774a0af1d1df56fdcd9e04bb708}{hsa\+\_\+access\+\_\+permission\+\_\+t}} access\+\_\+permission, \mbox{\hyperlink{group__ext-images_ga4e192988bd0b5abe2a57e248934e6dc6}{hsa\+\_\+ext\+\_\+image\+\_\+t}} $\ast$image)
+\begin{DoxyCompactList}\small\item\em Creates an agent specific image handle to an image with an opaque image data layout. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{group__status_gad755322e7ff95456520e8abdbe90d225}{hsa\+\_\+status\+\_\+t}} \mbox{\hyperlink{inc_2hsa__ext__image_8h_a64216765b98b62ee87deb50fd2899836}{HSA\+\_\+\+API}} \mbox{\hyperlink{group__ext-images_ga7de92e8bde1496761b7dd00d1e03186e}{hsa\+\_\+ext\+\_\+image\+\_\+create\+\_\+with\+\_\+layout}} (\mbox{\hyperlink{group__agentinfo_ga9ce217ef08e7d5e89c8e83ce7b6ef22b}{hsa\+\_\+agent\+\_\+t}} agent, const \mbox{\hyperlink{group__ext-images_ga7ccf44400f9bbb459c8e52f54a3c5eb0}{hsa\+\_\+ext\+\_\+image\+\_\+descriptor\+\_\+t}} $\ast$image\+\_\+descriptor, const void $\ast$image\+\_\+data, \mbox{\hyperlink{group__common_gacef73774a0af1d1df56fdcd9e04bb708}{hsa\+\_\+access\+\_\+permission\+\_\+t}} access\+\_\+permission, \mbox{\hyperlink{group__ext-images_ga102222a1420a2434d9b50100350305e4}{hsa\+\_\+ext\+\_\+image\+\_\+data\+\_\+layout\+\_\+t}} image\+\_\+data\+\_\+layout, size\+\_\+t image\+\_\+data\+\_\+row\+\_\+pitch, size\+\_\+t image\+\_\+data\+\_\+slice\+\_\+pitch, \mbox{\hyperlink{group__ext-images_ga4e192988bd0b5abe2a57e248934e6dc6}{hsa\+\_\+ext\+\_\+image\+\_\+t}} $\ast$image)
+\begin{DoxyCompactList}\small\item\em Creates an agent specific image handle to an image with an explicit image data layout. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{group__status_gad755322e7ff95456520e8abdbe90d225}{hsa\+\_\+status\+\_\+t}} \mbox{\hyperlink{inc_2hsa__ext__image_8h_a64216765b98b62ee87deb50fd2899836}{HSA\+\_\+\+API}} \mbox{\hyperlink{group__ext-images_ga7fdb9d51ec1916b0eeb6fc6742dc7572}{hsa\+\_\+ext\+\_\+image\+\_\+destroy}} (\mbox{\hyperlink{group__agentinfo_ga9ce217ef08e7d5e89c8e83ce7b6ef22b}{hsa\+\_\+agent\+\_\+t}} agent, \mbox{\hyperlink{group__ext-images_ga4e192988bd0b5abe2a57e248934e6dc6}{hsa\+\_\+ext\+\_\+image\+\_\+t}} image)
+\begin{DoxyCompactList}\small\item\em Destroy an image handle previously created using \mbox{\hyperlink{group__ext-images_ga985562c68508d4d8b0edcfd0729b6d49}{hsa\+\_\+ext\+\_\+image\+\_\+create}} or \mbox{\hyperlink{group__ext-images_ga7de92e8bde1496761b7dd00d1e03186e}{hsa\+\_\+ext\+\_\+image\+\_\+create\+\_\+with\+\_\+layout}}. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{group__status_gad755322e7ff95456520e8abdbe90d225}{hsa\+\_\+status\+\_\+t}} \mbox{\hyperlink{inc_2hsa__ext__image_8h_a64216765b98b62ee87deb50fd2899836}{HSA\+\_\+\+API}} \mbox{\hyperlink{group__ext-images_ga3c8f7cdc2f8f5fc7aa4ad3f845a3dc8d}{hsa\+\_\+ext\+\_\+image\+\_\+copy}} (\mbox{\hyperlink{group__agentinfo_ga9ce217ef08e7d5e89c8e83ce7b6ef22b}{hsa\+\_\+agent\+\_\+t}} agent, \mbox{\hyperlink{group__ext-images_ga4e192988bd0b5abe2a57e248934e6dc6}{hsa\+\_\+ext\+\_\+image\+\_\+t}} src\+\_\+image, const \mbox{\hyperlink{group__common_gae460d1df8c508a9c889d4550ea4eea30}{hsa\+\_\+dim3\+\_\+t}} $\ast$src\+\_\+offset, \mbox{\hyperlink{group__ext-images_ga4e192988bd0b5abe2a57e248934e6dc6}{hsa\+\_\+ext\+\_\+image\+\_\+t}} dst\+\_\+image, const \mbox{\hyperlink{group__common_gae460d1df8c508a9c889d4550ea4eea30}{hsa\+\_\+dim3\+\_\+t}} $\ast$dst\+\_\+offset, const \mbox{\hyperlink{group__common_gae460d1df8c508a9c889d4550ea4eea30}{hsa\+\_\+dim3\+\_\+t}} $\ast$range)
+\begin{DoxyCompactList}\small\item\em Copies a portion of one image (the source) to another image (the destination). \end{DoxyCompactList}\item 
+\mbox{\hyperlink{group__status_gad755322e7ff95456520e8abdbe90d225}{hsa\+\_\+status\+\_\+t}} \mbox{\hyperlink{inc_2hsa__ext__image_8h_a64216765b98b62ee87deb50fd2899836}{HSA\+\_\+\+API}} \mbox{\hyperlink{group__ext-images_gaea7edbc97a6758a71eaf4160c133802f}{hsa\+\_\+ext\+\_\+image\+\_\+import}} (\mbox{\hyperlink{group__agentinfo_ga9ce217ef08e7d5e89c8e83ce7b6ef22b}{hsa\+\_\+agent\+\_\+t}} agent, const void $\ast$src\+\_\+memory, size\+\_\+t src\+\_\+row\+\_\+pitch, size\+\_\+t src\+\_\+slice\+\_\+pitch, \mbox{\hyperlink{group__ext-images_ga4e192988bd0b5abe2a57e248934e6dc6}{hsa\+\_\+ext\+\_\+image\+\_\+t}} dst\+\_\+image, const \mbox{\hyperlink{group__ext-images_gaa407e3fb8aa43d59f8e8560294d1c702}{hsa\+\_\+ext\+\_\+image\+\_\+region\+\_\+t}} $\ast$image\+\_\+region)
+\begin{DoxyCompactList}\small\item\em Import a linearly organized image data from memory directly to an image handle. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{group__status_gad755322e7ff95456520e8abdbe90d225}{hsa\+\_\+status\+\_\+t}} \mbox{\hyperlink{inc_2hsa__ext__image_8h_a64216765b98b62ee87deb50fd2899836}{HSA\+\_\+\+API}} \mbox{\hyperlink{group__ext-images_ga2187349ce5a986c7292c70ce61437666}{hsa\+\_\+ext\+\_\+image\+\_\+export}} (\mbox{\hyperlink{group__agentinfo_ga9ce217ef08e7d5e89c8e83ce7b6ef22b}{hsa\+\_\+agent\+\_\+t}} agent, \mbox{\hyperlink{group__ext-images_ga4e192988bd0b5abe2a57e248934e6dc6}{hsa\+\_\+ext\+\_\+image\+\_\+t}} src\+\_\+image, void $\ast$dst\+\_\+memory, size\+\_\+t dst\+\_\+row\+\_\+pitch, size\+\_\+t dst\+\_\+slice\+\_\+pitch, const \mbox{\hyperlink{group__ext-images_gaa407e3fb8aa43d59f8e8560294d1c702}{hsa\+\_\+ext\+\_\+image\+\_\+region\+\_\+t}} $\ast$image\+\_\+region)
+\begin{DoxyCompactList}\small\item\em Export the image data to linearly organized memory. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{group__status_gad755322e7ff95456520e8abdbe90d225}{hsa\+\_\+status\+\_\+t}} \mbox{\hyperlink{inc_2hsa__ext__image_8h_a64216765b98b62ee87deb50fd2899836}{HSA\+\_\+\+API}} \mbox{\hyperlink{group__ext-images_gacc311188d2d5c9182e4a07bfceabbd99}{hsa\+\_\+ext\+\_\+image\+\_\+clear}} (\mbox{\hyperlink{group__agentinfo_ga9ce217ef08e7d5e89c8e83ce7b6ef22b}{hsa\+\_\+agent\+\_\+t}} agent, \mbox{\hyperlink{group__ext-images_ga4e192988bd0b5abe2a57e248934e6dc6}{hsa\+\_\+ext\+\_\+image\+\_\+t}} image, const void $\ast$data, const \mbox{\hyperlink{group__ext-images_gaa407e3fb8aa43d59f8e8560294d1c702}{hsa\+\_\+ext\+\_\+image\+\_\+region\+\_\+t}} $\ast$image\+\_\+region)
+\begin{DoxyCompactList}\small\item\em Clear a region of an image so that every image element has the specified value. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{group__status_gad755322e7ff95456520e8abdbe90d225}{hsa\+\_\+status\+\_\+t}} \mbox{\hyperlink{inc_2hsa__ext__image_8h_a64216765b98b62ee87deb50fd2899836}{HSA\+\_\+\+API}} \mbox{\hyperlink{group__ext-images_gaf3b5567510870cf0130efd69d5af3c07}{hsa\+\_\+ext\+\_\+sampler\+\_\+create}} (\mbox{\hyperlink{group__agentinfo_ga9ce217ef08e7d5e89c8e83ce7b6ef22b}{hsa\+\_\+agent\+\_\+t}} agent, const \mbox{\hyperlink{group__ext-images_gabed3b941e5a41287f2240f366797bda2}{hsa\+\_\+ext\+\_\+sampler\+\_\+descriptor\+\_\+t}} $\ast$sampler\+\_\+descriptor, \mbox{\hyperlink{group__ext-images_ga41c5c0a2cbd7c9020ef8ce2afc1c6101}{hsa\+\_\+ext\+\_\+sampler\+\_\+t}} $\ast$sampler)
+\begin{DoxyCompactList}\small\item\em Create an agent specific sampler handle for a given agent independent sampler descriptor and agent. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{group__status_gad755322e7ff95456520e8abdbe90d225}{hsa\+\_\+status\+\_\+t}} \mbox{\hyperlink{inc_2hsa__ext__image_8h_a64216765b98b62ee87deb50fd2899836}{HSA\+\_\+\+API}} \mbox{\hyperlink{group__ext-images_gaae9e9552761238b093b4197dadf3ef70}{hsa\+\_\+ext\+\_\+sampler\+\_\+destroy}} (\mbox{\hyperlink{group__agentinfo_ga9ce217ef08e7d5e89c8e83ce7b6ef22b}{hsa\+\_\+agent\+\_\+t}} agent, \mbox{\hyperlink{group__ext-images_ga41c5c0a2cbd7c9020ef8ce2afc1c6101}{hsa\+\_\+ext\+\_\+sampler\+\_\+t}} sampler)
+\begin{DoxyCompactList}\small\item\em Destroy a sampler handle previously created using \mbox{\hyperlink{group__ext-images_gaf3b5567510870cf0130efd69d5af3c07}{hsa\+\_\+ext\+\_\+sampler\+\_\+create}}. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+
+
+\doxysubsection{Macro Definition Documentation}
+\mbox{\Hypertarget{group__ext-images_ga985c4f63e8170261949cf1f304070175}\label{group__ext-images_ga985c4f63e8170261949cf1f304070175}} 
+\index{Images and Samplers@{Images and Samplers}!hsa\_ext\_images\_1@{hsa\_ext\_images\_1}}
+\index{hsa\_ext\_images\_1@{hsa\_ext\_images\_1}!Images and Samplers@{Images and Samplers}}
+\doxysubsubsection{\texorpdfstring{hsa\_ext\_images\_1}{hsa\_ext\_images\_1}}
+{\footnotesize\ttfamily \#define hsa\+\_\+ext\+\_\+images\+\_\+1}
+
+\mbox{\Hypertarget{group__ext-images_ga9e18e4efcfa4f7680002a3ea7cc68941}\label{group__ext-images_ga9e18e4efcfa4f7680002a3ea7cc68941}} 
+\index{Images and Samplers@{Images and Samplers}!hsa\_ext\_images\_1\_00@{hsa\_ext\_images\_1\_00}}
+\index{hsa\_ext\_images\_1\_00@{hsa\_ext\_images\_1\_00}!Images and Samplers@{Images and Samplers}}
+\doxysubsubsection{\texorpdfstring{hsa\_ext\_images\_1\_00}{hsa\_ext\_images\_1\_00}}
+{\footnotesize\ttfamily \#define hsa\+\_\+ext\+\_\+images\+\_\+1\+\_\+00}
+
+
+
+\doxysubsection{Typedef Documentation}
+\mbox{\Hypertarget{group__ext-images_ga0d11cab5cdf800545276a1c049a1766d}\label{group__ext-images_ga0d11cab5cdf800545276a1c049a1766d}} 
+\index{Images and Samplers@{Images and Samplers}!hsa\_ext\_image\_channel\_order32\_t@{hsa\_ext\_image\_channel\_order32\_t}}
+\index{hsa\_ext\_image\_channel\_order32\_t@{hsa\_ext\_image\_channel\_order32\_t}!Images and Samplers@{Images and Samplers}}
+\doxysubsubsection{\texorpdfstring{hsa\_ext\_image\_channel\_order32\_t}{hsa\_ext\_image\_channel\_order32\_t}}
+{\footnotesize\ttfamily typedef uint32\+\_\+t \mbox{\hyperlink{group__ext-images_ga0d11cab5cdf800545276a1c049a1766d}{hsa\+\_\+ext\+\_\+image\+\_\+channel\+\_\+order32\+\_\+t}}}
+
+
+
+A fixed-\/size type used to represent \mbox{\hyperlink{group__ext-images_gabaced4fb1f3b9fdaa978e143af5ff055}{hsa\+\_\+ext\+\_\+image\+\_\+channel\+\_\+order\+\_\+t}} constants. 
+
+\mbox{\Hypertarget{group__ext-images_ga001a082f110c66bc038f0aa3009f146a}\label{group__ext-images_ga001a082f110c66bc038f0aa3009f146a}} 
+\index{Images and Samplers@{Images and Samplers}!hsa\_ext\_image\_channel\_type32\_t@{hsa\_ext\_image\_channel\_type32\_t}}
+\index{hsa\_ext\_image\_channel\_type32\_t@{hsa\_ext\_image\_channel\_type32\_t}!Images and Samplers@{Images and Samplers}}
+\doxysubsubsection{\texorpdfstring{hsa\_ext\_image\_channel\_type32\_t}{hsa\_ext\_image\_channel\_type32\_t}}
+{\footnotesize\ttfamily typedef uint32\+\_\+t \mbox{\hyperlink{group__ext-images_ga001a082f110c66bc038f0aa3009f146a}{hsa\+\_\+ext\+\_\+image\+\_\+channel\+\_\+type32\+\_\+t}}}
+
+
+
+A fixed-\/size type used to represent \mbox{\hyperlink{group__ext-images_gaa143aa6feeaf24103b886c571ace568f}{hsa\+\_\+ext\+\_\+image\+\_\+channel\+\_\+type\+\_\+t}} constants. 
+
+\mbox{\Hypertarget{group__ext-images_gada32050df34dc3f6c0b9124706d8984b}\label{group__ext-images_gada32050df34dc3f6c0b9124706d8984b}} 
+\index{Images and Samplers@{Images and Samplers}!hsa\_ext\_image\_data\_info\_t@{hsa\_ext\_image\_data\_info\_t}}
+\index{hsa\_ext\_image\_data\_info\_t@{hsa\_ext\_image\_data\_info\_t}!Images and Samplers@{Images and Samplers}}
+\doxysubsubsection{\texorpdfstring{hsa\_ext\_image\_data\_info\_t}{hsa\_ext\_image\_data\_info\_t}}
+{\footnotesize\ttfamily typedef struct \mbox{\hyperlink{structhsa__ext__image__data__info__s}{hsa\+\_\+ext\+\_\+image\+\_\+data\+\_\+info\+\_\+s}} \mbox{\hyperlink{group__ext-images_gada32050df34dc3f6c0b9124706d8984b}{hsa\+\_\+ext\+\_\+image\+\_\+data\+\_\+info\+\_\+t}}}
+
+
+
+Agent specific image size and alignment requirements, populated by \mbox{\hyperlink{group__ext-images_gad8e2426d1829f772af6e603ff226f65a}{hsa\+\_\+ext\+\_\+image\+\_\+data\+\_\+get\+\_\+info}} and \mbox{\hyperlink{group__ext-images_ga2d3f7ebd674fe267e608b3f1c1a89965}{hsa\+\_\+ext\+\_\+image\+\_\+data\+\_\+get\+\_\+info\+\_\+with\+\_\+layout}}. 
+
+\mbox{\Hypertarget{group__ext-images_ga7ccf44400f9bbb459c8e52f54a3c5eb0}\label{group__ext-images_ga7ccf44400f9bbb459c8e52f54a3c5eb0}} 
+\index{Images and Samplers@{Images and Samplers}!hsa\_ext\_image\_descriptor\_t@{hsa\_ext\_image\_descriptor\_t}}
+\index{hsa\_ext\_image\_descriptor\_t@{hsa\_ext\_image\_descriptor\_t}!Images and Samplers@{Images and Samplers}}
+\doxysubsubsection{\texorpdfstring{hsa\_ext\_image\_descriptor\_t}{hsa\_ext\_image\_descriptor\_t}}
+{\footnotesize\ttfamily typedef struct \mbox{\hyperlink{structhsa__ext__image__descriptor__s}{hsa\+\_\+ext\+\_\+image\+\_\+descriptor\+\_\+s}} \mbox{\hyperlink{group__ext-images_ga7ccf44400f9bbb459c8e52f54a3c5eb0}{hsa\+\_\+ext\+\_\+image\+\_\+descriptor\+\_\+t}}}
+
+
+
+Implementation independent image descriptor. 
+
+\mbox{\Hypertarget{group__ext-images_ga37a5b98dd984766026174b4d6d486b29}\label{group__ext-images_ga37a5b98dd984766026174b4d6d486b29}} 
+\index{Images and Samplers@{Images and Samplers}!hsa\_ext\_image\_format\_t@{hsa\_ext\_image\_format\_t}}
+\index{hsa\_ext\_image\_format\_t@{hsa\_ext\_image\_format\_t}!Images and Samplers@{Images and Samplers}}
+\doxysubsubsection{\texorpdfstring{hsa\_ext\_image\_format\_t}{hsa\_ext\_image\_format\_t}}
+{\footnotesize\ttfamily typedef struct \mbox{\hyperlink{structhsa__ext__image__format__s}{hsa\+\_\+ext\+\_\+image\+\_\+format\+\_\+s}} \mbox{\hyperlink{group__ext-images_ga37a5b98dd984766026174b4d6d486b29}{hsa\+\_\+ext\+\_\+image\+\_\+format\+\_\+t}}}
+
+
+
+Image format. 
+
+\mbox{\Hypertarget{group__ext-images_gaa407e3fb8aa43d59f8e8560294d1c702}\label{group__ext-images_gaa407e3fb8aa43d59f8e8560294d1c702}} 
+\index{Images and Samplers@{Images and Samplers}!hsa\_ext\_image\_region\_t@{hsa\_ext\_image\_region\_t}}
+\index{hsa\_ext\_image\_region\_t@{hsa\_ext\_image\_region\_t}!Images and Samplers@{Images and Samplers}}
+\doxysubsubsection{\texorpdfstring{hsa\_ext\_image\_region\_t}{hsa\_ext\_image\_region\_t}}
+{\footnotesize\ttfamily typedef struct \mbox{\hyperlink{structhsa__ext__image__region__s}{hsa\+\_\+ext\+\_\+image\+\_\+region\+\_\+s}} \mbox{\hyperlink{group__ext-images_gaa407e3fb8aa43d59f8e8560294d1c702}{hsa\+\_\+ext\+\_\+image\+\_\+region\+\_\+t}}}
+
+
+
+Image region. 
+
+\mbox{\Hypertarget{group__ext-images_ga4e192988bd0b5abe2a57e248934e6dc6}\label{group__ext-images_ga4e192988bd0b5abe2a57e248934e6dc6}} 
+\index{Images and Samplers@{Images and Samplers}!hsa\_ext\_image\_t@{hsa\_ext\_image\_t}}
+\index{hsa\_ext\_image\_t@{hsa\_ext\_image\_t}!Images and Samplers@{Images and Samplers}}
+\doxysubsubsection{\texorpdfstring{hsa\_ext\_image\_t}{hsa\_ext\_image\_t}}
+{\footnotesize\ttfamily typedef struct \mbox{\hyperlink{structhsa__ext__image__s}{hsa\+\_\+ext\+\_\+image\+\_\+s}} \mbox{\hyperlink{group__ext-images_ga4e192988bd0b5abe2a57e248934e6dc6}{hsa\+\_\+ext\+\_\+image\+\_\+t}}}
+
+
+
+Image handle, populated by \mbox{\hyperlink{group__ext-images_ga985562c68508d4d8b0edcfd0729b6d49}{hsa\+\_\+ext\+\_\+image\+\_\+create}} or \mbox{\hyperlink{group__ext-images_ga7de92e8bde1496761b7dd00d1e03186e}{hsa\+\_\+ext\+\_\+image\+\_\+create\+\_\+with\+\_\+layout}}. Image handles are only unique within an agent, not across agents. 
+
+\mbox{\Hypertarget{group__ext-images_ga4890187e1de667ab7f542c628c82481b}\label{group__ext-images_ga4890187e1de667ab7f542c628c82481b}} 
+\index{Images and Samplers@{Images and Samplers}!hsa\_ext\_images\_1\_00\_pfn\_t@{hsa\_ext\_images\_1\_00\_pfn\_t}}
+\index{hsa\_ext\_images\_1\_00\_pfn\_t@{hsa\_ext\_images\_1\_00\_pfn\_t}!Images and Samplers@{Images and Samplers}}
+\doxysubsubsection{\texorpdfstring{hsa\_ext\_images\_1\_00\_pfn\_t}{hsa\_ext\_images\_1\_00\_pfn\_t}}
+{\footnotesize\ttfamily typedef struct \mbox{\hyperlink{structhsa__ext__images__1__00__pfn__s}{hsa\+\_\+ext\+\_\+images\+\_\+1\+\_\+00\+\_\+pfn\+\_\+s}} \mbox{\hyperlink{group__ext-images_ga4890187e1de667ab7f542c628c82481b}{hsa\+\_\+ext\+\_\+images\+\_\+1\+\_\+00\+\_\+pfn\+\_\+t}}}
+
+
+
+The function pointer table for the images v1.\+00 extension. Can be returned by \mbox{\hyperlink{group__agentinfo_gaf5f1a0e5884522f692c13525205978bb}{hsa\+\_\+system\+\_\+get\+\_\+extension\+\_\+table}} or \mbox{\hyperlink{group__agentinfo_ga728cb3122cea1f40ad9dbc2822d2e431}{hsa\+\_\+system\+\_\+get\+\_\+major\+\_\+extension\+\_\+table}}. 
+
+\mbox{\Hypertarget{group__ext-images_ga9ea749701480741f7d3858af9984ffbb}\label{group__ext-images_ga9ea749701480741f7d3858af9984ffbb}} 
+\index{Images and Samplers@{Images and Samplers}!hsa\_ext\_images\_1\_pfn\_t@{hsa\_ext\_images\_1\_pfn\_t}}
+\index{hsa\_ext\_images\_1\_pfn\_t@{hsa\_ext\_images\_1\_pfn\_t}!Images and Samplers@{Images and Samplers}}
+\doxysubsubsection{\texorpdfstring{hsa\_ext\_images\_1\_pfn\_t}{hsa\_ext\_images\_1\_pfn\_t}}
+{\footnotesize\ttfamily typedef struct \mbox{\hyperlink{structhsa__ext__images__1__pfn__s}{hsa\+\_\+ext\+\_\+images\+\_\+1\+\_\+pfn\+\_\+s}} \mbox{\hyperlink{group__ext-images_ga9ea749701480741f7d3858af9984ffbb}{hsa\+\_\+ext\+\_\+images\+\_\+1\+\_\+pfn\+\_\+t}}}
+
+
+
+The function pointer table for the images v1 extension. Can be returned by \mbox{\hyperlink{group__agentinfo_gaf5f1a0e5884522f692c13525205978bb}{hsa\+\_\+system\+\_\+get\+\_\+extension\+\_\+table}} or \mbox{\hyperlink{group__agentinfo_ga728cb3122cea1f40ad9dbc2822d2e431}{hsa\+\_\+system\+\_\+get\+\_\+major\+\_\+extension\+\_\+table}}. 
+
+\mbox{\Hypertarget{group__ext-images_ga2772ccb88d7ec77ef3b770d71d0750b3}\label{group__ext-images_ga2772ccb88d7ec77ef3b770d71d0750b3}} 
+\index{Images and Samplers@{Images and Samplers}!hsa\_ext\_sampler\_addressing\_mode32\_t@{hsa\_ext\_sampler\_addressing\_mode32\_t}}
+\index{hsa\_ext\_sampler\_addressing\_mode32\_t@{hsa\_ext\_sampler\_addressing\_mode32\_t}!Images and Samplers@{Images and Samplers}}
+\doxysubsubsection{\texorpdfstring{hsa\_ext\_sampler\_addressing\_mode32\_t}{hsa\_ext\_sampler\_addressing\_mode32\_t}}
+{\footnotesize\ttfamily typedef uint32\+\_\+t \mbox{\hyperlink{group__ext-images_ga2772ccb88d7ec77ef3b770d71d0750b3}{hsa\+\_\+ext\+\_\+sampler\+\_\+addressing\+\_\+mode32\+\_\+t}}}
+
+
+
+A fixed-\/size type used to represent \mbox{\hyperlink{group__ext-images_ga60a9fcdc1a1f338bd7e54445359fdf0f}{hsa\+\_\+ext\+\_\+sampler\+\_\+addressing\+\_\+mode\+\_\+t}} constants. 
+
+\mbox{\Hypertarget{group__ext-images_ga2bc1c9a8ff6599631d78775ef1b08cd6}\label{group__ext-images_ga2bc1c9a8ff6599631d78775ef1b08cd6}} 
+\index{Images and Samplers@{Images and Samplers}!hsa\_ext\_sampler\_coordinate\_mode32\_t@{hsa\_ext\_sampler\_coordinate\_mode32\_t}}
+\index{hsa\_ext\_sampler\_coordinate\_mode32\_t@{hsa\_ext\_sampler\_coordinate\_mode32\_t}!Images and Samplers@{Images and Samplers}}
+\doxysubsubsection{\texorpdfstring{hsa\_ext\_sampler\_coordinate\_mode32\_t}{hsa\_ext\_sampler\_coordinate\_mode32\_t}}
+{\footnotesize\ttfamily typedef uint32\+\_\+t \mbox{\hyperlink{group__ext-images_ga2bc1c9a8ff6599631d78775ef1b08cd6}{hsa\+\_\+ext\+\_\+sampler\+\_\+coordinate\+\_\+mode32\+\_\+t}}}
+
+
+
+A fixed-\/size type used to represent \mbox{\hyperlink{group__ext-images_gad7644f3eccb4f8ce5693313b88440d87}{hsa\+\_\+ext\+\_\+sampler\+\_\+coordinate\+\_\+mode\+\_\+t}} constants. 
+
+\mbox{\Hypertarget{group__ext-images_gabed3b941e5a41287f2240f366797bda2}\label{group__ext-images_gabed3b941e5a41287f2240f366797bda2}} 
+\index{Images and Samplers@{Images and Samplers}!hsa\_ext\_sampler\_descriptor\_t@{hsa\_ext\_sampler\_descriptor\_t}}
+\index{hsa\_ext\_sampler\_descriptor\_t@{hsa\_ext\_sampler\_descriptor\_t}!Images and Samplers@{Images and Samplers}}
+\doxysubsubsection{\texorpdfstring{hsa\_ext\_sampler\_descriptor\_t}{hsa\_ext\_sampler\_descriptor\_t}}
+{\footnotesize\ttfamily typedef struct \mbox{\hyperlink{structhsa__ext__sampler__descriptor__s}{hsa\+\_\+ext\+\_\+sampler\+\_\+descriptor\+\_\+s}} \mbox{\hyperlink{group__ext-images_gabed3b941e5a41287f2240f366797bda2}{hsa\+\_\+ext\+\_\+sampler\+\_\+descriptor\+\_\+t}}}
+
+
+
+Implementation independent sampler descriptor. 
+
+\mbox{\Hypertarget{group__ext-images_ga789cca3686944d15916b4e6241108146}\label{group__ext-images_ga789cca3686944d15916b4e6241108146}} 
+\index{Images and Samplers@{Images and Samplers}!hsa\_ext\_sampler\_filter\_mode32\_t@{hsa\_ext\_sampler\_filter\_mode32\_t}}
+\index{hsa\_ext\_sampler\_filter\_mode32\_t@{hsa\_ext\_sampler\_filter\_mode32\_t}!Images and Samplers@{Images and Samplers}}
+\doxysubsubsection{\texorpdfstring{hsa\_ext\_sampler\_filter\_mode32\_t}{hsa\_ext\_sampler\_filter\_mode32\_t}}
+{\footnotesize\ttfamily typedef uint32\+\_\+t \mbox{\hyperlink{group__ext-images_ga789cca3686944d15916b4e6241108146}{hsa\+\_\+ext\+\_\+sampler\+\_\+filter\+\_\+mode32\+\_\+t}}}
+
+
+
+A fixed-\/size type used to represent \mbox{\hyperlink{group__ext-images_ga0f0c16fdeea5c2a56130ecefe7cefd02}{hsa\+\_\+ext\+\_\+sampler\+\_\+filter\+\_\+mode\+\_\+t}} constants. 
+
+\mbox{\Hypertarget{group__ext-images_ga41c5c0a2cbd7c9020ef8ce2afc1c6101}\label{group__ext-images_ga41c5c0a2cbd7c9020ef8ce2afc1c6101}} 
+\index{Images and Samplers@{Images and Samplers}!hsa\_ext\_sampler\_t@{hsa\_ext\_sampler\_t}}
+\index{hsa\_ext\_sampler\_t@{hsa\_ext\_sampler\_t}!Images and Samplers@{Images and Samplers}}
+\doxysubsubsection{\texorpdfstring{hsa\_ext\_sampler\_t}{hsa\_ext\_sampler\_t}}
+{\footnotesize\ttfamily typedef struct \mbox{\hyperlink{structhsa__ext__sampler__s}{hsa\+\_\+ext\+\_\+sampler\+\_\+s}} \mbox{\hyperlink{group__ext-images_ga41c5c0a2cbd7c9020ef8ce2afc1c6101}{hsa\+\_\+ext\+\_\+sampler\+\_\+t}}}
+
+
+
+Sampler handle. Samplers are populated by \mbox{\hyperlink{group__ext-images_gaf3b5567510870cf0130efd69d5af3c07}{hsa\+\_\+ext\+\_\+sampler\+\_\+create}}. Sampler handles are only unique within an agent, not across agents. 
+
+
+
+\doxysubsection{Enumeration Type Documentation}
+\mbox{\Hypertarget{group__ext-images_gae6cdb622357fec6e889e47579a078524}\label{group__ext-images_gae6cdb622357fec6e889e47579a078524}} 
+\doxysubsubsection{\texorpdfstring{anonymous enum}{anonymous enum}}
+{\footnotesize\ttfamily anonymous enum}
+
+
+
+Enumeration constants added to \mbox{\hyperlink{group__status_gad755322e7ff95456520e8abdbe90d225}{hsa\+\_\+status\+\_\+t}} by this extension. 
+
+\begin{DoxyRemark}{Remarks}
+Additions to hsa\+\_\+status\+\_\+t 
+\end{DoxyRemark}
+\begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{HSA\_EXT\_STATUS\_ERROR\_IMAGE\_FORMAT\_UNSUPPORTED@{HSA\_EXT\_STATUS\_ERROR\_IMAGE\_FORMAT\_UNSUPPORTED}!Images and Samplers@{Images and Samplers}}\index{Images and Samplers@{Images and Samplers}!HSA\_EXT\_STATUS\_ERROR\_IMAGE\_FORMAT\_UNSUPPORTED@{HSA\_EXT\_STATUS\_ERROR\_IMAGE\_FORMAT\_UNSUPPORTED}}}\mbox{\Hypertarget{group__ext-images_ggae6cdb622357fec6e889e47579a078524a42108181943a2d94749d95dc7942b7d0}\label{group__ext-images_ggae6cdb622357fec6e889e47579a078524a42108181943a2d94749d95dc7942b7d0}} 
+HSA\+\_\+\+EXT\+\_\+\+STATUS\+\_\+\+ERROR\+\_\+\+IMAGE\+\_\+\+FORMAT\+\_\+\+UNSUPPORTED&Image format is not supported. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{HSA\_EXT\_STATUS\_ERROR\_IMAGE\_SIZE\_UNSUPPORTED@{HSA\_EXT\_STATUS\_ERROR\_IMAGE\_SIZE\_UNSUPPORTED}!Images and Samplers@{Images and Samplers}}\index{Images and Samplers@{Images and Samplers}!HSA\_EXT\_STATUS\_ERROR\_IMAGE\_SIZE\_UNSUPPORTED@{HSA\_EXT\_STATUS\_ERROR\_IMAGE\_SIZE\_UNSUPPORTED}}}\mbox{\Hypertarget{group__ext-images_ggae6cdb622357fec6e889e47579a078524a3ff898da367040b1f382c14c9f0a1bab}\label{group__ext-images_ggae6cdb622357fec6e889e47579a078524a3ff898da367040b1f382c14c9f0a1bab}} 
+HSA\+\_\+\+EXT\+\_\+\+STATUS\+\_\+\+ERROR\+\_\+\+IMAGE\+\_\+\+SIZE\+\_\+\+UNSUPPORTED&Image size is not supported. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{HSA\_EXT\_STATUS\_ERROR\_IMAGE\_PITCH\_UNSUPPORTED@{HSA\_EXT\_STATUS\_ERROR\_IMAGE\_PITCH\_UNSUPPORTED}!Images and Samplers@{Images and Samplers}}\index{Images and Samplers@{Images and Samplers}!HSA\_EXT\_STATUS\_ERROR\_IMAGE\_PITCH\_UNSUPPORTED@{HSA\_EXT\_STATUS\_ERROR\_IMAGE\_PITCH\_UNSUPPORTED}}}\mbox{\Hypertarget{group__ext-images_ggae6cdb622357fec6e889e47579a078524adf82d2411103b76656e8d99f0b894440}\label{group__ext-images_ggae6cdb622357fec6e889e47579a078524adf82d2411103b76656e8d99f0b894440}} 
+HSA\+\_\+\+EXT\+\_\+\+STATUS\+\_\+\+ERROR\+\_\+\+IMAGE\+\_\+\+PITCH\+\_\+\+UNSUPPORTED&Image pitch is not supported or invalid. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{HSA\_EXT\_STATUS\_ERROR\_SAMPLER\_DESCRIPTOR\_UNSUPPORTED@{HSA\_EXT\_STATUS\_ERROR\_SAMPLER\_DESCRIPTOR\_UNSUPPORTED}!Images and Samplers@{Images and Samplers}}\index{Images and Samplers@{Images and Samplers}!HSA\_EXT\_STATUS\_ERROR\_SAMPLER\_DESCRIPTOR\_UNSUPPORTED@{HSA\_EXT\_STATUS\_ERROR\_SAMPLER\_DESCRIPTOR\_UNSUPPORTED}}}\mbox{\Hypertarget{group__ext-images_ggae6cdb622357fec6e889e47579a078524a5f5858e98041ec936780edcbebd38f79}\label{group__ext-images_ggae6cdb622357fec6e889e47579a078524a5f5858e98041ec936780edcbebd38f79}} 
+HSA\+\_\+\+EXT\+\_\+\+STATUS\+\_\+\+ERROR\+\_\+\+SAMPLER\+\_\+\+DESCRIPTOR\+\_\+\+UNSUPPORTED&Sampler descriptor is not supported or invalid. \\
+\hline
+
+\end{DoxyEnumFields}
+\mbox{\Hypertarget{group__ext-images_ga6b1af8ba72fb238659a469ca5d2ef52b}\label{group__ext-images_ga6b1af8ba72fb238659a469ca5d2ef52b}} 
+\doxysubsubsection{\texorpdfstring{anonymous enum}{anonymous enum}}
+{\footnotesize\ttfamily anonymous enum}
+
+
+
+Enumeration constants added to \mbox{\hyperlink{group__agentinfo_ga39d0684207d95717d96319573b3e4a42}{hsa\+\_\+agent\+\_\+info\+\_\+t}} by this extension. 
+
+\begin{DoxyRemark}{Remarks}
+Additions to hsa\+\_\+agent\+\_\+info\+\_\+t 
+\end{DoxyRemark}
+\begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{HSA\_EXT\_AGENT\_INFO\_IMAGE\_1D\_MAX\_ELEMENTS@{HSA\_EXT\_AGENT\_INFO\_IMAGE\_1D\_MAX\_ELEMENTS}!Images and Samplers@{Images and Samplers}}\index{Images and Samplers@{Images and Samplers}!HSA\_EXT\_AGENT\_INFO\_IMAGE\_1D\_MAX\_ELEMENTS@{HSA\_EXT\_AGENT\_INFO\_IMAGE\_1D\_MAX\_ELEMENTS}}}\mbox{\Hypertarget{group__ext-images_gga6b1af8ba72fb238659a469ca5d2ef52baec34e7fe9f6f42ecbc1e72b48956fe5e}\label{group__ext-images_gga6b1af8ba72fb238659a469ca5d2ef52baec34e7fe9f6f42ecbc1e72b48956fe5e}} 
+HSA\+\_\+\+EXT\+\_\+\+AGENT\+\_\+\+INFO\+\_\+\+IMAGE\+\_\+1\+D\+\_\+\+MAX\+\_\+\+ELEMENTS&Maximum number of elements in 1D images. Must be at least 16384. The type of this attribute is size\+\_\+t. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{HSA\_EXT\_AGENT\_INFO\_IMAGE\_1DA\_MAX\_ELEMENTS@{HSA\_EXT\_AGENT\_INFO\_IMAGE\_1DA\_MAX\_ELEMENTS}!Images and Samplers@{Images and Samplers}}\index{Images and Samplers@{Images and Samplers}!HSA\_EXT\_AGENT\_INFO\_IMAGE\_1DA\_MAX\_ELEMENTS@{HSA\_EXT\_AGENT\_INFO\_IMAGE\_1DA\_MAX\_ELEMENTS}}}\mbox{\Hypertarget{group__ext-images_gga6b1af8ba72fb238659a469ca5d2ef52bab597cd205855caea8a58fbe9256a001f}\label{group__ext-images_gga6b1af8ba72fb238659a469ca5d2ef52bab597cd205855caea8a58fbe9256a001f}} 
+HSA\+\_\+\+EXT\+\_\+\+AGENT\+\_\+\+INFO\+\_\+\+IMAGE\+\_\+1\+DA\+\_\+\+MAX\+\_\+\+ELEMENTS&Maximum number of elements in 1DA images. Must be at least 16384. The type of this attribute is size\+\_\+t. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{HSA\_EXT\_AGENT\_INFO\_IMAGE\_1DB\_MAX\_ELEMENTS@{HSA\_EXT\_AGENT\_INFO\_IMAGE\_1DB\_MAX\_ELEMENTS}!Images and Samplers@{Images and Samplers}}\index{Images and Samplers@{Images and Samplers}!HSA\_EXT\_AGENT\_INFO\_IMAGE\_1DB\_MAX\_ELEMENTS@{HSA\_EXT\_AGENT\_INFO\_IMAGE\_1DB\_MAX\_ELEMENTS}}}\mbox{\Hypertarget{group__ext-images_gga6b1af8ba72fb238659a469ca5d2ef52ba145fa8a0ef85752e1e21966f88ffd85f}\label{group__ext-images_gga6b1af8ba72fb238659a469ca5d2ef52ba145fa8a0ef85752e1e21966f88ffd85f}} 
+HSA\+\_\+\+EXT\+\_\+\+AGENT\+\_\+\+INFO\+\_\+\+IMAGE\+\_\+1\+DB\+\_\+\+MAX\+\_\+\+ELEMENTS&Maximum number of elements in 1DB images. Must be at least 65536. The type of this attribute is size\+\_\+t. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{HSA\_EXT\_AGENT\_INFO\_IMAGE\_2D\_MAX\_ELEMENTS@{HSA\_EXT\_AGENT\_INFO\_IMAGE\_2D\_MAX\_ELEMENTS}!Images and Samplers@{Images and Samplers}}\index{Images and Samplers@{Images and Samplers}!HSA\_EXT\_AGENT\_INFO\_IMAGE\_2D\_MAX\_ELEMENTS@{HSA\_EXT\_AGENT\_INFO\_IMAGE\_2D\_MAX\_ELEMENTS}}}\mbox{\Hypertarget{group__ext-images_gga6b1af8ba72fb238659a469ca5d2ef52bac36ca2ff9c2b82444410acc2c05750c7}\label{group__ext-images_gga6b1af8ba72fb238659a469ca5d2ef52bac36ca2ff9c2b82444410acc2c05750c7}} 
+HSA\+\_\+\+EXT\+\_\+\+AGENT\+\_\+\+INFO\+\_\+\+IMAGE\+\_\+2\+D\+\_\+\+MAX\+\_\+\+ELEMENTS&Maximum dimensions (width, height) of 2D images, in image elements. The X and Y maximums must be at least 16384. The type of this attribute is size\+\_\+t\mbox{[}2\mbox{]}. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{HSA\_EXT\_AGENT\_INFO\_IMAGE\_2DA\_MAX\_ELEMENTS@{HSA\_EXT\_AGENT\_INFO\_IMAGE\_2DA\_MAX\_ELEMENTS}!Images and Samplers@{Images and Samplers}}\index{Images and Samplers@{Images and Samplers}!HSA\_EXT\_AGENT\_INFO\_IMAGE\_2DA\_MAX\_ELEMENTS@{HSA\_EXT\_AGENT\_INFO\_IMAGE\_2DA\_MAX\_ELEMENTS}}}\mbox{\Hypertarget{group__ext-images_gga6b1af8ba72fb238659a469ca5d2ef52ba9ee2d789843a03ae02bbd8cf44465ec6}\label{group__ext-images_gga6b1af8ba72fb238659a469ca5d2ef52ba9ee2d789843a03ae02bbd8cf44465ec6}} 
+HSA\+\_\+\+EXT\+\_\+\+AGENT\+\_\+\+INFO\+\_\+\+IMAGE\+\_\+2\+DA\+\_\+\+MAX\+\_\+\+ELEMENTS&Maximum dimensions (width, height) of 2DA images, in image elements. The X and Y maximums must be at least 16384. The type of this attribute is size\+\_\+t\mbox{[}2\mbox{]}. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{HSA\_EXT\_AGENT\_INFO\_IMAGE\_2DDEPTH\_MAX\_ELEMENTS@{HSA\_EXT\_AGENT\_INFO\_IMAGE\_2DDEPTH\_MAX\_ELEMENTS}!Images and Samplers@{Images and Samplers}}\index{Images and Samplers@{Images and Samplers}!HSA\_EXT\_AGENT\_INFO\_IMAGE\_2DDEPTH\_MAX\_ELEMENTS@{HSA\_EXT\_AGENT\_INFO\_IMAGE\_2DDEPTH\_MAX\_ELEMENTS}}}\mbox{\Hypertarget{group__ext-images_gga6b1af8ba72fb238659a469ca5d2ef52ba15262e3b83a1ff50af219c186b70ccde}\label{group__ext-images_gga6b1af8ba72fb238659a469ca5d2ef52ba15262e3b83a1ff50af219c186b70ccde}} 
+HSA\+\_\+\+EXT\+\_\+\+AGENT\+\_\+\+INFO\+\_\+\+IMAGE\+\_\+2\+DDEPTH\+\_\+\+MAX\+\_\+\+ELEMENTS&Maximum dimensions (width, height) of 2DDEPTH images, in image elements. The X and Y maximums must be at least 16384. The type of this attribute is size\+\_\+t\mbox{[}2\mbox{]}. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{HSA\_EXT\_AGENT\_INFO\_IMAGE\_2DADEPTH\_MAX\_ELEMENTS@{HSA\_EXT\_AGENT\_INFO\_IMAGE\_2DADEPTH\_MAX\_ELEMENTS}!Images and Samplers@{Images and Samplers}}\index{Images and Samplers@{Images and Samplers}!HSA\_EXT\_AGENT\_INFO\_IMAGE\_2DADEPTH\_MAX\_ELEMENTS@{HSA\_EXT\_AGENT\_INFO\_IMAGE\_2DADEPTH\_MAX\_ELEMENTS}}}\mbox{\Hypertarget{group__ext-images_gga6b1af8ba72fb238659a469ca5d2ef52babeb08bb9caae027b3d11d700aff4b306}\label{group__ext-images_gga6b1af8ba72fb238659a469ca5d2ef52babeb08bb9caae027b3d11d700aff4b306}} 
+HSA\+\_\+\+EXT\+\_\+\+AGENT\+\_\+\+INFO\+\_\+\+IMAGE\+\_\+2\+DADEPTH\+\_\+\+MAX\+\_\+\+ELEMENTS&Maximum dimensions (width, height) of 2DADEPTH images, in image elements. The X and Y maximums must be at least 16384. The type of this attribute is size\+\_\+t\mbox{[}2\mbox{]}. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{HSA\_EXT\_AGENT\_INFO\_IMAGE\_3D\_MAX\_ELEMENTS@{HSA\_EXT\_AGENT\_INFO\_IMAGE\_3D\_MAX\_ELEMENTS}!Images and Samplers@{Images and Samplers}}\index{Images and Samplers@{Images and Samplers}!HSA\_EXT\_AGENT\_INFO\_IMAGE\_3D\_MAX\_ELEMENTS@{HSA\_EXT\_AGENT\_INFO\_IMAGE\_3D\_MAX\_ELEMENTS}}}\mbox{\Hypertarget{group__ext-images_gga6b1af8ba72fb238659a469ca5d2ef52ba433a88189e85f3050829d04dd07b0667}\label{group__ext-images_gga6b1af8ba72fb238659a469ca5d2ef52ba433a88189e85f3050829d04dd07b0667}} 
+HSA\+\_\+\+EXT\+\_\+\+AGENT\+\_\+\+INFO\+\_\+\+IMAGE\+\_\+3\+D\+\_\+\+MAX\+\_\+\+ELEMENTS&Maximum dimensions (width, height, depth) of 3D images, in image elements. The maximum along any dimension must be at least 2048. The type of this attribute is size\+\_\+t\mbox{[}3\mbox{]}. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{HSA\_EXT\_AGENT\_INFO\_IMAGE\_ARRAY\_MAX\_LAYERS@{HSA\_EXT\_AGENT\_INFO\_IMAGE\_ARRAY\_MAX\_LAYERS}!Images and Samplers@{Images and Samplers}}\index{Images and Samplers@{Images and Samplers}!HSA\_EXT\_AGENT\_INFO\_IMAGE\_ARRAY\_MAX\_LAYERS@{HSA\_EXT\_AGENT\_INFO\_IMAGE\_ARRAY\_MAX\_LAYERS}}}\mbox{\Hypertarget{group__ext-images_gga6b1af8ba72fb238659a469ca5d2ef52bab389f4eb651f13c05a01d91533b0f443}\label{group__ext-images_gga6b1af8ba72fb238659a469ca5d2ef52bab389f4eb651f13c05a01d91533b0f443}} 
+HSA\+\_\+\+EXT\+\_\+\+AGENT\+\_\+\+INFO\+\_\+\+IMAGE\+\_\+\+ARRAY\+\_\+\+MAX\+\_\+\+LAYERS&Maximum number of image layers in a image array. Must be at least 2048. The type of this attribute is size\+\_\+t. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{HSA\_EXT\_AGENT\_INFO\_MAX\_IMAGE\_RD\_HANDLES@{HSA\_EXT\_AGENT\_INFO\_MAX\_IMAGE\_RD\_HANDLES}!Images and Samplers@{Images and Samplers}}\index{Images and Samplers@{Images and Samplers}!HSA\_EXT\_AGENT\_INFO\_MAX\_IMAGE\_RD\_HANDLES@{HSA\_EXT\_AGENT\_INFO\_MAX\_IMAGE\_RD\_HANDLES}}}\mbox{\Hypertarget{group__ext-images_gga6b1af8ba72fb238659a469ca5d2ef52bae7f9af4696df6fc8f82fb80fb0c1f70e}\label{group__ext-images_gga6b1af8ba72fb238659a469ca5d2ef52bae7f9af4696df6fc8f82fb80fb0c1f70e}} 
+HSA\+\_\+\+EXT\+\_\+\+AGENT\+\_\+\+INFO\+\_\+\+MAX\+\_\+\+IMAGE\+\_\+\+RD\+\_\+\+HANDLES&Maximum number of read-\/only image handles that can be created for an agent at any one time. Must be at least 128. The type of this attribute is size\+\_\+t. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{HSA\_EXT\_AGENT\_INFO\_MAX\_IMAGE\_RORW\_HANDLES@{HSA\_EXT\_AGENT\_INFO\_MAX\_IMAGE\_RORW\_HANDLES}!Images and Samplers@{Images and Samplers}}\index{Images and Samplers@{Images and Samplers}!HSA\_EXT\_AGENT\_INFO\_MAX\_IMAGE\_RORW\_HANDLES@{HSA\_EXT\_AGENT\_INFO\_MAX\_IMAGE\_RORW\_HANDLES}}}\mbox{\Hypertarget{group__ext-images_gga6b1af8ba72fb238659a469ca5d2ef52baa86fdcbb6e4a248d2b7a6d4f3146a552}\label{group__ext-images_gga6b1af8ba72fb238659a469ca5d2ef52baa86fdcbb6e4a248d2b7a6d4f3146a552}} 
+HSA\+\_\+\+EXT\+\_\+\+AGENT\+\_\+\+INFO\+\_\+\+MAX\+\_\+\+IMAGE\+\_\+\+RORW\+\_\+\+HANDLES&Maximum number of write-\/only and read-\/write image handles (combined) that can be created for an agent at any one time. Must be at least 64. The type of this attribute is size\+\_\+t. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{HSA\_EXT\_AGENT\_INFO\_MAX\_SAMPLER\_HANDLERS@{HSA\_EXT\_AGENT\_INFO\_MAX\_SAMPLER\_HANDLERS}!Images and Samplers@{Images and Samplers}}\index{Images and Samplers@{Images and Samplers}!HSA\_EXT\_AGENT\_INFO\_MAX\_SAMPLER\_HANDLERS@{HSA\_EXT\_AGENT\_INFO\_MAX\_SAMPLER\_HANDLERS}}}\mbox{\Hypertarget{group__ext-images_gga6b1af8ba72fb238659a469ca5d2ef52ba0e620b75fff69194e05f87f17ff82994}\label{group__ext-images_gga6b1af8ba72fb238659a469ca5d2ef52ba0e620b75fff69194e05f87f17ff82994}} 
+HSA\+\_\+\+EXT\+\_\+\+AGENT\+\_\+\+INFO\+\_\+\+MAX\+\_\+\+SAMPLER\+\_\+\+HANDLERS&Maximum number of sampler handlers that can be created for an agent at any one time. Must be at least 16. The type of this attribute is size\+\_\+t. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{HSA\_EXT\_AGENT\_INFO\_IMAGE\_LINEAR\_ROW\_PITCH\_ALIGNMENT@{HSA\_EXT\_AGENT\_INFO\_IMAGE\_LINEAR\_ROW\_PITCH\_ALIGNMENT}!Images and Samplers@{Images and Samplers}}\index{Images and Samplers@{Images and Samplers}!HSA\_EXT\_AGENT\_INFO\_IMAGE\_LINEAR\_ROW\_PITCH\_ALIGNMENT@{HSA\_EXT\_AGENT\_INFO\_IMAGE\_LINEAR\_ROW\_PITCH\_ALIGNMENT}}}\mbox{\Hypertarget{group__ext-images_gga6b1af8ba72fb238659a469ca5d2ef52baff1dadde6022a69baa28b63d0e638af5}\label{group__ext-images_gga6b1af8ba72fb238659a469ca5d2ef52baff1dadde6022a69baa28b63d0e638af5}} 
+HSA\+\_\+\+EXT\+\_\+\+AGENT\+\_\+\+INFO\+\_\+\+IMAGE\+\_\+\+LINEAR\+\_\+\+ROW\+\_\+\+PITCH\+\_\+\+ALIGNMENT&Image pitch alignment. The agent only supports linear image data layouts with a row pitch that is a multiple of this value. Must be a power of 2. The type of this attribute is size\+\_\+t. \\
+\hline
+
+\end{DoxyEnumFields}
+\mbox{\Hypertarget{group__ext-images_gab3d3401883f796b3f2d8dfad14f90568}\label{group__ext-images_gab3d3401883f796b3f2d8dfad14f90568}} 
+\index{Images and Samplers@{Images and Samplers}!hsa\_ext\_image\_capability\_t@{hsa\_ext\_image\_capability\_t}}
+\index{hsa\_ext\_image\_capability\_t@{hsa\_ext\_image\_capability\_t}!Images and Samplers@{Images and Samplers}}
+\doxysubsubsection{\texorpdfstring{hsa\_ext\_image\_capability\_t}{hsa\_ext\_image\_capability\_t}}
+{\footnotesize\ttfamily enum \mbox{\hyperlink{group__ext-images_gab3d3401883f796b3f2d8dfad14f90568}{hsa\+\_\+ext\+\_\+image\+\_\+capability\+\_\+t}}}
+
+
+
+Image capability. 
+
+\begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{HSA\_EXT\_IMAGE\_CAPABILITY\_NOT\_SUPPORTED@{HSA\_EXT\_IMAGE\_CAPABILITY\_NOT\_SUPPORTED}!Images and Samplers@{Images and Samplers}}\index{Images and Samplers@{Images and Samplers}!HSA\_EXT\_IMAGE\_CAPABILITY\_NOT\_SUPPORTED@{HSA\_EXT\_IMAGE\_CAPABILITY\_NOT\_SUPPORTED}}}\mbox{\Hypertarget{group__ext-images_ggab3d3401883f796b3f2d8dfad14f90568acd8ea93bf52221ca2503b74dc1bf967a}\label{group__ext-images_ggab3d3401883f796b3f2d8dfad14f90568acd8ea93bf52221ca2503b74dc1bf967a}} 
+HSA\+\_\+\+EXT\+\_\+\+IMAGE\+\_\+\+CAPABILITY\+\_\+\+NOT\+\_\+\+SUPPORTED&Images of this geometry, format, and layout are not supported by the agent. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{HSA\_EXT\_IMAGE\_CAPABILITY\_READ\_ONLY@{HSA\_EXT\_IMAGE\_CAPABILITY\_READ\_ONLY}!Images and Samplers@{Images and Samplers}}\index{Images and Samplers@{Images and Samplers}!HSA\_EXT\_IMAGE\_CAPABILITY\_READ\_ONLY@{HSA\_EXT\_IMAGE\_CAPABILITY\_READ\_ONLY}}}\mbox{\Hypertarget{group__ext-images_ggab3d3401883f796b3f2d8dfad14f90568add60b4b84820b05474e9431f85954e93}\label{group__ext-images_ggab3d3401883f796b3f2d8dfad14f90568add60b4b84820b05474e9431f85954e93}} 
+HSA\+\_\+\+EXT\+\_\+\+IMAGE\+\_\+\+CAPABILITY\+\_\+\+READ\+\_\+\+ONLY&Read-\/only images of this geometry, format, and layout are supported by the agent. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{HSA\_EXT\_IMAGE\_CAPABILITY\_WRITE\_ONLY@{HSA\_EXT\_IMAGE\_CAPABILITY\_WRITE\_ONLY}!Images and Samplers@{Images and Samplers}}\index{Images and Samplers@{Images and Samplers}!HSA\_EXT\_IMAGE\_CAPABILITY\_WRITE\_ONLY@{HSA\_EXT\_IMAGE\_CAPABILITY\_WRITE\_ONLY}}}\mbox{\Hypertarget{group__ext-images_ggab3d3401883f796b3f2d8dfad14f90568a01a4d914c62d2f7505c002e3d0510d22}\label{group__ext-images_ggab3d3401883f796b3f2d8dfad14f90568a01a4d914c62d2f7505c002e3d0510d22}} 
+HSA\+\_\+\+EXT\+\_\+\+IMAGE\+\_\+\+CAPABILITY\+\_\+\+WRITE\+\_\+\+ONLY&Write-\/only images of this geometry, format, and layout are supported by the agent. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{HSA\_EXT\_IMAGE\_CAPABILITY\_READ\_WRITE@{HSA\_EXT\_IMAGE\_CAPABILITY\_READ\_WRITE}!Images and Samplers@{Images and Samplers}}\index{Images and Samplers@{Images and Samplers}!HSA\_EXT\_IMAGE\_CAPABILITY\_READ\_WRITE@{HSA\_EXT\_IMAGE\_CAPABILITY\_READ\_WRITE}}}\mbox{\Hypertarget{group__ext-images_ggab3d3401883f796b3f2d8dfad14f90568a46df4b1dde4bd8fe803f49bfd4cec867}\label{group__ext-images_ggab3d3401883f796b3f2d8dfad14f90568a46df4b1dde4bd8fe803f49bfd4cec867}} 
+HSA\+\_\+\+EXT\+\_\+\+IMAGE\+\_\+\+CAPABILITY\+\_\+\+READ\+\_\+\+WRITE&Read-\/write images of this geometry, format, and layout are supported by the agent. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{HSA\_EXT\_IMAGE\_CAPABILITY\_READ\_MODIFY\_WRITE@{HSA\_EXT\_IMAGE\_CAPABILITY\_READ\_MODIFY\_WRITE}!Images and Samplers@{Images and Samplers}}\index{Images and Samplers@{Images and Samplers}!HSA\_EXT\_IMAGE\_CAPABILITY\_READ\_MODIFY\_WRITE@{HSA\_EXT\_IMAGE\_CAPABILITY\_READ\_MODIFY\_WRITE}}}\mbox{\Hypertarget{group__ext-images_ggab3d3401883f796b3f2d8dfad14f90568a93c1635f2a1cf303202219cdf9a96a10}\label{group__ext-images_ggab3d3401883f796b3f2d8dfad14f90568a93c1635f2a1cf303202219cdf9a96a10}} 
+HSA\+\_\+\+EXT\+\_\+\+IMAGE\+\_\+\+CAPABILITY\+\_\+\+READ\+\_\+\+MODIFY\+\_\+\+WRITE&\begin{DoxyRefDesc}{Deprecated}
+\item[\mbox{\hyperlink{deprecated__deprecated000091}{Deprecated}}]Images of this geometry, format, and layout can be accessed from read-\/modify-\/write atomic operations in the agent. \end{DoxyRefDesc}
+\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{HSA\_EXT\_IMAGE\_CAPABILITY\_ACCESS\_INVARIANT\_DATA\_LAYOUT@{HSA\_EXT\_IMAGE\_CAPABILITY\_ACCESS\_INVARIANT\_DATA\_LAYOUT}!Images and Samplers@{Images and Samplers}}\index{Images and Samplers@{Images and Samplers}!HSA\_EXT\_IMAGE\_CAPABILITY\_ACCESS\_INVARIANT\_DATA\_LAYOUT@{HSA\_EXT\_IMAGE\_CAPABILITY\_ACCESS\_INVARIANT\_DATA\_LAYOUT}}}\mbox{\Hypertarget{group__ext-images_ggab3d3401883f796b3f2d8dfad14f90568a7e7df436921a7ef7028281b9c12d6dc2}\label{group__ext-images_ggab3d3401883f796b3f2d8dfad14f90568a7e7df436921a7ef7028281b9c12d6dc2}} 
+HSA\+\_\+\+EXT\+\_\+\+IMAGE\+\_\+\+CAPABILITY\+\_\+\+ACCESS\+\_\+\+INVARIANT\+\_\+\+DATA\+\_\+\+LAYOUT&Images of this geometry, format, and layout are guaranteed to have a consistent data layout regardless of how they are accessed by the associated agent. \\
+\hline
+
+\end{DoxyEnumFields}
+\mbox{\Hypertarget{group__ext-images_gabaced4fb1f3b9fdaa978e143af5ff055}\label{group__ext-images_gabaced4fb1f3b9fdaa978e143af5ff055}} 
+\index{Images and Samplers@{Images and Samplers}!hsa\_ext\_image\_channel\_order\_t@{hsa\_ext\_image\_channel\_order\_t}}
+\index{hsa\_ext\_image\_channel\_order\_t@{hsa\_ext\_image\_channel\_order\_t}!Images and Samplers@{Images and Samplers}}
+\doxysubsubsection{\texorpdfstring{hsa\_ext\_image\_channel\_order\_t}{hsa\_ext\_image\_channel\_order\_t}}
+{\footnotesize\ttfamily enum \mbox{\hyperlink{group__ext-images_gabaced4fb1f3b9fdaa978e143af5ff055}{hsa\+\_\+ext\+\_\+image\+\_\+channel\+\_\+order\+\_\+t}}}
+
+
+
+Channel order associated with the elements of an image. See the {\itshape Channel Order} section in the {\itshape HSA Programming Reference Manual} for definitions on each channel order. The enumeration values match the BRIG type {\ttfamily hsa\+\_\+ext\+\_\+brig\+\_\+image\+\_\+channel\+\_\+order\+\_\+t}. 
+
+\begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{HSA\_EXT\_IMAGE\_CHANNEL\_ORDER\_A@{HSA\_EXT\_IMAGE\_CHANNEL\_ORDER\_A}!Images and Samplers@{Images and Samplers}}\index{Images and Samplers@{Images and Samplers}!HSA\_EXT\_IMAGE\_CHANNEL\_ORDER\_A@{HSA\_EXT\_IMAGE\_CHANNEL\_ORDER\_A}}}\mbox{\Hypertarget{group__ext-images_ggabaced4fb1f3b9fdaa978e143af5ff055aa68ce325d9662ff1a1c78598835c8d55}\label{group__ext-images_ggabaced4fb1f3b9fdaa978e143af5ff055aa68ce325d9662ff1a1c78598835c8d55}} 
+HSA\+\_\+\+EXT\+\_\+\+IMAGE\+\_\+\+CHANNEL\+\_\+\+ORDER\+\_\+A&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{HSA\_EXT\_IMAGE\_CHANNEL\_ORDER\_R@{HSA\_EXT\_IMAGE\_CHANNEL\_ORDER\_R}!Images and Samplers@{Images and Samplers}}\index{Images and Samplers@{Images and Samplers}!HSA\_EXT\_IMAGE\_CHANNEL\_ORDER\_R@{HSA\_EXT\_IMAGE\_CHANNEL\_ORDER\_R}}}\mbox{\Hypertarget{group__ext-images_ggabaced4fb1f3b9fdaa978e143af5ff055ae6f5e256120da86e073db6a996e778d7}\label{group__ext-images_ggabaced4fb1f3b9fdaa978e143af5ff055ae6f5e256120da86e073db6a996e778d7}} 
+HSA\+\_\+\+EXT\+\_\+\+IMAGE\+\_\+\+CHANNEL\+\_\+\+ORDER\+\_\+R&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{HSA\_EXT\_IMAGE\_CHANNEL\_ORDER\_RX@{HSA\_EXT\_IMAGE\_CHANNEL\_ORDER\_RX}!Images and Samplers@{Images and Samplers}}\index{Images and Samplers@{Images and Samplers}!HSA\_EXT\_IMAGE\_CHANNEL\_ORDER\_RX@{HSA\_EXT\_IMAGE\_CHANNEL\_ORDER\_RX}}}\mbox{\Hypertarget{group__ext-images_ggabaced4fb1f3b9fdaa978e143af5ff055ad22499f0285b97596caa1a316f839ace}\label{group__ext-images_ggabaced4fb1f3b9fdaa978e143af5ff055ad22499f0285b97596caa1a316f839ace}} 
+HSA\+\_\+\+EXT\+\_\+\+IMAGE\+\_\+\+CHANNEL\+\_\+\+ORDER\+\_\+\+RX&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{HSA\_EXT\_IMAGE\_CHANNEL\_ORDER\_RG@{HSA\_EXT\_IMAGE\_CHANNEL\_ORDER\_RG}!Images and Samplers@{Images and Samplers}}\index{Images and Samplers@{Images and Samplers}!HSA\_EXT\_IMAGE\_CHANNEL\_ORDER\_RG@{HSA\_EXT\_IMAGE\_CHANNEL\_ORDER\_RG}}}\mbox{\Hypertarget{group__ext-images_ggabaced4fb1f3b9fdaa978e143af5ff055a49185aef99188ff46b53d4da23614798}\label{group__ext-images_ggabaced4fb1f3b9fdaa978e143af5ff055a49185aef99188ff46b53d4da23614798}} 
+HSA\+\_\+\+EXT\+\_\+\+IMAGE\+\_\+\+CHANNEL\+\_\+\+ORDER\+\_\+\+RG&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{HSA\_EXT\_IMAGE\_CHANNEL\_ORDER\_RGX@{HSA\_EXT\_IMAGE\_CHANNEL\_ORDER\_RGX}!Images and Samplers@{Images and Samplers}}\index{Images and Samplers@{Images and Samplers}!HSA\_EXT\_IMAGE\_CHANNEL\_ORDER\_RGX@{HSA\_EXT\_IMAGE\_CHANNEL\_ORDER\_RGX}}}\mbox{\Hypertarget{group__ext-images_ggabaced4fb1f3b9fdaa978e143af5ff055a59e32fe3e15c24a407c5f1e56a6935f4}\label{group__ext-images_ggabaced4fb1f3b9fdaa978e143af5ff055a59e32fe3e15c24a407c5f1e56a6935f4}} 
+HSA\+\_\+\+EXT\+\_\+\+IMAGE\+\_\+\+CHANNEL\+\_\+\+ORDER\+\_\+\+RGX&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{HSA\_EXT\_IMAGE\_CHANNEL\_ORDER\_RA@{HSA\_EXT\_IMAGE\_CHANNEL\_ORDER\_RA}!Images and Samplers@{Images and Samplers}}\index{Images and Samplers@{Images and Samplers}!HSA\_EXT\_IMAGE\_CHANNEL\_ORDER\_RA@{HSA\_EXT\_IMAGE\_CHANNEL\_ORDER\_RA}}}\mbox{\Hypertarget{group__ext-images_ggabaced4fb1f3b9fdaa978e143af5ff055a7ec545d6291f17a9a779b6f673fad718}\label{group__ext-images_ggabaced4fb1f3b9fdaa978e143af5ff055a7ec545d6291f17a9a779b6f673fad718}} 
+HSA\+\_\+\+EXT\+\_\+\+IMAGE\+\_\+\+CHANNEL\+\_\+\+ORDER\+\_\+\+RA&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{HSA\_EXT\_IMAGE\_CHANNEL\_ORDER\_RGB@{HSA\_EXT\_IMAGE\_CHANNEL\_ORDER\_RGB}!Images and Samplers@{Images and Samplers}}\index{Images and Samplers@{Images and Samplers}!HSA\_EXT\_IMAGE\_CHANNEL\_ORDER\_RGB@{HSA\_EXT\_IMAGE\_CHANNEL\_ORDER\_RGB}}}\mbox{\Hypertarget{group__ext-images_ggabaced4fb1f3b9fdaa978e143af5ff055ae3d2eed3398c973eab1e66e1b92a8efe}\label{group__ext-images_ggabaced4fb1f3b9fdaa978e143af5ff055ae3d2eed3398c973eab1e66e1b92a8efe}} 
+HSA\+\_\+\+EXT\+\_\+\+IMAGE\+\_\+\+CHANNEL\+\_\+\+ORDER\+\_\+\+RGB&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{HSA\_EXT\_IMAGE\_CHANNEL\_ORDER\_RGBX@{HSA\_EXT\_IMAGE\_CHANNEL\_ORDER\_RGBX}!Images and Samplers@{Images and Samplers}}\index{Images and Samplers@{Images and Samplers}!HSA\_EXT\_IMAGE\_CHANNEL\_ORDER\_RGBX@{HSA\_EXT\_IMAGE\_CHANNEL\_ORDER\_RGBX}}}\mbox{\Hypertarget{group__ext-images_ggabaced4fb1f3b9fdaa978e143af5ff055a3d93bdf6b20f6409a9d684646908bfe1}\label{group__ext-images_ggabaced4fb1f3b9fdaa978e143af5ff055a3d93bdf6b20f6409a9d684646908bfe1}} 
+HSA\+\_\+\+EXT\+\_\+\+IMAGE\+\_\+\+CHANNEL\+\_\+\+ORDER\+\_\+\+RGBX&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{HSA\_EXT\_IMAGE\_CHANNEL\_ORDER\_RGBA@{HSA\_EXT\_IMAGE\_CHANNEL\_ORDER\_RGBA}!Images and Samplers@{Images and Samplers}}\index{Images and Samplers@{Images and Samplers}!HSA\_EXT\_IMAGE\_CHANNEL\_ORDER\_RGBA@{HSA\_EXT\_IMAGE\_CHANNEL\_ORDER\_RGBA}}}\mbox{\Hypertarget{group__ext-images_ggabaced4fb1f3b9fdaa978e143af5ff055a0c5e8dc0eef9af781786ef67ee3702df}\label{group__ext-images_ggabaced4fb1f3b9fdaa978e143af5ff055a0c5e8dc0eef9af781786ef67ee3702df}} 
+HSA\+\_\+\+EXT\+\_\+\+IMAGE\+\_\+\+CHANNEL\+\_\+\+ORDER\+\_\+\+RGBA&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{HSA\_EXT\_IMAGE\_CHANNEL\_ORDER\_BGRA@{HSA\_EXT\_IMAGE\_CHANNEL\_ORDER\_BGRA}!Images and Samplers@{Images and Samplers}}\index{Images and Samplers@{Images and Samplers}!HSA\_EXT\_IMAGE\_CHANNEL\_ORDER\_BGRA@{HSA\_EXT\_IMAGE\_CHANNEL\_ORDER\_BGRA}}}\mbox{\Hypertarget{group__ext-images_ggabaced4fb1f3b9fdaa978e143af5ff055a8f8724381ae9dfe592a15808ebe8c1d2}\label{group__ext-images_ggabaced4fb1f3b9fdaa978e143af5ff055a8f8724381ae9dfe592a15808ebe8c1d2}} 
+HSA\+\_\+\+EXT\+\_\+\+IMAGE\+\_\+\+CHANNEL\+\_\+\+ORDER\+\_\+\+BGRA&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{HSA\_EXT\_IMAGE\_CHANNEL\_ORDER\_ARGB@{HSA\_EXT\_IMAGE\_CHANNEL\_ORDER\_ARGB}!Images and Samplers@{Images and Samplers}}\index{Images and Samplers@{Images and Samplers}!HSA\_EXT\_IMAGE\_CHANNEL\_ORDER\_ARGB@{HSA\_EXT\_IMAGE\_CHANNEL\_ORDER\_ARGB}}}\mbox{\Hypertarget{group__ext-images_ggabaced4fb1f3b9fdaa978e143af5ff055a7a49085ae07e467293c0a10d003a2356}\label{group__ext-images_ggabaced4fb1f3b9fdaa978e143af5ff055a7a49085ae07e467293c0a10d003a2356}} 
+HSA\+\_\+\+EXT\+\_\+\+IMAGE\+\_\+\+CHANNEL\+\_\+\+ORDER\+\_\+\+ARGB&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{HSA\_EXT\_IMAGE\_CHANNEL\_ORDER\_ABGR@{HSA\_EXT\_IMAGE\_CHANNEL\_ORDER\_ABGR}!Images and Samplers@{Images and Samplers}}\index{Images and Samplers@{Images and Samplers}!HSA\_EXT\_IMAGE\_CHANNEL\_ORDER\_ABGR@{HSA\_EXT\_IMAGE\_CHANNEL\_ORDER\_ABGR}}}\mbox{\Hypertarget{group__ext-images_ggabaced4fb1f3b9fdaa978e143af5ff055a8fd833428ebe3e1428e0001115ec6880}\label{group__ext-images_ggabaced4fb1f3b9fdaa978e143af5ff055a8fd833428ebe3e1428e0001115ec6880}} 
+HSA\+\_\+\+EXT\+\_\+\+IMAGE\+\_\+\+CHANNEL\+\_\+\+ORDER\+\_\+\+ABGR&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{HSA\_EXT\_IMAGE\_CHANNEL\_ORDER\_SRGB@{HSA\_EXT\_IMAGE\_CHANNEL\_ORDER\_SRGB}!Images and Samplers@{Images and Samplers}}\index{Images and Samplers@{Images and Samplers}!HSA\_EXT\_IMAGE\_CHANNEL\_ORDER\_SRGB@{HSA\_EXT\_IMAGE\_CHANNEL\_ORDER\_SRGB}}}\mbox{\Hypertarget{group__ext-images_ggabaced4fb1f3b9fdaa978e143af5ff055a64dbb297ed7cf48f525ffe32aa653319}\label{group__ext-images_ggabaced4fb1f3b9fdaa978e143af5ff055a64dbb297ed7cf48f525ffe32aa653319}} 
+HSA\+\_\+\+EXT\+\_\+\+IMAGE\+\_\+\+CHANNEL\+\_\+\+ORDER\+\_\+\+SRGB&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{HSA\_EXT\_IMAGE\_CHANNEL\_ORDER\_SRGBX@{HSA\_EXT\_IMAGE\_CHANNEL\_ORDER\_SRGBX}!Images and Samplers@{Images and Samplers}}\index{Images and Samplers@{Images and Samplers}!HSA\_EXT\_IMAGE\_CHANNEL\_ORDER\_SRGBX@{HSA\_EXT\_IMAGE\_CHANNEL\_ORDER\_SRGBX}}}\mbox{\Hypertarget{group__ext-images_ggabaced4fb1f3b9fdaa978e143af5ff055a38d8f1c70900f6646df6a6d20746f840}\label{group__ext-images_ggabaced4fb1f3b9fdaa978e143af5ff055a38d8f1c70900f6646df6a6d20746f840}} 
+HSA\+\_\+\+EXT\+\_\+\+IMAGE\+\_\+\+CHANNEL\+\_\+\+ORDER\+\_\+\+SRGBX&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{HSA\_EXT\_IMAGE\_CHANNEL\_ORDER\_SRGBA@{HSA\_EXT\_IMAGE\_CHANNEL\_ORDER\_SRGBA}!Images and Samplers@{Images and Samplers}}\index{Images and Samplers@{Images and Samplers}!HSA\_EXT\_IMAGE\_CHANNEL\_ORDER\_SRGBA@{HSA\_EXT\_IMAGE\_CHANNEL\_ORDER\_SRGBA}}}\mbox{\Hypertarget{group__ext-images_ggabaced4fb1f3b9fdaa978e143af5ff055ae9980a3013f42e7d56f4fd28ea8c3b7c}\label{group__ext-images_ggabaced4fb1f3b9fdaa978e143af5ff055ae9980a3013f42e7d56f4fd28ea8c3b7c}} 
+HSA\+\_\+\+EXT\+\_\+\+IMAGE\+\_\+\+CHANNEL\+\_\+\+ORDER\+\_\+\+SRGBA&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{HSA\_EXT\_IMAGE\_CHANNEL\_ORDER\_SBGRA@{HSA\_EXT\_IMAGE\_CHANNEL\_ORDER\_SBGRA}!Images and Samplers@{Images and Samplers}}\index{Images and Samplers@{Images and Samplers}!HSA\_EXT\_IMAGE\_CHANNEL\_ORDER\_SBGRA@{HSA\_EXT\_IMAGE\_CHANNEL\_ORDER\_SBGRA}}}\mbox{\Hypertarget{group__ext-images_ggabaced4fb1f3b9fdaa978e143af5ff055a2617e3d26bbf6dd3c136534dcf5e4594}\label{group__ext-images_ggabaced4fb1f3b9fdaa978e143af5ff055a2617e3d26bbf6dd3c136534dcf5e4594}} 
+HSA\+\_\+\+EXT\+\_\+\+IMAGE\+\_\+\+CHANNEL\+\_\+\+ORDER\+\_\+\+SBGRA&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{HSA\_EXT\_IMAGE\_CHANNEL\_ORDER\_INTENSITY@{HSA\_EXT\_IMAGE\_CHANNEL\_ORDER\_INTENSITY}!Images and Samplers@{Images and Samplers}}\index{Images and Samplers@{Images and Samplers}!HSA\_EXT\_IMAGE\_CHANNEL\_ORDER\_INTENSITY@{HSA\_EXT\_IMAGE\_CHANNEL\_ORDER\_INTENSITY}}}\mbox{\Hypertarget{group__ext-images_ggabaced4fb1f3b9fdaa978e143af5ff055a5fb131f53f229f55456287a009da9b6e}\label{group__ext-images_ggabaced4fb1f3b9fdaa978e143af5ff055a5fb131f53f229f55456287a009da9b6e}} 
+HSA\+\_\+\+EXT\+\_\+\+IMAGE\+\_\+\+CHANNEL\+\_\+\+ORDER\+\_\+\+INTENSITY&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{HSA\_EXT\_IMAGE\_CHANNEL\_ORDER\_LUMINANCE@{HSA\_EXT\_IMAGE\_CHANNEL\_ORDER\_LUMINANCE}!Images and Samplers@{Images and Samplers}}\index{Images and Samplers@{Images and Samplers}!HSA\_EXT\_IMAGE\_CHANNEL\_ORDER\_LUMINANCE@{HSA\_EXT\_IMAGE\_CHANNEL\_ORDER\_LUMINANCE}}}\mbox{\Hypertarget{group__ext-images_ggabaced4fb1f3b9fdaa978e143af5ff055a5576d6ae7fd07c21fa8196c4323f1476}\label{group__ext-images_ggabaced4fb1f3b9fdaa978e143af5ff055a5576d6ae7fd07c21fa8196c4323f1476}} 
+HSA\+\_\+\+EXT\+\_\+\+IMAGE\+\_\+\+CHANNEL\+\_\+\+ORDER\+\_\+\+LUMINANCE&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{HSA\_EXT\_IMAGE\_CHANNEL\_ORDER\_DEPTH@{HSA\_EXT\_IMAGE\_CHANNEL\_ORDER\_DEPTH}!Images and Samplers@{Images and Samplers}}\index{Images and Samplers@{Images and Samplers}!HSA\_EXT\_IMAGE\_CHANNEL\_ORDER\_DEPTH@{HSA\_EXT\_IMAGE\_CHANNEL\_ORDER\_DEPTH}}}\mbox{\Hypertarget{group__ext-images_ggabaced4fb1f3b9fdaa978e143af5ff055ad26aef84eb00f1d1e9defc45f7508e50}\label{group__ext-images_ggabaced4fb1f3b9fdaa978e143af5ff055ad26aef84eb00f1d1e9defc45f7508e50}} 
+HSA\+\_\+\+EXT\+\_\+\+IMAGE\+\_\+\+CHANNEL\+\_\+\+ORDER\+\_\+\+DEPTH&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{HSA\_EXT\_IMAGE\_CHANNEL\_ORDER\_DEPTH\_STENCIL@{HSA\_EXT\_IMAGE\_CHANNEL\_ORDER\_DEPTH\_STENCIL}!Images and Samplers@{Images and Samplers}}\index{Images and Samplers@{Images and Samplers}!HSA\_EXT\_IMAGE\_CHANNEL\_ORDER\_DEPTH\_STENCIL@{HSA\_EXT\_IMAGE\_CHANNEL\_ORDER\_DEPTH\_STENCIL}}}\mbox{\Hypertarget{group__ext-images_ggabaced4fb1f3b9fdaa978e143af5ff055aa1c158a53efa2619ceefa748f3d99a99}\label{group__ext-images_ggabaced4fb1f3b9fdaa978e143af5ff055aa1c158a53efa2619ceefa748f3d99a99}} 
+HSA\+\_\+\+EXT\+\_\+\+IMAGE\+\_\+\+CHANNEL\+\_\+\+ORDER\+\_\+\+DEPTH\+\_\+\+STENCIL&\\
+\hline
+
+\end{DoxyEnumFields}
+\mbox{\Hypertarget{group__ext-images_gaa143aa6feeaf24103b886c571ace568f}\label{group__ext-images_gaa143aa6feeaf24103b886c571ace568f}} 
+\index{Images and Samplers@{Images and Samplers}!hsa\_ext\_image\_channel\_type\_t@{hsa\_ext\_image\_channel\_type\_t}}
+\index{hsa\_ext\_image\_channel\_type\_t@{hsa\_ext\_image\_channel\_type\_t}!Images and Samplers@{Images and Samplers}}
+\doxysubsubsection{\texorpdfstring{hsa\_ext\_image\_channel\_type\_t}{hsa\_ext\_image\_channel\_type\_t}}
+{\footnotesize\ttfamily enum \mbox{\hyperlink{group__ext-images_gaa143aa6feeaf24103b886c571ace568f}{hsa\+\_\+ext\+\_\+image\+\_\+channel\+\_\+type\+\_\+t}}}
+
+
+
+Channel type associated with the elements of an image. See the {\itshape Channel Type} section in the {\itshape HSA Programming Reference Manual} for definitions on each channel type. The enumeration values and definition match the BRIG type {\ttfamily hsa\+\_\+ext\+\_\+brig\+\_\+image\+\_\+channel\+\_\+type\+\_\+t}. 
+
+\begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{HSA\_EXT\_IMAGE\_CHANNEL\_TYPE\_SNORM\_INT8@{HSA\_EXT\_IMAGE\_CHANNEL\_TYPE\_SNORM\_INT8}!Images and Samplers@{Images and Samplers}}\index{Images and Samplers@{Images and Samplers}!HSA\_EXT\_IMAGE\_CHANNEL\_TYPE\_SNORM\_INT8@{HSA\_EXT\_IMAGE\_CHANNEL\_TYPE\_SNORM\_INT8}}}\mbox{\Hypertarget{group__ext-images_ggaa143aa6feeaf24103b886c571ace568fa59d72c5a5199e360e7a5773987696e42}\label{group__ext-images_ggaa143aa6feeaf24103b886c571ace568fa59d72c5a5199e360e7a5773987696e42}} 
+HSA\+\_\+\+EXT\+\_\+\+IMAGE\+\_\+\+CHANNEL\+\_\+\+TYPE\+\_\+\+SNORM\+\_\+\+INT8&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{HSA\_EXT\_IMAGE\_CHANNEL\_TYPE\_SNORM\_INT16@{HSA\_EXT\_IMAGE\_CHANNEL\_TYPE\_SNORM\_INT16}!Images and Samplers@{Images and Samplers}}\index{Images and Samplers@{Images and Samplers}!HSA\_EXT\_IMAGE\_CHANNEL\_TYPE\_SNORM\_INT16@{HSA\_EXT\_IMAGE\_CHANNEL\_TYPE\_SNORM\_INT16}}}\mbox{\Hypertarget{group__ext-images_ggaa143aa6feeaf24103b886c571ace568fa55ee5e3b2e6f3b593a9cf99f1f195b91}\label{group__ext-images_ggaa143aa6feeaf24103b886c571ace568fa55ee5e3b2e6f3b593a9cf99f1f195b91}} 
+HSA\+\_\+\+EXT\+\_\+\+IMAGE\+\_\+\+CHANNEL\+\_\+\+TYPE\+\_\+\+SNORM\+\_\+\+INT16&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{HSA\_EXT\_IMAGE\_CHANNEL\_TYPE\_UNORM\_INT8@{HSA\_EXT\_IMAGE\_CHANNEL\_TYPE\_UNORM\_INT8}!Images and Samplers@{Images and Samplers}}\index{Images and Samplers@{Images and Samplers}!HSA\_EXT\_IMAGE\_CHANNEL\_TYPE\_UNORM\_INT8@{HSA\_EXT\_IMAGE\_CHANNEL\_TYPE\_UNORM\_INT8}}}\mbox{\Hypertarget{group__ext-images_ggaa143aa6feeaf24103b886c571ace568fae3100c7304a6e1805711cd6965919e53}\label{group__ext-images_ggaa143aa6feeaf24103b886c571ace568fae3100c7304a6e1805711cd6965919e53}} 
+HSA\+\_\+\+EXT\+\_\+\+IMAGE\+\_\+\+CHANNEL\+\_\+\+TYPE\+\_\+\+UNORM\+\_\+\+INT8&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{HSA\_EXT\_IMAGE\_CHANNEL\_TYPE\_UNORM\_INT16@{HSA\_EXT\_IMAGE\_CHANNEL\_TYPE\_UNORM\_INT16}!Images and Samplers@{Images and Samplers}}\index{Images and Samplers@{Images and Samplers}!HSA\_EXT\_IMAGE\_CHANNEL\_TYPE\_UNORM\_INT16@{HSA\_EXT\_IMAGE\_CHANNEL\_TYPE\_UNORM\_INT16}}}\mbox{\Hypertarget{group__ext-images_ggaa143aa6feeaf24103b886c571ace568fa9a27c2852fb86761dcbabfda391a8e73}\label{group__ext-images_ggaa143aa6feeaf24103b886c571ace568fa9a27c2852fb86761dcbabfda391a8e73}} 
+HSA\+\_\+\+EXT\+\_\+\+IMAGE\+\_\+\+CHANNEL\+\_\+\+TYPE\+\_\+\+UNORM\+\_\+\+INT16&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{HSA\_EXT\_IMAGE\_CHANNEL\_TYPE\_UNORM\_INT24@{HSA\_EXT\_IMAGE\_CHANNEL\_TYPE\_UNORM\_INT24}!Images and Samplers@{Images and Samplers}}\index{Images and Samplers@{Images and Samplers}!HSA\_EXT\_IMAGE\_CHANNEL\_TYPE\_UNORM\_INT24@{HSA\_EXT\_IMAGE\_CHANNEL\_TYPE\_UNORM\_INT24}}}\mbox{\Hypertarget{group__ext-images_ggaa143aa6feeaf24103b886c571ace568fa0b12c9e8bee88608297ecd9246ebf96a}\label{group__ext-images_ggaa143aa6feeaf24103b886c571ace568fa0b12c9e8bee88608297ecd9246ebf96a}} 
+HSA\+\_\+\+EXT\+\_\+\+IMAGE\+\_\+\+CHANNEL\+\_\+\+TYPE\+\_\+\+UNORM\+\_\+\+INT24&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{HSA\_EXT\_IMAGE\_CHANNEL\_TYPE\_UNORM\_SHORT\_555@{HSA\_EXT\_IMAGE\_CHANNEL\_TYPE\_UNORM\_SHORT\_555}!Images and Samplers@{Images and Samplers}}\index{Images and Samplers@{Images and Samplers}!HSA\_EXT\_IMAGE\_CHANNEL\_TYPE\_UNORM\_SHORT\_555@{HSA\_EXT\_IMAGE\_CHANNEL\_TYPE\_UNORM\_SHORT\_555}}}\mbox{\Hypertarget{group__ext-images_ggaa143aa6feeaf24103b886c571ace568fa40e1eb056776d35da9f1dbaf2e264a19}\label{group__ext-images_ggaa143aa6feeaf24103b886c571ace568fa40e1eb056776d35da9f1dbaf2e264a19}} 
+HSA\+\_\+\+EXT\+\_\+\+IMAGE\+\_\+\+CHANNEL\+\_\+\+TYPE\+\_\+\+UNORM\+\_\+\+SHORT\+\_\+555&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{HSA\_EXT\_IMAGE\_CHANNEL\_TYPE\_UNORM\_SHORT\_565@{HSA\_EXT\_IMAGE\_CHANNEL\_TYPE\_UNORM\_SHORT\_565}!Images and Samplers@{Images and Samplers}}\index{Images and Samplers@{Images and Samplers}!HSA\_EXT\_IMAGE\_CHANNEL\_TYPE\_UNORM\_SHORT\_565@{HSA\_EXT\_IMAGE\_CHANNEL\_TYPE\_UNORM\_SHORT\_565}}}\mbox{\Hypertarget{group__ext-images_ggaa143aa6feeaf24103b886c571ace568fa6165cebe82d6c2b115bbce04548f5626}\label{group__ext-images_ggaa143aa6feeaf24103b886c571ace568fa6165cebe82d6c2b115bbce04548f5626}} 
+HSA\+\_\+\+EXT\+\_\+\+IMAGE\+\_\+\+CHANNEL\+\_\+\+TYPE\+\_\+\+UNORM\+\_\+\+SHORT\+\_\+565&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{HSA\_EXT\_IMAGE\_CHANNEL\_TYPE\_UNORM\_SHORT\_101010@{HSA\_EXT\_IMAGE\_CHANNEL\_TYPE\_UNORM\_SHORT\_101010}!Images and Samplers@{Images and Samplers}}\index{Images and Samplers@{Images and Samplers}!HSA\_EXT\_IMAGE\_CHANNEL\_TYPE\_UNORM\_SHORT\_101010@{HSA\_EXT\_IMAGE\_CHANNEL\_TYPE\_UNORM\_SHORT\_101010}}}\mbox{\Hypertarget{group__ext-images_ggaa143aa6feeaf24103b886c571ace568fad5193853cc5321dd50b16eb9e920237f}\label{group__ext-images_ggaa143aa6feeaf24103b886c571ace568fad5193853cc5321dd50b16eb9e920237f}} 
+HSA\+\_\+\+EXT\+\_\+\+IMAGE\+\_\+\+CHANNEL\+\_\+\+TYPE\+\_\+\+UNORM\+\_\+\+SHORT\+\_\+101010&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{HSA\_EXT\_IMAGE\_CHANNEL\_TYPE\_SIGNED\_INT8@{HSA\_EXT\_IMAGE\_CHANNEL\_TYPE\_SIGNED\_INT8}!Images and Samplers@{Images and Samplers}}\index{Images and Samplers@{Images and Samplers}!HSA\_EXT\_IMAGE\_CHANNEL\_TYPE\_SIGNED\_INT8@{HSA\_EXT\_IMAGE\_CHANNEL\_TYPE\_SIGNED\_INT8}}}\mbox{\Hypertarget{group__ext-images_ggaa143aa6feeaf24103b886c571ace568fa39b7795d032ee6afc6c701b25632b7c0}\label{group__ext-images_ggaa143aa6feeaf24103b886c571ace568fa39b7795d032ee6afc6c701b25632b7c0}} 
+HSA\+\_\+\+EXT\+\_\+\+IMAGE\+\_\+\+CHANNEL\+\_\+\+TYPE\+\_\+\+SIGNED\+\_\+\+INT8&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{HSA\_EXT\_IMAGE\_CHANNEL\_TYPE\_SIGNED\_INT16@{HSA\_EXT\_IMAGE\_CHANNEL\_TYPE\_SIGNED\_INT16}!Images and Samplers@{Images and Samplers}}\index{Images and Samplers@{Images and Samplers}!HSA\_EXT\_IMAGE\_CHANNEL\_TYPE\_SIGNED\_INT16@{HSA\_EXT\_IMAGE\_CHANNEL\_TYPE\_SIGNED\_INT16}}}\mbox{\Hypertarget{group__ext-images_ggaa143aa6feeaf24103b886c571ace568fa94b5591edcfac1939f541c48a6f84400}\label{group__ext-images_ggaa143aa6feeaf24103b886c571ace568fa94b5591edcfac1939f541c48a6f84400}} 
+HSA\+\_\+\+EXT\+\_\+\+IMAGE\+\_\+\+CHANNEL\+\_\+\+TYPE\+\_\+\+SIGNED\+\_\+\+INT16&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{HSA\_EXT\_IMAGE\_CHANNEL\_TYPE\_SIGNED\_INT32@{HSA\_EXT\_IMAGE\_CHANNEL\_TYPE\_SIGNED\_INT32}!Images and Samplers@{Images and Samplers}}\index{Images and Samplers@{Images and Samplers}!HSA\_EXT\_IMAGE\_CHANNEL\_TYPE\_SIGNED\_INT32@{HSA\_EXT\_IMAGE\_CHANNEL\_TYPE\_SIGNED\_INT32}}}\mbox{\Hypertarget{group__ext-images_ggaa143aa6feeaf24103b886c571ace568fab58308c224a7d513ecbf0ffd51846ff2}\label{group__ext-images_ggaa143aa6feeaf24103b886c571ace568fab58308c224a7d513ecbf0ffd51846ff2}} 
+HSA\+\_\+\+EXT\+\_\+\+IMAGE\+\_\+\+CHANNEL\+\_\+\+TYPE\+\_\+\+SIGNED\+\_\+\+INT32&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{HSA\_EXT\_IMAGE\_CHANNEL\_TYPE\_UNSIGNED\_INT8@{HSA\_EXT\_IMAGE\_CHANNEL\_TYPE\_UNSIGNED\_INT8}!Images and Samplers@{Images and Samplers}}\index{Images and Samplers@{Images and Samplers}!HSA\_EXT\_IMAGE\_CHANNEL\_TYPE\_UNSIGNED\_INT8@{HSA\_EXT\_IMAGE\_CHANNEL\_TYPE\_UNSIGNED\_INT8}}}\mbox{\Hypertarget{group__ext-images_ggaa143aa6feeaf24103b886c571ace568fad5a41c0a19a7cb34f4343db6cf757b7a}\label{group__ext-images_ggaa143aa6feeaf24103b886c571ace568fad5a41c0a19a7cb34f4343db6cf757b7a}} 
+HSA\+\_\+\+EXT\+\_\+\+IMAGE\+\_\+\+CHANNEL\+\_\+\+TYPE\+\_\+\+UNSIGNED\+\_\+\+INT8&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{HSA\_EXT\_IMAGE\_CHANNEL\_TYPE\_UNSIGNED\_INT16@{HSA\_EXT\_IMAGE\_CHANNEL\_TYPE\_UNSIGNED\_INT16}!Images and Samplers@{Images and Samplers}}\index{Images and Samplers@{Images and Samplers}!HSA\_EXT\_IMAGE\_CHANNEL\_TYPE\_UNSIGNED\_INT16@{HSA\_EXT\_IMAGE\_CHANNEL\_TYPE\_UNSIGNED\_INT16}}}\mbox{\Hypertarget{group__ext-images_ggaa143aa6feeaf24103b886c571ace568fa1779271b7ca06132b05918e5a72a2a85}\label{group__ext-images_ggaa143aa6feeaf24103b886c571ace568fa1779271b7ca06132b05918e5a72a2a85}} 
+HSA\+\_\+\+EXT\+\_\+\+IMAGE\+\_\+\+CHANNEL\+\_\+\+TYPE\+\_\+\+UNSIGNED\+\_\+\+INT16&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{HSA\_EXT\_IMAGE\_CHANNEL\_TYPE\_UNSIGNED\_INT32@{HSA\_EXT\_IMAGE\_CHANNEL\_TYPE\_UNSIGNED\_INT32}!Images and Samplers@{Images and Samplers}}\index{Images and Samplers@{Images and Samplers}!HSA\_EXT\_IMAGE\_CHANNEL\_TYPE\_UNSIGNED\_INT32@{HSA\_EXT\_IMAGE\_CHANNEL\_TYPE\_UNSIGNED\_INT32}}}\mbox{\Hypertarget{group__ext-images_ggaa143aa6feeaf24103b886c571ace568faf925e28a04ef0162badd74c43b324ec5}\label{group__ext-images_ggaa143aa6feeaf24103b886c571ace568faf925e28a04ef0162badd74c43b324ec5}} 
+HSA\+\_\+\+EXT\+\_\+\+IMAGE\+\_\+\+CHANNEL\+\_\+\+TYPE\+\_\+\+UNSIGNED\+\_\+\+INT32&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{HSA\_EXT\_IMAGE\_CHANNEL\_TYPE\_HALF\_FLOAT@{HSA\_EXT\_IMAGE\_CHANNEL\_TYPE\_HALF\_FLOAT}!Images and Samplers@{Images and Samplers}}\index{Images and Samplers@{Images and Samplers}!HSA\_EXT\_IMAGE\_CHANNEL\_TYPE\_HALF\_FLOAT@{HSA\_EXT\_IMAGE\_CHANNEL\_TYPE\_HALF\_FLOAT}}}\mbox{\Hypertarget{group__ext-images_ggaa143aa6feeaf24103b886c571ace568fa71200bfc55d6373e117594a624472973}\label{group__ext-images_ggaa143aa6feeaf24103b886c571ace568fa71200bfc55d6373e117594a624472973}} 
+HSA\+\_\+\+EXT\+\_\+\+IMAGE\+\_\+\+CHANNEL\+\_\+\+TYPE\+\_\+\+HALF\+\_\+\+FLOAT&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{HSA\_EXT\_IMAGE\_CHANNEL\_TYPE\_FLOAT@{HSA\_EXT\_IMAGE\_CHANNEL\_TYPE\_FLOAT}!Images and Samplers@{Images and Samplers}}\index{Images and Samplers@{Images and Samplers}!HSA\_EXT\_IMAGE\_CHANNEL\_TYPE\_FLOAT@{HSA\_EXT\_IMAGE\_CHANNEL\_TYPE\_FLOAT}}}\mbox{\Hypertarget{group__ext-images_ggaa143aa6feeaf24103b886c571ace568fa4b06498e72cfae3bffd55e5c7a483576}\label{group__ext-images_ggaa143aa6feeaf24103b886c571ace568fa4b06498e72cfae3bffd55e5c7a483576}} 
+HSA\+\_\+\+EXT\+\_\+\+IMAGE\+\_\+\+CHANNEL\+\_\+\+TYPE\+\_\+\+FLOAT&\\
+\hline
+
+\end{DoxyEnumFields}
+\mbox{\Hypertarget{group__ext-images_ga102222a1420a2434d9b50100350305e4}\label{group__ext-images_ga102222a1420a2434d9b50100350305e4}} 
+\index{Images and Samplers@{Images and Samplers}!hsa\_ext\_image\_data\_layout\_t@{hsa\_ext\_image\_data\_layout\_t}}
+\index{hsa\_ext\_image\_data\_layout\_t@{hsa\_ext\_image\_data\_layout\_t}!Images and Samplers@{Images and Samplers}}
+\doxysubsubsection{\texorpdfstring{hsa\_ext\_image\_data\_layout\_t}{hsa\_ext\_image\_data\_layout\_t}}
+{\footnotesize\ttfamily enum \mbox{\hyperlink{group__ext-images_ga102222a1420a2434d9b50100350305e4}{hsa\+\_\+ext\+\_\+image\+\_\+data\+\_\+layout\+\_\+t}}}
+
+
+
+Image data layout. 
+
+An image data layout denotes such aspects of image data layout as tiling and organization of channels in memory. Some image data layouts may only apply to specific image geometries, formats, and access permissions. Different agents may support different image layout identifiers, including vendor specific layouts. Note that an agent may not support the same image data layout for different access permissions to images with the same image geometry, size, and format. If multiple agents support the same image data layout then it is possible to use separate image handles for each agent that references the same image data. \begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{HSA\_EXT\_IMAGE\_DATA\_LAYOUT\_OPAQUE@{HSA\_EXT\_IMAGE\_DATA\_LAYOUT\_OPAQUE}!Images and Samplers@{Images and Samplers}}\index{Images and Samplers@{Images and Samplers}!HSA\_EXT\_IMAGE\_DATA\_LAYOUT\_OPAQUE@{HSA\_EXT\_IMAGE\_DATA\_LAYOUT\_OPAQUE}}}\mbox{\Hypertarget{group__ext-images_gga102222a1420a2434d9b50100350305e4a6d2884d8802b4696feda4dbbdc7ce86c}\label{group__ext-images_gga102222a1420a2434d9b50100350305e4a6d2884d8802b4696feda4dbbdc7ce86c}} 
+HSA\+\_\+\+EXT\+\_\+\+IMAGE\+\_\+\+DATA\+\_\+\+LAYOUT\+\_\+\+OPAQUE&An implementation specific opaque image data layout which can vary depending on the agent, geometry, image format, image size, and access permissions. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{HSA\_EXT\_IMAGE\_DATA\_LAYOUT\_LINEAR@{HSA\_EXT\_IMAGE\_DATA\_LAYOUT\_LINEAR}!Images and Samplers@{Images and Samplers}}\index{Images and Samplers@{Images and Samplers}!HSA\_EXT\_IMAGE\_DATA\_LAYOUT\_LINEAR@{HSA\_EXT\_IMAGE\_DATA\_LAYOUT\_LINEAR}}}\mbox{\Hypertarget{group__ext-images_gga102222a1420a2434d9b50100350305e4a989b98c2fc0e31d5c434bbb946ae63d0}\label{group__ext-images_gga102222a1420a2434d9b50100350305e4a989b98c2fc0e31d5c434bbb946ae63d0}} 
+HSA\+\_\+\+EXT\+\_\+\+IMAGE\+\_\+\+DATA\+\_\+\+LAYOUT\+\_\+\+LINEAR&The image data layout is specified by the following rules in ascending byte address order. For a 3D image, 2DA image array, or 1DA image array, the image data is stored as a linear sequence of adjacent 2D image slices, 2D images, or 1D images respectively, spaced according to the slice pitch. Each 2D image is stored as a linear sequence of adjacent image rows, spaced according to the row pitch. Each 1D or 1DB image is stored as a single image row. Each image row is stored as a linear sequence of image elements. Each image element is stored as a linear sequence of image components specified by the left to right channel order definition. Each image component is stored using the memory type specified by the channel type.
+
+The 1DB image geometry always uses the linear image data layout. \\
+\hline
+
+\end{DoxyEnumFields}
+\mbox{\Hypertarget{group__ext-images_gac61587d98a80d1660378e3904a66fc9c}\label{group__ext-images_gac61587d98a80d1660378e3904a66fc9c}} 
+\index{Images and Samplers@{Images and Samplers}!hsa\_ext\_image\_geometry\_t@{hsa\_ext\_image\_geometry\_t}}
+\index{hsa\_ext\_image\_geometry\_t@{hsa\_ext\_image\_geometry\_t}!Images and Samplers@{Images and Samplers}}
+\doxysubsubsection{\texorpdfstring{hsa\_ext\_image\_geometry\_t}{hsa\_ext\_image\_geometry\_t}}
+{\footnotesize\ttfamily enum \mbox{\hyperlink{group__ext-images_gac61587d98a80d1660378e3904a66fc9c}{hsa\+\_\+ext\+\_\+image\+\_\+geometry\+\_\+t}}}
+
+
+
+Geometry associated with the image. This specifies the number of image dimensions and whether the image is an image array. See the {\itshape Image Geometry} section in the {\itshape HSA Programming Reference Manual} for definitions on each geometry. The enumeration values match the BRIG type {\ttfamily hsa\+\_\+ext\+\_\+brig\+\_\+image\+\_\+geometry\+\_\+t}. 
+
+\begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{HSA\_EXT\_IMAGE\_GEOMETRY\_1D@{HSA\_EXT\_IMAGE\_GEOMETRY\_1D}!Images and Samplers@{Images and Samplers}}\index{Images and Samplers@{Images and Samplers}!HSA\_EXT\_IMAGE\_GEOMETRY\_1D@{HSA\_EXT\_IMAGE\_GEOMETRY\_1D}}}\mbox{\Hypertarget{group__ext-images_ggac61587d98a80d1660378e3904a66fc9caa025ea993dbfe3101d3ff0caea2ea0cf}\label{group__ext-images_ggac61587d98a80d1660378e3904a66fc9caa025ea993dbfe3101d3ff0caea2ea0cf}} 
+HSA\+\_\+\+EXT\+\_\+\+IMAGE\+\_\+\+GEOMETRY\+\_\+1D&One-\/dimensional image addressed by width coordinate. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{HSA\_EXT\_IMAGE\_GEOMETRY\_2D@{HSA\_EXT\_IMAGE\_GEOMETRY\_2D}!Images and Samplers@{Images and Samplers}}\index{Images and Samplers@{Images and Samplers}!HSA\_EXT\_IMAGE\_GEOMETRY\_2D@{HSA\_EXT\_IMAGE\_GEOMETRY\_2D}}}\mbox{\Hypertarget{group__ext-images_ggac61587d98a80d1660378e3904a66fc9ca4bcc28ccad5a32bd9c9dbf203da4464e}\label{group__ext-images_ggac61587d98a80d1660378e3904a66fc9ca4bcc28ccad5a32bd9c9dbf203da4464e}} 
+HSA\+\_\+\+EXT\+\_\+\+IMAGE\+\_\+\+GEOMETRY\+\_\+2D&Two-\/dimensional image addressed by width and height coordinates. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{HSA\_EXT\_IMAGE\_GEOMETRY\_3D@{HSA\_EXT\_IMAGE\_GEOMETRY\_3D}!Images and Samplers@{Images and Samplers}}\index{Images and Samplers@{Images and Samplers}!HSA\_EXT\_IMAGE\_GEOMETRY\_3D@{HSA\_EXT\_IMAGE\_GEOMETRY\_3D}}}\mbox{\Hypertarget{group__ext-images_ggac61587d98a80d1660378e3904a66fc9ca2e749b6b96377b9a744fc837296e318c}\label{group__ext-images_ggac61587d98a80d1660378e3904a66fc9ca2e749b6b96377b9a744fc837296e318c}} 
+HSA\+\_\+\+EXT\+\_\+\+IMAGE\+\_\+\+GEOMETRY\+\_\+3D&Three-\/dimensional image addressed by width, height, and depth coordinates. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{HSA\_EXT\_IMAGE\_GEOMETRY\_1DA@{HSA\_EXT\_IMAGE\_GEOMETRY\_1DA}!Images and Samplers@{Images and Samplers}}\index{Images and Samplers@{Images and Samplers}!HSA\_EXT\_IMAGE\_GEOMETRY\_1DA@{HSA\_EXT\_IMAGE\_GEOMETRY\_1DA}}}\mbox{\Hypertarget{group__ext-images_ggac61587d98a80d1660378e3904a66fc9cad989c8e619b376dc98ac3950be9afa33}\label{group__ext-images_ggac61587d98a80d1660378e3904a66fc9cad989c8e619b376dc98ac3950be9afa33}} 
+HSA\+\_\+\+EXT\+\_\+\+IMAGE\+\_\+\+GEOMETRY\+\_\+1\+DA&Array of one-\/dimensional images with the same size and format. 1D arrays are addressed by width and index coordinate. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{HSA\_EXT\_IMAGE\_GEOMETRY\_2DA@{HSA\_EXT\_IMAGE\_GEOMETRY\_2DA}!Images and Samplers@{Images and Samplers}}\index{Images and Samplers@{Images and Samplers}!HSA\_EXT\_IMAGE\_GEOMETRY\_2DA@{HSA\_EXT\_IMAGE\_GEOMETRY\_2DA}}}\mbox{\Hypertarget{group__ext-images_ggac61587d98a80d1660378e3904a66fc9ca90929e69cbf0b447060e1aeb23fd6dd4}\label{group__ext-images_ggac61587d98a80d1660378e3904a66fc9ca90929e69cbf0b447060e1aeb23fd6dd4}} 
+HSA\+\_\+\+EXT\+\_\+\+IMAGE\+\_\+\+GEOMETRY\+\_\+2\+DA&Array of two-\/dimensional images with the same size and format. 2D arrays are addressed by width, height, and index coordinates. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{HSA\_EXT\_IMAGE\_GEOMETRY\_1DB@{HSA\_EXT\_IMAGE\_GEOMETRY\_1DB}!Images and Samplers@{Images and Samplers}}\index{Images and Samplers@{Images and Samplers}!HSA\_EXT\_IMAGE\_GEOMETRY\_1DB@{HSA\_EXT\_IMAGE\_GEOMETRY\_1DB}}}\mbox{\Hypertarget{group__ext-images_ggac61587d98a80d1660378e3904a66fc9ca47b208990ed715c37071f1fff17e812c}\label{group__ext-images_ggac61587d98a80d1660378e3904a66fc9ca47b208990ed715c37071f1fff17e812c}} 
+HSA\+\_\+\+EXT\+\_\+\+IMAGE\+\_\+\+GEOMETRY\+\_\+1\+DB&One-\/dimensional image addressed by width coordinate. It has specific restrictions compared to \mbox{\hyperlink{group__ext-images_ggac61587d98a80d1660378e3904a66fc9caa025ea993dbfe3101d3ff0caea2ea0cf}{HSA\+\_\+\+EXT\+\_\+\+IMAGE\+\_\+\+GEOMETRY\+\_\+1D}}. An image with an opaque image data layout will always use a linear image data layout, and one with an explicit image data layout must specify \mbox{\hyperlink{group__ext-images_gga102222a1420a2434d9b50100350305e4a989b98c2fc0e31d5c434bbb946ae63d0}{HSA\+\_\+\+EXT\+\_\+\+IMAGE\+\_\+\+DATA\+\_\+\+LAYOUT\+\_\+\+LINEAR}}. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{HSA\_EXT\_IMAGE\_GEOMETRY\_2DDEPTH@{HSA\_EXT\_IMAGE\_GEOMETRY\_2DDEPTH}!Images and Samplers@{Images and Samplers}}\index{Images and Samplers@{Images and Samplers}!HSA\_EXT\_IMAGE\_GEOMETRY\_2DDEPTH@{HSA\_EXT\_IMAGE\_GEOMETRY\_2DDEPTH}}}\mbox{\Hypertarget{group__ext-images_ggac61587d98a80d1660378e3904a66fc9caf1f195107c114c7235275f047d2f0474}\label{group__ext-images_ggac61587d98a80d1660378e3904a66fc9caf1f195107c114c7235275f047d2f0474}} 
+HSA\+\_\+\+EXT\+\_\+\+IMAGE\+\_\+\+GEOMETRY\+\_\+2\+DDEPTH&Two-\/dimensional depth image addressed by width and height coordinates. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{HSA\_EXT\_IMAGE\_GEOMETRY\_2DADEPTH@{HSA\_EXT\_IMAGE\_GEOMETRY\_2DADEPTH}!Images and Samplers@{Images and Samplers}}\index{Images and Samplers@{Images and Samplers}!HSA\_EXT\_IMAGE\_GEOMETRY\_2DADEPTH@{HSA\_EXT\_IMAGE\_GEOMETRY\_2DADEPTH}}}\mbox{\Hypertarget{group__ext-images_ggac61587d98a80d1660378e3904a66fc9caf3d5440659a9dfd7892da13c1fe992bd}\label{group__ext-images_ggac61587d98a80d1660378e3904a66fc9caf3d5440659a9dfd7892da13c1fe992bd}} 
+HSA\+\_\+\+EXT\+\_\+\+IMAGE\+\_\+\+GEOMETRY\+\_\+2\+DADEPTH&Array of two-\/dimensional depth images with the same size and format. 2D arrays are addressed by width, height, and index coordinates. \\
+\hline
+
+\end{DoxyEnumFields}
+\mbox{\Hypertarget{group__ext-images_ga60a9fcdc1a1f338bd7e54445359fdf0f}\label{group__ext-images_ga60a9fcdc1a1f338bd7e54445359fdf0f}} 
+\index{Images and Samplers@{Images and Samplers}!hsa\_ext\_sampler\_addressing\_mode\_t@{hsa\_ext\_sampler\_addressing\_mode\_t}}
+\index{hsa\_ext\_sampler\_addressing\_mode\_t@{hsa\_ext\_sampler\_addressing\_mode\_t}!Images and Samplers@{Images and Samplers}}
+\doxysubsubsection{\texorpdfstring{hsa\_ext\_sampler\_addressing\_mode\_t}{hsa\_ext\_sampler\_addressing\_mode\_t}}
+{\footnotesize\ttfamily enum \mbox{\hyperlink{group__ext-images_ga60a9fcdc1a1f338bd7e54445359fdf0f}{hsa\+\_\+ext\+\_\+sampler\+\_\+addressing\+\_\+mode\+\_\+t}}}
+
+
+
+Sampler address modes. The sampler address mode describes the processing of out-\/of-\/range image coordinates. See the {\itshape Addressing Mode} section in the {\itshape HSA Programming Reference Manual} for definitions on each address mode. The values match the BRIG type {\ttfamily hsa\+\_\+ext\+\_\+brig\+\_\+sampler\+\_\+addressing\+\_\+t}. 
+
+\begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{HSA\_EXT\_SAMPLER\_ADDRESSING\_MODE\_UNDEFINED@{HSA\_EXT\_SAMPLER\_ADDRESSING\_MODE\_UNDEFINED}!Images and Samplers@{Images and Samplers}}\index{Images and Samplers@{Images and Samplers}!HSA\_EXT\_SAMPLER\_ADDRESSING\_MODE\_UNDEFINED@{HSA\_EXT\_SAMPLER\_ADDRESSING\_MODE\_UNDEFINED}}}\mbox{\Hypertarget{group__ext-images_gga60a9fcdc1a1f338bd7e54445359fdf0fa4b02e9d069ed545eb3771b2a2c69ccb8}\label{group__ext-images_gga60a9fcdc1a1f338bd7e54445359fdf0fa4b02e9d069ed545eb3771b2a2c69ccb8}} 
+HSA\+\_\+\+EXT\+\_\+\+SAMPLER\+\_\+\+ADDRESSING\+\_\+\+MODE\+\_\+\+UNDEFINED&Out-\/of-\/range coordinates are not handled. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{HSA\_EXT\_SAMPLER\_ADDRESSING\_MODE\_CLAMP\_TO\_EDGE@{HSA\_EXT\_SAMPLER\_ADDRESSING\_MODE\_CLAMP\_TO\_EDGE}!Images and Samplers@{Images and Samplers}}\index{Images and Samplers@{Images and Samplers}!HSA\_EXT\_SAMPLER\_ADDRESSING\_MODE\_CLAMP\_TO\_EDGE@{HSA\_EXT\_SAMPLER\_ADDRESSING\_MODE\_CLAMP\_TO\_EDGE}}}\mbox{\Hypertarget{group__ext-images_gga60a9fcdc1a1f338bd7e54445359fdf0faefb1f71d8741673081efd7fbb3141533}\label{group__ext-images_gga60a9fcdc1a1f338bd7e54445359fdf0faefb1f71d8741673081efd7fbb3141533}} 
+HSA\+\_\+\+EXT\+\_\+\+SAMPLER\+\_\+\+ADDRESSING\+\_\+\+MODE\+\_\+\+CLAMP\+\_\+\+TO\+\_\+\+EDGE&Clamp out-\/of-\/range coordinates to the image edge. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{HSA\_EXT\_SAMPLER\_ADDRESSING\_MODE\_CLAMP\_TO\_BORDER@{HSA\_EXT\_SAMPLER\_ADDRESSING\_MODE\_CLAMP\_TO\_BORDER}!Images and Samplers@{Images and Samplers}}\index{Images and Samplers@{Images and Samplers}!HSA\_EXT\_SAMPLER\_ADDRESSING\_MODE\_CLAMP\_TO\_BORDER@{HSA\_EXT\_SAMPLER\_ADDRESSING\_MODE\_CLAMP\_TO\_BORDER}}}\mbox{\Hypertarget{group__ext-images_gga60a9fcdc1a1f338bd7e54445359fdf0faf9fe6a395063062f4b827610f0c38572}\label{group__ext-images_gga60a9fcdc1a1f338bd7e54445359fdf0faf9fe6a395063062f4b827610f0c38572}} 
+HSA\+\_\+\+EXT\+\_\+\+SAMPLER\+\_\+\+ADDRESSING\+\_\+\+MODE\+\_\+\+CLAMP\+\_\+\+TO\+\_\+\+BORDER&Clamp out-\/of-\/range coordinates to the image border color. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{HSA\_EXT\_SAMPLER\_ADDRESSING\_MODE\_REPEAT@{HSA\_EXT\_SAMPLER\_ADDRESSING\_MODE\_REPEAT}!Images and Samplers@{Images and Samplers}}\index{Images and Samplers@{Images and Samplers}!HSA\_EXT\_SAMPLER\_ADDRESSING\_MODE\_REPEAT@{HSA\_EXT\_SAMPLER\_ADDRESSING\_MODE\_REPEAT}}}\mbox{\Hypertarget{group__ext-images_gga60a9fcdc1a1f338bd7e54445359fdf0facbb546d8b317e2e0af9b78fbfbc36b50}\label{group__ext-images_gga60a9fcdc1a1f338bd7e54445359fdf0facbb546d8b317e2e0af9b78fbfbc36b50}} 
+HSA\+\_\+\+EXT\+\_\+\+SAMPLER\+\_\+\+ADDRESSING\+\_\+\+MODE\+\_\+\+REPEAT&Wrap out-\/of-\/range coordinates back into the valid coordinate range so the image appears as repeated tiles. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{HSA\_EXT\_SAMPLER\_ADDRESSING\_MODE\_MIRRORED\_REPEAT@{HSA\_EXT\_SAMPLER\_ADDRESSING\_MODE\_MIRRORED\_REPEAT}!Images and Samplers@{Images and Samplers}}\index{Images and Samplers@{Images and Samplers}!HSA\_EXT\_SAMPLER\_ADDRESSING\_MODE\_MIRRORED\_REPEAT@{HSA\_EXT\_SAMPLER\_ADDRESSING\_MODE\_MIRRORED\_REPEAT}}}\mbox{\Hypertarget{group__ext-images_gga60a9fcdc1a1f338bd7e54445359fdf0faf4172b4d90cb5296e55885c7afa14bb6}\label{group__ext-images_gga60a9fcdc1a1f338bd7e54445359fdf0faf4172b4d90cb5296e55885c7afa14bb6}} 
+HSA\+\_\+\+EXT\+\_\+\+SAMPLER\+\_\+\+ADDRESSING\+\_\+\+MODE\+\_\+\+MIRRORED\+\_\+\+REPEAT&Mirror out-\/of-\/range coordinates back into the valid coordinate range so the image appears as repeated tiles with every other tile a reflection. \\
+\hline
+
+\end{DoxyEnumFields}
+\mbox{\Hypertarget{group__ext-images_gad7644f3eccb4f8ce5693313b88440d87}\label{group__ext-images_gad7644f3eccb4f8ce5693313b88440d87}} 
+\index{Images and Samplers@{Images and Samplers}!hsa\_ext\_sampler\_coordinate\_mode\_t@{hsa\_ext\_sampler\_coordinate\_mode\_t}}
+\index{hsa\_ext\_sampler\_coordinate\_mode\_t@{hsa\_ext\_sampler\_coordinate\_mode\_t}!Images and Samplers@{Images and Samplers}}
+\doxysubsubsection{\texorpdfstring{hsa\_ext\_sampler\_coordinate\_mode\_t}{hsa\_ext\_sampler\_coordinate\_mode\_t}}
+{\footnotesize\ttfamily enum \mbox{\hyperlink{group__ext-images_gad7644f3eccb4f8ce5693313b88440d87}{hsa\+\_\+ext\+\_\+sampler\+\_\+coordinate\+\_\+mode\+\_\+t}}}
+
+
+
+Sampler coordinate normalization modes. See the {\itshape Coordinate Normalization Mode} section in the {\itshape HSA Programming Reference Manual} for definitions on each coordinate normalization mode. The values match the BRIG type {\ttfamily hsa\+\_\+ext\+\_\+brig\+\_\+sampler\+\_\+coord\+\_\+normalization\+\_\+t}. 
+
+\begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{HSA\_EXT\_SAMPLER\_COORDINATE\_MODE\_UNNORMALIZED@{HSA\_EXT\_SAMPLER\_COORDINATE\_MODE\_UNNORMALIZED}!Images and Samplers@{Images and Samplers}}\index{Images and Samplers@{Images and Samplers}!HSA\_EXT\_SAMPLER\_COORDINATE\_MODE\_UNNORMALIZED@{HSA\_EXT\_SAMPLER\_COORDINATE\_MODE\_UNNORMALIZED}}}\mbox{\Hypertarget{group__ext-images_ggad7644f3eccb4f8ce5693313b88440d87a12bd33ab83e502cff3e7b8016470e97e}\label{group__ext-images_ggad7644f3eccb4f8ce5693313b88440d87a12bd33ab83e502cff3e7b8016470e97e}} 
+HSA\+\_\+\+EXT\+\_\+\+SAMPLER\+\_\+\+COORDINATE\+\_\+\+MODE\+\_\+\+UNNORMALIZED&Coordinates are used to directly address an image element. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{HSA\_EXT\_SAMPLER\_COORDINATE\_MODE\_NORMALIZED@{HSA\_EXT\_SAMPLER\_COORDINATE\_MODE\_NORMALIZED}!Images and Samplers@{Images and Samplers}}\index{Images and Samplers@{Images and Samplers}!HSA\_EXT\_SAMPLER\_COORDINATE\_MODE\_NORMALIZED@{HSA\_EXT\_SAMPLER\_COORDINATE\_MODE\_NORMALIZED}}}\mbox{\Hypertarget{group__ext-images_ggad7644f3eccb4f8ce5693313b88440d87a278882aec9c205d2bd184e1d0a1e6391}\label{group__ext-images_ggad7644f3eccb4f8ce5693313b88440d87a278882aec9c205d2bd184e1d0a1e6391}} 
+HSA\+\_\+\+EXT\+\_\+\+SAMPLER\+\_\+\+COORDINATE\+\_\+\+MODE\+\_\+\+NORMALIZED&Coordinates are scaled by the image dimension size before being used to address an image element. \\
+\hline
+
+\end{DoxyEnumFields}
+\mbox{\Hypertarget{group__ext-images_ga0f0c16fdeea5c2a56130ecefe7cefd02}\label{group__ext-images_ga0f0c16fdeea5c2a56130ecefe7cefd02}} 
+\index{Images and Samplers@{Images and Samplers}!hsa\_ext\_sampler\_filter\_mode\_t@{hsa\_ext\_sampler\_filter\_mode\_t}}
+\index{hsa\_ext\_sampler\_filter\_mode\_t@{hsa\_ext\_sampler\_filter\_mode\_t}!Images and Samplers@{Images and Samplers}}
+\doxysubsubsection{\texorpdfstring{hsa\_ext\_sampler\_filter\_mode\_t}{hsa\_ext\_sampler\_filter\_mode\_t}}
+{\footnotesize\ttfamily enum \mbox{\hyperlink{group__ext-images_ga0f0c16fdeea5c2a56130ecefe7cefd02}{hsa\+\_\+ext\+\_\+sampler\+\_\+filter\+\_\+mode\+\_\+t}}}
+
+
+
+Sampler filter modes. See the {\itshape Filter Mode} section in the {\itshape HSA Programming Reference Manual} for definitions on each address mode. The enumeration values match the BRIG type {\ttfamily hsa\+\_\+ext\+\_\+brig\+\_\+sampler\+\_\+filter\+\_\+t}. 
+
+\begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{HSA\_EXT\_SAMPLER\_FILTER\_MODE\_NEAREST@{HSA\_EXT\_SAMPLER\_FILTER\_MODE\_NEAREST}!Images and Samplers@{Images and Samplers}}\index{Images and Samplers@{Images and Samplers}!HSA\_EXT\_SAMPLER\_FILTER\_MODE\_NEAREST@{HSA\_EXT\_SAMPLER\_FILTER\_MODE\_NEAREST}}}\mbox{\Hypertarget{group__ext-images_gga0f0c16fdeea5c2a56130ecefe7cefd02a48340bfcc19863880213631f47b8607e}\label{group__ext-images_gga0f0c16fdeea5c2a56130ecefe7cefd02a48340bfcc19863880213631f47b8607e}} 
+HSA\+\_\+\+EXT\+\_\+\+SAMPLER\+\_\+\+FILTER\+\_\+\+MODE\+\_\+\+NEAREST&Filter to the image element nearest (in Manhattan distance) to the specified coordinate. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{HSA\_EXT\_SAMPLER\_FILTER\_MODE\_LINEAR@{HSA\_EXT\_SAMPLER\_FILTER\_MODE\_LINEAR}!Images and Samplers@{Images and Samplers}}\index{Images and Samplers@{Images and Samplers}!HSA\_EXT\_SAMPLER\_FILTER\_MODE\_LINEAR@{HSA\_EXT\_SAMPLER\_FILTER\_MODE\_LINEAR}}}\mbox{\Hypertarget{group__ext-images_gga0f0c16fdeea5c2a56130ecefe7cefd02a18009b32510cb5d6f890e09758b20b5e}\label{group__ext-images_gga0f0c16fdeea5c2a56130ecefe7cefd02a18009b32510cb5d6f890e09758b20b5e}} 
+HSA\+\_\+\+EXT\+\_\+\+SAMPLER\+\_\+\+FILTER\+\_\+\+MODE\+\_\+\+LINEAR&Filter to the image element calculated by combining the elements in a 2x2 square block or 2x2x2 cube block around the specified coordinate. The elements are combined using linear interpolation. \\
+\hline
+
+\end{DoxyEnumFields}
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{group__ext-images_gacc311188d2d5c9182e4a07bfceabbd99}\label{group__ext-images_gacc311188d2d5c9182e4a07bfceabbd99}} 
+\index{Images and Samplers@{Images and Samplers}!hsa\_ext\_image\_clear@{hsa\_ext\_image\_clear}}
+\index{hsa\_ext\_image\_clear@{hsa\_ext\_image\_clear}!Images and Samplers@{Images and Samplers}}
+\doxysubsubsection{\texorpdfstring{hsa\_ext\_image\_clear()}{hsa\_ext\_image\_clear()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{group__status_gad755322e7ff95456520e8abdbe90d225}{hsa\+\_\+status\+\_\+t}} \mbox{\hyperlink{inc_2hsa__ext__image_8h_a64216765b98b62ee87deb50fd2899836}{HSA\+\_\+\+API}} hsa\+\_\+ext\+\_\+image\+\_\+clear (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{group__agentinfo_ga9ce217ef08e7d5e89c8e83ce7b6ef22b}{hsa\+\_\+agent\+\_\+t}}}]{agent,  }\item[{\mbox{\hyperlink{group__ext-images_ga4e192988bd0b5abe2a57e248934e6dc6}{hsa\+\_\+ext\+\_\+image\+\_\+t}}}]{image,  }\item[{const void $\ast$}]{data,  }\item[{const \mbox{\hyperlink{group__ext-images_gaa407e3fb8aa43d59f8e8560294d1c702}{hsa\+\_\+ext\+\_\+image\+\_\+region\+\_\+t}} $\ast$}]{image\+\_\+region }\end{DoxyParamCaption})}
+
+
+
+Clear a region of an image so that every image element has the specified value. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em agent} & Agent associated with the image handle.\\
+\hline
+\mbox{\texttt{ in}}  & {\em image} & Image handle for image to be cleared.\\
+\hline
+\mbox{\texttt{ in}}  & {\em data} & The value to which to set each image element being cleared. It is specified as an array of image component values. The number of array elements must match the number of access components for the image channel order. The type of each array element must match the image access type of the image channel type. When the value is used to set the value of an image element, the conversion method corresponding to the image channel type is used. See the {\itshape Channel Order} section and {\itshape Channel Type} section in the {\itshape HSA Programming Reference Manual} for more information. Must not be NULL.\\
+\hline
+\mbox{\texttt{ in}}  & {\em image\+\_\+region} & Pointer to the image region to clear. Must not be NULL. If the region references an out-\/out-\/bounds element, the behavior is undefined.\\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em \mbox{\hyperlink{group__status_ggad755322e7ff95456520e8abdbe90d225ae382ea0c9c05cce5a60d0317375159cc}{HSA\+\_\+\+STATUS\+\_\+\+SUCCESS}}} & The function has been executed successfully.\\
+\hline
+{\em \mbox{\hyperlink{group__status_ggad755322e7ff95456520e8abdbe90d225a34ea59ade5bfce95eee935238a99f5b5}{HSA\+\_\+\+STATUS\+\_\+\+ERROR\+\_\+\+NOT\+\_\+\+INITIALIZED}}} & The HSA runtime has not been initialized.\\
+\hline
+{\em \mbox{\hyperlink{group__status_ggad755322e7ff95456520e8abdbe90d225a3a5d835c109c2d0ad5b9c2771e133e5d}{HSA\+\_\+\+STATUS\+\_\+\+ERROR\+\_\+\+INVALID\+\_\+\+AGENT}}} & The agent is invalid.\\
+\hline
+{\em \mbox{\hyperlink{group__status_ggad755322e7ff95456520e8abdbe90d225ac7d3651f75107d2a6a8ba3b25683c030}{HSA\+\_\+\+STATUS\+\_\+\+ERROR\+\_\+\+INVALID\+\_\+\+ARGUMENT}}} & {\ttfamily data} is NULL, or {\ttfamily image\+\_\+region} is NULL. \\
+\hline
+\end{DoxyRetVals}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{group__ext-images_gacc311188d2d5c9182e4a07bfceabbd99_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{group__ext-images_ga3c8f7cdc2f8f5fc7aa4ad3f845a3dc8d}\label{group__ext-images_ga3c8f7cdc2f8f5fc7aa4ad3f845a3dc8d}} 
+\index{Images and Samplers@{Images and Samplers}!hsa\_ext\_image\_copy@{hsa\_ext\_image\_copy}}
+\index{hsa\_ext\_image\_copy@{hsa\_ext\_image\_copy}!Images and Samplers@{Images and Samplers}}
+\doxysubsubsection{\texorpdfstring{hsa\_ext\_image\_copy()}{hsa\_ext\_image\_copy()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{group__status_gad755322e7ff95456520e8abdbe90d225}{hsa\+\_\+status\+\_\+t}} \mbox{\hyperlink{inc_2hsa__ext__image_8h_a64216765b98b62ee87deb50fd2899836}{HSA\+\_\+\+API}} hsa\+\_\+ext\+\_\+image\+\_\+copy (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{group__agentinfo_ga9ce217ef08e7d5e89c8e83ce7b6ef22b}{hsa\+\_\+agent\+\_\+t}}}]{agent,  }\item[{\mbox{\hyperlink{group__ext-images_ga4e192988bd0b5abe2a57e248934e6dc6}{hsa\+\_\+ext\+\_\+image\+\_\+t}}}]{src\+\_\+image,  }\item[{const \mbox{\hyperlink{group__common_gae460d1df8c508a9c889d4550ea4eea30}{hsa\+\_\+dim3\+\_\+t}} $\ast$}]{src\+\_\+offset,  }\item[{\mbox{\hyperlink{group__ext-images_ga4e192988bd0b5abe2a57e248934e6dc6}{hsa\+\_\+ext\+\_\+image\+\_\+t}}}]{dst\+\_\+image,  }\item[{const \mbox{\hyperlink{group__common_gae460d1df8c508a9c889d4550ea4eea30}{hsa\+\_\+dim3\+\_\+t}} $\ast$}]{dst\+\_\+offset,  }\item[{const \mbox{\hyperlink{group__common_gae460d1df8c508a9c889d4550ea4eea30}{hsa\+\_\+dim3\+\_\+t}} $\ast$}]{range }\end{DoxyParamCaption})}
+
+
+
+Copies a portion of one image (the source) to another image (the destination). 
+
+The source and destination image formats should be the same, with the exception that s-\/form channel orders match the corresponding non-\/s-\/form channel order and vice versa. For example, it is allowed to copy a source image with a channel order of HSA\+\_\+\+EXT\+\_\+\+IMAGE\+\_\+\+CHANNEL\+\_\+\+ORDER\+\_\+\+SRGB to a destination image with a channel order of HSA\+\_\+\+EXT\+\_\+\+IMAGE\+\_\+\+CHANNEL\+\_\+\+ORDER\+\_\+\+RGB.
+
+The source and destination images do not have to be of the same geometry and appropriate scaling is performed by the HSA runtime. It is possible to copy subregions between any combinations of source and destination geometries, provided that the dimensions of the subregions are the same. For example, it is allowed to copy a rectangular region from a 2D image to a slice of a 3D image.
+
+If the source and destination image data overlap, or the combination of offset and range references an out-\/out-\/bounds element in any of the images, the behavior is undefined.
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em agent} & Agent associated with both the source and destination image handles.\\
+\hline
+\mbox{\texttt{ in}}  & {\em src\+\_\+image} & Image handle of source image. The agent associated with the source image handle must be identical to that of the destination image.\\
+\hline
+\mbox{\texttt{ in}}  & {\em src\+\_\+offset} & Pointer to the offset within the source image where to copy the data from. Must not be NULL.\\
+\hline
+\mbox{\texttt{ in}}  & {\em dst\+\_\+image} & Image handle of destination image.\\
+\hline
+\mbox{\texttt{ in}}  & {\em dst\+\_\+offset} & Pointer to the offset within the destination image where to copy the data. Must not be NULL.\\
+\hline
+\mbox{\texttt{ in}}  & {\em range} & Dimensions of the image portion to be copied. The HSA runtime computes the size of the image data to be copied using this argument. Must not be NULL.\\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em \mbox{\hyperlink{group__status_ggad755322e7ff95456520e8abdbe90d225ae382ea0c9c05cce5a60d0317375159cc}{HSA\+\_\+\+STATUS\+\_\+\+SUCCESS}}} & The function has been executed successfully.\\
+\hline
+{\em \mbox{\hyperlink{group__status_ggad755322e7ff95456520e8abdbe90d225a34ea59ade5bfce95eee935238a99f5b5}{HSA\+\_\+\+STATUS\+\_\+\+ERROR\+\_\+\+NOT\+\_\+\+INITIALIZED}}} & The HSA runtime has not been initialized.\\
+\hline
+{\em \mbox{\hyperlink{group__status_ggad755322e7ff95456520e8abdbe90d225a3a5d835c109c2d0ad5b9c2771e133e5d}{HSA\+\_\+\+STATUS\+\_\+\+ERROR\+\_\+\+INVALID\+\_\+\+AGENT}}} & The agent is invalid.\\
+\hline
+{\em \mbox{\hyperlink{group__status_ggad755322e7ff95456520e8abdbe90d225ac7d3651f75107d2a6a8ba3b25683c030}{HSA\+\_\+\+STATUS\+\_\+\+ERROR\+\_\+\+INVALID\+\_\+\+ARGUMENT}}} & {\ttfamily src\+\_\+offset} is NULL, {\ttfamily dst\+\_\+offset} is NULL, or {\ttfamily range} is NULL. \\
+\hline
+\end{DoxyRetVals}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{group__ext-images_ga3c8f7cdc2f8f5fc7aa4ad3f845a3dc8d_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{group__ext-images_ga985562c68508d4d8b0edcfd0729b6d49}\label{group__ext-images_ga985562c68508d4d8b0edcfd0729b6d49}} 
+\index{Images and Samplers@{Images and Samplers}!hsa\_ext\_image\_create@{hsa\_ext\_image\_create}}
+\index{hsa\_ext\_image\_create@{hsa\_ext\_image\_create}!Images and Samplers@{Images and Samplers}}
+\doxysubsubsection{\texorpdfstring{hsa\_ext\_image\_create()}{hsa\_ext\_image\_create()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{group__status_gad755322e7ff95456520e8abdbe90d225}{hsa\+\_\+status\+\_\+t}} \mbox{\hyperlink{inc_2hsa__ext__image_8h_a64216765b98b62ee87deb50fd2899836}{HSA\+\_\+\+API}} hsa\+\_\+ext\+\_\+image\+\_\+create (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{group__agentinfo_ga9ce217ef08e7d5e89c8e83ce7b6ef22b}{hsa\+\_\+agent\+\_\+t}}}]{agent,  }\item[{const \mbox{\hyperlink{group__ext-images_ga7ccf44400f9bbb459c8e52f54a3c5eb0}{hsa\+\_\+ext\+\_\+image\+\_\+descriptor\+\_\+t}} $\ast$}]{image\+\_\+descriptor,  }\item[{const void $\ast$}]{image\+\_\+data,  }\item[{\mbox{\hyperlink{group__common_gacef73774a0af1d1df56fdcd9e04bb708}{hsa\+\_\+access\+\_\+permission\+\_\+t}}}]{access\+\_\+permission,  }\item[{\mbox{\hyperlink{group__ext-images_ga4e192988bd0b5abe2a57e248934e6dc6}{hsa\+\_\+ext\+\_\+image\+\_\+t}} $\ast$}]{image }\end{DoxyParamCaption})}
+
+
+
+Creates an agent specific image handle to an image with an opaque image data layout. 
+
+Images with an opaque image data layout created with different access permissions but matching image descriptors and same agent can share the same image data if \mbox{\hyperlink{group__ext-images_ggab3d3401883f796b3f2d8dfad14f90568a7e7df436921a7ef7028281b9c12d6dc2}{HSA\+\_\+\+EXT\+\_\+\+IMAGE\+\_\+\+CAPABILITY\+\_\+\+ACCESS\+\_\+\+INVARIANT\+\_\+\+DATA\+\_\+\+LAYOUT}} is reported by \mbox{\hyperlink{group__ext-images_ga12a909df33851b76afa2850abc7086f1}{hsa\+\_\+ext\+\_\+image\+\_\+get\+\_\+capability}} for the image format specified in the image descriptor. Image descriptors match if they have the same values, with the exception that s-\/form channel orders match the corresponding non-\/s-\/form channel order and vice versa.
+
+If necessary, an application can use image operations (import, export, copy, clear) to prepare the image for the intended use regardless of the access permissions.
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em agent} & agent to be associated with the image handle created.\\
+\hline
+\mbox{\texttt{ in}}  & {\em image\+\_\+descriptor} & Pointer to an image descriptor. Must not be NULL.\\
+\hline
+\mbox{\texttt{ in}}  & {\em image\+\_\+data} & Image data buffer that must have been allocated according to the size and alignment requirements dictated by \mbox{\hyperlink{group__ext-images_gad8e2426d1829f772af6e603ff226f65a}{hsa\+\_\+ext\+\_\+image\+\_\+data\+\_\+get\+\_\+info}}. Must not be NULL.\\
+\hline
+\end{DoxyParams}
+Any previous memory contents are preserved upon creation. The application is responsible for ensuring that the lifetime of the image data exceeds that of all the associated images.
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em access\+\_\+permission} & Access permission of the image when accessed by agent. The access permission defines how the agent is allowed to access the image using the image handle created and must match the corresponding HSAIL image handle type. The agent must support the image format specified in {\ttfamily image\+\_\+descriptor} for the given {\ttfamily access\+\_\+permission}.\\
+\hline
+\mbox{\texttt{ out}}  & {\em image} & Pointer to a memory location where the HSA runtime stores the newly created image handle. Must not be NULL.\\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em \mbox{\hyperlink{group__status_ggad755322e7ff95456520e8abdbe90d225ae382ea0c9c05cce5a60d0317375159cc}{HSA\+\_\+\+STATUS\+\_\+\+SUCCESS}}} & The function has been executed successfully.\\
+\hline
+{\em \mbox{\hyperlink{group__status_ggad755322e7ff95456520e8abdbe90d225a34ea59ade5bfce95eee935238a99f5b5}{HSA\+\_\+\+STATUS\+\_\+\+ERROR\+\_\+\+NOT\+\_\+\+INITIALIZED}}} & The HSA runtime has not been initialized.\\
+\hline
+{\em \mbox{\hyperlink{group__status_ggad755322e7ff95456520e8abdbe90d225a3a5d835c109c2d0ad5b9c2771e133e5d}{HSA\+\_\+\+STATUS\+\_\+\+ERROR\+\_\+\+INVALID\+\_\+\+AGENT}}} & The agent is invalid.\\
+\hline
+{\em \mbox{\hyperlink{group__ext-images_ggae6cdb622357fec6e889e47579a078524a42108181943a2d94749d95dc7942b7d0}{HSA\+\_\+\+EXT\+\_\+\+STATUS\+\_\+\+ERROR\+\_\+\+IMAGE\+\_\+\+FORMAT\+\_\+\+UNSUPPORTED}}} & The agent does not have the capability to support the image format contained in {\ttfamily image\+\_\+descriptor} using the specified {\ttfamily access\+\_\+permission}.\\
+\hline
+{\em \mbox{\hyperlink{group__ext-images_ggae6cdb622357fec6e889e47579a078524a3ff898da367040b1f382c14c9f0a1bab}{HSA\+\_\+\+EXT\+\_\+\+STATUS\+\_\+\+ERROR\+\_\+\+IMAGE\+\_\+\+SIZE\+\_\+\+UNSUPPORTED}}} & The agent does not support the image dimensions specified by {\ttfamily image\+\_\+descriptor} using the specified {\ttfamily access\+\_\+permission}.\\
+\hline
+{\em \mbox{\hyperlink{group__status_ggad755322e7ff95456520e8abdbe90d225a1a77fcf36d0d140874c4361ab093eff7}{HSA\+\_\+\+STATUS\+\_\+\+ERROR\+\_\+\+OUT\+\_\+\+OF\+\_\+\+RESOURCES}}} & The HSA runtime failed to allocate the required resources.\\
+\hline
+\end{DoxyRetVals}
+support the creation of more image handles with the given {\ttfamily access\+\_\+permission}).
+
+
+\begin{DoxyRetVals}{Return values}
+{\em \mbox{\hyperlink{group__status_ggad755322e7ff95456520e8abdbe90d225ac7d3651f75107d2a6a8ba3b25683c030}{HSA\+\_\+\+STATUS\+\_\+\+ERROR\+\_\+\+INVALID\+\_\+\+ARGUMENT}}} & {\ttfamily image\+\_\+descriptor} is NULL, {\ttfamily image\+\_\+data} is NULL, {\ttfamily image\+\_\+data} does not have a valid alignment, {\ttfamily access\+\_\+permission} is not a valid access permission value, or {\ttfamily image} is NULL. \\
+\hline
+\end{DoxyRetVals}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{group__ext-images_ga985562c68508d4d8b0edcfd0729b6d49_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{group__ext-images_ga7de92e8bde1496761b7dd00d1e03186e}\label{group__ext-images_ga7de92e8bde1496761b7dd00d1e03186e}} 
+\index{Images and Samplers@{Images and Samplers}!hsa\_ext\_image\_create\_with\_layout@{hsa\_ext\_image\_create\_with\_layout}}
+\index{hsa\_ext\_image\_create\_with\_layout@{hsa\_ext\_image\_create\_with\_layout}!Images and Samplers@{Images and Samplers}}
+\doxysubsubsection{\texorpdfstring{hsa\_ext\_image\_create\_with\_layout()}{hsa\_ext\_image\_create\_with\_layout()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{group__status_gad755322e7ff95456520e8abdbe90d225}{hsa\+\_\+status\+\_\+t}} \mbox{\hyperlink{inc_2hsa__ext__image_8h_a64216765b98b62ee87deb50fd2899836}{HSA\+\_\+\+API}} hsa\+\_\+ext\+\_\+image\+\_\+create\+\_\+with\+\_\+layout (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{group__agentinfo_ga9ce217ef08e7d5e89c8e83ce7b6ef22b}{hsa\+\_\+agent\+\_\+t}}}]{agent,  }\item[{const \mbox{\hyperlink{group__ext-images_ga7ccf44400f9bbb459c8e52f54a3c5eb0}{hsa\+\_\+ext\+\_\+image\+\_\+descriptor\+\_\+t}} $\ast$}]{image\+\_\+descriptor,  }\item[{const void $\ast$}]{image\+\_\+data,  }\item[{\mbox{\hyperlink{group__common_gacef73774a0af1d1df56fdcd9e04bb708}{hsa\+\_\+access\+\_\+permission\+\_\+t}}}]{access\+\_\+permission,  }\item[{\mbox{\hyperlink{group__ext-images_ga102222a1420a2434d9b50100350305e4}{hsa\+\_\+ext\+\_\+image\+\_\+data\+\_\+layout\+\_\+t}}}]{image\+\_\+data\+\_\+layout,  }\item[{size\+\_\+t}]{image\+\_\+data\+\_\+row\+\_\+pitch,  }\item[{size\+\_\+t}]{image\+\_\+data\+\_\+slice\+\_\+pitch,  }\item[{\mbox{\hyperlink{group__ext-images_ga4e192988bd0b5abe2a57e248934e6dc6}{hsa\+\_\+ext\+\_\+image\+\_\+t}} $\ast$}]{image }\end{DoxyParamCaption})}
+
+
+
+Creates an agent specific image handle to an image with an explicit image data layout. 
+
+Images with an explicit image data layout created with different access permissions but matching image descriptors and matching image layout can share the same image data if \mbox{\hyperlink{group__ext-images_ggab3d3401883f796b3f2d8dfad14f90568a7e7df436921a7ef7028281b9c12d6dc2}{HSA\+\_\+\+EXT\+\_\+\+IMAGE\+\_\+\+CAPABILITY\+\_\+\+ACCESS\+\_\+\+INVARIANT\+\_\+\+DATA\+\_\+\+LAYOUT}} is reported by \mbox{\hyperlink{group__ext-images_ga65fc81035fd8c70c3229ce8f5285e5e6}{hsa\+\_\+ext\+\_\+image\+\_\+get\+\_\+capability\+\_\+with\+\_\+layout}} for the image format specified in the image descriptor and specified image data layout. Image descriptors match if they have the same values, with the exception that s-\/form channel orders match the corresponding non-\/s-\/form channel order and vice versa. Image layouts match if they are the same image data layout and use the same image row and slice values.
+
+If necessary, an application can use image operations (import, export, copy, clear) to prepare the image for the intended use regardless of the access permissions.
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em agent} & agent to be associated with the image handle created.\\
+\hline
+\mbox{\texttt{ in}}  & {\em image\+\_\+descriptor} & Pointer to an image descriptor. Must not be NULL.\\
+\hline
+\mbox{\texttt{ in}}  & {\em image\+\_\+data} & Image data buffer that must have been allocated according to the size and alignment requirements dictated by \mbox{\hyperlink{group__ext-images_ga2d3f7ebd674fe267e608b3f1c1a89965}{hsa\+\_\+ext\+\_\+image\+\_\+data\+\_\+get\+\_\+info\+\_\+with\+\_\+layout}}. Must not be NULL.\\
+\hline
+\end{DoxyParams}
+Any previous memory contents are preserved upon creation. The application is responsible for ensuring that the lifetime of the image data exceeds that of all the associated images.
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em access\+\_\+permission} & Access permission of the image when accessed by the agent. The access permission defines how the agent is allowed to access the image and must match the corresponding HSAIL image handle type. The agent must support the image format specified in {\ttfamily image\+\_\+descriptor} for the given {\ttfamily access\+\_\+permission} and {\ttfamily image\+\_\+data\+\_\+layout}.\\
+\hline
+\mbox{\texttt{ in}}  & {\em image\+\_\+data\+\_\+layout} & The image data layout to use for the {\ttfamily image\+\_\+data}. It is invalid to use \mbox{\hyperlink{group__ext-images_gga102222a1420a2434d9b50100350305e4a6d2884d8802b4696feda4dbbdc7ce86c}{HSA\+\_\+\+EXT\+\_\+\+IMAGE\+\_\+\+DATA\+\_\+\+LAYOUT\+\_\+\+OPAQUE}}; use \mbox{\hyperlink{group__ext-images_ga985562c68508d4d8b0edcfd0729b6d49}{hsa\+\_\+ext\+\_\+image\+\_\+create}} instead.\\
+\hline
+\mbox{\texttt{ in}}  & {\em image\+\_\+data\+\_\+row\+\_\+pitch} & The size in bytes for a single row of the image in the image data. If 0 is specified then the default row pitch value is used\+: image width $\ast$ image element byte size. The value used must be greater than or equal to the default row pitch, and be a multiple of the image element byte size. For the linear image layout it must also be a multiple of the image linear row pitch alignment for the agents that will access the image data using image instructions.\\
+\hline
+\mbox{\texttt{ in}}  & {\em image\+\_\+data\+\_\+slice\+\_\+pitch} & The size in bytes of a single slice of a 3D image, or the size in bytes of each image layer in an image array in the image data. If 0 is specified then the default slice pitch value is used\+: row pitch $\ast$ height if geometry is \mbox{\hyperlink{group__ext-images_ggac61587d98a80d1660378e3904a66fc9ca2e749b6b96377b9a744fc837296e318c}{HSA\+\_\+\+EXT\+\_\+\+IMAGE\+\_\+\+GEOMETRY\+\_\+3D}}, \mbox{\hyperlink{group__ext-images_ggac61587d98a80d1660378e3904a66fc9ca90929e69cbf0b447060e1aeb23fd6dd4}{HSA\+\_\+\+EXT\+\_\+\+IMAGE\+\_\+\+GEOMETRY\+\_\+2\+DA}}, or \mbox{\hyperlink{group__ext-images_ggac61587d98a80d1660378e3904a66fc9caf3d5440659a9dfd7892da13c1fe992bd}{HSA\+\_\+\+EXT\+\_\+\+IMAGE\+\_\+\+GEOMETRY\+\_\+2\+DADEPTH}}; row pitch if geometry is \mbox{\hyperlink{group__ext-images_ggac61587d98a80d1660378e3904a66fc9cad989c8e619b376dc98ac3950be9afa33}{HSA\+\_\+\+EXT\+\_\+\+IMAGE\+\_\+\+GEOMETRY\+\_\+1\+DA}}; and 0 otherwise. The value used must be 0 if the default slice pitch is 0, be greater than or equal to the default slice pitch, and be a multiple of the row pitch.\\
+\hline
+\mbox{\texttt{ out}}  & {\em image} & Pointer to a memory location where the HSA runtime stores the newly created image handle. Must not be NULL.\\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em \mbox{\hyperlink{group__status_ggad755322e7ff95456520e8abdbe90d225ae382ea0c9c05cce5a60d0317375159cc}{HSA\+\_\+\+STATUS\+\_\+\+SUCCESS}}} & The function has been executed successfully.\\
+\hline
+{\em \mbox{\hyperlink{group__status_ggad755322e7ff95456520e8abdbe90d225a34ea59ade5bfce95eee935238a99f5b5}{HSA\+\_\+\+STATUS\+\_\+\+ERROR\+\_\+\+NOT\+\_\+\+INITIALIZED}}} & The HSA runtime has not been initialized.\\
+\hline
+{\em \mbox{\hyperlink{group__status_ggad755322e7ff95456520e8abdbe90d225a3a5d835c109c2d0ad5b9c2771e133e5d}{HSA\+\_\+\+STATUS\+\_\+\+ERROR\+\_\+\+INVALID\+\_\+\+AGENT}}} & The agent is invalid.\\
+\hline
+{\em \mbox{\hyperlink{group__ext-images_ggae6cdb622357fec6e889e47579a078524a42108181943a2d94749d95dc7942b7d0}{HSA\+\_\+\+EXT\+\_\+\+STATUS\+\_\+\+ERROR\+\_\+\+IMAGE\+\_\+\+FORMAT\+\_\+\+UNSUPPORTED}}} & The agent does not have the capability to support the image format contained in the image descriptor using the specified {\ttfamily access\+\_\+permission} and {\ttfamily image\+\_\+data\+\_\+layout}.\\
+\hline
+{\em \mbox{\hyperlink{group__ext-images_ggae6cdb622357fec6e889e47579a078524a3ff898da367040b1f382c14c9f0a1bab}{HSA\+\_\+\+EXT\+\_\+\+STATUS\+\_\+\+ERROR\+\_\+\+IMAGE\+\_\+\+SIZE\+\_\+\+UNSUPPORTED}}} & The agent does not support the image dimensions specified by {\ttfamily image\+\_\+descriptor} using the specified {\ttfamily access\+\_\+permission} and {\ttfamily image\+\_\+data\+\_\+layout}.\\
+\hline
+{\em \mbox{\hyperlink{group__ext-images_ggae6cdb622357fec6e889e47579a078524adf82d2411103b76656e8d99f0b894440}{HSA\+\_\+\+EXT\+\_\+\+STATUS\+\_\+\+ERROR\+\_\+\+IMAGE\+\_\+\+PITCH\+\_\+\+UNSUPPORTED}}} & The agent does not support the row and slice pitch specified by {\ttfamily image\+\_\+data\+\_\+row\+\_\+pitch} and {\ttfamily image\+\_\+data\+\_\+slice\+\_\+pitch}, or the values are invalid.\\
+\hline
+{\em \mbox{\hyperlink{group__status_ggad755322e7ff95456520e8abdbe90d225a1a77fcf36d0d140874c4361ab093eff7}{HSA\+\_\+\+STATUS\+\_\+\+ERROR\+\_\+\+OUT\+\_\+\+OF\+\_\+\+RESOURCES}}} & The HSA runtime failed to allocate the required resources.\\
+\hline
+\end{DoxyRetVals}
+support the creation of more image handles with the given {\ttfamily access\+\_\+permission}).
+
+
+\begin{DoxyRetVals}{Return values}
+{\em \mbox{\hyperlink{group__status_ggad755322e7ff95456520e8abdbe90d225ac7d3651f75107d2a6a8ba3b25683c030}{HSA\+\_\+\+STATUS\+\_\+\+ERROR\+\_\+\+INVALID\+\_\+\+ARGUMENT}}} & {\ttfamily image\+\_\+descriptor} is NULL, {\ttfamily image\+\_\+data} is NULL, {\ttfamily image\+\_\+data} does not have a valid alignment, {\ttfamily image\+\_\+data\+\_\+layout} is \mbox{\hyperlink{group__ext-images_gga102222a1420a2434d9b50100350305e4a6d2884d8802b4696feda4dbbdc7ce86c}{HSA\+\_\+\+EXT\+\_\+\+IMAGE\+\_\+\+DATA\+\_\+\+LAYOUT\+\_\+\+OPAQUE}}, or {\ttfamily image} is NULL. \\
+\hline
+\end{DoxyRetVals}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{group__ext-images_ga7de92e8bde1496761b7dd00d1e03186e_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{group__ext-images_gad8e2426d1829f772af6e603ff226f65a}\label{group__ext-images_gad8e2426d1829f772af6e603ff226f65a}} 
+\index{Images and Samplers@{Images and Samplers}!hsa\_ext\_image\_data\_get\_info@{hsa\_ext\_image\_data\_get\_info}}
+\index{hsa\_ext\_image\_data\_get\_info@{hsa\_ext\_image\_data\_get\_info}!Images and Samplers@{Images and Samplers}}
+\doxysubsubsection{\texorpdfstring{hsa\_ext\_image\_data\_get\_info()}{hsa\_ext\_image\_data\_get\_info()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{group__status_gad755322e7ff95456520e8abdbe90d225}{hsa\+\_\+status\+\_\+t}} \mbox{\hyperlink{inc_2hsa__ext__image_8h_a64216765b98b62ee87deb50fd2899836}{HSA\+\_\+\+API}} hsa\+\_\+ext\+\_\+image\+\_\+data\+\_\+get\+\_\+info (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{group__agentinfo_ga9ce217ef08e7d5e89c8e83ce7b6ef22b}{hsa\+\_\+agent\+\_\+t}}}]{agent,  }\item[{const \mbox{\hyperlink{group__ext-images_ga7ccf44400f9bbb459c8e52f54a3c5eb0}{hsa\+\_\+ext\+\_\+image\+\_\+descriptor\+\_\+t}} $\ast$}]{image\+\_\+descriptor,  }\item[{\mbox{\hyperlink{group__common_gacef73774a0af1d1df56fdcd9e04bb708}{hsa\+\_\+access\+\_\+permission\+\_\+t}}}]{access\+\_\+permission,  }\item[{\mbox{\hyperlink{group__ext-images_gada32050df34dc3f6c0b9124706d8984b}{hsa\+\_\+ext\+\_\+image\+\_\+data\+\_\+info\+\_\+t}} $\ast$}]{image\+\_\+data\+\_\+info }\end{DoxyParamCaption})}
+
+
+
+Retrieve the image data requirements for a given combination of agent, image descriptor, and access permission for an image created with an opaque image data layout. 
+
+The optimal image data size and alignment requirements may vary depending on the image attributes specified in {\ttfamily image\+\_\+descriptor}, the {\ttfamily access\+\_\+permission}, and the {\ttfamily agent}. Also, different implementations of the HSA runtime may return different requirements for the same input values.
+
+The implementation must return the same image data requirements for different access permissions with matching image descriptors as long as \mbox{\hyperlink{group__ext-images_ga12a909df33851b76afa2850abc7086f1}{hsa\+\_\+ext\+\_\+image\+\_\+get\+\_\+capability}} reports \mbox{\hyperlink{group__ext-images_ggab3d3401883f796b3f2d8dfad14f90568a7e7df436921a7ef7028281b9c12d6dc2}{HSA\+\_\+\+EXT\+\_\+\+IMAGE\+\_\+\+CAPABILITY\+\_\+\+ACCESS\+\_\+\+INVARIANT\+\_\+\+DATA\+\_\+\+LAYOUT}}. Image descriptors match if they have the same values, with the exception that s-\/form channel orders match the corresponding non-\/s-\/form channel order and vice versa.
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em agent} & Agent to be associated with the image handle.\\
+\hline
+\mbox{\texttt{ in}}  & {\em image\+\_\+descriptor} & Pointer to an image descriptor. Must not be NULL.\\
+\hline
+\mbox{\texttt{ in}}  & {\em access\+\_\+permission} & Access permission of the image when accessed by {\ttfamily agent}. The access permission defines how the agent is allowed to access the image and must match the corresponding HSAIL image handle type. The {\ttfamily agent} must support the image format specified in {\ttfamily image\+\_\+descriptor} for the given {\ttfamily access\+\_\+permission}.\\
+\hline
+\mbox{\texttt{ out}}  & {\em image\+\_\+data\+\_\+info} & Memory location where the runtime stores the size and alignment requirements. Must not be NULL.\\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em \mbox{\hyperlink{group__status_ggad755322e7ff95456520e8abdbe90d225ae382ea0c9c05cce5a60d0317375159cc}{HSA\+\_\+\+STATUS\+\_\+\+SUCCESS}}} & The function has been executed successfully.\\
+\hline
+{\em \mbox{\hyperlink{group__status_ggad755322e7ff95456520e8abdbe90d225a34ea59ade5bfce95eee935238a99f5b5}{HSA\+\_\+\+STATUS\+\_\+\+ERROR\+\_\+\+NOT\+\_\+\+INITIALIZED}}} & The HSA runtime has not been initialized.\\
+\hline
+{\em \mbox{\hyperlink{group__status_ggad755322e7ff95456520e8abdbe90d225a3a5d835c109c2d0ad5b9c2771e133e5d}{HSA\+\_\+\+STATUS\+\_\+\+ERROR\+\_\+\+INVALID\+\_\+\+AGENT}}} & The agent is invalid.\\
+\hline
+{\em \mbox{\hyperlink{group__ext-images_ggae6cdb622357fec6e889e47579a078524a42108181943a2d94749d95dc7942b7d0}{HSA\+\_\+\+EXT\+\_\+\+STATUS\+\_\+\+ERROR\+\_\+\+IMAGE\+\_\+\+FORMAT\+\_\+\+UNSUPPORTED}}} & The {\ttfamily agent} does not support the image format specified by {\ttfamily image\+\_\+descriptor} with the specified {\ttfamily access\+\_\+permission}.\\
+\hline
+{\em \mbox{\hyperlink{group__ext-images_ggae6cdb622357fec6e889e47579a078524a3ff898da367040b1f382c14c9f0a1bab}{HSA\+\_\+\+EXT\+\_\+\+STATUS\+\_\+\+ERROR\+\_\+\+IMAGE\+\_\+\+SIZE\+\_\+\+UNSUPPORTED}}} & The agent does not support the image dimensions specified by {\ttfamily image\+\_\+descriptor} with the specified {\ttfamily access\+\_\+permission}.\\
+\hline
+{\em \mbox{\hyperlink{group__status_ggad755322e7ff95456520e8abdbe90d225ac7d3651f75107d2a6a8ba3b25683c030}{HSA\+\_\+\+STATUS\+\_\+\+ERROR\+\_\+\+INVALID\+\_\+\+ARGUMENT}}} & {\ttfamily image\+\_\+descriptor} is NULL, {\ttfamily access\+\_\+permission} is not a valid access permission value, or {\ttfamily image\+\_\+data\+\_\+info} is NULL. \\
+\hline
+\end{DoxyRetVals}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{group__ext-images_gad8e2426d1829f772af6e603ff226f65a_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{group__ext-images_ga2d3f7ebd674fe267e608b3f1c1a89965}\label{group__ext-images_ga2d3f7ebd674fe267e608b3f1c1a89965}} 
+\index{Images and Samplers@{Images and Samplers}!hsa\_ext\_image\_data\_get\_info\_with\_layout@{hsa\_ext\_image\_data\_get\_info\_with\_layout}}
+\index{hsa\_ext\_image\_data\_get\_info\_with\_layout@{hsa\_ext\_image\_data\_get\_info\_with\_layout}!Images and Samplers@{Images and Samplers}}
+\doxysubsubsection{\texorpdfstring{hsa\_ext\_image\_data\_get\_info\_with\_layout()}{hsa\_ext\_image\_data\_get\_info\_with\_layout()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{group__status_gad755322e7ff95456520e8abdbe90d225}{hsa\+\_\+status\+\_\+t}} \mbox{\hyperlink{inc_2hsa__ext__image_8h_a64216765b98b62ee87deb50fd2899836}{HSA\+\_\+\+API}} hsa\+\_\+ext\+\_\+image\+\_\+data\+\_\+get\+\_\+info\+\_\+with\+\_\+layout (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{group__agentinfo_ga9ce217ef08e7d5e89c8e83ce7b6ef22b}{hsa\+\_\+agent\+\_\+t}}}]{agent,  }\item[{const \mbox{\hyperlink{group__ext-images_ga7ccf44400f9bbb459c8e52f54a3c5eb0}{hsa\+\_\+ext\+\_\+image\+\_\+descriptor\+\_\+t}} $\ast$}]{image\+\_\+descriptor,  }\item[{\mbox{\hyperlink{group__common_gacef73774a0af1d1df56fdcd9e04bb708}{hsa\+\_\+access\+\_\+permission\+\_\+t}}}]{access\+\_\+permission,  }\item[{\mbox{\hyperlink{group__ext-images_ga102222a1420a2434d9b50100350305e4}{hsa\+\_\+ext\+\_\+image\+\_\+data\+\_\+layout\+\_\+t}}}]{image\+\_\+data\+\_\+layout,  }\item[{size\+\_\+t}]{image\+\_\+data\+\_\+row\+\_\+pitch,  }\item[{size\+\_\+t}]{image\+\_\+data\+\_\+slice\+\_\+pitch,  }\item[{\mbox{\hyperlink{group__ext-images_gada32050df34dc3f6c0b9124706d8984b}{hsa\+\_\+ext\+\_\+image\+\_\+data\+\_\+info\+\_\+t}} $\ast$}]{image\+\_\+data\+\_\+info }\end{DoxyParamCaption})}
+
+
+
+Retrieve the image data requirements for a given combination of image descriptor, access permission, image data layout, image data row pitch, and image data slice pitch for an image created with an explicit image data layout. 
+
+The image data size and alignment requirements may vary depending on the image attributes specified in {\ttfamily image\+\_\+descriptor}, the {\ttfamily access\+\_\+permission}, and the image layout. However, different implementations of the HSA runtime will return the same requirements for the same input values.
+
+The implementation must return the same image data requirements for different access permissions with matching image descriptors and matching image layouts as long as \mbox{\hyperlink{group__ext-images_ga12a909df33851b76afa2850abc7086f1}{hsa\+\_\+ext\+\_\+image\+\_\+get\+\_\+capability}} reports \mbox{\hyperlink{group__ext-images_ggab3d3401883f796b3f2d8dfad14f90568a7e7df436921a7ef7028281b9c12d6dc2}{HSA\+\_\+\+EXT\+\_\+\+IMAGE\+\_\+\+CAPABILITY\+\_\+\+ACCESS\+\_\+\+INVARIANT\+\_\+\+DATA\+\_\+\+LAYOUT}}. Image descriptors match if they have the same values, with the exception that s-\/form channel orders match the corresponding non-\/s-\/form channel order and vice versa. Image layouts match if they are the same image data layout and use the same image row and slice pitch values.
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em image\+\_\+descriptor} & Pointer to an image descriptor. Must not be NULL.\\
+\hline
+\mbox{\texttt{ in}}  & {\em access\+\_\+permission} & Access permission of the image when accessed by an agent. The access permission defines how the agent is allowed to access the image and must match the corresponding HSAIL image handle type.\\
+\hline
+\mbox{\texttt{ in}}  & {\em image\+\_\+data\+\_\+layout} & The image data layout to use. It is invalid to use \mbox{\hyperlink{group__ext-images_gga102222a1420a2434d9b50100350305e4a6d2884d8802b4696feda4dbbdc7ce86c}{HSA\+\_\+\+EXT\+\_\+\+IMAGE\+\_\+\+DATA\+\_\+\+LAYOUT\+\_\+\+OPAQUE}}; use \mbox{\hyperlink{group__ext-images_gad8e2426d1829f772af6e603ff226f65a}{hsa\+\_\+ext\+\_\+image\+\_\+data\+\_\+get\+\_\+info}} instead.\\
+\hline
+\mbox{\texttt{ in}}  & {\em image\+\_\+data\+\_\+row\+\_\+pitch} & The size in bytes for a single row of the image in the image data. If 0 is specified then the default row pitch value is used\+: image width $\ast$ image element byte size. The value used must be greater than or equal to the default row pitch, and be a multiple of the image element byte size. For the linear image layout it must also be a multiple of the image linear row pitch alignment for the agents that will access the image data using image instructions.\\
+\hline
+\mbox{\texttt{ in}}  & {\em image\+\_\+data\+\_\+slice\+\_\+pitch} & The size in bytes of a single slice of a 3D image, or the size in bytes of each image layer in an image array in the image data. If 0 is specified then the default slice pitch value is used\+: row pitch $\ast$ height if geometry is \mbox{\hyperlink{group__ext-images_ggac61587d98a80d1660378e3904a66fc9ca2e749b6b96377b9a744fc837296e318c}{HSA\+\_\+\+EXT\+\_\+\+IMAGE\+\_\+\+GEOMETRY\+\_\+3D}}, \mbox{\hyperlink{group__ext-images_ggac61587d98a80d1660378e3904a66fc9ca90929e69cbf0b447060e1aeb23fd6dd4}{HSA\+\_\+\+EXT\+\_\+\+IMAGE\+\_\+\+GEOMETRY\+\_\+2\+DA}}, or \mbox{\hyperlink{group__ext-images_ggac61587d98a80d1660378e3904a66fc9caf3d5440659a9dfd7892da13c1fe992bd}{HSA\+\_\+\+EXT\+\_\+\+IMAGE\+\_\+\+GEOMETRY\+\_\+2\+DADEPTH}}; row pitch if geometry is \mbox{\hyperlink{group__ext-images_ggac61587d98a80d1660378e3904a66fc9cad989c8e619b376dc98ac3950be9afa33}{HSA\+\_\+\+EXT\+\_\+\+IMAGE\+\_\+\+GEOMETRY\+\_\+1\+DA}}; and 0 otherwise. The value used must be 0 if the default slice pitch is 0, be greater than or equal to the default slice pitch, and be a multiple of the row pitch.\\
+\hline
+\mbox{\texttt{ out}}  & {\em image\+\_\+data\+\_\+info} & Memory location where the runtime stores the size and alignment requirements. Must not be NULL.\\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em \mbox{\hyperlink{group__status_ggad755322e7ff95456520e8abdbe90d225ae382ea0c9c05cce5a60d0317375159cc}{HSA\+\_\+\+STATUS\+\_\+\+SUCCESS}}} & The function has been executed successfully.\\
+\hline
+{\em \mbox{\hyperlink{group__status_ggad755322e7ff95456520e8abdbe90d225a34ea59ade5bfce95eee935238a99f5b5}{HSA\+\_\+\+STATUS\+\_\+\+ERROR\+\_\+\+NOT\+\_\+\+INITIALIZED}}} & The HSA runtime has not been initialized.\\
+\hline
+{\em \mbox{\hyperlink{group__ext-images_ggae6cdb622357fec6e889e47579a078524a42108181943a2d94749d95dc7942b7d0}{HSA\+\_\+\+EXT\+\_\+\+STATUS\+\_\+\+ERROR\+\_\+\+IMAGE\+\_\+\+FORMAT\+\_\+\+UNSUPPORTED}}} & The image format specified by {\ttfamily image\+\_\+descriptor} is not supported for the {\ttfamily access\+\_\+permission} and {\ttfamily image\+\_\+data\+\_\+layout} specified.\\
+\hline
+{\em \mbox{\hyperlink{group__ext-images_ggae6cdb622357fec6e889e47579a078524a3ff898da367040b1f382c14c9f0a1bab}{HSA\+\_\+\+EXT\+\_\+\+STATUS\+\_\+\+ERROR\+\_\+\+IMAGE\+\_\+\+SIZE\+\_\+\+UNSUPPORTED}}} & The image dimensions specified by {\ttfamily image\+\_\+descriptor} are not supported for the {\ttfamily access\+\_\+permission} and {\ttfamily image\+\_\+data\+\_\+layout} specified.\\
+\hline
+{\em \mbox{\hyperlink{group__ext-images_ggae6cdb622357fec6e889e47579a078524adf82d2411103b76656e8d99f0b894440}{HSA\+\_\+\+EXT\+\_\+\+STATUS\+\_\+\+ERROR\+\_\+\+IMAGE\+\_\+\+PITCH\+\_\+\+UNSUPPORTED}}} & The row and slice pitch specified by {\ttfamily image\+\_\+data\+\_\+row\+\_\+pitch} and {\ttfamily image\+\_\+data\+\_\+slice\+\_\+pitch} are invalid or not supported.\\
+\hline
+{\em \mbox{\hyperlink{group__status_ggad755322e7ff95456520e8abdbe90d225ac7d3651f75107d2a6a8ba3b25683c030}{HSA\+\_\+\+STATUS\+\_\+\+ERROR\+\_\+\+INVALID\+\_\+\+ARGUMENT}}} & {\ttfamily image\+\_\+descriptor} is NULL, {\ttfamily image\+\_\+data\+\_\+layout} is \mbox{\hyperlink{group__ext-images_gga102222a1420a2434d9b50100350305e4a6d2884d8802b4696feda4dbbdc7ce86c}{HSA\+\_\+\+EXT\+\_\+\+IMAGE\+\_\+\+DATA\+\_\+\+LAYOUT\+\_\+\+OPAQUE}}, or {\ttfamily image\+\_\+data\+\_\+info} is NULL. \\
+\hline
+\end{DoxyRetVals}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{group__ext-images_ga2d3f7ebd674fe267e608b3f1c1a89965_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{group__ext-images_ga7fdb9d51ec1916b0eeb6fc6742dc7572}\label{group__ext-images_ga7fdb9d51ec1916b0eeb6fc6742dc7572}} 
+\index{Images and Samplers@{Images and Samplers}!hsa\_ext\_image\_destroy@{hsa\_ext\_image\_destroy}}
+\index{hsa\_ext\_image\_destroy@{hsa\_ext\_image\_destroy}!Images and Samplers@{Images and Samplers}}
+\doxysubsubsection{\texorpdfstring{hsa\_ext\_image\_destroy()}{hsa\_ext\_image\_destroy()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{group__status_gad755322e7ff95456520e8abdbe90d225}{hsa\+\_\+status\+\_\+t}} \mbox{\hyperlink{inc_2hsa__ext__image_8h_a64216765b98b62ee87deb50fd2899836}{HSA\+\_\+\+API}} hsa\+\_\+ext\+\_\+image\+\_\+destroy (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{group__agentinfo_ga9ce217ef08e7d5e89c8e83ce7b6ef22b}{hsa\+\_\+agent\+\_\+t}}}]{agent,  }\item[{\mbox{\hyperlink{group__ext-images_ga4e192988bd0b5abe2a57e248934e6dc6}{hsa\+\_\+ext\+\_\+image\+\_\+t}}}]{image }\end{DoxyParamCaption})}
+
+
+
+Destroy an image handle previously created using \mbox{\hyperlink{group__ext-images_ga985562c68508d4d8b0edcfd0729b6d49}{hsa\+\_\+ext\+\_\+image\+\_\+create}} or \mbox{\hyperlink{group__ext-images_ga7de92e8bde1496761b7dd00d1e03186e}{hsa\+\_\+ext\+\_\+image\+\_\+create\+\_\+with\+\_\+layout}}. 
+
+Destroying the image handle does not free the associated image data, or modify its contents. The application should not destroy an image handle while there are references to it queued for execution or currently being used in a kernel dispatch.
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em agent} & Agent associated with the image handle.\\
+\hline
+\mbox{\texttt{ in}}  & {\em image} & Image handle to destroy.\\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em \mbox{\hyperlink{group__status_ggad755322e7ff95456520e8abdbe90d225ae382ea0c9c05cce5a60d0317375159cc}{HSA\+\_\+\+STATUS\+\_\+\+SUCCESS}}} & The function has been executed successfully.\\
+\hline
+{\em \mbox{\hyperlink{group__status_ggad755322e7ff95456520e8abdbe90d225a34ea59ade5bfce95eee935238a99f5b5}{HSA\+\_\+\+STATUS\+\_\+\+ERROR\+\_\+\+NOT\+\_\+\+INITIALIZED}}} & The HSA runtime has not been initialized.\\
+\hline
+{\em \mbox{\hyperlink{group__status_ggad755322e7ff95456520e8abdbe90d225a3a5d835c109c2d0ad5b9c2771e133e5d}{HSA\+\_\+\+STATUS\+\_\+\+ERROR\+\_\+\+INVALID\+\_\+\+AGENT}}} & The agent is invalid. \\
+\hline
+\end{DoxyRetVals}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{group__ext-images_ga7fdb9d51ec1916b0eeb6fc6742dc7572_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{group__ext-images_ga2187349ce5a986c7292c70ce61437666}\label{group__ext-images_ga2187349ce5a986c7292c70ce61437666}} 
+\index{Images and Samplers@{Images and Samplers}!hsa\_ext\_image\_export@{hsa\_ext\_image\_export}}
+\index{hsa\_ext\_image\_export@{hsa\_ext\_image\_export}!Images and Samplers@{Images and Samplers}}
+\doxysubsubsection{\texorpdfstring{hsa\_ext\_image\_export()}{hsa\_ext\_image\_export()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{group__status_gad755322e7ff95456520e8abdbe90d225}{hsa\+\_\+status\+\_\+t}} \mbox{\hyperlink{inc_2hsa__ext__image_8h_a64216765b98b62ee87deb50fd2899836}{HSA\+\_\+\+API}} hsa\+\_\+ext\+\_\+image\+\_\+export (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{group__agentinfo_ga9ce217ef08e7d5e89c8e83ce7b6ef22b}{hsa\+\_\+agent\+\_\+t}}}]{agent,  }\item[{\mbox{\hyperlink{group__ext-images_ga4e192988bd0b5abe2a57e248934e6dc6}{hsa\+\_\+ext\+\_\+image\+\_\+t}}}]{src\+\_\+image,  }\item[{void $\ast$}]{dst\+\_\+memory,  }\item[{size\+\_\+t}]{dst\+\_\+row\+\_\+pitch,  }\item[{size\+\_\+t}]{dst\+\_\+slice\+\_\+pitch,  }\item[{const \mbox{\hyperlink{group__ext-images_gaa407e3fb8aa43d59f8e8560294d1c702}{hsa\+\_\+ext\+\_\+image\+\_\+region\+\_\+t}} $\ast$}]{image\+\_\+region }\end{DoxyParamCaption})}
+
+
+
+Export the image data to linearly organized memory. 
+
+The operation updates the destination memory with the image data of {\ttfamily src\+\_\+image}. The size of the data exported to memory is implicitly derived from the image region.
+
+It is the application\textquotesingle{}s responsibility to avoid out of bounds memory access.
+
+None of the destination memory or source image data memory can overlap. Overlapping of any of the source and destination image data memory within the export operation produces undefined results.
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em agent} & Agent associated with the image handle.\\
+\hline
+\mbox{\texttt{ in}}  & {\em src\+\_\+image} & Image handle of source image.\\
+\hline
+\mbox{\texttt{ in}}  & {\em dst\+\_\+memory} & Destination memory. Must not be NULL.\\
+\hline
+\mbox{\texttt{ in}}  & {\em dst\+\_\+row\+\_\+pitch} & The size in bytes of a single row of the image in the destination memory. If the value is smaller than the source image region width $\ast$ image element byte size, then region width $\ast$ image element byte size is used.\\
+\hline
+\mbox{\texttt{ in}}  & {\em dst\+\_\+slice\+\_\+pitch} & The size in bytes of a single 2D slice of a 3D image, or the size in bytes of each image in an image array in the destination memory. If the geometry is \mbox{\hyperlink{group__ext-images_ggac61587d98a80d1660378e3904a66fc9cad989c8e619b376dc98ac3950be9afa33}{HSA\+\_\+\+EXT\+\_\+\+IMAGE\+\_\+\+GEOMETRY\+\_\+1\+DA}} and the value is smaller than the value used for {\ttfamily dst\+\_\+row\+\_\+pitch}, then the value used for {\ttfamily dst\+\_\+row\+\_\+pitch} is used. If the geometry is \mbox{\hyperlink{group__ext-images_ggac61587d98a80d1660378e3904a66fc9ca2e749b6b96377b9a744fc837296e318c}{HSA\+\_\+\+EXT\+\_\+\+IMAGE\+\_\+\+GEOMETRY\+\_\+3D}}, \mbox{\hyperlink{group__ext-images_ggac61587d98a80d1660378e3904a66fc9ca90929e69cbf0b447060e1aeb23fd6dd4}{HSA\+\_\+\+EXT\+\_\+\+IMAGE\+\_\+\+GEOMETRY\+\_\+2\+DA}}, or HSA\+\_\+\+EXT\+\_\+\+IMAGE\+\_\+\+GEOMETRY\+\_\+2\+DADEPTH and the value is smaller than the value used for {\ttfamily dst\+\_\+row\+\_\+pitch} $\ast$ source image region height, then the value used for {\ttfamily dst\+\_\+row\+\_\+pitch} $\ast$ source image region height is used. Otherwise, the value is not used.\\
+\hline
+\mbox{\texttt{ in}}  & {\em image\+\_\+region} & Pointer to the image region to be exported. Must not be NULL.\\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em \mbox{\hyperlink{group__status_ggad755322e7ff95456520e8abdbe90d225ae382ea0c9c05cce5a60d0317375159cc}{HSA\+\_\+\+STATUS\+\_\+\+SUCCESS}}} & The function has been executed successfully.\\
+\hline
+{\em \mbox{\hyperlink{group__status_ggad755322e7ff95456520e8abdbe90d225a34ea59ade5bfce95eee935238a99f5b5}{HSA\+\_\+\+STATUS\+\_\+\+ERROR\+\_\+\+NOT\+\_\+\+INITIALIZED}}} & The HSA runtime has not been initialized.\\
+\hline
+{\em \mbox{\hyperlink{group__status_ggad755322e7ff95456520e8abdbe90d225a3a5d835c109c2d0ad5b9c2771e133e5d}{HSA\+\_\+\+STATUS\+\_\+\+ERROR\+\_\+\+INVALID\+\_\+\+AGENT}}} & The agent is invalid.\\
+\hline
+{\em \mbox{\hyperlink{group__status_ggad755322e7ff95456520e8abdbe90d225ac7d3651f75107d2a6a8ba3b25683c030}{HSA\+\_\+\+STATUS\+\_\+\+ERROR\+\_\+\+INVALID\+\_\+\+ARGUMENT}}} & {\ttfamily dst\+\_\+memory} is NULL, or {\ttfamily image\+\_\+region} is NULL. \\
+\hline
+\end{DoxyRetVals}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{group__ext-images_ga2187349ce5a986c7292c70ce61437666_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{group__ext-images_ga12a909df33851b76afa2850abc7086f1}\label{group__ext-images_ga12a909df33851b76afa2850abc7086f1}} 
+\index{Images and Samplers@{Images and Samplers}!hsa\_ext\_image\_get\_capability@{hsa\_ext\_image\_get\_capability}}
+\index{hsa\_ext\_image\_get\_capability@{hsa\_ext\_image\_get\_capability}!Images and Samplers@{Images and Samplers}}
+\doxysubsubsection{\texorpdfstring{hsa\_ext\_image\_get\_capability()}{hsa\_ext\_image\_get\_capability()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{group__status_gad755322e7ff95456520e8abdbe90d225}{hsa\+\_\+status\+\_\+t}} \mbox{\hyperlink{inc_2hsa__ext__image_8h_a64216765b98b62ee87deb50fd2899836}{HSA\+\_\+\+API}} hsa\+\_\+ext\+\_\+image\+\_\+get\+\_\+capability (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{group__agentinfo_ga9ce217ef08e7d5e89c8e83ce7b6ef22b}{hsa\+\_\+agent\+\_\+t}}}]{agent,  }\item[{\mbox{\hyperlink{group__ext-images_gac61587d98a80d1660378e3904a66fc9c}{hsa\+\_\+ext\+\_\+image\+\_\+geometry\+\_\+t}}}]{geometry,  }\item[{const \mbox{\hyperlink{group__ext-images_ga37a5b98dd984766026174b4d6d486b29}{hsa\+\_\+ext\+\_\+image\+\_\+format\+\_\+t}} $\ast$}]{image\+\_\+format,  }\item[{uint32\+\_\+t $\ast$}]{capability\+\_\+mask }\end{DoxyParamCaption})}
+
+
+
+Retrieve the supported image capabilities for a given combination of agent, geometry, and image format for an image created with an opaque image data layout. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em agent} & Agent to be associated with the image handle.\\
+\hline
+\mbox{\texttt{ in}}  & {\em geometry} & Geometry.\\
+\hline
+\mbox{\texttt{ in}}  & {\em image\+\_\+format} & Pointer to an image format. Must not be NULL.\\
+\hline
+\mbox{\texttt{ out}}  & {\em capability\+\_\+mask} & Pointer to a memory location where the HSA runtime stores a bit-\/mask of supported image capability (\mbox{\hyperlink{group__ext-images_gab3d3401883f796b3f2d8dfad14f90568}{hsa\+\_\+ext\+\_\+image\+\_\+capability\+\_\+t}}) values. Must not be NULL.\\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em \mbox{\hyperlink{group__status_ggad755322e7ff95456520e8abdbe90d225ae382ea0c9c05cce5a60d0317375159cc}{HSA\+\_\+\+STATUS\+\_\+\+SUCCESS}}} & The function has been executed successfully.\\
+\hline
+{\em \mbox{\hyperlink{group__status_ggad755322e7ff95456520e8abdbe90d225a34ea59ade5bfce95eee935238a99f5b5}{HSA\+\_\+\+STATUS\+\_\+\+ERROR\+\_\+\+NOT\+\_\+\+INITIALIZED}}} & The HSA runtime has not been initialized.\\
+\hline
+{\em \mbox{\hyperlink{group__status_ggad755322e7ff95456520e8abdbe90d225a3a5d835c109c2d0ad5b9c2771e133e5d}{HSA\+\_\+\+STATUS\+\_\+\+ERROR\+\_\+\+INVALID\+\_\+\+AGENT}}} & The agent is invalid.\\
+\hline
+{\em \mbox{\hyperlink{group__status_ggad755322e7ff95456520e8abdbe90d225ac7d3651f75107d2a6a8ba3b25683c030}{HSA\+\_\+\+STATUS\+\_\+\+ERROR\+\_\+\+INVALID\+\_\+\+ARGUMENT}}} & {\ttfamily image\+\_\+format} is NULL, or {\ttfamily capability\+\_\+mask} is NULL. \\
+\hline
+\end{DoxyRetVals}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{group__ext-images_ga12a909df33851b76afa2850abc7086f1_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{group__ext-images_ga65fc81035fd8c70c3229ce8f5285e5e6}\label{group__ext-images_ga65fc81035fd8c70c3229ce8f5285e5e6}} 
+\index{Images and Samplers@{Images and Samplers}!hsa\_ext\_image\_get\_capability\_with\_layout@{hsa\_ext\_image\_get\_capability\_with\_layout}}
+\index{hsa\_ext\_image\_get\_capability\_with\_layout@{hsa\_ext\_image\_get\_capability\_with\_layout}!Images and Samplers@{Images and Samplers}}
+\doxysubsubsection{\texorpdfstring{hsa\_ext\_image\_get\_capability\_with\_layout()}{hsa\_ext\_image\_get\_capability\_with\_layout()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{group__status_gad755322e7ff95456520e8abdbe90d225}{hsa\+\_\+status\+\_\+t}} \mbox{\hyperlink{inc_2hsa__ext__image_8h_a64216765b98b62ee87deb50fd2899836}{HSA\+\_\+\+API}} hsa\+\_\+ext\+\_\+image\+\_\+get\+\_\+capability\+\_\+with\+\_\+layout (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{group__agentinfo_ga9ce217ef08e7d5e89c8e83ce7b6ef22b}{hsa\+\_\+agent\+\_\+t}}}]{agent,  }\item[{\mbox{\hyperlink{group__ext-images_gac61587d98a80d1660378e3904a66fc9c}{hsa\+\_\+ext\+\_\+image\+\_\+geometry\+\_\+t}}}]{geometry,  }\item[{const \mbox{\hyperlink{group__ext-images_ga37a5b98dd984766026174b4d6d486b29}{hsa\+\_\+ext\+\_\+image\+\_\+format\+\_\+t}} $\ast$}]{image\+\_\+format,  }\item[{\mbox{\hyperlink{group__ext-images_ga102222a1420a2434d9b50100350305e4}{hsa\+\_\+ext\+\_\+image\+\_\+data\+\_\+layout\+\_\+t}}}]{image\+\_\+data\+\_\+layout,  }\item[{uint32\+\_\+t $\ast$}]{capability\+\_\+mask }\end{DoxyParamCaption})}
+
+
+
+Retrieve the supported image capabilities for a given combination of agent, geometry, image format, and image layout for an image created with an explicit image data layout. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em agent} & Agent to be associated with the image handle.\\
+\hline
+\mbox{\texttt{ in}}  & {\em geometry} & Geometry.\\
+\hline
+\mbox{\texttt{ in}}  & {\em image\+\_\+format} & Pointer to an image format. Must not be NULL.\\
+\hline
+\mbox{\texttt{ in}}  & {\em image\+\_\+data\+\_\+layout} & The image data layout. It is invalid to use \mbox{\hyperlink{group__ext-images_gga102222a1420a2434d9b50100350305e4a6d2884d8802b4696feda4dbbdc7ce86c}{HSA\+\_\+\+EXT\+\_\+\+IMAGE\+\_\+\+DATA\+\_\+\+LAYOUT\+\_\+\+OPAQUE}}; use \mbox{\hyperlink{group__ext-images_ga12a909df33851b76afa2850abc7086f1}{hsa\+\_\+ext\+\_\+image\+\_\+get\+\_\+capability}} instead.\\
+\hline
+\mbox{\texttt{ out}}  & {\em capability\+\_\+mask} & Pointer to a memory location where the HSA runtime stores a bit-\/mask of supported image capability (\mbox{\hyperlink{group__ext-images_gab3d3401883f796b3f2d8dfad14f90568}{hsa\+\_\+ext\+\_\+image\+\_\+capability\+\_\+t}}) values. Must not be NULL.\\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em \mbox{\hyperlink{group__status_ggad755322e7ff95456520e8abdbe90d225ae382ea0c9c05cce5a60d0317375159cc}{HSA\+\_\+\+STATUS\+\_\+\+SUCCESS}}} & The function has been executed successfully.\\
+\hline
+{\em \mbox{\hyperlink{group__status_ggad755322e7ff95456520e8abdbe90d225a34ea59ade5bfce95eee935238a99f5b5}{HSA\+\_\+\+STATUS\+\_\+\+ERROR\+\_\+\+NOT\+\_\+\+INITIALIZED}}} & The HSA runtime has not been initialized.\\
+\hline
+{\em \mbox{\hyperlink{group__status_ggad755322e7ff95456520e8abdbe90d225a3a5d835c109c2d0ad5b9c2771e133e5d}{HSA\+\_\+\+STATUS\+\_\+\+ERROR\+\_\+\+INVALID\+\_\+\+AGENT}}} & The agent is invalid.\\
+\hline
+{\em \mbox{\hyperlink{group__status_ggad755322e7ff95456520e8abdbe90d225ac7d3651f75107d2a6a8ba3b25683c030}{HSA\+\_\+\+STATUS\+\_\+\+ERROR\+\_\+\+INVALID\+\_\+\+ARGUMENT}}} & {\ttfamily image\+\_\+format} is NULL, {\ttfamily image\+\_\+data\+\_\+layout} is \mbox{\hyperlink{group__ext-images_gga102222a1420a2434d9b50100350305e4a6d2884d8802b4696feda4dbbdc7ce86c}{HSA\+\_\+\+EXT\+\_\+\+IMAGE\+\_\+\+DATA\+\_\+\+LAYOUT\+\_\+\+OPAQUE}}, or {\ttfamily capability\+\_\+mask} is NULL. \\
+\hline
+\end{DoxyRetVals}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{group__ext-images_ga65fc81035fd8c70c3229ce8f5285e5e6_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{group__ext-images_gaea7edbc97a6758a71eaf4160c133802f}\label{group__ext-images_gaea7edbc97a6758a71eaf4160c133802f}} 
+\index{Images and Samplers@{Images and Samplers}!hsa\_ext\_image\_import@{hsa\_ext\_image\_import}}
+\index{hsa\_ext\_image\_import@{hsa\_ext\_image\_import}!Images and Samplers@{Images and Samplers}}
+\doxysubsubsection{\texorpdfstring{hsa\_ext\_image\_import()}{hsa\_ext\_image\_import()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{group__status_gad755322e7ff95456520e8abdbe90d225}{hsa\+\_\+status\+\_\+t}} \mbox{\hyperlink{inc_2hsa__ext__image_8h_a64216765b98b62ee87deb50fd2899836}{HSA\+\_\+\+API}} hsa\+\_\+ext\+\_\+image\+\_\+import (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{group__agentinfo_ga9ce217ef08e7d5e89c8e83ce7b6ef22b}{hsa\+\_\+agent\+\_\+t}}}]{agent,  }\item[{const void $\ast$}]{src\+\_\+memory,  }\item[{size\+\_\+t}]{src\+\_\+row\+\_\+pitch,  }\item[{size\+\_\+t}]{src\+\_\+slice\+\_\+pitch,  }\item[{\mbox{\hyperlink{group__ext-images_ga4e192988bd0b5abe2a57e248934e6dc6}{hsa\+\_\+ext\+\_\+image\+\_\+t}}}]{dst\+\_\+image,  }\item[{const \mbox{\hyperlink{group__ext-images_gaa407e3fb8aa43d59f8e8560294d1c702}{hsa\+\_\+ext\+\_\+image\+\_\+region\+\_\+t}} $\ast$}]{image\+\_\+region }\end{DoxyParamCaption})}
+
+
+
+Import a linearly organized image data from memory directly to an image handle. 
+
+This operation updates the image data referenced by the image handle from the source memory. The size of the data imported from memory is implicitly derived from the image region.
+
+It is the application\textquotesingle{}s responsibility to avoid out of bounds memory access.
+
+None of the source memory or destination image data memory can overlap. Overlapping of any of the source and destination image data memory within the import operation produces undefined results.
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em agent} & Agent associated with the image handle.\\
+\hline
+\mbox{\texttt{ in}}  & {\em src\+\_\+memory} & Source memory. Must not be NULL.\\
+\hline
+\mbox{\texttt{ in}}  & {\em src\+\_\+row\+\_\+pitch} & The size in bytes of a single row of the image in the source memory. If the value is smaller than the destination image region width $\ast$ image element byte size, then region width $\ast$ image element byte size is used.\\
+\hline
+\mbox{\texttt{ in}}  & {\em src\+\_\+slice\+\_\+pitch} & The size in bytes of a single 2D slice of a 3D image, or the size in bytes of each image layer in an image array in the source memory. If the geometry is \mbox{\hyperlink{group__ext-images_ggac61587d98a80d1660378e3904a66fc9cad989c8e619b376dc98ac3950be9afa33}{HSA\+\_\+\+EXT\+\_\+\+IMAGE\+\_\+\+GEOMETRY\+\_\+1\+DA}} and the value is smaller than the value used for {\ttfamily src\+\_\+row\+\_\+pitch}, then the value used for {\ttfamily src\+\_\+row\+\_\+pitch} is used. If the geometry is \mbox{\hyperlink{group__ext-images_ggac61587d98a80d1660378e3904a66fc9ca2e749b6b96377b9a744fc837296e318c}{HSA\+\_\+\+EXT\+\_\+\+IMAGE\+\_\+\+GEOMETRY\+\_\+3D}}, \mbox{\hyperlink{group__ext-images_ggac61587d98a80d1660378e3904a66fc9ca90929e69cbf0b447060e1aeb23fd6dd4}{HSA\+\_\+\+EXT\+\_\+\+IMAGE\+\_\+\+GEOMETRY\+\_\+2\+DA}}, or HSA\+\_\+\+EXT\+\_\+\+IMAGE\+\_\+\+GEOMETRY\+\_\+2\+DADEPTH and the value is smaller than the value used for {\ttfamily src\+\_\+row\+\_\+pitch} $\ast$ destination image region height, then the value used for {\ttfamily src\+\_\+row\+\_\+pitch} $\ast$ destination image region height is used. Otherwise, the value is not used.\\
+\hline
+\mbox{\texttt{ in}}  & {\em dst\+\_\+image} & Image handle of destination image.\\
+\hline
+\mbox{\texttt{ in}}  & {\em image\+\_\+region} & Pointer to the image region to be updated. Must not be NULL.\\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em \mbox{\hyperlink{group__status_ggad755322e7ff95456520e8abdbe90d225ae382ea0c9c05cce5a60d0317375159cc}{HSA\+\_\+\+STATUS\+\_\+\+SUCCESS}}} & The function has been executed successfully.\\
+\hline
+{\em \mbox{\hyperlink{group__status_ggad755322e7ff95456520e8abdbe90d225a34ea59ade5bfce95eee935238a99f5b5}{HSA\+\_\+\+STATUS\+\_\+\+ERROR\+\_\+\+NOT\+\_\+\+INITIALIZED}}} & The HSA runtime has not been initialized.\\
+\hline
+{\em \mbox{\hyperlink{group__status_ggad755322e7ff95456520e8abdbe90d225a3a5d835c109c2d0ad5b9c2771e133e5d}{HSA\+\_\+\+STATUS\+\_\+\+ERROR\+\_\+\+INVALID\+\_\+\+AGENT}}} & The agent is invalid.\\
+\hline
+{\em \mbox{\hyperlink{group__status_ggad755322e7ff95456520e8abdbe90d225ac7d3651f75107d2a6a8ba3b25683c030}{HSA\+\_\+\+STATUS\+\_\+\+ERROR\+\_\+\+INVALID\+\_\+\+ARGUMENT}}} & {\ttfamily src\+\_\+memory} is NULL, or {\ttfamily image\+\_\+region} is NULL. \\
+\hline
+\end{DoxyRetVals}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{group__ext-images_gaea7edbc97a6758a71eaf4160c133802f_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{group__ext-images_gaf3b5567510870cf0130efd69d5af3c07}\label{group__ext-images_gaf3b5567510870cf0130efd69d5af3c07}} 
+\index{Images and Samplers@{Images and Samplers}!hsa\_ext\_sampler\_create@{hsa\_ext\_sampler\_create}}
+\index{hsa\_ext\_sampler\_create@{hsa\_ext\_sampler\_create}!Images and Samplers@{Images and Samplers}}
+\doxysubsubsection{\texorpdfstring{hsa\_ext\_sampler\_create()}{hsa\_ext\_sampler\_create()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{group__status_gad755322e7ff95456520e8abdbe90d225}{hsa\+\_\+status\+\_\+t}} \mbox{\hyperlink{inc_2hsa__ext__image_8h_a64216765b98b62ee87deb50fd2899836}{HSA\+\_\+\+API}} hsa\+\_\+ext\+\_\+sampler\+\_\+create (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{group__agentinfo_ga9ce217ef08e7d5e89c8e83ce7b6ef22b}{hsa\+\_\+agent\+\_\+t}}}]{agent,  }\item[{const \mbox{\hyperlink{group__ext-images_gabed3b941e5a41287f2240f366797bda2}{hsa\+\_\+ext\+\_\+sampler\+\_\+descriptor\+\_\+t}} $\ast$}]{sampler\+\_\+descriptor,  }\item[{\mbox{\hyperlink{group__ext-images_ga41c5c0a2cbd7c9020ef8ce2afc1c6101}{hsa\+\_\+ext\+\_\+sampler\+\_\+t}} $\ast$}]{sampler }\end{DoxyParamCaption})}
+
+
+
+Create an agent specific sampler handle for a given agent independent sampler descriptor and agent. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em agent} & Agent to be associated with the sampler handle created.\\
+\hline
+\mbox{\texttt{ in}}  & {\em sampler\+\_\+descriptor} & Pointer to a sampler descriptor. Must not be NULL.\\
+\hline
+\mbox{\texttt{ out}}  & {\em sampler} & Memory location where the HSA runtime stores the newly created sampler handle. Must not be NULL.\\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em \mbox{\hyperlink{group__status_ggad755322e7ff95456520e8abdbe90d225ae382ea0c9c05cce5a60d0317375159cc}{HSA\+\_\+\+STATUS\+\_\+\+SUCCESS}}} & The function has been executed successfully.\\
+\hline
+{\em \mbox{\hyperlink{group__status_ggad755322e7ff95456520e8abdbe90d225a34ea59ade5bfce95eee935238a99f5b5}{HSA\+\_\+\+STATUS\+\_\+\+ERROR\+\_\+\+NOT\+\_\+\+INITIALIZED}}} & The HSA runtime has not been initialized.\\
+\hline
+{\em \mbox{\hyperlink{group__status_ggad755322e7ff95456520e8abdbe90d225a3a5d835c109c2d0ad5b9c2771e133e5d}{HSA\+\_\+\+STATUS\+\_\+\+ERROR\+\_\+\+INVALID\+\_\+\+AGENT}}} & The agent is invalid.\\
+\hline
+{\em \mbox{\hyperlink{group__ext-images_ggae6cdb622357fec6e889e47579a078524a5f5858e98041ec936780edcbebd38f79}{HSA\+\_\+\+EXT\+\_\+\+STATUS\+\_\+\+ERROR\+\_\+\+SAMPLER\+\_\+\+DESCRIPTOR\+\_\+\+UNSUPPORTED}}} & The {\ttfamily agent} does not have the capability to support the properties specified by {\ttfamily sampler\+\_\+descriptor} or it is invalid.\\
+\hline
+{\em \mbox{\hyperlink{group__status_ggad755322e7ff95456520e8abdbe90d225a1a77fcf36d0d140874c4361ab093eff7}{HSA\+\_\+\+STATUS\+\_\+\+ERROR\+\_\+\+OUT\+\_\+\+OF\+\_\+\+RESOURCES}}} & The HSA runtime failed to allocate the required resources.\\
+\hline
+{\em \mbox{\hyperlink{group__status_ggad755322e7ff95456520e8abdbe90d225ac7d3651f75107d2a6a8ba3b25683c030}{HSA\+\_\+\+STATUS\+\_\+\+ERROR\+\_\+\+INVALID\+\_\+\+ARGUMENT}}} & {\ttfamily sampler\+\_\+descriptor} is NULL, or {\ttfamily sampler} is NULL. \\
+\hline
+\end{DoxyRetVals}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{group__ext-images_gaf3b5567510870cf0130efd69d5af3c07_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{group__ext-images_gaae9e9552761238b093b4197dadf3ef70}\label{group__ext-images_gaae9e9552761238b093b4197dadf3ef70}} 
+\index{Images and Samplers@{Images and Samplers}!hsa\_ext\_sampler\_destroy@{hsa\_ext\_sampler\_destroy}}
+\index{hsa\_ext\_sampler\_destroy@{hsa\_ext\_sampler\_destroy}!Images and Samplers@{Images and Samplers}}
+\doxysubsubsection{\texorpdfstring{hsa\_ext\_sampler\_destroy()}{hsa\_ext\_sampler\_destroy()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{group__status_gad755322e7ff95456520e8abdbe90d225}{hsa\+\_\+status\+\_\+t}} \mbox{\hyperlink{inc_2hsa__ext__image_8h_a64216765b98b62ee87deb50fd2899836}{HSA\+\_\+\+API}} hsa\+\_\+ext\+\_\+sampler\+\_\+destroy (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{group__agentinfo_ga9ce217ef08e7d5e89c8e83ce7b6ef22b}{hsa\+\_\+agent\+\_\+t}}}]{agent,  }\item[{\mbox{\hyperlink{group__ext-images_ga41c5c0a2cbd7c9020ef8ce2afc1c6101}{hsa\+\_\+ext\+\_\+sampler\+\_\+t}}}]{sampler }\end{DoxyParamCaption})}
+
+
+
+Destroy a sampler handle previously created using \mbox{\hyperlink{group__ext-images_gaf3b5567510870cf0130efd69d5af3c07}{hsa\+\_\+ext\+\_\+sampler\+\_\+create}}. 
+
+The sampler handle should not be destroyed while there are references to it queued for execution or currently being used in a kernel dispatch.
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em agent} & Agent associated with the sampler handle.\\
+\hline
+\mbox{\texttt{ in}}  & {\em sampler} & Sampler handle to destroy.\\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em \mbox{\hyperlink{group__status_ggad755322e7ff95456520e8abdbe90d225ae382ea0c9c05cce5a60d0317375159cc}{HSA\+\_\+\+STATUS\+\_\+\+SUCCESS}}} & The function has been executed successfully.\\
+\hline
+{\em \mbox{\hyperlink{group__status_ggad755322e7ff95456520e8abdbe90d225a34ea59ade5bfce95eee935238a99f5b5}{HSA\+\_\+\+STATUS\+\_\+\+ERROR\+\_\+\+NOT\+\_\+\+INITIALIZED}}} & The HSA runtime has not been initialized.\\
+\hline
+{\em \mbox{\hyperlink{group__status_ggad755322e7ff95456520e8abdbe90d225a3a5d835c109c2d0ad5b9c2771e133e5d}{HSA\+\_\+\+STATUS\+\_\+\+ERROR\+\_\+\+INVALID\+\_\+\+AGENT}}} & The agent is invalid. \\
+\hline
+\end{DoxyRetVals}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{group__ext-images_gaae9e9552761238b093b4197dadf3ef70_icgraph}
+\end{center}
+\end{figure}

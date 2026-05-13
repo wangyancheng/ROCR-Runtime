@@ -1,0 +1,115 @@
+\hypertarget{inc_2hsa__ext__finalize_8h}{}\doxysection{src/inc/hsa\+\_\+ext\+\_\+finalize.h File Reference}
+\label{inc_2hsa__ext__finalize_8h}\index{src/inc/hsa\_ext\_finalize.h@{src/inc/hsa\_ext\_finalize.h}}
+{\ttfamily \#include \char`\"{}hsa.\+h\char`\"{}}\newline
+Include dependency graph for hsa\+\_\+ext\+\_\+finalize.\+h\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=274pt]{inc_2hsa__ext__finalize_8h__incl}
+\end{center}
+\end{figure}
+This graph shows which files directly or indirectly include this file\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{inc_2hsa__ext__finalize_8h__dep__incl}
+\end{center}
+\end{figure}
+\doxysubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{structhsa__ext__program__s}{hsa\+\_\+ext\+\_\+program\+\_\+s}}
+\begin{DoxyCompactList}\small\item\em An opaque handle to a HSAIL program, which groups a set of HSAIL modules that collectively define functions and variables used by kernels and indirect functions. \end{DoxyCompactList}\item 
+struct \mbox{\hyperlink{structhsa__ext__control__directives__s}{hsa\+\_\+ext\+\_\+control\+\_\+directives\+\_\+s}}
+\begin{DoxyCompactList}\small\item\em Control directives specify low-\/level information about the finalization process. \end{DoxyCompactList}\item 
+struct \mbox{\hyperlink{structhsa__ext__finalizer__1__00__pfn__s}{hsa\+\_\+ext\+\_\+finalizer\+\_\+1\+\_\+00\+\_\+pfn\+\_\+s}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \mbox{\hyperlink{inc_2hsa__ext__finalize_8h_a64216765b98b62ee87deb50fd2899836}{HSA\+\_\+\+API}}~\mbox{\hyperlink{inc_2hsa_8h_a91f7b64d53fdd78621e7a29cfbe26c7e}{HSA\+\_\+\+API\+\_\+\+IMPORT}}
+\item 
+\#define \mbox{\hyperlink{inc_2hsa__ext__finalize_8h_ac6c9de556edb06d8df21384b8045bda8}{hsa\+\_\+ext\+\_\+finalizer\+\_\+1\+\_\+00}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+typedef struct \mbox{\hyperlink{structBrigModuleHeader}{Brig\+Module\+Header}} $\ast$ \mbox{\hyperlink{inc_2hsa__ext__finalize_8h_a9748939f35aa9509be33da9ef9ac51f7}{Brig\+Module\+\_\+t}}
+\item 
+typedef \mbox{\hyperlink{inc_2Brig_8h_af386cdc55b1fc2141b1ae0174e82688b}{Brig\+Module\+\_\+t}} \mbox{\hyperlink{group__ext-alt-finalizer-program_gafc31798efdd1873a6ebe29d5b6bb3e88}{hsa\+\_\+ext\+\_\+module\+\_\+t}}
+\begin{DoxyCompactList}\small\item\em HSAIL (BRIG) module. The HSA Programmer\textquotesingle{}s Reference Manual contains the definition of the Brig\+Module\+\_\+t type. \end{DoxyCompactList}\item 
+typedef struct \mbox{\hyperlink{structhsa__ext__program__s}{hsa\+\_\+ext\+\_\+program\+\_\+s}} \mbox{\hyperlink{group__ext-alt-finalizer-program_ga73a4db77f5c8e683576ee14bf3b3cd99}{hsa\+\_\+ext\+\_\+program\+\_\+t}}
+\begin{DoxyCompactList}\small\item\em An opaque handle to a HSAIL program, which groups a set of HSAIL modules that collectively define functions and variables used by kernels and indirect functions. \end{DoxyCompactList}\item 
+typedef struct \mbox{\hyperlink{structhsa__ext__control__directives__s}{hsa\+\_\+ext\+\_\+control\+\_\+directives\+\_\+s}} \mbox{\hyperlink{group__ext-alt-finalizer-program_gaea4f3ae95cc082cd39e20252669439b7}{hsa\+\_\+ext\+\_\+control\+\_\+directives\+\_\+t}}
+\begin{DoxyCompactList}\small\item\em Control directives specify low-\/level information about the finalization process. \end{DoxyCompactList}\item 
+typedef struct \mbox{\hyperlink{structhsa__ext__finalizer__1__00__pfn__s}{hsa\+\_\+ext\+\_\+finalizer\+\_\+1\+\_\+00\+\_\+pfn\+\_\+s}} \mbox{\hyperlink{inc_2hsa__ext__finalize_8h_a732407be878f467caecb57c2ef3a7383}{hsa\+\_\+ext\+\_\+finalizer\+\_\+1\+\_\+00\+\_\+pfn\+\_\+t}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Enumerations}
+\begin{DoxyCompactItemize}
+\item 
+enum \{ \newline
+\mbox{\hyperlink{group__ext-alt-finalizer-extensions_gga5bc6c193b77b15ca30bb8821799616e3a058105c75cdda59126637b8c5c0d893e}{HSA\+\_\+\+EXT\+\_\+\+STATUS\+\_\+\+ERROR\+\_\+\+INVALID\+\_\+\+PROGRAM}} = 0x2000
+, \mbox{\hyperlink{group__ext-alt-finalizer-extensions_gga5bc6c193b77b15ca30bb8821799616e3a159ae50ee80394dd6e051f623834ae9c}{HSA\+\_\+\+EXT\+\_\+\+STATUS\+\_\+\+ERROR\+\_\+\+INVALID\+\_\+\+MODULE}} = 0x2001
+, \mbox{\hyperlink{group__ext-alt-finalizer-extensions_gga5bc6c193b77b15ca30bb8821799616e3ac84325a8fd9a66c318b099f3e27dba96}{HSA\+\_\+\+EXT\+\_\+\+STATUS\+\_\+\+ERROR\+\_\+\+INCOMPATIBLE\+\_\+\+MODULE}} = 0x2002
+, \mbox{\hyperlink{group__ext-alt-finalizer-extensions_gga5bc6c193b77b15ca30bb8821799616e3a13e40409913e496a80d480eed5308271}{HSA\+\_\+\+EXT\+\_\+\+STATUS\+\_\+\+ERROR\+\_\+\+MODULE\+\_\+\+ALREADY\+\_\+\+INCLUDED}} = 0x2003
+, \newline
+\mbox{\hyperlink{group__ext-alt-finalizer-extensions_gga5bc6c193b77b15ca30bb8821799616e3ada2ef8c3a1d1cf92d82e6f430a1016af}{HSA\+\_\+\+EXT\+\_\+\+STATUS\+\_\+\+ERROR\+\_\+\+SYMBOL\+\_\+\+MISMATCH}} = 0x2004
+, \mbox{\hyperlink{group__ext-alt-finalizer-extensions_gga5bc6c193b77b15ca30bb8821799616e3a0d1db9dc87ccbdb308cb430b7bbdbcec}{HSA\+\_\+\+EXT\+\_\+\+STATUS\+\_\+\+ERROR\+\_\+\+FINALIZATION\+\_\+\+FAILED}} = 0x2005
+, \mbox{\hyperlink{group__ext-alt-finalizer-extensions_gga5bc6c193b77b15ca30bb8821799616e3ae16bcc443d027a0b880fd58f0443227b}{HSA\+\_\+\+EXT\+\_\+\+STATUS\+\_\+\+ERROR\+\_\+\+DIRECTIVE\+\_\+\+MISMATCH}} = 0x2006
+ \}
+\begin{DoxyCompactList}\small\item\em Enumeration constants added to \mbox{\hyperlink{group__status_gad755322e7ff95456520e8abdbe90d225}{hsa\+\_\+status\+\_\+t}} by this extension. \end{DoxyCompactList}\item 
+enum \mbox{\hyperlink{group__ext-alt-finalizer-program_gae88cde13c62f92f7c6b58b24dfe8d731}{hsa\+\_\+ext\+\_\+program\+\_\+info\+\_\+t}} \{ \mbox{\hyperlink{group__ext-alt-finalizer-program_ggae88cde13c62f92f7c6b58b24dfe8d731ad2f7dffa93f6e79990c30668a019dae8}{HSA\+\_\+\+EXT\+\_\+\+PROGRAM\+\_\+\+INFO\+\_\+\+MACHINE\+\_\+\+MODEL}} = 0
+, \mbox{\hyperlink{group__ext-alt-finalizer-program_ggae88cde13c62f92f7c6b58b24dfe8d731a2f5298eb42b875c2fa52bc212ff80a3e}{HSA\+\_\+\+EXT\+\_\+\+PROGRAM\+\_\+\+INFO\+\_\+\+PROFILE}} = 1
+, \mbox{\hyperlink{group__ext-alt-finalizer-program_ggae88cde13c62f92f7c6b58b24dfe8d731ad685ddd21dc897a6c73e87b143e980a4}{HSA\+\_\+\+EXT\+\_\+\+PROGRAM\+\_\+\+INFO\+\_\+\+DEFAULT\+\_\+\+FLOAT\+\_\+\+ROUNDING\+\_\+\+MODE}} = 2
+ \}
+\begin{DoxyCompactList}\small\item\em HSAIL program attributes. \end{DoxyCompactList}\item 
+enum \mbox{\hyperlink{group__ext-alt-finalizer-program_ga859463b7b8ac59d9ce2ec772333efa81}{hsa\+\_\+ext\+\_\+finalizer\+\_\+call\+\_\+convention\+\_\+t}} \{ \mbox{\hyperlink{group__ext-alt-finalizer-program_gga859463b7b8ac59d9ce2ec772333efa81a03a6dae23fb05ee289536df6b4f6bd63}{HSA\+\_\+\+EXT\+\_\+\+FINALIZER\+\_\+\+CALL\+\_\+\+CONVENTION\+\_\+\+AUTO}} = -\/1
+ \}
+\begin{DoxyCompactList}\small\item\em Finalizer-\/determined call convention. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{group__status_gad755322e7ff95456520e8abdbe90d225}{hsa\+\_\+status\+\_\+t}} \mbox{\hyperlink{inc_2hsa__ext__image_8h_a64216765b98b62ee87deb50fd2899836}{HSA\+\_\+\+API}} \mbox{\hyperlink{group__ext-alt-finalizer-program_gadbbd7d39587a6c353ef3de58fd056125}{hsa\+\_\+ext\+\_\+program\+\_\+create}} (\mbox{\hyperlink{group__agentinfo_ga4d45919fd6f6e8dbb8ae2f4030870e11}{hsa\+\_\+machine\+\_\+model\+\_\+t}} machine\+\_\+model, \mbox{\hyperlink{group__agentinfo_gacafd4247e2a04cbe0ac0b3998c127532}{hsa\+\_\+profile\+\_\+t}} profile, \mbox{\hyperlink{group__agentinfo_gaac56321e4596fe10a90b5bb3fedc4b73}{hsa\+\_\+default\+\_\+float\+\_\+rounding\+\_\+mode\+\_\+t}} default\+\_\+float\+\_\+rounding\+\_\+mode, const char $\ast$options, \mbox{\hyperlink{group__ext-alt-finalizer-program_ga73a4db77f5c8e683576ee14bf3b3cd99}{hsa\+\_\+ext\+\_\+program\+\_\+t}} $\ast$program)
+\begin{DoxyCompactList}\small\item\em Create an empty HSAIL program. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{group__status_gad755322e7ff95456520e8abdbe90d225}{hsa\+\_\+status\+\_\+t}} \mbox{\hyperlink{inc_2hsa__ext__image_8h_a64216765b98b62ee87deb50fd2899836}{HSA\+\_\+\+API}} \mbox{\hyperlink{group__ext-alt-finalizer-program_ga56289fba751ef7495061c812db029a57}{hsa\+\_\+ext\+\_\+program\+\_\+destroy}} (\mbox{\hyperlink{group__ext-alt-finalizer-program_ga73a4db77f5c8e683576ee14bf3b3cd99}{hsa\+\_\+ext\+\_\+program\+\_\+t}} program)
+\begin{DoxyCompactList}\small\item\em Destroy a HSAIL program. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{group__status_gad755322e7ff95456520e8abdbe90d225}{hsa\+\_\+status\+\_\+t}} \mbox{\hyperlink{inc_2hsa__ext__image_8h_a64216765b98b62ee87deb50fd2899836}{HSA\+\_\+\+API}} \mbox{\hyperlink{group__ext-alt-finalizer-program_gad6dd70e610e9a4b0a9173cd7ee7ac575}{hsa\+\_\+ext\+\_\+program\+\_\+add\+\_\+module}} (\mbox{\hyperlink{group__ext-alt-finalizer-program_ga73a4db77f5c8e683576ee14bf3b3cd99}{hsa\+\_\+ext\+\_\+program\+\_\+t}} program, \mbox{\hyperlink{group__ext-alt-finalizer-program_gafc31798efdd1873a6ebe29d5b6bb3e88}{hsa\+\_\+ext\+\_\+module\+\_\+t}} module)
+\begin{DoxyCompactList}\small\item\em Add a HSAIL module to an existing HSAIL program. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{group__status_gad755322e7ff95456520e8abdbe90d225}{hsa\+\_\+status\+\_\+t}} \mbox{\hyperlink{inc_2hsa__ext__image_8h_a64216765b98b62ee87deb50fd2899836}{HSA\+\_\+\+API}} \mbox{\hyperlink{group__ext-alt-finalizer-program_ga290e0760731512ba4ac37f541ca7c97e}{hsa\+\_\+ext\+\_\+program\+\_\+iterate\+\_\+modules}} (\mbox{\hyperlink{group__ext-alt-finalizer-program_ga73a4db77f5c8e683576ee14bf3b3cd99}{hsa\+\_\+ext\+\_\+program\+\_\+t}} program, \mbox{\hyperlink{group__status_gad755322e7ff95456520e8abdbe90d225}{hsa\+\_\+status\+\_\+t}}($\ast$callback)(\mbox{\hyperlink{group__ext-alt-finalizer-program_ga73a4db77f5c8e683576ee14bf3b3cd99}{hsa\+\_\+ext\+\_\+program\+\_\+t}} program, \mbox{\hyperlink{group__ext-alt-finalizer-program_gafc31798efdd1873a6ebe29d5b6bb3e88}{hsa\+\_\+ext\+\_\+module\+\_\+t}} module, void $\ast$data), void $\ast$data)
+\begin{DoxyCompactList}\small\item\em Iterate over the HSAIL modules in a program, and invoke an application-\/defined callback on every iteration. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{group__status_gad755322e7ff95456520e8abdbe90d225}{hsa\+\_\+status\+\_\+t}} \mbox{\hyperlink{inc_2hsa__ext__image_8h_a64216765b98b62ee87deb50fd2899836}{HSA\+\_\+\+API}} \mbox{\hyperlink{group__ext-alt-finalizer-program_gae29b7984c3cfaabfb1d42940cda1ee53}{hsa\+\_\+ext\+\_\+program\+\_\+get\+\_\+info}} (\mbox{\hyperlink{group__ext-alt-finalizer-program_ga73a4db77f5c8e683576ee14bf3b3cd99}{hsa\+\_\+ext\+\_\+program\+\_\+t}} program, \mbox{\hyperlink{group__ext-alt-finalizer-program_gae88cde13c62f92f7c6b58b24dfe8d731}{hsa\+\_\+ext\+\_\+program\+\_\+info\+\_\+t}} attribute, void $\ast$value)
+\begin{DoxyCompactList}\small\item\em Get the current value of an attribute for a given HSAIL program. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{group__status_gad755322e7ff95456520e8abdbe90d225}{hsa\+\_\+status\+\_\+t}} \mbox{\hyperlink{inc_2hsa__ext__image_8h_a64216765b98b62ee87deb50fd2899836}{HSA\+\_\+\+API}} \mbox{\hyperlink{group__ext-alt-finalizer-program_ga2c653f76c850b193c28932ee98d02b8c}{hsa\+\_\+ext\+\_\+program\+\_\+finalize}} (\mbox{\hyperlink{group__ext-alt-finalizer-program_ga73a4db77f5c8e683576ee14bf3b3cd99}{hsa\+\_\+ext\+\_\+program\+\_\+t}} program, \mbox{\hyperlink{group__instruction-set-architecture_ga459b132d062bba98dd1870f38b6ab721}{hsa\+\_\+isa\+\_\+t}} isa, int32\+\_\+t call\+\_\+convention, \mbox{\hyperlink{group__ext-alt-finalizer-program_gaea4f3ae95cc082cd39e20252669439b7}{hsa\+\_\+ext\+\_\+control\+\_\+directives\+\_\+t}} control\+\_\+directives, const char $\ast$options, \mbox{\hyperlink{group__code-object_gaf769fe79f88bec884909567e6a941f06}{hsa\+\_\+code\+\_\+object\+\_\+type\+\_\+t}} code\+\_\+object\+\_\+type, \mbox{\hyperlink{group__code-object_gafae7c731c8bfc39b3050ef08ae8bb3e3}{hsa\+\_\+code\+\_\+object\+\_\+t}} $\ast$code\+\_\+object)
+\begin{DoxyCompactList}\small\item\em Finalize an HSAIL program for a given instruction set architecture. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Macro Definition Documentation}
+\mbox{\Hypertarget{inc_2hsa__ext__finalize_8h_a64216765b98b62ee87deb50fd2899836}\label{inc_2hsa__ext__finalize_8h_a64216765b98b62ee87deb50fd2899836}} 
+\index{hsa\_ext\_finalize.h@{hsa\_ext\_finalize.h}!HSA\_API@{HSA\_API}}
+\index{HSA\_API@{HSA\_API}!hsa\_ext\_finalize.h@{hsa\_ext\_finalize.h}}
+\doxysubsubsection{\texorpdfstring{HSA\_API}{HSA\_API}}
+{\footnotesize\ttfamily \#define HSA\+\_\+\+API~\mbox{\hyperlink{inc_2hsa_8h_a91f7b64d53fdd78621e7a29cfbe26c7e}{HSA\+\_\+\+API\+\_\+\+IMPORT}}}
+
+\mbox{\Hypertarget{inc_2hsa__ext__finalize_8h_ac6c9de556edb06d8df21384b8045bda8}\label{inc_2hsa__ext__finalize_8h_ac6c9de556edb06d8df21384b8045bda8}} 
+\index{hsa\_ext\_finalize.h@{hsa\_ext\_finalize.h}!hsa\_ext\_finalizer\_1\_00@{hsa\_ext\_finalizer\_1\_00}}
+\index{hsa\_ext\_finalizer\_1\_00@{hsa\_ext\_finalizer\_1\_00}!hsa\_ext\_finalize.h@{hsa\_ext\_finalize.h}}
+\doxysubsubsection{\texorpdfstring{hsa\_ext\_finalizer\_1\_00}{hsa\_ext\_finalizer\_1\_00}}
+{\footnotesize\ttfamily \#define hsa\+\_\+ext\+\_\+finalizer\+\_\+1\+\_\+00}
+
+
+
+\doxysubsection{Typedef Documentation}
+\mbox{\Hypertarget{inc_2hsa__ext__finalize_8h_a9748939f35aa9509be33da9ef9ac51f7}\label{inc_2hsa__ext__finalize_8h_a9748939f35aa9509be33da9ef9ac51f7}} 
+\index{hsa\_ext\_finalize.h@{hsa\_ext\_finalize.h}!BrigModule\_t@{BrigModule\_t}}
+\index{BrigModule\_t@{BrigModule\_t}!hsa\_ext\_finalize.h@{hsa\_ext\_finalize.h}}
+\doxysubsubsection{\texorpdfstring{BrigModule\_t}{BrigModule\_t}}
+{\footnotesize\ttfamily typedef struct \mbox{\hyperlink{structBrigModuleHeader}{Brig\+Module\+Header}}$\ast$ \mbox{\hyperlink{inc_2Brig_8h_af386cdc55b1fc2141b1ae0174e82688b}{Brig\+Module\+\_\+t}}}
+
+\mbox{\Hypertarget{inc_2hsa__ext__finalize_8h_a732407be878f467caecb57c2ef3a7383}\label{inc_2hsa__ext__finalize_8h_a732407be878f467caecb57c2ef3a7383}} 
+\index{hsa\_ext\_finalize.h@{hsa\_ext\_finalize.h}!hsa\_ext\_finalizer\_1\_00\_pfn\_t@{hsa\_ext\_finalizer\_1\_00\_pfn\_t}}
+\index{hsa\_ext\_finalizer\_1\_00\_pfn\_t@{hsa\_ext\_finalizer\_1\_00\_pfn\_t}!hsa\_ext\_finalize.h@{hsa\_ext\_finalize.h}}
+\doxysubsubsection{\texorpdfstring{hsa\_ext\_finalizer\_1\_00\_pfn\_t}{hsa\_ext\_finalizer\_1\_00\_pfn\_t}}
+{\footnotesize\ttfamily typedef struct \mbox{\hyperlink{structhsa__ext__finalizer__1__00__pfn__s}{hsa\+\_\+ext\+\_\+finalizer\+\_\+1\+\_\+00\+\_\+pfn\+\_\+s}} \mbox{\hyperlink{inc_2hsa__ext__finalize_8h_a732407be878f467caecb57c2ef3a7383}{hsa\+\_\+ext\+\_\+finalizer\+\_\+1\+\_\+00\+\_\+pfn\+\_\+t}}}
+

@@ -1,0 +1,316 @@
+\hypertarget{classrocr_1_1amd_1_1hsa_1_1loader_1_1Segment}{}\doxysection{rocr\+::amd\+::hsa\+::loader\+::Segment Class Reference}
+\label{classrocr_1_1amd_1_1hsa_1_1loader_1_1Segment}\index{rocr::amd::hsa::loader::Segment@{rocr::amd::hsa::loader::Segment}}
+
+
+{\ttfamily \#include $<$executable.\+hpp$>$}
+
+
+
+Inheritance diagram for rocr\+::amd\+::hsa\+::loader\+::Segment\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=322pt]{classrocr_1_1amd_1_1hsa_1_1loader_1_1Segment__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for rocr\+::amd\+::hsa\+::loader\+::Segment\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classrocr_1_1amd_1_1hsa_1_1loader_1_1Segment__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classrocr_1_1amd_1_1hsa_1_1loader_1_1Segment_adf5be34c584424b4e9efb745a53931ed}{Segment}} (\mbox{\hyperlink{classrocr_1_1amd_1_1hsa_1_1loader_1_1ExecutableImpl}{Executable\+Impl}} $\ast$owner\+\_\+, \mbox{\hyperlink{group__agentinfo_ga9ce217ef08e7d5e89c8e83ce7b6ef22b}{hsa\+\_\+agent\+\_\+t}} agent\+\_\+, \mbox{\hyperlink{inc_2amd__hsa__elf_8h_a87ff377bc9a49e89b52f1b08a4af1ce4}{amdgpu\+\_\+hsa\+\_\+elf\+\_\+segment\+\_\+t}} segment\+\_\+, void $\ast$\mbox{\hyperlink{amd__loader__context_8cpp_afbe2be78a3ee81b2e3c6821cec74e116}{ptr\+\_\+}}, size\+\_\+t \mbox{\hyperlink{amd__loader__context_8cpp_a5f31775800bbb46b35b5791def1f3acc}{size\+\_\+}}, uint64\+\_\+t vaddr\+\_\+, size\+\_\+t storage\+\_\+offset\+\_\+)
+\item 
+\mbox{\hyperlink{inc_2amd__hsa__elf_8h_a87ff377bc9a49e89b52f1b08a4af1ce4}{amdgpu\+\_\+hsa\+\_\+elf\+\_\+segment\+\_\+t}} \mbox{\hyperlink{classrocr_1_1amd_1_1hsa_1_1loader_1_1Segment_a969b1e42ac79b04eb50c337bc55b5660}{Elf\+Segment}} () const
+\item 
+void $\ast$ \mbox{\hyperlink{classrocr_1_1amd_1_1hsa_1_1loader_1_1Segment_a5b59d56e6c1bcc3619ca67793671345d}{Ptr}} () const
+\item 
+size\+\_\+t \mbox{\hyperlink{classrocr_1_1amd_1_1hsa_1_1loader_1_1Segment_af2188c425f551c0baf90ef8dadd10a65}{Size}} () const
+\item 
+uint64\+\_\+t \mbox{\hyperlink{classrocr_1_1amd_1_1hsa_1_1loader_1_1Segment_a8844a2a5df805f35b87998f3ed69f0ae}{VAddr}} () const
+\item 
+size\+\_\+t \mbox{\hyperlink{classrocr_1_1amd_1_1hsa_1_1loader_1_1Segment_a7f962dd3bee9342df5c4a7cea1efe50a}{Storage\+Offset}} () const
+\item 
+bool \mbox{\hyperlink{classrocr_1_1amd_1_1hsa_1_1loader_1_1Segment_ab90ad6a21d02edba0dac663a5d01c52f}{Get\+Info}} (\mbox{\hyperlink{amd__hsa__loader_8hpp_afde334a235815f7c69b929ee29b68a05}{amd\+\_\+loaded\+\_\+segment\+\_\+info\+\_\+t}} attribute, void $\ast$value) override
+\item 
+uint64\+\_\+t \mbox{\hyperlink{classrocr_1_1amd_1_1hsa_1_1loader_1_1Segment_ace22ca958dd6385517f6fa90a59e1a16}{Offset}} (uint64\+\_\+t addr)
+\item 
+void $\ast$ \mbox{\hyperlink{classrocr_1_1amd_1_1hsa_1_1loader_1_1Segment_a96aabfa4aa1debaa2fa2d0ff49882c77}{Address}} (uint64\+\_\+t addr)
+\item 
+bool \mbox{\hyperlink{classrocr_1_1amd_1_1hsa_1_1loader_1_1Segment_ae033d0b663800d51a0fba6367b1d97f5}{Freeze}} ()
+\item 
+bool \mbox{\hyperlink{classrocr_1_1amd_1_1hsa_1_1loader_1_1Segment_af9dd82568d7930b42542bd6df25aafbf}{Is\+Address\+In\+Segment}} (uint64\+\_\+t addr)
+\item 
+void \mbox{\hyperlink{classrocr_1_1amd_1_1hsa_1_1loader_1_1Segment_a60cc5c4ad733e7ac2ccd2d9c8304264d}{Copy}} (uint64\+\_\+t addr, const void $\ast$src, size\+\_\+t \mbox{\hyperlink{classrocr_1_1amd_1_1hsa_1_1loader_1_1Segment_af89f3bd0a36805b15353d36dae367dbb}{size}})
+\item 
+void \mbox{\hyperlink{classrocr_1_1amd_1_1hsa_1_1loader_1_1Segment_a1aa18fb266bf1358cd05ed7263bafa5e}{Print}} (std\+::ostream \&out) override
+\item 
+void \mbox{\hyperlink{classrocr_1_1amd_1_1hsa_1_1loader_1_1Segment_a9133d5a42ce4bc5b87f0b2a909fff52a}{Destroy}} () override
+\end{DoxyCompactItemize}
+\doxysubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{inc_2amd__hsa__elf_8h_a87ff377bc9a49e89b52f1b08a4af1ce4}{amdgpu\+\_\+hsa\+\_\+elf\+\_\+segment\+\_\+t}} \mbox{\hyperlink{classrocr_1_1amd_1_1hsa_1_1loader_1_1Segment_a38cc20e0689cc4b4b77b7095a56a93c8}{segment}}
+\item 
+void $\ast$ \mbox{\hyperlink{classrocr_1_1amd_1_1hsa_1_1loader_1_1Segment_a0196daddc83c83d60396d68ea892e176}{ptr}}
+\item 
+size\+\_\+t \mbox{\hyperlink{classrocr_1_1amd_1_1hsa_1_1loader_1_1Segment_af89f3bd0a36805b15353d36dae367dbb}{size}}
+\item 
+uint64\+\_\+t \mbox{\hyperlink{classrocr_1_1amd_1_1hsa_1_1loader_1_1Segment_a6d8360dfa9ef968e20f025e8ac853c08}{vaddr}}
+\item 
+bool \mbox{\hyperlink{classrocr_1_1amd_1_1hsa_1_1loader_1_1Segment_aed6f7fcca31b2e49f5ef92aec2f35b7a}{frozen}}
+\item 
+size\+\_\+t \mbox{\hyperlink{classrocr_1_1amd_1_1hsa_1_1loader_1_1Segment_a819100e9b08de2e0dfb82b905638464b}{storage\+\_\+offset}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Additional Inherited Members}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classrocr_1_1amd_1_1hsa_1_1loader_1_1Segment_adf5be34c584424b4e9efb745a53931ed}\label{classrocr_1_1amd_1_1hsa_1_1loader_1_1Segment_adf5be34c584424b4e9efb745a53931ed}} 
+\index{rocr::amd::hsa::loader::Segment@{rocr::amd::hsa::loader::Segment}!Segment@{Segment}}
+\index{Segment@{Segment}!rocr::amd::hsa::loader::Segment@{rocr::amd::hsa::loader::Segment}}
+\doxysubsubsection{\texorpdfstring{Segment()}{Segment()}}
+{\footnotesize\ttfamily rocr\+::amd\+::hsa\+::loader\+::\+Segment\+::\+Segment (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classrocr_1_1amd_1_1hsa_1_1loader_1_1ExecutableImpl}{Executable\+Impl}} $\ast$}]{owner\+\_\+,  }\item[{\mbox{\hyperlink{group__agentinfo_ga9ce217ef08e7d5e89c8e83ce7b6ef22b}{hsa\+\_\+agent\+\_\+t}}}]{agent\+\_\+,  }\item[{\mbox{\hyperlink{inc_2amd__hsa__elf_8h_a87ff377bc9a49e89b52f1b08a4af1ce4}{amdgpu\+\_\+hsa\+\_\+elf\+\_\+segment\+\_\+t}}}]{segment\+\_\+,  }\item[{void $\ast$}]{ptr\+\_\+,  }\item[{size\+\_\+t}]{size\+\_\+,  }\item[{uint64\+\_\+t}]{vaddr\+\_\+,  }\item[{size\+\_\+t}]{storage\+\_\+offset\+\_\+ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classrocr_1_1amd_1_1hsa_1_1loader_1_1Segment_a96aabfa4aa1debaa2fa2d0ff49882c77}\label{classrocr_1_1amd_1_1hsa_1_1loader_1_1Segment_a96aabfa4aa1debaa2fa2d0ff49882c77}} 
+\index{rocr::amd::hsa::loader::Segment@{rocr::amd::hsa::loader::Segment}!Address@{Address}}
+\index{Address@{Address}!rocr::amd::hsa::loader::Segment@{rocr::amd::hsa::loader::Segment}}
+\doxysubsubsection{\texorpdfstring{Address()}{Address()}}
+{\footnotesize\ttfamily void $\ast$ rocr\+::amd\+::hsa\+::loader\+::\+Segment\+::\+Address (\begin{DoxyParamCaption}\item[{uint64\+\_\+t}]{addr }\end{DoxyParamCaption})}
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classrocr_1_1amd_1_1hsa_1_1loader_1_1Segment_a96aabfa4aa1debaa2fa2d0ff49882c77_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classrocr_1_1amd_1_1hsa_1_1loader_1_1Segment_a96aabfa4aa1debaa2fa2d0ff49882c77_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classrocr_1_1amd_1_1hsa_1_1loader_1_1Segment_a60cc5c4ad733e7ac2ccd2d9c8304264d}\label{classrocr_1_1amd_1_1hsa_1_1loader_1_1Segment_a60cc5c4ad733e7ac2ccd2d9c8304264d}} 
+\index{rocr::amd::hsa::loader::Segment@{rocr::amd::hsa::loader::Segment}!Copy@{Copy}}
+\index{Copy@{Copy}!rocr::amd::hsa::loader::Segment@{rocr::amd::hsa::loader::Segment}}
+\doxysubsubsection{\texorpdfstring{Copy()}{Copy()}}
+{\footnotesize\ttfamily void rocr\+::amd\+::hsa\+::loader\+::\+Segment\+::\+Copy (\begin{DoxyParamCaption}\item[{uint64\+\_\+t}]{addr,  }\item[{const void $\ast$}]{src,  }\item[{size\+\_\+t}]{size }\end{DoxyParamCaption})}
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classrocr_1_1amd_1_1hsa_1_1loader_1_1Segment_a60cc5c4ad733e7ac2ccd2d9c8304264d_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classrocr_1_1amd_1_1hsa_1_1loader_1_1Segment_a60cc5c4ad733e7ac2ccd2d9c8304264d_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classrocr_1_1amd_1_1hsa_1_1loader_1_1Segment_a9133d5a42ce4bc5b87f0b2a909fff52a}\label{classrocr_1_1amd_1_1hsa_1_1loader_1_1Segment_a9133d5a42ce4bc5b87f0b2a909fff52a}} 
+\index{rocr::amd::hsa::loader::Segment@{rocr::amd::hsa::loader::Segment}!Destroy@{Destroy}}
+\index{Destroy@{Destroy}!rocr::amd::hsa::loader::Segment@{rocr::amd::hsa::loader::Segment}}
+\doxysubsubsection{\texorpdfstring{Destroy()}{Destroy()}}
+{\footnotesize\ttfamily void rocr\+::amd\+::hsa\+::loader\+::\+Segment\+::\+Destroy (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Implements \mbox{\hyperlink{classrocr_1_1amd_1_1hsa_1_1loader_1_1ExecutableObject_a8a6f87947e96ffe0e1f0d4a1a07a7e94}{rocr\+::amd\+::hsa\+::loader\+::\+Executable\+Object}}.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classrocr_1_1amd_1_1hsa_1_1loader_1_1Segment_a9133d5a42ce4bc5b87f0b2a909fff52a_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classrocr_1_1amd_1_1hsa_1_1loader_1_1Segment_a969b1e42ac79b04eb50c337bc55b5660}\label{classrocr_1_1amd_1_1hsa_1_1loader_1_1Segment_a969b1e42ac79b04eb50c337bc55b5660}} 
+\index{rocr::amd::hsa::loader::Segment@{rocr::amd::hsa::loader::Segment}!ElfSegment@{ElfSegment}}
+\index{ElfSegment@{ElfSegment}!rocr::amd::hsa::loader::Segment@{rocr::amd::hsa::loader::Segment}}
+\doxysubsubsection{\texorpdfstring{ElfSegment()}{ElfSegment()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{inc_2amd__hsa__elf_8h_a87ff377bc9a49e89b52f1b08a4af1ce4}{amdgpu\+\_\+hsa\+\_\+elf\+\_\+segment\+\_\+t}} rocr\+::amd\+::hsa\+::loader\+::\+Segment\+::\+Elf\+Segment (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{classrocr_1_1amd_1_1hsa_1_1loader_1_1Segment_ae033d0b663800d51a0fba6367b1d97f5}\label{classrocr_1_1amd_1_1hsa_1_1loader_1_1Segment_ae033d0b663800d51a0fba6367b1d97f5}} 
+\index{rocr::amd::hsa::loader::Segment@{rocr::amd::hsa::loader::Segment}!Freeze@{Freeze}}
+\index{Freeze@{Freeze}!rocr::amd::hsa::loader::Segment@{rocr::amd::hsa::loader::Segment}}
+\doxysubsubsection{\texorpdfstring{Freeze()}{Freeze()}}
+{\footnotesize\ttfamily bool rocr\+::amd\+::hsa\+::loader\+::\+Segment\+::\+Freeze (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classrocr_1_1amd_1_1hsa_1_1loader_1_1Segment_ae033d0b663800d51a0fba6367b1d97f5_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classrocr_1_1amd_1_1hsa_1_1loader_1_1Segment_ab90ad6a21d02edba0dac663a5d01c52f}\label{classrocr_1_1amd_1_1hsa_1_1loader_1_1Segment_ab90ad6a21d02edba0dac663a5d01c52f}} 
+\index{rocr::amd::hsa::loader::Segment@{rocr::amd::hsa::loader::Segment}!GetInfo@{GetInfo}}
+\index{GetInfo@{GetInfo}!rocr::amd::hsa::loader::Segment@{rocr::amd::hsa::loader::Segment}}
+\doxysubsubsection{\texorpdfstring{GetInfo()}{GetInfo()}}
+{\footnotesize\ttfamily bool rocr\+::amd\+::hsa\+::loader\+::\+Segment\+::\+Get\+Info (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{amd__hsa__loader_8hpp_afde334a235815f7c69b929ee29b68a05}{amd\+\_\+loaded\+\_\+segment\+\_\+info\+\_\+t}}}]{attribute,  }\item[{void $\ast$}]{value }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Implements \mbox{\hyperlink{classrocr_1_1amd_1_1hsa_1_1loader_1_1LoadedSegment_a1a63a54413adaa763a2a765bcb47c81c}{rocr\+::amd\+::hsa\+::loader\+::\+Loaded\+Segment}}.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classrocr_1_1amd_1_1hsa_1_1loader_1_1Segment_ab90ad6a21d02edba0dac663a5d01c52f_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classrocr_1_1amd_1_1hsa_1_1loader_1_1Segment_af9dd82568d7930b42542bd6df25aafbf}\label{classrocr_1_1amd_1_1hsa_1_1loader_1_1Segment_af9dd82568d7930b42542bd6df25aafbf}} 
+\index{rocr::amd::hsa::loader::Segment@{rocr::amd::hsa::loader::Segment}!IsAddressInSegment@{IsAddressInSegment}}
+\index{IsAddressInSegment@{IsAddressInSegment}!rocr::amd::hsa::loader::Segment@{rocr::amd::hsa::loader::Segment}}
+\doxysubsubsection{\texorpdfstring{IsAddressInSegment()}{IsAddressInSegment()}}
+{\footnotesize\ttfamily bool rocr\+::amd\+::hsa\+::loader\+::\+Segment\+::\+Is\+Address\+In\+Segment (\begin{DoxyParamCaption}\item[{uint64\+\_\+t}]{addr }\end{DoxyParamCaption})}
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classrocr_1_1amd_1_1hsa_1_1loader_1_1Segment_af9dd82568d7930b42542bd6df25aafbf_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classrocr_1_1amd_1_1hsa_1_1loader_1_1Segment_ace22ca958dd6385517f6fa90a59e1a16}\label{classrocr_1_1amd_1_1hsa_1_1loader_1_1Segment_ace22ca958dd6385517f6fa90a59e1a16}} 
+\index{rocr::amd::hsa::loader::Segment@{rocr::amd::hsa::loader::Segment}!Offset@{Offset}}
+\index{Offset@{Offset}!rocr::amd::hsa::loader::Segment@{rocr::amd::hsa::loader::Segment}}
+\doxysubsubsection{\texorpdfstring{Offset()}{Offset()}}
+{\footnotesize\ttfamily uint64\+\_\+t rocr\+::amd\+::hsa\+::loader\+::\+Segment\+::\+Offset (\begin{DoxyParamCaption}\item[{uint64\+\_\+t}]{addr }\end{DoxyParamCaption})}
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classrocr_1_1amd_1_1hsa_1_1loader_1_1Segment_ace22ca958dd6385517f6fa90a59e1a16_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classrocr_1_1amd_1_1hsa_1_1loader_1_1Segment_ace22ca958dd6385517f6fa90a59e1a16_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classrocr_1_1amd_1_1hsa_1_1loader_1_1Segment_a1aa18fb266bf1358cd05ed7263bafa5e}\label{classrocr_1_1amd_1_1hsa_1_1loader_1_1Segment_a1aa18fb266bf1358cd05ed7263bafa5e}} 
+\index{rocr::amd::hsa::loader::Segment@{rocr::amd::hsa::loader::Segment}!Print@{Print}}
+\index{Print@{Print}!rocr::amd::hsa::loader::Segment@{rocr::amd::hsa::loader::Segment}}
+\doxysubsubsection{\texorpdfstring{Print()}{Print()}}
+{\footnotesize\ttfamily void rocr\+::amd\+::hsa\+::loader\+::\+Segment\+::\+Print (\begin{DoxyParamCaption}\item[{std\+::ostream \&}]{out }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Implements \mbox{\hyperlink{classrocr_1_1amd_1_1hsa_1_1loader_1_1ExecutableObject_a551a6938df4aeb4a4c033e393bcfc9a5}{rocr\+::amd\+::hsa\+::loader\+::\+Executable\+Object}}.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classrocr_1_1amd_1_1hsa_1_1loader_1_1Segment_a1aa18fb266bf1358cd05ed7263bafa5e_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classrocr_1_1amd_1_1hsa_1_1loader_1_1Segment_a5b59d56e6c1bcc3619ca67793671345d}\label{classrocr_1_1amd_1_1hsa_1_1loader_1_1Segment_a5b59d56e6c1bcc3619ca67793671345d}} 
+\index{rocr::amd::hsa::loader::Segment@{rocr::amd::hsa::loader::Segment}!Ptr@{Ptr}}
+\index{Ptr@{Ptr}!rocr::amd::hsa::loader::Segment@{rocr::amd::hsa::loader::Segment}}
+\doxysubsubsection{\texorpdfstring{Ptr()}{Ptr()}}
+{\footnotesize\ttfamily void$\ast$ rocr\+::amd\+::hsa\+::loader\+::\+Segment\+::\+Ptr (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{classrocr_1_1amd_1_1hsa_1_1loader_1_1Segment_af2188c425f551c0baf90ef8dadd10a65}\label{classrocr_1_1amd_1_1hsa_1_1loader_1_1Segment_af2188c425f551c0baf90ef8dadd10a65}} 
+\index{rocr::amd::hsa::loader::Segment@{rocr::amd::hsa::loader::Segment}!Size@{Size}}
+\index{Size@{Size}!rocr::amd::hsa::loader::Segment@{rocr::amd::hsa::loader::Segment}}
+\doxysubsubsection{\texorpdfstring{Size()}{Size()}}
+{\footnotesize\ttfamily size\+\_\+t rocr\+::amd\+::hsa\+::loader\+::\+Segment\+::\+Size (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{classrocr_1_1amd_1_1hsa_1_1loader_1_1Segment_a7f962dd3bee9342df5c4a7cea1efe50a}\label{classrocr_1_1amd_1_1hsa_1_1loader_1_1Segment_a7f962dd3bee9342df5c4a7cea1efe50a}} 
+\index{rocr::amd::hsa::loader::Segment@{rocr::amd::hsa::loader::Segment}!StorageOffset@{StorageOffset}}
+\index{StorageOffset@{StorageOffset}!rocr::amd::hsa::loader::Segment@{rocr::amd::hsa::loader::Segment}}
+\doxysubsubsection{\texorpdfstring{StorageOffset()}{StorageOffset()}}
+{\footnotesize\ttfamily size\+\_\+t rocr\+::amd\+::hsa\+::loader\+::\+Segment\+::\+Storage\+Offset (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{classrocr_1_1amd_1_1hsa_1_1loader_1_1Segment_a8844a2a5df805f35b87998f3ed69f0ae}\label{classrocr_1_1amd_1_1hsa_1_1loader_1_1Segment_a8844a2a5df805f35b87998f3ed69f0ae}} 
+\index{rocr::amd::hsa::loader::Segment@{rocr::amd::hsa::loader::Segment}!VAddr@{VAddr}}
+\index{VAddr@{VAddr}!rocr::amd::hsa::loader::Segment@{rocr::amd::hsa::loader::Segment}}
+\doxysubsubsection{\texorpdfstring{VAddr()}{VAddr()}}
+{\footnotesize\ttfamily uint64\+\_\+t rocr\+::amd\+::hsa\+::loader\+::\+Segment\+::\+VAddr (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classrocr_1_1amd_1_1hsa_1_1loader_1_1Segment_a8844a2a5df805f35b87998f3ed69f0ae_icgraph}
+\end{center}
+\end{figure}
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{classrocr_1_1amd_1_1hsa_1_1loader_1_1Segment_aed6f7fcca31b2e49f5ef92aec2f35b7a}\label{classrocr_1_1amd_1_1hsa_1_1loader_1_1Segment_aed6f7fcca31b2e49f5ef92aec2f35b7a}} 
+\index{rocr::amd::hsa::loader::Segment@{rocr::amd::hsa::loader::Segment}!frozen@{frozen}}
+\index{frozen@{frozen}!rocr::amd::hsa::loader::Segment@{rocr::amd::hsa::loader::Segment}}
+\doxysubsubsection{\texorpdfstring{frozen}{frozen}}
+{\footnotesize\ttfamily bool rocr\+::amd\+::hsa\+::loader\+::\+Segment\+::frozen\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classrocr_1_1amd_1_1hsa_1_1loader_1_1Segment_a0196daddc83c83d60396d68ea892e176}\label{classrocr_1_1amd_1_1hsa_1_1loader_1_1Segment_a0196daddc83c83d60396d68ea892e176}} 
+\index{rocr::amd::hsa::loader::Segment@{rocr::amd::hsa::loader::Segment}!ptr@{ptr}}
+\index{ptr@{ptr}!rocr::amd::hsa::loader::Segment@{rocr::amd::hsa::loader::Segment}}
+\doxysubsubsection{\texorpdfstring{ptr}{ptr}}
+{\footnotesize\ttfamily void$\ast$ rocr\+::amd\+::hsa\+::loader\+::\+Segment\+::ptr\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classrocr_1_1amd_1_1hsa_1_1loader_1_1Segment_a38cc20e0689cc4b4b77b7095a56a93c8}\label{classrocr_1_1amd_1_1hsa_1_1loader_1_1Segment_a38cc20e0689cc4b4b77b7095a56a93c8}} 
+\index{rocr::amd::hsa::loader::Segment@{rocr::amd::hsa::loader::Segment}!segment@{segment}}
+\index{segment@{segment}!rocr::amd::hsa::loader::Segment@{rocr::amd::hsa::loader::Segment}}
+\doxysubsubsection{\texorpdfstring{segment}{segment}}
+{\footnotesize\ttfamily \mbox{\hyperlink{inc_2amd__hsa__elf_8h_a87ff377bc9a49e89b52f1b08a4af1ce4}{amdgpu\+\_\+hsa\+\_\+elf\+\_\+segment\+\_\+t}} rocr\+::amd\+::hsa\+::loader\+::\+Segment\+::segment\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classrocr_1_1amd_1_1hsa_1_1loader_1_1Segment_af89f3bd0a36805b15353d36dae367dbb}\label{classrocr_1_1amd_1_1hsa_1_1loader_1_1Segment_af89f3bd0a36805b15353d36dae367dbb}} 
+\index{rocr::amd::hsa::loader::Segment@{rocr::amd::hsa::loader::Segment}!size@{size}}
+\index{size@{size}!rocr::amd::hsa::loader::Segment@{rocr::amd::hsa::loader::Segment}}
+\doxysubsubsection{\texorpdfstring{size}{size}}
+{\footnotesize\ttfamily size\+\_\+t rocr\+::amd\+::hsa\+::loader\+::\+Segment\+::size\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classrocr_1_1amd_1_1hsa_1_1loader_1_1Segment_a819100e9b08de2e0dfb82b905638464b}\label{classrocr_1_1amd_1_1hsa_1_1loader_1_1Segment_a819100e9b08de2e0dfb82b905638464b}} 
+\index{rocr::amd::hsa::loader::Segment@{rocr::amd::hsa::loader::Segment}!storage\_offset@{storage\_offset}}
+\index{storage\_offset@{storage\_offset}!rocr::amd::hsa::loader::Segment@{rocr::amd::hsa::loader::Segment}}
+\doxysubsubsection{\texorpdfstring{storage\_offset}{storage\_offset}}
+{\footnotesize\ttfamily size\+\_\+t rocr\+::amd\+::hsa\+::loader\+::\+Segment\+::storage\+\_\+offset\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classrocr_1_1amd_1_1hsa_1_1loader_1_1Segment_a6d8360dfa9ef968e20f025e8ac853c08}\label{classrocr_1_1amd_1_1hsa_1_1loader_1_1Segment_a6d8360dfa9ef968e20f025e8ac853c08}} 
+\index{rocr::amd::hsa::loader::Segment@{rocr::amd::hsa::loader::Segment}!vaddr@{vaddr}}
+\index{vaddr@{vaddr}!rocr::amd::hsa::loader::Segment@{rocr::amd::hsa::loader::Segment}}
+\doxysubsubsection{\texorpdfstring{vaddr}{vaddr}}
+{\footnotesize\ttfamily uint64\+\_\+t rocr\+::amd\+::hsa\+::loader\+::\+Segment\+::vaddr\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+src/loader/\mbox{\hyperlink{executable_8hpp}{executable.\+hpp}}\item 
+src/loader/\mbox{\hyperlink{executable_8cpp}{executable.\+cpp}}\end{DoxyCompactItemize}

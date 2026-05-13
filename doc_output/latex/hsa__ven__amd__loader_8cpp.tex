@@ -1,0 +1,39 @@
+\hypertarget{hsa__ven__amd__loader_8cpp}{}\doxysection{src/core/runtime/hsa\+\_\+ven\+\_\+amd\+\_\+loader.cpp File Reference}
+\label{hsa__ven__amd__loader_8cpp}\index{src/core/runtime/hsa\_ven\_amd\_loader.cpp@{src/core/runtime/hsa\_ven\_amd\_loader.cpp}}
+{\ttfamily \#include \char`\"{}core/inc/hsa\+\_\+ven\+\_\+amd\+\_\+loader\+\_\+impl.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}core/inc/amd\+\_\+hsa\+\_\+loader.\+hpp\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}core/inc/runtime.\+h\char`\"{}}\newline
+Include dependency graph for hsa\+\_\+ven\+\_\+amd\+\_\+loader.\+cpp\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{hsa__ven__amd__loader_8cpp__incl}
+\end{center}
+\end{figure}
+\doxysubsection*{Namespaces}
+\begin{DoxyCompactItemize}
+\item 
+ \mbox{\hyperlink{namespacerocr}{rocr}}
+\item 
+ \mbox{\hyperlink{namespacerocr_1_1AMD}{rocr\+::\+AMD}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{group__status_gad755322e7ff95456520e8abdbe90d225}{hsa\+\_\+status\+\_\+t}} \mbox{\hyperlink{namespacerocr_1_1AMD_a85c1dc627483c172954e373f424f633e}{rocr\+::\+AMD\+::handle\+Exception}} ()
+\item 
+\mbox{\hyperlink{group__status_gad755322e7ff95456520e8abdbe90d225}{hsa\+\_\+status\+\_\+t}} \mbox{\hyperlink{namespacerocr_a9025b591feb37a15d18eae5e2303f427}{rocr\+::hsa\+\_\+ven\+\_\+amd\+\_\+loader\+\_\+query\+\_\+host\+\_\+address}} (const void $\ast$device\+\_\+address, const void $\ast$$\ast$host\+\_\+address)
+\item 
+\mbox{\hyperlink{group__status_gad755322e7ff95456520e8abdbe90d225}{hsa\+\_\+status\+\_\+t}} \mbox{\hyperlink{namespacerocr_ac95b36ee203f5738035ba09cb4d8d537}{rocr\+::hsa\+\_\+ven\+\_\+amd\+\_\+loader\+\_\+query\+\_\+segment\+\_\+descriptors}} (\mbox{\hyperlink{inc_2hsa__ven__amd__loader_8h_acb66ca48865e62642b604bfe4ede86c7}{hsa\+\_\+ven\+\_\+amd\+\_\+loader\+\_\+segment\+\_\+descriptor\+\_\+t}} $\ast$segment\+\_\+descriptors, size\+\_\+t $\ast$num\+\_\+segment\+\_\+descriptors)
+\item 
+\mbox{\hyperlink{group__status_gad755322e7ff95456520e8abdbe90d225}{hsa\+\_\+status\+\_\+t}} \mbox{\hyperlink{namespacerocr_ae822c403115a7cb96aab1f3a709f30b9}{rocr\+::hsa\+\_\+ven\+\_\+amd\+\_\+loader\+\_\+query\+\_\+executable}} (const void $\ast$device\+\_\+address, \mbox{\hyperlink{group__executable_ga4a4281d636cb6048c4d7a015e1fa3baa}{hsa\+\_\+executable\+\_\+t}} $\ast$executable)
+\item 
+\mbox{\hyperlink{group__status_gad755322e7ff95456520e8abdbe90d225}{hsa\+\_\+status\+\_\+t}} \mbox{\hyperlink{namespacerocr_a616ba0fdadbb6ed371f7a42df396995e}{rocr\+::hsa\+\_\+ven\+\_\+amd\+\_\+loader\+\_\+executable\+\_\+iterate\+\_\+loaded\+\_\+code\+\_\+objects}} (\mbox{\hyperlink{group__executable_ga4a4281d636cb6048c4d7a015e1fa3baa}{hsa\+\_\+executable\+\_\+t}} executable, \mbox{\hyperlink{group__status_gad755322e7ff95456520e8abdbe90d225}{hsa\+\_\+status\+\_\+t}}($\ast$callback)(\mbox{\hyperlink{group__executable_ga4a4281d636cb6048c4d7a015e1fa3baa}{hsa\+\_\+executable\+\_\+t}} executable, \mbox{\hyperlink{group__executable_ga352150abd29df5b8cfa891bd51d1d714}{hsa\+\_\+loaded\+\_\+code\+\_\+object\+\_\+t}} loaded\+\_\+code\+\_\+object, void $\ast$data), void $\ast$data)
+\item 
+\mbox{\hyperlink{group__status_gad755322e7ff95456520e8abdbe90d225}{hsa\+\_\+status\+\_\+t}} \mbox{\hyperlink{namespacerocr_ad5dd77700112f1b0d8b6c41f3043a675}{rocr\+::hsa\+\_\+ven\+\_\+amd\+\_\+loader\+\_\+loaded\+\_\+code\+\_\+object\+\_\+get\+\_\+info}} (\mbox{\hyperlink{group__executable_ga352150abd29df5b8cfa891bd51d1d714}{hsa\+\_\+loaded\+\_\+code\+\_\+object\+\_\+t}} loaded\+\_\+code\+\_\+object, \mbox{\hyperlink{inc_2hsa__ven__amd__loader_8h_ad5f7d9c90686c1dd054c1814e506a2b3}{hsa\+\_\+ven\+\_\+amd\+\_\+loader\+\_\+loaded\+\_\+code\+\_\+object\+\_\+info\+\_\+t}} attribute, void $\ast$value)
+\item 
+\mbox{\hyperlink{group__status_gad755322e7ff95456520e8abdbe90d225}{hsa\+\_\+status\+\_\+t}} \mbox{\hyperlink{namespacerocr_af72b388ecdbc3acb6a19d607fa1b304a}{rocr\+::hsa\+\_\+ven\+\_\+amd\+\_\+loader\+\_\+code\+\_\+object\+\_\+reader\+\_\+create\+\_\+from\+\_\+file\+\_\+with\+\_\+offset\+\_\+size}} (\mbox{\hyperlink{group__common_gafed8ede11d6584c8a8973ca68ca5a7cc}{hsa\+\_\+file\+\_\+t}} file, size\+\_\+t offset, size\+\_\+t size, \mbox{\hyperlink{group__executable_ga99b23808ddf94561399f3a90e00c4ed0}{hsa\+\_\+code\+\_\+object\+\_\+reader\+\_\+t}} $\ast$code\+\_\+object\+\_\+reader)
+\item 
+\mbox{\hyperlink{group__status_gad755322e7ff95456520e8abdbe90d225}{hsa\+\_\+status\+\_\+t}} \mbox{\hyperlink{namespacerocr_ab8ab3f5f98849f88943719d6cd574f6c}{rocr\+::hsa\+\_\+ven\+\_\+amd\+\_\+loader\+\_\+iterate\+\_\+executables}} (\mbox{\hyperlink{group__status_gad755322e7ff95456520e8abdbe90d225}{hsa\+\_\+status\+\_\+t}}($\ast$callback)(\mbox{\hyperlink{group__executable_ga4a4281d636cb6048c4d7a015e1fa3baa}{hsa\+\_\+executable\+\_\+t}} executable, void $\ast$data), void $\ast$data)
+\end{DoxyCompactItemize}

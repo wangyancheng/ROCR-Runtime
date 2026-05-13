@@ -1,0 +1,288 @@
+\hypertarget{structrocr_1_1image_1_1Image}{}\doxysection{rocr\+::image\+::Image Struct Reference}
+\label{structrocr_1_1image_1_1Image}\index{rocr::image::Image@{rocr::image::Image}}
+
+
+Structure to represent an \mbox{\hyperlink{namespacerocr_1_1HSA}{HSA}} image object.  
+
+
+
+
+{\ttfamily \#include $<$resource.\+h$>$}
+
+
+
+Collaboration diagram for rocr\+::image\+::Image\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=312pt]{structrocr_1_1image_1_1Image__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+enum \mbox{\hyperlink{structrocr_1_1image_1_1Image_a4f72acb4b024e33dbeaed942866dcaef}{Tile\+Mode}} \{ \mbox{\hyperlink{structrocr_1_1image_1_1Image_a4f72acb4b024e33dbeaed942866dcaefa2a7567c81f184997faffefc56f80a4c0}{LINEAR}}
+, \mbox{\hyperlink{structrocr_1_1image_1_1Image_a4f72acb4b024e33dbeaed942866dcaefa717806c91209e00593e419140e7ee9f2}{TILED}}
+ \}
+\item 
+typedef enum \mbox{\hyperlink{structrocr_1_1image_1_1Image_a4f72acb4b024e33dbeaed942866dcaef}{rocr\+::image\+::\+Image\+::\+Tile\+Mode}} \mbox{\hyperlink{structrocr_1_1image_1_1Image_aaa53d346a5e3611cf7ce0d85028a5b03}{Tile\+Mode}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+uint64\+\_\+t \mbox{\hyperlink{structrocr_1_1image_1_1Image_ae8eb4b4f8fe45735f9de19817c5d50bb}{Convert}} () const
+\begin{DoxyCompactList}\small\item\em Convert from vendor representation to \mbox{\hyperlink{namespacerocr_1_1HSA}{HSA}} handle. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{structrocr_1_1image_1_1Image_a40c20803a95171246deb704df0905fbd}{\+\_\+\+\_\+\+ALIGNED\+\_\+\+\_\+}} (\mbox{\hyperlink{resource_8h_a70c167ce8a090612b7736135fe83cb33}{HSA\+\_\+\+IMAGE\+\_\+\+OBJECT\+\_\+\+ALIGNMENT}}) uint32\+\_\+t srd\mbox{[}\mbox{\hyperlink{resource_8h_aec61695ba4594b82c2e52073942d9946}{HSA\+\_\+\+IMAGE\+\_\+\+OBJECT\+\_\+\+SIZE\+\_\+\+DWORD}}\mbox{]}
+\item 
+void const \mbox{\hyperlink{structrocr_1_1image_1_1Image_a7f3ac3bdc4e87062f0ff9ecb9ac3fe6a}{print\+SRD}} () const
+\end{DoxyCompactItemize}
+\doxysubsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static \mbox{\hyperlink{structrocr_1_1image_1_1Image}{Image}} $\ast$ \mbox{\hyperlink{structrocr_1_1image_1_1Image_aa1b1eb02fc21617ffb58cd27f9877562}{Create}} (\mbox{\hyperlink{group__agentinfo_ga9ce217ef08e7d5e89c8e83ce7b6ef22b}{hsa\+\_\+agent\+\_\+t}} agent)
+\begin{DoxyCompactList}\small\item\em Create an \mbox{\hyperlink{structrocr_1_1image_1_1Image}{Image}}. \end{DoxyCompactList}\item 
+static void \mbox{\hyperlink{structrocr_1_1image_1_1Image_a2580a0e4ed0c127665d3da7cf213e01a}{Destroy}} (const \mbox{\hyperlink{structrocr_1_1image_1_1Image}{Image}} $\ast$image)
+\begin{DoxyCompactList}\small\item\em Destroy an \mbox{\hyperlink{structrocr_1_1image_1_1Image}{Image}}. \end{DoxyCompactList}\item 
+static \mbox{\hyperlink{structrocr_1_1image_1_1Image}{Image}} $\ast$ \mbox{\hyperlink{structrocr_1_1image_1_1Image_a6229c66c406c2dec6ce6a82563db6ed4}{Convert}} (uint64\+\_\+t handle)
+\begin{DoxyCompactList}\small\item\em Convert from \mbox{\hyperlink{namespacerocr_1_1HSA}{HSA}} handle to vendor representation. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{group__agentinfo_ga9ce217ef08e7d5e89c8e83ce7b6ef22b}{hsa\+\_\+agent\+\_\+t}} \mbox{\hyperlink{structrocr_1_1image_1_1Image_a8e473a45d35e621a55bbf9ed1db46a4c}{component}}
+\item 
+\mbox{\hyperlink{group__ext-images_ga7ccf44400f9bbb459c8e52f54a3c5eb0}{hsa\+\_\+ext\+\_\+image\+\_\+descriptor\+\_\+t}} \mbox{\hyperlink{structrocr_1_1image_1_1Image_a05c06bcebb6fe88a26897e82b3ddee41}{desc}}
+\item 
+\mbox{\hyperlink{group__common_gacef73774a0af1d1df56fdcd9e04bb708}{hsa\+\_\+access\+\_\+permission\+\_\+t}} \mbox{\hyperlink{structrocr_1_1image_1_1Image_a1829c530d5678ecb2f087b5c3266da34}{permission}}
+\item 
+void $\ast$ \mbox{\hyperlink{structrocr_1_1image_1_1Image_a5f85f5d9971092e72677e989584f6a89}{data}}
+\item 
+size\+\_\+t \mbox{\hyperlink{structrocr_1_1image_1_1Image_a464ff6a8b49d07502520015c380e9483}{row\+\_\+pitch}}
+\item 
+size\+\_\+t \mbox{\hyperlink{structrocr_1_1image_1_1Image_a04e2bf934df9194ab8fa2e662e893276}{slice\+\_\+pitch}}
+\item 
+\mbox{\hyperlink{structrocr_1_1image_1_1Image_a4f72acb4b024e33dbeaed942866dcaef}{Tile\+Mode}} \mbox{\hyperlink{structrocr_1_1image_1_1Image_a30b2b05c6e215fa2dddd8cac3723113b}{tile\+\_\+mode}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{structrocr_1_1image_1_1Image_aad38c99a13bc5311760d620233a71cad}{Image}} ()
+\item 
+\mbox{\hyperlink{structrocr_1_1image_1_1Image_ab3681c78f05af8493f21d45c193866ee}{$\sim$\+Image}} ()
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Structure to represent an \mbox{\hyperlink{namespacerocr_1_1HSA}{HSA}} image object. 
+
+\doxysubsection{Member Typedef Documentation}
+\mbox{\Hypertarget{structrocr_1_1image_1_1Image_aaa53d346a5e3611cf7ce0d85028a5b03}\label{structrocr_1_1image_1_1Image_aaa53d346a5e3611cf7ce0d85028a5b03}} 
+\index{rocr::image::Image@{rocr::image::Image}!TileMode@{TileMode}}
+\index{TileMode@{TileMode}!rocr::image::Image@{rocr::image::Image}}
+\doxysubsubsection{\texorpdfstring{TileMode}{TileMode}}
+{\footnotesize\ttfamily typedef enum \mbox{\hyperlink{structrocr_1_1image_1_1Image_a4f72acb4b024e33dbeaed942866dcaef}{rocr\+::image\+::\+Image\+::\+Tile\+Mode}} \mbox{\hyperlink{structrocr_1_1image_1_1Image_a4f72acb4b024e33dbeaed942866dcaef}{rocr\+::image\+::\+Image\+::\+Tile\+Mode}}}
+
+
+
+\doxysubsection{Member Enumeration Documentation}
+\mbox{\Hypertarget{structrocr_1_1image_1_1Image_a4f72acb4b024e33dbeaed942866dcaef}\label{structrocr_1_1image_1_1Image_a4f72acb4b024e33dbeaed942866dcaef}} 
+\index{rocr::image::Image@{rocr::image::Image}!TileMode@{TileMode}}
+\index{TileMode@{TileMode}!rocr::image::Image@{rocr::image::Image}}
+\doxysubsubsection{\texorpdfstring{TileMode}{TileMode}}
+{\footnotesize\ttfamily enum \mbox{\hyperlink{structrocr_1_1image_1_1Image_a4f72acb4b024e33dbeaed942866dcaef}{rocr\+::image\+::\+Image\+::\+Tile\+Mode}}}
+
+\begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{LINEAR@{LINEAR}!rocr::image::Image@{rocr::image::Image}}\index{rocr::image::Image@{rocr::image::Image}!LINEAR@{LINEAR}}}\mbox{\Hypertarget{structrocr_1_1image_1_1Image_a4f72acb4b024e33dbeaed942866dcaefa2a7567c81f184997faffefc56f80a4c0}\label{structrocr_1_1image_1_1Image_a4f72acb4b024e33dbeaed942866dcaefa2a7567c81f184997faffefc56f80a4c0}} 
+LINEAR&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{TILED@{TILED}!rocr::image::Image@{rocr::image::Image}}\index{rocr::image::Image@{rocr::image::Image}!TILED@{TILED}}}\mbox{\Hypertarget{structrocr_1_1image_1_1Image_a4f72acb4b024e33dbeaed942866dcaefa717806c91209e00593e419140e7ee9f2}\label{structrocr_1_1image_1_1Image_a4f72acb4b024e33dbeaed942866dcaefa717806c91209e00593e419140e7ee9f2}} 
+TILED&\\
+\hline
+
+\end{DoxyEnumFields}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{structrocr_1_1image_1_1Image_aad38c99a13bc5311760d620233a71cad}\label{structrocr_1_1image_1_1Image_aad38c99a13bc5311760d620233a71cad}} 
+\index{rocr::image::Image@{rocr::image::Image}!Image@{Image}}
+\index{Image@{Image}!rocr::image::Image@{rocr::image::Image}}
+\doxysubsubsection{\texorpdfstring{Image()}{Image()}}
+{\footnotesize\ttfamily rocr\+::image\+::\+Image\+::\+Image (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [private]}}
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{structrocr_1_1image_1_1Image_aad38c99a13bc5311760d620233a71cad_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{structrocr_1_1image_1_1Image_ab3681c78f05af8493f21d45c193866ee}\label{structrocr_1_1image_1_1Image_ab3681c78f05af8493f21d45c193866ee}} 
+\index{rocr::image::Image@{rocr::image::Image}!````~Image@{$\sim$Image}}
+\index{````~Image@{$\sim$Image}!rocr::image::Image@{rocr::image::Image}}
+\doxysubsubsection{\texorpdfstring{$\sim$Image()}{~Image()}}
+{\footnotesize\ttfamily rocr\+::image\+::\+Image\+::$\sim$\+Image (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [private]}}
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{structrocr_1_1image_1_1Image_ab3681c78f05af8493f21d45c193866ee_icgraph}
+\end{center}
+\end{figure}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{structrocr_1_1image_1_1Image_a40c20803a95171246deb704df0905fbd}\label{structrocr_1_1image_1_1Image_a40c20803a95171246deb704df0905fbd}} 
+\index{rocr::image::Image@{rocr::image::Image}!\_\_ALIGNED\_\_@{\_\_ALIGNED\_\_}}
+\index{\_\_ALIGNED\_\_@{\_\_ALIGNED\_\_}!rocr::image::Image@{rocr::image::Image}}
+\doxysubsubsection{\texorpdfstring{\_\_ALIGNED\_\_()}{\_\_ALIGNED\_\_()}}
+{\footnotesize\ttfamily rocr\+::image\+::\+Image\+::\+\_\+\+\_\+\+ALIGNED\+\_\+\+\_\+ (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{resource_8h_a70c167ce8a090612b7736135fe83cb33}{HSA\+\_\+\+IMAGE\+\_\+\+OBJECT\+\_\+\+ALIGNMENT}}}]{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{structrocr_1_1image_1_1Image_ae8eb4b4f8fe45735f9de19817c5d50bb}\label{structrocr_1_1image_1_1Image_ae8eb4b4f8fe45735f9de19817c5d50bb}} 
+\index{rocr::image::Image@{rocr::image::Image}!Convert@{Convert}}
+\index{Convert@{Convert}!rocr::image::Image@{rocr::image::Image}}
+\doxysubsubsection{\texorpdfstring{Convert()}{Convert()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily uint64\+\_\+t rocr\+::image\+::\+Image\+::\+Convert (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Convert from vendor representation to \mbox{\hyperlink{namespacerocr_1_1HSA}{HSA}} handle. 
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{structrocr_1_1image_1_1Image_ae8eb4b4f8fe45735f9de19817c5d50bb_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{structrocr_1_1image_1_1Image_a6229c66c406c2dec6ce6a82563db6ed4}\label{structrocr_1_1image_1_1Image_a6229c66c406c2dec6ce6a82563db6ed4}} 
+\index{rocr::image::Image@{rocr::image::Image}!Convert@{Convert}}
+\index{Convert@{Convert}!rocr::image::Image@{rocr::image::Image}}
+\doxysubsubsection{\texorpdfstring{Convert()}{Convert()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily static \mbox{\hyperlink{structrocr_1_1image_1_1Image}{Image}}$\ast$ rocr\+::image\+::\+Image\+::\+Convert (\begin{DoxyParamCaption}\item[{uint64\+\_\+t}]{handle }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+
+
+Convert from \mbox{\hyperlink{namespacerocr_1_1HSA}{HSA}} handle to vendor representation. 
+
+\mbox{\Hypertarget{structrocr_1_1image_1_1Image_aa1b1eb02fc21617ffb58cd27f9877562}\label{structrocr_1_1image_1_1Image_aa1b1eb02fc21617ffb58cd27f9877562}} 
+\index{rocr::image::Image@{rocr::image::Image}!Create@{Create}}
+\index{Create@{Create}!rocr::image::Image@{rocr::image::Image}}
+\doxysubsubsection{\texorpdfstring{Create()}{Create()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structrocr_1_1image_1_1Image}{Image}} $\ast$ rocr\+::image\+::\+Image\+::\+Create (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{group__agentinfo_ga9ce217ef08e7d5e89c8e83ce7b6ef22b}{hsa\+\_\+agent\+\_\+t}}}]{agent }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Create an \mbox{\hyperlink{structrocr_1_1image_1_1Image}{Image}}. 
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{structrocr_1_1image_1_1Image_aa1b1eb02fc21617ffb58cd27f9877562_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{structrocr_1_1image_1_1Image_aa1b1eb02fc21617ffb58cd27f9877562_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{structrocr_1_1image_1_1Image_a2580a0e4ed0c127665d3da7cf213e01a}\label{structrocr_1_1image_1_1Image_a2580a0e4ed0c127665d3da7cf213e01a}} 
+\index{rocr::image::Image@{rocr::image::Image}!Destroy@{Destroy}}
+\index{Destroy@{Destroy}!rocr::image::Image@{rocr::image::Image}}
+\doxysubsubsection{\texorpdfstring{Destroy()}{Destroy()}}
+{\footnotesize\ttfamily void rocr\+::image\+::\+Image\+::\+Destroy (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{structrocr_1_1image_1_1Image}{Image}} $\ast$}]{image }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Destroy an \mbox{\hyperlink{structrocr_1_1image_1_1Image}{Image}}. 
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{structrocr_1_1image_1_1Image_a2580a0e4ed0c127665d3da7cf213e01a_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{structrocr_1_1image_1_1Image_a2580a0e4ed0c127665d3da7cf213e01a_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{structrocr_1_1image_1_1Image_a7f3ac3bdc4e87062f0ff9ecb9ac3fe6a}\label{structrocr_1_1image_1_1Image_a7f3ac3bdc4e87062f0ff9ecb9ac3fe6a}} 
+\index{rocr::image::Image@{rocr::image::Image}!printSRD@{printSRD}}
+\index{printSRD@{printSRD}!rocr::image::Image@{rocr::image::Image}}
+\doxysubsubsection{\texorpdfstring{printSRD()}{printSRD()}}
+{\footnotesize\ttfamily void const rocr\+::image\+::\+Image\+::print\+SRD (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{structrocr_1_1image_1_1Image_a7f3ac3bdc4e87062f0ff9ecb9ac3fe6a_icgraph}
+\end{center}
+\end{figure}
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{structrocr_1_1image_1_1Image_a8e473a45d35e621a55bbf9ed1db46a4c}\label{structrocr_1_1image_1_1Image_a8e473a45d35e621a55bbf9ed1db46a4c}} 
+\index{rocr::image::Image@{rocr::image::Image}!component@{component}}
+\index{component@{component}!rocr::image::Image@{rocr::image::Image}}
+\doxysubsubsection{\texorpdfstring{component}{component}}
+{\footnotesize\ttfamily \mbox{\hyperlink{group__agentinfo_ga9ce217ef08e7d5e89c8e83ce7b6ef22b}{hsa\+\_\+agent\+\_\+t}} rocr\+::image\+::\+Image\+::component}
+
+\mbox{\Hypertarget{structrocr_1_1image_1_1Image_a5f85f5d9971092e72677e989584f6a89}\label{structrocr_1_1image_1_1Image_a5f85f5d9971092e72677e989584f6a89}} 
+\index{rocr::image::Image@{rocr::image::Image}!data@{data}}
+\index{data@{data}!rocr::image::Image@{rocr::image::Image}}
+\doxysubsubsection{\texorpdfstring{data}{data}}
+{\footnotesize\ttfamily void$\ast$ rocr\+::image\+::\+Image\+::data}
+
+\mbox{\Hypertarget{structrocr_1_1image_1_1Image_a05c06bcebb6fe88a26897e82b3ddee41}\label{structrocr_1_1image_1_1Image_a05c06bcebb6fe88a26897e82b3ddee41}} 
+\index{rocr::image::Image@{rocr::image::Image}!desc@{desc}}
+\index{desc@{desc}!rocr::image::Image@{rocr::image::Image}}
+\doxysubsubsection{\texorpdfstring{desc}{desc}}
+{\footnotesize\ttfamily \mbox{\hyperlink{group__ext-images_ga7ccf44400f9bbb459c8e52f54a3c5eb0}{hsa\+\_\+ext\+\_\+image\+\_\+descriptor\+\_\+t}} rocr\+::image\+::\+Image\+::desc}
+
+\mbox{\Hypertarget{structrocr_1_1image_1_1Image_a1829c530d5678ecb2f087b5c3266da34}\label{structrocr_1_1image_1_1Image_a1829c530d5678ecb2f087b5c3266da34}} 
+\index{rocr::image::Image@{rocr::image::Image}!permission@{permission}}
+\index{permission@{permission}!rocr::image::Image@{rocr::image::Image}}
+\doxysubsubsection{\texorpdfstring{permission}{permission}}
+{\footnotesize\ttfamily \mbox{\hyperlink{group__common_gacef73774a0af1d1df56fdcd9e04bb708}{hsa\+\_\+access\+\_\+permission\+\_\+t}} rocr\+::image\+::\+Image\+::permission}
+
+\mbox{\Hypertarget{structrocr_1_1image_1_1Image_a464ff6a8b49d07502520015c380e9483}\label{structrocr_1_1image_1_1Image_a464ff6a8b49d07502520015c380e9483}} 
+\index{rocr::image::Image@{rocr::image::Image}!row\_pitch@{row\_pitch}}
+\index{row\_pitch@{row\_pitch}!rocr::image::Image@{rocr::image::Image}}
+\doxysubsubsection{\texorpdfstring{row\_pitch}{row\_pitch}}
+{\footnotesize\ttfamily size\+\_\+t rocr\+::image\+::\+Image\+::row\+\_\+pitch}
+
+\mbox{\Hypertarget{structrocr_1_1image_1_1Image_a04e2bf934df9194ab8fa2e662e893276}\label{structrocr_1_1image_1_1Image_a04e2bf934df9194ab8fa2e662e893276}} 
+\index{rocr::image::Image@{rocr::image::Image}!slice\_pitch@{slice\_pitch}}
+\index{slice\_pitch@{slice\_pitch}!rocr::image::Image@{rocr::image::Image}}
+\doxysubsubsection{\texorpdfstring{slice\_pitch}{slice\_pitch}}
+{\footnotesize\ttfamily size\+\_\+t rocr\+::image\+::\+Image\+::slice\+\_\+pitch}
+
+\mbox{\Hypertarget{structrocr_1_1image_1_1Image_a30b2b05c6e215fa2dddd8cac3723113b}\label{structrocr_1_1image_1_1Image_a30b2b05c6e215fa2dddd8cac3723113b}} 
+\index{rocr::image::Image@{rocr::image::Image}!tile\_mode@{tile\_mode}}
+\index{tile\_mode@{tile\_mode}!rocr::image::Image@{rocr::image::Image}}
+\doxysubsubsection{\texorpdfstring{tile\_mode}{tile\_mode}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structrocr_1_1image_1_1Image_a4f72acb4b024e33dbeaed942866dcaef}{Tile\+Mode}} rocr\+::image\+::\+Image\+::tile\+\_\+mode}
+
+
+
+The documentation for this struct was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+src/image/\mbox{\hyperlink{resource_8h}{resource.\+h}}\item 
+src/image/\mbox{\hyperlink{image__manager_8cpp}{image\+\_\+manager.\+cpp}}\end{DoxyCompactItemize}

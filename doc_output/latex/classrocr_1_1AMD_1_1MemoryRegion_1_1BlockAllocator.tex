@@ -1,0 +1,108 @@
+\hypertarget{classrocr_1_1AMD_1_1MemoryRegion_1_1BlockAllocator}{}\doxysection{rocr\+::AMD\+::Memory\+Region\+::Block\+Allocator Class Reference}
+\label{classrocr_1_1AMD_1_1MemoryRegion_1_1BlockAllocator}\index{rocr::AMD::MemoryRegion::BlockAllocator@{rocr::AMD::MemoryRegion::BlockAllocator}}
+
+
+Collaboration diagram for rocr\+::AMD\+::Memory\+Region\+::Block\+Allocator\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classrocr_1_1AMD_1_1MemoryRegion_1_1BlockAllocator__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classrocr_1_1AMD_1_1MemoryRegion_1_1BlockAllocator_a9f44d31027694ccbd3d7cb979259cf6e}{Block\+Allocator}} (\mbox{\hyperlink{classrocr_1_1AMD_1_1MemoryRegion}{Memory\+Region}} \&region)
+\item 
+void $\ast$ \mbox{\hyperlink{classrocr_1_1AMD_1_1MemoryRegion_1_1BlockAllocator_a59d595a54d09fac6f067ff19fb75d5e5}{alloc}} (size\+\_\+t request\+\_\+size, size\+\_\+t \&allocated\+\_\+size) const
+\item 
+void \mbox{\hyperlink{classrocr_1_1AMD_1_1MemoryRegion_1_1BlockAllocator_af738f816b4512f5481e4d26942e37473}{free}} (void $\ast$ptr, size\+\_\+t length) const
+\item 
+size\+\_\+t \mbox{\hyperlink{classrocr_1_1AMD_1_1MemoryRegion_1_1BlockAllocator_a3640e0aeb4b6c4c4e40d4276933d1bb6}{block\+\_\+size}} () const
+\end{DoxyCompactItemize}
+\doxysubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classrocr_1_1AMD_1_1MemoryRegion}{Memory\+Region}} \& \mbox{\hyperlink{classrocr_1_1AMD_1_1MemoryRegion_1_1BlockAllocator_ad91b812acaa142198137514428a847fe}{region\+\_\+}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Static Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+static const size\+\_\+t \mbox{\hyperlink{classrocr_1_1AMD_1_1MemoryRegion_1_1BlockAllocator_a3ef78ff61fc1f280a2e26af86628caa1}{block\+\_\+size\+\_\+}} = 2 $\ast$ 1024 $\ast$ 1024
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classrocr_1_1AMD_1_1MemoryRegion_1_1BlockAllocator_a9f44d31027694ccbd3d7cb979259cf6e}\label{classrocr_1_1AMD_1_1MemoryRegion_1_1BlockAllocator_a9f44d31027694ccbd3d7cb979259cf6e}} 
+\index{rocr::AMD::MemoryRegion::BlockAllocator@{rocr::AMD::MemoryRegion::BlockAllocator}!BlockAllocator@{BlockAllocator}}
+\index{BlockAllocator@{BlockAllocator}!rocr::AMD::MemoryRegion::BlockAllocator@{rocr::AMD::MemoryRegion::BlockAllocator}}
+\doxysubsubsection{\texorpdfstring{BlockAllocator()}{BlockAllocator()}}
+{\footnotesize\ttfamily rocr\+::\+AMD\+::\+Memory\+Region\+::\+Block\+Allocator\+::\+Block\+Allocator (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classrocr_1_1AMD_1_1MemoryRegion}{Memory\+Region}} \&}]{region }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [explicit]}}
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classrocr_1_1AMD_1_1MemoryRegion_1_1BlockAllocator_a59d595a54d09fac6f067ff19fb75d5e5}\label{classrocr_1_1AMD_1_1MemoryRegion_1_1BlockAllocator_a59d595a54d09fac6f067ff19fb75d5e5}} 
+\index{rocr::AMD::MemoryRegion::BlockAllocator@{rocr::AMD::MemoryRegion::BlockAllocator}!alloc@{alloc}}
+\index{alloc@{alloc}!rocr::AMD::MemoryRegion::BlockAllocator@{rocr::AMD::MemoryRegion::BlockAllocator}}
+\doxysubsubsection{\texorpdfstring{alloc()}{alloc()}}
+{\footnotesize\ttfamily void $\ast$ rocr\+::\+AMD\+::\+Memory\+Region\+::\+Block\+Allocator\+::alloc (\begin{DoxyParamCaption}\item[{size\+\_\+t}]{request\+\_\+size,  }\item[{size\+\_\+t \&}]{allocated\+\_\+size }\end{DoxyParamCaption}) const}
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classrocr_1_1AMD_1_1MemoryRegion_1_1BlockAllocator_a59d595a54d09fac6f067ff19fb75d5e5_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classrocr_1_1AMD_1_1MemoryRegion_1_1BlockAllocator_a3640e0aeb4b6c4c4e40d4276933d1bb6}\label{classrocr_1_1AMD_1_1MemoryRegion_1_1BlockAllocator_a3640e0aeb4b6c4c4e40d4276933d1bb6}} 
+\index{rocr::AMD::MemoryRegion::BlockAllocator@{rocr::AMD::MemoryRegion::BlockAllocator}!block\_size@{block\_size}}
+\index{block\_size@{block\_size}!rocr::AMD::MemoryRegion::BlockAllocator@{rocr::AMD::MemoryRegion::BlockAllocator}}
+\doxysubsubsection{\texorpdfstring{block\_size()}{block\_size()}}
+{\footnotesize\ttfamily size\+\_\+t rocr\+::\+AMD\+::\+Memory\+Region\+::\+Block\+Allocator\+::block\+\_\+size (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classrocr_1_1AMD_1_1MemoryRegion_1_1BlockAllocator_a3640e0aeb4b6c4c4e40d4276933d1bb6_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classrocr_1_1AMD_1_1MemoryRegion_1_1BlockAllocator_af738f816b4512f5481e4d26942e37473}\label{classrocr_1_1AMD_1_1MemoryRegion_1_1BlockAllocator_af738f816b4512f5481e4d26942e37473}} 
+\index{rocr::AMD::MemoryRegion::BlockAllocator@{rocr::AMD::MemoryRegion::BlockAllocator}!free@{free}}
+\index{free@{free}!rocr::AMD::MemoryRegion::BlockAllocator@{rocr::AMD::MemoryRegion::BlockAllocator}}
+\doxysubsubsection{\texorpdfstring{free()}{free()}}
+{\footnotesize\ttfamily void rocr\+::\+AMD\+::\+Memory\+Region\+::\+Block\+Allocator\+::free (\begin{DoxyParamCaption}\item[{void $\ast$}]{ptr,  }\item[{size\+\_\+t}]{length }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classrocr_1_1AMD_1_1MemoryRegion_1_1BlockAllocator_af738f816b4512f5481e4d26942e37473_cgraph}
+\end{center}
+\end{figure}
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{classrocr_1_1AMD_1_1MemoryRegion_1_1BlockAllocator_a3ef78ff61fc1f280a2e26af86628caa1}\label{classrocr_1_1AMD_1_1MemoryRegion_1_1BlockAllocator_a3ef78ff61fc1f280a2e26af86628caa1}} 
+\index{rocr::AMD::MemoryRegion::BlockAllocator@{rocr::AMD::MemoryRegion::BlockAllocator}!block\_size\_@{block\_size\_}}
+\index{block\_size\_@{block\_size\_}!rocr::AMD::MemoryRegion::BlockAllocator@{rocr::AMD::MemoryRegion::BlockAllocator}}
+\doxysubsubsection{\texorpdfstring{block\_size\_}{block\_size\_}}
+{\footnotesize\ttfamily const size\+\_\+t rocr\+::\+AMD\+::\+Memory\+Region\+::\+Block\+Allocator\+::block\+\_\+size\+\_\+ = 2 $\ast$ 1024 $\ast$ 1024\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [private]}}
+
+\mbox{\Hypertarget{classrocr_1_1AMD_1_1MemoryRegion_1_1BlockAllocator_ad91b812acaa142198137514428a847fe}\label{classrocr_1_1AMD_1_1MemoryRegion_1_1BlockAllocator_ad91b812acaa142198137514428a847fe}} 
+\index{rocr::AMD::MemoryRegion::BlockAllocator@{rocr::AMD::MemoryRegion::BlockAllocator}!region\_@{region\_}}
+\index{region\_@{region\_}!rocr::AMD::MemoryRegion::BlockAllocator@{rocr::AMD::MemoryRegion::BlockAllocator}}
+\doxysubsubsection{\texorpdfstring{region\_}{region\_}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classrocr_1_1AMD_1_1MemoryRegion}{Memory\+Region}}\& rocr\+::\+AMD\+::\+Memory\+Region\+::\+Block\+Allocator\+::region\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+src/core/inc/\mbox{\hyperlink{amd__memory__region_8h}{amd\+\_\+memory\+\_\+region.\+h}}\item 
+src/core/runtime/\mbox{\hyperlink{amd__memory__region_8cpp}{amd\+\_\+memory\+\_\+region.\+cpp}}\end{DoxyCompactItemize}

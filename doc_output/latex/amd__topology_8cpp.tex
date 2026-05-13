@@ -1,0 +1,70 @@
+\hypertarget{amd__topology_8cpp}{}\doxysection{src/core/runtime/amd\+\_\+topology.cpp File Reference}
+\label{amd__topology_8cpp}\index{src/core/runtime/amd\_topology.cpp@{src/core/runtime/amd\_topology.cpp}}
+{\ttfamily \#include \char`\"{}core/inc/amd\+\_\+topology.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}core/inc/amd\+\_\+filter\+\_\+device.\+h\char`\"{}}\newline
+{\ttfamily \#include $<$algorithm$>$}\newline
+{\ttfamily \#include $<$cstring$>$}\newline
+{\ttfamily \#include $<$vector$>$}\newline
+{\ttfamily \#include $<$map$>$}\newline
+{\ttfamily \#include $<$string$>$}\newline
+{\ttfamily \#include $<$sstream$>$}\newline
+{\ttfamily \#include $<$link.\+h$>$}\newline
+{\ttfamily \#include $<$iostream$>$}\newline
+{\ttfamily \#include \char`\"{}hsakmt/hsakmt.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}core/inc/runtime.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}core/inc/amd\+\_\+cpu\+\_\+agent.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}core/inc/amd\+\_\+gpu\+\_\+agent.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}core/inc/amd\+\_\+memory\+\_\+region.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}core/util/utils.\+h\char`\"{}}\newline
+Include dependency graph for amd\+\_\+topology.\+cpp\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{amd__topology_8cpp__incl}
+\end{center}
+\end{figure}
+\doxysubsection*{Namespaces}
+\begin{DoxyCompactItemize}
+\item 
+ \mbox{\hyperlink{namespacerocr}{rocr}}
+\item 
+ \mbox{\hyperlink{namespacerocr_1_1AMD}{rocr\+::\+AMD}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+bool \mbox{\hyperlink{namespacerocr_1_1AMD_a3f38dbdf2fb1bd9bd8748f8c0da32b98}{rocr\+::\+AMD\+::\+Bind\+Xnack\+Mode}} ()
+\item 
+Cpu\+Agent $\ast$ \mbox{\hyperlink{namespacerocr_1_1AMD_a731b6369a44f94f115cda50f47bcdf9b}{rocr\+::\+AMD\+::\+Discover\+Cpu}} (HSAuint32 node\+\_\+id, Hsa\+Node\+Properties \&node\+\_\+prop)
+\item 
+Gpu\+Agent $\ast$ \mbox{\hyperlink{namespacerocr_1_1AMD_af69bd818de033e15dd8440d780028775}{rocr\+::\+AMD\+::\+Discover\+Gpu}} (HSAuint32 node\+\_\+id, Hsa\+Node\+Properties \&node\+\_\+prop, bool xnack\+\_\+mode, bool enabled)
+\item 
+void \mbox{\hyperlink{namespacerocr_1_1AMD_af80c7a580e3fe8cf38060cbc62332059}{rocr\+::\+AMD\+::\+Register\+Link\+Info}} (uint32\+\_\+t node\+\_\+id, uint32\+\_\+t num\+\_\+link)
+\item 
+static void \mbox{\hyperlink{namespacerocr_1_1AMD_aa04a1792d5f942c642cc89c876ab5822}{rocr\+::\+AMD\+::\+Surface\+Gpu\+List}} (std\+::vector$<$ int32\+\_\+t $>$ \&gpu\+\_\+list, bool xnack\+\_\+mode, bool enabled)
+\item 
+void \mbox{\hyperlink{namespacerocr_1_1AMD_a1ef49d3d5026b4061b48de0e8def6ab5}{rocr\+::\+AMD\+::\+Build\+Topology}} ()
+\begin{DoxyCompactList}\small\item\em Calls Kfd thunk to get the snapshot of the topology of the system, which includes associations between, node, devices, memory and caches. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{namespacerocr_1_1AMD_a35edc6fd9a344acaf6b88d0797f4c817}{rocr\+::\+AMD\+::\+Load}} ()
+\begin{DoxyCompactList}\small\item\em Initializes the runtime. Should not be called directly, must be called only from \mbox{\hyperlink{classrocr_1_1core_1_1Runtime_a3e2e9ca714df8c5893c34e6d8d77ddfc}{Runtime\+::\+Acquire()}} \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{namespacerocr_1_1AMD_a659a435757283a34ae1e3eb874933acf}{rocr\+::\+AMD\+::\+Unload}} ()
+\begin{DoxyCompactList}\small\item\em Shutdown/cleanup of runtime. Should not be called directly, must be called only from \mbox{\hyperlink{classrocr_1_1core_1_1Runtime_ad53500b4c944225cf4582e0174674a21}{Runtime\+::\+Release()}} \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+r\+\_\+debug \mbox{\hyperlink{amd__topology_8cpp_a713714b0677eb55faa4fe59dbc938b88}{\+\_\+amdgpu\+\_\+r\+\_\+debug}}
+\item 
+static const uint \mbox{\hyperlink{namespacerocr_1_1AMD_a91551e2f7fbd94ed08df999312e73734}{rocr\+::\+AMD\+::k\+Kfd\+Version\+Major}} = 0
+\item 
+static const uint \mbox{\hyperlink{namespacerocr_1_1AMD_a8f0f94c3bdb243c515d2e096d4956f5b}{rocr\+::\+AMD\+::k\+Kfd\+Version\+Minor}} = 99
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Variable Documentation}
+\mbox{\Hypertarget{amd__topology_8cpp_a713714b0677eb55faa4fe59dbc938b88}\label{amd__topology_8cpp_a713714b0677eb55faa4fe59dbc938b88}} 
+\index{amd\_topology.cpp@{amd\_topology.cpp}!\_amdgpu\_r\_debug@{\_amdgpu\_r\_debug}}
+\index{\_amdgpu\_r\_debug@{\_amdgpu\_r\_debug}!amd\_topology.cpp@{amd\_topology.cpp}}
+\doxysubsubsection{\texorpdfstring{\_amdgpu\_r\_debug}{\_amdgpu\_r\_debug}}
+{\footnotesize\ttfamily r\+\_\+debug \+\_\+amdgpu\+\_\+r\+\_\+debug\hspace{0.3cm}{\ttfamily [extern]}}
+

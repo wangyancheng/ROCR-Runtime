@@ -1,0 +1,428 @@
+\hypertarget{group__memory}{}\doxysection{Memory}
+\label{group__memory}\index{Memory@{Memory}}
+\doxysubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{structhsa__region__s}{hsa\+\_\+region\+\_\+s}}
+\begin{DoxyCompactList}\small\item\em A memory region represents a block of virtual memory with certain properties. For example, the HSA runtime represents fine-\/grained memory in the global segment using a region. A region might be associated with more than one agent. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+typedef struct \mbox{\hyperlink{structhsa__region__s}{hsa\+\_\+region\+\_\+s}} \mbox{\hyperlink{group__memory_ga9c649e7034e53233198aaa1b58e9d79b}{hsa\+\_\+region\+\_\+t}}
+\begin{DoxyCompactList}\small\item\em A memory region represents a block of virtual memory with certain properties. For example, the HSA runtime represents fine-\/grained memory in the global segment using a region. A region might be associated with more than one agent. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Enumerations}
+\begin{DoxyCompactItemize}
+\item 
+enum \mbox{\hyperlink{group__memory_ga8d508edc5ed47961e7169166ff92374c}{hsa\+\_\+region\+\_\+segment\+\_\+t}} \{ \newline
+\mbox{\hyperlink{group__memory_gga8d508edc5ed47961e7169166ff92374cae6919a97f0a4ab274f7779f22d89cfd8}{HSA\+\_\+\+REGION\+\_\+\+SEGMENT\+\_\+\+GLOBAL}} = 0
+, \mbox{\hyperlink{group__memory_gga8d508edc5ed47961e7169166ff92374ca8b287a82de4d63c805b01715d4e9c31e}{HSA\+\_\+\+REGION\+\_\+\+SEGMENT\+\_\+\+READONLY}} = 1
+, \mbox{\hyperlink{group__memory_gga8d508edc5ed47961e7169166ff92374ca548406285039c897bbe62dd5202d1ea2}{HSA\+\_\+\+REGION\+\_\+\+SEGMENT\+\_\+\+PRIVATE}} = 2
+, \mbox{\hyperlink{group__memory_gga8d508edc5ed47961e7169166ff92374cadbe54f04108f33bfc05193f35eb1ac70}{HSA\+\_\+\+REGION\+\_\+\+SEGMENT\+\_\+\+GROUP}} = 3
+, \newline
+\mbox{\hyperlink{group__memory_gga8d508edc5ed47961e7169166ff92374ca534ea2034103a3d17ae4e878870cee3e}{HSA\+\_\+\+REGION\+\_\+\+SEGMENT\+\_\+\+KERNARG}} = 4
+ \}
+\begin{DoxyCompactList}\small\item\em Memory segments associated with a region. \end{DoxyCompactList}\item 
+enum \mbox{\hyperlink{group__memory_gac95006089badc6953427a181132dcb3e}{hsa\+\_\+region\+\_\+global\+\_\+flag\+\_\+t}} \{ \mbox{\hyperlink{group__memory_ggac95006089badc6953427a181132dcb3ea777d92f76af12300952bbfcd2c0527bb}{HSA\+\_\+\+REGION\+\_\+\+GLOBAL\+\_\+\+FLAG\+\_\+\+KERNARG}} = 1
+, \mbox{\hyperlink{group__memory_ggac95006089badc6953427a181132dcb3ea6776669df933f60e48cb4e117048ed4e}{HSA\+\_\+\+REGION\+\_\+\+GLOBAL\+\_\+\+FLAG\+\_\+\+FINE\+\_\+\+GRAINED}} = 2
+, \mbox{\hyperlink{group__memory_ggac95006089badc6953427a181132dcb3ea59ad39b601881f238433af923a6ae097}{HSA\+\_\+\+REGION\+\_\+\+GLOBAL\+\_\+\+FLAG\+\_\+\+COARSE\+\_\+\+GRAINED}} = 4
+ \}
+\begin{DoxyCompactList}\small\item\em Global region flags. \end{DoxyCompactList}\item 
+enum \mbox{\hyperlink{group__memory_gad35755078ff15f645c6c25e7f7ef2707}{hsa\+\_\+region\+\_\+info\+\_\+t}} \{ \newline
+\mbox{\hyperlink{group__memory_ggad35755078ff15f645c6c25e7f7ef2707ab2701b5deebcf46596e8f070f6ef27b6}{HSA\+\_\+\+REGION\+\_\+\+INFO\+\_\+\+SEGMENT}} = 0
+, \mbox{\hyperlink{group__memory_ggad35755078ff15f645c6c25e7f7ef2707a4c274d5a12fee091c48a0e3ae3c23052}{HSA\+\_\+\+REGION\+\_\+\+INFO\+\_\+\+GLOBAL\+\_\+\+FLAGS}} = 1
+, \mbox{\hyperlink{group__memory_ggad35755078ff15f645c6c25e7f7ef2707a09403f5c83497726504523694b3e86b6}{HSA\+\_\+\+REGION\+\_\+\+INFO\+\_\+\+SIZE}} = 2
+, \mbox{\hyperlink{group__memory_ggad35755078ff15f645c6c25e7f7ef2707ab846101a22f46f61e0caf1d73cedd414}{HSA\+\_\+\+REGION\+\_\+\+INFO\+\_\+\+ALLOC\+\_\+\+MAX\+\_\+\+SIZE}} = 4
+, \newline
+\mbox{\hyperlink{group__memory_ggad35755078ff15f645c6c25e7f7ef2707a69c27d999e5c9d8a746b05b16dfbde54}{HSA\+\_\+\+REGION\+\_\+\+INFO\+\_\+\+ALLOC\+\_\+\+MAX\+\_\+\+PRIVATE\+\_\+\+WORKGROUP\+\_\+\+SIZE}} = 8
+, \mbox{\hyperlink{group__memory_ggad35755078ff15f645c6c25e7f7ef2707afeba9dee45ad3e79940b7a4159ef5f67}{HSA\+\_\+\+REGION\+\_\+\+INFO\+\_\+\+RUNTIME\+\_\+\+ALLOC\+\_\+\+ALLOWED}} = 5
+, \mbox{\hyperlink{group__memory_ggad35755078ff15f645c6c25e7f7ef2707a737c7f58926207f12f90289d9bd073b1}{HSA\+\_\+\+REGION\+\_\+\+INFO\+\_\+\+RUNTIME\+\_\+\+ALLOC\+\_\+\+GRANULE}} = 6
+, \mbox{\hyperlink{group__memory_ggad35755078ff15f645c6c25e7f7ef2707ab30393820aee1093f455d122805174c5}{HSA\+\_\+\+REGION\+\_\+\+INFO\+\_\+\+RUNTIME\+\_\+\+ALLOC\+\_\+\+ALIGNMENT}} = 7
+ \}
+\begin{DoxyCompactList}\small\item\em Attributes of a memory region. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{group__status_gad755322e7ff95456520e8abdbe90d225}{hsa\+\_\+status\+\_\+t}} \mbox{\hyperlink{inc_2hsa__ext__image_8h_a64216765b98b62ee87deb50fd2899836}{HSA\+\_\+\+API}} \mbox{\hyperlink{group__memory_gaad0ab0056cfee2e5a99270490b942a28}{hsa\+\_\+region\+\_\+get\+\_\+info}} (\mbox{\hyperlink{group__memory_ga9c649e7034e53233198aaa1b58e9d79b}{hsa\+\_\+region\+\_\+t}} region, \mbox{\hyperlink{group__memory_gad35755078ff15f645c6c25e7f7ef2707}{hsa\+\_\+region\+\_\+info\+\_\+t}} attribute, void $\ast$value)
+\begin{DoxyCompactList}\small\item\em Get the current value of an attribute of a region. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{group__status_gad755322e7ff95456520e8abdbe90d225}{hsa\+\_\+status\+\_\+t}} \mbox{\hyperlink{inc_2hsa__ext__image_8h_a64216765b98b62ee87deb50fd2899836}{HSA\+\_\+\+API}} \mbox{\hyperlink{group__memory_gad595a460e2867a134ec90de63589c0eb}{hsa\+\_\+agent\+\_\+iterate\+\_\+regions}} (\mbox{\hyperlink{group__agentinfo_ga9ce217ef08e7d5e89c8e83ce7b6ef22b}{hsa\+\_\+agent\+\_\+t}} agent, \mbox{\hyperlink{group__status_gad755322e7ff95456520e8abdbe90d225}{hsa\+\_\+status\+\_\+t}}($\ast$callback)(\mbox{\hyperlink{group__memory_ga9c649e7034e53233198aaa1b58e9d79b}{hsa\+\_\+region\+\_\+t}} region, void $\ast$data), void $\ast$data)
+\begin{DoxyCompactList}\small\item\em Iterate over the memory regions associated with a given agent, and invoke an application-\/defined callback on every iteration. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{group__status_gad755322e7ff95456520e8abdbe90d225}{hsa\+\_\+status\+\_\+t}} \mbox{\hyperlink{inc_2hsa__ext__image_8h_a64216765b98b62ee87deb50fd2899836}{HSA\+\_\+\+API}} \mbox{\hyperlink{group__memory_ga39f7943b93aa2bb754726fc74d929426}{hsa\+\_\+memory\+\_\+allocate}} (\mbox{\hyperlink{group__memory_ga9c649e7034e53233198aaa1b58e9d79b}{hsa\+\_\+region\+\_\+t}} region, size\+\_\+t size, void $\ast$$\ast$ptr)
+\begin{DoxyCompactList}\small\item\em Allocate a block of memory in a given region. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{group__status_gad755322e7ff95456520e8abdbe90d225}{hsa\+\_\+status\+\_\+t}} \mbox{\hyperlink{inc_2hsa__ext__image_8h_a64216765b98b62ee87deb50fd2899836}{HSA\+\_\+\+API}} \mbox{\hyperlink{group__memory_gaf968e8053981351ec0b16a04aeb51a8e}{hsa\+\_\+memory\+\_\+free}} (void $\ast$ptr)
+\begin{DoxyCompactList}\small\item\em Deallocate a block of memory previously allocated using \mbox{\hyperlink{group__memory_ga39f7943b93aa2bb754726fc74d929426}{hsa\+\_\+memory\+\_\+allocate}}. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{group__status_gad755322e7ff95456520e8abdbe90d225}{hsa\+\_\+status\+\_\+t}} \mbox{\hyperlink{inc_2hsa__ext__image_8h_a64216765b98b62ee87deb50fd2899836}{HSA\+\_\+\+API}} \mbox{\hyperlink{group__memory_ga471ef2f21b50ea21f2cf07ebac77ff32}{hsa\+\_\+memory\+\_\+copy}} (void $\ast$dst, const void $\ast$src, size\+\_\+t size)
+\begin{DoxyCompactList}\small\item\em Copy a block of memory from the location pointed to by {\ttfamily src} to the memory block pointed to by {\ttfamily dst}. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{group__status_gad755322e7ff95456520e8abdbe90d225}{hsa\+\_\+status\+\_\+t}} \mbox{\hyperlink{inc_2hsa__ext__image_8h_a64216765b98b62ee87deb50fd2899836}{HSA\+\_\+\+API}} \mbox{\hyperlink{group__memory_gac14d1e567bdb2655d8f03d0486260eab}{hsa\+\_\+memory\+\_\+assign\+\_\+agent}} (void $\ast$ptr, \mbox{\hyperlink{group__agentinfo_ga9ce217ef08e7d5e89c8e83ce7b6ef22b}{hsa\+\_\+agent\+\_\+t}} agent, \mbox{\hyperlink{group__common_gacef73774a0af1d1df56fdcd9e04bb708}{hsa\+\_\+access\+\_\+permission\+\_\+t}} access)
+\begin{DoxyCompactList}\small\item\em Change the ownership of a global, coarse-\/grained buffer. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{group__status_gad755322e7ff95456520e8abdbe90d225}{hsa\+\_\+status\+\_\+t}} \mbox{\hyperlink{inc_2hsa__ext__image_8h_a64216765b98b62ee87deb50fd2899836}{HSA\+\_\+\+API}} \mbox{\hyperlink{group__memory_ga2534b1f41fd77e32d142f75431ff2e36}{hsa\+\_\+memory\+\_\+register}} (void $\ast$ptr, size\+\_\+t size)
+\begin{DoxyCompactList}\small\item\em Register a global, fine-\/grained buffer. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{group__status_gad755322e7ff95456520e8abdbe90d225}{hsa\+\_\+status\+\_\+t}} \mbox{\hyperlink{inc_2hsa__ext__image_8h_a64216765b98b62ee87deb50fd2899836}{HSA\+\_\+\+API}} \mbox{\hyperlink{group__memory_gadc2f96c7d0fe1f75f119c111802931ab}{hsa\+\_\+memory\+\_\+deregister}} (void $\ast$ptr, size\+\_\+t size)
+\begin{DoxyCompactList}\small\item\em Deregister memory previously registered using \mbox{\hyperlink{group__memory_ga2534b1f41fd77e32d142f75431ff2e36}{hsa\+\_\+memory\+\_\+register}}. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+
+
+\doxysubsection{Typedef Documentation}
+\mbox{\Hypertarget{group__memory_ga9c649e7034e53233198aaa1b58e9d79b}\label{group__memory_ga9c649e7034e53233198aaa1b58e9d79b}} 
+\index{Memory@{Memory}!hsa\_region\_t@{hsa\_region\_t}}
+\index{hsa\_region\_t@{hsa\_region\_t}!Memory@{Memory}}
+\doxysubsubsection{\texorpdfstring{hsa\_region\_t}{hsa\_region\_t}}
+{\footnotesize\ttfamily typedef struct \mbox{\hyperlink{structhsa__region__s}{hsa\+\_\+region\+\_\+s}} \mbox{\hyperlink{group__memory_ga9c649e7034e53233198aaa1b58e9d79b}{hsa\+\_\+region\+\_\+t}}}
+
+
+
+A memory region represents a block of virtual memory with certain properties. For example, the HSA runtime represents fine-\/grained memory in the global segment using a region. A region might be associated with more than one agent. 
+
+
+
+\doxysubsection{Enumeration Type Documentation}
+\mbox{\Hypertarget{group__memory_gac95006089badc6953427a181132dcb3e}\label{group__memory_gac95006089badc6953427a181132dcb3e}} 
+\index{Memory@{Memory}!hsa\_region\_global\_flag\_t@{hsa\_region\_global\_flag\_t}}
+\index{hsa\_region\_global\_flag\_t@{hsa\_region\_global\_flag\_t}!Memory@{Memory}}
+\doxysubsubsection{\texorpdfstring{hsa\_region\_global\_flag\_t}{hsa\_region\_global\_flag\_t}}
+{\footnotesize\ttfamily enum \mbox{\hyperlink{group__memory_gac95006089badc6953427a181132dcb3e}{hsa\+\_\+region\+\_\+global\+\_\+flag\+\_\+t}}}
+
+
+
+Global region flags. 
+
+\begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{HSA\_REGION\_GLOBAL\_FLAG\_KERNARG@{HSA\_REGION\_GLOBAL\_FLAG\_KERNARG}!Memory@{Memory}}\index{Memory@{Memory}!HSA\_REGION\_GLOBAL\_FLAG\_KERNARG@{HSA\_REGION\_GLOBAL\_FLAG\_KERNARG}}}\mbox{\Hypertarget{group__memory_ggac95006089badc6953427a181132dcb3ea777d92f76af12300952bbfcd2c0527bb}\label{group__memory_ggac95006089badc6953427a181132dcb3ea777d92f76af12300952bbfcd2c0527bb}} 
+HSA\+\_\+\+REGION\+\_\+\+GLOBAL\+\_\+\+FLAG\+\_\+\+KERNARG&The application can use memory in the region to store kernel arguments, and provide the values for the kernarg segment of a kernel dispatch. If this flag is set, then \mbox{\hyperlink{group__memory_ggac95006089badc6953427a181132dcb3ea6776669df933f60e48cb4e117048ed4e}{HSA\+\_\+\+REGION\+\_\+\+GLOBAL\+\_\+\+FLAG\+\_\+\+FINE\+\_\+\+GRAINED}} must be set. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{HSA\_REGION\_GLOBAL\_FLAG\_FINE\_GRAINED@{HSA\_REGION\_GLOBAL\_FLAG\_FINE\_GRAINED}!Memory@{Memory}}\index{Memory@{Memory}!HSA\_REGION\_GLOBAL\_FLAG\_FINE\_GRAINED@{HSA\_REGION\_GLOBAL\_FLAG\_FINE\_GRAINED}}}\mbox{\Hypertarget{group__memory_ggac95006089badc6953427a181132dcb3ea6776669df933f60e48cb4e117048ed4e}\label{group__memory_ggac95006089badc6953427a181132dcb3ea6776669df933f60e48cb4e117048ed4e}} 
+HSA\+\_\+\+REGION\+\_\+\+GLOBAL\+\_\+\+FLAG\+\_\+\+FINE\+\_\+\+GRAINED&Updates to memory in this region are immediately visible to all the agents under the terms of the HSA memory model. If this flag is set, then \mbox{\hyperlink{group__memory_ggac95006089badc6953427a181132dcb3ea59ad39b601881f238433af923a6ae097}{HSA\+\_\+\+REGION\+\_\+\+GLOBAL\+\_\+\+FLAG\+\_\+\+COARSE\+\_\+\+GRAINED}} must not be set. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{HSA\_REGION\_GLOBAL\_FLAG\_COARSE\_GRAINED@{HSA\_REGION\_GLOBAL\_FLAG\_COARSE\_GRAINED}!Memory@{Memory}}\index{Memory@{Memory}!HSA\_REGION\_GLOBAL\_FLAG\_COARSE\_GRAINED@{HSA\_REGION\_GLOBAL\_FLAG\_COARSE\_GRAINED}}}\mbox{\Hypertarget{group__memory_ggac95006089badc6953427a181132dcb3ea59ad39b601881f238433af923a6ae097}\label{group__memory_ggac95006089badc6953427a181132dcb3ea59ad39b601881f238433af923a6ae097}} 
+HSA\+\_\+\+REGION\+\_\+\+GLOBAL\+\_\+\+FLAG\+\_\+\+COARSE\+\_\+\+GRAINED&Updates to memory in this region can be performed by a single agent at a time. If a different agent in the system is allowed to access the region, the application must explicitely invoke \mbox{\hyperlink{group__memory_gac14d1e567bdb2655d8f03d0486260eab}{hsa\+\_\+memory\+\_\+assign\+\_\+agent}} in order to transfer ownership to that agent for a particular buffer. \\
+\hline
+
+\end{DoxyEnumFields}
+\mbox{\Hypertarget{group__memory_gad35755078ff15f645c6c25e7f7ef2707}\label{group__memory_gad35755078ff15f645c6c25e7f7ef2707}} 
+\index{Memory@{Memory}!hsa\_region\_info\_t@{hsa\_region\_info\_t}}
+\index{hsa\_region\_info\_t@{hsa\_region\_info\_t}!Memory@{Memory}}
+\doxysubsubsection{\texorpdfstring{hsa\_region\_info\_t}{hsa\_region\_info\_t}}
+{\footnotesize\ttfamily enum \mbox{\hyperlink{group__memory_gad35755078ff15f645c6c25e7f7ef2707}{hsa\+\_\+region\+\_\+info\+\_\+t}}}
+
+
+
+Attributes of a memory region. 
+
+\begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{HSA\_REGION\_INFO\_SEGMENT@{HSA\_REGION\_INFO\_SEGMENT}!Memory@{Memory}}\index{Memory@{Memory}!HSA\_REGION\_INFO\_SEGMENT@{HSA\_REGION\_INFO\_SEGMENT}}}\mbox{\Hypertarget{group__memory_ggad35755078ff15f645c6c25e7f7ef2707ab2701b5deebcf46596e8f070f6ef27b6}\label{group__memory_ggad35755078ff15f645c6c25e7f7ef2707ab2701b5deebcf46596e8f070f6ef27b6}} 
+HSA\+\_\+\+REGION\+\_\+\+INFO\+\_\+\+SEGMENT&Segment where memory in the region can be used. The type of this attribute is \mbox{\hyperlink{group__memory_ga8d508edc5ed47961e7169166ff92374c}{hsa\+\_\+region\+\_\+segment\+\_\+t}}. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{HSA\_REGION\_INFO\_GLOBAL\_FLAGS@{HSA\_REGION\_INFO\_GLOBAL\_FLAGS}!Memory@{Memory}}\index{Memory@{Memory}!HSA\_REGION\_INFO\_GLOBAL\_FLAGS@{HSA\_REGION\_INFO\_GLOBAL\_FLAGS}}}\mbox{\Hypertarget{group__memory_ggad35755078ff15f645c6c25e7f7ef2707a4c274d5a12fee091c48a0e3ae3c23052}\label{group__memory_ggad35755078ff15f645c6c25e7f7ef2707a4c274d5a12fee091c48a0e3ae3c23052}} 
+HSA\+\_\+\+REGION\+\_\+\+INFO\+\_\+\+GLOBAL\+\_\+\+FLAGS&Flag mask. The value of this attribute is undefined if the value of \mbox{\hyperlink{group__memory_ggad35755078ff15f645c6c25e7f7ef2707ab2701b5deebcf46596e8f070f6ef27b6}{HSA\+\_\+\+REGION\+\_\+\+INFO\+\_\+\+SEGMENT}} is not \mbox{\hyperlink{group__memory_gga8d508edc5ed47961e7169166ff92374cae6919a97f0a4ab274f7779f22d89cfd8}{HSA\+\_\+\+REGION\+\_\+\+SEGMENT\+\_\+\+GLOBAL}}. The type of this attribute is uint32\+\_\+t, a bit-\/field of \mbox{\hyperlink{group__memory_gac95006089badc6953427a181132dcb3e}{hsa\+\_\+region\+\_\+global\+\_\+flag\+\_\+t}} values. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{HSA\_REGION\_INFO\_SIZE@{HSA\_REGION\_INFO\_SIZE}!Memory@{Memory}}\index{Memory@{Memory}!HSA\_REGION\_INFO\_SIZE@{HSA\_REGION\_INFO\_SIZE}}}\mbox{\Hypertarget{group__memory_ggad35755078ff15f645c6c25e7f7ef2707a09403f5c83497726504523694b3e86b6}\label{group__memory_ggad35755078ff15f645c6c25e7f7ef2707a09403f5c83497726504523694b3e86b6}} 
+HSA\+\_\+\+REGION\+\_\+\+INFO\+\_\+\+SIZE&Size of this region, in bytes. The type of this attribute is size\+\_\+t. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{HSA\_REGION\_INFO\_ALLOC\_MAX\_SIZE@{HSA\_REGION\_INFO\_ALLOC\_MAX\_SIZE}!Memory@{Memory}}\index{Memory@{Memory}!HSA\_REGION\_INFO\_ALLOC\_MAX\_SIZE@{HSA\_REGION\_INFO\_ALLOC\_MAX\_SIZE}}}\mbox{\Hypertarget{group__memory_ggad35755078ff15f645c6c25e7f7ef2707ab846101a22f46f61e0caf1d73cedd414}\label{group__memory_ggad35755078ff15f645c6c25e7f7ef2707ab846101a22f46f61e0caf1d73cedd414}} 
+HSA\+\_\+\+REGION\+\_\+\+INFO\+\_\+\+ALLOC\+\_\+\+MAX\+\_\+\+SIZE&Maximum allocation size in this region, in bytes. Must not exceed the value of \mbox{\hyperlink{group__memory_ggad35755078ff15f645c6c25e7f7ef2707a09403f5c83497726504523694b3e86b6}{HSA\+\_\+\+REGION\+\_\+\+INFO\+\_\+\+SIZE}}. The type of this attribute is size\+\_\+t.
+
+If the region is in the global or readonly segments, this is the maximum size that the application can pass to \mbox{\hyperlink{group__memory_ga39f7943b93aa2bb754726fc74d929426}{hsa\+\_\+memory\+\_\+allocate}}.
+
+If the region is in the group segment, this is the maximum size (per work-\/group) that can be requested for a given kernel dispatch. If the region is in the private segment, this is the maximum size (per work-\/item) that can be requested for a specific kernel dispatch, and must be at least 256 bytes. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{HSA\_REGION\_INFO\_ALLOC\_MAX\_PRIVATE\_WORKGROUP\_SIZE@{HSA\_REGION\_INFO\_ALLOC\_MAX\_PRIVATE\_WORKGROUP\_SIZE}!Memory@{Memory}}\index{Memory@{Memory}!HSA\_REGION\_INFO\_ALLOC\_MAX\_PRIVATE\_WORKGROUP\_SIZE@{HSA\_REGION\_INFO\_ALLOC\_MAX\_PRIVATE\_WORKGROUP\_SIZE}}}\mbox{\Hypertarget{group__memory_ggad35755078ff15f645c6c25e7f7ef2707a69c27d999e5c9d8a746b05b16dfbde54}\label{group__memory_ggad35755078ff15f645c6c25e7f7ef2707a69c27d999e5c9d8a746b05b16dfbde54}} 
+HSA\+\_\+\+REGION\+\_\+\+INFO\+\_\+\+ALLOC\+\_\+\+MAX\+\_\+\+PRIVATE\+\_\+\+WORKGROUP\+\_\+\+SIZE&Maximum size (per work-\/group) of private memory that can be requested for a specific kernel dispatch. Must be at least 65536 bytes. The type of this attribute is uint32\+\_\+t. The value of this attribute is undefined if the region is not in the private segment. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{HSA\_REGION\_INFO\_RUNTIME\_ALLOC\_ALLOWED@{HSA\_REGION\_INFO\_RUNTIME\_ALLOC\_ALLOWED}!Memory@{Memory}}\index{Memory@{Memory}!HSA\_REGION\_INFO\_RUNTIME\_ALLOC\_ALLOWED@{HSA\_REGION\_INFO\_RUNTIME\_ALLOC\_ALLOWED}}}\mbox{\Hypertarget{group__memory_ggad35755078ff15f645c6c25e7f7ef2707afeba9dee45ad3e79940b7a4159ef5f67}\label{group__memory_ggad35755078ff15f645c6c25e7f7ef2707afeba9dee45ad3e79940b7a4159ef5f67}} 
+HSA\+\_\+\+REGION\+\_\+\+INFO\+\_\+\+RUNTIME\+\_\+\+ALLOC\+\_\+\+ALLOWED&Indicates whether memory in this region can be allocated using \mbox{\hyperlink{group__memory_ga39f7943b93aa2bb754726fc74d929426}{hsa\+\_\+memory\+\_\+allocate}}. The type of this attribute is bool.
+
+The value of this flag is always false for regions in the group and private segments. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{HSA\_REGION\_INFO\_RUNTIME\_ALLOC\_GRANULE@{HSA\_REGION\_INFO\_RUNTIME\_ALLOC\_GRANULE}!Memory@{Memory}}\index{Memory@{Memory}!HSA\_REGION\_INFO\_RUNTIME\_ALLOC\_GRANULE@{HSA\_REGION\_INFO\_RUNTIME\_ALLOC\_GRANULE}}}\mbox{\Hypertarget{group__memory_ggad35755078ff15f645c6c25e7f7ef2707a737c7f58926207f12f90289d9bd073b1}\label{group__memory_ggad35755078ff15f645c6c25e7f7ef2707a737c7f58926207f12f90289d9bd073b1}} 
+HSA\+\_\+\+REGION\+\_\+\+INFO\+\_\+\+RUNTIME\+\_\+\+ALLOC\+\_\+\+GRANULE&Allocation granularity of buffers allocated by \mbox{\hyperlink{group__memory_ga39f7943b93aa2bb754726fc74d929426}{hsa\+\_\+memory\+\_\+allocate}} in this region. The size of a buffer allocated in this region is a multiple of the value of this attribute. The value of this attribute is only defined if \mbox{\hyperlink{group__memory_ggad35755078ff15f645c6c25e7f7ef2707afeba9dee45ad3e79940b7a4159ef5f67}{HSA\+\_\+\+REGION\+\_\+\+INFO\+\_\+\+RUNTIME\+\_\+\+ALLOC\+\_\+\+ALLOWED}} is true for this region. The type of this attribute is size\+\_\+t. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{HSA\_REGION\_INFO\_RUNTIME\_ALLOC\_ALIGNMENT@{HSA\_REGION\_INFO\_RUNTIME\_ALLOC\_ALIGNMENT}!Memory@{Memory}}\index{Memory@{Memory}!HSA\_REGION\_INFO\_RUNTIME\_ALLOC\_ALIGNMENT@{HSA\_REGION\_INFO\_RUNTIME\_ALLOC\_ALIGNMENT}}}\mbox{\Hypertarget{group__memory_ggad35755078ff15f645c6c25e7f7ef2707ab30393820aee1093f455d122805174c5}\label{group__memory_ggad35755078ff15f645c6c25e7f7ef2707ab30393820aee1093f455d122805174c5}} 
+HSA\+\_\+\+REGION\+\_\+\+INFO\+\_\+\+RUNTIME\+\_\+\+ALLOC\+\_\+\+ALIGNMENT&Alignment of buffers allocated by \mbox{\hyperlink{group__memory_ga39f7943b93aa2bb754726fc74d929426}{hsa\+\_\+memory\+\_\+allocate}} in this region. The value of this attribute is only defined if \mbox{\hyperlink{group__memory_ggad35755078ff15f645c6c25e7f7ef2707afeba9dee45ad3e79940b7a4159ef5f67}{HSA\+\_\+\+REGION\+\_\+\+INFO\+\_\+\+RUNTIME\+\_\+\+ALLOC\+\_\+\+ALLOWED}} is true for this region, and must be a power of 2. The type of this attribute is size\+\_\+t. \\
+\hline
+
+\end{DoxyEnumFields}
+\mbox{\Hypertarget{group__memory_ga8d508edc5ed47961e7169166ff92374c}\label{group__memory_ga8d508edc5ed47961e7169166ff92374c}} 
+\index{Memory@{Memory}!hsa\_region\_segment\_t@{hsa\_region\_segment\_t}}
+\index{hsa\_region\_segment\_t@{hsa\_region\_segment\_t}!Memory@{Memory}}
+\doxysubsubsection{\texorpdfstring{hsa\_region\_segment\_t}{hsa\_region\_segment\_t}}
+{\footnotesize\ttfamily enum \mbox{\hyperlink{group__memory_ga8d508edc5ed47961e7169166ff92374c}{hsa\+\_\+region\+\_\+segment\+\_\+t}}}
+
+
+
+Memory segments associated with a region. 
+
+\begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{HSA\_REGION\_SEGMENT\_GLOBAL@{HSA\_REGION\_SEGMENT\_GLOBAL}!Memory@{Memory}}\index{Memory@{Memory}!HSA\_REGION\_SEGMENT\_GLOBAL@{HSA\_REGION\_SEGMENT\_GLOBAL}}}\mbox{\Hypertarget{group__memory_gga8d508edc5ed47961e7169166ff92374cae6919a97f0a4ab274f7779f22d89cfd8}\label{group__memory_gga8d508edc5ed47961e7169166ff92374cae6919a97f0a4ab274f7779f22d89cfd8}} 
+HSA\+\_\+\+REGION\+\_\+\+SEGMENT\+\_\+\+GLOBAL&Global segment. Used to hold data that is shared by all agents. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{HSA\_REGION\_SEGMENT\_READONLY@{HSA\_REGION\_SEGMENT\_READONLY}!Memory@{Memory}}\index{Memory@{Memory}!HSA\_REGION\_SEGMENT\_READONLY@{HSA\_REGION\_SEGMENT\_READONLY}}}\mbox{\Hypertarget{group__memory_gga8d508edc5ed47961e7169166ff92374ca8b287a82de4d63c805b01715d4e9c31e}\label{group__memory_gga8d508edc5ed47961e7169166ff92374ca8b287a82de4d63c805b01715d4e9c31e}} 
+HSA\+\_\+\+REGION\+\_\+\+SEGMENT\+\_\+\+READONLY&Read-\/only segment. Used to hold data that remains constant during the execution of a kernel. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{HSA\_REGION\_SEGMENT\_PRIVATE@{HSA\_REGION\_SEGMENT\_PRIVATE}!Memory@{Memory}}\index{Memory@{Memory}!HSA\_REGION\_SEGMENT\_PRIVATE@{HSA\_REGION\_SEGMENT\_PRIVATE}}}\mbox{\Hypertarget{group__memory_gga8d508edc5ed47961e7169166ff92374ca548406285039c897bbe62dd5202d1ea2}\label{group__memory_gga8d508edc5ed47961e7169166ff92374ca548406285039c897bbe62dd5202d1ea2}} 
+HSA\+\_\+\+REGION\+\_\+\+SEGMENT\+\_\+\+PRIVATE&Private segment. Used to hold data that is local to a single work-\/item. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{HSA\_REGION\_SEGMENT\_GROUP@{HSA\_REGION\_SEGMENT\_GROUP}!Memory@{Memory}}\index{Memory@{Memory}!HSA\_REGION\_SEGMENT\_GROUP@{HSA\_REGION\_SEGMENT\_GROUP}}}\mbox{\Hypertarget{group__memory_gga8d508edc5ed47961e7169166ff92374cadbe54f04108f33bfc05193f35eb1ac70}\label{group__memory_gga8d508edc5ed47961e7169166ff92374cadbe54f04108f33bfc05193f35eb1ac70}} 
+HSA\+\_\+\+REGION\+\_\+\+SEGMENT\+\_\+\+GROUP&Group segment. Used to hold data that is shared by the work-\/items of a work-\/group. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{HSA\_REGION\_SEGMENT\_KERNARG@{HSA\_REGION\_SEGMENT\_KERNARG}!Memory@{Memory}}\index{Memory@{Memory}!HSA\_REGION\_SEGMENT\_KERNARG@{HSA\_REGION\_SEGMENT\_KERNARG}}}\mbox{\Hypertarget{group__memory_gga8d508edc5ed47961e7169166ff92374ca534ea2034103a3d17ae4e878870cee3e}\label{group__memory_gga8d508edc5ed47961e7169166ff92374ca534ea2034103a3d17ae4e878870cee3e}} 
+HSA\+\_\+\+REGION\+\_\+\+SEGMENT\+\_\+\+KERNARG&Kernarg segment. Used to store kernel arguments. \\
+\hline
+
+\end{DoxyEnumFields}
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{group__memory_gad595a460e2867a134ec90de63589c0eb}\label{group__memory_gad595a460e2867a134ec90de63589c0eb}} 
+\index{Memory@{Memory}!hsa\_agent\_iterate\_regions@{hsa\_agent\_iterate\_regions}}
+\index{hsa\_agent\_iterate\_regions@{hsa\_agent\_iterate\_regions}!Memory@{Memory}}
+\doxysubsubsection{\texorpdfstring{hsa\_agent\_iterate\_regions()}{hsa\_agent\_iterate\_regions()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{group__status_gad755322e7ff95456520e8abdbe90d225}{hsa\+\_\+status\+\_\+t}} \mbox{\hyperlink{inc_2hsa__ext__image_8h_a64216765b98b62ee87deb50fd2899836}{HSA\+\_\+\+API}} hsa\+\_\+agent\+\_\+iterate\+\_\+regions (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{group__agentinfo_ga9ce217ef08e7d5e89c8e83ce7b6ef22b}{hsa\+\_\+agent\+\_\+t}}}]{agent,  }\item[{\mbox{\hyperlink{group__status_gad755322e7ff95456520e8abdbe90d225}{hsa\+\_\+status\+\_\+t}}($\ast$)(\mbox{\hyperlink{group__memory_ga9c649e7034e53233198aaa1b58e9d79b}{hsa\+\_\+region\+\_\+t}} region, void $\ast$data)}]{callback,  }\item[{void $\ast$}]{data }\end{DoxyParamCaption})}
+
+
+
+Iterate over the memory regions associated with a given agent, and invoke an application-\/defined callback on every iteration. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em agent} & A valid agent.\\
+\hline
+\mbox{\texttt{ in}}  & {\em callback} & Callback to be invoked once per region that is accessible from the agent. The HSA runtime passes two arguments to the callback, the region and the application data. If {\ttfamily callback} returns a status other than \mbox{\hyperlink{group__status_ggad755322e7ff95456520e8abdbe90d225ae382ea0c9c05cce5a60d0317375159cc}{HSA\+\_\+\+STATUS\+\_\+\+SUCCESS}} for a particular iteration, the traversal stops and \mbox{\hyperlink{group__memory_gad595a460e2867a134ec90de63589c0eb}{hsa\+\_\+agent\+\_\+iterate\+\_\+regions}} returns that status value.\\
+\hline
+\mbox{\texttt{ in}}  & {\em data} & Application data that is passed to {\ttfamily callback} on every iteration. May be NULL.\\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em \mbox{\hyperlink{group__status_ggad755322e7ff95456520e8abdbe90d225ae382ea0c9c05cce5a60d0317375159cc}{HSA\+\_\+\+STATUS\+\_\+\+SUCCESS}}} & The function has been executed successfully.\\
+\hline
+{\em \mbox{\hyperlink{group__status_ggad755322e7ff95456520e8abdbe90d225a34ea59ade5bfce95eee935238a99f5b5}{HSA\+\_\+\+STATUS\+\_\+\+ERROR\+\_\+\+NOT\+\_\+\+INITIALIZED}}} & The HSA runtime has not been initialized.\\
+\hline
+{\em \mbox{\hyperlink{group__status_ggad755322e7ff95456520e8abdbe90d225a3a5d835c109c2d0ad5b9c2771e133e5d}{HSA\+\_\+\+STATUS\+\_\+\+ERROR\+\_\+\+INVALID\+\_\+\+AGENT}}} & The agent is invalid.\\
+\hline
+{\em \mbox{\hyperlink{group__status_ggad755322e7ff95456520e8abdbe90d225ac7d3651f75107d2a6a8ba3b25683c030}{HSA\+\_\+\+STATUS\+\_\+\+ERROR\+\_\+\+INVALID\+\_\+\+ARGUMENT}}} & {\ttfamily callback} is NULL. \\
+\hline
+\end{DoxyRetVals}
+\mbox{\Hypertarget{group__memory_ga39f7943b93aa2bb754726fc74d929426}\label{group__memory_ga39f7943b93aa2bb754726fc74d929426}} 
+\index{Memory@{Memory}!hsa\_memory\_allocate@{hsa\_memory\_allocate}}
+\index{hsa\_memory\_allocate@{hsa\_memory\_allocate}!Memory@{Memory}}
+\doxysubsubsection{\texorpdfstring{hsa\_memory\_allocate()}{hsa\_memory\_allocate()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{group__status_gad755322e7ff95456520e8abdbe90d225}{hsa\+\_\+status\+\_\+t}} \mbox{\hyperlink{inc_2hsa__ext__image_8h_a64216765b98b62ee87deb50fd2899836}{HSA\+\_\+\+API}} hsa\+\_\+memory\+\_\+allocate (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{group__memory_ga9c649e7034e53233198aaa1b58e9d79b}{hsa\+\_\+region\+\_\+t}}}]{region,  }\item[{size\+\_\+t}]{size,  }\item[{void $\ast$$\ast$}]{ptr }\end{DoxyParamCaption})}
+
+
+
+Allocate a block of memory in a given region. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em region} & Region where to allocate memory from. The region must have the \mbox{\hyperlink{group__memory_ggad35755078ff15f645c6c25e7f7ef2707afeba9dee45ad3e79940b7a4159ef5f67}{HSA\+\_\+\+REGION\+\_\+\+INFO\+\_\+\+RUNTIME\+\_\+\+ALLOC\+\_\+\+ALLOWED}} flag set.\\
+\hline
+\mbox{\texttt{ in}}  & {\em size} & Allocation size, in bytes. Must not be zero. This value is rounded up to the nearest multiple of \mbox{\hyperlink{group__memory_ggad35755078ff15f645c6c25e7f7ef2707a737c7f58926207f12f90289d9bd073b1}{HSA\+\_\+\+REGION\+\_\+\+INFO\+\_\+\+RUNTIME\+\_\+\+ALLOC\+\_\+\+GRANULE}} in {\ttfamily region}.\\
+\hline
+\mbox{\texttt{ out}}  & {\em ptr} & Pointer to the location where to store the base address of the allocated block. The returned base address is aligned to the value of \mbox{\hyperlink{group__memory_ggad35755078ff15f645c6c25e7f7ef2707ab30393820aee1093f455d122805174c5}{HSA\+\_\+\+REGION\+\_\+\+INFO\+\_\+\+RUNTIME\+\_\+\+ALLOC\+\_\+\+ALIGNMENT}} in {\ttfamily region}. If the allocation fails, the returned value is undefined.\\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em \mbox{\hyperlink{group__status_ggad755322e7ff95456520e8abdbe90d225ae382ea0c9c05cce5a60d0317375159cc}{HSA\+\_\+\+STATUS\+\_\+\+SUCCESS}}} & The function has been executed successfully.\\
+\hline
+{\em \mbox{\hyperlink{group__status_ggad755322e7ff95456520e8abdbe90d225a34ea59ade5bfce95eee935238a99f5b5}{HSA\+\_\+\+STATUS\+\_\+\+ERROR\+\_\+\+NOT\+\_\+\+INITIALIZED}}} & The HSA runtime has not been initialized.\\
+\hline
+{\em \mbox{\hyperlink{group__status_ggad755322e7ff95456520e8abdbe90d225a1a77fcf36d0d140874c4361ab093eff7}{HSA\+\_\+\+STATUS\+\_\+\+ERROR\+\_\+\+OUT\+\_\+\+OF\+\_\+\+RESOURCES}}} & The HSA runtime failed to allocate the required resources.\\
+\hline
+{\em \mbox{\hyperlink{group__status_ggad755322e7ff95456520e8abdbe90d225ad63594ac02edec7ae7aa7722c11afcd9}{HSA\+\_\+\+STATUS\+\_\+\+ERROR\+\_\+\+INVALID\+\_\+\+REGION}}} & The region is invalid.\\
+\hline
+{\em \mbox{\hyperlink{group__status_ggad755322e7ff95456520e8abdbe90d225ac818189ff640d38ce13558e72daddb75}{HSA\+\_\+\+STATUS\+\_\+\+ERROR\+\_\+\+INVALID\+\_\+\+ALLOCATION}}} & The host is not allowed to allocate memory in {\ttfamily region}, or {\ttfamily size} is greater than the value of HSA\+\_\+\+REGION\+\_\+\+INFO\+\_\+\+ALLOC\+\_\+\+MAX\+\_\+\+SIZE in {\ttfamily region}.\\
+\hline
+{\em \mbox{\hyperlink{group__status_ggad755322e7ff95456520e8abdbe90d225ac7d3651f75107d2a6a8ba3b25683c030}{HSA\+\_\+\+STATUS\+\_\+\+ERROR\+\_\+\+INVALID\+\_\+\+ARGUMENT}}} & {\ttfamily ptr} is NULL, or {\ttfamily size} is 0. \\
+\hline
+\end{DoxyRetVals}
+\mbox{\Hypertarget{group__memory_gac14d1e567bdb2655d8f03d0486260eab}\label{group__memory_gac14d1e567bdb2655d8f03d0486260eab}} 
+\index{Memory@{Memory}!hsa\_memory\_assign\_agent@{hsa\_memory\_assign\_agent}}
+\index{hsa\_memory\_assign\_agent@{hsa\_memory\_assign\_agent}!Memory@{Memory}}
+\doxysubsubsection{\texorpdfstring{hsa\_memory\_assign\_agent()}{hsa\_memory\_assign\_agent()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{group__status_gad755322e7ff95456520e8abdbe90d225}{hsa\+\_\+status\+\_\+t}} \mbox{\hyperlink{inc_2hsa__ext__image_8h_a64216765b98b62ee87deb50fd2899836}{HSA\+\_\+\+API}} hsa\+\_\+memory\+\_\+assign\+\_\+agent (\begin{DoxyParamCaption}\item[{void $\ast$}]{ptr,  }\item[{\mbox{\hyperlink{group__agentinfo_ga9ce217ef08e7d5e89c8e83ce7b6ef22b}{hsa\+\_\+agent\+\_\+t}}}]{agent,  }\item[{\mbox{\hyperlink{group__common_gacef73774a0af1d1df56fdcd9e04bb708}{hsa\+\_\+access\+\_\+permission\+\_\+t}}}]{access }\end{DoxyParamCaption})}
+
+
+
+Change the ownership of a global, coarse-\/grained buffer. 
+
+The contents of a coarse-\/grained buffer are visible to an agent only after ownership has been explicitely transferred to that agent. Once the operation completes, the previous owner cannot longer access the data in the buffer.
+
+An implementation of the HSA runtime is allowed, but not required, to change the physical location of the buffer when ownership is transferred to a different agent. In general the application must not assume this behavior. The virtual location (address) of the passed buffer is never modified.
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em ptr} & Base address of a global buffer. The pointer must match an address previously returned by \mbox{\hyperlink{group__memory_ga39f7943b93aa2bb754726fc74d929426}{hsa\+\_\+memory\+\_\+allocate}}. The size of the buffer affected by the ownership change is identical to the size of that previous allocation. If {\ttfamily ptr} points to a fine-\/grained global buffer, no operation is performed and the function returns success. If {\ttfamily ptr} does not point to global memory, the behavior is undefined.\\
+\hline
+\mbox{\texttt{ in}}  & {\em agent} & Agent that becomes the owner of the buffer. The application is responsible for ensuring that {\ttfamily agent} has access to the region that contains the buffer. It is allowed to change ownership to an agent that is already the owner of the buffer, with the same or different access permissions.\\
+\hline
+\mbox{\texttt{ in}}  & {\em access} & Access permissions requested for the new owner.\\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em \mbox{\hyperlink{group__status_ggad755322e7ff95456520e8abdbe90d225ae382ea0c9c05cce5a60d0317375159cc}{HSA\+\_\+\+STATUS\+\_\+\+SUCCESS}}} & The function has been executed successfully.\\
+\hline
+{\em \mbox{\hyperlink{group__status_ggad755322e7ff95456520e8abdbe90d225a34ea59ade5bfce95eee935238a99f5b5}{HSA\+\_\+\+STATUS\+\_\+\+ERROR\+\_\+\+NOT\+\_\+\+INITIALIZED}}} & The HSA runtime has not been initialized.\\
+\hline
+{\em \mbox{\hyperlink{group__status_ggad755322e7ff95456520e8abdbe90d225a3a5d835c109c2d0ad5b9c2771e133e5d}{HSA\+\_\+\+STATUS\+\_\+\+ERROR\+\_\+\+INVALID\+\_\+\+AGENT}}} & The agent is invalid.\\
+\hline
+{\em \mbox{\hyperlink{group__status_ggad755322e7ff95456520e8abdbe90d225a1a77fcf36d0d140874c4361ab093eff7}{HSA\+\_\+\+STATUS\+\_\+\+ERROR\+\_\+\+OUT\+\_\+\+OF\+\_\+\+RESOURCES}}} & The HSA runtime failed to allocate the required resources.\\
+\hline
+{\em \mbox{\hyperlink{group__status_ggad755322e7ff95456520e8abdbe90d225ac7d3651f75107d2a6a8ba3b25683c030}{HSA\+\_\+\+STATUS\+\_\+\+ERROR\+\_\+\+INVALID\+\_\+\+ARGUMENT}}} & {\ttfamily ptr} is NULL, or {\ttfamily access} is not a valid access value. \\
+\hline
+\end{DoxyRetVals}
+\mbox{\Hypertarget{group__memory_ga471ef2f21b50ea21f2cf07ebac77ff32}\label{group__memory_ga471ef2f21b50ea21f2cf07ebac77ff32}} 
+\index{Memory@{Memory}!hsa\_memory\_copy@{hsa\_memory\_copy}}
+\index{hsa\_memory\_copy@{hsa\_memory\_copy}!Memory@{Memory}}
+\doxysubsubsection{\texorpdfstring{hsa\_memory\_copy()}{hsa\_memory\_copy()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{group__status_gad755322e7ff95456520e8abdbe90d225}{hsa\+\_\+status\+\_\+t}} \mbox{\hyperlink{inc_2hsa__ext__image_8h_a64216765b98b62ee87deb50fd2899836}{HSA\+\_\+\+API}} hsa\+\_\+memory\+\_\+copy (\begin{DoxyParamCaption}\item[{void $\ast$}]{dst,  }\item[{const void $\ast$}]{src,  }\item[{size\+\_\+t}]{size }\end{DoxyParamCaption})}
+
+
+
+Copy a block of memory from the location pointed to by {\ttfamily src} to the memory block pointed to by {\ttfamily dst}. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ out}}  & {\em dst} & Buffer where the content is to be copied. If {\ttfamily dst} is in coarse-\/grained memory, the copied data is only visible to the agent currently assigned (\mbox{\hyperlink{group__memory_gac14d1e567bdb2655d8f03d0486260eab}{hsa\+\_\+memory\+\_\+assign\+\_\+agent}}) to {\ttfamily dst}.\\
+\hline
+\mbox{\texttt{ in}}  & {\em src} & A valid pointer to the source of data to be copied. The source buffer must not overlap with the destination buffer. If the source buffer is in coarse-\/grained memory then it must be assigned to an agent, from which the data will be retrieved.\\
+\hline
+\mbox{\texttt{ in}}  & {\em size} & Number of bytes to copy. If {\ttfamily size} is 0, no copy is performed and the function returns success. Copying a number of bytes larger than the size of the buffers pointed by {\ttfamily dst} or {\ttfamily src} results in undefined behavior.\\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em \mbox{\hyperlink{group__status_ggad755322e7ff95456520e8abdbe90d225ae382ea0c9c05cce5a60d0317375159cc}{HSA\+\_\+\+STATUS\+\_\+\+SUCCESS}}} & The function has been executed successfully.\\
+\hline
+{\em \mbox{\hyperlink{group__status_ggad755322e7ff95456520e8abdbe90d225a34ea59ade5bfce95eee935238a99f5b5}{HSA\+\_\+\+STATUS\+\_\+\+ERROR\+\_\+\+NOT\+\_\+\+INITIALIZED}}} & The HSA runtime has not been initialized.\\
+\hline
+{\em \mbox{\hyperlink{group__status_ggad755322e7ff95456520e8abdbe90d225ac7d3651f75107d2a6a8ba3b25683c030}{HSA\+\_\+\+STATUS\+\_\+\+ERROR\+\_\+\+INVALID\+\_\+\+ARGUMENT}}} & The source or destination pointers are NULL. \\
+\hline
+\end{DoxyRetVals}
+\mbox{\Hypertarget{group__memory_gadc2f96c7d0fe1f75f119c111802931ab}\label{group__memory_gadc2f96c7d0fe1f75f119c111802931ab}} 
+\index{Memory@{Memory}!hsa\_memory\_deregister@{hsa\_memory\_deregister}}
+\index{hsa\_memory\_deregister@{hsa\_memory\_deregister}!Memory@{Memory}}
+\doxysubsubsection{\texorpdfstring{hsa\_memory\_deregister()}{hsa\_memory\_deregister()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{group__status_gad755322e7ff95456520e8abdbe90d225}{hsa\+\_\+status\+\_\+t}} \mbox{\hyperlink{inc_2hsa__ext__image_8h_a64216765b98b62ee87deb50fd2899836}{HSA\+\_\+\+API}} hsa\+\_\+memory\+\_\+deregister (\begin{DoxyParamCaption}\item[{void $\ast$}]{ptr,  }\item[{size\+\_\+t}]{size }\end{DoxyParamCaption})}
+
+
+
+Deregister memory previously registered using \mbox{\hyperlink{group__memory_ga2534b1f41fd77e32d142f75431ff2e36}{hsa\+\_\+memory\+\_\+register}}. 
+
+If the memory interval being deregistered does not match a previous registration (start and end addresses), the behavior is undefined.
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em ptr} & A pointer to the base of the buffer to be deregistered. If a NULL pointer is passed, no operation is performed.\\
+\hline
+\mbox{\texttt{ in}}  & {\em size} & Size of the buffer to be deregistered.\\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em \mbox{\hyperlink{group__status_ggad755322e7ff95456520e8abdbe90d225ae382ea0c9c05cce5a60d0317375159cc}{HSA\+\_\+\+STATUS\+\_\+\+SUCCESS}}} & The function has been executed successfully.\\
+\hline
+{\em \mbox{\hyperlink{group__status_ggad755322e7ff95456520e8abdbe90d225a34ea59ade5bfce95eee935238a99f5b5}{HSA\+\_\+\+STATUS\+\_\+\+ERROR\+\_\+\+NOT\+\_\+\+INITIALIZED}}} & The HSA runtime has not been initialized. \\
+\hline
+\end{DoxyRetVals}
+\mbox{\Hypertarget{group__memory_gaf968e8053981351ec0b16a04aeb51a8e}\label{group__memory_gaf968e8053981351ec0b16a04aeb51a8e}} 
+\index{Memory@{Memory}!hsa\_memory\_free@{hsa\_memory\_free}}
+\index{hsa\_memory\_free@{hsa\_memory\_free}!Memory@{Memory}}
+\doxysubsubsection{\texorpdfstring{hsa\_memory\_free()}{hsa\_memory\_free()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{group__status_gad755322e7ff95456520e8abdbe90d225}{hsa\+\_\+status\+\_\+t}} \mbox{\hyperlink{inc_2hsa__ext__image_8h_a64216765b98b62ee87deb50fd2899836}{HSA\+\_\+\+API}} hsa\+\_\+memory\+\_\+free (\begin{DoxyParamCaption}\item[{void $\ast$}]{ptr }\end{DoxyParamCaption})}
+
+
+
+Deallocate a block of memory previously allocated using \mbox{\hyperlink{group__memory_ga39f7943b93aa2bb754726fc74d929426}{hsa\+\_\+memory\+\_\+allocate}}. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em ptr} & Pointer to a memory block. If {\ttfamily ptr} does not match a value previously returned by \mbox{\hyperlink{group__memory_ga39f7943b93aa2bb754726fc74d929426}{hsa\+\_\+memory\+\_\+allocate}}, the behavior is undefined.\\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em \mbox{\hyperlink{group__status_ggad755322e7ff95456520e8abdbe90d225ae382ea0c9c05cce5a60d0317375159cc}{HSA\+\_\+\+STATUS\+\_\+\+SUCCESS}}} & The function has been executed successfully.\\
+\hline
+{\em \mbox{\hyperlink{group__status_ggad755322e7ff95456520e8abdbe90d225a34ea59ade5bfce95eee935238a99f5b5}{HSA\+\_\+\+STATUS\+\_\+\+ERROR\+\_\+\+NOT\+\_\+\+INITIALIZED}}} & The HSA runtime has not been initialized. \\
+\hline
+\end{DoxyRetVals}
+\mbox{\Hypertarget{group__memory_ga2534b1f41fd77e32d142f75431ff2e36}\label{group__memory_ga2534b1f41fd77e32d142f75431ff2e36}} 
+\index{Memory@{Memory}!hsa\_memory\_register@{hsa\_memory\_register}}
+\index{hsa\_memory\_register@{hsa\_memory\_register}!Memory@{Memory}}
+\doxysubsubsection{\texorpdfstring{hsa\_memory\_register()}{hsa\_memory\_register()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{group__status_gad755322e7ff95456520e8abdbe90d225}{hsa\+\_\+status\+\_\+t}} \mbox{\hyperlink{inc_2hsa__ext__image_8h_a64216765b98b62ee87deb50fd2899836}{HSA\+\_\+\+API}} hsa\+\_\+memory\+\_\+register (\begin{DoxyParamCaption}\item[{void $\ast$}]{ptr,  }\item[{size\+\_\+t}]{size }\end{DoxyParamCaption})}
+
+
+
+Register a global, fine-\/grained buffer. 
+
+Registering a buffer serves as an indication to the HSA runtime that the memory might be accessed from a kernel agent other than the host. Registration is a performance hint that allows the HSA runtime implementation to know which buffers will be accessed by some of the kernel agents ahead of time.
+
+Registration is only recommended for buffers in the global segment that have not been allocated using the HSA allocator (\mbox{\hyperlink{group__memory_ga39f7943b93aa2bb754726fc74d929426}{hsa\+\_\+memory\+\_\+allocate}}), but an OS allocator instead. Registering an OS-\/allocated buffer in the base profile is equivalent to a no-\/op.
+
+Registrations should not overlap.
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em ptr} & A buffer in global, fine-\/grained memory. If a NULL pointer is passed, no operation is performed. If the buffer has been allocated using \mbox{\hyperlink{group__memory_ga39f7943b93aa2bb754726fc74d929426}{hsa\+\_\+memory\+\_\+allocate}}, or has already been registered, no operation is performed.\\
+\hline
+\mbox{\texttt{ in}}  & {\em size} & Requested registration size in bytes. A size of 0 is only allowed if {\ttfamily ptr} is NULL.\\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em \mbox{\hyperlink{group__status_ggad755322e7ff95456520e8abdbe90d225ae382ea0c9c05cce5a60d0317375159cc}{HSA\+\_\+\+STATUS\+\_\+\+SUCCESS}}} & The function has been executed successfully.\\
+\hline
+{\em \mbox{\hyperlink{group__status_ggad755322e7ff95456520e8abdbe90d225a34ea59ade5bfce95eee935238a99f5b5}{HSA\+\_\+\+STATUS\+\_\+\+ERROR\+\_\+\+NOT\+\_\+\+INITIALIZED}}} & The HSA runtime has not been initialized.\\
+\hline
+{\em \mbox{\hyperlink{group__status_ggad755322e7ff95456520e8abdbe90d225a1a77fcf36d0d140874c4361ab093eff7}{HSA\+\_\+\+STATUS\+\_\+\+ERROR\+\_\+\+OUT\+\_\+\+OF\+\_\+\+RESOURCES}}} & The HSA runtime failed to allocate the required resources.\\
+\hline
+{\em \mbox{\hyperlink{group__status_ggad755322e7ff95456520e8abdbe90d225ac7d3651f75107d2a6a8ba3b25683c030}{HSA\+\_\+\+STATUS\+\_\+\+ERROR\+\_\+\+INVALID\+\_\+\+ARGUMENT}}} & {\ttfamily size} is 0 but {\ttfamily ptr} is not NULL. \\
+\hline
+\end{DoxyRetVals}
+\mbox{\Hypertarget{group__memory_gaad0ab0056cfee2e5a99270490b942a28}\label{group__memory_gaad0ab0056cfee2e5a99270490b942a28}} 
+\index{Memory@{Memory}!hsa\_region\_get\_info@{hsa\_region\_get\_info}}
+\index{hsa\_region\_get\_info@{hsa\_region\_get\_info}!Memory@{Memory}}
+\doxysubsubsection{\texorpdfstring{hsa\_region\_get\_info()}{hsa\_region\_get\_info()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{group__status_gad755322e7ff95456520e8abdbe90d225}{hsa\+\_\+status\+\_\+t}} \mbox{\hyperlink{inc_2hsa__ext__image_8h_a64216765b98b62ee87deb50fd2899836}{HSA\+\_\+\+API}} hsa\+\_\+region\+\_\+get\+\_\+info (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{group__memory_ga9c649e7034e53233198aaa1b58e9d79b}{hsa\+\_\+region\+\_\+t}}}]{region,  }\item[{\mbox{\hyperlink{group__memory_gad35755078ff15f645c6c25e7f7ef2707}{hsa\+\_\+region\+\_\+info\+\_\+t}}}]{attribute,  }\item[{void $\ast$}]{value }\end{DoxyParamCaption})}
+
+
+
+Get the current value of an attribute of a region. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em region} & A valid region.\\
+\hline
+\mbox{\texttt{ in}}  & {\em attribute} & Attribute to query.\\
+\hline
+\mbox{\texttt{ out}}  & {\em value} & Pointer to a application-\/allocated buffer where to store the value of the attribute. If the buffer passed by the application is not large enough to hold the value of {\ttfamily attribute}, the behavior is undefined.\\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em \mbox{\hyperlink{group__status_ggad755322e7ff95456520e8abdbe90d225ae382ea0c9c05cce5a60d0317375159cc}{HSA\+\_\+\+STATUS\+\_\+\+SUCCESS}}} & The function has been executed successfully.\\
+\hline
+{\em \mbox{\hyperlink{group__status_ggad755322e7ff95456520e8abdbe90d225a34ea59ade5bfce95eee935238a99f5b5}{HSA\+\_\+\+STATUS\+\_\+\+ERROR\+\_\+\+NOT\+\_\+\+INITIALIZED}}} & The HSA runtime has not been initialized.\\
+\hline
+{\em \mbox{\hyperlink{group__status_ggad755322e7ff95456520e8abdbe90d225ad63594ac02edec7ae7aa7722c11afcd9}{HSA\+\_\+\+STATUS\+\_\+\+ERROR\+\_\+\+INVALID\+\_\+\+REGION}}} & The region is invalid.\\
+\hline
+{\em \mbox{\hyperlink{group__status_ggad755322e7ff95456520e8abdbe90d225ac7d3651f75107d2a6a8ba3b25683c030}{HSA\+\_\+\+STATUS\+\_\+\+ERROR\+\_\+\+INVALID\+\_\+\+ARGUMENT}}} & {\ttfamily attribute} is an invalid region attribute, or {\ttfamily value} is NULL. \\
+\hline
+\end{DoxyRetVals}

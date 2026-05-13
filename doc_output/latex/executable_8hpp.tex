@@ -1,0 +1,89 @@
+\hypertarget{executable_8hpp}{}\doxysection{src/loader/executable.hpp File Reference}
+\label{executable_8hpp}\index{src/loader/executable.hpp@{src/loader/executable.hpp}}
+{\ttfamily \#include $<$array$>$}\newline
+{\ttfamily \#include $<$cassert$>$}\newline
+{\ttfamily \#include $<$cstdint$>$}\newline
+{\ttfamily \#include $<$iostream$>$}\newline
+{\ttfamily \#include $<$libelf.\+h$>$}\newline
+{\ttfamily \#include $<$link.\+h$>$}\newline
+{\ttfamily \#include $<$list$>$}\newline
+{\ttfamily \#include $<$string$>$}\newline
+{\ttfamily \#include $<$unordered\+\_\+map$>$}\newline
+{\ttfamily \#include $<$utility$>$}\newline
+{\ttfamily \#include $<$vector$>$}\newline
+{\ttfamily \#include $<$cstring$>$}\newline
+{\ttfamily \#include \char`\"{}inc/hsa.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}inc/hsa\+\_\+ext\+\_\+image.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}core/inc/amd\+\_\+hsa\+\_\+loader.\+hpp\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}core/inc/amd\+\_\+hsa\+\_\+code.\+hpp\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}inc/amd\+\_\+hsa\+\_\+kernel\+\_\+code.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}amd\+\_\+hsa\+\_\+locks.\+hpp\char`\"{}}\newline
+Include dependency graph for executable.\+hpp\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{executable_8hpp__incl}
+\end{center}
+\end{figure}
+This graph shows which files directly or indirectly include this file\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=208pt]{executable_8hpp__dep__incl}
+\end{center}
+\end{figure}
+\doxysubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class \mbox{\hyperlink{classrocr_1_1amd_1_1hsa_1_1loader_1_1SymbolImpl}{rocr\+::amd\+::hsa\+::loader\+::\+Symbol\+Impl}}
+\item 
+class \mbox{\hyperlink{classrocr_1_1amd_1_1hsa_1_1loader_1_1KernelSymbol}{rocr\+::amd\+::hsa\+::loader\+::\+Kernel\+Symbol}}
+\item 
+class \mbox{\hyperlink{classrocr_1_1amd_1_1hsa_1_1loader_1_1VariableSymbol}{rocr\+::amd\+::hsa\+::loader\+::\+Variable\+Symbol}}
+\item 
+class \mbox{\hyperlink{classrocr_1_1amd_1_1hsa_1_1loader_1_1Logger}{rocr\+::amd\+::hsa\+::loader\+::\+Logger}}
+\item 
+class \mbox{\hyperlink{classrocr_1_1amd_1_1hsa_1_1loader_1_1ExecutableObject}{rocr\+::amd\+::hsa\+::loader\+::\+Executable\+Object}}
+\item 
+class \mbox{\hyperlink{classrocr_1_1amd_1_1hsa_1_1loader_1_1LoadedCodeObjectImpl}{rocr\+::amd\+::hsa\+::loader\+::\+Loaded\+Code\+Object\+Impl}}
+\item 
+class \mbox{\hyperlink{classrocr_1_1amd_1_1hsa_1_1loader_1_1Segment}{rocr\+::amd\+::hsa\+::loader\+::\+Segment}}
+\item 
+class \mbox{\hyperlink{classrocr_1_1amd_1_1hsa_1_1loader_1_1Sampler}{rocr\+::amd\+::hsa\+::loader\+::\+Sampler}}
+\item 
+class \mbox{\hyperlink{classrocr_1_1amd_1_1hsa_1_1loader_1_1Image}{rocr\+::amd\+::hsa\+::loader\+::\+Image}}
+\item 
+struct \mbox{\hyperlink{structrocr_1_1amd_1_1hsa_1_1loader_1_1ASC}{rocr\+::amd\+::hsa\+::loader\+::\+ASC}}
+\item 
+struct \mbox{\hyperlink{structrocr_1_1amd_1_1hsa_1_1loader_1_1ASH}{rocr\+::amd\+::hsa\+::loader\+::\+ASH}}
+\item 
+class \mbox{\hyperlink{classrocr_1_1amd_1_1hsa_1_1loader_1_1ExecutableImpl}{rocr\+::amd\+::hsa\+::loader\+::\+Executable\+Impl}}
+\item 
+class \mbox{\hyperlink{classrocr_1_1amd_1_1hsa_1_1loader_1_1AmdHsaCodeLoader}{rocr\+::amd\+::hsa\+::loader\+::\+Amd\+Hsa\+Code\+Loader}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Namespaces}
+\begin{DoxyCompactItemize}
+\item 
+ \mbox{\hyperlink{namespacerocr}{rocr}}
+\item 
+ \mbox{\hyperlink{namespacerocr_1_1amd}{rocr\+::amd}}
+\item 
+ \mbox{\hyperlink{namespacerocr_1_1amd_1_1hsa}{rocr\+::amd\+::hsa}}
+\item 
+ \mbox{\hyperlink{namespacerocr_1_1amd_1_1hsa_1_1loader}{rocr\+::amd\+::hsa\+::loader}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+typedef uint32\+\_\+t \mbox{\hyperlink{namespacerocr_1_1amd_1_1hsa_1_1loader_a702bbb748418010808180b8ac34d0805}{rocr\+::amd\+::hsa\+::loader\+::symbol\+\_\+attribute32\+\_\+t}}
+\item 
+typedef std\+::string \mbox{\hyperlink{namespacerocr_1_1amd_1_1hsa_1_1loader_a2c72927f11be4f5b346d5ac80b0c514a}{rocr\+::amd\+::hsa\+::loader\+::\+Program\+Symbol}}
+\item 
+typedef std\+::unordered\+\_\+map$<$ Program\+Symbol, Symbol\+Impl $\ast$ $>$ \mbox{\hyperlink{namespacerocr_1_1amd_1_1hsa_1_1loader_afd3bf86937028d4d70dd33f41aa5eb7b}{rocr\+::amd\+::hsa\+::loader\+::\+Program\+Symbol\+Map}}
+\item 
+typedef std\+::pair$<$ std\+::string, \mbox{\hyperlink{group__agentinfo_ga9ce217ef08e7d5e89c8e83ce7b6ef22b}{hsa\+\_\+agent\+\_\+t}} $>$ \mbox{\hyperlink{namespacerocr_1_1amd_1_1hsa_1_1loader_a2fcae2b1d77a1422e375485f2779e534}{rocr\+::amd\+::hsa\+::loader\+::\+Agent\+Symbol}}
+\item 
+typedef std\+::unordered\+\_\+map$<$ Agent\+Symbol, Symbol\+Impl $\ast$, ASH, ASC $>$ \mbox{\hyperlink{namespacerocr_1_1amd_1_1hsa_1_1loader_aaf847df9b4137165bedf26438c8fed47}{rocr\+::amd\+::hsa\+::loader\+::\+Agent\+Symbol\+Map}}
+\end{DoxyCompactItemize}

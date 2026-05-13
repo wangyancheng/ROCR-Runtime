@@ -1,0 +1,1199 @@
+\hypertarget{namespacerocr_1_1os}{}\doxysection{rocr\+::os Namespace Reference}
+\label{namespacerocr_1_1os}\index{rocr::os@{rocr::os}}
+\doxysubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{structrocr_1_1os_1_1cpuid__s}{cpuid\+\_\+s}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+typedef void $\ast$ \mbox{\hyperlink{namespacerocr_1_1os_a3be69e560dfb1309df3f4b0d1037bc2d}{Lib\+Handle}}
+\item 
+typedef void $\ast$ \mbox{\hyperlink{namespacerocr_1_1os_ad197657099b389acf698b1e2b8d3da5c}{Mutex}}
+\item 
+typedef void $\ast$ \mbox{\hyperlink{namespacerocr_1_1os_a316363adab9dba05a2210b480a037d17}{Shared\+Mutex}}
+\item 
+typedef void $\ast$ \mbox{\hyperlink{namespacerocr_1_1os_a64ca1a1bc204bebd23f2753be844a31c}{Thread}}
+\item 
+typedef void $\ast$ \mbox{\hyperlink{namespacerocr_1_1os_a7ed5c2b1d47fced332b20d7a5057a7e3}{Event\+Handle}}
+\item 
+typedef void($\ast$ \mbox{\hyperlink{namespacerocr_1_1os_aa260955450b493fc1bcc9622b008c192}{Thread\+Entry}}) (void $\ast$)
+\item 
+typedef struct \mbox{\hyperlink{structrocr_1_1os_1_1cpuid__s}{rocr\+::os\+::cpuid\+\_\+s}} \mbox{\hyperlink{namespacerocr_1_1os_a0dcc877295d42b6eff9faffb87345210}{cpuid\+\_\+t}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Enumerations}
+\begin{DoxyCompactItemize}
+\item 
+enum class \mbox{\hyperlink{namespacerocr_1_1os_abfe8759a72c92042841be171ec3b8951}{os\+\_\+t}} \{ \mbox{\hyperlink{namespacerocr_1_1os_abfe8759a72c92042841be171ec3b8951a70bd7947623583c30cb7062e8cddc05b}{OS\+\_\+\+WIN}} = 0
+, \mbox{\hyperlink{namespacerocr_1_1os_abfe8759a72c92042841be171ec3b8951a6104e63e219587983ec4f1553a7fbbaa}{OS\+\_\+\+LINUX}}
+, \mbox{\hyperlink{namespacerocr_1_1os_abfe8759a72c92042841be171ec3b8951a4905ac9d6a22bdfc1ae096094ce6248d}{COUNT}}
+ \}
+\end{DoxyCompactItemize}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+static \+\_\+\+\_\+forceinline std\+::underlying\+\_\+type$<$ \mbox{\hyperlink{namespacerocr_1_1os_abfe8759a72c92042841be171ec3b8951}{os\+\_\+t}} $>$\+::type \mbox{\hyperlink{namespacerocr_1_1os_adabf54a3ad6222560091a68f22923205}{os\+\_\+index}} (\mbox{\hyperlink{namespacerocr_1_1os_abfe8759a72c92042841be171ec3b8951}{os\+\_\+t}} val)
+\item 
+\mbox{\hyperlink{namespacerocr_1_1os_a3be69e560dfb1309df3f4b0d1037bc2d}{Lib\+Handle}} \mbox{\hyperlink{namespacerocr_1_1os_af21d3b5d0ff3318d7f05b83ae3419407}{Load\+Lib}} (std\+::string filename)
+\begin{DoxyCompactList}\small\item\em \+: Loads dynamic library based on file name. Return value will be NULL if failed. \end{DoxyCompactList}\item 
+void $\ast$ \mbox{\hyperlink{namespacerocr_1_1os_acd1be6425ed4fce80cf1f6859c1ab854}{Get\+Export\+Address}} (\mbox{\hyperlink{namespacerocr_1_1os_a3be69e560dfb1309df3f4b0d1037bc2d}{Lib\+Handle}} lib, std\+::string export\+\_\+name)
+\begin{DoxyCompactList}\small\item\em \+: Gets the address of exported symbol. Return NULl if failed. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{namespacerocr_1_1os_a561730d035cac28a08115275345132b9}{Close\+Lib}} (\mbox{\hyperlink{namespacerocr_1_1os_a3be69e560dfb1309df3f4b0d1037bc2d}{Lib\+Handle}} lib)
+\begin{DoxyCompactList}\small\item\em \+: Unloads the dynamic library. \end{DoxyCompactList}\item 
+std\+::vector$<$ \mbox{\hyperlink{namespacerocr_1_1os_a3be69e560dfb1309df3f4b0d1037bc2d}{Lib\+Handle}} $>$ \mbox{\hyperlink{namespacerocr_1_1os_a9ffc1cce2541e5b75ebc78eefcdc8cde}{Get\+Loaded\+Tools\+Lib}} ()
+\begin{DoxyCompactList}\small\item\em \+: Lists loaded tool libraries that contain symbol HSA\+\_\+\+AMD\+\_\+\+TOOL\+\_\+\+PRIORITY \end{DoxyCompactList}\item 
+std\+::string \mbox{\hyperlink{namespacerocr_1_1os_ae536b7a31c86c43fe669e68e2eabdb70}{Get\+Library\+Name}} (\mbox{\hyperlink{namespacerocr_1_1os_a3be69e560dfb1309df3f4b0d1037bc2d}{Lib\+Handle}} lib)
+\begin{DoxyCompactList}\small\item\em \+: Returns the library\textquotesingle{}s path name. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{namespacerocr_1_1os_ad197657099b389acf698b1e2b8d3da5c}{Mutex}} \mbox{\hyperlink{namespacerocr_1_1os_a3fcd709e4f5691f0a31104253a10dd68}{Create\+Mutex}} ()
+\begin{DoxyCompactList}\small\item\em \+: Creates a mutex, will return NULL if failed. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{namespacerocr_1_1os_a3edfcbf2a57328d57cd12009de8a1c55}{Try\+Acquire\+Mutex}} (\mbox{\hyperlink{namespacerocr_1_1os_ad197657099b389acf698b1e2b8d3da5c}{Mutex}} lock)
+\begin{DoxyCompactList}\small\item\em \+: Tries to acquire the mutex once, if successed, return true. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{namespacerocr_1_1os_a5b019c4726940ee6d54802b2e2e5d1c9}{Acquire\+Mutex}} (\mbox{\hyperlink{namespacerocr_1_1os_ad197657099b389acf698b1e2b8d3da5c}{Mutex}} lock)
+\begin{DoxyCompactList}\small\item\em \+: Aquires the mutex, if the mutex is locked, it will wait until it is released. If the mutex is acquired successfully, it will return true. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{namespacerocr_1_1os_abd1d9ec737a917be2feaf8ded25e4302}{Release\+Mutex}} (\mbox{\hyperlink{namespacerocr_1_1os_ad197657099b389acf698b1e2b8d3da5c}{Mutex}} lock)
+\begin{DoxyCompactList}\small\item\em \+: Releases the mutex. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{namespacerocr_1_1os_a7c06246fda2f879635b8b33a9b6e5d59}{Destroy\+Mutex}} (\mbox{\hyperlink{namespacerocr_1_1os_ad197657099b389acf698b1e2b8d3da5c}{Mutex}} lock)
+\begin{DoxyCompactList}\small\item\em \+: Destroys the mutex. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{namespacerocr_1_1os_a316363adab9dba05a2210b480a037d17}{Shared\+Mutex}} \mbox{\hyperlink{namespacerocr_1_1os_a26ec81334709c5134842b9bbb09efaa4}{Create\+Shared\+Mutex}} ()
+\begin{DoxyCompactList}\small\item\em \+: Creates a shared mutex, will return NULL if failed. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{namespacerocr_1_1os_aa3294bbb41805280ae3d6053a8955744}{Try\+Acquire\+Shared\+Mutex}} (\mbox{\hyperlink{namespacerocr_1_1os_a316363adab9dba05a2210b480a037d17}{Shared\+Mutex}} lock)
+\begin{DoxyCompactList}\small\item\em \+: Tries to acquire the mutex in exclusive mode once, if successed, return true. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{namespacerocr_1_1os_a57ff00c81f350db887cb162dd4410644}{Acquire\+Shared\+Mutex}} (\mbox{\hyperlink{namespacerocr_1_1os_a316363adab9dba05a2210b480a037d17}{Shared\+Mutex}} lock)
+\begin{DoxyCompactList}\small\item\em \+: Aquires the mutex in exclusive mode, if the mutex is locked, it will wait until it is released. If the mutex is acquired successfully, it will return true. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{namespacerocr_1_1os_acdcb3f414927a23bfbc4c93af9ac9dbe}{Release\+Shared\+Mutex}} (\mbox{\hyperlink{namespacerocr_1_1os_a316363adab9dba05a2210b480a037d17}{Shared\+Mutex}} lock)
+\begin{DoxyCompactList}\small\item\em \+: Releases the mutex from exclusive mode. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{namespacerocr_1_1os_a66215653000b1b774ffb47afea431777}{Try\+Shared\+Acquire\+Shared\+Mutex}} (\mbox{\hyperlink{namespacerocr_1_1os_a316363adab9dba05a2210b480a037d17}{Shared\+Mutex}} lock)
+\begin{DoxyCompactList}\small\item\em \+: Tries to acquire the mutex in shared mode once, if successed, return true. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{namespacerocr_1_1os_a3b503927de70efa5dc60d993dc953292}{Shared\+Acquire\+Shared\+Mutex}} (\mbox{\hyperlink{namespacerocr_1_1os_a316363adab9dba05a2210b480a037d17}{Shared\+Mutex}} lock)
+\begin{DoxyCompactList}\small\item\em \+: Aquires the mutex in shared mode, if the mutex in exclusive mode, it will wait until it is released. If the mutex is acquired successfully, it will return true. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{namespacerocr_1_1os_a8d2fa1dcd621381eac9d325e6d313565}{Shared\+Release\+Shared\+Mutex}} (\mbox{\hyperlink{namespacerocr_1_1os_a316363adab9dba05a2210b480a037d17}{Shared\+Mutex}} lock)
+\begin{DoxyCompactList}\small\item\em \+: Releases the mutex from shared mode. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{namespacerocr_1_1os_abc2e49b164b2d952aec506e6ebe83f38}{Destroy\+Shared\+Mutex}} (\mbox{\hyperlink{namespacerocr_1_1os_a316363adab9dba05a2210b480a037d17}{Shared\+Mutex}} lock)
+\begin{DoxyCompactList}\small\item\em \+: Destroys the mutex. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{namespacerocr_1_1os_a6ec515091b14b3361e3fca487588f3a8}{Sleep}} (int delay\+In\+Ms)
+\begin{DoxyCompactList}\small\item\em \+: Puts current thread to sleep. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{namespacerocr_1_1os_a792b6b1effdea52cf0449b53c4ed7094}{u\+Sleep}} (int delay\+In\+Us)
+\begin{DoxyCompactList}\small\item\em \+: Puts current thread to sleep. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{namespacerocr_1_1os_aa7b0dcc88b5bf6dc37395feb2496ae72}{Yield\+Thread}} ()
+\begin{DoxyCompactList}\small\item\em \+: Yields current thread. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{namespacerocr_1_1os_a64ca1a1bc204bebd23f2753be844a31c}{Thread}} \mbox{\hyperlink{namespacerocr_1_1os_a9e70397930487beb74aaaab5e8f0d9c0}{Create\+Thread}} (\mbox{\hyperlink{namespacerocr_1_1os_aa260955450b493fc1bcc9622b008c192}{Thread\+Entry}} entry\+\_\+function, void $\ast$entry\+\_\+argument, \mbox{\hyperlink{namespacerocr_a70e499739cfc08c3e2232c79b991e1c5}{uint}} stack\+\_\+size=0)
+\begin{DoxyCompactList}\small\item\em \+: Creates a thread will return NULL if failed. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{namespacerocr_1_1os_a0c3ce1f9f382f023e6a6341714b25522}{Close\+Thread}} (\mbox{\hyperlink{namespacerocr_1_1os_a64ca1a1bc204bebd23f2753be844a31c}{Thread}} thread)
+\begin{DoxyCompactList}\small\item\em \+: Destroys the thread. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{namespacerocr_1_1os_afefcc98dd9dc1afa05ec161b290edeb7}{Wait\+For\+Thread}} (\mbox{\hyperlink{namespacerocr_1_1os_a64ca1a1bc204bebd23f2753be844a31c}{Thread}} thread)
+\begin{DoxyCompactList}\small\item\em \+: Waits for specific thread to finish, if successful, return true. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{namespacerocr_1_1os_a70b535cf43093f7617c39a33433207f4}{Wait\+For\+All\+Threads}} (\mbox{\hyperlink{namespacerocr_1_1os_a64ca1a1bc204bebd23f2753be844a31c}{Thread}} $\ast$threads, \mbox{\hyperlink{namespacerocr_a70e499739cfc08c3e2232c79b991e1c5}{uint}} thread\+\_\+count)
+\begin{DoxyCompactList}\small\item\em \+: Waits for multiple threads to finish, if successful, return true. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{namespacerocr_1_1os_a10c38a63c7f82ec8f9f100adb91d6ae6}{Is\+Env\+Var\+Set}} (std\+::string env\+\_\+var\+\_\+name)
+\begin{DoxyCompactList}\small\item\em \+: Determines if environment key is set. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{namespacerocr_1_1os_aef9302a43dbf70019152624ee228ab9f}{Set\+Env\+Var}} (std\+::string env\+\_\+var\+\_\+name, std\+::string env\+\_\+var\+\_\+value)
+\begin{DoxyCompactList}\small\item\em \+: Sets the environment value. \end{DoxyCompactList}\item 
+std\+::string \mbox{\hyperlink{namespacerocr_1_1os_aba31140144f56dff9344ffd12f1bc00c}{Get\+Env\+Var}} (std\+::string env\+\_\+var\+\_\+name)
+\begin{DoxyCompactList}\small\item\em \+: Gets the value of environment value. \end{DoxyCompactList}\item 
+size\+\_\+t \mbox{\hyperlink{namespacerocr_1_1os_a7a2e5d0a74cc2fdf6e62a8f309c147ef}{Get\+User\+Mode\+Virtual\+Memory\+Size}} ()
+\begin{DoxyCompactList}\small\item\em \+: Gets the max virtual memory size accessible to the application. \end{DoxyCompactList}\item 
+size\+\_\+t \mbox{\hyperlink{namespacerocr_1_1os_a92c217a2e7e02dc7048736121666c8ca}{Get\+Usable\+Physical\+Host\+Memory\+Size}} ()
+\begin{DoxyCompactList}\small\item\em \+: Gets the max physical host system memory size. \end{DoxyCompactList}\item 
+uintptr\+\_\+t \mbox{\hyperlink{namespacerocr_1_1os_a1243ef4844a64d3c7e43d32dde7edb1e}{Get\+User\+Mode\+Virtual\+Memory\+Base}} ()
+\begin{DoxyCompactList}\small\item\em \+: Gets the virtual memory base address. It is hardcoded to 0. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{namespacerocr_1_1os_a7ed5c2b1d47fced332b20d7a5057a7e3}{Event\+Handle}} \mbox{\hyperlink{namespacerocr_1_1os_a6b875772eeebc8e00e4d3e4ba79aa6d0}{Create\+Os\+Event}} (bool auto\+\_\+reset, bool init\+\_\+state)
+\begin{DoxyCompactList}\small\item\em os event api, create an event \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{namespacerocr_1_1os_a98da548beebb7a5a151ec051c9eeaf22}{Destroy\+Os\+Event}} (\mbox{\hyperlink{namespacerocr_1_1os_a7ed5c2b1d47fced332b20d7a5057a7e3}{Event\+Handle}} event)
+\begin{DoxyCompactList}\small\item\em os event api, destroy an event \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{namespacerocr_1_1os_a8d561d22b26dbce87c35d049dafbc35b}{Wait\+For\+Os\+Event}} (\mbox{\hyperlink{namespacerocr_1_1os_a7ed5c2b1d47fced332b20d7a5057a7e3}{Event\+Handle}} event, unsigned int milli\+\_\+seconds)
+\begin{DoxyCompactList}\small\item\em os event api, wait on event \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{namespacerocr_1_1os_a2d50f3f81a29d892e907045b7d1c2479}{Set\+Os\+Event}} (\mbox{\hyperlink{namespacerocr_1_1os_a7ed5c2b1d47fced332b20d7a5057a7e3}{Event\+Handle}} event)
+\begin{DoxyCompactList}\small\item\em os event api, set event state \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{namespacerocr_1_1os_a0fdbb9b3227e2440ea2ace8a40d99ef0}{Reset\+Os\+Event}} (\mbox{\hyperlink{namespacerocr_1_1os_a7ed5c2b1d47fced332b20d7a5057a7e3}{Event\+Handle}} event)
+\begin{DoxyCompactList}\small\item\em os event api, reset event state \end{DoxyCompactList}\item 
+uint64\+\_\+t \mbox{\hyperlink{namespacerocr_1_1os_a12d80ec42a093530c3b5a1c91c8a922b}{Read\+Accurate\+Clock}} ()
+\begin{DoxyCompactList}\small\item\em reads a clock which is deemed to be accurate for elapsed time measurements, though not necessarilly fast to query \end{DoxyCompactList}\item 
+uint64\+\_\+t \mbox{\hyperlink{namespacerocr_1_1os_a41af7bd8d467ed193499123102007a99}{Accurate\+Clock\+Frequency}} ()
+\begin{DoxyCompactList}\small\item\em retrieves the frequency in Hz of the unit used in Read\+Accurate\+Clock. It does not necessarilly reflect the resolution of the clock, but is the value needed to convert a difference in the clock\textquotesingle{}s counter value to elapsed seconds. This frequency does not change at runtime. \end{DoxyCompactList}\item 
+uint64\+\_\+t \mbox{\hyperlink{namespacerocr_1_1os_a410df3659fc87264f31c8d32913f350f}{Read\+System\+Clock}} ()
+\begin{DoxyCompactList}\small\item\em read the system clock which serves as the \mbox{\hyperlink{namespacerocr_1_1HSA}{HSA}} system clock counter in KFD. \end{DoxyCompactList}\item 
+uint64\+\_\+t \mbox{\hyperlink{namespacerocr_1_1os_a50fb52a230a533976c5cbe458d47fef8}{System\+Clock\+Frequency}} ()
+\begin{DoxyCompactList}\small\item\em read the system clock frequency \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{namespacerocr_1_1os_a91e797f479378cdf873ddde2f5860527}{Parse\+Cpu\+ID}} (\mbox{\hyperlink{namespacerocr_1_1os_a0dcc877295d42b6eff9faffb87345210}{cpuid\+\_\+t}} $\ast$cpuinfo)
+\begin{DoxyCompactList}\small\item\em parse CPUID \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Typedef Documentation}
+\mbox{\Hypertarget{namespacerocr_1_1os_a0dcc877295d42b6eff9faffb87345210}\label{namespacerocr_1_1os_a0dcc877295d42b6eff9faffb87345210}} 
+\index{rocr::os@{rocr::os}!cpuid\_t@{cpuid\_t}}
+\index{cpuid\_t@{cpuid\_t}!rocr::os@{rocr::os}}
+\doxysubsubsection{\texorpdfstring{cpuid\_t}{cpuid\_t}}
+{\footnotesize\ttfamily typedef struct \mbox{\hyperlink{structrocr_1_1os_1_1cpuid__s}{rocr\+::os\+::cpuid\+\_\+s}} \mbox{\hyperlink{namespacerocr_1_1os_a0dcc877295d42b6eff9faffb87345210}{rocr\+::os\+::cpuid\+\_\+t}}}
+
+\mbox{\Hypertarget{namespacerocr_1_1os_a7ed5c2b1d47fced332b20d7a5057a7e3}\label{namespacerocr_1_1os_a7ed5c2b1d47fced332b20d7a5057a7e3}} 
+\index{rocr::os@{rocr::os}!EventHandle@{EventHandle}}
+\index{EventHandle@{EventHandle}!rocr::os@{rocr::os}}
+\doxysubsubsection{\texorpdfstring{EventHandle}{EventHandle}}
+{\footnotesize\ttfamily typedef void$\ast$ \mbox{\hyperlink{namespacerocr_1_1os_a7ed5c2b1d47fced332b20d7a5057a7e3}{rocr\+::os\+::\+Event\+Handle}}}
+
+\mbox{\Hypertarget{namespacerocr_1_1os_a3be69e560dfb1309df3f4b0d1037bc2d}\label{namespacerocr_1_1os_a3be69e560dfb1309df3f4b0d1037bc2d}} 
+\index{rocr::os@{rocr::os}!LibHandle@{LibHandle}}
+\index{LibHandle@{LibHandle}!rocr::os@{rocr::os}}
+\doxysubsubsection{\texorpdfstring{LibHandle}{LibHandle}}
+{\footnotesize\ttfamily typedef void$\ast$ \mbox{\hyperlink{namespacerocr_1_1os_a3be69e560dfb1309df3f4b0d1037bc2d}{rocr\+::os\+::\+Lib\+Handle}}}
+
+\mbox{\Hypertarget{namespacerocr_1_1os_ad197657099b389acf698b1e2b8d3da5c}\label{namespacerocr_1_1os_ad197657099b389acf698b1e2b8d3da5c}} 
+\index{rocr::os@{rocr::os}!Mutex@{Mutex}}
+\index{Mutex@{Mutex}!rocr::os@{rocr::os}}
+\doxysubsubsection{\texorpdfstring{Mutex}{Mutex}}
+{\footnotesize\ttfamily typedef void$\ast$ \mbox{\hyperlink{namespacerocr_1_1os_ad197657099b389acf698b1e2b8d3da5c}{rocr\+::os\+::\+Mutex}}}
+
+\mbox{\Hypertarget{namespacerocr_1_1os_a316363adab9dba05a2210b480a037d17}\label{namespacerocr_1_1os_a316363adab9dba05a2210b480a037d17}} 
+\index{rocr::os@{rocr::os}!SharedMutex@{SharedMutex}}
+\index{SharedMutex@{SharedMutex}!rocr::os@{rocr::os}}
+\doxysubsubsection{\texorpdfstring{SharedMutex}{SharedMutex}}
+{\footnotesize\ttfamily typedef void$\ast$ \mbox{\hyperlink{namespacerocr_1_1os_a316363adab9dba05a2210b480a037d17}{rocr\+::os\+::\+Shared\+Mutex}}}
+
+\mbox{\Hypertarget{namespacerocr_1_1os_a64ca1a1bc204bebd23f2753be844a31c}\label{namespacerocr_1_1os_a64ca1a1bc204bebd23f2753be844a31c}} 
+\index{rocr::os@{rocr::os}!Thread@{Thread}}
+\index{Thread@{Thread}!rocr::os@{rocr::os}}
+\doxysubsubsection{\texorpdfstring{Thread}{Thread}}
+{\footnotesize\ttfamily typedef void$\ast$ \mbox{\hyperlink{namespacerocr_1_1os_a64ca1a1bc204bebd23f2753be844a31c}{rocr\+::os\+::\+Thread}}}
+
+\mbox{\Hypertarget{namespacerocr_1_1os_aa260955450b493fc1bcc9622b008c192}\label{namespacerocr_1_1os_aa260955450b493fc1bcc9622b008c192}} 
+\index{rocr::os@{rocr::os}!ThreadEntry@{ThreadEntry}}
+\index{ThreadEntry@{ThreadEntry}!rocr::os@{rocr::os}}
+\doxysubsubsection{\texorpdfstring{ThreadEntry}{ThreadEntry}}
+{\footnotesize\ttfamily typedef void($\ast$ rocr\+::os\+::\+Thread\+Entry) (void $\ast$)}
+
+
+
+\doxysubsection{Enumeration Type Documentation}
+\mbox{\Hypertarget{namespacerocr_1_1os_abfe8759a72c92042841be171ec3b8951}\label{namespacerocr_1_1os_abfe8759a72c92042841be171ec3b8951}} 
+\index{rocr::os@{rocr::os}!os\_t@{os\_t}}
+\index{os\_t@{os\_t}!rocr::os@{rocr::os}}
+\doxysubsubsection{\texorpdfstring{os\_t}{os\_t}}
+{\footnotesize\ttfamily enum \mbox{\hyperlink{namespacerocr_1_1os_abfe8759a72c92042841be171ec3b8951}{rocr\+::os\+::os\+\_\+t}}\hspace{0.3cm}{\ttfamily [strong]}}
+
+\begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{OS\_WIN@{OS\_WIN}!rocr::os@{rocr::os}}\index{rocr::os@{rocr::os}!OS\_WIN@{OS\_WIN}}}\mbox{\Hypertarget{namespacerocr_1_1os_abfe8759a72c92042841be171ec3b8951a70bd7947623583c30cb7062e8cddc05b}\label{namespacerocr_1_1os_abfe8759a72c92042841be171ec3b8951a70bd7947623583c30cb7062e8cddc05b}} 
+OS\+\_\+\+WIN&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{OS\_LINUX@{OS\_LINUX}!rocr::os@{rocr::os}}\index{rocr::os@{rocr::os}!OS\_LINUX@{OS\_LINUX}}}\mbox{\Hypertarget{namespacerocr_1_1os_abfe8759a72c92042841be171ec3b8951a6104e63e219587983ec4f1553a7fbbaa}\label{namespacerocr_1_1os_abfe8759a72c92042841be171ec3b8951a6104e63e219587983ec4f1553a7fbbaa}} 
+OS\+\_\+\+LINUX&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{COUNT@{COUNT}!rocr::os@{rocr::os}}\index{rocr::os@{rocr::os}!COUNT@{COUNT}}}\mbox{\Hypertarget{namespacerocr_1_1os_abfe8759a72c92042841be171ec3b8951a4905ac9d6a22bdfc1ae096094ce6248d}\label{namespacerocr_1_1os_abfe8759a72c92042841be171ec3b8951a4905ac9d6a22bdfc1ae096094ce6248d}} 
+COUNT&\\
+\hline
+
+\end{DoxyEnumFields}
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{namespacerocr_1_1os_a41af7bd8d467ed193499123102007a99}\label{namespacerocr_1_1os_a41af7bd8d467ed193499123102007a99}} 
+\index{rocr::os@{rocr::os}!AccurateClockFrequency@{AccurateClockFrequency}}
+\index{AccurateClockFrequency@{AccurateClockFrequency}!rocr::os@{rocr::os}}
+\doxysubsubsection{\texorpdfstring{AccurateClockFrequency()}{AccurateClockFrequency()}}
+{\footnotesize\ttfamily uint64\+\_\+t rocr\+::os\+::\+Accurate\+Clock\+Frequency (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+retrieves the frequency in Hz of the unit used in Read\+Accurate\+Clock. It does not necessarilly reflect the resolution of the clock, but is the value needed to convert a difference in the clock\textquotesingle{}s counter value to elapsed seconds. This frequency does not change at runtime. 
+
+\begin{DoxyReturn}{Returns}
+returns the frequency 
+\end{DoxyReturn}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{namespacerocr_1_1os_a41af7bd8d467ed193499123102007a99_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{namespacerocr_1_1os_a5b019c4726940ee6d54802b2e2e5d1c9}\label{namespacerocr_1_1os_a5b019c4726940ee6d54802b2e2e5d1c9}} 
+\index{rocr::os@{rocr::os}!AcquireMutex@{AcquireMutex}}
+\index{AcquireMutex@{AcquireMutex}!rocr::os@{rocr::os}}
+\doxysubsubsection{\texorpdfstring{AcquireMutex()}{AcquireMutex()}}
+{\footnotesize\ttfamily bool rocr\+::os\+::\+Acquire\+Mutex (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{namespacerocr_1_1os_ad197657099b389acf698b1e2b8d3da5c}{Mutex}}}]{lock }\end{DoxyParamCaption})}
+
+
+
+\+: Aquires the mutex, if the mutex is locked, it will wait until it is released. If the mutex is acquired successfully, it will return true. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em } & lock(\+Input), handle to the mutex. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\+: bool. 
+\end{DoxyReturn}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{namespacerocr_1_1os_a5b019c4726940ee6d54802b2e2e5d1c9_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{namespacerocr_1_1os_a57ff00c81f350db887cb162dd4410644}\label{namespacerocr_1_1os_a57ff00c81f350db887cb162dd4410644}} 
+\index{rocr::os@{rocr::os}!AcquireSharedMutex@{AcquireSharedMutex}}
+\index{AcquireSharedMutex@{AcquireSharedMutex}!rocr::os@{rocr::os}}
+\doxysubsubsection{\texorpdfstring{AcquireSharedMutex()}{AcquireSharedMutex()}}
+{\footnotesize\ttfamily bool rocr\+::os\+::\+Acquire\+Shared\+Mutex (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{namespacerocr_1_1os_a316363adab9dba05a2210b480a037d17}{Shared\+Mutex}}}]{lock }\end{DoxyParamCaption})}
+
+
+
+\+: Aquires the mutex in exclusive mode, if the mutex is locked, it will wait until it is released. If the mutex is acquired successfully, it will return true. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em } & lock(\+Input), handle to the mutex. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\+: bool. 
+\end{DoxyReturn}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{namespacerocr_1_1os_a57ff00c81f350db887cb162dd4410644_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{namespacerocr_1_1os_a561730d035cac28a08115275345132b9}\label{namespacerocr_1_1os_a561730d035cac28a08115275345132b9}} 
+\index{rocr::os@{rocr::os}!CloseLib@{CloseLib}}
+\index{CloseLib@{CloseLib}!rocr::os@{rocr::os}}
+\doxysubsubsection{\texorpdfstring{CloseLib()}{CloseLib()}}
+{\footnotesize\ttfamily void rocr\+::os\+::\+Close\+Lib (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{namespacerocr_1_1os_a3be69e560dfb1309df3f4b0d1037bc2d}{Lib\+Handle}}}]{lib }\end{DoxyParamCaption})}
+
+
+
+\+: Unloads the dynamic library. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em } & lib(\+Input), library handle which will be unloaded. \\
+\hline
+\end{DoxyParams}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{namespacerocr_1_1os_a561730d035cac28a08115275345132b9_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{namespacerocr_1_1os_a0c3ce1f9f382f023e6a6341714b25522}\label{namespacerocr_1_1os_a0c3ce1f9f382f023e6a6341714b25522}} 
+\index{rocr::os@{rocr::os}!CloseThread@{CloseThread}}
+\index{CloseThread@{CloseThread}!rocr::os@{rocr::os}}
+\doxysubsubsection{\texorpdfstring{CloseThread()}{CloseThread()}}
+{\footnotesize\ttfamily void rocr\+::os\+::\+Close\+Thread (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{namespacerocr_1_1os_a64ca1a1bc204bebd23f2753be844a31c}{Thread}}}]{thread }\end{DoxyParamCaption})}
+
+
+
+\+: Destroys the thread. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em } & thread(\+Input), thread handle to what will be destroyed. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\+: void. 
+\end{DoxyReturn}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{namespacerocr_1_1os_a0c3ce1f9f382f023e6a6341714b25522_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{namespacerocr_1_1os_a3fcd709e4f5691f0a31104253a10dd68}\label{namespacerocr_1_1os_a3fcd709e4f5691f0a31104253a10dd68}} 
+\index{rocr::os@{rocr::os}!CreateMutex@{CreateMutex}}
+\index{CreateMutex@{CreateMutex}!rocr::os@{rocr::os}}
+\doxysubsubsection{\texorpdfstring{CreateMutex()}{CreateMutex()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{namespacerocr_1_1os_ad197657099b389acf698b1e2b8d3da5c}{Mutex}} rocr\+::os\+::\+Create\+Mutex (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+\+: Creates a mutex, will return NULL if failed. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em } & void. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\+: Mutex. 
+\end{DoxyReturn}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=328pt]{namespacerocr_1_1os_a3fcd709e4f5691f0a31104253a10dd68_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{namespacerocr_1_1os_a6b875772eeebc8e00e4d3e4ba79aa6d0}\label{namespacerocr_1_1os_a6b875772eeebc8e00e4d3e4ba79aa6d0}} 
+\index{rocr::os@{rocr::os}!CreateOsEvent@{CreateOsEvent}}
+\index{CreateOsEvent@{CreateOsEvent}!rocr::os@{rocr::os}}
+\doxysubsubsection{\texorpdfstring{CreateOsEvent()}{CreateOsEvent()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{namespacerocr_1_1os_a7ed5c2b1d47fced332b20d7a5057a7e3}{Event\+Handle}} rocr\+::os\+::\+Create\+Os\+Event (\begin{DoxyParamCaption}\item[{bool}]{auto\+\_\+reset,  }\item[{bool}]{init\+\_\+state }\end{DoxyParamCaption})}
+
+
+
+os event api, create an event 
+
+
+\begin{DoxyParams}{Parameters}
+{\em } & auto\+\_\+reset whether an event can reset the status automatically \\
+\hline
+{\em } & init\+\_\+state initial state of the event \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\+: event handle 
+\end{DoxyReturn}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=337pt]{namespacerocr_1_1os_a6b875772eeebc8e00e4d3e4ba79aa6d0_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{namespacerocr_1_1os_a26ec81334709c5134842b9bbb09efaa4}\label{namespacerocr_1_1os_a26ec81334709c5134842b9bbb09efaa4}} 
+\index{rocr::os@{rocr::os}!CreateSharedMutex@{CreateSharedMutex}}
+\index{CreateSharedMutex@{CreateSharedMutex}!rocr::os@{rocr::os}}
+\doxysubsubsection{\texorpdfstring{CreateSharedMutex()}{CreateSharedMutex()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{namespacerocr_1_1os_a316363adab9dba05a2210b480a037d17}{Shared\+Mutex}} rocr\+::os\+::\+Create\+Shared\+Mutex (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+\+: Creates a shared mutex, will return NULL if failed. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em } & void. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\+: Shared\+Mutex. 
+\end{DoxyReturn}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{namespacerocr_1_1os_a26ec81334709c5134842b9bbb09efaa4_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{namespacerocr_1_1os_a9e70397930487beb74aaaab5e8f0d9c0}\label{namespacerocr_1_1os_a9e70397930487beb74aaaab5e8f0d9c0}} 
+\index{rocr::os@{rocr::os}!CreateThread@{CreateThread}}
+\index{CreateThread@{CreateThread}!rocr::os@{rocr::os}}
+\doxysubsubsection{\texorpdfstring{CreateThread()}{CreateThread()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{namespacerocr_1_1os_a64ca1a1bc204bebd23f2753be844a31c}{Thread}} rocr\+::os\+::\+Create\+Thread (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{namespacerocr_1_1os_aa260955450b493fc1bcc9622b008c192}{Thread\+Entry}}}]{entry\+\_\+function,  }\item[{void $\ast$}]{entry\+\_\+argument,  }\item[{\mbox{\hyperlink{namespacerocr_a70e499739cfc08c3e2232c79b991e1c5}{uint}}}]{stack\+\_\+size = {\ttfamily 0} }\end{DoxyParamCaption})}
+
+
+
+\+: Creates a thread will return NULL if failed. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em } & entry\+\_\+function(\+Input), a pointer to the function which the thread starts from. \\
+\hline
+{\em } & entry\+\_\+argument(\+Input), a pointer to the argument of the thread function. \\
+\hline
+{\em } & stack\+\_\+size(\+Input), size of the thread\textquotesingle{}s stack, 0 by default. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\+: Thread, a handle to thread created. 
+\end{DoxyReturn}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{namespacerocr_1_1os_a9e70397930487beb74aaaab5e8f0d9c0_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{namespacerocr_1_1os_a7c06246fda2f879635b8b33a9b6e5d59}\label{namespacerocr_1_1os_a7c06246fda2f879635b8b33a9b6e5d59}} 
+\index{rocr::os@{rocr::os}!DestroyMutex@{DestroyMutex}}
+\index{DestroyMutex@{DestroyMutex}!rocr::os@{rocr::os}}
+\doxysubsubsection{\texorpdfstring{DestroyMutex()}{DestroyMutex()}}
+{\footnotesize\ttfamily void rocr\+::os\+::\+Destroy\+Mutex (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{namespacerocr_1_1os_ad197657099b389acf698b1e2b8d3da5c}{Mutex}}}]{lock }\end{DoxyParamCaption})}
+
+
+
+\+: Destroys the mutex. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em } & lock(\+Input), handle to the mutex. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\+: void. 
+\end{DoxyReturn}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=333pt]{namespacerocr_1_1os_a7c06246fda2f879635b8b33a9b6e5d59_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{namespacerocr_1_1os_a98da548beebb7a5a151ec051c9eeaf22}\label{namespacerocr_1_1os_a98da548beebb7a5a151ec051c9eeaf22}} 
+\index{rocr::os@{rocr::os}!DestroyOsEvent@{DestroyOsEvent}}
+\index{DestroyOsEvent@{DestroyOsEvent}!rocr::os@{rocr::os}}
+\doxysubsubsection{\texorpdfstring{DestroyOsEvent()}{DestroyOsEvent()}}
+{\footnotesize\ttfamily int rocr\+::os\+::\+Destroy\+Os\+Event (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{namespacerocr_1_1os_a7ed5c2b1d47fced332b20d7a5057a7e3}{Event\+Handle}}}]{event }\end{DoxyParamCaption})}
+
+
+
+os event api, destroy an event 
+
+
+\begin{DoxyParams}{Parameters}
+{\em } & event handle \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\+: whether destroy is correct 
+\end{DoxyReturn}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=342pt]{namespacerocr_1_1os_a98da548beebb7a5a151ec051c9eeaf22_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{namespacerocr_1_1os_abc2e49b164b2d952aec506e6ebe83f38}\label{namespacerocr_1_1os_abc2e49b164b2d952aec506e6ebe83f38}} 
+\index{rocr::os@{rocr::os}!DestroySharedMutex@{DestroySharedMutex}}
+\index{DestroySharedMutex@{DestroySharedMutex}!rocr::os@{rocr::os}}
+\doxysubsubsection{\texorpdfstring{DestroySharedMutex()}{DestroySharedMutex()}}
+{\footnotesize\ttfamily void rocr\+::os\+::\+Destroy\+Shared\+Mutex (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{namespacerocr_1_1os_a316363adab9dba05a2210b480a037d17}{Shared\+Mutex}}}]{lock }\end{DoxyParamCaption})}
+
+
+
+\+: Destroys the mutex. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em } & lock(\+Input), handle to the mutex. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\+: void. 
+\end{DoxyReturn}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{namespacerocr_1_1os_abc2e49b164b2d952aec506e6ebe83f38_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{namespacerocr_1_1os_aba31140144f56dff9344ffd12f1bc00c}\label{namespacerocr_1_1os_aba31140144f56dff9344ffd12f1bc00c}} 
+\index{rocr::os@{rocr::os}!GetEnvVar@{GetEnvVar}}
+\index{GetEnvVar@{GetEnvVar}!rocr::os@{rocr::os}}
+\doxysubsubsection{\texorpdfstring{GetEnvVar()}{GetEnvVar()}}
+{\footnotesize\ttfamily std\+::string rocr\+::os\+::\+Get\+Env\+Var (\begin{DoxyParamCaption}\item[{std\+::string}]{env\+\_\+var\+\_\+name }\end{DoxyParamCaption})}
+
+
+
+\+: Gets the value of environment value. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em } & env\+\_\+var\+\_\+name(\+Input), name of the environment value. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\+: std\+::string, value of the environment value, returned as string. 
+\end{DoxyReturn}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{namespacerocr_1_1os_aba31140144f56dff9344ffd12f1bc00c_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{namespacerocr_1_1os_acd1be6425ed4fce80cf1f6859c1ab854}\label{namespacerocr_1_1os_acd1be6425ed4fce80cf1f6859c1ab854}} 
+\index{rocr::os@{rocr::os}!GetExportAddress@{GetExportAddress}}
+\index{GetExportAddress@{GetExportAddress}!rocr::os@{rocr::os}}
+\doxysubsubsection{\texorpdfstring{GetExportAddress()}{GetExportAddress()}}
+{\footnotesize\ttfamily void$\ast$ rocr\+::os\+::\+Get\+Export\+Address (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{namespacerocr_1_1os_a3be69e560dfb1309df3f4b0d1037bc2d}{Lib\+Handle}}}]{lib,  }\item[{std\+::string}]{export\+\_\+name }\end{DoxyParamCaption})}
+
+
+
+\+: Gets the address of exported symbol. Return NULl if failed. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em } & lib(\+Input), library handle which exporting from. \\
+\hline
+{\em } & export\+\_\+name(\+Input), the name of the exported symbol. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\+: void$\ast$. 
+\end{DoxyReturn}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{namespacerocr_1_1os_acd1be6425ed4fce80cf1f6859c1ab854_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{namespacerocr_1_1os_ae536b7a31c86c43fe669e68e2eabdb70}\label{namespacerocr_1_1os_ae536b7a31c86c43fe669e68e2eabdb70}} 
+\index{rocr::os@{rocr::os}!GetLibraryName@{GetLibraryName}}
+\index{GetLibraryName@{GetLibraryName}!rocr::os@{rocr::os}}
+\doxysubsubsection{\texorpdfstring{GetLibraryName()}{GetLibraryName()}}
+{\footnotesize\ttfamily std\+::string rocr\+::os\+::\+Get\+Library\+Name (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{namespacerocr_1_1os_a3be69e560dfb1309df3f4b0d1037bc2d}{Lib\+Handle}}}]{lib }\end{DoxyParamCaption})}
+
+
+
+\+: Returns the library\textquotesingle{}s path name. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em } & lib(\+Input), libray handle \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\+: Path name of library 
+\end{DoxyReturn}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{namespacerocr_1_1os_ae536b7a31c86c43fe669e68e2eabdb70_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{namespacerocr_1_1os_a9ffc1cce2541e5b75ebc78eefcdc8cde}\label{namespacerocr_1_1os_a9ffc1cce2541e5b75ebc78eefcdc8cde}} 
+\index{rocr::os@{rocr::os}!GetLoadedToolsLib@{GetLoadedToolsLib}}
+\index{GetLoadedToolsLib@{GetLoadedToolsLib}!rocr::os@{rocr::os}}
+\doxysubsubsection{\texorpdfstring{GetLoadedToolsLib()}{GetLoadedToolsLib()}}
+{\footnotesize\ttfamily std\+::vector$<$\mbox{\hyperlink{namespacerocr_1_1os_a3be69e560dfb1309df3f4b0d1037bc2d}{Lib\+Handle}}$>$ rocr\+::os\+::\+Get\+Loaded\+Tools\+Lib (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+\+: Lists loaded tool libraries that contain symbol HSA\+\_\+\+AMD\+\_\+\+TOOL\+\_\+\+PRIORITY 
+
+\begin{DoxyReturn}{Returns}
+\+: List of library handles 
+\end{DoxyReturn}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{namespacerocr_1_1os_a9ffc1cce2541e5b75ebc78eefcdc8cde_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{namespacerocr_1_1os_a92c217a2e7e02dc7048736121666c8ca}\label{namespacerocr_1_1os_a92c217a2e7e02dc7048736121666c8ca}} 
+\index{rocr::os@{rocr::os}!GetUsablePhysicalHostMemorySize@{GetUsablePhysicalHostMemorySize}}
+\index{GetUsablePhysicalHostMemorySize@{GetUsablePhysicalHostMemorySize}!rocr::os@{rocr::os}}
+\doxysubsubsection{\texorpdfstring{GetUsablePhysicalHostMemorySize()}{GetUsablePhysicalHostMemorySize()}}
+{\footnotesize\ttfamily size\+\_\+t rocr\+::os\+::\+Get\+Usable\+Physical\+Host\+Memory\+Size (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+\+: Gets the max physical host system memory size. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em } & void. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\+: size\+\_\+t, size of the physical host system memory. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{namespacerocr_1_1os_a1243ef4844a64d3c7e43d32dde7edb1e}\label{namespacerocr_1_1os_a1243ef4844a64d3c7e43d32dde7edb1e}} 
+\index{rocr::os@{rocr::os}!GetUserModeVirtualMemoryBase@{GetUserModeVirtualMemoryBase}}
+\index{GetUserModeVirtualMemoryBase@{GetUserModeVirtualMemoryBase}!rocr::os@{rocr::os}}
+\doxysubsubsection{\texorpdfstring{GetUserModeVirtualMemoryBase()}{GetUserModeVirtualMemoryBase()}}
+{\footnotesize\ttfamily uintptr\+\_\+t rocr\+::os\+::\+Get\+User\+Mode\+Virtual\+Memory\+Base (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+\+: Gets the virtual memory base address. It is hardcoded to 0. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em } & void. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\+: uintptr\+\_\+t, always 0. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{namespacerocr_1_1os_a7a2e5d0a74cc2fdf6e62a8f309c147ef}\label{namespacerocr_1_1os_a7a2e5d0a74cc2fdf6e62a8f309c147ef}} 
+\index{rocr::os@{rocr::os}!GetUserModeVirtualMemorySize@{GetUserModeVirtualMemorySize}}
+\index{GetUserModeVirtualMemorySize@{GetUserModeVirtualMemorySize}!rocr::os@{rocr::os}}
+\doxysubsubsection{\texorpdfstring{GetUserModeVirtualMemorySize()}{GetUserModeVirtualMemorySize()}}
+{\footnotesize\ttfamily size\+\_\+t rocr\+::os\+::\+Get\+User\+Mode\+Virtual\+Memory\+Size (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+\+: Gets the max virtual memory size accessible to the application. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em } & void. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\+: size\+\_\+t, size of the accessible memory to the application. 
+\end{DoxyReturn}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{namespacerocr_1_1os_a7a2e5d0a74cc2fdf6e62a8f309c147ef_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{namespacerocr_1_1os_a10c38a63c7f82ec8f9f100adb91d6ae6}\label{namespacerocr_1_1os_a10c38a63c7f82ec8f9f100adb91d6ae6}} 
+\index{rocr::os@{rocr::os}!IsEnvVarSet@{IsEnvVarSet}}
+\index{IsEnvVarSet@{IsEnvVarSet}!rocr::os@{rocr::os}}
+\doxysubsubsection{\texorpdfstring{IsEnvVarSet()}{IsEnvVarSet()}}
+{\footnotesize\ttfamily bool rocr\+::os\+::\+Is\+Env\+Var\+Set (\begin{DoxyParamCaption}\item[{std\+::string}]{env\+\_\+var\+\_\+name }\end{DoxyParamCaption})}
+
+
+
+\+: Determines if environment key is set. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em } & env\+\_\+var\+\_\+name(\+Input), name of the environment value. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\+: bool, true for binding any value to environment key, including an empty string. False otherwise 
+\end{DoxyReturn}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{namespacerocr_1_1os_a10c38a63c7f82ec8f9f100adb91d6ae6_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{namespacerocr_1_1os_af21d3b5d0ff3318d7f05b83ae3419407}\label{namespacerocr_1_1os_af21d3b5d0ff3318d7f05b83ae3419407}} 
+\index{rocr::os@{rocr::os}!LoadLib@{LoadLib}}
+\index{LoadLib@{LoadLib}!rocr::os@{rocr::os}}
+\doxysubsubsection{\texorpdfstring{LoadLib()}{LoadLib()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{namespacerocr_1_1os_a3be69e560dfb1309df3f4b0d1037bc2d}{Lib\+Handle}} rocr\+::os\+::\+Load\+Lib (\begin{DoxyParamCaption}\item[{std\+::string}]{filename }\end{DoxyParamCaption})}
+
+
+
+\+: Loads dynamic library based on file name. Return value will be NULL if failed. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em } & filename(\+Input), file name of the library. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\+: Lib\+Handle. 
+\end{DoxyReturn}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{namespacerocr_1_1os_af21d3b5d0ff3318d7f05b83ae3419407_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{namespacerocr_1_1os_adabf54a3ad6222560091a68f22923205}\label{namespacerocr_1_1os_adabf54a3ad6222560091a68f22923205}} 
+\index{rocr::os@{rocr::os}!os\_index@{os\_index}}
+\index{os\_index@{os\_index}!rocr::os@{rocr::os}}
+\doxysubsubsection{\texorpdfstring{os\_index()}{os\_index()}}
+{\footnotesize\ttfamily static \+\_\+\+\_\+forceinline std\+::underlying\+\_\+type$<$\mbox{\hyperlink{namespacerocr_1_1os_abfe8759a72c92042841be171ec3b8951}{os\+\_\+t}}$>$\+::type rocr\+::os\+::os\+\_\+index (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{namespacerocr_1_1os_abfe8759a72c92042841be171ec3b8951}{os\+\_\+t}}}]{val }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+\mbox{\Hypertarget{namespacerocr_1_1os_a91e797f479378cdf873ddde2f5860527}\label{namespacerocr_1_1os_a91e797f479378cdf873ddde2f5860527}} 
+\index{rocr::os@{rocr::os}!ParseCpuID@{ParseCpuID}}
+\index{ParseCpuID@{ParseCpuID}!rocr::os@{rocr::os}}
+\doxysubsubsection{\texorpdfstring{ParseCpuID()}{ParseCpuID()}}
+{\footnotesize\ttfamily bool rocr\+::os\+::\+Parse\+Cpu\+ID (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{namespacerocr_1_1os_a0dcc877295d42b6eff9faffb87345210}{cpuid\+\_\+t}} $\ast$}]{cpuinfo }\end{DoxyParamCaption})}
+
+
+
+parse CPUID 
+
+
+\begin{DoxyParams}{Parameters}
+{\em } & cpuinfo struct to be filled \\
+\hline
+\end{DoxyParams}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{namespacerocr_1_1os_a91e797f479378cdf873ddde2f5860527_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{namespacerocr_1_1os_a12d80ec42a093530c3b5a1c91c8a922b}\label{namespacerocr_1_1os_a12d80ec42a093530c3b5a1c91c8a922b}} 
+\index{rocr::os@{rocr::os}!ReadAccurateClock@{ReadAccurateClock}}
+\index{ReadAccurateClock@{ReadAccurateClock}!rocr::os@{rocr::os}}
+\doxysubsubsection{\texorpdfstring{ReadAccurateClock()}{ReadAccurateClock()}}
+{\footnotesize\ttfamily uint64\+\_\+t rocr\+::os\+::\+Read\+Accurate\+Clock (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+reads a clock which is deemed to be accurate for elapsed time measurements, though not necessarilly fast to query 
+
+\begin{DoxyReturn}{Returns}
+clock counter value 
+\end{DoxyReturn}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{namespacerocr_1_1os_a12d80ec42a093530c3b5a1c91c8a922b_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{namespacerocr_1_1os_a410df3659fc87264f31c8d32913f350f}\label{namespacerocr_1_1os_a410df3659fc87264f31c8d32913f350f}} 
+\index{rocr::os@{rocr::os}!ReadSystemClock@{ReadSystemClock}}
+\index{ReadSystemClock@{ReadSystemClock}!rocr::os@{rocr::os}}
+\doxysubsubsection{\texorpdfstring{ReadSystemClock()}{ReadSystemClock()}}
+{\footnotesize\ttfamily uint64\+\_\+t rocr\+::os\+::\+Read\+System\+Clock (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+read the system clock which serves as the \mbox{\hyperlink{namespacerocr_1_1HSA}{HSA}} system clock counter in KFD. 
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{namespacerocr_1_1os_a410df3659fc87264f31c8d32913f350f_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{namespacerocr_1_1os_abd1d9ec737a917be2feaf8ded25e4302}\label{namespacerocr_1_1os_abd1d9ec737a917be2feaf8ded25e4302}} 
+\index{rocr::os@{rocr::os}!ReleaseMutex@{ReleaseMutex}}
+\index{ReleaseMutex@{ReleaseMutex}!rocr::os@{rocr::os}}
+\doxysubsubsection{\texorpdfstring{ReleaseMutex()}{ReleaseMutex()}}
+{\footnotesize\ttfamily void rocr\+::os\+::\+Release\+Mutex (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{namespacerocr_1_1os_ad197657099b389acf698b1e2b8d3da5c}{Mutex}}}]{lock }\end{DoxyParamCaption})}
+
+
+
+\+: Releases the mutex. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em } & lock(\+Input), handle to the mutex. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\+: void. 
+\end{DoxyReturn}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{namespacerocr_1_1os_abd1d9ec737a917be2feaf8ded25e4302_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{namespacerocr_1_1os_acdcb3f414927a23bfbc4c93af9ac9dbe}\label{namespacerocr_1_1os_acdcb3f414927a23bfbc4c93af9ac9dbe}} 
+\index{rocr::os@{rocr::os}!ReleaseSharedMutex@{ReleaseSharedMutex}}
+\index{ReleaseSharedMutex@{ReleaseSharedMutex}!rocr::os@{rocr::os}}
+\doxysubsubsection{\texorpdfstring{ReleaseSharedMutex()}{ReleaseSharedMutex()}}
+{\footnotesize\ttfamily void rocr\+::os\+::\+Release\+Shared\+Mutex (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{namespacerocr_1_1os_a316363adab9dba05a2210b480a037d17}{Shared\+Mutex}}}]{lock }\end{DoxyParamCaption})}
+
+
+
+\+: Releases the mutex from exclusive mode. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em } & lock(\+Input), handle to the mutex. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\+: void. 
+\end{DoxyReturn}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{namespacerocr_1_1os_acdcb3f414927a23bfbc4c93af9ac9dbe_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{namespacerocr_1_1os_a0fdbb9b3227e2440ea2ace8a40d99ef0}\label{namespacerocr_1_1os_a0fdbb9b3227e2440ea2ace8a40d99ef0}} 
+\index{rocr::os@{rocr::os}!ResetOsEvent@{ResetOsEvent}}
+\index{ResetOsEvent@{ResetOsEvent}!rocr::os@{rocr::os}}
+\doxysubsubsection{\texorpdfstring{ResetOsEvent()}{ResetOsEvent()}}
+{\footnotesize\ttfamily int rocr\+::os\+::\+Reset\+Os\+Event (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{namespacerocr_1_1os_a7ed5c2b1d47fced332b20d7a5057a7e3}{Event\+Handle}}}]{event }\end{DoxyParamCaption})}
+
+
+
+os event api, reset event state 
+
+
+\begin{DoxyParams}{Parameters}
+{\em } & event Event handle \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\+: Whether event reset is correct 
+\end{DoxyReturn}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=334pt]{namespacerocr_1_1os_a0fdbb9b3227e2440ea2ace8a40d99ef0_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{namespacerocr_1_1os_aef9302a43dbf70019152624ee228ab9f}\label{namespacerocr_1_1os_aef9302a43dbf70019152624ee228ab9f}} 
+\index{rocr::os@{rocr::os}!SetEnvVar@{SetEnvVar}}
+\index{SetEnvVar@{SetEnvVar}!rocr::os@{rocr::os}}
+\doxysubsubsection{\texorpdfstring{SetEnvVar()}{SetEnvVar()}}
+{\footnotesize\ttfamily void rocr\+::os\+::\+Set\+Env\+Var (\begin{DoxyParamCaption}\item[{std\+::string}]{env\+\_\+var\+\_\+name,  }\item[{std\+::string}]{env\+\_\+var\+\_\+value }\end{DoxyParamCaption})}
+
+
+
+\+: Sets the environment value. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em } & env\+\_\+var\+\_\+name(\+Input), name of the environment value. \\
+\hline
+{\em } & env\+\_\+var\+\_\+value(\+Input), value of the environment value.\+s \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\+: void. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{namespacerocr_1_1os_a2d50f3f81a29d892e907045b7d1c2479}\label{namespacerocr_1_1os_a2d50f3f81a29d892e907045b7d1c2479}} 
+\index{rocr::os@{rocr::os}!SetOsEvent@{SetOsEvent}}
+\index{SetOsEvent@{SetOsEvent}!rocr::os@{rocr::os}}
+\doxysubsubsection{\texorpdfstring{SetOsEvent()}{SetOsEvent()}}
+{\footnotesize\ttfamily int rocr\+::os\+::\+Set\+Os\+Event (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{namespacerocr_1_1os_a7ed5c2b1d47fced332b20d7a5057a7e3}{Event\+Handle}}}]{event }\end{DoxyParamCaption})}
+
+
+
+os event api, set event state 
+
+
+\begin{DoxyParams}{Parameters}
+{\em } & event Event handle \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\+: Whether event set is correct 
+\end{DoxyReturn}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=338pt]{namespacerocr_1_1os_a2d50f3f81a29d892e907045b7d1c2479_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{namespacerocr_1_1os_a3b503927de70efa5dc60d993dc953292}\label{namespacerocr_1_1os_a3b503927de70efa5dc60d993dc953292}} 
+\index{rocr::os@{rocr::os}!SharedAcquireSharedMutex@{SharedAcquireSharedMutex}}
+\index{SharedAcquireSharedMutex@{SharedAcquireSharedMutex}!rocr::os@{rocr::os}}
+\doxysubsubsection{\texorpdfstring{SharedAcquireSharedMutex()}{SharedAcquireSharedMutex()}}
+{\footnotesize\ttfamily bool rocr\+::os\+::\+Shared\+Acquire\+Shared\+Mutex (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{namespacerocr_1_1os_a316363adab9dba05a2210b480a037d17}{Shared\+Mutex}}}]{lock }\end{DoxyParamCaption})}
+
+
+
+\+: Aquires the mutex in shared mode, if the mutex in exclusive mode, it will wait until it is released. If the mutex is acquired successfully, it will return true. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em } & lock(\+Input), handle to the mutex. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\+: bool. 
+\end{DoxyReturn}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{namespacerocr_1_1os_a3b503927de70efa5dc60d993dc953292_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{namespacerocr_1_1os_a8d2fa1dcd621381eac9d325e6d313565}\label{namespacerocr_1_1os_a8d2fa1dcd621381eac9d325e6d313565}} 
+\index{rocr::os@{rocr::os}!SharedReleaseSharedMutex@{SharedReleaseSharedMutex}}
+\index{SharedReleaseSharedMutex@{SharedReleaseSharedMutex}!rocr::os@{rocr::os}}
+\doxysubsubsection{\texorpdfstring{SharedReleaseSharedMutex()}{SharedReleaseSharedMutex()}}
+{\footnotesize\ttfamily void rocr\+::os\+::\+Shared\+Release\+Shared\+Mutex (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{namespacerocr_1_1os_a316363adab9dba05a2210b480a037d17}{Shared\+Mutex}}}]{lock }\end{DoxyParamCaption})}
+
+
+
+\+: Releases the mutex from shared mode. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em } & lock(\+Input), handle to the mutex. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\+: void. 
+\end{DoxyReturn}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{namespacerocr_1_1os_a8d2fa1dcd621381eac9d325e6d313565_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{namespacerocr_1_1os_a6ec515091b14b3361e3fca487588f3a8}\label{namespacerocr_1_1os_a6ec515091b14b3361e3fca487588f3a8}} 
+\index{rocr::os@{rocr::os}!Sleep@{Sleep}}
+\index{Sleep@{Sleep}!rocr::os@{rocr::os}}
+\doxysubsubsection{\texorpdfstring{Sleep()}{Sleep()}}
+{\footnotesize\ttfamily void rocr\+::os\+::\+Sleep (\begin{DoxyParamCaption}\item[{int}]{delay\+In\+Ms }\end{DoxyParamCaption})}
+
+
+
+\+: Puts current thread to sleep. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em } & delay\+In\+Ms(\+Input), time in millisecond for sleeping. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\+: void. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{namespacerocr_1_1os_a50fb52a230a533976c5cbe458d47fef8}\label{namespacerocr_1_1os_a50fb52a230a533976c5cbe458d47fef8}} 
+\index{rocr::os@{rocr::os}!SystemClockFrequency@{SystemClockFrequency}}
+\index{SystemClockFrequency@{SystemClockFrequency}!rocr::os@{rocr::os}}
+\doxysubsubsection{\texorpdfstring{SystemClockFrequency()}{SystemClockFrequency()}}
+{\footnotesize\ttfamily uint64\+\_\+t rocr\+::os\+::\+System\+Clock\+Frequency (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+read the system clock frequency 
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{namespacerocr_1_1os_a50fb52a230a533976c5cbe458d47fef8_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{namespacerocr_1_1os_a3edfcbf2a57328d57cd12009de8a1c55}\label{namespacerocr_1_1os_a3edfcbf2a57328d57cd12009de8a1c55}} 
+\index{rocr::os@{rocr::os}!TryAcquireMutex@{TryAcquireMutex}}
+\index{TryAcquireMutex@{TryAcquireMutex}!rocr::os@{rocr::os}}
+\doxysubsubsection{\texorpdfstring{TryAcquireMutex()}{TryAcquireMutex()}}
+{\footnotesize\ttfamily bool rocr\+::os\+::\+Try\+Acquire\+Mutex (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{namespacerocr_1_1os_ad197657099b389acf698b1e2b8d3da5c}{Mutex}}}]{lock }\end{DoxyParamCaption})}
+
+
+
+\+: Tries to acquire the mutex once, if successed, return true. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em } & lock(\+Input), handle to the mutex. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\+: bool. 
+\end{DoxyReturn}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{namespacerocr_1_1os_a3edfcbf2a57328d57cd12009de8a1c55_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{namespacerocr_1_1os_aa3294bbb41805280ae3d6053a8955744}\label{namespacerocr_1_1os_aa3294bbb41805280ae3d6053a8955744}} 
+\index{rocr::os@{rocr::os}!TryAcquireSharedMutex@{TryAcquireSharedMutex}}
+\index{TryAcquireSharedMutex@{TryAcquireSharedMutex}!rocr::os@{rocr::os}}
+\doxysubsubsection{\texorpdfstring{TryAcquireSharedMutex()}{TryAcquireSharedMutex()}}
+{\footnotesize\ttfamily bool rocr\+::os\+::\+Try\+Acquire\+Shared\+Mutex (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{namespacerocr_1_1os_a316363adab9dba05a2210b480a037d17}{Shared\+Mutex}}}]{lock }\end{DoxyParamCaption})}
+
+
+
+\+: Tries to acquire the mutex in exclusive mode once, if successed, return true. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em } & lock(\+Input), handle to the shared mutex. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\+: bool. 
+\end{DoxyReturn}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{namespacerocr_1_1os_aa3294bbb41805280ae3d6053a8955744_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{namespacerocr_1_1os_a66215653000b1b774ffb47afea431777}\label{namespacerocr_1_1os_a66215653000b1b774ffb47afea431777}} 
+\index{rocr::os@{rocr::os}!TrySharedAcquireSharedMutex@{TrySharedAcquireSharedMutex}}
+\index{TrySharedAcquireSharedMutex@{TrySharedAcquireSharedMutex}!rocr::os@{rocr::os}}
+\doxysubsubsection{\texorpdfstring{TrySharedAcquireSharedMutex()}{TrySharedAcquireSharedMutex()}}
+{\footnotesize\ttfamily bool rocr\+::os\+::\+Try\+Shared\+Acquire\+Shared\+Mutex (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{namespacerocr_1_1os_a316363adab9dba05a2210b480a037d17}{Shared\+Mutex}}}]{lock }\end{DoxyParamCaption})}
+
+
+
+\+: Tries to acquire the mutex in shared mode once, if successed, return true. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em } & lock(\+Input), handle to the mutex. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\+: bool. 
+\end{DoxyReturn}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{namespacerocr_1_1os_a66215653000b1b774ffb47afea431777_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{namespacerocr_1_1os_a792b6b1effdea52cf0449b53c4ed7094}\label{namespacerocr_1_1os_a792b6b1effdea52cf0449b53c4ed7094}} 
+\index{rocr::os@{rocr::os}!uSleep@{uSleep}}
+\index{uSleep@{uSleep}!rocr::os@{rocr::os}}
+\doxysubsubsection{\texorpdfstring{uSleep()}{uSleep()}}
+{\footnotesize\ttfamily void rocr\+::os\+::u\+Sleep (\begin{DoxyParamCaption}\item[{int}]{delay\+In\+Us }\end{DoxyParamCaption})}
+
+
+
+\+: Puts current thread to sleep. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em } & delay\+In\+Ms(\+Input), time in millisecond for sleeping. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\+: void. 
+\end{DoxyReturn}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{namespacerocr_1_1os_a792b6b1effdea52cf0449b53c4ed7094_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{namespacerocr_1_1os_a70b535cf43093f7617c39a33433207f4}\label{namespacerocr_1_1os_a70b535cf43093f7617c39a33433207f4}} 
+\index{rocr::os@{rocr::os}!WaitForAllThreads@{WaitForAllThreads}}
+\index{WaitForAllThreads@{WaitForAllThreads}!rocr::os@{rocr::os}}
+\doxysubsubsection{\texorpdfstring{WaitForAllThreads()}{WaitForAllThreads()}}
+{\footnotesize\ttfamily bool rocr\+::os\+::\+Wait\+For\+All\+Threads (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{namespacerocr_1_1os_a64ca1a1bc204bebd23f2753be844a31c}{Thread}} $\ast$}]{threads,  }\item[{\mbox{\hyperlink{namespacerocr_a70e499739cfc08c3e2232c79b991e1c5}{uint}}}]{thread\+\_\+count }\end{DoxyParamCaption})}
+
+
+
+\+: Waits for multiple threads to finish, if successful, return true. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em ;} & threads(\+Input), a pointer to a list of thread handle. \\
+\hline
+{\em } & thread\+\_\+count(\+Input), number of threads to be waited on. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\+: bool. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{namespacerocr_1_1os_a8d561d22b26dbce87c35d049dafbc35b}\label{namespacerocr_1_1os_a8d561d22b26dbce87c35d049dafbc35b}} 
+\index{rocr::os@{rocr::os}!WaitForOsEvent@{WaitForOsEvent}}
+\index{WaitForOsEvent@{WaitForOsEvent}!rocr::os@{rocr::os}}
+\doxysubsubsection{\texorpdfstring{WaitForOsEvent()}{WaitForOsEvent()}}
+{\footnotesize\ttfamily int rocr\+::os\+::\+Wait\+For\+Os\+Event (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{namespacerocr_1_1os_a7ed5c2b1d47fced332b20d7a5057a7e3}{Event\+Handle}}}]{event,  }\item[{unsigned int}]{milli\+\_\+seconds }\end{DoxyParamCaption})}
+
+
+
+os event api, wait on event 
+
+
+\begin{DoxyParams}{Parameters}
+{\em } & event Event handle \\
+\hline
+{\em } & milli\+\_\+seconds wait time \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\+: Indicate success or timeout 
+\end{DoxyReturn}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=342pt]{namespacerocr_1_1os_a8d561d22b26dbce87c35d049dafbc35b_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{namespacerocr_1_1os_afefcc98dd9dc1afa05ec161b290edeb7}\label{namespacerocr_1_1os_afefcc98dd9dc1afa05ec161b290edeb7}} 
+\index{rocr::os@{rocr::os}!WaitForThread@{WaitForThread}}
+\index{WaitForThread@{WaitForThread}!rocr::os@{rocr::os}}
+\doxysubsubsection{\texorpdfstring{WaitForThread()}{WaitForThread()}}
+{\footnotesize\ttfamily bool rocr\+::os\+::\+Wait\+For\+Thread (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{namespacerocr_1_1os_a64ca1a1bc204bebd23f2753be844a31c}{Thread}}}]{thread }\end{DoxyParamCaption})}
+
+
+
+\+: Waits for specific thread to finish, if successful, return true. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em } & thread(\+Input), handle to waiting thread. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\+: bool. 
+\end{DoxyReturn}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{namespacerocr_1_1os_afefcc98dd9dc1afa05ec161b290edeb7_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{namespacerocr_1_1os_aa7b0dcc88b5bf6dc37395feb2496ae72}\label{namespacerocr_1_1os_aa7b0dcc88b5bf6dc37395feb2496ae72}} 
+\index{rocr::os@{rocr::os}!YieldThread@{YieldThread}}
+\index{YieldThread@{YieldThread}!rocr::os@{rocr::os}}
+\doxysubsubsection{\texorpdfstring{YieldThread()}{YieldThread()}}
+{\footnotesize\ttfamily void rocr\+::os\+::\+Yield\+Thread (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+\+: Yields current thread. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em } & void. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\+: void. 
+\end{DoxyReturn}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{namespacerocr_1_1os_aa7b0dcc88b5bf6dc37395feb2496ae72_icgraph}
+\end{center}
+\end{figure}

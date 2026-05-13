@@ -1,0 +1,145 @@
+\hypertarget{os_8h}{}\doxysection{src/core/util/os.h File Reference}
+\label{os_8h}\index{src/core/util/os.h@{src/core/util/os.h}}
+{\ttfamily \#include $<$string$>$}\newline
+{\ttfamily \#include $<$vector$>$}\newline
+{\ttfamily \#include \char`\"{}utils.\+h\char`\"{}}\newline
+Include dependency graph for os.\+h\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{os_8h__incl}
+\end{center}
+\end{figure}
+This graph shows which files directly or indirectly include this file\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{os_8h__dep__incl}
+\end{center}
+\end{figure}
+\doxysubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{structrocr_1_1os_1_1cpuid__s}{rocr\+::os\+::cpuid\+\_\+s}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Namespaces}
+\begin{DoxyCompactItemize}
+\item 
+ \mbox{\hyperlink{namespacerocr}{rocr}}
+\item 
+ \mbox{\hyperlink{namespacerocr_1_1os}{rocr\+::os}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+typedef void $\ast$ \mbox{\hyperlink{namespacerocr_1_1os_a3be69e560dfb1309df3f4b0d1037bc2d}{rocr\+::os\+::\+Lib\+Handle}}
+\item 
+typedef void $\ast$ \mbox{\hyperlink{namespacerocr_1_1os_ad197657099b389acf698b1e2b8d3da5c}{rocr\+::os\+::\+Mutex}}
+\item 
+typedef void $\ast$ \mbox{\hyperlink{namespacerocr_1_1os_a316363adab9dba05a2210b480a037d17}{rocr\+::os\+::\+Shared\+Mutex}}
+\item 
+typedef void $\ast$ \mbox{\hyperlink{namespacerocr_1_1os_a64ca1a1bc204bebd23f2753be844a31c}{rocr\+::os\+::\+Thread}}
+\item 
+typedef void $\ast$ \mbox{\hyperlink{namespacerocr_1_1os_a7ed5c2b1d47fced332b20d7a5057a7e3}{rocr\+::os\+::\+Event\+Handle}}
+\item 
+typedef void($\ast$ \mbox{\hyperlink{namespacerocr_1_1os_aa260955450b493fc1bcc9622b008c192}{rocr\+::os\+::\+Thread\+Entry}}) (void $\ast$)
+\item 
+typedef struct \mbox{\hyperlink{structrocr_1_1os_1_1cpuid__s}{rocr\+::os\+::cpuid\+\_\+s}} \mbox{\hyperlink{namespacerocr_1_1os_a0dcc877295d42b6eff9faffb87345210}{rocr\+::os\+::cpuid\+\_\+t}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Enumerations}
+\begin{DoxyCompactItemize}
+\item 
+enum class \mbox{\hyperlink{namespacerocr_1_1os_abfe8759a72c92042841be171ec3b8951}{rocr\+::os\+::os\+\_\+t}} \{ \mbox{\hyperlink{namespacerocr_1_1os_abfe8759a72c92042841be171ec3b8951a70bd7947623583c30cb7062e8cddc05b}{rocr\+::os\+::\+OS\+\_\+\+WIN}} = 0
+, \mbox{\hyperlink{namespacerocr_1_1os_abfe8759a72c92042841be171ec3b8951a6104e63e219587983ec4f1553a7fbbaa}{rocr\+::os\+::\+OS\+\_\+\+LINUX}}
+, \mbox{\hyperlink{namespacerocr_1_1os_abfe8759a72c92042841be171ec3b8951a4905ac9d6a22bdfc1ae096094ce6248d}{rocr\+::os\+::\+COUNT}}
+ \}
+\end{DoxyCompactItemize}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+static \+\_\+\+\_\+forceinline std\+::underlying\+\_\+type$<$ os\+\_\+t $>$\+::type \mbox{\hyperlink{namespacerocr_1_1os_adabf54a3ad6222560091a68f22923205}{rocr\+::os\+::os\+\_\+index}} (os\+\_\+t val)
+\item 
+Lib\+Handle \mbox{\hyperlink{namespacerocr_1_1os_af21d3b5d0ff3318d7f05b83ae3419407}{rocr\+::os\+::\+Load\+Lib}} (std\+::string filename)
+\begin{DoxyCompactList}\small\item\em \+: Loads dynamic library based on file name. Return value will be NULL if failed. \end{DoxyCompactList}\item 
+void $\ast$ \mbox{\hyperlink{namespacerocr_1_1os_acd1be6425ed4fce80cf1f6859c1ab854}{rocr\+::os\+::\+Get\+Export\+Address}} (Lib\+Handle lib, std\+::string export\+\_\+name)
+\begin{DoxyCompactList}\small\item\em \+: Gets the address of exported symbol. Return NULl if failed. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{namespacerocr_1_1os_a561730d035cac28a08115275345132b9}{rocr\+::os\+::\+Close\+Lib}} (Lib\+Handle lib)
+\begin{DoxyCompactList}\small\item\em \+: Unloads the dynamic library. \end{DoxyCompactList}\item 
+std\+::vector$<$ Lib\+Handle $>$ \mbox{\hyperlink{namespacerocr_1_1os_a9ffc1cce2541e5b75ebc78eefcdc8cde}{rocr\+::os\+::\+Get\+Loaded\+Tools\+Lib}} ()
+\begin{DoxyCompactList}\small\item\em \+: Lists loaded tool libraries that contain symbol HSA\+\_\+\+AMD\+\_\+\+TOOL\+\_\+\+PRIORITY \end{DoxyCompactList}\item 
+std\+::string \mbox{\hyperlink{namespacerocr_1_1os_ae536b7a31c86c43fe669e68e2eabdb70}{rocr\+::os\+::\+Get\+Library\+Name}} (Lib\+Handle lib)
+\begin{DoxyCompactList}\small\item\em \+: Returns the library\textquotesingle{}s path name. \end{DoxyCompactList}\item 
+Mutex \mbox{\hyperlink{namespacerocr_1_1os_a3fcd709e4f5691f0a31104253a10dd68}{rocr\+::os\+::\+Create\+Mutex}} ()
+\begin{DoxyCompactList}\small\item\em \+: Creates a mutex, will return NULL if failed. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{namespacerocr_1_1os_a3edfcbf2a57328d57cd12009de8a1c55}{rocr\+::os\+::\+Try\+Acquire\+Mutex}} (Mutex lock)
+\begin{DoxyCompactList}\small\item\em \+: Tries to acquire the mutex once, if successed, return true. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{namespacerocr_1_1os_a5b019c4726940ee6d54802b2e2e5d1c9}{rocr\+::os\+::\+Acquire\+Mutex}} (Mutex lock)
+\begin{DoxyCompactList}\small\item\em \+: Aquires the mutex, if the mutex is locked, it will wait until it is released. If the mutex is acquired successfully, it will return true. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{namespacerocr_1_1os_abd1d9ec737a917be2feaf8ded25e4302}{rocr\+::os\+::\+Release\+Mutex}} (Mutex lock)
+\begin{DoxyCompactList}\small\item\em \+: Releases the mutex. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{namespacerocr_1_1os_a7c06246fda2f879635b8b33a9b6e5d59}{rocr\+::os\+::\+Destroy\+Mutex}} (Mutex lock)
+\begin{DoxyCompactList}\small\item\em \+: Destroys the mutex. \end{DoxyCompactList}\item 
+Shared\+Mutex \mbox{\hyperlink{namespacerocr_1_1os_a26ec81334709c5134842b9bbb09efaa4}{rocr\+::os\+::\+Create\+Shared\+Mutex}} ()
+\begin{DoxyCompactList}\small\item\em \+: Creates a shared mutex, will return NULL if failed. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{namespacerocr_1_1os_aa3294bbb41805280ae3d6053a8955744}{rocr\+::os\+::\+Try\+Acquire\+Shared\+Mutex}} (Shared\+Mutex lock)
+\begin{DoxyCompactList}\small\item\em \+: Tries to acquire the mutex in exclusive mode once, if successed, return true. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{namespacerocr_1_1os_a57ff00c81f350db887cb162dd4410644}{rocr\+::os\+::\+Acquire\+Shared\+Mutex}} (Shared\+Mutex lock)
+\begin{DoxyCompactList}\small\item\em \+: Aquires the mutex in exclusive mode, if the mutex is locked, it will wait until it is released. If the mutex is acquired successfully, it will return true. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{namespacerocr_1_1os_acdcb3f414927a23bfbc4c93af9ac9dbe}{rocr\+::os\+::\+Release\+Shared\+Mutex}} (Shared\+Mutex lock)
+\begin{DoxyCompactList}\small\item\em \+: Releases the mutex from exclusive mode. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{namespacerocr_1_1os_a66215653000b1b774ffb47afea431777}{rocr\+::os\+::\+Try\+Shared\+Acquire\+Shared\+Mutex}} (Shared\+Mutex lock)
+\begin{DoxyCompactList}\small\item\em \+: Tries to acquire the mutex in shared mode once, if successed, return true. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{namespacerocr_1_1os_a3b503927de70efa5dc60d993dc953292}{rocr\+::os\+::\+Shared\+Acquire\+Shared\+Mutex}} (Shared\+Mutex lock)
+\begin{DoxyCompactList}\small\item\em \+: Aquires the mutex in shared mode, if the mutex in exclusive mode, it will wait until it is released. If the mutex is acquired successfully, it will return true. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{namespacerocr_1_1os_a8d2fa1dcd621381eac9d325e6d313565}{rocr\+::os\+::\+Shared\+Release\+Shared\+Mutex}} (Shared\+Mutex lock)
+\begin{DoxyCompactList}\small\item\em \+: Releases the mutex from shared mode. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{namespacerocr_1_1os_abc2e49b164b2d952aec506e6ebe83f38}{rocr\+::os\+::\+Destroy\+Shared\+Mutex}} (Shared\+Mutex lock)
+\begin{DoxyCompactList}\small\item\em \+: Destroys the mutex. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{namespacerocr_1_1os_a6ec515091b14b3361e3fca487588f3a8}{rocr\+::os\+::\+Sleep}} (int delay\+In\+Ms)
+\begin{DoxyCompactList}\small\item\em \+: Puts current thread to sleep. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{namespacerocr_1_1os_a792b6b1effdea52cf0449b53c4ed7094}{rocr\+::os\+::u\+Sleep}} (int delay\+In\+Us)
+\begin{DoxyCompactList}\small\item\em \+: Puts current thread to sleep. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{namespacerocr_1_1os_aa7b0dcc88b5bf6dc37395feb2496ae72}{rocr\+::os\+::\+Yield\+Thread}} ()
+\begin{DoxyCompactList}\small\item\em \+: Yields current thread. \end{DoxyCompactList}\item 
+Thread \mbox{\hyperlink{namespacerocr_1_1os_a9e70397930487beb74aaaab5e8f0d9c0}{rocr\+::os\+::\+Create\+Thread}} (Thread\+Entry entry\+\_\+function, void $\ast$entry\+\_\+argument, uint stack\+\_\+size=0)
+\begin{DoxyCompactList}\small\item\em \+: Creates a thread will return NULL if failed. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{namespacerocr_1_1os_a0c3ce1f9f382f023e6a6341714b25522}{rocr\+::os\+::\+Close\+Thread}} (Thread thread)
+\begin{DoxyCompactList}\small\item\em \+: Destroys the thread. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{namespacerocr_1_1os_afefcc98dd9dc1afa05ec161b290edeb7}{rocr\+::os\+::\+Wait\+For\+Thread}} (Thread thread)
+\begin{DoxyCompactList}\small\item\em \+: Waits for specific thread to finish, if successful, return true. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{namespacerocr_1_1os_a70b535cf43093f7617c39a33433207f4}{rocr\+::os\+::\+Wait\+For\+All\+Threads}} (Thread $\ast$threads, uint thread\+\_\+count)
+\begin{DoxyCompactList}\small\item\em \+: Waits for multiple threads to finish, if successful, return true. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{namespacerocr_1_1os_a10c38a63c7f82ec8f9f100adb91d6ae6}{rocr\+::os\+::\+Is\+Env\+Var\+Set}} (std\+::string env\+\_\+var\+\_\+name)
+\begin{DoxyCompactList}\small\item\em \+: Determines if environment key is set. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{namespacerocr_1_1os_aef9302a43dbf70019152624ee228ab9f}{rocr\+::os\+::\+Set\+Env\+Var}} (std\+::string env\+\_\+var\+\_\+name, std\+::string env\+\_\+var\+\_\+value)
+\begin{DoxyCompactList}\small\item\em \+: Sets the environment value. \end{DoxyCompactList}\item 
+std\+::string \mbox{\hyperlink{namespacerocr_1_1os_aba31140144f56dff9344ffd12f1bc00c}{rocr\+::os\+::\+Get\+Env\+Var}} (std\+::string env\+\_\+var\+\_\+name)
+\begin{DoxyCompactList}\small\item\em \+: Gets the value of environment value. \end{DoxyCompactList}\item 
+size\+\_\+t \mbox{\hyperlink{namespacerocr_1_1os_a7a2e5d0a74cc2fdf6e62a8f309c147ef}{rocr\+::os\+::\+Get\+User\+Mode\+Virtual\+Memory\+Size}} ()
+\begin{DoxyCompactList}\small\item\em \+: Gets the max virtual memory size accessible to the application. \end{DoxyCompactList}\item 
+size\+\_\+t \mbox{\hyperlink{namespacerocr_1_1os_a92c217a2e7e02dc7048736121666c8ca}{rocr\+::os\+::\+Get\+Usable\+Physical\+Host\+Memory\+Size}} ()
+\begin{DoxyCompactList}\small\item\em \+: Gets the max physical host system memory size. \end{DoxyCompactList}\item 
+uintptr\+\_\+t \mbox{\hyperlink{namespacerocr_1_1os_a1243ef4844a64d3c7e43d32dde7edb1e}{rocr\+::os\+::\+Get\+User\+Mode\+Virtual\+Memory\+Base}} ()
+\begin{DoxyCompactList}\small\item\em \+: Gets the virtual memory base address. It is hardcoded to 0. \end{DoxyCompactList}\item 
+Event\+Handle \mbox{\hyperlink{namespacerocr_1_1os_a6b875772eeebc8e00e4d3e4ba79aa6d0}{rocr\+::os\+::\+Create\+Os\+Event}} (bool auto\+\_\+reset, bool init\+\_\+state)
+\begin{DoxyCompactList}\small\item\em os event api, create an event \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{namespacerocr_1_1os_a98da548beebb7a5a151ec051c9eeaf22}{rocr\+::os\+::\+Destroy\+Os\+Event}} (Event\+Handle event)
+\begin{DoxyCompactList}\small\item\em os event api, destroy an event \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{namespacerocr_1_1os_a8d561d22b26dbce87c35d049dafbc35b}{rocr\+::os\+::\+Wait\+For\+Os\+Event}} (Event\+Handle event, unsigned int milli\+\_\+seconds)
+\begin{DoxyCompactList}\small\item\em os event api, wait on event \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{namespacerocr_1_1os_a2d50f3f81a29d892e907045b7d1c2479}{rocr\+::os\+::\+Set\+Os\+Event}} (Event\+Handle event)
+\begin{DoxyCompactList}\small\item\em os event api, set event state \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{namespacerocr_1_1os_a0fdbb9b3227e2440ea2ace8a40d99ef0}{rocr\+::os\+::\+Reset\+Os\+Event}} (Event\+Handle event)
+\begin{DoxyCompactList}\small\item\em os event api, reset event state \end{DoxyCompactList}\item 
+uint64\+\_\+t \mbox{\hyperlink{namespacerocr_1_1os_a12d80ec42a093530c3b5a1c91c8a922b}{rocr\+::os\+::\+Read\+Accurate\+Clock}} ()
+\begin{DoxyCompactList}\small\item\em reads a clock which is deemed to be accurate for elapsed time measurements, though not necessarilly fast to query \end{DoxyCompactList}\item 
+uint64\+\_\+t \mbox{\hyperlink{namespacerocr_1_1os_a41af7bd8d467ed193499123102007a99}{rocr\+::os\+::\+Accurate\+Clock\+Frequency}} ()
+\begin{DoxyCompactList}\small\item\em retrieves the frequency in Hz of the unit used in Read\+Accurate\+Clock. It does not necessarilly reflect the resolution of the clock, but is the value needed to convert a difference in the clock\textquotesingle{}s counter value to elapsed seconds. This frequency does not change at runtime. \end{DoxyCompactList}\item 
+uint64\+\_\+t \mbox{\hyperlink{namespacerocr_1_1os_a410df3659fc87264f31c8d32913f350f}{rocr\+::os\+::\+Read\+System\+Clock}} ()
+\begin{DoxyCompactList}\small\item\em read the system clock which serves as the \mbox{\hyperlink{namespacerocr_1_1HSA}{HSA}} system clock counter in KFD. \end{DoxyCompactList}\item 
+uint64\+\_\+t \mbox{\hyperlink{namespacerocr_1_1os_a50fb52a230a533976c5cbe458d47fef8}{rocr\+::os\+::\+System\+Clock\+Frequency}} ()
+\begin{DoxyCompactList}\small\item\em read the system clock frequency \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{namespacerocr_1_1os_a91e797f479378cdf873ddde2f5860527}{rocr\+::os\+::\+Parse\+Cpu\+ID}} (cpuid\+\_\+t $\ast$cpuinfo)
+\begin{DoxyCompactList}\small\item\em parse CPUID \end{DoxyCompactList}\end{DoxyCompactItemize}

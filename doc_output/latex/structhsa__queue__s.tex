@@ -1,0 +1,103 @@
+\hypertarget{structhsa__queue__s}{}\doxysection{hsa\+\_\+queue\+\_\+s Struct Reference}
+\label{structhsa__queue__s}\index{hsa\_queue\_s@{hsa\_queue\_s}}
+
+
+User mode queue.  
+
+
+
+
+{\ttfamily \#include $<$hsa.\+h$>$}
+
+
+
+Collaboration diagram for hsa\+\_\+queue\+\_\+s\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=185pt]{structhsa__queue__s__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{group__queue_ga4ca8f732dfceaf6b88dcfeec168d82ae}{hsa\+\_\+queue\+\_\+type32\+\_\+t}} \mbox{\hyperlink{structhsa__queue__s_a2e7574cf74e365de0e3ac17c96c1e731}{type}}
+\item 
+uint32\+\_\+t \mbox{\hyperlink{structhsa__queue__s_a5668c59bf161c12ab291780664dc12d8}{features}}
+\item 
+uint32\+\_\+t \mbox{\hyperlink{structhsa__queue__s_a4a9edb49a3a5986c3e6613f4878d2031}{reserved0}}
+\item 
+void $\ast$ \mbox{\hyperlink{structhsa__queue__s_a3feb2b8cbc34463d726d37fd53491e9c}{base\+\_\+address}}
+\item 
+\mbox{\hyperlink{group__signals_ga0003af605a660e7ef4f89aa555d3b3fc}{hsa\+\_\+signal\+\_\+t}} \mbox{\hyperlink{structhsa__queue__s_aa702495a4cb8d0d0e4160c0d94729b37}{doorbell\+\_\+signal}}
+\item 
+uint32\+\_\+t \mbox{\hyperlink{structhsa__queue__s_a0d37948000a552345051894fe4099372}{size}}
+\item 
+uint32\+\_\+t \mbox{\hyperlink{structhsa__queue__s_a4131692a1448d83728ce86489aeaea43}{reserved1}}
+\item 
+uint64\+\_\+t \mbox{\hyperlink{structhsa__queue__s_a3ef7f552a3cb28834f5788b6acbc0b00}{id}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+User mode queue. 
+
+The queue structure is read-\/only and allocated by the HSA runtime, but agents can directly modify the contents of the buffer pointed by {\itshape base\+\_\+address}, or use HSA runtime APIs to access the doorbell signal. 
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{structhsa__queue__s_a3feb2b8cbc34463d726d37fd53491e9c}\label{structhsa__queue__s_a3feb2b8cbc34463d726d37fd53491e9c}} 
+\index{hsa\_queue\_s@{hsa\_queue\_s}!base\_address@{base\_address}}
+\index{base\_address@{base\_address}!hsa\_queue\_s@{hsa\_queue\_s}}
+\doxysubsubsection{\texorpdfstring{base\_address}{base\_address}}
+{\footnotesize\ttfamily void$\ast$ hsa\+\_\+queue\+\_\+s\+::base\+\_\+address}
+
+\mbox{\Hypertarget{structhsa__queue__s_aa702495a4cb8d0d0e4160c0d94729b37}\label{structhsa__queue__s_aa702495a4cb8d0d0e4160c0d94729b37}} 
+\index{hsa\_queue\_s@{hsa\_queue\_s}!doorbell\_signal@{doorbell\_signal}}
+\index{doorbell\_signal@{doorbell\_signal}!hsa\_queue\_s@{hsa\_queue\_s}}
+\doxysubsubsection{\texorpdfstring{doorbell\_signal}{doorbell\_signal}}
+{\footnotesize\ttfamily \mbox{\hyperlink{group__signals_ga0003af605a660e7ef4f89aa555d3b3fc}{hsa\+\_\+signal\+\_\+t}} hsa\+\_\+queue\+\_\+s\+::doorbell\+\_\+signal}
+
+Signal object used by the application to indicate the ID of a packet that is ready to be processed. The HSA runtime manages the doorbell signal. If the application tries to replace or destroy this signal, the behavior is undefined.
+
+If {\itshape type} is \mbox{\hyperlink{group__queue_ggaf1939f228a41fa6ee50cffd4de03b561a45c3277e4e4fcb8a9788081549551f0a}{HSA\+\_\+\+QUEUE\+\_\+\+TYPE\+\_\+\+SINGLE}}, the doorbell signal value must be updated in a monotonically increasing fashion. If {\itshape type} is \mbox{\hyperlink{group__queue_ggaf1939f228a41fa6ee50cffd4de03b561abb25665f0708270e16e6c400c097c88b}{HSA\+\_\+\+QUEUE\+\_\+\+TYPE\+\_\+\+MULTI}}, the doorbell signal value can be updated with any value. \mbox{\Hypertarget{structhsa__queue__s_a5668c59bf161c12ab291780664dc12d8}\label{structhsa__queue__s_a5668c59bf161c12ab291780664dc12d8}} 
+\index{hsa\_queue\_s@{hsa\_queue\_s}!features@{features}}
+\index{features@{features}!hsa\_queue\_s@{hsa\_queue\_s}}
+\doxysubsubsection{\texorpdfstring{features}{features}}
+{\footnotesize\ttfamily uint32\+\_\+t hsa\+\_\+queue\+\_\+s\+::features}
+
+Queue features mask. This is a bit-\/field of \mbox{\hyperlink{group__queue_ga1145b01f6d9e2670179a22c92db39413}{hsa\+\_\+queue\+\_\+feature\+\_\+t}} values. Applications should ignore any unknown set bits. \mbox{\Hypertarget{structhsa__queue__s_a3ef7f552a3cb28834f5788b6acbc0b00}\label{structhsa__queue__s_a3ef7f552a3cb28834f5788b6acbc0b00}} 
+\index{hsa\_queue\_s@{hsa\_queue\_s}!id@{id}}
+\index{id@{id}!hsa\_queue\_s@{hsa\_queue\_s}}
+\doxysubsubsection{\texorpdfstring{id}{id}}
+{\footnotesize\ttfamily uint64\+\_\+t hsa\+\_\+queue\+\_\+s\+::id}
+
+Queue identifier, which is unique over the lifetime of the application. \mbox{\Hypertarget{structhsa__queue__s_a4a9edb49a3a5986c3e6613f4878d2031}\label{structhsa__queue__s_a4a9edb49a3a5986c3e6613f4878d2031}} 
+\index{hsa\_queue\_s@{hsa\_queue\_s}!reserved0@{reserved0}}
+\index{reserved0@{reserved0}!hsa\_queue\_s@{hsa\_queue\_s}}
+\doxysubsubsection{\texorpdfstring{reserved0}{reserved0}}
+{\footnotesize\ttfamily uint32\+\_\+t hsa\+\_\+queue\+\_\+s\+::reserved0}
+
+\mbox{\Hypertarget{structhsa__queue__s_a4131692a1448d83728ce86489aeaea43}\label{structhsa__queue__s_a4131692a1448d83728ce86489aeaea43}} 
+\index{hsa\_queue\_s@{hsa\_queue\_s}!reserved1@{reserved1}}
+\index{reserved1@{reserved1}!hsa\_queue\_s@{hsa\_queue\_s}}
+\doxysubsubsection{\texorpdfstring{reserved1}{reserved1}}
+{\footnotesize\ttfamily uint32\+\_\+t hsa\+\_\+queue\+\_\+s\+::reserved1}
+
+Reserved. Must be 0. \mbox{\Hypertarget{structhsa__queue__s_a0d37948000a552345051894fe4099372}\label{structhsa__queue__s_a0d37948000a552345051894fe4099372}} 
+\index{hsa\_queue\_s@{hsa\_queue\_s}!size@{size}}
+\index{size@{size}!hsa\_queue\_s@{hsa\_queue\_s}}
+\doxysubsubsection{\texorpdfstring{size}{size}}
+{\footnotesize\ttfamily uint32\+\_\+t hsa\+\_\+queue\+\_\+s\+::size}
+
+Maximum number of packets the queue can hold. Must be a power of 2. \mbox{\Hypertarget{structhsa__queue__s_a2e7574cf74e365de0e3ac17c96c1e731}\label{structhsa__queue__s_a2e7574cf74e365de0e3ac17c96c1e731}} 
+\index{hsa\_queue\_s@{hsa\_queue\_s}!type@{type}}
+\index{type@{type}!hsa\_queue\_s@{hsa\_queue\_s}}
+\doxysubsubsection{\texorpdfstring{type}{type}}
+{\footnotesize\ttfamily \mbox{\hyperlink{group__queue_ga4ca8f732dfceaf6b88dcfeec168d82ae}{hsa\+\_\+queue\+\_\+type32\+\_\+t}} hsa\+\_\+queue\+\_\+s\+::type}
+
+Queue type. 
+
+The documentation for this struct was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+src/inc/\mbox{\hyperlink{inc_2hsa_8h}{hsa.\+h}}\end{DoxyCompactItemize}

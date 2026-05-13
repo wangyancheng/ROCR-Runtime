@@ -1,0 +1,1463 @@
+\hypertarget{classrocr_1_1AMD_1_1AqlQueue}{}\doxysection{rocr\+::AMD\+::Aql\+Queue Class Reference}
+\label{classrocr_1_1AMD_1_1AqlQueue}\index{rocr::AMD::AqlQueue@{rocr::AMD::AqlQueue}}
+
+
+Encapsulates HW Aql Command Processor functionality. It provide the interface for things such as Doorbell register, read, write pointers and a buffer.  
+
+
+
+
+{\ttfamily \#include $<$amd\+\_\+aql\+\_\+queue.\+h$>$}
+
+
+
+Inheritance diagram for rocr\+::AMD\+::Aql\+Queue\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classrocr_1_1AMD_1_1AqlQueue__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for rocr\+::AMD\+::Aql\+Queue\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classrocr_1_1AMD_1_1AqlQueue__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classrocr_1_1AMD_1_1AqlQueue_a429900627c207062d8d66cbf15759704}{Aql\+Queue}} (\mbox{\hyperlink{classrocr_1_1AMD_1_1GpuAgent}{Gpu\+Agent}} $\ast$agent, size\+\_\+t req\+\_\+size\+\_\+pkts, HSAuint32 node\+\_\+id, \mbox{\hyperlink{namespacerocr_1_1AMD_aa7626ec0332dae56a091e85f8ffd0891}{Scratch\+Info}} \&scratch, \mbox{\hyperlink{namespacerocr_1_1core_aa60ad090079a2e4917c75124c7a8de54}{core\+::\+Hsa\+Event\+Callback}} callback, void $\ast$err\+\_\+data, bool is\+\_\+kv=false)
+\item 
+\mbox{\hyperlink{classrocr_1_1AMD_1_1AqlQueue_af559aa39bb7739a2781f3993b2c85bc7}{$\sim$\+Aql\+Queue}} ()
+\item 
+\mbox{\hyperlink{group__status_gad755322e7ff95456520e8abdbe90d225}{hsa\+\_\+status\+\_\+t}} \mbox{\hyperlink{classrocr_1_1AMD_1_1AqlQueue_a49769c16e4a1b9bde622eacf77e4bb11}{Inactivate}} () override
+\begin{DoxyCompactList}\small\item\em Queue interfaces. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{group__status_gad755322e7ff95456520e8abdbe90d225}{hsa\+\_\+status\+\_\+t}} \mbox{\hyperlink{classrocr_1_1AMD_1_1AqlQueue_a78284ae1f1cb89f7b311f7b1a93e043e}{Set\+Priority}} (HSA\+\_\+\+QUEUE\+\_\+\+PRIORITY priority) override
+\begin{DoxyCompactList}\small\item\em Change the scheduling priority of the queue. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classrocr_1_1AMD_1_1AqlQueue_a8189bafe9423234c67bf9d7448ab8fd4}{Destroy}} () override
+\begin{DoxyCompactList}\small\item\em Destroy ref counted queue. \end{DoxyCompactList}\item 
+uint64\+\_\+t \mbox{\hyperlink{classrocr_1_1AMD_1_1AqlQueue_aed75e9fcfa6844fd48f50d30e186e84b}{Load\+Read\+Index\+Acquire}} () override
+\begin{DoxyCompactList}\small\item\em Atomically reads the Read index of with Acquire semantics. \end{DoxyCompactList}\item 
+uint64\+\_\+t \mbox{\hyperlink{classrocr_1_1AMD_1_1AqlQueue_abfaaee73ecb56d9845c96dbb11c17914}{Load\+Read\+Index\+Relaxed}} () override
+\begin{DoxyCompactList}\small\item\em Atomically reads the Read index of with Relaxed semantics. \end{DoxyCompactList}\item 
+uint64\+\_\+t \mbox{\hyperlink{classrocr_1_1AMD_1_1AqlQueue_aa69854d094f76d3741d9cba7d5ab8f4a}{Load\+Write\+Index\+Acquire}} () override
+\begin{DoxyCompactList}\small\item\em Atomically reads the Write index of with Acquire semantics. \end{DoxyCompactList}\item 
+uint64\+\_\+t \mbox{\hyperlink{classrocr_1_1AMD_1_1AqlQueue_ac9fcdbf07984c514502d6acfd29663f3}{Load\+Write\+Index\+Relaxed}} () override
+\begin{DoxyCompactList}\small\item\em Atomically reads the Write index of with Relaxed semantics. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classrocr_1_1AMD_1_1AqlQueue_af9ad399253a28f148c4d2afe2a431f6d}{Store\+Read\+Index\+Relaxed}} (uint64\+\_\+t value) override
+\begin{DoxyCompactList}\small\item\em This operation is illegal. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classrocr_1_1AMD_1_1AqlQueue_ae5580453c250733db1834d703b51c143}{Store\+Read\+Index\+Release}} (uint64\+\_\+t value) override
+\begin{DoxyCompactList}\small\item\em This operation is illegal. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classrocr_1_1AMD_1_1AqlQueue_afa970c1b3b792bcb37b9850c6d9472d5}{Store\+Write\+Index\+Relaxed}} (uint64\+\_\+t value) override
+\begin{DoxyCompactList}\small\item\em Atomically writes the Write index of with Relaxed semantics. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classrocr_1_1AMD_1_1AqlQueue_a7002c47e4ade0ec1e10ecacff92762f3}{Store\+Write\+Index\+Release}} (uint64\+\_\+t value) override
+\begin{DoxyCompactList}\small\item\em Atomically writes the Write index of with Release semantics. \end{DoxyCompactList}\item 
+uint64\+\_\+t \mbox{\hyperlink{classrocr_1_1AMD_1_1AqlQueue_a0a0313af4a1902bf508afc18a62f85a1}{Cas\+Write\+Index\+Acq\+Rel}} (uint64\+\_\+t expected, uint64\+\_\+t value) override
+\begin{DoxyCompactList}\small\item\em Compares and swaps Write index using Acquire and Release semantics. \end{DoxyCompactList}\item 
+uint64\+\_\+t \mbox{\hyperlink{classrocr_1_1AMD_1_1AqlQueue_a1c9d3d4ca1f93d53dd1a9e3473f4f0fb}{Cas\+Write\+Index\+Acquire}} (uint64\+\_\+t expected, uint64\+\_\+t value) override
+\begin{DoxyCompactList}\small\item\em Compares and swaps Write index using Acquire semantics. \end{DoxyCompactList}\item 
+uint64\+\_\+t \mbox{\hyperlink{classrocr_1_1AMD_1_1AqlQueue_add17e9b2a8bc4aac73f835d972a3aaae}{Cas\+Write\+Index\+Relaxed}} (uint64\+\_\+t expected, uint64\+\_\+t value) override
+\begin{DoxyCompactList}\small\item\em Compares and swaps Write index using Relaxed semantics. \end{DoxyCompactList}\item 
+uint64\+\_\+t \mbox{\hyperlink{classrocr_1_1AMD_1_1AqlQueue_abced31aece81a28228d3e420b35d3c0f}{Cas\+Write\+Index\+Release}} (uint64\+\_\+t expected, uint64\+\_\+t value) override
+\begin{DoxyCompactList}\small\item\em Compares and swaps Write index using Release semantics. \end{DoxyCompactList}\item 
+uint64\+\_\+t \mbox{\hyperlink{classrocr_1_1AMD_1_1AqlQueue_a620cb65fa599af8ef3f36fcc7e5c1ced}{Add\+Write\+Index\+Acq\+Rel}} (uint64\+\_\+t value) override
+\begin{DoxyCompactList}\small\item\em Updates the Write index using Acquire and Release semantics. \end{DoxyCompactList}\item 
+uint64\+\_\+t \mbox{\hyperlink{classrocr_1_1AMD_1_1AqlQueue_abd5c568c511ef16725a16a54a4b8e66b}{Add\+Write\+Index\+Acquire}} (uint64\+\_\+t value) override
+\begin{DoxyCompactList}\small\item\em Updates the Write index using Acquire semantics. \end{DoxyCompactList}\item 
+uint64\+\_\+t \mbox{\hyperlink{classrocr_1_1AMD_1_1AqlQueue_a04afa6a0aa7ed2222f059181d564f02c}{Add\+Write\+Index\+Relaxed}} (uint64\+\_\+t value) override
+\begin{DoxyCompactList}\small\item\em Updates the Write index using Relaxed semantics. \end{DoxyCompactList}\item 
+uint64\+\_\+t \mbox{\hyperlink{classrocr_1_1AMD_1_1AqlQueue_a95ffaaf9595094a24998bee6937925ea}{Add\+Write\+Index\+Release}} (uint64\+\_\+t value) override
+\begin{DoxyCompactList}\small\item\em Updates the Write index using Release semantics. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{group__status_gad755322e7ff95456520e8abdbe90d225}{hsa\+\_\+status\+\_\+t}} \mbox{\hyperlink{classrocr_1_1AMD_1_1AqlQueue_af3ae8f94055d4a90fa405d5c390494ec}{Set\+CUMasking}} (uint32\+\_\+t num\+\_\+cu\+\_\+mask\+\_\+count, const uint32\+\_\+t $\ast$cu\+\_\+mask) override
+\begin{DoxyCompactList}\small\item\em Set CU Masking. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{group__status_gad755322e7ff95456520e8abdbe90d225}{hsa\+\_\+status\+\_\+t}} \mbox{\hyperlink{classrocr_1_1AMD_1_1AqlQueue_a42716c0b3d1c66f7dcdc531f531d7b46}{Get\+CUMasking}} (uint32\+\_\+t num\+\_\+cu\+\_\+mask\+\_\+count, uint32\+\_\+t $\ast$cu\+\_\+mask) override
+\begin{DoxyCompactList}\small\item\em Get CU Masking. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classrocr_1_1AMD_1_1AqlQueue_a97fe87760f5c7ce92375d568791a5d78}{Execute\+PM4}} (uint32\+\_\+t $\ast$cmd\+\_\+data, size\+\_\+t cmd\+\_\+size\+\_\+b) override
+\item 
+void \mbox{\hyperlink{classrocr_1_1AMD_1_1AqlQueue_a20b9afa55938eabba30a5e606f5d8ce6}{Store\+Relaxed}} (\mbox{\hyperlink{group__signals_ga67ca2818879c9990e1b5f1b14ce7ed27}{hsa\+\_\+signal\+\_\+value\+\_\+t}} value) override
+\begin{DoxyCompactList}\small\item\em Update signal value using Relaxed semantics. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classrocr_1_1AMD_1_1AqlQueue_a05c960302573028c8c67692d518e6a29}{Store\+Release}} (\mbox{\hyperlink{group__signals_ga67ca2818879c9990e1b5f1b14ce7ed27}{hsa\+\_\+signal\+\_\+value\+\_\+t}} value) override
+\begin{DoxyCompactList}\small\item\em Update signal value using Release semantics. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{group__status_gad755322e7ff95456520e8abdbe90d225}{hsa\+\_\+status\+\_\+t}} \mbox{\hyperlink{classrocr_1_1AMD_1_1AqlQueue_acee04de8969b1aadb55b75d17a1184b6}{Enable\+GWS}} (int gws\+\_\+slot\+\_\+count)
+\begin{DoxyCompactList}\small\item\em Enable use of GWS from this queue. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static \+\_\+\+\_\+forceinline bool \mbox{\hyperlink{classrocr_1_1AMD_1_1AqlQueue_a6ccc588945b8b65242f0ade2b04d4520}{Is\+Type}} (\mbox{\hyperlink{classrocr_1_1core_1_1Signal}{core\+::\+Signal}} $\ast$\mbox{\hyperlink{classrocr_1_1core_1_1LocalSignal_a18914fb4f19bd8dd951b57235a81b0bf}{signal}})
+\item 
+static \+\_\+\+\_\+forceinline bool \mbox{\hyperlink{classrocr_1_1AMD_1_1AqlQueue_a57eb5d10faf3728927b737ee6b755141}{Is\+Type}} (\mbox{\hyperlink{classrocr_1_1core_1_1Queue}{core\+::\+Queue}} $\ast$\mbox{\hyperlink{classrocr_1_1core_1_1LocalQueue_ab74803630adc230051e757a1e3eaa617}{queue}})
+\end{DoxyCompactItemize}
+\doxysubsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+bool \mbox{\hyperlink{classrocr_1_1AMD_1_1AqlQueue_added3c3cc74e74fb695eb64cad41bc2e}{\+\_\+\+IsA}} (\mbox{\hyperlink{classrocr_1_1core_1_1Queue_a7852beb01a0e5ece387b10034f27478f}{Queue\+::rtti\+\_\+t}} \mbox{\hyperlink{classrocr_1_1core_1_1Checked_aaf728d54727b7e8cb7d2cf4438212a42}{id}}) const override
+\end{DoxyCompactItemize}
+\doxysubsection*{Private Types}
+\begin{DoxyCompactItemize}
+\item 
+enum \{ \mbox{\hyperlink{classrocr_1_1AMD_1_1AqlQueue_abbbb93c89e254d943d1f8ed56b49f0b6a38eb8cbe9492af257ebcff85e566c25c}{ERROR\+\_\+\+HANDLER\+\_\+\+DONE}} = 1
+, \mbox{\hyperlink{classrocr_1_1AMD_1_1AqlQueue_abbbb93c89e254d943d1f8ed56b49f0b6a53a80da053957a870e23b1997287e896}{ERROR\+\_\+\+HANDLER\+\_\+\+TERMINATE}} = 2
+, \mbox{\hyperlink{classrocr_1_1AMD_1_1AqlQueue_abbbb93c89e254d943d1f8ed56b49f0b6a82576b108573d43c6495b77611275b1f}{ERROR\+\_\+\+HANDLER\+\_\+\+SCRATCH\+\_\+\+RETRY}} = 4
+ \}
+\end{DoxyCompactItemize}
+\doxysubsection*{Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+uint32\+\_\+t \mbox{\hyperlink{classrocr_1_1AMD_1_1AqlQueue_a9bc9b898f76c984e7d805dde7bdc1d47}{Compute\+Ring\+Buffer\+Min\+Pkts}} ()
+\item 
+uint32\+\_\+t \mbox{\hyperlink{classrocr_1_1AMD_1_1AqlQueue_a077a2e97798561e9de43bebc2c738bad}{Compute\+Ring\+Buffer\+Max\+Pkts}} ()
+\item 
+void \mbox{\hyperlink{classrocr_1_1AMD_1_1AqlQueue_aaec169d9da3087a444ef67c5edac65c4}{Alloc\+Registered\+Ring\+Buffer}} (uint32\+\_\+t queue\+\_\+size\+\_\+pkts)
+\item 
+void \mbox{\hyperlink{classrocr_1_1AMD_1_1AqlQueue_a988c88753c2d948480ed99d90aa26452}{Free\+Registered\+Ring\+Buffer}} ()
+\item 
+void \mbox{\hyperlink{classrocr_1_1AMD_1_1AqlQueue_adaebe1838e4de10c707385891f61b6fa}{Close\+Ring\+Buffer\+FD}} (const char $\ast$ring\+\_\+buf\+\_\+shm\+\_\+path, int fd) const
+\begin{DoxyCompactList}\small\item\em Abstracts the file handle use for double mapping queues. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{classrocr_1_1AMD_1_1AqlQueue_a0512d5f82fd0e1dfb33272cf02f4dd05}{Create\+Ring\+Buffer\+FD}} (const char $\ast$ring\+\_\+buf\+\_\+shm\+\_\+path, uint32\+\_\+t ring\+\_\+buf\+\_\+phys\+\_\+size\+\_\+bytes) const
+\item 
+void \mbox{\hyperlink{classrocr_1_1AMD_1_1AqlQueue_a9a1abe1b30b8969d9a607936fc3ac628}{Init\+Scratch\+SRD}} ()
+\begin{DoxyCompactList}\small\item\em Define the Scratch Buffer Descriptor and related parameters that enable kernel access scratch memory. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classrocr_1_1AMD_1_1AqlQueue_a9b623ff5b2a56c647b207211e45d1691}{Fill\+Buf\+Rsrc\+Word0}} ()
+\item 
+void \mbox{\hyperlink{classrocr_1_1AMD_1_1AqlQueue_ad90b9be42941f43ca2ee596fc1fb886d}{Fill\+Buf\+Rsrc\+Word1}} ()
+\item 
+void \mbox{\hyperlink{classrocr_1_1AMD_1_1AqlQueue_a959f422572aaa294057caef1ba4ca1da}{Fill\+Buf\+Rsrc\+Word1\+\_\+\+Gfx11}} ()
+\item 
+void \mbox{\hyperlink{classrocr_1_1AMD_1_1AqlQueue_a1998821a0f9704e559befbd1dbcfb99b}{Fill\+Buf\+Rsrc\+Word2}} ()
+\item 
+void \mbox{\hyperlink{classrocr_1_1AMD_1_1AqlQueue_a3a3a018987b3985f9d80281fc2b7e36e}{Fill\+Buf\+Rsrc\+Word3}} ()
+\item 
+void \mbox{\hyperlink{classrocr_1_1AMD_1_1AqlQueue_a8214997bae4a52905fe6bc3e2621aab5}{Fill\+Buf\+Rsrc\+Word3\+\_\+\+Gfx10}} ()
+\item 
+void \mbox{\hyperlink{classrocr_1_1AMD_1_1AqlQueue_a2bed88dae4b23ca36d649447e1ac2a8d}{Fill\+Buf\+Rsrc\+Word3\+\_\+\+Gfx11}} ()
+\item 
+void \mbox{\hyperlink{classrocr_1_1AMD_1_1AqlQueue_a84181b68b31c26fe16bbfa961729b19f}{Fill\+Compute\+Tmp\+Ring\+Size}} ()
+\item 
+void \mbox{\hyperlink{classrocr_1_1AMD_1_1AqlQueue_a6190610ba5583a63ae0f365887f52b77}{Fill\+Compute\+Tmp\+Ring\+Size\+\_\+\+Gfx11}} ()
+\item 
+void \mbox{\hyperlink{classrocr_1_1AMD_1_1AqlQueue_af693469b92bcb056c4531a5a57add0fc}{Suspend}} ()
+\begin{DoxyCompactList}\small\item\em Halt the queue without destroying it or fencing memory. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classrocr_1_1AMD_1_1AqlQueue_af239aeb0e7d69042424c2215bf9e9ff4}{DISALLOW\+\_\+\+COPY\+\_\+\+AND\+\_\+\+ASSIGN}} (\mbox{\hyperlink{classrocr_1_1AMD_1_1AqlQueue}{Aql\+Queue}})
+\end{DoxyCompactItemize}
+\doxysubsection*{Static Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+{\footnotesize template$<$bool Handle\+Exceptions$>$ }\\static bool \mbox{\hyperlink{classrocr_1_1AMD_1_1AqlQueue_adee3393c66ad84cafd3838975250f272}{Dynamic\+Scratch\+Handler}} (\mbox{\hyperlink{group__signals_ga67ca2818879c9990e1b5f1b14ce7ed27}{hsa\+\_\+signal\+\_\+value\+\_\+t}} error\+\_\+code, void $\ast$arg)
+\begin{DoxyCompactList}\small\item\em Handler for hardware queue events. \end{DoxyCompactList}\item 
+static bool \mbox{\hyperlink{classrocr_1_1AMD_1_1AqlQueue_ab33a9947bd1257448e12b8193271d239}{Exception\+Handler}} (\mbox{\hyperlink{group__signals_ga67ca2818879c9990e1b5f1b14ce7ed27}{hsa\+\_\+signal\+\_\+value\+\_\+t}} error\+\_\+code, void $\ast$arg)
+\begin{DoxyCompactList}\small\item\em Handler for KFD exceptions. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+void $\ast$ \mbox{\hyperlink{classrocr_1_1AMD_1_1AqlQueue_ab65efd80c80964d8ce02e4a3ded92579}{ring\+\_\+buf\+\_\+}}
+\item 
+uint32\+\_\+t \mbox{\hyperlink{classrocr_1_1AMD_1_1AqlQueue_ad0cf649260119f4041765aad5133ab45}{ring\+\_\+buf\+\_\+alloc\+\_\+bytes\+\_\+}}
+\item 
+HSA\+\_\+\+QUEUEID \mbox{\hyperlink{classrocr_1_1AMD_1_1AqlQueue_ae88579c1bfdd350c118500fb60bfe35a}{queue\+\_\+id\+\_\+}}
+\item 
+std\+::atomic$<$ bool $>$ \mbox{\hyperlink{classrocr_1_1AMD_1_1AqlQueue_a08b28ec24cd07124e490aa805cf7f0b9}{active\+\_\+}}
+\item 
+int \mbox{\hyperlink{classrocr_1_1AMD_1_1AqlQueue_ae76135c7b92104af5d99373e3cd1bfbc}{doorbell\+\_\+type\+\_\+}}
+\item 
+\mbox{\hyperlink{classrocr_1_1AMD_1_1GpuAgent}{Gpu\+Agent}} $\ast$ \mbox{\hyperlink{classrocr_1_1AMD_1_1AqlQueue_a96f032f55299d3b3fface99eb5541e3b}{agent\+\_\+}}
+\item 
+uint32\+\_\+t \mbox{\hyperlink{classrocr_1_1AMD_1_1AqlQueue_a8e84c51fee8030e251bad613af81c5bd}{queue\+\_\+full\+\_\+workaround\+\_\+}}
+\item 
+\mbox{\hyperlink{namespacerocr_1_1AMD_aa7626ec0332dae56a091e85f8ffd0891}{Scratch\+Info}} \mbox{\hyperlink{classrocr_1_1AMD_1_1AqlQueue_aca9b232d7aefbb1a747cede47e535999}{queue\+\_\+scratch\+\_\+}}
+\item 
+\mbox{\hyperlink{classrocr_1_1AMD_1_1callback__t}{AMD\+::callback\+\_\+t}}$<$ \mbox{\hyperlink{namespacerocr_1_1core_aa60ad090079a2e4917c75124c7a8de54}{core\+::\+Hsa\+Event\+Callback}} $>$ \mbox{\hyperlink{classrocr_1_1AMD_1_1AqlQueue_a1e01c5bed6899de1e12e5f89949ca9f3}{errors\+\_\+callback\+\_\+}}
+\item 
+void $\ast$ \mbox{\hyperlink{classrocr_1_1AMD_1_1AqlQueue_a0deec18815af185739c1f7d9a69d5d45}{errors\+\_\+data\+\_\+}}
+\item 
+bool \mbox{\hyperlink{classrocr_1_1AMD_1_1AqlQueue_a86cb5038f93112c3d6fd877269421467}{is\+\_\+kv\+\_\+queue\+\_\+}}
+\item 
+void $\ast$ \mbox{\hyperlink{classrocr_1_1AMD_1_1AqlQueue_a3a273324c6769d322a7f958011c821b0}{pm4\+\_\+ib\+\_\+buf\+\_\+}}
+\item 
+uint32\+\_\+t \mbox{\hyperlink{classrocr_1_1AMD_1_1AqlQueue_a52d548c5c46530840754d4ead2e199e4}{pm4\+\_\+ib\+\_\+size\+\_\+b\+\_\+}}
+\item 
+\mbox{\hyperlink{classrocr_1_1KernelMutex}{Kernel\+Mutex}} \mbox{\hyperlink{classrocr_1_1AMD_1_1AqlQueue_afd511afca05fa30053fbe4f34d5e1514}{pm4\+\_\+ib\+\_\+mutex\+\_\+}}
+\item 
+std\+::atomic$<$ uint32\+\_\+t $>$ \mbox{\hyperlink{classrocr_1_1AMD_1_1AqlQueue_ab347da52f58724248fbbc0255814dbbb}{dynamic\+Scratch\+State}}
+\item 
+std\+::atomic$<$ uint32\+\_\+t $>$ \mbox{\hyperlink{classrocr_1_1AMD_1_1AqlQueue_ae7a19f0de050a1ea85f75fb6ee911626}{exception\+State}}
+\item 
+bool \mbox{\hyperlink{classrocr_1_1AMD_1_1AqlQueue_a3aca886de8d77f4ee7d0c33c39bab787}{suspended\+\_\+}}
+\item 
+HSA\+\_\+\+QUEUE\+\_\+\+PRIORITY \mbox{\hyperlink{classrocr_1_1AMD_1_1AqlQueue_acb4c73b2da1996b1a27272679a213316}{priority\+\_\+}}
+\item 
+\mbox{\hyperlink{classrocr_1_1core_1_1Signal}{Signal}} $\ast$ \mbox{\hyperlink{classrocr_1_1AMD_1_1AqlQueue_aed7b9902c165d8644f74ab2f542239ab}{exception\+\_\+signal\+\_\+}}
+\item 
+\mbox{\hyperlink{classrocr_1_1KernelMutex}{Kernel\+Mutex}} \mbox{\hyperlink{classrocr_1_1AMD_1_1AqlQueue_a4c4daeb650325bbb6f9120291b8e788e}{mask\+\_\+lock\+\_\+}}
+\item 
+std\+::vector$<$ uint32\+\_\+t $>$ \mbox{\hyperlink{classrocr_1_1AMD_1_1AqlQueue_a89251d1b283b9c7245efb6b6248576dc}{cu\+\_\+mask\+\_\+}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Static Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+static Hsa\+Event $\ast$ \mbox{\hyperlink{classrocr_1_1AMD_1_1AqlQueue_a9a5dc197fffbfb2cf2c5d8f5015e12bc}{queue\+\_\+event\+\_\+}} = nullptr
+\item 
+static std\+::atomic$<$ uint32\+\_\+t $>$ \mbox{\hyperlink{classrocr_1_1AMD_1_1AqlQueue_ad0d4efdd660aa007bde218fc1cb9663c}{queue\+\_\+count\+\_\+}}
+\item 
+static \mbox{\hyperlink{classrocr_1_1KernelMutex}{Kernel\+Mutex}} \mbox{\hyperlink{classrocr_1_1AMD_1_1AqlQueue_ac4ae52643e6a0e535a88d9764b0e7a7a}{queue\+\_\+lock\+\_\+}}
+\item 
+static int \mbox{\hyperlink{classrocr_1_1AMD_1_1AqlQueue_a24463bf2c10b41e7cac9dab4077c8503}{rtti\+\_\+id\+\_\+}} = 0
+\end{DoxyCompactItemize}
+\doxysubsection*{Additional Inherited Members}
+
+
+\doxysubsection{Detailed Description}
+Encapsulates HW Aql Command Processor functionality. It provide the interface for things such as Doorbell register, read, write pointers and a buffer. 
+
+\doxysubsection{Member Enumeration Documentation}
+\mbox{\Hypertarget{classrocr_1_1AMD_1_1AqlQueue_abbbb93c89e254d943d1f8ed56b49f0b6}\label{classrocr_1_1AMD_1_1AqlQueue_abbbb93c89e254d943d1f8ed56b49f0b6}} 
+\doxysubsubsection{\texorpdfstring{anonymous enum}{anonymous enum}}
+{\footnotesize\ttfamily anonymous enum\hspace{0.3cm}{\ttfamily [private]}}
+
+\begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{ERROR\_HANDLER\_DONE@{ERROR\_HANDLER\_DONE}!rocr::AMD::AqlQueue@{rocr::AMD::AqlQueue}}\index{rocr::AMD::AqlQueue@{rocr::AMD::AqlQueue}!ERROR\_HANDLER\_DONE@{ERROR\_HANDLER\_DONE}}}\mbox{\Hypertarget{classrocr_1_1AMD_1_1AqlQueue_abbbb93c89e254d943d1f8ed56b49f0b6a38eb8cbe9492af257ebcff85e566c25c}\label{classrocr_1_1AMD_1_1AqlQueue_abbbb93c89e254d943d1f8ed56b49f0b6a38eb8cbe9492af257ebcff85e566c25c}} 
+ERROR\+\_\+\+HANDLER\+\_\+\+DONE&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{ERROR\_HANDLER\_TERMINATE@{ERROR\_HANDLER\_TERMINATE}!rocr::AMD::AqlQueue@{rocr::AMD::AqlQueue}}\index{rocr::AMD::AqlQueue@{rocr::AMD::AqlQueue}!ERROR\_HANDLER\_TERMINATE@{ERROR\_HANDLER\_TERMINATE}}}\mbox{\Hypertarget{classrocr_1_1AMD_1_1AqlQueue_abbbb93c89e254d943d1f8ed56b49f0b6a53a80da053957a870e23b1997287e896}\label{classrocr_1_1AMD_1_1AqlQueue_abbbb93c89e254d943d1f8ed56b49f0b6a53a80da053957a870e23b1997287e896}} 
+ERROR\+\_\+\+HANDLER\+\_\+\+TERMINATE&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{ERROR\_HANDLER\_SCRATCH\_RETRY@{ERROR\_HANDLER\_SCRATCH\_RETRY}!rocr::AMD::AqlQueue@{rocr::AMD::AqlQueue}}\index{rocr::AMD::AqlQueue@{rocr::AMD::AqlQueue}!ERROR\_HANDLER\_SCRATCH\_RETRY@{ERROR\_HANDLER\_SCRATCH\_RETRY}}}\mbox{\Hypertarget{classrocr_1_1AMD_1_1AqlQueue_abbbb93c89e254d943d1f8ed56b49f0b6a82576b108573d43c6495b77611275b1f}\label{classrocr_1_1AMD_1_1AqlQueue_abbbb93c89e254d943d1f8ed56b49f0b6a82576b108573d43c6495b77611275b1f}} 
+ERROR\+\_\+\+HANDLER\+\_\+\+SCRATCH\+\_\+\+RETRY&\\
+\hline
+
+\end{DoxyEnumFields}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classrocr_1_1AMD_1_1AqlQueue_a429900627c207062d8d66cbf15759704}\label{classrocr_1_1AMD_1_1AqlQueue_a429900627c207062d8d66cbf15759704}} 
+\index{rocr::AMD::AqlQueue@{rocr::AMD::AqlQueue}!AqlQueue@{AqlQueue}}
+\index{AqlQueue@{AqlQueue}!rocr::AMD::AqlQueue@{rocr::AMD::AqlQueue}}
+\doxysubsubsection{\texorpdfstring{AqlQueue()}{AqlQueue()}}
+{\footnotesize\ttfamily rocr\+::\+AMD\+::\+Aql\+Queue\+::\+Aql\+Queue (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classrocr_1_1AMD_1_1GpuAgent}{Gpu\+Agent}} $\ast$}]{agent,  }\item[{size\+\_\+t}]{req\+\_\+size\+\_\+pkts,  }\item[{HSAuint32}]{node\+\_\+id,  }\item[{\mbox{\hyperlink{namespacerocr_1_1AMD_aa7626ec0332dae56a091e85f8ffd0891}{Scratch\+Info}} \&}]{scratch,  }\item[{\mbox{\hyperlink{namespacerocr_1_1core_aa60ad090079a2e4917c75124c7a8de54}{core\+::\+Hsa\+Event\+Callback}}}]{callback,  }\item[{void $\ast$}]{err\+\_\+data,  }\item[{bool}]{is\+\_\+kv = {\ttfamily false} }\end{DoxyParamCaption})}
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=550pt]{classrocr_1_1AMD_1_1AqlQueue_a429900627c207062d8d66cbf15759704_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classrocr_1_1AMD_1_1AqlQueue_af559aa39bb7739a2781f3993b2c85bc7}\label{classrocr_1_1AMD_1_1AqlQueue_af559aa39bb7739a2781f3993b2c85bc7}} 
+\index{rocr::AMD::AqlQueue@{rocr::AMD::AqlQueue}!````~AqlQueue@{$\sim$AqlQueue}}
+\index{````~AqlQueue@{$\sim$AqlQueue}!rocr::AMD::AqlQueue@{rocr::AMD::AqlQueue}}
+\doxysubsubsection{\texorpdfstring{$\sim$AqlQueue()}{~AqlQueue()}}
+{\footnotesize\ttfamily rocr\+::\+AMD\+::\+Aql\+Queue\+::$\sim$\+Aql\+Queue (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classrocr_1_1AMD_1_1AqlQueue_af559aa39bb7739a2781f3993b2c85bc7_cgraph}
+\end{center}
+\end{figure}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classrocr_1_1AMD_1_1AqlQueue_added3c3cc74e74fb695eb64cad41bc2e}\label{classrocr_1_1AMD_1_1AqlQueue_added3c3cc74e74fb695eb64cad41bc2e}} 
+\index{rocr::AMD::AqlQueue@{rocr::AMD::AqlQueue}!\_IsA@{\_IsA}}
+\index{\_IsA@{\_IsA}!rocr::AMD::AqlQueue@{rocr::AMD::AqlQueue}}
+\doxysubsubsection{\texorpdfstring{\_IsA()}{\_IsA()}}
+{\footnotesize\ttfamily bool rocr\+::\+AMD\+::\+Aql\+Queue\+::\+\_\+\+IsA (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classrocr_1_1core_1_1Queue_a7852beb01a0e5ece387b10034f27478f}{Queue\+::rtti\+\_\+t}}}]{id }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}, {\ttfamily [protected]}, {\ttfamily [virtual]}}
+
+
+
+Implements \mbox{\hyperlink{classrocr_1_1core_1_1Queue_ad1728f21b7d730cdc9548a2b0512589b}{rocr\+::core\+::\+Queue}}.
+
+\mbox{\Hypertarget{classrocr_1_1AMD_1_1AqlQueue_a620cb65fa599af8ef3f36fcc7e5c1ced}\label{classrocr_1_1AMD_1_1AqlQueue_a620cb65fa599af8ef3f36fcc7e5c1ced}} 
+\index{rocr::AMD::AqlQueue@{rocr::AMD::AqlQueue}!AddWriteIndexAcqRel@{AddWriteIndexAcqRel}}
+\index{AddWriteIndexAcqRel@{AddWriteIndexAcqRel}!rocr::AMD::AqlQueue@{rocr::AMD::AqlQueue}}
+\doxysubsubsection{\texorpdfstring{AddWriteIndexAcqRel()}{AddWriteIndexAcqRel()}}
+{\footnotesize\ttfamily uint64\+\_\+t rocr\+::\+AMD\+::\+Aql\+Queue\+::\+Add\+Write\+Index\+Acq\+Rel (\begin{DoxyParamCaption}\item[{uint64\+\_\+t}]{value }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Updates the Write index using Acquire and Release semantics. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em value} & Value of new write index\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+uint64\+\_\+t Value of write index before the update 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{classrocr_1_1core_1_1Queue_aacd0aaf29d36d57e1b65860f374ad363}{rocr\+::core\+::\+Queue}}.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classrocr_1_1AMD_1_1AqlQueue_a620cb65fa599af8ef3f36fcc7e5c1ced_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classrocr_1_1AMD_1_1AqlQueue_abd5c568c511ef16725a16a54a4b8e66b}\label{classrocr_1_1AMD_1_1AqlQueue_abd5c568c511ef16725a16a54a4b8e66b}} 
+\index{rocr::AMD::AqlQueue@{rocr::AMD::AqlQueue}!AddWriteIndexAcquire@{AddWriteIndexAcquire}}
+\index{AddWriteIndexAcquire@{AddWriteIndexAcquire}!rocr::AMD::AqlQueue@{rocr::AMD::AqlQueue}}
+\doxysubsubsection{\texorpdfstring{AddWriteIndexAcquire()}{AddWriteIndexAcquire()}}
+{\footnotesize\ttfamily uint64\+\_\+t rocr\+::\+AMD\+::\+Aql\+Queue\+::\+Add\+Write\+Index\+Acquire (\begin{DoxyParamCaption}\item[{uint64\+\_\+t}]{value }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Updates the Write index using Acquire semantics. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em value} & Value of new write index\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+uint64\+\_\+t Value of write index before the update 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{classrocr_1_1core_1_1Queue_aed931264bf545753d3f0a21ed8bf0216}{rocr\+::core\+::\+Queue}}.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classrocr_1_1AMD_1_1AqlQueue_abd5c568c511ef16725a16a54a4b8e66b_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classrocr_1_1AMD_1_1AqlQueue_a04afa6a0aa7ed2222f059181d564f02c}\label{classrocr_1_1AMD_1_1AqlQueue_a04afa6a0aa7ed2222f059181d564f02c}} 
+\index{rocr::AMD::AqlQueue@{rocr::AMD::AqlQueue}!AddWriteIndexRelaxed@{AddWriteIndexRelaxed}}
+\index{AddWriteIndexRelaxed@{AddWriteIndexRelaxed}!rocr::AMD::AqlQueue@{rocr::AMD::AqlQueue}}
+\doxysubsubsection{\texorpdfstring{AddWriteIndexRelaxed()}{AddWriteIndexRelaxed()}}
+{\footnotesize\ttfamily uint64\+\_\+t rocr\+::\+AMD\+::\+Aql\+Queue\+::\+Add\+Write\+Index\+Relaxed (\begin{DoxyParamCaption}\item[{uint64\+\_\+t}]{value }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Updates the Write index using Relaxed semantics. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em value} & Value of new write index\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+uint64\+\_\+t Value of write index before the update 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{classrocr_1_1core_1_1Queue_a1534ce8fad99019e5fd8f13c3cc8a957}{rocr\+::core\+::\+Queue}}.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classrocr_1_1AMD_1_1AqlQueue_a04afa6a0aa7ed2222f059181d564f02c_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classrocr_1_1AMD_1_1AqlQueue_a95ffaaf9595094a24998bee6937925ea}\label{classrocr_1_1AMD_1_1AqlQueue_a95ffaaf9595094a24998bee6937925ea}} 
+\index{rocr::AMD::AqlQueue@{rocr::AMD::AqlQueue}!AddWriteIndexRelease@{AddWriteIndexRelease}}
+\index{AddWriteIndexRelease@{AddWriteIndexRelease}!rocr::AMD::AqlQueue@{rocr::AMD::AqlQueue}}
+\doxysubsubsection{\texorpdfstring{AddWriteIndexRelease()}{AddWriteIndexRelease()}}
+{\footnotesize\ttfamily uint64\+\_\+t rocr\+::\+AMD\+::\+Aql\+Queue\+::\+Add\+Write\+Index\+Release (\begin{DoxyParamCaption}\item[{uint64\+\_\+t}]{value }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Updates the Write index using Release semantics. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em value} & Value of new write index\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+uint64\+\_\+t Value of write index before the update 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{classrocr_1_1core_1_1Queue_aa647ee872f30c009af51076f4597bdd1}{rocr\+::core\+::\+Queue}}.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classrocr_1_1AMD_1_1AqlQueue_a95ffaaf9595094a24998bee6937925ea_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classrocr_1_1AMD_1_1AqlQueue_aaec169d9da3087a444ef67c5edac65c4}\label{classrocr_1_1AMD_1_1AqlQueue_aaec169d9da3087a444ef67c5edac65c4}} 
+\index{rocr::AMD::AqlQueue@{rocr::AMD::AqlQueue}!AllocRegisteredRingBuffer@{AllocRegisteredRingBuffer}}
+\index{AllocRegisteredRingBuffer@{AllocRegisteredRingBuffer}!rocr::AMD::AqlQueue@{rocr::AMD::AqlQueue}}
+\doxysubsubsection{\texorpdfstring{AllocRegisteredRingBuffer()}{AllocRegisteredRingBuffer()}}
+{\footnotesize\ttfamily void rocr\+::\+AMD\+::\+Aql\+Queue\+::\+Alloc\+Registered\+Ring\+Buffer (\begin{DoxyParamCaption}\item[{uint32\+\_\+t}]{queue\+\_\+size\+\_\+pkts }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classrocr_1_1AMD_1_1AqlQueue_aaec169d9da3087a444ef67c5edac65c4_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classrocr_1_1AMD_1_1AqlQueue_aaec169d9da3087a444ef67c5edac65c4_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classrocr_1_1AMD_1_1AqlQueue_a0a0313af4a1902bf508afc18a62f85a1}\label{classrocr_1_1AMD_1_1AqlQueue_a0a0313af4a1902bf508afc18a62f85a1}} 
+\index{rocr::AMD::AqlQueue@{rocr::AMD::AqlQueue}!CasWriteIndexAcqRel@{CasWriteIndexAcqRel}}
+\index{CasWriteIndexAcqRel@{CasWriteIndexAcqRel}!rocr::AMD::AqlQueue@{rocr::AMD::AqlQueue}}
+\doxysubsubsection{\texorpdfstring{CasWriteIndexAcqRel()}{CasWriteIndexAcqRel()}}
+{\footnotesize\ttfamily uint64\+\_\+t rocr\+::\+AMD\+::\+Aql\+Queue\+::\+Cas\+Write\+Index\+Acq\+Rel (\begin{DoxyParamCaption}\item[{uint64\+\_\+t}]{expected,  }\item[{uint64\+\_\+t}]{value }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Compares and swaps Write index using Acquire and Release semantics. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em expected} & Current value of write index\\
+\hline
+{\em value} & Value of new write index\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+uint64\+\_\+t Value of write index before the update 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{classrocr_1_1core_1_1Queue_a2b3d73996a2aa224bab9bf605d6ddbbb}{rocr\+::core\+::\+Queue}}.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classrocr_1_1AMD_1_1AqlQueue_a0a0313af4a1902bf508afc18a62f85a1_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classrocr_1_1AMD_1_1AqlQueue_a1c9d3d4ca1f93d53dd1a9e3473f4f0fb}\label{classrocr_1_1AMD_1_1AqlQueue_a1c9d3d4ca1f93d53dd1a9e3473f4f0fb}} 
+\index{rocr::AMD::AqlQueue@{rocr::AMD::AqlQueue}!CasWriteIndexAcquire@{CasWriteIndexAcquire}}
+\index{CasWriteIndexAcquire@{CasWriteIndexAcquire}!rocr::AMD::AqlQueue@{rocr::AMD::AqlQueue}}
+\doxysubsubsection{\texorpdfstring{CasWriteIndexAcquire()}{CasWriteIndexAcquire()}}
+{\footnotesize\ttfamily uint64\+\_\+t rocr\+::\+AMD\+::\+Aql\+Queue\+::\+Cas\+Write\+Index\+Acquire (\begin{DoxyParamCaption}\item[{uint64\+\_\+t}]{expected,  }\item[{uint64\+\_\+t}]{value }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Compares and swaps Write index using Acquire semantics. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em expected} & Current value of write index\\
+\hline
+{\em value} & Value of new write index\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+uint64\+\_\+t Value of write index before the update 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{classrocr_1_1core_1_1Queue_af434e3b953e9644ac4497bed34d94105}{rocr\+::core\+::\+Queue}}.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classrocr_1_1AMD_1_1AqlQueue_a1c9d3d4ca1f93d53dd1a9e3473f4f0fb_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classrocr_1_1AMD_1_1AqlQueue_add17e9b2a8bc4aac73f835d972a3aaae}\label{classrocr_1_1AMD_1_1AqlQueue_add17e9b2a8bc4aac73f835d972a3aaae}} 
+\index{rocr::AMD::AqlQueue@{rocr::AMD::AqlQueue}!CasWriteIndexRelaxed@{CasWriteIndexRelaxed}}
+\index{CasWriteIndexRelaxed@{CasWriteIndexRelaxed}!rocr::AMD::AqlQueue@{rocr::AMD::AqlQueue}}
+\doxysubsubsection{\texorpdfstring{CasWriteIndexRelaxed()}{CasWriteIndexRelaxed()}}
+{\footnotesize\ttfamily uint64\+\_\+t rocr\+::\+AMD\+::\+Aql\+Queue\+::\+Cas\+Write\+Index\+Relaxed (\begin{DoxyParamCaption}\item[{uint64\+\_\+t}]{expected,  }\item[{uint64\+\_\+t}]{value }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Compares and swaps Write index using Relaxed semantics. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em expected} & Current value of write index\\
+\hline
+{\em value} & Value of new write index\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+uint64\+\_\+t Value of write index before the update 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{classrocr_1_1core_1_1Queue_a4598e8dbeffa919a8992cf873d1a7222}{rocr\+::core\+::\+Queue}}.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classrocr_1_1AMD_1_1AqlQueue_add17e9b2a8bc4aac73f835d972a3aaae_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classrocr_1_1AMD_1_1AqlQueue_abced31aece81a28228d3e420b35d3c0f}\label{classrocr_1_1AMD_1_1AqlQueue_abced31aece81a28228d3e420b35d3c0f}} 
+\index{rocr::AMD::AqlQueue@{rocr::AMD::AqlQueue}!CasWriteIndexRelease@{CasWriteIndexRelease}}
+\index{CasWriteIndexRelease@{CasWriteIndexRelease}!rocr::AMD::AqlQueue@{rocr::AMD::AqlQueue}}
+\doxysubsubsection{\texorpdfstring{CasWriteIndexRelease()}{CasWriteIndexRelease()}}
+{\footnotesize\ttfamily uint64\+\_\+t rocr\+::\+AMD\+::\+Aql\+Queue\+::\+Cas\+Write\+Index\+Release (\begin{DoxyParamCaption}\item[{uint64\+\_\+t}]{expected,  }\item[{uint64\+\_\+t}]{value }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Compares and swaps Write index using Release semantics. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em expected} & Current value of write index\\
+\hline
+{\em value} & Value of new write index\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+uint64\+\_\+t Value of write index before the update 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{classrocr_1_1core_1_1Queue_a9728aa41324ad5f05ef2174f67b1612c}{rocr\+::core\+::\+Queue}}.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classrocr_1_1AMD_1_1AqlQueue_abced31aece81a28228d3e420b35d3c0f_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classrocr_1_1AMD_1_1AqlQueue_adaebe1838e4de10c707385891f61b6fa}\label{classrocr_1_1AMD_1_1AqlQueue_adaebe1838e4de10c707385891f61b6fa}} 
+\index{rocr::AMD::AqlQueue@{rocr::AMD::AqlQueue}!CloseRingBufferFD@{CloseRingBufferFD}}
+\index{CloseRingBufferFD@{CloseRingBufferFD}!rocr::AMD::AqlQueue@{rocr::AMD::AqlQueue}}
+\doxysubsubsection{\texorpdfstring{CloseRingBufferFD()}{CloseRingBufferFD()}}
+{\footnotesize\ttfamily void rocr\+::\+AMD\+::\+Aql\+Queue\+::\+Close\+Ring\+Buffer\+FD (\begin{DoxyParamCaption}\item[{const char $\ast$}]{ring\+\_\+buf\+\_\+shm\+\_\+path,  }\item[{int}]{fd }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Abstracts the file handle use for double mapping queues. 
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classrocr_1_1AMD_1_1AqlQueue_adaebe1838e4de10c707385891f61b6fa_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classrocr_1_1AMD_1_1AqlQueue_a077a2e97798561e9de43bebc2c738bad}\label{classrocr_1_1AMD_1_1AqlQueue_a077a2e97798561e9de43bebc2c738bad}} 
+\index{rocr::AMD::AqlQueue@{rocr::AMD::AqlQueue}!ComputeRingBufferMaxPkts@{ComputeRingBufferMaxPkts}}
+\index{ComputeRingBufferMaxPkts@{ComputeRingBufferMaxPkts}!rocr::AMD::AqlQueue@{rocr::AMD::AqlQueue}}
+\doxysubsubsection{\texorpdfstring{ComputeRingBufferMaxPkts()}{ComputeRingBufferMaxPkts()}}
+{\footnotesize\ttfamily uint32\+\_\+t rocr\+::\+AMD\+::\+Aql\+Queue\+::\+Compute\+Ring\+Buffer\+Max\+Pkts (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classrocr_1_1AMD_1_1AqlQueue_a077a2e97798561e9de43bebc2c738bad_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classrocr_1_1AMD_1_1AqlQueue_a9bc9b898f76c984e7d805dde7bdc1d47}\label{classrocr_1_1AMD_1_1AqlQueue_a9bc9b898f76c984e7d805dde7bdc1d47}} 
+\index{rocr::AMD::AqlQueue@{rocr::AMD::AqlQueue}!ComputeRingBufferMinPkts@{ComputeRingBufferMinPkts}}
+\index{ComputeRingBufferMinPkts@{ComputeRingBufferMinPkts}!rocr::AMD::AqlQueue@{rocr::AMD::AqlQueue}}
+\doxysubsubsection{\texorpdfstring{ComputeRingBufferMinPkts()}{ComputeRingBufferMinPkts()}}
+{\footnotesize\ttfamily uint32\+\_\+t rocr\+::\+AMD\+::\+Aql\+Queue\+::\+Compute\+Ring\+Buffer\+Min\+Pkts (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=319pt]{classrocr_1_1AMD_1_1AqlQueue_a9bc9b898f76c984e7d805dde7bdc1d47_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classrocr_1_1AMD_1_1AqlQueue_a9bc9b898f76c984e7d805dde7bdc1d47_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classrocr_1_1AMD_1_1AqlQueue_a0512d5f82fd0e1dfb33272cf02f4dd05}\label{classrocr_1_1AMD_1_1AqlQueue_a0512d5f82fd0e1dfb33272cf02f4dd05}} 
+\index{rocr::AMD::AqlQueue@{rocr::AMD::AqlQueue}!CreateRingBufferFD@{CreateRingBufferFD}}
+\index{CreateRingBufferFD@{CreateRingBufferFD}!rocr::AMD::AqlQueue@{rocr::AMD::AqlQueue}}
+\doxysubsubsection{\texorpdfstring{CreateRingBufferFD()}{CreateRingBufferFD()}}
+{\footnotesize\ttfamily int rocr\+::\+AMD\+::\+Aql\+Queue\+::\+Create\+Ring\+Buffer\+FD (\begin{DoxyParamCaption}\item[{const char $\ast$}]{ring\+\_\+buf\+\_\+shm\+\_\+path,  }\item[{uint32\+\_\+t}]{ring\+\_\+buf\+\_\+phys\+\_\+size\+\_\+bytes }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [private]}}
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=338pt]{classrocr_1_1AMD_1_1AqlQueue_a0512d5f82fd0e1dfb33272cf02f4dd05_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classrocr_1_1AMD_1_1AqlQueue_a0512d5f82fd0e1dfb33272cf02f4dd05_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classrocr_1_1AMD_1_1AqlQueue_a8189bafe9423234c67bf9d7448ab8fd4}\label{classrocr_1_1AMD_1_1AqlQueue_a8189bafe9423234c67bf9d7448ab8fd4}} 
+\index{rocr::AMD::AqlQueue@{rocr::AMD::AqlQueue}!Destroy@{Destroy}}
+\index{Destroy@{Destroy}!rocr::AMD::AqlQueue@{rocr::AMD::AqlQueue}}
+\doxysubsubsection{\texorpdfstring{Destroy()}{Destroy()}}
+{\footnotesize\ttfamily void rocr\+::\+AMD\+::\+Aql\+Queue\+::\+Destroy (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Destroy ref counted queue. 
+
+
+
+Reimplemented from \mbox{\hyperlink{classrocr_1_1core_1_1Queue_a47ae7440fb29d0abc9ae181afe2b2be3}{rocr\+::core\+::\+Queue}}.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classrocr_1_1AMD_1_1AqlQueue_a8189bafe9423234c67bf9d7448ab8fd4_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classrocr_1_1AMD_1_1AqlQueue_af239aeb0e7d69042424c2215bf9e9ff4}\label{classrocr_1_1AMD_1_1AqlQueue_af239aeb0e7d69042424c2215bf9e9ff4}} 
+\index{rocr::AMD::AqlQueue@{rocr::AMD::AqlQueue}!DISALLOW\_COPY\_AND\_ASSIGN@{DISALLOW\_COPY\_AND\_ASSIGN}}
+\index{DISALLOW\_COPY\_AND\_ASSIGN@{DISALLOW\_COPY\_AND\_ASSIGN}!rocr::AMD::AqlQueue@{rocr::AMD::AqlQueue}}
+\doxysubsubsection{\texorpdfstring{DISALLOW\_COPY\_AND\_ASSIGN()}{DISALLOW\_COPY\_AND\_ASSIGN()}}
+{\footnotesize\ttfamily rocr\+::\+AMD\+::\+Aql\+Queue\+::\+DISALLOW\+\_\+\+COPY\+\_\+\+AND\+\_\+\+ASSIGN (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classrocr_1_1AMD_1_1AqlQueue}{Aql\+Queue}}}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classrocr_1_1AMD_1_1AqlQueue_adee3393c66ad84cafd3838975250f272}\label{classrocr_1_1AMD_1_1AqlQueue_adee3393c66ad84cafd3838975250f272}} 
+\index{rocr::AMD::AqlQueue@{rocr::AMD::AqlQueue}!DynamicScratchHandler@{DynamicScratchHandler}}
+\index{DynamicScratchHandler@{DynamicScratchHandler}!rocr::AMD::AqlQueue@{rocr::AMD::AqlQueue}}
+\doxysubsubsection{\texorpdfstring{DynamicScratchHandler()}{DynamicScratchHandler()}}
+{\footnotesize\ttfamily template$<$bool Handle\+Exceptions$>$ \\
+bool rocr\+::\+AMD\+::\+Aql\+Queue\+::\+Dynamic\+Scratch\+Handler (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{group__signals_ga67ca2818879c9990e1b5f1b14ce7ed27}{hsa\+\_\+signal\+\_\+value\+\_\+t}}}]{error\+\_\+code,  }\item[{void $\ast$}]{arg }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [private]}}
+
+
+
+Handler for hardware queue events. 
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classrocr_1_1AMD_1_1AqlQueue_adee3393c66ad84cafd3838975250f272_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classrocr_1_1AMD_1_1AqlQueue_acee04de8969b1aadb55b75d17a1184b6}\label{classrocr_1_1AMD_1_1AqlQueue_acee04de8969b1aadb55b75d17a1184b6}} 
+\index{rocr::AMD::AqlQueue@{rocr::AMD::AqlQueue}!EnableGWS@{EnableGWS}}
+\index{EnableGWS@{EnableGWS}!rocr::AMD::AqlQueue@{rocr::AMD::AqlQueue}}
+\doxysubsubsection{\texorpdfstring{EnableGWS()}{EnableGWS()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{group__status_gad755322e7ff95456520e8abdbe90d225}{hsa\+\_\+status\+\_\+t}} rocr\+::\+AMD\+::\+Aql\+Queue\+::\+Enable\+GWS (\begin{DoxyParamCaption}\item[{int}]{gws\+\_\+slot\+\_\+count }\end{DoxyParamCaption})}
+
+
+
+Enable use of GWS from this queue. 
+
+\mbox{\Hypertarget{classrocr_1_1AMD_1_1AqlQueue_ab33a9947bd1257448e12b8193271d239}\label{classrocr_1_1AMD_1_1AqlQueue_ab33a9947bd1257448e12b8193271d239}} 
+\index{rocr::AMD::AqlQueue@{rocr::AMD::AqlQueue}!ExceptionHandler@{ExceptionHandler}}
+\index{ExceptionHandler@{ExceptionHandler}!rocr::AMD::AqlQueue@{rocr::AMD::AqlQueue}}
+\doxysubsubsection{\texorpdfstring{ExceptionHandler()}{ExceptionHandler()}}
+{\footnotesize\ttfamily bool rocr\+::\+AMD\+::\+Aql\+Queue\+::\+Exception\+Handler (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{group__signals_ga67ca2818879c9990e1b5f1b14ce7ed27}{hsa\+\_\+signal\+\_\+value\+\_\+t}}}]{error\+\_\+code,  }\item[{void $\ast$}]{arg }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [private]}}
+
+
+
+Handler for KFD exceptions. 
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=342pt]{classrocr_1_1AMD_1_1AqlQueue_ab33a9947bd1257448e12b8193271d239_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=336pt]{classrocr_1_1AMD_1_1AqlQueue_ab33a9947bd1257448e12b8193271d239_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classrocr_1_1AMD_1_1AqlQueue_a97fe87760f5c7ce92375d568791a5d78}\label{classrocr_1_1AMD_1_1AqlQueue_a97fe87760f5c7ce92375d568791a5d78}} 
+\index{rocr::AMD::AqlQueue@{rocr::AMD::AqlQueue}!ExecutePM4@{ExecutePM4}}
+\index{ExecutePM4@{ExecutePM4}!rocr::AMD::AqlQueue@{rocr::AMD::AqlQueue}}
+\doxysubsubsection{\texorpdfstring{ExecutePM4()}{ExecutePM4()}}
+{\footnotesize\ttfamily void rocr\+::\+AMD\+::\+Aql\+Queue\+::\+Execute\+PM4 (\begin{DoxyParamCaption}\item[{uint32\+\_\+t $\ast$}]{cmd\+\_\+data,  }\item[{size\+\_\+t}]{cmd\+\_\+size\+\_\+b }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Implements \mbox{\hyperlink{classrocr_1_1core_1_1Queue_a4c19e15ee0af0d3163d598ba6a96daa9}{rocr\+::core\+::\+Queue}}.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classrocr_1_1AMD_1_1AqlQueue_a97fe87760f5c7ce92375d568791a5d78_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classrocr_1_1AMD_1_1AqlQueue_a9b623ff5b2a56c647b207211e45d1691}\label{classrocr_1_1AMD_1_1AqlQueue_a9b623ff5b2a56c647b207211e45d1691}} 
+\index{rocr::AMD::AqlQueue@{rocr::AMD::AqlQueue}!FillBufRsrcWord0@{FillBufRsrcWord0}}
+\index{FillBufRsrcWord0@{FillBufRsrcWord0}!rocr::AMD::AqlQueue@{rocr::AMD::AqlQueue}}
+\doxysubsubsection{\texorpdfstring{FillBufRsrcWord0()}{FillBufRsrcWord0()}}
+{\footnotesize\ttfamily void rocr\+::\+AMD\+::\+Aql\+Queue\+::\+Fill\+Buf\+Rsrc\+Word0 (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classrocr_1_1AMD_1_1AqlQueue_a9b623ff5b2a56c647b207211e45d1691_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classrocr_1_1AMD_1_1AqlQueue_ad90b9be42941f43ca2ee596fc1fb886d}\label{classrocr_1_1AMD_1_1AqlQueue_ad90b9be42941f43ca2ee596fc1fb886d}} 
+\index{rocr::AMD::AqlQueue@{rocr::AMD::AqlQueue}!FillBufRsrcWord1@{FillBufRsrcWord1}}
+\index{FillBufRsrcWord1@{FillBufRsrcWord1}!rocr::AMD::AqlQueue@{rocr::AMD::AqlQueue}}
+\doxysubsubsection{\texorpdfstring{FillBufRsrcWord1()}{FillBufRsrcWord1()}}
+{\footnotesize\ttfamily void rocr\+::\+AMD\+::\+Aql\+Queue\+::\+Fill\+Buf\+Rsrc\+Word1 (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classrocr_1_1AMD_1_1AqlQueue_ad90b9be42941f43ca2ee596fc1fb886d_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classrocr_1_1AMD_1_1AqlQueue_a959f422572aaa294057caef1ba4ca1da}\label{classrocr_1_1AMD_1_1AqlQueue_a959f422572aaa294057caef1ba4ca1da}} 
+\index{rocr::AMD::AqlQueue@{rocr::AMD::AqlQueue}!FillBufRsrcWord1\_Gfx11@{FillBufRsrcWord1\_Gfx11}}
+\index{FillBufRsrcWord1\_Gfx11@{FillBufRsrcWord1\_Gfx11}!rocr::AMD::AqlQueue@{rocr::AMD::AqlQueue}}
+\doxysubsubsection{\texorpdfstring{FillBufRsrcWord1\_Gfx11()}{FillBufRsrcWord1\_Gfx11()}}
+{\footnotesize\ttfamily void rocr\+::\+AMD\+::\+Aql\+Queue\+::\+Fill\+Buf\+Rsrc\+Word1\+\_\+\+Gfx11 (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classrocr_1_1AMD_1_1AqlQueue_a959f422572aaa294057caef1ba4ca1da_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classrocr_1_1AMD_1_1AqlQueue_a1998821a0f9704e559befbd1dbcfb99b}\label{classrocr_1_1AMD_1_1AqlQueue_a1998821a0f9704e559befbd1dbcfb99b}} 
+\index{rocr::AMD::AqlQueue@{rocr::AMD::AqlQueue}!FillBufRsrcWord2@{FillBufRsrcWord2}}
+\index{FillBufRsrcWord2@{FillBufRsrcWord2}!rocr::AMD::AqlQueue@{rocr::AMD::AqlQueue}}
+\doxysubsubsection{\texorpdfstring{FillBufRsrcWord2()}{FillBufRsrcWord2()}}
+{\footnotesize\ttfamily void rocr\+::\+AMD\+::\+Aql\+Queue\+::\+Fill\+Buf\+Rsrc\+Word2 (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classrocr_1_1AMD_1_1AqlQueue_a1998821a0f9704e559befbd1dbcfb99b_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classrocr_1_1AMD_1_1AqlQueue_a3a3a018987b3985f9d80281fc2b7e36e}\label{classrocr_1_1AMD_1_1AqlQueue_a3a3a018987b3985f9d80281fc2b7e36e}} 
+\index{rocr::AMD::AqlQueue@{rocr::AMD::AqlQueue}!FillBufRsrcWord3@{FillBufRsrcWord3}}
+\index{FillBufRsrcWord3@{FillBufRsrcWord3}!rocr::AMD::AqlQueue@{rocr::AMD::AqlQueue}}
+\doxysubsubsection{\texorpdfstring{FillBufRsrcWord3()}{FillBufRsrcWord3()}}
+{\footnotesize\ttfamily void rocr\+::\+AMD\+::\+Aql\+Queue\+::\+Fill\+Buf\+Rsrc\+Word3 (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=337pt]{classrocr_1_1AMD_1_1AqlQueue_a3a3a018987b3985f9d80281fc2b7e36e_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classrocr_1_1AMD_1_1AqlQueue_a3a3a018987b3985f9d80281fc2b7e36e_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classrocr_1_1AMD_1_1AqlQueue_a8214997bae4a52905fe6bc3e2621aab5}\label{classrocr_1_1AMD_1_1AqlQueue_a8214997bae4a52905fe6bc3e2621aab5}} 
+\index{rocr::AMD::AqlQueue@{rocr::AMD::AqlQueue}!FillBufRsrcWord3\_Gfx10@{FillBufRsrcWord3\_Gfx10}}
+\index{FillBufRsrcWord3\_Gfx10@{FillBufRsrcWord3\_Gfx10}!rocr::AMD::AqlQueue@{rocr::AMD::AqlQueue}}
+\doxysubsubsection{\texorpdfstring{FillBufRsrcWord3\_Gfx10()}{FillBufRsrcWord3\_Gfx10()}}
+{\footnotesize\ttfamily void rocr\+::\+AMD\+::\+Aql\+Queue\+::\+Fill\+Buf\+Rsrc\+Word3\+\_\+\+Gfx10 (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classrocr_1_1AMD_1_1AqlQueue_a8214997bae4a52905fe6bc3e2621aab5_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classrocr_1_1AMD_1_1AqlQueue_a2bed88dae4b23ca36d649447e1ac2a8d}\label{classrocr_1_1AMD_1_1AqlQueue_a2bed88dae4b23ca36d649447e1ac2a8d}} 
+\index{rocr::AMD::AqlQueue@{rocr::AMD::AqlQueue}!FillBufRsrcWord3\_Gfx11@{FillBufRsrcWord3\_Gfx11}}
+\index{FillBufRsrcWord3\_Gfx11@{FillBufRsrcWord3\_Gfx11}!rocr::AMD::AqlQueue@{rocr::AMD::AqlQueue}}
+\doxysubsubsection{\texorpdfstring{FillBufRsrcWord3\_Gfx11()}{FillBufRsrcWord3\_Gfx11()}}
+{\footnotesize\ttfamily void rocr\+::\+AMD\+::\+Aql\+Queue\+::\+Fill\+Buf\+Rsrc\+Word3\+\_\+\+Gfx11 (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classrocr_1_1AMD_1_1AqlQueue_a2bed88dae4b23ca36d649447e1ac2a8d_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classrocr_1_1AMD_1_1AqlQueue_a84181b68b31c26fe16bbfa961729b19f}\label{classrocr_1_1AMD_1_1AqlQueue_a84181b68b31c26fe16bbfa961729b19f}} 
+\index{rocr::AMD::AqlQueue@{rocr::AMD::AqlQueue}!FillComputeTmpRingSize@{FillComputeTmpRingSize}}
+\index{FillComputeTmpRingSize@{FillComputeTmpRingSize}!rocr::AMD::AqlQueue@{rocr::AMD::AqlQueue}}
+\doxysubsubsection{\texorpdfstring{FillComputeTmpRingSize()}{FillComputeTmpRingSize()}}
+{\footnotesize\ttfamily void rocr\+::\+AMD\+::\+Aql\+Queue\+::\+Fill\+Compute\+Tmp\+Ring\+Size (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classrocr_1_1AMD_1_1AqlQueue_a84181b68b31c26fe16bbfa961729b19f_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classrocr_1_1AMD_1_1AqlQueue_a84181b68b31c26fe16bbfa961729b19f_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classrocr_1_1AMD_1_1AqlQueue_a6190610ba5583a63ae0f365887f52b77}\label{classrocr_1_1AMD_1_1AqlQueue_a6190610ba5583a63ae0f365887f52b77}} 
+\index{rocr::AMD::AqlQueue@{rocr::AMD::AqlQueue}!FillComputeTmpRingSize\_Gfx11@{FillComputeTmpRingSize\_Gfx11}}
+\index{FillComputeTmpRingSize\_Gfx11@{FillComputeTmpRingSize\_Gfx11}!rocr::AMD::AqlQueue@{rocr::AMD::AqlQueue}}
+\doxysubsubsection{\texorpdfstring{FillComputeTmpRingSize\_Gfx11()}{FillComputeTmpRingSize\_Gfx11()}}
+{\footnotesize\ttfamily void rocr\+::\+AMD\+::\+Aql\+Queue\+::\+Fill\+Compute\+Tmp\+Ring\+Size\+\_\+\+Gfx11 (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classrocr_1_1AMD_1_1AqlQueue_a6190610ba5583a63ae0f365887f52b77_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classrocr_1_1AMD_1_1AqlQueue_a6190610ba5583a63ae0f365887f52b77_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classrocr_1_1AMD_1_1AqlQueue_a988c88753c2d948480ed99d90aa26452}\label{classrocr_1_1AMD_1_1AqlQueue_a988c88753c2d948480ed99d90aa26452}} 
+\index{rocr::AMD::AqlQueue@{rocr::AMD::AqlQueue}!FreeRegisteredRingBuffer@{FreeRegisteredRingBuffer}}
+\index{FreeRegisteredRingBuffer@{FreeRegisteredRingBuffer}!rocr::AMD::AqlQueue@{rocr::AMD::AqlQueue}}
+\doxysubsubsection{\texorpdfstring{FreeRegisteredRingBuffer()}{FreeRegisteredRingBuffer()}}
+{\footnotesize\ttfamily void rocr\+::\+AMD\+::\+Aql\+Queue\+::\+Free\+Registered\+Ring\+Buffer (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classrocr_1_1AMD_1_1AqlQueue_a988c88753c2d948480ed99d90aa26452_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classrocr_1_1AMD_1_1AqlQueue_a988c88753c2d948480ed99d90aa26452_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classrocr_1_1AMD_1_1AqlQueue_a42716c0b3d1c66f7dcdc531f531d7b46}\label{classrocr_1_1AMD_1_1AqlQueue_a42716c0b3d1c66f7dcdc531f531d7b46}} 
+\index{rocr::AMD::AqlQueue@{rocr::AMD::AqlQueue}!GetCUMasking@{GetCUMasking}}
+\index{GetCUMasking@{GetCUMasking}!rocr::AMD::AqlQueue@{rocr::AMD::AqlQueue}}
+\doxysubsubsection{\texorpdfstring{GetCUMasking()}{GetCUMasking()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{group__status_gad755322e7ff95456520e8abdbe90d225}{hsa\+\_\+status\+\_\+t}} rocr\+::\+AMD\+::\+Aql\+Queue\+::\+Get\+CUMasking (\begin{DoxyParamCaption}\item[{uint32\+\_\+t}]{num\+\_\+cu\+\_\+mask\+\_\+count,  }\item[{uint32\+\_\+t $\ast$}]{cu\+\_\+mask }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Get CU Masking. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em num\+\_\+cu\+\_\+mask\+\_\+count} & size of mask bit array\\
+\hline
+{\em cu\+\_\+mask} & pointer to cu mask\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+hsa\+\_\+status\+\_\+t 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{classrocr_1_1core_1_1Queue_ae3f768ad2473b6c09213d03ebaa1f9db}{rocr\+::core\+::\+Queue}}.
+
+\mbox{\Hypertarget{classrocr_1_1AMD_1_1AqlQueue_a49769c16e4a1b9bde622eacf77e4bb11}\label{classrocr_1_1AMD_1_1AqlQueue_a49769c16e4a1b9bde622eacf77e4bb11}} 
+\index{rocr::AMD::AqlQueue@{rocr::AMD::AqlQueue}!Inactivate@{Inactivate}}
+\index{Inactivate@{Inactivate}!rocr::AMD::AqlQueue@{rocr::AMD::AqlQueue}}
+\doxysubsubsection{\texorpdfstring{Inactivate()}{Inactivate()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{group__status_gad755322e7ff95456520e8abdbe90d225}{hsa\+\_\+status\+\_\+t}} rocr\+::\+AMD\+::\+Aql\+Queue\+::\+Inactivate (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Queue interfaces. 
+
+
+
+Implements \mbox{\hyperlink{classrocr_1_1core_1_1Queue_a6f69e8583658ba5b2352125d286f839a}{rocr\+::core\+::\+Queue}}.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=327pt]{classrocr_1_1AMD_1_1AqlQueue_a49769c16e4a1b9bde622eacf77e4bb11_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=336pt]{classrocr_1_1AMD_1_1AqlQueue_a49769c16e4a1b9bde622eacf77e4bb11_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classrocr_1_1AMD_1_1AqlQueue_a9a1abe1b30b8969d9a607936fc3ac628}\label{classrocr_1_1AMD_1_1AqlQueue_a9a1abe1b30b8969d9a607936fc3ac628}} 
+\index{rocr::AMD::AqlQueue@{rocr::AMD::AqlQueue}!InitScratchSRD@{InitScratchSRD}}
+\index{InitScratchSRD@{InitScratchSRD}!rocr::AMD::AqlQueue@{rocr::AMD::AqlQueue}}
+\doxysubsubsection{\texorpdfstring{InitScratchSRD()}{InitScratchSRD()}}
+{\footnotesize\ttfamily void rocr\+::\+AMD\+::\+Aql\+Queue\+::\+Init\+Scratch\+SRD (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Define the Scratch Buffer Descriptor and related parameters that enable kernel access scratch memory. 
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classrocr_1_1AMD_1_1AqlQueue_a9a1abe1b30b8969d9a607936fc3ac628_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=336pt]{classrocr_1_1AMD_1_1AqlQueue_a9a1abe1b30b8969d9a607936fc3ac628_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classrocr_1_1AMD_1_1AqlQueue_a57eb5d10faf3728927b737ee6b755141}\label{classrocr_1_1AMD_1_1AqlQueue_a57eb5d10faf3728927b737ee6b755141}} 
+\index{rocr::AMD::AqlQueue@{rocr::AMD::AqlQueue}!IsType@{IsType}}
+\index{IsType@{IsType}!rocr::AMD::AqlQueue@{rocr::AMD::AqlQueue}}
+\doxysubsubsection{\texorpdfstring{IsType()}{IsType()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily static \+\_\+\+\_\+forceinline bool rocr\+::\+AMD\+::\+Aql\+Queue\+::\+Is\+Type (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classrocr_1_1core_1_1Queue}{core\+::\+Queue}} $\ast$}]{queue }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=342pt]{classrocr_1_1AMD_1_1AqlQueue_a57eb5d10faf3728927b737ee6b755141_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classrocr_1_1AMD_1_1AqlQueue_a6ccc588945b8b65242f0ade2b04d4520}\label{classrocr_1_1AMD_1_1AqlQueue_a6ccc588945b8b65242f0ade2b04d4520}} 
+\index{rocr::AMD::AqlQueue@{rocr::AMD::AqlQueue}!IsType@{IsType}}
+\index{IsType@{IsType}!rocr::AMD::AqlQueue@{rocr::AMD::AqlQueue}}
+\doxysubsubsection{\texorpdfstring{IsType()}{IsType()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily static \+\_\+\+\_\+forceinline bool rocr\+::\+AMD\+::\+Aql\+Queue\+::\+Is\+Type (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classrocr_1_1core_1_1Signal}{core\+::\+Signal}} $\ast$}]{signal }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=340pt]{classrocr_1_1AMD_1_1AqlQueue_a6ccc588945b8b65242f0ade2b04d4520_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classrocr_1_1AMD_1_1AqlQueue_aed75e9fcfa6844fd48f50d30e186e84b}\label{classrocr_1_1AMD_1_1AqlQueue_aed75e9fcfa6844fd48f50d30e186e84b}} 
+\index{rocr::AMD::AqlQueue@{rocr::AMD::AqlQueue}!LoadReadIndexAcquire@{LoadReadIndexAcquire}}
+\index{LoadReadIndexAcquire@{LoadReadIndexAcquire}!rocr::AMD::AqlQueue@{rocr::AMD::AqlQueue}}
+\doxysubsubsection{\texorpdfstring{LoadReadIndexAcquire()}{LoadReadIndexAcquire()}}
+{\footnotesize\ttfamily uint64\+\_\+t rocr\+::\+AMD\+::\+Aql\+Queue\+::\+Load\+Read\+Index\+Acquire (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Atomically reads the Read index of with Acquire semantics. 
+
+\begin{DoxyReturn}{Returns}
+uint64\+\_\+t Value of read index 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{classrocr_1_1core_1_1Queue_a243f8e1d28563513ab08b461bc8599dd}{rocr\+::core\+::\+Queue}}.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classrocr_1_1AMD_1_1AqlQueue_aed75e9fcfa6844fd48f50d30e186e84b_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classrocr_1_1AMD_1_1AqlQueue_abfaaee73ecb56d9845c96dbb11c17914}\label{classrocr_1_1AMD_1_1AqlQueue_abfaaee73ecb56d9845c96dbb11c17914}} 
+\index{rocr::AMD::AqlQueue@{rocr::AMD::AqlQueue}!LoadReadIndexRelaxed@{LoadReadIndexRelaxed}}
+\index{LoadReadIndexRelaxed@{LoadReadIndexRelaxed}!rocr::AMD::AqlQueue@{rocr::AMD::AqlQueue}}
+\doxysubsubsection{\texorpdfstring{LoadReadIndexRelaxed()}{LoadReadIndexRelaxed()}}
+{\footnotesize\ttfamily uint64\+\_\+t rocr\+::\+AMD\+::\+Aql\+Queue\+::\+Load\+Read\+Index\+Relaxed (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Atomically reads the Read index of with Relaxed semantics. 
+
+\begin{DoxyReturn}{Returns}
+uint64\+\_\+t Value of read index 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{classrocr_1_1core_1_1Queue_a6af92136b6c400f5543e9cb2754f7895}{rocr\+::core\+::\+Queue}}.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classrocr_1_1AMD_1_1AqlQueue_abfaaee73ecb56d9845c96dbb11c17914_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classrocr_1_1AMD_1_1AqlQueue_aa69854d094f76d3741d9cba7d5ab8f4a}\label{classrocr_1_1AMD_1_1AqlQueue_aa69854d094f76d3741d9cba7d5ab8f4a}} 
+\index{rocr::AMD::AqlQueue@{rocr::AMD::AqlQueue}!LoadWriteIndexAcquire@{LoadWriteIndexAcquire}}
+\index{LoadWriteIndexAcquire@{LoadWriteIndexAcquire}!rocr::AMD::AqlQueue@{rocr::AMD::AqlQueue}}
+\doxysubsubsection{\texorpdfstring{LoadWriteIndexAcquire()}{LoadWriteIndexAcquire()}}
+{\footnotesize\ttfamily uint64\+\_\+t rocr\+::\+AMD\+::\+Aql\+Queue\+::\+Load\+Write\+Index\+Acquire (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Atomically reads the Write index of with Acquire semantics. 
+
+\begin{DoxyReturn}{Returns}
+uint64\+\_\+t Value of write index 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{classrocr_1_1core_1_1Queue_a0b273d8cb34c367ce46ffe313f026bdd}{rocr\+::core\+::\+Queue}}.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classrocr_1_1AMD_1_1AqlQueue_aa69854d094f76d3741d9cba7d5ab8f4a_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classrocr_1_1AMD_1_1AqlQueue_ac9fcdbf07984c514502d6acfd29663f3}\label{classrocr_1_1AMD_1_1AqlQueue_ac9fcdbf07984c514502d6acfd29663f3}} 
+\index{rocr::AMD::AqlQueue@{rocr::AMD::AqlQueue}!LoadWriteIndexRelaxed@{LoadWriteIndexRelaxed}}
+\index{LoadWriteIndexRelaxed@{LoadWriteIndexRelaxed}!rocr::AMD::AqlQueue@{rocr::AMD::AqlQueue}}
+\doxysubsubsection{\texorpdfstring{LoadWriteIndexRelaxed()}{LoadWriteIndexRelaxed()}}
+{\footnotesize\ttfamily uint64\+\_\+t rocr\+::\+AMD\+::\+Aql\+Queue\+::\+Load\+Write\+Index\+Relaxed (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Atomically reads the Write index of with Relaxed semantics. 
+
+\begin{DoxyReturn}{Returns}
+uint64\+\_\+t Value of write index 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{classrocr_1_1core_1_1Queue_a2927f38afcb3e93bd69139844613c952}{rocr\+::core\+::\+Queue}}.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classrocr_1_1AMD_1_1AqlQueue_ac9fcdbf07984c514502d6acfd29663f3_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classrocr_1_1AMD_1_1AqlQueue_af3ae8f94055d4a90fa405d5c390494ec}\label{classrocr_1_1AMD_1_1AqlQueue_af3ae8f94055d4a90fa405d5c390494ec}} 
+\index{rocr::AMD::AqlQueue@{rocr::AMD::AqlQueue}!SetCUMasking@{SetCUMasking}}
+\index{SetCUMasking@{SetCUMasking}!rocr::AMD::AqlQueue@{rocr::AMD::AqlQueue}}
+\doxysubsubsection{\texorpdfstring{SetCUMasking()}{SetCUMasking()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{group__status_gad755322e7ff95456520e8abdbe90d225}{hsa\+\_\+status\+\_\+t}} rocr\+::\+AMD\+::\+Aql\+Queue\+::\+Set\+CUMasking (\begin{DoxyParamCaption}\item[{uint32\+\_\+t}]{num\+\_\+cu\+\_\+mask\+\_\+count,  }\item[{const uint32\+\_\+t $\ast$}]{cu\+\_\+mask }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Set CU Masking. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em num\+\_\+cu\+\_\+mask\+\_\+count} & size of mask bit array\\
+\hline
+{\em cu\+\_\+mask} & pointer to cu mask\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+hsa\+\_\+status\+\_\+t 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{classrocr_1_1core_1_1Queue_af03e3a102b38b3ec9368d3c267c1cfcc}{rocr\+::core\+::\+Queue}}.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classrocr_1_1AMD_1_1AqlQueue_af3ae8f94055d4a90fa405d5c390494ec_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=336pt]{classrocr_1_1AMD_1_1AqlQueue_af3ae8f94055d4a90fa405d5c390494ec_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classrocr_1_1AMD_1_1AqlQueue_a78284ae1f1cb89f7b311f7b1a93e043e}\label{classrocr_1_1AMD_1_1AqlQueue_a78284ae1f1cb89f7b311f7b1a93e043e}} 
+\index{rocr::AMD::AqlQueue@{rocr::AMD::AqlQueue}!SetPriority@{SetPriority}}
+\index{SetPriority@{SetPriority}!rocr::AMD::AqlQueue@{rocr::AMD::AqlQueue}}
+\doxysubsubsection{\texorpdfstring{SetPriority()}{SetPriority()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{group__status_gad755322e7ff95456520e8abdbe90d225}{hsa\+\_\+status\+\_\+t}} rocr\+::\+AMD\+::\+Aql\+Queue\+::\+Set\+Priority (\begin{DoxyParamCaption}\item[{HSA\+\_\+\+QUEUE\+\_\+\+PRIORITY}]{priority }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Change the scheduling priority of the queue. 
+
+
+
+Implements \mbox{\hyperlink{classrocr_1_1core_1_1Queue_a04971316d1449cac40664e59e9538071}{rocr\+::core\+::\+Queue}}.
+
+\mbox{\Hypertarget{classrocr_1_1AMD_1_1AqlQueue_af9ad399253a28f148c4d2afe2a431f6d}\label{classrocr_1_1AMD_1_1AqlQueue_af9ad399253a28f148c4d2afe2a431f6d}} 
+\index{rocr::AMD::AqlQueue@{rocr::AMD::AqlQueue}!StoreReadIndexRelaxed@{StoreReadIndexRelaxed}}
+\index{StoreReadIndexRelaxed@{StoreReadIndexRelaxed}!rocr::AMD::AqlQueue@{rocr::AMD::AqlQueue}}
+\doxysubsubsection{\texorpdfstring{StoreReadIndexRelaxed()}{StoreReadIndexRelaxed()}}
+{\footnotesize\ttfamily void rocr\+::\+AMD\+::\+Aql\+Queue\+::\+Store\+Read\+Index\+Relaxed (\begin{DoxyParamCaption}\item[{uint64\+\_\+t}]{value }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+This operation is illegal. 
+
+
+
+Implements \mbox{\hyperlink{classrocr_1_1core_1_1Queue_ad51e5d70cd973cd340f3a35b2c485f1c}{rocr\+::core\+::\+Queue}}.
+
+\mbox{\Hypertarget{classrocr_1_1AMD_1_1AqlQueue_ae5580453c250733db1834d703b51c143}\label{classrocr_1_1AMD_1_1AqlQueue_ae5580453c250733db1834d703b51c143}} 
+\index{rocr::AMD::AqlQueue@{rocr::AMD::AqlQueue}!StoreReadIndexRelease@{StoreReadIndexRelease}}
+\index{StoreReadIndexRelease@{StoreReadIndexRelease}!rocr::AMD::AqlQueue@{rocr::AMD::AqlQueue}}
+\doxysubsubsection{\texorpdfstring{StoreReadIndexRelease()}{StoreReadIndexRelease()}}
+{\footnotesize\ttfamily void rocr\+::\+AMD\+::\+Aql\+Queue\+::\+Store\+Read\+Index\+Release (\begin{DoxyParamCaption}\item[{uint64\+\_\+t}]{value }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+This operation is illegal. 
+
+
+
+Implements \mbox{\hyperlink{classrocr_1_1core_1_1Queue_ae846f848ead70065b391f1122ebf71f3}{rocr\+::core\+::\+Queue}}.
+
+\mbox{\Hypertarget{classrocr_1_1AMD_1_1AqlQueue_a20b9afa55938eabba30a5e606f5d8ce6}\label{classrocr_1_1AMD_1_1AqlQueue_a20b9afa55938eabba30a5e606f5d8ce6}} 
+\index{rocr::AMD::AqlQueue@{rocr::AMD::AqlQueue}!StoreRelaxed@{StoreRelaxed}}
+\index{StoreRelaxed@{StoreRelaxed}!rocr::AMD::AqlQueue@{rocr::AMD::AqlQueue}}
+\doxysubsubsection{\texorpdfstring{StoreRelaxed()}{StoreRelaxed()}}
+{\footnotesize\ttfamily void rocr\+::\+AMD\+::\+Aql\+Queue\+::\+Store\+Relaxed (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{group__signals_ga67ca2818879c9990e1b5f1b14ce7ed27}{hsa\+\_\+signal\+\_\+value\+\_\+t}}}]{value }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Update signal value using Relaxed semantics. 
+
+
+
+Implements \mbox{\hyperlink{classrocr_1_1core_1_1Signal_a9c6fc8df6ed40dc6838099a9ea11a33b}{rocr\+::core\+::\+Signal}}.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classrocr_1_1AMD_1_1AqlQueue_a20b9afa55938eabba30a5e606f5d8ce6_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=336pt]{classrocr_1_1AMD_1_1AqlQueue_a20b9afa55938eabba30a5e606f5d8ce6_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classrocr_1_1AMD_1_1AqlQueue_a05c960302573028c8c67692d518e6a29}\label{classrocr_1_1AMD_1_1AqlQueue_a05c960302573028c8c67692d518e6a29}} 
+\index{rocr::AMD::AqlQueue@{rocr::AMD::AqlQueue}!StoreRelease@{StoreRelease}}
+\index{StoreRelease@{StoreRelease}!rocr::AMD::AqlQueue@{rocr::AMD::AqlQueue}}
+\doxysubsubsection{\texorpdfstring{StoreRelease()}{StoreRelease()}}
+{\footnotesize\ttfamily void rocr\+::\+AMD\+::\+Aql\+Queue\+::\+Store\+Release (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{group__signals_ga67ca2818879c9990e1b5f1b14ce7ed27}{hsa\+\_\+signal\+\_\+value\+\_\+t}}}]{value }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Update signal value using Release semantics. 
+
+
+
+Implements \mbox{\hyperlink{classrocr_1_1core_1_1Signal_a90026d695f31e3e9f79bdbf0ecfb78f7}{rocr\+::core\+::\+Signal}}.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classrocr_1_1AMD_1_1AqlQueue_a05c960302573028c8c67692d518e6a29_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classrocr_1_1AMD_1_1AqlQueue_afa970c1b3b792bcb37b9850c6d9472d5}\label{classrocr_1_1AMD_1_1AqlQueue_afa970c1b3b792bcb37b9850c6d9472d5}} 
+\index{rocr::AMD::AqlQueue@{rocr::AMD::AqlQueue}!StoreWriteIndexRelaxed@{StoreWriteIndexRelaxed}}
+\index{StoreWriteIndexRelaxed@{StoreWriteIndexRelaxed}!rocr::AMD::AqlQueue@{rocr::AMD::AqlQueue}}
+\doxysubsubsection{\texorpdfstring{StoreWriteIndexRelaxed()}{StoreWriteIndexRelaxed()}}
+{\footnotesize\ttfamily void rocr\+::\+AMD\+::\+Aql\+Queue\+::\+Store\+Write\+Index\+Relaxed (\begin{DoxyParamCaption}\item[{uint64\+\_\+t}]{value }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Atomically writes the Write index of with Relaxed semantics. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em value} & New value of write index to update with \\
+\hline
+\end{DoxyParams}
+
+
+Implements \mbox{\hyperlink{classrocr_1_1core_1_1Queue_a619b453587f3013b1dd817ca6a865ce6}{rocr\+::core\+::\+Queue}}.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classrocr_1_1AMD_1_1AqlQueue_afa970c1b3b792bcb37b9850c6d9472d5_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classrocr_1_1AMD_1_1AqlQueue_a7002c47e4ade0ec1e10ecacff92762f3}\label{classrocr_1_1AMD_1_1AqlQueue_a7002c47e4ade0ec1e10ecacff92762f3}} 
+\index{rocr::AMD::AqlQueue@{rocr::AMD::AqlQueue}!StoreWriteIndexRelease@{StoreWriteIndexRelease}}
+\index{StoreWriteIndexRelease@{StoreWriteIndexRelease}!rocr::AMD::AqlQueue@{rocr::AMD::AqlQueue}}
+\doxysubsubsection{\texorpdfstring{StoreWriteIndexRelease()}{StoreWriteIndexRelease()}}
+{\footnotesize\ttfamily void rocr\+::\+AMD\+::\+Aql\+Queue\+::\+Store\+Write\+Index\+Release (\begin{DoxyParamCaption}\item[{uint64\+\_\+t}]{value }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Atomically writes the Write index of with Release semantics. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em value} & New value of write index to update with \\
+\hline
+\end{DoxyParams}
+
+
+Implements \mbox{\hyperlink{classrocr_1_1core_1_1Queue_a5101fe558b3d4cfa54e4a8b49ae44b6c}{rocr\+::core\+::\+Queue}}.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classrocr_1_1AMD_1_1AqlQueue_a7002c47e4ade0ec1e10ecacff92762f3_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classrocr_1_1AMD_1_1AqlQueue_af693469b92bcb056c4531a5a57add0fc}\label{classrocr_1_1AMD_1_1AqlQueue_af693469b92bcb056c4531a5a57add0fc}} 
+\index{rocr::AMD::AqlQueue@{rocr::AMD::AqlQueue}!Suspend@{Suspend}}
+\index{Suspend@{Suspend}!rocr::AMD::AqlQueue@{rocr::AMD::AqlQueue}}
+\doxysubsubsection{\texorpdfstring{Suspend()}{Suspend()}}
+{\footnotesize\ttfamily void rocr\+::\+AMD\+::\+Aql\+Queue\+::\+Suspend (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Halt the queue without destroying it or fencing memory. 
+
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{classrocr_1_1AMD_1_1AqlQueue_a08b28ec24cd07124e490aa805cf7f0b9}\label{classrocr_1_1AMD_1_1AqlQueue_a08b28ec24cd07124e490aa805cf7f0b9}} 
+\index{rocr::AMD::AqlQueue@{rocr::AMD::AqlQueue}!active\_@{active\_}}
+\index{active\_@{active\_}!rocr::AMD::AqlQueue@{rocr::AMD::AqlQueue}}
+\doxysubsubsection{\texorpdfstring{active\_}{active\_}}
+{\footnotesize\ttfamily std\+::atomic$<$bool$>$ rocr\+::\+AMD\+::\+Aql\+Queue\+::active\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classrocr_1_1AMD_1_1AqlQueue_a96f032f55299d3b3fface99eb5541e3b}\label{classrocr_1_1AMD_1_1AqlQueue_a96f032f55299d3b3fface99eb5541e3b}} 
+\index{rocr::AMD::AqlQueue@{rocr::AMD::AqlQueue}!agent\_@{agent\_}}
+\index{agent\_@{agent\_}!rocr::AMD::AqlQueue@{rocr::AMD::AqlQueue}}
+\doxysubsubsection{\texorpdfstring{agent\_}{agent\_}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classrocr_1_1AMD_1_1GpuAgent}{Gpu\+Agent}}$\ast$ rocr\+::\+AMD\+::\+Aql\+Queue\+::agent\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classrocr_1_1AMD_1_1AqlQueue_a89251d1b283b9c7245efb6b6248576dc}\label{classrocr_1_1AMD_1_1AqlQueue_a89251d1b283b9c7245efb6b6248576dc}} 
+\index{rocr::AMD::AqlQueue@{rocr::AMD::AqlQueue}!cu\_mask\_@{cu\_mask\_}}
+\index{cu\_mask\_@{cu\_mask\_}!rocr::AMD::AqlQueue@{rocr::AMD::AqlQueue}}
+\doxysubsubsection{\texorpdfstring{cu\_mask\_}{cu\_mask\_}}
+{\footnotesize\ttfamily std\+::vector$<$uint32\+\_\+t$>$ rocr\+::\+AMD\+::\+Aql\+Queue\+::cu\+\_\+mask\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classrocr_1_1AMD_1_1AqlQueue_ae76135c7b92104af5d99373e3cd1bfbc}\label{classrocr_1_1AMD_1_1AqlQueue_ae76135c7b92104af5d99373e3cd1bfbc}} 
+\index{rocr::AMD::AqlQueue@{rocr::AMD::AqlQueue}!doorbell\_type\_@{doorbell\_type\_}}
+\index{doorbell\_type\_@{doorbell\_type\_}!rocr::AMD::AqlQueue@{rocr::AMD::AqlQueue}}
+\doxysubsubsection{\texorpdfstring{doorbell\_type\_}{doorbell\_type\_}}
+{\footnotesize\ttfamily int rocr\+::\+AMD\+::\+Aql\+Queue\+::doorbell\+\_\+type\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classrocr_1_1AMD_1_1AqlQueue_ab347da52f58724248fbbc0255814dbbb}\label{classrocr_1_1AMD_1_1AqlQueue_ab347da52f58724248fbbc0255814dbbb}} 
+\index{rocr::AMD::AqlQueue@{rocr::AMD::AqlQueue}!dynamicScratchState@{dynamicScratchState}}
+\index{dynamicScratchState@{dynamicScratchState}!rocr::AMD::AqlQueue@{rocr::AMD::AqlQueue}}
+\doxysubsubsection{\texorpdfstring{dynamicScratchState}{dynamicScratchState}}
+{\footnotesize\ttfamily std\+::atomic$<$uint32\+\_\+t$>$ rocr\+::\+AMD\+::\+Aql\+Queue\+::dynamic\+Scratch\+State\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classrocr_1_1AMD_1_1AqlQueue_a1e01c5bed6899de1e12e5f89949ca9f3}\label{classrocr_1_1AMD_1_1AqlQueue_a1e01c5bed6899de1e12e5f89949ca9f3}} 
+\index{rocr::AMD::AqlQueue@{rocr::AMD::AqlQueue}!errors\_callback\_@{errors\_callback\_}}
+\index{errors\_callback\_@{errors\_callback\_}!rocr::AMD::AqlQueue@{rocr::AMD::AqlQueue}}
+\doxysubsubsection{\texorpdfstring{errors\_callback\_}{errors\_callback\_}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classrocr_1_1AMD_1_1callback__t}{AMD\+::callback\+\_\+t}}$<$\mbox{\hyperlink{namespacerocr_1_1core_aa60ad090079a2e4917c75124c7a8de54}{core\+::\+Hsa\+Event\+Callback}}$>$ rocr\+::\+AMD\+::\+Aql\+Queue\+::errors\+\_\+callback\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classrocr_1_1AMD_1_1AqlQueue_a0deec18815af185739c1f7d9a69d5d45}\label{classrocr_1_1AMD_1_1AqlQueue_a0deec18815af185739c1f7d9a69d5d45}} 
+\index{rocr::AMD::AqlQueue@{rocr::AMD::AqlQueue}!errors\_data\_@{errors\_data\_}}
+\index{errors\_data\_@{errors\_data\_}!rocr::AMD::AqlQueue@{rocr::AMD::AqlQueue}}
+\doxysubsubsection{\texorpdfstring{errors\_data\_}{errors\_data\_}}
+{\footnotesize\ttfamily void$\ast$ rocr\+::\+AMD\+::\+Aql\+Queue\+::errors\+\_\+data\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classrocr_1_1AMD_1_1AqlQueue_aed7b9902c165d8644f74ab2f542239ab}\label{classrocr_1_1AMD_1_1AqlQueue_aed7b9902c165d8644f74ab2f542239ab}} 
+\index{rocr::AMD::AqlQueue@{rocr::AMD::AqlQueue}!exception\_signal\_@{exception\_signal\_}}
+\index{exception\_signal\_@{exception\_signal\_}!rocr::AMD::AqlQueue@{rocr::AMD::AqlQueue}}
+\doxysubsubsection{\texorpdfstring{exception\_signal\_}{exception\_signal\_}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classrocr_1_1core_1_1Signal}{Signal}}$\ast$ rocr\+::\+AMD\+::\+Aql\+Queue\+::exception\+\_\+signal\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classrocr_1_1AMD_1_1AqlQueue_ae7a19f0de050a1ea85f75fb6ee911626}\label{classrocr_1_1AMD_1_1AqlQueue_ae7a19f0de050a1ea85f75fb6ee911626}} 
+\index{rocr::AMD::AqlQueue@{rocr::AMD::AqlQueue}!exceptionState@{exceptionState}}
+\index{exceptionState@{exceptionState}!rocr::AMD::AqlQueue@{rocr::AMD::AqlQueue}}
+\doxysubsubsection{\texorpdfstring{exceptionState}{exceptionState}}
+{\footnotesize\ttfamily std\+::atomic$<$uint32\+\_\+t$>$ rocr\+::\+AMD\+::\+Aql\+Queue\+::exception\+State\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classrocr_1_1AMD_1_1AqlQueue_a86cb5038f93112c3d6fd877269421467}\label{classrocr_1_1AMD_1_1AqlQueue_a86cb5038f93112c3d6fd877269421467}} 
+\index{rocr::AMD::AqlQueue@{rocr::AMD::AqlQueue}!is\_kv\_queue\_@{is\_kv\_queue\_}}
+\index{is\_kv\_queue\_@{is\_kv\_queue\_}!rocr::AMD::AqlQueue@{rocr::AMD::AqlQueue}}
+\doxysubsubsection{\texorpdfstring{is\_kv\_queue\_}{is\_kv\_queue\_}}
+{\footnotesize\ttfamily bool rocr\+::\+AMD\+::\+Aql\+Queue\+::is\+\_\+kv\+\_\+queue\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classrocr_1_1AMD_1_1AqlQueue_a4c4daeb650325bbb6f9120291b8e788e}\label{classrocr_1_1AMD_1_1AqlQueue_a4c4daeb650325bbb6f9120291b8e788e}} 
+\index{rocr::AMD::AqlQueue@{rocr::AMD::AqlQueue}!mask\_lock\_@{mask\_lock\_}}
+\index{mask\_lock\_@{mask\_lock\_}!rocr::AMD::AqlQueue@{rocr::AMD::AqlQueue}}
+\doxysubsubsection{\texorpdfstring{mask\_lock\_}{mask\_lock\_}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classrocr_1_1KernelMutex}{Kernel\+Mutex}} rocr\+::\+AMD\+::\+Aql\+Queue\+::mask\+\_\+lock\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classrocr_1_1AMD_1_1AqlQueue_a3a273324c6769d322a7f958011c821b0}\label{classrocr_1_1AMD_1_1AqlQueue_a3a273324c6769d322a7f958011c821b0}} 
+\index{rocr::AMD::AqlQueue@{rocr::AMD::AqlQueue}!pm4\_ib\_buf\_@{pm4\_ib\_buf\_}}
+\index{pm4\_ib\_buf\_@{pm4\_ib\_buf\_}!rocr::AMD::AqlQueue@{rocr::AMD::AqlQueue}}
+\doxysubsubsection{\texorpdfstring{pm4\_ib\_buf\_}{pm4\_ib\_buf\_}}
+{\footnotesize\ttfamily void$\ast$ rocr\+::\+AMD\+::\+Aql\+Queue\+::pm4\+\_\+ib\+\_\+buf\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classrocr_1_1AMD_1_1AqlQueue_afd511afca05fa30053fbe4f34d5e1514}\label{classrocr_1_1AMD_1_1AqlQueue_afd511afca05fa30053fbe4f34d5e1514}} 
+\index{rocr::AMD::AqlQueue@{rocr::AMD::AqlQueue}!pm4\_ib\_mutex\_@{pm4\_ib\_mutex\_}}
+\index{pm4\_ib\_mutex\_@{pm4\_ib\_mutex\_}!rocr::AMD::AqlQueue@{rocr::AMD::AqlQueue}}
+\doxysubsubsection{\texorpdfstring{pm4\_ib\_mutex\_}{pm4\_ib\_mutex\_}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classrocr_1_1KernelMutex}{Kernel\+Mutex}} rocr\+::\+AMD\+::\+Aql\+Queue\+::pm4\+\_\+ib\+\_\+mutex\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classrocr_1_1AMD_1_1AqlQueue_a52d548c5c46530840754d4ead2e199e4}\label{classrocr_1_1AMD_1_1AqlQueue_a52d548c5c46530840754d4ead2e199e4}} 
+\index{rocr::AMD::AqlQueue@{rocr::AMD::AqlQueue}!pm4\_ib\_size\_b\_@{pm4\_ib\_size\_b\_}}
+\index{pm4\_ib\_size\_b\_@{pm4\_ib\_size\_b\_}!rocr::AMD::AqlQueue@{rocr::AMD::AqlQueue}}
+\doxysubsubsection{\texorpdfstring{pm4\_ib\_size\_b\_}{pm4\_ib\_size\_b\_}}
+{\footnotesize\ttfamily uint32\+\_\+t rocr\+::\+AMD\+::\+Aql\+Queue\+::pm4\+\_\+ib\+\_\+size\+\_\+b\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classrocr_1_1AMD_1_1AqlQueue_acb4c73b2da1996b1a27272679a213316}\label{classrocr_1_1AMD_1_1AqlQueue_acb4c73b2da1996b1a27272679a213316}} 
+\index{rocr::AMD::AqlQueue@{rocr::AMD::AqlQueue}!priority\_@{priority\_}}
+\index{priority\_@{priority\_}!rocr::AMD::AqlQueue@{rocr::AMD::AqlQueue}}
+\doxysubsubsection{\texorpdfstring{priority\_}{priority\_}}
+{\footnotesize\ttfamily HSA\+\_\+\+QUEUE\+\_\+\+PRIORITY rocr\+::\+AMD\+::\+Aql\+Queue\+::priority\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classrocr_1_1AMD_1_1AqlQueue_ad0d4efdd660aa007bde218fc1cb9663c}\label{classrocr_1_1AMD_1_1AqlQueue_ad0d4efdd660aa007bde218fc1cb9663c}} 
+\index{rocr::AMD::AqlQueue@{rocr::AMD::AqlQueue}!queue\_count\_@{queue\_count\_}}
+\index{queue\_count\_@{queue\_count\_}!rocr::AMD::AqlQueue@{rocr::AMD::AqlQueue}}
+\doxysubsubsection{\texorpdfstring{queue\_count\_}{queue\_count\_}}
+{\footnotesize\ttfamily std\+::atomic$<$ uint32\+\_\+t $>$ rocr\+::\+AMD\+::\+Aql\+Queue\+::queue\+\_\+count\+\_\+\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [private]}}
+
+\mbox{\Hypertarget{classrocr_1_1AMD_1_1AqlQueue_a9a5dc197fffbfb2cf2c5d8f5015e12bc}\label{classrocr_1_1AMD_1_1AqlQueue_a9a5dc197fffbfb2cf2c5d8f5015e12bc}} 
+\index{rocr::AMD::AqlQueue@{rocr::AMD::AqlQueue}!queue\_event\_@{queue\_event\_}}
+\index{queue\_event\_@{queue\_event\_}!rocr::AMD::AqlQueue@{rocr::AMD::AqlQueue}}
+\doxysubsubsection{\texorpdfstring{queue\_event\_}{queue\_event\_}}
+{\footnotesize\ttfamily Hsa\+Event $\ast$ rocr\+::\+AMD\+::\+Aql\+Queue\+::queue\+\_\+event\+\_\+ = nullptr\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [private]}}
+
+\mbox{\Hypertarget{classrocr_1_1AMD_1_1AqlQueue_a8e84c51fee8030e251bad613af81c5bd}\label{classrocr_1_1AMD_1_1AqlQueue_a8e84c51fee8030e251bad613af81c5bd}} 
+\index{rocr::AMD::AqlQueue@{rocr::AMD::AqlQueue}!queue\_full\_workaround\_@{queue\_full\_workaround\_}}
+\index{queue\_full\_workaround\_@{queue\_full\_workaround\_}!rocr::AMD::AqlQueue@{rocr::AMD::AqlQueue}}
+\doxysubsubsection{\texorpdfstring{queue\_full\_workaround\_}{queue\_full\_workaround\_}}
+{\footnotesize\ttfamily uint32\+\_\+t rocr\+::\+AMD\+::\+Aql\+Queue\+::queue\+\_\+full\+\_\+workaround\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classrocr_1_1AMD_1_1AqlQueue_ae88579c1bfdd350c118500fb60bfe35a}\label{classrocr_1_1AMD_1_1AqlQueue_ae88579c1bfdd350c118500fb60bfe35a}} 
+\index{rocr::AMD::AqlQueue@{rocr::AMD::AqlQueue}!queue\_id\_@{queue\_id\_}}
+\index{queue\_id\_@{queue\_id\_}!rocr::AMD::AqlQueue@{rocr::AMD::AqlQueue}}
+\doxysubsubsection{\texorpdfstring{queue\_id\_}{queue\_id\_}}
+{\footnotesize\ttfamily HSA\+\_\+\+QUEUEID rocr\+::\+AMD\+::\+Aql\+Queue\+::queue\+\_\+id\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classrocr_1_1AMD_1_1AqlQueue_ac4ae52643e6a0e535a88d9764b0e7a7a}\label{classrocr_1_1AMD_1_1AqlQueue_ac4ae52643e6a0e535a88d9764b0e7a7a}} 
+\index{rocr::AMD::AqlQueue@{rocr::AMD::AqlQueue}!queue\_lock\_@{queue\_lock\_}}
+\index{queue\_lock\_@{queue\_lock\_}!rocr::AMD::AqlQueue@{rocr::AMD::AqlQueue}}
+\doxysubsubsection{\texorpdfstring{queue\_lock\_}{queue\_lock\_}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classrocr_1_1KernelMutex}{Kernel\+Mutex}} rocr\+::\+AMD\+::\+Aql\+Queue\+::queue\+\_\+lock\+\_\+\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [private]}}
+
+\mbox{\Hypertarget{classrocr_1_1AMD_1_1AqlQueue_aca9b232d7aefbb1a747cede47e535999}\label{classrocr_1_1AMD_1_1AqlQueue_aca9b232d7aefbb1a747cede47e535999}} 
+\index{rocr::AMD::AqlQueue@{rocr::AMD::AqlQueue}!queue\_scratch\_@{queue\_scratch\_}}
+\index{queue\_scratch\_@{queue\_scratch\_}!rocr::AMD::AqlQueue@{rocr::AMD::AqlQueue}}
+\doxysubsubsection{\texorpdfstring{queue\_scratch\_}{queue\_scratch\_}}
+{\footnotesize\ttfamily \mbox{\hyperlink{namespacerocr_1_1AMD_aa7626ec0332dae56a091e85f8ffd0891}{Scratch\+Info}} rocr\+::\+AMD\+::\+Aql\+Queue\+::queue\+\_\+scratch\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classrocr_1_1AMD_1_1AqlQueue_ab65efd80c80964d8ce02e4a3ded92579}\label{classrocr_1_1AMD_1_1AqlQueue_ab65efd80c80964d8ce02e4a3ded92579}} 
+\index{rocr::AMD::AqlQueue@{rocr::AMD::AqlQueue}!ring\_buf\_@{ring\_buf\_}}
+\index{ring\_buf\_@{ring\_buf\_}!rocr::AMD::AqlQueue@{rocr::AMD::AqlQueue}}
+\doxysubsubsection{\texorpdfstring{ring\_buf\_}{ring\_buf\_}}
+{\footnotesize\ttfamily void$\ast$ rocr\+::\+AMD\+::\+Aql\+Queue\+::ring\+\_\+buf\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classrocr_1_1AMD_1_1AqlQueue_ad0cf649260119f4041765aad5133ab45}\label{classrocr_1_1AMD_1_1AqlQueue_ad0cf649260119f4041765aad5133ab45}} 
+\index{rocr::AMD::AqlQueue@{rocr::AMD::AqlQueue}!ring\_buf\_alloc\_bytes\_@{ring\_buf\_alloc\_bytes\_}}
+\index{ring\_buf\_alloc\_bytes\_@{ring\_buf\_alloc\_bytes\_}!rocr::AMD::AqlQueue@{rocr::AMD::AqlQueue}}
+\doxysubsubsection{\texorpdfstring{ring\_buf\_alloc\_bytes\_}{ring\_buf\_alloc\_bytes\_}}
+{\footnotesize\ttfamily uint32\+\_\+t rocr\+::\+AMD\+::\+Aql\+Queue\+::ring\+\_\+buf\+\_\+alloc\+\_\+bytes\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classrocr_1_1AMD_1_1AqlQueue_a24463bf2c10b41e7cac9dab4077c8503}\label{classrocr_1_1AMD_1_1AqlQueue_a24463bf2c10b41e7cac9dab4077c8503}} 
+\index{rocr::AMD::AqlQueue@{rocr::AMD::AqlQueue}!rtti\_id\_@{rtti\_id\_}}
+\index{rtti\_id\_@{rtti\_id\_}!rocr::AMD::AqlQueue@{rocr::AMD::AqlQueue}}
+\doxysubsubsection{\texorpdfstring{rtti\_id\_}{rtti\_id\_}}
+{\footnotesize\ttfamily int rocr\+::\+AMD\+::\+Aql\+Queue\+::rtti\+\_\+id\+\_\+ = 0\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [private]}}
+
+\mbox{\Hypertarget{classrocr_1_1AMD_1_1AqlQueue_a3aca886de8d77f4ee7d0c33c39bab787}\label{classrocr_1_1AMD_1_1AqlQueue_a3aca886de8d77f4ee7d0c33c39bab787}} 
+\index{rocr::AMD::AqlQueue@{rocr::AMD::AqlQueue}!suspended\_@{suspended\_}}
+\index{suspended\_@{suspended\_}!rocr::AMD::AqlQueue@{rocr::AMD::AqlQueue}}
+\doxysubsubsection{\texorpdfstring{suspended\_}{suspended\_}}
+{\footnotesize\ttfamily bool rocr\+::\+AMD\+::\+Aql\+Queue\+::suspended\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+src/core/inc/\mbox{\hyperlink{amd__aql__queue_8h}{amd\+\_\+aql\+\_\+queue.\+h}}\item 
+src/core/runtime/\mbox{\hyperlink{amd__aql__queue_8cpp}{amd\+\_\+aql\+\_\+queue.\+cpp}}\end{DoxyCompactItemize}

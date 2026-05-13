@@ -1,0 +1,298 @@
+\hypertarget{unionrocr_1_1__ADDR2__SURFACE__FLAGS}{}\doxysection{rocr\+::\+\_\+\+ADDR2\+\_\+\+SURFACE\+\_\+\+FLAGS Union Reference}
+\label{unionrocr_1_1__ADDR2__SURFACE__FLAGS}\index{rocr::\_ADDR2\_SURFACE\_FLAGS@{rocr::\_ADDR2\_SURFACE\_FLAGS}}
+
+
+Surface flags.  
+
+
+
+
+{\ttfamily \#include $<$addrinterface.\+h$>$}
+
+\doxysubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\begin{tabbing}
+xx\=xx\=xx\=xx\=xx\=xx\=xx\=xx\=xx\=\kill
+struct \{\\
+\>\mbox{\hyperlink{addrtypes_8h_af5a2be58a28390f9a494538f34054637}{UINT\_32}} \mbox{\hyperlink{unionrocr_1_1__ADDR2__SURFACE__FLAGS_a8f460bfa1c1e34e67a0981440a11590b}{color}}: 1\\
+\>\>{\em This resource is a color buffer, can be used with RTV. }\\
+\>\mbox{\hyperlink{addrtypes_8h_af5a2be58a28390f9a494538f34054637}{UINT\_32}} \mbox{\hyperlink{unionrocr_1_1__ADDR2__SURFACE__FLAGS_a64795a61fed7680c8894a64a98305684}{depth}}: 1\\
+\>\>{\em Thie resource is a depth buffer, can be used with DSV. }\\
+\>\mbox{\hyperlink{addrtypes_8h_af5a2be58a28390f9a494538f34054637}{UINT\_32}} \mbox{\hyperlink{unionrocr_1_1__ADDR2__SURFACE__FLAGS_a4785c26173a2e85d36d483a257ebb01e}{stencil}}: 1\\
+\>\>{\em Thie resource is a stencil buffer, can be used with DSV. }\\
+\>\mbox{\hyperlink{addrtypes_8h_af5a2be58a28390f9a494538f34054637}{UINT\_32}} \mbox{\hyperlink{unionrocr_1_1__ADDR2__SURFACE__FLAGS_a6247d31a85c2e08befd0a48916fb835e}{fmask}}: 1\\
+\>\>{\em This is an fmask surface. }\\
+\>\mbox{\hyperlink{addrtypes_8h_af5a2be58a28390f9a494538f34054637}{UINT\_32}} \mbox{\hyperlink{unionrocr_1_1__ADDR2__SURFACE__FLAGS_a43765f182d84ec02d37dd7c9e1e9d4bc}{overlay}}: 1\\
+\>\>{\em This is an overlay surface. }\\
+\>\mbox{\hyperlink{addrtypes_8h_af5a2be58a28390f9a494538f34054637}{UINT\_32}} \mbox{\hyperlink{unionrocr_1_1__ADDR2__SURFACE__FLAGS_a4aa98d013970ff1dc1b31131418a99e0}{display}}: 1\\
+\>\>{\em This resource is displable, can be used with DRV. }\\
+\>\mbox{\hyperlink{addrtypes_8h_af5a2be58a28390f9a494538f34054637}{UINT\_32}} \mbox{\hyperlink{unionrocr_1_1__ADDR2__SURFACE__FLAGS_a2612b68d8dbafa921821740830834398}{prt}}: 1\\
+\>\>{\em This is a partially resident texture. }\\
+\>\mbox{\hyperlink{addrtypes_8h_af5a2be58a28390f9a494538f34054637}{UINT\_32}} \mbox{\hyperlink{unionrocr_1_1__ADDR2__SURFACE__FLAGS_ade262a895d7797ebf77f721cb75d702a}{qbStereo}}: 1\\
+\>\>{\em This is a quad buffer stereo surface. }\\
+\>\mbox{\hyperlink{addrtypes_8h_af5a2be58a28390f9a494538f34054637}{UINT\_32}} \mbox{\hyperlink{unionrocr_1_1__ADDR2__SURFACE__FLAGS_a6547cc7a2348e7b873db8584e69f25fa}{interleaved}}: 1\\
+\>\>{\em Special flag for interleaved YUV surface padding. }\\
+\>\mbox{\hyperlink{addrtypes_8h_af5a2be58a28390f9a494538f34054637}{UINT\_32}} \mbox{\hyperlink{unionrocr_1_1__ADDR2__SURFACE__FLAGS_a57600a034b1728062918d71f04bab7e1}{texture}}: 1\\
+\>\>{\em This resource can be used with SRV. }\\
+\>\mbox{\hyperlink{addrtypes_8h_af5a2be58a28390f9a494538f34054637}{UINT\_32}} \mbox{\hyperlink{unionrocr_1_1__ADDR2__SURFACE__FLAGS_a909f0c99dee0c8530695a43b47b0fa63}{unordered}}: 1\\
+\>\>{\em This resource can be used with UAV. }\\
+\>\mbox{\hyperlink{addrtypes_8h_af5a2be58a28390f9a494538f34054637}{UINT\_32}} \mbox{\hyperlink{unionrocr_1_1__ADDR2__SURFACE__FLAGS_afe003661e30d6d5347e05148eae1ecf8}{rotated}}: 1\\
+\>\>{\em This resource is rotated and displable. }\\
+\>\mbox{\hyperlink{addrtypes_8h_af5a2be58a28390f9a494538f34054637}{UINT\_32}} \mbox{\hyperlink{unionrocr_1_1__ADDR2__SURFACE__FLAGS_adb3b332c0ffbf572aa3ad23ffa8e28c3}{needEquation}}: 1\\
+\>\>{\em This resource needs equation to be generated if possible. }\\
+\>\mbox{\hyperlink{addrtypes_8h_af5a2be58a28390f9a494538f34054637}{UINT\_32}} \mbox{\hyperlink{unionrocr_1_1__ADDR2__SURFACE__FLAGS_a4609a50ff7aa91f195945cf26e171530}{opt4space}}: 1\\
+\>\>{\em This resource should be optimized for space. }\\
+\>\mbox{\hyperlink{addrtypes_8h_af5a2be58a28390f9a494538f34054637}{UINT\_32}} \mbox{\hyperlink{unionrocr_1_1__ADDR2__SURFACE__FLAGS_a4ffaca03101741c7041c735b9758ad8d}{minimizeAlign}}: 1\\
+\>\>{\em This resource should use minimum alignment. }\\
+\>\mbox{\hyperlink{addrtypes_8h_af5a2be58a28390f9a494538f34054637}{UINT\_32}} \mbox{\hyperlink{unionrocr_1_1__ADDR2__SURFACE__FLAGS_ad6d7c9bfa611e5f62c1222fc40dc39e5}{noMetadata}}: 1\\
+\>\>{\em This resource has no metadata. }\\
+\>\mbox{\hyperlink{addrtypes_8h_af5a2be58a28390f9a494538f34054637}{UINT\_32}} \mbox{\hyperlink{unionrocr_1_1__ADDR2__SURFACE__FLAGS_a3f6265ec4ba0c0f7564f8d03f6e70a74}{metaRbUnaligned}}: 1\\
+\>\>{\em This resource has rb unaligned metadata. }\\
+\>\mbox{\hyperlink{addrtypes_8h_af5a2be58a28390f9a494538f34054637}{UINT\_32}} \mbox{\hyperlink{unionrocr_1_1__ADDR2__SURFACE__FLAGS_a8130964f7a49c1c546d6dae167209f5c}{metaPipeUnaligned}}: 1\\
+\>\>{\em This resource has pipe unaligned metadata. }\\
+\>\mbox{\hyperlink{addrtypes_8h_af5a2be58a28390f9a494538f34054637}{UINT\_32}} \mbox{\hyperlink{unionrocr_1_1__ADDR2__SURFACE__FLAGS_a6241ec69fc5090197f97a4098a6704d0}{view3dAs2dArray}}: 1\\
+\>\>{\em This resource is a 3D resource viewed as 2D array. }\\
+\>\mbox{\hyperlink{addrtypes_8h_af5a2be58a28390f9a494538f34054637}{UINT\_32}} \mbox{\hyperlink{unionrocr_1_1__ADDR2__SURFACE__FLAGS_a972591cc61d2d23c956b9471aa65a45a}{reserved}}: 13\\
+\>\>{\em Reserved bits. }\\
+\}; \\
+
+\end{tabbing}\item 
+\mbox{\hyperlink{addrtypes_8h_af5a2be58a28390f9a494538f34054637}{UINT\+\_\+32}} \mbox{\hyperlink{unionrocr_1_1__ADDR2__SURFACE__FLAGS_a43ac75d5bbaeeb15d742d1b4592bfba5}{value}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Surface flags. 
+
+\begin{DoxyVerb}                       Address library interface version 2
+                           available from Gfx9 hardware
+\end{DoxyVerb}
+ \mbox{\hyperlink{namespacerocr_a64075ccc977a4a53b79222b721ebfdeb}{Addr2\+Compute\+Surface\+Info()}} \mbox{\hyperlink{namespacerocr_a6917b2c62aa7763d294d2dc13f22d688}{Addr2\+Compute\+Surface\+Addr\+From\+Coord()}} \mbox{\hyperlink{namespacerocr_a9ba73f9a955c32548f7d32485ef9b2bb}{Addr2\+Compute\+Surface\+Coord\+From\+Addr()}}
+
+\mbox{\hyperlink{namespacerocr_aeb403e8e9bc08e7d53ca9ad8f1b125a6}{Addr2\+Compute\+Htile\+Info()}} \mbox{\hyperlink{namespacerocr_af9ed19fa36b59e87fb29ac34d7c439fc}{Addr2\+Compute\+Htile\+Addr\+From\+Coord()}} \mbox{\hyperlink{namespacerocr_afcaa8a290afe0fb87232cb091e003797}{Addr2\+Compute\+Htile\+Coord\+From\+Addr()}}
+
+\mbox{\hyperlink{namespacerocr_a6079e0efcf17c9829b35a155428858f6}{Addr2\+Compute\+Cmask\+Info()}} \mbox{\hyperlink{namespacerocr_acc030e21901ac9c41b993d5fb76efd12}{Addr2\+Compute\+Cmask\+Addr\+From\+Coord()}} \mbox{\hyperlink{namespacerocr_af18ca97b9d0cbbba1803ad2b649eb229}{Addr2\+Compute\+Cmask\+Coord\+From\+Addr()}}
+
+\mbox{\hyperlink{namespacerocr_a9deab409eb987d53da1ad2071f6675e5}{Addr2\+Compute\+Fmask\+Info()}} \mbox{\hyperlink{namespacerocr_aa13404c92ae620418b57088123a993c9}{Addr2\+Compute\+Fmask\+Addr\+From\+Coord()}} \mbox{\hyperlink{namespacerocr_ada7f10ae0b30f54d2eb93dcdf2ca08d0}{Addr2\+Compute\+Fmask\+Coord\+From\+Addr()}}
+
+\mbox{\hyperlink{namespacerocr_a5c0f9b532773ef45ae4fda9668de1a59}{Addr2\+Compute\+Dcc\+Info()}}
+
+ADDR2\+\_\+\+SURFACE\+\_\+\+FLAGS 
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{unionrocr_1_1__ADDR2__SURFACE__FLAGS_aa2a467cbf89032e6db46eea9e3d62bd7}\label{unionrocr_1_1__ADDR2__SURFACE__FLAGS_aa2a467cbf89032e6db46eea9e3d62bd7}} 
+\doxysubsubsection{\texorpdfstring{}{}}
+{\footnotesize\ttfamily struct \{ ... \} }
+
+\mbox{\Hypertarget{unionrocr_1_1__ADDR2__SURFACE__FLAGS_a8f460bfa1c1e34e67a0981440a11590b}\label{unionrocr_1_1__ADDR2__SURFACE__FLAGS_a8f460bfa1c1e34e67a0981440a11590b}} 
+\index{rocr::\_ADDR2\_SURFACE\_FLAGS@{rocr::\_ADDR2\_SURFACE\_FLAGS}!color@{color}}
+\index{color@{color}!rocr::\_ADDR2\_SURFACE\_FLAGS@{rocr::\_ADDR2\_SURFACE\_FLAGS}}
+\doxysubsubsection{\texorpdfstring{color}{color}}
+{\footnotesize\ttfamily \mbox{\hyperlink{addrtypes_8h_af5a2be58a28390f9a494538f34054637}{UINT\+\_\+32}} rocr\+::\+\_\+\+ADDR2\+\_\+\+SURFACE\+\_\+\+FLAGS\+::color}
+
+
+
+This resource is a color buffer, can be used with RTV. 
+
+\mbox{\Hypertarget{unionrocr_1_1__ADDR2__SURFACE__FLAGS_a64795a61fed7680c8894a64a98305684}\label{unionrocr_1_1__ADDR2__SURFACE__FLAGS_a64795a61fed7680c8894a64a98305684}} 
+\index{rocr::\_ADDR2\_SURFACE\_FLAGS@{rocr::\_ADDR2\_SURFACE\_FLAGS}!depth@{depth}}
+\index{depth@{depth}!rocr::\_ADDR2\_SURFACE\_FLAGS@{rocr::\_ADDR2\_SURFACE\_FLAGS}}
+\doxysubsubsection{\texorpdfstring{depth}{depth}}
+{\footnotesize\ttfamily \mbox{\hyperlink{addrtypes_8h_af5a2be58a28390f9a494538f34054637}{UINT\+\_\+32}} rocr\+::\+\_\+\+ADDR2\+\_\+\+SURFACE\+\_\+\+FLAGS\+::depth}
+
+
+
+Thie resource is a depth buffer, can be used with DSV. 
+
+\mbox{\Hypertarget{unionrocr_1_1__ADDR2__SURFACE__FLAGS_a4aa98d013970ff1dc1b31131418a99e0}\label{unionrocr_1_1__ADDR2__SURFACE__FLAGS_a4aa98d013970ff1dc1b31131418a99e0}} 
+\index{rocr::\_ADDR2\_SURFACE\_FLAGS@{rocr::\_ADDR2\_SURFACE\_FLAGS}!display@{display}}
+\index{display@{display}!rocr::\_ADDR2\_SURFACE\_FLAGS@{rocr::\_ADDR2\_SURFACE\_FLAGS}}
+\doxysubsubsection{\texorpdfstring{display}{display}}
+{\footnotesize\ttfamily \mbox{\hyperlink{addrtypes_8h_af5a2be58a28390f9a494538f34054637}{UINT\+\_\+32}} rocr\+::\+\_\+\+ADDR2\+\_\+\+SURFACE\+\_\+\+FLAGS\+::display}
+
+
+
+This resource is displable, can be used with DRV. 
+
+\mbox{\Hypertarget{unionrocr_1_1__ADDR2__SURFACE__FLAGS_a6247d31a85c2e08befd0a48916fb835e}\label{unionrocr_1_1__ADDR2__SURFACE__FLAGS_a6247d31a85c2e08befd0a48916fb835e}} 
+\index{rocr::\_ADDR2\_SURFACE\_FLAGS@{rocr::\_ADDR2\_SURFACE\_FLAGS}!fmask@{fmask}}
+\index{fmask@{fmask}!rocr::\_ADDR2\_SURFACE\_FLAGS@{rocr::\_ADDR2\_SURFACE\_FLAGS}}
+\doxysubsubsection{\texorpdfstring{fmask}{fmask}}
+{\footnotesize\ttfamily \mbox{\hyperlink{addrtypes_8h_af5a2be58a28390f9a494538f34054637}{UINT\+\_\+32}} rocr\+::\+\_\+\+ADDR2\+\_\+\+SURFACE\+\_\+\+FLAGS\+::fmask}
+
+
+
+This is an fmask surface. 
+
+\mbox{\Hypertarget{unionrocr_1_1__ADDR2__SURFACE__FLAGS_a6547cc7a2348e7b873db8584e69f25fa}\label{unionrocr_1_1__ADDR2__SURFACE__FLAGS_a6547cc7a2348e7b873db8584e69f25fa}} 
+\index{rocr::\_ADDR2\_SURFACE\_FLAGS@{rocr::\_ADDR2\_SURFACE\_FLAGS}!interleaved@{interleaved}}
+\index{interleaved@{interleaved}!rocr::\_ADDR2\_SURFACE\_FLAGS@{rocr::\_ADDR2\_SURFACE\_FLAGS}}
+\doxysubsubsection{\texorpdfstring{interleaved}{interleaved}}
+{\footnotesize\ttfamily \mbox{\hyperlink{addrtypes_8h_af5a2be58a28390f9a494538f34054637}{UINT\+\_\+32}} rocr\+::\+\_\+\+ADDR2\+\_\+\+SURFACE\+\_\+\+FLAGS\+::interleaved}
+
+
+
+Special flag for interleaved YUV surface padding. 
+
+\mbox{\Hypertarget{unionrocr_1_1__ADDR2__SURFACE__FLAGS_a8130964f7a49c1c546d6dae167209f5c}\label{unionrocr_1_1__ADDR2__SURFACE__FLAGS_a8130964f7a49c1c546d6dae167209f5c}} 
+\index{rocr::\_ADDR2\_SURFACE\_FLAGS@{rocr::\_ADDR2\_SURFACE\_FLAGS}!metaPipeUnaligned@{metaPipeUnaligned}}
+\index{metaPipeUnaligned@{metaPipeUnaligned}!rocr::\_ADDR2\_SURFACE\_FLAGS@{rocr::\_ADDR2\_SURFACE\_FLAGS}}
+\doxysubsubsection{\texorpdfstring{metaPipeUnaligned}{metaPipeUnaligned}}
+{\footnotesize\ttfamily \mbox{\hyperlink{addrtypes_8h_af5a2be58a28390f9a494538f34054637}{UINT\+\_\+32}} rocr\+::\+\_\+\+ADDR2\+\_\+\+SURFACE\+\_\+\+FLAGS\+::meta\+Pipe\+Unaligned}
+
+
+
+This resource has pipe unaligned metadata. 
+
+\mbox{\Hypertarget{unionrocr_1_1__ADDR2__SURFACE__FLAGS_a3f6265ec4ba0c0f7564f8d03f6e70a74}\label{unionrocr_1_1__ADDR2__SURFACE__FLAGS_a3f6265ec4ba0c0f7564f8d03f6e70a74}} 
+\index{rocr::\_ADDR2\_SURFACE\_FLAGS@{rocr::\_ADDR2\_SURFACE\_FLAGS}!metaRbUnaligned@{metaRbUnaligned}}
+\index{metaRbUnaligned@{metaRbUnaligned}!rocr::\_ADDR2\_SURFACE\_FLAGS@{rocr::\_ADDR2\_SURFACE\_FLAGS}}
+\doxysubsubsection{\texorpdfstring{metaRbUnaligned}{metaRbUnaligned}}
+{\footnotesize\ttfamily \mbox{\hyperlink{addrtypes_8h_af5a2be58a28390f9a494538f34054637}{UINT\+\_\+32}} rocr\+::\+\_\+\+ADDR2\+\_\+\+SURFACE\+\_\+\+FLAGS\+::meta\+Rb\+Unaligned}
+
+
+
+This resource has rb unaligned metadata. 
+
+\mbox{\Hypertarget{unionrocr_1_1__ADDR2__SURFACE__FLAGS_a4ffaca03101741c7041c735b9758ad8d}\label{unionrocr_1_1__ADDR2__SURFACE__FLAGS_a4ffaca03101741c7041c735b9758ad8d}} 
+\index{rocr::\_ADDR2\_SURFACE\_FLAGS@{rocr::\_ADDR2\_SURFACE\_FLAGS}!minimizeAlign@{minimizeAlign}}
+\index{minimizeAlign@{minimizeAlign}!rocr::\_ADDR2\_SURFACE\_FLAGS@{rocr::\_ADDR2\_SURFACE\_FLAGS}}
+\doxysubsubsection{\texorpdfstring{minimizeAlign}{minimizeAlign}}
+{\footnotesize\ttfamily \mbox{\hyperlink{addrtypes_8h_af5a2be58a28390f9a494538f34054637}{UINT\+\_\+32}} rocr\+::\+\_\+\+ADDR2\+\_\+\+SURFACE\+\_\+\+FLAGS\+::minimize\+Align}
+
+
+
+This resource should use minimum alignment. 
+
+\mbox{\Hypertarget{unionrocr_1_1__ADDR2__SURFACE__FLAGS_adb3b332c0ffbf572aa3ad23ffa8e28c3}\label{unionrocr_1_1__ADDR2__SURFACE__FLAGS_adb3b332c0ffbf572aa3ad23ffa8e28c3}} 
+\index{rocr::\_ADDR2\_SURFACE\_FLAGS@{rocr::\_ADDR2\_SURFACE\_FLAGS}!needEquation@{needEquation}}
+\index{needEquation@{needEquation}!rocr::\_ADDR2\_SURFACE\_FLAGS@{rocr::\_ADDR2\_SURFACE\_FLAGS}}
+\doxysubsubsection{\texorpdfstring{needEquation}{needEquation}}
+{\footnotesize\ttfamily \mbox{\hyperlink{addrtypes_8h_af5a2be58a28390f9a494538f34054637}{UINT\+\_\+32}} rocr\+::\+\_\+\+ADDR2\+\_\+\+SURFACE\+\_\+\+FLAGS\+::need\+Equation}
+
+
+
+This resource needs equation to be generated if possible. 
+
+\mbox{\Hypertarget{unionrocr_1_1__ADDR2__SURFACE__FLAGS_ad6d7c9bfa611e5f62c1222fc40dc39e5}\label{unionrocr_1_1__ADDR2__SURFACE__FLAGS_ad6d7c9bfa611e5f62c1222fc40dc39e5}} 
+\index{rocr::\_ADDR2\_SURFACE\_FLAGS@{rocr::\_ADDR2\_SURFACE\_FLAGS}!noMetadata@{noMetadata}}
+\index{noMetadata@{noMetadata}!rocr::\_ADDR2\_SURFACE\_FLAGS@{rocr::\_ADDR2\_SURFACE\_FLAGS}}
+\doxysubsubsection{\texorpdfstring{noMetadata}{noMetadata}}
+{\footnotesize\ttfamily \mbox{\hyperlink{addrtypes_8h_af5a2be58a28390f9a494538f34054637}{UINT\+\_\+32}} rocr\+::\+\_\+\+ADDR2\+\_\+\+SURFACE\+\_\+\+FLAGS\+::no\+Metadata}
+
+
+
+This resource has no metadata. 
+
+\mbox{\Hypertarget{unionrocr_1_1__ADDR2__SURFACE__FLAGS_a4609a50ff7aa91f195945cf26e171530}\label{unionrocr_1_1__ADDR2__SURFACE__FLAGS_a4609a50ff7aa91f195945cf26e171530}} 
+\index{rocr::\_ADDR2\_SURFACE\_FLAGS@{rocr::\_ADDR2\_SURFACE\_FLAGS}!opt4space@{opt4space}}
+\index{opt4space@{opt4space}!rocr::\_ADDR2\_SURFACE\_FLAGS@{rocr::\_ADDR2\_SURFACE\_FLAGS}}
+\doxysubsubsection{\texorpdfstring{opt4space}{opt4space}}
+{\footnotesize\ttfamily \mbox{\hyperlink{addrtypes_8h_af5a2be58a28390f9a494538f34054637}{UINT\+\_\+32}} rocr\+::\+\_\+\+ADDR2\+\_\+\+SURFACE\+\_\+\+FLAGS\+::opt4space}
+
+
+
+This resource should be optimized for space. 
+
+\mbox{\Hypertarget{unionrocr_1_1__ADDR2__SURFACE__FLAGS_a43765f182d84ec02d37dd7c9e1e9d4bc}\label{unionrocr_1_1__ADDR2__SURFACE__FLAGS_a43765f182d84ec02d37dd7c9e1e9d4bc}} 
+\index{rocr::\_ADDR2\_SURFACE\_FLAGS@{rocr::\_ADDR2\_SURFACE\_FLAGS}!overlay@{overlay}}
+\index{overlay@{overlay}!rocr::\_ADDR2\_SURFACE\_FLAGS@{rocr::\_ADDR2\_SURFACE\_FLAGS}}
+\doxysubsubsection{\texorpdfstring{overlay}{overlay}}
+{\footnotesize\ttfamily \mbox{\hyperlink{addrtypes_8h_af5a2be58a28390f9a494538f34054637}{UINT\+\_\+32}} rocr\+::\+\_\+\+ADDR2\+\_\+\+SURFACE\+\_\+\+FLAGS\+::overlay}
+
+
+
+This is an overlay surface. 
+
+\mbox{\Hypertarget{unionrocr_1_1__ADDR2__SURFACE__FLAGS_a2612b68d8dbafa921821740830834398}\label{unionrocr_1_1__ADDR2__SURFACE__FLAGS_a2612b68d8dbafa921821740830834398}} 
+\index{rocr::\_ADDR2\_SURFACE\_FLAGS@{rocr::\_ADDR2\_SURFACE\_FLAGS}!prt@{prt}}
+\index{prt@{prt}!rocr::\_ADDR2\_SURFACE\_FLAGS@{rocr::\_ADDR2\_SURFACE\_FLAGS}}
+\doxysubsubsection{\texorpdfstring{prt}{prt}}
+{\footnotesize\ttfamily \mbox{\hyperlink{addrtypes_8h_af5a2be58a28390f9a494538f34054637}{UINT\+\_\+32}} rocr\+::\+\_\+\+ADDR2\+\_\+\+SURFACE\+\_\+\+FLAGS\+::prt}
+
+
+
+This is a partially resident texture. 
+
+\mbox{\Hypertarget{unionrocr_1_1__ADDR2__SURFACE__FLAGS_ade262a895d7797ebf77f721cb75d702a}\label{unionrocr_1_1__ADDR2__SURFACE__FLAGS_ade262a895d7797ebf77f721cb75d702a}} 
+\index{rocr::\_ADDR2\_SURFACE\_FLAGS@{rocr::\_ADDR2\_SURFACE\_FLAGS}!qbStereo@{qbStereo}}
+\index{qbStereo@{qbStereo}!rocr::\_ADDR2\_SURFACE\_FLAGS@{rocr::\_ADDR2\_SURFACE\_FLAGS}}
+\doxysubsubsection{\texorpdfstring{qbStereo}{qbStereo}}
+{\footnotesize\ttfamily \mbox{\hyperlink{addrtypes_8h_af5a2be58a28390f9a494538f34054637}{UINT\+\_\+32}} rocr\+::\+\_\+\+ADDR2\+\_\+\+SURFACE\+\_\+\+FLAGS\+::qb\+Stereo}
+
+
+
+This is a quad buffer stereo surface. 
+
+\mbox{\Hypertarget{unionrocr_1_1__ADDR2__SURFACE__FLAGS_a972591cc61d2d23c956b9471aa65a45a}\label{unionrocr_1_1__ADDR2__SURFACE__FLAGS_a972591cc61d2d23c956b9471aa65a45a}} 
+\index{rocr::\_ADDR2\_SURFACE\_FLAGS@{rocr::\_ADDR2\_SURFACE\_FLAGS}!reserved@{reserved}}
+\index{reserved@{reserved}!rocr::\_ADDR2\_SURFACE\_FLAGS@{rocr::\_ADDR2\_SURFACE\_FLAGS}}
+\doxysubsubsection{\texorpdfstring{reserved}{reserved}}
+{\footnotesize\ttfamily \mbox{\hyperlink{addrtypes_8h_af5a2be58a28390f9a494538f34054637}{UINT\+\_\+32}} rocr\+::\+\_\+\+ADDR2\+\_\+\+SURFACE\+\_\+\+FLAGS\+::reserved}
+
+
+
+Reserved bits. 
+
+\mbox{\Hypertarget{unionrocr_1_1__ADDR2__SURFACE__FLAGS_afe003661e30d6d5347e05148eae1ecf8}\label{unionrocr_1_1__ADDR2__SURFACE__FLAGS_afe003661e30d6d5347e05148eae1ecf8}} 
+\index{rocr::\_ADDR2\_SURFACE\_FLAGS@{rocr::\_ADDR2\_SURFACE\_FLAGS}!rotated@{rotated}}
+\index{rotated@{rotated}!rocr::\_ADDR2\_SURFACE\_FLAGS@{rocr::\_ADDR2\_SURFACE\_FLAGS}}
+\doxysubsubsection{\texorpdfstring{rotated}{rotated}}
+{\footnotesize\ttfamily \mbox{\hyperlink{addrtypes_8h_af5a2be58a28390f9a494538f34054637}{UINT\+\_\+32}} rocr\+::\+\_\+\+ADDR2\+\_\+\+SURFACE\+\_\+\+FLAGS\+::rotated}
+
+
+
+This resource is rotated and displable. 
+
+\mbox{\Hypertarget{unionrocr_1_1__ADDR2__SURFACE__FLAGS_a4785c26173a2e85d36d483a257ebb01e}\label{unionrocr_1_1__ADDR2__SURFACE__FLAGS_a4785c26173a2e85d36d483a257ebb01e}} 
+\index{rocr::\_ADDR2\_SURFACE\_FLAGS@{rocr::\_ADDR2\_SURFACE\_FLAGS}!stencil@{stencil}}
+\index{stencil@{stencil}!rocr::\_ADDR2\_SURFACE\_FLAGS@{rocr::\_ADDR2\_SURFACE\_FLAGS}}
+\doxysubsubsection{\texorpdfstring{stencil}{stencil}}
+{\footnotesize\ttfamily \mbox{\hyperlink{addrtypes_8h_af5a2be58a28390f9a494538f34054637}{UINT\+\_\+32}} rocr\+::\+\_\+\+ADDR2\+\_\+\+SURFACE\+\_\+\+FLAGS\+::stencil}
+
+
+
+Thie resource is a stencil buffer, can be used with DSV. 
+
+\mbox{\Hypertarget{unionrocr_1_1__ADDR2__SURFACE__FLAGS_a57600a034b1728062918d71f04bab7e1}\label{unionrocr_1_1__ADDR2__SURFACE__FLAGS_a57600a034b1728062918d71f04bab7e1}} 
+\index{rocr::\_ADDR2\_SURFACE\_FLAGS@{rocr::\_ADDR2\_SURFACE\_FLAGS}!texture@{texture}}
+\index{texture@{texture}!rocr::\_ADDR2\_SURFACE\_FLAGS@{rocr::\_ADDR2\_SURFACE\_FLAGS}}
+\doxysubsubsection{\texorpdfstring{texture}{texture}}
+{\footnotesize\ttfamily \mbox{\hyperlink{addrtypes_8h_af5a2be58a28390f9a494538f34054637}{UINT\+\_\+32}} rocr\+::\+\_\+\+ADDR2\+\_\+\+SURFACE\+\_\+\+FLAGS\+::texture}
+
+
+
+This resource can be used with SRV. 
+
+\mbox{\Hypertarget{unionrocr_1_1__ADDR2__SURFACE__FLAGS_a909f0c99dee0c8530695a43b47b0fa63}\label{unionrocr_1_1__ADDR2__SURFACE__FLAGS_a909f0c99dee0c8530695a43b47b0fa63}} 
+\index{rocr::\_ADDR2\_SURFACE\_FLAGS@{rocr::\_ADDR2\_SURFACE\_FLAGS}!unordered@{unordered}}
+\index{unordered@{unordered}!rocr::\_ADDR2\_SURFACE\_FLAGS@{rocr::\_ADDR2\_SURFACE\_FLAGS}}
+\doxysubsubsection{\texorpdfstring{unordered}{unordered}}
+{\footnotesize\ttfamily \mbox{\hyperlink{addrtypes_8h_af5a2be58a28390f9a494538f34054637}{UINT\+\_\+32}} rocr\+::\+\_\+\+ADDR2\+\_\+\+SURFACE\+\_\+\+FLAGS\+::unordered}
+
+
+
+This resource can be used with UAV. 
+
+\mbox{\Hypertarget{unionrocr_1_1__ADDR2__SURFACE__FLAGS_a43ac75d5bbaeeb15d742d1b4592bfba5}\label{unionrocr_1_1__ADDR2__SURFACE__FLAGS_a43ac75d5bbaeeb15d742d1b4592bfba5}} 
+\index{rocr::\_ADDR2\_SURFACE\_FLAGS@{rocr::\_ADDR2\_SURFACE\_FLAGS}!value@{value}}
+\index{value@{value}!rocr::\_ADDR2\_SURFACE\_FLAGS@{rocr::\_ADDR2\_SURFACE\_FLAGS}}
+\doxysubsubsection{\texorpdfstring{value}{value}}
+{\footnotesize\ttfamily \mbox{\hyperlink{addrtypes_8h_af5a2be58a28390f9a494538f34054637}{UINT\+\_\+32}} rocr\+::\+\_\+\+ADDR2\+\_\+\+SURFACE\+\_\+\+FLAGS\+::value}
+
+\mbox{\Hypertarget{unionrocr_1_1__ADDR2__SURFACE__FLAGS_a6241ec69fc5090197f97a4098a6704d0}\label{unionrocr_1_1__ADDR2__SURFACE__FLAGS_a6241ec69fc5090197f97a4098a6704d0}} 
+\index{rocr::\_ADDR2\_SURFACE\_FLAGS@{rocr::\_ADDR2\_SURFACE\_FLAGS}!view3dAs2dArray@{view3dAs2dArray}}
+\index{view3dAs2dArray@{view3dAs2dArray}!rocr::\_ADDR2\_SURFACE\_FLAGS@{rocr::\_ADDR2\_SURFACE\_FLAGS}}
+\doxysubsubsection{\texorpdfstring{view3dAs2dArray}{view3dAs2dArray}}
+{\footnotesize\ttfamily \mbox{\hyperlink{addrtypes_8h_af5a2be58a28390f9a494538f34054637}{UINT\+\_\+32}} rocr\+::\+\_\+\+ADDR2\+\_\+\+SURFACE\+\_\+\+FLAGS\+::view3d\+As2d\+Array}
+
+
+
+This resource is a 3D resource viewed as 2D array. 
+
+
+
+The documentation for this union was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+src/image/addrlib/inc/\mbox{\hyperlink{addrinterface_8h}{addrinterface.\+h}}\end{DoxyCompactItemize}

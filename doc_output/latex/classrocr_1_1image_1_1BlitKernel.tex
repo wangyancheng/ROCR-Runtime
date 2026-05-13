@@ -1,0 +1,556 @@
+\hypertarget{classrocr_1_1image_1_1BlitKernel}{}\doxysection{rocr\+::image\+::Blit\+Kernel Class Reference}
+\label{classrocr_1_1image_1_1BlitKernel}\index{rocr::image::BlitKernel@{rocr::image::BlitKernel}}
+
+
+{\ttfamily \#include $<$blit\+\_\+kernel.\+h$>$}
+
+\doxysubsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+enum \mbox{\hyperlink{classrocr_1_1image_1_1BlitKernel_a14abc5d0ad40dbe404add3f3a4333437}{Kernel\+Op}} \{ \newline
+\mbox{\hyperlink{classrocr_1_1image_1_1BlitKernel_a14abc5d0ad40dbe404add3f3a4333437af79527117b199bbb8a3a6617ba94a3c9}{KERNEL\+\_\+\+OP\+\_\+\+COPY\+\_\+\+IMAGE\+\_\+\+TO\+\_\+\+BUFFER}} = 0
+, \mbox{\hyperlink{classrocr_1_1image_1_1BlitKernel_a14abc5d0ad40dbe404add3f3a4333437ab6df5b302d6b0f02983bf50b48dd5a95}{KERNEL\+\_\+\+OP\+\_\+\+COPY\+\_\+\+BUFFER\+\_\+\+TO\+\_\+\+IMAGE}} = 1
+, \mbox{\hyperlink{classrocr_1_1image_1_1BlitKernel_a14abc5d0ad40dbe404add3f3a4333437a41f71ceb338034b496dec820ad9dd8c2}{KERNEL\+\_\+\+OP\+\_\+\+COPY\+\_\+\+IMAGE\+\_\+\+DEFAULT}} = 2
+, \mbox{\hyperlink{classrocr_1_1image_1_1BlitKernel_a14abc5d0ad40dbe404add3f3a4333437af744a0c974cc2cc0e53cf2c57c828285}{KERNEL\+\_\+\+OP\+\_\+\+COPY\+\_\+\+IMAGE\+\_\+\+LINEAR\+\_\+\+TO\+\_\+\+STANDARD}} = 3
+, \newline
+\mbox{\hyperlink{classrocr_1_1image_1_1BlitKernel_a14abc5d0ad40dbe404add3f3a4333437ad8e30ed9f5dbd432ddd993d75c453f89}{KERNEL\+\_\+\+OP\+\_\+\+COPY\+\_\+\+IMAGE\+\_\+\+STANDARD\+\_\+\+TO\+\_\+\+LINEAR}} = 4
+, \mbox{\hyperlink{classrocr_1_1image_1_1BlitKernel_a14abc5d0ad40dbe404add3f3a4333437a336a914aa0484cc33e8156ddde5d373c}{KERNEL\+\_\+\+OP\+\_\+\+COPY\+\_\+\+IMAGE\+\_\+1\+DB}} = 5
+, \mbox{\hyperlink{classrocr_1_1image_1_1BlitKernel_a14abc5d0ad40dbe404add3f3a4333437a33d50f600e5ec63e057c803f699b1f34}{KERNEL\+\_\+\+OP\+\_\+\+COPY\+\_\+\+IMAGE\+\_\+1\+DB\+\_\+\+TO\+\_\+\+REG}} = 6
+, \mbox{\hyperlink{classrocr_1_1image_1_1BlitKernel_a14abc5d0ad40dbe404add3f3a4333437aff725382e844616a267ea376e7503e59}{KERNEL\+\_\+\+OP\+\_\+\+COPY\+\_\+\+IMAGE\+\_\+\+REG\+\_\+\+TO\+\_\+1\+DB}} = 7
+, \newline
+\mbox{\hyperlink{classrocr_1_1image_1_1BlitKernel_a14abc5d0ad40dbe404add3f3a4333437a5ee0e73654c103380be7cf760fdd5fb6}{KERNEL\+\_\+\+OP\+\_\+\+CLEAR\+\_\+\+IMAGE}} = 8
+, \mbox{\hyperlink{classrocr_1_1image_1_1BlitKernel_a14abc5d0ad40dbe404add3f3a4333437a08bd318db12a7af2b95b9c307448e995}{KERNEL\+\_\+\+OP\+\_\+\+CLEAR\+\_\+\+IMAGE\+\_\+1\+DB}} = 9
+, \mbox{\hyperlink{classrocr_1_1image_1_1BlitKernel_a14abc5d0ad40dbe404add3f3a4333437a3e2d48e6d60a70ac017af77bd13afe95}{KERNEL\+\_\+\+OP\+\_\+\+COUNT}} = 10
+ \}
+\item 
+typedef enum \mbox{\hyperlink{classrocr_1_1image_1_1BlitKernel_a14abc5d0ad40dbe404add3f3a4333437}{rocr\+::image\+::\+Blit\+Kernel\+::\+Kernel\+Op}} \mbox{\hyperlink{classrocr_1_1image_1_1BlitKernel_ac7d93dd7854577b63fe3722b3cea81a7}{Kernel\+Op}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classrocr_1_1image_1_1BlitKernel_a621ba577f6edf5b28a767548bd621902}{Blit\+Kernel}} ()
+\item 
+\mbox{\hyperlink{classrocr_1_1image_1_1BlitKernel_adbff38563b507844134eb176ee7df562}{$\sim$\+Blit\+Kernel}} ()
+\item 
+\mbox{\hyperlink{group__status_gad755322e7ff95456520e8abdbe90d225}{hsa\+\_\+status\+\_\+t}} \mbox{\hyperlink{classrocr_1_1image_1_1BlitKernel_af820309a86102b5aa37ddb058bd44e71}{Initialize}} ()
+\item 
+\mbox{\hyperlink{group__status_gad755322e7ff95456520e8abdbe90d225}{hsa\+\_\+status\+\_\+t}} \mbox{\hyperlink{classrocr_1_1image_1_1BlitKernel_a414bce7d0af5f896fcacd48baca8628d}{Cleanup}} ()
+\item 
+\mbox{\hyperlink{group__status_gad755322e7ff95456520e8abdbe90d225}{hsa\+\_\+status\+\_\+t}} \mbox{\hyperlink{classrocr_1_1image_1_1BlitKernel_aaa69275e61459de20e4d080e74bca947}{Build\+Blit\+Code}} (\mbox{\hyperlink{group__agentinfo_ga9ce217ef08e7d5e89c8e83ce7b6ef22b}{hsa\+\_\+agent\+\_\+t}} agent, std\+::vector$<$ \mbox{\hyperlink{structrocr_1_1image_1_1BlitCodeInfo}{Blit\+Code\+Info}} $>$ \&blit\+\_\+code\+\_\+catalog)
+\item 
+\mbox{\hyperlink{group__status_gad755322e7ff95456520e8abdbe90d225}{hsa\+\_\+status\+\_\+t}} \mbox{\hyperlink{classrocr_1_1image_1_1BlitKernel_a99d91e3444237e9174c7b8df6b108260}{Copy\+Buffer\+To\+Image}} (\mbox{\hyperlink{structrocr_1_1image_1_1BlitQueue}{Blit\+Queue}} \&blit\+\_\+queue, const std\+::vector$<$ \mbox{\hyperlink{structrocr_1_1image_1_1BlitCodeInfo}{Blit\+Code\+Info}} $>$ \&blit\+\_\+code\+\_\+catalog, const void $\ast$src\+\_\+memory, size\+\_\+t src\+\_\+row\+\_\+pitch, size\+\_\+t src\+\_\+slice\+\_\+pitch, const \mbox{\hyperlink{structrocr_1_1image_1_1Image}{Image}} \&dst\+\_\+image, const \mbox{\hyperlink{group__ext-images_gaa407e3fb8aa43d59f8e8560294d1c702}{hsa\+\_\+ext\+\_\+image\+\_\+region\+\_\+t}} \&image\+\_\+region)
+\item 
+\mbox{\hyperlink{group__status_gad755322e7ff95456520e8abdbe90d225}{hsa\+\_\+status\+\_\+t}} \mbox{\hyperlink{classrocr_1_1image_1_1BlitKernel_a2c8d36a806e5bb91a30448aba694626c}{Copy\+Image\+To\+Buffer}} (\mbox{\hyperlink{structrocr_1_1image_1_1BlitQueue}{Blit\+Queue}} \&blit\+\_\+queue, const std\+::vector$<$ \mbox{\hyperlink{structrocr_1_1image_1_1BlitCodeInfo}{Blit\+Code\+Info}} $>$ \&blit\+\_\+code\+\_\+catalog, const \mbox{\hyperlink{structrocr_1_1image_1_1Image}{Image}} \&src\+\_\+image, void $\ast$dst\+\_\+memory, size\+\_\+t dst\+\_\+row\+\_\+pitch, size\+\_\+t dst\+\_\+slice\+\_\+pitch, const \mbox{\hyperlink{group__ext-images_gaa407e3fb8aa43d59f8e8560294d1c702}{hsa\+\_\+ext\+\_\+image\+\_\+region\+\_\+t}} \&image\+\_\+region)
+\item 
+\mbox{\hyperlink{group__status_gad755322e7ff95456520e8abdbe90d225}{hsa\+\_\+status\+\_\+t}} \mbox{\hyperlink{classrocr_1_1image_1_1BlitKernel_a1520a4d11d8d88ba4deb65f727ea7102}{Copy\+Image}} (\mbox{\hyperlink{structrocr_1_1image_1_1BlitQueue}{Blit\+Queue}} \&blit\+\_\+queue, const std\+::vector$<$ \mbox{\hyperlink{structrocr_1_1image_1_1BlitCodeInfo}{Blit\+Code\+Info}} $>$ \&blit\+\_\+code\+\_\+catalog, const \mbox{\hyperlink{structrocr_1_1image_1_1Image}{Image}} \&dst\+\_\+image, const \mbox{\hyperlink{structrocr_1_1image_1_1Image}{Image}} \&src\+\_\+image, const \mbox{\hyperlink{group__common_gae460d1df8c508a9c889d4550ea4eea30}{hsa\+\_\+dim3\+\_\+t}} \&dst\+\_\+origin, const \mbox{\hyperlink{group__common_gae460d1df8c508a9c889d4550ea4eea30}{hsa\+\_\+dim3\+\_\+t}} \&src\+\_\+origin, const \mbox{\hyperlink{group__common_gae460d1df8c508a9c889d4550ea4eea30}{hsa\+\_\+dim3\+\_\+t}} size, \mbox{\hyperlink{classrocr_1_1image_1_1BlitKernel_a14abc5d0ad40dbe404add3f3a4333437}{Kernel\+Op}} copy\+\_\+type)
+\item 
+\mbox{\hyperlink{group__status_gad755322e7ff95456520e8abdbe90d225}{hsa\+\_\+status\+\_\+t}} \mbox{\hyperlink{classrocr_1_1image_1_1BlitKernel_a6a72cb09d45d1a9460a4cd600e0af7cf}{Fill\+Image}} (\mbox{\hyperlink{structrocr_1_1image_1_1BlitQueue}{Blit\+Queue}} \&blit\+\_\+queue, const std\+::vector$<$ \mbox{\hyperlink{structrocr_1_1image_1_1BlitCodeInfo}{Blit\+Code\+Info}} $>$ \&blit\+\_\+code\+\_\+catalog, const \mbox{\hyperlink{structrocr_1_1image_1_1Image}{Image}} \&image, const void $\ast$pattern, const \mbox{\hyperlink{group__ext-images_gaa407e3fb8aa43d59f8e8560294d1c702}{hsa\+\_\+ext\+\_\+image\+\_\+region\+\_\+t}} \&region)
+\end{DoxyCompactItemize}
+\doxysubsection*{Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{group__status_gad755322e7ff95456520e8abdbe90d225}{hsa\+\_\+status\+\_\+t}} \mbox{\hyperlink{classrocr_1_1image_1_1BlitKernel_acc685ca1d4c3350bc2f63cf24d1729b8}{Populate\+Kernel\+Code}} (\mbox{\hyperlink{group__agentinfo_ga9ce217ef08e7d5e89c8e83ce7b6ef22b}{hsa\+\_\+agent\+\_\+t}} agent, \mbox{\hyperlink{group__executable_ga4a4281d636cb6048c4d7a015e1fa3baa}{hsa\+\_\+executable\+\_\+t}} executable, std\+::vector$<$ \mbox{\hyperlink{structrocr_1_1image_1_1BlitCodeInfo}{Blit\+Code\+Info}} $>$ \&blit\+\_\+code\+\_\+catalog)
+\item 
+void \mbox{\hyperlink{classrocr_1_1image_1_1BlitKernel_a4dea2832c08f79d4023101be8cf208ab}{Calc\+Buffer\+Row\+Slice\+Pitches\+In\+Pixel}} (\mbox{\hyperlink{group__ext-images_gac61587d98a80d1660378e3904a66fc9c}{hsa\+\_\+ext\+\_\+image\+\_\+geometry\+\_\+t}} geometry, uint32\+\_\+t element\+\_\+size, const \mbox{\hyperlink{group__common_gae460d1df8c508a9c889d4550ea4eea30}{hsa\+\_\+dim3\+\_\+t}} \&copy\+\_\+size, size\+\_\+t in\+\_\+row\+\_\+pitch\+\_\+byte, size\+\_\+t in\+\_\+slice\+\_\+pitch\+\_\+byte, unsigned long $\ast$out\+\_\+pitch\+\_\+pixel)
+\item 
+uint32\+\_\+t \mbox{\hyperlink{classrocr_1_1image_1_1BlitKernel_a047d544d96ab0c0c141520108f0942ba}{Get\+Dim\+Size}} (const \mbox{\hyperlink{structrocr_1_1image_1_1Image}{Image}} \&image)
+\item 
+uint32\+\_\+t \mbox{\hyperlink{classrocr_1_1image_1_1BlitKernel_a0d2dfccd3e02ba161c56bbb0574d25f8}{Get\+Num\+Channel}} (const \mbox{\hyperlink{structrocr_1_1image_1_1Image}{Image}} \&image)
+\item 
+uint32\+\_\+t \mbox{\hyperlink{classrocr_1_1image_1_1BlitKernel_a80121e757efdc40be814f2d47edbb3c9}{Get\+Image\+Access\+Type}} (const \mbox{\hyperlink{structrocr_1_1image_1_1Image}{Image}} \&image)
+\item 
+void \mbox{\hyperlink{classrocr_1_1image_1_1BlitKernel_aca3985d8466a1e0d280a40f7755cabf4}{Calc\+Working\+Size}} (const \mbox{\hyperlink{structrocr_1_1image_1_1Image}{Image}} \&image, const \mbox{\hyperlink{group__common_gae460d1df8c508a9c889d4550ea4eea30}{hsa\+\_\+dim3\+\_\+t}} \&range, \mbox{\hyperlink{group__aql_gaf08e3b09665195c8274b0d7c4b1015e3}{hsa\+\_\+kernel\+\_\+dispatch\+\_\+packet\+\_\+t}} \&packet)
+\item 
+void \mbox{\hyperlink{classrocr_1_1image_1_1BlitKernel_abaf93548a541a225fbbedbada3427c4c}{Calc\+Working\+Size}} (const \mbox{\hyperlink{structrocr_1_1image_1_1Image}{Image}} \&src\+\_\+image, const \mbox{\hyperlink{structrocr_1_1image_1_1Image}{Image}} \&dst\+\_\+image, const \mbox{\hyperlink{group__common_gae460d1df8c508a9c889d4550ea4eea30}{hsa\+\_\+dim3\+\_\+t}} \&range, \mbox{\hyperlink{group__aql_gaf08e3b09665195c8274b0d7c4b1015e3}{hsa\+\_\+kernel\+\_\+dispatch\+\_\+packet\+\_\+t}} \&packet)
+\item 
+\mbox{\hyperlink{group__status_gad755322e7ff95456520e8abdbe90d225}{hsa\+\_\+status\+\_\+t}} \mbox{\hyperlink{classrocr_1_1image_1_1BlitKernel_ae94a4612b547ba54482e6bbc755a7214}{Convert\+Image}} (const \mbox{\hyperlink{structrocr_1_1image_1_1Image}{Image}} \&original\+\_\+image, const \mbox{\hyperlink{structrocr_1_1image_1_1Image}{Image}} $\ast$$\ast$new\+\_\+image)
+\item 
+\mbox{\hyperlink{group__status_gad755322e7ff95456520e8abdbe90d225}{hsa\+\_\+status\+\_\+t}} \mbox{\hyperlink{classrocr_1_1image_1_1BlitKernel_a8377a76ef06799d6f20c921534222121}{Launch\+Kernel}} (\mbox{\hyperlink{structrocr_1_1image_1_1BlitQueue}{Blit\+Queue}} \&queue, \mbox{\hyperlink{group__aql_gaf08e3b09665195c8274b0d7c4b1015e3}{hsa\+\_\+kernel\+\_\+dispatch\+\_\+packet\+\_\+t}} \&packet)
+\item 
+\mbox{\hyperlink{classrocr_1_1image_1_1BlitKernel_a45b61f32b65fd56a3a95165378e2150c}{DISALLOW\+\_\+\+COPY\+\_\+\+AND\+\_\+\+ASSIGN}} (\mbox{\hyperlink{classrocr_1_1image_1_1BlitKernel}{Blit\+Kernel}})
+\item 
+\mbox{\hyperlink{group__status_gad755322e7ff95456520e8abdbe90d225}{hsa\+\_\+status\+\_\+t}} \mbox{\hyperlink{classrocr_1_1image_1_1BlitKernel_a5dc7d63a1ee4d48d7acd034e5866e78c}{Get\+Patched\+Blit\+Object}} (const char $\ast$agent\+\_\+name, uint8\+\_\+t $\ast$$\ast$code\+\_\+object\+\_\+handle)
+\end{DoxyCompactItemize}
+\doxysubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+std\+::unordered\+\_\+map$<$ uint64\+\_\+t, \mbox{\hyperlink{group__code-object_gafae7c731c8bfc39b3050ef08ae8bb3e3}{hsa\+\_\+code\+\_\+object\+\_\+t}} $>$ \mbox{\hyperlink{classrocr_1_1image_1_1BlitKernel_a68be329812d7bed1082207eee22fecb7}{code\+\_\+object\+\_\+map\+\_\+}}
+\item 
+std\+::unordered\+\_\+map$<$ uint64\+\_\+t, \mbox{\hyperlink{group__executable_ga4a4281d636cb6048c4d7a015e1fa3baa}{hsa\+\_\+executable\+\_\+t}} $>$ \mbox{\hyperlink{classrocr_1_1image_1_1BlitKernel_ab96fba0e7e85580c3a5db62bf2f99dca}{code\+\_\+executable\+\_\+map\+\_\+}}
+\item 
+std\+::mutex \mbox{\hyperlink{classrocr_1_1image_1_1BlitKernel_abc1a2ceddb148198a504b68c85bfd5c6}{lock\+\_\+}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Static Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+static const char $\ast$ \mbox{\hyperlink{classrocr_1_1image_1_1BlitKernel_a7d419c5a7dfdf311005f6db7f07e9603}{kernel\+\_\+name\+\_\+}} \mbox{[}\mbox{\hyperlink{classrocr_1_1image_1_1BlitKernel_a14abc5d0ad40dbe404add3f3a4333437a3e2d48e6d60a70ac017af77bd13afe95}{KERNEL\+\_\+\+OP\+\_\+\+COUNT}}\mbox{]}
+\item 
+static const char $\ast$ \mbox{\hyperlink{classrocr_1_1image_1_1BlitKernel_abf355447fecafe9c12d1538f229a57a9}{ocl\+\_\+kernel\+\_\+name\+\_\+}} \mbox{[}\mbox{\hyperlink{classrocr_1_1image_1_1BlitKernel_a14abc5d0ad40dbe404add3f3a4333437a3e2d48e6d60a70ac017af77bd13afe95}{KERNEL\+\_\+\+OP\+\_\+\+COUNT}}\mbox{]}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Member Typedef Documentation}
+\mbox{\Hypertarget{classrocr_1_1image_1_1BlitKernel_ac7d93dd7854577b63fe3722b3cea81a7}\label{classrocr_1_1image_1_1BlitKernel_ac7d93dd7854577b63fe3722b3cea81a7}} 
+\index{rocr::image::BlitKernel@{rocr::image::BlitKernel}!KernelOp@{KernelOp}}
+\index{KernelOp@{KernelOp}!rocr::image::BlitKernel@{rocr::image::BlitKernel}}
+\doxysubsubsection{\texorpdfstring{KernelOp}{KernelOp}}
+{\footnotesize\ttfamily typedef enum \mbox{\hyperlink{classrocr_1_1image_1_1BlitKernel_a14abc5d0ad40dbe404add3f3a4333437}{rocr\+::image\+::\+Blit\+Kernel\+::\+Kernel\+Op}} \mbox{\hyperlink{classrocr_1_1image_1_1BlitKernel_a14abc5d0ad40dbe404add3f3a4333437}{rocr\+::image\+::\+Blit\+Kernel\+::\+Kernel\+Op}}}
+
+
+
+\doxysubsection{Member Enumeration Documentation}
+\mbox{\Hypertarget{classrocr_1_1image_1_1BlitKernel_a14abc5d0ad40dbe404add3f3a4333437}\label{classrocr_1_1image_1_1BlitKernel_a14abc5d0ad40dbe404add3f3a4333437}} 
+\index{rocr::image::BlitKernel@{rocr::image::BlitKernel}!KernelOp@{KernelOp}}
+\index{KernelOp@{KernelOp}!rocr::image::BlitKernel@{rocr::image::BlitKernel}}
+\doxysubsubsection{\texorpdfstring{KernelOp}{KernelOp}}
+{\footnotesize\ttfamily enum \mbox{\hyperlink{classrocr_1_1image_1_1BlitKernel_a14abc5d0ad40dbe404add3f3a4333437}{rocr\+::image\+::\+Blit\+Kernel\+::\+Kernel\+Op}}}
+
+\begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{KERNEL\_OP\_COPY\_IMAGE\_TO\_BUFFER@{KERNEL\_OP\_COPY\_IMAGE\_TO\_BUFFER}!rocr::image::BlitKernel@{rocr::image::BlitKernel}}\index{rocr::image::BlitKernel@{rocr::image::BlitKernel}!KERNEL\_OP\_COPY\_IMAGE\_TO\_BUFFER@{KERNEL\_OP\_COPY\_IMAGE\_TO\_BUFFER}}}\mbox{\Hypertarget{classrocr_1_1image_1_1BlitKernel_a14abc5d0ad40dbe404add3f3a4333437af79527117b199bbb8a3a6617ba94a3c9}\label{classrocr_1_1image_1_1BlitKernel_a14abc5d0ad40dbe404add3f3a4333437af79527117b199bbb8a3a6617ba94a3c9}} 
+KERNEL\+\_\+\+OP\+\_\+\+COPY\+\_\+\+IMAGE\+\_\+\+TO\+\_\+\+BUFFER&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{KERNEL\_OP\_COPY\_BUFFER\_TO\_IMAGE@{KERNEL\_OP\_COPY\_BUFFER\_TO\_IMAGE}!rocr::image::BlitKernel@{rocr::image::BlitKernel}}\index{rocr::image::BlitKernel@{rocr::image::BlitKernel}!KERNEL\_OP\_COPY\_BUFFER\_TO\_IMAGE@{KERNEL\_OP\_COPY\_BUFFER\_TO\_IMAGE}}}\mbox{\Hypertarget{classrocr_1_1image_1_1BlitKernel_a14abc5d0ad40dbe404add3f3a4333437ab6df5b302d6b0f02983bf50b48dd5a95}\label{classrocr_1_1image_1_1BlitKernel_a14abc5d0ad40dbe404add3f3a4333437ab6df5b302d6b0f02983bf50b48dd5a95}} 
+KERNEL\+\_\+\+OP\+\_\+\+COPY\+\_\+\+BUFFER\+\_\+\+TO\+\_\+\+IMAGE&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{KERNEL\_OP\_COPY\_IMAGE\_DEFAULT@{KERNEL\_OP\_COPY\_IMAGE\_DEFAULT}!rocr::image::BlitKernel@{rocr::image::BlitKernel}}\index{rocr::image::BlitKernel@{rocr::image::BlitKernel}!KERNEL\_OP\_COPY\_IMAGE\_DEFAULT@{KERNEL\_OP\_COPY\_IMAGE\_DEFAULT}}}\mbox{\Hypertarget{classrocr_1_1image_1_1BlitKernel_a14abc5d0ad40dbe404add3f3a4333437a41f71ceb338034b496dec820ad9dd8c2}\label{classrocr_1_1image_1_1BlitKernel_a14abc5d0ad40dbe404add3f3a4333437a41f71ceb338034b496dec820ad9dd8c2}} 
+KERNEL\+\_\+\+OP\+\_\+\+COPY\+\_\+\+IMAGE\+\_\+\+DEFAULT&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{KERNEL\_OP\_COPY\_IMAGE\_LINEAR\_TO\_STANDARD@{KERNEL\_OP\_COPY\_IMAGE\_LINEAR\_TO\_STANDARD}!rocr::image::BlitKernel@{rocr::image::BlitKernel}}\index{rocr::image::BlitKernel@{rocr::image::BlitKernel}!KERNEL\_OP\_COPY\_IMAGE\_LINEAR\_TO\_STANDARD@{KERNEL\_OP\_COPY\_IMAGE\_LINEAR\_TO\_STANDARD}}}\mbox{\Hypertarget{classrocr_1_1image_1_1BlitKernel_a14abc5d0ad40dbe404add3f3a4333437af744a0c974cc2cc0e53cf2c57c828285}\label{classrocr_1_1image_1_1BlitKernel_a14abc5d0ad40dbe404add3f3a4333437af744a0c974cc2cc0e53cf2c57c828285}} 
+KERNEL\+\_\+\+OP\+\_\+\+COPY\+\_\+\+IMAGE\+\_\+\+LINEAR\+\_\+\+TO\+\_\+\+STANDARD&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{KERNEL\_OP\_COPY\_IMAGE\_STANDARD\_TO\_LINEAR@{KERNEL\_OP\_COPY\_IMAGE\_STANDARD\_TO\_LINEAR}!rocr::image::BlitKernel@{rocr::image::BlitKernel}}\index{rocr::image::BlitKernel@{rocr::image::BlitKernel}!KERNEL\_OP\_COPY\_IMAGE\_STANDARD\_TO\_LINEAR@{KERNEL\_OP\_COPY\_IMAGE\_STANDARD\_TO\_LINEAR}}}\mbox{\Hypertarget{classrocr_1_1image_1_1BlitKernel_a14abc5d0ad40dbe404add3f3a4333437ad8e30ed9f5dbd432ddd993d75c453f89}\label{classrocr_1_1image_1_1BlitKernel_a14abc5d0ad40dbe404add3f3a4333437ad8e30ed9f5dbd432ddd993d75c453f89}} 
+KERNEL\+\_\+\+OP\+\_\+\+COPY\+\_\+\+IMAGE\+\_\+\+STANDARD\+\_\+\+TO\+\_\+\+LINEAR&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{KERNEL\_OP\_COPY\_IMAGE\_1DB@{KERNEL\_OP\_COPY\_IMAGE\_1DB}!rocr::image::BlitKernel@{rocr::image::BlitKernel}}\index{rocr::image::BlitKernel@{rocr::image::BlitKernel}!KERNEL\_OP\_COPY\_IMAGE\_1DB@{KERNEL\_OP\_COPY\_IMAGE\_1DB}}}\mbox{\Hypertarget{classrocr_1_1image_1_1BlitKernel_a14abc5d0ad40dbe404add3f3a4333437a336a914aa0484cc33e8156ddde5d373c}\label{classrocr_1_1image_1_1BlitKernel_a14abc5d0ad40dbe404add3f3a4333437a336a914aa0484cc33e8156ddde5d373c}} 
+KERNEL\+\_\+\+OP\+\_\+\+COPY\+\_\+\+IMAGE\+\_\+1\+DB&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{KERNEL\_OP\_COPY\_IMAGE\_1DB\_TO\_REG@{KERNEL\_OP\_COPY\_IMAGE\_1DB\_TO\_REG}!rocr::image::BlitKernel@{rocr::image::BlitKernel}}\index{rocr::image::BlitKernel@{rocr::image::BlitKernel}!KERNEL\_OP\_COPY\_IMAGE\_1DB\_TO\_REG@{KERNEL\_OP\_COPY\_IMAGE\_1DB\_TO\_REG}}}\mbox{\Hypertarget{classrocr_1_1image_1_1BlitKernel_a14abc5d0ad40dbe404add3f3a4333437a33d50f600e5ec63e057c803f699b1f34}\label{classrocr_1_1image_1_1BlitKernel_a14abc5d0ad40dbe404add3f3a4333437a33d50f600e5ec63e057c803f699b1f34}} 
+KERNEL\+\_\+\+OP\+\_\+\+COPY\+\_\+\+IMAGE\+\_\+1\+DB\+\_\+\+TO\+\_\+\+REG&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{KERNEL\_OP\_COPY\_IMAGE\_REG\_TO\_1DB@{KERNEL\_OP\_COPY\_IMAGE\_REG\_TO\_1DB}!rocr::image::BlitKernel@{rocr::image::BlitKernel}}\index{rocr::image::BlitKernel@{rocr::image::BlitKernel}!KERNEL\_OP\_COPY\_IMAGE\_REG\_TO\_1DB@{KERNEL\_OP\_COPY\_IMAGE\_REG\_TO\_1DB}}}\mbox{\Hypertarget{classrocr_1_1image_1_1BlitKernel_a14abc5d0ad40dbe404add3f3a4333437aff725382e844616a267ea376e7503e59}\label{classrocr_1_1image_1_1BlitKernel_a14abc5d0ad40dbe404add3f3a4333437aff725382e844616a267ea376e7503e59}} 
+KERNEL\+\_\+\+OP\+\_\+\+COPY\+\_\+\+IMAGE\+\_\+\+REG\+\_\+\+TO\+\_\+1\+DB&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{KERNEL\_OP\_CLEAR\_IMAGE@{KERNEL\_OP\_CLEAR\_IMAGE}!rocr::image::BlitKernel@{rocr::image::BlitKernel}}\index{rocr::image::BlitKernel@{rocr::image::BlitKernel}!KERNEL\_OP\_CLEAR\_IMAGE@{KERNEL\_OP\_CLEAR\_IMAGE}}}\mbox{\Hypertarget{classrocr_1_1image_1_1BlitKernel_a14abc5d0ad40dbe404add3f3a4333437a5ee0e73654c103380be7cf760fdd5fb6}\label{classrocr_1_1image_1_1BlitKernel_a14abc5d0ad40dbe404add3f3a4333437a5ee0e73654c103380be7cf760fdd5fb6}} 
+KERNEL\+\_\+\+OP\+\_\+\+CLEAR\+\_\+\+IMAGE&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{KERNEL\_OP\_CLEAR\_IMAGE\_1DB@{KERNEL\_OP\_CLEAR\_IMAGE\_1DB}!rocr::image::BlitKernel@{rocr::image::BlitKernel}}\index{rocr::image::BlitKernel@{rocr::image::BlitKernel}!KERNEL\_OP\_CLEAR\_IMAGE\_1DB@{KERNEL\_OP\_CLEAR\_IMAGE\_1DB}}}\mbox{\Hypertarget{classrocr_1_1image_1_1BlitKernel_a14abc5d0ad40dbe404add3f3a4333437a08bd318db12a7af2b95b9c307448e995}\label{classrocr_1_1image_1_1BlitKernel_a14abc5d0ad40dbe404add3f3a4333437a08bd318db12a7af2b95b9c307448e995}} 
+KERNEL\+\_\+\+OP\+\_\+\+CLEAR\+\_\+\+IMAGE\+\_\+1\+DB&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{KERNEL\_OP\_COUNT@{KERNEL\_OP\_COUNT}!rocr::image::BlitKernel@{rocr::image::BlitKernel}}\index{rocr::image::BlitKernel@{rocr::image::BlitKernel}!KERNEL\_OP\_COUNT@{KERNEL\_OP\_COUNT}}}\mbox{\Hypertarget{classrocr_1_1image_1_1BlitKernel_a14abc5d0ad40dbe404add3f3a4333437a3e2d48e6d60a70ac017af77bd13afe95}\label{classrocr_1_1image_1_1BlitKernel_a14abc5d0ad40dbe404add3f3a4333437a3e2d48e6d60a70ac017af77bd13afe95}} 
+KERNEL\+\_\+\+OP\+\_\+\+COUNT&\\
+\hline
+
+\end{DoxyEnumFields}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classrocr_1_1image_1_1BlitKernel_a621ba577f6edf5b28a767548bd621902}\label{classrocr_1_1image_1_1BlitKernel_a621ba577f6edf5b28a767548bd621902}} 
+\index{rocr::image::BlitKernel@{rocr::image::BlitKernel}!BlitKernel@{BlitKernel}}
+\index{BlitKernel@{BlitKernel}!rocr::image::BlitKernel@{rocr::image::BlitKernel}}
+\doxysubsubsection{\texorpdfstring{BlitKernel()}{BlitKernel()}}
+{\footnotesize\ttfamily rocr\+::image\+::\+Blit\+Kernel\+::\+Blit\+Kernel (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [explicit]}}
+
+\mbox{\Hypertarget{classrocr_1_1image_1_1BlitKernel_adbff38563b507844134eb176ee7df562}\label{classrocr_1_1image_1_1BlitKernel_adbff38563b507844134eb176ee7df562}} 
+\index{rocr::image::BlitKernel@{rocr::image::BlitKernel}!````~BlitKernel@{$\sim$BlitKernel}}
+\index{````~BlitKernel@{$\sim$BlitKernel}!rocr::image::BlitKernel@{rocr::image::BlitKernel}}
+\doxysubsubsection{\texorpdfstring{$\sim$BlitKernel()}{~BlitKernel()}}
+{\footnotesize\ttfamily rocr\+::image\+::\+Blit\+Kernel\+::$\sim$\+Blit\+Kernel (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classrocr_1_1image_1_1BlitKernel_aaa69275e61459de20e4d080e74bca947}\label{classrocr_1_1image_1_1BlitKernel_aaa69275e61459de20e4d080e74bca947}} 
+\index{rocr::image::BlitKernel@{rocr::image::BlitKernel}!BuildBlitCode@{BuildBlitCode}}
+\index{BuildBlitCode@{BuildBlitCode}!rocr::image::BlitKernel@{rocr::image::BlitKernel}}
+\doxysubsubsection{\texorpdfstring{BuildBlitCode()}{BuildBlitCode()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{group__status_gad755322e7ff95456520e8abdbe90d225}{hsa\+\_\+status\+\_\+t}} rocr\+::image\+::\+Blit\+Kernel\+::\+Build\+Blit\+Code (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{group__agentinfo_ga9ce217ef08e7d5e89c8e83ce7b6ef22b}{hsa\+\_\+agent\+\_\+t}}}]{agent,  }\item[{std\+::vector$<$ \mbox{\hyperlink{structrocr_1_1image_1_1BlitCodeInfo}{Blit\+Code\+Info}} $>$ \&}]{blit\+\_\+code\+\_\+catalog }\end{DoxyParamCaption})}
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classrocr_1_1image_1_1BlitKernel_aaa69275e61459de20e4d080e74bca947_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classrocr_1_1image_1_1BlitKernel_aaa69275e61459de20e4d080e74bca947_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classrocr_1_1image_1_1BlitKernel_a4dea2832c08f79d4023101be8cf208ab}\label{classrocr_1_1image_1_1BlitKernel_a4dea2832c08f79d4023101be8cf208ab}} 
+\index{rocr::image::BlitKernel@{rocr::image::BlitKernel}!CalcBufferRowSlicePitchesInPixel@{CalcBufferRowSlicePitchesInPixel}}
+\index{CalcBufferRowSlicePitchesInPixel@{CalcBufferRowSlicePitchesInPixel}!rocr::image::BlitKernel@{rocr::image::BlitKernel}}
+\doxysubsubsection{\texorpdfstring{CalcBufferRowSlicePitchesInPixel()}{CalcBufferRowSlicePitchesInPixel()}}
+{\footnotesize\ttfamily void rocr\+::image\+::\+Blit\+Kernel\+::\+Calc\+Buffer\+Row\+Slice\+Pitches\+In\+Pixel (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{group__ext-images_gac61587d98a80d1660378e3904a66fc9c}{hsa\+\_\+ext\+\_\+image\+\_\+geometry\+\_\+t}}}]{geometry,  }\item[{uint32\+\_\+t}]{element\+\_\+size,  }\item[{const \mbox{\hyperlink{group__common_gae460d1df8c508a9c889d4550ea4eea30}{hsa\+\_\+dim3\+\_\+t}} \&}]{copy\+\_\+size,  }\item[{size\+\_\+t}]{in\+\_\+row\+\_\+pitch\+\_\+byte,  }\item[{size\+\_\+t}]{in\+\_\+slice\+\_\+pitch\+\_\+byte,  }\item[{unsigned long $\ast$}]{out\+\_\+pitch\+\_\+pixel }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [private]}}
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classrocr_1_1image_1_1BlitKernel_a4dea2832c08f79d4023101be8cf208ab_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classrocr_1_1image_1_1BlitKernel_aca3985d8466a1e0d280a40f7755cabf4}\label{classrocr_1_1image_1_1BlitKernel_aca3985d8466a1e0d280a40f7755cabf4}} 
+\index{rocr::image::BlitKernel@{rocr::image::BlitKernel}!CalcWorkingSize@{CalcWorkingSize}}
+\index{CalcWorkingSize@{CalcWorkingSize}!rocr::image::BlitKernel@{rocr::image::BlitKernel}}
+\doxysubsubsection{\texorpdfstring{CalcWorkingSize()}{CalcWorkingSize()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily void rocr\+::image\+::\+Blit\+Kernel\+::\+Calc\+Working\+Size (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{structrocr_1_1image_1_1Image}{Image}} \&}]{image,  }\item[{const \mbox{\hyperlink{group__common_gae460d1df8c508a9c889d4550ea4eea30}{hsa\+\_\+dim3\+\_\+t}} \&}]{range,  }\item[{\mbox{\hyperlink{group__aql_gaf08e3b09665195c8274b0d7c4b1015e3}{hsa\+\_\+kernel\+\_\+dispatch\+\_\+packet\+\_\+t}} \&}]{packet }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classrocr_1_1image_1_1BlitKernel_aca3985d8466a1e0d280a40f7755cabf4_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classrocr_1_1image_1_1BlitKernel_abaf93548a541a225fbbedbada3427c4c}\label{classrocr_1_1image_1_1BlitKernel_abaf93548a541a225fbbedbada3427c4c}} 
+\index{rocr::image::BlitKernel@{rocr::image::BlitKernel}!CalcWorkingSize@{CalcWorkingSize}}
+\index{CalcWorkingSize@{CalcWorkingSize}!rocr::image::BlitKernel@{rocr::image::BlitKernel}}
+\doxysubsubsection{\texorpdfstring{CalcWorkingSize()}{CalcWorkingSize()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily void rocr\+::image\+::\+Blit\+Kernel\+::\+Calc\+Working\+Size (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{structrocr_1_1image_1_1Image}{Image}} \&}]{src\+\_\+image,  }\item[{const \mbox{\hyperlink{structrocr_1_1image_1_1Image}{Image}} \&}]{dst\+\_\+image,  }\item[{const \mbox{\hyperlink{group__common_gae460d1df8c508a9c889d4550ea4eea30}{hsa\+\_\+dim3\+\_\+t}} \&}]{range,  }\item[{\mbox{\hyperlink{group__aql_gaf08e3b09665195c8274b0d7c4b1015e3}{hsa\+\_\+kernel\+\_\+dispatch\+\_\+packet\+\_\+t}} \&}]{packet }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=342pt]{classrocr_1_1image_1_1BlitKernel_abaf93548a541a225fbbedbada3427c4c_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classrocr_1_1image_1_1BlitKernel_a414bce7d0af5f896fcacd48baca8628d}\label{classrocr_1_1image_1_1BlitKernel_a414bce7d0af5f896fcacd48baca8628d}} 
+\index{rocr::image::BlitKernel@{rocr::image::BlitKernel}!Cleanup@{Cleanup}}
+\index{Cleanup@{Cleanup}!rocr::image::BlitKernel@{rocr::image::BlitKernel}}
+\doxysubsubsection{\texorpdfstring{Cleanup()}{Cleanup()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{group__status_gad755322e7ff95456520e8abdbe90d225}{hsa\+\_\+status\+\_\+t}} rocr\+::image\+::\+Blit\+Kernel\+::\+Cleanup (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classrocr_1_1image_1_1BlitKernel_a414bce7d0af5f896fcacd48baca8628d_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classrocr_1_1image_1_1BlitKernel_a414bce7d0af5f896fcacd48baca8628d_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classrocr_1_1image_1_1BlitKernel_ae94a4612b547ba54482e6bbc755a7214}\label{classrocr_1_1image_1_1BlitKernel_ae94a4612b547ba54482e6bbc755a7214}} 
+\index{rocr::image::BlitKernel@{rocr::image::BlitKernel}!ConvertImage@{ConvertImage}}
+\index{ConvertImage@{ConvertImage}!rocr::image::BlitKernel@{rocr::image::BlitKernel}}
+\doxysubsubsection{\texorpdfstring{ConvertImage()}{ConvertImage()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{group__status_gad755322e7ff95456520e8abdbe90d225}{hsa\+\_\+status\+\_\+t}} rocr\+::image\+::\+Blit\+Kernel\+::\+Convert\+Image (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{structrocr_1_1image_1_1Image}{Image}} \&}]{original\+\_\+image,  }\item[{const \mbox{\hyperlink{structrocr_1_1image_1_1Image}{Image}} $\ast$$\ast$}]{new\+\_\+image }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classrocr_1_1image_1_1BlitKernel_ae94a4612b547ba54482e6bbc755a7214_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classrocr_1_1image_1_1BlitKernel_ae94a4612b547ba54482e6bbc755a7214_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classrocr_1_1image_1_1BlitKernel_a99d91e3444237e9174c7b8df6b108260}\label{classrocr_1_1image_1_1BlitKernel_a99d91e3444237e9174c7b8df6b108260}} 
+\index{rocr::image::BlitKernel@{rocr::image::BlitKernel}!CopyBufferToImage@{CopyBufferToImage}}
+\index{CopyBufferToImage@{CopyBufferToImage}!rocr::image::BlitKernel@{rocr::image::BlitKernel}}
+\doxysubsubsection{\texorpdfstring{CopyBufferToImage()}{CopyBufferToImage()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{group__status_gad755322e7ff95456520e8abdbe90d225}{hsa\+\_\+status\+\_\+t}} rocr\+::image\+::\+Blit\+Kernel\+::\+Copy\+Buffer\+To\+Image (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structrocr_1_1image_1_1BlitQueue}{Blit\+Queue}} \&}]{blit\+\_\+queue,  }\item[{const std\+::vector$<$ \mbox{\hyperlink{structrocr_1_1image_1_1BlitCodeInfo}{Blit\+Code\+Info}} $>$ \&}]{blit\+\_\+code\+\_\+catalog,  }\item[{const void $\ast$}]{src\+\_\+memory,  }\item[{size\+\_\+t}]{src\+\_\+row\+\_\+pitch,  }\item[{size\+\_\+t}]{src\+\_\+slice\+\_\+pitch,  }\item[{const \mbox{\hyperlink{structrocr_1_1image_1_1Image}{Image}} \&}]{dst\+\_\+image,  }\item[{const \mbox{\hyperlink{group__ext-images_gaa407e3fb8aa43d59f8e8560294d1c702}{hsa\+\_\+ext\+\_\+image\+\_\+region\+\_\+t}} \&}]{image\+\_\+region }\end{DoxyParamCaption})}
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classrocr_1_1image_1_1BlitKernel_a99d91e3444237e9174c7b8df6b108260_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classrocr_1_1image_1_1BlitKernel_a99d91e3444237e9174c7b8df6b108260_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classrocr_1_1image_1_1BlitKernel_a1520a4d11d8d88ba4deb65f727ea7102}\label{classrocr_1_1image_1_1BlitKernel_a1520a4d11d8d88ba4deb65f727ea7102}} 
+\index{rocr::image::BlitKernel@{rocr::image::BlitKernel}!CopyImage@{CopyImage}}
+\index{CopyImage@{CopyImage}!rocr::image::BlitKernel@{rocr::image::BlitKernel}}
+\doxysubsubsection{\texorpdfstring{CopyImage()}{CopyImage()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{group__status_gad755322e7ff95456520e8abdbe90d225}{hsa\+\_\+status\+\_\+t}} rocr\+::image\+::\+Blit\+Kernel\+::\+Copy\+Image (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structrocr_1_1image_1_1BlitQueue}{Blit\+Queue}} \&}]{blit\+\_\+queue,  }\item[{const std\+::vector$<$ \mbox{\hyperlink{structrocr_1_1image_1_1BlitCodeInfo}{Blit\+Code\+Info}} $>$ \&}]{blit\+\_\+code\+\_\+catalog,  }\item[{const \mbox{\hyperlink{structrocr_1_1image_1_1Image}{Image}} \&}]{dst\+\_\+image,  }\item[{const \mbox{\hyperlink{structrocr_1_1image_1_1Image}{Image}} \&}]{src\+\_\+image,  }\item[{const \mbox{\hyperlink{group__common_gae460d1df8c508a9c889d4550ea4eea30}{hsa\+\_\+dim3\+\_\+t}} \&}]{dst\+\_\+origin,  }\item[{const \mbox{\hyperlink{group__common_gae460d1df8c508a9c889d4550ea4eea30}{hsa\+\_\+dim3\+\_\+t}} \&}]{src\+\_\+origin,  }\item[{const \mbox{\hyperlink{group__common_gae460d1df8c508a9c889d4550ea4eea30}{hsa\+\_\+dim3\+\_\+t}}}]{size,  }\item[{\mbox{\hyperlink{classrocr_1_1image_1_1BlitKernel_a14abc5d0ad40dbe404add3f3a4333437}{Kernel\+Op}}}]{copy\+\_\+type }\end{DoxyParamCaption})}
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classrocr_1_1image_1_1BlitKernel_a1520a4d11d8d88ba4deb65f727ea7102_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classrocr_1_1image_1_1BlitKernel_a1520a4d11d8d88ba4deb65f727ea7102_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classrocr_1_1image_1_1BlitKernel_a2c8d36a806e5bb91a30448aba694626c}\label{classrocr_1_1image_1_1BlitKernel_a2c8d36a806e5bb91a30448aba694626c}} 
+\index{rocr::image::BlitKernel@{rocr::image::BlitKernel}!CopyImageToBuffer@{CopyImageToBuffer}}
+\index{CopyImageToBuffer@{CopyImageToBuffer}!rocr::image::BlitKernel@{rocr::image::BlitKernel}}
+\doxysubsubsection{\texorpdfstring{CopyImageToBuffer()}{CopyImageToBuffer()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{group__status_gad755322e7ff95456520e8abdbe90d225}{hsa\+\_\+status\+\_\+t}} rocr\+::image\+::\+Blit\+Kernel\+::\+Copy\+Image\+To\+Buffer (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structrocr_1_1image_1_1BlitQueue}{Blit\+Queue}} \&}]{blit\+\_\+queue,  }\item[{const std\+::vector$<$ \mbox{\hyperlink{structrocr_1_1image_1_1BlitCodeInfo}{Blit\+Code\+Info}} $>$ \&}]{blit\+\_\+code\+\_\+catalog,  }\item[{const \mbox{\hyperlink{structrocr_1_1image_1_1Image}{Image}} \&}]{src\+\_\+image,  }\item[{void $\ast$}]{dst\+\_\+memory,  }\item[{size\+\_\+t}]{dst\+\_\+row\+\_\+pitch,  }\item[{size\+\_\+t}]{dst\+\_\+slice\+\_\+pitch,  }\item[{const \mbox{\hyperlink{group__ext-images_gaa407e3fb8aa43d59f8e8560294d1c702}{hsa\+\_\+ext\+\_\+image\+\_\+region\+\_\+t}} \&}]{image\+\_\+region }\end{DoxyParamCaption})}
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classrocr_1_1image_1_1BlitKernel_a2c8d36a806e5bb91a30448aba694626c_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classrocr_1_1image_1_1BlitKernel_a2c8d36a806e5bb91a30448aba694626c_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classrocr_1_1image_1_1BlitKernel_a45b61f32b65fd56a3a95165378e2150c}\label{classrocr_1_1image_1_1BlitKernel_a45b61f32b65fd56a3a95165378e2150c}} 
+\index{rocr::image::BlitKernel@{rocr::image::BlitKernel}!DISALLOW\_COPY\_AND\_ASSIGN@{DISALLOW\_COPY\_AND\_ASSIGN}}
+\index{DISALLOW\_COPY\_AND\_ASSIGN@{DISALLOW\_COPY\_AND\_ASSIGN}!rocr::image::BlitKernel@{rocr::image::BlitKernel}}
+\doxysubsubsection{\texorpdfstring{DISALLOW\_COPY\_AND\_ASSIGN()}{DISALLOW\_COPY\_AND\_ASSIGN()}}
+{\footnotesize\ttfamily rocr\+::image\+::\+Blit\+Kernel\+::\+DISALLOW\+\_\+\+COPY\+\_\+\+AND\+\_\+\+ASSIGN (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classrocr_1_1image_1_1BlitKernel}{Blit\+Kernel}}}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classrocr_1_1image_1_1BlitKernel_a6a72cb09d45d1a9460a4cd600e0af7cf}\label{classrocr_1_1image_1_1BlitKernel_a6a72cb09d45d1a9460a4cd600e0af7cf}} 
+\index{rocr::image::BlitKernel@{rocr::image::BlitKernel}!FillImage@{FillImage}}
+\index{FillImage@{FillImage}!rocr::image::BlitKernel@{rocr::image::BlitKernel}}
+\doxysubsubsection{\texorpdfstring{FillImage()}{FillImage()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{group__status_gad755322e7ff95456520e8abdbe90d225}{hsa\+\_\+status\+\_\+t}} rocr\+::image\+::\+Blit\+Kernel\+::\+Fill\+Image (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structrocr_1_1image_1_1BlitQueue}{Blit\+Queue}} \&}]{blit\+\_\+queue,  }\item[{const std\+::vector$<$ \mbox{\hyperlink{structrocr_1_1image_1_1BlitCodeInfo}{Blit\+Code\+Info}} $>$ \&}]{blit\+\_\+code\+\_\+catalog,  }\item[{const \mbox{\hyperlink{structrocr_1_1image_1_1Image}{Image}} \&}]{image,  }\item[{const void $\ast$}]{pattern,  }\item[{const \mbox{\hyperlink{group__ext-images_gaa407e3fb8aa43d59f8e8560294d1c702}{hsa\+\_\+ext\+\_\+image\+\_\+region\+\_\+t}} \&}]{region }\end{DoxyParamCaption})}
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classrocr_1_1image_1_1BlitKernel_a6a72cb09d45d1a9460a4cd600e0af7cf_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classrocr_1_1image_1_1BlitKernel_a6a72cb09d45d1a9460a4cd600e0af7cf_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classrocr_1_1image_1_1BlitKernel_a047d544d96ab0c0c141520108f0942ba}\label{classrocr_1_1image_1_1BlitKernel_a047d544d96ab0c0c141520108f0942ba}} 
+\index{rocr::image::BlitKernel@{rocr::image::BlitKernel}!GetDimSize@{GetDimSize}}
+\index{GetDimSize@{GetDimSize}!rocr::image::BlitKernel@{rocr::image::BlitKernel}}
+\doxysubsubsection{\texorpdfstring{GetDimSize()}{GetDimSize()}}
+{\footnotesize\ttfamily uint32\+\_\+t rocr\+::image\+::\+Blit\+Kernel\+::\+Get\+Dim\+Size (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{structrocr_1_1image_1_1Image}{Image}} \&}]{image }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [private]}}
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=342pt]{classrocr_1_1image_1_1BlitKernel_a047d544d96ab0c0c141520108f0942ba_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classrocr_1_1image_1_1BlitKernel_a80121e757efdc40be814f2d47edbb3c9}\label{classrocr_1_1image_1_1BlitKernel_a80121e757efdc40be814f2d47edbb3c9}} 
+\index{rocr::image::BlitKernel@{rocr::image::BlitKernel}!GetImageAccessType@{GetImageAccessType}}
+\index{GetImageAccessType@{GetImageAccessType}!rocr::image::BlitKernel@{rocr::image::BlitKernel}}
+\doxysubsubsection{\texorpdfstring{GetImageAccessType()}{GetImageAccessType()}}
+{\footnotesize\ttfamily uint32\+\_\+t rocr\+::image\+::\+Blit\+Kernel\+::\+Get\+Image\+Access\+Type (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{structrocr_1_1image_1_1Image}{Image}} \&}]{image }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [private]}}
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classrocr_1_1image_1_1BlitKernel_a80121e757efdc40be814f2d47edbb3c9_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classrocr_1_1image_1_1BlitKernel_a0d2dfccd3e02ba161c56bbb0574d25f8}\label{classrocr_1_1image_1_1BlitKernel_a0d2dfccd3e02ba161c56bbb0574d25f8}} 
+\index{rocr::image::BlitKernel@{rocr::image::BlitKernel}!GetNumChannel@{GetNumChannel}}
+\index{GetNumChannel@{GetNumChannel}!rocr::image::BlitKernel@{rocr::image::BlitKernel}}
+\doxysubsubsection{\texorpdfstring{GetNumChannel()}{GetNumChannel()}}
+{\footnotesize\ttfamily uint32\+\_\+t rocr\+::image\+::\+Blit\+Kernel\+::\+Get\+Num\+Channel (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{structrocr_1_1image_1_1Image}{Image}} \&}]{image }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [private]}}
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classrocr_1_1image_1_1BlitKernel_a0d2dfccd3e02ba161c56bbb0574d25f8_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classrocr_1_1image_1_1BlitKernel_a5dc7d63a1ee4d48d7acd034e5866e78c}\label{classrocr_1_1image_1_1BlitKernel_a5dc7d63a1ee4d48d7acd034e5866e78c}} 
+\index{rocr::image::BlitKernel@{rocr::image::BlitKernel}!GetPatchedBlitObject@{GetPatchedBlitObject}}
+\index{GetPatchedBlitObject@{GetPatchedBlitObject}!rocr::image::BlitKernel@{rocr::image::BlitKernel}}
+\doxysubsubsection{\texorpdfstring{GetPatchedBlitObject()}{GetPatchedBlitObject()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{group__status_gad755322e7ff95456520e8abdbe90d225}{hsa\+\_\+status\+\_\+t}} rocr\+::image\+::\+Blit\+Kernel\+::\+Get\+Patched\+Blit\+Object (\begin{DoxyParamCaption}\item[{const char $\ast$}]{agent\+\_\+name,  }\item[{uint8\+\_\+t $\ast$$\ast$}]{code\+\_\+object\+\_\+handle }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classrocr_1_1image_1_1BlitKernel_a5dc7d63a1ee4d48d7acd034e5866e78c_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classrocr_1_1image_1_1BlitKernel_af820309a86102b5aa37ddb058bd44e71}\label{classrocr_1_1image_1_1BlitKernel_af820309a86102b5aa37ddb058bd44e71}} 
+\index{rocr::image::BlitKernel@{rocr::image::BlitKernel}!Initialize@{Initialize}}
+\index{Initialize@{Initialize}!rocr::image::BlitKernel@{rocr::image::BlitKernel}}
+\doxysubsubsection{\texorpdfstring{Initialize()}{Initialize()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{group__status_gad755322e7ff95456520e8abdbe90d225}{hsa\+\_\+status\+\_\+t}} rocr\+::image\+::\+Blit\+Kernel\+::\+Initialize (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classrocr_1_1image_1_1BlitKernel_af820309a86102b5aa37ddb058bd44e71_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classrocr_1_1image_1_1BlitKernel_a8377a76ef06799d6f20c921534222121}\label{classrocr_1_1image_1_1BlitKernel_a8377a76ef06799d6f20c921534222121}} 
+\index{rocr::image::BlitKernel@{rocr::image::BlitKernel}!LaunchKernel@{LaunchKernel}}
+\index{LaunchKernel@{LaunchKernel}!rocr::image::BlitKernel@{rocr::image::BlitKernel}}
+\doxysubsubsection{\texorpdfstring{LaunchKernel()}{LaunchKernel()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{group__status_gad755322e7ff95456520e8abdbe90d225}{hsa\+\_\+status\+\_\+t}} rocr\+::image\+::\+Blit\+Kernel\+::\+Launch\+Kernel (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structrocr_1_1image_1_1BlitQueue}{Blit\+Queue}} \&}]{queue,  }\item[{\mbox{\hyperlink{group__aql_gaf08e3b09665195c8274b0d7c4b1015e3}{hsa\+\_\+kernel\+\_\+dispatch\+\_\+packet\+\_\+t}} \&}]{packet }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classrocr_1_1image_1_1BlitKernel_a8377a76ef06799d6f20c921534222121_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classrocr_1_1image_1_1BlitKernel_a8377a76ef06799d6f20c921534222121_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classrocr_1_1image_1_1BlitKernel_acc685ca1d4c3350bc2f63cf24d1729b8}\label{classrocr_1_1image_1_1BlitKernel_acc685ca1d4c3350bc2f63cf24d1729b8}} 
+\index{rocr::image::BlitKernel@{rocr::image::BlitKernel}!PopulateKernelCode@{PopulateKernelCode}}
+\index{PopulateKernelCode@{PopulateKernelCode}!rocr::image::BlitKernel@{rocr::image::BlitKernel}}
+\doxysubsubsection{\texorpdfstring{PopulateKernelCode()}{PopulateKernelCode()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{group__status_gad755322e7ff95456520e8abdbe90d225}{hsa\+\_\+status\+\_\+t}} rocr\+::image\+::\+Blit\+Kernel\+::\+Populate\+Kernel\+Code (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{group__agentinfo_ga9ce217ef08e7d5e89c8e83ce7b6ef22b}{hsa\+\_\+agent\+\_\+t}}}]{agent,  }\item[{\mbox{\hyperlink{group__executable_ga4a4281d636cb6048c4d7a015e1fa3baa}{hsa\+\_\+executable\+\_\+t}}}]{executable,  }\item[{std\+::vector$<$ \mbox{\hyperlink{structrocr_1_1image_1_1BlitCodeInfo}{Blit\+Code\+Info}} $>$ \&}]{blit\+\_\+code\+\_\+catalog }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classrocr_1_1image_1_1BlitKernel_acc685ca1d4c3350bc2f63cf24d1729b8_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classrocr_1_1image_1_1BlitKernel_acc685ca1d4c3350bc2f63cf24d1729b8_icgraph}
+\end{center}
+\end{figure}
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{classrocr_1_1image_1_1BlitKernel_ab96fba0e7e85580c3a5db62bf2f99dca}\label{classrocr_1_1image_1_1BlitKernel_ab96fba0e7e85580c3a5db62bf2f99dca}} 
+\index{rocr::image::BlitKernel@{rocr::image::BlitKernel}!code\_executable\_map\_@{code\_executable\_map\_}}
+\index{code\_executable\_map\_@{code\_executable\_map\_}!rocr::image::BlitKernel@{rocr::image::BlitKernel}}
+\doxysubsubsection{\texorpdfstring{code\_executable\_map\_}{code\_executable\_map\_}}
+{\footnotesize\ttfamily std\+::unordered\+\_\+map$<$uint64\+\_\+t, \mbox{\hyperlink{group__executable_ga4a4281d636cb6048c4d7a015e1fa3baa}{hsa\+\_\+executable\+\_\+t}}$>$ rocr\+::image\+::\+Blit\+Kernel\+::code\+\_\+executable\+\_\+map\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classrocr_1_1image_1_1BlitKernel_a68be329812d7bed1082207eee22fecb7}\label{classrocr_1_1image_1_1BlitKernel_a68be329812d7bed1082207eee22fecb7}} 
+\index{rocr::image::BlitKernel@{rocr::image::BlitKernel}!code\_object\_map\_@{code\_object\_map\_}}
+\index{code\_object\_map\_@{code\_object\_map\_}!rocr::image::BlitKernel@{rocr::image::BlitKernel}}
+\doxysubsubsection{\texorpdfstring{code\_object\_map\_}{code\_object\_map\_}}
+{\footnotesize\ttfamily std\+::unordered\+\_\+map$<$uint64\+\_\+t, \mbox{\hyperlink{group__code-object_gafae7c731c8bfc39b3050ef08ae8bb3e3}{hsa\+\_\+code\+\_\+object\+\_\+t}}$>$ rocr\+::image\+::\+Blit\+Kernel\+::code\+\_\+object\+\_\+map\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classrocr_1_1image_1_1BlitKernel_a7d419c5a7dfdf311005f6db7f07e9603}\label{classrocr_1_1image_1_1BlitKernel_a7d419c5a7dfdf311005f6db7f07e9603}} 
+\index{rocr::image::BlitKernel@{rocr::image::BlitKernel}!kernel\_name\_@{kernel\_name\_}}
+\index{kernel\_name\_@{kernel\_name\_}!rocr::image::BlitKernel@{rocr::image::BlitKernel}}
+\doxysubsubsection{\texorpdfstring{kernel\_name\_}{kernel\_name\_}}
+{\footnotesize\ttfamily const char $\ast$ rocr\+::image\+::\+Blit\+Kernel\+::kernel\+\_\+name\+\_\+\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [private]}}
+
+{\bfseries Initial value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{= \{}
+\DoxyCodeLine{      \textcolor{stringliteral}{"{}\&\_\_copy\_image\_to\_buffer\_kernel"{}},}
+\DoxyCodeLine{      \textcolor{stringliteral}{"{}\&\_\_copy\_buffer\_to\_image\_kernel"{}},}
+\DoxyCodeLine{      \textcolor{stringliteral}{"{}\&\_\_copy\_image\_default\_kernel"{}},}
+\DoxyCodeLine{      \textcolor{stringliteral}{"{}\&\_\_copy\_image\_linear\_to\_standard\_kernel"{}},}
+\DoxyCodeLine{      \textcolor{stringliteral}{"{}\&\_\_copy\_image\_standard\_to\_linear\_kernel"{}},}
+\DoxyCodeLine{      \textcolor{stringliteral}{"{}\&\_\_copy\_image\_1db\_kernel"{}},}
+\DoxyCodeLine{      \textcolor{stringliteral}{"{}\&\_\_copy\_image\_1db\_to\_reg\_kernel"{}},}
+\DoxyCodeLine{      \textcolor{stringliteral}{"{}\&\_\_copy\_image\_reg\_to\_1db\_kernel"{}},}
+\DoxyCodeLine{      \textcolor{stringliteral}{"{}\&\_\_clear\_image\_kernel"{}},}
+\DoxyCodeLine{      \textcolor{stringliteral}{"{}\&\_\_clear\_image\_1db\_kernel"{}}\}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{classrocr_1_1image_1_1BlitKernel_abc1a2ceddb148198a504b68c85bfd5c6}\label{classrocr_1_1image_1_1BlitKernel_abc1a2ceddb148198a504b68c85bfd5c6}} 
+\index{rocr::image::BlitKernel@{rocr::image::BlitKernel}!lock\_@{lock\_}}
+\index{lock\_@{lock\_}!rocr::image::BlitKernel@{rocr::image::BlitKernel}}
+\doxysubsubsection{\texorpdfstring{lock\_}{lock\_}}
+{\footnotesize\ttfamily std\+::mutex rocr\+::image\+::\+Blit\+Kernel\+::lock\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classrocr_1_1image_1_1BlitKernel_abf355447fecafe9c12d1538f229a57a9}\label{classrocr_1_1image_1_1BlitKernel_abf355447fecafe9c12d1538f229a57a9}} 
+\index{rocr::image::BlitKernel@{rocr::image::BlitKernel}!ocl\_kernel\_name\_@{ocl\_kernel\_name\_}}
+\index{ocl\_kernel\_name\_@{ocl\_kernel\_name\_}!rocr::image::BlitKernel@{rocr::image::BlitKernel}}
+\doxysubsubsection{\texorpdfstring{ocl\_kernel\_name\_}{ocl\_kernel\_name\_}}
+{\footnotesize\ttfamily const char $\ast$ rocr\+::image\+::\+Blit\+Kernel\+::ocl\+\_\+kernel\+\_\+name\+\_\+\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [private]}}
+
+{\bfseries Initial value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{= \{}
+\DoxyCodeLine{      \textcolor{stringliteral}{"{}copy\_image\_to\_buffer.kd"{}},}
+\DoxyCodeLine{      \textcolor{stringliteral}{"{}copy\_buffer\_to\_image.kd"{}},}
+\DoxyCodeLine{      \textcolor{stringliteral}{"{}copy\_image\_default.kd"{}},}
+\DoxyCodeLine{      \textcolor{stringliteral}{"{}copy\_image\_linear\_to\_standard.kd"{}},}
+\DoxyCodeLine{      \textcolor{stringliteral}{"{}copy\_image\_standard\_to\_linear.kd"{}},}
+\DoxyCodeLine{      \textcolor{stringliteral}{"{}copy\_image\_1db.kd"{}},}
+\DoxyCodeLine{      \textcolor{stringliteral}{"{}copy\_image\_1db\_to\_reg.kd"{}},}
+\DoxyCodeLine{      \textcolor{stringliteral}{"{}copy\_image\_reg\_to\_1db.kd"{}},}
+\DoxyCodeLine{      \textcolor{stringliteral}{"{}clear\_image.kd"{}},}
+\DoxyCodeLine{      \textcolor{stringliteral}{"{}clear\_image\_1db.kd"{}}\}}
+
+\end{DoxyCode}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+src/image/\mbox{\hyperlink{blit__kernel_8h}{blit\+\_\+kernel.\+h}}\item 
+src/image/\mbox{\hyperlink{blit__kernel_8cpp}{blit\+\_\+kernel.\+cpp}}\end{DoxyCompactItemize}

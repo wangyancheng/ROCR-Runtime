@@ -1,0 +1,149 @@
+\hypertarget{classrocr_1_1ScopedAcquire}{}\doxysection{rocr\+::Scoped\+Acquire$<$ Lock\+Type $>$ Class Template Reference}
+\label{classrocr_1_1ScopedAcquire}\index{rocr::ScopedAcquire$<$ LockType $>$@{rocr::ScopedAcquire$<$ LockType $>$}}
+
+
+\+: A class behaves as a lock in a scope. When trying to enter into the critical section, creat a object of this class. After the control path goes out of the scope, it will release the lock automatically.  
+
+
+
+
+{\ttfamily \#include $<$locks.\+h$>$}
+
+
+
+Collaboration diagram for rocr\+::Scoped\+Acquire$<$ Lock\+Type $>$\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classrocr_1_1ScopedAcquire__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class \mbox{\hyperlink{classrocr_1_1ScopedAcquire_1_1container}{container}}
+\begin{DoxyCompactList}\small\item\em \+: Adapts between pointers to mutex types and mutex pointer types. \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{classrocr_1_1ScopedAcquire_1_1container_3_01T_00_01false_01_4}{container$<$ T, false $>$}}
+\begin{DoxyCompactList}\small\item\em \+: Specialization for mutex pointer types. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classrocr_1_1ScopedAcquire_aba85dc483e4654347be83905a90fdeb8}{Scoped\+Acquire}} (Lock\+Type $\ast$lock)
+\begin{DoxyCompactList}\small\item\em \+: When constructing, acquire the lock. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classrocr_1_1ScopedAcquire_a45314e76647819ebebe3767f929e8954}{Scoped\+Acquire}} (Lock\+Type lock)
+\item 
+\mbox{\hyperlink{classrocr_1_1ScopedAcquire_a5a9d0461e44b71f993fd7d77bd446929}{$\sim$\+Scoped\+Acquire}} ()
+\begin{DoxyCompactList}\small\item\em \+: when destructing, release the lock. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classrocr_1_1ScopedAcquire_a108a9b3e4a45044dc963c79a8ca0468f}{Release}} ()
+\begin{DoxyCompactList}\small\item\em \+: Release the lock early. Avoid using when possible. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classrocr_1_1ScopedAcquire_a7b913ce4effbd6a7617cb73dc1a37670}{DISALLOW\+\_\+\+COPY\+\_\+\+AND\+\_\+\+ASSIGN}} (\mbox{\hyperlink{classrocr_1_1ScopedAcquire}{Scoped\+Acquire}})
+\begin{DoxyCompactList}\small\item\em \+: Disable copiable and assignable ability. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classrocr_1_1ScopedAcquire_1_1container}{container}}$<$ Lock\+Type, \mbox{\hyperlink{classrocr_1_1isMutex}{is\+Mutex}}$<$ Lock\+Type $>$\+::value $>$ \mbox{\hyperlink{classrocr_1_1ScopedAcquire_aeb1ca17bbd4dc93304673086f93053ee}{lock\+\_\+}}
+\item 
+bool \mbox{\hyperlink{classrocr_1_1ScopedAcquire_a0cd47a8a3d44a302b467603d5ab975fe}{do\+Release}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+\subsubsection*{template$<$class Lock\+Type$>$\newline
+class rocr\+::\+Scoped\+Acquire$<$ Lock\+Type $>$}
+
+\+: A class behaves as a lock in a scope. When trying to enter into the critical section, creat a object of this class. After the control path goes out of the scope, it will release the lock automatically. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classrocr_1_1ScopedAcquire_aba85dc483e4654347be83905a90fdeb8}\label{classrocr_1_1ScopedAcquire_aba85dc483e4654347be83905a90fdeb8}} 
+\index{rocr::ScopedAcquire$<$ LockType $>$@{rocr::ScopedAcquire$<$ LockType $>$}!ScopedAcquire@{ScopedAcquire}}
+\index{ScopedAcquire@{ScopedAcquire}!rocr::ScopedAcquire$<$ LockType $>$@{rocr::ScopedAcquire$<$ LockType $>$}}
+\doxysubsubsection{\texorpdfstring{ScopedAcquire()}{ScopedAcquire()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily template$<$class Lock\+Type $>$ \\
+\mbox{\hyperlink{classrocr_1_1ScopedAcquire}{rocr\+::\+Scoped\+Acquire}}$<$ Lock\+Type $>$\+::\mbox{\hyperlink{classrocr_1_1ScopedAcquire}{Scoped\+Acquire}} (\begin{DoxyParamCaption}\item[{Lock\+Type $\ast$}]{lock }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [explicit]}}
+
+
+
+\+: When constructing, acquire the lock. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em } & lock(\+Input), pointer to an existing lock. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classrocr_1_1ScopedAcquire_a45314e76647819ebebe3767f929e8954}\label{classrocr_1_1ScopedAcquire_a45314e76647819ebebe3767f929e8954}} 
+\index{rocr::ScopedAcquire$<$ LockType $>$@{rocr::ScopedAcquire$<$ LockType $>$}!ScopedAcquire@{ScopedAcquire}}
+\index{ScopedAcquire@{ScopedAcquire}!rocr::ScopedAcquire$<$ LockType $>$@{rocr::ScopedAcquire$<$ LockType $>$}}
+\doxysubsubsection{\texorpdfstring{ScopedAcquire()}{ScopedAcquire()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily template$<$class Lock\+Type $>$ \\
+\mbox{\hyperlink{classrocr_1_1ScopedAcquire}{rocr\+::\+Scoped\+Acquire}}$<$ Lock\+Type $>$\+::\mbox{\hyperlink{classrocr_1_1ScopedAcquire}{Scoped\+Acquire}} (\begin{DoxyParamCaption}\item[{Lock\+Type}]{lock }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [explicit]}}
+
+\mbox{\Hypertarget{classrocr_1_1ScopedAcquire_a5a9d0461e44b71f993fd7d77bd446929}\label{classrocr_1_1ScopedAcquire_a5a9d0461e44b71f993fd7d77bd446929}} 
+\index{rocr::ScopedAcquire$<$ LockType $>$@{rocr::ScopedAcquire$<$ LockType $>$}!````~ScopedAcquire@{$\sim$ScopedAcquire}}
+\index{````~ScopedAcquire@{$\sim$ScopedAcquire}!rocr::ScopedAcquire$<$ LockType $>$@{rocr::ScopedAcquire$<$ LockType $>$}}
+\doxysubsubsection{\texorpdfstring{$\sim$ScopedAcquire()}{~ScopedAcquire()}}
+{\footnotesize\ttfamily template$<$class Lock\+Type $>$ \\
+\mbox{\hyperlink{classrocr_1_1ScopedAcquire}{rocr\+::\+Scoped\+Acquire}}$<$ Lock\+Type $>$\+::$\sim$\mbox{\hyperlink{classrocr_1_1ScopedAcquire}{Scoped\+Acquire}} (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+\+: when destructing, release the lock. 
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classrocr_1_1ScopedAcquire_a7b913ce4effbd6a7617cb73dc1a37670}\label{classrocr_1_1ScopedAcquire_a7b913ce4effbd6a7617cb73dc1a37670}} 
+\index{rocr::ScopedAcquire$<$ LockType $>$@{rocr::ScopedAcquire$<$ LockType $>$}!DISALLOW\_COPY\_AND\_ASSIGN@{DISALLOW\_COPY\_AND\_ASSIGN}}
+\index{DISALLOW\_COPY\_AND\_ASSIGN@{DISALLOW\_COPY\_AND\_ASSIGN}!rocr::ScopedAcquire$<$ LockType $>$@{rocr::ScopedAcquire$<$ LockType $>$}}
+\doxysubsubsection{\texorpdfstring{DISALLOW\_COPY\_AND\_ASSIGN()}{DISALLOW\_COPY\_AND\_ASSIGN()}}
+{\footnotesize\ttfamily template$<$class Lock\+Type $>$ \\
+\mbox{\hyperlink{classrocr_1_1ScopedAcquire}{rocr\+::\+Scoped\+Acquire}}$<$ Lock\+Type $>$\+::DISALLOW\+\_\+\+COPY\+\_\+\+AND\+\_\+\+ASSIGN (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classrocr_1_1ScopedAcquire}{Scoped\+Acquire}}$<$ Lock\+Type $>$}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+\+: Disable copiable and assignable ability. 
+
+\mbox{\Hypertarget{classrocr_1_1ScopedAcquire_a108a9b3e4a45044dc963c79a8ca0468f}\label{classrocr_1_1ScopedAcquire_a108a9b3e4a45044dc963c79a8ca0468f}} 
+\index{rocr::ScopedAcquire$<$ LockType $>$@{rocr::ScopedAcquire$<$ LockType $>$}!Release@{Release}}
+\index{Release@{Release}!rocr::ScopedAcquire$<$ LockType $>$@{rocr::ScopedAcquire$<$ LockType $>$}}
+\doxysubsubsection{\texorpdfstring{Release()}{Release()}}
+{\footnotesize\ttfamily template$<$class Lock\+Type $>$ \\
+void \mbox{\hyperlink{classrocr_1_1ScopedAcquire}{rocr\+::\+Scoped\+Acquire}}$<$ Lock\+Type $>$\+::Release (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+\+: Release the lock early. Avoid using when possible. 
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classrocr_1_1ScopedAcquire_a108a9b3e4a45044dc963c79a8ca0468f_icgraph}
+\end{center}
+\end{figure}
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{classrocr_1_1ScopedAcquire_a0cd47a8a3d44a302b467603d5ab975fe}\label{classrocr_1_1ScopedAcquire_a0cd47a8a3d44a302b467603d5ab975fe}} 
+\index{rocr::ScopedAcquire$<$ LockType $>$@{rocr::ScopedAcquire$<$ LockType $>$}!doRelease@{doRelease}}
+\index{doRelease@{doRelease}!rocr::ScopedAcquire$<$ LockType $>$@{rocr::ScopedAcquire$<$ LockType $>$}}
+\doxysubsubsection{\texorpdfstring{doRelease}{doRelease}}
+{\footnotesize\ttfamily template$<$class Lock\+Type $>$ \\
+bool \mbox{\hyperlink{classrocr_1_1ScopedAcquire}{rocr\+::\+Scoped\+Acquire}}$<$ Lock\+Type $>$\+::do\+Release\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classrocr_1_1ScopedAcquire_aeb1ca17bbd4dc93304673086f93053ee}\label{classrocr_1_1ScopedAcquire_aeb1ca17bbd4dc93304673086f93053ee}} 
+\index{rocr::ScopedAcquire$<$ LockType $>$@{rocr::ScopedAcquire$<$ LockType $>$}!lock\_@{lock\_}}
+\index{lock\_@{lock\_}!rocr::ScopedAcquire$<$ LockType $>$@{rocr::ScopedAcquire$<$ LockType $>$}}
+\doxysubsubsection{\texorpdfstring{lock\_}{lock\_}}
+{\footnotesize\ttfamily template$<$class Lock\+Type $>$ \\
+\mbox{\hyperlink{classrocr_1_1ScopedAcquire_1_1container}{container}}$<$Lock\+Type, \mbox{\hyperlink{classrocr_1_1isMutex}{is\+Mutex}}$<$Lock\+Type$>$\+::value$>$ \mbox{\hyperlink{classrocr_1_1ScopedAcquire}{rocr\+::\+Scoped\+Acquire}}$<$ Lock\+Type $>$\+::lock\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+src/core/util/\mbox{\hyperlink{locks_8h}{locks.\+h}}\end{DoxyCompactItemize}

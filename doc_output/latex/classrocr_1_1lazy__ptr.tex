@@ -1,0 +1,300 @@
+\hypertarget{classrocr_1_1lazy__ptr}{}\doxysection{rocr\+::lazy\+\_\+ptr$<$ T $>$ Class Template Reference}
+\label{classrocr_1_1lazy__ptr}\index{rocr::lazy\_ptr$<$ T $>$@{rocr::lazy\_ptr$<$ T $>$}}
+
+
+{\ttfamily \#include $<$lazy\+\_\+ptr.\+h$>$}
+
+
+
+Collaboration diagram for rocr\+::lazy\+\_\+ptr$<$ T $>$\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=178pt]{classrocr_1_1lazy__ptr__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classrocr_1_1lazy__ptr_a566828315263093ef48796cac62017d6}{lazy\+\_\+ptr}} ()
+\item 
+\mbox{\hyperlink{classrocr_1_1lazy__ptr_a36ccedd3efab58ce2a1a8a4fefe30750}{lazy\+\_\+ptr}} (std\+::function$<$ T $\ast$()$>$ Constructor)
+\item 
+\mbox{\hyperlink{classrocr_1_1lazy__ptr_a8e4305a6597f5430dd39b76798d8cce8}{lazy\+\_\+ptr}} (\mbox{\hyperlink{classrocr_1_1lazy__ptr}{lazy\+\_\+ptr}} \&\&rhs)
+\item 
+\mbox{\hyperlink{classrocr_1_1lazy__ptr}{lazy\+\_\+ptr}} \& \mbox{\hyperlink{classrocr_1_1lazy__ptr_a22c13e0ae175401cbeba3f274b69d7b9}{operator=}} (\mbox{\hyperlink{classrocr_1_1lazy__ptr}{lazy\+\_\+ptr}} \&\&rhs)
+\item 
+\mbox{\hyperlink{classrocr_1_1lazy__ptr_af7325d61d6e71cd513461efa10ec828f}{lazy\+\_\+ptr}} (\mbox{\hyperlink{classrocr_1_1lazy__ptr}{lazy\+\_\+ptr}} \&)=delete
+\item 
+\mbox{\hyperlink{classrocr_1_1lazy__ptr}{lazy\+\_\+ptr}} \& \mbox{\hyperlink{classrocr_1_1lazy__ptr_a728016f40b9ee932af172a3e596ea8cb}{operator=}} (\mbox{\hyperlink{classrocr_1_1lazy__ptr}{lazy\+\_\+ptr}} \&)=delete
+\item 
+void \mbox{\hyperlink{classrocr_1_1lazy__ptr_a5f27d8ae1bec7da39044f45917b06ce6}{reset}} (std\+::function$<$ T $\ast$()$>$ Constructor=nullptr)
+\item 
+void \mbox{\hyperlink{classrocr_1_1lazy__ptr_a48f83874d73c23352fc6ad58753f10c0}{reset}} (T $\ast$ptr)
+\item 
+bool \mbox{\hyperlink{classrocr_1_1lazy__ptr_ad1411050b945eb968d076fe66d1dc110}{operator==}} (T $\ast$rhs) const
+\item 
+bool \mbox{\hyperlink{classrocr_1_1lazy__ptr_ac5184451bef5953fd33fb7425e8d2001}{operator!=}} (T $\ast$rhs) const
+\item 
+const std\+::unique\+\_\+ptr$<$ T $>$ \& \mbox{\hyperlink{classrocr_1_1lazy__ptr_ad6929d5862754ac8cdd6a99a28f8321f}{operator-\/$>$}} () const
+\item 
+std\+::unique\+\_\+ptr$<$ T $>$ \& \mbox{\hyperlink{classrocr_1_1lazy__ptr_a833e42a62df3d2803658e1d7cdbb98e2}{operator$\ast$}} ()
+\item 
+const std\+::unique\+\_\+ptr$<$ T $>$ \& \mbox{\hyperlink{classrocr_1_1lazy__ptr_ada35f1d2e8face4ab12d23abde559d02}{operator$\ast$}} () const
+\item 
+void \mbox{\hyperlink{classrocr_1_1lazy__ptr_ac5bd07e1470aeecaa203e2ce38327e3e}{touch}} () const
+\item 
+bool \mbox{\hyperlink{classrocr_1_1lazy__ptr_af946e6928f65d26997fd0746f5f35b22}{created}} () const
+\item 
+bool \mbox{\hyperlink{classrocr_1_1lazy__ptr_a065cec5459b99d491ad86685841d65bb}{empty}} () const
+\end{DoxyCompactItemize}
+\doxysubsection*{Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{classrocr_1_1lazy__ptr_ab870187f8fc5c3cc5def1da5b55651c0}{make\+\_\+body}} (bool block) const
+\item 
+\+\_\+\+\_\+forceinline void \mbox{\hyperlink{classrocr_1_1lazy__ptr_a75de961a1853847c4bffdba33596b529}{make}} (bool block) const
+\end{DoxyCompactItemize}
+\doxysubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+std\+::unique\+\_\+ptr$<$ T $>$ \mbox{\hyperlink{classrocr_1_1lazy__ptr_a522db73375e16bb3d52d908beaec4234}{obj}}
+\item 
+std\+::function$<$ T $\ast$(void)$>$ \mbox{\hyperlink{classrocr_1_1lazy__ptr_a1632b5ca7312fc11d314f3ec5609e090}{func}}
+\item 
+\mbox{\hyperlink{classrocr_1_1KernelMutex}{Kernel\+Mutex}} \mbox{\hyperlink{classrocr_1_1lazy__ptr_a0f9851920a7cbc03a20f40b757e7eb00}{lock}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classrocr_1_1lazy__ptr_a566828315263093ef48796cac62017d6}\label{classrocr_1_1lazy__ptr_a566828315263093ef48796cac62017d6}} 
+\index{rocr::lazy\_ptr$<$ T $>$@{rocr::lazy\_ptr$<$ T $>$}!lazy\_ptr@{lazy\_ptr}}
+\index{lazy\_ptr@{lazy\_ptr}!rocr::lazy\_ptr$<$ T $>$@{rocr::lazy\_ptr$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{lazy\_ptr()}{lazy\_ptr()}\hspace{0.1cm}{\footnotesize\ttfamily [1/4]}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+\mbox{\hyperlink{classrocr_1_1lazy__ptr}{rocr\+::lazy\+\_\+ptr}}$<$ T $>$\+::\mbox{\hyperlink{classrocr_1_1lazy__ptr}{lazy\+\_\+ptr}} (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{classrocr_1_1lazy__ptr_a36ccedd3efab58ce2a1a8a4fefe30750}\label{classrocr_1_1lazy__ptr_a36ccedd3efab58ce2a1a8a4fefe30750}} 
+\index{rocr::lazy\_ptr$<$ T $>$@{rocr::lazy\_ptr$<$ T $>$}!lazy\_ptr@{lazy\_ptr}}
+\index{lazy\_ptr@{lazy\_ptr}!rocr::lazy\_ptr$<$ T $>$@{rocr::lazy\_ptr$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{lazy\_ptr()}{lazy\_ptr()}\hspace{0.1cm}{\footnotesize\ttfamily [2/4]}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+\mbox{\hyperlink{classrocr_1_1lazy__ptr}{rocr\+::lazy\+\_\+ptr}}$<$ T $>$\+::\mbox{\hyperlink{classrocr_1_1lazy__ptr}{lazy\+\_\+ptr}} (\begin{DoxyParamCaption}\item[{std\+::function$<$ T $\ast$()$>$}]{Constructor }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [explicit]}}
+
+\mbox{\Hypertarget{classrocr_1_1lazy__ptr_a8e4305a6597f5430dd39b76798d8cce8}\label{classrocr_1_1lazy__ptr_a8e4305a6597f5430dd39b76798d8cce8}} 
+\index{rocr::lazy\_ptr$<$ T $>$@{rocr::lazy\_ptr$<$ T $>$}!lazy\_ptr@{lazy\_ptr}}
+\index{lazy\_ptr@{lazy\_ptr}!rocr::lazy\_ptr$<$ T $>$@{rocr::lazy\_ptr$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{lazy\_ptr()}{lazy\_ptr()}\hspace{0.1cm}{\footnotesize\ttfamily [3/4]}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+\mbox{\hyperlink{classrocr_1_1lazy__ptr}{rocr\+::lazy\+\_\+ptr}}$<$ T $>$\+::\mbox{\hyperlink{classrocr_1_1lazy__ptr}{lazy\+\_\+ptr}} (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classrocr_1_1lazy__ptr}{lazy\+\_\+ptr}}$<$ T $>$ \&\&}]{rhs }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{classrocr_1_1lazy__ptr_af7325d61d6e71cd513461efa10ec828f}\label{classrocr_1_1lazy__ptr_af7325d61d6e71cd513461efa10ec828f}} 
+\index{rocr::lazy\_ptr$<$ T $>$@{rocr::lazy\_ptr$<$ T $>$}!lazy\_ptr@{lazy\_ptr}}
+\index{lazy\_ptr@{lazy\_ptr}!rocr::lazy\_ptr$<$ T $>$@{rocr::lazy\_ptr$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{lazy\_ptr()}{lazy\_ptr()}\hspace{0.1cm}{\footnotesize\ttfamily [4/4]}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+\mbox{\hyperlink{classrocr_1_1lazy__ptr}{rocr\+::lazy\+\_\+ptr}}$<$ T $>$\+::\mbox{\hyperlink{classrocr_1_1lazy__ptr}{lazy\+\_\+ptr}} (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classrocr_1_1lazy__ptr}{lazy\+\_\+ptr}}$<$ T $>$ \&}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [delete]}}
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classrocr_1_1lazy__ptr_af946e6928f65d26997fd0746f5f35b22}\label{classrocr_1_1lazy__ptr_af946e6928f65d26997fd0746f5f35b22}} 
+\index{rocr::lazy\_ptr$<$ T $>$@{rocr::lazy\_ptr$<$ T $>$}!created@{created}}
+\index{created@{created}!rocr::lazy\_ptr$<$ T $>$@{rocr::lazy\_ptr$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{created()}{created()}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+bool \mbox{\hyperlink{classrocr_1_1lazy__ptr}{rocr\+::lazy\+\_\+ptr}}$<$ T $>$\+::created (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classrocr_1_1lazy__ptr_af946e6928f65d26997fd0746f5f35b22_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classrocr_1_1lazy__ptr_a065cec5459b99d491ad86685841d65bb}\label{classrocr_1_1lazy__ptr_a065cec5459b99d491ad86685841d65bb}} 
+\index{rocr::lazy\_ptr$<$ T $>$@{rocr::lazy\_ptr$<$ T $>$}!empty@{empty}}
+\index{empty@{empty}!rocr::lazy\_ptr$<$ T $>$@{rocr::lazy\_ptr$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{empty()}{empty()}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+bool \mbox{\hyperlink{classrocr_1_1lazy__ptr}{rocr\+::lazy\+\_\+ptr}}$<$ T $>$\+::empty (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{classrocr_1_1lazy__ptr_a75de961a1853847c4bffdba33596b529}\label{classrocr_1_1lazy__ptr_a75de961a1853847c4bffdba33596b529}} 
+\index{rocr::lazy\_ptr$<$ T $>$@{rocr::lazy\_ptr$<$ T $>$}!make@{make}}
+\index{make@{make}!rocr::lazy\_ptr$<$ T $>$@{rocr::lazy\_ptr$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{make()}{make()}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+\+\_\+\+\_\+forceinline void \mbox{\hyperlink{classrocr_1_1lazy__ptr}{rocr\+::lazy\+\_\+ptr}}$<$ T $>$\+::make (\begin{DoxyParamCaption}\item[{bool}]{block }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [private]}}
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classrocr_1_1lazy__ptr_a75de961a1853847c4bffdba33596b529_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=344pt]{classrocr_1_1lazy__ptr_a75de961a1853847c4bffdba33596b529_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classrocr_1_1lazy__ptr_ab870187f8fc5c3cc5def1da5b55651c0}\label{classrocr_1_1lazy__ptr_ab870187f8fc5c3cc5def1da5b55651c0}} 
+\index{rocr::lazy\_ptr$<$ T $>$@{rocr::lazy\_ptr$<$ T $>$}!make\_body@{make\_body}}
+\index{make\_body@{make\_body}!rocr::lazy\_ptr$<$ T $>$@{rocr::lazy\_ptr$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{make\_body()}{make\_body()}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+void \mbox{\hyperlink{classrocr_1_1lazy__ptr}{rocr\+::lazy\+\_\+ptr}}$<$ T $>$\+::make\+\_\+body (\begin{DoxyParamCaption}\item[{bool}]{block }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [private]}}
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classrocr_1_1lazy__ptr_ab870187f8fc5c3cc5def1da5b55651c0_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classrocr_1_1lazy__ptr_ab870187f8fc5c3cc5def1da5b55651c0_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classrocr_1_1lazy__ptr_ac5184451bef5953fd33fb7425e8d2001}\label{classrocr_1_1lazy__ptr_ac5184451bef5953fd33fb7425e8d2001}} 
+\index{rocr::lazy\_ptr$<$ T $>$@{rocr::lazy\_ptr$<$ T $>$}!operator"!=@{operator"!=}}
+\index{operator"!=@{operator"!=}!rocr::lazy\_ptr$<$ T $>$@{rocr::lazy\_ptr$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{operator"!=()}{operator!=()}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+bool \mbox{\hyperlink{classrocr_1_1lazy__ptr}{rocr\+::lazy\+\_\+ptr}}$<$ T $>$\+::operator!= (\begin{DoxyParamCaption}\item[{T $\ast$}]{rhs }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{classrocr_1_1lazy__ptr_a833e42a62df3d2803658e1d7cdbb98e2}\label{classrocr_1_1lazy__ptr_a833e42a62df3d2803658e1d7cdbb98e2}} 
+\index{rocr::lazy\_ptr$<$ T $>$@{rocr::lazy\_ptr$<$ T $>$}!operator$\ast$@{operator$\ast$}}
+\index{operator$\ast$@{operator$\ast$}!rocr::lazy\_ptr$<$ T $>$@{rocr::lazy\_ptr$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{operator$\ast$()}{operator*()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+std\+::unique\+\_\+ptr$<$T$>$\& \mbox{\hyperlink{classrocr_1_1lazy__ptr}{rocr\+::lazy\+\_\+ptr}}$<$ T $>$\+::operator$\ast$ (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classrocr_1_1lazy__ptr_a833e42a62df3d2803658e1d7cdbb98e2_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classrocr_1_1lazy__ptr_ada35f1d2e8face4ab12d23abde559d02}\label{classrocr_1_1lazy__ptr_ada35f1d2e8face4ab12d23abde559d02}} 
+\index{rocr::lazy\_ptr$<$ T $>$@{rocr::lazy\_ptr$<$ T $>$}!operator$\ast$@{operator$\ast$}}
+\index{operator$\ast$@{operator$\ast$}!rocr::lazy\_ptr$<$ T $>$@{rocr::lazy\_ptr$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{operator$\ast$()}{operator*()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+const std\+::unique\+\_\+ptr$<$T$>$\& \mbox{\hyperlink{classrocr_1_1lazy__ptr}{rocr\+::lazy\+\_\+ptr}}$<$ T $>$\+::operator$\ast$ (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classrocr_1_1lazy__ptr_ada35f1d2e8face4ab12d23abde559d02_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classrocr_1_1lazy__ptr_ad6929d5862754ac8cdd6a99a28f8321f}\label{classrocr_1_1lazy__ptr_ad6929d5862754ac8cdd6a99a28f8321f}} 
+\index{rocr::lazy\_ptr$<$ T $>$@{rocr::lazy\_ptr$<$ T $>$}!operator-\/$>$@{operator-\/$>$}}
+\index{operator-\/$>$@{operator-\/$>$}!rocr::lazy\_ptr$<$ T $>$@{rocr::lazy\_ptr$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{operator-\/$>$()}{operator->()}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+const std\+::unique\+\_\+ptr$<$T$>$\& \mbox{\hyperlink{classrocr_1_1lazy__ptr}{rocr\+::lazy\+\_\+ptr}}$<$ T $>$\+::operator-\/$>$ (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classrocr_1_1lazy__ptr_ad6929d5862754ac8cdd6a99a28f8321f_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classrocr_1_1lazy__ptr_a22c13e0ae175401cbeba3f274b69d7b9}\label{classrocr_1_1lazy__ptr_a22c13e0ae175401cbeba3f274b69d7b9}} 
+\index{rocr::lazy\_ptr$<$ T $>$@{rocr::lazy\_ptr$<$ T $>$}!operator=@{operator=}}
+\index{operator=@{operator=}!rocr::lazy\_ptr$<$ T $>$@{rocr::lazy\_ptr$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{operator=()}{operator=()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+\mbox{\hyperlink{classrocr_1_1lazy__ptr}{lazy\+\_\+ptr}}\& \mbox{\hyperlink{classrocr_1_1lazy__ptr}{rocr\+::lazy\+\_\+ptr}}$<$ T $>$\+::operator= (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classrocr_1_1lazy__ptr}{lazy\+\_\+ptr}}$<$ T $>$ \&\&}]{rhs }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{classrocr_1_1lazy__ptr_a728016f40b9ee932af172a3e596ea8cb}\label{classrocr_1_1lazy__ptr_a728016f40b9ee932af172a3e596ea8cb}} 
+\index{rocr::lazy\_ptr$<$ T $>$@{rocr::lazy\_ptr$<$ T $>$}!operator=@{operator=}}
+\index{operator=@{operator=}!rocr::lazy\_ptr$<$ T $>$@{rocr::lazy\_ptr$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{operator=()}{operator=()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+\mbox{\hyperlink{classrocr_1_1lazy__ptr}{lazy\+\_\+ptr}}\& \mbox{\hyperlink{classrocr_1_1lazy__ptr}{rocr\+::lazy\+\_\+ptr}}$<$ T $>$\+::operator= (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classrocr_1_1lazy__ptr}{lazy\+\_\+ptr}}$<$ T $>$ \&}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [delete]}}
+
+\mbox{\Hypertarget{classrocr_1_1lazy__ptr_ad1411050b945eb968d076fe66d1dc110}\label{classrocr_1_1lazy__ptr_ad1411050b945eb968d076fe66d1dc110}} 
+\index{rocr::lazy\_ptr$<$ T $>$@{rocr::lazy\_ptr$<$ T $>$}!operator==@{operator==}}
+\index{operator==@{operator==}!rocr::lazy\_ptr$<$ T $>$@{rocr::lazy\_ptr$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{operator==()}{operator==()}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+bool \mbox{\hyperlink{classrocr_1_1lazy__ptr}{rocr\+::lazy\+\_\+ptr}}$<$ T $>$\+::operator== (\begin{DoxyParamCaption}\item[{T $\ast$}]{rhs }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{classrocr_1_1lazy__ptr_a5f27d8ae1bec7da39044f45917b06ce6}\label{classrocr_1_1lazy__ptr_a5f27d8ae1bec7da39044f45917b06ce6}} 
+\index{rocr::lazy\_ptr$<$ T $>$@{rocr::lazy\_ptr$<$ T $>$}!reset@{reset}}
+\index{reset@{reset}!rocr::lazy\_ptr$<$ T $>$@{rocr::lazy\_ptr$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{reset()}{reset()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+void \mbox{\hyperlink{classrocr_1_1lazy__ptr}{rocr\+::lazy\+\_\+ptr}}$<$ T $>$\+::reset (\begin{DoxyParamCaption}\item[{std\+::function$<$ T $\ast$()$>$}]{Constructor = {\ttfamily nullptr} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{classrocr_1_1lazy__ptr_a48f83874d73c23352fc6ad58753f10c0}\label{classrocr_1_1lazy__ptr_a48f83874d73c23352fc6ad58753f10c0}} 
+\index{rocr::lazy\_ptr$<$ T $>$@{rocr::lazy\_ptr$<$ T $>$}!reset@{reset}}
+\index{reset@{reset}!rocr::lazy\_ptr$<$ T $>$@{rocr::lazy\_ptr$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{reset()}{reset()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+void \mbox{\hyperlink{classrocr_1_1lazy__ptr}{rocr\+::lazy\+\_\+ptr}}$<$ T $>$\+::reset (\begin{DoxyParamCaption}\item[{T $\ast$}]{ptr }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{classrocr_1_1lazy__ptr_ac5bd07e1470aeecaa203e2ce38327e3e}\label{classrocr_1_1lazy__ptr_ac5bd07e1470aeecaa203e2ce38327e3e}} 
+\index{rocr::lazy\_ptr$<$ T $>$@{rocr::lazy\_ptr$<$ T $>$}!touch@{touch}}
+\index{touch@{touch}!rocr::lazy\_ptr$<$ T $>$@{rocr::lazy\_ptr$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{touch()}{touch()}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+void \mbox{\hyperlink{classrocr_1_1lazy__ptr}{rocr\+::lazy\+\_\+ptr}}$<$ T $>$\+::touch (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classrocr_1_1lazy__ptr_ac5bd07e1470aeecaa203e2ce38327e3e_cgraph}
+\end{center}
+\end{figure}
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{classrocr_1_1lazy__ptr_a1632b5ca7312fc11d314f3ec5609e090}\label{classrocr_1_1lazy__ptr_a1632b5ca7312fc11d314f3ec5609e090}} 
+\index{rocr::lazy\_ptr$<$ T $>$@{rocr::lazy\_ptr$<$ T $>$}!func@{func}}
+\index{func@{func}!rocr::lazy\_ptr$<$ T $>$@{rocr::lazy\_ptr$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{func}{func}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+std\+::function$<$T$\ast$(void)$>$ \mbox{\hyperlink{classrocr_1_1lazy__ptr}{rocr\+::lazy\+\_\+ptr}}$<$ T $>$\+::func\hspace{0.3cm}{\ttfamily [mutable]}, {\ttfamily [private]}}
+
+\mbox{\Hypertarget{classrocr_1_1lazy__ptr_a0f9851920a7cbc03a20f40b757e7eb00}\label{classrocr_1_1lazy__ptr_a0f9851920a7cbc03a20f40b757e7eb00}} 
+\index{rocr::lazy\_ptr$<$ T $>$@{rocr::lazy\_ptr$<$ T $>$}!lock@{lock}}
+\index{lock@{lock}!rocr::lazy\_ptr$<$ T $>$@{rocr::lazy\_ptr$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{lock}{lock}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+\mbox{\hyperlink{classrocr_1_1KernelMutex}{Kernel\+Mutex}} \mbox{\hyperlink{classrocr_1_1lazy__ptr}{rocr\+::lazy\+\_\+ptr}}$<$ T $>$\+::lock\hspace{0.3cm}{\ttfamily [mutable]}, {\ttfamily [private]}}
+
+\mbox{\Hypertarget{classrocr_1_1lazy__ptr_a522db73375e16bb3d52d908beaec4234}\label{classrocr_1_1lazy__ptr_a522db73375e16bb3d52d908beaec4234}} 
+\index{rocr::lazy\_ptr$<$ T $>$@{rocr::lazy\_ptr$<$ T $>$}!obj@{obj}}
+\index{obj@{obj}!rocr::lazy\_ptr$<$ T $>$@{rocr::lazy\_ptr$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{obj}{obj}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+std\+::unique\+\_\+ptr$<$T$>$ \mbox{\hyperlink{classrocr_1_1lazy__ptr}{rocr\+::lazy\+\_\+ptr}}$<$ T $>$\+::obj\hspace{0.3cm}{\ttfamily [mutable]}, {\ttfamily [private]}}
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+src/core/util/\mbox{\hyperlink{lazy__ptr_8h}{lazy\+\_\+ptr.\+h}}\end{DoxyCompactItemize}

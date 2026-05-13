@@ -1,0 +1,2089 @@
+\hypertarget{classrocr_1_1Addr_1_1V2_1_1Gfx11Lib}{}\doxysection{rocr\+::Addr\+::V2\+::Gfx11\+Lib Class Reference}
+\label{classrocr_1_1Addr_1_1V2_1_1Gfx11Lib}\index{rocr::Addr::V2::Gfx11Lib@{rocr::Addr::V2::Gfx11Lib}}
+
+
+This class is the GFX11 specific address library function set.  
+
+
+
+
+{\ttfamily \#include $<$gfx11addrlib.\+h$>$}
+
+
+
+Inheritance diagram for rocr\+::Addr\+::V2\+::Gfx11\+Lib\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=202pt]{classrocr_1_1Addr_1_1V2_1_1Gfx11Lib__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for rocr\+::Addr\+::V2\+::Gfx11\+Lib\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classrocr_1_1Addr_1_1V2_1_1Gfx11Lib__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static \mbox{\hyperlink{classrocr_1_1Addr_1_1Lib}{Addr\+::\+Lib}} $\ast$ \mbox{\hyperlink{classrocr_1_1Addr_1_1V2_1_1Gfx11Lib_a6f7a17f374bef5c51f416509d391edbf}{Create\+Obj}} (const \mbox{\hyperlink{structrocr_1_1Addr_1_1Client}{Client}} $\ast$p\+Client)
+\begin{DoxyCompactList}\small\item\em Creates \mbox{\hyperlink{classrocr_1_1Addr_1_1V2_1_1Gfx11Lib}{Gfx11\+Lib}} object. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classrocr_1_1Addr_1_1V2_1_1Gfx11Lib_a63755a3925a88f10d3402e16bfd4b46f}{Gfx11\+Lib}} (const \mbox{\hyperlink{structrocr_1_1Addr_1_1Client}{Client}} $\ast$p\+Client)
+\begin{DoxyCompactList}\small\item\em Constructor. \end{DoxyCompactList}\item 
+virtual \mbox{\hyperlink{classrocr_1_1Addr_1_1V2_1_1Gfx11Lib_a3fb5624c743e706a949f4cf993ea2c0b}{$\sim$\+Gfx11\+Lib}} ()
+\begin{DoxyCompactList}\small\item\em Destructor. \end{DoxyCompactList}\item 
+virtual \mbox{\hyperlink{addrtypes_8h_ac4225671b7e87c943146915461c9b2f4}{BOOL\+\_\+32}} \mbox{\hyperlink{classrocr_1_1Addr_1_1V2_1_1Gfx11Lib_abe2ef0bc00aa4ae3916dd794f2b6187c}{Hwl\+Is\+Standard\+Swizzle}} (\mbox{\hyperlink{addrtypes_8h_a3a71ad42801586bbe32648f34f3d5ee7}{Addr\+Resource\+Type}} resource\+Type, \mbox{\hyperlink{addrtypes_8h_af64a81eb4c83301dba12714f6f0aefed}{Addr\+Swizzle\+Mode}} swizzle\+Mode) const
+\item 
+virtual \mbox{\hyperlink{addrtypes_8h_ac4225671b7e87c943146915461c9b2f4}{BOOL\+\_\+32}} \mbox{\hyperlink{classrocr_1_1Addr_1_1V2_1_1Gfx11Lib_a63f2c213c2dbd33ed5170da2ccc2a97b}{Hwl\+Is\+Display\+Swizzle}} (\mbox{\hyperlink{addrtypes_8h_a3a71ad42801586bbe32648f34f3d5ee7}{Addr\+Resource\+Type}} resource\+Type, \mbox{\hyperlink{addrtypes_8h_af64a81eb4c83301dba12714f6f0aefed}{Addr\+Swizzle\+Mode}} swizzle\+Mode) const
+\item 
+virtual \mbox{\hyperlink{addrtypes_8h_ac4225671b7e87c943146915461c9b2f4}{BOOL\+\_\+32}} \mbox{\hyperlink{classrocr_1_1Addr_1_1V2_1_1Gfx11Lib_ad8de742e0920cf0e72209594701a9400}{Hwl\+Is\+Thin}} (\mbox{\hyperlink{addrtypes_8h_a3a71ad42801586bbe32648f34f3d5ee7}{Addr\+Resource\+Type}} resource\+Type, \mbox{\hyperlink{addrtypes_8h_af64a81eb4c83301dba12714f6f0aefed}{Addr\+Swizzle\+Mode}} swizzle\+Mode) const
+\item 
+virtual \mbox{\hyperlink{addrtypes_8h_ac4225671b7e87c943146915461c9b2f4}{BOOL\+\_\+32}} \mbox{\hyperlink{classrocr_1_1Addr_1_1V2_1_1Gfx11Lib_ae0519728aca25ade191981a537f5b0b2}{Hwl\+Is\+Thick}} (\mbox{\hyperlink{addrtypes_8h_a3a71ad42801586bbe32648f34f3d5ee7}{Addr\+Resource\+Type}} resource\+Type, \mbox{\hyperlink{addrtypes_8h_af64a81eb4c83301dba12714f6f0aefed}{Addr\+Swizzle\+Mode}} swizzle\+Mode) const
+\item 
+virtual \mbox{\hyperlink{addrtypes_8h_a45468f108457c1977c8684dea3df88c7}{ADDR\+\_\+\+E\+\_\+\+RETURNCODE}} \mbox{\hyperlink{classrocr_1_1Addr_1_1V2_1_1Gfx11Lib_a765805da03c367a64cf9fd7b4ee3c9e4}{Hwl\+Compute\+Htile\+Info}} (const \mbox{\hyperlink{namespacerocr_aea7281daa9ee2da30b24414f6b88386c}{ADDR2\+\_\+\+COMPUTE\+\_\+\+HTILE\+\_\+\+INFO\+\_\+\+INPUT}} $\ast$p\+In, \mbox{\hyperlink{namespacerocr_a8dcd76da66a46cba78e346cddf0e0c98}{ADDR2\+\_\+\+COMPUTE\+\_\+\+HTILE\+\_\+\+INFO\+\_\+\+OUTPUT}} $\ast$p\+Out) const
+\begin{DoxyCompactList}\small\item\em Interface function stub of Addr\+Compute\+Htilenfo. \end{DoxyCompactList}\item 
+virtual \mbox{\hyperlink{addrtypes_8h_a45468f108457c1977c8684dea3df88c7}{ADDR\+\_\+\+E\+\_\+\+RETURNCODE}} \mbox{\hyperlink{classrocr_1_1Addr_1_1V2_1_1Gfx11Lib_a1ffc8fc03d4a835882ec3ecb05f6f9aa}{Hwl\+Compute\+Dcc\+Info}} (const \mbox{\hyperlink{namespacerocr_a18e9a04c69fb4dcc9846449325cd23d9}{ADDR2\+\_\+\+COMPUTE\+\_\+\+DCCINFO\+\_\+\+INPUT}} $\ast$p\+In, \mbox{\hyperlink{namespacerocr_a63d989e6c98e7baff9daa676709f8be6}{ADDR2\+\_\+\+COMPUTE\+\_\+\+DCCINFO\+\_\+\+OUTPUT}} $\ast$p\+Out) const
+\begin{DoxyCompactList}\small\item\em Interface function to compute DCC key info. \end{DoxyCompactList}\item 
+virtual \mbox{\hyperlink{addrtypes_8h_a45468f108457c1977c8684dea3df88c7}{ADDR\+\_\+\+E\+\_\+\+RETURNCODE}} \mbox{\hyperlink{classrocr_1_1Addr_1_1V2_1_1Gfx11Lib_ad2bc82618948a71af606e61d0e55081f}{Hwl\+Compute\+Htile\+Addr\+From\+Coord}} (const \mbox{\hyperlink{namespacerocr_a7bb3c10eeebe23f4a027891b22705b63}{ADDR2\+\_\+\+COMPUTE\+\_\+\+HTILE\+\_\+\+ADDRFROMCOORD\+\_\+\+INPUT}} $\ast$p\+In, \mbox{\hyperlink{namespacerocr_ad62134b2544240e4f12901540156f02f}{ADDR2\+\_\+\+COMPUTE\+\_\+\+HTILE\+\_\+\+ADDRFROMCOORD\+\_\+\+OUTPUT}} $\ast$p\+Out)
+\begin{DoxyCompactList}\small\item\em Interface function stub of Addr\+Compute\+Htile\+Addr\+From\+Coord. \end{DoxyCompactList}\item 
+virtual \mbox{\hyperlink{addrtypes_8h_a45468f108457c1977c8684dea3df88c7}{ADDR\+\_\+\+E\+\_\+\+RETURNCODE}} \mbox{\hyperlink{classrocr_1_1Addr_1_1V2_1_1Gfx11Lib_ae218cc297ab5c2b6f348d83db02bd804}{Hwl\+Compute\+Htile\+Coord\+From\+Addr}} (const \mbox{\hyperlink{namespacerocr_ac2a3d653ade6287dcc992d48d05dca7b}{ADDR2\+\_\+\+COMPUTE\+\_\+\+HTILE\+\_\+\+COORDFROMADDR\+\_\+\+INPUT}} $\ast$p\+In, \mbox{\hyperlink{namespacerocr_ac73ec3fa4a7ddace3c4a6a203123bc91}{ADDR2\+\_\+\+COMPUTE\+\_\+\+HTILE\+\_\+\+COORDFROMADDR\+\_\+\+OUTPUT}} $\ast$p\+Out)
+\begin{DoxyCompactList}\small\item\em Interface function stub of Addr\+Compute\+Htile\+Coord\+From\+Addr. \end{DoxyCompactList}\item 
+virtual \mbox{\hyperlink{addrtypes_8h_a45468f108457c1977c8684dea3df88c7}{ADDR\+\_\+\+E\+\_\+\+RETURNCODE}} \mbox{\hyperlink{classrocr_1_1Addr_1_1V2_1_1Gfx11Lib_a4914dc3a36fbde2fa0c207a8a33e262a}{Hwl\+Support\+Compute\+Dcc\+Addr\+From\+Coord}} (const \mbox{\hyperlink{namespacerocr_a692bcd0d2b453fe8457ae94243a77e6a}{ADDR2\+\_\+\+COMPUTE\+\_\+\+DCC\+\_\+\+ADDRFROMCOORD\+\_\+\+INPUT}} $\ast$p\+In)
+\begin{DoxyCompactList}\small\item\em Check whether \mbox{\hyperlink{classrocr_1_1Addr_1_1V2_1_1Gfx11Lib_a05ebed66cbb1f2c6bd3ac282373f3e41}{Hwl\+Compute\+Dcc\+Addr\+From\+Coord()}} can be done for the input parameter. \end{DoxyCompactList}\item 
+virtual \mbox{\hyperlink{addrtypes_8h_a7927e087749615dae3114cc27b91c86d}{VOID}} \mbox{\hyperlink{classrocr_1_1Addr_1_1V2_1_1Gfx11Lib_a05ebed66cbb1f2c6bd3ac282373f3e41}{Hwl\+Compute\+Dcc\+Addr\+From\+Coord}} (const \mbox{\hyperlink{namespacerocr_a692bcd0d2b453fe8457ae94243a77e6a}{ADDR2\+\_\+\+COMPUTE\+\_\+\+DCC\+\_\+\+ADDRFROMCOORD\+\_\+\+INPUT}} $\ast$p\+In, \mbox{\hyperlink{namespacerocr_a5fead5e0166c854966cbde3bb0c85ef4}{ADDR2\+\_\+\+COMPUTE\+\_\+\+DCC\+\_\+\+ADDRFROMCOORD\+\_\+\+OUTPUT}} $\ast$p\+Out)
+\begin{DoxyCompactList}\small\item\em Interface function stub of Addr\+Compute\+Dcc\+Addr\+From\+Coord. \end{DoxyCompactList}\item 
+virtual \mbox{\hyperlink{addrtypes_8h_af5a2be58a28390f9a494538f34054637}{UINT\+\_\+32}} \mbox{\hyperlink{classrocr_1_1Addr_1_1V2_1_1Gfx11Lib_a2c0aa77905ca22eba0b453cf8099a905}{Hwl\+Get\+Equation\+Index}} (const \mbox{\hyperlink{namespacerocr_a8c8793265a5c744be40efbbaef407074}{ADDR2\+\_\+\+COMPUTE\+\_\+\+SURFACE\+\_\+\+INFO\+\_\+\+INPUT}} $\ast$p\+In, \mbox{\hyperlink{namespacerocr_aa64211e3cee652bcca905fc7cfea8e7b}{ADDR2\+\_\+\+COMPUTE\+\_\+\+SURFACE\+\_\+\+INFO\+\_\+\+OUTPUT}} $\ast$p\+Out) const
+\begin{DoxyCompactList}\small\item\em Interface function stub of Get\+Equation\+Index. \end{DoxyCompactList}\item 
+virtual \mbox{\hyperlink{addrtypes_8h_af5a2be58a28390f9a494538f34054637}{UINT\+\_\+32}} \mbox{\hyperlink{classrocr_1_1Addr_1_1V2_1_1Gfx11Lib_a08107a7644152132f1d449f3087f0090}{Hwl\+Get\+Equation\+Table\+Info}} (const \mbox{\hyperlink{namespacerocr_a9d269a2f79e2b96962f79909f5e1643c}{ADDR\+\_\+\+EQUATION}} $\ast$$\ast$pp\+Equation\+Table) const
+\begin{DoxyCompactList}\small\item\em Get equation table pointer and number of equations. \end{DoxyCompactList}\item 
+virtual \mbox{\hyperlink{addrtypes_8h_a45468f108457c1977c8684dea3df88c7}{ADDR\+\_\+\+E\+\_\+\+RETURNCODE}} \mbox{\hyperlink{classrocr_1_1Addr_1_1V2_1_1Gfx11Lib_a3c3784d046aeb1d95a420e80f2c95d38}{Hwl\+Compute\+Pipe\+Bank\+Xor}} (const \mbox{\hyperlink{namespacerocr_a4f27a7a5b14903f135b9978909945fbf}{ADDR2\+\_\+\+COMPUTE\+\_\+\+PIPEBANKXOR\+\_\+\+INPUT}} $\ast$p\+In, \mbox{\hyperlink{namespacerocr_a3976bd7e6e45d52c3cd7569c76a3b1b6}{ADDR2\+\_\+\+COMPUTE\+\_\+\+PIPEBANKXOR\+\_\+\+OUTPUT}} $\ast$p\+Out) const
+\begin{DoxyCompactList}\small\item\em Generate a Pipe\+Bank\+Xor value to be ORed into bits above pipe\+Interleave\+Bits of address. \end{DoxyCompactList}\item 
+virtual \mbox{\hyperlink{addrtypes_8h_a45468f108457c1977c8684dea3df88c7}{ADDR\+\_\+\+E\+\_\+\+RETURNCODE}} \mbox{\hyperlink{classrocr_1_1Addr_1_1V2_1_1Gfx11Lib_a271e2e598fe2533cfc998e1acd8c3a48}{Hwl\+Compute\+Slice\+Pipe\+Bank\+Xor}} (const \mbox{\hyperlink{namespacerocr_a03c086b14c7befe9589b281574d09206}{ADDR2\+\_\+\+COMPUTE\+\_\+\+SLICE\+\_\+\+PIPEBANKXOR\+\_\+\+INPUT}} $\ast$p\+In, \mbox{\hyperlink{namespacerocr_ac715a526ab9f7dd452aaf78ab3b20976}{ADDR2\+\_\+\+COMPUTE\+\_\+\+SLICE\+\_\+\+PIPEBANKXOR\+\_\+\+OUTPUT}} $\ast$p\+Out) const
+\begin{DoxyCompactList}\small\item\em Generate slice Pipe\+Bank\+Xor value based on base Pipe\+Bank\+Xor value and slice id. \end{DoxyCompactList}\item 
+virtual \mbox{\hyperlink{addrtypes_8h_a45468f108457c1977c8684dea3df88c7}{ADDR\+\_\+\+E\+\_\+\+RETURNCODE}} \mbox{\hyperlink{classrocr_1_1Addr_1_1V2_1_1Gfx11Lib_aead3e8bc6d85df14871f926dbac9f2b5}{Hwl\+Compute\+Sub\+Resource\+Offset\+For\+Swizzle\+Pattern}} (const \mbox{\hyperlink{namespacerocr_a0afb8cd2dfd96beb6f30660962d9150f}{ADDR2\+\_\+\+COMPUTE\+\_\+\+SUBRESOURCE\+\_\+\+OFFSET\+\_\+\+FORSWIZZLEPATTERN\+\_\+\+INPUT}} $\ast$p\+In, \mbox{\hyperlink{namespacerocr_aff3b7e71f3f199a98099d9657722514c}{ADDR2\+\_\+\+COMPUTE\+\_\+\+SUBRESOURCE\+\_\+\+OFFSET\+\_\+\+FORSWIZZLEPATTERN\+\_\+\+OUTPUT}} $\ast$p\+Out) const
+\begin{DoxyCompactList}\small\item\em Compute sub resource offset to support swizzle pattern. \end{DoxyCompactList}\item 
+virtual \mbox{\hyperlink{addrtypes_8h_a45468f108457c1977c8684dea3df88c7}{ADDR\+\_\+\+E\+\_\+\+RETURNCODE}} \mbox{\hyperlink{classrocr_1_1Addr_1_1V2_1_1Gfx11Lib_a8830f86a7e17b818f7afd5fef5766ec8}{Hwl\+Compute\+Non\+Block\+Compressed\+View}} (const \mbox{\hyperlink{namespacerocr_a32a42a0264b6489a84c56456b5495459}{ADDR2\+\_\+\+COMPUTE\+\_\+\+NONBLOCKCOMPRESSEDVIEW\+\_\+\+INPUT}} $\ast$p\+In, \mbox{\hyperlink{namespacerocr_a1556a4278a5dc1d0706ee0e4570c6194}{ADDR2\+\_\+\+COMPUTE\+\_\+\+NONBLOCKCOMPRESSEDVIEW\+\_\+\+OUTPUT}} $\ast$p\+Out) const
+\begin{DoxyCompactList}\small\item\em Compute non-\/block-\/compressed view for a given mipmap level/slice. \end{DoxyCompactList}\item 
+virtual \mbox{\hyperlink{addrtypes_8h_a45468f108457c1977c8684dea3df88c7}{ADDR\+\_\+\+E\+\_\+\+RETURNCODE}} \mbox{\hyperlink{classrocr_1_1Addr_1_1V2_1_1Gfx11Lib_abc4c29142c08deb85edc685d2b9282fb}{Hwl\+Get\+Preferred\+Surface\+Setting}} (const \mbox{\hyperlink{namespacerocr_a945c3184ba671c5d044ff7d6dc0a1910}{ADDR2\+\_\+\+GET\+\_\+\+PREFERRED\+\_\+\+SURF\+\_\+\+SETTING\+\_\+\+INPUT}} $\ast$p\+In, \mbox{\hyperlink{namespacerocr_a5f4f8e1ece6b248b799f7296af42ae3e}{ADDR2\+\_\+\+GET\+\_\+\+PREFERRED\+\_\+\+SURF\+\_\+\+SETTING\+\_\+\+OUTPUT}} $\ast$p\+Out) const
+\begin{DoxyCompactList}\small\item\em Internal function to get suggested surface information for cliet to use. \end{DoxyCompactList}\item 
+virtual \mbox{\hyperlink{addrtypes_8h_a45468f108457c1977c8684dea3df88c7}{ADDR\+\_\+\+E\+\_\+\+RETURNCODE}} \mbox{\hyperlink{classrocr_1_1Addr_1_1V2_1_1Gfx11Lib_adea5ec207757756ac02a65eeaa385f75}{Hwl\+Compute\+Surface\+Info\+Sanity\+Check}} (const \mbox{\hyperlink{namespacerocr_a8c8793265a5c744be40efbbaef407074}{ADDR2\+\_\+\+COMPUTE\+\_\+\+SURFACE\+\_\+\+INFO\+\_\+\+INPUT}} $\ast$p\+In) const
+\begin{DoxyCompactList}\small\item\em Compute surface info sanity check. \end{DoxyCompactList}\item 
+virtual \mbox{\hyperlink{addrtypes_8h_a45468f108457c1977c8684dea3df88c7}{ADDR\+\_\+\+E\+\_\+\+RETURNCODE}} \mbox{\hyperlink{classrocr_1_1Addr_1_1V2_1_1Gfx11Lib_a8b5058afc5ab9f3ee71d82a075c00006}{Hwl\+Compute\+Surface\+Info\+Tiled}} (const \mbox{\hyperlink{namespacerocr_a8c8793265a5c744be40efbbaef407074}{ADDR2\+\_\+\+COMPUTE\+\_\+\+SURFACE\+\_\+\+INFO\+\_\+\+INPUT}} $\ast$p\+In, \mbox{\hyperlink{namespacerocr_aa64211e3cee652bcca905fc7cfea8e7b}{ADDR2\+\_\+\+COMPUTE\+\_\+\+SURFACE\+\_\+\+INFO\+\_\+\+OUTPUT}} $\ast$p\+Out) const
+\begin{DoxyCompactList}\small\item\em Internal function to calculate alignment for tiled surface. \end{DoxyCompactList}\item 
+virtual \mbox{\hyperlink{addrtypes_8h_a45468f108457c1977c8684dea3df88c7}{ADDR\+\_\+\+E\+\_\+\+RETURNCODE}} \mbox{\hyperlink{classrocr_1_1Addr_1_1V2_1_1Gfx11Lib_a862c757e40fdd00e99808d1a424ba096}{Hwl\+Compute\+Surface\+Info\+Linear}} (const \mbox{\hyperlink{namespacerocr_a8c8793265a5c744be40efbbaef407074}{ADDR2\+\_\+\+COMPUTE\+\_\+\+SURFACE\+\_\+\+INFO\+\_\+\+INPUT}} $\ast$p\+In, \mbox{\hyperlink{namespacerocr_aa64211e3cee652bcca905fc7cfea8e7b}{ADDR2\+\_\+\+COMPUTE\+\_\+\+SURFACE\+\_\+\+INFO\+\_\+\+OUTPUT}} $\ast$p\+Out) const
+\begin{DoxyCompactList}\small\item\em Internal function to calculate alignment for linear surface. \end{DoxyCompactList}\item 
+virtual \mbox{\hyperlink{addrtypes_8h_a45468f108457c1977c8684dea3df88c7}{ADDR\+\_\+\+E\+\_\+\+RETURNCODE}} \mbox{\hyperlink{classrocr_1_1Addr_1_1V2_1_1Gfx11Lib_a19d1b8803e50eb9dce97297eda790b9d}{Hwl\+Compute\+Surface\+Addr\+From\+Coord\+Tiled}} (const \mbox{\hyperlink{namespacerocr_a21fad763bf2d5b88e8ec080eaaacdb59}{ADDR2\+\_\+\+COMPUTE\+\_\+\+SURFACE\+\_\+\+ADDRFROMCOORD\+\_\+\+INPUT}} $\ast$p\+In, \mbox{\hyperlink{namespacerocr_a140bf521eaf847698bb9900f1292b963}{ADDR2\+\_\+\+COMPUTE\+\_\+\+SURFACE\+\_\+\+ADDRFROMCOORD\+\_\+\+OUTPUT}} $\ast$p\+Out) const
+\begin{DoxyCompactList}\small\item\em Internal function to calculate address from coord for tiled swizzle surface. \end{DoxyCompactList}\item 
+virtual \mbox{\hyperlink{addrtypes_8h_af5a2be58a28390f9a494538f34054637}{UINT\+\_\+32}} \mbox{\hyperlink{classrocr_1_1Addr_1_1V2_1_1Gfx11Lib_ab3d0175d7a33b6afe11c370215abc7c8}{Hwl\+Compute\+Max\+Base\+Alignments}} () const
+\begin{DoxyCompactList}\small\item\em Gets maximum alignments. \end{DoxyCompactList}\item 
+virtual \mbox{\hyperlink{addrtypes_8h_af5a2be58a28390f9a494538f34054637}{UINT\+\_\+32}} \mbox{\hyperlink{classrocr_1_1Addr_1_1V2_1_1Gfx11Lib_ad57d7bc7aafae0d6cb707b120549af50}{Hwl\+Compute\+Max\+Meta\+Base\+Alignments}} () const
+\begin{DoxyCompactList}\small\item\em Gets maximum alignments for metadata. \end{DoxyCompactList}\item 
+virtual \mbox{\hyperlink{addrtypes_8h_ac4225671b7e87c943146915461c9b2f4}{BOOL\+\_\+32}} \mbox{\hyperlink{classrocr_1_1Addr_1_1V2_1_1Gfx11Lib_a2105660d847543784bca91e605fa7c3d}{Hwl\+Init\+Global\+Params}} (const \mbox{\hyperlink{namespacerocr_aa6951cc0839e1ebafba4f88da2c31c6d}{ADDR\+\_\+\+CREATE\+\_\+\+INPUT}} $\ast$p\+Create\+In)
+\begin{DoxyCompactList}\small\item\em Initializes global parameters. \end{DoxyCompactList}\item 
+virtual \mbox{\hyperlink{namespacerocr_1_1Addr_a9baa6f324df4a9cb3c4a61f6e6af6b09}{Chip\+Family}} \mbox{\hyperlink{classrocr_1_1Addr_1_1V2_1_1Gfx11Lib_a7da8a5a5decb13c00a19185c4d13fe49}{Hwl\+Convert\+Chip\+Family}} (\mbox{\hyperlink{addrtypes_8h_af5a2be58a28390f9a494538f34054637}{UINT\+\_\+32}} u\+Chip\+Family, \mbox{\hyperlink{addrtypes_8h_af5a2be58a28390f9a494538f34054637}{UINT\+\_\+32}} u\+Chip\+Revision)
+\begin{DoxyCompactList}\small\item\em Convert family\+ID defined in atiid.\+h to Chip\+Family and set m\+\_\+chip\+Family/m\+\_\+chip\+Revision. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{addrtypes_8h_a7927e087749615dae3114cc27b91c86d}{VOID}} \mbox{\hyperlink{classrocr_1_1Addr_1_1V2_1_1Gfx11Lib_ae0874925d053c02c7b59852e938d1aec}{Init\+Equation\+Table}} ()
+\begin{DoxyCompactList}\small\item\em Initialize Equation table. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{addrtypes_8h_a45468f108457c1977c8684dea3df88c7}{ADDR\+\_\+\+E\+\_\+\+RETURNCODE}} \mbox{\hyperlink{classrocr_1_1Addr_1_1V2_1_1Gfx11Lib_a37461d5fbe6c73ae96ddd89dc8443f6e}{Compute\+Surface\+Info\+Macro\+Tiled}} (const \mbox{\hyperlink{namespacerocr_a8c8793265a5c744be40efbbaef407074}{ADDR2\+\_\+\+COMPUTE\+\_\+\+SURFACE\+\_\+\+INFO\+\_\+\+INPUT}} $\ast$p\+In, \mbox{\hyperlink{namespacerocr_aa64211e3cee652bcca905fc7cfea8e7b}{ADDR2\+\_\+\+COMPUTE\+\_\+\+SURFACE\+\_\+\+INFO\+\_\+\+OUTPUT}} $\ast$p\+Out) const
+\begin{DoxyCompactList}\small\item\em Internal function to calculate alignment for macro tiled surface. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{addrtypes_8h_a45468f108457c1977c8684dea3df88c7}{ADDR\+\_\+\+E\+\_\+\+RETURNCODE}} \mbox{\hyperlink{classrocr_1_1Addr_1_1V2_1_1Gfx11Lib_afea90d038d0313658eb6acc844a38e9f}{Compute\+Surface\+Info\+Micro\+Tiled}} (const \mbox{\hyperlink{namespacerocr_a8c8793265a5c744be40efbbaef407074}{ADDR2\+\_\+\+COMPUTE\+\_\+\+SURFACE\+\_\+\+INFO\+\_\+\+INPUT}} $\ast$p\+In, \mbox{\hyperlink{namespacerocr_aa64211e3cee652bcca905fc7cfea8e7b}{ADDR2\+\_\+\+COMPUTE\+\_\+\+SURFACE\+\_\+\+INFO\+\_\+\+OUTPUT}} $\ast$p\+Out) const
+\begin{DoxyCompactList}\small\item\em Internal function to calculate alignment for micro tiled surface. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{addrtypes_8h_a45468f108457c1977c8684dea3df88c7}{ADDR\+\_\+\+E\+\_\+\+RETURNCODE}} \mbox{\hyperlink{classrocr_1_1Addr_1_1V2_1_1Gfx11Lib_ab8d68b4d0b56d98ce29856104a0536a1}{Compute\+Surface\+Addr\+From\+Coord\+Macro\+Tiled}} (const \mbox{\hyperlink{namespacerocr_a21fad763bf2d5b88e8ec080eaaacdb59}{ADDR2\+\_\+\+COMPUTE\+\_\+\+SURFACE\+\_\+\+ADDRFROMCOORD\+\_\+\+INPUT}} $\ast$p\+In, \mbox{\hyperlink{namespacerocr_a140bf521eaf847698bb9900f1292b963}{ADDR2\+\_\+\+COMPUTE\+\_\+\+SURFACE\+\_\+\+ADDRFROMCOORD\+\_\+\+OUTPUT}} $\ast$p\+Out) const
+\begin{DoxyCompactList}\small\item\em Internal function to calculate address from coord for macro tiled swizzle surface. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{addrtypes_8h_a45468f108457c1977c8684dea3df88c7}{ADDR\+\_\+\+E\+\_\+\+RETURNCODE}} \mbox{\hyperlink{classrocr_1_1Addr_1_1V2_1_1Gfx11Lib_ab5b9397d3052286af8e7adb8b043b748}{Compute\+Surface\+Addr\+From\+Coord\+Micro\+Tiled}} (const \mbox{\hyperlink{namespacerocr_a21fad763bf2d5b88e8ec080eaaacdb59}{ADDR2\+\_\+\+COMPUTE\+\_\+\+SURFACE\+\_\+\+ADDRFROMCOORD\+\_\+\+INPUT}} $\ast$p\+In, \mbox{\hyperlink{namespacerocr_a140bf521eaf847698bb9900f1292b963}{ADDR2\+\_\+\+COMPUTE\+\_\+\+SURFACE\+\_\+\+ADDRFROMCOORD\+\_\+\+OUTPUT}} $\ast$p\+Out) const
+\begin{DoxyCompactList}\small\item\em Internal function to calculate address from coord for micro tiled swizzle surface. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{addrtypes_8h_af5a2be58a28390f9a494538f34054637}{UINT\+\_\+32}} \mbox{\hyperlink{classrocr_1_1Addr_1_1V2_1_1Gfx11Lib_a36b79c896eec010e4c5bb2774f639752}{Compute\+Offset\+From\+Swizzle\+Pattern}} (const \mbox{\hyperlink{addrtypes_8h_ac4116bb9a5e80b5cb845d4f2674c160f}{UINT\+\_\+64}} $\ast$p\+Pattern, \mbox{\hyperlink{addrtypes_8h_af5a2be58a28390f9a494538f34054637}{UINT\+\_\+32}} num\+Bits, \mbox{\hyperlink{addrtypes_8h_af5a2be58a28390f9a494538f34054637}{UINT\+\_\+32}} x, \mbox{\hyperlink{addrtypes_8h_af5a2be58a28390f9a494538f34054637}{UINT\+\_\+32}} y, \mbox{\hyperlink{addrtypes_8h_af5a2be58a28390f9a494538f34054637}{UINT\+\_\+32}} z, \mbox{\hyperlink{addrtypes_8h_af5a2be58a28390f9a494538f34054637}{UINT\+\_\+32}} s) const
+\begin{DoxyCompactList}\small\item\em Compute offset from swizzle pattern. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{addrtypes_8h_af5a2be58a28390f9a494538f34054637}{UINT\+\_\+32}} \mbox{\hyperlink{classrocr_1_1Addr_1_1V2_1_1Gfx11Lib_a3af7c9fb673fff374aeaac8c613fbd09}{Compute\+Offset\+From\+Equation}} (const \mbox{\hyperlink{namespacerocr_a9d269a2f79e2b96962f79909f5e1643c}{ADDR\+\_\+\+EQUATION}} $\ast$p\+Eq, \mbox{\hyperlink{addrtypes_8h_af5a2be58a28390f9a494538f34054637}{UINT\+\_\+32}} x, \mbox{\hyperlink{addrtypes_8h_af5a2be58a28390f9a494538f34054637}{UINT\+\_\+32}} y, \mbox{\hyperlink{addrtypes_8h_af5a2be58a28390f9a494538f34054637}{UINT\+\_\+32}} z) const
+\begin{DoxyCompactList}\small\item\em Compute offset from equation. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{addrtypes_8h_a45468f108457c1977c8684dea3df88c7}{ADDR\+\_\+\+E\+\_\+\+RETURNCODE}} \mbox{\hyperlink{classrocr_1_1Addr_1_1V2_1_1Gfx11Lib_a5487d88ef9426ba235aeb1e5ede19e6b}{Compute\+Stereo\+Info}} (const \mbox{\hyperlink{namespacerocr_a8c8793265a5c744be40efbbaef407074}{ADDR2\+\_\+\+COMPUTE\+\_\+\+SURFACE\+\_\+\+INFO\+\_\+\+INPUT}} $\ast$p\+In, \mbox{\hyperlink{addrtypes_8h_af5a2be58a28390f9a494538f34054637}{UINT\+\_\+32}} $\ast$p\+AlignY, \mbox{\hyperlink{addrtypes_8h_af5a2be58a28390f9a494538f34054637}{UINT\+\_\+32}} $\ast$p\+Right\+Xor) const
+\begin{DoxyCompactList}\small\item\em Compute height alignment and right eye pipe\+Bank\+Xor for stereo surface. \end{DoxyCompactList}\item 
+const \mbox{\hyperlink{structrocr_1_1Addr_1_1V2_1_1ADDR__SW__PATINFO}{ADDR\+\_\+\+SW\+\_\+\+PATINFO}} $\ast$ \mbox{\hyperlink{classrocr_1_1Addr_1_1V2_1_1Gfx11Lib_a2db98d8cb90aef72055adabcdb833845}{Get\+Swizzle\+Pattern\+Info}} (\mbox{\hyperlink{addrtypes_8h_af64a81eb4c83301dba12714f6f0aefed}{Addr\+Swizzle\+Mode}} swizzle\+Mode, \mbox{\hyperlink{addrtypes_8h_a3a71ad42801586bbe32648f34f3d5ee7}{Addr\+Resource\+Type}} resource\+Type, \mbox{\hyperlink{addrtypes_8h_af5a2be58a28390f9a494538f34054637}{UINT\+\_\+32}} log2\+Elem, \mbox{\hyperlink{addrtypes_8h_af5a2be58a28390f9a494538f34054637}{UINT\+\_\+32}} num\+Frag) const
+\begin{DoxyCompactList}\small\item\em Get swizzle pattern. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{addrtypes_8h_a7927e087749615dae3114cc27b91c86d}{VOID}} \mbox{\hyperlink{classrocr_1_1Addr_1_1V2_1_1Gfx11Lib_ab147da88b1266b3c5e7e464a8c1537b3}{Get\+Swizzle\+Pattern\+From\+Pattern\+Info}} (const \mbox{\hyperlink{structrocr_1_1Addr_1_1V2_1_1ADDR__SW__PATINFO}{ADDR\+\_\+\+SW\+\_\+\+PATINFO}} $\ast$p\+Pat\+Info, \mbox{\hyperlink{unionrocr_1_1Addr_1_1V2_1_1ADDR__BIT__SETTING}{ADDR\+\_\+\+BIT\+\_\+\+SETTING}}(\&p\+Swizzle)\mbox{[}20\mbox{]}) const
+\item 
+\mbox{\hyperlink{addrtypes_8h_a7927e087749615dae3114cc27b91c86d}{VOID}} \mbox{\hyperlink{classrocr_1_1Addr_1_1V2_1_1Gfx11Lib_acb8a89b21d9628b7dc8e41d26e931cd9}{Convert\+Swizzle\+Pattern\+To\+Equation}} (\mbox{\hyperlink{addrtypes_8h_af5a2be58a28390f9a494538f34054637}{UINT\+\_\+32}} elem\+Log2, \mbox{\hyperlink{addrtypes_8h_a3a71ad42801586bbe32648f34f3d5ee7}{Addr\+Resource\+Type}} rsrc\+Type, \mbox{\hyperlink{addrtypes_8h_af64a81eb4c83301dba12714f6f0aefed}{Addr\+Swizzle\+Mode}} sw\+Mode, const \mbox{\hyperlink{structrocr_1_1Addr_1_1V2_1_1ADDR__SW__PATINFO}{ADDR\+\_\+\+SW\+\_\+\+PATINFO}} $\ast$p\+Pat\+Info, \mbox{\hyperlink{namespacerocr_a9d269a2f79e2b96962f79909f5e1643c}{ADDR\+\_\+\+EQUATION}} $\ast$p\+Equation) const
+\begin{DoxyCompactList}\small\item\em Convert swizzle pattern to equation. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classrocr_1_1Addr_1_1V2_1_1Gfx11Lib_a728123f93b596a9856d133e49e879d14}{Get\+Blk256\+Size\+Log2}} (\mbox{\hyperlink{addrtypes_8h_a3a71ad42801586bbe32648f34f3d5ee7}{Addr\+Resource\+Type}} resource\+Type, \mbox{\hyperlink{addrtypes_8h_af64a81eb4c83301dba12714f6f0aefed}{Addr\+Swizzle\+Mode}} swizzle\+Mode, \mbox{\hyperlink{addrtypes_8h_af5a2be58a28390f9a494538f34054637}{UINT\+\_\+32}} elem\+Log2, \mbox{\hyperlink{addrtypes_8h_af5a2be58a28390f9a494538f34054637}{UINT\+\_\+32}} num\+Samples\+Log2, \mbox{\hyperlink{structrocr_1_1Addr_1_1V2_1_1Dim3d}{Dim3d}} $\ast$p\+Block) const
+\begin{DoxyCompactList}\small\item\em Get block 256 size. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classrocr_1_1Addr_1_1V2_1_1Gfx11Lib_a23aae6aeef4722007ea28cacf3e54311}{Get\+Compressed\+Block\+Size\+Log2}} (\mbox{\hyperlink{namespacerocr_1_1Addr_1_1V2_ae6ffa64ef973acad3659a7d420cd36ba}{Gfx11\+Data\+Type}} data\+Type, \mbox{\hyperlink{addrtypes_8h_a3a71ad42801586bbe32648f34f3d5ee7}{Addr\+Resource\+Type}} resource\+Type, \mbox{\hyperlink{addrtypes_8h_af64a81eb4c83301dba12714f6f0aefed}{Addr\+Swizzle\+Mode}} swizzle\+Mode, \mbox{\hyperlink{addrtypes_8h_af5a2be58a28390f9a494538f34054637}{UINT\+\_\+32}} elem\+Log2, \mbox{\hyperlink{addrtypes_8h_af5a2be58a28390f9a494538f34054637}{UINT\+\_\+32}} num\+Samples\+Log2, \mbox{\hyperlink{structrocr_1_1Addr_1_1V2_1_1Dim3d}{Dim3d}} $\ast$p\+Block) const
+\begin{DoxyCompactList}\small\item\em Get compress block size. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{addrtypes_8h_adacc69c9db3b9adfc072b838ebf2bb0e}{INT\+\_\+32}} \mbox{\hyperlink{classrocr_1_1Addr_1_1V2_1_1Gfx11Lib_aa5287a079c8895225852cbf3c4e0d19c}{Get\+Meta\+Overlap\+Log2}} (\mbox{\hyperlink{namespacerocr_1_1Addr_1_1V2_ae6ffa64ef973acad3659a7d420cd36ba}{Gfx11\+Data\+Type}} data\+Type, \mbox{\hyperlink{addrtypes_8h_a3a71ad42801586bbe32648f34f3d5ee7}{Addr\+Resource\+Type}} resource\+Type, \mbox{\hyperlink{addrtypes_8h_af64a81eb4c83301dba12714f6f0aefed}{Addr\+Swizzle\+Mode}} swizzle\+Mode, \mbox{\hyperlink{addrtypes_8h_af5a2be58a28390f9a494538f34054637}{UINT\+\_\+32}} elem\+Log2, \mbox{\hyperlink{addrtypes_8h_af5a2be58a28390f9a494538f34054637}{UINT\+\_\+32}} num\+Samples\+Log2) const
+\begin{DoxyCompactList}\small\item\em Get meta block overlap. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{addrtypes_8h_adacc69c9db3b9adfc072b838ebf2bb0e}{INT\+\_\+32}} \mbox{\hyperlink{classrocr_1_1Addr_1_1V2_1_1Gfx11Lib_a314dd9c39e17c24bdf2091812d065bad}{Get3\+DMeta\+Overlap\+Log2}} (\mbox{\hyperlink{addrtypes_8h_a3a71ad42801586bbe32648f34f3d5ee7}{Addr\+Resource\+Type}} resource\+Type, \mbox{\hyperlink{addrtypes_8h_af64a81eb4c83301dba12714f6f0aefed}{Addr\+Swizzle\+Mode}} swizzle\+Mode, \mbox{\hyperlink{addrtypes_8h_af5a2be58a28390f9a494538f34054637}{UINT\+\_\+32}} elem\+Log2) const
+\begin{DoxyCompactList}\small\item\em Get 3d meta block overlap. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{addrtypes_8h_af5a2be58a28390f9a494538f34054637}{UINT\+\_\+32}} \mbox{\hyperlink{classrocr_1_1Addr_1_1V2_1_1Gfx11Lib_ac9255f52b902514f4204d3a015d3b2fd}{Get\+Meta\+Blk\+Size}} (\mbox{\hyperlink{namespacerocr_1_1Addr_1_1V2_ae6ffa64ef973acad3659a7d420cd36ba}{Gfx11\+Data\+Type}} data\+Type, \mbox{\hyperlink{addrtypes_8h_a3a71ad42801586bbe32648f34f3d5ee7}{Addr\+Resource\+Type}} resource\+Type, \mbox{\hyperlink{addrtypes_8h_af64a81eb4c83301dba12714f6f0aefed}{Addr\+Swizzle\+Mode}} swizzle\+Mode, \mbox{\hyperlink{addrtypes_8h_af5a2be58a28390f9a494538f34054637}{UINT\+\_\+32}} elem\+Log2, \mbox{\hyperlink{addrtypes_8h_af5a2be58a28390f9a494538f34054637}{UINT\+\_\+32}} num\+Samples\+Log2, \mbox{\hyperlink{addrtypes_8h_ac4225671b7e87c943146915461c9b2f4}{BOOL\+\_\+32}} pipe\+Align, \mbox{\hyperlink{structrocr_1_1Addr_1_1V2_1_1Dim3d}{Dim3d}} $\ast$p\+Block) const
+\begin{DoxyCompactList}\small\item\em Get metadata block size. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{addrtypes_8h_adacc69c9db3b9adfc072b838ebf2bb0e}{INT\+\_\+32}} \mbox{\hyperlink{classrocr_1_1Addr_1_1V2_1_1Gfx11Lib_a8313ad9258551ea4fb634710a4eb04e7}{Get\+Pipe\+Rotate\+Amount}} (\mbox{\hyperlink{addrtypes_8h_a3a71ad42801586bbe32648f34f3d5ee7}{Addr\+Resource\+Type}} resource\+Type, \mbox{\hyperlink{addrtypes_8h_af64a81eb4c83301dba12714f6f0aefed}{Addr\+Swizzle\+Mode}} swizzle\+Mode) const
+\begin{DoxyCompactList}\small\item\em Get pipe rotate amount. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{addrtypes_8h_adacc69c9db3b9adfc072b838ebf2bb0e}{INT\+\_\+32}} \mbox{\hyperlink{classrocr_1_1Addr_1_1V2_1_1Gfx11Lib_a7d4743cd64ad01cc9576981d22f13588}{Get\+Effective\+Num\+Pipes}} () const
+\item 
+\mbox{\hyperlink{addrtypes_8h_ac4225671b7e87c943146915461c9b2f4}{BOOL\+\_\+32}} \mbox{\hyperlink{classrocr_1_1Addr_1_1V2_1_1Gfx11Lib_a86f031d6c2612435b01258d46c7efb04}{Is\+Rb\+Aligned}} (\mbox{\hyperlink{addrtypes_8h_a3a71ad42801586bbe32648f34f3d5ee7}{Addr\+Resource\+Type}} resource\+Type, \mbox{\hyperlink{addrtypes_8h_af64a81eb4c83301dba12714f6f0aefed}{Addr\+Swizzle\+Mode}} swizzle\+Mode) const
+\item 
+\mbox{\hyperlink{addrtypes_8h_af5a2be58a28390f9a494538f34054637}{UINT\+\_\+32}} \mbox{\hyperlink{classrocr_1_1Addr_1_1V2_1_1Gfx11Lib_af452fdc5983f33872c5115d8417c426a}{Get\+Valid\+Display\+Swizzle\+Modes}} (\mbox{\hyperlink{addrtypes_8h_af5a2be58a28390f9a494538f34054637}{UINT\+\_\+32}} bpp) const
+\begin{DoxyCompactList}\small\item\em Get valid swizzle modes mask for displayable surface. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{addrtypes_8h_ac4225671b7e87c943146915461c9b2f4}{BOOL\+\_\+32}} \mbox{\hyperlink{classrocr_1_1Addr_1_1V2_1_1Gfx11Lib_a0addf476991f991284dc1899a431351d}{Is\+Valid\+Display\+Swizzle\+Mode}} (const \mbox{\hyperlink{namespacerocr_a8c8793265a5c744be40efbbaef407074}{ADDR2\+\_\+\+COMPUTE\+\_\+\+SURFACE\+\_\+\+INFO\+\_\+\+INPUT}} $\ast$p\+In) const
+\begin{DoxyCompactList}\small\item\em Check if a swizzle mode is supported by display engine. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{addrtypes_8h_af5a2be58a28390f9a494538f34054637}{UINT\+\_\+32}} \mbox{\hyperlink{classrocr_1_1Addr_1_1V2_1_1Gfx11Lib_ab519a967fc1efbe068b9136845f3f1c2}{Get\+Max\+Num\+Mips\+In\+Tail}} (\mbox{\hyperlink{addrtypes_8h_af5a2be58a28390f9a494538f34054637}{UINT\+\_\+32}} block\+Size\+Log2, \mbox{\hyperlink{addrtypes_8h_ac4225671b7e87c943146915461c9b2f4}{BOOL\+\_\+32}} is\+Thin) const
+\begin{DoxyCompactList}\small\item\em Return max number of mips in tails. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{addrtypes_8h_ac4225671b7e87c943146915461c9b2f4}{BOOL\+\_\+32}} \mbox{\hyperlink{classrocr_1_1Addr_1_1V2_1_1Gfx11Lib_a6342495991dadbf096dc8682ad66b2fc}{Is\+In\+Mip\+Tail}} (\mbox{\hyperlink{structrocr_1_1Addr_1_1V2_1_1Dim3d}{Dim3d}} mip\+Tail\+Dim, \mbox{\hyperlink{addrtypes_8h_af5a2be58a28390f9a494538f34054637}{UINT\+\_\+32}} max\+Num\+Mips\+In\+Tail, \mbox{\hyperlink{addrtypes_8h_af5a2be58a28390f9a494538f34054637}{UINT\+\_\+32}} mip\+Width, \mbox{\hyperlink{addrtypes_8h_af5a2be58a28390f9a494538f34054637}{UINT\+\_\+32}} mip\+Height, \mbox{\hyperlink{addrtypes_8h_af5a2be58a28390f9a494538f34054637}{UINT\+\_\+32}} num\+Mips\+To\+The\+End) const
+\item 
+\mbox{\hyperlink{addrtypes_8h_af5a2be58a28390f9a494538f34054637}{UINT\+\_\+32}} \mbox{\hyperlink{classrocr_1_1Addr_1_1V2_1_1Gfx11Lib_af4665bc79171ac505aa1df6a5834c6d0}{Get\+Bank\+Xor\+Bits}} (\mbox{\hyperlink{addrtypes_8h_af5a2be58a28390f9a494538f34054637}{UINT\+\_\+32}} block\+Bits) const
+\item 
+\mbox{\hyperlink{addrtypes_8h_ac4225671b7e87c943146915461c9b2f4}{BOOL\+\_\+32}} \mbox{\hyperlink{classrocr_1_1Addr_1_1V2_1_1Gfx11Lib_a6eba1ccfb84b9be2906ffe371afd6b5e}{Validate\+Non\+Sw\+Mode\+Params}} (const \mbox{\hyperlink{namespacerocr_a8c8793265a5c744be40efbbaef407074}{ADDR2\+\_\+\+COMPUTE\+\_\+\+SURFACE\+\_\+\+INFO\+\_\+\+INPUT}} $\ast$p\+In) const
+\begin{DoxyCompactList}\small\item\em Validate compute surface info params except swizzle mode. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{addrtypes_8h_ac4225671b7e87c943146915461c9b2f4}{BOOL\+\_\+32}} \mbox{\hyperlink{classrocr_1_1Addr_1_1V2_1_1Gfx11Lib_a80ac58c4efd8cdb1b0670575ff81c8f0}{Validate\+Sw\+Mode\+Params}} (const \mbox{\hyperlink{namespacerocr_a8c8793265a5c744be40efbbaef407074}{ADDR2\+\_\+\+COMPUTE\+\_\+\+SURFACE\+\_\+\+INFO\+\_\+\+INPUT}} $\ast$p\+In) const
+\begin{DoxyCompactList}\small\item\em Validate compute surface info related to swizzle mode. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{addrtypes_8h_ac4225671b7e87c943146915461c9b2f4}{BOOL\+\_\+32}} \mbox{\hyperlink{classrocr_1_1Addr_1_1V2_1_1Gfx11Lib_a15817461ac1d37cd70411d79b5c4be36}{Is\+Block256kb}} (\mbox{\hyperlink{addrtypes_8h_af64a81eb4c83301dba12714f6f0aefed}{Addr\+Swizzle\+Mode}} swizzle\+Mode) const
+\end{DoxyCompactItemize}
+\doxysubsection*{Static Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static void \mbox{\hyperlink{classrocr_1_1Addr_1_1V2_1_1Gfx11Lib_a36205c1b8131eb850213dbf2250007e0}{Get\+Mip\+Size}} (\mbox{\hyperlink{addrtypes_8h_af5a2be58a28390f9a494538f34054637}{UINT\+\_\+32}} mip0\+Width, \mbox{\hyperlink{addrtypes_8h_af5a2be58a28390f9a494538f34054637}{UINT\+\_\+32}} mip0\+Height, \mbox{\hyperlink{addrtypes_8h_af5a2be58a28390f9a494538f34054637}{UINT\+\_\+32}} mip0\+Depth, \mbox{\hyperlink{addrtypes_8h_af5a2be58a28390f9a494538f34054637}{UINT\+\_\+32}} mip\+Id, \mbox{\hyperlink{addrtypes_8h_af5a2be58a28390f9a494538f34054637}{UINT\+\_\+32}} $\ast$p\+Mip\+Width, \mbox{\hyperlink{addrtypes_8h_af5a2be58a28390f9a494538f34054637}{UINT\+\_\+32}} $\ast$p\+Mip\+Height, \mbox{\hyperlink{addrtypes_8h_af5a2be58a28390f9a494538f34054637}{UINT\+\_\+32}} $\ast$p\+Mip\+Depth=\mbox{\hyperlink{addrtypes_8h_a070d2ce7b6bb7e5c05602aa8c308d0c4}{NULL}})
+\item 
+static \mbox{\hyperlink{addrtypes_8h_adacc69c9db3b9adfc072b838ebf2bb0e}{INT\+\_\+32}} \mbox{\hyperlink{classrocr_1_1Addr_1_1V2_1_1Gfx11Lib_a11e30cb5cea851f28e35da4171092385}{Get\+Meta\+Element\+Size\+Log2}} (\mbox{\hyperlink{namespacerocr_1_1Addr_1_1V2_ae6ffa64ef973acad3659a7d420cd36ba}{Gfx11\+Data\+Type}} data\+Type)
+\begin{DoxyCompactList}\small\item\em Gets meta data element size log2. \end{DoxyCompactList}\item 
+static \mbox{\hyperlink{addrtypes_8h_adacc69c9db3b9adfc072b838ebf2bb0e}{INT\+\_\+32}} \mbox{\hyperlink{classrocr_1_1Addr_1_1V2_1_1Gfx11Lib_a72d37d277fe1932f1ac9b463a25ccef0}{Get\+Meta\+Cache\+Size\+Log2}} (\mbox{\hyperlink{namespacerocr_1_1Addr_1_1V2_ae6ffa64ef973acad3659a7d420cd36ba}{Gfx11\+Data\+Type}} data\+Type)
+\begin{DoxyCompactList}\small\item\em Gets meta data cache line size log2. \end{DoxyCompactList}\item 
+static \mbox{\hyperlink{namespacerocr_ad723c5daa0ba0a358ce336c36949ded4}{ADDR2\+\_\+\+BLOCK\+\_\+\+SET}} \mbox{\hyperlink{classrocr_1_1Addr_1_1V2_1_1Gfx11Lib_a0241f9067bc70de92730807e94aa1b61}{Get\+Allowed\+Block\+Set}} (\mbox{\hyperlink{namespacerocr_a045bd0087db5582ee20cde85aefe2957}{ADDR2\+\_\+\+SWMODE\+\_\+\+SET}} allowed\+Sw\+Mode\+Set, \mbox{\hyperlink{addrtypes_8h_a3a71ad42801586bbe32648f34f3d5ee7}{Addr\+Resource\+Type}} rsrc\+Type)
+\item 
+static \mbox{\hyperlink{namespacerocr_a8c696d63861e5537049e3938deb6bd7b}{ADDR2\+\_\+\+SWTYPE\+\_\+\+SET}} \mbox{\hyperlink{classrocr_1_1Addr_1_1V2_1_1Gfx11Lib_acd74c477924b021e9c0383e92f25905c}{Get\+Allowed\+Sw\+Set}} (\mbox{\hyperlink{namespacerocr_a045bd0087db5582ee20cde85aefe2957}{ADDR2\+\_\+\+SWMODE\+\_\+\+SET}} allowed\+Sw\+Mode\+Set)
+\end{DoxyCompactItemize}
+\doxysubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{addrtypes_8h_af5a2be58a28390f9a494538f34054637}{UINT\+\_\+32}} \mbox{\hyperlink{classrocr_1_1Addr_1_1V2_1_1Gfx11Lib_ad67522241a14081ec4cadace0d9e991d}{m\+\_\+num\+Pkr\+Log2}}
+\item 
+\mbox{\hyperlink{addrtypes_8h_af5a2be58a28390f9a494538f34054637}{UINT\+\_\+32}} \mbox{\hyperlink{classrocr_1_1Addr_1_1V2_1_1Gfx11Lib_a2f44aa4eb9915aa6b953587ac15d2bed}{m\+\_\+num\+Sa\+Log2}}
+\item 
+\mbox{\hyperlink{structrocr_1_1Addr_1_1V2_1_1Gfx11ChipSettings}{Gfx11\+Chip\+Settings}} \mbox{\hyperlink{classrocr_1_1Addr_1_1V2_1_1Gfx11Lib_a9874e0831a31259c1ed8850b297a19d4}{m\+\_\+settings}}
+\item 
+\mbox{\hyperlink{addrtypes_8h_af5a2be58a28390f9a494538f34054637}{UINT\+\_\+32}} \mbox{\hyperlink{classrocr_1_1Addr_1_1V2_1_1Gfx11Lib_a9f6ebb8846a860c6580901cb6349f709}{m\+\_\+color\+Base\+Index}}
+\item 
+\mbox{\hyperlink{addrtypes_8h_af5a2be58a28390f9a494538f34054637}{UINT\+\_\+32}} \mbox{\hyperlink{classrocr_1_1Addr_1_1V2_1_1Gfx11Lib_a2ee88c7c4a106ccfbc43a874d896af7e}{m\+\_\+htile\+Base\+Index}}
+\item 
+\mbox{\hyperlink{addrtypes_8h_af5a2be58a28390f9a494538f34054637}{UINT\+\_\+32}} \mbox{\hyperlink{classrocr_1_1Addr_1_1V2_1_1Gfx11Lib_af45eea20454cc3d8b72c6a6a088ad12b}{m\+\_\+dcc\+Base\+Index}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Static Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+static const \mbox{\hyperlink{addrtypes_8h_af5a2be58a28390f9a494538f34054637}{UINT\+\_\+32}} \mbox{\hyperlink{classrocr_1_1Addr_1_1V2_1_1Gfx11Lib_a21f0c1d4ccfc8583cc26deb2917a1175}{Column\+Bits}} = 2
+\item 
+static const \mbox{\hyperlink{addrtypes_8h_af5a2be58a28390f9a494538f34054637}{UINT\+\_\+32}} \mbox{\hyperlink{classrocr_1_1Addr_1_1V2_1_1Gfx11Lib_a9a1dd25dc307e9a4c69977c4275eeb80}{Bank\+Bits}} = 4
+\item 
+static const \mbox{\hyperlink{addrtypes_8h_af5a2be58a28390f9a494538f34054637}{UINT\+\_\+32}} \mbox{\hyperlink{classrocr_1_1Addr_1_1V2_1_1Gfx11Lib_a966225810aed3a42d75a310a65ba76e3}{Unaligned\+Dcc\+Type}} = 3
+\item 
+static const \mbox{\hyperlink{structrocr_1_1Addr_1_1V2_1_1Dim3d}{Dim3d}} \mbox{\hyperlink{classrocr_1_1Addr_1_1V2_1_1Gfx11Lib_a5bd95cf3639bd2e9caa8b9b188963062}{Block256\+\_\+3d}} \mbox{[}\mbox{\hyperlink{classrocr_1_1Addr_1_1V2_1_1Lib_a71eda98c42d45554936e642cfff99ae2}{Max\+Num\+Of\+Bpp}}\mbox{]} = \{\{8, 4, 8\}, \{4, 4, 8\}, \{4, 4, 4\}, \{4, 2, 4\}, \{2, 2, 4\}\}
+\item 
+static const \mbox{\hyperlink{structrocr_1_1Addr_1_1V2_1_1Dim3d}{Dim3d}} \mbox{\hyperlink{classrocr_1_1Addr_1_1V2_1_1Gfx11Lib_a9845cf74c9b02015b87ad8a9b03d372c}{Block256\+K\+\_\+\+Log2\+\_\+3d}} \mbox{[}\mbox{\hyperlink{classrocr_1_1Addr_1_1V2_1_1Lib_a71eda98c42d45554936e642cfff99ae2}{Max\+Num\+Of\+Bpp}}\mbox{]} = \{\{6, 6, 6\}, \{5, 6, 6\}, \{5, 6, 5\}, \{5, 5, 5\}, \{4, 5, 5\}\}
+\item 
+static const \mbox{\hyperlink{structrocr_1_1Addr_1_1V2_1_1Dim3d}{Dim3d}} \mbox{\hyperlink{classrocr_1_1Addr_1_1V2_1_1Gfx11Lib_ae06d483820de77b819d9c12136f6de18}{Block64\+K\+\_\+\+Log2\+\_\+3d}} \mbox{[}\mbox{\hyperlink{classrocr_1_1Addr_1_1V2_1_1Lib_a71eda98c42d45554936e642cfff99ae2}{Max\+Num\+Of\+Bpp}}\mbox{]} = \{\{6, 5, 5\}, \{5, 5, 5\}, \{5, 5, 4\}, \{5, 4, 4\}, \{4, 4, 4\}\}
+\item 
+static const \mbox{\hyperlink{structrocr_1_1Addr_1_1V2_1_1Dim3d}{Dim3d}} \mbox{\hyperlink{classrocr_1_1Addr_1_1V2_1_1Gfx11Lib_ada30c071baa4201f1866f48319ecf20d}{Block4\+K\+\_\+\+Log2\+\_\+3d}} \mbox{[}\mbox{\hyperlink{classrocr_1_1Addr_1_1V2_1_1Lib_a71eda98c42d45554936e642cfff99ae2}{Max\+Num\+Of\+Bpp}}\mbox{]} = \{\{4, 4, 4\}, \{3, 4, 4\}, \{3, 4, 3\}, \{3, 3, 3\}, \{2, 3, 3\}\}
+\item 
+static const \mbox{\hyperlink{unionrocr_1_1Addr_1_1V2_1_1SwizzleModeFlags}{Swizzle\+Mode\+Flags}} \mbox{\hyperlink{classrocr_1_1Addr_1_1V2_1_1Gfx11Lib_a2f374c7c7d9ca61398ec6c0acb509738}{Swizzle\+Mode\+Table}} \mbox{[}\mbox{\hyperlink{addrtypes_8h_af2beb43b92a6a43e77370de1af05772da4a9e23b410e82ee7a191adcb3fc3650f}{ADDR\+\_\+\+SW\+\_\+\+MAX\+\_\+\+TYPE}}\mbox{]}
+\end{DoxyCompactItemize}
+\doxysubsection*{Additional Inherited Members}
+
+
+\doxysubsection{Detailed Description}
+This class is the GFX11 specific address library function set. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classrocr_1_1Addr_1_1V2_1_1Gfx11Lib_a63755a3925a88f10d3402e16bfd4b46f}\label{classrocr_1_1Addr_1_1V2_1_1Gfx11Lib_a63755a3925a88f10d3402e16bfd4b46f}} 
+\index{rocr::Addr::V2::Gfx11Lib@{rocr::Addr::V2::Gfx11Lib}!Gfx11Lib@{Gfx11Lib}}
+\index{Gfx11Lib@{Gfx11Lib}!rocr::Addr::V2::Gfx11Lib@{rocr::Addr::V2::Gfx11Lib}}
+\doxysubsubsection{\texorpdfstring{Gfx11Lib()}{Gfx11Lib()}}
+{\footnotesize\ttfamily rocr\+::\+Addr\+::\+V2\+::\+Gfx11\+Lib\+::\+Gfx11\+Lib (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{structrocr_1_1Addr_1_1Client}{Client}} $\ast$}]{p\+Client }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Constructor. 
+
+\mbox{\hyperlink{classrocr_1_1Addr_1_1V2_1_1Gfx11Lib_a63755a3925a88f10d3402e16bfd4b46f}{Gfx11\+Lib\+::\+Gfx11\+Lib}} Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classrocr_1_1Addr_1_1V2_1_1Gfx11Lib_a63755a3925a88f10d3402e16bfd4b46f_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classrocr_1_1Addr_1_1V2_1_1Gfx11Lib_a3fb5624c743e706a949f4cf993ea2c0b}\label{classrocr_1_1Addr_1_1V2_1_1Gfx11Lib_a3fb5624c743e706a949f4cf993ea2c0b}} 
+\index{rocr::Addr::V2::Gfx11Lib@{rocr::Addr::V2::Gfx11Lib}!````~Gfx11Lib@{$\sim$Gfx11Lib}}
+\index{````~Gfx11Lib@{$\sim$Gfx11Lib}!rocr::Addr::V2::Gfx11Lib@{rocr::Addr::V2::Gfx11Lib}}
+\doxysubsubsection{\texorpdfstring{$\sim$Gfx11Lib()}{~Gfx11Lib()}}
+{\footnotesize\ttfamily rocr\+::\+Addr\+::\+V2\+::\+Gfx11\+Lib\+::$\sim$\+Gfx11\+Lib (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [virtual]}}
+
+
+
+Destructor. 
+
+\mbox{\hyperlink{classrocr_1_1Addr_1_1V2_1_1Gfx11Lib_a3fb5624c743e706a949f4cf993ea2c0b}{Gfx11\+Lib\+::$\sim$\+Gfx11\+Lib}} 
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classrocr_1_1Addr_1_1V2_1_1Gfx11Lib_a3af7c9fb673fff374aeaac8c613fbd09}\label{classrocr_1_1Addr_1_1V2_1_1Gfx11Lib_a3af7c9fb673fff374aeaac8c613fbd09}} 
+\index{rocr::Addr::V2::Gfx11Lib@{rocr::Addr::V2::Gfx11Lib}!ComputeOffsetFromEquation@{ComputeOffsetFromEquation}}
+\index{ComputeOffsetFromEquation@{ComputeOffsetFromEquation}!rocr::Addr::V2::Gfx11Lib@{rocr::Addr::V2::Gfx11Lib}}
+\doxysubsubsection{\texorpdfstring{ComputeOffsetFromEquation()}{ComputeOffsetFromEquation()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{addrtypes_8h_af5a2be58a28390f9a494538f34054637}{UINT\+\_\+32}} rocr\+::\+Addr\+::\+V2\+::\+Gfx11\+Lib\+::\+Compute\+Offset\+From\+Equation (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{namespacerocr_a9d269a2f79e2b96962f79909f5e1643c}{ADDR\+\_\+\+EQUATION}} $\ast$}]{p\+Eq,  }\item[{\mbox{\hyperlink{addrtypes_8h_af5a2be58a28390f9a494538f34054637}{UINT\+\_\+32}}}]{x,  }\item[{\mbox{\hyperlink{addrtypes_8h_af5a2be58a28390f9a494538f34054637}{UINT\+\_\+32}}}]{y,  }\item[{\mbox{\hyperlink{addrtypes_8h_af5a2be58a28390f9a494538f34054637}{UINT\+\_\+32}}}]{z }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Compute offset from equation. 
+
+\mbox{\hyperlink{classrocr_1_1Addr_1_1V2_1_1Gfx11Lib_a3af7c9fb673fff374aeaac8c613fbd09}{Gfx11\+Lib\+::\+Compute\+Offset\+From\+Equation}}
+
+\begin{DoxyReturn}{Returns}
+Offset 
+\end{DoxyReturn}
+
+\begin{DoxyParams}{Parameters}
+{\em p\+Eq} & Equation \\
+\hline
+{\em x} & x coord in bytes \\
+\hline
+{\em y} & y coord in pixel \\
+\hline
+{\em z} & z coord in slice \\
+\hline
+\end{DoxyParams}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classrocr_1_1Addr_1_1V2_1_1Gfx11Lib_a3af7c9fb673fff374aeaac8c613fbd09_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classrocr_1_1Addr_1_1V2_1_1Gfx11Lib_a36b79c896eec010e4c5bb2774f639752}\label{classrocr_1_1Addr_1_1V2_1_1Gfx11Lib_a36b79c896eec010e4c5bb2774f639752}} 
+\index{rocr::Addr::V2::Gfx11Lib@{rocr::Addr::V2::Gfx11Lib}!ComputeOffsetFromSwizzlePattern@{ComputeOffsetFromSwizzlePattern}}
+\index{ComputeOffsetFromSwizzlePattern@{ComputeOffsetFromSwizzlePattern}!rocr::Addr::V2::Gfx11Lib@{rocr::Addr::V2::Gfx11Lib}}
+\doxysubsubsection{\texorpdfstring{ComputeOffsetFromSwizzlePattern()}{ComputeOffsetFromSwizzlePattern()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{addrtypes_8h_af5a2be58a28390f9a494538f34054637}{UINT\+\_\+32}} rocr\+::\+Addr\+::\+V2\+::\+Gfx11\+Lib\+::\+Compute\+Offset\+From\+Swizzle\+Pattern (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{addrtypes_8h_ac4116bb9a5e80b5cb845d4f2674c160f}{UINT\+\_\+64}} $\ast$}]{p\+Pattern,  }\item[{\mbox{\hyperlink{addrtypes_8h_af5a2be58a28390f9a494538f34054637}{UINT\+\_\+32}}}]{num\+Bits,  }\item[{\mbox{\hyperlink{addrtypes_8h_af5a2be58a28390f9a494538f34054637}{UINT\+\_\+32}}}]{x,  }\item[{\mbox{\hyperlink{addrtypes_8h_af5a2be58a28390f9a494538f34054637}{UINT\+\_\+32}}}]{y,  }\item[{\mbox{\hyperlink{addrtypes_8h_af5a2be58a28390f9a494538f34054637}{UINT\+\_\+32}}}]{z,  }\item[{\mbox{\hyperlink{addrtypes_8h_af5a2be58a28390f9a494538f34054637}{UINT\+\_\+32}}}]{s }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Compute offset from swizzle pattern. 
+
+\mbox{\hyperlink{classrocr_1_1Addr_1_1V2_1_1Gfx11Lib_a36b79c896eec010e4c5bb2774f639752}{Gfx11\+Lib\+::\+Compute\+Offset\+From\+Swizzle\+Pattern}}
+
+\begin{DoxyReturn}{Returns}
+Offset 
+\end{DoxyReturn}
+
+\begin{DoxyParams}{Parameters}
+{\em p\+Pattern} & Swizzle pattern \\
+\hline
+{\em num\+Bits} & Number of bits in pattern \\
+\hline
+{\em x} & x coord in pixel \\
+\hline
+{\em y} & y coord in pixel \\
+\hline
+{\em z} & z coord in slice \\
+\hline
+{\em s} & sample id \\
+\hline
+\end{DoxyParams}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classrocr_1_1Addr_1_1V2_1_1Gfx11Lib_a36b79c896eec010e4c5bb2774f639752_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classrocr_1_1Addr_1_1V2_1_1Gfx11Lib_a5487d88ef9426ba235aeb1e5ede19e6b}\label{classrocr_1_1Addr_1_1V2_1_1Gfx11Lib_a5487d88ef9426ba235aeb1e5ede19e6b}} 
+\index{rocr::Addr::V2::Gfx11Lib@{rocr::Addr::V2::Gfx11Lib}!ComputeStereoInfo@{ComputeStereoInfo}}
+\index{ComputeStereoInfo@{ComputeStereoInfo}!rocr::Addr::V2::Gfx11Lib@{rocr::Addr::V2::Gfx11Lib}}
+\doxysubsubsection{\texorpdfstring{ComputeStereoInfo()}{ComputeStereoInfo()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{addrtypes_8h_a45468f108457c1977c8684dea3df88c7}{ADDR\+\_\+\+E\+\_\+\+RETURNCODE}} rocr\+::\+Addr\+::\+V2\+::\+Gfx11\+Lib\+::\+Compute\+Stereo\+Info (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{namespacerocr_a8c8793265a5c744be40efbbaef407074}{ADDR2\+\_\+\+COMPUTE\+\_\+\+SURFACE\+\_\+\+INFO\+\_\+\+INPUT}} $\ast$}]{p\+In,  }\item[{\mbox{\hyperlink{addrtypes_8h_af5a2be58a28390f9a494538f34054637}{UINT\+\_\+32}} $\ast$}]{p\+AlignY,  }\item[{\mbox{\hyperlink{addrtypes_8h_af5a2be58a28390f9a494538f34054637}{UINT\+\_\+32}} $\ast$}]{p\+Right\+Xor }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Compute height alignment and right eye pipe\+Bank\+Xor for stereo surface. 
+
+\mbox{\hyperlink{classrocr_1_1Addr_1_1V2_1_1Gfx11Lib_a5487d88ef9426ba235aeb1e5ede19e6b}{Gfx11\+Lib\+::\+Compute\+Stereo\+Info}}
+
+\begin{DoxyReturn}{Returns}
+Error code 
+\end{DoxyReturn}
+
+\begin{DoxyParams}{Parameters}
+{\em p\+In} & Compute surface info \\
+\hline
+{\em p\+AlignY} & Stereo requested additional alignment in Y \\
+\hline
+{\em p\+Right\+Xor} & Right eye xor \\
+\hline
+\end{DoxyParams}
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classrocr_1_1Addr_1_1V2_1_1Gfx11Lib_a5487d88ef9426ba235aeb1e5ede19e6b_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classrocr_1_1Addr_1_1V2_1_1Gfx11Lib_a5487d88ef9426ba235aeb1e5ede19e6b_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classrocr_1_1Addr_1_1V2_1_1Gfx11Lib_ab8d68b4d0b56d98ce29856104a0536a1}\label{classrocr_1_1Addr_1_1V2_1_1Gfx11Lib_ab8d68b4d0b56d98ce29856104a0536a1}} 
+\index{rocr::Addr::V2::Gfx11Lib@{rocr::Addr::V2::Gfx11Lib}!ComputeSurfaceAddrFromCoordMacroTiled@{ComputeSurfaceAddrFromCoordMacroTiled}}
+\index{ComputeSurfaceAddrFromCoordMacroTiled@{ComputeSurfaceAddrFromCoordMacroTiled}!rocr::Addr::V2::Gfx11Lib@{rocr::Addr::V2::Gfx11Lib}}
+\doxysubsubsection{\texorpdfstring{ComputeSurfaceAddrFromCoordMacroTiled()}{ComputeSurfaceAddrFromCoordMacroTiled()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{addrtypes_8h_a45468f108457c1977c8684dea3df88c7}{ADDR\+\_\+\+E\+\_\+\+RETURNCODE}} rocr\+::\+Addr\+::\+V2\+::\+Gfx11\+Lib\+::\+Compute\+Surface\+Addr\+From\+Coord\+Macro\+Tiled (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{namespacerocr_a21fad763bf2d5b88e8ec080eaaacdb59}{ADDR2\+\_\+\+COMPUTE\+\_\+\+SURFACE\+\_\+\+ADDRFROMCOORD\+\_\+\+INPUT}} $\ast$}]{p\+In,  }\item[{\mbox{\hyperlink{namespacerocr_a140bf521eaf847698bb9900f1292b963}{ADDR2\+\_\+\+COMPUTE\+\_\+\+SURFACE\+\_\+\+ADDRFROMCOORD\+\_\+\+OUTPUT}} $\ast$}]{p\+Out }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Internal function to calculate address from coord for macro tiled swizzle surface. 
+
+\mbox{\hyperlink{classrocr_1_1Addr_1_1V2_1_1Gfx11Lib_ab8d68b4d0b56d98ce29856104a0536a1}{Gfx11\+Lib\+::\+Compute\+Surface\+Addr\+From\+Coord\+Macro\+Tiled}}
+
+\begin{DoxyReturn}{Returns}
+ADDR\+\_\+\+E\+\_\+\+RETURNCODE 
+\end{DoxyReturn}
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em p\+In} & input structure \\
+\hline
+\mbox{\texttt{ out}}  & {\em p\+Out} & output structure \\
+\hline
+\end{DoxyParams}
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classrocr_1_1Addr_1_1V2_1_1Gfx11Lib_ab8d68b4d0b56d98ce29856104a0536a1_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classrocr_1_1Addr_1_1V2_1_1Gfx11Lib_ab8d68b4d0b56d98ce29856104a0536a1_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classrocr_1_1Addr_1_1V2_1_1Gfx11Lib_ab5b9397d3052286af8e7adb8b043b748}\label{classrocr_1_1Addr_1_1V2_1_1Gfx11Lib_ab5b9397d3052286af8e7adb8b043b748}} 
+\index{rocr::Addr::V2::Gfx11Lib@{rocr::Addr::V2::Gfx11Lib}!ComputeSurfaceAddrFromCoordMicroTiled@{ComputeSurfaceAddrFromCoordMicroTiled}}
+\index{ComputeSurfaceAddrFromCoordMicroTiled@{ComputeSurfaceAddrFromCoordMicroTiled}!rocr::Addr::V2::Gfx11Lib@{rocr::Addr::V2::Gfx11Lib}}
+\doxysubsubsection{\texorpdfstring{ComputeSurfaceAddrFromCoordMicroTiled()}{ComputeSurfaceAddrFromCoordMicroTiled()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{addrtypes_8h_a45468f108457c1977c8684dea3df88c7}{ADDR\+\_\+\+E\+\_\+\+RETURNCODE}} rocr\+::\+Addr\+::\+V2\+::\+Gfx11\+Lib\+::\+Compute\+Surface\+Addr\+From\+Coord\+Micro\+Tiled (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{namespacerocr_a21fad763bf2d5b88e8ec080eaaacdb59}{ADDR2\+\_\+\+COMPUTE\+\_\+\+SURFACE\+\_\+\+ADDRFROMCOORD\+\_\+\+INPUT}} $\ast$}]{p\+In,  }\item[{\mbox{\hyperlink{namespacerocr_a140bf521eaf847698bb9900f1292b963}{ADDR2\+\_\+\+COMPUTE\+\_\+\+SURFACE\+\_\+\+ADDRFROMCOORD\+\_\+\+OUTPUT}} $\ast$}]{p\+Out }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Internal function to calculate address from coord for micro tiled swizzle surface. 
+
+\mbox{\hyperlink{classrocr_1_1Addr_1_1V2_1_1Gfx11Lib_ab5b9397d3052286af8e7adb8b043b748}{Gfx11\+Lib\+::\+Compute\+Surface\+Addr\+From\+Coord\+Micro\+Tiled}}
+
+\begin{DoxyReturn}{Returns}
+ADDR\+\_\+\+E\+\_\+\+RETURNCODE 
+\end{DoxyReturn}
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em p\+In} & input structure \\
+\hline
+\mbox{\texttt{ out}}  & {\em p\+Out} & output structure \\
+\hline
+\end{DoxyParams}
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classrocr_1_1Addr_1_1V2_1_1Gfx11Lib_ab5b9397d3052286af8e7adb8b043b748_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classrocr_1_1Addr_1_1V2_1_1Gfx11Lib_ab5b9397d3052286af8e7adb8b043b748_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classrocr_1_1Addr_1_1V2_1_1Gfx11Lib_a37461d5fbe6c73ae96ddd89dc8443f6e}\label{classrocr_1_1Addr_1_1V2_1_1Gfx11Lib_a37461d5fbe6c73ae96ddd89dc8443f6e}} 
+\index{rocr::Addr::V2::Gfx11Lib@{rocr::Addr::V2::Gfx11Lib}!ComputeSurfaceInfoMacroTiled@{ComputeSurfaceInfoMacroTiled}}
+\index{ComputeSurfaceInfoMacroTiled@{ComputeSurfaceInfoMacroTiled}!rocr::Addr::V2::Gfx11Lib@{rocr::Addr::V2::Gfx11Lib}}
+\doxysubsubsection{\texorpdfstring{ComputeSurfaceInfoMacroTiled()}{ComputeSurfaceInfoMacroTiled()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{addrtypes_8h_a45468f108457c1977c8684dea3df88c7}{ADDR\+\_\+\+E\+\_\+\+RETURNCODE}} rocr\+::\+Addr\+::\+V2\+::\+Gfx11\+Lib\+::\+Compute\+Surface\+Info\+Macro\+Tiled (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{namespacerocr_a8c8793265a5c744be40efbbaef407074}{ADDR2\+\_\+\+COMPUTE\+\_\+\+SURFACE\+\_\+\+INFO\+\_\+\+INPUT}} $\ast$}]{p\+In,  }\item[{\mbox{\hyperlink{namespacerocr_aa64211e3cee652bcca905fc7cfea8e7b}{ADDR2\+\_\+\+COMPUTE\+\_\+\+SURFACE\+\_\+\+INFO\+\_\+\+OUTPUT}} $\ast$}]{p\+Out }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Internal function to calculate alignment for macro tiled surface. 
+
+\mbox{\hyperlink{classrocr_1_1Addr_1_1V2_1_1Gfx11Lib_a37461d5fbe6c73ae96ddd89dc8443f6e}{Gfx11\+Lib\+::\+Compute\+Surface\+Info\+Macro\+Tiled}}
+
+\begin{DoxyReturn}{Returns}
+ADDR\+\_\+\+E\+\_\+\+RETURNCODE 
+\end{DoxyReturn}
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em p\+In} & input structure \\
+\hline
+\mbox{\texttt{ out}}  & {\em p\+Out} & output structure \\
+\hline
+\end{DoxyParams}
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classrocr_1_1Addr_1_1V2_1_1Gfx11Lib_a37461d5fbe6c73ae96ddd89dc8443f6e_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classrocr_1_1Addr_1_1V2_1_1Gfx11Lib_a37461d5fbe6c73ae96ddd89dc8443f6e_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classrocr_1_1Addr_1_1V2_1_1Gfx11Lib_afea90d038d0313658eb6acc844a38e9f}\label{classrocr_1_1Addr_1_1V2_1_1Gfx11Lib_afea90d038d0313658eb6acc844a38e9f}} 
+\index{rocr::Addr::V2::Gfx11Lib@{rocr::Addr::V2::Gfx11Lib}!ComputeSurfaceInfoMicroTiled@{ComputeSurfaceInfoMicroTiled}}
+\index{ComputeSurfaceInfoMicroTiled@{ComputeSurfaceInfoMicroTiled}!rocr::Addr::V2::Gfx11Lib@{rocr::Addr::V2::Gfx11Lib}}
+\doxysubsubsection{\texorpdfstring{ComputeSurfaceInfoMicroTiled()}{ComputeSurfaceInfoMicroTiled()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{addrtypes_8h_a45468f108457c1977c8684dea3df88c7}{ADDR\+\_\+\+E\+\_\+\+RETURNCODE}} rocr\+::\+Addr\+::\+V2\+::\+Gfx11\+Lib\+::\+Compute\+Surface\+Info\+Micro\+Tiled (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{namespacerocr_a8c8793265a5c744be40efbbaef407074}{ADDR2\+\_\+\+COMPUTE\+\_\+\+SURFACE\+\_\+\+INFO\+\_\+\+INPUT}} $\ast$}]{p\+In,  }\item[{\mbox{\hyperlink{namespacerocr_aa64211e3cee652bcca905fc7cfea8e7b}{ADDR2\+\_\+\+COMPUTE\+\_\+\+SURFACE\+\_\+\+INFO\+\_\+\+OUTPUT}} $\ast$}]{p\+Out }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Internal function to calculate alignment for micro tiled surface. 
+
+\mbox{\hyperlink{classrocr_1_1Addr_1_1V2_1_1Gfx11Lib_afea90d038d0313658eb6acc844a38e9f}{Gfx11\+Lib\+::\+Compute\+Surface\+Info\+Micro\+Tiled}}
+
+\begin{DoxyReturn}{Returns}
+ADDR\+\_\+\+E\+\_\+\+RETURNCODE 
+\end{DoxyReturn}
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em p\+In} & input structure \\
+\hline
+\mbox{\texttt{ out}}  & {\em p\+Out} & output structure \\
+\hline
+\end{DoxyParams}
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classrocr_1_1Addr_1_1V2_1_1Gfx11Lib_afea90d038d0313658eb6acc844a38e9f_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classrocr_1_1Addr_1_1V2_1_1Gfx11Lib_afea90d038d0313658eb6acc844a38e9f_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classrocr_1_1Addr_1_1V2_1_1Gfx11Lib_acb8a89b21d9628b7dc8e41d26e931cd9}\label{classrocr_1_1Addr_1_1V2_1_1Gfx11Lib_acb8a89b21d9628b7dc8e41d26e931cd9}} 
+\index{rocr::Addr::V2::Gfx11Lib@{rocr::Addr::V2::Gfx11Lib}!ConvertSwizzlePatternToEquation@{ConvertSwizzlePatternToEquation}}
+\index{ConvertSwizzlePatternToEquation@{ConvertSwizzlePatternToEquation}!rocr::Addr::V2::Gfx11Lib@{rocr::Addr::V2::Gfx11Lib}}
+\doxysubsubsection{\texorpdfstring{ConvertSwizzlePatternToEquation()}{ConvertSwizzlePatternToEquation()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{addrtypes_8h_a7927e087749615dae3114cc27b91c86d}{VOID}} rocr\+::\+Addr\+::\+V2\+::\+Gfx11\+Lib\+::\+Convert\+Swizzle\+Pattern\+To\+Equation (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{addrtypes_8h_af5a2be58a28390f9a494538f34054637}{UINT\+\_\+32}}}]{elem\+Log2,  }\item[{\mbox{\hyperlink{addrtypes_8h_a3a71ad42801586bbe32648f34f3d5ee7}{Addr\+Resource\+Type}}}]{rsrc\+Type,  }\item[{\mbox{\hyperlink{addrtypes_8h_af64a81eb4c83301dba12714f6f0aefed}{Addr\+Swizzle\+Mode}}}]{sw\+Mode,  }\item[{const \mbox{\hyperlink{structrocr_1_1Addr_1_1V2_1_1ADDR__SW__PATINFO}{ADDR\+\_\+\+SW\+\_\+\+PATINFO}} $\ast$}]{p\+Pat\+Info,  }\item[{\mbox{\hyperlink{namespacerocr_a9d269a2f79e2b96962f79909f5e1643c}{ADDR\+\_\+\+EQUATION}} $\ast$}]{p\+Equation }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Convert swizzle pattern to equation. 
+
+\mbox{\hyperlink{classrocr_1_1Addr_1_1V2_1_1Gfx11Lib_acb8a89b21d9628b7dc8e41d26e931cd9}{Gfx11\+Lib\+::\+Convert\+Swizzle\+Pattern\+To\+Equation}}
+
+\begin{DoxyReturn}{Returns}
+N/A 
+\end{DoxyReturn}
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em elem\+Log2} & element bytes log2 \\
+\hline
+\mbox{\texttt{ in}}  & {\em rsrc\+Type} & resource type \\
+\hline
+\mbox{\texttt{ in}}  & {\em sw\+Mode} & swizzle mode \\
+\hline
+\mbox{\texttt{ in}}  & {\em p\+Pat\+Info} & swizzle pattern infor \\
+\hline
+\mbox{\texttt{ out}}  & {\em p\+Equation} & equation converted from swizzle pattern \\
+\hline
+\end{DoxyParams}
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classrocr_1_1Addr_1_1V2_1_1Gfx11Lib_acb8a89b21d9628b7dc8e41d26e931cd9_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classrocr_1_1Addr_1_1V2_1_1Gfx11Lib_acb8a89b21d9628b7dc8e41d26e931cd9_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classrocr_1_1Addr_1_1V2_1_1Gfx11Lib_a6f7a17f374bef5c51f416509d391edbf}\label{classrocr_1_1Addr_1_1V2_1_1Gfx11Lib_a6f7a17f374bef5c51f416509d391edbf}} 
+\index{rocr::Addr::V2::Gfx11Lib@{rocr::Addr::V2::Gfx11Lib}!CreateObj@{CreateObj}}
+\index{CreateObj@{CreateObj}!rocr::Addr::V2::Gfx11Lib@{rocr::Addr::V2::Gfx11Lib}}
+\doxysubsubsection{\texorpdfstring{CreateObj()}{CreateObj()}}
+{\footnotesize\ttfamily static \mbox{\hyperlink{classrocr_1_1Addr_1_1Lib}{Addr\+::\+Lib}}$\ast$ rocr\+::\+Addr\+::\+V2\+::\+Gfx11\+Lib\+::\+Create\+Obj (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{structrocr_1_1Addr_1_1Client}{Client}} $\ast$}]{p\+Client }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+
+
+Creates \mbox{\hyperlink{classrocr_1_1Addr_1_1V2_1_1Gfx11Lib}{Gfx11\+Lib}} object. 
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classrocr_1_1Addr_1_1V2_1_1Gfx11Lib_a6f7a17f374bef5c51f416509d391edbf_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classrocr_1_1Addr_1_1V2_1_1Gfx11Lib_a6f7a17f374bef5c51f416509d391edbf_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classrocr_1_1Addr_1_1V2_1_1Gfx11Lib_a314dd9c39e17c24bdf2091812d065bad}\label{classrocr_1_1Addr_1_1V2_1_1Gfx11Lib_a314dd9c39e17c24bdf2091812d065bad}} 
+\index{rocr::Addr::V2::Gfx11Lib@{rocr::Addr::V2::Gfx11Lib}!Get3DMetaOverlapLog2@{Get3DMetaOverlapLog2}}
+\index{Get3DMetaOverlapLog2@{Get3DMetaOverlapLog2}!rocr::Addr::V2::Gfx11Lib@{rocr::Addr::V2::Gfx11Lib}}
+\doxysubsubsection{\texorpdfstring{Get3DMetaOverlapLog2()}{Get3DMetaOverlapLog2()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{addrtypes_8h_adacc69c9db3b9adfc072b838ebf2bb0e}{INT\+\_\+32}} rocr\+::\+Addr\+::\+V2\+::\+Gfx11\+Lib\+::\+Get3\+DMeta\+Overlap\+Log2 (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{addrtypes_8h_a3a71ad42801586bbe32648f34f3d5ee7}{Addr\+Resource\+Type}}}]{resource\+Type,  }\item[{\mbox{\hyperlink{addrtypes_8h_af64a81eb4c83301dba12714f6f0aefed}{Addr\+Swizzle\+Mode}}}]{swizzle\+Mode,  }\item[{\mbox{\hyperlink{addrtypes_8h_af5a2be58a28390f9a494538f34054637}{UINT\+\_\+32}}}]{elem\+Log2 }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Get 3d meta block overlap. 
+
+\mbox{\hyperlink{classrocr_1_1Addr_1_1V2_1_1Gfx11Lib_a314dd9c39e17c24bdf2091812d065bad}{Gfx11\+Lib\+::\+Get3\+DMeta\+Overlap\+Log2}}
+
+\begin{DoxyReturn}{Returns}
+N/A 
+\end{DoxyReturn}
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em resource\+Type} & Resource type \\
+\hline
+\mbox{\texttt{ in}}  & {\em swizzle\+Mode} & Swizzle mode \\
+\hline
+\mbox{\texttt{ in}}  & {\em elem\+Log2} & element size log2 \\
+\hline
+\end{DoxyParams}
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classrocr_1_1Addr_1_1V2_1_1Gfx11Lib_a314dd9c39e17c24bdf2091812d065bad_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classrocr_1_1Addr_1_1V2_1_1Gfx11Lib_a314dd9c39e17c24bdf2091812d065bad_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classrocr_1_1Addr_1_1V2_1_1Gfx11Lib_a0241f9067bc70de92730807e94aa1b61}\label{classrocr_1_1Addr_1_1V2_1_1Gfx11Lib_a0241f9067bc70de92730807e94aa1b61}} 
+\index{rocr::Addr::V2::Gfx11Lib@{rocr::Addr::V2::Gfx11Lib}!GetAllowedBlockSet@{GetAllowedBlockSet}}
+\index{GetAllowedBlockSet@{GetAllowedBlockSet}!rocr::Addr::V2::Gfx11Lib@{rocr::Addr::V2::Gfx11Lib}}
+\doxysubsubsection{\texorpdfstring{GetAllowedBlockSet()}{GetAllowedBlockSet()}}
+{\footnotesize\ttfamily static \mbox{\hyperlink{namespacerocr_ad723c5daa0ba0a358ce336c36949ded4}{ADDR2\+\_\+\+BLOCK\+\_\+\+SET}} rocr\+::\+Addr\+::\+V2\+::\+Gfx11\+Lib\+::\+Get\+Allowed\+Block\+Set (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{namespacerocr_a045bd0087db5582ee20cde85aefe2957}{ADDR2\+\_\+\+SWMODE\+\_\+\+SET}}}]{allowed\+Sw\+Mode\+Set,  }\item[{\mbox{\hyperlink{addrtypes_8h_a3a71ad42801586bbe32648f34f3d5ee7}{Addr\+Resource\+Type}}}]{rsrc\+Type }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}, {\ttfamily [private]}}
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classrocr_1_1Addr_1_1V2_1_1Gfx11Lib_a0241f9067bc70de92730807e94aa1b61_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classrocr_1_1Addr_1_1V2_1_1Gfx11Lib_acd74c477924b021e9c0383e92f25905c}\label{classrocr_1_1Addr_1_1V2_1_1Gfx11Lib_acd74c477924b021e9c0383e92f25905c}} 
+\index{rocr::Addr::V2::Gfx11Lib@{rocr::Addr::V2::Gfx11Lib}!GetAllowedSwSet@{GetAllowedSwSet}}
+\index{GetAllowedSwSet@{GetAllowedSwSet}!rocr::Addr::V2::Gfx11Lib@{rocr::Addr::V2::Gfx11Lib}}
+\doxysubsubsection{\texorpdfstring{GetAllowedSwSet()}{GetAllowedSwSet()}}
+{\footnotesize\ttfamily static \mbox{\hyperlink{namespacerocr_a8c696d63861e5537049e3938deb6bd7b}{ADDR2\+\_\+\+SWTYPE\+\_\+\+SET}} rocr\+::\+Addr\+::\+V2\+::\+Gfx11\+Lib\+::\+Get\+Allowed\+Sw\+Set (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{namespacerocr_a045bd0087db5582ee20cde85aefe2957}{ADDR2\+\_\+\+SWMODE\+\_\+\+SET}}}]{allowed\+Sw\+Mode\+Set }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}, {\ttfamily [private]}}
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classrocr_1_1Addr_1_1V2_1_1Gfx11Lib_acd74c477924b021e9c0383e92f25905c_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classrocr_1_1Addr_1_1V2_1_1Gfx11Lib_af4665bc79171ac505aa1df6a5834c6d0}\label{classrocr_1_1Addr_1_1V2_1_1Gfx11Lib_af4665bc79171ac505aa1df6a5834c6d0}} 
+\index{rocr::Addr::V2::Gfx11Lib@{rocr::Addr::V2::Gfx11Lib}!GetBankXorBits@{GetBankXorBits}}
+\index{GetBankXorBits@{GetBankXorBits}!rocr::Addr::V2::Gfx11Lib@{rocr::Addr::V2::Gfx11Lib}}
+\doxysubsubsection{\texorpdfstring{GetBankXorBits()}{GetBankXorBits()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{addrtypes_8h_af5a2be58a28390f9a494538f34054637}{UINT\+\_\+32}} rocr\+::\+Addr\+::\+V2\+::\+Gfx11\+Lib\+::\+Get\+Bank\+Xor\+Bits (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{addrtypes_8h_af5a2be58a28390f9a494538f34054637}{UINT\+\_\+32}}}]{block\+Bits }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [private]}}
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=319pt]{classrocr_1_1Addr_1_1V2_1_1Gfx11Lib_af4665bc79171ac505aa1df6a5834c6d0_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classrocr_1_1Addr_1_1V2_1_1Gfx11Lib_af4665bc79171ac505aa1df6a5834c6d0_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classrocr_1_1Addr_1_1V2_1_1Gfx11Lib_a728123f93b596a9856d133e49e879d14}\label{classrocr_1_1Addr_1_1V2_1_1Gfx11Lib_a728123f93b596a9856d133e49e879d14}} 
+\index{rocr::Addr::V2::Gfx11Lib@{rocr::Addr::V2::Gfx11Lib}!GetBlk256SizeLog2@{GetBlk256SizeLog2}}
+\index{GetBlk256SizeLog2@{GetBlk256SizeLog2}!rocr::Addr::V2::Gfx11Lib@{rocr::Addr::V2::Gfx11Lib}}
+\doxysubsubsection{\texorpdfstring{GetBlk256SizeLog2()}{GetBlk256SizeLog2()}}
+{\footnotesize\ttfamily void rocr\+::\+Addr\+::\+V2\+::\+Gfx11\+Lib\+::\+Get\+Blk256\+Size\+Log2 (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{addrtypes_8h_a3a71ad42801586bbe32648f34f3d5ee7}{Addr\+Resource\+Type}}}]{resource\+Type,  }\item[{\mbox{\hyperlink{addrtypes_8h_af64a81eb4c83301dba12714f6f0aefed}{Addr\+Swizzle\+Mode}}}]{swizzle\+Mode,  }\item[{\mbox{\hyperlink{addrtypes_8h_af5a2be58a28390f9a494538f34054637}{UINT\+\_\+32}}}]{elem\+Log2,  }\item[{\mbox{\hyperlink{addrtypes_8h_af5a2be58a28390f9a494538f34054637}{UINT\+\_\+32}}}]{num\+Samples\+Log2,  }\item[{\mbox{\hyperlink{structrocr_1_1Addr_1_1V2_1_1Dim3d}{Dim3d}} $\ast$}]{p\+Block }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Get block 256 size. 
+
+\mbox{\hyperlink{classrocr_1_1Addr_1_1V2_1_1Gfx11Lib_a728123f93b596a9856d133e49e879d14}{Gfx11\+Lib\+::\+Get\+Blk256\+Size\+Log2}}
+
+\begin{DoxyReturn}{Returns}
+N/A 
+\end{DoxyReturn}
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em resource\+Type} & Resource type \\
+\hline
+\mbox{\texttt{ in}}  & {\em swizzle\+Mode} & Swizzle mode \\
+\hline
+\mbox{\texttt{ in}}  & {\em elem\+Log2} & element size log2 \\
+\hline
+\mbox{\texttt{ in}}  & {\em num\+Samples\+Log2} & number of samples \\
+\hline
+\mbox{\texttt{ out}}  & {\em p\+Block} & block size \\
+\hline
+\end{DoxyParams}
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classrocr_1_1Addr_1_1V2_1_1Gfx11Lib_a728123f93b596a9856d133e49e879d14_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classrocr_1_1Addr_1_1V2_1_1Gfx11Lib_a728123f93b596a9856d133e49e879d14_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classrocr_1_1Addr_1_1V2_1_1Gfx11Lib_a23aae6aeef4722007ea28cacf3e54311}\label{classrocr_1_1Addr_1_1V2_1_1Gfx11Lib_a23aae6aeef4722007ea28cacf3e54311}} 
+\index{rocr::Addr::V2::Gfx11Lib@{rocr::Addr::V2::Gfx11Lib}!GetCompressedBlockSizeLog2@{GetCompressedBlockSizeLog2}}
+\index{GetCompressedBlockSizeLog2@{GetCompressedBlockSizeLog2}!rocr::Addr::V2::Gfx11Lib@{rocr::Addr::V2::Gfx11Lib}}
+\doxysubsubsection{\texorpdfstring{GetCompressedBlockSizeLog2()}{GetCompressedBlockSizeLog2()}}
+{\footnotesize\ttfamily void rocr\+::\+Addr\+::\+V2\+::\+Gfx11\+Lib\+::\+Get\+Compressed\+Block\+Size\+Log2 (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{namespacerocr_1_1Addr_1_1V2_ae6ffa64ef973acad3659a7d420cd36ba}{Gfx11\+Data\+Type}}}]{data\+Type,  }\item[{\mbox{\hyperlink{addrtypes_8h_a3a71ad42801586bbe32648f34f3d5ee7}{Addr\+Resource\+Type}}}]{resource\+Type,  }\item[{\mbox{\hyperlink{addrtypes_8h_af64a81eb4c83301dba12714f6f0aefed}{Addr\+Swizzle\+Mode}}}]{swizzle\+Mode,  }\item[{\mbox{\hyperlink{addrtypes_8h_af5a2be58a28390f9a494538f34054637}{UINT\+\_\+32}}}]{elem\+Log2,  }\item[{\mbox{\hyperlink{addrtypes_8h_af5a2be58a28390f9a494538f34054637}{UINT\+\_\+32}}}]{num\+Samples\+Log2,  }\item[{\mbox{\hyperlink{structrocr_1_1Addr_1_1V2_1_1Dim3d}{Dim3d}} $\ast$}]{p\+Block }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Get compress block size. 
+
+\mbox{\hyperlink{classrocr_1_1Addr_1_1V2_1_1Gfx11Lib_a23aae6aeef4722007ea28cacf3e54311}{Gfx11\+Lib\+::\+Get\+Compressed\+Block\+Size\+Log2}}
+
+\begin{DoxyReturn}{Returns}
+N/A 
+\end{DoxyReturn}
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em data\+Type} & Data type \\
+\hline
+\mbox{\texttt{ in}}  & {\em resource\+Type} & Resource type \\
+\hline
+\mbox{\texttt{ in}}  & {\em swizzle\+Mode} & Swizzle mode \\
+\hline
+\mbox{\texttt{ in}}  & {\em elem\+Log2} & element size log2 \\
+\hline
+\mbox{\texttt{ in}}  & {\em num\+Samples\+Log2} & number of samples \\
+\hline
+\mbox{\texttt{ out}}  & {\em p\+Block} & block size \\
+\hline
+\end{DoxyParams}
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classrocr_1_1Addr_1_1V2_1_1Gfx11Lib_a23aae6aeef4722007ea28cacf3e54311_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classrocr_1_1Addr_1_1V2_1_1Gfx11Lib_a23aae6aeef4722007ea28cacf3e54311_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classrocr_1_1Addr_1_1V2_1_1Gfx11Lib_a7d4743cd64ad01cc9576981d22f13588}\label{classrocr_1_1Addr_1_1V2_1_1Gfx11Lib_a7d4743cd64ad01cc9576981d22f13588}} 
+\index{rocr::Addr::V2::Gfx11Lib@{rocr::Addr::V2::Gfx11Lib}!GetEffectiveNumPipes@{GetEffectiveNumPipes}}
+\index{GetEffectiveNumPipes@{GetEffectiveNumPipes}!rocr::Addr::V2::Gfx11Lib@{rocr::Addr::V2::Gfx11Lib}}
+\doxysubsubsection{\texorpdfstring{GetEffectiveNumPipes()}{GetEffectiveNumPipes()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{addrtypes_8h_adacc69c9db3b9adfc072b838ebf2bb0e}{INT\+\_\+32}} rocr\+::\+Addr\+::\+V2\+::\+Gfx11\+Lib\+::\+Get\+Effective\+Num\+Pipes (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [private]}}
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classrocr_1_1Addr_1_1V2_1_1Gfx11Lib_a7d4743cd64ad01cc9576981d22f13588_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classrocr_1_1Addr_1_1V2_1_1Gfx11Lib_ab519a967fc1efbe068b9136845f3f1c2}\label{classrocr_1_1Addr_1_1V2_1_1Gfx11Lib_ab519a967fc1efbe068b9136845f3f1c2}} 
+\index{rocr::Addr::V2::Gfx11Lib@{rocr::Addr::V2::Gfx11Lib}!GetMaxNumMipsInTail@{GetMaxNumMipsInTail}}
+\index{GetMaxNumMipsInTail@{GetMaxNumMipsInTail}!rocr::Addr::V2::Gfx11Lib@{rocr::Addr::V2::Gfx11Lib}}
+\doxysubsubsection{\texorpdfstring{GetMaxNumMipsInTail()}{GetMaxNumMipsInTail()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{addrtypes_8h_af5a2be58a28390f9a494538f34054637}{UINT\+\_\+32}} rocr\+::\+Addr\+::\+V2\+::\+Gfx11\+Lib\+::\+Get\+Max\+Num\+Mips\+In\+Tail (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{addrtypes_8h_af5a2be58a28390f9a494538f34054637}{UINT\+\_\+32}}}]{block\+Size\+Log2,  }\item[{\mbox{\hyperlink{addrtypes_8h_ac4225671b7e87c943146915461c9b2f4}{BOOL\+\_\+32}}}]{is\+Thin }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Return max number of mips in tails. 
+
+\mbox{\hyperlink{classrocr_1_1Addr_1_1V2_1_1Gfx11Lib_ab519a967fc1efbe068b9136845f3f1c2}{Gfx11\+Lib\+::\+Get\+Max\+Num\+Mips\+In\+Tail}}
+
+\begin{DoxyReturn}{Returns}
+Max number of mips in tails 
+\end{DoxyReturn}
+
+\begin{DoxyParams}{Parameters}
+{\em block\+Size\+Log2} & block size log2 \\
+\hline
+{\em is\+Thin} & is thin or thick \\
+\hline
+\end{DoxyParams}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classrocr_1_1Addr_1_1V2_1_1Gfx11Lib_ab519a967fc1efbe068b9136845f3f1c2_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classrocr_1_1Addr_1_1V2_1_1Gfx11Lib_ac9255f52b902514f4204d3a015d3b2fd}\label{classrocr_1_1Addr_1_1V2_1_1Gfx11Lib_ac9255f52b902514f4204d3a015d3b2fd}} 
+\index{rocr::Addr::V2::Gfx11Lib@{rocr::Addr::V2::Gfx11Lib}!GetMetaBlkSize@{GetMetaBlkSize}}
+\index{GetMetaBlkSize@{GetMetaBlkSize}!rocr::Addr::V2::Gfx11Lib@{rocr::Addr::V2::Gfx11Lib}}
+\doxysubsubsection{\texorpdfstring{GetMetaBlkSize()}{GetMetaBlkSize()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{addrtypes_8h_af5a2be58a28390f9a494538f34054637}{UINT\+\_\+32}} rocr\+::\+Addr\+::\+V2\+::\+Gfx11\+Lib\+::\+Get\+Meta\+Blk\+Size (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{namespacerocr_1_1Addr_1_1V2_ae6ffa64ef973acad3659a7d420cd36ba}{Gfx11\+Data\+Type}}}]{data\+Type,  }\item[{\mbox{\hyperlink{addrtypes_8h_a3a71ad42801586bbe32648f34f3d5ee7}{Addr\+Resource\+Type}}}]{resource\+Type,  }\item[{\mbox{\hyperlink{addrtypes_8h_af64a81eb4c83301dba12714f6f0aefed}{Addr\+Swizzle\+Mode}}}]{swizzle\+Mode,  }\item[{\mbox{\hyperlink{addrtypes_8h_af5a2be58a28390f9a494538f34054637}{UINT\+\_\+32}}}]{elem\+Log2,  }\item[{\mbox{\hyperlink{addrtypes_8h_af5a2be58a28390f9a494538f34054637}{UINT\+\_\+32}}}]{num\+Samples\+Log2,  }\item[{\mbox{\hyperlink{addrtypes_8h_ac4225671b7e87c943146915461c9b2f4}{BOOL\+\_\+32}}}]{pipe\+Align,  }\item[{\mbox{\hyperlink{structrocr_1_1Addr_1_1V2_1_1Dim3d}{Dim3d}} $\ast$}]{p\+Block }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Get metadata block size. 
+
+\mbox{\hyperlink{classrocr_1_1Addr_1_1V2_1_1Gfx11Lib_ac9255f52b902514f4204d3a015d3b2fd}{Gfx11\+Lib\+::\+Get\+Meta\+Blk\+Size}}
+
+\begin{DoxyReturn}{Returns}
+Meta block size 
+\end{DoxyReturn}
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em data\+Type} & Data type \\
+\hline
+\mbox{\texttt{ in}}  & {\em resource\+Type} & Resource type \\
+\hline
+\mbox{\texttt{ in}}  & {\em swizzle\+Mode} & Swizzle mode \\
+\hline
+\mbox{\texttt{ in}}  & {\em elem\+Log2} & element size log2 \\
+\hline
+\mbox{\texttt{ in}}  & {\em num\+Samples\+Log2} & number of samples \\
+\hline
+\mbox{\texttt{ in}}  & {\em pipe\+Align} & pipe align \\
+\hline
+\mbox{\texttt{ out}}  & {\em p\+Block} & block size \\
+\hline
+\end{DoxyParams}
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classrocr_1_1Addr_1_1V2_1_1Gfx11Lib_ac9255f52b902514f4204d3a015d3b2fd_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classrocr_1_1Addr_1_1V2_1_1Gfx11Lib_ac9255f52b902514f4204d3a015d3b2fd_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classrocr_1_1Addr_1_1V2_1_1Gfx11Lib_a72d37d277fe1932f1ac9b463a25ccef0}\label{classrocr_1_1Addr_1_1V2_1_1Gfx11Lib_a72d37d277fe1932f1ac9b463a25ccef0}} 
+\index{rocr::Addr::V2::Gfx11Lib@{rocr::Addr::V2::Gfx11Lib}!GetMetaCacheSizeLog2@{GetMetaCacheSizeLog2}}
+\index{GetMetaCacheSizeLog2@{GetMetaCacheSizeLog2}!rocr::Addr::V2::Gfx11Lib@{rocr::Addr::V2::Gfx11Lib}}
+\doxysubsubsection{\texorpdfstring{GetMetaCacheSizeLog2()}{GetMetaCacheSizeLog2()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{addrtypes_8h_adacc69c9db3b9adfc072b838ebf2bb0e}{INT\+\_\+32}} rocr\+::\+Addr\+::\+V2\+::\+Gfx11\+Lib\+::\+Get\+Meta\+Cache\+Size\+Log2 (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{namespacerocr_1_1Addr_1_1V2_ae6ffa64ef973acad3659a7d420cd36ba}{Gfx11\+Data\+Type}}}]{data\+Type }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [private]}}
+
+
+
+Gets meta data cache line size log2. 
+
+\mbox{\hyperlink{classrocr_1_1Addr_1_1V2_1_1Gfx11Lib_a72d37d277fe1932f1ac9b463a25ccef0}{Gfx11\+Lib\+::\+Get\+Meta\+Cache\+Size\+Log2}}
+
+\begin{DoxyReturn}{Returns}
+Meta data cache line size log2 
+\end{DoxyReturn}
+
+\begin{DoxyParams}{Parameters}
+{\em data\+Type} & Data surface type \\
+\hline
+\end{DoxyParams}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classrocr_1_1Addr_1_1V2_1_1Gfx11Lib_a72d37d277fe1932f1ac9b463a25ccef0_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classrocr_1_1Addr_1_1V2_1_1Gfx11Lib_a11e30cb5cea851f28e35da4171092385}\label{classrocr_1_1Addr_1_1V2_1_1Gfx11Lib_a11e30cb5cea851f28e35da4171092385}} 
+\index{rocr::Addr::V2::Gfx11Lib@{rocr::Addr::V2::Gfx11Lib}!GetMetaElementSizeLog2@{GetMetaElementSizeLog2}}
+\index{GetMetaElementSizeLog2@{GetMetaElementSizeLog2}!rocr::Addr::V2::Gfx11Lib@{rocr::Addr::V2::Gfx11Lib}}
+\doxysubsubsection{\texorpdfstring{GetMetaElementSizeLog2()}{GetMetaElementSizeLog2()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{addrtypes_8h_adacc69c9db3b9adfc072b838ebf2bb0e}{INT\+\_\+32}} rocr\+::\+Addr\+::\+V2\+::\+Gfx11\+Lib\+::\+Get\+Meta\+Element\+Size\+Log2 (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{namespacerocr_1_1Addr_1_1V2_ae6ffa64ef973acad3659a7d420cd36ba}{Gfx11\+Data\+Type}}}]{data\+Type }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [private]}}
+
+
+
+Gets meta data element size log2. 
+
+\mbox{\hyperlink{classrocr_1_1Addr_1_1V2_1_1Gfx11Lib_a11e30cb5cea851f28e35da4171092385}{Gfx11\+Lib\+::\+Get\+Meta\+Element\+Size\+Log2}}
+
+\begin{DoxyReturn}{Returns}
+Meta data element size log2 
+\end{DoxyReturn}
+
+\begin{DoxyParams}{Parameters}
+{\em data\+Type} & Data surface type \\
+\hline
+\end{DoxyParams}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classrocr_1_1Addr_1_1V2_1_1Gfx11Lib_a11e30cb5cea851f28e35da4171092385_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classrocr_1_1Addr_1_1V2_1_1Gfx11Lib_aa5287a079c8895225852cbf3c4e0d19c}\label{classrocr_1_1Addr_1_1V2_1_1Gfx11Lib_aa5287a079c8895225852cbf3c4e0d19c}} 
+\index{rocr::Addr::V2::Gfx11Lib@{rocr::Addr::V2::Gfx11Lib}!GetMetaOverlapLog2@{GetMetaOverlapLog2}}
+\index{GetMetaOverlapLog2@{GetMetaOverlapLog2}!rocr::Addr::V2::Gfx11Lib@{rocr::Addr::V2::Gfx11Lib}}
+\doxysubsubsection{\texorpdfstring{GetMetaOverlapLog2()}{GetMetaOverlapLog2()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{addrtypes_8h_adacc69c9db3b9adfc072b838ebf2bb0e}{INT\+\_\+32}} rocr\+::\+Addr\+::\+V2\+::\+Gfx11\+Lib\+::\+Get\+Meta\+Overlap\+Log2 (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{namespacerocr_1_1Addr_1_1V2_ae6ffa64ef973acad3659a7d420cd36ba}{Gfx11\+Data\+Type}}}]{data\+Type,  }\item[{\mbox{\hyperlink{addrtypes_8h_a3a71ad42801586bbe32648f34f3d5ee7}{Addr\+Resource\+Type}}}]{resource\+Type,  }\item[{\mbox{\hyperlink{addrtypes_8h_af64a81eb4c83301dba12714f6f0aefed}{Addr\+Swizzle\+Mode}}}]{swizzle\+Mode,  }\item[{\mbox{\hyperlink{addrtypes_8h_af5a2be58a28390f9a494538f34054637}{UINT\+\_\+32}}}]{elem\+Log2,  }\item[{\mbox{\hyperlink{addrtypes_8h_af5a2be58a28390f9a494538f34054637}{UINT\+\_\+32}}}]{num\+Samples\+Log2 }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Get meta block overlap. 
+
+\mbox{\hyperlink{classrocr_1_1Addr_1_1V2_1_1Gfx11Lib_aa5287a079c8895225852cbf3c4e0d19c}{Gfx11\+Lib\+::\+Get\+Meta\+Overlap\+Log2}}
+
+\begin{DoxyReturn}{Returns}
+N/A 
+\end{DoxyReturn}
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em data\+Type} & Data type \\
+\hline
+\mbox{\texttt{ in}}  & {\em resource\+Type} & Resource type \\
+\hline
+\mbox{\texttt{ in}}  & {\em swizzle\+Mode} & Swizzle mode \\
+\hline
+\mbox{\texttt{ in}}  & {\em elem\+Log2} & element size log2 \\
+\hline
+\mbox{\texttt{ in}}  & {\em num\+Samples\+Log2} & number of samples \\
+\hline
+\end{DoxyParams}
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classrocr_1_1Addr_1_1V2_1_1Gfx11Lib_aa5287a079c8895225852cbf3c4e0d19c_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classrocr_1_1Addr_1_1V2_1_1Gfx11Lib_aa5287a079c8895225852cbf3c4e0d19c_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classrocr_1_1Addr_1_1V2_1_1Gfx11Lib_a36205c1b8131eb850213dbf2250007e0}\label{classrocr_1_1Addr_1_1V2_1_1Gfx11Lib_a36205c1b8131eb850213dbf2250007e0}} 
+\index{rocr::Addr::V2::Gfx11Lib@{rocr::Addr::V2::Gfx11Lib}!GetMipSize@{GetMipSize}}
+\index{GetMipSize@{GetMipSize}!rocr::Addr::V2::Gfx11Lib@{rocr::Addr::V2::Gfx11Lib}}
+\doxysubsubsection{\texorpdfstring{GetMipSize()}{GetMipSize()}}
+{\footnotesize\ttfamily static void rocr\+::\+Addr\+::\+V2\+::\+Gfx11\+Lib\+::\+Get\+Mip\+Size (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{addrtypes_8h_af5a2be58a28390f9a494538f34054637}{UINT\+\_\+32}}}]{mip0\+Width,  }\item[{\mbox{\hyperlink{addrtypes_8h_af5a2be58a28390f9a494538f34054637}{UINT\+\_\+32}}}]{mip0\+Height,  }\item[{\mbox{\hyperlink{addrtypes_8h_af5a2be58a28390f9a494538f34054637}{UINT\+\_\+32}}}]{mip0\+Depth,  }\item[{\mbox{\hyperlink{addrtypes_8h_af5a2be58a28390f9a494538f34054637}{UINT\+\_\+32}}}]{mip\+Id,  }\item[{\mbox{\hyperlink{addrtypes_8h_af5a2be58a28390f9a494538f34054637}{UINT\+\_\+32}} $\ast$}]{p\+Mip\+Width,  }\item[{\mbox{\hyperlink{addrtypes_8h_af5a2be58a28390f9a494538f34054637}{UINT\+\_\+32}} $\ast$}]{p\+Mip\+Height,  }\item[{\mbox{\hyperlink{addrtypes_8h_af5a2be58a28390f9a494538f34054637}{UINT\+\_\+32}} $\ast$}]{p\+Mip\+Depth = {\ttfamily \mbox{\hyperlink{addrtypes_8h_a070d2ce7b6bb7e5c05602aa8c308d0c4}{NULL}}} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}, {\ttfamily [private]}}
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=341pt]{classrocr_1_1Addr_1_1V2_1_1Gfx11Lib_a36205c1b8131eb850213dbf2250007e0_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classrocr_1_1Addr_1_1V2_1_1Gfx11Lib_a36205c1b8131eb850213dbf2250007e0_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classrocr_1_1Addr_1_1V2_1_1Gfx11Lib_a8313ad9258551ea4fb634710a4eb04e7}\label{classrocr_1_1Addr_1_1V2_1_1Gfx11Lib_a8313ad9258551ea4fb634710a4eb04e7}} 
+\index{rocr::Addr::V2::Gfx11Lib@{rocr::Addr::V2::Gfx11Lib}!GetPipeRotateAmount@{GetPipeRotateAmount}}
+\index{GetPipeRotateAmount@{GetPipeRotateAmount}!rocr::Addr::V2::Gfx11Lib@{rocr::Addr::V2::Gfx11Lib}}
+\doxysubsubsection{\texorpdfstring{GetPipeRotateAmount()}{GetPipeRotateAmount()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{addrtypes_8h_adacc69c9db3b9adfc072b838ebf2bb0e}{INT\+\_\+32}} rocr\+::\+Addr\+::\+V2\+::\+Gfx11\+Lib\+::\+Get\+Pipe\+Rotate\+Amount (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{addrtypes_8h_a3a71ad42801586bbe32648f34f3d5ee7}{Addr\+Resource\+Type}}}]{resource\+Type,  }\item[{\mbox{\hyperlink{addrtypes_8h_af64a81eb4c83301dba12714f6f0aefed}{Addr\+Swizzle\+Mode}}}]{swizzle\+Mode }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Get pipe rotate amount. 
+
+\mbox{\hyperlink{classrocr_1_1Addr_1_1V2_1_1Gfx11Lib_a8313ad9258551ea4fb634710a4eb04e7}{Gfx11\+Lib\+::\+Get\+Pipe\+Rotate\+Amount}}
+
+\begin{DoxyReturn}{Returns}
+Pipe rotate amount 
+\end{DoxyReturn}
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em resource\+Type} & Resource type \\
+\hline
+\mbox{\texttt{ in}}  & {\em swizzle\+Mode} & Swizzle mode \\
+\hline
+\end{DoxyParams}
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classrocr_1_1Addr_1_1V2_1_1Gfx11Lib_a8313ad9258551ea4fb634710a4eb04e7_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classrocr_1_1Addr_1_1V2_1_1Gfx11Lib_a8313ad9258551ea4fb634710a4eb04e7_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classrocr_1_1Addr_1_1V2_1_1Gfx11Lib_ab147da88b1266b3c5e7e464a8c1537b3}\label{classrocr_1_1Addr_1_1V2_1_1Gfx11Lib_ab147da88b1266b3c5e7e464a8c1537b3}} 
+\index{rocr::Addr::V2::Gfx11Lib@{rocr::Addr::V2::Gfx11Lib}!GetSwizzlePatternFromPatternInfo@{GetSwizzlePatternFromPatternInfo}}
+\index{GetSwizzlePatternFromPatternInfo@{GetSwizzlePatternFromPatternInfo}!rocr::Addr::V2::Gfx11Lib@{rocr::Addr::V2::Gfx11Lib}}
+\doxysubsubsection{\texorpdfstring{GetSwizzlePatternFromPatternInfo()}{GetSwizzlePatternFromPatternInfo()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{addrtypes_8h_a7927e087749615dae3114cc27b91c86d}{VOID}} rocr\+::\+Addr\+::\+V2\+::\+Gfx11\+Lib\+::\+Get\+Swizzle\+Pattern\+From\+Pattern\+Info (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{structrocr_1_1Addr_1_1V2_1_1ADDR__SW__PATINFO}{ADDR\+\_\+\+SW\+\_\+\+PATINFO}} $\ast$}]{p\+Pat\+Info,  }\item[{\mbox{\hyperlink{unionrocr_1_1Addr_1_1V2_1_1ADDR__BIT__SETTING}{ADDR\+\_\+\+BIT\+\_\+\+SETTING}}(\&)}]{p\+Swizzle\mbox{[}20\mbox{]} }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [private]}}
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classrocr_1_1Addr_1_1V2_1_1Gfx11Lib_ab147da88b1266b3c5e7e464a8c1537b3_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classrocr_1_1Addr_1_1V2_1_1Gfx11Lib_a2db98d8cb90aef72055adabcdb833845}\label{classrocr_1_1Addr_1_1V2_1_1Gfx11Lib_a2db98d8cb90aef72055adabcdb833845}} 
+\index{rocr::Addr::V2::Gfx11Lib@{rocr::Addr::V2::Gfx11Lib}!GetSwizzlePatternInfo@{GetSwizzlePatternInfo}}
+\index{GetSwizzlePatternInfo@{GetSwizzlePatternInfo}!rocr::Addr::V2::Gfx11Lib@{rocr::Addr::V2::Gfx11Lib}}
+\doxysubsubsection{\texorpdfstring{GetSwizzlePatternInfo()}{GetSwizzlePatternInfo()}}
+{\footnotesize\ttfamily const \mbox{\hyperlink{structrocr_1_1Addr_1_1V2_1_1ADDR__SW__PATINFO}{ADDR\+\_\+\+SW\+\_\+\+PATINFO}} $\ast$ rocr\+::\+Addr\+::\+V2\+::\+Gfx11\+Lib\+::\+Get\+Swizzle\+Pattern\+Info (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{addrtypes_8h_af64a81eb4c83301dba12714f6f0aefed}{Addr\+Swizzle\+Mode}}}]{swizzle\+Mode,  }\item[{\mbox{\hyperlink{addrtypes_8h_a3a71ad42801586bbe32648f34f3d5ee7}{Addr\+Resource\+Type}}}]{resource\+Type,  }\item[{\mbox{\hyperlink{addrtypes_8h_af5a2be58a28390f9a494538f34054637}{UINT\+\_\+32}}}]{elem\+Log2,  }\item[{\mbox{\hyperlink{addrtypes_8h_af5a2be58a28390f9a494538f34054637}{UINT\+\_\+32}}}]{num\+Frag }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Get swizzle pattern. 
+
+\mbox{\hyperlink{classrocr_1_1Addr_1_1V2_1_1Gfx11Lib_a2db98d8cb90aef72055adabcdb833845}{Gfx11\+Lib\+::\+Get\+Swizzle\+Pattern\+Info}}
+
+\begin{DoxyReturn}{Returns}
+Swizzle pattern information 
+\end{DoxyReturn}
+
+\begin{DoxyParams}{Parameters}
+{\em swizzle\+Mode} & Swizzle mode \\
+\hline
+{\em resource\+Type} & Resource type \\
+\hline
+{\em elem\+Log2} & Element size in bytes log2 \\
+\hline
+{\em num\+Frag} & Number of fragment \\
+\hline
+\end{DoxyParams}
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classrocr_1_1Addr_1_1V2_1_1Gfx11Lib_a2db98d8cb90aef72055adabcdb833845_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classrocr_1_1Addr_1_1V2_1_1Gfx11Lib_a2db98d8cb90aef72055adabcdb833845_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classrocr_1_1Addr_1_1V2_1_1Gfx11Lib_af452fdc5983f33872c5115d8417c426a}\label{classrocr_1_1Addr_1_1V2_1_1Gfx11Lib_af452fdc5983f33872c5115d8417c426a}} 
+\index{rocr::Addr::V2::Gfx11Lib@{rocr::Addr::V2::Gfx11Lib}!GetValidDisplaySwizzleModes@{GetValidDisplaySwizzleModes}}
+\index{GetValidDisplaySwizzleModes@{GetValidDisplaySwizzleModes}!rocr::Addr::V2::Gfx11Lib@{rocr::Addr::V2::Gfx11Lib}}
+\doxysubsubsection{\texorpdfstring{GetValidDisplaySwizzleModes()}{GetValidDisplaySwizzleModes()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{addrtypes_8h_af5a2be58a28390f9a494538f34054637}{UINT\+\_\+32}} rocr\+::\+Addr\+::\+V2\+::\+Gfx11\+Lib\+::\+Get\+Valid\+Display\+Swizzle\+Modes (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{addrtypes_8h_af5a2be58a28390f9a494538f34054637}{UINT\+\_\+32}}}]{bpp }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Get valid swizzle modes mask for displayable surface. 
+
+\mbox{\hyperlink{classrocr_1_1Addr_1_1V2_1_1Gfx11Lib_af452fdc5983f33872c5115d8417c426a}{Gfx11\+Lib\+::\+Get\+Valid\+Display\+Swizzle\+Modes}}
+
+\begin{DoxyReturn}{Returns}
+Valid swizzle modes mask for displayable surface 
+\end{DoxyReturn}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classrocr_1_1Addr_1_1V2_1_1Gfx11Lib_af452fdc5983f33872c5115d8417c426a_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classrocr_1_1Addr_1_1V2_1_1Gfx11Lib_a05ebed66cbb1f2c6bd3ac282373f3e41}\label{classrocr_1_1Addr_1_1V2_1_1Gfx11Lib_a05ebed66cbb1f2c6bd3ac282373f3e41}} 
+\index{rocr::Addr::V2::Gfx11Lib@{rocr::Addr::V2::Gfx11Lib}!HwlComputeDccAddrFromCoord@{HwlComputeDccAddrFromCoord}}
+\index{HwlComputeDccAddrFromCoord@{HwlComputeDccAddrFromCoord}!rocr::Addr::V2::Gfx11Lib@{rocr::Addr::V2::Gfx11Lib}}
+\doxysubsubsection{\texorpdfstring{HwlComputeDccAddrFromCoord()}{HwlComputeDccAddrFromCoord()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{addrtypes_8h_a7927e087749615dae3114cc27b91c86d}{VOID}} rocr\+::\+Addr\+::\+V2\+::\+Gfx11\+Lib\+::\+Hwl\+Compute\+Dcc\+Addr\+From\+Coord (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{namespacerocr_a692bcd0d2b453fe8457ae94243a77e6a}{ADDR2\+\_\+\+COMPUTE\+\_\+\+DCC\+\_\+\+ADDRFROMCOORD\+\_\+\+INPUT}} $\ast$}]{p\+In,  }\item[{\mbox{\hyperlink{namespacerocr_a5fead5e0166c854966cbde3bb0c85ef4}{ADDR2\+\_\+\+COMPUTE\+\_\+\+DCC\+\_\+\+ADDRFROMCOORD\+\_\+\+OUTPUT}} $\ast$}]{p\+Out }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [virtual]}}
+
+
+
+Interface function stub of Addr\+Compute\+Dcc\+Addr\+From\+Coord. 
+
+\mbox{\hyperlink{classrocr_1_1Addr_1_1V2_1_1Gfx11Lib_a05ebed66cbb1f2c6bd3ac282373f3e41}{Gfx11\+Lib\+::\+Hwl\+Compute\+Dcc\+Addr\+From\+Coord}}
+
+\begin{DoxyReturn}{Returns}
+N/A 
+\end{DoxyReturn}
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em p\+In} & input structure \\
+\hline
+\mbox{\texttt{ out}}  & {\em p\+Out} & output structure \\
+\hline
+\end{DoxyParams}
+
+
+Reimplemented from \mbox{\hyperlink{classrocr_1_1Addr_1_1V2_1_1Lib_a5bc8b05a5043b716b58796afb118d354}{rocr\+::\+Addr\+::\+V2\+::\+Lib}}.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classrocr_1_1Addr_1_1V2_1_1Gfx11Lib_a05ebed66cbb1f2c6bd3ac282373f3e41_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classrocr_1_1Addr_1_1V2_1_1Gfx11Lib_a1ffc8fc03d4a835882ec3ecb05f6f9aa}\label{classrocr_1_1Addr_1_1V2_1_1Gfx11Lib_a1ffc8fc03d4a835882ec3ecb05f6f9aa}} 
+\index{rocr::Addr::V2::Gfx11Lib@{rocr::Addr::V2::Gfx11Lib}!HwlComputeDccInfo@{HwlComputeDccInfo}}
+\index{HwlComputeDccInfo@{HwlComputeDccInfo}!rocr::Addr::V2::Gfx11Lib@{rocr::Addr::V2::Gfx11Lib}}
+\doxysubsubsection{\texorpdfstring{HwlComputeDccInfo()}{HwlComputeDccInfo()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{addrtypes_8h_a45468f108457c1977c8684dea3df88c7}{ADDR\+\_\+\+E\+\_\+\+RETURNCODE}} rocr\+::\+Addr\+::\+V2\+::\+Gfx11\+Lib\+::\+Hwl\+Compute\+Dcc\+Info (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{namespacerocr_a18e9a04c69fb4dcc9846449325cd23d9}{ADDR2\+\_\+\+COMPUTE\+\_\+\+DCCINFO\+\_\+\+INPUT}} $\ast$}]{p\+In,  }\item[{\mbox{\hyperlink{namespacerocr_a63d989e6c98e7baff9daa676709f8be6}{ADDR2\+\_\+\+COMPUTE\+\_\+\+DCCINFO\+\_\+\+OUTPUT}} $\ast$}]{p\+Out }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [virtual]}}
+
+
+
+Interface function to compute DCC key info. 
+
+\mbox{\hyperlink{classrocr_1_1Addr_1_1V2_1_1Gfx11Lib_a1ffc8fc03d4a835882ec3ecb05f6f9aa}{Gfx11\+Lib\+::\+Hwl\+Compute\+Dcc\+Info}}
+
+\begin{DoxyReturn}{Returns}
+ADDR\+\_\+\+E\+\_\+\+RETURNCODE 
+\end{DoxyReturn}
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em p\+In} & input structure \\
+\hline
+\mbox{\texttt{ out}}  & {\em p\+Out} & output structure \\
+\hline
+\end{DoxyParams}
+
+
+Reimplemented from \mbox{\hyperlink{classrocr_1_1Addr_1_1V2_1_1Lib_af45401d406d2d41444b5b844093748ee}{rocr\+::\+Addr\+::\+V2\+::\+Lib}}.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classrocr_1_1Addr_1_1V2_1_1Gfx11Lib_a1ffc8fc03d4a835882ec3ecb05f6f9aa_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classrocr_1_1Addr_1_1V2_1_1Gfx11Lib_ad2bc82618948a71af606e61d0e55081f}\label{classrocr_1_1Addr_1_1V2_1_1Gfx11Lib_ad2bc82618948a71af606e61d0e55081f}} 
+\index{rocr::Addr::V2::Gfx11Lib@{rocr::Addr::V2::Gfx11Lib}!HwlComputeHtileAddrFromCoord@{HwlComputeHtileAddrFromCoord}}
+\index{HwlComputeHtileAddrFromCoord@{HwlComputeHtileAddrFromCoord}!rocr::Addr::V2::Gfx11Lib@{rocr::Addr::V2::Gfx11Lib}}
+\doxysubsubsection{\texorpdfstring{HwlComputeHtileAddrFromCoord()}{HwlComputeHtileAddrFromCoord()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{addrtypes_8h_a45468f108457c1977c8684dea3df88c7}{ADDR\+\_\+\+E\+\_\+\+RETURNCODE}} rocr\+::\+Addr\+::\+V2\+::\+Gfx11\+Lib\+::\+Hwl\+Compute\+Htile\+Addr\+From\+Coord (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{namespacerocr_a7bb3c10eeebe23f4a027891b22705b63}{ADDR2\+\_\+\+COMPUTE\+\_\+\+HTILE\+\_\+\+ADDRFROMCOORD\+\_\+\+INPUT}} $\ast$}]{p\+In,  }\item[{\mbox{\hyperlink{namespacerocr_ad62134b2544240e4f12901540156f02f}{ADDR2\+\_\+\+COMPUTE\+\_\+\+HTILE\+\_\+\+ADDRFROMCOORD\+\_\+\+OUTPUT}} $\ast$}]{p\+Out }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [virtual]}}
+
+
+
+Interface function stub of Addr\+Compute\+Htile\+Addr\+From\+Coord. 
+
+\mbox{\hyperlink{classrocr_1_1Addr_1_1V2_1_1Gfx11Lib_ad2bc82618948a71af606e61d0e55081f}{Gfx11\+Lib\+::\+Hwl\+Compute\+Htile\+Addr\+From\+Coord}}
+
+\begin{DoxyReturn}{Returns}
+ADDR\+\_\+\+E\+\_\+\+RETURNCODE 
+\end{DoxyReturn}
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em p\+In} & input structure \\
+\hline
+\mbox{\texttt{ out}}  & {\em p\+Out} & output structure \\
+\hline
+\end{DoxyParams}
+
+
+Reimplemented from \mbox{\hyperlink{classrocr_1_1Addr_1_1V2_1_1Lib_a649bace93a500dd94036d6aca569f0f5}{rocr\+::\+Addr\+::\+V2\+::\+Lib}}.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classrocr_1_1Addr_1_1V2_1_1Gfx11Lib_ad2bc82618948a71af606e61d0e55081f_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classrocr_1_1Addr_1_1V2_1_1Gfx11Lib_ae218cc297ab5c2b6f348d83db02bd804}\label{classrocr_1_1Addr_1_1V2_1_1Gfx11Lib_ae218cc297ab5c2b6f348d83db02bd804}} 
+\index{rocr::Addr::V2::Gfx11Lib@{rocr::Addr::V2::Gfx11Lib}!HwlComputeHtileCoordFromAddr@{HwlComputeHtileCoordFromAddr}}
+\index{HwlComputeHtileCoordFromAddr@{HwlComputeHtileCoordFromAddr}!rocr::Addr::V2::Gfx11Lib@{rocr::Addr::V2::Gfx11Lib}}
+\doxysubsubsection{\texorpdfstring{HwlComputeHtileCoordFromAddr()}{HwlComputeHtileCoordFromAddr()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{addrtypes_8h_a45468f108457c1977c8684dea3df88c7}{ADDR\+\_\+\+E\+\_\+\+RETURNCODE}} rocr\+::\+Addr\+::\+V2\+::\+Gfx11\+Lib\+::\+Hwl\+Compute\+Htile\+Coord\+From\+Addr (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{namespacerocr_ac2a3d653ade6287dcc992d48d05dca7b}{ADDR2\+\_\+\+COMPUTE\+\_\+\+HTILE\+\_\+\+COORDFROMADDR\+\_\+\+INPUT}} $\ast$}]{p\+In,  }\item[{\mbox{\hyperlink{namespacerocr_ac73ec3fa4a7ddace3c4a6a203123bc91}{ADDR2\+\_\+\+COMPUTE\+\_\+\+HTILE\+\_\+\+COORDFROMADDR\+\_\+\+OUTPUT}} $\ast$}]{p\+Out }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [virtual]}}
+
+
+
+Interface function stub of Addr\+Compute\+Htile\+Coord\+From\+Addr. 
+
+\mbox{\hyperlink{classrocr_1_1Addr_1_1V2_1_1Gfx11Lib_ae218cc297ab5c2b6f348d83db02bd804}{Gfx11\+Lib\+::\+Hwl\+Compute\+Htile\+Coord\+From\+Addr}}
+
+\begin{DoxyReturn}{Returns}
+ADDR\+\_\+\+E\+\_\+\+RETURNCODE 
+\end{DoxyReturn}
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em p\+In} & input structure \\
+\hline
+\mbox{\texttt{ out}}  & {\em p\+Out} & output structure \\
+\hline
+\end{DoxyParams}
+
+
+Reimplemented from \mbox{\hyperlink{classrocr_1_1Addr_1_1V2_1_1Lib_a43574da1cecdcea1e2746d54f330f462}{rocr\+::\+Addr\+::\+V2\+::\+Lib}}.
+
+\mbox{\Hypertarget{classrocr_1_1Addr_1_1V2_1_1Gfx11Lib_a765805da03c367a64cf9fd7b4ee3c9e4}\label{classrocr_1_1Addr_1_1V2_1_1Gfx11Lib_a765805da03c367a64cf9fd7b4ee3c9e4}} 
+\index{rocr::Addr::V2::Gfx11Lib@{rocr::Addr::V2::Gfx11Lib}!HwlComputeHtileInfo@{HwlComputeHtileInfo}}
+\index{HwlComputeHtileInfo@{HwlComputeHtileInfo}!rocr::Addr::V2::Gfx11Lib@{rocr::Addr::V2::Gfx11Lib}}
+\doxysubsubsection{\texorpdfstring{HwlComputeHtileInfo()}{HwlComputeHtileInfo()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{addrtypes_8h_a45468f108457c1977c8684dea3df88c7}{ADDR\+\_\+\+E\+\_\+\+RETURNCODE}} rocr\+::\+Addr\+::\+V2\+::\+Gfx11\+Lib\+::\+Hwl\+Compute\+Htile\+Info (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{namespacerocr_aea7281daa9ee2da30b24414f6b88386c}{ADDR2\+\_\+\+COMPUTE\+\_\+\+HTILE\+\_\+\+INFO\+\_\+\+INPUT}} $\ast$}]{p\+In,  }\item[{\mbox{\hyperlink{namespacerocr_a8dcd76da66a46cba78e346cddf0e0c98}{ADDR2\+\_\+\+COMPUTE\+\_\+\+HTILE\+\_\+\+INFO\+\_\+\+OUTPUT}} $\ast$}]{p\+Out }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [virtual]}}
+
+
+
+Interface function stub of Addr\+Compute\+Htilenfo. 
+
+\mbox{\hyperlink{classrocr_1_1Addr_1_1V2_1_1Gfx11Lib_a765805da03c367a64cf9fd7b4ee3c9e4}{Gfx11\+Lib\+::\+Hwl\+Compute\+Htile\+Info}}
+
+\begin{DoxyReturn}{Returns}
+ADDR\+\_\+\+E\+\_\+\+RETURNCODE 
+\end{DoxyReturn}
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em p\+In} & input structure \\
+\hline
+\mbox{\texttt{ out}}  & {\em p\+Out} & output structure \\
+\hline
+\end{DoxyParams}
+
+
+Reimplemented from \mbox{\hyperlink{classrocr_1_1Addr_1_1V2_1_1Lib_ac9b70e63cce0832c5d0b165d771f7f3d}{rocr\+::\+Addr\+::\+V2\+::\+Lib}}.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classrocr_1_1Addr_1_1V2_1_1Gfx11Lib_a765805da03c367a64cf9fd7b4ee3c9e4_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classrocr_1_1Addr_1_1V2_1_1Gfx11Lib_ab3d0175d7a33b6afe11c370215abc7c8}\label{classrocr_1_1Addr_1_1V2_1_1Gfx11Lib_ab3d0175d7a33b6afe11c370215abc7c8}} 
+\index{rocr::Addr::V2::Gfx11Lib@{rocr::Addr::V2::Gfx11Lib}!HwlComputeMaxBaseAlignments@{HwlComputeMaxBaseAlignments}}
+\index{HwlComputeMaxBaseAlignments@{HwlComputeMaxBaseAlignments}!rocr::Addr::V2::Gfx11Lib@{rocr::Addr::V2::Gfx11Lib}}
+\doxysubsubsection{\texorpdfstring{HwlComputeMaxBaseAlignments()}{HwlComputeMaxBaseAlignments()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{addrtypes_8h_af5a2be58a28390f9a494538f34054637}{UINT\+\_\+32}} rocr\+::\+Addr\+::\+V2\+::\+Gfx11\+Lib\+::\+Hwl\+Compute\+Max\+Base\+Alignments (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [virtual]}}
+
+
+
+Gets maximum alignments. 
+
+\mbox{\hyperlink{classrocr_1_1Addr_1_1V2_1_1Gfx11Lib_ab3d0175d7a33b6afe11c370215abc7c8}{Gfx11\+Lib\+::\+Hwl\+Compute\+Max\+Base\+Alignments}}
+
+\begin{DoxyReturn}{Returns}
+maximum alignments 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{classrocr_1_1Addr_1_1Lib_af7f043bf04ff32372f658c108c9b42f5}{rocr\+::\+Addr\+::\+Lib}}.
+
+\mbox{\Hypertarget{classrocr_1_1Addr_1_1V2_1_1Gfx11Lib_ad57d7bc7aafae0d6cb707b120549af50}\label{classrocr_1_1Addr_1_1V2_1_1Gfx11Lib_ad57d7bc7aafae0d6cb707b120549af50}} 
+\index{rocr::Addr::V2::Gfx11Lib@{rocr::Addr::V2::Gfx11Lib}!HwlComputeMaxMetaBaseAlignments@{HwlComputeMaxMetaBaseAlignments}}
+\index{HwlComputeMaxMetaBaseAlignments@{HwlComputeMaxMetaBaseAlignments}!rocr::Addr::V2::Gfx11Lib@{rocr::Addr::V2::Gfx11Lib}}
+\doxysubsubsection{\texorpdfstring{HwlComputeMaxMetaBaseAlignments()}{HwlComputeMaxMetaBaseAlignments()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{addrtypes_8h_af5a2be58a28390f9a494538f34054637}{UINT\+\_\+32}} rocr\+::\+Addr\+::\+V2\+::\+Gfx11\+Lib\+::\+Hwl\+Compute\+Max\+Meta\+Base\+Alignments (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [virtual]}}
+
+
+
+Gets maximum alignments for metadata. 
+
+\mbox{\hyperlink{classrocr_1_1Addr_1_1V2_1_1Gfx11Lib_ad57d7bc7aafae0d6cb707b120549af50}{Gfx11\+Lib\+::\+Hwl\+Compute\+Max\+Meta\+Base\+Alignments}}
+
+\begin{DoxyReturn}{Returns}
+maximum alignments for metadata 
+\end{DoxyReturn}
+
+
+Reimplemented from \mbox{\hyperlink{classrocr_1_1Addr_1_1Lib_a4daace978b94bc7538469f8eb17730cd}{rocr\+::\+Addr\+::\+Lib}}.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classrocr_1_1Addr_1_1V2_1_1Gfx11Lib_ad57d7bc7aafae0d6cb707b120549af50_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classrocr_1_1Addr_1_1V2_1_1Gfx11Lib_a8830f86a7e17b818f7afd5fef5766ec8}\label{classrocr_1_1Addr_1_1V2_1_1Gfx11Lib_a8830f86a7e17b818f7afd5fef5766ec8}} 
+\index{rocr::Addr::V2::Gfx11Lib@{rocr::Addr::V2::Gfx11Lib}!HwlComputeNonBlockCompressedView@{HwlComputeNonBlockCompressedView}}
+\index{HwlComputeNonBlockCompressedView@{HwlComputeNonBlockCompressedView}!rocr::Addr::V2::Gfx11Lib@{rocr::Addr::V2::Gfx11Lib}}
+\doxysubsubsection{\texorpdfstring{HwlComputeNonBlockCompressedView()}{HwlComputeNonBlockCompressedView()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{addrtypes_8h_a45468f108457c1977c8684dea3df88c7}{ADDR\+\_\+\+E\+\_\+\+RETURNCODE}} rocr\+::\+Addr\+::\+V2\+::\+Gfx11\+Lib\+::\+Hwl\+Compute\+Non\+Block\+Compressed\+View (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{namespacerocr_a32a42a0264b6489a84c56456b5495459}{ADDR2\+\_\+\+COMPUTE\+\_\+\+NONBLOCKCOMPRESSEDVIEW\+\_\+\+INPUT}} $\ast$}]{p\+In,  }\item[{\mbox{\hyperlink{namespacerocr_a1556a4278a5dc1d0706ee0e4570c6194}{ADDR2\+\_\+\+COMPUTE\+\_\+\+NONBLOCKCOMPRESSEDVIEW\+\_\+\+OUTPUT}} $\ast$}]{p\+Out }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [virtual]}}
+
+
+
+Compute non-\/block-\/compressed view for a given mipmap level/slice. 
+
+\mbox{\hyperlink{classrocr_1_1Addr_1_1V2_1_1Gfx11Lib_a8830f86a7e17b818f7afd5fef5766ec8}{Gfx11\+Lib\+::\+Hwl\+Compute\+Non\+Block\+Compressed\+View}}
+
+\begin{DoxyReturn}{Returns}
+ADDR\+\_\+\+E\+\_\+\+RETURNCODE 
+\end{DoxyReturn}
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em p\+In} & input structure \\
+\hline
+\mbox{\texttt{ out}}  & {\em p\+Out} & output structure \\
+\hline
+\end{DoxyParams}
+
+
+Reimplemented from \mbox{\hyperlink{classrocr_1_1Addr_1_1V2_1_1Lib_ae778a2f1d2e20af1799f40cac5de24ff}{rocr\+::\+Addr\+::\+V2\+::\+Lib}}.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classrocr_1_1Addr_1_1V2_1_1Gfx11Lib_a8830f86a7e17b818f7afd5fef5766ec8_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classrocr_1_1Addr_1_1V2_1_1Gfx11Lib_a3c3784d046aeb1d95a420e80f2c95d38}\label{classrocr_1_1Addr_1_1V2_1_1Gfx11Lib_a3c3784d046aeb1d95a420e80f2c95d38}} 
+\index{rocr::Addr::V2::Gfx11Lib@{rocr::Addr::V2::Gfx11Lib}!HwlComputePipeBankXor@{HwlComputePipeBankXor}}
+\index{HwlComputePipeBankXor@{HwlComputePipeBankXor}!rocr::Addr::V2::Gfx11Lib@{rocr::Addr::V2::Gfx11Lib}}
+\doxysubsubsection{\texorpdfstring{HwlComputePipeBankXor()}{HwlComputePipeBankXor()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{addrtypes_8h_a45468f108457c1977c8684dea3df88c7}{ADDR\+\_\+\+E\+\_\+\+RETURNCODE}} rocr\+::\+Addr\+::\+V2\+::\+Gfx11\+Lib\+::\+Hwl\+Compute\+Pipe\+Bank\+Xor (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{namespacerocr_a4f27a7a5b14903f135b9978909945fbf}{ADDR2\+\_\+\+COMPUTE\+\_\+\+PIPEBANKXOR\+\_\+\+INPUT}} $\ast$}]{p\+In,  }\item[{\mbox{\hyperlink{namespacerocr_a3976bd7e6e45d52c3cd7569c76a3b1b6}{ADDR2\+\_\+\+COMPUTE\+\_\+\+PIPEBANKXOR\+\_\+\+OUTPUT}} $\ast$}]{p\+Out }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [virtual]}}
+
+
+
+Generate a Pipe\+Bank\+Xor value to be ORed into bits above pipe\+Interleave\+Bits of address. 
+
+\mbox{\hyperlink{classrocr_1_1Addr_1_1V2_1_1Gfx11Lib_a3c3784d046aeb1d95a420e80f2c95d38}{Gfx11\+Lib\+::\+Hwl\+Compute\+Pipe\+Bank\+Xor}}
+
+\begin{DoxyReturn}{Returns}
+Pipe\+Bank\+Xor value 
+\end{DoxyReturn}
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em p\+In} & input structure \\
+\hline
+\mbox{\texttt{ out}}  & {\em p\+Out} & output structure \\
+\hline
+\end{DoxyParams}
+
+
+Reimplemented from \mbox{\hyperlink{classrocr_1_1Addr_1_1V2_1_1Lib_a53d7abc538ac3be27ea5d5c35ba8b5d1}{rocr\+::\+Addr\+::\+V2\+::\+Lib}}.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classrocr_1_1Addr_1_1V2_1_1Gfx11Lib_a3c3784d046aeb1d95a420e80f2c95d38_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classrocr_1_1Addr_1_1V2_1_1Gfx11Lib_a271e2e598fe2533cfc998e1acd8c3a48}\label{classrocr_1_1Addr_1_1V2_1_1Gfx11Lib_a271e2e598fe2533cfc998e1acd8c3a48}} 
+\index{rocr::Addr::V2::Gfx11Lib@{rocr::Addr::V2::Gfx11Lib}!HwlComputeSlicePipeBankXor@{HwlComputeSlicePipeBankXor}}
+\index{HwlComputeSlicePipeBankXor@{HwlComputeSlicePipeBankXor}!rocr::Addr::V2::Gfx11Lib@{rocr::Addr::V2::Gfx11Lib}}
+\doxysubsubsection{\texorpdfstring{HwlComputeSlicePipeBankXor()}{HwlComputeSlicePipeBankXor()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{addrtypes_8h_a45468f108457c1977c8684dea3df88c7}{ADDR\+\_\+\+E\+\_\+\+RETURNCODE}} rocr\+::\+Addr\+::\+V2\+::\+Gfx11\+Lib\+::\+Hwl\+Compute\+Slice\+Pipe\+Bank\+Xor (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{namespacerocr_a03c086b14c7befe9589b281574d09206}{ADDR2\+\_\+\+COMPUTE\+\_\+\+SLICE\+\_\+\+PIPEBANKXOR\+\_\+\+INPUT}} $\ast$}]{p\+In,  }\item[{\mbox{\hyperlink{namespacerocr_ac715a526ab9f7dd452aaf78ab3b20976}{ADDR2\+\_\+\+COMPUTE\+\_\+\+SLICE\+\_\+\+PIPEBANKXOR\+\_\+\+OUTPUT}} $\ast$}]{p\+Out }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [virtual]}}
+
+
+
+Generate slice Pipe\+Bank\+Xor value based on base Pipe\+Bank\+Xor value and slice id. 
+
+\mbox{\hyperlink{classrocr_1_1Addr_1_1V2_1_1Gfx11Lib_a271e2e598fe2533cfc998e1acd8c3a48}{Gfx11\+Lib\+::\+Hwl\+Compute\+Slice\+Pipe\+Bank\+Xor}}
+
+\begin{DoxyReturn}{Returns}
+Pipe\+Bank\+Xor value 
+\end{DoxyReturn}
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em p\+In} & input structure \\
+\hline
+\mbox{\texttt{ out}}  & {\em p\+Out} & output structure \\
+\hline
+\end{DoxyParams}
+
+
+Reimplemented from \mbox{\hyperlink{classrocr_1_1Addr_1_1V2_1_1Lib_abea33f060846e5d8f845f4eb47525951}{rocr\+::\+Addr\+::\+V2\+::\+Lib}}.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classrocr_1_1Addr_1_1V2_1_1Gfx11Lib_a271e2e598fe2533cfc998e1acd8c3a48_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classrocr_1_1Addr_1_1V2_1_1Gfx11Lib_a271e2e598fe2533cfc998e1acd8c3a48_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classrocr_1_1Addr_1_1V2_1_1Gfx11Lib_aead3e8bc6d85df14871f926dbac9f2b5}\label{classrocr_1_1Addr_1_1V2_1_1Gfx11Lib_aead3e8bc6d85df14871f926dbac9f2b5}} 
+\index{rocr::Addr::V2::Gfx11Lib@{rocr::Addr::V2::Gfx11Lib}!HwlComputeSubResourceOffsetForSwizzlePattern@{HwlComputeSubResourceOffsetForSwizzlePattern}}
+\index{HwlComputeSubResourceOffsetForSwizzlePattern@{HwlComputeSubResourceOffsetForSwizzlePattern}!rocr::Addr::V2::Gfx11Lib@{rocr::Addr::V2::Gfx11Lib}}
+\doxysubsubsection{\texorpdfstring{HwlComputeSubResourceOffsetForSwizzlePattern()}{HwlComputeSubResourceOffsetForSwizzlePattern()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{addrtypes_8h_a45468f108457c1977c8684dea3df88c7}{ADDR\+\_\+\+E\+\_\+\+RETURNCODE}} rocr\+::\+Addr\+::\+V2\+::\+Gfx11\+Lib\+::\+Hwl\+Compute\+Sub\+Resource\+Offset\+For\+Swizzle\+Pattern (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{namespacerocr_a0afb8cd2dfd96beb6f30660962d9150f}{ADDR2\+\_\+\+COMPUTE\+\_\+\+SUBRESOURCE\+\_\+\+OFFSET\+\_\+\+FORSWIZZLEPATTERN\+\_\+\+INPUT}} $\ast$}]{p\+In,  }\item[{\mbox{\hyperlink{namespacerocr_aff3b7e71f3f199a98099d9657722514c}{ADDR2\+\_\+\+COMPUTE\+\_\+\+SUBRESOURCE\+\_\+\+OFFSET\+\_\+\+FORSWIZZLEPATTERN\+\_\+\+OUTPUT}} $\ast$}]{p\+Out }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [virtual]}}
+
+
+
+Compute sub resource offset to support swizzle pattern. 
+
+\mbox{\hyperlink{classrocr_1_1Addr_1_1V2_1_1Gfx11Lib_aead3e8bc6d85df14871f926dbac9f2b5}{Gfx11\+Lib\+::\+Hwl\+Compute\+Sub\+Resource\+Offset\+For\+Swizzle\+Pattern}}
+
+\begin{DoxyReturn}{Returns}
+Offset 
+\end{DoxyReturn}
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em p\+In} & input structure \\
+\hline
+\mbox{\texttt{ out}}  & {\em p\+Out} & output structure \\
+\hline
+\end{DoxyParams}
+
+
+Reimplemented from \mbox{\hyperlink{classrocr_1_1Addr_1_1V2_1_1Lib_a5d9f90b842e7ec0da4a62c03456a7572}{rocr\+::\+Addr\+::\+V2\+::\+Lib}}.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classrocr_1_1Addr_1_1V2_1_1Gfx11Lib_aead3e8bc6d85df14871f926dbac9f2b5_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classrocr_1_1Addr_1_1V2_1_1Gfx11Lib_aead3e8bc6d85df14871f926dbac9f2b5_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classrocr_1_1Addr_1_1V2_1_1Gfx11Lib_a19d1b8803e50eb9dce97297eda790b9d}\label{classrocr_1_1Addr_1_1V2_1_1Gfx11Lib_a19d1b8803e50eb9dce97297eda790b9d}} 
+\index{rocr::Addr::V2::Gfx11Lib@{rocr::Addr::V2::Gfx11Lib}!HwlComputeSurfaceAddrFromCoordTiled@{HwlComputeSurfaceAddrFromCoordTiled}}
+\index{HwlComputeSurfaceAddrFromCoordTiled@{HwlComputeSurfaceAddrFromCoordTiled}!rocr::Addr::V2::Gfx11Lib@{rocr::Addr::V2::Gfx11Lib}}
+\doxysubsubsection{\texorpdfstring{HwlComputeSurfaceAddrFromCoordTiled()}{HwlComputeSurfaceAddrFromCoordTiled()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{addrtypes_8h_a45468f108457c1977c8684dea3df88c7}{ADDR\+\_\+\+E\+\_\+\+RETURNCODE}} rocr\+::\+Addr\+::\+V2\+::\+Gfx11\+Lib\+::\+Hwl\+Compute\+Surface\+Addr\+From\+Coord\+Tiled (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{namespacerocr_a21fad763bf2d5b88e8ec080eaaacdb59}{ADDR2\+\_\+\+COMPUTE\+\_\+\+SURFACE\+\_\+\+ADDRFROMCOORD\+\_\+\+INPUT}} $\ast$}]{p\+In,  }\item[{\mbox{\hyperlink{namespacerocr_a140bf521eaf847698bb9900f1292b963}{ADDR2\+\_\+\+COMPUTE\+\_\+\+SURFACE\+\_\+\+ADDRFROMCOORD\+\_\+\+OUTPUT}} $\ast$}]{p\+Out }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [virtual]}}
+
+
+
+Internal function to calculate address from coord for tiled swizzle surface. 
+
+\mbox{\hyperlink{classrocr_1_1Addr_1_1V2_1_1Gfx11Lib_a19d1b8803e50eb9dce97297eda790b9d}{Gfx11\+Lib\+::\+Hwl\+Compute\+Surface\+Addr\+From\+Coord\+Tiled}}
+
+\begin{DoxyReturn}{Returns}
+ADDR\+\_\+\+E\+\_\+\+RETURNCODE 
+\end{DoxyReturn}
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em p\+In} & input structure \\
+\hline
+\mbox{\texttt{ out}}  & {\em p\+Out} & output structure \\
+\hline
+\end{DoxyParams}
+
+
+Reimplemented from \mbox{\hyperlink{classrocr_1_1Addr_1_1V2_1_1Lib_aec3e5cf2c134792067c90fde378b5aa3}{rocr\+::\+Addr\+::\+V2\+::\+Lib}}.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classrocr_1_1Addr_1_1V2_1_1Gfx11Lib_a19d1b8803e50eb9dce97297eda790b9d_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classrocr_1_1Addr_1_1V2_1_1Gfx11Lib_a862c757e40fdd00e99808d1a424ba096}\label{classrocr_1_1Addr_1_1V2_1_1Gfx11Lib_a862c757e40fdd00e99808d1a424ba096}} 
+\index{rocr::Addr::V2::Gfx11Lib@{rocr::Addr::V2::Gfx11Lib}!HwlComputeSurfaceInfoLinear@{HwlComputeSurfaceInfoLinear}}
+\index{HwlComputeSurfaceInfoLinear@{HwlComputeSurfaceInfoLinear}!rocr::Addr::V2::Gfx11Lib@{rocr::Addr::V2::Gfx11Lib}}
+\doxysubsubsection{\texorpdfstring{HwlComputeSurfaceInfoLinear()}{HwlComputeSurfaceInfoLinear()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{addrtypes_8h_a45468f108457c1977c8684dea3df88c7}{ADDR\+\_\+\+E\+\_\+\+RETURNCODE}} rocr\+::\+Addr\+::\+V2\+::\+Gfx11\+Lib\+::\+Hwl\+Compute\+Surface\+Info\+Linear (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{namespacerocr_a8c8793265a5c744be40efbbaef407074}{ADDR2\+\_\+\+COMPUTE\+\_\+\+SURFACE\+\_\+\+INFO\+\_\+\+INPUT}} $\ast$}]{p\+In,  }\item[{\mbox{\hyperlink{namespacerocr_aa64211e3cee652bcca905fc7cfea8e7b}{ADDR2\+\_\+\+COMPUTE\+\_\+\+SURFACE\+\_\+\+INFO\+\_\+\+OUTPUT}} $\ast$}]{p\+Out }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [virtual]}}
+
+
+
+Internal function to calculate alignment for linear surface. 
+
+\mbox{\hyperlink{classrocr_1_1Addr_1_1V2_1_1Gfx11Lib_a862c757e40fdd00e99808d1a424ba096}{Gfx11\+Lib\+::\+Hwl\+Compute\+Surface\+Info\+Linear}}
+
+\begin{DoxyReturn}{Returns}
+ADDR\+\_\+\+E\+\_\+\+RETURNCODE 
+\end{DoxyReturn}
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em p\+In} & input structure \\
+\hline
+\mbox{\texttt{ out}}  & {\em p\+Out} & output structure \\
+\hline
+\end{DoxyParams}
+
+
+Reimplemented from \mbox{\hyperlink{classrocr_1_1Addr_1_1V2_1_1Lib_a8835d3a66f0bbc0300aace5c1cac8782}{rocr\+::\+Addr\+::\+V2\+::\+Lib}}.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classrocr_1_1Addr_1_1V2_1_1Gfx11Lib_a862c757e40fdd00e99808d1a424ba096_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classrocr_1_1Addr_1_1V2_1_1Gfx11Lib_a862c757e40fdd00e99808d1a424ba096_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classrocr_1_1Addr_1_1V2_1_1Gfx11Lib_adea5ec207757756ac02a65eeaa385f75}\label{classrocr_1_1Addr_1_1V2_1_1Gfx11Lib_adea5ec207757756ac02a65eeaa385f75}} 
+\index{rocr::Addr::V2::Gfx11Lib@{rocr::Addr::V2::Gfx11Lib}!HwlComputeSurfaceInfoSanityCheck@{HwlComputeSurfaceInfoSanityCheck}}
+\index{HwlComputeSurfaceInfoSanityCheck@{HwlComputeSurfaceInfoSanityCheck}!rocr::Addr::V2::Gfx11Lib@{rocr::Addr::V2::Gfx11Lib}}
+\doxysubsubsection{\texorpdfstring{HwlComputeSurfaceInfoSanityCheck()}{HwlComputeSurfaceInfoSanityCheck()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{addrtypes_8h_a45468f108457c1977c8684dea3df88c7}{ADDR\+\_\+\+E\+\_\+\+RETURNCODE}} rocr\+::\+Addr\+::\+V2\+::\+Gfx11\+Lib\+::\+Hwl\+Compute\+Surface\+Info\+Sanity\+Check (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{namespacerocr_a8c8793265a5c744be40efbbaef407074}{ADDR2\+\_\+\+COMPUTE\+\_\+\+SURFACE\+\_\+\+INFO\+\_\+\+INPUT}} $\ast$}]{p\+In }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [virtual]}}
+
+
+
+Compute surface info sanity check. 
+
+\mbox{\hyperlink{classrocr_1_1Addr_1_1V2_1_1Gfx11Lib_adea5ec207757756ac02a65eeaa385f75}{Gfx11\+Lib\+::\+Hwl\+Compute\+Surface\+Info\+Sanity\+Check}}
+
+\begin{DoxyReturn}{Returns}
+Offset 
+\end{DoxyReturn}
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em p\+In} & input structure \\
+\hline
+\end{DoxyParams}
+
+
+Reimplemented from \mbox{\hyperlink{classrocr_1_1Addr_1_1V2_1_1Lib_a2524f18175edfc2265d75225e8b06ff2}{rocr\+::\+Addr\+::\+V2\+::\+Lib}}.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classrocr_1_1Addr_1_1V2_1_1Gfx11Lib_adea5ec207757756ac02a65eeaa385f75_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classrocr_1_1Addr_1_1V2_1_1Gfx11Lib_a8b5058afc5ab9f3ee71d82a075c00006}\label{classrocr_1_1Addr_1_1V2_1_1Gfx11Lib_a8b5058afc5ab9f3ee71d82a075c00006}} 
+\index{rocr::Addr::V2::Gfx11Lib@{rocr::Addr::V2::Gfx11Lib}!HwlComputeSurfaceInfoTiled@{HwlComputeSurfaceInfoTiled}}
+\index{HwlComputeSurfaceInfoTiled@{HwlComputeSurfaceInfoTiled}!rocr::Addr::V2::Gfx11Lib@{rocr::Addr::V2::Gfx11Lib}}
+\doxysubsubsection{\texorpdfstring{HwlComputeSurfaceInfoTiled()}{HwlComputeSurfaceInfoTiled()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{addrtypes_8h_a45468f108457c1977c8684dea3df88c7}{ADDR\+\_\+\+E\+\_\+\+RETURNCODE}} rocr\+::\+Addr\+::\+V2\+::\+Gfx11\+Lib\+::\+Hwl\+Compute\+Surface\+Info\+Tiled (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{namespacerocr_a8c8793265a5c744be40efbbaef407074}{ADDR2\+\_\+\+COMPUTE\+\_\+\+SURFACE\+\_\+\+INFO\+\_\+\+INPUT}} $\ast$}]{p\+In,  }\item[{\mbox{\hyperlink{namespacerocr_aa64211e3cee652bcca905fc7cfea8e7b}{ADDR2\+\_\+\+COMPUTE\+\_\+\+SURFACE\+\_\+\+INFO\+\_\+\+OUTPUT}} $\ast$}]{p\+Out }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [virtual]}}
+
+
+
+Internal function to calculate alignment for tiled surface. 
+
+\mbox{\hyperlink{classrocr_1_1Addr_1_1V2_1_1Gfx11Lib_a8b5058afc5ab9f3ee71d82a075c00006}{Gfx11\+Lib\+::\+Hwl\+Compute\+Surface\+Info\+Tiled}}
+
+\begin{DoxyReturn}{Returns}
+ADDR\+\_\+\+E\+\_\+\+RETURNCODE 
+\end{DoxyReturn}
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em p\+In} & input structure \\
+\hline
+\mbox{\texttt{ out}}  & {\em p\+Out} & output structure \\
+\hline
+\end{DoxyParams}
+
+
+Reimplemented from \mbox{\hyperlink{classrocr_1_1Addr_1_1V2_1_1Lib_a8a7bc4eb94d1d0e969fe29c1d2359dfa}{rocr\+::\+Addr\+::\+V2\+::\+Lib}}.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classrocr_1_1Addr_1_1V2_1_1Gfx11Lib_a8b5058afc5ab9f3ee71d82a075c00006_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classrocr_1_1Addr_1_1V2_1_1Gfx11Lib_a8b5058afc5ab9f3ee71d82a075c00006_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classrocr_1_1Addr_1_1V2_1_1Gfx11Lib_a7da8a5a5decb13c00a19185c4d13fe49}\label{classrocr_1_1Addr_1_1V2_1_1Gfx11Lib_a7da8a5a5decb13c00a19185c4d13fe49}} 
+\index{rocr::Addr::V2::Gfx11Lib@{rocr::Addr::V2::Gfx11Lib}!HwlConvertChipFamily@{HwlConvertChipFamily}}
+\index{HwlConvertChipFamily@{HwlConvertChipFamily}!rocr::Addr::V2::Gfx11Lib@{rocr::Addr::V2::Gfx11Lib}}
+\doxysubsubsection{\texorpdfstring{HwlConvertChipFamily()}{HwlConvertChipFamily()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{namespacerocr_1_1Addr_a9baa6f324df4a9cb3c4a61f6e6af6b09}{Chip\+Family}} rocr\+::\+Addr\+::\+V2\+::\+Gfx11\+Lib\+::\+Hwl\+Convert\+Chip\+Family (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{addrtypes_8h_af5a2be58a28390f9a494538f34054637}{UINT\+\_\+32}}}]{chip\+Family,  }\item[{\mbox{\hyperlink{addrtypes_8h_af5a2be58a28390f9a494538f34054637}{UINT\+\_\+32}}}]{chip\+Revision }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [virtual]}}
+
+
+
+Convert family\+ID defined in atiid.\+h to Chip\+Family and set m\+\_\+chip\+Family/m\+\_\+chip\+Revision. 
+
+\mbox{\hyperlink{classrocr_1_1Addr_1_1V2_1_1Gfx11Lib_a7da8a5a5decb13c00a19185c4d13fe49}{Gfx11\+Lib\+::\+Hwl\+Convert\+Chip\+Family}}
+
+\begin{DoxyReturn}{Returns}
+Chip\+Family 
+\end{DoxyReturn}
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em chip\+Family} & chip family defined in atiih.\+h \\
+\hline
+\mbox{\texttt{ in}}  & {\em chip\+Revision} & chip revision defined in \char`\"{}asic\+\_\+family\char`\"{}\+\_\+id.\+h \\
+\hline
+\end{DoxyParams}
+
+
+Implements \mbox{\hyperlink{classrocr_1_1Addr_1_1Lib_a7f69a936833e7004fb40bc87bdfba53b}{rocr\+::\+Addr\+::\+Lib}}.
+
+\mbox{\Hypertarget{classrocr_1_1Addr_1_1V2_1_1Gfx11Lib_a2c0aa77905ca22eba0b453cf8099a905}\label{classrocr_1_1Addr_1_1V2_1_1Gfx11Lib_a2c0aa77905ca22eba0b453cf8099a905}} 
+\index{rocr::Addr::V2::Gfx11Lib@{rocr::Addr::V2::Gfx11Lib}!HwlGetEquationIndex@{HwlGetEquationIndex}}
+\index{HwlGetEquationIndex@{HwlGetEquationIndex}!rocr::Addr::V2::Gfx11Lib@{rocr::Addr::V2::Gfx11Lib}}
+\doxysubsubsection{\texorpdfstring{HwlGetEquationIndex()}{HwlGetEquationIndex()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{addrtypes_8h_af5a2be58a28390f9a494538f34054637}{UINT\+\_\+32}} rocr\+::\+Addr\+::\+V2\+::\+Gfx11\+Lib\+::\+Hwl\+Get\+Equation\+Index (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{namespacerocr_a8c8793265a5c744be40efbbaef407074}{ADDR2\+\_\+\+COMPUTE\+\_\+\+SURFACE\+\_\+\+INFO\+\_\+\+INPUT}} $\ast$}]{p\+In,  }\item[{\mbox{\hyperlink{namespacerocr_aa64211e3cee652bcca905fc7cfea8e7b}{ADDR2\+\_\+\+COMPUTE\+\_\+\+SURFACE\+\_\+\+INFO\+\_\+\+OUTPUT}} $\ast$}]{p\+Out }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [virtual]}}
+
+
+
+Interface function stub of Get\+Equation\+Index. 
+
+\mbox{\hyperlink{classrocr_1_1Addr_1_1V2_1_1Gfx11Lib_a2c0aa77905ca22eba0b453cf8099a905}{Gfx11\+Lib\+::\+Hwl\+Get\+Equation\+Index}}
+
+\begin{DoxyReturn}{Returns}
+ADDR\+\_\+\+E\+\_\+\+RETURNCODE 
+\end{DoxyReturn}
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em p\+In} & input structure \\
+\hline
+\mbox{\texttt{ out}}  & {\em p\+Out} & output structure \\
+\hline
+\end{DoxyParams}
+
+
+Reimplemented from \mbox{\hyperlink{classrocr_1_1Addr_1_1V2_1_1Lib_a2e55fd675e9c485a6b89518cc7dfba85}{rocr\+::\+Addr\+::\+V2\+::\+Lib}}.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classrocr_1_1Addr_1_1V2_1_1Gfx11Lib_a2c0aa77905ca22eba0b453cf8099a905_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classrocr_1_1Addr_1_1V2_1_1Gfx11Lib_a08107a7644152132f1d449f3087f0090}\label{classrocr_1_1Addr_1_1V2_1_1Gfx11Lib_a08107a7644152132f1d449f3087f0090}} 
+\index{rocr::Addr::V2::Gfx11Lib@{rocr::Addr::V2::Gfx11Lib}!HwlGetEquationTableInfo@{HwlGetEquationTableInfo}}
+\index{HwlGetEquationTableInfo@{HwlGetEquationTableInfo}!rocr::Addr::V2::Gfx11Lib@{rocr::Addr::V2::Gfx11Lib}}
+\doxysubsubsection{\texorpdfstring{HwlGetEquationTableInfo()}{HwlGetEquationTableInfo()}}
+{\footnotesize\ttfamily virtual \mbox{\hyperlink{addrtypes_8h_af5a2be58a28390f9a494538f34054637}{UINT\+\_\+32}} rocr\+::\+Addr\+::\+V2\+::\+Gfx11\+Lib\+::\+Hwl\+Get\+Equation\+Table\+Info (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{namespacerocr_a9d269a2f79e2b96962f79909f5e1643c}{ADDR\+\_\+\+EQUATION}} $\ast$$\ast$}]{pp\+Equation\+Table }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [protected]}, {\ttfamily [virtual]}}
+
+
+
+Get equation table pointer and number of equations. 
+
+
+
+Reimplemented from \mbox{\hyperlink{classrocr_1_1Addr_1_1Lib_a1bd6bc7d3b82297b9f800eaf66ea371d}{rocr\+::\+Addr\+::\+Lib}}.
+
+\mbox{\Hypertarget{classrocr_1_1Addr_1_1V2_1_1Gfx11Lib_abc4c29142c08deb85edc685d2b9282fb}\label{classrocr_1_1Addr_1_1V2_1_1Gfx11Lib_abc4c29142c08deb85edc685d2b9282fb}} 
+\index{rocr::Addr::V2::Gfx11Lib@{rocr::Addr::V2::Gfx11Lib}!HwlGetPreferredSurfaceSetting@{HwlGetPreferredSurfaceSetting}}
+\index{HwlGetPreferredSurfaceSetting@{HwlGetPreferredSurfaceSetting}!rocr::Addr::V2::Gfx11Lib@{rocr::Addr::V2::Gfx11Lib}}
+\doxysubsubsection{\texorpdfstring{HwlGetPreferredSurfaceSetting()}{HwlGetPreferredSurfaceSetting()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{addrtypes_8h_a45468f108457c1977c8684dea3df88c7}{ADDR\+\_\+\+E\+\_\+\+RETURNCODE}} rocr\+::\+Addr\+::\+V2\+::\+Gfx11\+Lib\+::\+Hwl\+Get\+Preferred\+Surface\+Setting (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{namespacerocr_a945c3184ba671c5d044ff7d6dc0a1910}{ADDR2\+\_\+\+GET\+\_\+\+PREFERRED\+\_\+\+SURF\+\_\+\+SETTING\+\_\+\+INPUT}} $\ast$}]{p\+In,  }\item[{\mbox{\hyperlink{namespacerocr_a5f4f8e1ece6b248b799f7296af42ae3e}{ADDR2\+\_\+\+GET\+\_\+\+PREFERRED\+\_\+\+SURF\+\_\+\+SETTING\+\_\+\+OUTPUT}} $\ast$}]{p\+Out }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [virtual]}}
+
+
+
+Internal function to get suggested surface information for cliet to use. 
+
+\mbox{\hyperlink{classrocr_1_1Addr_1_1V2_1_1Gfx11Lib_abc4c29142c08deb85edc685d2b9282fb}{Gfx11\+Lib\+::\+Hwl\+Get\+Preferred\+Surface\+Setting}}
+
+\begin{DoxyReturn}{Returns}
+ADDR\+\_\+\+E\+\_\+\+RETURNCODE 
+\end{DoxyReturn}
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em p\+In} & input structure \\
+\hline
+\mbox{\texttt{ out}}  & {\em p\+Out} & output structure \\
+\hline
+\end{DoxyParams}
+
+
+Reimplemented from \mbox{\hyperlink{classrocr_1_1Addr_1_1V2_1_1Lib_a3d458628beda1b9d52641a6e401974a7}{rocr\+::\+Addr\+::\+V2\+::\+Lib}}.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classrocr_1_1Addr_1_1V2_1_1Gfx11Lib_abc4c29142c08deb85edc685d2b9282fb_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classrocr_1_1Addr_1_1V2_1_1Gfx11Lib_a2105660d847543784bca91e605fa7c3d}\label{classrocr_1_1Addr_1_1V2_1_1Gfx11Lib_a2105660d847543784bca91e605fa7c3d}} 
+\index{rocr::Addr::V2::Gfx11Lib@{rocr::Addr::V2::Gfx11Lib}!HwlInitGlobalParams@{HwlInitGlobalParams}}
+\index{HwlInitGlobalParams@{HwlInitGlobalParams}!rocr::Addr::V2::Gfx11Lib@{rocr::Addr::V2::Gfx11Lib}}
+\doxysubsubsection{\texorpdfstring{HwlInitGlobalParams()}{HwlInitGlobalParams()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{addrtypes_8h_ac4225671b7e87c943146915461c9b2f4}{BOOL\+\_\+32}} rocr\+::\+Addr\+::\+V2\+::\+Gfx11\+Lib\+::\+Hwl\+Init\+Global\+Params (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{namespacerocr_aa6951cc0839e1ebafba4f88da2c31c6d}{ADDR\+\_\+\+CREATE\+\_\+\+INPUT}} $\ast$}]{p\+Create\+In }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [virtual]}}
+
+
+
+Initializes global parameters. 
+
+\mbox{\hyperlink{classrocr_1_1Addr_1_1V2_1_1Gfx11Lib_a2105660d847543784bca91e605fa7c3d}{Gfx11\+Lib\+::\+Hwl\+Init\+Global\+Params}}
+
+\begin{DoxyReturn}{Returns}
+TRUE if all settings are valid 
+\end{DoxyReturn}
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em p\+Create\+In} & create input \\
+\hline
+\end{DoxyParams}
+
+
+Implements \mbox{\hyperlink{classrocr_1_1Addr_1_1Lib_a052b2f774e4067bfafaab518807c52d3}{rocr\+::\+Addr\+::\+Lib}}.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classrocr_1_1Addr_1_1V2_1_1Gfx11Lib_a2105660d847543784bca91e605fa7c3d_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classrocr_1_1Addr_1_1V2_1_1Gfx11Lib_a63f2c213c2dbd33ed5170da2ccc2a97b}\label{classrocr_1_1Addr_1_1V2_1_1Gfx11Lib_a63f2c213c2dbd33ed5170da2ccc2a97b}} 
+\index{rocr::Addr::V2::Gfx11Lib@{rocr::Addr::V2::Gfx11Lib}!HwlIsDisplaySwizzle@{HwlIsDisplaySwizzle}}
+\index{HwlIsDisplaySwizzle@{HwlIsDisplaySwizzle}!rocr::Addr::V2::Gfx11Lib@{rocr::Addr::V2::Gfx11Lib}}
+\doxysubsubsection{\texorpdfstring{HwlIsDisplaySwizzle()}{HwlIsDisplaySwizzle()}}
+{\footnotesize\ttfamily virtual \mbox{\hyperlink{addrtypes_8h_ac4225671b7e87c943146915461c9b2f4}{BOOL\+\_\+32}} rocr\+::\+Addr\+::\+V2\+::\+Gfx11\+Lib\+::\+Hwl\+Is\+Display\+Swizzle (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{addrtypes_8h_a3a71ad42801586bbe32648f34f3d5ee7}{Addr\+Resource\+Type}}}]{resource\+Type,  }\item[{\mbox{\hyperlink{addrtypes_8h_af64a81eb4c83301dba12714f6f0aefed}{Addr\+Swizzle\+Mode}}}]{swizzle\+Mode }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [protected]}, {\ttfamily [virtual]}}
+
+
+
+Reimplemented from \mbox{\hyperlink{classrocr_1_1Addr_1_1V2_1_1Lib_a59e604078324c237e0d93989e390d4d0}{rocr\+::\+Addr\+::\+V2\+::\+Lib}}.
+
+\mbox{\Hypertarget{classrocr_1_1Addr_1_1V2_1_1Gfx11Lib_abe2ef0bc00aa4ae3916dd794f2b6187c}\label{classrocr_1_1Addr_1_1V2_1_1Gfx11Lib_abe2ef0bc00aa4ae3916dd794f2b6187c}} 
+\index{rocr::Addr::V2::Gfx11Lib@{rocr::Addr::V2::Gfx11Lib}!HwlIsStandardSwizzle@{HwlIsStandardSwizzle}}
+\index{HwlIsStandardSwizzle@{HwlIsStandardSwizzle}!rocr::Addr::V2::Gfx11Lib@{rocr::Addr::V2::Gfx11Lib}}
+\doxysubsubsection{\texorpdfstring{HwlIsStandardSwizzle()}{HwlIsStandardSwizzle()}}
+{\footnotesize\ttfamily virtual \mbox{\hyperlink{addrtypes_8h_ac4225671b7e87c943146915461c9b2f4}{BOOL\+\_\+32}} rocr\+::\+Addr\+::\+V2\+::\+Gfx11\+Lib\+::\+Hwl\+Is\+Standard\+Swizzle (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{addrtypes_8h_a3a71ad42801586bbe32648f34f3d5ee7}{Addr\+Resource\+Type}}}]{resource\+Type,  }\item[{\mbox{\hyperlink{addrtypes_8h_af64a81eb4c83301dba12714f6f0aefed}{Addr\+Swizzle\+Mode}}}]{swizzle\+Mode }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [protected]}, {\ttfamily [virtual]}}
+
+
+
+Reimplemented from \mbox{\hyperlink{classrocr_1_1Addr_1_1V2_1_1Lib_a6da13a26c72c79cf87ce9a98b3931f77}{rocr\+::\+Addr\+::\+V2\+::\+Lib}}.
+
+\mbox{\Hypertarget{classrocr_1_1Addr_1_1V2_1_1Gfx11Lib_ae0519728aca25ade191981a537f5b0b2}\label{classrocr_1_1Addr_1_1V2_1_1Gfx11Lib_ae0519728aca25ade191981a537f5b0b2}} 
+\index{rocr::Addr::V2::Gfx11Lib@{rocr::Addr::V2::Gfx11Lib}!HwlIsThick@{HwlIsThick}}
+\index{HwlIsThick@{HwlIsThick}!rocr::Addr::V2::Gfx11Lib@{rocr::Addr::V2::Gfx11Lib}}
+\doxysubsubsection{\texorpdfstring{HwlIsThick()}{HwlIsThick()}}
+{\footnotesize\ttfamily virtual \mbox{\hyperlink{addrtypes_8h_ac4225671b7e87c943146915461c9b2f4}{BOOL\+\_\+32}} rocr\+::\+Addr\+::\+V2\+::\+Gfx11\+Lib\+::\+Hwl\+Is\+Thick (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{addrtypes_8h_a3a71ad42801586bbe32648f34f3d5ee7}{Addr\+Resource\+Type}}}]{resource\+Type,  }\item[{\mbox{\hyperlink{addrtypes_8h_af64a81eb4c83301dba12714f6f0aefed}{Addr\+Swizzle\+Mode}}}]{swizzle\+Mode }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [protected]}, {\ttfamily [virtual]}}
+
+
+
+Reimplemented from \mbox{\hyperlink{classrocr_1_1Addr_1_1V2_1_1Lib_adc1591e80b26746481e4e12926a51adf}{rocr\+::\+Addr\+::\+V2\+::\+Lib}}.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=334pt]{classrocr_1_1Addr_1_1V2_1_1Gfx11Lib_ae0519728aca25ade191981a537f5b0b2_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classrocr_1_1Addr_1_1V2_1_1Gfx11Lib_ad8de742e0920cf0e72209594701a9400}\label{classrocr_1_1Addr_1_1V2_1_1Gfx11Lib_ad8de742e0920cf0e72209594701a9400}} 
+\index{rocr::Addr::V2::Gfx11Lib@{rocr::Addr::V2::Gfx11Lib}!HwlIsThin@{HwlIsThin}}
+\index{HwlIsThin@{HwlIsThin}!rocr::Addr::V2::Gfx11Lib@{rocr::Addr::V2::Gfx11Lib}}
+\doxysubsubsection{\texorpdfstring{HwlIsThin()}{HwlIsThin()}}
+{\footnotesize\ttfamily virtual \mbox{\hyperlink{addrtypes_8h_ac4225671b7e87c943146915461c9b2f4}{BOOL\+\_\+32}} rocr\+::\+Addr\+::\+V2\+::\+Gfx11\+Lib\+::\+Hwl\+Is\+Thin (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{addrtypes_8h_a3a71ad42801586bbe32648f34f3d5ee7}{Addr\+Resource\+Type}}}]{resource\+Type,  }\item[{\mbox{\hyperlink{addrtypes_8h_af64a81eb4c83301dba12714f6f0aefed}{Addr\+Swizzle\+Mode}}}]{swizzle\+Mode }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [protected]}, {\ttfamily [virtual]}}
+
+
+
+Reimplemented from \mbox{\hyperlink{classrocr_1_1Addr_1_1V2_1_1Lib_ab6880db45d9b17e7f987e1d82e936d3b}{rocr\+::\+Addr\+::\+V2\+::\+Lib}}.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=334pt]{classrocr_1_1Addr_1_1V2_1_1Gfx11Lib_ad8de742e0920cf0e72209594701a9400_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classrocr_1_1Addr_1_1V2_1_1Gfx11Lib_a4914dc3a36fbde2fa0c207a8a33e262a}\label{classrocr_1_1Addr_1_1V2_1_1Gfx11Lib_a4914dc3a36fbde2fa0c207a8a33e262a}} 
+\index{rocr::Addr::V2::Gfx11Lib@{rocr::Addr::V2::Gfx11Lib}!HwlSupportComputeDccAddrFromCoord@{HwlSupportComputeDccAddrFromCoord}}
+\index{HwlSupportComputeDccAddrFromCoord@{HwlSupportComputeDccAddrFromCoord}!rocr::Addr::V2::Gfx11Lib@{rocr::Addr::V2::Gfx11Lib}}
+\doxysubsubsection{\texorpdfstring{HwlSupportComputeDccAddrFromCoord()}{HwlSupportComputeDccAddrFromCoord()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{addrtypes_8h_a45468f108457c1977c8684dea3df88c7}{ADDR\+\_\+\+E\+\_\+\+RETURNCODE}} rocr\+::\+Addr\+::\+V2\+::\+Gfx11\+Lib\+::\+Hwl\+Support\+Compute\+Dcc\+Addr\+From\+Coord (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{namespacerocr_a692bcd0d2b453fe8457ae94243a77e6a}{ADDR2\+\_\+\+COMPUTE\+\_\+\+DCC\+\_\+\+ADDRFROMCOORD\+\_\+\+INPUT}} $\ast$}]{p\+In }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [virtual]}}
+
+
+
+Check whether \mbox{\hyperlink{classrocr_1_1Addr_1_1V2_1_1Gfx11Lib_a05ebed66cbb1f2c6bd3ac282373f3e41}{Hwl\+Compute\+Dcc\+Addr\+From\+Coord()}} can be done for the input parameter. 
+
+\mbox{\hyperlink{classrocr_1_1Addr_1_1V2_1_1Gfx11Lib_a4914dc3a36fbde2fa0c207a8a33e262a}{Gfx11\+Lib\+::\+Hwl\+Support\+Compute\+Dcc\+Addr\+From\+Coord}}
+
+\begin{DoxyReturn}{Returns}
+ADDR\+\_\+\+E\+\_\+\+RETURNCODE 
+\end{DoxyReturn}
+
+
+Reimplemented from \mbox{\hyperlink{classrocr_1_1Addr_1_1V2_1_1Lib_aadae0392ee4268a9daf5c84f57a23a3b}{rocr\+::\+Addr\+::\+V2\+::\+Lib}}.
+
+\mbox{\Hypertarget{classrocr_1_1Addr_1_1V2_1_1Gfx11Lib_ae0874925d053c02c7b59852e938d1aec}\label{classrocr_1_1Addr_1_1V2_1_1Gfx11Lib_ae0874925d053c02c7b59852e938d1aec}} 
+\index{rocr::Addr::V2::Gfx11Lib@{rocr::Addr::V2::Gfx11Lib}!InitEquationTable@{InitEquationTable}}
+\index{InitEquationTable@{InitEquationTable}!rocr::Addr::V2::Gfx11Lib@{rocr::Addr::V2::Gfx11Lib}}
+\doxysubsubsection{\texorpdfstring{InitEquationTable()}{InitEquationTable()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{addrtypes_8h_a7927e087749615dae3114cc27b91c86d}{VOID}} rocr\+::\+Addr\+::\+V2\+::\+Gfx11\+Lib\+::\+Init\+Equation\+Table (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Initialize Equation table. 
+
+\mbox{\hyperlink{classrocr_1_1Addr_1_1V2_1_1Gfx11Lib_ae0874925d053c02c7b59852e938d1aec}{Gfx11\+Lib\+::\+Init\+Equation\+Table}}
+
+\begin{DoxyReturn}{Returns}
+N/A 
+\end{DoxyReturn}
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classrocr_1_1Addr_1_1V2_1_1Gfx11Lib_ae0874925d053c02c7b59852e938d1aec_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classrocr_1_1Addr_1_1V2_1_1Gfx11Lib_ae0874925d053c02c7b59852e938d1aec_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classrocr_1_1Addr_1_1V2_1_1Gfx11Lib_a15817461ac1d37cd70411d79b5c4be36}\label{classrocr_1_1Addr_1_1V2_1_1Gfx11Lib_a15817461ac1d37cd70411d79b5c4be36}} 
+\index{rocr::Addr::V2::Gfx11Lib@{rocr::Addr::V2::Gfx11Lib}!IsBlock256kb@{IsBlock256kb}}
+\index{IsBlock256kb@{IsBlock256kb}!rocr::Addr::V2::Gfx11Lib@{rocr::Addr::V2::Gfx11Lib}}
+\doxysubsubsection{\texorpdfstring{IsBlock256kb()}{IsBlock256kb()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{addrtypes_8h_ac4225671b7e87c943146915461c9b2f4}{BOOL\+\_\+32}} rocr\+::\+Addr\+::\+V2\+::\+Gfx11\+Lib\+::\+Is\+Block256kb (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{addrtypes_8h_af64a81eb4c83301dba12714f6f0aefed}{Addr\+Swizzle\+Mode}}}]{swizzle\+Mode }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [private]}}
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=334pt]{classrocr_1_1Addr_1_1V2_1_1Gfx11Lib_a15817461ac1d37cd70411d79b5c4be36_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classrocr_1_1Addr_1_1V2_1_1Gfx11Lib_a15817461ac1d37cd70411d79b5c4be36_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classrocr_1_1Addr_1_1V2_1_1Gfx11Lib_a6342495991dadbf096dc8682ad66b2fc}\label{classrocr_1_1Addr_1_1V2_1_1Gfx11Lib_a6342495991dadbf096dc8682ad66b2fc}} 
+\index{rocr::Addr::V2::Gfx11Lib@{rocr::Addr::V2::Gfx11Lib}!IsInMipTail@{IsInMipTail}}
+\index{IsInMipTail@{IsInMipTail}!rocr::Addr::V2::Gfx11Lib@{rocr::Addr::V2::Gfx11Lib}}
+\doxysubsubsection{\texorpdfstring{IsInMipTail()}{IsInMipTail()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{addrtypes_8h_ac4225671b7e87c943146915461c9b2f4}{BOOL\+\_\+32}} rocr\+::\+Addr\+::\+V2\+::\+Gfx11\+Lib\+::\+Is\+In\+Mip\+Tail (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structrocr_1_1Addr_1_1V2_1_1Dim3d}{Dim3d}}}]{mip\+Tail\+Dim,  }\item[{\mbox{\hyperlink{addrtypes_8h_af5a2be58a28390f9a494538f34054637}{UINT\+\_\+32}}}]{max\+Num\+Mips\+In\+Tail,  }\item[{\mbox{\hyperlink{addrtypes_8h_af5a2be58a28390f9a494538f34054637}{UINT\+\_\+32}}}]{mip\+Width,  }\item[{\mbox{\hyperlink{addrtypes_8h_af5a2be58a28390f9a494538f34054637}{UINT\+\_\+32}}}]{mip\+Height,  }\item[{\mbox{\hyperlink{addrtypes_8h_af5a2be58a28390f9a494538f34054637}{UINT\+\_\+32}}}]{num\+Mips\+To\+The\+End }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [private]}}
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classrocr_1_1Addr_1_1V2_1_1Gfx11Lib_a6342495991dadbf096dc8682ad66b2fc_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classrocr_1_1Addr_1_1V2_1_1Gfx11Lib_a86f031d6c2612435b01258d46c7efb04}\label{classrocr_1_1Addr_1_1V2_1_1Gfx11Lib_a86f031d6c2612435b01258d46c7efb04}} 
+\index{rocr::Addr::V2::Gfx11Lib@{rocr::Addr::V2::Gfx11Lib}!IsRbAligned@{IsRbAligned}}
+\index{IsRbAligned@{IsRbAligned}!rocr::Addr::V2::Gfx11Lib@{rocr::Addr::V2::Gfx11Lib}}
+\doxysubsubsection{\texorpdfstring{IsRbAligned()}{IsRbAligned()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{addrtypes_8h_ac4225671b7e87c943146915461c9b2f4}{BOOL\+\_\+32}} rocr\+::\+Addr\+::\+V2\+::\+Gfx11\+Lib\+::\+Is\+Rb\+Aligned (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{addrtypes_8h_a3a71ad42801586bbe32648f34f3d5ee7}{Addr\+Resource\+Type}}}]{resource\+Type,  }\item[{\mbox{\hyperlink{addrtypes_8h_af64a81eb4c83301dba12714f6f0aefed}{Addr\+Swizzle\+Mode}}}]{swizzle\+Mode }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [private]}}
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=336pt]{classrocr_1_1Addr_1_1V2_1_1Gfx11Lib_a86f031d6c2612435b01258d46c7efb04_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classrocr_1_1Addr_1_1V2_1_1Gfx11Lib_a86f031d6c2612435b01258d46c7efb04_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classrocr_1_1Addr_1_1V2_1_1Gfx11Lib_a0addf476991f991284dc1899a431351d}\label{classrocr_1_1Addr_1_1V2_1_1Gfx11Lib_a0addf476991f991284dc1899a431351d}} 
+\index{rocr::Addr::V2::Gfx11Lib@{rocr::Addr::V2::Gfx11Lib}!IsValidDisplaySwizzleMode@{IsValidDisplaySwizzleMode}}
+\index{IsValidDisplaySwizzleMode@{IsValidDisplaySwizzleMode}!rocr::Addr::V2::Gfx11Lib@{rocr::Addr::V2::Gfx11Lib}}
+\doxysubsubsection{\texorpdfstring{IsValidDisplaySwizzleMode()}{IsValidDisplaySwizzleMode()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{addrtypes_8h_ac4225671b7e87c943146915461c9b2f4}{BOOL\+\_\+32}} rocr\+::\+Addr\+::\+V2\+::\+Gfx11\+Lib\+::\+Is\+Valid\+Display\+Swizzle\+Mode (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{namespacerocr_a8c8793265a5c744be40efbbaef407074}{ADDR2\+\_\+\+COMPUTE\+\_\+\+SURFACE\+\_\+\+INFO\+\_\+\+INPUT}} $\ast$}]{p\+In }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [private]}, {\ttfamily [virtual]}}
+
+
+
+Check if a swizzle mode is supported by display engine. 
+
+\mbox{\hyperlink{classrocr_1_1Addr_1_1V2_1_1Gfx11Lib_a0addf476991f991284dc1899a431351d}{Gfx11\+Lib\+::\+Is\+Valid\+Display\+Swizzle\+Mode}}
+
+\begin{DoxyReturn}{Returns}
+TRUE is swizzle mode is supported by display engine 
+\end{DoxyReturn}
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em p\+In} & input structure \\
+\hline
+\end{DoxyParams}
+
+
+Reimplemented from \mbox{\hyperlink{classrocr_1_1Addr_1_1V2_1_1Lib_a8506582efcbbf39765b7dab8d9a30f10}{rocr\+::\+Addr\+::\+V2\+::\+Lib}}.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classrocr_1_1Addr_1_1V2_1_1Gfx11Lib_a0addf476991f991284dc1899a431351d_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classrocr_1_1Addr_1_1V2_1_1Gfx11Lib_a0addf476991f991284dc1899a431351d_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classrocr_1_1Addr_1_1V2_1_1Gfx11Lib_a6eba1ccfb84b9be2906ffe371afd6b5e}\label{classrocr_1_1Addr_1_1V2_1_1Gfx11Lib_a6eba1ccfb84b9be2906ffe371afd6b5e}} 
+\index{rocr::Addr::V2::Gfx11Lib@{rocr::Addr::V2::Gfx11Lib}!ValidateNonSwModeParams@{ValidateNonSwModeParams}}
+\index{ValidateNonSwModeParams@{ValidateNonSwModeParams}!rocr::Addr::V2::Gfx11Lib@{rocr::Addr::V2::Gfx11Lib}}
+\doxysubsubsection{\texorpdfstring{ValidateNonSwModeParams()}{ValidateNonSwModeParams()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{addrtypes_8h_ac4225671b7e87c943146915461c9b2f4}{BOOL\+\_\+32}} rocr\+::\+Addr\+::\+V2\+::\+Gfx11\+Lib\+::\+Validate\+Non\+Sw\+Mode\+Params (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{namespacerocr_a8c8793265a5c744be40efbbaef407074}{ADDR2\+\_\+\+COMPUTE\+\_\+\+SURFACE\+\_\+\+INFO\+\_\+\+INPUT}} $\ast$}]{p\+In }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Validate compute surface info params except swizzle mode. 
+
+\mbox{\hyperlink{classrocr_1_1Addr_1_1V2_1_1Gfx11Lib_a6eba1ccfb84b9be2906ffe371afd6b5e}{Gfx11\+Lib\+::\+Validate\+Non\+Sw\+Mode\+Params}}
+
+\begin{DoxyReturn}{Returns}
+TRUE if parameters are valid, FALSE otherwise 
+\end{DoxyReturn}
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classrocr_1_1Addr_1_1V2_1_1Gfx11Lib_a6eba1ccfb84b9be2906ffe371afd6b5e_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classrocr_1_1Addr_1_1V2_1_1Gfx11Lib_a6eba1ccfb84b9be2906ffe371afd6b5e_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classrocr_1_1Addr_1_1V2_1_1Gfx11Lib_a80ac58c4efd8cdb1b0670575ff81c8f0}\label{classrocr_1_1Addr_1_1V2_1_1Gfx11Lib_a80ac58c4efd8cdb1b0670575ff81c8f0}} 
+\index{rocr::Addr::V2::Gfx11Lib@{rocr::Addr::V2::Gfx11Lib}!ValidateSwModeParams@{ValidateSwModeParams}}
+\index{ValidateSwModeParams@{ValidateSwModeParams}!rocr::Addr::V2::Gfx11Lib@{rocr::Addr::V2::Gfx11Lib}}
+\doxysubsubsection{\texorpdfstring{ValidateSwModeParams()}{ValidateSwModeParams()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{addrtypes_8h_ac4225671b7e87c943146915461c9b2f4}{BOOL\+\_\+32}} rocr\+::\+Addr\+::\+V2\+::\+Gfx11\+Lib\+::\+Validate\+Sw\+Mode\+Params (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{namespacerocr_a8c8793265a5c744be40efbbaef407074}{ADDR2\+\_\+\+COMPUTE\+\_\+\+SURFACE\+\_\+\+INFO\+\_\+\+INPUT}} $\ast$}]{p\+In }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Validate compute surface info related to swizzle mode. 
+
+\mbox{\hyperlink{classrocr_1_1Addr_1_1V2_1_1Gfx11Lib_a80ac58c4efd8cdb1b0670575ff81c8f0}{Gfx11\+Lib\+::\+Validate\+Sw\+Mode\+Params}}
+
+\begin{DoxyReturn}{Returns}
+TRUE if parameters are valid, FALSE otherwise 
+\end{DoxyReturn}
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classrocr_1_1Addr_1_1V2_1_1Gfx11Lib_a80ac58c4efd8cdb1b0670575ff81c8f0_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classrocr_1_1Addr_1_1V2_1_1Gfx11Lib_a80ac58c4efd8cdb1b0670575ff81c8f0_icgraph}
+\end{center}
+\end{figure}
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{classrocr_1_1Addr_1_1V2_1_1Gfx11Lib_a9a1dd25dc307e9a4c69977c4275eeb80}\label{classrocr_1_1Addr_1_1V2_1_1Gfx11Lib_a9a1dd25dc307e9a4c69977c4275eeb80}} 
+\index{rocr::Addr::V2::Gfx11Lib@{rocr::Addr::V2::Gfx11Lib}!BankBits@{BankBits}}
+\index{BankBits@{BankBits}!rocr::Addr::V2::Gfx11Lib@{rocr::Addr::V2::Gfx11Lib}}
+\doxysubsubsection{\texorpdfstring{BankBits}{BankBits}}
+{\footnotesize\ttfamily const \mbox{\hyperlink{addrtypes_8h_af5a2be58a28390f9a494538f34054637}{UINT\+\_\+32}} rocr\+::\+Addr\+::\+V2\+::\+Gfx11\+Lib\+::\+Bank\+Bits = 4\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [private]}}
+
+\mbox{\Hypertarget{classrocr_1_1Addr_1_1V2_1_1Gfx11Lib_a5bd95cf3639bd2e9caa8b9b188963062}\label{classrocr_1_1Addr_1_1V2_1_1Gfx11Lib_a5bd95cf3639bd2e9caa8b9b188963062}} 
+\index{rocr::Addr::V2::Gfx11Lib@{rocr::Addr::V2::Gfx11Lib}!Block256\_3d@{Block256\_3d}}
+\index{Block256\_3d@{Block256\_3d}!rocr::Addr::V2::Gfx11Lib@{rocr::Addr::V2::Gfx11Lib}}
+\doxysubsubsection{\texorpdfstring{Block256\_3d}{Block256\_3d}}
+{\footnotesize\ttfamily const \mbox{\hyperlink{structrocr_1_1Addr_1_1V2_1_1Dim3d}{Dim3d}} rocr\+::\+Addr\+::\+V2\+::\+Gfx11\+Lib\+::\+Block256\+\_\+3d = \{\{8, 4, 8\}, \{4, 4, 8\}, \{4, 4, 4\}, \{4, 2, 4\}, \{2, 2, 4\}\}\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [private]}}
+
+\mbox{\Hypertarget{classrocr_1_1Addr_1_1V2_1_1Gfx11Lib_a9845cf74c9b02015b87ad8a9b03d372c}\label{classrocr_1_1Addr_1_1V2_1_1Gfx11Lib_a9845cf74c9b02015b87ad8a9b03d372c}} 
+\index{rocr::Addr::V2::Gfx11Lib@{rocr::Addr::V2::Gfx11Lib}!Block256K\_Log2\_3d@{Block256K\_Log2\_3d}}
+\index{Block256K\_Log2\_3d@{Block256K\_Log2\_3d}!rocr::Addr::V2::Gfx11Lib@{rocr::Addr::V2::Gfx11Lib}}
+\doxysubsubsection{\texorpdfstring{Block256K\_Log2\_3d}{Block256K\_Log2\_3d}}
+{\footnotesize\ttfamily const \mbox{\hyperlink{structrocr_1_1Addr_1_1V2_1_1Dim3d}{Dim3d}} rocr\+::\+Addr\+::\+V2\+::\+Gfx11\+Lib\+::\+Block256\+K\+\_\+\+Log2\+\_\+3d = \{\{6, 6, 6\}, \{5, 6, 6\}, \{5, 6, 5\}, \{5, 5, 5\}, \{4, 5, 5\}\}\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [private]}}
+
+\mbox{\Hypertarget{classrocr_1_1Addr_1_1V2_1_1Gfx11Lib_ada30c071baa4201f1866f48319ecf20d}\label{classrocr_1_1Addr_1_1V2_1_1Gfx11Lib_ada30c071baa4201f1866f48319ecf20d}} 
+\index{rocr::Addr::V2::Gfx11Lib@{rocr::Addr::V2::Gfx11Lib}!Block4K\_Log2\_3d@{Block4K\_Log2\_3d}}
+\index{Block4K\_Log2\_3d@{Block4K\_Log2\_3d}!rocr::Addr::V2::Gfx11Lib@{rocr::Addr::V2::Gfx11Lib}}
+\doxysubsubsection{\texorpdfstring{Block4K\_Log2\_3d}{Block4K\_Log2\_3d}}
+{\footnotesize\ttfamily const \mbox{\hyperlink{structrocr_1_1Addr_1_1V2_1_1Dim3d}{Dim3d}} rocr\+::\+Addr\+::\+V2\+::\+Gfx11\+Lib\+::\+Block4\+K\+\_\+\+Log2\+\_\+3d = \{\{4, 4, 4\}, \{3, 4, 4\}, \{3, 4, 3\}, \{3, 3, 3\}, \{2, 3, 3\}\}\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [private]}}
+
+\mbox{\Hypertarget{classrocr_1_1Addr_1_1V2_1_1Gfx11Lib_ae06d483820de77b819d9c12136f6de18}\label{classrocr_1_1Addr_1_1V2_1_1Gfx11Lib_ae06d483820de77b819d9c12136f6de18}} 
+\index{rocr::Addr::V2::Gfx11Lib@{rocr::Addr::V2::Gfx11Lib}!Block64K\_Log2\_3d@{Block64K\_Log2\_3d}}
+\index{Block64K\_Log2\_3d@{Block64K\_Log2\_3d}!rocr::Addr::V2::Gfx11Lib@{rocr::Addr::V2::Gfx11Lib}}
+\doxysubsubsection{\texorpdfstring{Block64K\_Log2\_3d}{Block64K\_Log2\_3d}}
+{\footnotesize\ttfamily const \mbox{\hyperlink{structrocr_1_1Addr_1_1V2_1_1Dim3d}{Dim3d}} rocr\+::\+Addr\+::\+V2\+::\+Gfx11\+Lib\+::\+Block64\+K\+\_\+\+Log2\+\_\+3d = \{\{6, 5, 5\}, \{5, 5, 5\}, \{5, 5, 4\}, \{5, 4, 4\}, \{4, 4, 4\}\}\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [private]}}
+
+\mbox{\Hypertarget{classrocr_1_1Addr_1_1V2_1_1Gfx11Lib_a21f0c1d4ccfc8583cc26deb2917a1175}\label{classrocr_1_1Addr_1_1V2_1_1Gfx11Lib_a21f0c1d4ccfc8583cc26deb2917a1175}} 
+\index{rocr::Addr::V2::Gfx11Lib@{rocr::Addr::V2::Gfx11Lib}!ColumnBits@{ColumnBits}}
+\index{ColumnBits@{ColumnBits}!rocr::Addr::V2::Gfx11Lib@{rocr::Addr::V2::Gfx11Lib}}
+\doxysubsubsection{\texorpdfstring{ColumnBits}{ColumnBits}}
+{\footnotesize\ttfamily const \mbox{\hyperlink{addrtypes_8h_af5a2be58a28390f9a494538f34054637}{UINT\+\_\+32}} rocr\+::\+Addr\+::\+V2\+::\+Gfx11\+Lib\+::\+Column\+Bits = 2\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [private]}}
+
+\mbox{\Hypertarget{classrocr_1_1Addr_1_1V2_1_1Gfx11Lib_a9f6ebb8846a860c6580901cb6349f709}\label{classrocr_1_1Addr_1_1V2_1_1Gfx11Lib_a9f6ebb8846a860c6580901cb6349f709}} 
+\index{rocr::Addr::V2::Gfx11Lib@{rocr::Addr::V2::Gfx11Lib}!m\_colorBaseIndex@{m\_colorBaseIndex}}
+\index{m\_colorBaseIndex@{m\_colorBaseIndex}!rocr::Addr::V2::Gfx11Lib@{rocr::Addr::V2::Gfx11Lib}}
+\doxysubsubsection{\texorpdfstring{m\_colorBaseIndex}{m\_colorBaseIndex}}
+{\footnotesize\ttfamily \mbox{\hyperlink{addrtypes_8h_af5a2be58a28390f9a494538f34054637}{UINT\+\_\+32}} rocr\+::\+Addr\+::\+V2\+::\+Gfx11\+Lib\+::m\+\_\+color\+Base\+Index\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classrocr_1_1Addr_1_1V2_1_1Gfx11Lib_af45eea20454cc3d8b72c6a6a088ad12b}\label{classrocr_1_1Addr_1_1V2_1_1Gfx11Lib_af45eea20454cc3d8b72c6a6a088ad12b}} 
+\index{rocr::Addr::V2::Gfx11Lib@{rocr::Addr::V2::Gfx11Lib}!m\_dccBaseIndex@{m\_dccBaseIndex}}
+\index{m\_dccBaseIndex@{m\_dccBaseIndex}!rocr::Addr::V2::Gfx11Lib@{rocr::Addr::V2::Gfx11Lib}}
+\doxysubsubsection{\texorpdfstring{m\_dccBaseIndex}{m\_dccBaseIndex}}
+{\footnotesize\ttfamily \mbox{\hyperlink{addrtypes_8h_af5a2be58a28390f9a494538f34054637}{UINT\+\_\+32}} rocr\+::\+Addr\+::\+V2\+::\+Gfx11\+Lib\+::m\+\_\+dcc\+Base\+Index\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classrocr_1_1Addr_1_1V2_1_1Gfx11Lib_a2ee88c7c4a106ccfbc43a874d896af7e}\label{classrocr_1_1Addr_1_1V2_1_1Gfx11Lib_a2ee88c7c4a106ccfbc43a874d896af7e}} 
+\index{rocr::Addr::V2::Gfx11Lib@{rocr::Addr::V2::Gfx11Lib}!m\_htileBaseIndex@{m\_htileBaseIndex}}
+\index{m\_htileBaseIndex@{m\_htileBaseIndex}!rocr::Addr::V2::Gfx11Lib@{rocr::Addr::V2::Gfx11Lib}}
+\doxysubsubsection{\texorpdfstring{m\_htileBaseIndex}{m\_htileBaseIndex}}
+{\footnotesize\ttfamily \mbox{\hyperlink{addrtypes_8h_af5a2be58a28390f9a494538f34054637}{UINT\+\_\+32}} rocr\+::\+Addr\+::\+V2\+::\+Gfx11\+Lib\+::m\+\_\+htile\+Base\+Index\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classrocr_1_1Addr_1_1V2_1_1Gfx11Lib_ad67522241a14081ec4cadace0d9e991d}\label{classrocr_1_1Addr_1_1V2_1_1Gfx11Lib_ad67522241a14081ec4cadace0d9e991d}} 
+\index{rocr::Addr::V2::Gfx11Lib@{rocr::Addr::V2::Gfx11Lib}!m\_numPkrLog2@{m\_numPkrLog2}}
+\index{m\_numPkrLog2@{m\_numPkrLog2}!rocr::Addr::V2::Gfx11Lib@{rocr::Addr::V2::Gfx11Lib}}
+\doxysubsubsection{\texorpdfstring{m\_numPkrLog2}{m\_numPkrLog2}}
+{\footnotesize\ttfamily \mbox{\hyperlink{addrtypes_8h_af5a2be58a28390f9a494538f34054637}{UINT\+\_\+32}} rocr\+::\+Addr\+::\+V2\+::\+Gfx11\+Lib\+::m\+\_\+num\+Pkr\+Log2\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classrocr_1_1Addr_1_1V2_1_1Gfx11Lib_a2f44aa4eb9915aa6b953587ac15d2bed}\label{classrocr_1_1Addr_1_1V2_1_1Gfx11Lib_a2f44aa4eb9915aa6b953587ac15d2bed}} 
+\index{rocr::Addr::V2::Gfx11Lib@{rocr::Addr::V2::Gfx11Lib}!m\_numSaLog2@{m\_numSaLog2}}
+\index{m\_numSaLog2@{m\_numSaLog2}!rocr::Addr::V2::Gfx11Lib@{rocr::Addr::V2::Gfx11Lib}}
+\doxysubsubsection{\texorpdfstring{m\_numSaLog2}{m\_numSaLog2}}
+{\footnotesize\ttfamily \mbox{\hyperlink{addrtypes_8h_af5a2be58a28390f9a494538f34054637}{UINT\+\_\+32}} rocr\+::\+Addr\+::\+V2\+::\+Gfx11\+Lib\+::m\+\_\+num\+Sa\+Log2\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classrocr_1_1Addr_1_1V2_1_1Gfx11Lib_a9874e0831a31259c1ed8850b297a19d4}\label{classrocr_1_1Addr_1_1V2_1_1Gfx11Lib_a9874e0831a31259c1ed8850b297a19d4}} 
+\index{rocr::Addr::V2::Gfx11Lib@{rocr::Addr::V2::Gfx11Lib}!m\_settings@{m\_settings}}
+\index{m\_settings@{m\_settings}!rocr::Addr::V2::Gfx11Lib@{rocr::Addr::V2::Gfx11Lib}}
+\doxysubsubsection{\texorpdfstring{m\_settings}{m\_settings}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structrocr_1_1Addr_1_1V2_1_1Gfx11ChipSettings}{Gfx11\+Chip\+Settings}} rocr\+::\+Addr\+::\+V2\+::\+Gfx11\+Lib\+::m\+\_\+settings\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classrocr_1_1Addr_1_1V2_1_1Gfx11Lib_a2f374c7c7d9ca61398ec6c0acb509738}\label{classrocr_1_1Addr_1_1V2_1_1Gfx11Lib_a2f374c7c7d9ca61398ec6c0acb509738}} 
+\index{rocr::Addr::V2::Gfx11Lib@{rocr::Addr::V2::Gfx11Lib}!SwizzleModeTable@{SwizzleModeTable}}
+\index{SwizzleModeTable@{SwizzleModeTable}!rocr::Addr::V2::Gfx11Lib@{rocr::Addr::V2::Gfx11Lib}}
+\doxysubsubsection{\texorpdfstring{SwizzleModeTable}{SwizzleModeTable}}
+{\footnotesize\ttfamily const \mbox{\hyperlink{unionrocr_1_1Addr_1_1V2_1_1SwizzleModeFlags}{Swizzle\+Mode\+Flags}} rocr\+::\+Addr\+::\+V2\+::\+Gfx11\+Lib\+::\+Swizzle\+Mode\+Table\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [private]}}
+
+\mbox{\Hypertarget{classrocr_1_1Addr_1_1V2_1_1Gfx11Lib_a966225810aed3a42d75a310a65ba76e3}\label{classrocr_1_1Addr_1_1V2_1_1Gfx11Lib_a966225810aed3a42d75a310a65ba76e3}} 
+\index{rocr::Addr::V2::Gfx11Lib@{rocr::Addr::V2::Gfx11Lib}!UnalignedDccType@{UnalignedDccType}}
+\index{UnalignedDccType@{UnalignedDccType}!rocr::Addr::V2::Gfx11Lib@{rocr::Addr::V2::Gfx11Lib}}
+\doxysubsubsection{\texorpdfstring{UnalignedDccType}{UnalignedDccType}}
+{\footnotesize\ttfamily const \mbox{\hyperlink{addrtypes_8h_af5a2be58a28390f9a494538f34054637}{UINT\+\_\+32}} rocr\+::\+Addr\+::\+V2\+::\+Gfx11\+Lib\+::\+Unaligned\+Dcc\+Type = 3\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [private]}}
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+src/image/addrlib/src/gfx11/\mbox{\hyperlink{gfx11addrlib_8h}{gfx11addrlib.\+h}}\item 
+src/image/addrlib/src/gfx11/\mbox{\hyperlink{gfx11addrlib_8cpp}{gfx11addrlib.\+cpp}}\end{DoxyCompactItemize}

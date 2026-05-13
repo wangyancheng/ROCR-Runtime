@@ -1,0 +1,117 @@
+\hypertarget{structhsa__ven__amd__loader__segment__descriptor__s}{}\doxysection{hsa\+\_\+ven\+\_\+amd\+\_\+loader\+\_\+segment\+\_\+descriptor\+\_\+s Struct Reference}
+\label{structhsa__ven__amd__loader__segment__descriptor__s}\index{hsa\_ven\_amd\_loader\_segment\_descriptor\_s@{hsa\_ven\_amd\_loader\_segment\_descriptor\_s}}
+
+
+Loaded memory segment descriptor.  
+
+
+
+
+{\ttfamily \#include $<$hsa\+\_\+ven\+\_\+amd\+\_\+loader.\+h$>$}
+
+
+
+Collaboration diagram for hsa\+\_\+ven\+\_\+amd\+\_\+loader\+\_\+segment\+\_\+descriptor\+\_\+s\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=266pt]{structhsa__ven__amd__loader__segment__descriptor__s__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{group__agentinfo_ga9ce217ef08e7d5e89c8e83ce7b6ef22b}{hsa\+\_\+agent\+\_\+t}} \mbox{\hyperlink{structhsa__ven__amd__loader__segment__descriptor__s_a5efdfc516d8131456dcfe8c6cf598725}{agent}}
+\item 
+\mbox{\hyperlink{group__executable_ga4a4281d636cb6048c4d7a015e1fa3baa}{hsa\+\_\+executable\+\_\+t}} \mbox{\hyperlink{structhsa__ven__amd__loader__segment__descriptor__s_a349e4889eff2ae1dbde1f0522aa5c8ef}{executable}}
+\item 
+\mbox{\hyperlink{inc_2hsa__ven__amd__loader_8h_a2c0f23446397bdafed69dacb5e48d94b}{hsa\+\_\+ven\+\_\+amd\+\_\+loader\+\_\+code\+\_\+object\+\_\+storage\+\_\+type\+\_\+t}} \mbox{\hyperlink{structhsa__ven__amd__loader__segment__descriptor__s_a13454a7cc3c73bf72a4652741100ac21}{code\+\_\+object\+\_\+storage\+\_\+type}}
+\item 
+const void $\ast$ \mbox{\hyperlink{structhsa__ven__amd__loader__segment__descriptor__s_a98b1a5e40724e57e8071d93412e57715}{code\+\_\+object\+\_\+storage\+\_\+base}}
+\item 
+size\+\_\+t \mbox{\hyperlink{structhsa__ven__amd__loader__segment__descriptor__s_a67002e53c4b22c521c25682bb5de2146}{code\+\_\+object\+\_\+storage\+\_\+size}}
+\item 
+size\+\_\+t \mbox{\hyperlink{structhsa__ven__amd__loader__segment__descriptor__s_a6c98bd7ac72d1d5481865a3d79e4aebc}{code\+\_\+object\+\_\+storage\+\_\+offset}}
+\item 
+const void $\ast$ \mbox{\hyperlink{structhsa__ven__amd__loader__segment__descriptor__s_a323b0b8de33f34d0c7a262c3e86d29c8}{segment\+\_\+base}}
+\item 
+size\+\_\+t \mbox{\hyperlink{structhsa__ven__amd__loader__segment__descriptor__s_a887a06c08de4a21baceaf07ea5c29c65}{segment\+\_\+size}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Loaded memory segment descriptor. 
+
+Loaded memory segment descriptor describes underlying loaded memory segment. Loaded memory segment is created/allocated by the executable during the loading of the code object that is backing underlying memory segment.
+
+The lifetime of underlying memory segment is limited by the lifetime of the executable that is managing underlying memory segment. 
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{structhsa__ven__amd__loader__segment__descriptor__s_a5efdfc516d8131456dcfe8c6cf598725}\label{structhsa__ven__amd__loader__segment__descriptor__s_a5efdfc516d8131456dcfe8c6cf598725}} 
+\index{hsa\_ven\_amd\_loader\_segment\_descriptor\_s@{hsa\_ven\_amd\_loader\_segment\_descriptor\_s}!agent@{agent}}
+\index{agent@{agent}!hsa\_ven\_amd\_loader\_segment\_descriptor\_s@{hsa\_ven\_amd\_loader\_segment\_descriptor\_s}}
+\doxysubsubsection{\texorpdfstring{agent}{agent}}
+{\footnotesize\ttfamily \mbox{\hyperlink{group__agentinfo_ga9ce217ef08e7d5e89c8e83ce7b6ef22b}{hsa\+\_\+agent\+\_\+t}} hsa\+\_\+ven\+\_\+amd\+\_\+loader\+\_\+segment\+\_\+descriptor\+\_\+s\+::agent}
+
+Agent underlying memory segment is allocated on. If the code object that is backing underlying memory segment is program code object, then 0. \mbox{\Hypertarget{structhsa__ven__amd__loader__segment__descriptor__s_a98b1a5e40724e57e8071d93412e57715}\label{structhsa__ven__amd__loader__segment__descriptor__s_a98b1a5e40724e57e8071d93412e57715}} 
+\index{hsa\_ven\_amd\_loader\_segment\_descriptor\_s@{hsa\_ven\_amd\_loader\_segment\_descriptor\_s}!code\_object\_storage\_base@{code\_object\_storage\_base}}
+\index{code\_object\_storage\_base@{code\_object\_storage\_base}!hsa\_ven\_amd\_loader\_segment\_descriptor\_s@{hsa\_ven\_amd\_loader\_segment\_descriptor\_s}}
+\doxysubsubsection{\texorpdfstring{code\_object\_storage\_base}{code\_object\_storage\_base}}
+{\footnotesize\ttfamily const void$\ast$ hsa\+\_\+ven\+\_\+amd\+\_\+loader\+\_\+segment\+\_\+descriptor\+\_\+s\+::code\+\_\+object\+\_\+storage\+\_\+base}
+
+If the storage type of the code object that is backing underlying memory segment is\+:
+\begin{DoxyItemize}
+\item HSA\+\_\+\+VEN\+\_\+\+AMD\+\_\+\+LOADER\+\_\+\+CODE\+\_\+\+OBJECT\+\_\+\+STORAGE\+\_\+\+TYPE\+\_\+\+NONE, then null;
+\item HSA\+\_\+\+VEN\+\_\+\+AMD\+\_\+\+LOADER\+\_\+\+CODE\+\_\+\+OBJECT\+\_\+\+STORAGE\+\_\+\+TYPE\+\_\+\+FILE, then null-\/terminated filepath to the code object;
+\item HSA\+\_\+\+VEN\+\_\+\+AMD\+\_\+\+LOADER\+\_\+\+CODE\+\_\+\+OBJECT\+\_\+\+STORAGE\+\_\+\+TYPE\+\_\+\+MEMORY, then host accessible pointer to the first byte of the code object. 
+\end{DoxyItemize}\mbox{\Hypertarget{structhsa__ven__amd__loader__segment__descriptor__s_a6c98bd7ac72d1d5481865a3d79e4aebc}\label{structhsa__ven__amd__loader__segment__descriptor__s_a6c98bd7ac72d1d5481865a3d79e4aebc}} 
+\index{hsa\_ven\_amd\_loader\_segment\_descriptor\_s@{hsa\_ven\_amd\_loader\_segment\_descriptor\_s}!code\_object\_storage\_offset@{code\_object\_storage\_offset}}
+\index{code\_object\_storage\_offset@{code\_object\_storage\_offset}!hsa\_ven\_amd\_loader\_segment\_descriptor\_s@{hsa\_ven\_amd\_loader\_segment\_descriptor\_s}}
+\doxysubsubsection{\texorpdfstring{code\_object\_storage\_offset}{code\_object\_storage\_offset}}
+{\footnotesize\ttfamily size\+\_\+t hsa\+\_\+ven\+\_\+amd\+\_\+loader\+\_\+segment\+\_\+descriptor\+\_\+s\+::code\+\_\+object\+\_\+storage\+\_\+offset}
+
+If the storage type of the code object that is backing underlying memory segment is\+:
+\begin{DoxyItemize}
+\item HSA\+\_\+\+VEN\+\_\+\+AMD\+\_\+\+LOADER\+\_\+\+CODE\+\_\+\+OBJECT\+\_\+\+STORAGE\+\_\+\+TYPE\+\_\+\+NONE, then 0;
+\item other, then offset, in bytes, from the beginning of the code object to the first byte in the code object data is copied from. 
+\end{DoxyItemize}\mbox{\Hypertarget{structhsa__ven__amd__loader__segment__descriptor__s_a67002e53c4b22c521c25682bb5de2146}\label{structhsa__ven__amd__loader__segment__descriptor__s_a67002e53c4b22c521c25682bb5de2146}} 
+\index{hsa\_ven\_amd\_loader\_segment\_descriptor\_s@{hsa\_ven\_amd\_loader\_segment\_descriptor\_s}!code\_object\_storage\_size@{code\_object\_storage\_size}}
+\index{code\_object\_storage\_size@{code\_object\_storage\_size}!hsa\_ven\_amd\_loader\_segment\_descriptor\_s@{hsa\_ven\_amd\_loader\_segment\_descriptor\_s}}
+\doxysubsubsection{\texorpdfstring{code\_object\_storage\_size}{code\_object\_storage\_size}}
+{\footnotesize\ttfamily size\+\_\+t hsa\+\_\+ven\+\_\+amd\+\_\+loader\+\_\+segment\+\_\+descriptor\+\_\+s\+::code\+\_\+object\+\_\+storage\+\_\+size}
+
+If the storage type of the code object that is backing underlying memory segment is\+:
+\begin{DoxyItemize}
+\item HSA\+\_\+\+VEN\+\_\+\+AMD\+\_\+\+LOADER\+\_\+\+CODE\+\_\+\+OBJECT\+\_\+\+STORAGE\+\_\+\+TYPE\+\_\+\+NONE, then 0;
+\item HSA\+\_\+\+VEN\+\_\+\+AMD\+\_\+\+LOADER\+\_\+\+CODE\+\_\+\+OBJECT\+\_\+\+STORAGE\+\_\+\+TYPE\+\_\+\+FILE, then the length of the filepath to the code object (including null-\/terminating character);
+\item HSA\+\_\+\+VEN\+\_\+\+AMD\+\_\+\+LOADER\+\_\+\+CODE\+\_\+\+OBJECT\+\_\+\+STORAGE\+\_\+\+TYPE\+\_\+\+MEMORY, then the size, in bytes, of the memory occupied by the code object. 
+\end{DoxyItemize}\mbox{\Hypertarget{structhsa__ven__amd__loader__segment__descriptor__s_a13454a7cc3c73bf72a4652741100ac21}\label{structhsa__ven__amd__loader__segment__descriptor__s_a13454a7cc3c73bf72a4652741100ac21}} 
+\index{hsa\_ven\_amd\_loader\_segment\_descriptor\_s@{hsa\_ven\_amd\_loader\_segment\_descriptor\_s}!code\_object\_storage\_type@{code\_object\_storage\_type}}
+\index{code\_object\_storage\_type@{code\_object\_storage\_type}!hsa\_ven\_amd\_loader\_segment\_descriptor\_s@{hsa\_ven\_amd\_loader\_segment\_descriptor\_s}}
+\doxysubsubsection{\texorpdfstring{code\_object\_storage\_type}{code\_object\_storage\_type}}
+{\footnotesize\ttfamily \mbox{\hyperlink{inc_2hsa__ven__amd__loader_8h_a2c0f23446397bdafed69dacb5e48d94b}{hsa\+\_\+ven\+\_\+amd\+\_\+loader\+\_\+code\+\_\+object\+\_\+storage\+\_\+type\+\_\+t}} hsa\+\_\+ven\+\_\+amd\+\_\+loader\+\_\+segment\+\_\+descriptor\+\_\+s\+::code\+\_\+object\+\_\+storage\+\_\+type}
+
+Storage type of the code object that is backing underlying memory segment. \mbox{\Hypertarget{structhsa__ven__amd__loader__segment__descriptor__s_a349e4889eff2ae1dbde1f0522aa5c8ef}\label{structhsa__ven__amd__loader__segment__descriptor__s_a349e4889eff2ae1dbde1f0522aa5c8ef}} 
+\index{hsa\_ven\_amd\_loader\_segment\_descriptor\_s@{hsa\_ven\_amd\_loader\_segment\_descriptor\_s}!executable@{executable}}
+\index{executable@{executable}!hsa\_ven\_amd\_loader\_segment\_descriptor\_s@{hsa\_ven\_amd\_loader\_segment\_descriptor\_s}}
+\doxysubsubsection{\texorpdfstring{executable}{executable}}
+{\footnotesize\ttfamily \mbox{\hyperlink{group__executable_ga4a4281d636cb6048c4d7a015e1fa3baa}{hsa\+\_\+executable\+\_\+t}} hsa\+\_\+ven\+\_\+amd\+\_\+loader\+\_\+segment\+\_\+descriptor\+\_\+s\+::executable}
+
+Executable that is managing this underlying memory segment. \mbox{\Hypertarget{structhsa__ven__amd__loader__segment__descriptor__s_a323b0b8de33f34d0c7a262c3e86d29c8}\label{structhsa__ven__amd__loader__segment__descriptor__s_a323b0b8de33f34d0c7a262c3e86d29c8}} 
+\index{hsa\_ven\_amd\_loader\_segment\_descriptor\_s@{hsa\_ven\_amd\_loader\_segment\_descriptor\_s}!segment\_base@{segment\_base}}
+\index{segment\_base@{segment\_base}!hsa\_ven\_amd\_loader\_segment\_descriptor\_s@{hsa\_ven\_amd\_loader\_segment\_descriptor\_s}}
+\doxysubsubsection{\texorpdfstring{segment\_base}{segment\_base}}
+{\footnotesize\ttfamily const void$\ast$ hsa\+\_\+ven\+\_\+amd\+\_\+loader\+\_\+segment\+\_\+descriptor\+\_\+s\+::segment\+\_\+base}
+
+Starting address of the underlying memory segment. \mbox{\Hypertarget{structhsa__ven__amd__loader__segment__descriptor__s_a887a06c08de4a21baceaf07ea5c29c65}\label{structhsa__ven__amd__loader__segment__descriptor__s_a887a06c08de4a21baceaf07ea5c29c65}} 
+\index{hsa\_ven\_amd\_loader\_segment\_descriptor\_s@{hsa\_ven\_amd\_loader\_segment\_descriptor\_s}!segment\_size@{segment\_size}}
+\index{segment\_size@{segment\_size}!hsa\_ven\_amd\_loader\_segment\_descriptor\_s@{hsa\_ven\_amd\_loader\_segment\_descriptor\_s}}
+\doxysubsubsection{\texorpdfstring{segment\_size}{segment\_size}}
+{\footnotesize\ttfamily size\+\_\+t hsa\+\_\+ven\+\_\+amd\+\_\+loader\+\_\+segment\+\_\+descriptor\+\_\+s\+::segment\+\_\+size}
+
+Size, in bytes, of the underlying memory segment. 
+
+The documentation for this struct was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+src/inc/\mbox{\hyperlink{inc_2hsa__ven__amd__loader_8h}{hsa\+\_\+ven\+\_\+amd\+\_\+loader.\+h}}\end{DoxyCompactItemize}

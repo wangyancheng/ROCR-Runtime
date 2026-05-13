@@ -1,0 +1,65 @@
+\hypertarget{signal_8h}{}\doxysection{src/core/inc/signal.h File Reference}
+\label{signal_8h}\index{src/core/inc/signal.h@{src/core/inc/signal.h}}
+{\ttfamily \#include $<$map$>$}\newline
+{\ttfamily \#include $<$functional$>$}\newline
+{\ttfamily \#include $<$memory$>$}\newline
+{\ttfamily \#include $<$vector$>$}\newline
+{\ttfamily \#include $<$utility$>$}\newline
+{\ttfamily \#include \char`\"{}hsakmt/hsakmt.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}core/common/shared.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}core/inc/checked.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}core/inc/exceptions.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}core/util/utils.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}core/util/locks.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}inc/amd\+\_\+hsa\+\_\+signal.\+h\char`\"{}}\newline
+Include dependency graph for signal.\+h\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{signal_8h__incl}
+\end{center}
+\end{figure}
+This graph shows which files directly or indirectly include this file\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{signal_8h__dep__incl}
+\end{center}
+\end{figure}
+\doxysubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{structstd_1_1less_3_01hsa__signal__t_01_4}{std\+::less$<$ hsa\+\_\+signal\+\_\+t $>$}}
+\item 
+struct \mbox{\hyperlink{structrocr_1_1core_1_1SharedSignal}{rocr\+::core\+::\+Shared\+Signal}}
+\begin{DoxyCompactList}\small\item\em ABI and object conversion struct for signals. May be shared between processes. \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{classrocr_1_1core_1_1SharedSignalPool__t}{rocr\+::core\+::\+Shared\+Signal\+Pool\+\_\+t}}
+\begin{DoxyCompactList}\small\item\em Pool class for \mbox{\hyperlink{structrocr_1_1core_1_1SharedSignal}{Shared\+Signal}} suitable for use with \mbox{\hyperlink{classrocr_1_1core_1_1Shared}{Shared}}. \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{classrocr_1_1core_1_1LocalSignal}{rocr\+::core\+::\+Local\+Signal}}
+\item 
+class \mbox{\hyperlink{classrocr_1_1core_1_1Signal}{rocr\+::core\+::\+Signal}}
+\begin{DoxyCompactList}\small\item\em An abstract base class which helps implement the public hsa\+\_\+signal\+\_\+t type (an opaque handle) and its associated APIs. At its core, signal uses a 32 or 64 bit value. This value can be waitied on or signaled atomically using specified memory ordering semantics. \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{classrocr_1_1core_1_1DoorbellSignal}{rocr\+::core\+::\+Doorbell\+Signal}}
+\begin{DoxyCompactList}\small\item\em Handle signal operations which are not for use on doorbells. \end{DoxyCompactList}\item 
+struct \mbox{\hyperlink{structrocr_1_1core_1_1hsa__signal__handle}{rocr\+::core\+::hsa\+\_\+signal\+\_\+handle}}
+\item 
+class \mbox{\hyperlink{classrocr_1_1core_1_1SignalGroup}{rocr\+::core\+::\+Signal\+Group}}
+\item 
+class \mbox{\hyperlink{classrocr_1_1core_1_1SignalDeleter}{rocr\+::core\+::\+Signal\+Deleter}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Namespaces}
+\begin{DoxyCompactItemize}
+\item 
+ \mbox{\hyperlink{namespacestd}{std}}
+\item 
+ \mbox{\hyperlink{namespacerocr}{rocr}}
+\item 
+ \mbox{\hyperlink{namespacerocr_1_1core}{rocr\+::core}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+using \mbox{\hyperlink{namespacerocr_1_1core_a6e717c0b3cb9239a37ef236c53b52796}{rocr\+::core\+::unique\+\_\+signal\+\_\+ptr}} = \+::std\+::unique\+\_\+ptr$<$ core\+::\+Signal, Signal\+Deleter $>$
+\end{DoxyCompactItemize}

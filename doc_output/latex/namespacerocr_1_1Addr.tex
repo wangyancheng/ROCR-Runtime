@@ -1,0 +1,1949 @@
+\hypertarget{namespacerocr_1_1Addr}{}\doxysection{rocr\+::Addr Namespace Reference}
+\label{namespacerocr_1_1Addr}\index{rocr::Addr@{rocr::Addr}}
+\doxysubsection*{Namespaces}
+\begin{DoxyCompactItemize}
+\item 
+ \mbox{\hyperlink{namespacerocr_1_1Addr_1_1V1}{V1}}
+\item 
+ \mbox{\hyperlink{namespacerocr_1_1Addr_1_1V2}{V2}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+union \mbox{\hyperlink{unionrocr_1_1Addr_1_1ConfigFlags}{Config\+Flags}}
+\begin{DoxyCompactList}\small\item\em This structure is used to set configuration flags. \end{DoxyCompactList}\item 
+union \mbox{\hyperlink{unionrocr_1_1Addr_1_1ComponentFlags}{Component\+Flags}}
+\item 
+struct \mbox{\hyperlink{structrocr_1_1Addr_1_1PixelFormatInfo}{Pixel\+Format\+Info}}
+\begin{DoxyCompactList}\small\item\em Per component info. \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{classrocr_1_1Addr_1_1ElemLib}{Elem\+Lib}}
+\begin{DoxyCompactList}\small\item\em This class contains asic indepentent element related attributes and operations. \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{classrocr_1_1Addr_1_1Lib}{Lib}}
+\begin{DoxyCompactList}\small\item\em This class contains asic independent address lib functionalities. \end{DoxyCompactList}\item 
+struct \mbox{\hyperlink{structrocr_1_1Addr_1_1Client}{Client}}
+\begin{DoxyCompactList}\small\item\em This structure contains client specific data. \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{classrocr_1_1Addr_1_1Object}{Object}}
+\begin{DoxyCompactList}\small\item\em This class is the base class for all ADDR class objects. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Enumerations}
+\begin{DoxyCompactItemize}
+\item 
+enum \mbox{\hyperlink{namespacerocr_1_1Addr_a9baa6f324df4a9cb3c4a61f6e6af6b09}{Chip\+Family}} \{ \newline
+\mbox{\hyperlink{namespacerocr_1_1Addr_a9baa6f324df4a9cb3c4a61f6e6af6b09a77a77e3d2ea165df0eec658330235648}{ADDR\+\_\+\+CHIP\+\_\+\+FAMILY\+\_\+\+IVLD}}
+, \mbox{\hyperlink{namespacerocr_1_1Addr_a9baa6f324df4a9cb3c4a61f6e6af6b09ada5df8b8bde09b914f57506465c16f6f}{ADDR\+\_\+\+CHIP\+\_\+\+FAMILY\+\_\+\+R6\+XX}}
+, \mbox{\hyperlink{namespacerocr_1_1Addr_a9baa6f324df4a9cb3c4a61f6e6af6b09ac4069c0ddb53563362da584c6b9873c7}{ADDR\+\_\+\+CHIP\+\_\+\+FAMILY\+\_\+\+R7\+XX}}
+, \mbox{\hyperlink{namespacerocr_1_1Addr_a9baa6f324df4a9cb3c4a61f6e6af6b09a907ca2535f0863b0c726c067d0ae69fb}{ADDR\+\_\+\+CHIP\+\_\+\+FAMILY\+\_\+\+R8\+XX}}
+, \newline
+\mbox{\hyperlink{namespacerocr_1_1Addr_a9baa6f324df4a9cb3c4a61f6e6af6b09ab9593a21926e964357cea451425276c8}{ADDR\+\_\+\+CHIP\+\_\+\+FAMILY\+\_\+\+NI}}
+, \mbox{\hyperlink{namespacerocr_1_1Addr_a9baa6f324df4a9cb3c4a61f6e6af6b09ad69e83e709150bfb29a09d1b1aa696f1}{ADDR\+\_\+\+CHIP\+\_\+\+FAMILY\+\_\+\+SI}}
+, \mbox{\hyperlink{namespacerocr_1_1Addr_a9baa6f324df4a9cb3c4a61f6e6af6b09afad118409992ebb6ecb913f1035e362b}{ADDR\+\_\+\+CHIP\+\_\+\+FAMILY\+\_\+\+CI}}
+, \mbox{\hyperlink{namespacerocr_1_1Addr_a9baa6f324df4a9cb3c4a61f6e6af6b09a671d4ea5a903c5181444c369e436b211}{ADDR\+\_\+\+CHIP\+\_\+\+FAMILY\+\_\+\+VI}}
+, \newline
+\mbox{\hyperlink{namespacerocr_1_1Addr_a9baa6f324df4a9cb3c4a61f6e6af6b09a1781656bf663b5e063cee1765cbec5c2}{ADDR\+\_\+\+CHIP\+\_\+\+FAMILY\+\_\+\+AI}}
+, \mbox{\hyperlink{namespacerocr_1_1Addr_a9baa6f324df4a9cb3c4a61f6e6af6b09a18a6c058f7da6521c5ca104cc845f03e}{ADDR\+\_\+\+CHIP\+\_\+\+FAMILY\+\_\+\+NAVI}}
+ \}
+\begin{DoxyCompactList}\small\item\em Neutral enums that specifies chip family. \end{DoxyCompactList}\item 
+enum \mbox{\hyperlink{namespacerocr_1_1Addr_afc359d0926a4e5d0adf7ee6bfaf2a94a}{Number\+Type}} \{ \newline
+\mbox{\hyperlink{namespacerocr_1_1Addr_afc359d0926a4e5d0adf7ee6bfaf2a94aa953e04fa33ddc720d0bdbb9e169d98c2}{ADDR\+\_\+\+NO\+\_\+\+NUMBER}}
+, \mbox{\hyperlink{namespacerocr_1_1Addr_afc359d0926a4e5d0adf7ee6bfaf2a94aac7b5ada128ea0bf5bf72cf74e084a468}{ADDR\+\_\+\+EPSILON}}
+, \mbox{\hyperlink{namespacerocr_1_1Addr_afc359d0926a4e5d0adf7ee6bfaf2a94aa490805c36048236b5e082b3908631a26}{ADDR\+\_\+\+ZERO}}
+, \mbox{\hyperlink{namespacerocr_1_1Addr_afc359d0926a4e5d0adf7ee6bfaf2a94aa53258e37cc0f5b6bd6e55365fd24a2a0}{ADDR\+\_\+\+ONE}}
+, \newline
+\mbox{\hyperlink{namespacerocr_1_1Addr_afc359d0926a4e5d0adf7ee6bfaf2a94aa94a3dff67f389394d54f17eb3e75dfba}{ADDR\+\_\+\+UNORM}}
+, \mbox{\hyperlink{namespacerocr_1_1Addr_afc359d0926a4e5d0adf7ee6bfaf2a94aae07901f8476f2e8f456b86bde81451fe}{ADDR\+\_\+\+SNORM}}
+, \mbox{\hyperlink{namespacerocr_1_1Addr_afc359d0926a4e5d0adf7ee6bfaf2a94aa303e2e13a09d5c8e34e2168b44e01f13}{ADDR\+\_\+\+GAMMA}}
+, \mbox{\hyperlink{namespacerocr_1_1Addr_afc359d0926a4e5d0adf7ee6bfaf2a94aaed7880d6879a37186843e6f1e9964800}{ADDR\+\_\+\+UNORM\+\_\+\+R5\+XXRB}}
+, \newline
+\mbox{\hyperlink{namespacerocr_1_1Addr_afc359d0926a4e5d0adf7ee6bfaf2a94aac0362b6c3f5e78dc9050fd2f23f490c7}{ADDR\+\_\+\+SNORM\+\_\+\+R5\+XXRB}}
+, \mbox{\hyperlink{namespacerocr_1_1Addr_afc359d0926a4e5d0adf7ee6bfaf2a94aa058e48cbf55754ec5357f1cb257a27b1}{ADDR\+\_\+\+GAMMA\+\_\+\+R5\+XXRB}}
+, \mbox{\hyperlink{namespacerocr_1_1Addr_afc359d0926a4e5d0adf7ee6bfaf2a94aab7b89739c0f76e1170a24d8ba86d9442}{ADDR\+\_\+\+UNORM\+\_\+\+R5\+XXBC}}
+, \mbox{\hyperlink{namespacerocr_1_1Addr_afc359d0926a4e5d0adf7ee6bfaf2a94aa55ba26f6f57d672e6bd2ce84bed7b0ea}{ADDR\+\_\+\+SNORM\+\_\+\+R5\+XXBC}}
+, \newline
+\mbox{\hyperlink{namespacerocr_1_1Addr_afc359d0926a4e5d0adf7ee6bfaf2a94aa8e333a97fa678f1e73c0b3b09eea7a57}{ADDR\+\_\+\+GAMMA\+\_\+\+R5\+XXBC}}
+, \mbox{\hyperlink{namespacerocr_1_1Addr_afc359d0926a4e5d0adf7ee6bfaf2a94aac3bbbeee6c1bdcd02ef53bba46a822ab}{ADDR\+\_\+\+UNORM\+\_\+\+R6\+XX}}
+, \mbox{\hyperlink{namespacerocr_1_1Addr_afc359d0926a4e5d0adf7ee6bfaf2a94aae17c7ab40e4f29f6ad37b77179acbab3}{ADDR\+\_\+\+UNORM\+\_\+\+R6\+XXDB}}
+, \mbox{\hyperlink{namespacerocr_1_1Addr_afc359d0926a4e5d0adf7ee6bfaf2a94aa4aafec453b3502a56fc062d3d8fe8371}{ADDR\+\_\+\+SNORM\+\_\+\+R6\+XX}}
+, \newline
+\mbox{\hyperlink{namespacerocr_1_1Addr_afc359d0926a4e5d0adf7ee6bfaf2a94aac800d1e56fb5175a8abdf7df334348a0}{ADDR\+\_\+\+GAMMA8\+\_\+\+R6\+XX}}
+, \mbox{\hyperlink{namespacerocr_1_1Addr_afc359d0926a4e5d0adf7ee6bfaf2a94aa81fa56f190781e150e515384faeea5eb}{ADDR\+\_\+\+GAMMA8\+\_\+\+R7\+XX\+\_\+\+TP}}
+, \mbox{\hyperlink{namespacerocr_1_1Addr_afc359d0926a4e5d0adf7ee6bfaf2a94aa88fa43bf11b9de03c29dabbcabf2de8f}{ADDR\+\_\+\+U4\+FLOATC}}
+, \mbox{\hyperlink{namespacerocr_1_1Addr_afc359d0926a4e5d0adf7ee6bfaf2a94aa1d06ae54be6c44cc477c55594a2916f0}{ADDR\+\_\+\+GAMMA\+\_\+4\+SEG}}
+, \newline
+\mbox{\hyperlink{namespacerocr_1_1Addr_afc359d0926a4e5d0adf7ee6bfaf2a94aad1012bc6dac84f3598ad23a79823fa0c}{ADDR\+\_\+\+U0\+FIXED}}
+, \mbox{\hyperlink{namespacerocr_1_1Addr_afc359d0926a4e5d0adf7ee6bfaf2a94aa03c5a81d40e525dd44d249b865ab95c3}{ADDR\+\_\+\+USCALED}}
+, \mbox{\hyperlink{namespacerocr_1_1Addr_afc359d0926a4e5d0adf7ee6bfaf2a94aa41144eb049e9605cb06bf51eddf53387}{ADDR\+\_\+\+SSCALED}}
+, \mbox{\hyperlink{namespacerocr_1_1Addr_afc359d0926a4e5d0adf7ee6bfaf2a94aabce901ec8e6dfacf117239b83dbc28db}{ADDR\+\_\+\+USCALED\+\_\+\+R5\+XXRB}}
+, \newline
+\mbox{\hyperlink{namespacerocr_1_1Addr_afc359d0926a4e5d0adf7ee6bfaf2a94aae0803d69d8b8c821d0dd99ddb92b9489}{ADDR\+\_\+\+SSCALED\+\_\+\+R5\+XXRB}}
+, \mbox{\hyperlink{namespacerocr_1_1Addr_afc359d0926a4e5d0adf7ee6bfaf2a94aa82591639bc5e86e8e65750b71c5fb310}{ADDR\+\_\+\+UINT\+\_\+\+BITS}}
+, \mbox{\hyperlink{namespacerocr_1_1Addr_afc359d0926a4e5d0adf7ee6bfaf2a94aad2cc97db6b717d9395d2a7ca58ec0073}{ADDR\+\_\+\+SINT\+\_\+\+BITS}}
+, \mbox{\hyperlink{namespacerocr_1_1Addr_afc359d0926a4e5d0adf7ee6bfaf2a94aadd673dad461f5d52994f4880c1947f91}{ADDR\+\_\+\+UINTBITS}}
+, \newline
+\mbox{\hyperlink{namespacerocr_1_1Addr_afc359d0926a4e5d0adf7ee6bfaf2a94aa20b7249a9c7de32a31468ea2fffd59ac}{ADDR\+\_\+\+SINTBITS}}
+, \mbox{\hyperlink{namespacerocr_1_1Addr_afc359d0926a4e5d0adf7ee6bfaf2a94aad86836e95961f5c3f3ef3c529cbcff37}{ADDR\+\_\+\+S8\+FLOAT}}
+, \mbox{\hyperlink{namespacerocr_1_1Addr_afc359d0926a4e5d0adf7ee6bfaf2a94aa1d747caa524b5c9a7410059804c53648}{ADDR\+\_\+\+S8\+FLOAT32}}
+, \mbox{\hyperlink{namespacerocr_1_1Addr_afc359d0926a4e5d0adf7ee6bfaf2a94aacd17dcbd0a2b302c7d6cd6278ddd3d46}{ADDR\+\_\+\+S5\+FLOAT}}
+, \newline
+\mbox{\hyperlink{namespacerocr_1_1Addr_afc359d0926a4e5d0adf7ee6bfaf2a94aa67b502aca9f2c25e573992f010ba982d}{ADDR\+\_\+\+S5\+FLOATM}}
+, \mbox{\hyperlink{namespacerocr_1_1Addr_afc359d0926a4e5d0adf7ee6bfaf2a94aa3cddea2056878b50bfc2ff88754c8b03}{ADDR\+\_\+\+U5\+FLOAT}}
+, \mbox{\hyperlink{namespacerocr_1_1Addr_afc359d0926a4e5d0adf7ee6bfaf2a94aa55d477ab44ca3999dc6401c5a7357a65}{ADDR\+\_\+\+U3\+FLOATM}}
+, \mbox{\hyperlink{namespacerocr_1_1Addr_afc359d0926a4e5d0adf7ee6bfaf2a94aa86449859335d8e3efb8e96b4d82590c3}{ADDR\+\_\+\+S5\+FIXED}}
+, \newline
+\mbox{\hyperlink{namespacerocr_1_1Addr_afc359d0926a4e5d0adf7ee6bfaf2a94aa0ff022cecc515d91b8acae16d26d5bc4}{ADDR\+\_\+\+END\+\_\+\+NUMBER}}
+ \}
+\item 
+enum \mbox{\hyperlink{namespacerocr_1_1Addr_a99d88f693437a549495a2b094146c100}{Elem\+Mode}} \{ \newline
+\mbox{\hyperlink{namespacerocr_1_1Addr_a99d88f693437a549495a2b094146c100a4f5b63f8f5ed10ed8aeb70b1b62a4662}{ADDR\+\_\+\+ROUND\+\_\+\+BY\+\_\+\+HALF}}
+, \mbox{\hyperlink{namespacerocr_1_1Addr_a99d88f693437a549495a2b094146c100a744ff791d785ce47644613e57f3a0568}{ADDR\+\_\+\+ROUND\+\_\+\+TRUNCATE}}
+, \mbox{\hyperlink{namespacerocr_1_1Addr_a99d88f693437a549495a2b094146c100a44cafd2937bde1757c82a3a8861a1061}{ADDR\+\_\+\+ROUND\+\_\+\+DITHER}}
+, \mbox{\hyperlink{namespacerocr_1_1Addr_a99d88f693437a549495a2b094146c100a1e6cfce15b98f75866bbbf06cef5674f}{ADDR\+\_\+\+UNCOMPRESSED}}
+, \newline
+\mbox{\hyperlink{namespacerocr_1_1Addr_a99d88f693437a549495a2b094146c100a5efcc2be4204d2b34373741dee347558}{ADDR\+\_\+\+EXPANDED}}
+, \mbox{\hyperlink{namespacerocr_1_1Addr_a99d88f693437a549495a2b094146c100a61912068faba9d72b297f5b5cce1e8b4}{ADDR\+\_\+\+PACKED\+\_\+\+STD}}
+, \mbox{\hyperlink{namespacerocr_1_1Addr_a99d88f693437a549495a2b094146c100a00d72673f9e6f579de859bac39139219}{ADDR\+\_\+\+PACKED\+\_\+\+REV}}
+, \mbox{\hyperlink{namespacerocr_1_1Addr_a99d88f693437a549495a2b094146c100a7680fbc1350a577292ecb03c0e888b86}{ADDR\+\_\+\+PACKED\+\_\+\+GBGR}}
+, \newline
+\mbox{\hyperlink{namespacerocr_1_1Addr_a99d88f693437a549495a2b094146c100a8cf8fe95f16aa73bbc70f82a5f4c1802}{ADDR\+\_\+\+PACKED\+\_\+\+BGRG}}
+, \mbox{\hyperlink{namespacerocr_1_1Addr_a99d88f693437a549495a2b094146c100ab9eab607b939bfecea20215fac06dc19}{ADDR\+\_\+\+PACKED\+\_\+\+BC1}}
+, \mbox{\hyperlink{namespacerocr_1_1Addr_a99d88f693437a549495a2b094146c100a67a2ee042ad8ee1851698cc491270844}{ADDR\+\_\+\+PACKED\+\_\+\+BC2}}
+, \mbox{\hyperlink{namespacerocr_1_1Addr_a99d88f693437a549495a2b094146c100a2ca14375a059a8018cab5d3aaf641ed8}{ADDR\+\_\+\+PACKED\+\_\+\+BC3}}
+, \newline
+\mbox{\hyperlink{namespacerocr_1_1Addr_a99d88f693437a549495a2b094146c100a8001fee35895250606b060181145447f}{ADDR\+\_\+\+PACKED\+\_\+\+BC4}}
+, \mbox{\hyperlink{namespacerocr_1_1Addr_a99d88f693437a549495a2b094146c100a7f195c11948c27230cccf2a9dee53a6a}{ADDR\+\_\+\+PACKED\+\_\+\+BC5}}
+, \mbox{\hyperlink{namespacerocr_1_1Addr_a99d88f693437a549495a2b094146c100ac6789afc13da067348cf810ecc53e9ea}{ADDR\+\_\+\+PACKED\+\_\+\+ETC2\+\_\+64\+BPP}}
+, \mbox{\hyperlink{namespacerocr_1_1Addr_a99d88f693437a549495a2b094146c100aeddcd0625cab74f92c87185131d6e30f}{ADDR\+\_\+\+PACKED\+\_\+\+ETC2\+\_\+128\+BPP}}
+, \newline
+\mbox{\hyperlink{namespacerocr_1_1Addr_a99d88f693437a549495a2b094146c100a53e418933a5c70a38a655cb0f61d4c44}{ADDR\+\_\+\+PACKED\+\_\+\+ASTC}}
+, \mbox{\hyperlink{namespacerocr_1_1Addr_a99d88f693437a549495a2b094146c100a93ebbe1c979522a17104eca614a898d8}{ADDR\+\_\+\+ZPLANE\+\_\+\+R5\+XX}}
+, \mbox{\hyperlink{namespacerocr_1_1Addr_a99d88f693437a549495a2b094146c100a136e2d3265991c2368896f77d69593eb}{ADDR\+\_\+\+ZPLANE\+\_\+\+R6\+XX}}
+, \mbox{\hyperlink{namespacerocr_1_1Addr_a99d88f693437a549495a2b094146c100af5d06c9dc10816c7e13a95c67902dd5d}{ADDR\+\_\+\+END\+\_\+\+ELEMENT}}
+ \}
+\item 
+enum \mbox{\hyperlink{namespacerocr_1_1Addr_acbe90a63826f958f0fcadd37f3a99e0a}{Depth\+Planar\+Type}} \{ \mbox{\hyperlink{namespacerocr_1_1Addr_acbe90a63826f958f0fcadd37f3a99e0aa5739392a7508900af20ded18ccfaf3fa}{ADDR\+\_\+\+DEPTH\+\_\+\+PLANAR\+\_\+\+NONE}} = 0
+, \mbox{\hyperlink{namespacerocr_1_1Addr_acbe90a63826f958f0fcadd37f3a99e0aa694fa16d90e5d852209a2bf2a08dc1eb}{ADDR\+\_\+\+DEPTH\+\_\+\+PLANAR\+\_\+\+R600}} = 1
+, \mbox{\hyperlink{namespacerocr_1_1Addr_acbe90a63826f958f0fcadd37f3a99e0aae69277e356d83e1ff13fd818ae3cbc00}{ADDR\+\_\+\+DEPTH\+\_\+\+PLANAR\+\_\+\+R800}} = 2
+ \}
+\item 
+enum \mbox{\hyperlink{namespacerocr_1_1Addr_ad4480aec2572dd57f56f34f91571c74a}{Pipe\+Interleave}} \{ \mbox{\hyperlink{namespacerocr_1_1Addr_ad4480aec2572dd57f56f34f91571c74aa184a3cc3d9343f115b3838a53e1cbfd7}{ADDR\+\_\+\+PIPEINTERLEAVE\+\_\+256B}} = 256
+, \mbox{\hyperlink{namespacerocr_1_1Addr_ad4480aec2572dd57f56f34f91571c74aaca656a43abbccc3bd0dbc02f1bad4fce}{ADDR\+\_\+\+PIPEINTERLEAVE\+\_\+512B}} = 512
+, \mbox{\hyperlink{namespacerocr_1_1Addr_ad4480aec2572dd57f56f34f91571c74aa2ec91f1be9528fffcb018d9ed80292e3}{ADDR\+\_\+\+PIPEINTERLEAVE\+\_\+1\+KB}} = 1024
+, \mbox{\hyperlink{namespacerocr_1_1Addr_ad4480aec2572dd57f56f34f91571c74aadc5f711f89a161c75868985dfa413220}{ADDR\+\_\+\+PIPEINTERLEAVE\+\_\+2\+KB}} = 2048
+ \}
+\begin{DoxyCompactList}\small\item\em Neutral enums that define pipeinterleave. \end{DoxyCompactList}\item 
+enum \mbox{\hyperlink{namespacerocr_1_1Addr_adfce313f4524500d0a9fd0db4a50e555}{Row\+Size}} \{ \mbox{\hyperlink{namespacerocr_1_1Addr_adfce313f4524500d0a9fd0db4a50e555a7b36490995e736f0fa1abca0e3d216e1}{ADDR\+\_\+\+ROWSIZE\+\_\+1\+KB}} = 1024
+, \mbox{\hyperlink{namespacerocr_1_1Addr_adfce313f4524500d0a9fd0db4a50e555ae471ea7a747b0a1d5ab8f1e3cf22084d}{ADDR\+\_\+\+ROWSIZE\+\_\+2\+KB}} = 2048
+, \mbox{\hyperlink{namespacerocr_1_1Addr_adfce313f4524500d0a9fd0db4a50e555a2619aafef2142cac95e24ff8410e2e66}{ADDR\+\_\+\+ROWSIZE\+\_\+4\+KB}} = 4096
+, \mbox{\hyperlink{namespacerocr_1_1Addr_adfce313f4524500d0a9fd0db4a50e555a2238333ec381c9846f0b2535f8526202}{ADDR\+\_\+\+ROWSIZE\+\_\+8\+KB}} = 8192
+ \}
+\begin{DoxyCompactList}\small\item\em Neutral enums that define DRAM row size. \end{DoxyCompactList}\item 
+enum \mbox{\hyperlink{namespacerocr_1_1Addr_a1929212eecda2740cdf72974c035aa10}{Bank\+Interleave}} \{ \mbox{\hyperlink{namespacerocr_1_1Addr_a1929212eecda2740cdf72974c035aa10a5acc729cf364a2ae43a692dc47799746}{ADDR\+\_\+\+BANKINTERLEAVE\+\_\+1}} = 1
+, \mbox{\hyperlink{namespacerocr_1_1Addr_a1929212eecda2740cdf72974c035aa10a5f16c873244df1db22bf96ebcf3294a4}{ADDR\+\_\+\+BANKINTERLEAVE\+\_\+2}} = 2
+, \mbox{\hyperlink{namespacerocr_1_1Addr_a1929212eecda2740cdf72974c035aa10ae0f0fed467c598785cafe0fc278151f3}{ADDR\+\_\+\+BANKINTERLEAVE\+\_\+4}} = 4
+, \mbox{\hyperlink{namespacerocr_1_1Addr_a1929212eecda2740cdf72974c035aa10a31565c03b12c92a5ceb435f03363c325}{ADDR\+\_\+\+BANKINTERLEAVE\+\_\+8}} = 8
+ \}
+\begin{DoxyCompactList}\small\item\em Neutral enums that define bank interleave. \end{DoxyCompactList}\item 
+enum \mbox{\hyperlink{namespacerocr_1_1Addr_ae92e45c5549bbc87023a4ea976b607c9}{Shader\+Engine\+Tile\+Size}} \{ \mbox{\hyperlink{namespacerocr_1_1Addr_ae92e45c5549bbc87023a4ea976b607c9af447302115272b476a61f829a04d346d}{ADDR\+\_\+\+SE\+\_\+\+TILESIZE\+\_\+16}} = 16
+, \mbox{\hyperlink{namespacerocr_1_1Addr_ae92e45c5549bbc87023a4ea976b607c9ab0c639b7814fe80fc13eab2ca6848671}{ADDR\+\_\+\+SE\+\_\+\+TILESIZE\+\_\+32}} = 32
+ \}
+\begin{DoxyCompactList}\small\item\em Neutral enums that define shader engine tile size. \end{DoxyCompactList}\item 
+enum \mbox{\hyperlink{namespacerocr_1_1Addr_abf27b79b3a48f0155935cadd527bd9d9}{Bank\+Swap\+Size}} \{ \mbox{\hyperlink{namespacerocr_1_1Addr_abf27b79b3a48f0155935cadd527bd9d9a46254724ca295752bcc526e8ea1227c5}{ADDR\+\_\+\+BANKSWAP\+\_\+128B}} = 128
+, \mbox{\hyperlink{namespacerocr_1_1Addr_abf27b79b3a48f0155935cadd527bd9d9a3ce7767d8be54773017291839a8e345c}{ADDR\+\_\+\+BANKSWAP\+\_\+256B}} = 256
+, \mbox{\hyperlink{namespacerocr_1_1Addr_abf27b79b3a48f0155935cadd527bd9d9a5ca6345606112b7cbc3a7a06f1874fc0}{ADDR\+\_\+\+BANKSWAP\+\_\+512B}} = 512
+, \mbox{\hyperlink{namespacerocr_1_1Addr_abf27b79b3a48f0155935cadd527bd9d9a46736d9a9faac022659e5fc688f7b958}{ADDR\+\_\+\+BANKSWAP\+\_\+1\+KB}} = 1024
+ \}
+\begin{DoxyCompactList}\small\item\em Neutral enums that define bank swap size. \end{DoxyCompactList}\item 
+enum \mbox{\hyperlink{namespacerocr_1_1Addr_ac60856c92488f70830a646d7e43e39fc}{Num\+Max\+Compressed\+Fragments\+Config}} \{ \mbox{\hyperlink{namespacerocr_1_1Addr_ac60856c92488f70830a646d7e43e39fca3ea47504b72c4ab3413a697eda708021}{ADDR\+\_\+\+CONFIG\+\_\+1\+\_\+\+MAX\+\_\+\+COMPRESSED\+\_\+\+FRAGMENTS}} = 0x00000000
+, \mbox{\hyperlink{namespacerocr_1_1Addr_ac60856c92488f70830a646d7e43e39fca95cf6b235902b8e8403c65de92699473}{ADDR\+\_\+\+CONFIG\+\_\+2\+\_\+\+MAX\+\_\+\+COMPRESSED\+\_\+\+FRAGMENTS}} = 0x00000001
+, \mbox{\hyperlink{namespacerocr_1_1Addr_ac60856c92488f70830a646d7e43e39fcac8321fe539aae5f643ad92f6704b67e4}{ADDR\+\_\+\+CONFIG\+\_\+4\+\_\+\+MAX\+\_\+\+COMPRESSED\+\_\+\+FRAGMENTS}} = 0x00000002
+, \mbox{\hyperlink{namespacerocr_1_1Addr_ac60856c92488f70830a646d7e43e39fcabfc67e7b5fe3b66dae4ad32a9f2833b6}{ADDR\+\_\+\+CONFIG\+\_\+8\+\_\+\+MAX\+\_\+\+COMPRESSED\+\_\+\+FRAGMENTS}} = 0x00000003
+ \}
+\begin{DoxyCompactList}\small\item\em Enums that define max compressed fragments config. \end{DoxyCompactList}\item 
+enum \mbox{\hyperlink{namespacerocr_1_1Addr_a8d26f0c323acaf95b3acf9323f1b561d}{Num\+Pipes\+Config}} \{ \newline
+\mbox{\hyperlink{namespacerocr_1_1Addr_a8d26f0c323acaf95b3acf9323f1b561daa4d3431134e19a5fb4ffbacd3b490202}{ADDR\+\_\+\+CONFIG\+\_\+1\+\_\+\+PIPE}} = 0x00000000
+, \mbox{\hyperlink{namespacerocr_1_1Addr_a8d26f0c323acaf95b3acf9323f1b561daad49e53a546d8d78fd0c859193e7c319}{ADDR\+\_\+\+CONFIG\+\_\+2\+\_\+\+PIPE}} = 0x00000001
+, \mbox{\hyperlink{namespacerocr_1_1Addr_a8d26f0c323acaf95b3acf9323f1b561da55b3992e7234acfd443c3a6a369c04a2}{ADDR\+\_\+\+CONFIG\+\_\+4\+\_\+\+PIPE}} = 0x00000002
+, \mbox{\hyperlink{namespacerocr_1_1Addr_a8d26f0c323acaf95b3acf9323f1b561daa3f0e0748593da225dfcef6841d0a1dd}{ADDR\+\_\+\+CONFIG\+\_\+8\+\_\+\+PIPE}} = 0x00000003
+, \newline
+\mbox{\hyperlink{namespacerocr_1_1Addr_a8d26f0c323acaf95b3acf9323f1b561da6bb6fcf4d19dba43ba0ea7da304c7e12}{ADDR\+\_\+\+CONFIG\+\_\+16\+\_\+\+PIPE}} = 0x00000004
+, \mbox{\hyperlink{namespacerocr_1_1Addr_a8d26f0c323acaf95b3acf9323f1b561dafc7b36eea1d8bcdd092814272432204d}{ADDR\+\_\+\+CONFIG\+\_\+32\+\_\+\+PIPE}} = 0x00000005
+, \mbox{\hyperlink{namespacerocr_1_1Addr_a8d26f0c323acaf95b3acf9323f1b561dac0df0f2f410bcf7dcb214735ca94084e}{ADDR\+\_\+\+CONFIG\+\_\+64\+\_\+\+PIPE}} = 0x00000006
+ \}
+\begin{DoxyCompactList}\small\item\em Enums that define num pipes config. \end{DoxyCompactList}\item 
+enum \mbox{\hyperlink{namespacerocr_1_1Addr_adcb6b92d5b579ec2cefb56afe259292b}{Num\+Banks\+Config}} \{ \newline
+\mbox{\hyperlink{namespacerocr_1_1Addr_adcb6b92d5b579ec2cefb56afe259292ba77925ef3948409cf24e14aef957b0e0e}{ADDR\+\_\+\+CONFIG\+\_\+1\+\_\+\+BANK}} = 0x00000000
+, \mbox{\hyperlink{namespacerocr_1_1Addr_adcb6b92d5b579ec2cefb56afe259292baede79725bc8fab31ae2bc1ed40354866}{ADDR\+\_\+\+CONFIG\+\_\+2\+\_\+\+BANK}} = 0x00000001
+, \mbox{\hyperlink{namespacerocr_1_1Addr_adcb6b92d5b579ec2cefb56afe259292ba8283a3b4053c130a84476d6151d7c88a}{ADDR\+\_\+\+CONFIG\+\_\+4\+\_\+\+BANK}} = 0x00000002
+, \mbox{\hyperlink{namespacerocr_1_1Addr_adcb6b92d5b579ec2cefb56afe259292ba8b2ada0cfa7a05f5553f45a4011bc94d}{ADDR\+\_\+\+CONFIG\+\_\+8\+\_\+\+BANK}} = 0x00000003
+, \newline
+\mbox{\hyperlink{namespacerocr_1_1Addr_adcb6b92d5b579ec2cefb56afe259292bab89cc1c68daca7e1e979b7c03714a282}{ADDR\+\_\+\+CONFIG\+\_\+16\+\_\+\+BANK}} = 0x00000004
+ \}
+\begin{DoxyCompactList}\small\item\em Enums that define num banks config. \end{DoxyCompactList}\item 
+enum \mbox{\hyperlink{namespacerocr_1_1Addr_a42743f276070681400405bcff023ce04}{Num\+Rb\+Per\+Shader\+Engine\+Config}} \{ \mbox{\hyperlink{namespacerocr_1_1Addr_a42743f276070681400405bcff023ce04a83712f94f68ffc7cc01800f3795e5ede}{ADDR\+\_\+\+CONFIG\+\_\+1\+\_\+\+RB\+\_\+\+PER\+\_\+\+SHADER\+\_\+\+ENGINE}} = 0x00000000
+, \mbox{\hyperlink{namespacerocr_1_1Addr_a42743f276070681400405bcff023ce04a45d6fe9434c4e6e60df161d032dbdafe}{ADDR\+\_\+\+CONFIG\+\_\+2\+\_\+\+RB\+\_\+\+PER\+\_\+\+SHADER\+\_\+\+ENGINE}} = 0x00000001
+, \mbox{\hyperlink{namespacerocr_1_1Addr_a42743f276070681400405bcff023ce04ac0b5ffb6884d12faffd5f0c09329b4dc}{ADDR\+\_\+\+CONFIG\+\_\+4\+\_\+\+RB\+\_\+\+PER\+\_\+\+SHADER\+\_\+\+ENGINE}} = 0x00000002
+ \}
+\begin{DoxyCompactList}\small\item\em Enums that define num rb per shader engine config. \end{DoxyCompactList}\item 
+enum \mbox{\hyperlink{namespacerocr_1_1Addr_ac83c6fde1f10158a47137ac4b9bbf95b}{Num\+Shader\+Engines\+Config}} \{ \mbox{\hyperlink{namespacerocr_1_1Addr_ac83c6fde1f10158a47137ac4b9bbf95baace997ac5ffe0827453668d9e9c34cfe}{ADDR\+\_\+\+CONFIG\+\_\+1\+\_\+\+SHADER\+\_\+\+ENGINE}} = 0x00000000
+, \mbox{\hyperlink{namespacerocr_1_1Addr_ac83c6fde1f10158a47137ac4b9bbf95ba6024134818bc758e59f69e2e96e100c9}{ADDR\+\_\+\+CONFIG\+\_\+2\+\_\+\+SHADER\+\_\+\+ENGINE}} = 0x00000001
+, \mbox{\hyperlink{namespacerocr_1_1Addr_ac83c6fde1f10158a47137ac4b9bbf95ba22a1f2dee5e1a356874c216426235136}{ADDR\+\_\+\+CONFIG\+\_\+4\+\_\+\+SHADER\+\_\+\+ENGINE}} = 0x00000002
+, \mbox{\hyperlink{namespacerocr_1_1Addr_ac83c6fde1f10158a47137ac4b9bbf95bac24265adbf90b55bf9af917835b1bc1e}{ADDR\+\_\+\+CONFIG\+\_\+8\+\_\+\+SHADER\+\_\+\+ENGINE}} = 0x00000003
+ \}
+\begin{DoxyCompactList}\small\item\em Enums that define num shader engines config. \end{DoxyCompactList}\item 
+enum \mbox{\hyperlink{namespacerocr_1_1Addr_a680dc1c96a52a86705f2506f8a229937}{Pipe\+Interleave\+Size\+Config}} \{ \mbox{\hyperlink{namespacerocr_1_1Addr_a680dc1c96a52a86705f2506f8a229937a1fb80181c77a0ba097bd3c6393b18179}{ADDR\+\_\+\+CONFIG\+\_\+\+PIPE\+\_\+\+INTERLEAVE\+\_\+256B}} = 0x00000000
+, \mbox{\hyperlink{namespacerocr_1_1Addr_a680dc1c96a52a86705f2506f8a229937ad0726113a9f7a80b6ce4f46654a216ab}{ADDR\+\_\+\+CONFIG\+\_\+\+PIPE\+\_\+\+INTERLEAVE\+\_\+512B}} = 0x00000001
+, \mbox{\hyperlink{namespacerocr_1_1Addr_a680dc1c96a52a86705f2506f8a229937ac80c8a94950705eb35db34f3efa59eeb}{ADDR\+\_\+\+CONFIG\+\_\+\+PIPE\+\_\+\+INTERLEAVE\+\_\+1\+KB}} = 0x00000002
+, \mbox{\hyperlink{namespacerocr_1_1Addr_a680dc1c96a52a86705f2506f8a229937af89ce08fab589fbcc0c12b98aabc55af}{ADDR\+\_\+\+CONFIG\+\_\+\+PIPE\+\_\+\+INTERLEAVE\+\_\+2\+KB}} = 0x00000003
+ \}
+\begin{DoxyCompactList}\small\item\em Enums that define pipe interleave size config. \end{DoxyCompactList}\item 
+enum \mbox{\hyperlink{namespacerocr_1_1Addr_acecdf369ec165e5ffa61ed827c5ed7fb}{Row\+Size\+Config}} \{ \mbox{\hyperlink{namespacerocr_1_1Addr_acecdf369ec165e5ffa61ed827c5ed7fba2336d2780d1aac85244c9705f41ee72b}{ADDR\+\_\+\+CONFIG\+\_\+1\+KB\+\_\+\+ROW}} = 0x00000000
+, \mbox{\hyperlink{namespacerocr_1_1Addr_acecdf369ec165e5ffa61ed827c5ed7fbad65f4b854867b5664a323eb2b14d0966}{ADDR\+\_\+\+CONFIG\+\_\+2\+KB\+\_\+\+ROW}} = 0x00000001
+, \mbox{\hyperlink{namespacerocr_1_1Addr_acecdf369ec165e5ffa61ed827c5ed7fba3bd065391da9a006f7e9977349fd1647}{ADDR\+\_\+\+CONFIG\+\_\+4\+KB\+\_\+\+ROW}} = 0x00000002
+ \}
+\begin{DoxyCompactList}\small\item\em Enums that define row size config. \end{DoxyCompactList}\item 
+enum \mbox{\hyperlink{namespacerocr_1_1Addr_a4b102935935d20c9f36bbbbfddbe9d22}{Bank\+Interleave\+Size\+Config}} \{ \mbox{\hyperlink{namespacerocr_1_1Addr_a4b102935935d20c9f36bbbbfddbe9d22a6dddac01dee4414cc50cd914fb9f8d50}{ADDR\+\_\+\+CONFIG\+\_\+\+BANK\+\_\+\+INTERLEAVE\+\_\+1}} = 0x00000000
+, \mbox{\hyperlink{namespacerocr_1_1Addr_a4b102935935d20c9f36bbbbfddbe9d22a49b87f95ba02e12ba3966a167b20250c}{ADDR\+\_\+\+CONFIG\+\_\+\+BANK\+\_\+\+INTERLEAVE\+\_\+2}} = 0x00000001
+, \mbox{\hyperlink{namespacerocr_1_1Addr_a4b102935935d20c9f36bbbbfddbe9d22af17aab6cf7ba032bfa64493d5cdfd10c}{ADDR\+\_\+\+CONFIG\+\_\+\+BANK\+\_\+\+INTERLEAVE\+\_\+4}} = 0x00000002
+, \mbox{\hyperlink{namespacerocr_1_1Addr_a4b102935935d20c9f36bbbbfddbe9d22a81d55df1d698365ddce236e325509bf6}{ADDR\+\_\+\+CONFIG\+\_\+\+BANK\+\_\+\+INTERLEAVE\+\_\+8}} = 0x00000003
+ \}
+\begin{DoxyCompactList}\small\item\em Enums that define bank interleave size config. \end{DoxyCompactList}\item 
+enum \mbox{\hyperlink{namespacerocr_1_1Addr_a457dd834e5b79ed6374f877872439005}{Shader\+Engine\+Tile\+Size\+Config}} \{ \mbox{\hyperlink{namespacerocr_1_1Addr_a457dd834e5b79ed6374f877872439005af4bdcf7ecb6ca7401ed1a099f0ebba56}{ADDR\+\_\+\+CONFIG\+\_\+\+SE\+\_\+\+TILE\+\_\+16}} = 0x00000000
+, \mbox{\hyperlink{namespacerocr_1_1Addr_a457dd834e5b79ed6374f877872439005ae2f646c562660d35e798023f1493e9a8}{ADDR\+\_\+\+CONFIG\+\_\+\+SE\+\_\+\+TILE\+\_\+32}} = 0x00000001
+ \}
+\begin{DoxyCompactList}\small\item\em Enums that define engine tile size config. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+static \mbox{\hyperlink{addrtypes_8h_af5a2be58a28390f9a494538f34054637}{UINT\+\_\+32}} \mbox{\hyperlink{namespacerocr_1_1Addr_abedb7aa6bc52c41be6d71180848a7506}{Xor\+Reduce}} (\mbox{\hyperlink{addrtypes_8h_af5a2be58a28390f9a494538f34054637}{UINT\+\_\+32}} x, \mbox{\hyperlink{addrtypes_8h_af5a2be58a28390f9a494538f34054637}{UINT\+\_\+32}} number\+Of\+Bits)
+\begin{DoxyCompactList}\small\item\em Xor the right-\/side number\+Of\+Bits bits of x. \end{DoxyCompactList}\item 
+static \mbox{\hyperlink{addrtypes_8h_af5a2be58a28390f9a494538f34054637}{UINT\+\_\+32}} \mbox{\hyperlink{namespacerocr_1_1Addr_a6d7456ccf55cba9b6ce33956ce9c6d61}{Is\+Pow2}} (\mbox{\hyperlink{addrtypes_8h_af5a2be58a28390f9a494538f34054637}{UINT\+\_\+32}} dim)
+\begin{DoxyCompactList}\small\item\em Check if the size (UINT\+\_\+32) is pow 2. \end{DoxyCompactList}\item 
+static \mbox{\hyperlink{addrtypes_8h_ac4116bb9a5e80b5cb845d4f2674c160f}{UINT\+\_\+64}} \mbox{\hyperlink{namespacerocr_1_1Addr_a32f11d670c06b7b83b922043ff29f18a}{Is\+Pow2}} (\mbox{\hyperlink{addrtypes_8h_ac4116bb9a5e80b5cb845d4f2674c160f}{UINT\+\_\+64}} dim)
+\begin{DoxyCompactList}\small\item\em Check if the size (UINT\+\_\+64) is pow 2. \end{DoxyCompactList}\item 
+static \mbox{\hyperlink{addrtypes_8h_af5a2be58a28390f9a494538f34054637}{UINT\+\_\+32}} \mbox{\hyperlink{namespacerocr_1_1Addr_a29b8ae20a72f01357ff7212500234bb2}{Pow\+Two\+Align}} (\mbox{\hyperlink{addrtypes_8h_af5a2be58a28390f9a494538f34054637}{UINT\+\_\+32}} x, \mbox{\hyperlink{addrtypes_8h_af5a2be58a28390f9a494538f34054637}{UINT\+\_\+32}} align)
+\begin{DoxyCompactList}\small\item\em Align UINT\+\_\+32 \char`\"{}x\char`\"{} to \char`\"{}align\char`\"{} alignment, \char`\"{}align\char`\"{} should be power of 2. \end{DoxyCompactList}\item 
+static \mbox{\hyperlink{addrtypes_8h_ac4116bb9a5e80b5cb845d4f2674c160f}{UINT\+\_\+64}} \mbox{\hyperlink{namespacerocr_1_1Addr_a33768568b89fc95bd427aae0d3b2a44b}{Pow\+Two\+Align}} (\mbox{\hyperlink{addrtypes_8h_ac4116bb9a5e80b5cb845d4f2674c160f}{UINT\+\_\+64}} x, \mbox{\hyperlink{addrtypes_8h_ac4116bb9a5e80b5cb845d4f2674c160f}{UINT\+\_\+64}} align)
+\begin{DoxyCompactList}\small\item\em Align UINT\+\_\+64 \char`\"{}x\char`\"{} to \char`\"{}align\char`\"{} alignment, \char`\"{}align\char`\"{} should be power of 2. \end{DoxyCompactList}\item 
+static \mbox{\hyperlink{addrtypes_8h_af5a2be58a28390f9a494538f34054637}{UINT\+\_\+32}} \mbox{\hyperlink{namespacerocr_1_1Addr_a635f98d28d067d351bd28f71c33107ad}{Min}} (\mbox{\hyperlink{addrtypes_8h_af5a2be58a28390f9a494538f34054637}{UINT\+\_\+32}} value1, \mbox{\hyperlink{addrtypes_8h_af5a2be58a28390f9a494538f34054637}{UINT\+\_\+32}} value2)
+\begin{DoxyCompactList}\small\item\em Get the min value between two unsigned values. \end{DoxyCompactList}\item 
+static \mbox{\hyperlink{addrtypes_8h_adacc69c9db3b9adfc072b838ebf2bb0e}{INT\+\_\+32}} \mbox{\hyperlink{namespacerocr_1_1Addr_a492fef30d3bd49bb64dee773ecd5d0d6}{Min}} (\mbox{\hyperlink{addrtypes_8h_adacc69c9db3b9adfc072b838ebf2bb0e}{INT\+\_\+32}} value1, \mbox{\hyperlink{addrtypes_8h_adacc69c9db3b9adfc072b838ebf2bb0e}{INT\+\_\+32}} value2)
+\begin{DoxyCompactList}\small\item\em Get the min value between two signed values. \end{DoxyCompactList}\item 
+static \mbox{\hyperlink{addrtypes_8h_af5a2be58a28390f9a494538f34054637}{UINT\+\_\+32}} \mbox{\hyperlink{namespacerocr_1_1Addr_ad9ea8ddca9e41abb83f0e9aede4a49a3}{Max}} (\mbox{\hyperlink{addrtypes_8h_af5a2be58a28390f9a494538f34054637}{UINT\+\_\+32}} value1, \mbox{\hyperlink{addrtypes_8h_af5a2be58a28390f9a494538f34054637}{UINT\+\_\+32}} value2)
+\begin{DoxyCompactList}\small\item\em Get the max value between two unsigned values. \end{DoxyCompactList}\item 
+static \mbox{\hyperlink{addrtypes_8h_adacc69c9db3b9adfc072b838ebf2bb0e}{INT\+\_\+32}} \mbox{\hyperlink{namespacerocr_1_1Addr_ac36a8bb8c6411de53b86d7e292b6d8b0}{Max}} (\mbox{\hyperlink{addrtypes_8h_adacc69c9db3b9adfc072b838ebf2bb0e}{INT\+\_\+32}} value1, \mbox{\hyperlink{addrtypes_8h_adacc69c9db3b9adfc072b838ebf2bb0e}{INT\+\_\+32}} value2)
+\begin{DoxyCompactList}\small\item\em Get the max value between two signed values. \end{DoxyCompactList}\item 
+static \mbox{\hyperlink{addrtypes_8h_af5a2be58a28390f9a494538f34054637}{UINT\+\_\+32}} \mbox{\hyperlink{namespacerocr_1_1Addr_aaf7e32be5293d29917e9d7382dd6144d}{Round\+Up\+Quotient}} (\mbox{\hyperlink{addrtypes_8h_af5a2be58a28390f9a494538f34054637}{UINT\+\_\+32}} numerator, \mbox{\hyperlink{addrtypes_8h_af5a2be58a28390f9a494538f34054637}{UINT\+\_\+32}} denominator)
+\begin{DoxyCompactList}\small\item\em Divides two numbers, rounding up any remainder. \end{DoxyCompactList}\item 
+static \mbox{\hyperlink{addrtypes_8h_ac4116bb9a5e80b5cb845d4f2674c160f}{UINT\+\_\+64}} \mbox{\hyperlink{namespacerocr_1_1Addr_a144bf0d73b05319f1565001e0f9875ef}{Round\+Up\+Quotient}} (\mbox{\hyperlink{addrtypes_8h_ac4116bb9a5e80b5cb845d4f2674c160f}{UINT\+\_\+64}} numerator, \mbox{\hyperlink{addrtypes_8h_ac4116bb9a5e80b5cb845d4f2674c160f}{UINT\+\_\+64}} denominator)
+\begin{DoxyCompactList}\small\item\em Divides two numbers, rounding up any remainder. \end{DoxyCompactList}\item 
+static \mbox{\hyperlink{addrtypes_8h_af5a2be58a28390f9a494538f34054637}{UINT\+\_\+32}} \mbox{\hyperlink{namespacerocr_1_1Addr_a80b899a4d0cbea3f730ecc53dc4f5ce8}{Next\+Pow2}} (\mbox{\hyperlink{addrtypes_8h_af5a2be58a28390f9a494538f34054637}{UINT\+\_\+32}} dim)
+\begin{DoxyCompactList}\small\item\em Compute the mipmap\textquotesingle{}s next level dim size. \end{DoxyCompactList}\item 
+static \mbox{\hyperlink{addrtypes_8h_af5a2be58a28390f9a494538f34054637}{UINT\+\_\+32}} \mbox{\hyperlink{namespacerocr_1_1Addr_a731b1ed6593076666efef883028acdb6}{Log2\+Non\+Pow2}} (\mbox{\hyperlink{addrtypes_8h_af5a2be58a28390f9a494538f34054637}{UINT\+\_\+32}} x)
+\begin{DoxyCompactList}\small\item\em Compute log of base 2 no matter the target is power of 2 or not. \end{DoxyCompactList}\item 
+static \mbox{\hyperlink{addrtypes_8h_af5a2be58a28390f9a494538f34054637}{UINT\+\_\+32}} \mbox{\hyperlink{namespacerocr_1_1Addr_acff3bfbf578c5a064527dd59e2bbd9e8}{Log2}} (\mbox{\hyperlink{addrtypes_8h_af5a2be58a28390f9a494538f34054637}{UINT\+\_\+32}} x)
+\begin{DoxyCompactList}\small\item\em Compute log of base 2. \end{DoxyCompactList}\item 
+static \mbox{\hyperlink{addrtypes_8h_af5a2be58a28390f9a494538f34054637}{UINT\+\_\+32}} \mbox{\hyperlink{namespacerocr_1_1Addr_a7327e3027cf67fabc691e966245a859d}{QLog2}} (\mbox{\hyperlink{addrtypes_8h_af5a2be58a28390f9a494538f34054637}{UINT\+\_\+32}} x)
+\begin{DoxyCompactList}\small\item\em Compute log of base 2 quickly ($<$= 16) \end{DoxyCompactList}\item 
+static \mbox{\hyperlink{addrtypes_8h_a7927e087749615dae3114cc27b91c86d}{VOID}} \mbox{\hyperlink{namespacerocr_1_1Addr_a846424f93411f07c84b7f7f72a178016}{Safe\+Assign}} (\mbox{\hyperlink{addrtypes_8h_af5a2be58a28390f9a494538f34054637}{UINT\+\_\+32}} $\ast$p\+LVal, \mbox{\hyperlink{addrtypes_8h_af5a2be58a28390f9a494538f34054637}{UINT\+\_\+32}} r\+Val)
+\begin{DoxyCompactList}\small\item\em NULL pointer safe assignment. \end{DoxyCompactList}\item 
+static \mbox{\hyperlink{addrtypes_8h_a7927e087749615dae3114cc27b91c86d}{VOID}} \mbox{\hyperlink{namespacerocr_1_1Addr_a1f9722e414b20e70c8f99a78ccef881d}{Safe\+Assign}} (\mbox{\hyperlink{addrtypes_8h_ac4116bb9a5e80b5cb845d4f2674c160f}{UINT\+\_\+64}} $\ast$p\+LVal, \mbox{\hyperlink{addrtypes_8h_ac4116bb9a5e80b5cb845d4f2674c160f}{UINT\+\_\+64}} r\+Val)
+\begin{DoxyCompactList}\small\item\em NULL pointer safe assignment for 64bit values. \end{DoxyCompactList}\item 
+static \mbox{\hyperlink{addrtypes_8h_a7927e087749615dae3114cc27b91c86d}{VOID}} \mbox{\hyperlink{namespacerocr_1_1Addr_a54babd968d7455f6a030a58d1d95b2cf}{Safe\+Assign}} (\mbox{\hyperlink{addrtypes_8h_a9dffa8321911d7791c03fe3a233a34e7}{Addr\+Tile\+Mode}} $\ast$p\+LVal, \mbox{\hyperlink{addrtypes_8h_a9dffa8321911d7791c03fe3a233a34e7}{Addr\+Tile\+Mode}} r\+Val)
+\begin{DoxyCompactList}\small\item\em NULL pointer safe assignment for Addr\+Tile\+Mode. \end{DoxyCompactList}\item 
+static \mbox{\hyperlink{addrtypes_8h_af5a2be58a28390f9a494538f34054637}{UINT\+\_\+32}} \mbox{\hyperlink{namespacerocr_1_1Addr_abb259b41db0ddacc2bfd83e94e7dea18}{Round\+Half}} (\mbox{\hyperlink{addrtypes_8h_af5a2be58a28390f9a494538f34054637}{UINT\+\_\+32}} x)
+\begin{DoxyCompactList}\small\item\em return (x + 1) / 2 \end{DoxyCompactList}\item 
+static \mbox{\hyperlink{addrtypes_8h_af5a2be58a28390f9a494538f34054637}{UINT\+\_\+32}} \mbox{\hyperlink{namespacerocr_1_1Addr_a43d67d419acdfc9dbd06dbc4aba9c77c}{Sum\+Geo}} (\mbox{\hyperlink{addrtypes_8h_af5a2be58a28390f9a494538f34054637}{UINT\+\_\+32}} base, \mbox{\hyperlink{addrtypes_8h_af5a2be58a28390f9a494538f34054637}{UINT\+\_\+32}} num)
+\begin{DoxyCompactList}\small\item\em Calculate sum of a geometric progression whose ratio is 1/2. \end{DoxyCompactList}\item 
+static \mbox{\hyperlink{addrtypes_8h_af5a2be58a28390f9a494538f34054637}{UINT\+\_\+32}} \mbox{\hyperlink{namespacerocr_1_1Addr_ae34af78cd68fa3cf33b180ca436e25c0}{Get\+Bit}} (\mbox{\hyperlink{addrtypes_8h_af5a2be58a28390f9a494538f34054637}{UINT\+\_\+32}} u32, \mbox{\hyperlink{addrtypes_8h_af5a2be58a28390f9a494538f34054637}{UINT\+\_\+32}} pos)
+\begin{DoxyCompactList}\small\item\em Extract bit N value (0 or 1) of a UINT32 value. \end{DoxyCompactList}\item 
+static \mbox{\hyperlink{addrtypes_8h_af5a2be58a28390f9a494538f34054637}{UINT\+\_\+32}} \mbox{\hyperlink{namespacerocr_1_1Addr_acb70da6af9651e3a85d6d846014fefc5}{Get\+Bits}} (\mbox{\hyperlink{addrtypes_8h_af5a2be58a28390f9a494538f34054637}{UINT\+\_\+32}} src, \mbox{\hyperlink{addrtypes_8h_af5a2be58a28390f9a494538f34054637}{UINT\+\_\+32}} src\+Start\+Pos, \mbox{\hyperlink{addrtypes_8h_af5a2be58a28390f9a494538f34054637}{UINT\+\_\+32}} bits\+Num, \mbox{\hyperlink{addrtypes_8h_af5a2be58a28390f9a494538f34054637}{UINT\+\_\+32}} dst\+Start\+Pos)
+\begin{DoxyCompactList}\small\item\em Copy \textquotesingle{}bits\+Num\textquotesingle{} bits from src start from src\+Start\+Pos into destination from dst\+Start\+Pos src\+Start\+Pos\+: 0$\sim$31 for UINT\+\_\+32 bits\+Num \+: 1$\sim$32 for UINT\+\_\+32 src\+Start\+Pos\+: 0$\sim$31 for UINT\+\_\+32 src start position $\vert$ src \+: b\mbox{[}31\mbox{]} b\mbox{[}30\mbox{]} b\mbox{[}29\mbox{]} ... ... ... ... ... ... ... ... b\mbox{[}end\mbox{]}..b\mbox{[}beg\mbox{]} ... b\mbox{[}1\mbox{]} b\mbox{[}0\mbox{]} $\vert$$\vert$ Bits num $\vert$$\vert$ copy length $\vert$$\vert$ Bits num $\vert$$\vert$ dst \+: b\mbox{[}31\mbox{]} b\mbox{[}30\mbox{]} b\mbox{[}29\mbox{]} ... b\mbox{[}end\mbox{]}..b\mbox{[}beg\mbox{]} ... ... ... ... ... ... ... ... b\mbox{[}1\mbox{]} b\mbox{[}0\mbox{]} $\vert$ dst start position. \end{DoxyCompactList}\item 
+static \mbox{\hyperlink{addrtypes_8h_af5a2be58a28390f9a494538f34054637}{UINT\+\_\+32}} \mbox{\hyperlink{namespacerocr_1_1Addr_aff23695a85d926a4a7f3be1591674402}{Morton\+Gen2d}} (\mbox{\hyperlink{addrtypes_8h_af5a2be58a28390f9a494538f34054637}{UINT\+\_\+32}} x, \mbox{\hyperlink{addrtypes_8h_af5a2be58a28390f9a494538f34054637}{UINT\+\_\+32}} y, \mbox{\hyperlink{addrtypes_8h_af5a2be58a28390f9a494538f34054637}{UINT\+\_\+32}} num)
+\begin{DoxyCompactList}\small\item\em Generate 2D Morton interleave code with num lowest bits in each channel. \end{DoxyCompactList}\item 
+static \mbox{\hyperlink{addrtypes_8h_af5a2be58a28390f9a494538f34054637}{UINT\+\_\+32}} \mbox{\hyperlink{namespacerocr_1_1Addr_a1e116479962ad244afc2992995067dc9}{Morton\+Gen3d}} (\mbox{\hyperlink{addrtypes_8h_af5a2be58a28390f9a494538f34054637}{UINT\+\_\+32}} x, \mbox{\hyperlink{addrtypes_8h_af5a2be58a28390f9a494538f34054637}{UINT\+\_\+32}} y, \mbox{\hyperlink{addrtypes_8h_af5a2be58a28390f9a494538f34054637}{UINT\+\_\+32}} z, \mbox{\hyperlink{addrtypes_8h_af5a2be58a28390f9a494538f34054637}{UINT\+\_\+32}} num)
+\begin{DoxyCompactList}\small\item\em Generate 3D Morton interleave code with num lowest bits in each channel. \end{DoxyCompactList}\item 
+static \mbox{\hyperlink{addrtypes_8h_af5a2be58a28390f9a494538f34054637}{UINT\+\_\+32}} \mbox{\hyperlink{namespacerocr_1_1Addr_ad3cc172da26b1cbe71360ca5c78e1776}{Reverse\+Bit\+Vector}} (\mbox{\hyperlink{addrtypes_8h_af5a2be58a28390f9a494538f34054637}{UINT\+\_\+32}} v, \mbox{\hyperlink{addrtypes_8h_af5a2be58a28390f9a494538f34054637}{UINT\+\_\+32}} num)
+\begin{DoxyCompactList}\small\item\em Return reversed lowest num bits of v\+: v\mbox{[}0\mbox{]}v\mbox{[}1\mbox{]}...v\mbox{[}num-\/2\mbox{]}v\mbox{[}num-\/1\mbox{]}. \end{DoxyCompactList}\item 
+static \mbox{\hyperlink{addrtypes_8h_af5a2be58a28390f9a494538f34054637}{UINT\+\_\+32}} \mbox{\hyperlink{namespacerocr_1_1Addr_aa02764167b1dbb798cf9bebd7d3fd955}{Fold\+Xor2d}} (\mbox{\hyperlink{addrtypes_8h_af5a2be58a28390f9a494538f34054637}{UINT\+\_\+32}} v, \mbox{\hyperlink{addrtypes_8h_af5a2be58a28390f9a494538f34054637}{UINT\+\_\+32}} num)
+\begin{DoxyCompactList}\small\item\em Xor bit vector v\mbox{[}num-\/1\mbox{]}v\mbox{[}num-\/2\mbox{]}...v\mbox{[}1\mbox{]}v\mbox{[}0\mbox{]} with v\mbox{[}num\mbox{]}v\mbox{[}num+1\mbox{]}...v\mbox{[}2$\ast$num-\/2\mbox{]}v\mbox{[}2$\ast$num-\/1\mbox{]}. \end{DoxyCompactList}\item 
+static \mbox{\hyperlink{addrtypes_8h_af5a2be58a28390f9a494538f34054637}{UINT\+\_\+32}} \mbox{\hyperlink{namespacerocr_1_1Addr_a8d18316748fffba6a76697eb1adf26cc}{De\+Mort}} (\mbox{\hyperlink{addrtypes_8h_af5a2be58a28390f9a494538f34054637}{UINT\+\_\+32}} v, \mbox{\hyperlink{addrtypes_8h_af5a2be58a28390f9a494538f34054637}{UINT\+\_\+32}} num)
+\begin{DoxyCompactList}\small\item\em Return v\mbox{[}0\mbox{]} $\vert$ v\mbox{[}2\mbox{]} $\vert$ v\mbox{[}4\mbox{]} $\vert$ v\mbox{[}6\mbox{]}... $\vert$ v\mbox{[}2$\ast$num -\/ 2\mbox{]}. \end{DoxyCompactList}\item 
+static \mbox{\hyperlink{addrtypes_8h_af5a2be58a28390f9a494538f34054637}{UINT\+\_\+32}} \mbox{\hyperlink{namespacerocr_1_1Addr_a430019b3d99c57d6efe116464f399385}{Fold\+Xor3d}} (\mbox{\hyperlink{addrtypes_8h_af5a2be58a28390f9a494538f34054637}{UINT\+\_\+32}} v, \mbox{\hyperlink{addrtypes_8h_af5a2be58a28390f9a494538f34054637}{UINT\+\_\+32}} num)
+\begin{DoxyCompactList}\small\item\em v\mbox{[}0\mbox{]}...v\mbox{[}num-\/1\mbox{]} $^\wedge$ v\mbox{[}3$\ast$num-\/1\mbox{]}v\mbox{[}3$\ast$num-\/3\mbox{]}...v\mbox{[}num+2\mbox{]}v\mbox{[}num\mbox{]} $^\wedge$ v\mbox{[}3$\ast$num-\/2\mbox{]}...v\mbox{[}num+1\mbox{]}v\mbox{[}num-\/1\mbox{]} \end{DoxyCompactList}\item 
+static \mbox{\hyperlink{namespacerocr_afe75e972942d670db53328fa0e640e8a}{ADDR\+\_\+\+CHANNEL\+\_\+\+SETTING}} \mbox{\hyperlink{namespacerocr_1_1Addr_a581747da285dae0a44c521100a755dba}{Init\+Channel}} (\mbox{\hyperlink{addrtypes_8h_af5a2be58a28390f9a494538f34054637}{UINT\+\_\+32}} valid, \mbox{\hyperlink{addrtypes_8h_af5a2be58a28390f9a494538f34054637}{UINT\+\_\+32}} channel, \mbox{\hyperlink{addrtypes_8h_af5a2be58a28390f9a494538f34054637}{UINT\+\_\+32}} index)
+\begin{DoxyCompactList}\small\item\em Set channel initialization value via a return value. \end{DoxyCompactList}\item 
+static \mbox{\hyperlink{addrtypes_8h_a7927e087749615dae3114cc27b91c86d}{VOID}} \mbox{\hyperlink{namespacerocr_1_1Addr_a52991389ca2460b619a5a05debdd6e53}{Init\+Channel}} (\mbox{\hyperlink{addrtypes_8h_af5a2be58a28390f9a494538f34054637}{UINT\+\_\+32}} valid, \mbox{\hyperlink{addrtypes_8h_af5a2be58a28390f9a494538f34054637}{UINT\+\_\+32}} channel, \mbox{\hyperlink{addrtypes_8h_af5a2be58a28390f9a494538f34054637}{UINT\+\_\+32}} index, \mbox{\hyperlink{namespacerocr_afe75e972942d670db53328fa0e640e8a}{ADDR\+\_\+\+CHANNEL\+\_\+\+SETTING}} $\ast$p\+Chan\+Set)
+\begin{DoxyCompactList}\small\item\em Set channel initialization value via channel pointer. \end{DoxyCompactList}\item 
+static \mbox{\hyperlink{addrtypes_8h_a7927e087749615dae3114cc27b91c86d}{VOID}} \mbox{\hyperlink{namespacerocr_1_1Addr_a7512690b443de410d7a59cb625b84235}{Init\+Channel}} (\mbox{\hyperlink{namespacerocr_afe75e972942d670db53328fa0e640e8a}{ADDR\+\_\+\+CHANNEL\+\_\+\+SETTING}} $\ast$p\+Chan\+Dst, \mbox{\hyperlink{namespacerocr_afe75e972942d670db53328fa0e640e8a}{ADDR\+\_\+\+CHANNEL\+\_\+\+SETTING}} $\ast$p\+Chan\+Src)
+\begin{DoxyCompactList}\small\item\em Set channel initialization value via another channel. \end{DoxyCompactList}\item 
+static \mbox{\hyperlink{addrtypes_8h_af5a2be58a28390f9a494538f34054637}{UINT\+\_\+32}} \mbox{\hyperlink{namespacerocr_1_1Addr_aa55d75d21cd6c77828f5b87288164906}{Get\+Max\+Valid\+Channel\+Index}} (const \mbox{\hyperlink{namespacerocr_afe75e972942d670db53328fa0e640e8a}{ADDR\+\_\+\+CHANNEL\+\_\+\+SETTING}} $\ast$p\+Chan\+Set, \mbox{\hyperlink{addrtypes_8h_af5a2be58a28390f9a494538f34054637}{UINT\+\_\+32}} search\+Count, \mbox{\hyperlink{addrtypes_8h_af5a2be58a28390f9a494538f34054637}{UINT\+\_\+32}} channel)
+\begin{DoxyCompactList}\small\item\em Get max valid index for a specific channel. \end{DoxyCompactList}\item 
+static \mbox{\hyperlink{addrtypes_8h_af5a2be58a28390f9a494538f34054637}{UINT\+\_\+32}} \mbox{\hyperlink{namespacerocr_1_1Addr_a46ee800433dd00a297a6102a30c9bc77}{Get\+Coord\+Active\+Mask}} (const \mbox{\hyperlink{namespacerocr_afe75e972942d670db53328fa0e640e8a}{ADDR\+\_\+\+CHANNEL\+\_\+\+SETTING}} $\ast$p\+Chan\+Set, \mbox{\hyperlink{addrtypes_8h_af5a2be58a28390f9a494538f34054637}{UINT\+\_\+32}} search\+Count, \mbox{\hyperlink{addrtypes_8h_af5a2be58a28390f9a494538f34054637}{UINT\+\_\+32}} channel, \mbox{\hyperlink{addrtypes_8h_af5a2be58a28390f9a494538f34054637}{UINT\+\_\+32}} index)
+\begin{DoxyCompactList}\small\item\em Get bit mask which indicates which positions in the equation match the target coord. \end{DoxyCompactList}\item 
+static \mbox{\hyperlink{addrtypes_8h_af5a2be58a28390f9a494538f34054637}{UINT\+\_\+32}} \mbox{\hyperlink{namespacerocr_1_1Addr_aa1f586ec353b6f0428a6c402a64aeb4d}{Shift\+Ceil}} (\mbox{\hyperlink{addrtypes_8h_af5a2be58a28390f9a494538f34054637}{UINT\+\_\+32}} a, \mbox{\hyperlink{addrtypes_8h_af5a2be58a28390f9a494538f34054637}{UINT\+\_\+32}} b)
+\begin{DoxyCompactList}\small\item\em Apply right-\/shift with ceiling. \end{DoxyCompactList}\item 
+static \mbox{\hyperlink{addrtypes_8h_af5a2be58a28390f9a494538f34054637}{UINT\+\_\+32}} \mbox{\hyperlink{namespacerocr_1_1Addr_a7240ed0d61925a9d7cfbf9abdcb092e0}{Shift\+Right}} (\mbox{\hyperlink{addrtypes_8h_af5a2be58a28390f9a494538f34054637}{UINT\+\_\+32}} a, \mbox{\hyperlink{addrtypes_8h_af5a2be58a28390f9a494538f34054637}{UINT\+\_\+32}} b)
+\begin{DoxyCompactList}\small\item\em Return right-\/shift value and minimum is 1. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classrocr_1_1Addr_1_1Lib}{Lib}} $\ast$ \mbox{\hyperlink{namespacerocr_1_1Addr_a2eea13cc12281136db7823a10df104fe}{Si\+Hwl\+Init}} (const \mbox{\hyperlink{structrocr_1_1Addr_1_1Client}{Client}} $\ast$p\+Client)
+\begin{DoxyCompactList}\small\item\em Creates an Si\+Lib object. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classrocr_1_1Addr_1_1Lib}{Lib}} $\ast$ \mbox{\hyperlink{namespacerocr_1_1Addr_a2a97e48ccda595dc514506c65a050685}{Ci\+Hwl\+Init}} (const \mbox{\hyperlink{structrocr_1_1Addr_1_1Client}{Client}} $\ast$p\+Client)
+\begin{DoxyCompactList}\small\item\em Creates an Ci\+Lib object. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classrocr_1_1Addr_1_1Lib}{Lib}} $\ast$ \mbox{\hyperlink{namespacerocr_1_1Addr_a769add892e97a54dd03946e531f9bc50}{Gfx9\+Hwl\+Init}} (const \mbox{\hyperlink{structrocr_1_1Addr_1_1Client}{Client}} $\ast$p\+Client)
+\begin{DoxyCompactList}\small\item\em Creates an Gfx9\+Lib object. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classrocr_1_1Addr_1_1Lib}{Lib}} $\ast$ \mbox{\hyperlink{namespacerocr_1_1Addr_a4e7e348c5a8fa900178713ef4c380337}{Gfx10\+Hwl\+Init}} (const \mbox{\hyperlink{structrocr_1_1Addr_1_1Client}{Client}} $\ast$p\+Client)
+\begin{DoxyCompactList}\small\item\em Creates an Gfx10\+Lib object. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classrocr_1_1Addr_1_1Lib}{Lib}} $\ast$ \mbox{\hyperlink{namespacerocr_1_1Addr_aa177032c08cf7a2413c6bc8b404dfb65}{Gfx11\+Hwl\+Init}} (const \mbox{\hyperlink{structrocr_1_1Addr_1_1Client}{Client}} $\ast$p\+Client)
+\begin{DoxyCompactList}\small\item\em Creates an Gfx11\+Lib object. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Enumeration Type Documentation}
+\mbox{\Hypertarget{namespacerocr_1_1Addr_a1929212eecda2740cdf72974c035aa10}\label{namespacerocr_1_1Addr_a1929212eecda2740cdf72974c035aa10}} 
+\index{rocr::Addr@{rocr::Addr}!BankInterleave@{BankInterleave}}
+\index{BankInterleave@{BankInterleave}!rocr::Addr@{rocr::Addr}}
+\doxysubsubsection{\texorpdfstring{BankInterleave}{BankInterleave}}
+{\footnotesize\ttfamily enum \mbox{\hyperlink{namespacerocr_1_1Addr_a1929212eecda2740cdf72974c035aa10}{rocr\+::\+Addr\+::\+Bank\+Interleave}}}
+
+
+
+Neutral enums that define bank interleave. 
+
+\begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{ADDR\_BANKINTERLEAVE\_1@{ADDR\_BANKINTERLEAVE\_1}!rocr::Addr@{rocr::Addr}}\index{rocr::Addr@{rocr::Addr}!ADDR\_BANKINTERLEAVE\_1@{ADDR\_BANKINTERLEAVE\_1}}}\mbox{\Hypertarget{namespacerocr_1_1Addr_a1929212eecda2740cdf72974c035aa10a5acc729cf364a2ae43a692dc47799746}\label{namespacerocr_1_1Addr_a1929212eecda2740cdf72974c035aa10a5acc729cf364a2ae43a692dc47799746}} 
+ADDR\+\_\+\+BANKINTERLEAVE\+\_\+1&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{ADDR\_BANKINTERLEAVE\_2@{ADDR\_BANKINTERLEAVE\_2}!rocr::Addr@{rocr::Addr}}\index{rocr::Addr@{rocr::Addr}!ADDR\_BANKINTERLEAVE\_2@{ADDR\_BANKINTERLEAVE\_2}}}\mbox{\Hypertarget{namespacerocr_1_1Addr_a1929212eecda2740cdf72974c035aa10a5f16c873244df1db22bf96ebcf3294a4}\label{namespacerocr_1_1Addr_a1929212eecda2740cdf72974c035aa10a5f16c873244df1db22bf96ebcf3294a4}} 
+ADDR\+\_\+\+BANKINTERLEAVE\+\_\+2&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{ADDR\_BANKINTERLEAVE\_4@{ADDR\_BANKINTERLEAVE\_4}!rocr::Addr@{rocr::Addr}}\index{rocr::Addr@{rocr::Addr}!ADDR\_BANKINTERLEAVE\_4@{ADDR\_BANKINTERLEAVE\_4}}}\mbox{\Hypertarget{namespacerocr_1_1Addr_a1929212eecda2740cdf72974c035aa10ae0f0fed467c598785cafe0fc278151f3}\label{namespacerocr_1_1Addr_a1929212eecda2740cdf72974c035aa10ae0f0fed467c598785cafe0fc278151f3}} 
+ADDR\+\_\+\+BANKINTERLEAVE\+\_\+4&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{ADDR\_BANKINTERLEAVE\_8@{ADDR\_BANKINTERLEAVE\_8}!rocr::Addr@{rocr::Addr}}\index{rocr::Addr@{rocr::Addr}!ADDR\_BANKINTERLEAVE\_8@{ADDR\_BANKINTERLEAVE\_8}}}\mbox{\Hypertarget{namespacerocr_1_1Addr_a1929212eecda2740cdf72974c035aa10a31565c03b12c92a5ceb435f03363c325}\label{namespacerocr_1_1Addr_a1929212eecda2740cdf72974c035aa10a31565c03b12c92a5ceb435f03363c325}} 
+ADDR\+\_\+\+BANKINTERLEAVE\+\_\+8&\\
+\hline
+
+\end{DoxyEnumFields}
+\mbox{\Hypertarget{namespacerocr_1_1Addr_a4b102935935d20c9f36bbbbfddbe9d22}\label{namespacerocr_1_1Addr_a4b102935935d20c9f36bbbbfddbe9d22}} 
+\index{rocr::Addr@{rocr::Addr}!BankInterleaveSizeConfig@{BankInterleaveSizeConfig}}
+\index{BankInterleaveSizeConfig@{BankInterleaveSizeConfig}!rocr::Addr@{rocr::Addr}}
+\doxysubsubsection{\texorpdfstring{BankInterleaveSizeConfig}{BankInterleaveSizeConfig}}
+{\footnotesize\ttfamily enum \mbox{\hyperlink{namespacerocr_1_1Addr_a4b102935935d20c9f36bbbbfddbe9d22}{rocr\+::\+Addr\+::\+Bank\+Interleave\+Size\+Config}}}
+
+
+
+Enums that define bank interleave size config. 
+
+\begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{ADDR\_CONFIG\_BANK\_INTERLEAVE\_1@{ADDR\_CONFIG\_BANK\_INTERLEAVE\_1}!rocr::Addr@{rocr::Addr}}\index{rocr::Addr@{rocr::Addr}!ADDR\_CONFIG\_BANK\_INTERLEAVE\_1@{ADDR\_CONFIG\_BANK\_INTERLEAVE\_1}}}\mbox{\Hypertarget{namespacerocr_1_1Addr_a4b102935935d20c9f36bbbbfddbe9d22a6dddac01dee4414cc50cd914fb9f8d50}\label{namespacerocr_1_1Addr_a4b102935935d20c9f36bbbbfddbe9d22a6dddac01dee4414cc50cd914fb9f8d50}} 
+ADDR\+\_\+\+CONFIG\+\_\+\+BANK\+\_\+\+INTERLEAVE\+\_\+1&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{ADDR\_CONFIG\_BANK\_INTERLEAVE\_2@{ADDR\_CONFIG\_BANK\_INTERLEAVE\_2}!rocr::Addr@{rocr::Addr}}\index{rocr::Addr@{rocr::Addr}!ADDR\_CONFIG\_BANK\_INTERLEAVE\_2@{ADDR\_CONFIG\_BANK\_INTERLEAVE\_2}}}\mbox{\Hypertarget{namespacerocr_1_1Addr_a4b102935935d20c9f36bbbbfddbe9d22a49b87f95ba02e12ba3966a167b20250c}\label{namespacerocr_1_1Addr_a4b102935935d20c9f36bbbbfddbe9d22a49b87f95ba02e12ba3966a167b20250c}} 
+ADDR\+\_\+\+CONFIG\+\_\+\+BANK\+\_\+\+INTERLEAVE\+\_\+2&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{ADDR\_CONFIG\_BANK\_INTERLEAVE\_4@{ADDR\_CONFIG\_BANK\_INTERLEAVE\_4}!rocr::Addr@{rocr::Addr}}\index{rocr::Addr@{rocr::Addr}!ADDR\_CONFIG\_BANK\_INTERLEAVE\_4@{ADDR\_CONFIG\_BANK\_INTERLEAVE\_4}}}\mbox{\Hypertarget{namespacerocr_1_1Addr_a4b102935935d20c9f36bbbbfddbe9d22af17aab6cf7ba032bfa64493d5cdfd10c}\label{namespacerocr_1_1Addr_a4b102935935d20c9f36bbbbfddbe9d22af17aab6cf7ba032bfa64493d5cdfd10c}} 
+ADDR\+\_\+\+CONFIG\+\_\+\+BANK\+\_\+\+INTERLEAVE\+\_\+4&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{ADDR\_CONFIG\_BANK\_INTERLEAVE\_8@{ADDR\_CONFIG\_BANK\_INTERLEAVE\_8}!rocr::Addr@{rocr::Addr}}\index{rocr::Addr@{rocr::Addr}!ADDR\_CONFIG\_BANK\_INTERLEAVE\_8@{ADDR\_CONFIG\_BANK\_INTERLEAVE\_8}}}\mbox{\Hypertarget{namespacerocr_1_1Addr_a4b102935935d20c9f36bbbbfddbe9d22a81d55df1d698365ddce236e325509bf6}\label{namespacerocr_1_1Addr_a4b102935935d20c9f36bbbbfddbe9d22a81d55df1d698365ddce236e325509bf6}} 
+ADDR\+\_\+\+CONFIG\+\_\+\+BANK\+\_\+\+INTERLEAVE\+\_\+8&\\
+\hline
+
+\end{DoxyEnumFields}
+\mbox{\Hypertarget{namespacerocr_1_1Addr_abf27b79b3a48f0155935cadd527bd9d9}\label{namespacerocr_1_1Addr_abf27b79b3a48f0155935cadd527bd9d9}} 
+\index{rocr::Addr@{rocr::Addr}!BankSwapSize@{BankSwapSize}}
+\index{BankSwapSize@{BankSwapSize}!rocr::Addr@{rocr::Addr}}
+\doxysubsubsection{\texorpdfstring{BankSwapSize}{BankSwapSize}}
+{\footnotesize\ttfamily enum \mbox{\hyperlink{namespacerocr_1_1Addr_abf27b79b3a48f0155935cadd527bd9d9}{rocr\+::\+Addr\+::\+Bank\+Swap\+Size}}}
+
+
+
+Neutral enums that define bank swap size. 
+
+\begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{ADDR\_BANKSWAP\_128B@{ADDR\_BANKSWAP\_128B}!rocr::Addr@{rocr::Addr}}\index{rocr::Addr@{rocr::Addr}!ADDR\_BANKSWAP\_128B@{ADDR\_BANKSWAP\_128B}}}\mbox{\Hypertarget{namespacerocr_1_1Addr_abf27b79b3a48f0155935cadd527bd9d9a46254724ca295752bcc526e8ea1227c5}\label{namespacerocr_1_1Addr_abf27b79b3a48f0155935cadd527bd9d9a46254724ca295752bcc526e8ea1227c5}} 
+ADDR\+\_\+\+BANKSWAP\+\_\+128B&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{ADDR\_BANKSWAP\_256B@{ADDR\_BANKSWAP\_256B}!rocr::Addr@{rocr::Addr}}\index{rocr::Addr@{rocr::Addr}!ADDR\_BANKSWAP\_256B@{ADDR\_BANKSWAP\_256B}}}\mbox{\Hypertarget{namespacerocr_1_1Addr_abf27b79b3a48f0155935cadd527bd9d9a3ce7767d8be54773017291839a8e345c}\label{namespacerocr_1_1Addr_abf27b79b3a48f0155935cadd527bd9d9a3ce7767d8be54773017291839a8e345c}} 
+ADDR\+\_\+\+BANKSWAP\+\_\+256B&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{ADDR\_BANKSWAP\_512B@{ADDR\_BANKSWAP\_512B}!rocr::Addr@{rocr::Addr}}\index{rocr::Addr@{rocr::Addr}!ADDR\_BANKSWAP\_512B@{ADDR\_BANKSWAP\_512B}}}\mbox{\Hypertarget{namespacerocr_1_1Addr_abf27b79b3a48f0155935cadd527bd9d9a5ca6345606112b7cbc3a7a06f1874fc0}\label{namespacerocr_1_1Addr_abf27b79b3a48f0155935cadd527bd9d9a5ca6345606112b7cbc3a7a06f1874fc0}} 
+ADDR\+\_\+\+BANKSWAP\+\_\+512B&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{ADDR\_BANKSWAP\_1KB@{ADDR\_BANKSWAP\_1KB}!rocr::Addr@{rocr::Addr}}\index{rocr::Addr@{rocr::Addr}!ADDR\_BANKSWAP\_1KB@{ADDR\_BANKSWAP\_1KB}}}\mbox{\Hypertarget{namespacerocr_1_1Addr_abf27b79b3a48f0155935cadd527bd9d9a46736d9a9faac022659e5fc688f7b958}\label{namespacerocr_1_1Addr_abf27b79b3a48f0155935cadd527bd9d9a46736d9a9faac022659e5fc688f7b958}} 
+ADDR\+\_\+\+BANKSWAP\+\_\+1\+KB&\\
+\hline
+
+\end{DoxyEnumFields}
+\mbox{\Hypertarget{namespacerocr_1_1Addr_a9baa6f324df4a9cb3c4a61f6e6af6b09}\label{namespacerocr_1_1Addr_a9baa6f324df4a9cb3c4a61f6e6af6b09}} 
+\index{rocr::Addr@{rocr::Addr}!ChipFamily@{ChipFamily}}
+\index{ChipFamily@{ChipFamily}!rocr::Addr@{rocr::Addr}}
+\doxysubsubsection{\texorpdfstring{ChipFamily}{ChipFamily}}
+{\footnotesize\ttfamily enum \mbox{\hyperlink{namespacerocr_1_1Addr_a9baa6f324df4a9cb3c4a61f6e6af6b09}{rocr\+::\+Addr\+::\+Chip\+Family}}}
+
+
+
+Neutral enums that specifies chip family. 
+
+Chip\+Family \begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{ADDR\_CHIP\_FAMILY\_IVLD@{ADDR\_CHIP\_FAMILY\_IVLD}!rocr::Addr@{rocr::Addr}}\index{rocr::Addr@{rocr::Addr}!ADDR\_CHIP\_FAMILY\_IVLD@{ADDR\_CHIP\_FAMILY\_IVLD}}}\mbox{\Hypertarget{namespacerocr_1_1Addr_a9baa6f324df4a9cb3c4a61f6e6af6b09a77a77e3d2ea165df0eec658330235648}\label{namespacerocr_1_1Addr_a9baa6f324df4a9cb3c4a61f6e6af6b09a77a77e3d2ea165df0eec658330235648}} 
+ADDR\+\_\+\+CHIP\+\_\+\+FAMILY\+\_\+\+IVLD&Invalid family. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{ADDR\_CHIP\_FAMILY\_R6XX@{ADDR\_CHIP\_FAMILY\_R6XX}!rocr::Addr@{rocr::Addr}}\index{rocr::Addr@{rocr::Addr}!ADDR\_CHIP\_FAMILY\_R6XX@{ADDR\_CHIP\_FAMILY\_R6XX}}}\mbox{\Hypertarget{namespacerocr_1_1Addr_a9baa6f324df4a9cb3c4a61f6e6af6b09ada5df8b8bde09b914f57506465c16f6f}\label{namespacerocr_1_1Addr_a9baa6f324df4a9cb3c4a61f6e6af6b09ada5df8b8bde09b914f57506465c16f6f}} 
+ADDR\+\_\+\+CHIP\+\_\+\+FAMILY\+\_\+\+R6\+XX&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{ADDR\_CHIP\_FAMILY\_R7XX@{ADDR\_CHIP\_FAMILY\_R7XX}!rocr::Addr@{rocr::Addr}}\index{rocr::Addr@{rocr::Addr}!ADDR\_CHIP\_FAMILY\_R7XX@{ADDR\_CHIP\_FAMILY\_R7XX}}}\mbox{\Hypertarget{namespacerocr_1_1Addr_a9baa6f324df4a9cb3c4a61f6e6af6b09ac4069c0ddb53563362da584c6b9873c7}\label{namespacerocr_1_1Addr_a9baa6f324df4a9cb3c4a61f6e6af6b09ac4069c0ddb53563362da584c6b9873c7}} 
+ADDR\+\_\+\+CHIP\+\_\+\+FAMILY\+\_\+\+R7\+XX&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{ADDR\_CHIP\_FAMILY\_R8XX@{ADDR\_CHIP\_FAMILY\_R8XX}!rocr::Addr@{rocr::Addr}}\index{rocr::Addr@{rocr::Addr}!ADDR\_CHIP\_FAMILY\_R8XX@{ADDR\_CHIP\_FAMILY\_R8XX}}}\mbox{\Hypertarget{namespacerocr_1_1Addr_a9baa6f324df4a9cb3c4a61f6e6af6b09a907ca2535f0863b0c726c067d0ae69fb}\label{namespacerocr_1_1Addr_a9baa6f324df4a9cb3c4a61f6e6af6b09a907ca2535f0863b0c726c067d0ae69fb}} 
+ADDR\+\_\+\+CHIP\+\_\+\+FAMILY\+\_\+\+R8\+XX&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{ADDR\_CHIP\_FAMILY\_NI@{ADDR\_CHIP\_FAMILY\_NI}!rocr::Addr@{rocr::Addr}}\index{rocr::Addr@{rocr::Addr}!ADDR\_CHIP\_FAMILY\_NI@{ADDR\_CHIP\_FAMILY\_NI}}}\mbox{\Hypertarget{namespacerocr_1_1Addr_a9baa6f324df4a9cb3c4a61f6e6af6b09ab9593a21926e964357cea451425276c8}\label{namespacerocr_1_1Addr_a9baa6f324df4a9cb3c4a61f6e6af6b09ab9593a21926e964357cea451425276c8}} 
+ADDR\+\_\+\+CHIP\+\_\+\+FAMILY\+\_\+\+NI&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{ADDR\_CHIP\_FAMILY\_SI@{ADDR\_CHIP\_FAMILY\_SI}!rocr::Addr@{rocr::Addr}}\index{rocr::Addr@{rocr::Addr}!ADDR\_CHIP\_FAMILY\_SI@{ADDR\_CHIP\_FAMILY\_SI}}}\mbox{\Hypertarget{namespacerocr_1_1Addr_a9baa6f324df4a9cb3c4a61f6e6af6b09ad69e83e709150bfb29a09d1b1aa696f1}\label{namespacerocr_1_1Addr_a9baa6f324df4a9cb3c4a61f6e6af6b09ad69e83e709150bfb29a09d1b1aa696f1}} 
+ADDR\+\_\+\+CHIP\+\_\+\+FAMILY\+\_\+\+SI&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{ADDR\_CHIP\_FAMILY\_CI@{ADDR\_CHIP\_FAMILY\_CI}!rocr::Addr@{rocr::Addr}}\index{rocr::Addr@{rocr::Addr}!ADDR\_CHIP\_FAMILY\_CI@{ADDR\_CHIP\_FAMILY\_CI}}}\mbox{\Hypertarget{namespacerocr_1_1Addr_a9baa6f324df4a9cb3c4a61f6e6af6b09afad118409992ebb6ecb913f1035e362b}\label{namespacerocr_1_1Addr_a9baa6f324df4a9cb3c4a61f6e6af6b09afad118409992ebb6ecb913f1035e362b}} 
+ADDR\+\_\+\+CHIP\+\_\+\+FAMILY\+\_\+\+CI&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{ADDR\_CHIP\_FAMILY\_VI@{ADDR\_CHIP\_FAMILY\_VI}!rocr::Addr@{rocr::Addr}}\index{rocr::Addr@{rocr::Addr}!ADDR\_CHIP\_FAMILY\_VI@{ADDR\_CHIP\_FAMILY\_VI}}}\mbox{\Hypertarget{namespacerocr_1_1Addr_a9baa6f324df4a9cb3c4a61f6e6af6b09a671d4ea5a903c5181444c369e436b211}\label{namespacerocr_1_1Addr_a9baa6f324df4a9cb3c4a61f6e6af6b09a671d4ea5a903c5181444c369e436b211}} 
+ADDR\+\_\+\+CHIP\+\_\+\+FAMILY\+\_\+\+VI&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{ADDR\_CHIP\_FAMILY\_AI@{ADDR\_CHIP\_FAMILY\_AI}!rocr::Addr@{rocr::Addr}}\index{rocr::Addr@{rocr::Addr}!ADDR\_CHIP\_FAMILY\_AI@{ADDR\_CHIP\_FAMILY\_AI}}}\mbox{\Hypertarget{namespacerocr_1_1Addr_a9baa6f324df4a9cb3c4a61f6e6af6b09a1781656bf663b5e063cee1765cbec5c2}\label{namespacerocr_1_1Addr_a9baa6f324df4a9cb3c4a61f6e6af6b09a1781656bf663b5e063cee1765cbec5c2}} 
+ADDR\+\_\+\+CHIP\+\_\+\+FAMILY\+\_\+\+AI&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{ADDR\_CHIP\_FAMILY\_NAVI@{ADDR\_CHIP\_FAMILY\_NAVI}!rocr::Addr@{rocr::Addr}}\index{rocr::Addr@{rocr::Addr}!ADDR\_CHIP\_FAMILY\_NAVI@{ADDR\_CHIP\_FAMILY\_NAVI}}}\mbox{\Hypertarget{namespacerocr_1_1Addr_a9baa6f324df4a9cb3c4a61f6e6af6b09a18a6c058f7da6521c5ca104cc845f03e}\label{namespacerocr_1_1Addr_a9baa6f324df4a9cb3c4a61f6e6af6b09a18a6c058f7da6521c5ca104cc845f03e}} 
+ADDR\+\_\+\+CHIP\+\_\+\+FAMILY\+\_\+\+NAVI&\\
+\hline
+
+\end{DoxyEnumFields}
+\mbox{\Hypertarget{namespacerocr_1_1Addr_acbe90a63826f958f0fcadd37f3a99e0a}\label{namespacerocr_1_1Addr_acbe90a63826f958f0fcadd37f3a99e0a}} 
+\index{rocr::Addr@{rocr::Addr}!DepthPlanarType@{DepthPlanarType}}
+\index{DepthPlanarType@{DepthPlanarType}!rocr::Addr@{rocr::Addr}}
+\doxysubsubsection{\texorpdfstring{DepthPlanarType}{DepthPlanarType}}
+{\footnotesize\ttfamily enum \mbox{\hyperlink{namespacerocr_1_1Addr_acbe90a63826f958f0fcadd37f3a99e0a}{rocr\+::\+Addr\+::\+Depth\+Planar\+Type}}}
+
+\begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{ADDR\_DEPTH\_PLANAR\_NONE@{ADDR\_DEPTH\_PLANAR\_NONE}!rocr::Addr@{rocr::Addr}}\index{rocr::Addr@{rocr::Addr}!ADDR\_DEPTH\_PLANAR\_NONE@{ADDR\_DEPTH\_PLANAR\_NONE}}}\mbox{\Hypertarget{namespacerocr_1_1Addr_acbe90a63826f958f0fcadd37f3a99e0aa5739392a7508900af20ded18ccfaf3fa}\label{namespacerocr_1_1Addr_acbe90a63826f958f0fcadd37f3a99e0aa5739392a7508900af20ded18ccfaf3fa}} 
+ADDR\+\_\+\+DEPTH\+\_\+\+PLANAR\+\_\+\+NONE&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{ADDR\_DEPTH\_PLANAR\_R600@{ADDR\_DEPTH\_PLANAR\_R600}!rocr::Addr@{rocr::Addr}}\index{rocr::Addr@{rocr::Addr}!ADDR\_DEPTH\_PLANAR\_R600@{ADDR\_DEPTH\_PLANAR\_R600}}}\mbox{\Hypertarget{namespacerocr_1_1Addr_acbe90a63826f958f0fcadd37f3a99e0aa694fa16d90e5d852209a2bf2a08dc1eb}\label{namespacerocr_1_1Addr_acbe90a63826f958f0fcadd37f3a99e0aa694fa16d90e5d852209a2bf2a08dc1eb}} 
+ADDR\+\_\+\+DEPTH\+\_\+\+PLANAR\+\_\+\+R600&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{ADDR\_DEPTH\_PLANAR\_R800@{ADDR\_DEPTH\_PLANAR\_R800}!rocr::Addr@{rocr::Addr}}\index{rocr::Addr@{rocr::Addr}!ADDR\_DEPTH\_PLANAR\_R800@{ADDR\_DEPTH\_PLANAR\_R800}}}\mbox{\Hypertarget{namespacerocr_1_1Addr_acbe90a63826f958f0fcadd37f3a99e0aae69277e356d83e1ff13fd818ae3cbc00}\label{namespacerocr_1_1Addr_acbe90a63826f958f0fcadd37f3a99e0aae69277e356d83e1ff13fd818ae3cbc00}} 
+ADDR\+\_\+\+DEPTH\+\_\+\+PLANAR\+\_\+\+R800&\\
+\hline
+
+\end{DoxyEnumFields}
+\mbox{\Hypertarget{namespacerocr_1_1Addr_a99d88f693437a549495a2b094146c100}\label{namespacerocr_1_1Addr_a99d88f693437a549495a2b094146c100}} 
+\index{rocr::Addr@{rocr::Addr}!ElemMode@{ElemMode}}
+\index{ElemMode@{ElemMode}!rocr::Addr@{rocr::Addr}}
+\doxysubsubsection{\texorpdfstring{ElemMode}{ElemMode}}
+{\footnotesize\ttfamily enum \mbox{\hyperlink{namespacerocr_1_1Addr_a99d88f693437a549495a2b094146c100}{rocr\+::\+Addr\+::\+Elem\+Mode}}}
+
+\begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{ADDR\_ROUND\_BY\_HALF@{ADDR\_ROUND\_BY\_HALF}!rocr::Addr@{rocr::Addr}}\index{rocr::Addr@{rocr::Addr}!ADDR\_ROUND\_BY\_HALF@{ADDR\_ROUND\_BY\_HALF}}}\mbox{\Hypertarget{namespacerocr_1_1Addr_a99d88f693437a549495a2b094146c100a4f5b63f8f5ed10ed8aeb70b1b62a4662}\label{namespacerocr_1_1Addr_a99d88f693437a549495a2b094146c100a4f5b63f8f5ed10ed8aeb70b1b62a4662}} 
+ADDR\+\_\+\+ROUND\+\_\+\+BY\+\_\+\+HALF&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{ADDR\_ROUND\_TRUNCATE@{ADDR\_ROUND\_TRUNCATE}!rocr::Addr@{rocr::Addr}}\index{rocr::Addr@{rocr::Addr}!ADDR\_ROUND\_TRUNCATE@{ADDR\_ROUND\_TRUNCATE}}}\mbox{\Hypertarget{namespacerocr_1_1Addr_a99d88f693437a549495a2b094146c100a744ff791d785ce47644613e57f3a0568}\label{namespacerocr_1_1Addr_a99d88f693437a549495a2b094146c100a744ff791d785ce47644613e57f3a0568}} 
+ADDR\+\_\+\+ROUND\+\_\+\+TRUNCATE&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{ADDR\_ROUND\_DITHER@{ADDR\_ROUND\_DITHER}!rocr::Addr@{rocr::Addr}}\index{rocr::Addr@{rocr::Addr}!ADDR\_ROUND\_DITHER@{ADDR\_ROUND\_DITHER}}}\mbox{\Hypertarget{namespacerocr_1_1Addr_a99d88f693437a549495a2b094146c100a44cafd2937bde1757c82a3a8861a1061}\label{namespacerocr_1_1Addr_a99d88f693437a549495a2b094146c100a44cafd2937bde1757c82a3a8861a1061}} 
+ADDR\+\_\+\+ROUND\+\_\+\+DITHER&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{ADDR\_UNCOMPRESSED@{ADDR\_UNCOMPRESSED}!rocr::Addr@{rocr::Addr}}\index{rocr::Addr@{rocr::Addr}!ADDR\_UNCOMPRESSED@{ADDR\_UNCOMPRESSED}}}\mbox{\Hypertarget{namespacerocr_1_1Addr_a99d88f693437a549495a2b094146c100a1e6cfce15b98f75866bbbf06cef5674f}\label{namespacerocr_1_1Addr_a99d88f693437a549495a2b094146c100a1e6cfce15b98f75866bbbf06cef5674f}} 
+ADDR\+\_\+\+UNCOMPRESSED&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{ADDR\_EXPANDED@{ADDR\_EXPANDED}!rocr::Addr@{rocr::Addr}}\index{rocr::Addr@{rocr::Addr}!ADDR\_EXPANDED@{ADDR\_EXPANDED}}}\mbox{\Hypertarget{namespacerocr_1_1Addr_a99d88f693437a549495a2b094146c100a5efcc2be4204d2b34373741dee347558}\label{namespacerocr_1_1Addr_a99d88f693437a549495a2b094146c100a5efcc2be4204d2b34373741dee347558}} 
+ADDR\+\_\+\+EXPANDED&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{ADDR\_PACKED\_STD@{ADDR\_PACKED\_STD}!rocr::Addr@{rocr::Addr}}\index{rocr::Addr@{rocr::Addr}!ADDR\_PACKED\_STD@{ADDR\_PACKED\_STD}}}\mbox{\Hypertarget{namespacerocr_1_1Addr_a99d88f693437a549495a2b094146c100a61912068faba9d72b297f5b5cce1e8b4}\label{namespacerocr_1_1Addr_a99d88f693437a549495a2b094146c100a61912068faba9d72b297f5b5cce1e8b4}} 
+ADDR\+\_\+\+PACKED\+\_\+\+STD&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{ADDR\_PACKED\_REV@{ADDR\_PACKED\_REV}!rocr::Addr@{rocr::Addr}}\index{rocr::Addr@{rocr::Addr}!ADDR\_PACKED\_REV@{ADDR\_PACKED\_REV}}}\mbox{\Hypertarget{namespacerocr_1_1Addr_a99d88f693437a549495a2b094146c100a00d72673f9e6f579de859bac39139219}\label{namespacerocr_1_1Addr_a99d88f693437a549495a2b094146c100a00d72673f9e6f579de859bac39139219}} 
+ADDR\+\_\+\+PACKED\+\_\+\+REV&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{ADDR\_PACKED\_GBGR@{ADDR\_PACKED\_GBGR}!rocr::Addr@{rocr::Addr}}\index{rocr::Addr@{rocr::Addr}!ADDR\_PACKED\_GBGR@{ADDR\_PACKED\_GBGR}}}\mbox{\Hypertarget{namespacerocr_1_1Addr_a99d88f693437a549495a2b094146c100a7680fbc1350a577292ecb03c0e888b86}\label{namespacerocr_1_1Addr_a99d88f693437a549495a2b094146c100a7680fbc1350a577292ecb03c0e888b86}} 
+ADDR\+\_\+\+PACKED\+\_\+\+GBGR&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{ADDR\_PACKED\_BGRG@{ADDR\_PACKED\_BGRG}!rocr::Addr@{rocr::Addr}}\index{rocr::Addr@{rocr::Addr}!ADDR\_PACKED\_BGRG@{ADDR\_PACKED\_BGRG}}}\mbox{\Hypertarget{namespacerocr_1_1Addr_a99d88f693437a549495a2b094146c100a8cf8fe95f16aa73bbc70f82a5f4c1802}\label{namespacerocr_1_1Addr_a99d88f693437a549495a2b094146c100a8cf8fe95f16aa73bbc70f82a5f4c1802}} 
+ADDR\+\_\+\+PACKED\+\_\+\+BGRG&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{ADDR\_PACKED\_BC1@{ADDR\_PACKED\_BC1}!rocr::Addr@{rocr::Addr}}\index{rocr::Addr@{rocr::Addr}!ADDR\_PACKED\_BC1@{ADDR\_PACKED\_BC1}}}\mbox{\Hypertarget{namespacerocr_1_1Addr_a99d88f693437a549495a2b094146c100ab9eab607b939bfecea20215fac06dc19}\label{namespacerocr_1_1Addr_a99d88f693437a549495a2b094146c100ab9eab607b939bfecea20215fac06dc19}} 
+ADDR\+\_\+\+PACKED\+\_\+\+BC1&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{ADDR\_PACKED\_BC2@{ADDR\_PACKED\_BC2}!rocr::Addr@{rocr::Addr}}\index{rocr::Addr@{rocr::Addr}!ADDR\_PACKED\_BC2@{ADDR\_PACKED\_BC2}}}\mbox{\Hypertarget{namespacerocr_1_1Addr_a99d88f693437a549495a2b094146c100a67a2ee042ad8ee1851698cc491270844}\label{namespacerocr_1_1Addr_a99d88f693437a549495a2b094146c100a67a2ee042ad8ee1851698cc491270844}} 
+ADDR\+\_\+\+PACKED\+\_\+\+BC2&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{ADDR\_PACKED\_BC3@{ADDR\_PACKED\_BC3}!rocr::Addr@{rocr::Addr}}\index{rocr::Addr@{rocr::Addr}!ADDR\_PACKED\_BC3@{ADDR\_PACKED\_BC3}}}\mbox{\Hypertarget{namespacerocr_1_1Addr_a99d88f693437a549495a2b094146c100a2ca14375a059a8018cab5d3aaf641ed8}\label{namespacerocr_1_1Addr_a99d88f693437a549495a2b094146c100a2ca14375a059a8018cab5d3aaf641ed8}} 
+ADDR\+\_\+\+PACKED\+\_\+\+BC3&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{ADDR\_PACKED\_BC4@{ADDR\_PACKED\_BC4}!rocr::Addr@{rocr::Addr}}\index{rocr::Addr@{rocr::Addr}!ADDR\_PACKED\_BC4@{ADDR\_PACKED\_BC4}}}\mbox{\Hypertarget{namespacerocr_1_1Addr_a99d88f693437a549495a2b094146c100a8001fee35895250606b060181145447f}\label{namespacerocr_1_1Addr_a99d88f693437a549495a2b094146c100a8001fee35895250606b060181145447f}} 
+ADDR\+\_\+\+PACKED\+\_\+\+BC4&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{ADDR\_PACKED\_BC5@{ADDR\_PACKED\_BC5}!rocr::Addr@{rocr::Addr}}\index{rocr::Addr@{rocr::Addr}!ADDR\_PACKED\_BC5@{ADDR\_PACKED\_BC5}}}\mbox{\Hypertarget{namespacerocr_1_1Addr_a99d88f693437a549495a2b094146c100a7f195c11948c27230cccf2a9dee53a6a}\label{namespacerocr_1_1Addr_a99d88f693437a549495a2b094146c100a7f195c11948c27230cccf2a9dee53a6a}} 
+ADDR\+\_\+\+PACKED\+\_\+\+BC5&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{ADDR\_PACKED\_ETC2\_64BPP@{ADDR\_PACKED\_ETC2\_64BPP}!rocr::Addr@{rocr::Addr}}\index{rocr::Addr@{rocr::Addr}!ADDR\_PACKED\_ETC2\_64BPP@{ADDR\_PACKED\_ETC2\_64BPP}}}\mbox{\Hypertarget{namespacerocr_1_1Addr_a99d88f693437a549495a2b094146c100ac6789afc13da067348cf810ecc53e9ea}\label{namespacerocr_1_1Addr_a99d88f693437a549495a2b094146c100ac6789afc13da067348cf810ecc53e9ea}} 
+ADDR\+\_\+\+PACKED\+\_\+\+ETC2\+\_\+64\+BPP&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{ADDR\_PACKED\_ETC2\_128BPP@{ADDR\_PACKED\_ETC2\_128BPP}!rocr::Addr@{rocr::Addr}}\index{rocr::Addr@{rocr::Addr}!ADDR\_PACKED\_ETC2\_128BPP@{ADDR\_PACKED\_ETC2\_128BPP}}}\mbox{\Hypertarget{namespacerocr_1_1Addr_a99d88f693437a549495a2b094146c100aeddcd0625cab74f92c87185131d6e30f}\label{namespacerocr_1_1Addr_a99d88f693437a549495a2b094146c100aeddcd0625cab74f92c87185131d6e30f}} 
+ADDR\+\_\+\+PACKED\+\_\+\+ETC2\+\_\+128\+BPP&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{ADDR\_PACKED\_ASTC@{ADDR\_PACKED\_ASTC}!rocr::Addr@{rocr::Addr}}\index{rocr::Addr@{rocr::Addr}!ADDR\_PACKED\_ASTC@{ADDR\_PACKED\_ASTC}}}\mbox{\Hypertarget{namespacerocr_1_1Addr_a99d88f693437a549495a2b094146c100a53e418933a5c70a38a655cb0f61d4c44}\label{namespacerocr_1_1Addr_a99d88f693437a549495a2b094146c100a53e418933a5c70a38a655cb0f61d4c44}} 
+ADDR\+\_\+\+PACKED\+\_\+\+ASTC&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{ADDR\_ZPLANE\_R5XX@{ADDR\_ZPLANE\_R5XX}!rocr::Addr@{rocr::Addr}}\index{rocr::Addr@{rocr::Addr}!ADDR\_ZPLANE\_R5XX@{ADDR\_ZPLANE\_R5XX}}}\mbox{\Hypertarget{namespacerocr_1_1Addr_a99d88f693437a549495a2b094146c100a93ebbe1c979522a17104eca614a898d8}\label{namespacerocr_1_1Addr_a99d88f693437a549495a2b094146c100a93ebbe1c979522a17104eca614a898d8}} 
+ADDR\+\_\+\+ZPLANE\+\_\+\+R5\+XX&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{ADDR\_ZPLANE\_R6XX@{ADDR\_ZPLANE\_R6XX}!rocr::Addr@{rocr::Addr}}\index{rocr::Addr@{rocr::Addr}!ADDR\_ZPLANE\_R6XX@{ADDR\_ZPLANE\_R6XX}}}\mbox{\Hypertarget{namespacerocr_1_1Addr_a99d88f693437a549495a2b094146c100a136e2d3265991c2368896f77d69593eb}\label{namespacerocr_1_1Addr_a99d88f693437a549495a2b094146c100a136e2d3265991c2368896f77d69593eb}} 
+ADDR\+\_\+\+ZPLANE\+\_\+\+R6\+XX&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{ADDR\_END\_ELEMENT@{ADDR\_END\_ELEMENT}!rocr::Addr@{rocr::Addr}}\index{rocr::Addr@{rocr::Addr}!ADDR\_END\_ELEMENT@{ADDR\_END\_ELEMENT}}}\mbox{\Hypertarget{namespacerocr_1_1Addr_a99d88f693437a549495a2b094146c100af5d06c9dc10816c7e13a95c67902dd5d}\label{namespacerocr_1_1Addr_a99d88f693437a549495a2b094146c100af5d06c9dc10816c7e13a95c67902dd5d}} 
+ADDR\+\_\+\+END\+\_\+\+ELEMENT&\\
+\hline
+
+\end{DoxyEnumFields}
+\mbox{\Hypertarget{namespacerocr_1_1Addr_adcb6b92d5b579ec2cefb56afe259292b}\label{namespacerocr_1_1Addr_adcb6b92d5b579ec2cefb56afe259292b}} 
+\index{rocr::Addr@{rocr::Addr}!NumBanksConfig@{NumBanksConfig}}
+\index{NumBanksConfig@{NumBanksConfig}!rocr::Addr@{rocr::Addr}}
+\doxysubsubsection{\texorpdfstring{NumBanksConfig}{NumBanksConfig}}
+{\footnotesize\ttfamily enum \mbox{\hyperlink{namespacerocr_1_1Addr_adcb6b92d5b579ec2cefb56afe259292b}{rocr\+::\+Addr\+::\+Num\+Banks\+Config}}}
+
+
+
+Enums that define num banks config. 
+
+\begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{ADDR\_CONFIG\_1\_BANK@{ADDR\_CONFIG\_1\_BANK}!rocr::Addr@{rocr::Addr}}\index{rocr::Addr@{rocr::Addr}!ADDR\_CONFIG\_1\_BANK@{ADDR\_CONFIG\_1\_BANK}}}\mbox{\Hypertarget{namespacerocr_1_1Addr_adcb6b92d5b579ec2cefb56afe259292ba77925ef3948409cf24e14aef957b0e0e}\label{namespacerocr_1_1Addr_adcb6b92d5b579ec2cefb56afe259292ba77925ef3948409cf24e14aef957b0e0e}} 
+ADDR\+\_\+\+CONFIG\+\_\+1\+\_\+\+BANK&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{ADDR\_CONFIG\_2\_BANK@{ADDR\_CONFIG\_2\_BANK}!rocr::Addr@{rocr::Addr}}\index{rocr::Addr@{rocr::Addr}!ADDR\_CONFIG\_2\_BANK@{ADDR\_CONFIG\_2\_BANK}}}\mbox{\Hypertarget{namespacerocr_1_1Addr_adcb6b92d5b579ec2cefb56afe259292baede79725bc8fab31ae2bc1ed40354866}\label{namespacerocr_1_1Addr_adcb6b92d5b579ec2cefb56afe259292baede79725bc8fab31ae2bc1ed40354866}} 
+ADDR\+\_\+\+CONFIG\+\_\+2\+\_\+\+BANK&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{ADDR\_CONFIG\_4\_BANK@{ADDR\_CONFIG\_4\_BANK}!rocr::Addr@{rocr::Addr}}\index{rocr::Addr@{rocr::Addr}!ADDR\_CONFIG\_4\_BANK@{ADDR\_CONFIG\_4\_BANK}}}\mbox{\Hypertarget{namespacerocr_1_1Addr_adcb6b92d5b579ec2cefb56afe259292ba8283a3b4053c130a84476d6151d7c88a}\label{namespacerocr_1_1Addr_adcb6b92d5b579ec2cefb56afe259292ba8283a3b4053c130a84476d6151d7c88a}} 
+ADDR\+\_\+\+CONFIG\+\_\+4\+\_\+\+BANK&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{ADDR\_CONFIG\_8\_BANK@{ADDR\_CONFIG\_8\_BANK}!rocr::Addr@{rocr::Addr}}\index{rocr::Addr@{rocr::Addr}!ADDR\_CONFIG\_8\_BANK@{ADDR\_CONFIG\_8\_BANK}}}\mbox{\Hypertarget{namespacerocr_1_1Addr_adcb6b92d5b579ec2cefb56afe259292ba8b2ada0cfa7a05f5553f45a4011bc94d}\label{namespacerocr_1_1Addr_adcb6b92d5b579ec2cefb56afe259292ba8b2ada0cfa7a05f5553f45a4011bc94d}} 
+ADDR\+\_\+\+CONFIG\+\_\+8\+\_\+\+BANK&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{ADDR\_CONFIG\_16\_BANK@{ADDR\_CONFIG\_16\_BANK}!rocr::Addr@{rocr::Addr}}\index{rocr::Addr@{rocr::Addr}!ADDR\_CONFIG\_16\_BANK@{ADDR\_CONFIG\_16\_BANK}}}\mbox{\Hypertarget{namespacerocr_1_1Addr_adcb6b92d5b579ec2cefb56afe259292bab89cc1c68daca7e1e979b7c03714a282}\label{namespacerocr_1_1Addr_adcb6b92d5b579ec2cefb56afe259292bab89cc1c68daca7e1e979b7c03714a282}} 
+ADDR\+\_\+\+CONFIG\+\_\+16\+\_\+\+BANK&\\
+\hline
+
+\end{DoxyEnumFields}
+\mbox{\Hypertarget{namespacerocr_1_1Addr_afc359d0926a4e5d0adf7ee6bfaf2a94a}\label{namespacerocr_1_1Addr_afc359d0926a4e5d0adf7ee6bfaf2a94a}} 
+\index{rocr::Addr@{rocr::Addr}!NumberType@{NumberType}}
+\index{NumberType@{NumberType}!rocr::Addr@{rocr::Addr}}
+\doxysubsubsection{\texorpdfstring{NumberType}{NumberType}}
+{\footnotesize\ttfamily enum \mbox{\hyperlink{namespacerocr_1_1Addr_afc359d0926a4e5d0adf7ee6bfaf2a94a}{rocr\+::\+Addr\+::\+Number\+Type}}}
+
+\begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{ADDR\_NO\_NUMBER@{ADDR\_NO\_NUMBER}!rocr::Addr@{rocr::Addr}}\index{rocr::Addr@{rocr::Addr}!ADDR\_NO\_NUMBER@{ADDR\_NO\_NUMBER}}}\mbox{\Hypertarget{namespacerocr_1_1Addr_afc359d0926a4e5d0adf7ee6bfaf2a94aa953e04fa33ddc720d0bdbb9e169d98c2}\label{namespacerocr_1_1Addr_afc359d0926a4e5d0adf7ee6bfaf2a94aa953e04fa33ddc720d0bdbb9e169d98c2}} 
+ADDR\+\_\+\+NO\+\_\+\+NUMBER&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{ADDR\_EPSILON@{ADDR\_EPSILON}!rocr::Addr@{rocr::Addr}}\index{rocr::Addr@{rocr::Addr}!ADDR\_EPSILON@{ADDR\_EPSILON}}}\mbox{\Hypertarget{namespacerocr_1_1Addr_afc359d0926a4e5d0adf7ee6bfaf2a94aac7b5ada128ea0bf5bf72cf74e084a468}\label{namespacerocr_1_1Addr_afc359d0926a4e5d0adf7ee6bfaf2a94aac7b5ada128ea0bf5bf72cf74e084a468}} 
+ADDR\+\_\+\+EPSILON&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{ADDR\_ZERO@{ADDR\_ZERO}!rocr::Addr@{rocr::Addr}}\index{rocr::Addr@{rocr::Addr}!ADDR\_ZERO@{ADDR\_ZERO}}}\mbox{\Hypertarget{namespacerocr_1_1Addr_afc359d0926a4e5d0adf7ee6bfaf2a94aa490805c36048236b5e082b3908631a26}\label{namespacerocr_1_1Addr_afc359d0926a4e5d0adf7ee6bfaf2a94aa490805c36048236b5e082b3908631a26}} 
+ADDR\+\_\+\+ZERO&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{ADDR\_ONE@{ADDR\_ONE}!rocr::Addr@{rocr::Addr}}\index{rocr::Addr@{rocr::Addr}!ADDR\_ONE@{ADDR\_ONE}}}\mbox{\Hypertarget{namespacerocr_1_1Addr_afc359d0926a4e5d0adf7ee6bfaf2a94aa53258e37cc0f5b6bd6e55365fd24a2a0}\label{namespacerocr_1_1Addr_afc359d0926a4e5d0adf7ee6bfaf2a94aa53258e37cc0f5b6bd6e55365fd24a2a0}} 
+ADDR\+\_\+\+ONE&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{ADDR\_UNORM@{ADDR\_UNORM}!rocr::Addr@{rocr::Addr}}\index{rocr::Addr@{rocr::Addr}!ADDR\_UNORM@{ADDR\_UNORM}}}\mbox{\Hypertarget{namespacerocr_1_1Addr_afc359d0926a4e5d0adf7ee6bfaf2a94aa94a3dff67f389394d54f17eb3e75dfba}\label{namespacerocr_1_1Addr_afc359d0926a4e5d0adf7ee6bfaf2a94aa94a3dff67f389394d54f17eb3e75dfba}} 
+ADDR\+\_\+\+UNORM&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{ADDR\_SNORM@{ADDR\_SNORM}!rocr::Addr@{rocr::Addr}}\index{rocr::Addr@{rocr::Addr}!ADDR\_SNORM@{ADDR\_SNORM}}}\mbox{\Hypertarget{namespacerocr_1_1Addr_afc359d0926a4e5d0adf7ee6bfaf2a94aae07901f8476f2e8f456b86bde81451fe}\label{namespacerocr_1_1Addr_afc359d0926a4e5d0adf7ee6bfaf2a94aae07901f8476f2e8f456b86bde81451fe}} 
+ADDR\+\_\+\+SNORM&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{ADDR\_GAMMA@{ADDR\_GAMMA}!rocr::Addr@{rocr::Addr}}\index{rocr::Addr@{rocr::Addr}!ADDR\_GAMMA@{ADDR\_GAMMA}}}\mbox{\Hypertarget{namespacerocr_1_1Addr_afc359d0926a4e5d0adf7ee6bfaf2a94aa303e2e13a09d5c8e34e2168b44e01f13}\label{namespacerocr_1_1Addr_afc359d0926a4e5d0adf7ee6bfaf2a94aa303e2e13a09d5c8e34e2168b44e01f13}} 
+ADDR\+\_\+\+GAMMA&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{ADDR\_UNORM\_R5XXRB@{ADDR\_UNORM\_R5XXRB}!rocr::Addr@{rocr::Addr}}\index{rocr::Addr@{rocr::Addr}!ADDR\_UNORM\_R5XXRB@{ADDR\_UNORM\_R5XXRB}}}\mbox{\Hypertarget{namespacerocr_1_1Addr_afc359d0926a4e5d0adf7ee6bfaf2a94aaed7880d6879a37186843e6f1e9964800}\label{namespacerocr_1_1Addr_afc359d0926a4e5d0adf7ee6bfaf2a94aaed7880d6879a37186843e6f1e9964800}} 
+ADDR\+\_\+\+UNORM\+\_\+\+R5\+XXRB&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{ADDR\_SNORM\_R5XXRB@{ADDR\_SNORM\_R5XXRB}!rocr::Addr@{rocr::Addr}}\index{rocr::Addr@{rocr::Addr}!ADDR\_SNORM\_R5XXRB@{ADDR\_SNORM\_R5XXRB}}}\mbox{\Hypertarget{namespacerocr_1_1Addr_afc359d0926a4e5d0adf7ee6bfaf2a94aac0362b6c3f5e78dc9050fd2f23f490c7}\label{namespacerocr_1_1Addr_afc359d0926a4e5d0adf7ee6bfaf2a94aac0362b6c3f5e78dc9050fd2f23f490c7}} 
+ADDR\+\_\+\+SNORM\+\_\+\+R5\+XXRB&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{ADDR\_GAMMA\_R5XXRB@{ADDR\_GAMMA\_R5XXRB}!rocr::Addr@{rocr::Addr}}\index{rocr::Addr@{rocr::Addr}!ADDR\_GAMMA\_R5XXRB@{ADDR\_GAMMA\_R5XXRB}}}\mbox{\Hypertarget{namespacerocr_1_1Addr_afc359d0926a4e5d0adf7ee6bfaf2a94aa058e48cbf55754ec5357f1cb257a27b1}\label{namespacerocr_1_1Addr_afc359d0926a4e5d0adf7ee6bfaf2a94aa058e48cbf55754ec5357f1cb257a27b1}} 
+ADDR\+\_\+\+GAMMA\+\_\+\+R5\+XXRB&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{ADDR\_UNORM\_R5XXBC@{ADDR\_UNORM\_R5XXBC}!rocr::Addr@{rocr::Addr}}\index{rocr::Addr@{rocr::Addr}!ADDR\_UNORM\_R5XXBC@{ADDR\_UNORM\_R5XXBC}}}\mbox{\Hypertarget{namespacerocr_1_1Addr_afc359d0926a4e5d0adf7ee6bfaf2a94aab7b89739c0f76e1170a24d8ba86d9442}\label{namespacerocr_1_1Addr_afc359d0926a4e5d0adf7ee6bfaf2a94aab7b89739c0f76e1170a24d8ba86d9442}} 
+ADDR\+\_\+\+UNORM\+\_\+\+R5\+XXBC&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{ADDR\_SNORM\_R5XXBC@{ADDR\_SNORM\_R5XXBC}!rocr::Addr@{rocr::Addr}}\index{rocr::Addr@{rocr::Addr}!ADDR\_SNORM\_R5XXBC@{ADDR\_SNORM\_R5XXBC}}}\mbox{\Hypertarget{namespacerocr_1_1Addr_afc359d0926a4e5d0adf7ee6bfaf2a94aa55ba26f6f57d672e6bd2ce84bed7b0ea}\label{namespacerocr_1_1Addr_afc359d0926a4e5d0adf7ee6bfaf2a94aa55ba26f6f57d672e6bd2ce84bed7b0ea}} 
+ADDR\+\_\+\+SNORM\+\_\+\+R5\+XXBC&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{ADDR\_GAMMA\_R5XXBC@{ADDR\_GAMMA\_R5XXBC}!rocr::Addr@{rocr::Addr}}\index{rocr::Addr@{rocr::Addr}!ADDR\_GAMMA\_R5XXBC@{ADDR\_GAMMA\_R5XXBC}}}\mbox{\Hypertarget{namespacerocr_1_1Addr_afc359d0926a4e5d0adf7ee6bfaf2a94aa8e333a97fa678f1e73c0b3b09eea7a57}\label{namespacerocr_1_1Addr_afc359d0926a4e5d0adf7ee6bfaf2a94aa8e333a97fa678f1e73c0b3b09eea7a57}} 
+ADDR\+\_\+\+GAMMA\+\_\+\+R5\+XXBC&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{ADDR\_UNORM\_R6XX@{ADDR\_UNORM\_R6XX}!rocr::Addr@{rocr::Addr}}\index{rocr::Addr@{rocr::Addr}!ADDR\_UNORM\_R6XX@{ADDR\_UNORM\_R6XX}}}\mbox{\Hypertarget{namespacerocr_1_1Addr_afc359d0926a4e5d0adf7ee6bfaf2a94aac3bbbeee6c1bdcd02ef53bba46a822ab}\label{namespacerocr_1_1Addr_afc359d0926a4e5d0adf7ee6bfaf2a94aac3bbbeee6c1bdcd02ef53bba46a822ab}} 
+ADDR\+\_\+\+UNORM\+\_\+\+R6\+XX&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{ADDR\_UNORM\_R6XXDB@{ADDR\_UNORM\_R6XXDB}!rocr::Addr@{rocr::Addr}}\index{rocr::Addr@{rocr::Addr}!ADDR\_UNORM\_R6XXDB@{ADDR\_UNORM\_R6XXDB}}}\mbox{\Hypertarget{namespacerocr_1_1Addr_afc359d0926a4e5d0adf7ee6bfaf2a94aae17c7ab40e4f29f6ad37b77179acbab3}\label{namespacerocr_1_1Addr_afc359d0926a4e5d0adf7ee6bfaf2a94aae17c7ab40e4f29f6ad37b77179acbab3}} 
+ADDR\+\_\+\+UNORM\+\_\+\+R6\+XXDB&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{ADDR\_SNORM\_R6XX@{ADDR\_SNORM\_R6XX}!rocr::Addr@{rocr::Addr}}\index{rocr::Addr@{rocr::Addr}!ADDR\_SNORM\_R6XX@{ADDR\_SNORM\_R6XX}}}\mbox{\Hypertarget{namespacerocr_1_1Addr_afc359d0926a4e5d0adf7ee6bfaf2a94aa4aafec453b3502a56fc062d3d8fe8371}\label{namespacerocr_1_1Addr_afc359d0926a4e5d0adf7ee6bfaf2a94aa4aafec453b3502a56fc062d3d8fe8371}} 
+ADDR\+\_\+\+SNORM\+\_\+\+R6\+XX&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{ADDR\_GAMMA8\_R6XX@{ADDR\_GAMMA8\_R6XX}!rocr::Addr@{rocr::Addr}}\index{rocr::Addr@{rocr::Addr}!ADDR\_GAMMA8\_R6XX@{ADDR\_GAMMA8\_R6XX}}}\mbox{\Hypertarget{namespacerocr_1_1Addr_afc359d0926a4e5d0adf7ee6bfaf2a94aac800d1e56fb5175a8abdf7df334348a0}\label{namespacerocr_1_1Addr_afc359d0926a4e5d0adf7ee6bfaf2a94aac800d1e56fb5175a8abdf7df334348a0}} 
+ADDR\+\_\+\+GAMMA8\+\_\+\+R6\+XX&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{ADDR\_GAMMA8\_R7XX\_TP@{ADDR\_GAMMA8\_R7XX\_TP}!rocr::Addr@{rocr::Addr}}\index{rocr::Addr@{rocr::Addr}!ADDR\_GAMMA8\_R7XX\_TP@{ADDR\_GAMMA8\_R7XX\_TP}}}\mbox{\Hypertarget{namespacerocr_1_1Addr_afc359d0926a4e5d0adf7ee6bfaf2a94aa81fa56f190781e150e515384faeea5eb}\label{namespacerocr_1_1Addr_afc359d0926a4e5d0adf7ee6bfaf2a94aa81fa56f190781e150e515384faeea5eb}} 
+ADDR\+\_\+\+GAMMA8\+\_\+\+R7\+XX\+\_\+\+TP&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{ADDR\_U4FLOATC@{ADDR\_U4FLOATC}!rocr::Addr@{rocr::Addr}}\index{rocr::Addr@{rocr::Addr}!ADDR\_U4FLOATC@{ADDR\_U4FLOATC}}}\mbox{\Hypertarget{namespacerocr_1_1Addr_afc359d0926a4e5d0adf7ee6bfaf2a94aa88fa43bf11b9de03c29dabbcabf2de8f}\label{namespacerocr_1_1Addr_afc359d0926a4e5d0adf7ee6bfaf2a94aa88fa43bf11b9de03c29dabbcabf2de8f}} 
+ADDR\+\_\+\+U4\+FLOATC&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{ADDR\_GAMMA\_4SEG@{ADDR\_GAMMA\_4SEG}!rocr::Addr@{rocr::Addr}}\index{rocr::Addr@{rocr::Addr}!ADDR\_GAMMA\_4SEG@{ADDR\_GAMMA\_4SEG}}}\mbox{\Hypertarget{namespacerocr_1_1Addr_afc359d0926a4e5d0adf7ee6bfaf2a94aa1d06ae54be6c44cc477c55594a2916f0}\label{namespacerocr_1_1Addr_afc359d0926a4e5d0adf7ee6bfaf2a94aa1d06ae54be6c44cc477c55594a2916f0}} 
+ADDR\+\_\+\+GAMMA\+\_\+4\+SEG&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{ADDR\_U0FIXED@{ADDR\_U0FIXED}!rocr::Addr@{rocr::Addr}}\index{rocr::Addr@{rocr::Addr}!ADDR\_U0FIXED@{ADDR\_U0FIXED}}}\mbox{\Hypertarget{namespacerocr_1_1Addr_afc359d0926a4e5d0adf7ee6bfaf2a94aad1012bc6dac84f3598ad23a79823fa0c}\label{namespacerocr_1_1Addr_afc359d0926a4e5d0adf7ee6bfaf2a94aad1012bc6dac84f3598ad23a79823fa0c}} 
+ADDR\+\_\+\+U0\+FIXED&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{ADDR\_USCALED@{ADDR\_USCALED}!rocr::Addr@{rocr::Addr}}\index{rocr::Addr@{rocr::Addr}!ADDR\_USCALED@{ADDR\_USCALED}}}\mbox{\Hypertarget{namespacerocr_1_1Addr_afc359d0926a4e5d0adf7ee6bfaf2a94aa03c5a81d40e525dd44d249b865ab95c3}\label{namespacerocr_1_1Addr_afc359d0926a4e5d0adf7ee6bfaf2a94aa03c5a81d40e525dd44d249b865ab95c3}} 
+ADDR\+\_\+\+USCALED&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{ADDR\_SSCALED@{ADDR\_SSCALED}!rocr::Addr@{rocr::Addr}}\index{rocr::Addr@{rocr::Addr}!ADDR\_SSCALED@{ADDR\_SSCALED}}}\mbox{\Hypertarget{namespacerocr_1_1Addr_afc359d0926a4e5d0adf7ee6bfaf2a94aa41144eb049e9605cb06bf51eddf53387}\label{namespacerocr_1_1Addr_afc359d0926a4e5d0adf7ee6bfaf2a94aa41144eb049e9605cb06bf51eddf53387}} 
+ADDR\+\_\+\+SSCALED&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{ADDR\_USCALED\_R5XXRB@{ADDR\_USCALED\_R5XXRB}!rocr::Addr@{rocr::Addr}}\index{rocr::Addr@{rocr::Addr}!ADDR\_USCALED\_R5XXRB@{ADDR\_USCALED\_R5XXRB}}}\mbox{\Hypertarget{namespacerocr_1_1Addr_afc359d0926a4e5d0adf7ee6bfaf2a94aabce901ec8e6dfacf117239b83dbc28db}\label{namespacerocr_1_1Addr_afc359d0926a4e5d0adf7ee6bfaf2a94aabce901ec8e6dfacf117239b83dbc28db}} 
+ADDR\+\_\+\+USCALED\+\_\+\+R5\+XXRB&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{ADDR\_SSCALED\_R5XXRB@{ADDR\_SSCALED\_R5XXRB}!rocr::Addr@{rocr::Addr}}\index{rocr::Addr@{rocr::Addr}!ADDR\_SSCALED\_R5XXRB@{ADDR\_SSCALED\_R5XXRB}}}\mbox{\Hypertarget{namespacerocr_1_1Addr_afc359d0926a4e5d0adf7ee6bfaf2a94aae0803d69d8b8c821d0dd99ddb92b9489}\label{namespacerocr_1_1Addr_afc359d0926a4e5d0adf7ee6bfaf2a94aae0803d69d8b8c821d0dd99ddb92b9489}} 
+ADDR\+\_\+\+SSCALED\+\_\+\+R5\+XXRB&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{ADDR\_UINT\_BITS@{ADDR\_UINT\_BITS}!rocr::Addr@{rocr::Addr}}\index{rocr::Addr@{rocr::Addr}!ADDR\_UINT\_BITS@{ADDR\_UINT\_BITS}}}\mbox{\Hypertarget{namespacerocr_1_1Addr_afc359d0926a4e5d0adf7ee6bfaf2a94aa82591639bc5e86e8e65750b71c5fb310}\label{namespacerocr_1_1Addr_afc359d0926a4e5d0adf7ee6bfaf2a94aa82591639bc5e86e8e65750b71c5fb310}} 
+ADDR\+\_\+\+UINT\+\_\+\+BITS&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{ADDR\_SINT\_BITS@{ADDR\_SINT\_BITS}!rocr::Addr@{rocr::Addr}}\index{rocr::Addr@{rocr::Addr}!ADDR\_SINT\_BITS@{ADDR\_SINT\_BITS}}}\mbox{\Hypertarget{namespacerocr_1_1Addr_afc359d0926a4e5d0adf7ee6bfaf2a94aad2cc97db6b717d9395d2a7ca58ec0073}\label{namespacerocr_1_1Addr_afc359d0926a4e5d0adf7ee6bfaf2a94aad2cc97db6b717d9395d2a7ca58ec0073}} 
+ADDR\+\_\+\+SINT\+\_\+\+BITS&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{ADDR\_UINTBITS@{ADDR\_UINTBITS}!rocr::Addr@{rocr::Addr}}\index{rocr::Addr@{rocr::Addr}!ADDR\_UINTBITS@{ADDR\_UINTBITS}}}\mbox{\Hypertarget{namespacerocr_1_1Addr_afc359d0926a4e5d0adf7ee6bfaf2a94aadd673dad461f5d52994f4880c1947f91}\label{namespacerocr_1_1Addr_afc359d0926a4e5d0adf7ee6bfaf2a94aadd673dad461f5d52994f4880c1947f91}} 
+ADDR\+\_\+\+UINTBITS&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{ADDR\_SINTBITS@{ADDR\_SINTBITS}!rocr::Addr@{rocr::Addr}}\index{rocr::Addr@{rocr::Addr}!ADDR\_SINTBITS@{ADDR\_SINTBITS}}}\mbox{\Hypertarget{namespacerocr_1_1Addr_afc359d0926a4e5d0adf7ee6bfaf2a94aa20b7249a9c7de32a31468ea2fffd59ac}\label{namespacerocr_1_1Addr_afc359d0926a4e5d0adf7ee6bfaf2a94aa20b7249a9c7de32a31468ea2fffd59ac}} 
+ADDR\+\_\+\+SINTBITS&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{ADDR\_S8FLOAT@{ADDR\_S8FLOAT}!rocr::Addr@{rocr::Addr}}\index{rocr::Addr@{rocr::Addr}!ADDR\_S8FLOAT@{ADDR\_S8FLOAT}}}\mbox{\Hypertarget{namespacerocr_1_1Addr_afc359d0926a4e5d0adf7ee6bfaf2a94aad86836e95961f5c3f3ef3c529cbcff37}\label{namespacerocr_1_1Addr_afc359d0926a4e5d0adf7ee6bfaf2a94aad86836e95961f5c3f3ef3c529cbcff37}} 
+ADDR\+\_\+\+S8\+FLOAT&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{ADDR\_S8FLOAT32@{ADDR\_S8FLOAT32}!rocr::Addr@{rocr::Addr}}\index{rocr::Addr@{rocr::Addr}!ADDR\_S8FLOAT32@{ADDR\_S8FLOAT32}}}\mbox{\Hypertarget{namespacerocr_1_1Addr_afc359d0926a4e5d0adf7ee6bfaf2a94aa1d747caa524b5c9a7410059804c53648}\label{namespacerocr_1_1Addr_afc359d0926a4e5d0adf7ee6bfaf2a94aa1d747caa524b5c9a7410059804c53648}} 
+ADDR\+\_\+\+S8\+FLOAT32&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{ADDR\_S5FLOAT@{ADDR\_S5FLOAT}!rocr::Addr@{rocr::Addr}}\index{rocr::Addr@{rocr::Addr}!ADDR\_S5FLOAT@{ADDR\_S5FLOAT}}}\mbox{\Hypertarget{namespacerocr_1_1Addr_afc359d0926a4e5d0adf7ee6bfaf2a94aacd17dcbd0a2b302c7d6cd6278ddd3d46}\label{namespacerocr_1_1Addr_afc359d0926a4e5d0adf7ee6bfaf2a94aacd17dcbd0a2b302c7d6cd6278ddd3d46}} 
+ADDR\+\_\+\+S5\+FLOAT&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{ADDR\_S5FLOATM@{ADDR\_S5FLOATM}!rocr::Addr@{rocr::Addr}}\index{rocr::Addr@{rocr::Addr}!ADDR\_S5FLOATM@{ADDR\_S5FLOATM}}}\mbox{\Hypertarget{namespacerocr_1_1Addr_afc359d0926a4e5d0adf7ee6bfaf2a94aa67b502aca9f2c25e573992f010ba982d}\label{namespacerocr_1_1Addr_afc359d0926a4e5d0adf7ee6bfaf2a94aa67b502aca9f2c25e573992f010ba982d}} 
+ADDR\+\_\+\+S5\+FLOATM&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{ADDR\_U5FLOAT@{ADDR\_U5FLOAT}!rocr::Addr@{rocr::Addr}}\index{rocr::Addr@{rocr::Addr}!ADDR\_U5FLOAT@{ADDR\_U5FLOAT}}}\mbox{\Hypertarget{namespacerocr_1_1Addr_afc359d0926a4e5d0adf7ee6bfaf2a94aa3cddea2056878b50bfc2ff88754c8b03}\label{namespacerocr_1_1Addr_afc359d0926a4e5d0adf7ee6bfaf2a94aa3cddea2056878b50bfc2ff88754c8b03}} 
+ADDR\+\_\+\+U5\+FLOAT&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{ADDR\_U3FLOATM@{ADDR\_U3FLOATM}!rocr::Addr@{rocr::Addr}}\index{rocr::Addr@{rocr::Addr}!ADDR\_U3FLOATM@{ADDR\_U3FLOATM}}}\mbox{\Hypertarget{namespacerocr_1_1Addr_afc359d0926a4e5d0adf7ee6bfaf2a94aa55d477ab44ca3999dc6401c5a7357a65}\label{namespacerocr_1_1Addr_afc359d0926a4e5d0adf7ee6bfaf2a94aa55d477ab44ca3999dc6401c5a7357a65}} 
+ADDR\+\_\+\+U3\+FLOATM&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{ADDR\_S5FIXED@{ADDR\_S5FIXED}!rocr::Addr@{rocr::Addr}}\index{rocr::Addr@{rocr::Addr}!ADDR\_S5FIXED@{ADDR\_S5FIXED}}}\mbox{\Hypertarget{namespacerocr_1_1Addr_afc359d0926a4e5d0adf7ee6bfaf2a94aa86449859335d8e3efb8e96b4d82590c3}\label{namespacerocr_1_1Addr_afc359d0926a4e5d0adf7ee6bfaf2a94aa86449859335d8e3efb8e96b4d82590c3}} 
+ADDR\+\_\+\+S5\+FIXED&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{ADDR\_END\_NUMBER@{ADDR\_END\_NUMBER}!rocr::Addr@{rocr::Addr}}\index{rocr::Addr@{rocr::Addr}!ADDR\_END\_NUMBER@{ADDR\_END\_NUMBER}}}\mbox{\Hypertarget{namespacerocr_1_1Addr_afc359d0926a4e5d0adf7ee6bfaf2a94aa0ff022cecc515d91b8acae16d26d5bc4}\label{namespacerocr_1_1Addr_afc359d0926a4e5d0adf7ee6bfaf2a94aa0ff022cecc515d91b8acae16d26d5bc4}} 
+ADDR\+\_\+\+END\+\_\+\+NUMBER&\\
+\hline
+
+\end{DoxyEnumFields}
+\mbox{\Hypertarget{namespacerocr_1_1Addr_ac60856c92488f70830a646d7e43e39fc}\label{namespacerocr_1_1Addr_ac60856c92488f70830a646d7e43e39fc}} 
+\index{rocr::Addr@{rocr::Addr}!NumMaxCompressedFragmentsConfig@{NumMaxCompressedFragmentsConfig}}
+\index{NumMaxCompressedFragmentsConfig@{NumMaxCompressedFragmentsConfig}!rocr::Addr@{rocr::Addr}}
+\doxysubsubsection{\texorpdfstring{NumMaxCompressedFragmentsConfig}{NumMaxCompressedFragmentsConfig}}
+{\footnotesize\ttfamily enum \mbox{\hyperlink{namespacerocr_1_1Addr_ac60856c92488f70830a646d7e43e39fc}{rocr\+::\+Addr\+::\+Num\+Max\+Compressed\+Fragments\+Config}}}
+
+
+
+Enums that define max compressed fragments config. 
+
+\begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{ADDR\_CONFIG\_1\_MAX\_COMPRESSED\_FRAGMENTS@{ADDR\_CONFIG\_1\_MAX\_COMPRESSED\_FRAGMENTS}!rocr::Addr@{rocr::Addr}}\index{rocr::Addr@{rocr::Addr}!ADDR\_CONFIG\_1\_MAX\_COMPRESSED\_FRAGMENTS@{ADDR\_CONFIG\_1\_MAX\_COMPRESSED\_FRAGMENTS}}}\mbox{\Hypertarget{namespacerocr_1_1Addr_ac60856c92488f70830a646d7e43e39fca3ea47504b72c4ab3413a697eda708021}\label{namespacerocr_1_1Addr_ac60856c92488f70830a646d7e43e39fca3ea47504b72c4ab3413a697eda708021}} 
+ADDR\+\_\+\+CONFIG\+\_\+1\+\_\+\+MAX\+\_\+\+COMPRESSED\+\_\+\+FRAGMENTS&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{ADDR\_CONFIG\_2\_MAX\_COMPRESSED\_FRAGMENTS@{ADDR\_CONFIG\_2\_MAX\_COMPRESSED\_FRAGMENTS}!rocr::Addr@{rocr::Addr}}\index{rocr::Addr@{rocr::Addr}!ADDR\_CONFIG\_2\_MAX\_COMPRESSED\_FRAGMENTS@{ADDR\_CONFIG\_2\_MAX\_COMPRESSED\_FRAGMENTS}}}\mbox{\Hypertarget{namespacerocr_1_1Addr_ac60856c92488f70830a646d7e43e39fca95cf6b235902b8e8403c65de92699473}\label{namespacerocr_1_1Addr_ac60856c92488f70830a646d7e43e39fca95cf6b235902b8e8403c65de92699473}} 
+ADDR\+\_\+\+CONFIG\+\_\+2\+\_\+\+MAX\+\_\+\+COMPRESSED\+\_\+\+FRAGMENTS&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{ADDR\_CONFIG\_4\_MAX\_COMPRESSED\_FRAGMENTS@{ADDR\_CONFIG\_4\_MAX\_COMPRESSED\_FRAGMENTS}!rocr::Addr@{rocr::Addr}}\index{rocr::Addr@{rocr::Addr}!ADDR\_CONFIG\_4\_MAX\_COMPRESSED\_FRAGMENTS@{ADDR\_CONFIG\_4\_MAX\_COMPRESSED\_FRAGMENTS}}}\mbox{\Hypertarget{namespacerocr_1_1Addr_ac60856c92488f70830a646d7e43e39fcac8321fe539aae5f643ad92f6704b67e4}\label{namespacerocr_1_1Addr_ac60856c92488f70830a646d7e43e39fcac8321fe539aae5f643ad92f6704b67e4}} 
+ADDR\+\_\+\+CONFIG\+\_\+4\+\_\+\+MAX\+\_\+\+COMPRESSED\+\_\+\+FRAGMENTS&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{ADDR\_CONFIG\_8\_MAX\_COMPRESSED\_FRAGMENTS@{ADDR\_CONFIG\_8\_MAX\_COMPRESSED\_FRAGMENTS}!rocr::Addr@{rocr::Addr}}\index{rocr::Addr@{rocr::Addr}!ADDR\_CONFIG\_8\_MAX\_COMPRESSED\_FRAGMENTS@{ADDR\_CONFIG\_8\_MAX\_COMPRESSED\_FRAGMENTS}}}\mbox{\Hypertarget{namespacerocr_1_1Addr_ac60856c92488f70830a646d7e43e39fcabfc67e7b5fe3b66dae4ad32a9f2833b6}\label{namespacerocr_1_1Addr_ac60856c92488f70830a646d7e43e39fcabfc67e7b5fe3b66dae4ad32a9f2833b6}} 
+ADDR\+\_\+\+CONFIG\+\_\+8\+\_\+\+MAX\+\_\+\+COMPRESSED\+\_\+\+FRAGMENTS&\\
+\hline
+
+\end{DoxyEnumFields}
+\mbox{\Hypertarget{namespacerocr_1_1Addr_a8d26f0c323acaf95b3acf9323f1b561d}\label{namespacerocr_1_1Addr_a8d26f0c323acaf95b3acf9323f1b561d}} 
+\index{rocr::Addr@{rocr::Addr}!NumPipesConfig@{NumPipesConfig}}
+\index{NumPipesConfig@{NumPipesConfig}!rocr::Addr@{rocr::Addr}}
+\doxysubsubsection{\texorpdfstring{NumPipesConfig}{NumPipesConfig}}
+{\footnotesize\ttfamily enum \mbox{\hyperlink{namespacerocr_1_1Addr_a8d26f0c323acaf95b3acf9323f1b561d}{rocr\+::\+Addr\+::\+Num\+Pipes\+Config}}}
+
+
+
+Enums that define num pipes config. 
+
+\begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{ADDR\_CONFIG\_1\_PIPE@{ADDR\_CONFIG\_1\_PIPE}!rocr::Addr@{rocr::Addr}}\index{rocr::Addr@{rocr::Addr}!ADDR\_CONFIG\_1\_PIPE@{ADDR\_CONFIG\_1\_PIPE}}}\mbox{\Hypertarget{namespacerocr_1_1Addr_a8d26f0c323acaf95b3acf9323f1b561daa4d3431134e19a5fb4ffbacd3b490202}\label{namespacerocr_1_1Addr_a8d26f0c323acaf95b3acf9323f1b561daa4d3431134e19a5fb4ffbacd3b490202}} 
+ADDR\+\_\+\+CONFIG\+\_\+1\+\_\+\+PIPE&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{ADDR\_CONFIG\_2\_PIPE@{ADDR\_CONFIG\_2\_PIPE}!rocr::Addr@{rocr::Addr}}\index{rocr::Addr@{rocr::Addr}!ADDR\_CONFIG\_2\_PIPE@{ADDR\_CONFIG\_2\_PIPE}}}\mbox{\Hypertarget{namespacerocr_1_1Addr_a8d26f0c323acaf95b3acf9323f1b561daad49e53a546d8d78fd0c859193e7c319}\label{namespacerocr_1_1Addr_a8d26f0c323acaf95b3acf9323f1b561daad49e53a546d8d78fd0c859193e7c319}} 
+ADDR\+\_\+\+CONFIG\+\_\+2\+\_\+\+PIPE&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{ADDR\_CONFIG\_4\_PIPE@{ADDR\_CONFIG\_4\_PIPE}!rocr::Addr@{rocr::Addr}}\index{rocr::Addr@{rocr::Addr}!ADDR\_CONFIG\_4\_PIPE@{ADDR\_CONFIG\_4\_PIPE}}}\mbox{\Hypertarget{namespacerocr_1_1Addr_a8d26f0c323acaf95b3acf9323f1b561da55b3992e7234acfd443c3a6a369c04a2}\label{namespacerocr_1_1Addr_a8d26f0c323acaf95b3acf9323f1b561da55b3992e7234acfd443c3a6a369c04a2}} 
+ADDR\+\_\+\+CONFIG\+\_\+4\+\_\+\+PIPE&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{ADDR\_CONFIG\_8\_PIPE@{ADDR\_CONFIG\_8\_PIPE}!rocr::Addr@{rocr::Addr}}\index{rocr::Addr@{rocr::Addr}!ADDR\_CONFIG\_8\_PIPE@{ADDR\_CONFIG\_8\_PIPE}}}\mbox{\Hypertarget{namespacerocr_1_1Addr_a8d26f0c323acaf95b3acf9323f1b561daa3f0e0748593da225dfcef6841d0a1dd}\label{namespacerocr_1_1Addr_a8d26f0c323acaf95b3acf9323f1b561daa3f0e0748593da225dfcef6841d0a1dd}} 
+ADDR\+\_\+\+CONFIG\+\_\+8\+\_\+\+PIPE&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{ADDR\_CONFIG\_16\_PIPE@{ADDR\_CONFIG\_16\_PIPE}!rocr::Addr@{rocr::Addr}}\index{rocr::Addr@{rocr::Addr}!ADDR\_CONFIG\_16\_PIPE@{ADDR\_CONFIG\_16\_PIPE}}}\mbox{\Hypertarget{namespacerocr_1_1Addr_a8d26f0c323acaf95b3acf9323f1b561da6bb6fcf4d19dba43ba0ea7da304c7e12}\label{namespacerocr_1_1Addr_a8d26f0c323acaf95b3acf9323f1b561da6bb6fcf4d19dba43ba0ea7da304c7e12}} 
+ADDR\+\_\+\+CONFIG\+\_\+16\+\_\+\+PIPE&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{ADDR\_CONFIG\_32\_PIPE@{ADDR\_CONFIG\_32\_PIPE}!rocr::Addr@{rocr::Addr}}\index{rocr::Addr@{rocr::Addr}!ADDR\_CONFIG\_32\_PIPE@{ADDR\_CONFIG\_32\_PIPE}}}\mbox{\Hypertarget{namespacerocr_1_1Addr_a8d26f0c323acaf95b3acf9323f1b561dafc7b36eea1d8bcdd092814272432204d}\label{namespacerocr_1_1Addr_a8d26f0c323acaf95b3acf9323f1b561dafc7b36eea1d8bcdd092814272432204d}} 
+ADDR\+\_\+\+CONFIG\+\_\+32\+\_\+\+PIPE&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{ADDR\_CONFIG\_64\_PIPE@{ADDR\_CONFIG\_64\_PIPE}!rocr::Addr@{rocr::Addr}}\index{rocr::Addr@{rocr::Addr}!ADDR\_CONFIG\_64\_PIPE@{ADDR\_CONFIG\_64\_PIPE}}}\mbox{\Hypertarget{namespacerocr_1_1Addr_a8d26f0c323acaf95b3acf9323f1b561dac0df0f2f410bcf7dcb214735ca94084e}\label{namespacerocr_1_1Addr_a8d26f0c323acaf95b3acf9323f1b561dac0df0f2f410bcf7dcb214735ca94084e}} 
+ADDR\+\_\+\+CONFIG\+\_\+64\+\_\+\+PIPE&\\
+\hline
+
+\end{DoxyEnumFields}
+\mbox{\Hypertarget{namespacerocr_1_1Addr_a42743f276070681400405bcff023ce04}\label{namespacerocr_1_1Addr_a42743f276070681400405bcff023ce04}} 
+\index{rocr::Addr@{rocr::Addr}!NumRbPerShaderEngineConfig@{NumRbPerShaderEngineConfig}}
+\index{NumRbPerShaderEngineConfig@{NumRbPerShaderEngineConfig}!rocr::Addr@{rocr::Addr}}
+\doxysubsubsection{\texorpdfstring{NumRbPerShaderEngineConfig}{NumRbPerShaderEngineConfig}}
+{\footnotesize\ttfamily enum \mbox{\hyperlink{namespacerocr_1_1Addr_a42743f276070681400405bcff023ce04}{rocr\+::\+Addr\+::\+Num\+Rb\+Per\+Shader\+Engine\+Config}}}
+
+
+
+Enums that define num rb per shader engine config. 
+
+\begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{ADDR\_CONFIG\_1\_RB\_PER\_SHADER\_ENGINE@{ADDR\_CONFIG\_1\_RB\_PER\_SHADER\_ENGINE}!rocr::Addr@{rocr::Addr}}\index{rocr::Addr@{rocr::Addr}!ADDR\_CONFIG\_1\_RB\_PER\_SHADER\_ENGINE@{ADDR\_CONFIG\_1\_RB\_PER\_SHADER\_ENGINE}}}\mbox{\Hypertarget{namespacerocr_1_1Addr_a42743f276070681400405bcff023ce04a83712f94f68ffc7cc01800f3795e5ede}\label{namespacerocr_1_1Addr_a42743f276070681400405bcff023ce04a83712f94f68ffc7cc01800f3795e5ede}} 
+ADDR\+\_\+\+CONFIG\+\_\+1\+\_\+\+RB\+\_\+\+PER\+\_\+\+SHADER\+\_\+\+ENGINE&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{ADDR\_CONFIG\_2\_RB\_PER\_SHADER\_ENGINE@{ADDR\_CONFIG\_2\_RB\_PER\_SHADER\_ENGINE}!rocr::Addr@{rocr::Addr}}\index{rocr::Addr@{rocr::Addr}!ADDR\_CONFIG\_2\_RB\_PER\_SHADER\_ENGINE@{ADDR\_CONFIG\_2\_RB\_PER\_SHADER\_ENGINE}}}\mbox{\Hypertarget{namespacerocr_1_1Addr_a42743f276070681400405bcff023ce04a45d6fe9434c4e6e60df161d032dbdafe}\label{namespacerocr_1_1Addr_a42743f276070681400405bcff023ce04a45d6fe9434c4e6e60df161d032dbdafe}} 
+ADDR\+\_\+\+CONFIG\+\_\+2\+\_\+\+RB\+\_\+\+PER\+\_\+\+SHADER\+\_\+\+ENGINE&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{ADDR\_CONFIG\_4\_RB\_PER\_SHADER\_ENGINE@{ADDR\_CONFIG\_4\_RB\_PER\_SHADER\_ENGINE}!rocr::Addr@{rocr::Addr}}\index{rocr::Addr@{rocr::Addr}!ADDR\_CONFIG\_4\_RB\_PER\_SHADER\_ENGINE@{ADDR\_CONFIG\_4\_RB\_PER\_SHADER\_ENGINE}}}\mbox{\Hypertarget{namespacerocr_1_1Addr_a42743f276070681400405bcff023ce04ac0b5ffb6884d12faffd5f0c09329b4dc}\label{namespacerocr_1_1Addr_a42743f276070681400405bcff023ce04ac0b5ffb6884d12faffd5f0c09329b4dc}} 
+ADDR\+\_\+\+CONFIG\+\_\+4\+\_\+\+RB\+\_\+\+PER\+\_\+\+SHADER\+\_\+\+ENGINE&\\
+\hline
+
+\end{DoxyEnumFields}
+\mbox{\Hypertarget{namespacerocr_1_1Addr_ac83c6fde1f10158a47137ac4b9bbf95b}\label{namespacerocr_1_1Addr_ac83c6fde1f10158a47137ac4b9bbf95b}} 
+\index{rocr::Addr@{rocr::Addr}!NumShaderEnginesConfig@{NumShaderEnginesConfig}}
+\index{NumShaderEnginesConfig@{NumShaderEnginesConfig}!rocr::Addr@{rocr::Addr}}
+\doxysubsubsection{\texorpdfstring{NumShaderEnginesConfig}{NumShaderEnginesConfig}}
+{\footnotesize\ttfamily enum \mbox{\hyperlink{namespacerocr_1_1Addr_ac83c6fde1f10158a47137ac4b9bbf95b}{rocr\+::\+Addr\+::\+Num\+Shader\+Engines\+Config}}}
+
+
+
+Enums that define num shader engines config. 
+
+\begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{ADDR\_CONFIG\_1\_SHADER\_ENGINE@{ADDR\_CONFIG\_1\_SHADER\_ENGINE}!rocr::Addr@{rocr::Addr}}\index{rocr::Addr@{rocr::Addr}!ADDR\_CONFIG\_1\_SHADER\_ENGINE@{ADDR\_CONFIG\_1\_SHADER\_ENGINE}}}\mbox{\Hypertarget{namespacerocr_1_1Addr_ac83c6fde1f10158a47137ac4b9bbf95baace997ac5ffe0827453668d9e9c34cfe}\label{namespacerocr_1_1Addr_ac83c6fde1f10158a47137ac4b9bbf95baace997ac5ffe0827453668d9e9c34cfe}} 
+ADDR\+\_\+\+CONFIG\+\_\+1\+\_\+\+SHADER\+\_\+\+ENGINE&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{ADDR\_CONFIG\_2\_SHADER\_ENGINE@{ADDR\_CONFIG\_2\_SHADER\_ENGINE}!rocr::Addr@{rocr::Addr}}\index{rocr::Addr@{rocr::Addr}!ADDR\_CONFIG\_2\_SHADER\_ENGINE@{ADDR\_CONFIG\_2\_SHADER\_ENGINE}}}\mbox{\Hypertarget{namespacerocr_1_1Addr_ac83c6fde1f10158a47137ac4b9bbf95ba6024134818bc758e59f69e2e96e100c9}\label{namespacerocr_1_1Addr_ac83c6fde1f10158a47137ac4b9bbf95ba6024134818bc758e59f69e2e96e100c9}} 
+ADDR\+\_\+\+CONFIG\+\_\+2\+\_\+\+SHADER\+\_\+\+ENGINE&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{ADDR\_CONFIG\_4\_SHADER\_ENGINE@{ADDR\_CONFIG\_4\_SHADER\_ENGINE}!rocr::Addr@{rocr::Addr}}\index{rocr::Addr@{rocr::Addr}!ADDR\_CONFIG\_4\_SHADER\_ENGINE@{ADDR\_CONFIG\_4\_SHADER\_ENGINE}}}\mbox{\Hypertarget{namespacerocr_1_1Addr_ac83c6fde1f10158a47137ac4b9bbf95ba22a1f2dee5e1a356874c216426235136}\label{namespacerocr_1_1Addr_ac83c6fde1f10158a47137ac4b9bbf95ba22a1f2dee5e1a356874c216426235136}} 
+ADDR\+\_\+\+CONFIG\+\_\+4\+\_\+\+SHADER\+\_\+\+ENGINE&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{ADDR\_CONFIG\_8\_SHADER\_ENGINE@{ADDR\_CONFIG\_8\_SHADER\_ENGINE}!rocr::Addr@{rocr::Addr}}\index{rocr::Addr@{rocr::Addr}!ADDR\_CONFIG\_8\_SHADER\_ENGINE@{ADDR\_CONFIG\_8\_SHADER\_ENGINE}}}\mbox{\Hypertarget{namespacerocr_1_1Addr_ac83c6fde1f10158a47137ac4b9bbf95bac24265adbf90b55bf9af917835b1bc1e}\label{namespacerocr_1_1Addr_ac83c6fde1f10158a47137ac4b9bbf95bac24265adbf90b55bf9af917835b1bc1e}} 
+ADDR\+\_\+\+CONFIG\+\_\+8\+\_\+\+SHADER\+\_\+\+ENGINE&\\
+\hline
+
+\end{DoxyEnumFields}
+\mbox{\Hypertarget{namespacerocr_1_1Addr_ad4480aec2572dd57f56f34f91571c74a}\label{namespacerocr_1_1Addr_ad4480aec2572dd57f56f34f91571c74a}} 
+\index{rocr::Addr@{rocr::Addr}!PipeInterleave@{PipeInterleave}}
+\index{PipeInterleave@{PipeInterleave}!rocr::Addr@{rocr::Addr}}
+\doxysubsubsection{\texorpdfstring{PipeInterleave}{PipeInterleave}}
+{\footnotesize\ttfamily enum \mbox{\hyperlink{namespacerocr_1_1Addr_ad4480aec2572dd57f56f34f91571c74a}{rocr\+::\+Addr\+::\+Pipe\+Interleave}}}
+
+
+
+Neutral enums that define pipeinterleave. 
+
+\begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{ADDR\_PIPEINTERLEAVE\_256B@{ADDR\_PIPEINTERLEAVE\_256B}!rocr::Addr@{rocr::Addr}}\index{rocr::Addr@{rocr::Addr}!ADDR\_PIPEINTERLEAVE\_256B@{ADDR\_PIPEINTERLEAVE\_256B}}}\mbox{\Hypertarget{namespacerocr_1_1Addr_ad4480aec2572dd57f56f34f91571c74aa184a3cc3d9343f115b3838a53e1cbfd7}\label{namespacerocr_1_1Addr_ad4480aec2572dd57f56f34f91571c74aa184a3cc3d9343f115b3838a53e1cbfd7}} 
+ADDR\+\_\+\+PIPEINTERLEAVE\+\_\+256B&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{ADDR\_PIPEINTERLEAVE\_512B@{ADDR\_PIPEINTERLEAVE\_512B}!rocr::Addr@{rocr::Addr}}\index{rocr::Addr@{rocr::Addr}!ADDR\_PIPEINTERLEAVE\_512B@{ADDR\_PIPEINTERLEAVE\_512B}}}\mbox{\Hypertarget{namespacerocr_1_1Addr_ad4480aec2572dd57f56f34f91571c74aaca656a43abbccc3bd0dbc02f1bad4fce}\label{namespacerocr_1_1Addr_ad4480aec2572dd57f56f34f91571c74aaca656a43abbccc3bd0dbc02f1bad4fce}} 
+ADDR\+\_\+\+PIPEINTERLEAVE\+\_\+512B&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{ADDR\_PIPEINTERLEAVE\_1KB@{ADDR\_PIPEINTERLEAVE\_1KB}!rocr::Addr@{rocr::Addr}}\index{rocr::Addr@{rocr::Addr}!ADDR\_PIPEINTERLEAVE\_1KB@{ADDR\_PIPEINTERLEAVE\_1KB}}}\mbox{\Hypertarget{namespacerocr_1_1Addr_ad4480aec2572dd57f56f34f91571c74aa2ec91f1be9528fffcb018d9ed80292e3}\label{namespacerocr_1_1Addr_ad4480aec2572dd57f56f34f91571c74aa2ec91f1be9528fffcb018d9ed80292e3}} 
+ADDR\+\_\+\+PIPEINTERLEAVE\+\_\+1\+KB&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{ADDR\_PIPEINTERLEAVE\_2KB@{ADDR\_PIPEINTERLEAVE\_2KB}!rocr::Addr@{rocr::Addr}}\index{rocr::Addr@{rocr::Addr}!ADDR\_PIPEINTERLEAVE\_2KB@{ADDR\_PIPEINTERLEAVE\_2KB}}}\mbox{\Hypertarget{namespacerocr_1_1Addr_ad4480aec2572dd57f56f34f91571c74aadc5f711f89a161c75868985dfa413220}\label{namespacerocr_1_1Addr_ad4480aec2572dd57f56f34f91571c74aadc5f711f89a161c75868985dfa413220}} 
+ADDR\+\_\+\+PIPEINTERLEAVE\+\_\+2\+KB&\\
+\hline
+
+\end{DoxyEnumFields}
+\mbox{\Hypertarget{namespacerocr_1_1Addr_a680dc1c96a52a86705f2506f8a229937}\label{namespacerocr_1_1Addr_a680dc1c96a52a86705f2506f8a229937}} 
+\index{rocr::Addr@{rocr::Addr}!PipeInterleaveSizeConfig@{PipeInterleaveSizeConfig}}
+\index{PipeInterleaveSizeConfig@{PipeInterleaveSizeConfig}!rocr::Addr@{rocr::Addr}}
+\doxysubsubsection{\texorpdfstring{PipeInterleaveSizeConfig}{PipeInterleaveSizeConfig}}
+{\footnotesize\ttfamily enum \mbox{\hyperlink{namespacerocr_1_1Addr_a680dc1c96a52a86705f2506f8a229937}{rocr\+::\+Addr\+::\+Pipe\+Interleave\+Size\+Config}}}
+
+
+
+Enums that define pipe interleave size config. 
+
+\begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{ADDR\_CONFIG\_PIPE\_INTERLEAVE\_256B@{ADDR\_CONFIG\_PIPE\_INTERLEAVE\_256B}!rocr::Addr@{rocr::Addr}}\index{rocr::Addr@{rocr::Addr}!ADDR\_CONFIG\_PIPE\_INTERLEAVE\_256B@{ADDR\_CONFIG\_PIPE\_INTERLEAVE\_256B}}}\mbox{\Hypertarget{namespacerocr_1_1Addr_a680dc1c96a52a86705f2506f8a229937a1fb80181c77a0ba097bd3c6393b18179}\label{namespacerocr_1_1Addr_a680dc1c96a52a86705f2506f8a229937a1fb80181c77a0ba097bd3c6393b18179}} 
+ADDR\+\_\+\+CONFIG\+\_\+\+PIPE\+\_\+\+INTERLEAVE\+\_\+256B&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{ADDR\_CONFIG\_PIPE\_INTERLEAVE\_512B@{ADDR\_CONFIG\_PIPE\_INTERLEAVE\_512B}!rocr::Addr@{rocr::Addr}}\index{rocr::Addr@{rocr::Addr}!ADDR\_CONFIG\_PIPE\_INTERLEAVE\_512B@{ADDR\_CONFIG\_PIPE\_INTERLEAVE\_512B}}}\mbox{\Hypertarget{namespacerocr_1_1Addr_a680dc1c96a52a86705f2506f8a229937ad0726113a9f7a80b6ce4f46654a216ab}\label{namespacerocr_1_1Addr_a680dc1c96a52a86705f2506f8a229937ad0726113a9f7a80b6ce4f46654a216ab}} 
+ADDR\+\_\+\+CONFIG\+\_\+\+PIPE\+\_\+\+INTERLEAVE\+\_\+512B&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{ADDR\_CONFIG\_PIPE\_INTERLEAVE\_1KB@{ADDR\_CONFIG\_PIPE\_INTERLEAVE\_1KB}!rocr::Addr@{rocr::Addr}}\index{rocr::Addr@{rocr::Addr}!ADDR\_CONFIG\_PIPE\_INTERLEAVE\_1KB@{ADDR\_CONFIG\_PIPE\_INTERLEAVE\_1KB}}}\mbox{\Hypertarget{namespacerocr_1_1Addr_a680dc1c96a52a86705f2506f8a229937ac80c8a94950705eb35db34f3efa59eeb}\label{namespacerocr_1_1Addr_a680dc1c96a52a86705f2506f8a229937ac80c8a94950705eb35db34f3efa59eeb}} 
+ADDR\+\_\+\+CONFIG\+\_\+\+PIPE\+\_\+\+INTERLEAVE\+\_\+1\+KB&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{ADDR\_CONFIG\_PIPE\_INTERLEAVE\_2KB@{ADDR\_CONFIG\_PIPE\_INTERLEAVE\_2KB}!rocr::Addr@{rocr::Addr}}\index{rocr::Addr@{rocr::Addr}!ADDR\_CONFIG\_PIPE\_INTERLEAVE\_2KB@{ADDR\_CONFIG\_PIPE\_INTERLEAVE\_2KB}}}\mbox{\Hypertarget{namespacerocr_1_1Addr_a680dc1c96a52a86705f2506f8a229937af89ce08fab589fbcc0c12b98aabc55af}\label{namespacerocr_1_1Addr_a680dc1c96a52a86705f2506f8a229937af89ce08fab589fbcc0c12b98aabc55af}} 
+ADDR\+\_\+\+CONFIG\+\_\+\+PIPE\+\_\+\+INTERLEAVE\+\_\+2\+KB&\\
+\hline
+
+\end{DoxyEnumFields}
+\mbox{\Hypertarget{namespacerocr_1_1Addr_adfce313f4524500d0a9fd0db4a50e555}\label{namespacerocr_1_1Addr_adfce313f4524500d0a9fd0db4a50e555}} 
+\index{rocr::Addr@{rocr::Addr}!RowSize@{RowSize}}
+\index{RowSize@{RowSize}!rocr::Addr@{rocr::Addr}}
+\doxysubsubsection{\texorpdfstring{RowSize}{RowSize}}
+{\footnotesize\ttfamily enum \mbox{\hyperlink{namespacerocr_1_1Addr_adfce313f4524500d0a9fd0db4a50e555}{rocr\+::\+Addr\+::\+Row\+Size}}}
+
+
+
+Neutral enums that define DRAM row size. 
+
+\begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{ADDR\_ROWSIZE\_1KB@{ADDR\_ROWSIZE\_1KB}!rocr::Addr@{rocr::Addr}}\index{rocr::Addr@{rocr::Addr}!ADDR\_ROWSIZE\_1KB@{ADDR\_ROWSIZE\_1KB}}}\mbox{\Hypertarget{namespacerocr_1_1Addr_adfce313f4524500d0a9fd0db4a50e555a7b36490995e736f0fa1abca0e3d216e1}\label{namespacerocr_1_1Addr_adfce313f4524500d0a9fd0db4a50e555a7b36490995e736f0fa1abca0e3d216e1}} 
+ADDR\+\_\+\+ROWSIZE\+\_\+1\+KB&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{ADDR\_ROWSIZE\_2KB@{ADDR\_ROWSIZE\_2KB}!rocr::Addr@{rocr::Addr}}\index{rocr::Addr@{rocr::Addr}!ADDR\_ROWSIZE\_2KB@{ADDR\_ROWSIZE\_2KB}}}\mbox{\Hypertarget{namespacerocr_1_1Addr_adfce313f4524500d0a9fd0db4a50e555ae471ea7a747b0a1d5ab8f1e3cf22084d}\label{namespacerocr_1_1Addr_adfce313f4524500d0a9fd0db4a50e555ae471ea7a747b0a1d5ab8f1e3cf22084d}} 
+ADDR\+\_\+\+ROWSIZE\+\_\+2\+KB&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{ADDR\_ROWSIZE\_4KB@{ADDR\_ROWSIZE\_4KB}!rocr::Addr@{rocr::Addr}}\index{rocr::Addr@{rocr::Addr}!ADDR\_ROWSIZE\_4KB@{ADDR\_ROWSIZE\_4KB}}}\mbox{\Hypertarget{namespacerocr_1_1Addr_adfce313f4524500d0a9fd0db4a50e555a2619aafef2142cac95e24ff8410e2e66}\label{namespacerocr_1_1Addr_adfce313f4524500d0a9fd0db4a50e555a2619aafef2142cac95e24ff8410e2e66}} 
+ADDR\+\_\+\+ROWSIZE\+\_\+4\+KB&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{ADDR\_ROWSIZE\_8KB@{ADDR\_ROWSIZE\_8KB}!rocr::Addr@{rocr::Addr}}\index{rocr::Addr@{rocr::Addr}!ADDR\_ROWSIZE\_8KB@{ADDR\_ROWSIZE\_8KB}}}\mbox{\Hypertarget{namespacerocr_1_1Addr_adfce313f4524500d0a9fd0db4a50e555a2238333ec381c9846f0b2535f8526202}\label{namespacerocr_1_1Addr_adfce313f4524500d0a9fd0db4a50e555a2238333ec381c9846f0b2535f8526202}} 
+ADDR\+\_\+\+ROWSIZE\+\_\+8\+KB&\\
+\hline
+
+\end{DoxyEnumFields}
+\mbox{\Hypertarget{namespacerocr_1_1Addr_acecdf369ec165e5ffa61ed827c5ed7fb}\label{namespacerocr_1_1Addr_acecdf369ec165e5ffa61ed827c5ed7fb}} 
+\index{rocr::Addr@{rocr::Addr}!RowSizeConfig@{RowSizeConfig}}
+\index{RowSizeConfig@{RowSizeConfig}!rocr::Addr@{rocr::Addr}}
+\doxysubsubsection{\texorpdfstring{RowSizeConfig}{RowSizeConfig}}
+{\footnotesize\ttfamily enum \mbox{\hyperlink{namespacerocr_1_1Addr_acecdf369ec165e5ffa61ed827c5ed7fb}{rocr\+::\+Addr\+::\+Row\+Size\+Config}}}
+
+
+
+Enums that define row size config. 
+
+\begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{ADDR\_CONFIG\_1KB\_ROW@{ADDR\_CONFIG\_1KB\_ROW}!rocr::Addr@{rocr::Addr}}\index{rocr::Addr@{rocr::Addr}!ADDR\_CONFIG\_1KB\_ROW@{ADDR\_CONFIG\_1KB\_ROW}}}\mbox{\Hypertarget{namespacerocr_1_1Addr_acecdf369ec165e5ffa61ed827c5ed7fba2336d2780d1aac85244c9705f41ee72b}\label{namespacerocr_1_1Addr_acecdf369ec165e5ffa61ed827c5ed7fba2336d2780d1aac85244c9705f41ee72b}} 
+ADDR\+\_\+\+CONFIG\+\_\+1\+KB\+\_\+\+ROW&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{ADDR\_CONFIG\_2KB\_ROW@{ADDR\_CONFIG\_2KB\_ROW}!rocr::Addr@{rocr::Addr}}\index{rocr::Addr@{rocr::Addr}!ADDR\_CONFIG\_2KB\_ROW@{ADDR\_CONFIG\_2KB\_ROW}}}\mbox{\Hypertarget{namespacerocr_1_1Addr_acecdf369ec165e5ffa61ed827c5ed7fbad65f4b854867b5664a323eb2b14d0966}\label{namespacerocr_1_1Addr_acecdf369ec165e5ffa61ed827c5ed7fbad65f4b854867b5664a323eb2b14d0966}} 
+ADDR\+\_\+\+CONFIG\+\_\+2\+KB\+\_\+\+ROW&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{ADDR\_CONFIG\_4KB\_ROW@{ADDR\_CONFIG\_4KB\_ROW}!rocr::Addr@{rocr::Addr}}\index{rocr::Addr@{rocr::Addr}!ADDR\_CONFIG\_4KB\_ROW@{ADDR\_CONFIG\_4KB\_ROW}}}\mbox{\Hypertarget{namespacerocr_1_1Addr_acecdf369ec165e5ffa61ed827c5ed7fba3bd065391da9a006f7e9977349fd1647}\label{namespacerocr_1_1Addr_acecdf369ec165e5ffa61ed827c5ed7fba3bd065391da9a006f7e9977349fd1647}} 
+ADDR\+\_\+\+CONFIG\+\_\+4\+KB\+\_\+\+ROW&\\
+\hline
+
+\end{DoxyEnumFields}
+\mbox{\Hypertarget{namespacerocr_1_1Addr_ae92e45c5549bbc87023a4ea976b607c9}\label{namespacerocr_1_1Addr_ae92e45c5549bbc87023a4ea976b607c9}} 
+\index{rocr::Addr@{rocr::Addr}!ShaderEngineTileSize@{ShaderEngineTileSize}}
+\index{ShaderEngineTileSize@{ShaderEngineTileSize}!rocr::Addr@{rocr::Addr}}
+\doxysubsubsection{\texorpdfstring{ShaderEngineTileSize}{ShaderEngineTileSize}}
+{\footnotesize\ttfamily enum \mbox{\hyperlink{namespacerocr_1_1Addr_ae92e45c5549bbc87023a4ea976b607c9}{rocr\+::\+Addr\+::\+Shader\+Engine\+Tile\+Size}}}
+
+
+
+Neutral enums that define shader engine tile size. 
+
+\begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{ADDR\_SE\_TILESIZE\_16@{ADDR\_SE\_TILESIZE\_16}!rocr::Addr@{rocr::Addr}}\index{rocr::Addr@{rocr::Addr}!ADDR\_SE\_TILESIZE\_16@{ADDR\_SE\_TILESIZE\_16}}}\mbox{\Hypertarget{namespacerocr_1_1Addr_ae92e45c5549bbc87023a4ea976b607c9af447302115272b476a61f829a04d346d}\label{namespacerocr_1_1Addr_ae92e45c5549bbc87023a4ea976b607c9af447302115272b476a61f829a04d346d}} 
+ADDR\+\_\+\+SE\+\_\+\+TILESIZE\+\_\+16&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{ADDR\_SE\_TILESIZE\_32@{ADDR\_SE\_TILESIZE\_32}!rocr::Addr@{rocr::Addr}}\index{rocr::Addr@{rocr::Addr}!ADDR\_SE\_TILESIZE\_32@{ADDR\_SE\_TILESIZE\_32}}}\mbox{\Hypertarget{namespacerocr_1_1Addr_ae92e45c5549bbc87023a4ea976b607c9ab0c639b7814fe80fc13eab2ca6848671}\label{namespacerocr_1_1Addr_ae92e45c5549bbc87023a4ea976b607c9ab0c639b7814fe80fc13eab2ca6848671}} 
+ADDR\+\_\+\+SE\+\_\+\+TILESIZE\+\_\+32&\\
+\hline
+
+\end{DoxyEnumFields}
+\mbox{\Hypertarget{namespacerocr_1_1Addr_a457dd834e5b79ed6374f877872439005}\label{namespacerocr_1_1Addr_a457dd834e5b79ed6374f877872439005}} 
+\index{rocr::Addr@{rocr::Addr}!ShaderEngineTileSizeConfig@{ShaderEngineTileSizeConfig}}
+\index{ShaderEngineTileSizeConfig@{ShaderEngineTileSizeConfig}!rocr::Addr@{rocr::Addr}}
+\doxysubsubsection{\texorpdfstring{ShaderEngineTileSizeConfig}{ShaderEngineTileSizeConfig}}
+{\footnotesize\ttfamily enum \mbox{\hyperlink{namespacerocr_1_1Addr_a457dd834e5b79ed6374f877872439005}{rocr\+::\+Addr\+::\+Shader\+Engine\+Tile\+Size\+Config}}}
+
+
+
+Enums that define engine tile size config. 
+
+\begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{ADDR\_CONFIG\_SE\_TILE\_16@{ADDR\_CONFIG\_SE\_TILE\_16}!rocr::Addr@{rocr::Addr}}\index{rocr::Addr@{rocr::Addr}!ADDR\_CONFIG\_SE\_TILE\_16@{ADDR\_CONFIG\_SE\_TILE\_16}}}\mbox{\Hypertarget{namespacerocr_1_1Addr_a457dd834e5b79ed6374f877872439005af4bdcf7ecb6ca7401ed1a099f0ebba56}\label{namespacerocr_1_1Addr_a457dd834e5b79ed6374f877872439005af4bdcf7ecb6ca7401ed1a099f0ebba56}} 
+ADDR\+\_\+\+CONFIG\+\_\+\+SE\+\_\+\+TILE\+\_\+16&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{ADDR\_CONFIG\_SE\_TILE\_32@{ADDR\_CONFIG\_SE\_TILE\_32}!rocr::Addr@{rocr::Addr}}\index{rocr::Addr@{rocr::Addr}!ADDR\_CONFIG\_SE\_TILE\_32@{ADDR\_CONFIG\_SE\_TILE\_32}}}\mbox{\Hypertarget{namespacerocr_1_1Addr_a457dd834e5b79ed6374f877872439005ae2f646c562660d35e798023f1493e9a8}\label{namespacerocr_1_1Addr_a457dd834e5b79ed6374f877872439005ae2f646c562660d35e798023f1493e9a8}} 
+ADDR\+\_\+\+CONFIG\+\_\+\+SE\+\_\+\+TILE\+\_\+32&\\
+\hline
+
+\end{DoxyEnumFields}
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{namespacerocr_1_1Addr_a2a97e48ccda595dc514506c65a050685}\label{namespacerocr_1_1Addr_a2a97e48ccda595dc514506c65a050685}} 
+\index{rocr::Addr@{rocr::Addr}!CiHwlInit@{CiHwlInit}}
+\index{CiHwlInit@{CiHwlInit}!rocr::Addr@{rocr::Addr}}
+\doxysubsubsection{\texorpdfstring{CiHwlInit()}{CiHwlInit()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classrocr_1_1Addr_1_1Lib}{Lib}} $\ast$ rocr\+::\+Addr\+::\+Ci\+Hwl\+Init (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{structrocr_1_1Addr_1_1Client}{Client}} $\ast$}]{p\+Client }\end{DoxyParamCaption})}
+
+
+
+Creates an Ci\+Lib object. 
+
+Ci\+Hwl\+Init
+
+\begin{DoxyReturn}{Returns}
+Returns an Ci\+Lib object pointer. 
+\end{DoxyReturn}
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{namespacerocr_1_1Addr_a2a97e48ccda595dc514506c65a050685_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{namespacerocr_1_1Addr_a2a97e48ccda595dc514506c65a050685_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{namespacerocr_1_1Addr_a8d18316748fffba6a76697eb1adf26cc}\label{namespacerocr_1_1Addr_a8d18316748fffba6a76697eb1adf26cc}} 
+\index{rocr::Addr@{rocr::Addr}!DeMort@{DeMort}}
+\index{DeMort@{DeMort}!rocr::Addr@{rocr::Addr}}
+\doxysubsubsection{\texorpdfstring{DeMort()}{DeMort()}}
+{\footnotesize\ttfamily static \mbox{\hyperlink{addrtypes_8h_af5a2be58a28390f9a494538f34054637}{UINT\+\_\+32}} rocr\+::\+Addr\+::\+De\+Mort (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{addrtypes_8h_af5a2be58a28390f9a494538f34054637}{UINT\+\_\+32}}}]{v,  }\item[{\mbox{\hyperlink{addrtypes_8h_af5a2be58a28390f9a494538f34054637}{UINT\+\_\+32}}}]{num }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+
+
+Return v\mbox{[}0\mbox{]} $\vert$ v\mbox{[}2\mbox{]} $\vert$ v\mbox{[}4\mbox{]} $\vert$ v\mbox{[}6\mbox{]}... $\vert$ v\mbox{[}2$\ast$num -\/ 2\mbox{]}. 
+
+De\+Mort 
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em v} & De\+Mort operation base value \\
+\hline
+\mbox{\texttt{ in}}  & {\em num} & Number of bits used in fold De\+Mort operation \\
+\hline
+\end{DoxyParams}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{namespacerocr_1_1Addr_a8d18316748fffba6a76697eb1adf26cc_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{namespacerocr_1_1Addr_aa02764167b1dbb798cf9bebd7d3fd955}\label{namespacerocr_1_1Addr_aa02764167b1dbb798cf9bebd7d3fd955}} 
+\index{rocr::Addr@{rocr::Addr}!FoldXor2d@{FoldXor2d}}
+\index{FoldXor2d@{FoldXor2d}!rocr::Addr@{rocr::Addr}}
+\doxysubsubsection{\texorpdfstring{FoldXor2d()}{FoldXor2d()}}
+{\footnotesize\ttfamily static \mbox{\hyperlink{addrtypes_8h_af5a2be58a28390f9a494538f34054637}{UINT\+\_\+32}} rocr\+::\+Addr\+::\+Fold\+Xor2d (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{addrtypes_8h_af5a2be58a28390f9a494538f34054637}{UINT\+\_\+32}}}]{v,  }\item[{\mbox{\hyperlink{addrtypes_8h_af5a2be58a28390f9a494538f34054637}{UINT\+\_\+32}}}]{num }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+
+
+Xor bit vector v\mbox{[}num-\/1\mbox{]}v\mbox{[}num-\/2\mbox{]}...v\mbox{[}1\mbox{]}v\mbox{[}0\mbox{]} with v\mbox{[}num\mbox{]}v\mbox{[}num+1\mbox{]}...v\mbox{[}2$\ast$num-\/2\mbox{]}v\mbox{[}2$\ast$num-\/1\mbox{]}. 
+
+Fold\+Xor2d 
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em v} & Xor operation base value \\
+\hline
+\mbox{\texttt{ in}}  & {\em num} & Number of bits used in fold xor operation \\
+\hline
+\end{DoxyParams}
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{namespacerocr_1_1Addr_aa02764167b1dbb798cf9bebd7d3fd955_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{namespacerocr_1_1Addr_aa02764167b1dbb798cf9bebd7d3fd955_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{namespacerocr_1_1Addr_a430019b3d99c57d6efe116464f399385}\label{namespacerocr_1_1Addr_a430019b3d99c57d6efe116464f399385}} 
+\index{rocr::Addr@{rocr::Addr}!FoldXor3d@{FoldXor3d}}
+\index{FoldXor3d@{FoldXor3d}!rocr::Addr@{rocr::Addr}}
+\doxysubsubsection{\texorpdfstring{FoldXor3d()}{FoldXor3d()}}
+{\footnotesize\ttfamily static \mbox{\hyperlink{addrtypes_8h_af5a2be58a28390f9a494538f34054637}{UINT\+\_\+32}} rocr\+::\+Addr\+::\+Fold\+Xor3d (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{addrtypes_8h_af5a2be58a28390f9a494538f34054637}{UINT\+\_\+32}}}]{v,  }\item[{\mbox{\hyperlink{addrtypes_8h_af5a2be58a28390f9a494538f34054637}{UINT\+\_\+32}}}]{num }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+
+
+v\mbox{[}0\mbox{]}...v\mbox{[}num-\/1\mbox{]} $^\wedge$ v\mbox{[}3$\ast$num-\/1\mbox{]}v\mbox{[}3$\ast$num-\/3\mbox{]}...v\mbox{[}num+2\mbox{]}v\mbox{[}num\mbox{]} $^\wedge$ v\mbox{[}3$\ast$num-\/2\mbox{]}...v\mbox{[}num+1\mbox{]}v\mbox{[}num-\/1\mbox{]} 
+
+Fold\+Xor3d 
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em v} & Xor operation base value \\
+\hline
+\mbox{\texttt{ in}}  & {\em num} & Number of bits used in fold xor operation \\
+\hline
+\end{DoxyParams}
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{namespacerocr_1_1Addr_a430019b3d99c57d6efe116464f399385_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{namespacerocr_1_1Addr_a430019b3d99c57d6efe116464f399385_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{namespacerocr_1_1Addr_ae34af78cd68fa3cf33b180ca436e25c0}\label{namespacerocr_1_1Addr_ae34af78cd68fa3cf33b180ca436e25c0}} 
+\index{rocr::Addr@{rocr::Addr}!GetBit@{GetBit}}
+\index{GetBit@{GetBit}!rocr::Addr@{rocr::Addr}}
+\doxysubsubsection{\texorpdfstring{GetBit()}{GetBit()}}
+{\footnotesize\ttfamily static \mbox{\hyperlink{addrtypes_8h_af5a2be58a28390f9a494538f34054637}{UINT\+\_\+32}} rocr\+::\+Addr\+::\+Get\+Bit (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{addrtypes_8h_af5a2be58a28390f9a494538f34054637}{UINT\+\_\+32}}}]{u32,  }\item[{\mbox{\hyperlink{addrtypes_8h_af5a2be58a28390f9a494538f34054637}{UINT\+\_\+32}}}]{pos }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+
+
+Extract bit N value (0 or 1) of a UINT32 value. 
+
+Get\+Bit 
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em u32} & UINT32 value \\
+\hline
+\mbox{\texttt{ in}}  & {\em pos} & bit position from LSB, valid range is \mbox{[}0..31\mbox{]} \\
+\hline
+\end{DoxyParams}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{namespacerocr_1_1Addr_ae34af78cd68fa3cf33b180ca436e25c0_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{namespacerocr_1_1Addr_acb70da6af9651e3a85d6d846014fefc5}\label{namespacerocr_1_1Addr_acb70da6af9651e3a85d6d846014fefc5}} 
+\index{rocr::Addr@{rocr::Addr}!GetBits@{GetBits}}
+\index{GetBits@{GetBits}!rocr::Addr@{rocr::Addr}}
+\doxysubsubsection{\texorpdfstring{GetBits()}{GetBits()}}
+{\footnotesize\ttfamily static \mbox{\hyperlink{addrtypes_8h_af5a2be58a28390f9a494538f34054637}{UINT\+\_\+32}} rocr\+::\+Addr\+::\+Get\+Bits (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{addrtypes_8h_af5a2be58a28390f9a494538f34054637}{UINT\+\_\+32}}}]{src,  }\item[{\mbox{\hyperlink{addrtypes_8h_af5a2be58a28390f9a494538f34054637}{UINT\+\_\+32}}}]{src\+Start\+Pos,  }\item[{\mbox{\hyperlink{addrtypes_8h_af5a2be58a28390f9a494538f34054637}{UINT\+\_\+32}}}]{bits\+Num,  }\item[{\mbox{\hyperlink{addrtypes_8h_af5a2be58a28390f9a494538f34054637}{UINT\+\_\+32}}}]{dst\+Start\+Pos }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+
+
+Copy \textquotesingle{}bits\+Num\textquotesingle{} bits from src start from src\+Start\+Pos into destination from dst\+Start\+Pos src\+Start\+Pos\+: 0$\sim$31 for UINT\+\_\+32 bits\+Num \+: 1$\sim$32 for UINT\+\_\+32 src\+Start\+Pos\+: 0$\sim$31 for UINT\+\_\+32 src start position $\vert$ src \+: b\mbox{[}31\mbox{]} b\mbox{[}30\mbox{]} b\mbox{[}29\mbox{]} ... ... ... ... ... ... ... ... b\mbox{[}end\mbox{]}..b\mbox{[}beg\mbox{]} ... b\mbox{[}1\mbox{]} b\mbox{[}0\mbox{]} $\vert$$\vert$ Bits num $\vert$$\vert$ copy length $\vert$$\vert$ Bits num $\vert$$\vert$ dst \+: b\mbox{[}31\mbox{]} b\mbox{[}30\mbox{]} b\mbox{[}29\mbox{]} ... b\mbox{[}end\mbox{]}..b\mbox{[}beg\mbox{]} ... ... ... ... ... ... ... ... b\mbox{[}1\mbox{]} b\mbox{[}0\mbox{]} $\vert$ dst start position. 
+
+Get\+Bits Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{namespacerocr_1_1Addr_acb70da6af9651e3a85d6d846014fefc5_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{namespacerocr_1_1Addr_a46ee800433dd00a297a6102a30c9bc77}\label{namespacerocr_1_1Addr_a46ee800433dd00a297a6102a30c9bc77}} 
+\index{rocr::Addr@{rocr::Addr}!GetCoordActiveMask@{GetCoordActiveMask}}
+\index{GetCoordActiveMask@{GetCoordActiveMask}!rocr::Addr@{rocr::Addr}}
+\doxysubsubsection{\texorpdfstring{GetCoordActiveMask()}{GetCoordActiveMask()}}
+{\footnotesize\ttfamily static \mbox{\hyperlink{addrtypes_8h_af5a2be58a28390f9a494538f34054637}{UINT\+\_\+32}} rocr\+::\+Addr\+::\+Get\+Coord\+Active\+Mask (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{namespacerocr_afe75e972942d670db53328fa0e640e8a}{ADDR\+\_\+\+CHANNEL\+\_\+\+SETTING}} $\ast$}]{p\+Chan\+Set,  }\item[{\mbox{\hyperlink{addrtypes_8h_af5a2be58a28390f9a494538f34054637}{UINT\+\_\+32}}}]{search\+Count,  }\item[{\mbox{\hyperlink{addrtypes_8h_af5a2be58a28390f9a494538f34054637}{UINT\+\_\+32}}}]{channel,  }\item[{\mbox{\hyperlink{addrtypes_8h_af5a2be58a28390f9a494538f34054637}{UINT\+\_\+32}}}]{index }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+
+
+Get bit mask which indicates which positions in the equation match the target coord. 
+
+Get\+Coord\+Active\+Mask 
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em p\+Chan\+Set} & channel setting to be initialized \\
+\hline
+\mbox{\texttt{ in}}  & {\em search\+Count} & number of channel setting to be searched \\
+\hline
+\mbox{\texttt{ in}}  & {\em channel} & channel to be searched \\
+\hline
+\mbox{\texttt{ in}}  & {\em index} & index to be searched \\
+\hline
+\end{DoxyParams}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{namespacerocr_1_1Addr_a46ee800433dd00a297a6102a30c9bc77_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{namespacerocr_1_1Addr_aa55d75d21cd6c77828f5b87288164906}\label{namespacerocr_1_1Addr_aa55d75d21cd6c77828f5b87288164906}} 
+\index{rocr::Addr@{rocr::Addr}!GetMaxValidChannelIndex@{GetMaxValidChannelIndex}}
+\index{GetMaxValidChannelIndex@{GetMaxValidChannelIndex}!rocr::Addr@{rocr::Addr}}
+\doxysubsubsection{\texorpdfstring{GetMaxValidChannelIndex()}{GetMaxValidChannelIndex()}}
+{\footnotesize\ttfamily static \mbox{\hyperlink{addrtypes_8h_af5a2be58a28390f9a494538f34054637}{UINT\+\_\+32}} rocr\+::\+Addr\+::\+Get\+Max\+Valid\+Channel\+Index (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{namespacerocr_afe75e972942d670db53328fa0e640e8a}{ADDR\+\_\+\+CHANNEL\+\_\+\+SETTING}} $\ast$}]{p\+Chan\+Set,  }\item[{\mbox{\hyperlink{addrtypes_8h_af5a2be58a28390f9a494538f34054637}{UINT\+\_\+32}}}]{search\+Count,  }\item[{\mbox{\hyperlink{addrtypes_8h_af5a2be58a28390f9a494538f34054637}{UINT\+\_\+32}}}]{channel }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+
+
+Get max valid index for a specific channel. 
+
+Get\+Max\+Valid\+Channel\+Index 
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em p\+Chan\+Set} & channel setting to be initialized \\
+\hline
+\mbox{\texttt{ in}}  & {\em search\+Count} & number of channel setting to be searched \\
+\hline
+\mbox{\texttt{ in}}  & {\em channel} & channel to be searched \\
+\hline
+\end{DoxyParams}
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{namespacerocr_1_1Addr_aa55d75d21cd6c77828f5b87288164906_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{namespacerocr_1_1Addr_aa55d75d21cd6c77828f5b87288164906_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{namespacerocr_1_1Addr_a4e7e348c5a8fa900178713ef4c380337}\label{namespacerocr_1_1Addr_a4e7e348c5a8fa900178713ef4c380337}} 
+\index{rocr::Addr@{rocr::Addr}!Gfx10HwlInit@{Gfx10HwlInit}}
+\index{Gfx10HwlInit@{Gfx10HwlInit}!rocr::Addr@{rocr::Addr}}
+\doxysubsubsection{\texorpdfstring{Gfx10HwlInit()}{Gfx10HwlInit()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classrocr_1_1Addr_1_1Lib}{Addr\+::\+Lib}} $\ast$ rocr\+::\+Addr\+::\+Gfx10\+Hwl\+Init (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{structrocr_1_1Addr_1_1Client}{Client}} $\ast$}]{p\+Client }\end{DoxyParamCaption})}
+
+
+
+Creates an Gfx10\+Lib object. 
+
+Gfx10\+Hwl\+Init
+
+\begin{DoxyReturn}{Returns}
+Returns an Gfx10\+Lib object pointer. 
+\end{DoxyReturn}
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{namespacerocr_1_1Addr_a4e7e348c5a8fa900178713ef4c380337_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{namespacerocr_1_1Addr_a4e7e348c5a8fa900178713ef4c380337_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{namespacerocr_1_1Addr_aa177032c08cf7a2413c6bc8b404dfb65}\label{namespacerocr_1_1Addr_aa177032c08cf7a2413c6bc8b404dfb65}} 
+\index{rocr::Addr@{rocr::Addr}!Gfx11HwlInit@{Gfx11HwlInit}}
+\index{Gfx11HwlInit@{Gfx11HwlInit}!rocr::Addr@{rocr::Addr}}
+\doxysubsubsection{\texorpdfstring{Gfx11HwlInit()}{Gfx11HwlInit()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classrocr_1_1Addr_1_1Lib}{Addr\+::\+Lib}} $\ast$ rocr\+::\+Addr\+::\+Gfx11\+Hwl\+Init (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{structrocr_1_1Addr_1_1Client}{Client}} $\ast$}]{p\+Client }\end{DoxyParamCaption})}
+
+
+
+Creates an Gfx11\+Lib object. 
+
+Gfx11\+Hwl\+Init
+
+\begin{DoxyReturn}{Returns}
+Returns an Gfx11\+Lib object pointer. 
+\end{DoxyReturn}
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{namespacerocr_1_1Addr_aa177032c08cf7a2413c6bc8b404dfb65_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{namespacerocr_1_1Addr_aa177032c08cf7a2413c6bc8b404dfb65_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{namespacerocr_1_1Addr_a769add892e97a54dd03946e531f9bc50}\label{namespacerocr_1_1Addr_a769add892e97a54dd03946e531f9bc50}} 
+\index{rocr::Addr@{rocr::Addr}!Gfx9HwlInit@{Gfx9HwlInit}}
+\index{Gfx9HwlInit@{Gfx9HwlInit}!rocr::Addr@{rocr::Addr}}
+\doxysubsubsection{\texorpdfstring{Gfx9HwlInit()}{Gfx9HwlInit()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classrocr_1_1Addr_1_1Lib}{Addr\+::\+Lib}} $\ast$ rocr\+::\+Addr\+::\+Gfx9\+Hwl\+Init (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{structrocr_1_1Addr_1_1Client}{Client}} $\ast$}]{p\+Client }\end{DoxyParamCaption})}
+
+
+
+Creates an Gfx9\+Lib object. 
+
+Gfx9\+Hwl\+Init
+
+\begin{DoxyReturn}{Returns}
+Returns an Gfx9\+Lib object pointer. 
+\end{DoxyReturn}
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{namespacerocr_1_1Addr_a769add892e97a54dd03946e531f9bc50_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{namespacerocr_1_1Addr_a769add892e97a54dd03946e531f9bc50_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{namespacerocr_1_1Addr_a7512690b443de410d7a59cb625b84235}\label{namespacerocr_1_1Addr_a7512690b443de410d7a59cb625b84235}} 
+\index{rocr::Addr@{rocr::Addr}!InitChannel@{InitChannel}}
+\index{InitChannel@{InitChannel}!rocr::Addr@{rocr::Addr}}
+\doxysubsubsection{\texorpdfstring{InitChannel()}{InitChannel()}\hspace{0.1cm}{\footnotesize\ttfamily [1/3]}}
+{\footnotesize\ttfamily static \mbox{\hyperlink{addrtypes_8h_a7927e087749615dae3114cc27b91c86d}{VOID}} rocr\+::\+Addr\+::\+Init\+Channel (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{namespacerocr_afe75e972942d670db53328fa0e640e8a}{ADDR\+\_\+\+CHANNEL\+\_\+\+SETTING}} $\ast$}]{p\+Chan\+Dst,  }\item[{\mbox{\hyperlink{namespacerocr_afe75e972942d670db53328fa0e640e8a}{ADDR\+\_\+\+CHANNEL\+\_\+\+SETTING}} $\ast$}]{p\+Chan\+Src }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+
+
+Set channel initialization value via another channel. 
+
+Init\+Channel 
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em p\+Chan\+Dst} & channel setting to be copied from \\
+\hline
+\mbox{\texttt{ out}}  & {\em p\+Chan\+Src} & channel setting to be initialized \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{namespacerocr_1_1Addr_a581747da285dae0a44c521100a755dba}\label{namespacerocr_1_1Addr_a581747da285dae0a44c521100a755dba}} 
+\index{rocr::Addr@{rocr::Addr}!InitChannel@{InitChannel}}
+\index{InitChannel@{InitChannel}!rocr::Addr@{rocr::Addr}}
+\doxysubsubsection{\texorpdfstring{InitChannel()}{InitChannel()}\hspace{0.1cm}{\footnotesize\ttfamily [2/3]}}
+{\footnotesize\ttfamily static \mbox{\hyperlink{namespacerocr_afe75e972942d670db53328fa0e640e8a}{ADDR\+\_\+\+CHANNEL\+\_\+\+SETTING}} rocr\+::\+Addr\+::\+Init\+Channel (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{addrtypes_8h_af5a2be58a28390f9a494538f34054637}{UINT\+\_\+32}}}]{valid,  }\item[{\mbox{\hyperlink{addrtypes_8h_af5a2be58a28390f9a494538f34054637}{UINT\+\_\+32}}}]{channel,  }\item[{\mbox{\hyperlink{addrtypes_8h_af5a2be58a28390f9a494538f34054637}{UINT\+\_\+32}}}]{index }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+
+
+Set channel initialization value via a return value. 
+
+Init\+Channel 
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em valid} & valid setting \\
+\hline
+\mbox{\texttt{ in}}  & {\em channel} & channel setting \\
+\hline
+\mbox{\texttt{ in}}  & {\em index} & index setting \\
+\hline
+\end{DoxyParams}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{namespacerocr_1_1Addr_a581747da285dae0a44c521100a755dba_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{namespacerocr_1_1Addr_a52991389ca2460b619a5a05debdd6e53}\label{namespacerocr_1_1Addr_a52991389ca2460b619a5a05debdd6e53}} 
+\index{rocr::Addr@{rocr::Addr}!InitChannel@{InitChannel}}
+\index{InitChannel@{InitChannel}!rocr::Addr@{rocr::Addr}}
+\doxysubsubsection{\texorpdfstring{InitChannel()}{InitChannel()}\hspace{0.1cm}{\footnotesize\ttfamily [3/3]}}
+{\footnotesize\ttfamily static \mbox{\hyperlink{addrtypes_8h_a7927e087749615dae3114cc27b91c86d}{VOID}} rocr\+::\+Addr\+::\+Init\+Channel (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{addrtypes_8h_af5a2be58a28390f9a494538f34054637}{UINT\+\_\+32}}}]{valid,  }\item[{\mbox{\hyperlink{addrtypes_8h_af5a2be58a28390f9a494538f34054637}{UINT\+\_\+32}}}]{channel,  }\item[{\mbox{\hyperlink{addrtypes_8h_af5a2be58a28390f9a494538f34054637}{UINT\+\_\+32}}}]{index,  }\item[{\mbox{\hyperlink{namespacerocr_afe75e972942d670db53328fa0e640e8a}{ADDR\+\_\+\+CHANNEL\+\_\+\+SETTING}} $\ast$}]{p\+Chan\+Set }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+
+
+Set channel initialization value via channel pointer. 
+
+Init\+Channel 
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em valid} & valid setting \\
+\hline
+\mbox{\texttt{ in}}  & {\em channel} & channel setting \\
+\hline
+\mbox{\texttt{ in}}  & {\em index} & index setting \\
+\hline
+\mbox{\texttt{ out}}  & {\em p\+Chan\+Set} & channel setting to be initialized \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{namespacerocr_1_1Addr_a6d7456ccf55cba9b6ce33956ce9c6d61}\label{namespacerocr_1_1Addr_a6d7456ccf55cba9b6ce33956ce9c6d61}} 
+\index{rocr::Addr@{rocr::Addr}!IsPow2@{IsPow2}}
+\index{IsPow2@{IsPow2}!rocr::Addr@{rocr::Addr}}
+\doxysubsubsection{\texorpdfstring{IsPow2()}{IsPow2()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily static \mbox{\hyperlink{addrtypes_8h_af5a2be58a28390f9a494538f34054637}{UINT\+\_\+32}} rocr\+::\+Addr\+::\+Is\+Pow2 (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{addrtypes_8h_af5a2be58a28390f9a494538f34054637}{UINT\+\_\+32}}}]{dim }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+
+
+Check if the size (UINT\+\_\+32) is pow 2. 
+
+Is\+Pow2 
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em dim} & dimension of miplevel \\
+\hline
+\end{DoxyParams}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=550pt]{namespacerocr_1_1Addr_a6d7456ccf55cba9b6ce33956ce9c6d61_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{namespacerocr_1_1Addr_a32f11d670c06b7b83b922043ff29f18a}\label{namespacerocr_1_1Addr_a32f11d670c06b7b83b922043ff29f18a}} 
+\index{rocr::Addr@{rocr::Addr}!IsPow2@{IsPow2}}
+\index{IsPow2@{IsPow2}!rocr::Addr@{rocr::Addr}}
+\doxysubsubsection{\texorpdfstring{IsPow2()}{IsPow2()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily static \mbox{\hyperlink{addrtypes_8h_ac4116bb9a5e80b5cb845d4f2674c160f}{UINT\+\_\+64}} rocr\+::\+Addr\+::\+Is\+Pow2 (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{addrtypes_8h_ac4116bb9a5e80b5cb845d4f2674c160f}{UINT\+\_\+64}}}]{dim }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+
+
+Check if the size (UINT\+\_\+64) is pow 2. 
+
+Is\+Pow2 
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em dim} & dimension of miplevel \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{namespacerocr_1_1Addr_acff3bfbf578c5a064527dd59e2bbd9e8}\label{namespacerocr_1_1Addr_acff3bfbf578c5a064527dd59e2bbd9e8}} 
+\index{rocr::Addr@{rocr::Addr}!Log2@{Log2}}
+\index{Log2@{Log2}!rocr::Addr@{rocr::Addr}}
+\doxysubsubsection{\texorpdfstring{Log2()}{Log2()}}
+{\footnotesize\ttfamily static \mbox{\hyperlink{addrtypes_8h_af5a2be58a28390f9a494538f34054637}{UINT\+\_\+32}} rocr\+::\+Addr\+::\+Log2 (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{addrtypes_8h_af5a2be58a28390f9a494538f34054637}{UINT\+\_\+32}}}]{x }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+
+
+Compute log of base 2. 
+
+Log2 
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em x} & the value should calculate log based 2 \\
+\hline
+\end{DoxyParams}
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=331pt]{namespacerocr_1_1Addr_acff3bfbf578c5a064527dd59e2bbd9e8_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{namespacerocr_1_1Addr_a731b1ed6593076666efef883028acdb6}\label{namespacerocr_1_1Addr_a731b1ed6593076666efef883028acdb6}} 
+\index{rocr::Addr@{rocr::Addr}!Log2NonPow2@{Log2NonPow2}}
+\index{Log2NonPow2@{Log2NonPow2}!rocr::Addr@{rocr::Addr}}
+\doxysubsubsection{\texorpdfstring{Log2NonPow2()}{Log2NonPow2()}}
+{\footnotesize\ttfamily static \mbox{\hyperlink{addrtypes_8h_af5a2be58a28390f9a494538f34054637}{UINT\+\_\+32}} rocr\+::\+Addr\+::\+Log2\+Non\+Pow2 (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{addrtypes_8h_af5a2be58a28390f9a494538f34054637}{UINT\+\_\+32}}}]{x }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+
+
+Compute log of base 2 no matter the target is power of 2 or not. 
+
+Log2\+Non\+Pow2 
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em x} & the value should calculate log based 2 \\
+\hline
+\end{DoxyParams}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=550pt]{namespacerocr_1_1Addr_a731b1ed6593076666efef883028acdb6_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{namespacerocr_1_1Addr_ac36a8bb8c6411de53b86d7e292b6d8b0}\label{namespacerocr_1_1Addr_ac36a8bb8c6411de53b86d7e292b6d8b0}} 
+\index{rocr::Addr@{rocr::Addr}!Max@{Max}}
+\index{Max@{Max}!rocr::Addr@{rocr::Addr}}
+\doxysubsubsection{\texorpdfstring{Max()}{Max()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily static \mbox{\hyperlink{addrtypes_8h_adacc69c9db3b9adfc072b838ebf2bb0e}{INT\+\_\+32}} rocr\+::\+Addr\+::\+Max (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{addrtypes_8h_adacc69c9db3b9adfc072b838ebf2bb0e}{INT\+\_\+32}}}]{value1,  }\item[{\mbox{\hyperlink{addrtypes_8h_adacc69c9db3b9adfc072b838ebf2bb0e}{INT\+\_\+32}}}]{value2 }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+
+
+Get the max value between two signed values. 
+
+Max \mbox{\Hypertarget{namespacerocr_1_1Addr_ad9ea8ddca9e41abb83f0e9aede4a49a3}\label{namespacerocr_1_1Addr_ad9ea8ddca9e41abb83f0e9aede4a49a3}} 
+\index{rocr::Addr@{rocr::Addr}!Max@{Max}}
+\index{Max@{Max}!rocr::Addr@{rocr::Addr}}
+\doxysubsubsection{\texorpdfstring{Max()}{Max()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily static \mbox{\hyperlink{addrtypes_8h_af5a2be58a28390f9a494538f34054637}{UINT\+\_\+32}} rocr\+::\+Addr\+::\+Max (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{addrtypes_8h_af5a2be58a28390f9a494538f34054637}{UINT\+\_\+32}}}]{value1,  }\item[{\mbox{\hyperlink{addrtypes_8h_af5a2be58a28390f9a494538f34054637}{UINT\+\_\+32}}}]{value2 }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+
+
+Get the max value between two unsigned values. 
+
+Max \mbox{\Hypertarget{namespacerocr_1_1Addr_a492fef30d3bd49bb64dee773ecd5d0d6}\label{namespacerocr_1_1Addr_a492fef30d3bd49bb64dee773ecd5d0d6}} 
+\index{rocr::Addr@{rocr::Addr}!Min@{Min}}
+\index{Min@{Min}!rocr::Addr@{rocr::Addr}}
+\doxysubsubsection{\texorpdfstring{Min()}{Min()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily static \mbox{\hyperlink{addrtypes_8h_adacc69c9db3b9adfc072b838ebf2bb0e}{INT\+\_\+32}} rocr\+::\+Addr\+::\+Min (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{addrtypes_8h_adacc69c9db3b9adfc072b838ebf2bb0e}{INT\+\_\+32}}}]{value1,  }\item[{\mbox{\hyperlink{addrtypes_8h_adacc69c9db3b9adfc072b838ebf2bb0e}{INT\+\_\+32}}}]{value2 }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+
+
+Get the min value between two signed values. 
+
+Min \mbox{\Hypertarget{namespacerocr_1_1Addr_a635f98d28d067d351bd28f71c33107ad}\label{namespacerocr_1_1Addr_a635f98d28d067d351bd28f71c33107ad}} 
+\index{rocr::Addr@{rocr::Addr}!Min@{Min}}
+\index{Min@{Min}!rocr::Addr@{rocr::Addr}}
+\doxysubsubsection{\texorpdfstring{Min()}{Min()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily static \mbox{\hyperlink{addrtypes_8h_af5a2be58a28390f9a494538f34054637}{UINT\+\_\+32}} rocr\+::\+Addr\+::\+Min (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{addrtypes_8h_af5a2be58a28390f9a494538f34054637}{UINT\+\_\+32}}}]{value1,  }\item[{\mbox{\hyperlink{addrtypes_8h_af5a2be58a28390f9a494538f34054637}{UINT\+\_\+32}}}]{value2 }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+
+
+Get the min value between two unsigned values. 
+
+Min Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=550pt]{namespacerocr_1_1Addr_a635f98d28d067d351bd28f71c33107ad_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{namespacerocr_1_1Addr_aff23695a85d926a4a7f3be1591674402}\label{namespacerocr_1_1Addr_aff23695a85d926a4a7f3be1591674402}} 
+\index{rocr::Addr@{rocr::Addr}!MortonGen2d@{MortonGen2d}}
+\index{MortonGen2d@{MortonGen2d}!rocr::Addr@{rocr::Addr}}
+\doxysubsubsection{\texorpdfstring{MortonGen2d()}{MortonGen2d()}}
+{\footnotesize\ttfamily static \mbox{\hyperlink{addrtypes_8h_af5a2be58a28390f9a494538f34054637}{UINT\+\_\+32}} rocr\+::\+Addr\+::\+Morton\+Gen2d (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{addrtypes_8h_af5a2be58a28390f9a494538f34054637}{UINT\+\_\+32}}}]{x,  }\item[{\mbox{\hyperlink{addrtypes_8h_af5a2be58a28390f9a494538f34054637}{UINT\+\_\+32}}}]{y,  }\item[{\mbox{\hyperlink{addrtypes_8h_af5a2be58a28390f9a494538f34054637}{UINT\+\_\+32}}}]{num }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+
+
+Generate 2D Morton interleave code with num lowest bits in each channel. 
+
+Morton\+Gen2d 
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em x} & First channel \\
+\hline
+\mbox{\texttt{ in}}  & {\em y} & Second channel \\
+\hline
+\mbox{\texttt{ in}}  & {\em num} & Number of bits extracted from each channel \\
+\hline
+\end{DoxyParams}
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=333pt]{namespacerocr_1_1Addr_aff23695a85d926a4a7f3be1591674402_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{namespacerocr_1_1Addr_aff23695a85d926a4a7f3be1591674402_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{namespacerocr_1_1Addr_a1e116479962ad244afc2992995067dc9}\label{namespacerocr_1_1Addr_a1e116479962ad244afc2992995067dc9}} 
+\index{rocr::Addr@{rocr::Addr}!MortonGen3d@{MortonGen3d}}
+\index{MortonGen3d@{MortonGen3d}!rocr::Addr@{rocr::Addr}}
+\doxysubsubsection{\texorpdfstring{MortonGen3d()}{MortonGen3d()}}
+{\footnotesize\ttfamily static \mbox{\hyperlink{addrtypes_8h_af5a2be58a28390f9a494538f34054637}{UINT\+\_\+32}} rocr\+::\+Addr\+::\+Morton\+Gen3d (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{addrtypes_8h_af5a2be58a28390f9a494538f34054637}{UINT\+\_\+32}}}]{x,  }\item[{\mbox{\hyperlink{addrtypes_8h_af5a2be58a28390f9a494538f34054637}{UINT\+\_\+32}}}]{y,  }\item[{\mbox{\hyperlink{addrtypes_8h_af5a2be58a28390f9a494538f34054637}{UINT\+\_\+32}}}]{z,  }\item[{\mbox{\hyperlink{addrtypes_8h_af5a2be58a28390f9a494538f34054637}{UINT\+\_\+32}}}]{num }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+
+
+Generate 3D Morton interleave code with num lowest bits in each channel. 
+
+Morton\+Gen3d 
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em x} & First channel \\
+\hline
+\mbox{\texttt{ in}}  & {\em y} & Second channel \\
+\hline
+\mbox{\texttt{ in}}  & {\em z} & Third channel \\
+\hline
+\mbox{\texttt{ in}}  & {\em num} & Number of bits extracted from each channel \\
+\hline
+\end{DoxyParams}
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=333pt]{namespacerocr_1_1Addr_a1e116479962ad244afc2992995067dc9_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{namespacerocr_1_1Addr_a1e116479962ad244afc2992995067dc9_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{namespacerocr_1_1Addr_a80b899a4d0cbea3f730ecc53dc4f5ce8}\label{namespacerocr_1_1Addr_a80b899a4d0cbea3f730ecc53dc4f5ce8}} 
+\index{rocr::Addr@{rocr::Addr}!NextPow2@{NextPow2}}
+\index{NextPow2@{NextPow2}!rocr::Addr@{rocr::Addr}}
+\doxysubsubsection{\texorpdfstring{NextPow2()}{NextPow2()}}
+{\footnotesize\ttfamily static \mbox{\hyperlink{addrtypes_8h_af5a2be58a28390f9a494538f34054637}{UINT\+\_\+32}} rocr\+::\+Addr\+::\+Next\+Pow2 (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{addrtypes_8h_af5a2be58a28390f9a494538f34054637}{UINT\+\_\+32}}}]{dim }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+
+
+Compute the mipmap\textquotesingle{}s next level dim size. 
+
+Next\+Pow2 
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em dim} & dimension of miplevel \\
+\hline
+\end{DoxyParams}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{namespacerocr_1_1Addr_a80b899a4d0cbea3f730ecc53dc4f5ce8_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{namespacerocr_1_1Addr_a29b8ae20a72f01357ff7212500234bb2}\label{namespacerocr_1_1Addr_a29b8ae20a72f01357ff7212500234bb2}} 
+\index{rocr::Addr@{rocr::Addr}!PowTwoAlign@{PowTwoAlign}}
+\index{PowTwoAlign@{PowTwoAlign}!rocr::Addr@{rocr::Addr}}
+\doxysubsubsection{\texorpdfstring{PowTwoAlign()}{PowTwoAlign()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily static \mbox{\hyperlink{addrtypes_8h_af5a2be58a28390f9a494538f34054637}{UINT\+\_\+32}} rocr\+::\+Addr\+::\+Pow\+Two\+Align (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{addrtypes_8h_af5a2be58a28390f9a494538f34054637}{UINT\+\_\+32}}}]{x,  }\item[{\mbox{\hyperlink{addrtypes_8h_af5a2be58a28390f9a494538f34054637}{UINT\+\_\+32}}}]{align }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+
+
+Align UINT\+\_\+32 \char`\"{}x\char`\"{} to \char`\"{}align\char`\"{} alignment, \char`\"{}align\char`\"{} should be power of 2. 
+
+Byte\+Align Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=339pt]{namespacerocr_1_1Addr_a29b8ae20a72f01357ff7212500234bb2_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=550pt]{namespacerocr_1_1Addr_a29b8ae20a72f01357ff7212500234bb2_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{namespacerocr_1_1Addr_a33768568b89fc95bd427aae0d3b2a44b}\label{namespacerocr_1_1Addr_a33768568b89fc95bd427aae0d3b2a44b}} 
+\index{rocr::Addr@{rocr::Addr}!PowTwoAlign@{PowTwoAlign}}
+\index{PowTwoAlign@{PowTwoAlign}!rocr::Addr@{rocr::Addr}}
+\doxysubsubsection{\texorpdfstring{PowTwoAlign()}{PowTwoAlign()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily static \mbox{\hyperlink{addrtypes_8h_ac4116bb9a5e80b5cb845d4f2674c160f}{UINT\+\_\+64}} rocr\+::\+Addr\+::\+Pow\+Two\+Align (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{addrtypes_8h_ac4116bb9a5e80b5cb845d4f2674c160f}{UINT\+\_\+64}}}]{x,  }\item[{\mbox{\hyperlink{addrtypes_8h_ac4116bb9a5e80b5cb845d4f2674c160f}{UINT\+\_\+64}}}]{align }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+
+
+Align UINT\+\_\+64 \char`\"{}x\char`\"{} to \char`\"{}align\char`\"{} alignment, \char`\"{}align\char`\"{} should be power of 2. 
+
+Byte\+Align Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=339pt]{namespacerocr_1_1Addr_a33768568b89fc95bd427aae0d3b2a44b_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{namespacerocr_1_1Addr_a7327e3027cf67fabc691e966245a859d}\label{namespacerocr_1_1Addr_a7327e3027cf67fabc691e966245a859d}} 
+\index{rocr::Addr@{rocr::Addr}!QLog2@{QLog2}}
+\index{QLog2@{QLog2}!rocr::Addr@{rocr::Addr}}
+\doxysubsubsection{\texorpdfstring{QLog2()}{QLog2()}}
+{\footnotesize\ttfamily static \mbox{\hyperlink{addrtypes_8h_af5a2be58a28390f9a494538f34054637}{UINT\+\_\+32}} rocr\+::\+Addr\+::\+QLog2 (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{addrtypes_8h_af5a2be58a28390f9a494538f34054637}{UINT\+\_\+32}}}]{x }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+
+
+Compute log of base 2 quickly ($<$= 16) 
+
+QLog2 
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em x} & the value should calculate log based 2 \\
+\hline
+\end{DoxyParams}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{namespacerocr_1_1Addr_a7327e3027cf67fabc691e966245a859d_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{namespacerocr_1_1Addr_ad3cc172da26b1cbe71360ca5c78e1776}\label{namespacerocr_1_1Addr_ad3cc172da26b1cbe71360ca5c78e1776}} 
+\index{rocr::Addr@{rocr::Addr}!ReverseBitVector@{ReverseBitVector}}
+\index{ReverseBitVector@{ReverseBitVector}!rocr::Addr@{rocr::Addr}}
+\doxysubsubsection{\texorpdfstring{ReverseBitVector()}{ReverseBitVector()}}
+{\footnotesize\ttfamily static \mbox{\hyperlink{addrtypes_8h_af5a2be58a28390f9a494538f34054637}{UINT\+\_\+32}} rocr\+::\+Addr\+::\+Reverse\+Bit\+Vector (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{addrtypes_8h_af5a2be58a28390f9a494538f34054637}{UINT\+\_\+32}}}]{v,  }\item[{\mbox{\hyperlink{addrtypes_8h_af5a2be58a28390f9a494538f34054637}{UINT\+\_\+32}}}]{num }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+
+
+Return reversed lowest num bits of v\+: v\mbox{[}0\mbox{]}v\mbox{[}1\mbox{]}...v\mbox{[}num-\/2\mbox{]}v\mbox{[}num-\/1\mbox{]}. 
+
+Reverse\+Bit\+Vector 
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em v} & Reverse operation base value \\
+\hline
+\mbox{\texttt{ in}}  & {\em num} & Number of bits used in reverse operation \\
+\hline
+\end{DoxyParams}
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{namespacerocr_1_1Addr_ad3cc172da26b1cbe71360ca5c78e1776_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{namespacerocr_1_1Addr_ad3cc172da26b1cbe71360ca5c78e1776_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{namespacerocr_1_1Addr_abb259b41db0ddacc2bfd83e94e7dea18}\label{namespacerocr_1_1Addr_abb259b41db0ddacc2bfd83e94e7dea18}} 
+\index{rocr::Addr@{rocr::Addr}!RoundHalf@{RoundHalf}}
+\index{RoundHalf@{RoundHalf}!rocr::Addr@{rocr::Addr}}
+\doxysubsubsection{\texorpdfstring{RoundHalf()}{RoundHalf()}}
+{\footnotesize\ttfamily static \mbox{\hyperlink{addrtypes_8h_af5a2be58a28390f9a494538f34054637}{UINT\+\_\+32}} rocr\+::\+Addr\+::\+Round\+Half (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{addrtypes_8h_af5a2be58a28390f9a494538f34054637}{UINT\+\_\+32}}}]{x }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+
+
+return (x + 1) / 2 
+
+Round\+Half 
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em x} & input value \\
+\hline
+\end{DoxyParams}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{namespacerocr_1_1Addr_abb259b41db0ddacc2bfd83e94e7dea18_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{namespacerocr_1_1Addr_aaf7e32be5293d29917e9d7382dd6144d}\label{namespacerocr_1_1Addr_aaf7e32be5293d29917e9d7382dd6144d}} 
+\index{rocr::Addr@{rocr::Addr}!RoundUpQuotient@{RoundUpQuotient}}
+\index{RoundUpQuotient@{RoundUpQuotient}!rocr::Addr@{rocr::Addr}}
+\doxysubsubsection{\texorpdfstring{RoundUpQuotient()}{RoundUpQuotient()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily static \mbox{\hyperlink{addrtypes_8h_af5a2be58a28390f9a494538f34054637}{UINT\+\_\+32}} rocr\+::\+Addr\+::\+Round\+Up\+Quotient (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{addrtypes_8h_af5a2be58a28390f9a494538f34054637}{UINT\+\_\+32}}}]{numerator,  }\item[{\mbox{\hyperlink{addrtypes_8h_af5a2be58a28390f9a494538f34054637}{UINT\+\_\+32}}}]{denominator }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+
+
+Divides two numbers, rounding up any remainder. 
+
+Round\+Up\+Quotient Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{namespacerocr_1_1Addr_aaf7e32be5293d29917e9d7382dd6144d_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{namespacerocr_1_1Addr_a144bf0d73b05319f1565001e0f9875ef}\label{namespacerocr_1_1Addr_a144bf0d73b05319f1565001e0f9875ef}} 
+\index{rocr::Addr@{rocr::Addr}!RoundUpQuotient@{RoundUpQuotient}}
+\index{RoundUpQuotient@{RoundUpQuotient}!rocr::Addr@{rocr::Addr}}
+\doxysubsubsection{\texorpdfstring{RoundUpQuotient()}{RoundUpQuotient()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily static \mbox{\hyperlink{addrtypes_8h_ac4116bb9a5e80b5cb845d4f2674c160f}{UINT\+\_\+64}} rocr\+::\+Addr\+::\+Round\+Up\+Quotient (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{addrtypes_8h_ac4116bb9a5e80b5cb845d4f2674c160f}{UINT\+\_\+64}}}]{numerator,  }\item[{\mbox{\hyperlink{addrtypes_8h_ac4116bb9a5e80b5cb845d4f2674c160f}{UINT\+\_\+64}}}]{denominator }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+
+
+Divides two numbers, rounding up any remainder. 
+
+Round\+Up\+Quotient \mbox{\Hypertarget{namespacerocr_1_1Addr_a54babd968d7455f6a030a58d1d95b2cf}\label{namespacerocr_1_1Addr_a54babd968d7455f6a030a58d1d95b2cf}} 
+\index{rocr::Addr@{rocr::Addr}!SafeAssign@{SafeAssign}}
+\index{SafeAssign@{SafeAssign}!rocr::Addr@{rocr::Addr}}
+\doxysubsubsection{\texorpdfstring{SafeAssign()}{SafeAssign()}\hspace{0.1cm}{\footnotesize\ttfamily [1/3]}}
+{\footnotesize\ttfamily static \mbox{\hyperlink{addrtypes_8h_a7927e087749615dae3114cc27b91c86d}{VOID}} rocr\+::\+Addr\+::\+Safe\+Assign (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{addrtypes_8h_a9dffa8321911d7791c03fe3a233a34e7}{Addr\+Tile\+Mode}} $\ast$}]{p\+LVal,  }\item[{\mbox{\hyperlink{addrtypes_8h_a9dffa8321911d7791c03fe3a233a34e7}{Addr\+Tile\+Mode}}}]{r\+Val }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+
+
+NULL pointer safe assignment for Addr\+Tile\+Mode. 
+
+Safe\+Assign 
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em p\+LVal} & Pointer to left val \\
+\hline
+\mbox{\texttt{ in}}  & {\em r\+Val} & Right value \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{namespacerocr_1_1Addr_a846424f93411f07c84b7f7f72a178016}\label{namespacerocr_1_1Addr_a846424f93411f07c84b7f7f72a178016}} 
+\index{rocr::Addr@{rocr::Addr}!SafeAssign@{SafeAssign}}
+\index{SafeAssign@{SafeAssign}!rocr::Addr@{rocr::Addr}}
+\doxysubsubsection{\texorpdfstring{SafeAssign()}{SafeAssign()}\hspace{0.1cm}{\footnotesize\ttfamily [2/3]}}
+{\footnotesize\ttfamily static \mbox{\hyperlink{addrtypes_8h_a7927e087749615dae3114cc27b91c86d}{VOID}} rocr\+::\+Addr\+::\+Safe\+Assign (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{addrtypes_8h_af5a2be58a28390f9a494538f34054637}{UINT\+\_\+32}} $\ast$}]{p\+LVal,  }\item[{\mbox{\hyperlink{addrtypes_8h_af5a2be58a28390f9a494538f34054637}{UINT\+\_\+32}}}]{r\+Val }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+
+
+NULL pointer safe assignment. 
+
+Safe\+Assign 
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em p\+LVal} & Pointer to left val \\
+\hline
+\mbox{\texttt{ in}}  & {\em r\+Val} & Right value \\
+\hline
+\end{DoxyParams}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{namespacerocr_1_1Addr_a846424f93411f07c84b7f7f72a178016_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{namespacerocr_1_1Addr_a1f9722e414b20e70c8f99a78ccef881d}\label{namespacerocr_1_1Addr_a1f9722e414b20e70c8f99a78ccef881d}} 
+\index{rocr::Addr@{rocr::Addr}!SafeAssign@{SafeAssign}}
+\index{SafeAssign@{SafeAssign}!rocr::Addr@{rocr::Addr}}
+\doxysubsubsection{\texorpdfstring{SafeAssign()}{SafeAssign()}\hspace{0.1cm}{\footnotesize\ttfamily [3/3]}}
+{\footnotesize\ttfamily static \mbox{\hyperlink{addrtypes_8h_a7927e087749615dae3114cc27b91c86d}{VOID}} rocr\+::\+Addr\+::\+Safe\+Assign (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{addrtypes_8h_ac4116bb9a5e80b5cb845d4f2674c160f}{UINT\+\_\+64}} $\ast$}]{p\+LVal,  }\item[{\mbox{\hyperlink{addrtypes_8h_ac4116bb9a5e80b5cb845d4f2674c160f}{UINT\+\_\+64}}}]{r\+Val }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+
+
+NULL pointer safe assignment for 64bit values. 
+
+Safe\+Assign 
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em p\+LVal} & Pointer to left val \\
+\hline
+\mbox{\texttt{ in}}  & {\em r\+Val} & Right value \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{namespacerocr_1_1Addr_aa1f586ec353b6f0428a6c402a64aeb4d}\label{namespacerocr_1_1Addr_aa1f586ec353b6f0428a6c402a64aeb4d}} 
+\index{rocr::Addr@{rocr::Addr}!ShiftCeil@{ShiftCeil}}
+\index{ShiftCeil@{ShiftCeil}!rocr::Addr@{rocr::Addr}}
+\doxysubsubsection{\texorpdfstring{ShiftCeil()}{ShiftCeil()}}
+{\footnotesize\ttfamily static \mbox{\hyperlink{addrtypes_8h_af5a2be58a28390f9a494538f34054637}{UINT\+\_\+32}} rocr\+::\+Addr\+::\+Shift\+Ceil (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{addrtypes_8h_af5a2be58a28390f9a494538f34054637}{UINT\+\_\+32}}}]{a,  }\item[{\mbox{\hyperlink{addrtypes_8h_af5a2be58a28390f9a494538f34054637}{UINT\+\_\+32}}}]{b }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+
+
+Apply right-\/shift with ceiling. 
+
+Shift\+Ceil 
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em a} & value to be right-\/shifted \\
+\hline
+\mbox{\texttt{ in}}  & {\em b} & number of bits to shift \\
+\hline
+\end{DoxyParams}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{namespacerocr_1_1Addr_aa1f586ec353b6f0428a6c402a64aeb4d_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{namespacerocr_1_1Addr_a7240ed0d61925a9d7cfbf9abdcb092e0}\label{namespacerocr_1_1Addr_a7240ed0d61925a9d7cfbf9abdcb092e0}} 
+\index{rocr::Addr@{rocr::Addr}!ShiftRight@{ShiftRight}}
+\index{ShiftRight@{ShiftRight}!rocr::Addr@{rocr::Addr}}
+\doxysubsubsection{\texorpdfstring{ShiftRight()}{ShiftRight()}}
+{\footnotesize\ttfamily static \mbox{\hyperlink{addrtypes_8h_af5a2be58a28390f9a494538f34054637}{UINT\+\_\+32}} rocr\+::\+Addr\+::\+Shift\+Right (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{addrtypes_8h_af5a2be58a28390f9a494538f34054637}{UINT\+\_\+32}}}]{a,  }\item[{\mbox{\hyperlink{addrtypes_8h_af5a2be58a28390f9a494538f34054637}{UINT\+\_\+32}}}]{b }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+
+
+Return right-\/shift value and minimum is 1. 
+
+Shift\+Right 
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em a} & value to be right-\/shifted \\
+\hline
+\mbox{\texttt{ in}}  & {\em b} & number of bits to shift \\
+\hline
+\end{DoxyParams}
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=309pt]{namespacerocr_1_1Addr_a7240ed0d61925a9d7cfbf9abdcb092e0_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{namespacerocr_1_1Addr_a7240ed0d61925a9d7cfbf9abdcb092e0_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{namespacerocr_1_1Addr_a2eea13cc12281136db7823a10df104fe}\label{namespacerocr_1_1Addr_a2eea13cc12281136db7823a10df104fe}} 
+\index{rocr::Addr@{rocr::Addr}!SiHwlInit@{SiHwlInit}}
+\index{SiHwlInit@{SiHwlInit}!rocr::Addr@{rocr::Addr}}
+\doxysubsubsection{\texorpdfstring{SiHwlInit()}{SiHwlInit()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classrocr_1_1Addr_1_1Lib}{Lib}} $\ast$ rocr\+::\+Addr\+::\+Si\+Hwl\+Init (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{structrocr_1_1Addr_1_1Client}{Client}} $\ast$}]{p\+Client }\end{DoxyParamCaption})}
+
+
+
+Creates an Si\+Lib object. 
+
+Si\+Hwl\+Init
+
+\begin{DoxyReturn}{Returns}
+Returns an Si\+Lib object pointer. 
+\end{DoxyReturn}
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{namespacerocr_1_1Addr_a2eea13cc12281136db7823a10df104fe_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{namespacerocr_1_1Addr_a2eea13cc12281136db7823a10df104fe_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{namespacerocr_1_1Addr_a43d67d419acdfc9dbd06dbc4aba9c77c}\label{namespacerocr_1_1Addr_a43d67d419acdfc9dbd06dbc4aba9c77c}} 
+\index{rocr::Addr@{rocr::Addr}!SumGeo@{SumGeo}}
+\index{SumGeo@{SumGeo}!rocr::Addr@{rocr::Addr}}
+\doxysubsubsection{\texorpdfstring{SumGeo()}{SumGeo()}}
+{\footnotesize\ttfamily static \mbox{\hyperlink{addrtypes_8h_af5a2be58a28390f9a494538f34054637}{UINT\+\_\+32}} rocr\+::\+Addr\+::\+Sum\+Geo (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{addrtypes_8h_af5a2be58a28390f9a494538f34054637}{UINT\+\_\+32}}}]{base,  }\item[{\mbox{\hyperlink{addrtypes_8h_af5a2be58a28390f9a494538f34054637}{UINT\+\_\+32}}}]{num }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+
+
+Calculate sum of a geometric progression whose ratio is 1/2. 
+
+Sum\+Geo 
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em base} & First term in the geometric progression \\
+\hline
+\mbox{\texttt{ in}}  & {\em num} & Number of terms to be added into sum \\
+\hline
+\end{DoxyParams}
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=332pt]{namespacerocr_1_1Addr_a43d67d419acdfc9dbd06dbc4aba9c77c_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{namespacerocr_1_1Addr_abedb7aa6bc52c41be6d71180848a7506}\label{namespacerocr_1_1Addr_abedb7aa6bc52c41be6d71180848a7506}} 
+\index{rocr::Addr@{rocr::Addr}!XorReduce@{XorReduce}}
+\index{XorReduce@{XorReduce}!rocr::Addr@{rocr::Addr}}
+\doxysubsubsection{\texorpdfstring{XorReduce()}{XorReduce()}}
+{\footnotesize\ttfamily static \mbox{\hyperlink{addrtypes_8h_af5a2be58a28390f9a494538f34054637}{UINT\+\_\+32}} rocr\+::\+Addr\+::\+Xor\+Reduce (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{addrtypes_8h_af5a2be58a28390f9a494538f34054637}{UINT\+\_\+32}}}]{x,  }\item[{\mbox{\hyperlink{addrtypes_8h_af5a2be58a28390f9a494538f34054637}{UINT\+\_\+32}}}]{number\+Of\+Bits }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+
+
+Xor the right-\/side number\+Of\+Bits bits of x. 
+
+Addr\+Xor\+Reduce 

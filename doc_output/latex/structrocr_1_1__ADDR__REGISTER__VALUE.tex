@@ -1,0 +1,111 @@
+\hypertarget{structrocr_1_1__ADDR__REGISTER__VALUE}{}\doxysection{rocr\+::\+\_\+\+ADDR\+\_\+\+REGISTER\+\_\+\+VALUE Struct Reference}
+\label{structrocr_1_1__ADDR__REGISTER__VALUE}\index{rocr::\_ADDR\_REGISTER\_VALUE@{rocr::\_ADDR\_REGISTER\_VALUE}}
+
+
+Data from registers to setup Addr\+Lib global data, used in Addr\+Create.  
+
+
+
+
+{\ttfamily \#include $<$addrinterface.\+h$>$}
+
+\doxysubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{addrtypes_8h_af5a2be58a28390f9a494538f34054637}{UINT\+\_\+32}} \mbox{\hyperlink{structrocr_1_1__ADDR__REGISTER__VALUE_a1391f00fd9c9cded7ce768cb97d35a23}{gb\+Addr\+Config}}
+\item 
+\mbox{\hyperlink{addrtypes_8h_af5a2be58a28390f9a494538f34054637}{UINT\+\_\+32}} \mbox{\hyperlink{structrocr_1_1__ADDR__REGISTER__VALUE_a1c3f2c3cf333446d06b926d354d5d325}{backend\+Disables}}
+\item 
+\mbox{\hyperlink{addrtypes_8h_af5a2be58a28390f9a494538f34054637}{UINT\+\_\+32}} \mbox{\hyperlink{structrocr_1_1__ADDR__REGISTER__VALUE_a54c8a37d6c664215ee2f8b66419f0c64}{no\+Of\+Banks}}
+\begin{DoxyCompactList}\small\item\em R800 registers-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/---. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{addrtypes_8h_af5a2be58a28390f9a494538f34054637}{UINT\+\_\+32}} \mbox{\hyperlink{structrocr_1_1__ADDR__REGISTER__VALUE_a42a232f3996f23219c6c79c913f41986}{no\+Of\+Ranks}}
+\item 
+const \mbox{\hyperlink{addrtypes_8h_af5a2be58a28390f9a494538f34054637}{UINT\+\_\+32}} $\ast$ \mbox{\hyperlink{structrocr_1_1__ADDR__REGISTER__VALUE_abb9691af58201029ff195385e086e9a1}{p\+Tile\+Config}}
+\begin{DoxyCompactList}\small\item\em Global tile setting tables. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{addrtypes_8h_af5a2be58a28390f9a494538f34054637}{UINT\+\_\+32}} \mbox{\hyperlink{structrocr_1_1__ADDR__REGISTER__VALUE_ab2e9aa13350f15daf0c9ef4faa5b592a}{no\+Of\+Entries}}
+\begin{DoxyCompactList}\small\item\em Number of entries in p\+Tile\+Config. \end{DoxyCompactList}\item 
+const \mbox{\hyperlink{addrtypes_8h_af5a2be58a28390f9a494538f34054637}{UINT\+\_\+32}} $\ast$ \mbox{\hyperlink{structrocr_1_1__ADDR__REGISTER__VALUE_a28f2325897764ede805303abc26fdfb8}{p\+Macro\+Tile\+Config}}
+\begin{DoxyCompactList}\small\item\em Global macro tile mode table. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{addrtypes_8h_af5a2be58a28390f9a494538f34054637}{UINT\+\_\+32}} \mbox{\hyperlink{structrocr_1_1__ADDR__REGISTER__VALUE_a20534591017375b199ba93ae209692bf}{no\+Of\+Macro\+Entries}}
+\begin{DoxyCompactList}\small\item\em Number of entries in p\+Macro\+Tile\+Config. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Data from registers to setup Addr\+Lib global data, used in Addr\+Create. 
+
+ADDR\+\_\+\+REGISTER\+\_\+\+VALUE 
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{structrocr_1_1__ADDR__REGISTER__VALUE_a1c3f2c3cf333446d06b926d354d5d325}\label{structrocr_1_1__ADDR__REGISTER__VALUE_a1c3f2c3cf333446d06b926d354d5d325}} 
+\index{rocr::\_ADDR\_REGISTER\_VALUE@{rocr::\_ADDR\_REGISTER\_VALUE}!backendDisables@{backendDisables}}
+\index{backendDisables@{backendDisables}!rocr::\_ADDR\_REGISTER\_VALUE@{rocr::\_ADDR\_REGISTER\_VALUE}}
+\doxysubsubsection{\texorpdfstring{backendDisables}{backendDisables}}
+{\footnotesize\ttfamily \mbox{\hyperlink{addrtypes_8h_af5a2be58a28390f9a494538f34054637}{UINT\+\_\+32}} rocr\+::\+\_\+\+ADDR\+\_\+\+REGISTER\+\_\+\+VALUE\+::backend\+Disables}
+
+1 bit per backend, starting with LSB. 1=disabled,0=enabled. Register value of CC\+\_\+\+RB\+\_\+\+BACKEND\+\_\+\+DISABLE.\+BACKEND\+\_\+\+DISABLE \mbox{\Hypertarget{structrocr_1_1__ADDR__REGISTER__VALUE_a1391f00fd9c9cded7ce768cb97d35a23}\label{structrocr_1_1__ADDR__REGISTER__VALUE_a1391f00fd9c9cded7ce768cb97d35a23}} 
+\index{rocr::\_ADDR\_REGISTER\_VALUE@{rocr::\_ADDR\_REGISTER\_VALUE}!gbAddrConfig@{gbAddrConfig}}
+\index{gbAddrConfig@{gbAddrConfig}!rocr::\_ADDR\_REGISTER\_VALUE@{rocr::\_ADDR\_REGISTER\_VALUE}}
+\doxysubsubsection{\texorpdfstring{gbAddrConfig}{gbAddrConfig}}
+{\footnotesize\ttfamily \mbox{\hyperlink{addrtypes_8h_af5a2be58a28390f9a494538f34054637}{UINT\+\_\+32}} rocr\+::\+\_\+\+ADDR\+\_\+\+REGISTER\+\_\+\+VALUE\+::gb\+Addr\+Config}
+
+For R8xx, use \mbox{\hyperlink{unionGB__ADDR__CONFIG}{GB\+\_\+\+ADDR\+\_\+\+CONFIG}} register value. For R6xx/\+R7xx, use GB\+\_\+\+TILING\+\_\+\+CONFIG. But they can be treated as the same. if this value is 0, use chip to set default value \mbox{\Hypertarget{structrocr_1_1__ADDR__REGISTER__VALUE_a54c8a37d6c664215ee2f8b66419f0c64}\label{structrocr_1_1__ADDR__REGISTER__VALUE_a54c8a37d6c664215ee2f8b66419f0c64}} 
+\index{rocr::\_ADDR\_REGISTER\_VALUE@{rocr::\_ADDR\_REGISTER\_VALUE}!noOfBanks@{noOfBanks}}
+\index{noOfBanks@{noOfBanks}!rocr::\_ADDR\_REGISTER\_VALUE@{rocr::\_ADDR\_REGISTER\_VALUE}}
+\doxysubsubsection{\texorpdfstring{noOfBanks}{noOfBanks}}
+{\footnotesize\ttfamily \mbox{\hyperlink{addrtypes_8h_af5a2be58a28390f9a494538f34054637}{UINT\+\_\+32}} rocr\+::\+\_\+\+ADDR\+\_\+\+REGISTER\+\_\+\+VALUE\+::no\+Of\+Banks}
+
+
+
+R800 registers-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/---. 
+
+Number of h/w ram banks -\/ For r800\+: MC\+\_\+\+ARB\+\_\+\+RAMCFG.\+NOOFBANK No enums for this value in h/w header files 0\+: 4 1\+: 8 2\+: 16 \mbox{\Hypertarget{structrocr_1_1__ADDR__REGISTER__VALUE_ab2e9aa13350f15daf0c9ef4faa5b592a}\label{structrocr_1_1__ADDR__REGISTER__VALUE_ab2e9aa13350f15daf0c9ef4faa5b592a}} 
+\index{rocr::\_ADDR\_REGISTER\_VALUE@{rocr::\_ADDR\_REGISTER\_VALUE}!noOfEntries@{noOfEntries}}
+\index{noOfEntries@{noOfEntries}!rocr::\_ADDR\_REGISTER\_VALUE@{rocr::\_ADDR\_REGISTER\_VALUE}}
+\doxysubsubsection{\texorpdfstring{noOfEntries}{noOfEntries}}
+{\footnotesize\ttfamily \mbox{\hyperlink{addrtypes_8h_af5a2be58a28390f9a494538f34054637}{UINT\+\_\+32}} rocr\+::\+\_\+\+ADDR\+\_\+\+REGISTER\+\_\+\+VALUE\+::no\+Of\+Entries}
+
+
+
+Number of entries in p\+Tile\+Config. 
+
+CI registers-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/--- \mbox{\Hypertarget{structrocr_1_1__ADDR__REGISTER__VALUE_a20534591017375b199ba93ae209692bf}\label{structrocr_1_1__ADDR__REGISTER__VALUE_a20534591017375b199ba93ae209692bf}} 
+\index{rocr::\_ADDR\_REGISTER\_VALUE@{rocr::\_ADDR\_REGISTER\_VALUE}!noOfMacroEntries@{noOfMacroEntries}}
+\index{noOfMacroEntries@{noOfMacroEntries}!rocr::\_ADDR\_REGISTER\_VALUE@{rocr::\_ADDR\_REGISTER\_VALUE}}
+\doxysubsubsection{\texorpdfstring{noOfMacroEntries}{noOfMacroEntries}}
+{\footnotesize\ttfamily \mbox{\hyperlink{addrtypes_8h_af5a2be58a28390f9a494538f34054637}{UINT\+\_\+32}} rocr\+::\+\_\+\+ADDR\+\_\+\+REGISTER\+\_\+\+VALUE\+::no\+Of\+Macro\+Entries}
+
+
+
+Number of entries in p\+Macro\+Tile\+Config. 
+
+\mbox{\Hypertarget{structrocr_1_1__ADDR__REGISTER__VALUE_a42a232f3996f23219c6c79c913f41986}\label{structrocr_1_1__ADDR__REGISTER__VALUE_a42a232f3996f23219c6c79c913f41986}} 
+\index{rocr::\_ADDR\_REGISTER\_VALUE@{rocr::\_ADDR\_REGISTER\_VALUE}!noOfRanks@{noOfRanks}}
+\index{noOfRanks@{noOfRanks}!rocr::\_ADDR\_REGISTER\_VALUE@{rocr::\_ADDR\_REGISTER\_VALUE}}
+\doxysubsubsection{\texorpdfstring{noOfRanks}{noOfRanks}}
+{\footnotesize\ttfamily \mbox{\hyperlink{addrtypes_8h_af5a2be58a28390f9a494538f34054637}{UINT\+\_\+32}} rocr\+::\+\_\+\+ADDR\+\_\+\+REGISTER\+\_\+\+VALUE\+::no\+Of\+Ranks}
+
+\mbox{\Hypertarget{structrocr_1_1__ADDR__REGISTER__VALUE_a28f2325897764ede805303abc26fdfb8}\label{structrocr_1_1__ADDR__REGISTER__VALUE_a28f2325897764ede805303abc26fdfb8}} 
+\index{rocr::\_ADDR\_REGISTER\_VALUE@{rocr::\_ADDR\_REGISTER\_VALUE}!pMacroTileConfig@{pMacroTileConfig}}
+\index{pMacroTileConfig@{pMacroTileConfig}!rocr::\_ADDR\_REGISTER\_VALUE@{rocr::\_ADDR\_REGISTER\_VALUE}}
+\doxysubsubsection{\texorpdfstring{pMacroTileConfig}{pMacroTileConfig}}
+{\footnotesize\ttfamily const \mbox{\hyperlink{addrtypes_8h_af5a2be58a28390f9a494538f34054637}{UINT\+\_\+32}}$\ast$ rocr\+::\+\_\+\+ADDR\+\_\+\+REGISTER\+\_\+\+VALUE\+::p\+Macro\+Tile\+Config}
+
+
+
+Global macro tile mode table. 
+
+\mbox{\Hypertarget{structrocr_1_1__ADDR__REGISTER__VALUE_abb9691af58201029ff195385e086e9a1}\label{structrocr_1_1__ADDR__REGISTER__VALUE_abb9691af58201029ff195385e086e9a1}} 
+\index{rocr::\_ADDR\_REGISTER\_VALUE@{rocr::\_ADDR\_REGISTER\_VALUE}!pTileConfig@{pTileConfig}}
+\index{pTileConfig@{pTileConfig}!rocr::\_ADDR\_REGISTER\_VALUE@{rocr::\_ADDR\_REGISTER\_VALUE}}
+\doxysubsubsection{\texorpdfstring{pTileConfig}{pTileConfig}}
+{\footnotesize\ttfamily const \mbox{\hyperlink{addrtypes_8h_af5a2be58a28390f9a494538f34054637}{UINT\+\_\+32}}$\ast$ rocr\+::\+\_\+\+ADDR\+\_\+\+REGISTER\+\_\+\+VALUE\+::p\+Tile\+Config}
+
+
+
+Global tile setting tables. 
+
+MC\+\_\+\+ARB\+\_\+\+RAMCFG.\+NOOFRANK 0\+: 1 1\+: 2 SI (R1000) registers-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/--- 
+
+The documentation for this struct was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+src/image/addrlib/inc/\mbox{\hyperlink{addrinterface_8h}{addrinterface.\+h}}\end{DoxyCompactItemize}

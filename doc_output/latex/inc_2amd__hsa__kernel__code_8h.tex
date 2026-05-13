@@ -1,0 +1,780 @@
+\hypertarget{inc_2amd__hsa__kernel__code_8h}{}\doxysection{src/inc/amd\+\_\+hsa\+\_\+kernel\+\_\+code.h File Reference}
+\label{inc_2amd__hsa__kernel__code_8h}\index{src/inc/amd\_hsa\_kernel\_code.h@{src/inc/amd\_hsa\_kernel\_code.h}}
+{\ttfamily \#include \char`\"{}amd\+\_\+hsa\+\_\+common.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}hsa.\+h\char`\"{}}\newline
+Include dependency graph for amd\+\_\+hsa\+\_\+kernel\+\_\+code.\+h\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=303pt]{inc_2amd__hsa__kernel__code_8h__incl}
+\end{center}
+\end{figure}
+This graph shows which files directly or indirectly include this file\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{inc_2amd__hsa__kernel__code_8h__dep__incl}
+\end{center}
+\end{figure}
+\doxysubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{structamd__control__directives__s}{amd\+\_\+control\+\_\+directives\+\_\+s}}
+\item 
+struct \mbox{\hyperlink{structamd__kernel__code__s}{amd\+\_\+kernel\+\_\+code\+\_\+s}}
+\item 
+struct \mbox{\hyperlink{structamd__runtime__loader__debug__info__s}{amd\+\_\+runtime\+\_\+loader\+\_\+debug\+\_\+info\+\_\+s}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \mbox{\hyperlink{inc_2amd__hsa__kernel__code_8h_a70915656ffef3a0f7e3330298c408b60}{AMD\+\_\+\+CONTROL\+\_\+\+DIRECTIVES\+\_\+\+ALIGN\+\_\+\+BYTES}}~64
+\item 
+\#define \mbox{\hyperlink{inc_2amd__hsa__kernel__code_8h_a9e6907ee55c7120bcee26a624cb68958}{AMD\+\_\+\+CONTROL\+\_\+\+DIRECTIVES\+\_\+\+ALIGN}}~\+\_\+\+\_\+\+ALIGNED\+\_\+\+\_\+(\mbox{\hyperlink{inc_2amd__hsa__kernel__code_8h_a70915656ffef3a0f7e3330298c408b60}{AMD\+\_\+\+CONTROL\+\_\+\+DIRECTIVES\+\_\+\+ALIGN\+\_\+\+BYTES}})
+\item 
+\#define \mbox{\hyperlink{inc_2amd__hsa__kernel__code_8h_abb2b2ad36935757dc24ef57c4c21d772}{AMD\+\_\+\+ISA\+\_\+\+ALIGN\+\_\+\+BYTES}}~256
+\item 
+\#define \mbox{\hyperlink{inc_2amd__hsa__kernel__code_8h_a3f755b6dec3ff374d999f7ebde2f2114}{AMD\+\_\+\+KERNEL\+\_\+\+CODE\+\_\+\+ALIGN\+\_\+\+BYTES}}~64
+\item 
+\#define \mbox{\hyperlink{inc_2amd__hsa__kernel__code_8h_a7fe004cd1e77e9285bed6a78378ab493}{AMD\+\_\+\+KERNEL\+\_\+\+CODE\+\_\+\+ALIGN}}~\+\_\+\+\_\+\+ALIGNED\+\_\+\+\_\+(\mbox{\hyperlink{inc_2amd__hsa__kernel__code_8h_a3f755b6dec3ff374d999f7ebde2f2114}{AMD\+\_\+\+KERNEL\+\_\+\+CODE\+\_\+\+ALIGN\+\_\+\+BYTES}})
+\end{DoxyCompactItemize}
+\doxysubsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+typedef uint32\+\_\+t \mbox{\hyperlink{inc_2amd__hsa__kernel__code_8h_a6839c2c81272c47ed87ee9849423f926}{amd\+\_\+kernel\+\_\+code\+\_\+version32\+\_\+t}}
+\item 
+typedef uint16\+\_\+t \mbox{\hyperlink{inc_2amd__hsa__kernel__code_8h_a9ef9b8b0cbf9c68117c96e2fb8853484}{amd\+\_\+machine\+\_\+kind16\+\_\+t}}
+\item 
+typedef uint16\+\_\+t \mbox{\hyperlink{inc_2amd__hsa__kernel__code_8h_ae05260712d65b9dd65eb5e230ed29422}{amd\+\_\+machine\+\_\+version16\+\_\+t}}
+\item 
+typedef uint32\+\_\+t \mbox{\hyperlink{inc_2amd__hsa__kernel__code_8h_a76980361efe7d87e512b3dc22b01d730}{amd\+\_\+compute\+\_\+pgm\+\_\+rsrc\+\_\+one32\+\_\+t}}
+\item 
+typedef uint32\+\_\+t \mbox{\hyperlink{inc_2amd__hsa__kernel__code_8h_a5952fa5f3f310e8ac0de8eef6235c545}{amd\+\_\+compute\+\_\+pgm\+\_\+rsrc\+\_\+two32\+\_\+t}}
+\item 
+typedef uint32\+\_\+t \mbox{\hyperlink{inc_2amd__hsa__kernel__code_8h_af7fcfef8839feb2765526892d0fab469}{amd\+\_\+kernel\+\_\+code\+\_\+properties32\+\_\+t}}
+\item 
+typedef uint8\+\_\+t \mbox{\hyperlink{inc_2amd__hsa__kernel__code_8h_a3eff030f24a2022e35b1a475ba48d1b0}{amd\+\_\+powertwo8\+\_\+t}}
+\item 
+typedef uint64\+\_\+t \mbox{\hyperlink{inc_2amd__hsa__kernel__code_8h_ae66fcaf2ced08fa586bf57af087eb5ee}{amd\+\_\+enabled\+\_\+control\+\_\+directive64\+\_\+t}}
+\item 
+typedef uint16\+\_\+t \mbox{\hyperlink{inc_2amd__hsa__kernel__code_8h_a2f32a22e6e29a3bea364b1335fddadef}{amd\+\_\+exception\+\_\+kind16\+\_\+t}}
+\item 
+typedef \mbox{\hyperlink{inc_2amd__hsa__kernel__code_8h_a9e6907ee55c7120bcee26a624cb68958}{AMD\+\_\+\+CONTROL\+\_\+\+DIRECTIVES\+\_\+\+ALIGN}} struct \mbox{\hyperlink{structamd__control__directives__s}{amd\+\_\+control\+\_\+directives\+\_\+s}} \mbox{\hyperlink{inc_2amd__hsa__kernel__code_8h_a4eb7f834ade3e309fc1c2d94a5a54db7}{amd\+\_\+control\+\_\+directives\+\_\+t}}
+\item 
+typedef \mbox{\hyperlink{inc_2amd__hsa__kernel__code_8h_a7fe004cd1e77e9285bed6a78378ab493}{AMD\+\_\+\+KERNEL\+\_\+\+CODE\+\_\+\+ALIGN}} struct \mbox{\hyperlink{structamd__kernel__code__s}{amd\+\_\+kernel\+\_\+code\+\_\+s}} \mbox{\hyperlink{inc_2amd__hsa__kernel__code_8h_ab6a9ac3a2bb96180e3282395e564391a}{amd\+\_\+kernel\+\_\+code\+\_\+t}}
+\item 
+typedef struct \mbox{\hyperlink{structamd__runtime__loader__debug__info__s}{amd\+\_\+runtime\+\_\+loader\+\_\+debug\+\_\+info\+\_\+s}} \mbox{\hyperlink{inc_2amd__hsa__kernel__code_8h_ad35dc0fe769813d78ed477348809c979}{amd\+\_\+runtime\+\_\+loader\+\_\+debug\+\_\+info\+\_\+t}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Enumerations}
+\begin{DoxyCompactItemize}
+\item 
+enum \mbox{\hyperlink{inc_2amd__hsa__kernel__code_8h_ab5c8e8eb28e89f87bd5c6bbee5a03456}{amd\+\_\+kernel\+\_\+code\+\_\+version\+\_\+t}} \{ \mbox{\hyperlink{inc_2amd__hsa__kernel__code_8h_ab5c8e8eb28e89f87bd5c6bbee5a03456a40fc0dbcd05e303b80b4b7c85ab032a9}{AMD\+\_\+\+KERNEL\+\_\+\+CODE\+\_\+\+VERSION\+\_\+\+MAJOR}} = 1
+, \mbox{\hyperlink{inc_2amd__hsa__kernel__code_8h_ab5c8e8eb28e89f87bd5c6bbee5a03456ac1c7c6a570d958e419f07d7bbde92206}{AMD\+\_\+\+KERNEL\+\_\+\+CODE\+\_\+\+VERSION\+\_\+\+MINOR}} = 1
+ \}
+\item 
+enum \mbox{\hyperlink{inc_2amd__hsa__kernel__code_8h_a9cd58a03906620f349e31fbb4d97bce8}{amd\+\_\+machine\+\_\+kind\+\_\+t}} \{ \mbox{\hyperlink{inc_2amd__hsa__kernel__code_8h_a9cd58a03906620f349e31fbb4d97bce8a85d659be3fb4d4ea158fe3e27fffd45b}{AMD\+\_\+\+MACHINE\+\_\+\+KIND\+\_\+\+UNDEFINED}} = 0
+, \mbox{\hyperlink{inc_2amd__hsa__kernel__code_8h_a9cd58a03906620f349e31fbb4d97bce8a0db975c62313f4198f670d43e83e7747}{AMD\+\_\+\+MACHINE\+\_\+\+KIND\+\_\+\+AMDGPU}} = 1
+ \}
+\item 
+enum \mbox{\hyperlink{inc_2amd__hsa__kernel__code_8h_a12269e07ed57d521dc77bd2ba23b196d}{amd\+\_\+float\+\_\+round\+\_\+mode\+\_\+t}} \{ \mbox{\hyperlink{inc_2amd__hsa__kernel__code_8h_a12269e07ed57d521dc77bd2ba23b196da54b925df2a6c6b2209f4dc6053d35f74}{AMD\+\_\+\+FLOAT\+\_\+\+ROUND\+\_\+\+MODE\+\_\+\+NEAREST\+\_\+\+EVEN}} = 0
+, \mbox{\hyperlink{inc_2amd__hsa__kernel__code_8h_a12269e07ed57d521dc77bd2ba23b196dae4726571a20d53681442198a48374304}{AMD\+\_\+\+FLOAT\+\_\+\+ROUND\+\_\+\+MODE\+\_\+\+PLUS\+\_\+\+INFINITY}} = 1
+, \mbox{\hyperlink{inc_2amd__hsa__kernel__code_8h_a12269e07ed57d521dc77bd2ba23b196da8aed4259b9d822f06587775ecb307da1}{AMD\+\_\+\+FLOAT\+\_\+\+ROUND\+\_\+\+MODE\+\_\+\+MINUS\+\_\+\+INFINITY}} = 2
+, \mbox{\hyperlink{inc_2amd__hsa__kernel__code_8h_a12269e07ed57d521dc77bd2ba23b196da7222f28685e0a6d02abe2d09d37746d6}{AMD\+\_\+\+FLOAT\+\_\+\+ROUND\+\_\+\+MODE\+\_\+\+ZERO}} = 3
+ \}
+\item 
+enum \mbox{\hyperlink{inc_2amd__hsa__kernel__code_8h_a0a04a2c12ba829f950ff2af4a64f54c4}{amd\+\_\+float\+\_\+denorm\+\_\+mode\+\_\+t}} \{ \mbox{\hyperlink{inc_2amd__hsa__kernel__code_8h_a0a04a2c12ba829f950ff2af4a64f54c4a4c4be36da8452485321b8d787aff6bb3}{AMD\+\_\+\+FLOAT\+\_\+\+DENORM\+\_\+\+MODE\+\_\+\+FLUSH\+\_\+\+SOURCE\+\_\+\+OUTPUT}} = 0
+, \mbox{\hyperlink{inc_2amd__hsa__kernel__code_8h_a0a04a2c12ba829f950ff2af4a64f54c4a8ff459a7fd3452375de94a1ac6465efc}{AMD\+\_\+\+FLOAT\+\_\+\+DENORM\+\_\+\+MODE\+\_\+\+FLUSH\+\_\+\+OUTPUT}} = 1
+, \mbox{\hyperlink{inc_2amd__hsa__kernel__code_8h_a0a04a2c12ba829f950ff2af4a64f54c4a6ec726a58c73ac7d924ae04609c9c603}{AMD\+\_\+\+FLOAT\+\_\+\+DENORM\+\_\+\+MODE\+\_\+\+FLUSH\+\_\+\+SOURCE}} = 2
+, \mbox{\hyperlink{inc_2amd__hsa__kernel__code_8h_a0a04a2c12ba829f950ff2af4a64f54c4ab6113fb37173029ec8492879390bd71e}{AMD\+\_\+\+FLOAT\+\_\+\+DENORM\+\_\+\+MODE\+\_\+\+NO\+\_\+\+FLUSH}} = 3
+ \}
+\item 
+enum \mbox{\hyperlink{inc_2amd__hsa__kernel__code_8h_a19072b708370dbff1ddf74dc8cb34096}{amd\+\_\+compute\+\_\+pgm\+\_\+rsrc\+\_\+one\+\_\+t}} \{ \newline
+\mbox{\hyperlink{inc_2amd__hsa__kernel__code_8h_adf50d36c4a2d44c32c92373bd7f6b19dad7372416dbaca5a3e1080a791527efc3}{AMD\+\_\+\+HSA\+\_\+\+BITS\+\_\+\+CREATE\+\_\+\+ENUM\+\_\+\+ENTRIES}} =(AMD\+\_\+\+COMPUTE\+\_\+\+PGM\+\_\+\+RSRC\+\_\+\+ONE\+\_\+\+GRANULATED\+\_\+\+WORKITEM\+\_\+\+VGPR\+\_\+\+COUNT, 0, 6)
+, \mbox{\hyperlink{inc_2amd__hsa__kernel__code_8h_adf50d36c4a2d44c32c92373bd7f6b19dad7372416dbaca5a3e1080a791527efc3}{AMD\+\_\+\+HSA\+\_\+\+BITS\+\_\+\+CREATE\+\_\+\+ENUM\+\_\+\+ENTRIES}} =(AMD\+\_\+\+COMPUTE\+\_\+\+PGM\+\_\+\+RSRC\+\_\+\+ONE\+\_\+\+GRANULATED\+\_\+\+WORKITEM\+\_\+\+VGPR\+\_\+\+COUNT, 0, 6)
+, \mbox{\hyperlink{inc_2amd__hsa__kernel__code_8h_adf50d36c4a2d44c32c92373bd7f6b19dad7372416dbaca5a3e1080a791527efc3}{AMD\+\_\+\+HSA\+\_\+\+BITS\+\_\+\+CREATE\+\_\+\+ENUM\+\_\+\+ENTRIES}} =(AMD\+\_\+\+COMPUTE\+\_\+\+PGM\+\_\+\+RSRC\+\_\+\+ONE\+\_\+\+GRANULATED\+\_\+\+WORKITEM\+\_\+\+VGPR\+\_\+\+COUNT, 0, 6)
+, \mbox{\hyperlink{inc_2amd__hsa__kernel__code_8h_adf50d36c4a2d44c32c92373bd7f6b19dad7372416dbaca5a3e1080a791527efc3}{AMD\+\_\+\+HSA\+\_\+\+BITS\+\_\+\+CREATE\+\_\+\+ENUM\+\_\+\+ENTRIES}} =(AMD\+\_\+\+COMPUTE\+\_\+\+PGM\+\_\+\+RSRC\+\_\+\+ONE\+\_\+\+GRANULATED\+\_\+\+WORKITEM\+\_\+\+VGPR\+\_\+\+COUNT, 0, 6)
+, \newline
+\mbox{\hyperlink{inc_2amd__hsa__kernel__code_8h_adf50d36c4a2d44c32c92373bd7f6b19dad7372416dbaca5a3e1080a791527efc3}{AMD\+\_\+\+HSA\+\_\+\+BITS\+\_\+\+CREATE\+\_\+\+ENUM\+\_\+\+ENTRIES}} =(AMD\+\_\+\+COMPUTE\+\_\+\+PGM\+\_\+\+RSRC\+\_\+\+ONE\+\_\+\+GRANULATED\+\_\+\+WORKITEM\+\_\+\+VGPR\+\_\+\+COUNT, 0, 6)
+, \mbox{\hyperlink{inc_2amd__hsa__kernel__code_8h_adf50d36c4a2d44c32c92373bd7f6b19dad7372416dbaca5a3e1080a791527efc3}{AMD\+\_\+\+HSA\+\_\+\+BITS\+\_\+\+CREATE\+\_\+\+ENUM\+\_\+\+ENTRIES}} =(AMD\+\_\+\+COMPUTE\+\_\+\+PGM\+\_\+\+RSRC\+\_\+\+ONE\+\_\+\+GRANULATED\+\_\+\+WORKITEM\+\_\+\+VGPR\+\_\+\+COUNT, 0, 6)
+, \mbox{\hyperlink{inc_2amd__hsa__kernel__code_8h_adf50d36c4a2d44c32c92373bd7f6b19dad7372416dbaca5a3e1080a791527efc3}{AMD\+\_\+\+HSA\+\_\+\+BITS\+\_\+\+CREATE\+\_\+\+ENUM\+\_\+\+ENTRIES}} =(AMD\+\_\+\+COMPUTE\+\_\+\+PGM\+\_\+\+RSRC\+\_\+\+ONE\+\_\+\+GRANULATED\+\_\+\+WORKITEM\+\_\+\+VGPR\+\_\+\+COUNT, 0, 6)
+, \mbox{\hyperlink{inc_2amd__hsa__kernel__code_8h_adf50d36c4a2d44c32c92373bd7f6b19dad7372416dbaca5a3e1080a791527efc3}{AMD\+\_\+\+HSA\+\_\+\+BITS\+\_\+\+CREATE\+\_\+\+ENUM\+\_\+\+ENTRIES}} =(AMD\+\_\+\+COMPUTE\+\_\+\+PGM\+\_\+\+RSRC\+\_\+\+ONE\+\_\+\+GRANULATED\+\_\+\+WORKITEM\+\_\+\+VGPR\+\_\+\+COUNT, 0, 6)
+, \newline
+\mbox{\hyperlink{inc_2amd__hsa__kernel__code_8h_adf50d36c4a2d44c32c92373bd7f6b19dad7372416dbaca5a3e1080a791527efc3}{AMD\+\_\+\+HSA\+\_\+\+BITS\+\_\+\+CREATE\+\_\+\+ENUM\+\_\+\+ENTRIES}} =(AMD\+\_\+\+COMPUTE\+\_\+\+PGM\+\_\+\+RSRC\+\_\+\+ONE\+\_\+\+GRANULATED\+\_\+\+WORKITEM\+\_\+\+VGPR\+\_\+\+COUNT, 0, 6)
+, \mbox{\hyperlink{inc_2amd__hsa__kernel__code_8h_adf50d36c4a2d44c32c92373bd7f6b19dad7372416dbaca5a3e1080a791527efc3}{AMD\+\_\+\+HSA\+\_\+\+BITS\+\_\+\+CREATE\+\_\+\+ENUM\+\_\+\+ENTRIES}} =(AMD\+\_\+\+COMPUTE\+\_\+\+PGM\+\_\+\+RSRC\+\_\+\+ONE\+\_\+\+GRANULATED\+\_\+\+WORKITEM\+\_\+\+VGPR\+\_\+\+COUNT, 0, 6)
+, \mbox{\hyperlink{inc_2amd__hsa__kernel__code_8h_adf50d36c4a2d44c32c92373bd7f6b19dad7372416dbaca5a3e1080a791527efc3}{AMD\+\_\+\+HSA\+\_\+\+BITS\+\_\+\+CREATE\+\_\+\+ENUM\+\_\+\+ENTRIES}} =(AMD\+\_\+\+COMPUTE\+\_\+\+PGM\+\_\+\+RSRC\+\_\+\+ONE\+\_\+\+GRANULATED\+\_\+\+WORKITEM\+\_\+\+VGPR\+\_\+\+COUNT, 0, 6)
+, \mbox{\hyperlink{inc_2amd__hsa__kernel__code_8h_adf50d36c4a2d44c32c92373bd7f6b19dad7372416dbaca5a3e1080a791527efc3}{AMD\+\_\+\+HSA\+\_\+\+BITS\+\_\+\+CREATE\+\_\+\+ENUM\+\_\+\+ENTRIES}} =(AMD\+\_\+\+COMPUTE\+\_\+\+PGM\+\_\+\+RSRC\+\_\+\+ONE\+\_\+\+GRANULATED\+\_\+\+WORKITEM\+\_\+\+VGPR\+\_\+\+COUNT, 0, 6)
+, \newline
+\mbox{\hyperlink{inc_2amd__hsa__kernel__code_8h_adf50d36c4a2d44c32c92373bd7f6b19dad7372416dbaca5a3e1080a791527efc3}{AMD\+\_\+\+HSA\+\_\+\+BITS\+\_\+\+CREATE\+\_\+\+ENUM\+\_\+\+ENTRIES}} =(AMD\+\_\+\+COMPUTE\+\_\+\+PGM\+\_\+\+RSRC\+\_\+\+ONE\+\_\+\+GRANULATED\+\_\+\+WORKITEM\+\_\+\+VGPR\+\_\+\+COUNT, 0, 6)
+ \}
+\item 
+enum \mbox{\hyperlink{inc_2amd__hsa__kernel__code_8h_a83d9b6f1908dfd5b808780992d5222cd}{amd\+\_\+system\+\_\+vgpr\+\_\+workitem\+\_\+id\+\_\+t}} \{ \mbox{\hyperlink{inc_2amd__hsa__kernel__code_8h_a83d9b6f1908dfd5b808780992d5222cda171dc3b10c97532c950c10e4dcb88e0b}{AMD\+\_\+\+SYSTEM\+\_\+\+VGPR\+\_\+\+WORKITEM\+\_\+\+ID\+\_\+X}} = 0
+, \mbox{\hyperlink{inc_2amd__hsa__kernel__code_8h_a83d9b6f1908dfd5b808780992d5222cda907bb7b2adeff766f0b31d2f092b6355}{AMD\+\_\+\+SYSTEM\+\_\+\+VGPR\+\_\+\+WORKITEM\+\_\+\+ID\+\_\+\+X\+\_\+Y}} = 1
+, \mbox{\hyperlink{inc_2amd__hsa__kernel__code_8h_a83d9b6f1908dfd5b808780992d5222cdaf60802a396982b59d63b2ef2af5df62c}{AMD\+\_\+\+SYSTEM\+\_\+\+VGPR\+\_\+\+WORKITEM\+\_\+\+ID\+\_\+\+X\+\_\+\+Y\+\_\+Z}} = 2
+, \mbox{\hyperlink{inc_2amd__hsa__kernel__code_8h_a83d9b6f1908dfd5b808780992d5222cdafc176b82ed94d0939ca9f3c275f60917}{AMD\+\_\+\+SYSTEM\+\_\+\+VGPR\+\_\+\+WORKITEM\+\_\+\+ID\+\_\+\+UNDEFINED}} = 3
+ \}
+\item 
+enum \mbox{\hyperlink{inc_2amd__hsa__kernel__code_8h_aa622de19248b3b34cc494463e4bb8fd7}{amd\+\_\+compute\+\_\+pgm\+\_\+rsrc\+\_\+two\+\_\+t}} \{ \newline
+\mbox{\hyperlink{inc_2amd__hsa__kernel__code_8h_adf50d36c4a2d44c32c92373bd7f6b19dad7372416dbaca5a3e1080a791527efc3}{AMD\+\_\+\+HSA\+\_\+\+BITS\+\_\+\+CREATE\+\_\+\+ENUM\+\_\+\+ENTRIES}} =(AMD\+\_\+\+COMPUTE\+\_\+\+PGM\+\_\+\+RSRC\+\_\+\+ONE\+\_\+\+GRANULATED\+\_\+\+WORKITEM\+\_\+\+VGPR\+\_\+\+COUNT, 0, 6)
+, \mbox{\hyperlink{inc_2amd__hsa__kernel__code_8h_adf50d36c4a2d44c32c92373bd7f6b19dad7372416dbaca5a3e1080a791527efc3}{AMD\+\_\+\+HSA\+\_\+\+BITS\+\_\+\+CREATE\+\_\+\+ENUM\+\_\+\+ENTRIES}} =(AMD\+\_\+\+COMPUTE\+\_\+\+PGM\+\_\+\+RSRC\+\_\+\+ONE\+\_\+\+GRANULATED\+\_\+\+WORKITEM\+\_\+\+VGPR\+\_\+\+COUNT, 0, 6)
+, \mbox{\hyperlink{inc_2amd__hsa__kernel__code_8h_adf50d36c4a2d44c32c92373bd7f6b19dad7372416dbaca5a3e1080a791527efc3}{AMD\+\_\+\+HSA\+\_\+\+BITS\+\_\+\+CREATE\+\_\+\+ENUM\+\_\+\+ENTRIES}} =(AMD\+\_\+\+COMPUTE\+\_\+\+PGM\+\_\+\+RSRC\+\_\+\+ONE\+\_\+\+GRANULATED\+\_\+\+WORKITEM\+\_\+\+VGPR\+\_\+\+COUNT, 0, 6)
+, \mbox{\hyperlink{inc_2amd__hsa__kernel__code_8h_adf50d36c4a2d44c32c92373bd7f6b19dad7372416dbaca5a3e1080a791527efc3}{AMD\+\_\+\+HSA\+\_\+\+BITS\+\_\+\+CREATE\+\_\+\+ENUM\+\_\+\+ENTRIES}} =(AMD\+\_\+\+COMPUTE\+\_\+\+PGM\+\_\+\+RSRC\+\_\+\+ONE\+\_\+\+GRANULATED\+\_\+\+WORKITEM\+\_\+\+VGPR\+\_\+\+COUNT, 0, 6)
+, \newline
+\mbox{\hyperlink{inc_2amd__hsa__kernel__code_8h_adf50d36c4a2d44c32c92373bd7f6b19dad7372416dbaca5a3e1080a791527efc3}{AMD\+\_\+\+HSA\+\_\+\+BITS\+\_\+\+CREATE\+\_\+\+ENUM\+\_\+\+ENTRIES}} =(AMD\+\_\+\+COMPUTE\+\_\+\+PGM\+\_\+\+RSRC\+\_\+\+ONE\+\_\+\+GRANULATED\+\_\+\+WORKITEM\+\_\+\+VGPR\+\_\+\+COUNT, 0, 6)
+, \mbox{\hyperlink{inc_2amd__hsa__kernel__code_8h_adf50d36c4a2d44c32c92373bd7f6b19dad7372416dbaca5a3e1080a791527efc3}{AMD\+\_\+\+HSA\+\_\+\+BITS\+\_\+\+CREATE\+\_\+\+ENUM\+\_\+\+ENTRIES}} =(AMD\+\_\+\+COMPUTE\+\_\+\+PGM\+\_\+\+RSRC\+\_\+\+ONE\+\_\+\+GRANULATED\+\_\+\+WORKITEM\+\_\+\+VGPR\+\_\+\+COUNT, 0, 6)
+, \mbox{\hyperlink{inc_2amd__hsa__kernel__code_8h_adf50d36c4a2d44c32c92373bd7f6b19dad7372416dbaca5a3e1080a791527efc3}{AMD\+\_\+\+HSA\+\_\+\+BITS\+\_\+\+CREATE\+\_\+\+ENUM\+\_\+\+ENTRIES}} =(AMD\+\_\+\+COMPUTE\+\_\+\+PGM\+\_\+\+RSRC\+\_\+\+ONE\+\_\+\+GRANULATED\+\_\+\+WORKITEM\+\_\+\+VGPR\+\_\+\+COUNT, 0, 6)
+, \mbox{\hyperlink{inc_2amd__hsa__kernel__code_8h_adf50d36c4a2d44c32c92373bd7f6b19dad7372416dbaca5a3e1080a791527efc3}{AMD\+\_\+\+HSA\+\_\+\+BITS\+\_\+\+CREATE\+\_\+\+ENUM\+\_\+\+ENTRIES}} =(AMD\+\_\+\+COMPUTE\+\_\+\+PGM\+\_\+\+RSRC\+\_\+\+ONE\+\_\+\+GRANULATED\+\_\+\+WORKITEM\+\_\+\+VGPR\+\_\+\+COUNT, 0, 6)
+, \newline
+\mbox{\hyperlink{inc_2amd__hsa__kernel__code_8h_adf50d36c4a2d44c32c92373bd7f6b19dad7372416dbaca5a3e1080a791527efc3}{AMD\+\_\+\+HSA\+\_\+\+BITS\+\_\+\+CREATE\+\_\+\+ENUM\+\_\+\+ENTRIES}} =(AMD\+\_\+\+COMPUTE\+\_\+\+PGM\+\_\+\+RSRC\+\_\+\+ONE\+\_\+\+GRANULATED\+\_\+\+WORKITEM\+\_\+\+VGPR\+\_\+\+COUNT, 0, 6)
+, \mbox{\hyperlink{inc_2amd__hsa__kernel__code_8h_adf50d36c4a2d44c32c92373bd7f6b19dad7372416dbaca5a3e1080a791527efc3}{AMD\+\_\+\+HSA\+\_\+\+BITS\+\_\+\+CREATE\+\_\+\+ENUM\+\_\+\+ENTRIES}} =(AMD\+\_\+\+COMPUTE\+\_\+\+PGM\+\_\+\+RSRC\+\_\+\+ONE\+\_\+\+GRANULATED\+\_\+\+WORKITEM\+\_\+\+VGPR\+\_\+\+COUNT, 0, 6)
+, \mbox{\hyperlink{inc_2amd__hsa__kernel__code_8h_adf50d36c4a2d44c32c92373bd7f6b19dad7372416dbaca5a3e1080a791527efc3}{AMD\+\_\+\+HSA\+\_\+\+BITS\+\_\+\+CREATE\+\_\+\+ENUM\+\_\+\+ENTRIES}} =(AMD\+\_\+\+COMPUTE\+\_\+\+PGM\+\_\+\+RSRC\+\_\+\+ONE\+\_\+\+GRANULATED\+\_\+\+WORKITEM\+\_\+\+VGPR\+\_\+\+COUNT, 0, 6)
+, \mbox{\hyperlink{inc_2amd__hsa__kernel__code_8h_adf50d36c4a2d44c32c92373bd7f6b19dad7372416dbaca5a3e1080a791527efc3}{AMD\+\_\+\+HSA\+\_\+\+BITS\+\_\+\+CREATE\+\_\+\+ENUM\+\_\+\+ENTRIES}} =(AMD\+\_\+\+COMPUTE\+\_\+\+PGM\+\_\+\+RSRC\+\_\+\+ONE\+\_\+\+GRANULATED\+\_\+\+WORKITEM\+\_\+\+VGPR\+\_\+\+COUNT, 0, 6)
+, \newline
+\mbox{\hyperlink{inc_2amd__hsa__kernel__code_8h_adf50d36c4a2d44c32c92373bd7f6b19dad7372416dbaca5a3e1080a791527efc3}{AMD\+\_\+\+HSA\+\_\+\+BITS\+\_\+\+CREATE\+\_\+\+ENUM\+\_\+\+ENTRIES}} =(AMD\+\_\+\+COMPUTE\+\_\+\+PGM\+\_\+\+RSRC\+\_\+\+ONE\+\_\+\+GRANULATED\+\_\+\+WORKITEM\+\_\+\+VGPR\+\_\+\+COUNT, 0, 6)
+, \mbox{\hyperlink{inc_2amd__hsa__kernel__code_8h_adf50d36c4a2d44c32c92373bd7f6b19dad7372416dbaca5a3e1080a791527efc3}{AMD\+\_\+\+HSA\+\_\+\+BITS\+\_\+\+CREATE\+\_\+\+ENUM\+\_\+\+ENTRIES}} =(AMD\+\_\+\+COMPUTE\+\_\+\+PGM\+\_\+\+RSRC\+\_\+\+ONE\+\_\+\+GRANULATED\+\_\+\+WORKITEM\+\_\+\+VGPR\+\_\+\+COUNT, 0, 6)
+, \mbox{\hyperlink{inc_2amd__hsa__kernel__code_8h_adf50d36c4a2d44c32c92373bd7f6b19dad7372416dbaca5a3e1080a791527efc3}{AMD\+\_\+\+HSA\+\_\+\+BITS\+\_\+\+CREATE\+\_\+\+ENUM\+\_\+\+ENTRIES}} =(AMD\+\_\+\+COMPUTE\+\_\+\+PGM\+\_\+\+RSRC\+\_\+\+ONE\+\_\+\+GRANULATED\+\_\+\+WORKITEM\+\_\+\+VGPR\+\_\+\+COUNT, 0, 6)
+, \mbox{\hyperlink{inc_2amd__hsa__kernel__code_8h_adf50d36c4a2d44c32c92373bd7f6b19dad7372416dbaca5a3e1080a791527efc3}{AMD\+\_\+\+HSA\+\_\+\+BITS\+\_\+\+CREATE\+\_\+\+ENUM\+\_\+\+ENTRIES}} =(AMD\+\_\+\+COMPUTE\+\_\+\+PGM\+\_\+\+RSRC\+\_\+\+ONE\+\_\+\+GRANULATED\+\_\+\+WORKITEM\+\_\+\+VGPR\+\_\+\+COUNT, 0, 6)
+, \newline
+\mbox{\hyperlink{inc_2amd__hsa__kernel__code_8h_adf50d36c4a2d44c32c92373bd7f6b19dad7372416dbaca5a3e1080a791527efc3}{AMD\+\_\+\+HSA\+\_\+\+BITS\+\_\+\+CREATE\+\_\+\+ENUM\+\_\+\+ENTRIES}} =(AMD\+\_\+\+COMPUTE\+\_\+\+PGM\+\_\+\+RSRC\+\_\+\+ONE\+\_\+\+GRANULATED\+\_\+\+WORKITEM\+\_\+\+VGPR\+\_\+\+COUNT, 0, 6)
+, \mbox{\hyperlink{inc_2amd__hsa__kernel__code_8h_adf50d36c4a2d44c32c92373bd7f6b19dad7372416dbaca5a3e1080a791527efc3}{AMD\+\_\+\+HSA\+\_\+\+BITS\+\_\+\+CREATE\+\_\+\+ENUM\+\_\+\+ENTRIES}} =(AMD\+\_\+\+COMPUTE\+\_\+\+PGM\+\_\+\+RSRC\+\_\+\+ONE\+\_\+\+GRANULATED\+\_\+\+WORKITEM\+\_\+\+VGPR\+\_\+\+COUNT, 0, 6)
+ \}
+\item 
+enum \mbox{\hyperlink{inc_2amd__hsa__kernel__code_8h_a270d9c0c715e4ee0049a0f0f8b8e4818}{amd\+\_\+element\+\_\+byte\+\_\+size\+\_\+t}} \{ \mbox{\hyperlink{inc_2amd__hsa__kernel__code_8h_a270d9c0c715e4ee0049a0f0f8b8e4818ac1329a4420682d14da5ada2ad5ae413d}{AMD\+\_\+\+ELEMENT\+\_\+\+BYTE\+\_\+\+SIZE\+\_\+2}} = 0
+, \mbox{\hyperlink{inc_2amd__hsa__kernel__code_8h_a270d9c0c715e4ee0049a0f0f8b8e4818a6ad476eb3938d6b24529ffc68e21ad27}{AMD\+\_\+\+ELEMENT\+\_\+\+BYTE\+\_\+\+SIZE\+\_\+4}} = 1
+, \mbox{\hyperlink{inc_2amd__hsa__kernel__code_8h_a270d9c0c715e4ee0049a0f0f8b8e4818a2681255c030529c4ea51ed27fa8303ae}{AMD\+\_\+\+ELEMENT\+\_\+\+BYTE\+\_\+\+SIZE\+\_\+8}} = 2
+, \mbox{\hyperlink{inc_2amd__hsa__kernel__code_8h_a270d9c0c715e4ee0049a0f0f8b8e4818a55cd248c2d9fa82b5c9ceb9630cabf75}{AMD\+\_\+\+ELEMENT\+\_\+\+BYTE\+\_\+\+SIZE\+\_\+16}} = 3
+ \}
+\item 
+enum \mbox{\hyperlink{inc_2amd__hsa__kernel__code_8h_adf50d36c4a2d44c32c92373bd7f6b19d}{amd\+\_\+kernel\+\_\+code\+\_\+properties\+\_\+t}} \{ \newline
+\mbox{\hyperlink{inc_2amd__hsa__kernel__code_8h_adf50d36c4a2d44c32c92373bd7f6b19dad7372416dbaca5a3e1080a791527efc3}{AMD\+\_\+\+HSA\+\_\+\+BITS\+\_\+\+CREATE\+\_\+\+ENUM\+\_\+\+ENTRIES}} =(AMD\+\_\+\+COMPUTE\+\_\+\+PGM\+\_\+\+RSRC\+\_\+\+ONE\+\_\+\+GRANULATED\+\_\+\+WORKITEM\+\_\+\+VGPR\+\_\+\+COUNT, 0, 6)
+, \mbox{\hyperlink{inc_2amd__hsa__kernel__code_8h_adf50d36c4a2d44c32c92373bd7f6b19dad7372416dbaca5a3e1080a791527efc3}{AMD\+\_\+\+HSA\+\_\+\+BITS\+\_\+\+CREATE\+\_\+\+ENUM\+\_\+\+ENTRIES}} =(AMD\+\_\+\+COMPUTE\+\_\+\+PGM\+\_\+\+RSRC\+\_\+\+ONE\+\_\+\+GRANULATED\+\_\+\+WORKITEM\+\_\+\+VGPR\+\_\+\+COUNT, 0, 6)
+, \mbox{\hyperlink{inc_2amd__hsa__kernel__code_8h_adf50d36c4a2d44c32c92373bd7f6b19dad7372416dbaca5a3e1080a791527efc3}{AMD\+\_\+\+HSA\+\_\+\+BITS\+\_\+\+CREATE\+\_\+\+ENUM\+\_\+\+ENTRIES}} =(AMD\+\_\+\+COMPUTE\+\_\+\+PGM\+\_\+\+RSRC\+\_\+\+ONE\+\_\+\+GRANULATED\+\_\+\+WORKITEM\+\_\+\+VGPR\+\_\+\+COUNT, 0, 6)
+, \mbox{\hyperlink{inc_2amd__hsa__kernel__code_8h_adf50d36c4a2d44c32c92373bd7f6b19dad7372416dbaca5a3e1080a791527efc3}{AMD\+\_\+\+HSA\+\_\+\+BITS\+\_\+\+CREATE\+\_\+\+ENUM\+\_\+\+ENTRIES}} =(AMD\+\_\+\+COMPUTE\+\_\+\+PGM\+\_\+\+RSRC\+\_\+\+ONE\+\_\+\+GRANULATED\+\_\+\+WORKITEM\+\_\+\+VGPR\+\_\+\+COUNT, 0, 6)
+, \newline
+\mbox{\hyperlink{inc_2amd__hsa__kernel__code_8h_adf50d36c4a2d44c32c92373bd7f6b19dad7372416dbaca5a3e1080a791527efc3}{AMD\+\_\+\+HSA\+\_\+\+BITS\+\_\+\+CREATE\+\_\+\+ENUM\+\_\+\+ENTRIES}} =(AMD\+\_\+\+COMPUTE\+\_\+\+PGM\+\_\+\+RSRC\+\_\+\+ONE\+\_\+\+GRANULATED\+\_\+\+WORKITEM\+\_\+\+VGPR\+\_\+\+COUNT, 0, 6)
+, \mbox{\hyperlink{inc_2amd__hsa__kernel__code_8h_adf50d36c4a2d44c32c92373bd7f6b19dad7372416dbaca5a3e1080a791527efc3}{AMD\+\_\+\+HSA\+\_\+\+BITS\+\_\+\+CREATE\+\_\+\+ENUM\+\_\+\+ENTRIES}} =(AMD\+\_\+\+COMPUTE\+\_\+\+PGM\+\_\+\+RSRC\+\_\+\+ONE\+\_\+\+GRANULATED\+\_\+\+WORKITEM\+\_\+\+VGPR\+\_\+\+COUNT, 0, 6)
+, \mbox{\hyperlink{inc_2amd__hsa__kernel__code_8h_adf50d36c4a2d44c32c92373bd7f6b19dad7372416dbaca5a3e1080a791527efc3}{AMD\+\_\+\+HSA\+\_\+\+BITS\+\_\+\+CREATE\+\_\+\+ENUM\+\_\+\+ENTRIES}} =(AMD\+\_\+\+COMPUTE\+\_\+\+PGM\+\_\+\+RSRC\+\_\+\+ONE\+\_\+\+GRANULATED\+\_\+\+WORKITEM\+\_\+\+VGPR\+\_\+\+COUNT, 0, 6)
+, \mbox{\hyperlink{inc_2amd__hsa__kernel__code_8h_adf50d36c4a2d44c32c92373bd7f6b19dad7372416dbaca5a3e1080a791527efc3}{AMD\+\_\+\+HSA\+\_\+\+BITS\+\_\+\+CREATE\+\_\+\+ENUM\+\_\+\+ENTRIES}} =(AMD\+\_\+\+COMPUTE\+\_\+\+PGM\+\_\+\+RSRC\+\_\+\+ONE\+\_\+\+GRANULATED\+\_\+\+WORKITEM\+\_\+\+VGPR\+\_\+\+COUNT, 0, 6)
+, \newline
+\mbox{\hyperlink{inc_2amd__hsa__kernel__code_8h_adf50d36c4a2d44c32c92373bd7f6b19dad7372416dbaca5a3e1080a791527efc3}{AMD\+\_\+\+HSA\+\_\+\+BITS\+\_\+\+CREATE\+\_\+\+ENUM\+\_\+\+ENTRIES}} =(AMD\+\_\+\+COMPUTE\+\_\+\+PGM\+\_\+\+RSRC\+\_\+\+ONE\+\_\+\+GRANULATED\+\_\+\+WORKITEM\+\_\+\+VGPR\+\_\+\+COUNT, 0, 6)
+, \mbox{\hyperlink{inc_2amd__hsa__kernel__code_8h_adf50d36c4a2d44c32c92373bd7f6b19dad7372416dbaca5a3e1080a791527efc3}{AMD\+\_\+\+HSA\+\_\+\+BITS\+\_\+\+CREATE\+\_\+\+ENUM\+\_\+\+ENTRIES}} =(AMD\+\_\+\+COMPUTE\+\_\+\+PGM\+\_\+\+RSRC\+\_\+\+ONE\+\_\+\+GRANULATED\+\_\+\+WORKITEM\+\_\+\+VGPR\+\_\+\+COUNT, 0, 6)
+, \mbox{\hyperlink{inc_2amd__hsa__kernel__code_8h_adf50d36c4a2d44c32c92373bd7f6b19dad7372416dbaca5a3e1080a791527efc3}{AMD\+\_\+\+HSA\+\_\+\+BITS\+\_\+\+CREATE\+\_\+\+ENUM\+\_\+\+ENTRIES}} =(AMD\+\_\+\+COMPUTE\+\_\+\+PGM\+\_\+\+RSRC\+\_\+\+ONE\+\_\+\+GRANULATED\+\_\+\+WORKITEM\+\_\+\+VGPR\+\_\+\+COUNT, 0, 6)
+, \mbox{\hyperlink{inc_2amd__hsa__kernel__code_8h_adf50d36c4a2d44c32c92373bd7f6b19dad7372416dbaca5a3e1080a791527efc3}{AMD\+\_\+\+HSA\+\_\+\+BITS\+\_\+\+CREATE\+\_\+\+ENUM\+\_\+\+ENTRIES}} =(AMD\+\_\+\+COMPUTE\+\_\+\+PGM\+\_\+\+RSRC\+\_\+\+ONE\+\_\+\+GRANULATED\+\_\+\+WORKITEM\+\_\+\+VGPR\+\_\+\+COUNT, 0, 6)
+, \newline
+\mbox{\hyperlink{inc_2amd__hsa__kernel__code_8h_adf50d36c4a2d44c32c92373bd7f6b19dad7372416dbaca5a3e1080a791527efc3}{AMD\+\_\+\+HSA\+\_\+\+BITS\+\_\+\+CREATE\+\_\+\+ENUM\+\_\+\+ENTRIES}} =(AMD\+\_\+\+COMPUTE\+\_\+\+PGM\+\_\+\+RSRC\+\_\+\+ONE\+\_\+\+GRANULATED\+\_\+\+WORKITEM\+\_\+\+VGPR\+\_\+\+COUNT, 0, 6)
+, \mbox{\hyperlink{inc_2amd__hsa__kernel__code_8h_adf50d36c4a2d44c32c92373bd7f6b19dad7372416dbaca5a3e1080a791527efc3}{AMD\+\_\+\+HSA\+\_\+\+BITS\+\_\+\+CREATE\+\_\+\+ENUM\+\_\+\+ENTRIES}} =(AMD\+\_\+\+COMPUTE\+\_\+\+PGM\+\_\+\+RSRC\+\_\+\+ONE\+\_\+\+GRANULATED\+\_\+\+WORKITEM\+\_\+\+VGPR\+\_\+\+COUNT, 0, 6)
+, \mbox{\hyperlink{inc_2amd__hsa__kernel__code_8h_adf50d36c4a2d44c32c92373bd7f6b19dad7372416dbaca5a3e1080a791527efc3}{AMD\+\_\+\+HSA\+\_\+\+BITS\+\_\+\+CREATE\+\_\+\+ENUM\+\_\+\+ENTRIES}} =(AMD\+\_\+\+COMPUTE\+\_\+\+PGM\+\_\+\+RSRC\+\_\+\+ONE\+\_\+\+GRANULATED\+\_\+\+WORKITEM\+\_\+\+VGPR\+\_\+\+COUNT, 0, 6)
+, \mbox{\hyperlink{inc_2amd__hsa__kernel__code_8h_adf50d36c4a2d44c32c92373bd7f6b19dad7372416dbaca5a3e1080a791527efc3}{AMD\+\_\+\+HSA\+\_\+\+BITS\+\_\+\+CREATE\+\_\+\+ENUM\+\_\+\+ENTRIES}} =(AMD\+\_\+\+COMPUTE\+\_\+\+PGM\+\_\+\+RSRC\+\_\+\+ONE\+\_\+\+GRANULATED\+\_\+\+WORKITEM\+\_\+\+VGPR\+\_\+\+COUNT, 0, 6)
+, \newline
+\mbox{\hyperlink{inc_2amd__hsa__kernel__code_8h_adf50d36c4a2d44c32c92373bd7f6b19dad7372416dbaca5a3e1080a791527efc3}{AMD\+\_\+\+HSA\+\_\+\+BITS\+\_\+\+CREATE\+\_\+\+ENUM\+\_\+\+ENTRIES}} =(AMD\+\_\+\+COMPUTE\+\_\+\+PGM\+\_\+\+RSRC\+\_\+\+ONE\+\_\+\+GRANULATED\+\_\+\+WORKITEM\+\_\+\+VGPR\+\_\+\+COUNT, 0, 6)
+ \}
+\item 
+enum \mbox{\hyperlink{inc_2amd__hsa__kernel__code_8h_a6c7bdc62744f0c9f79151bcd388ec204}{amd\+\_\+powertwo\+\_\+t}} \{ \newline
+\mbox{\hyperlink{inc_2amd__hsa__kernel__code_8h_a6c7bdc62744f0c9f79151bcd388ec204a3faa30c8f6ab5c1160e7ac4f3bac7f54}{AMD\+\_\+\+POWERTWO\+\_\+1}} = 0
+, \mbox{\hyperlink{inc_2amd__hsa__kernel__code_8h_a6c7bdc62744f0c9f79151bcd388ec204a13a3c7fd17d8b04b441aeb481b111cea}{AMD\+\_\+\+POWERTWO\+\_\+2}} = 1
+, \mbox{\hyperlink{inc_2amd__hsa__kernel__code_8h_a6c7bdc62744f0c9f79151bcd388ec204a5bf541135bf2109cc39a850d241698ed}{AMD\+\_\+\+POWERTWO\+\_\+4}} = 2
+, \mbox{\hyperlink{inc_2amd__hsa__kernel__code_8h_a6c7bdc62744f0c9f79151bcd388ec204ae9e0a05d56253a4b4ca51339810153af}{AMD\+\_\+\+POWERTWO\+\_\+8}} = 3
+, \newline
+\mbox{\hyperlink{inc_2amd__hsa__kernel__code_8h_a6c7bdc62744f0c9f79151bcd388ec204aefa23776169077a985d197564dc99eb2}{AMD\+\_\+\+POWERTWO\+\_\+16}} = 4
+, \mbox{\hyperlink{inc_2amd__hsa__kernel__code_8h_a6c7bdc62744f0c9f79151bcd388ec204ac7a810efcfa74e45132cf35d9a4a6ecd}{AMD\+\_\+\+POWERTWO\+\_\+32}} = 5
+, \mbox{\hyperlink{inc_2amd__hsa__kernel__code_8h_a6c7bdc62744f0c9f79151bcd388ec204af7dc1805405ead764e96add073826da2}{AMD\+\_\+\+POWERTWO\+\_\+64}} = 6
+, \mbox{\hyperlink{inc_2amd__hsa__kernel__code_8h_a6c7bdc62744f0c9f79151bcd388ec204aed374cf74f7075f0b3b992dbfcdb41e5}{AMD\+\_\+\+POWERTWO\+\_\+128}} = 7
+, \newline
+\mbox{\hyperlink{inc_2amd__hsa__kernel__code_8h_a6c7bdc62744f0c9f79151bcd388ec204a041bbab30f36d791083d3e5529856ec0}{AMD\+\_\+\+POWERTWO\+\_\+256}} = 8
+ \}
+\item 
+enum \mbox{\hyperlink{inc_2amd__hsa__kernel__code_8h_adf3e5d9c917e9d53f67d2302167737d1}{amd\+\_\+enabled\+\_\+control\+\_\+directive\+\_\+t}} \{ \newline
+\mbox{\hyperlink{inc_2amd__hsa__kernel__code_8h_adf3e5d9c917e9d53f67d2302167737d1a6ab41dede2b249d5a5513fae27b64f73}{AMD\+\_\+\+ENABLED\+\_\+\+CONTROL\+\_\+\+DIRECTIVE\+\_\+\+ENABLE\+\_\+\+BREAK\+\_\+\+EXCEPTIONS}} = 1
+, \mbox{\hyperlink{inc_2amd__hsa__kernel__code_8h_adf3e5d9c917e9d53f67d2302167737d1a961e8f8430de2cc3b6e831c74be5e40e}{AMD\+\_\+\+ENABLED\+\_\+\+CONTROL\+\_\+\+DIRECTIVE\+\_\+\+ENABLE\+\_\+\+DETECT\+\_\+\+EXCEPTIONS}} = 2
+, \mbox{\hyperlink{inc_2amd__hsa__kernel__code_8h_adf3e5d9c917e9d53f67d2302167737d1a6709da996e7deab0007a62926186f02d}{AMD\+\_\+\+ENABLED\+\_\+\+CONTROL\+\_\+\+DIRECTIVE\+\_\+\+MAX\+\_\+\+DYNAMIC\+\_\+\+GROUP\+\_\+\+SIZE}} = 4
+, \mbox{\hyperlink{inc_2amd__hsa__kernel__code_8h_adf3e5d9c917e9d53f67d2302167737d1aec30637c055a38584de300971a3f539b}{AMD\+\_\+\+ENABLED\+\_\+\+CONTROL\+\_\+\+DIRECTIVE\+\_\+\+MAX\+\_\+\+FLAT\+\_\+\+GRID\+\_\+\+SIZE}} = 8
+, \newline
+\mbox{\hyperlink{inc_2amd__hsa__kernel__code_8h_adf3e5d9c917e9d53f67d2302167737d1a48961a30584956e23e9684bb5ccdc858}{AMD\+\_\+\+ENABLED\+\_\+\+CONTROL\+\_\+\+DIRECTIVE\+\_\+\+MAX\+\_\+\+FLAT\+\_\+\+WORKGROUP\+\_\+\+SIZE}} = 16
+, \mbox{\hyperlink{inc_2amd__hsa__kernel__code_8h_adf3e5d9c917e9d53f67d2302167737d1a9e7b9cb7f9996d9c1da4b866238a78eb}{AMD\+\_\+\+ENABLED\+\_\+\+CONTROL\+\_\+\+DIRECTIVE\+\_\+\+REQUIRED\+\_\+\+DIM}} = 32
+, \mbox{\hyperlink{inc_2amd__hsa__kernel__code_8h_adf3e5d9c917e9d53f67d2302167737d1a8750e3853bbc839dc49b6273f129a355}{AMD\+\_\+\+ENABLED\+\_\+\+CONTROL\+\_\+\+DIRECTIVE\+\_\+\+REQUIRED\+\_\+\+GRID\+\_\+\+SIZE}} = 64
+, \mbox{\hyperlink{inc_2amd__hsa__kernel__code_8h_adf3e5d9c917e9d53f67d2302167737d1aa5298e58c530689ab23701cfa158c9d6}{AMD\+\_\+\+ENABLED\+\_\+\+CONTROL\+\_\+\+DIRECTIVE\+\_\+\+REQUIRED\+\_\+\+WORKGROUP\+\_\+\+SIZE}} = 128
+, \newline
+\mbox{\hyperlink{inc_2amd__hsa__kernel__code_8h_adf3e5d9c917e9d53f67d2302167737d1a71b4a2fd43f70838395f617f80df720c}{AMD\+\_\+\+ENABLED\+\_\+\+CONTROL\+\_\+\+DIRECTIVE\+\_\+\+REQUIRE\+\_\+\+NO\+\_\+\+PARTIAL\+\_\+\+WORKGROUPS}} = 256
+ \}
+\item 
+enum \mbox{\hyperlink{inc_2amd__hsa__kernel__code_8h_a927a5a71465633512efd3626303a1609}{amd\+\_\+exception\+\_\+kind\+\_\+t}} \{ \newline
+\mbox{\hyperlink{inc_2amd__hsa__kernel__code_8h_a927a5a71465633512efd3626303a1609a2efef6c406a697babe3d8d489eeaec5d}{AMD\+\_\+\+EXCEPTION\+\_\+\+KIND\+\_\+\+INVALID\+\_\+\+OPERATION}} = 1
+, \mbox{\hyperlink{inc_2amd__hsa__kernel__code_8h_a927a5a71465633512efd3626303a1609afc07ddb7b477ee6b3b2fdd131d5a5851}{AMD\+\_\+\+EXCEPTION\+\_\+\+KIND\+\_\+\+DIVISION\+\_\+\+BY\+\_\+\+ZERO}} = 2
+, \mbox{\hyperlink{inc_2amd__hsa__kernel__code_8h_a927a5a71465633512efd3626303a1609aeb496794c49f6fa593144ec3f29cc927}{AMD\+\_\+\+EXCEPTION\+\_\+\+KIND\+\_\+\+OVERFLOW}} = 4
+, \mbox{\hyperlink{inc_2amd__hsa__kernel__code_8h_a927a5a71465633512efd3626303a1609a38f1c69ae3b381475490129ca6010b69}{AMD\+\_\+\+EXCEPTION\+\_\+\+KIND\+\_\+\+UNDERFLOW}} = 8
+, \newline
+\mbox{\hyperlink{inc_2amd__hsa__kernel__code_8h_a927a5a71465633512efd3626303a1609af091adafd93bdcf1185de189bca7e829}{AMD\+\_\+\+EXCEPTION\+\_\+\+KIND\+\_\+\+INEXACT}} = 16
+ \}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Macro Definition Documentation}
+\mbox{\Hypertarget{inc_2amd__hsa__kernel__code_8h_a9e6907ee55c7120bcee26a624cb68958}\label{inc_2amd__hsa__kernel__code_8h_a9e6907ee55c7120bcee26a624cb68958}} 
+\index{amd\_hsa\_kernel\_code.h@{amd\_hsa\_kernel\_code.h}!AMD\_CONTROL\_DIRECTIVES\_ALIGN@{AMD\_CONTROL\_DIRECTIVES\_ALIGN}}
+\index{AMD\_CONTROL\_DIRECTIVES\_ALIGN@{AMD\_CONTROL\_DIRECTIVES\_ALIGN}!amd\_hsa\_kernel\_code.h@{amd\_hsa\_kernel\_code.h}}
+\doxysubsubsection{\texorpdfstring{AMD\_CONTROL\_DIRECTIVES\_ALIGN}{AMD\_CONTROL\_DIRECTIVES\_ALIGN}}
+{\footnotesize\ttfamily \#define AMD\+\_\+\+CONTROL\+\_\+\+DIRECTIVES\+\_\+\+ALIGN~\+\_\+\+\_\+\+ALIGNED\+\_\+\+\_\+(\mbox{\hyperlink{inc_2amd__hsa__kernel__code_8h_a70915656ffef3a0f7e3330298c408b60}{AMD\+\_\+\+CONTROL\+\_\+\+DIRECTIVES\+\_\+\+ALIGN\+\_\+\+BYTES}})}
+
+\mbox{\Hypertarget{inc_2amd__hsa__kernel__code_8h_a70915656ffef3a0f7e3330298c408b60}\label{inc_2amd__hsa__kernel__code_8h_a70915656ffef3a0f7e3330298c408b60}} 
+\index{amd\_hsa\_kernel\_code.h@{amd\_hsa\_kernel\_code.h}!AMD\_CONTROL\_DIRECTIVES\_ALIGN\_BYTES@{AMD\_CONTROL\_DIRECTIVES\_ALIGN\_BYTES}}
+\index{AMD\_CONTROL\_DIRECTIVES\_ALIGN\_BYTES@{AMD\_CONTROL\_DIRECTIVES\_ALIGN\_BYTES}!amd\_hsa\_kernel\_code.h@{amd\_hsa\_kernel\_code.h}}
+\doxysubsubsection{\texorpdfstring{AMD\_CONTROL\_DIRECTIVES\_ALIGN\_BYTES}{AMD\_CONTROL\_DIRECTIVES\_ALIGN\_BYTES}}
+{\footnotesize\ttfamily \#define AMD\+\_\+\+CONTROL\+\_\+\+DIRECTIVES\+\_\+\+ALIGN\+\_\+\+BYTES~64}
+
+\mbox{\Hypertarget{inc_2amd__hsa__kernel__code_8h_abb2b2ad36935757dc24ef57c4c21d772}\label{inc_2amd__hsa__kernel__code_8h_abb2b2ad36935757dc24ef57c4c21d772}} 
+\index{amd\_hsa\_kernel\_code.h@{amd\_hsa\_kernel\_code.h}!AMD\_ISA\_ALIGN\_BYTES@{AMD\_ISA\_ALIGN\_BYTES}}
+\index{AMD\_ISA\_ALIGN\_BYTES@{AMD\_ISA\_ALIGN\_BYTES}!amd\_hsa\_kernel\_code.h@{amd\_hsa\_kernel\_code.h}}
+\doxysubsubsection{\texorpdfstring{AMD\_ISA\_ALIGN\_BYTES}{AMD\_ISA\_ALIGN\_BYTES}}
+{\footnotesize\ttfamily \#define AMD\+\_\+\+ISA\+\_\+\+ALIGN\+\_\+\+BYTES~256}
+
+\mbox{\Hypertarget{inc_2amd__hsa__kernel__code_8h_a7fe004cd1e77e9285bed6a78378ab493}\label{inc_2amd__hsa__kernel__code_8h_a7fe004cd1e77e9285bed6a78378ab493}} 
+\index{amd\_hsa\_kernel\_code.h@{amd\_hsa\_kernel\_code.h}!AMD\_KERNEL\_CODE\_ALIGN@{AMD\_KERNEL\_CODE\_ALIGN}}
+\index{AMD\_KERNEL\_CODE\_ALIGN@{AMD\_KERNEL\_CODE\_ALIGN}!amd\_hsa\_kernel\_code.h@{amd\_hsa\_kernel\_code.h}}
+\doxysubsubsection{\texorpdfstring{AMD\_KERNEL\_CODE\_ALIGN}{AMD\_KERNEL\_CODE\_ALIGN}}
+{\footnotesize\ttfamily \#define AMD\+\_\+\+KERNEL\+\_\+\+CODE\+\_\+\+ALIGN~\+\_\+\+\_\+\+ALIGNED\+\_\+\+\_\+(\mbox{\hyperlink{inc_2amd__hsa__kernel__code_8h_a3f755b6dec3ff374d999f7ebde2f2114}{AMD\+\_\+\+KERNEL\+\_\+\+CODE\+\_\+\+ALIGN\+\_\+\+BYTES}})}
+
+\mbox{\Hypertarget{inc_2amd__hsa__kernel__code_8h_a3f755b6dec3ff374d999f7ebde2f2114}\label{inc_2amd__hsa__kernel__code_8h_a3f755b6dec3ff374d999f7ebde2f2114}} 
+\index{amd\_hsa\_kernel\_code.h@{amd\_hsa\_kernel\_code.h}!AMD\_KERNEL\_CODE\_ALIGN\_BYTES@{AMD\_KERNEL\_CODE\_ALIGN\_BYTES}}
+\index{AMD\_KERNEL\_CODE\_ALIGN\_BYTES@{AMD\_KERNEL\_CODE\_ALIGN\_BYTES}!amd\_hsa\_kernel\_code.h@{amd\_hsa\_kernel\_code.h}}
+\doxysubsubsection{\texorpdfstring{AMD\_KERNEL\_CODE\_ALIGN\_BYTES}{AMD\_KERNEL\_CODE\_ALIGN\_BYTES}}
+{\footnotesize\ttfamily \#define AMD\+\_\+\+KERNEL\+\_\+\+CODE\+\_\+\+ALIGN\+\_\+\+BYTES~64}
+
+
+
+\doxysubsection{Typedef Documentation}
+\mbox{\Hypertarget{inc_2amd__hsa__kernel__code_8h_a76980361efe7d87e512b3dc22b01d730}\label{inc_2amd__hsa__kernel__code_8h_a76980361efe7d87e512b3dc22b01d730}} 
+\index{amd\_hsa\_kernel\_code.h@{amd\_hsa\_kernel\_code.h}!amd\_compute\_pgm\_rsrc\_one32\_t@{amd\_compute\_pgm\_rsrc\_one32\_t}}
+\index{amd\_compute\_pgm\_rsrc\_one32\_t@{amd\_compute\_pgm\_rsrc\_one32\_t}!amd\_hsa\_kernel\_code.h@{amd\_hsa\_kernel\_code.h}}
+\doxysubsubsection{\texorpdfstring{amd\_compute\_pgm\_rsrc\_one32\_t}{amd\_compute\_pgm\_rsrc\_one32\_t}}
+{\footnotesize\ttfamily typedef uint32\+\_\+t \mbox{\hyperlink{inc_2amd__hsa__kernel__code_8h_a76980361efe7d87e512b3dc22b01d730}{amd\+\_\+compute\+\_\+pgm\+\_\+rsrc\+\_\+one32\+\_\+t}}}
+
+\mbox{\Hypertarget{inc_2amd__hsa__kernel__code_8h_a5952fa5f3f310e8ac0de8eef6235c545}\label{inc_2amd__hsa__kernel__code_8h_a5952fa5f3f310e8ac0de8eef6235c545}} 
+\index{amd\_hsa\_kernel\_code.h@{amd\_hsa\_kernel\_code.h}!amd\_compute\_pgm\_rsrc\_two32\_t@{amd\_compute\_pgm\_rsrc\_two32\_t}}
+\index{amd\_compute\_pgm\_rsrc\_two32\_t@{amd\_compute\_pgm\_rsrc\_two32\_t}!amd\_hsa\_kernel\_code.h@{amd\_hsa\_kernel\_code.h}}
+\doxysubsubsection{\texorpdfstring{amd\_compute\_pgm\_rsrc\_two32\_t}{amd\_compute\_pgm\_rsrc\_two32\_t}}
+{\footnotesize\ttfamily typedef uint32\+\_\+t \mbox{\hyperlink{inc_2amd__hsa__kernel__code_8h_a5952fa5f3f310e8ac0de8eef6235c545}{amd\+\_\+compute\+\_\+pgm\+\_\+rsrc\+\_\+two32\+\_\+t}}}
+
+\mbox{\Hypertarget{inc_2amd__hsa__kernel__code_8h_a4eb7f834ade3e309fc1c2d94a5a54db7}\label{inc_2amd__hsa__kernel__code_8h_a4eb7f834ade3e309fc1c2d94a5a54db7}} 
+\index{amd\_hsa\_kernel\_code.h@{amd\_hsa\_kernel\_code.h}!amd\_control\_directives\_t@{amd\_control\_directives\_t}}
+\index{amd\_control\_directives\_t@{amd\_control\_directives\_t}!amd\_hsa\_kernel\_code.h@{amd\_hsa\_kernel\_code.h}}
+\doxysubsubsection{\texorpdfstring{amd\_control\_directives\_t}{amd\_control\_directives\_t}}
+{\footnotesize\ttfamily typedef \mbox{\hyperlink{inc_2amd__hsa__kernel__code_8h_a9e6907ee55c7120bcee26a624cb68958}{AMD\+\_\+\+CONTROL\+\_\+\+DIRECTIVES\+\_\+\+ALIGN}} struct \mbox{\hyperlink{structamd__control__directives__s}{amd\+\_\+control\+\_\+directives\+\_\+s}} \mbox{\hyperlink{inc_2amd__hsa__kernel__code_8h_a4eb7f834ade3e309fc1c2d94a5a54db7}{amd\+\_\+control\+\_\+directives\+\_\+t}}}
+
+\mbox{\Hypertarget{inc_2amd__hsa__kernel__code_8h_ae66fcaf2ced08fa586bf57af087eb5ee}\label{inc_2amd__hsa__kernel__code_8h_ae66fcaf2ced08fa586bf57af087eb5ee}} 
+\index{amd\_hsa\_kernel\_code.h@{amd\_hsa\_kernel\_code.h}!amd\_enabled\_control\_directive64\_t@{amd\_enabled\_control\_directive64\_t}}
+\index{amd\_enabled\_control\_directive64\_t@{amd\_enabled\_control\_directive64\_t}!amd\_hsa\_kernel\_code.h@{amd\_hsa\_kernel\_code.h}}
+\doxysubsubsection{\texorpdfstring{amd\_enabled\_control\_directive64\_t}{amd\_enabled\_control\_directive64\_t}}
+{\footnotesize\ttfamily typedef uint64\+\_\+t \mbox{\hyperlink{inc_2amd__hsa__kernel__code_8h_ae66fcaf2ced08fa586bf57af087eb5ee}{amd\+\_\+enabled\+\_\+control\+\_\+directive64\+\_\+t}}}
+
+\mbox{\Hypertarget{inc_2amd__hsa__kernel__code_8h_a2f32a22e6e29a3bea364b1335fddadef}\label{inc_2amd__hsa__kernel__code_8h_a2f32a22e6e29a3bea364b1335fddadef}} 
+\index{amd\_hsa\_kernel\_code.h@{amd\_hsa\_kernel\_code.h}!amd\_exception\_kind16\_t@{amd\_exception\_kind16\_t}}
+\index{amd\_exception\_kind16\_t@{amd\_exception\_kind16\_t}!amd\_hsa\_kernel\_code.h@{amd\_hsa\_kernel\_code.h}}
+\doxysubsubsection{\texorpdfstring{amd\_exception\_kind16\_t}{amd\_exception\_kind16\_t}}
+{\footnotesize\ttfamily typedef uint16\+\_\+t \mbox{\hyperlink{inc_2amd__hsa__kernel__code_8h_a2f32a22e6e29a3bea364b1335fddadef}{amd\+\_\+exception\+\_\+kind16\+\_\+t}}}
+
+\mbox{\Hypertarget{inc_2amd__hsa__kernel__code_8h_af7fcfef8839feb2765526892d0fab469}\label{inc_2amd__hsa__kernel__code_8h_af7fcfef8839feb2765526892d0fab469}} 
+\index{amd\_hsa\_kernel\_code.h@{amd\_hsa\_kernel\_code.h}!amd\_kernel\_code\_properties32\_t@{amd\_kernel\_code\_properties32\_t}}
+\index{amd\_kernel\_code\_properties32\_t@{amd\_kernel\_code\_properties32\_t}!amd\_hsa\_kernel\_code.h@{amd\_hsa\_kernel\_code.h}}
+\doxysubsubsection{\texorpdfstring{amd\_kernel\_code\_properties32\_t}{amd\_kernel\_code\_properties32\_t}}
+{\footnotesize\ttfamily typedef uint32\+\_\+t \mbox{\hyperlink{inc_2amd__hsa__kernel__code_8h_af7fcfef8839feb2765526892d0fab469}{amd\+\_\+kernel\+\_\+code\+\_\+properties32\+\_\+t}}}
+
+\mbox{\Hypertarget{inc_2amd__hsa__kernel__code_8h_ab6a9ac3a2bb96180e3282395e564391a}\label{inc_2amd__hsa__kernel__code_8h_ab6a9ac3a2bb96180e3282395e564391a}} 
+\index{amd\_hsa\_kernel\_code.h@{amd\_hsa\_kernel\_code.h}!amd\_kernel\_code\_t@{amd\_kernel\_code\_t}}
+\index{amd\_kernel\_code\_t@{amd\_kernel\_code\_t}!amd\_hsa\_kernel\_code.h@{amd\_hsa\_kernel\_code.h}}
+\doxysubsubsection{\texorpdfstring{amd\_kernel\_code\_t}{amd\_kernel\_code\_t}}
+{\footnotesize\ttfamily typedef \mbox{\hyperlink{inc_2amd__hsa__kernel__code_8h_a7fe004cd1e77e9285bed6a78378ab493}{AMD\+\_\+\+KERNEL\+\_\+\+CODE\+\_\+\+ALIGN}} struct \mbox{\hyperlink{structamd__kernel__code__s}{amd\+\_\+kernel\+\_\+code\+\_\+s}} \mbox{\hyperlink{inc_2amd__hsa__kernel__code_8h_ab6a9ac3a2bb96180e3282395e564391a}{amd\+\_\+kernel\+\_\+code\+\_\+t}}}
+
+\mbox{\Hypertarget{inc_2amd__hsa__kernel__code_8h_a6839c2c81272c47ed87ee9849423f926}\label{inc_2amd__hsa__kernel__code_8h_a6839c2c81272c47ed87ee9849423f926}} 
+\index{amd\_hsa\_kernel\_code.h@{amd\_hsa\_kernel\_code.h}!amd\_kernel\_code\_version32\_t@{amd\_kernel\_code\_version32\_t}}
+\index{amd\_kernel\_code\_version32\_t@{amd\_kernel\_code\_version32\_t}!amd\_hsa\_kernel\_code.h@{amd\_hsa\_kernel\_code.h}}
+\doxysubsubsection{\texorpdfstring{amd\_kernel\_code\_version32\_t}{amd\_kernel\_code\_version32\_t}}
+{\footnotesize\ttfamily typedef uint32\+\_\+t \mbox{\hyperlink{inc_2amd__hsa__kernel__code_8h_a6839c2c81272c47ed87ee9849423f926}{amd\+\_\+kernel\+\_\+code\+\_\+version32\+\_\+t}}}
+
+\mbox{\Hypertarget{inc_2amd__hsa__kernel__code_8h_a9ef9b8b0cbf9c68117c96e2fb8853484}\label{inc_2amd__hsa__kernel__code_8h_a9ef9b8b0cbf9c68117c96e2fb8853484}} 
+\index{amd\_hsa\_kernel\_code.h@{amd\_hsa\_kernel\_code.h}!amd\_machine\_kind16\_t@{amd\_machine\_kind16\_t}}
+\index{amd\_machine\_kind16\_t@{amd\_machine\_kind16\_t}!amd\_hsa\_kernel\_code.h@{amd\_hsa\_kernel\_code.h}}
+\doxysubsubsection{\texorpdfstring{amd\_machine\_kind16\_t}{amd\_machine\_kind16\_t}}
+{\footnotesize\ttfamily typedef uint16\+\_\+t \mbox{\hyperlink{inc_2amd__hsa__kernel__code_8h_a9ef9b8b0cbf9c68117c96e2fb8853484}{amd\+\_\+machine\+\_\+kind16\+\_\+t}}}
+
+\mbox{\Hypertarget{inc_2amd__hsa__kernel__code_8h_ae05260712d65b9dd65eb5e230ed29422}\label{inc_2amd__hsa__kernel__code_8h_ae05260712d65b9dd65eb5e230ed29422}} 
+\index{amd\_hsa\_kernel\_code.h@{amd\_hsa\_kernel\_code.h}!amd\_machine\_version16\_t@{amd\_machine\_version16\_t}}
+\index{amd\_machine\_version16\_t@{amd\_machine\_version16\_t}!amd\_hsa\_kernel\_code.h@{amd\_hsa\_kernel\_code.h}}
+\doxysubsubsection{\texorpdfstring{amd\_machine\_version16\_t}{amd\_machine\_version16\_t}}
+{\footnotesize\ttfamily typedef uint16\+\_\+t \mbox{\hyperlink{inc_2amd__hsa__kernel__code_8h_ae05260712d65b9dd65eb5e230ed29422}{amd\+\_\+machine\+\_\+version16\+\_\+t}}}
+
+\mbox{\Hypertarget{inc_2amd__hsa__kernel__code_8h_a3eff030f24a2022e35b1a475ba48d1b0}\label{inc_2amd__hsa__kernel__code_8h_a3eff030f24a2022e35b1a475ba48d1b0}} 
+\index{amd\_hsa\_kernel\_code.h@{amd\_hsa\_kernel\_code.h}!amd\_powertwo8\_t@{amd\_powertwo8\_t}}
+\index{amd\_powertwo8\_t@{amd\_powertwo8\_t}!amd\_hsa\_kernel\_code.h@{amd\_hsa\_kernel\_code.h}}
+\doxysubsubsection{\texorpdfstring{amd\_powertwo8\_t}{amd\_powertwo8\_t}}
+{\footnotesize\ttfamily typedef uint8\+\_\+t \mbox{\hyperlink{inc_2amd__hsa__kernel__code_8h_a3eff030f24a2022e35b1a475ba48d1b0}{amd\+\_\+powertwo8\+\_\+t}}}
+
+\mbox{\Hypertarget{inc_2amd__hsa__kernel__code_8h_ad35dc0fe769813d78ed477348809c979}\label{inc_2amd__hsa__kernel__code_8h_ad35dc0fe769813d78ed477348809c979}} 
+\index{amd\_hsa\_kernel\_code.h@{amd\_hsa\_kernel\_code.h}!amd\_runtime\_loader\_debug\_info\_t@{amd\_runtime\_loader\_debug\_info\_t}}
+\index{amd\_runtime\_loader\_debug\_info\_t@{amd\_runtime\_loader\_debug\_info\_t}!amd\_hsa\_kernel\_code.h@{amd\_hsa\_kernel\_code.h}}
+\doxysubsubsection{\texorpdfstring{amd\_runtime\_loader\_debug\_info\_t}{amd\_runtime\_loader\_debug\_info\_t}}
+{\footnotesize\ttfamily typedef struct \mbox{\hyperlink{structamd__runtime__loader__debug__info__s}{amd\+\_\+runtime\+\_\+loader\+\_\+debug\+\_\+info\+\_\+s}} \mbox{\hyperlink{inc_2amd__hsa__kernel__code_8h_ad35dc0fe769813d78ed477348809c979}{amd\+\_\+runtime\+\_\+loader\+\_\+debug\+\_\+info\+\_\+t}}}
+
+
+
+\doxysubsection{Enumeration Type Documentation}
+\mbox{\Hypertarget{inc_2amd__hsa__kernel__code_8h_a19072b708370dbff1ddf74dc8cb34096}\label{inc_2amd__hsa__kernel__code_8h_a19072b708370dbff1ddf74dc8cb34096}} 
+\index{amd\_hsa\_kernel\_code.h@{amd\_hsa\_kernel\_code.h}!amd\_compute\_pgm\_rsrc\_one\_t@{amd\_compute\_pgm\_rsrc\_one\_t}}
+\index{amd\_compute\_pgm\_rsrc\_one\_t@{amd\_compute\_pgm\_rsrc\_one\_t}!amd\_hsa\_kernel\_code.h@{amd\_hsa\_kernel\_code.h}}
+\doxysubsubsection{\texorpdfstring{amd\_compute\_pgm\_rsrc\_one\_t}{amd\_compute\_pgm\_rsrc\_one\_t}}
+{\footnotesize\ttfamily enum \mbox{\hyperlink{inc_2amd__hsa__kernel__code_8h_a19072b708370dbff1ddf74dc8cb34096}{amd\+\_\+compute\+\_\+pgm\+\_\+rsrc\+\_\+one\+\_\+t}}}
+
+\begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{AMD\_HSA\_BITS\_CREATE\_ENUM\_ENTRIES@{AMD\_HSA\_BITS\_CREATE\_ENUM\_ENTRIES}!amd\_hsa\_kernel\_code.h@{amd\_hsa\_kernel\_code.h}}\index{amd\_hsa\_kernel\_code.h@{amd\_hsa\_kernel\_code.h}!AMD\_HSA\_BITS\_CREATE\_ENUM\_ENTRIES@{AMD\_HSA\_BITS\_CREATE\_ENUM\_ENTRIES}}}\mbox{\Hypertarget{inc_2amd__hsa__kernel__code_8h_adf50d36c4a2d44c32c92373bd7f6b19dad7372416dbaca5a3e1080a791527efc3}\label{inc_2amd__hsa__kernel__code_8h_adf50d36c4a2d44c32c92373bd7f6b19dad7372416dbaca5a3e1080a791527efc3}} 
+AMD\+\_\+\+HSA\+\_\+\+BITS\+\_\+\+CREATE\+\_\+\+ENUM\+\_\+\+ENTRIES&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{AMD\_HSA\_BITS\_CREATE\_ENUM\_ENTRIES@{AMD\_HSA\_BITS\_CREATE\_ENUM\_ENTRIES}!amd\_hsa\_kernel\_code.h@{amd\_hsa\_kernel\_code.h}}\index{amd\_hsa\_kernel\_code.h@{amd\_hsa\_kernel\_code.h}!AMD\_HSA\_BITS\_CREATE\_ENUM\_ENTRIES@{AMD\_HSA\_BITS\_CREATE\_ENUM\_ENTRIES}}}\mbox{\Hypertarget{inc_2amd__hsa__kernel__code_8h_adf50d36c4a2d44c32c92373bd7f6b19dad7372416dbaca5a3e1080a791527efc3}\label{inc_2amd__hsa__kernel__code_8h_adf50d36c4a2d44c32c92373bd7f6b19dad7372416dbaca5a3e1080a791527efc3}} 
+AMD\+\_\+\+HSA\+\_\+\+BITS\+\_\+\+CREATE\+\_\+\+ENUM\+\_\+\+ENTRIES&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{AMD\_HSA\_BITS\_CREATE\_ENUM\_ENTRIES@{AMD\_HSA\_BITS\_CREATE\_ENUM\_ENTRIES}!amd\_hsa\_kernel\_code.h@{amd\_hsa\_kernel\_code.h}}\index{amd\_hsa\_kernel\_code.h@{amd\_hsa\_kernel\_code.h}!AMD\_HSA\_BITS\_CREATE\_ENUM\_ENTRIES@{AMD\_HSA\_BITS\_CREATE\_ENUM\_ENTRIES}}}\mbox{\Hypertarget{inc_2amd__hsa__kernel__code_8h_adf50d36c4a2d44c32c92373bd7f6b19dad7372416dbaca5a3e1080a791527efc3}\label{inc_2amd__hsa__kernel__code_8h_adf50d36c4a2d44c32c92373bd7f6b19dad7372416dbaca5a3e1080a791527efc3}} 
+AMD\+\_\+\+HSA\+\_\+\+BITS\+\_\+\+CREATE\+\_\+\+ENUM\+\_\+\+ENTRIES&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{AMD\_HSA\_BITS\_CREATE\_ENUM\_ENTRIES@{AMD\_HSA\_BITS\_CREATE\_ENUM\_ENTRIES}!amd\_hsa\_kernel\_code.h@{amd\_hsa\_kernel\_code.h}}\index{amd\_hsa\_kernel\_code.h@{amd\_hsa\_kernel\_code.h}!AMD\_HSA\_BITS\_CREATE\_ENUM\_ENTRIES@{AMD\_HSA\_BITS\_CREATE\_ENUM\_ENTRIES}}}\mbox{\Hypertarget{inc_2amd__hsa__kernel__code_8h_adf50d36c4a2d44c32c92373bd7f6b19dad7372416dbaca5a3e1080a791527efc3}\label{inc_2amd__hsa__kernel__code_8h_adf50d36c4a2d44c32c92373bd7f6b19dad7372416dbaca5a3e1080a791527efc3}} 
+AMD\+\_\+\+HSA\+\_\+\+BITS\+\_\+\+CREATE\+\_\+\+ENUM\+\_\+\+ENTRIES&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{AMD\_HSA\_BITS\_CREATE\_ENUM\_ENTRIES@{AMD\_HSA\_BITS\_CREATE\_ENUM\_ENTRIES}!amd\_hsa\_kernel\_code.h@{amd\_hsa\_kernel\_code.h}}\index{amd\_hsa\_kernel\_code.h@{amd\_hsa\_kernel\_code.h}!AMD\_HSA\_BITS\_CREATE\_ENUM\_ENTRIES@{AMD\_HSA\_BITS\_CREATE\_ENUM\_ENTRIES}}}\mbox{\Hypertarget{inc_2amd__hsa__kernel__code_8h_adf50d36c4a2d44c32c92373bd7f6b19dad7372416dbaca5a3e1080a791527efc3}\label{inc_2amd__hsa__kernel__code_8h_adf50d36c4a2d44c32c92373bd7f6b19dad7372416dbaca5a3e1080a791527efc3}} 
+AMD\+\_\+\+HSA\+\_\+\+BITS\+\_\+\+CREATE\+\_\+\+ENUM\+\_\+\+ENTRIES&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{AMD\_HSA\_BITS\_CREATE\_ENUM\_ENTRIES@{AMD\_HSA\_BITS\_CREATE\_ENUM\_ENTRIES}!amd\_hsa\_kernel\_code.h@{amd\_hsa\_kernel\_code.h}}\index{amd\_hsa\_kernel\_code.h@{amd\_hsa\_kernel\_code.h}!AMD\_HSA\_BITS\_CREATE\_ENUM\_ENTRIES@{AMD\_HSA\_BITS\_CREATE\_ENUM\_ENTRIES}}}\mbox{\Hypertarget{inc_2amd__hsa__kernel__code_8h_adf50d36c4a2d44c32c92373bd7f6b19dad7372416dbaca5a3e1080a791527efc3}\label{inc_2amd__hsa__kernel__code_8h_adf50d36c4a2d44c32c92373bd7f6b19dad7372416dbaca5a3e1080a791527efc3}} 
+AMD\+\_\+\+HSA\+\_\+\+BITS\+\_\+\+CREATE\+\_\+\+ENUM\+\_\+\+ENTRIES&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{AMD\_HSA\_BITS\_CREATE\_ENUM\_ENTRIES@{AMD\_HSA\_BITS\_CREATE\_ENUM\_ENTRIES}!amd\_hsa\_kernel\_code.h@{amd\_hsa\_kernel\_code.h}}\index{amd\_hsa\_kernel\_code.h@{amd\_hsa\_kernel\_code.h}!AMD\_HSA\_BITS\_CREATE\_ENUM\_ENTRIES@{AMD\_HSA\_BITS\_CREATE\_ENUM\_ENTRIES}}}\mbox{\Hypertarget{inc_2amd__hsa__kernel__code_8h_adf50d36c4a2d44c32c92373bd7f6b19dad7372416dbaca5a3e1080a791527efc3}\label{inc_2amd__hsa__kernel__code_8h_adf50d36c4a2d44c32c92373bd7f6b19dad7372416dbaca5a3e1080a791527efc3}} 
+AMD\+\_\+\+HSA\+\_\+\+BITS\+\_\+\+CREATE\+\_\+\+ENUM\+\_\+\+ENTRIES&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{AMD\_HSA\_BITS\_CREATE\_ENUM\_ENTRIES@{AMD\_HSA\_BITS\_CREATE\_ENUM\_ENTRIES}!amd\_hsa\_kernel\_code.h@{amd\_hsa\_kernel\_code.h}}\index{amd\_hsa\_kernel\_code.h@{amd\_hsa\_kernel\_code.h}!AMD\_HSA\_BITS\_CREATE\_ENUM\_ENTRIES@{AMD\_HSA\_BITS\_CREATE\_ENUM\_ENTRIES}}}\mbox{\Hypertarget{inc_2amd__hsa__kernel__code_8h_adf50d36c4a2d44c32c92373bd7f6b19dad7372416dbaca5a3e1080a791527efc3}\label{inc_2amd__hsa__kernel__code_8h_adf50d36c4a2d44c32c92373bd7f6b19dad7372416dbaca5a3e1080a791527efc3}} 
+AMD\+\_\+\+HSA\+\_\+\+BITS\+\_\+\+CREATE\+\_\+\+ENUM\+\_\+\+ENTRIES&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{AMD\_HSA\_BITS\_CREATE\_ENUM\_ENTRIES@{AMD\_HSA\_BITS\_CREATE\_ENUM\_ENTRIES}!amd\_hsa\_kernel\_code.h@{amd\_hsa\_kernel\_code.h}}\index{amd\_hsa\_kernel\_code.h@{amd\_hsa\_kernel\_code.h}!AMD\_HSA\_BITS\_CREATE\_ENUM\_ENTRIES@{AMD\_HSA\_BITS\_CREATE\_ENUM\_ENTRIES}}}\mbox{\Hypertarget{inc_2amd__hsa__kernel__code_8h_adf50d36c4a2d44c32c92373bd7f6b19dad7372416dbaca5a3e1080a791527efc3}\label{inc_2amd__hsa__kernel__code_8h_adf50d36c4a2d44c32c92373bd7f6b19dad7372416dbaca5a3e1080a791527efc3}} 
+AMD\+\_\+\+HSA\+\_\+\+BITS\+\_\+\+CREATE\+\_\+\+ENUM\+\_\+\+ENTRIES&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{AMD\_HSA\_BITS\_CREATE\_ENUM\_ENTRIES@{AMD\_HSA\_BITS\_CREATE\_ENUM\_ENTRIES}!amd\_hsa\_kernel\_code.h@{amd\_hsa\_kernel\_code.h}}\index{amd\_hsa\_kernel\_code.h@{amd\_hsa\_kernel\_code.h}!AMD\_HSA\_BITS\_CREATE\_ENUM\_ENTRIES@{AMD\_HSA\_BITS\_CREATE\_ENUM\_ENTRIES}}}\mbox{\Hypertarget{inc_2amd__hsa__kernel__code_8h_adf50d36c4a2d44c32c92373bd7f6b19dad7372416dbaca5a3e1080a791527efc3}\label{inc_2amd__hsa__kernel__code_8h_adf50d36c4a2d44c32c92373bd7f6b19dad7372416dbaca5a3e1080a791527efc3}} 
+AMD\+\_\+\+HSA\+\_\+\+BITS\+\_\+\+CREATE\+\_\+\+ENUM\+\_\+\+ENTRIES&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{AMD\_HSA\_BITS\_CREATE\_ENUM\_ENTRIES@{AMD\_HSA\_BITS\_CREATE\_ENUM\_ENTRIES}!amd\_hsa\_kernel\_code.h@{amd\_hsa\_kernel\_code.h}}\index{amd\_hsa\_kernel\_code.h@{amd\_hsa\_kernel\_code.h}!AMD\_HSA\_BITS\_CREATE\_ENUM\_ENTRIES@{AMD\_HSA\_BITS\_CREATE\_ENUM\_ENTRIES}}}\mbox{\Hypertarget{inc_2amd__hsa__kernel__code_8h_adf50d36c4a2d44c32c92373bd7f6b19dad7372416dbaca5a3e1080a791527efc3}\label{inc_2amd__hsa__kernel__code_8h_adf50d36c4a2d44c32c92373bd7f6b19dad7372416dbaca5a3e1080a791527efc3}} 
+AMD\+\_\+\+HSA\+\_\+\+BITS\+\_\+\+CREATE\+\_\+\+ENUM\+\_\+\+ENTRIES&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{AMD\_HSA\_BITS\_CREATE\_ENUM\_ENTRIES@{AMD\_HSA\_BITS\_CREATE\_ENUM\_ENTRIES}!amd\_hsa\_kernel\_code.h@{amd\_hsa\_kernel\_code.h}}\index{amd\_hsa\_kernel\_code.h@{amd\_hsa\_kernel\_code.h}!AMD\_HSA\_BITS\_CREATE\_ENUM\_ENTRIES@{AMD\_HSA\_BITS\_CREATE\_ENUM\_ENTRIES}}}\mbox{\Hypertarget{inc_2amd__hsa__kernel__code_8h_adf50d36c4a2d44c32c92373bd7f6b19dad7372416dbaca5a3e1080a791527efc3}\label{inc_2amd__hsa__kernel__code_8h_adf50d36c4a2d44c32c92373bd7f6b19dad7372416dbaca5a3e1080a791527efc3}} 
+AMD\+\_\+\+HSA\+\_\+\+BITS\+\_\+\+CREATE\+\_\+\+ENUM\+\_\+\+ENTRIES&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{AMD\_HSA\_BITS\_CREATE\_ENUM\_ENTRIES@{AMD\_HSA\_BITS\_CREATE\_ENUM\_ENTRIES}!amd\_hsa\_kernel\_code.h@{amd\_hsa\_kernel\_code.h}}\index{amd\_hsa\_kernel\_code.h@{amd\_hsa\_kernel\_code.h}!AMD\_HSA\_BITS\_CREATE\_ENUM\_ENTRIES@{AMD\_HSA\_BITS\_CREATE\_ENUM\_ENTRIES}}}\mbox{\Hypertarget{inc_2amd__hsa__kernel__code_8h_adf50d36c4a2d44c32c92373bd7f6b19dad7372416dbaca5a3e1080a791527efc3}\label{inc_2amd__hsa__kernel__code_8h_adf50d36c4a2d44c32c92373bd7f6b19dad7372416dbaca5a3e1080a791527efc3}} 
+AMD\+\_\+\+HSA\+\_\+\+BITS\+\_\+\+CREATE\+\_\+\+ENUM\+\_\+\+ENTRIES&\\
+\hline
+
+\end{DoxyEnumFields}
+\mbox{\Hypertarget{inc_2amd__hsa__kernel__code_8h_aa622de19248b3b34cc494463e4bb8fd7}\label{inc_2amd__hsa__kernel__code_8h_aa622de19248b3b34cc494463e4bb8fd7}} 
+\index{amd\_hsa\_kernel\_code.h@{amd\_hsa\_kernel\_code.h}!amd\_compute\_pgm\_rsrc\_two\_t@{amd\_compute\_pgm\_rsrc\_two\_t}}
+\index{amd\_compute\_pgm\_rsrc\_two\_t@{amd\_compute\_pgm\_rsrc\_two\_t}!amd\_hsa\_kernel\_code.h@{amd\_hsa\_kernel\_code.h}}
+\doxysubsubsection{\texorpdfstring{amd\_compute\_pgm\_rsrc\_two\_t}{amd\_compute\_pgm\_rsrc\_two\_t}}
+{\footnotesize\ttfamily enum \mbox{\hyperlink{inc_2amd__hsa__kernel__code_8h_aa622de19248b3b34cc494463e4bb8fd7}{amd\+\_\+compute\+\_\+pgm\+\_\+rsrc\+\_\+two\+\_\+t}}}
+
+\begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{AMD\_HSA\_BITS\_CREATE\_ENUM\_ENTRIES@{AMD\_HSA\_BITS\_CREATE\_ENUM\_ENTRIES}!amd\_hsa\_kernel\_code.h@{amd\_hsa\_kernel\_code.h}}\index{amd\_hsa\_kernel\_code.h@{amd\_hsa\_kernel\_code.h}!AMD\_HSA\_BITS\_CREATE\_ENUM\_ENTRIES@{AMD\_HSA\_BITS\_CREATE\_ENUM\_ENTRIES}}}\mbox{\Hypertarget{inc_2amd__hsa__kernel__code_8h_adf50d36c4a2d44c32c92373bd7f6b19dad7372416dbaca5a3e1080a791527efc3}\label{inc_2amd__hsa__kernel__code_8h_adf50d36c4a2d44c32c92373bd7f6b19dad7372416dbaca5a3e1080a791527efc3}} 
+AMD\+\_\+\+HSA\+\_\+\+BITS\+\_\+\+CREATE\+\_\+\+ENUM\+\_\+\+ENTRIES&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{AMD\_HSA\_BITS\_CREATE\_ENUM\_ENTRIES@{AMD\_HSA\_BITS\_CREATE\_ENUM\_ENTRIES}!amd\_hsa\_kernel\_code.h@{amd\_hsa\_kernel\_code.h}}\index{amd\_hsa\_kernel\_code.h@{amd\_hsa\_kernel\_code.h}!AMD\_HSA\_BITS\_CREATE\_ENUM\_ENTRIES@{AMD\_HSA\_BITS\_CREATE\_ENUM\_ENTRIES}}}\mbox{\Hypertarget{inc_2amd__hsa__kernel__code_8h_adf50d36c4a2d44c32c92373bd7f6b19dad7372416dbaca5a3e1080a791527efc3}\label{inc_2amd__hsa__kernel__code_8h_adf50d36c4a2d44c32c92373bd7f6b19dad7372416dbaca5a3e1080a791527efc3}} 
+AMD\+\_\+\+HSA\+\_\+\+BITS\+\_\+\+CREATE\+\_\+\+ENUM\+\_\+\+ENTRIES&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{AMD\_HSA\_BITS\_CREATE\_ENUM\_ENTRIES@{AMD\_HSA\_BITS\_CREATE\_ENUM\_ENTRIES}!amd\_hsa\_kernel\_code.h@{amd\_hsa\_kernel\_code.h}}\index{amd\_hsa\_kernel\_code.h@{amd\_hsa\_kernel\_code.h}!AMD\_HSA\_BITS\_CREATE\_ENUM\_ENTRIES@{AMD\_HSA\_BITS\_CREATE\_ENUM\_ENTRIES}}}\mbox{\Hypertarget{inc_2amd__hsa__kernel__code_8h_adf50d36c4a2d44c32c92373bd7f6b19dad7372416dbaca5a3e1080a791527efc3}\label{inc_2amd__hsa__kernel__code_8h_adf50d36c4a2d44c32c92373bd7f6b19dad7372416dbaca5a3e1080a791527efc3}} 
+AMD\+\_\+\+HSA\+\_\+\+BITS\+\_\+\+CREATE\+\_\+\+ENUM\+\_\+\+ENTRIES&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{AMD\_HSA\_BITS\_CREATE\_ENUM\_ENTRIES@{AMD\_HSA\_BITS\_CREATE\_ENUM\_ENTRIES}!amd\_hsa\_kernel\_code.h@{amd\_hsa\_kernel\_code.h}}\index{amd\_hsa\_kernel\_code.h@{amd\_hsa\_kernel\_code.h}!AMD\_HSA\_BITS\_CREATE\_ENUM\_ENTRIES@{AMD\_HSA\_BITS\_CREATE\_ENUM\_ENTRIES}}}\mbox{\Hypertarget{inc_2amd__hsa__kernel__code_8h_adf50d36c4a2d44c32c92373bd7f6b19dad7372416dbaca5a3e1080a791527efc3}\label{inc_2amd__hsa__kernel__code_8h_adf50d36c4a2d44c32c92373bd7f6b19dad7372416dbaca5a3e1080a791527efc3}} 
+AMD\+\_\+\+HSA\+\_\+\+BITS\+\_\+\+CREATE\+\_\+\+ENUM\+\_\+\+ENTRIES&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{AMD\_HSA\_BITS\_CREATE\_ENUM\_ENTRIES@{AMD\_HSA\_BITS\_CREATE\_ENUM\_ENTRIES}!amd\_hsa\_kernel\_code.h@{amd\_hsa\_kernel\_code.h}}\index{amd\_hsa\_kernel\_code.h@{amd\_hsa\_kernel\_code.h}!AMD\_HSA\_BITS\_CREATE\_ENUM\_ENTRIES@{AMD\_HSA\_BITS\_CREATE\_ENUM\_ENTRIES}}}\mbox{\Hypertarget{inc_2amd__hsa__kernel__code_8h_adf50d36c4a2d44c32c92373bd7f6b19dad7372416dbaca5a3e1080a791527efc3}\label{inc_2amd__hsa__kernel__code_8h_adf50d36c4a2d44c32c92373bd7f6b19dad7372416dbaca5a3e1080a791527efc3}} 
+AMD\+\_\+\+HSA\+\_\+\+BITS\+\_\+\+CREATE\+\_\+\+ENUM\+\_\+\+ENTRIES&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{AMD\_HSA\_BITS\_CREATE\_ENUM\_ENTRIES@{AMD\_HSA\_BITS\_CREATE\_ENUM\_ENTRIES}!amd\_hsa\_kernel\_code.h@{amd\_hsa\_kernel\_code.h}}\index{amd\_hsa\_kernel\_code.h@{amd\_hsa\_kernel\_code.h}!AMD\_HSA\_BITS\_CREATE\_ENUM\_ENTRIES@{AMD\_HSA\_BITS\_CREATE\_ENUM\_ENTRIES}}}\mbox{\Hypertarget{inc_2amd__hsa__kernel__code_8h_adf50d36c4a2d44c32c92373bd7f6b19dad7372416dbaca5a3e1080a791527efc3}\label{inc_2amd__hsa__kernel__code_8h_adf50d36c4a2d44c32c92373bd7f6b19dad7372416dbaca5a3e1080a791527efc3}} 
+AMD\+\_\+\+HSA\+\_\+\+BITS\+\_\+\+CREATE\+\_\+\+ENUM\+\_\+\+ENTRIES&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{AMD\_HSA\_BITS\_CREATE\_ENUM\_ENTRIES@{AMD\_HSA\_BITS\_CREATE\_ENUM\_ENTRIES}!amd\_hsa\_kernel\_code.h@{amd\_hsa\_kernel\_code.h}}\index{amd\_hsa\_kernel\_code.h@{amd\_hsa\_kernel\_code.h}!AMD\_HSA\_BITS\_CREATE\_ENUM\_ENTRIES@{AMD\_HSA\_BITS\_CREATE\_ENUM\_ENTRIES}}}\mbox{\Hypertarget{inc_2amd__hsa__kernel__code_8h_adf50d36c4a2d44c32c92373bd7f6b19dad7372416dbaca5a3e1080a791527efc3}\label{inc_2amd__hsa__kernel__code_8h_adf50d36c4a2d44c32c92373bd7f6b19dad7372416dbaca5a3e1080a791527efc3}} 
+AMD\+\_\+\+HSA\+\_\+\+BITS\+\_\+\+CREATE\+\_\+\+ENUM\+\_\+\+ENTRIES&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{AMD\_HSA\_BITS\_CREATE\_ENUM\_ENTRIES@{AMD\_HSA\_BITS\_CREATE\_ENUM\_ENTRIES}!amd\_hsa\_kernel\_code.h@{amd\_hsa\_kernel\_code.h}}\index{amd\_hsa\_kernel\_code.h@{amd\_hsa\_kernel\_code.h}!AMD\_HSA\_BITS\_CREATE\_ENUM\_ENTRIES@{AMD\_HSA\_BITS\_CREATE\_ENUM\_ENTRIES}}}\mbox{\Hypertarget{inc_2amd__hsa__kernel__code_8h_adf50d36c4a2d44c32c92373bd7f6b19dad7372416dbaca5a3e1080a791527efc3}\label{inc_2amd__hsa__kernel__code_8h_adf50d36c4a2d44c32c92373bd7f6b19dad7372416dbaca5a3e1080a791527efc3}} 
+AMD\+\_\+\+HSA\+\_\+\+BITS\+\_\+\+CREATE\+\_\+\+ENUM\+\_\+\+ENTRIES&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{AMD\_HSA\_BITS\_CREATE\_ENUM\_ENTRIES@{AMD\_HSA\_BITS\_CREATE\_ENUM\_ENTRIES}!amd\_hsa\_kernel\_code.h@{amd\_hsa\_kernel\_code.h}}\index{amd\_hsa\_kernel\_code.h@{amd\_hsa\_kernel\_code.h}!AMD\_HSA\_BITS\_CREATE\_ENUM\_ENTRIES@{AMD\_HSA\_BITS\_CREATE\_ENUM\_ENTRIES}}}\mbox{\Hypertarget{inc_2amd__hsa__kernel__code_8h_adf50d36c4a2d44c32c92373bd7f6b19dad7372416dbaca5a3e1080a791527efc3}\label{inc_2amd__hsa__kernel__code_8h_adf50d36c4a2d44c32c92373bd7f6b19dad7372416dbaca5a3e1080a791527efc3}} 
+AMD\+\_\+\+HSA\+\_\+\+BITS\+\_\+\+CREATE\+\_\+\+ENUM\+\_\+\+ENTRIES&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{AMD\_HSA\_BITS\_CREATE\_ENUM\_ENTRIES@{AMD\_HSA\_BITS\_CREATE\_ENUM\_ENTRIES}!amd\_hsa\_kernel\_code.h@{amd\_hsa\_kernel\_code.h}}\index{amd\_hsa\_kernel\_code.h@{amd\_hsa\_kernel\_code.h}!AMD\_HSA\_BITS\_CREATE\_ENUM\_ENTRIES@{AMD\_HSA\_BITS\_CREATE\_ENUM\_ENTRIES}}}\mbox{\Hypertarget{inc_2amd__hsa__kernel__code_8h_adf50d36c4a2d44c32c92373bd7f6b19dad7372416dbaca5a3e1080a791527efc3}\label{inc_2amd__hsa__kernel__code_8h_adf50d36c4a2d44c32c92373bd7f6b19dad7372416dbaca5a3e1080a791527efc3}} 
+AMD\+\_\+\+HSA\+\_\+\+BITS\+\_\+\+CREATE\+\_\+\+ENUM\+\_\+\+ENTRIES&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{AMD\_HSA\_BITS\_CREATE\_ENUM\_ENTRIES@{AMD\_HSA\_BITS\_CREATE\_ENUM\_ENTRIES}!amd\_hsa\_kernel\_code.h@{amd\_hsa\_kernel\_code.h}}\index{amd\_hsa\_kernel\_code.h@{amd\_hsa\_kernel\_code.h}!AMD\_HSA\_BITS\_CREATE\_ENUM\_ENTRIES@{AMD\_HSA\_BITS\_CREATE\_ENUM\_ENTRIES}}}\mbox{\Hypertarget{inc_2amd__hsa__kernel__code_8h_adf50d36c4a2d44c32c92373bd7f6b19dad7372416dbaca5a3e1080a791527efc3}\label{inc_2amd__hsa__kernel__code_8h_adf50d36c4a2d44c32c92373bd7f6b19dad7372416dbaca5a3e1080a791527efc3}} 
+AMD\+\_\+\+HSA\+\_\+\+BITS\+\_\+\+CREATE\+\_\+\+ENUM\+\_\+\+ENTRIES&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{AMD\_HSA\_BITS\_CREATE\_ENUM\_ENTRIES@{AMD\_HSA\_BITS\_CREATE\_ENUM\_ENTRIES}!amd\_hsa\_kernel\_code.h@{amd\_hsa\_kernel\_code.h}}\index{amd\_hsa\_kernel\_code.h@{amd\_hsa\_kernel\_code.h}!AMD\_HSA\_BITS\_CREATE\_ENUM\_ENTRIES@{AMD\_HSA\_BITS\_CREATE\_ENUM\_ENTRIES}}}\mbox{\Hypertarget{inc_2amd__hsa__kernel__code_8h_adf50d36c4a2d44c32c92373bd7f6b19dad7372416dbaca5a3e1080a791527efc3}\label{inc_2amd__hsa__kernel__code_8h_adf50d36c4a2d44c32c92373bd7f6b19dad7372416dbaca5a3e1080a791527efc3}} 
+AMD\+\_\+\+HSA\+\_\+\+BITS\+\_\+\+CREATE\+\_\+\+ENUM\+\_\+\+ENTRIES&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{AMD\_HSA\_BITS\_CREATE\_ENUM\_ENTRIES@{AMD\_HSA\_BITS\_CREATE\_ENUM\_ENTRIES}!amd\_hsa\_kernel\_code.h@{amd\_hsa\_kernel\_code.h}}\index{amd\_hsa\_kernel\_code.h@{amd\_hsa\_kernel\_code.h}!AMD\_HSA\_BITS\_CREATE\_ENUM\_ENTRIES@{AMD\_HSA\_BITS\_CREATE\_ENUM\_ENTRIES}}}\mbox{\Hypertarget{inc_2amd__hsa__kernel__code_8h_adf50d36c4a2d44c32c92373bd7f6b19dad7372416dbaca5a3e1080a791527efc3}\label{inc_2amd__hsa__kernel__code_8h_adf50d36c4a2d44c32c92373bd7f6b19dad7372416dbaca5a3e1080a791527efc3}} 
+AMD\+\_\+\+HSA\+\_\+\+BITS\+\_\+\+CREATE\+\_\+\+ENUM\+\_\+\+ENTRIES&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{AMD\_HSA\_BITS\_CREATE\_ENUM\_ENTRIES@{AMD\_HSA\_BITS\_CREATE\_ENUM\_ENTRIES}!amd\_hsa\_kernel\_code.h@{amd\_hsa\_kernel\_code.h}}\index{amd\_hsa\_kernel\_code.h@{amd\_hsa\_kernel\_code.h}!AMD\_HSA\_BITS\_CREATE\_ENUM\_ENTRIES@{AMD\_HSA\_BITS\_CREATE\_ENUM\_ENTRIES}}}\mbox{\Hypertarget{inc_2amd__hsa__kernel__code_8h_adf50d36c4a2d44c32c92373bd7f6b19dad7372416dbaca5a3e1080a791527efc3}\label{inc_2amd__hsa__kernel__code_8h_adf50d36c4a2d44c32c92373bd7f6b19dad7372416dbaca5a3e1080a791527efc3}} 
+AMD\+\_\+\+HSA\+\_\+\+BITS\+\_\+\+CREATE\+\_\+\+ENUM\+\_\+\+ENTRIES&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{AMD\_HSA\_BITS\_CREATE\_ENUM\_ENTRIES@{AMD\_HSA\_BITS\_CREATE\_ENUM\_ENTRIES}!amd\_hsa\_kernel\_code.h@{amd\_hsa\_kernel\_code.h}}\index{amd\_hsa\_kernel\_code.h@{amd\_hsa\_kernel\_code.h}!AMD\_HSA\_BITS\_CREATE\_ENUM\_ENTRIES@{AMD\_HSA\_BITS\_CREATE\_ENUM\_ENTRIES}}}\mbox{\Hypertarget{inc_2amd__hsa__kernel__code_8h_adf50d36c4a2d44c32c92373bd7f6b19dad7372416dbaca5a3e1080a791527efc3}\label{inc_2amd__hsa__kernel__code_8h_adf50d36c4a2d44c32c92373bd7f6b19dad7372416dbaca5a3e1080a791527efc3}} 
+AMD\+\_\+\+HSA\+\_\+\+BITS\+\_\+\+CREATE\+\_\+\+ENUM\+\_\+\+ENTRIES&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{AMD\_HSA\_BITS\_CREATE\_ENUM\_ENTRIES@{AMD\_HSA\_BITS\_CREATE\_ENUM\_ENTRIES}!amd\_hsa\_kernel\_code.h@{amd\_hsa\_kernel\_code.h}}\index{amd\_hsa\_kernel\_code.h@{amd\_hsa\_kernel\_code.h}!AMD\_HSA\_BITS\_CREATE\_ENUM\_ENTRIES@{AMD\_HSA\_BITS\_CREATE\_ENUM\_ENTRIES}}}\mbox{\Hypertarget{inc_2amd__hsa__kernel__code_8h_adf50d36c4a2d44c32c92373bd7f6b19dad7372416dbaca5a3e1080a791527efc3}\label{inc_2amd__hsa__kernel__code_8h_adf50d36c4a2d44c32c92373bd7f6b19dad7372416dbaca5a3e1080a791527efc3}} 
+AMD\+\_\+\+HSA\+\_\+\+BITS\+\_\+\+CREATE\+\_\+\+ENUM\+\_\+\+ENTRIES&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{AMD\_HSA\_BITS\_CREATE\_ENUM\_ENTRIES@{AMD\_HSA\_BITS\_CREATE\_ENUM\_ENTRIES}!amd\_hsa\_kernel\_code.h@{amd\_hsa\_kernel\_code.h}}\index{amd\_hsa\_kernel\_code.h@{amd\_hsa\_kernel\_code.h}!AMD\_HSA\_BITS\_CREATE\_ENUM\_ENTRIES@{AMD\_HSA\_BITS\_CREATE\_ENUM\_ENTRIES}}}\mbox{\Hypertarget{inc_2amd__hsa__kernel__code_8h_adf50d36c4a2d44c32c92373bd7f6b19dad7372416dbaca5a3e1080a791527efc3}\label{inc_2amd__hsa__kernel__code_8h_adf50d36c4a2d44c32c92373bd7f6b19dad7372416dbaca5a3e1080a791527efc3}} 
+AMD\+\_\+\+HSA\+\_\+\+BITS\+\_\+\+CREATE\+\_\+\+ENUM\+\_\+\+ENTRIES&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{AMD\_HSA\_BITS\_CREATE\_ENUM\_ENTRIES@{AMD\_HSA\_BITS\_CREATE\_ENUM\_ENTRIES}!amd\_hsa\_kernel\_code.h@{amd\_hsa\_kernel\_code.h}}\index{amd\_hsa\_kernel\_code.h@{amd\_hsa\_kernel\_code.h}!AMD\_HSA\_BITS\_CREATE\_ENUM\_ENTRIES@{AMD\_HSA\_BITS\_CREATE\_ENUM\_ENTRIES}}}\mbox{\Hypertarget{inc_2amd__hsa__kernel__code_8h_adf50d36c4a2d44c32c92373bd7f6b19dad7372416dbaca5a3e1080a791527efc3}\label{inc_2amd__hsa__kernel__code_8h_adf50d36c4a2d44c32c92373bd7f6b19dad7372416dbaca5a3e1080a791527efc3}} 
+AMD\+\_\+\+HSA\+\_\+\+BITS\+\_\+\+CREATE\+\_\+\+ENUM\+\_\+\+ENTRIES&\\
+\hline
+
+\end{DoxyEnumFields}
+\mbox{\Hypertarget{inc_2amd__hsa__kernel__code_8h_a270d9c0c715e4ee0049a0f0f8b8e4818}\label{inc_2amd__hsa__kernel__code_8h_a270d9c0c715e4ee0049a0f0f8b8e4818}} 
+\index{amd\_hsa\_kernel\_code.h@{amd\_hsa\_kernel\_code.h}!amd\_element\_byte\_size\_t@{amd\_element\_byte\_size\_t}}
+\index{amd\_element\_byte\_size\_t@{amd\_element\_byte\_size\_t}!amd\_hsa\_kernel\_code.h@{amd\_hsa\_kernel\_code.h}}
+\doxysubsubsection{\texorpdfstring{amd\_element\_byte\_size\_t}{amd\_element\_byte\_size\_t}}
+{\footnotesize\ttfamily enum \mbox{\hyperlink{inc_2amd__hsa__kernel__code_8h_a270d9c0c715e4ee0049a0f0f8b8e4818}{amd\+\_\+element\+\_\+byte\+\_\+size\+\_\+t}}}
+
+\begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{AMD\_ELEMENT\_BYTE\_SIZE\_2@{AMD\_ELEMENT\_BYTE\_SIZE\_2}!amd\_hsa\_kernel\_code.h@{amd\_hsa\_kernel\_code.h}}\index{amd\_hsa\_kernel\_code.h@{amd\_hsa\_kernel\_code.h}!AMD\_ELEMENT\_BYTE\_SIZE\_2@{AMD\_ELEMENT\_BYTE\_SIZE\_2}}}\mbox{\Hypertarget{inc_2amd__hsa__kernel__code_8h_a270d9c0c715e4ee0049a0f0f8b8e4818ac1329a4420682d14da5ada2ad5ae413d}\label{inc_2amd__hsa__kernel__code_8h_a270d9c0c715e4ee0049a0f0f8b8e4818ac1329a4420682d14da5ada2ad5ae413d}} 
+AMD\+\_\+\+ELEMENT\+\_\+\+BYTE\+\_\+\+SIZE\+\_\+2&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{AMD\_ELEMENT\_BYTE\_SIZE\_4@{AMD\_ELEMENT\_BYTE\_SIZE\_4}!amd\_hsa\_kernel\_code.h@{amd\_hsa\_kernel\_code.h}}\index{amd\_hsa\_kernel\_code.h@{amd\_hsa\_kernel\_code.h}!AMD\_ELEMENT\_BYTE\_SIZE\_4@{AMD\_ELEMENT\_BYTE\_SIZE\_4}}}\mbox{\Hypertarget{inc_2amd__hsa__kernel__code_8h_a270d9c0c715e4ee0049a0f0f8b8e4818a6ad476eb3938d6b24529ffc68e21ad27}\label{inc_2amd__hsa__kernel__code_8h_a270d9c0c715e4ee0049a0f0f8b8e4818a6ad476eb3938d6b24529ffc68e21ad27}} 
+AMD\+\_\+\+ELEMENT\+\_\+\+BYTE\+\_\+\+SIZE\+\_\+4&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{AMD\_ELEMENT\_BYTE\_SIZE\_8@{AMD\_ELEMENT\_BYTE\_SIZE\_8}!amd\_hsa\_kernel\_code.h@{amd\_hsa\_kernel\_code.h}}\index{amd\_hsa\_kernel\_code.h@{amd\_hsa\_kernel\_code.h}!AMD\_ELEMENT\_BYTE\_SIZE\_8@{AMD\_ELEMENT\_BYTE\_SIZE\_8}}}\mbox{\Hypertarget{inc_2amd__hsa__kernel__code_8h_a270d9c0c715e4ee0049a0f0f8b8e4818a2681255c030529c4ea51ed27fa8303ae}\label{inc_2amd__hsa__kernel__code_8h_a270d9c0c715e4ee0049a0f0f8b8e4818a2681255c030529c4ea51ed27fa8303ae}} 
+AMD\+\_\+\+ELEMENT\+\_\+\+BYTE\+\_\+\+SIZE\+\_\+8&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{AMD\_ELEMENT\_BYTE\_SIZE\_16@{AMD\_ELEMENT\_BYTE\_SIZE\_16}!amd\_hsa\_kernel\_code.h@{amd\_hsa\_kernel\_code.h}}\index{amd\_hsa\_kernel\_code.h@{amd\_hsa\_kernel\_code.h}!AMD\_ELEMENT\_BYTE\_SIZE\_16@{AMD\_ELEMENT\_BYTE\_SIZE\_16}}}\mbox{\Hypertarget{inc_2amd__hsa__kernel__code_8h_a270d9c0c715e4ee0049a0f0f8b8e4818a55cd248c2d9fa82b5c9ceb9630cabf75}\label{inc_2amd__hsa__kernel__code_8h_a270d9c0c715e4ee0049a0f0f8b8e4818a55cd248c2d9fa82b5c9ceb9630cabf75}} 
+AMD\+\_\+\+ELEMENT\+\_\+\+BYTE\+\_\+\+SIZE\+\_\+16&\\
+\hline
+
+\end{DoxyEnumFields}
+\mbox{\Hypertarget{inc_2amd__hsa__kernel__code_8h_adf3e5d9c917e9d53f67d2302167737d1}\label{inc_2amd__hsa__kernel__code_8h_adf3e5d9c917e9d53f67d2302167737d1}} 
+\index{amd\_hsa\_kernel\_code.h@{amd\_hsa\_kernel\_code.h}!amd\_enabled\_control\_directive\_t@{amd\_enabled\_control\_directive\_t}}
+\index{amd\_enabled\_control\_directive\_t@{amd\_enabled\_control\_directive\_t}!amd\_hsa\_kernel\_code.h@{amd\_hsa\_kernel\_code.h}}
+\doxysubsubsection{\texorpdfstring{amd\_enabled\_control\_directive\_t}{amd\_enabled\_control\_directive\_t}}
+{\footnotesize\ttfamily enum \mbox{\hyperlink{inc_2amd__hsa__kernel__code_8h_adf3e5d9c917e9d53f67d2302167737d1}{amd\+\_\+enabled\+\_\+control\+\_\+directive\+\_\+t}}}
+
+\begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{AMD\_ENABLED\_CONTROL\_DIRECTIVE\_ENABLE\_BREAK\_EXCEPTIONS@{AMD\_ENABLED\_CONTROL\_DIRECTIVE\_ENABLE\_BREAK\_EXCEPTIONS}!amd\_hsa\_kernel\_code.h@{amd\_hsa\_kernel\_code.h}}\index{amd\_hsa\_kernel\_code.h@{amd\_hsa\_kernel\_code.h}!AMD\_ENABLED\_CONTROL\_DIRECTIVE\_ENABLE\_BREAK\_EXCEPTIONS@{AMD\_ENABLED\_CONTROL\_DIRECTIVE\_ENABLE\_BREAK\_EXCEPTIONS}}}\mbox{\Hypertarget{inc_2amd__hsa__kernel__code_8h_adf3e5d9c917e9d53f67d2302167737d1a6ab41dede2b249d5a5513fae27b64f73}\label{inc_2amd__hsa__kernel__code_8h_adf3e5d9c917e9d53f67d2302167737d1a6ab41dede2b249d5a5513fae27b64f73}} 
+AMD\+\_\+\+ENABLED\+\_\+\+CONTROL\+\_\+\+DIRECTIVE\+\_\+\+ENABLE\+\_\+\+BREAK\+\_\+\+EXCEPTIONS&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{AMD\_ENABLED\_CONTROL\_DIRECTIVE\_ENABLE\_DETECT\_EXCEPTIONS@{AMD\_ENABLED\_CONTROL\_DIRECTIVE\_ENABLE\_DETECT\_EXCEPTIONS}!amd\_hsa\_kernel\_code.h@{amd\_hsa\_kernel\_code.h}}\index{amd\_hsa\_kernel\_code.h@{amd\_hsa\_kernel\_code.h}!AMD\_ENABLED\_CONTROL\_DIRECTIVE\_ENABLE\_DETECT\_EXCEPTIONS@{AMD\_ENABLED\_CONTROL\_DIRECTIVE\_ENABLE\_DETECT\_EXCEPTIONS}}}\mbox{\Hypertarget{inc_2amd__hsa__kernel__code_8h_adf3e5d9c917e9d53f67d2302167737d1a961e8f8430de2cc3b6e831c74be5e40e}\label{inc_2amd__hsa__kernel__code_8h_adf3e5d9c917e9d53f67d2302167737d1a961e8f8430de2cc3b6e831c74be5e40e}} 
+AMD\+\_\+\+ENABLED\+\_\+\+CONTROL\+\_\+\+DIRECTIVE\+\_\+\+ENABLE\+\_\+\+DETECT\+\_\+\+EXCEPTIONS&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{AMD\_ENABLED\_CONTROL\_DIRECTIVE\_MAX\_DYNAMIC\_GROUP\_SIZE@{AMD\_ENABLED\_CONTROL\_DIRECTIVE\_MAX\_DYNAMIC\_GROUP\_SIZE}!amd\_hsa\_kernel\_code.h@{amd\_hsa\_kernel\_code.h}}\index{amd\_hsa\_kernel\_code.h@{amd\_hsa\_kernel\_code.h}!AMD\_ENABLED\_CONTROL\_DIRECTIVE\_MAX\_DYNAMIC\_GROUP\_SIZE@{AMD\_ENABLED\_CONTROL\_DIRECTIVE\_MAX\_DYNAMIC\_GROUP\_SIZE}}}\mbox{\Hypertarget{inc_2amd__hsa__kernel__code_8h_adf3e5d9c917e9d53f67d2302167737d1a6709da996e7deab0007a62926186f02d}\label{inc_2amd__hsa__kernel__code_8h_adf3e5d9c917e9d53f67d2302167737d1a6709da996e7deab0007a62926186f02d}} 
+AMD\+\_\+\+ENABLED\+\_\+\+CONTROL\+\_\+\+DIRECTIVE\+\_\+\+MAX\+\_\+\+DYNAMIC\+\_\+\+GROUP\+\_\+\+SIZE&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{AMD\_ENABLED\_CONTROL\_DIRECTIVE\_MAX\_FLAT\_GRID\_SIZE@{AMD\_ENABLED\_CONTROL\_DIRECTIVE\_MAX\_FLAT\_GRID\_SIZE}!amd\_hsa\_kernel\_code.h@{amd\_hsa\_kernel\_code.h}}\index{amd\_hsa\_kernel\_code.h@{amd\_hsa\_kernel\_code.h}!AMD\_ENABLED\_CONTROL\_DIRECTIVE\_MAX\_FLAT\_GRID\_SIZE@{AMD\_ENABLED\_CONTROL\_DIRECTIVE\_MAX\_FLAT\_GRID\_SIZE}}}\mbox{\Hypertarget{inc_2amd__hsa__kernel__code_8h_adf3e5d9c917e9d53f67d2302167737d1aec30637c055a38584de300971a3f539b}\label{inc_2amd__hsa__kernel__code_8h_adf3e5d9c917e9d53f67d2302167737d1aec30637c055a38584de300971a3f539b}} 
+AMD\+\_\+\+ENABLED\+\_\+\+CONTROL\+\_\+\+DIRECTIVE\+\_\+\+MAX\+\_\+\+FLAT\+\_\+\+GRID\+\_\+\+SIZE&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{AMD\_ENABLED\_CONTROL\_DIRECTIVE\_MAX\_FLAT\_WORKGROUP\_SIZE@{AMD\_ENABLED\_CONTROL\_DIRECTIVE\_MAX\_FLAT\_WORKGROUP\_SIZE}!amd\_hsa\_kernel\_code.h@{amd\_hsa\_kernel\_code.h}}\index{amd\_hsa\_kernel\_code.h@{amd\_hsa\_kernel\_code.h}!AMD\_ENABLED\_CONTROL\_DIRECTIVE\_MAX\_FLAT\_WORKGROUP\_SIZE@{AMD\_ENABLED\_CONTROL\_DIRECTIVE\_MAX\_FLAT\_WORKGROUP\_SIZE}}}\mbox{\Hypertarget{inc_2amd__hsa__kernel__code_8h_adf3e5d9c917e9d53f67d2302167737d1a48961a30584956e23e9684bb5ccdc858}\label{inc_2amd__hsa__kernel__code_8h_adf3e5d9c917e9d53f67d2302167737d1a48961a30584956e23e9684bb5ccdc858}} 
+AMD\+\_\+\+ENABLED\+\_\+\+CONTROL\+\_\+\+DIRECTIVE\+\_\+\+MAX\+\_\+\+FLAT\+\_\+\+WORKGROUP\+\_\+\+SIZE&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{AMD\_ENABLED\_CONTROL\_DIRECTIVE\_REQUIRED\_DIM@{AMD\_ENABLED\_CONTROL\_DIRECTIVE\_REQUIRED\_DIM}!amd\_hsa\_kernel\_code.h@{amd\_hsa\_kernel\_code.h}}\index{amd\_hsa\_kernel\_code.h@{amd\_hsa\_kernel\_code.h}!AMD\_ENABLED\_CONTROL\_DIRECTIVE\_REQUIRED\_DIM@{AMD\_ENABLED\_CONTROL\_DIRECTIVE\_REQUIRED\_DIM}}}\mbox{\Hypertarget{inc_2amd__hsa__kernel__code_8h_adf3e5d9c917e9d53f67d2302167737d1a9e7b9cb7f9996d9c1da4b866238a78eb}\label{inc_2amd__hsa__kernel__code_8h_adf3e5d9c917e9d53f67d2302167737d1a9e7b9cb7f9996d9c1da4b866238a78eb}} 
+AMD\+\_\+\+ENABLED\+\_\+\+CONTROL\+\_\+\+DIRECTIVE\+\_\+\+REQUIRED\+\_\+\+DIM&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{AMD\_ENABLED\_CONTROL\_DIRECTIVE\_REQUIRED\_GRID\_SIZE@{AMD\_ENABLED\_CONTROL\_DIRECTIVE\_REQUIRED\_GRID\_SIZE}!amd\_hsa\_kernel\_code.h@{amd\_hsa\_kernel\_code.h}}\index{amd\_hsa\_kernel\_code.h@{amd\_hsa\_kernel\_code.h}!AMD\_ENABLED\_CONTROL\_DIRECTIVE\_REQUIRED\_GRID\_SIZE@{AMD\_ENABLED\_CONTROL\_DIRECTIVE\_REQUIRED\_GRID\_SIZE}}}\mbox{\Hypertarget{inc_2amd__hsa__kernel__code_8h_adf3e5d9c917e9d53f67d2302167737d1a8750e3853bbc839dc49b6273f129a355}\label{inc_2amd__hsa__kernel__code_8h_adf3e5d9c917e9d53f67d2302167737d1a8750e3853bbc839dc49b6273f129a355}} 
+AMD\+\_\+\+ENABLED\+\_\+\+CONTROL\+\_\+\+DIRECTIVE\+\_\+\+REQUIRED\+\_\+\+GRID\+\_\+\+SIZE&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{AMD\_ENABLED\_CONTROL\_DIRECTIVE\_REQUIRED\_WORKGROUP\_SIZE@{AMD\_ENABLED\_CONTROL\_DIRECTIVE\_REQUIRED\_WORKGROUP\_SIZE}!amd\_hsa\_kernel\_code.h@{amd\_hsa\_kernel\_code.h}}\index{amd\_hsa\_kernel\_code.h@{amd\_hsa\_kernel\_code.h}!AMD\_ENABLED\_CONTROL\_DIRECTIVE\_REQUIRED\_WORKGROUP\_SIZE@{AMD\_ENABLED\_CONTROL\_DIRECTIVE\_REQUIRED\_WORKGROUP\_SIZE}}}\mbox{\Hypertarget{inc_2amd__hsa__kernel__code_8h_adf3e5d9c917e9d53f67d2302167737d1aa5298e58c530689ab23701cfa158c9d6}\label{inc_2amd__hsa__kernel__code_8h_adf3e5d9c917e9d53f67d2302167737d1aa5298e58c530689ab23701cfa158c9d6}} 
+AMD\+\_\+\+ENABLED\+\_\+\+CONTROL\+\_\+\+DIRECTIVE\+\_\+\+REQUIRED\+\_\+\+WORKGROUP\+\_\+\+SIZE&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{AMD\_ENABLED\_CONTROL\_DIRECTIVE\_REQUIRE\_NO\_PARTIAL\_WORKGROUPS@{AMD\_ENABLED\_CONTROL\_DIRECTIVE\_REQUIRE\_NO\_PARTIAL\_WORKGROUPS}!amd\_hsa\_kernel\_code.h@{amd\_hsa\_kernel\_code.h}}\index{amd\_hsa\_kernel\_code.h@{amd\_hsa\_kernel\_code.h}!AMD\_ENABLED\_CONTROL\_DIRECTIVE\_REQUIRE\_NO\_PARTIAL\_WORKGROUPS@{AMD\_ENABLED\_CONTROL\_DIRECTIVE\_REQUIRE\_NO\_PARTIAL\_WORKGROUPS}}}\mbox{\Hypertarget{inc_2amd__hsa__kernel__code_8h_adf3e5d9c917e9d53f67d2302167737d1a71b4a2fd43f70838395f617f80df720c}\label{inc_2amd__hsa__kernel__code_8h_adf3e5d9c917e9d53f67d2302167737d1a71b4a2fd43f70838395f617f80df720c}} 
+AMD\+\_\+\+ENABLED\+\_\+\+CONTROL\+\_\+\+DIRECTIVE\+\_\+\+REQUIRE\+\_\+\+NO\+\_\+\+PARTIAL\+\_\+\+WORKGROUPS&\\
+\hline
+
+\end{DoxyEnumFields}
+\mbox{\Hypertarget{inc_2amd__hsa__kernel__code_8h_a927a5a71465633512efd3626303a1609}\label{inc_2amd__hsa__kernel__code_8h_a927a5a71465633512efd3626303a1609}} 
+\index{amd\_hsa\_kernel\_code.h@{amd\_hsa\_kernel\_code.h}!amd\_exception\_kind\_t@{amd\_exception\_kind\_t}}
+\index{amd\_exception\_kind\_t@{amd\_exception\_kind\_t}!amd\_hsa\_kernel\_code.h@{amd\_hsa\_kernel\_code.h}}
+\doxysubsubsection{\texorpdfstring{amd\_exception\_kind\_t}{amd\_exception\_kind\_t}}
+{\footnotesize\ttfamily enum \mbox{\hyperlink{inc_2amd__hsa__kernel__code_8h_a927a5a71465633512efd3626303a1609}{amd\+\_\+exception\+\_\+kind\+\_\+t}}}
+
+\begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{AMD\_EXCEPTION\_KIND\_INVALID\_OPERATION@{AMD\_EXCEPTION\_KIND\_INVALID\_OPERATION}!amd\_hsa\_kernel\_code.h@{amd\_hsa\_kernel\_code.h}}\index{amd\_hsa\_kernel\_code.h@{amd\_hsa\_kernel\_code.h}!AMD\_EXCEPTION\_KIND\_INVALID\_OPERATION@{AMD\_EXCEPTION\_KIND\_INVALID\_OPERATION}}}\mbox{\Hypertarget{inc_2amd__hsa__kernel__code_8h_a927a5a71465633512efd3626303a1609a2efef6c406a697babe3d8d489eeaec5d}\label{inc_2amd__hsa__kernel__code_8h_a927a5a71465633512efd3626303a1609a2efef6c406a697babe3d8d489eeaec5d}} 
+AMD\+\_\+\+EXCEPTION\+\_\+\+KIND\+\_\+\+INVALID\+\_\+\+OPERATION&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{AMD\_EXCEPTION\_KIND\_DIVISION\_BY\_ZERO@{AMD\_EXCEPTION\_KIND\_DIVISION\_BY\_ZERO}!amd\_hsa\_kernel\_code.h@{amd\_hsa\_kernel\_code.h}}\index{amd\_hsa\_kernel\_code.h@{amd\_hsa\_kernel\_code.h}!AMD\_EXCEPTION\_KIND\_DIVISION\_BY\_ZERO@{AMD\_EXCEPTION\_KIND\_DIVISION\_BY\_ZERO}}}\mbox{\Hypertarget{inc_2amd__hsa__kernel__code_8h_a927a5a71465633512efd3626303a1609afc07ddb7b477ee6b3b2fdd131d5a5851}\label{inc_2amd__hsa__kernel__code_8h_a927a5a71465633512efd3626303a1609afc07ddb7b477ee6b3b2fdd131d5a5851}} 
+AMD\+\_\+\+EXCEPTION\+\_\+\+KIND\+\_\+\+DIVISION\+\_\+\+BY\+\_\+\+ZERO&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{AMD\_EXCEPTION\_KIND\_OVERFLOW@{AMD\_EXCEPTION\_KIND\_OVERFLOW}!amd\_hsa\_kernel\_code.h@{amd\_hsa\_kernel\_code.h}}\index{amd\_hsa\_kernel\_code.h@{amd\_hsa\_kernel\_code.h}!AMD\_EXCEPTION\_KIND\_OVERFLOW@{AMD\_EXCEPTION\_KIND\_OVERFLOW}}}\mbox{\Hypertarget{inc_2amd__hsa__kernel__code_8h_a927a5a71465633512efd3626303a1609aeb496794c49f6fa593144ec3f29cc927}\label{inc_2amd__hsa__kernel__code_8h_a927a5a71465633512efd3626303a1609aeb496794c49f6fa593144ec3f29cc927}} 
+AMD\+\_\+\+EXCEPTION\+\_\+\+KIND\+\_\+\+OVERFLOW&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{AMD\_EXCEPTION\_KIND\_UNDERFLOW@{AMD\_EXCEPTION\_KIND\_UNDERFLOW}!amd\_hsa\_kernel\_code.h@{amd\_hsa\_kernel\_code.h}}\index{amd\_hsa\_kernel\_code.h@{amd\_hsa\_kernel\_code.h}!AMD\_EXCEPTION\_KIND\_UNDERFLOW@{AMD\_EXCEPTION\_KIND\_UNDERFLOW}}}\mbox{\Hypertarget{inc_2amd__hsa__kernel__code_8h_a927a5a71465633512efd3626303a1609a38f1c69ae3b381475490129ca6010b69}\label{inc_2amd__hsa__kernel__code_8h_a927a5a71465633512efd3626303a1609a38f1c69ae3b381475490129ca6010b69}} 
+AMD\+\_\+\+EXCEPTION\+\_\+\+KIND\+\_\+\+UNDERFLOW&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{AMD\_EXCEPTION\_KIND\_INEXACT@{AMD\_EXCEPTION\_KIND\_INEXACT}!amd\_hsa\_kernel\_code.h@{amd\_hsa\_kernel\_code.h}}\index{amd\_hsa\_kernel\_code.h@{amd\_hsa\_kernel\_code.h}!AMD\_EXCEPTION\_KIND\_INEXACT@{AMD\_EXCEPTION\_KIND\_INEXACT}}}\mbox{\Hypertarget{inc_2amd__hsa__kernel__code_8h_a927a5a71465633512efd3626303a1609af091adafd93bdcf1185de189bca7e829}\label{inc_2amd__hsa__kernel__code_8h_a927a5a71465633512efd3626303a1609af091adafd93bdcf1185de189bca7e829}} 
+AMD\+\_\+\+EXCEPTION\+\_\+\+KIND\+\_\+\+INEXACT&\\
+\hline
+
+\end{DoxyEnumFields}
+\mbox{\Hypertarget{inc_2amd__hsa__kernel__code_8h_a0a04a2c12ba829f950ff2af4a64f54c4}\label{inc_2amd__hsa__kernel__code_8h_a0a04a2c12ba829f950ff2af4a64f54c4}} 
+\index{amd\_hsa\_kernel\_code.h@{amd\_hsa\_kernel\_code.h}!amd\_float\_denorm\_mode\_t@{amd\_float\_denorm\_mode\_t}}
+\index{amd\_float\_denorm\_mode\_t@{amd\_float\_denorm\_mode\_t}!amd\_hsa\_kernel\_code.h@{amd\_hsa\_kernel\_code.h}}
+\doxysubsubsection{\texorpdfstring{amd\_float\_denorm\_mode\_t}{amd\_float\_denorm\_mode\_t}}
+{\footnotesize\ttfamily enum \mbox{\hyperlink{inc_2amd__hsa__kernel__code_8h_a0a04a2c12ba829f950ff2af4a64f54c4}{amd\+\_\+float\+\_\+denorm\+\_\+mode\+\_\+t}}}
+
+\begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{AMD\_FLOAT\_DENORM\_MODE\_FLUSH\_SOURCE\_OUTPUT@{AMD\_FLOAT\_DENORM\_MODE\_FLUSH\_SOURCE\_OUTPUT}!amd\_hsa\_kernel\_code.h@{amd\_hsa\_kernel\_code.h}}\index{amd\_hsa\_kernel\_code.h@{amd\_hsa\_kernel\_code.h}!AMD\_FLOAT\_DENORM\_MODE\_FLUSH\_SOURCE\_OUTPUT@{AMD\_FLOAT\_DENORM\_MODE\_FLUSH\_SOURCE\_OUTPUT}}}\mbox{\Hypertarget{inc_2amd__hsa__kernel__code_8h_a0a04a2c12ba829f950ff2af4a64f54c4a4c4be36da8452485321b8d787aff6bb3}\label{inc_2amd__hsa__kernel__code_8h_a0a04a2c12ba829f950ff2af4a64f54c4a4c4be36da8452485321b8d787aff6bb3}} 
+AMD\+\_\+\+FLOAT\+\_\+\+DENORM\+\_\+\+MODE\+\_\+\+FLUSH\+\_\+\+SOURCE\+\_\+\+OUTPUT&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{AMD\_FLOAT\_DENORM\_MODE\_FLUSH\_OUTPUT@{AMD\_FLOAT\_DENORM\_MODE\_FLUSH\_OUTPUT}!amd\_hsa\_kernel\_code.h@{amd\_hsa\_kernel\_code.h}}\index{amd\_hsa\_kernel\_code.h@{amd\_hsa\_kernel\_code.h}!AMD\_FLOAT\_DENORM\_MODE\_FLUSH\_OUTPUT@{AMD\_FLOAT\_DENORM\_MODE\_FLUSH\_OUTPUT}}}\mbox{\Hypertarget{inc_2amd__hsa__kernel__code_8h_a0a04a2c12ba829f950ff2af4a64f54c4a8ff459a7fd3452375de94a1ac6465efc}\label{inc_2amd__hsa__kernel__code_8h_a0a04a2c12ba829f950ff2af4a64f54c4a8ff459a7fd3452375de94a1ac6465efc}} 
+AMD\+\_\+\+FLOAT\+\_\+\+DENORM\+\_\+\+MODE\+\_\+\+FLUSH\+\_\+\+OUTPUT&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{AMD\_FLOAT\_DENORM\_MODE\_FLUSH\_SOURCE@{AMD\_FLOAT\_DENORM\_MODE\_FLUSH\_SOURCE}!amd\_hsa\_kernel\_code.h@{amd\_hsa\_kernel\_code.h}}\index{amd\_hsa\_kernel\_code.h@{amd\_hsa\_kernel\_code.h}!AMD\_FLOAT\_DENORM\_MODE\_FLUSH\_SOURCE@{AMD\_FLOAT\_DENORM\_MODE\_FLUSH\_SOURCE}}}\mbox{\Hypertarget{inc_2amd__hsa__kernel__code_8h_a0a04a2c12ba829f950ff2af4a64f54c4a6ec726a58c73ac7d924ae04609c9c603}\label{inc_2amd__hsa__kernel__code_8h_a0a04a2c12ba829f950ff2af4a64f54c4a6ec726a58c73ac7d924ae04609c9c603}} 
+AMD\+\_\+\+FLOAT\+\_\+\+DENORM\+\_\+\+MODE\+\_\+\+FLUSH\+\_\+\+SOURCE&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{AMD\_FLOAT\_DENORM\_MODE\_NO\_FLUSH@{AMD\_FLOAT\_DENORM\_MODE\_NO\_FLUSH}!amd\_hsa\_kernel\_code.h@{amd\_hsa\_kernel\_code.h}}\index{amd\_hsa\_kernel\_code.h@{amd\_hsa\_kernel\_code.h}!AMD\_FLOAT\_DENORM\_MODE\_NO\_FLUSH@{AMD\_FLOAT\_DENORM\_MODE\_NO\_FLUSH}}}\mbox{\Hypertarget{inc_2amd__hsa__kernel__code_8h_a0a04a2c12ba829f950ff2af4a64f54c4ab6113fb37173029ec8492879390bd71e}\label{inc_2amd__hsa__kernel__code_8h_a0a04a2c12ba829f950ff2af4a64f54c4ab6113fb37173029ec8492879390bd71e}} 
+AMD\+\_\+\+FLOAT\+\_\+\+DENORM\+\_\+\+MODE\+\_\+\+NO\+\_\+\+FLUSH&\\
+\hline
+
+\end{DoxyEnumFields}
+\mbox{\Hypertarget{inc_2amd__hsa__kernel__code_8h_a12269e07ed57d521dc77bd2ba23b196d}\label{inc_2amd__hsa__kernel__code_8h_a12269e07ed57d521dc77bd2ba23b196d}} 
+\index{amd\_hsa\_kernel\_code.h@{amd\_hsa\_kernel\_code.h}!amd\_float\_round\_mode\_t@{amd\_float\_round\_mode\_t}}
+\index{amd\_float\_round\_mode\_t@{amd\_float\_round\_mode\_t}!amd\_hsa\_kernel\_code.h@{amd\_hsa\_kernel\_code.h}}
+\doxysubsubsection{\texorpdfstring{amd\_float\_round\_mode\_t}{amd\_float\_round\_mode\_t}}
+{\footnotesize\ttfamily enum \mbox{\hyperlink{inc_2amd__hsa__kernel__code_8h_a12269e07ed57d521dc77bd2ba23b196d}{amd\+\_\+float\+\_\+round\+\_\+mode\+\_\+t}}}
+
+\begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{AMD\_FLOAT\_ROUND\_MODE\_NEAREST\_EVEN@{AMD\_FLOAT\_ROUND\_MODE\_NEAREST\_EVEN}!amd\_hsa\_kernel\_code.h@{amd\_hsa\_kernel\_code.h}}\index{amd\_hsa\_kernel\_code.h@{amd\_hsa\_kernel\_code.h}!AMD\_FLOAT\_ROUND\_MODE\_NEAREST\_EVEN@{AMD\_FLOAT\_ROUND\_MODE\_NEAREST\_EVEN}}}\mbox{\Hypertarget{inc_2amd__hsa__kernel__code_8h_a12269e07ed57d521dc77bd2ba23b196da54b925df2a6c6b2209f4dc6053d35f74}\label{inc_2amd__hsa__kernel__code_8h_a12269e07ed57d521dc77bd2ba23b196da54b925df2a6c6b2209f4dc6053d35f74}} 
+AMD\+\_\+\+FLOAT\+\_\+\+ROUND\+\_\+\+MODE\+\_\+\+NEAREST\+\_\+\+EVEN&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{AMD\_FLOAT\_ROUND\_MODE\_PLUS\_INFINITY@{AMD\_FLOAT\_ROUND\_MODE\_PLUS\_INFINITY}!amd\_hsa\_kernel\_code.h@{amd\_hsa\_kernel\_code.h}}\index{amd\_hsa\_kernel\_code.h@{amd\_hsa\_kernel\_code.h}!AMD\_FLOAT\_ROUND\_MODE\_PLUS\_INFINITY@{AMD\_FLOAT\_ROUND\_MODE\_PLUS\_INFINITY}}}\mbox{\Hypertarget{inc_2amd__hsa__kernel__code_8h_a12269e07ed57d521dc77bd2ba23b196dae4726571a20d53681442198a48374304}\label{inc_2amd__hsa__kernel__code_8h_a12269e07ed57d521dc77bd2ba23b196dae4726571a20d53681442198a48374304}} 
+AMD\+\_\+\+FLOAT\+\_\+\+ROUND\+\_\+\+MODE\+\_\+\+PLUS\+\_\+\+INFINITY&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{AMD\_FLOAT\_ROUND\_MODE\_MINUS\_INFINITY@{AMD\_FLOAT\_ROUND\_MODE\_MINUS\_INFINITY}!amd\_hsa\_kernel\_code.h@{amd\_hsa\_kernel\_code.h}}\index{amd\_hsa\_kernel\_code.h@{amd\_hsa\_kernel\_code.h}!AMD\_FLOAT\_ROUND\_MODE\_MINUS\_INFINITY@{AMD\_FLOAT\_ROUND\_MODE\_MINUS\_INFINITY}}}\mbox{\Hypertarget{inc_2amd__hsa__kernel__code_8h_a12269e07ed57d521dc77bd2ba23b196da8aed4259b9d822f06587775ecb307da1}\label{inc_2amd__hsa__kernel__code_8h_a12269e07ed57d521dc77bd2ba23b196da8aed4259b9d822f06587775ecb307da1}} 
+AMD\+\_\+\+FLOAT\+\_\+\+ROUND\+\_\+\+MODE\+\_\+\+MINUS\+\_\+\+INFINITY&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{AMD\_FLOAT\_ROUND\_MODE\_ZERO@{AMD\_FLOAT\_ROUND\_MODE\_ZERO}!amd\_hsa\_kernel\_code.h@{amd\_hsa\_kernel\_code.h}}\index{amd\_hsa\_kernel\_code.h@{amd\_hsa\_kernel\_code.h}!AMD\_FLOAT\_ROUND\_MODE\_ZERO@{AMD\_FLOAT\_ROUND\_MODE\_ZERO}}}\mbox{\Hypertarget{inc_2amd__hsa__kernel__code_8h_a12269e07ed57d521dc77bd2ba23b196da7222f28685e0a6d02abe2d09d37746d6}\label{inc_2amd__hsa__kernel__code_8h_a12269e07ed57d521dc77bd2ba23b196da7222f28685e0a6d02abe2d09d37746d6}} 
+AMD\+\_\+\+FLOAT\+\_\+\+ROUND\+\_\+\+MODE\+\_\+\+ZERO&\\
+\hline
+
+\end{DoxyEnumFields}
+\mbox{\Hypertarget{inc_2amd__hsa__kernel__code_8h_adf50d36c4a2d44c32c92373bd7f6b19d}\label{inc_2amd__hsa__kernel__code_8h_adf50d36c4a2d44c32c92373bd7f6b19d}} 
+\index{amd\_hsa\_kernel\_code.h@{amd\_hsa\_kernel\_code.h}!amd\_kernel\_code\_properties\_t@{amd\_kernel\_code\_properties\_t}}
+\index{amd\_kernel\_code\_properties\_t@{amd\_kernel\_code\_properties\_t}!amd\_hsa\_kernel\_code.h@{amd\_hsa\_kernel\_code.h}}
+\doxysubsubsection{\texorpdfstring{amd\_kernel\_code\_properties\_t}{amd\_kernel\_code\_properties\_t}}
+{\footnotesize\ttfamily enum \mbox{\hyperlink{inc_2amd__hsa__kernel__code_8h_adf50d36c4a2d44c32c92373bd7f6b19d}{amd\+\_\+kernel\+\_\+code\+\_\+properties\+\_\+t}}}
+
+\begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{AMD\_HSA\_BITS\_CREATE\_ENUM\_ENTRIES@{AMD\_HSA\_BITS\_CREATE\_ENUM\_ENTRIES}!amd\_hsa\_kernel\_code.h@{amd\_hsa\_kernel\_code.h}}\index{amd\_hsa\_kernel\_code.h@{amd\_hsa\_kernel\_code.h}!AMD\_HSA\_BITS\_CREATE\_ENUM\_ENTRIES@{AMD\_HSA\_BITS\_CREATE\_ENUM\_ENTRIES}}}\mbox{\Hypertarget{inc_2amd__hsa__kernel__code_8h_adf50d36c4a2d44c32c92373bd7f6b19dad7372416dbaca5a3e1080a791527efc3}\label{inc_2amd__hsa__kernel__code_8h_adf50d36c4a2d44c32c92373bd7f6b19dad7372416dbaca5a3e1080a791527efc3}} 
+AMD\+\_\+\+HSA\+\_\+\+BITS\+\_\+\+CREATE\+\_\+\+ENUM\+\_\+\+ENTRIES&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{AMD\_HSA\_BITS\_CREATE\_ENUM\_ENTRIES@{AMD\_HSA\_BITS\_CREATE\_ENUM\_ENTRIES}!amd\_hsa\_kernel\_code.h@{amd\_hsa\_kernel\_code.h}}\index{amd\_hsa\_kernel\_code.h@{amd\_hsa\_kernel\_code.h}!AMD\_HSA\_BITS\_CREATE\_ENUM\_ENTRIES@{AMD\_HSA\_BITS\_CREATE\_ENUM\_ENTRIES}}}\mbox{\Hypertarget{inc_2amd__hsa__kernel__code_8h_adf50d36c4a2d44c32c92373bd7f6b19dad7372416dbaca5a3e1080a791527efc3}\label{inc_2amd__hsa__kernel__code_8h_adf50d36c4a2d44c32c92373bd7f6b19dad7372416dbaca5a3e1080a791527efc3}} 
+AMD\+\_\+\+HSA\+\_\+\+BITS\+\_\+\+CREATE\+\_\+\+ENUM\+\_\+\+ENTRIES&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{AMD\_HSA\_BITS\_CREATE\_ENUM\_ENTRIES@{AMD\_HSA\_BITS\_CREATE\_ENUM\_ENTRIES}!amd\_hsa\_kernel\_code.h@{amd\_hsa\_kernel\_code.h}}\index{amd\_hsa\_kernel\_code.h@{amd\_hsa\_kernel\_code.h}!AMD\_HSA\_BITS\_CREATE\_ENUM\_ENTRIES@{AMD\_HSA\_BITS\_CREATE\_ENUM\_ENTRIES}}}\mbox{\Hypertarget{inc_2amd__hsa__kernel__code_8h_adf50d36c4a2d44c32c92373bd7f6b19dad7372416dbaca5a3e1080a791527efc3}\label{inc_2amd__hsa__kernel__code_8h_adf50d36c4a2d44c32c92373bd7f6b19dad7372416dbaca5a3e1080a791527efc3}} 
+AMD\+\_\+\+HSA\+\_\+\+BITS\+\_\+\+CREATE\+\_\+\+ENUM\+\_\+\+ENTRIES&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{AMD\_HSA\_BITS\_CREATE\_ENUM\_ENTRIES@{AMD\_HSA\_BITS\_CREATE\_ENUM\_ENTRIES}!amd\_hsa\_kernel\_code.h@{amd\_hsa\_kernel\_code.h}}\index{amd\_hsa\_kernel\_code.h@{amd\_hsa\_kernel\_code.h}!AMD\_HSA\_BITS\_CREATE\_ENUM\_ENTRIES@{AMD\_HSA\_BITS\_CREATE\_ENUM\_ENTRIES}}}\mbox{\Hypertarget{inc_2amd__hsa__kernel__code_8h_adf50d36c4a2d44c32c92373bd7f6b19dad7372416dbaca5a3e1080a791527efc3}\label{inc_2amd__hsa__kernel__code_8h_adf50d36c4a2d44c32c92373bd7f6b19dad7372416dbaca5a3e1080a791527efc3}} 
+AMD\+\_\+\+HSA\+\_\+\+BITS\+\_\+\+CREATE\+\_\+\+ENUM\+\_\+\+ENTRIES&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{AMD\_HSA\_BITS\_CREATE\_ENUM\_ENTRIES@{AMD\_HSA\_BITS\_CREATE\_ENUM\_ENTRIES}!amd\_hsa\_kernel\_code.h@{amd\_hsa\_kernel\_code.h}}\index{amd\_hsa\_kernel\_code.h@{amd\_hsa\_kernel\_code.h}!AMD\_HSA\_BITS\_CREATE\_ENUM\_ENTRIES@{AMD\_HSA\_BITS\_CREATE\_ENUM\_ENTRIES}}}\mbox{\Hypertarget{inc_2amd__hsa__kernel__code_8h_adf50d36c4a2d44c32c92373bd7f6b19dad7372416dbaca5a3e1080a791527efc3}\label{inc_2amd__hsa__kernel__code_8h_adf50d36c4a2d44c32c92373bd7f6b19dad7372416dbaca5a3e1080a791527efc3}} 
+AMD\+\_\+\+HSA\+\_\+\+BITS\+\_\+\+CREATE\+\_\+\+ENUM\+\_\+\+ENTRIES&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{AMD\_HSA\_BITS\_CREATE\_ENUM\_ENTRIES@{AMD\_HSA\_BITS\_CREATE\_ENUM\_ENTRIES}!amd\_hsa\_kernel\_code.h@{amd\_hsa\_kernel\_code.h}}\index{amd\_hsa\_kernel\_code.h@{amd\_hsa\_kernel\_code.h}!AMD\_HSA\_BITS\_CREATE\_ENUM\_ENTRIES@{AMD\_HSA\_BITS\_CREATE\_ENUM\_ENTRIES}}}\mbox{\Hypertarget{inc_2amd__hsa__kernel__code_8h_adf50d36c4a2d44c32c92373bd7f6b19dad7372416dbaca5a3e1080a791527efc3}\label{inc_2amd__hsa__kernel__code_8h_adf50d36c4a2d44c32c92373bd7f6b19dad7372416dbaca5a3e1080a791527efc3}} 
+AMD\+\_\+\+HSA\+\_\+\+BITS\+\_\+\+CREATE\+\_\+\+ENUM\+\_\+\+ENTRIES&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{AMD\_HSA\_BITS\_CREATE\_ENUM\_ENTRIES@{AMD\_HSA\_BITS\_CREATE\_ENUM\_ENTRIES}!amd\_hsa\_kernel\_code.h@{amd\_hsa\_kernel\_code.h}}\index{amd\_hsa\_kernel\_code.h@{amd\_hsa\_kernel\_code.h}!AMD\_HSA\_BITS\_CREATE\_ENUM\_ENTRIES@{AMD\_HSA\_BITS\_CREATE\_ENUM\_ENTRIES}}}\mbox{\Hypertarget{inc_2amd__hsa__kernel__code_8h_adf50d36c4a2d44c32c92373bd7f6b19dad7372416dbaca5a3e1080a791527efc3}\label{inc_2amd__hsa__kernel__code_8h_adf50d36c4a2d44c32c92373bd7f6b19dad7372416dbaca5a3e1080a791527efc3}} 
+AMD\+\_\+\+HSA\+\_\+\+BITS\+\_\+\+CREATE\+\_\+\+ENUM\+\_\+\+ENTRIES&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{AMD\_HSA\_BITS\_CREATE\_ENUM\_ENTRIES@{AMD\_HSA\_BITS\_CREATE\_ENUM\_ENTRIES}!amd\_hsa\_kernel\_code.h@{amd\_hsa\_kernel\_code.h}}\index{amd\_hsa\_kernel\_code.h@{amd\_hsa\_kernel\_code.h}!AMD\_HSA\_BITS\_CREATE\_ENUM\_ENTRIES@{AMD\_HSA\_BITS\_CREATE\_ENUM\_ENTRIES}}}\mbox{\Hypertarget{inc_2amd__hsa__kernel__code_8h_adf50d36c4a2d44c32c92373bd7f6b19dad7372416dbaca5a3e1080a791527efc3}\label{inc_2amd__hsa__kernel__code_8h_adf50d36c4a2d44c32c92373bd7f6b19dad7372416dbaca5a3e1080a791527efc3}} 
+AMD\+\_\+\+HSA\+\_\+\+BITS\+\_\+\+CREATE\+\_\+\+ENUM\+\_\+\+ENTRIES&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{AMD\_HSA\_BITS\_CREATE\_ENUM\_ENTRIES@{AMD\_HSA\_BITS\_CREATE\_ENUM\_ENTRIES}!amd\_hsa\_kernel\_code.h@{amd\_hsa\_kernel\_code.h}}\index{amd\_hsa\_kernel\_code.h@{amd\_hsa\_kernel\_code.h}!AMD\_HSA\_BITS\_CREATE\_ENUM\_ENTRIES@{AMD\_HSA\_BITS\_CREATE\_ENUM\_ENTRIES}}}\mbox{\Hypertarget{inc_2amd__hsa__kernel__code_8h_adf50d36c4a2d44c32c92373bd7f6b19dad7372416dbaca5a3e1080a791527efc3}\label{inc_2amd__hsa__kernel__code_8h_adf50d36c4a2d44c32c92373bd7f6b19dad7372416dbaca5a3e1080a791527efc3}} 
+AMD\+\_\+\+HSA\+\_\+\+BITS\+\_\+\+CREATE\+\_\+\+ENUM\+\_\+\+ENTRIES&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{AMD\_HSA\_BITS\_CREATE\_ENUM\_ENTRIES@{AMD\_HSA\_BITS\_CREATE\_ENUM\_ENTRIES}!amd\_hsa\_kernel\_code.h@{amd\_hsa\_kernel\_code.h}}\index{amd\_hsa\_kernel\_code.h@{amd\_hsa\_kernel\_code.h}!AMD\_HSA\_BITS\_CREATE\_ENUM\_ENTRIES@{AMD\_HSA\_BITS\_CREATE\_ENUM\_ENTRIES}}}\mbox{\Hypertarget{inc_2amd__hsa__kernel__code_8h_adf50d36c4a2d44c32c92373bd7f6b19dad7372416dbaca5a3e1080a791527efc3}\label{inc_2amd__hsa__kernel__code_8h_adf50d36c4a2d44c32c92373bd7f6b19dad7372416dbaca5a3e1080a791527efc3}} 
+AMD\+\_\+\+HSA\+\_\+\+BITS\+\_\+\+CREATE\+\_\+\+ENUM\+\_\+\+ENTRIES&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{AMD\_HSA\_BITS\_CREATE\_ENUM\_ENTRIES@{AMD\_HSA\_BITS\_CREATE\_ENUM\_ENTRIES}!amd\_hsa\_kernel\_code.h@{amd\_hsa\_kernel\_code.h}}\index{amd\_hsa\_kernel\_code.h@{amd\_hsa\_kernel\_code.h}!AMD\_HSA\_BITS\_CREATE\_ENUM\_ENTRIES@{AMD\_HSA\_BITS\_CREATE\_ENUM\_ENTRIES}}}\mbox{\Hypertarget{inc_2amd__hsa__kernel__code_8h_adf50d36c4a2d44c32c92373bd7f6b19dad7372416dbaca5a3e1080a791527efc3}\label{inc_2amd__hsa__kernel__code_8h_adf50d36c4a2d44c32c92373bd7f6b19dad7372416dbaca5a3e1080a791527efc3}} 
+AMD\+\_\+\+HSA\+\_\+\+BITS\+\_\+\+CREATE\+\_\+\+ENUM\+\_\+\+ENTRIES&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{AMD\_HSA\_BITS\_CREATE\_ENUM\_ENTRIES@{AMD\_HSA\_BITS\_CREATE\_ENUM\_ENTRIES}!amd\_hsa\_kernel\_code.h@{amd\_hsa\_kernel\_code.h}}\index{amd\_hsa\_kernel\_code.h@{amd\_hsa\_kernel\_code.h}!AMD\_HSA\_BITS\_CREATE\_ENUM\_ENTRIES@{AMD\_HSA\_BITS\_CREATE\_ENUM\_ENTRIES}}}\mbox{\Hypertarget{inc_2amd__hsa__kernel__code_8h_adf50d36c4a2d44c32c92373bd7f6b19dad7372416dbaca5a3e1080a791527efc3}\label{inc_2amd__hsa__kernel__code_8h_adf50d36c4a2d44c32c92373bd7f6b19dad7372416dbaca5a3e1080a791527efc3}} 
+AMD\+\_\+\+HSA\+\_\+\+BITS\+\_\+\+CREATE\+\_\+\+ENUM\+\_\+\+ENTRIES&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{AMD\_HSA\_BITS\_CREATE\_ENUM\_ENTRIES@{AMD\_HSA\_BITS\_CREATE\_ENUM\_ENTRIES}!amd\_hsa\_kernel\_code.h@{amd\_hsa\_kernel\_code.h}}\index{amd\_hsa\_kernel\_code.h@{amd\_hsa\_kernel\_code.h}!AMD\_HSA\_BITS\_CREATE\_ENUM\_ENTRIES@{AMD\_HSA\_BITS\_CREATE\_ENUM\_ENTRIES}}}\mbox{\Hypertarget{inc_2amd__hsa__kernel__code_8h_adf50d36c4a2d44c32c92373bd7f6b19dad7372416dbaca5a3e1080a791527efc3}\label{inc_2amd__hsa__kernel__code_8h_adf50d36c4a2d44c32c92373bd7f6b19dad7372416dbaca5a3e1080a791527efc3}} 
+AMD\+\_\+\+HSA\+\_\+\+BITS\+\_\+\+CREATE\+\_\+\+ENUM\+\_\+\+ENTRIES&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{AMD\_HSA\_BITS\_CREATE\_ENUM\_ENTRIES@{AMD\_HSA\_BITS\_CREATE\_ENUM\_ENTRIES}!amd\_hsa\_kernel\_code.h@{amd\_hsa\_kernel\_code.h}}\index{amd\_hsa\_kernel\_code.h@{amd\_hsa\_kernel\_code.h}!AMD\_HSA\_BITS\_CREATE\_ENUM\_ENTRIES@{AMD\_HSA\_BITS\_CREATE\_ENUM\_ENTRIES}}}\mbox{\Hypertarget{inc_2amd__hsa__kernel__code_8h_adf50d36c4a2d44c32c92373bd7f6b19dad7372416dbaca5a3e1080a791527efc3}\label{inc_2amd__hsa__kernel__code_8h_adf50d36c4a2d44c32c92373bd7f6b19dad7372416dbaca5a3e1080a791527efc3}} 
+AMD\+\_\+\+HSA\+\_\+\+BITS\+\_\+\+CREATE\+\_\+\+ENUM\+\_\+\+ENTRIES&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{AMD\_HSA\_BITS\_CREATE\_ENUM\_ENTRIES@{AMD\_HSA\_BITS\_CREATE\_ENUM\_ENTRIES}!amd\_hsa\_kernel\_code.h@{amd\_hsa\_kernel\_code.h}}\index{amd\_hsa\_kernel\_code.h@{amd\_hsa\_kernel\_code.h}!AMD\_HSA\_BITS\_CREATE\_ENUM\_ENTRIES@{AMD\_HSA\_BITS\_CREATE\_ENUM\_ENTRIES}}}\mbox{\Hypertarget{inc_2amd__hsa__kernel__code_8h_adf50d36c4a2d44c32c92373bd7f6b19dad7372416dbaca5a3e1080a791527efc3}\label{inc_2amd__hsa__kernel__code_8h_adf50d36c4a2d44c32c92373bd7f6b19dad7372416dbaca5a3e1080a791527efc3}} 
+AMD\+\_\+\+HSA\+\_\+\+BITS\+\_\+\+CREATE\+\_\+\+ENUM\+\_\+\+ENTRIES&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{AMD\_HSA\_BITS\_CREATE\_ENUM\_ENTRIES@{AMD\_HSA\_BITS\_CREATE\_ENUM\_ENTRIES}!amd\_hsa\_kernel\_code.h@{amd\_hsa\_kernel\_code.h}}\index{amd\_hsa\_kernel\_code.h@{amd\_hsa\_kernel\_code.h}!AMD\_HSA\_BITS\_CREATE\_ENUM\_ENTRIES@{AMD\_HSA\_BITS\_CREATE\_ENUM\_ENTRIES}}}\mbox{\Hypertarget{inc_2amd__hsa__kernel__code_8h_adf50d36c4a2d44c32c92373bd7f6b19dad7372416dbaca5a3e1080a791527efc3}\label{inc_2amd__hsa__kernel__code_8h_adf50d36c4a2d44c32c92373bd7f6b19dad7372416dbaca5a3e1080a791527efc3}} 
+AMD\+\_\+\+HSA\+\_\+\+BITS\+\_\+\+CREATE\+\_\+\+ENUM\+\_\+\+ENTRIES&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{AMD\_HSA\_BITS\_CREATE\_ENUM\_ENTRIES@{AMD\_HSA\_BITS\_CREATE\_ENUM\_ENTRIES}!amd\_hsa\_kernel\_code.h@{amd\_hsa\_kernel\_code.h}}\index{amd\_hsa\_kernel\_code.h@{amd\_hsa\_kernel\_code.h}!AMD\_HSA\_BITS\_CREATE\_ENUM\_ENTRIES@{AMD\_HSA\_BITS\_CREATE\_ENUM\_ENTRIES}}}\mbox{\Hypertarget{inc_2amd__hsa__kernel__code_8h_adf50d36c4a2d44c32c92373bd7f6b19dad7372416dbaca5a3e1080a791527efc3}\label{inc_2amd__hsa__kernel__code_8h_adf50d36c4a2d44c32c92373bd7f6b19dad7372416dbaca5a3e1080a791527efc3}} 
+AMD\+\_\+\+HSA\+\_\+\+BITS\+\_\+\+CREATE\+\_\+\+ENUM\+\_\+\+ENTRIES&\\
+\hline
+
+\end{DoxyEnumFields}
+\mbox{\Hypertarget{inc_2amd__hsa__kernel__code_8h_ab5c8e8eb28e89f87bd5c6bbee5a03456}\label{inc_2amd__hsa__kernel__code_8h_ab5c8e8eb28e89f87bd5c6bbee5a03456}} 
+\index{amd\_hsa\_kernel\_code.h@{amd\_hsa\_kernel\_code.h}!amd\_kernel\_code\_version\_t@{amd\_kernel\_code\_version\_t}}
+\index{amd\_kernel\_code\_version\_t@{amd\_kernel\_code\_version\_t}!amd\_hsa\_kernel\_code.h@{amd\_hsa\_kernel\_code.h}}
+\doxysubsubsection{\texorpdfstring{amd\_kernel\_code\_version\_t}{amd\_kernel\_code\_version\_t}}
+{\footnotesize\ttfamily enum \mbox{\hyperlink{inc_2amd__hsa__kernel__code_8h_ab5c8e8eb28e89f87bd5c6bbee5a03456}{amd\+\_\+kernel\+\_\+code\+\_\+version\+\_\+t}}}
+
+\begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{AMD\_KERNEL\_CODE\_VERSION\_MAJOR@{AMD\_KERNEL\_CODE\_VERSION\_MAJOR}!amd\_hsa\_kernel\_code.h@{amd\_hsa\_kernel\_code.h}}\index{amd\_hsa\_kernel\_code.h@{amd\_hsa\_kernel\_code.h}!AMD\_KERNEL\_CODE\_VERSION\_MAJOR@{AMD\_KERNEL\_CODE\_VERSION\_MAJOR}}}\mbox{\Hypertarget{inc_2amd__hsa__kernel__code_8h_ab5c8e8eb28e89f87bd5c6bbee5a03456a40fc0dbcd05e303b80b4b7c85ab032a9}\label{inc_2amd__hsa__kernel__code_8h_ab5c8e8eb28e89f87bd5c6bbee5a03456a40fc0dbcd05e303b80b4b7c85ab032a9}} 
+AMD\+\_\+\+KERNEL\+\_\+\+CODE\+\_\+\+VERSION\+\_\+\+MAJOR&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{AMD\_KERNEL\_CODE\_VERSION\_MINOR@{AMD\_KERNEL\_CODE\_VERSION\_MINOR}!amd\_hsa\_kernel\_code.h@{amd\_hsa\_kernel\_code.h}}\index{amd\_hsa\_kernel\_code.h@{amd\_hsa\_kernel\_code.h}!AMD\_KERNEL\_CODE\_VERSION\_MINOR@{AMD\_KERNEL\_CODE\_VERSION\_MINOR}}}\mbox{\Hypertarget{inc_2amd__hsa__kernel__code_8h_ab5c8e8eb28e89f87bd5c6bbee5a03456ac1c7c6a570d958e419f07d7bbde92206}\label{inc_2amd__hsa__kernel__code_8h_ab5c8e8eb28e89f87bd5c6bbee5a03456ac1c7c6a570d958e419f07d7bbde92206}} 
+AMD\+\_\+\+KERNEL\+\_\+\+CODE\+\_\+\+VERSION\+\_\+\+MINOR&\\
+\hline
+
+\end{DoxyEnumFields}
+\mbox{\Hypertarget{inc_2amd__hsa__kernel__code_8h_a9cd58a03906620f349e31fbb4d97bce8}\label{inc_2amd__hsa__kernel__code_8h_a9cd58a03906620f349e31fbb4d97bce8}} 
+\index{amd\_hsa\_kernel\_code.h@{amd\_hsa\_kernel\_code.h}!amd\_machine\_kind\_t@{amd\_machine\_kind\_t}}
+\index{amd\_machine\_kind\_t@{amd\_machine\_kind\_t}!amd\_hsa\_kernel\_code.h@{amd\_hsa\_kernel\_code.h}}
+\doxysubsubsection{\texorpdfstring{amd\_machine\_kind\_t}{amd\_machine\_kind\_t}}
+{\footnotesize\ttfamily enum \mbox{\hyperlink{inc_2amd__hsa__kernel__code_8h_a9cd58a03906620f349e31fbb4d97bce8}{amd\+\_\+machine\+\_\+kind\+\_\+t}}}
+
+\begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{AMD\_MACHINE\_KIND\_UNDEFINED@{AMD\_MACHINE\_KIND\_UNDEFINED}!amd\_hsa\_kernel\_code.h@{amd\_hsa\_kernel\_code.h}}\index{amd\_hsa\_kernel\_code.h@{amd\_hsa\_kernel\_code.h}!AMD\_MACHINE\_KIND\_UNDEFINED@{AMD\_MACHINE\_KIND\_UNDEFINED}}}\mbox{\Hypertarget{inc_2amd__hsa__kernel__code_8h_a9cd58a03906620f349e31fbb4d97bce8a85d659be3fb4d4ea158fe3e27fffd45b}\label{inc_2amd__hsa__kernel__code_8h_a9cd58a03906620f349e31fbb4d97bce8a85d659be3fb4d4ea158fe3e27fffd45b}} 
+AMD\+\_\+\+MACHINE\+\_\+\+KIND\+\_\+\+UNDEFINED&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{AMD\_MACHINE\_KIND\_AMDGPU@{AMD\_MACHINE\_KIND\_AMDGPU}!amd\_hsa\_kernel\_code.h@{amd\_hsa\_kernel\_code.h}}\index{amd\_hsa\_kernel\_code.h@{amd\_hsa\_kernel\_code.h}!AMD\_MACHINE\_KIND\_AMDGPU@{AMD\_MACHINE\_KIND\_AMDGPU}}}\mbox{\Hypertarget{inc_2amd__hsa__kernel__code_8h_a9cd58a03906620f349e31fbb4d97bce8a0db975c62313f4198f670d43e83e7747}\label{inc_2amd__hsa__kernel__code_8h_a9cd58a03906620f349e31fbb4d97bce8a0db975c62313f4198f670d43e83e7747}} 
+AMD\+\_\+\+MACHINE\+\_\+\+KIND\+\_\+\+AMDGPU&\\
+\hline
+
+\end{DoxyEnumFields}
+\mbox{\Hypertarget{inc_2amd__hsa__kernel__code_8h_a6c7bdc62744f0c9f79151bcd388ec204}\label{inc_2amd__hsa__kernel__code_8h_a6c7bdc62744f0c9f79151bcd388ec204}} 
+\index{amd\_hsa\_kernel\_code.h@{amd\_hsa\_kernel\_code.h}!amd\_powertwo\_t@{amd\_powertwo\_t}}
+\index{amd\_powertwo\_t@{amd\_powertwo\_t}!amd\_hsa\_kernel\_code.h@{amd\_hsa\_kernel\_code.h}}
+\doxysubsubsection{\texorpdfstring{amd\_powertwo\_t}{amd\_powertwo\_t}}
+{\footnotesize\ttfamily enum \mbox{\hyperlink{inc_2amd__hsa__kernel__code_8h_a6c7bdc62744f0c9f79151bcd388ec204}{amd\+\_\+powertwo\+\_\+t}}}
+
+\begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{AMD\_POWERTWO\_1@{AMD\_POWERTWO\_1}!amd\_hsa\_kernel\_code.h@{amd\_hsa\_kernel\_code.h}}\index{amd\_hsa\_kernel\_code.h@{amd\_hsa\_kernel\_code.h}!AMD\_POWERTWO\_1@{AMD\_POWERTWO\_1}}}\mbox{\Hypertarget{inc_2amd__hsa__kernel__code_8h_a6c7bdc62744f0c9f79151bcd388ec204a3faa30c8f6ab5c1160e7ac4f3bac7f54}\label{inc_2amd__hsa__kernel__code_8h_a6c7bdc62744f0c9f79151bcd388ec204a3faa30c8f6ab5c1160e7ac4f3bac7f54}} 
+AMD\+\_\+\+POWERTWO\+\_\+1&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{AMD\_POWERTWO\_2@{AMD\_POWERTWO\_2}!amd\_hsa\_kernel\_code.h@{amd\_hsa\_kernel\_code.h}}\index{amd\_hsa\_kernel\_code.h@{amd\_hsa\_kernel\_code.h}!AMD\_POWERTWO\_2@{AMD\_POWERTWO\_2}}}\mbox{\Hypertarget{inc_2amd__hsa__kernel__code_8h_a6c7bdc62744f0c9f79151bcd388ec204a13a3c7fd17d8b04b441aeb481b111cea}\label{inc_2amd__hsa__kernel__code_8h_a6c7bdc62744f0c9f79151bcd388ec204a13a3c7fd17d8b04b441aeb481b111cea}} 
+AMD\+\_\+\+POWERTWO\+\_\+2&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{AMD\_POWERTWO\_4@{AMD\_POWERTWO\_4}!amd\_hsa\_kernel\_code.h@{amd\_hsa\_kernel\_code.h}}\index{amd\_hsa\_kernel\_code.h@{amd\_hsa\_kernel\_code.h}!AMD\_POWERTWO\_4@{AMD\_POWERTWO\_4}}}\mbox{\Hypertarget{inc_2amd__hsa__kernel__code_8h_a6c7bdc62744f0c9f79151bcd388ec204a5bf541135bf2109cc39a850d241698ed}\label{inc_2amd__hsa__kernel__code_8h_a6c7bdc62744f0c9f79151bcd388ec204a5bf541135bf2109cc39a850d241698ed}} 
+AMD\+\_\+\+POWERTWO\+\_\+4&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{AMD\_POWERTWO\_8@{AMD\_POWERTWO\_8}!amd\_hsa\_kernel\_code.h@{amd\_hsa\_kernel\_code.h}}\index{amd\_hsa\_kernel\_code.h@{amd\_hsa\_kernel\_code.h}!AMD\_POWERTWO\_8@{AMD\_POWERTWO\_8}}}\mbox{\Hypertarget{inc_2amd__hsa__kernel__code_8h_a6c7bdc62744f0c9f79151bcd388ec204ae9e0a05d56253a4b4ca51339810153af}\label{inc_2amd__hsa__kernel__code_8h_a6c7bdc62744f0c9f79151bcd388ec204ae9e0a05d56253a4b4ca51339810153af}} 
+AMD\+\_\+\+POWERTWO\+\_\+8&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{AMD\_POWERTWO\_16@{AMD\_POWERTWO\_16}!amd\_hsa\_kernel\_code.h@{amd\_hsa\_kernel\_code.h}}\index{amd\_hsa\_kernel\_code.h@{amd\_hsa\_kernel\_code.h}!AMD\_POWERTWO\_16@{AMD\_POWERTWO\_16}}}\mbox{\Hypertarget{inc_2amd__hsa__kernel__code_8h_a6c7bdc62744f0c9f79151bcd388ec204aefa23776169077a985d197564dc99eb2}\label{inc_2amd__hsa__kernel__code_8h_a6c7bdc62744f0c9f79151bcd388ec204aefa23776169077a985d197564dc99eb2}} 
+AMD\+\_\+\+POWERTWO\+\_\+16&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{AMD\_POWERTWO\_32@{AMD\_POWERTWO\_32}!amd\_hsa\_kernel\_code.h@{amd\_hsa\_kernel\_code.h}}\index{amd\_hsa\_kernel\_code.h@{amd\_hsa\_kernel\_code.h}!AMD\_POWERTWO\_32@{AMD\_POWERTWO\_32}}}\mbox{\Hypertarget{inc_2amd__hsa__kernel__code_8h_a6c7bdc62744f0c9f79151bcd388ec204ac7a810efcfa74e45132cf35d9a4a6ecd}\label{inc_2amd__hsa__kernel__code_8h_a6c7bdc62744f0c9f79151bcd388ec204ac7a810efcfa74e45132cf35d9a4a6ecd}} 
+AMD\+\_\+\+POWERTWO\+\_\+32&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{AMD\_POWERTWO\_64@{AMD\_POWERTWO\_64}!amd\_hsa\_kernel\_code.h@{amd\_hsa\_kernel\_code.h}}\index{amd\_hsa\_kernel\_code.h@{amd\_hsa\_kernel\_code.h}!AMD\_POWERTWO\_64@{AMD\_POWERTWO\_64}}}\mbox{\Hypertarget{inc_2amd__hsa__kernel__code_8h_a6c7bdc62744f0c9f79151bcd388ec204af7dc1805405ead764e96add073826da2}\label{inc_2amd__hsa__kernel__code_8h_a6c7bdc62744f0c9f79151bcd388ec204af7dc1805405ead764e96add073826da2}} 
+AMD\+\_\+\+POWERTWO\+\_\+64&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{AMD\_POWERTWO\_128@{AMD\_POWERTWO\_128}!amd\_hsa\_kernel\_code.h@{amd\_hsa\_kernel\_code.h}}\index{amd\_hsa\_kernel\_code.h@{amd\_hsa\_kernel\_code.h}!AMD\_POWERTWO\_128@{AMD\_POWERTWO\_128}}}\mbox{\Hypertarget{inc_2amd__hsa__kernel__code_8h_a6c7bdc62744f0c9f79151bcd388ec204aed374cf74f7075f0b3b992dbfcdb41e5}\label{inc_2amd__hsa__kernel__code_8h_a6c7bdc62744f0c9f79151bcd388ec204aed374cf74f7075f0b3b992dbfcdb41e5}} 
+AMD\+\_\+\+POWERTWO\+\_\+128&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{AMD\_POWERTWO\_256@{AMD\_POWERTWO\_256}!amd\_hsa\_kernel\_code.h@{amd\_hsa\_kernel\_code.h}}\index{amd\_hsa\_kernel\_code.h@{amd\_hsa\_kernel\_code.h}!AMD\_POWERTWO\_256@{AMD\_POWERTWO\_256}}}\mbox{\Hypertarget{inc_2amd__hsa__kernel__code_8h_a6c7bdc62744f0c9f79151bcd388ec204a041bbab30f36d791083d3e5529856ec0}\label{inc_2amd__hsa__kernel__code_8h_a6c7bdc62744f0c9f79151bcd388ec204a041bbab30f36d791083d3e5529856ec0}} 
+AMD\+\_\+\+POWERTWO\+\_\+256&\\
+\hline
+
+\end{DoxyEnumFields}
+\mbox{\Hypertarget{inc_2amd__hsa__kernel__code_8h_a83d9b6f1908dfd5b808780992d5222cd}\label{inc_2amd__hsa__kernel__code_8h_a83d9b6f1908dfd5b808780992d5222cd}} 
+\index{amd\_hsa\_kernel\_code.h@{amd\_hsa\_kernel\_code.h}!amd\_system\_vgpr\_workitem\_id\_t@{amd\_system\_vgpr\_workitem\_id\_t}}
+\index{amd\_system\_vgpr\_workitem\_id\_t@{amd\_system\_vgpr\_workitem\_id\_t}!amd\_hsa\_kernel\_code.h@{amd\_hsa\_kernel\_code.h}}
+\doxysubsubsection{\texorpdfstring{amd\_system\_vgpr\_workitem\_id\_t}{amd\_system\_vgpr\_workitem\_id\_t}}
+{\footnotesize\ttfamily enum \mbox{\hyperlink{inc_2amd__hsa__kernel__code_8h_a83d9b6f1908dfd5b808780992d5222cd}{amd\+\_\+system\+\_\+vgpr\+\_\+workitem\+\_\+id\+\_\+t}}}
+
+\begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{AMD\_SYSTEM\_VGPR\_WORKITEM\_ID\_X@{AMD\_SYSTEM\_VGPR\_WORKITEM\_ID\_X}!amd\_hsa\_kernel\_code.h@{amd\_hsa\_kernel\_code.h}}\index{amd\_hsa\_kernel\_code.h@{amd\_hsa\_kernel\_code.h}!AMD\_SYSTEM\_VGPR\_WORKITEM\_ID\_X@{AMD\_SYSTEM\_VGPR\_WORKITEM\_ID\_X}}}\mbox{\Hypertarget{inc_2amd__hsa__kernel__code_8h_a83d9b6f1908dfd5b808780992d5222cda171dc3b10c97532c950c10e4dcb88e0b}\label{inc_2amd__hsa__kernel__code_8h_a83d9b6f1908dfd5b808780992d5222cda171dc3b10c97532c950c10e4dcb88e0b}} 
+AMD\+\_\+\+SYSTEM\+\_\+\+VGPR\+\_\+\+WORKITEM\+\_\+\+ID\+\_\+X&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{AMD\_SYSTEM\_VGPR\_WORKITEM\_ID\_X\_Y@{AMD\_SYSTEM\_VGPR\_WORKITEM\_ID\_X\_Y}!amd\_hsa\_kernel\_code.h@{amd\_hsa\_kernel\_code.h}}\index{amd\_hsa\_kernel\_code.h@{amd\_hsa\_kernel\_code.h}!AMD\_SYSTEM\_VGPR\_WORKITEM\_ID\_X\_Y@{AMD\_SYSTEM\_VGPR\_WORKITEM\_ID\_X\_Y}}}\mbox{\Hypertarget{inc_2amd__hsa__kernel__code_8h_a83d9b6f1908dfd5b808780992d5222cda907bb7b2adeff766f0b31d2f092b6355}\label{inc_2amd__hsa__kernel__code_8h_a83d9b6f1908dfd5b808780992d5222cda907bb7b2adeff766f0b31d2f092b6355}} 
+AMD\+\_\+\+SYSTEM\+\_\+\+VGPR\+\_\+\+WORKITEM\+\_\+\+ID\+\_\+\+X\+\_\+Y&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{AMD\_SYSTEM\_VGPR\_WORKITEM\_ID\_X\_Y\_Z@{AMD\_SYSTEM\_VGPR\_WORKITEM\_ID\_X\_Y\_Z}!amd\_hsa\_kernel\_code.h@{amd\_hsa\_kernel\_code.h}}\index{amd\_hsa\_kernel\_code.h@{amd\_hsa\_kernel\_code.h}!AMD\_SYSTEM\_VGPR\_WORKITEM\_ID\_X\_Y\_Z@{AMD\_SYSTEM\_VGPR\_WORKITEM\_ID\_X\_Y\_Z}}}\mbox{\Hypertarget{inc_2amd__hsa__kernel__code_8h_a83d9b6f1908dfd5b808780992d5222cdaf60802a396982b59d63b2ef2af5df62c}\label{inc_2amd__hsa__kernel__code_8h_a83d9b6f1908dfd5b808780992d5222cdaf60802a396982b59d63b2ef2af5df62c}} 
+AMD\+\_\+\+SYSTEM\+\_\+\+VGPR\+\_\+\+WORKITEM\+\_\+\+ID\+\_\+\+X\+\_\+\+Y\+\_\+Z&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{AMD\_SYSTEM\_VGPR\_WORKITEM\_ID\_UNDEFINED@{AMD\_SYSTEM\_VGPR\_WORKITEM\_ID\_UNDEFINED}!amd\_hsa\_kernel\_code.h@{amd\_hsa\_kernel\_code.h}}\index{amd\_hsa\_kernel\_code.h@{amd\_hsa\_kernel\_code.h}!AMD\_SYSTEM\_VGPR\_WORKITEM\_ID\_UNDEFINED@{AMD\_SYSTEM\_VGPR\_WORKITEM\_ID\_UNDEFINED}}}\mbox{\Hypertarget{inc_2amd__hsa__kernel__code_8h_a83d9b6f1908dfd5b808780992d5222cdafc176b82ed94d0939ca9f3c275f60917}\label{inc_2amd__hsa__kernel__code_8h_a83d9b6f1908dfd5b808780992d5222cdafc176b82ed94d0939ca9f3c275f60917}} 
+AMD\+\_\+\+SYSTEM\+\_\+\+VGPR\+\_\+\+WORKITEM\+\_\+\+ID\+\_\+\+UNDEFINED&\\
+\hline
+
+\end{DoxyEnumFields}

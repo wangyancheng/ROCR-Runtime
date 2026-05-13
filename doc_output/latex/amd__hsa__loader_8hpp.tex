@@ -1,0 +1,242 @@
+\hypertarget{amd__hsa__loader_8hpp}{}\doxysection{src/core/inc/amd\+\_\+hsa\+\_\+loader.hpp File Reference}
+\label{amd__hsa__loader_8hpp}\index{src/core/inc/amd\_hsa\_loader.hpp@{src/core/inc/amd\_hsa\_loader.hpp}}
+{\ttfamily \#include $<$cstddef$>$}\newline
+{\ttfamily \#include $<$cstdint$>$}\newline
+{\ttfamily \#include \char`\"{}inc/hsa.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}inc/hsa\+\_\+ext\+\_\+image.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}inc/hsa\+\_\+ven\+\_\+amd\+\_\+loader.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}inc/amd\+\_\+hsa\+\_\+elf.\+h\char`\"{}}\newline
+{\ttfamily \#include $<$string$>$}\newline
+{\ttfamily \#include $<$mutex$>$}\newline
+{\ttfamily \#include $<$vector$>$}\newline
+{\ttfamily \#include $<$unistd.\+h$>$}\newline
+Include dependency graph for amd\+\_\+hsa\+\_\+loader.\+hpp\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{amd__hsa__loader_8hpp__incl}
+\end{center}
+\end{figure}
+This graph shows which files directly or indirectly include this file\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{amd__hsa__loader_8hpp__dep__incl}
+\end{center}
+\end{figure}
+\doxysubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{structamd__loaded__segment__s}{amd\+\_\+loaded\+\_\+segment\+\_\+s}}
+\begin{DoxyCompactList}\small\item\em Loaded segment handle. \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{structrocr_1_1amd_1_1hsa_1_1loader_1_1CodeObjectReaderImpl}{rocr\+::amd\+::hsa\+::loader\+::\+Code\+Object\+Reader\+Impl}}
+\begin{DoxyCompactList}\small\item\em Code Object Reader Wrapper. \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{classrocr_1_1amd_1_1hsa_1_1loader_1_1Context}{rocr\+::amd\+::hsa\+::loader\+::\+Context}}
+\item 
+class \mbox{\hyperlink{classrocr_1_1amd_1_1hsa_1_1loader_1_1Symbol}{rocr\+::amd\+::hsa\+::loader\+::\+Symbol}}
+\item 
+class \mbox{\hyperlink{classrocr_1_1amd_1_1hsa_1_1loader_1_1LoadedCodeObject}{rocr\+::amd\+::hsa\+::loader\+::\+Loaded\+Code\+Object}}
+\item 
+class \mbox{\hyperlink{classrocr_1_1amd_1_1hsa_1_1loader_1_1LoadedSegment}{rocr\+::amd\+::hsa\+::loader\+::\+Loaded\+Segment}}
+\item 
+class \mbox{\hyperlink{classrocr_1_1amd_1_1hsa_1_1loader_1_1Executable}{rocr\+::amd\+::hsa\+::loader\+::\+Executable}}
+\item 
+class \mbox{\hyperlink{classrocr_1_1amd_1_1hsa_1_1loader_1_1Loader}{rocr\+::amd\+::hsa\+::loader\+::\+Loader}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Namespaces}
+\begin{DoxyCompactItemize}
+\item 
+ \mbox{\hyperlink{namespacerocr}{rocr}}
+\item 
+ \mbox{\hyperlink{namespacerocr_1_1amd}{rocr\+::amd}}
+\item 
+ \mbox{\hyperlink{namespacerocr_1_1amd_1_1hsa}{rocr\+::amd\+::hsa}}
+\item 
+ \mbox{\hyperlink{namespacerocr_1_1amd_1_1hsa_1_1loader}{rocr\+::amd\+::hsa\+::loader}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \mbox{\hyperlink{amd__hsa__loader_8hpp_ac9147c5895e92a57b1b6f5f8109504e4}{\+\_\+\+\_\+read\+\_\+\+\_\+}}~read
+\item 
+\#define \mbox{\hyperlink{amd__hsa__loader_8hpp_a1663fe46db346e951ae414531d986471}{\+\_\+\+\_\+lseek\+\_\+\+\_\+}}~lseek
+\item 
+\#define \mbox{\hyperlink{amd__hsa__loader_8hpp_a831798e8c93ff919e40958a6641fa93b}{AMD\+\_\+\+HSA\+\_\+\+LOADER\+\_\+\+VERSION\+\_\+\+MAJOR}}~0
+\begin{DoxyCompactList}\small\item\em Major version of the AMD HSA Loader. Major versions are not backwards compatible. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{amd__hsa__loader_8hpp_a69a9ec77f1358d49fdd2193398a85864}{AMD\+\_\+\+HSA\+\_\+\+LOADER\+\_\+\+VERSION\+\_\+\+MINOR}}~5
+\begin{DoxyCompactList}\small\item\em Minor version of the AMD HSA Loader. Minor versions are backwards compatible. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{amd__hsa__loader_8hpp_ab3abb5ec39922225eda2c24ecb021bd1}{AMD\+\_\+\+HSA\+\_\+\+LOADER\+\_\+\+VERSION}}~\char`\"{}AMD HSA Loader v0.\+05 (June 16, 2015)\char`\"{}
+\begin{DoxyCompactList}\small\item\em Descriptive version of the AMD HSA Loader. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+typedef uint32\+\_\+t \mbox{\hyperlink{amd__hsa__loader_8hpp_a18a41c944d447cda03a02f29bca53ffd}{hsa\+\_\+symbol\+\_\+info32\+\_\+t}}
+\item 
+typedef \mbox{\hyperlink{group__executable_gac6b342e0224ea2ddef549b3626e8ccc1}{hsa\+\_\+executable\+\_\+symbol\+\_\+t}} \mbox{\hyperlink{amd__hsa__loader_8hpp_a40d726b346cc8092c1e701a2b7c26d16}{hsa\+\_\+symbol\+\_\+t}}
+\item 
+typedef \mbox{\hyperlink{group__executable_ga27e2e3a930764e3e7385e1ceded09706}{hsa\+\_\+executable\+\_\+symbol\+\_\+info\+\_\+t}} \mbox{\hyperlink{amd__hsa__loader_8hpp_a40f0bf6b071fa668816cc43e89993697}{hsa\+\_\+symbol\+\_\+info\+\_\+t}}
+\item 
+typedef struct \mbox{\hyperlink{structamd__loaded__segment__s}{amd\+\_\+loaded\+\_\+segment\+\_\+s}} \mbox{\hyperlink{amd__hsa__loader_8hpp_a4a3397ff112a75c1fcfc2583f9f3f183}{amd\+\_\+loaded\+\_\+segment\+\_\+t}}
+\begin{DoxyCompactList}\small\item\em Loaded segment handle. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Enumerations}
+\begin{DoxyCompactItemize}
+\item 
+enum \mbox{\hyperlink{amd__hsa__loader_8hpp_a580815462a231e808421ace1f9214d51}{hsa\+\_\+ext\+\_\+symbol\+\_\+info\+\_\+t}} \{ \mbox{\hyperlink{amd__hsa__loader_8hpp_a580815462a231e808421ace1f9214d51a716967db2b42a7dbf7d936e6059e434e}{HSA\+\_\+\+EXT\+\_\+\+EXECUTABLE\+\_\+\+SYMBOL\+\_\+\+INFO\+\_\+\+KERNEL\+\_\+\+OBJECT\+\_\+\+SIZE}} = 100
+, \mbox{\hyperlink{amd__hsa__loader_8hpp_a580815462a231e808421ace1f9214d51a94e6a10795bfc7aefebd803a90949928}{HSA\+\_\+\+EXT\+\_\+\+EXECUTABLE\+\_\+\+SYMBOL\+\_\+\+INFO\+\_\+\+KERNEL\+\_\+\+OBJECT\+\_\+\+ALIGN}} = 101
+ \}
+\item 
+enum \mbox{\hyperlink{amd__hsa__loader_8hpp_a72c5d52e378a3a4fc7a8c38f164e7671}{amd\+\_\+loaded\+\_\+code\+\_\+object\+\_\+info\+\_\+t}} \{ \mbox{\hyperlink{amd__hsa__loader_8hpp_a72c5d52e378a3a4fc7a8c38f164e7671ab0b68ff7f6c66940d9b01ea91d89a3f0}{AMD\+\_\+\+LOADED\+\_\+\+CODE\+\_\+\+OBJECT\+\_\+\+INFO\+\_\+\+ELF\+\_\+\+IMAGE}} = 0
+, \mbox{\hyperlink{amd__hsa__loader_8hpp_a72c5d52e378a3a4fc7a8c38f164e7671acc8c786460165098871a54c41ff9fab2}{AMD\+\_\+\+LOADED\+\_\+\+CODE\+\_\+\+OBJECT\+\_\+\+INFO\+\_\+\+ELF\+\_\+\+IMAGE\+\_\+\+SIZE}} = 1
+ \}
+\begin{DoxyCompactList}\small\item\em Loaded code object attributes. \end{DoxyCompactList}\item 
+enum \mbox{\hyperlink{amd__hsa__loader_8hpp_afde334a235815f7c69b929ee29b68a05}{amd\+\_\+loaded\+\_\+segment\+\_\+info\+\_\+t}} \{ \mbox{\hyperlink{amd__hsa__loader_8hpp_afde334a235815f7c69b929ee29b68a05ae671444f652be5004129d724961c3542}{AMD\+\_\+\+LOADED\+\_\+\+SEGMENT\+\_\+\+INFO\+\_\+\+TYPE}} = 0
+, \mbox{\hyperlink{amd__hsa__loader_8hpp_afde334a235815f7c69b929ee29b68a05a07f54a2e9fa59aaeef149245de966cea}{AMD\+\_\+\+LOADED\+\_\+\+SEGMENT\+\_\+\+INFO\+\_\+\+ELF\+\_\+\+BASE\+\_\+\+ADDRESS}} = 1
+, \mbox{\hyperlink{amd__hsa__loader_8hpp_afde334a235815f7c69b929ee29b68a05a00b5ed85347e7652ad42f4c51a8c1f89}{AMD\+\_\+\+LOADED\+\_\+\+SEGMENT\+\_\+\+INFO\+\_\+\+LOAD\+\_\+\+BASE\+\_\+\+ADDRESS}} = 2
+, \mbox{\hyperlink{amd__hsa__loader_8hpp_afde334a235815f7c69b929ee29b68a05aee6c0c46cca288612c87964ee4474ff6}{AMD\+\_\+\+LOADED\+\_\+\+SEGMENT\+\_\+\+INFO\+\_\+\+SIZE}} = 3
+ \}
+\begin{DoxyCompactList}\small\item\em Loaded segment attributes. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Macro Definition Documentation}
+\mbox{\Hypertarget{amd__hsa__loader_8hpp_a1663fe46db346e951ae414531d986471}\label{amd__hsa__loader_8hpp_a1663fe46db346e951ae414531d986471}} 
+\index{amd\_hsa\_loader.hpp@{amd\_hsa\_loader.hpp}!\_\_lseek\_\_@{\_\_lseek\_\_}}
+\index{\_\_lseek\_\_@{\_\_lseek\_\_}!amd\_hsa\_loader.hpp@{amd\_hsa\_loader.hpp}}
+\doxysubsubsection{\texorpdfstring{\_\_lseek\_\_}{\_\_lseek\_\_}}
+{\footnotesize\ttfamily \#define \+\_\+\+\_\+lseek\+\_\+\+\_\+~lseek}
+
+\mbox{\Hypertarget{amd__hsa__loader_8hpp_ac9147c5895e92a57b1b6f5f8109504e4}\label{amd__hsa__loader_8hpp_ac9147c5895e92a57b1b6f5f8109504e4}} 
+\index{amd\_hsa\_loader.hpp@{amd\_hsa\_loader.hpp}!\_\_read\_\_@{\_\_read\_\_}}
+\index{\_\_read\_\_@{\_\_read\_\_}!amd\_hsa\_loader.hpp@{amd\_hsa\_loader.hpp}}
+\doxysubsubsection{\texorpdfstring{\_\_read\_\_}{\_\_read\_\_}}
+{\footnotesize\ttfamily \#define \+\_\+\+\_\+read\+\_\+\+\_\+~read}
+
+\mbox{\Hypertarget{amd__hsa__loader_8hpp_ab3abb5ec39922225eda2c24ecb021bd1}\label{amd__hsa__loader_8hpp_ab3abb5ec39922225eda2c24ecb021bd1}} 
+\index{amd\_hsa\_loader.hpp@{amd\_hsa\_loader.hpp}!AMD\_HSA\_LOADER\_VERSION@{AMD\_HSA\_LOADER\_VERSION}}
+\index{AMD\_HSA\_LOADER\_VERSION@{AMD\_HSA\_LOADER\_VERSION}!amd\_hsa\_loader.hpp@{amd\_hsa\_loader.hpp}}
+\doxysubsubsection{\texorpdfstring{AMD\_HSA\_LOADER\_VERSION}{AMD\_HSA\_LOADER\_VERSION}}
+{\footnotesize\ttfamily \#define AMD\+\_\+\+HSA\+\_\+\+LOADER\+\_\+\+VERSION~\char`\"{}AMD HSA Loader v0.\+05 (June 16, 2015)\char`\"{}}
+
+
+
+Descriptive version of the AMD HSA Loader. 
+
+\mbox{\Hypertarget{amd__hsa__loader_8hpp_a831798e8c93ff919e40958a6641fa93b}\label{amd__hsa__loader_8hpp_a831798e8c93ff919e40958a6641fa93b}} 
+\index{amd\_hsa\_loader.hpp@{amd\_hsa\_loader.hpp}!AMD\_HSA\_LOADER\_VERSION\_MAJOR@{AMD\_HSA\_LOADER\_VERSION\_MAJOR}}
+\index{AMD\_HSA\_LOADER\_VERSION\_MAJOR@{AMD\_HSA\_LOADER\_VERSION\_MAJOR}!amd\_hsa\_loader.hpp@{amd\_hsa\_loader.hpp}}
+\doxysubsubsection{\texorpdfstring{AMD\_HSA\_LOADER\_VERSION\_MAJOR}{AMD\_HSA\_LOADER\_VERSION\_MAJOR}}
+{\footnotesize\ttfamily \#define AMD\+\_\+\+HSA\+\_\+\+LOADER\+\_\+\+VERSION\+\_\+\+MAJOR~0}
+
+
+
+Major version of the AMD HSA Loader. Major versions are not backwards compatible. 
+
+\mbox{\Hypertarget{amd__hsa__loader_8hpp_a69a9ec77f1358d49fdd2193398a85864}\label{amd__hsa__loader_8hpp_a69a9ec77f1358d49fdd2193398a85864}} 
+\index{amd\_hsa\_loader.hpp@{amd\_hsa\_loader.hpp}!AMD\_HSA\_LOADER\_VERSION\_MINOR@{AMD\_HSA\_LOADER\_VERSION\_MINOR}}
+\index{AMD\_HSA\_LOADER\_VERSION\_MINOR@{AMD\_HSA\_LOADER\_VERSION\_MINOR}!amd\_hsa\_loader.hpp@{amd\_hsa\_loader.hpp}}
+\doxysubsubsection{\texorpdfstring{AMD\_HSA\_LOADER\_VERSION\_MINOR}{AMD\_HSA\_LOADER\_VERSION\_MINOR}}
+{\footnotesize\ttfamily \#define AMD\+\_\+\+HSA\+\_\+\+LOADER\+\_\+\+VERSION\+\_\+\+MINOR~5}
+
+
+
+Minor version of the AMD HSA Loader. Minor versions are backwards compatible. 
+
+
+
+\doxysubsection{Typedef Documentation}
+\mbox{\Hypertarget{amd__hsa__loader_8hpp_a4a3397ff112a75c1fcfc2583f9f3f183}\label{amd__hsa__loader_8hpp_a4a3397ff112a75c1fcfc2583f9f3f183}} 
+\index{amd\_hsa\_loader.hpp@{amd\_hsa\_loader.hpp}!amd\_loaded\_segment\_t@{amd\_loaded\_segment\_t}}
+\index{amd\_loaded\_segment\_t@{amd\_loaded\_segment\_t}!amd\_hsa\_loader.hpp@{amd\_hsa\_loader.hpp}}
+\doxysubsubsection{\texorpdfstring{amd\_loaded\_segment\_t}{amd\_loaded\_segment\_t}}
+{\footnotesize\ttfamily typedef struct \mbox{\hyperlink{structamd__loaded__segment__s}{amd\+\_\+loaded\+\_\+segment\+\_\+s}} \mbox{\hyperlink{amd__hsa__loader_8hpp_a4a3397ff112a75c1fcfc2583f9f3f183}{amd\+\_\+loaded\+\_\+segment\+\_\+t}}}
+
+
+
+Loaded segment handle. 
+
+\mbox{\Hypertarget{amd__hsa__loader_8hpp_a18a41c944d447cda03a02f29bca53ffd}\label{amd__hsa__loader_8hpp_a18a41c944d447cda03a02f29bca53ffd}} 
+\index{amd\_hsa\_loader.hpp@{amd\_hsa\_loader.hpp}!hsa\_symbol\_info32\_t@{hsa\_symbol\_info32\_t}}
+\index{hsa\_symbol\_info32\_t@{hsa\_symbol\_info32\_t}!amd\_hsa\_loader.hpp@{amd\_hsa\_loader.hpp}}
+\doxysubsubsection{\texorpdfstring{hsa\_symbol\_info32\_t}{hsa\_symbol\_info32\_t}}
+{\footnotesize\ttfamily typedef uint32\+\_\+t \mbox{\hyperlink{amd__hsa__loader_8hpp_a18a41c944d447cda03a02f29bca53ffd}{hsa\+\_\+symbol\+\_\+info32\+\_\+t}}}
+
+\mbox{\Hypertarget{amd__hsa__loader_8hpp_a40f0bf6b071fa668816cc43e89993697}\label{amd__hsa__loader_8hpp_a40f0bf6b071fa668816cc43e89993697}} 
+\index{amd\_hsa\_loader.hpp@{amd\_hsa\_loader.hpp}!hsa\_symbol\_info\_t@{hsa\_symbol\_info\_t}}
+\index{hsa\_symbol\_info\_t@{hsa\_symbol\_info\_t}!amd\_hsa\_loader.hpp@{amd\_hsa\_loader.hpp}}
+\doxysubsubsection{\texorpdfstring{hsa\_symbol\_info\_t}{hsa\_symbol\_info\_t}}
+{\footnotesize\ttfamily typedef \mbox{\hyperlink{group__executable_ga27e2e3a930764e3e7385e1ceded09706}{hsa\+\_\+executable\+\_\+symbol\+\_\+info\+\_\+t}} \mbox{\hyperlink{group__executable_ga27e2e3a930764e3e7385e1ceded09706}{hsa\+\_\+symbol\+\_\+info\+\_\+t}}}
+
+\mbox{\Hypertarget{amd__hsa__loader_8hpp_a40d726b346cc8092c1e701a2b7c26d16}\label{amd__hsa__loader_8hpp_a40d726b346cc8092c1e701a2b7c26d16}} 
+\index{amd\_hsa\_loader.hpp@{amd\_hsa\_loader.hpp}!hsa\_symbol\_t@{hsa\_symbol\_t}}
+\index{hsa\_symbol\_t@{hsa\_symbol\_t}!amd\_hsa\_loader.hpp@{amd\_hsa\_loader.hpp}}
+\doxysubsubsection{\texorpdfstring{hsa\_symbol\_t}{hsa\_symbol\_t}}
+{\footnotesize\ttfamily typedef \mbox{\hyperlink{group__executable_gac6b342e0224ea2ddef549b3626e8ccc1}{hsa\+\_\+executable\+\_\+symbol\+\_\+t}} \mbox{\hyperlink{amd__hsa__loader_8hpp_a40d726b346cc8092c1e701a2b7c26d16}{hsa\+\_\+symbol\+\_\+t}}}
+
+
+
+\doxysubsection{Enumeration Type Documentation}
+\mbox{\Hypertarget{amd__hsa__loader_8hpp_a72c5d52e378a3a4fc7a8c38f164e7671}\label{amd__hsa__loader_8hpp_a72c5d52e378a3a4fc7a8c38f164e7671}} 
+\index{amd\_hsa\_loader.hpp@{amd\_hsa\_loader.hpp}!amd\_loaded\_code\_object\_info\_t@{amd\_loaded\_code\_object\_info\_t}}
+\index{amd\_loaded\_code\_object\_info\_t@{amd\_loaded\_code\_object\_info\_t}!amd\_hsa\_loader.hpp@{amd\_hsa\_loader.hpp}}
+\doxysubsubsection{\texorpdfstring{amd\_loaded\_code\_object\_info\_t}{amd\_loaded\_code\_object\_info\_t}}
+{\footnotesize\ttfamily enum \mbox{\hyperlink{amd__hsa__loader_8hpp_a72c5d52e378a3a4fc7a8c38f164e7671}{amd\+\_\+loaded\+\_\+code\+\_\+object\+\_\+info\+\_\+t}}}
+
+
+
+Loaded code object attributes. 
+
+\begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{AMD\_LOADED\_CODE\_OBJECT\_INFO\_ELF\_IMAGE@{AMD\_LOADED\_CODE\_OBJECT\_INFO\_ELF\_IMAGE}!amd\_hsa\_loader.hpp@{amd\_hsa\_loader.hpp}}\index{amd\_hsa\_loader.hpp@{amd\_hsa\_loader.hpp}!AMD\_LOADED\_CODE\_OBJECT\_INFO\_ELF\_IMAGE@{AMD\_LOADED\_CODE\_OBJECT\_INFO\_ELF\_IMAGE}}}\mbox{\Hypertarget{amd__hsa__loader_8hpp_a72c5d52e378a3a4fc7a8c38f164e7671ab0b68ff7f6c66940d9b01ea91d89a3f0}\label{amd__hsa__loader_8hpp_a72c5d52e378a3a4fc7a8c38f164e7671ab0b68ff7f6c66940d9b01ea91d89a3f0}} 
+AMD\+\_\+\+LOADED\+\_\+\+CODE\+\_\+\+OBJECT\+\_\+\+INFO\+\_\+\+ELF\+\_\+\+IMAGE&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{AMD\_LOADED\_CODE\_OBJECT\_INFO\_ELF\_IMAGE\_SIZE@{AMD\_LOADED\_CODE\_OBJECT\_INFO\_ELF\_IMAGE\_SIZE}!amd\_hsa\_loader.hpp@{amd\_hsa\_loader.hpp}}\index{amd\_hsa\_loader.hpp@{amd\_hsa\_loader.hpp}!AMD\_LOADED\_CODE\_OBJECT\_INFO\_ELF\_IMAGE\_SIZE@{AMD\_LOADED\_CODE\_OBJECT\_INFO\_ELF\_IMAGE\_SIZE}}}\mbox{\Hypertarget{amd__hsa__loader_8hpp_a72c5d52e378a3a4fc7a8c38f164e7671acc8c786460165098871a54c41ff9fab2}\label{amd__hsa__loader_8hpp_a72c5d52e378a3a4fc7a8c38f164e7671acc8c786460165098871a54c41ff9fab2}} 
+AMD\+\_\+\+LOADED\+\_\+\+CODE\+\_\+\+OBJECT\+\_\+\+INFO\+\_\+\+ELF\+\_\+\+IMAGE\+\_\+\+SIZE&\\
+\hline
+
+\end{DoxyEnumFields}
+\mbox{\Hypertarget{amd__hsa__loader_8hpp_afde334a235815f7c69b929ee29b68a05}\label{amd__hsa__loader_8hpp_afde334a235815f7c69b929ee29b68a05}} 
+\index{amd\_hsa\_loader.hpp@{amd\_hsa\_loader.hpp}!amd\_loaded\_segment\_info\_t@{amd\_loaded\_segment\_info\_t}}
+\index{amd\_loaded\_segment\_info\_t@{amd\_loaded\_segment\_info\_t}!amd\_hsa\_loader.hpp@{amd\_hsa\_loader.hpp}}
+\doxysubsubsection{\texorpdfstring{amd\_loaded\_segment\_info\_t}{amd\_loaded\_segment\_info\_t}}
+{\footnotesize\ttfamily enum \mbox{\hyperlink{amd__hsa__loader_8hpp_afde334a235815f7c69b929ee29b68a05}{amd\+\_\+loaded\+\_\+segment\+\_\+info\+\_\+t}}}
+
+
+
+Loaded segment attributes. 
+
+\begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{AMD\_LOADED\_SEGMENT\_INFO\_TYPE@{AMD\_LOADED\_SEGMENT\_INFO\_TYPE}!amd\_hsa\_loader.hpp@{amd\_hsa\_loader.hpp}}\index{amd\_hsa\_loader.hpp@{amd\_hsa\_loader.hpp}!AMD\_LOADED\_SEGMENT\_INFO\_TYPE@{AMD\_LOADED\_SEGMENT\_INFO\_TYPE}}}\mbox{\Hypertarget{amd__hsa__loader_8hpp_afde334a235815f7c69b929ee29b68a05ae671444f652be5004129d724961c3542}\label{amd__hsa__loader_8hpp_afde334a235815f7c69b929ee29b68a05ae671444f652be5004129d724961c3542}} 
+AMD\+\_\+\+LOADED\+\_\+\+SEGMENT\+\_\+\+INFO\+\_\+\+TYPE&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{AMD\_LOADED\_SEGMENT\_INFO\_ELF\_BASE\_ADDRESS@{AMD\_LOADED\_SEGMENT\_INFO\_ELF\_BASE\_ADDRESS}!amd\_hsa\_loader.hpp@{amd\_hsa\_loader.hpp}}\index{amd\_hsa\_loader.hpp@{amd\_hsa\_loader.hpp}!AMD\_LOADED\_SEGMENT\_INFO\_ELF\_BASE\_ADDRESS@{AMD\_LOADED\_SEGMENT\_INFO\_ELF\_BASE\_ADDRESS}}}\mbox{\Hypertarget{amd__hsa__loader_8hpp_afde334a235815f7c69b929ee29b68a05a07f54a2e9fa59aaeef149245de966cea}\label{amd__hsa__loader_8hpp_afde334a235815f7c69b929ee29b68a05a07f54a2e9fa59aaeef149245de966cea}} 
+AMD\+\_\+\+LOADED\+\_\+\+SEGMENT\+\_\+\+INFO\+\_\+\+ELF\+\_\+\+BASE\+\_\+\+ADDRESS&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{AMD\_LOADED\_SEGMENT\_INFO\_LOAD\_BASE\_ADDRESS@{AMD\_LOADED\_SEGMENT\_INFO\_LOAD\_BASE\_ADDRESS}!amd\_hsa\_loader.hpp@{amd\_hsa\_loader.hpp}}\index{amd\_hsa\_loader.hpp@{amd\_hsa\_loader.hpp}!AMD\_LOADED\_SEGMENT\_INFO\_LOAD\_BASE\_ADDRESS@{AMD\_LOADED\_SEGMENT\_INFO\_LOAD\_BASE\_ADDRESS}}}\mbox{\Hypertarget{amd__hsa__loader_8hpp_afde334a235815f7c69b929ee29b68a05a00b5ed85347e7652ad42f4c51a8c1f89}\label{amd__hsa__loader_8hpp_afde334a235815f7c69b929ee29b68a05a00b5ed85347e7652ad42f4c51a8c1f89}} 
+AMD\+\_\+\+LOADED\+\_\+\+SEGMENT\+\_\+\+INFO\+\_\+\+LOAD\+\_\+\+BASE\+\_\+\+ADDRESS&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{AMD\_LOADED\_SEGMENT\_INFO\_SIZE@{AMD\_LOADED\_SEGMENT\_INFO\_SIZE}!amd\_hsa\_loader.hpp@{amd\_hsa\_loader.hpp}}\index{amd\_hsa\_loader.hpp@{amd\_hsa\_loader.hpp}!AMD\_LOADED\_SEGMENT\_INFO\_SIZE@{AMD\_LOADED\_SEGMENT\_INFO\_SIZE}}}\mbox{\Hypertarget{amd__hsa__loader_8hpp_afde334a235815f7c69b929ee29b68a05aee6c0c46cca288612c87964ee4474ff6}\label{amd__hsa__loader_8hpp_afde334a235815f7c69b929ee29b68a05aee6c0c46cca288612c87964ee4474ff6}} 
+AMD\+\_\+\+LOADED\+\_\+\+SEGMENT\+\_\+\+INFO\+\_\+\+SIZE&\\
+\hline
+
+\end{DoxyEnumFields}
+\mbox{\Hypertarget{amd__hsa__loader_8hpp_a580815462a231e808421ace1f9214d51}\label{amd__hsa__loader_8hpp_a580815462a231e808421ace1f9214d51}} 
+\index{amd\_hsa\_loader.hpp@{amd\_hsa\_loader.hpp}!hsa\_ext\_symbol\_info\_t@{hsa\_ext\_symbol\_info\_t}}
+\index{hsa\_ext\_symbol\_info\_t@{hsa\_ext\_symbol\_info\_t}!amd\_hsa\_loader.hpp@{amd\_hsa\_loader.hpp}}
+\doxysubsubsection{\texorpdfstring{hsa\_ext\_symbol\_info\_t}{hsa\_ext\_symbol\_info\_t}}
+{\footnotesize\ttfamily enum \mbox{\hyperlink{amd__hsa__loader_8hpp_a580815462a231e808421ace1f9214d51}{hsa\+\_\+ext\+\_\+symbol\+\_\+info\+\_\+t}}}
+
+\begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{HSA\_EXT\_EXECUTABLE\_SYMBOL\_INFO\_KERNEL\_OBJECT\_SIZE@{HSA\_EXT\_EXECUTABLE\_SYMBOL\_INFO\_KERNEL\_OBJECT\_SIZE}!amd\_hsa\_loader.hpp@{amd\_hsa\_loader.hpp}}\index{amd\_hsa\_loader.hpp@{amd\_hsa\_loader.hpp}!HSA\_EXT\_EXECUTABLE\_SYMBOL\_INFO\_KERNEL\_OBJECT\_SIZE@{HSA\_EXT\_EXECUTABLE\_SYMBOL\_INFO\_KERNEL\_OBJECT\_SIZE}}}\mbox{\Hypertarget{amd__hsa__loader_8hpp_a580815462a231e808421ace1f9214d51a716967db2b42a7dbf7d936e6059e434e}\label{amd__hsa__loader_8hpp_a580815462a231e808421ace1f9214d51a716967db2b42a7dbf7d936e6059e434e}} 
+HSA\+\_\+\+EXT\+\_\+\+EXECUTABLE\+\_\+\+SYMBOL\+\_\+\+INFO\+\_\+\+KERNEL\+\_\+\+OBJECT\+\_\+\+SIZE&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{HSA\_EXT\_EXECUTABLE\_SYMBOL\_INFO\_KERNEL\_OBJECT\_ALIGN@{HSA\_EXT\_EXECUTABLE\_SYMBOL\_INFO\_KERNEL\_OBJECT\_ALIGN}!amd\_hsa\_loader.hpp@{amd\_hsa\_loader.hpp}}\index{amd\_hsa\_loader.hpp@{amd\_hsa\_loader.hpp}!HSA\_EXT\_EXECUTABLE\_SYMBOL\_INFO\_KERNEL\_OBJECT\_ALIGN@{HSA\_EXT\_EXECUTABLE\_SYMBOL\_INFO\_KERNEL\_OBJECT\_ALIGN}}}\mbox{\Hypertarget{amd__hsa__loader_8hpp_a580815462a231e808421ace1f9214d51a94e6a10795bfc7aefebd803a90949928}\label{amd__hsa__loader_8hpp_a580815462a231e808421ace1f9214d51a94e6a10795bfc7aefebd803a90949928}} 
+HSA\+\_\+\+EXT\+\_\+\+EXECUTABLE\+\_\+\+SYMBOL\+\_\+\+INFO\+\_\+\+KERNEL\+\_\+\+OBJECT\+\_\+\+ALIGN&\\
+\hline
+
+\end{DoxyEnumFields}

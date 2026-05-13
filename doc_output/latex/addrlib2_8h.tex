@@ -1,0 +1,187 @@
+\hypertarget{addrlib2_8h}{}\doxysection{src/image/addrlib/src/core/addrlib2.h File Reference}
+\label{addrlib2_8h}\index{src/image/addrlib/src/core/addrlib2.h@{src/image/addrlib/src/core/addrlib2.h}}
+
+
+Contains the Addr\+::\+V2\+::\+Lib class definition.  
+
+
+{\ttfamily \#include \char`\"{}addrlib.\+h\char`\"{}}\newline
+Include dependency graph for addrlib2.\+h\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{addrlib2_8h__incl}
+\end{center}
+\end{figure}
+This graph shows which files directly or indirectly include this file\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{addrlib2_8h__dep__incl}
+\end{center}
+\end{figure}
+\doxysubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+union \mbox{\hyperlink{unionrocr_1_1Addr_1_1V2_1_1SwizzleModeFlags}{rocr\+::\+Addr\+::\+V2\+::\+Swizzle\+Mode\+Flags}}
+\begin{DoxyCompactList}\small\item\em Flags for Swizzle\+Mode\+Table. \end{DoxyCompactList}\item 
+struct \mbox{\hyperlink{structrocr_1_1Addr_1_1V2_1_1Dim2d}{rocr\+::\+Addr\+::\+V2\+::\+Dim2d}}
+\item 
+struct \mbox{\hyperlink{structrocr_1_1Addr_1_1V2_1_1Dim3d}{rocr\+::\+Addr\+::\+V2\+::\+Dim3d}}
+\item 
+union \mbox{\hyperlink{unionrocr_1_1Addr_1_1V2_1_1ADDR__BIT__SETTING}{rocr\+::\+Addr\+::\+V2\+::\+ADDR\+\_\+\+BIT\+\_\+\+SETTING}}
+\begin{DoxyCompactList}\small\item\em Bit setting for swizzle pattern. \end{DoxyCompactList}\item 
+struct \mbox{\hyperlink{structrocr_1_1Addr_1_1V2_1_1ADDR__SW__PATINFO}{rocr\+::\+Addr\+::\+V2\+::\+ADDR\+\_\+\+SW\+\_\+\+PATINFO}}
+\begin{DoxyCompactList}\small\item\em Swizzle pattern information. \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{classrocr_1_1Addr_1_1V2_1_1Lib}{rocr\+::\+Addr\+::\+V2\+::\+Lib}}
+\begin{DoxyCompactList}\small\item\em This class contains asic independent address lib functionalities. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Namespaces}
+\begin{DoxyCompactItemize}
+\item 
+ \mbox{\hyperlink{namespacerocr}{rocr}}
+\item 
+ \mbox{\hyperlink{namespacerocr_1_1Addr}{rocr\+::\+Addr}}
+\item 
+ \mbox{\hyperlink{namespacerocr_1_1Addr_1_1V2}{rocr\+::\+Addr\+::\+V2}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \mbox{\hyperlink{addrlib2_8h_ab142265fae76da8b5f20dbbaa7e013b2}{Init\+Bit}}(c,  index)~(1ull $<$$<$ ((c $<$$<$ 4) + index))
+\begin{DoxyCompactList}\small\item\em Initialize bit setting value via a return value. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Enumerations}
+\begin{DoxyCompactItemize}
+\item 
+enum \mbox{\hyperlink{namespacerocr_1_1Addr_1_1V2_a31af19e5082f3bb6e7b74d1383cb748c}{rocr\+::\+Addr\+::\+V2\+::\+Addr\+Block\+Type}} \{ \newline
+\mbox{\hyperlink{namespacerocr_1_1Addr_1_1V2_a31af19e5082f3bb6e7b74d1383cb748ca9c6e03fac60c405ef05d3600f9e39361}{rocr\+::\+Addr\+::\+V2\+::\+Addr\+Block\+Linear}} = 0
+, \mbox{\hyperlink{namespacerocr_1_1Addr_1_1V2_a31af19e5082f3bb6e7b74d1383cb748cab2bd5120be06357ea70e2700aa93f5d9}{rocr\+::\+Addr\+::\+V2\+::\+Addr\+Block\+Micro}} = 1
+, \mbox{\hyperlink{namespacerocr_1_1Addr_1_1V2_a31af19e5082f3bb6e7b74d1383cb748ca0e196dc252b60d1ef95e48d43ee5c2dc}{rocr\+::\+Addr\+::\+V2\+::\+Addr\+Block\+Thin4\+KB}} = 2
+, \mbox{\hyperlink{namespacerocr_1_1Addr_1_1V2_a31af19e5082f3bb6e7b74d1383cb748cac3b342a4240b8103322ee9a0d3abf169}{rocr\+::\+Addr\+::\+V2\+::\+Addr\+Block\+Thick4\+KB}} = 3
+, \newline
+\mbox{\hyperlink{namespacerocr_1_1Addr_1_1V2_a31af19e5082f3bb6e7b74d1383cb748ca110180681a87ea27e619f6e7051c1e84}{rocr\+::\+Addr\+::\+V2\+::\+Addr\+Block\+Thin64\+KB}} = 4
+, \mbox{\hyperlink{namespacerocr_1_1Addr_1_1V2_a31af19e5082f3bb6e7b74d1383cb748caacd84d8454b308599866da58f7cf6688}{rocr\+::\+Addr\+::\+V2\+::\+Addr\+Block\+Thick64\+KB}} = 5
+, \mbox{\hyperlink{namespacerocr_1_1Addr_1_1V2_a31af19e5082f3bb6e7b74d1383cb748ca23125e860c41fbdd3dbe92fac694b13d}{rocr\+::\+Addr\+::\+V2\+::\+Addr\+Block\+Thin\+Var}} = 6
+, \mbox{\hyperlink{namespacerocr_1_1Addr_1_1V2_a31af19e5082f3bb6e7b74d1383cb748cab5b2387f0195f56e4b22568f4d209743}{rocr\+::\+Addr\+::\+V2\+::\+Addr\+Block\+Thick\+Var}} = 7
+, \newline
+\mbox{\hyperlink{namespacerocr_1_1Addr_1_1V2_a31af19e5082f3bb6e7b74d1383cb748caded433b8cc1dbfde939327d4ea919035}{rocr\+::\+Addr\+::\+V2\+::\+Addr\+Block\+Max\+Tiled\+Type}}
+, \mbox{\hyperlink{namespacerocr_1_1Addr_1_1V2_a31af19e5082f3bb6e7b74d1383cb748ca862fad5c475abdc5ce41490aa2ce255a}{rocr\+::\+Addr\+::\+V2\+::\+Addr\+Block\+Thin256\+KB}} = Addr\+Block\+Thin\+Var
+, \mbox{\hyperlink{namespacerocr_1_1Addr_1_1V2_a31af19e5082f3bb6e7b74d1383cb748cad4bf3d504fd7310f1accddcacbc56290}{rocr\+::\+Addr\+::\+V2\+::\+Addr\+Block\+Thick256\+KB}} = Addr\+Block\+Thick\+Var
+ \}
+\item 
+enum \mbox{\hyperlink{namespacerocr_1_1Addr_1_1V2_a453b784754184865edecc5ca9b79a466}{rocr\+::\+Addr\+::\+V2\+::\+Addr\+Sw\+Set}} \{ \newline
+\mbox{\hyperlink{namespacerocr_1_1Addr_1_1V2_a453b784754184865edecc5ca9b79a466ab680e1d0d7b810c7822bc2792d2b9a97}{rocr\+::\+Addr\+::\+V2\+::\+Addr\+Sw\+SetZ}} = 1 $<$$<$ ADDR\+\_\+\+SW\+\_\+Z
+, \mbox{\hyperlink{namespacerocr_1_1Addr_1_1V2_a453b784754184865edecc5ca9b79a466a1e293941883776c5ee24301b7e6f3b1f}{rocr\+::\+Addr\+::\+V2\+::\+Addr\+Sw\+SetS}} = 1 $<$$<$ ADDR\+\_\+\+SW\+\_\+S
+, \mbox{\hyperlink{namespacerocr_1_1Addr_1_1V2_a453b784754184865edecc5ca9b79a466a500de383e99c8fd64812147f696f00b9}{rocr\+::\+Addr\+::\+V2\+::\+Addr\+Sw\+SetD}} = 1 $<$$<$ ADDR\+\_\+\+SW\+\_\+D
+, \mbox{\hyperlink{namespacerocr_1_1Addr_1_1V2_a453b784754184865edecc5ca9b79a466ac911fb58c5ab166981aabeb2039e933b}{rocr\+::\+Addr\+::\+V2\+::\+Addr\+Sw\+SetR}} = 1 $<$$<$ ADDR\+\_\+\+SW\+\_\+R
+, \newline
+\mbox{\hyperlink{namespacerocr_1_1Addr_1_1V2_a453b784754184865edecc5ca9b79a466ae78c81b7297593e99a75d806a511e8d3}{rocr\+::\+Addr\+::\+V2\+::\+Addr\+Sw\+Set\+All}} = Addr\+Sw\+SetZ $\vert$ Addr\+Sw\+SetS $\vert$ Addr\+Sw\+SetD $\vert$ Addr\+Sw\+SetR
+ \}
+\end{DoxyCompactItemize}
+\doxysubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+const \mbox{\hyperlink{addrtypes_8h_af5a2be58a28390f9a494538f34054637}{UINT\+\_\+32}} \mbox{\hyperlink{namespacerocr_1_1Addr_1_1V2_ac24f734a863ce068be2733368127c6b4}{rocr\+::\+Addr\+::\+V2\+::\+Size256}} = 256u
+\item 
+const \mbox{\hyperlink{addrtypes_8h_af5a2be58a28390f9a494538f34054637}{UINT\+\_\+32}} \mbox{\hyperlink{namespacerocr_1_1Addr_1_1V2_a711248bfa7bdf43c2da7eaebdba2f849}{rocr\+::\+Addr\+::\+V2\+::\+Size4K}} = 4096u
+\item 
+const \mbox{\hyperlink{addrtypes_8h_af5a2be58a28390f9a494538f34054637}{UINT\+\_\+32}} \mbox{\hyperlink{namespacerocr_1_1Addr_1_1V2_a22d21034898f6ac197b466c351b6527a}{rocr\+::\+Addr\+::\+V2\+::\+Size64K}} = 65536u
+\item 
+const \mbox{\hyperlink{addrtypes_8h_af5a2be58a28390f9a494538f34054637}{UINT\+\_\+32}} \mbox{\hyperlink{namespacerocr_1_1Addr_1_1V2_a41939d8da2afdebb072727a1b2e7d341}{rocr\+::\+Addr\+::\+V2\+::\+Log2\+Size256}} = 8u
+\item 
+const \mbox{\hyperlink{addrtypes_8h_af5a2be58a28390f9a494538f34054637}{UINT\+\_\+32}} \mbox{\hyperlink{namespacerocr_1_1Addr_1_1V2_a1052488f5b5bacc62809f72d2df16492}{rocr\+::\+Addr\+::\+V2\+::\+Log2\+Size4K}} = 12u
+\item 
+const \mbox{\hyperlink{addrtypes_8h_af5a2be58a28390f9a494538f34054637}{UINT\+\_\+32}} \mbox{\hyperlink{namespacerocr_1_1Addr_1_1V2_af0e8cf7dfbc134416042c3b29bda8b89}{rocr\+::\+Addr\+::\+V2\+::\+Log2\+Size64K}} = 16u
+\item 
+const \mbox{\hyperlink{addrtypes_8h_ac4116bb9a5e80b5cb845d4f2674c160f}{UINT\+\_\+64}} \mbox{\hyperlink{namespacerocr_1_1Addr_1_1V2_a2fd3c4b4510a07492ee192c8ceb63802}{rocr\+::\+Addr\+::\+V2\+::\+X0}} = \mbox{\hyperlink{addrlib2_8h_ab142265fae76da8b5f20dbbaa7e013b2}{Init\+Bit}}(0, 0)
+\item 
+const \mbox{\hyperlink{addrtypes_8h_ac4116bb9a5e80b5cb845d4f2674c160f}{UINT\+\_\+64}} \mbox{\hyperlink{namespacerocr_1_1Addr_1_1V2_af37f7ae53db35fbf6c79eb034fd66516}{rocr\+::\+Addr\+::\+V2\+::\+X1}} = \mbox{\hyperlink{addrlib2_8h_ab142265fae76da8b5f20dbbaa7e013b2}{Init\+Bit}}(0, 1)
+\item 
+const \mbox{\hyperlink{addrtypes_8h_ac4116bb9a5e80b5cb845d4f2674c160f}{UINT\+\_\+64}} \mbox{\hyperlink{namespacerocr_1_1Addr_1_1V2_a7429d384582975746803f18c269e41f7}{rocr\+::\+Addr\+::\+V2\+::\+X2}} = \mbox{\hyperlink{addrlib2_8h_ab142265fae76da8b5f20dbbaa7e013b2}{Init\+Bit}}(0, 2)
+\item 
+const \mbox{\hyperlink{addrtypes_8h_ac4116bb9a5e80b5cb845d4f2674c160f}{UINT\+\_\+64}} \mbox{\hyperlink{namespacerocr_1_1Addr_1_1V2_a339ad720f7d4a25959270adad380ccc5}{rocr\+::\+Addr\+::\+V2\+::\+X3}} = \mbox{\hyperlink{addrlib2_8h_ab142265fae76da8b5f20dbbaa7e013b2}{Init\+Bit}}(0, 3)
+\item 
+const \mbox{\hyperlink{addrtypes_8h_ac4116bb9a5e80b5cb845d4f2674c160f}{UINT\+\_\+64}} \mbox{\hyperlink{namespacerocr_1_1Addr_1_1V2_ac7713994948a234a2253adbe6fcf344d}{rocr\+::\+Addr\+::\+V2\+::\+X4}} = \mbox{\hyperlink{addrlib2_8h_ab142265fae76da8b5f20dbbaa7e013b2}{Init\+Bit}}(0, 4)
+\item 
+const \mbox{\hyperlink{addrtypes_8h_ac4116bb9a5e80b5cb845d4f2674c160f}{UINT\+\_\+64}} \mbox{\hyperlink{namespacerocr_1_1Addr_1_1V2_a814b7033cf716da9a27ba2356faab550}{rocr\+::\+Addr\+::\+V2\+::\+X5}} = \mbox{\hyperlink{addrlib2_8h_ab142265fae76da8b5f20dbbaa7e013b2}{Init\+Bit}}(0, 5)
+\item 
+const \mbox{\hyperlink{addrtypes_8h_ac4116bb9a5e80b5cb845d4f2674c160f}{UINT\+\_\+64}} \mbox{\hyperlink{namespacerocr_1_1Addr_1_1V2_acd0aa2a8580c07f6a582af108dda63ed}{rocr\+::\+Addr\+::\+V2\+::\+X6}} = \mbox{\hyperlink{addrlib2_8h_ab142265fae76da8b5f20dbbaa7e013b2}{Init\+Bit}}(0, 6)
+\item 
+const \mbox{\hyperlink{addrtypes_8h_ac4116bb9a5e80b5cb845d4f2674c160f}{UINT\+\_\+64}} \mbox{\hyperlink{namespacerocr_1_1Addr_1_1V2_a6c3c7e268100742caf64013741520936}{rocr\+::\+Addr\+::\+V2\+::\+X7}} = \mbox{\hyperlink{addrlib2_8h_ab142265fae76da8b5f20dbbaa7e013b2}{Init\+Bit}}(0, 7)
+\item 
+const \mbox{\hyperlink{addrtypes_8h_ac4116bb9a5e80b5cb845d4f2674c160f}{UINT\+\_\+64}} \mbox{\hyperlink{namespacerocr_1_1Addr_1_1V2_a0d6b4d0a1a295253bdc745671452bec6}{rocr\+::\+Addr\+::\+V2\+::\+X8}} = \mbox{\hyperlink{addrlib2_8h_ab142265fae76da8b5f20dbbaa7e013b2}{Init\+Bit}}(0, 8)
+\item 
+const \mbox{\hyperlink{addrtypes_8h_ac4116bb9a5e80b5cb845d4f2674c160f}{UINT\+\_\+64}} \mbox{\hyperlink{namespacerocr_1_1Addr_1_1V2_abc9b4ec97b760953b6cfb08eb1970d59}{rocr\+::\+Addr\+::\+V2\+::\+X9}} = \mbox{\hyperlink{addrlib2_8h_ab142265fae76da8b5f20dbbaa7e013b2}{Init\+Bit}}(0, 9)
+\item 
+const \mbox{\hyperlink{addrtypes_8h_ac4116bb9a5e80b5cb845d4f2674c160f}{UINT\+\_\+64}} \mbox{\hyperlink{namespacerocr_1_1Addr_1_1V2_a3c85c0f04710689fe7bf0382a090e17f}{rocr\+::\+Addr\+::\+V2\+::\+X10}} = \mbox{\hyperlink{addrlib2_8h_ab142265fae76da8b5f20dbbaa7e013b2}{Init\+Bit}}(0, 10)
+\item 
+const \mbox{\hyperlink{addrtypes_8h_ac4116bb9a5e80b5cb845d4f2674c160f}{UINT\+\_\+64}} \mbox{\hyperlink{namespacerocr_1_1Addr_1_1V2_a81a49ab82a30a4c0b425575951f58b86}{rocr\+::\+Addr\+::\+V2\+::\+X11}} = \mbox{\hyperlink{addrlib2_8h_ab142265fae76da8b5f20dbbaa7e013b2}{Init\+Bit}}(0, 11)
+\item 
+const \mbox{\hyperlink{addrtypes_8h_ac4116bb9a5e80b5cb845d4f2674c160f}{UINT\+\_\+64}} \mbox{\hyperlink{namespacerocr_1_1Addr_1_1V2_ac54d46645d25c9b86372f9c03d3c9a5c}{rocr\+::\+Addr\+::\+V2\+::\+Y0}} = \mbox{\hyperlink{addrlib2_8h_ab142265fae76da8b5f20dbbaa7e013b2}{Init\+Bit}}(1, 0)
+\item 
+const \mbox{\hyperlink{addrtypes_8h_ac4116bb9a5e80b5cb845d4f2674c160f}{UINT\+\_\+64}} \mbox{\hyperlink{namespacerocr_1_1Addr_1_1V2_a24af102dad7b76d7b7b439a12155272d}{rocr\+::\+Addr\+::\+V2\+::\+Y1}} = \mbox{\hyperlink{addrlib2_8h_ab142265fae76da8b5f20dbbaa7e013b2}{Init\+Bit}}(1, 1)
+\item 
+const \mbox{\hyperlink{addrtypes_8h_ac4116bb9a5e80b5cb845d4f2674c160f}{UINT\+\_\+64}} \mbox{\hyperlink{namespacerocr_1_1Addr_1_1V2_aa9b6b0467cf61d3d6cb887915ba54937}{rocr\+::\+Addr\+::\+V2\+::\+Y2}} = \mbox{\hyperlink{addrlib2_8h_ab142265fae76da8b5f20dbbaa7e013b2}{Init\+Bit}}(1, 2)
+\item 
+const \mbox{\hyperlink{addrtypes_8h_ac4116bb9a5e80b5cb845d4f2674c160f}{UINT\+\_\+64}} \mbox{\hyperlink{namespacerocr_1_1Addr_1_1V2_a572b182d67917cc1df896782aa84e137}{rocr\+::\+Addr\+::\+V2\+::\+Y3}} = \mbox{\hyperlink{addrlib2_8h_ab142265fae76da8b5f20dbbaa7e013b2}{Init\+Bit}}(1, 3)
+\item 
+const \mbox{\hyperlink{addrtypes_8h_ac4116bb9a5e80b5cb845d4f2674c160f}{UINT\+\_\+64}} \mbox{\hyperlink{namespacerocr_1_1Addr_1_1V2_a9762099e3479df74fc31b79fb60ebe9f}{rocr\+::\+Addr\+::\+V2\+::\+Y4}} = \mbox{\hyperlink{addrlib2_8h_ab142265fae76da8b5f20dbbaa7e013b2}{Init\+Bit}}(1, 4)
+\item 
+const \mbox{\hyperlink{addrtypes_8h_ac4116bb9a5e80b5cb845d4f2674c160f}{UINT\+\_\+64}} \mbox{\hyperlink{namespacerocr_1_1Addr_1_1V2_aa035e96c47a41067af0503db25bf5501}{rocr\+::\+Addr\+::\+V2\+::\+Y5}} = \mbox{\hyperlink{addrlib2_8h_ab142265fae76da8b5f20dbbaa7e013b2}{Init\+Bit}}(1, 5)
+\item 
+const \mbox{\hyperlink{addrtypes_8h_ac4116bb9a5e80b5cb845d4f2674c160f}{UINT\+\_\+64}} \mbox{\hyperlink{namespacerocr_1_1Addr_1_1V2_a2ce0a69436c8ae6887e160578365ab13}{rocr\+::\+Addr\+::\+V2\+::\+Y6}} = \mbox{\hyperlink{addrlib2_8h_ab142265fae76da8b5f20dbbaa7e013b2}{Init\+Bit}}(1, 6)
+\item 
+const \mbox{\hyperlink{addrtypes_8h_ac4116bb9a5e80b5cb845d4f2674c160f}{UINT\+\_\+64}} \mbox{\hyperlink{namespacerocr_1_1Addr_1_1V2_a5d7bd97798df75e4a81efbd2782fe8f5}{rocr\+::\+Addr\+::\+V2\+::\+Y7}} = \mbox{\hyperlink{addrlib2_8h_ab142265fae76da8b5f20dbbaa7e013b2}{Init\+Bit}}(1, 7)
+\item 
+const \mbox{\hyperlink{addrtypes_8h_ac4116bb9a5e80b5cb845d4f2674c160f}{UINT\+\_\+64}} \mbox{\hyperlink{namespacerocr_1_1Addr_1_1V2_aea0fe50b736548cf8b889128e9c2ca0a}{rocr\+::\+Addr\+::\+V2\+::\+Y8}} = \mbox{\hyperlink{addrlib2_8h_ab142265fae76da8b5f20dbbaa7e013b2}{Init\+Bit}}(1, 8)
+\item 
+const \mbox{\hyperlink{addrtypes_8h_ac4116bb9a5e80b5cb845d4f2674c160f}{UINT\+\_\+64}} \mbox{\hyperlink{namespacerocr_1_1Addr_1_1V2_a9904790643113bb7ca1ed427433c2f77}{rocr\+::\+Addr\+::\+V2\+::\+Y9}} = \mbox{\hyperlink{addrlib2_8h_ab142265fae76da8b5f20dbbaa7e013b2}{Init\+Bit}}(1, 9)
+\item 
+const \mbox{\hyperlink{addrtypes_8h_ac4116bb9a5e80b5cb845d4f2674c160f}{UINT\+\_\+64}} \mbox{\hyperlink{namespacerocr_1_1Addr_1_1V2_a14a3f35b5d1b4a7b0bf6e0d83693889a}{rocr\+::\+Addr\+::\+V2\+::\+Y10}} = \mbox{\hyperlink{addrlib2_8h_ab142265fae76da8b5f20dbbaa7e013b2}{Init\+Bit}}(1, 10)
+\item 
+const \mbox{\hyperlink{addrtypes_8h_ac4116bb9a5e80b5cb845d4f2674c160f}{UINT\+\_\+64}} \mbox{\hyperlink{namespacerocr_1_1Addr_1_1V2_afb7723c14fc4928efd4bb7e2d13739c5}{rocr\+::\+Addr\+::\+V2\+::\+Y11}} = \mbox{\hyperlink{addrlib2_8h_ab142265fae76da8b5f20dbbaa7e013b2}{Init\+Bit}}(1, 11)
+\item 
+const \mbox{\hyperlink{addrtypes_8h_ac4116bb9a5e80b5cb845d4f2674c160f}{UINT\+\_\+64}} \mbox{\hyperlink{namespacerocr_1_1Addr_1_1V2_a16a1a6f548bcf39ef8eb58b2e471bbeb}{rocr\+::\+Addr\+::\+V2\+::\+Z0}} = \mbox{\hyperlink{addrlib2_8h_ab142265fae76da8b5f20dbbaa7e013b2}{Init\+Bit}}(2, 0)
+\item 
+const \mbox{\hyperlink{addrtypes_8h_ac4116bb9a5e80b5cb845d4f2674c160f}{UINT\+\_\+64}} \mbox{\hyperlink{namespacerocr_1_1Addr_1_1V2_a8fb7e46f0154dab4a4c9a7c6e949ab77}{rocr\+::\+Addr\+::\+V2\+::\+Z1}} = \mbox{\hyperlink{addrlib2_8h_ab142265fae76da8b5f20dbbaa7e013b2}{Init\+Bit}}(2, 1)
+\item 
+const \mbox{\hyperlink{addrtypes_8h_ac4116bb9a5e80b5cb845d4f2674c160f}{UINT\+\_\+64}} \mbox{\hyperlink{namespacerocr_1_1Addr_1_1V2_a6781903e65be78b9d93bc5c293d2b092}{rocr\+::\+Addr\+::\+V2\+::\+Z2}} = \mbox{\hyperlink{addrlib2_8h_ab142265fae76da8b5f20dbbaa7e013b2}{Init\+Bit}}(2, 2)
+\item 
+const \mbox{\hyperlink{addrtypes_8h_ac4116bb9a5e80b5cb845d4f2674c160f}{UINT\+\_\+64}} \mbox{\hyperlink{namespacerocr_1_1Addr_1_1V2_a2b95fc5e0fc3b0f1497bf01d50195c67}{rocr\+::\+Addr\+::\+V2\+::\+Z3}} = \mbox{\hyperlink{addrlib2_8h_ab142265fae76da8b5f20dbbaa7e013b2}{Init\+Bit}}(2, 3)
+\item 
+const \mbox{\hyperlink{addrtypes_8h_ac4116bb9a5e80b5cb845d4f2674c160f}{UINT\+\_\+64}} \mbox{\hyperlink{namespacerocr_1_1Addr_1_1V2_a4546c2c60c0e773cf9930e1f708ce983}{rocr\+::\+Addr\+::\+V2\+::\+Z4}} = \mbox{\hyperlink{addrlib2_8h_ab142265fae76da8b5f20dbbaa7e013b2}{Init\+Bit}}(2, 4)
+\item 
+const \mbox{\hyperlink{addrtypes_8h_ac4116bb9a5e80b5cb845d4f2674c160f}{UINT\+\_\+64}} \mbox{\hyperlink{namespacerocr_1_1Addr_1_1V2_a2d58bce0165ea71946d3db669d5f7637}{rocr\+::\+Addr\+::\+V2\+::\+Z5}} = \mbox{\hyperlink{addrlib2_8h_ab142265fae76da8b5f20dbbaa7e013b2}{Init\+Bit}}(2, 5)
+\item 
+const \mbox{\hyperlink{addrtypes_8h_ac4116bb9a5e80b5cb845d4f2674c160f}{UINT\+\_\+64}} \mbox{\hyperlink{namespacerocr_1_1Addr_1_1V2_ad6dc793dbb0dd65f503c91e4c96d0139}{rocr\+::\+Addr\+::\+V2\+::\+Z6}} = \mbox{\hyperlink{addrlib2_8h_ab142265fae76da8b5f20dbbaa7e013b2}{Init\+Bit}}(2, 6)
+\item 
+const \mbox{\hyperlink{addrtypes_8h_ac4116bb9a5e80b5cb845d4f2674c160f}{UINT\+\_\+64}} \mbox{\hyperlink{namespacerocr_1_1Addr_1_1V2_ab3db1e65b40d4a7b2271748fb3ed3c2e}{rocr\+::\+Addr\+::\+V2\+::\+Z7}} = \mbox{\hyperlink{addrlib2_8h_ab142265fae76da8b5f20dbbaa7e013b2}{Init\+Bit}}(2, 7)
+\item 
+const \mbox{\hyperlink{addrtypes_8h_ac4116bb9a5e80b5cb845d4f2674c160f}{UINT\+\_\+64}} \mbox{\hyperlink{namespacerocr_1_1Addr_1_1V2_a437f8bf54eafeeb947031c719b352cdb}{rocr\+::\+Addr\+::\+V2\+::\+Z8}} = \mbox{\hyperlink{addrlib2_8h_ab142265fae76da8b5f20dbbaa7e013b2}{Init\+Bit}}(2, 8)
+\item 
+const \mbox{\hyperlink{addrtypes_8h_ac4116bb9a5e80b5cb845d4f2674c160f}{UINT\+\_\+64}} \mbox{\hyperlink{namespacerocr_1_1Addr_1_1V2_a7ac0495ab689ef5347f8805d1fb6e5be}{rocr\+::\+Addr\+::\+V2\+::\+S0}} = \mbox{\hyperlink{addrlib2_8h_ab142265fae76da8b5f20dbbaa7e013b2}{Init\+Bit}}(3, 0)
+\item 
+const \mbox{\hyperlink{addrtypes_8h_ac4116bb9a5e80b5cb845d4f2674c160f}{UINT\+\_\+64}} \mbox{\hyperlink{namespacerocr_1_1Addr_1_1V2_a776b4fa6964830307524c9f5f7f48d4e}{rocr\+::\+Addr\+::\+V2\+::\+S1}} = \mbox{\hyperlink{addrlib2_8h_ab142265fae76da8b5f20dbbaa7e013b2}{Init\+Bit}}(3, 1)
+\item 
+const \mbox{\hyperlink{addrtypes_8h_ac4116bb9a5e80b5cb845d4f2674c160f}{UINT\+\_\+64}} \mbox{\hyperlink{namespacerocr_1_1Addr_1_1V2_a30d52e60dfe06466fb26edeac4c94e27}{rocr\+::\+Addr\+::\+V2\+::\+S2}} = \mbox{\hyperlink{addrlib2_8h_ab142265fae76da8b5f20dbbaa7e013b2}{Init\+Bit}}(3, 2)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Contains the Addr\+::\+V2\+::\+Lib class definition. 
+
+
+
+\doxysubsection{Macro Definition Documentation}
+\mbox{\Hypertarget{addrlib2_8h_ab142265fae76da8b5f20dbbaa7e013b2}\label{addrlib2_8h_ab142265fae76da8b5f20dbbaa7e013b2}} 
+\index{addrlib2.h@{addrlib2.h}!InitBit@{InitBit}}
+\index{InitBit@{InitBit}!addrlib2.h@{addrlib2.h}}
+\doxysubsubsection{\texorpdfstring{InitBit}{InitBit}}
+{\footnotesize\ttfamily \#define Init\+Bit(\begin{DoxyParamCaption}\item[{}]{c,  }\item[{}]{index }\end{DoxyParamCaption})~(1ull $<$$<$ ((c $<$$<$ 4) + index))}
+
+
+
+Initialize bit setting value via a return value. 
+
+Init\+Bit 

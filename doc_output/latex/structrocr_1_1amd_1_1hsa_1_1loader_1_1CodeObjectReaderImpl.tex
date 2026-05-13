@@ -1,0 +1,196 @@
+\hypertarget{structrocr_1_1amd_1_1hsa_1_1loader_1_1CodeObjectReaderImpl}{}\doxysection{rocr\+::amd\+::hsa\+::loader\+::Code\+Object\+Reader\+Impl Class Reference}
+\label{structrocr_1_1amd_1_1hsa_1_1loader_1_1CodeObjectReaderImpl}\index{rocr::amd::hsa::loader::CodeObjectReaderImpl@{rocr::amd::hsa::loader::CodeObjectReaderImpl}}
+
+
+Code Object Reader Wrapper.  
+
+
+
+
+{\ttfamily \#include $<$amd\+\_\+hsa\+\_\+loader.\+hpp$>$}
+
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{structrocr_1_1amd_1_1hsa_1_1loader_1_1CodeObjectReaderImpl_aa207e656bd0f25d5f136f7d920f4e45a}{Code\+Object\+Reader\+Impl}} ()
+\begin{DoxyCompactList}\small\item\em Default constructor. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{structrocr_1_1amd_1_1hsa_1_1loader_1_1CodeObjectReaderImpl_abdf26d183db89da47561c2429c25f491}{$\sim$\+Code\+Object\+Reader\+Impl}} ()
+\begin{DoxyCompactList}\small\item\em Default destructor. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{group__status_gad755322e7ff95456520e8abdbe90d225}{hsa\+\_\+status\+\_\+t}} \mbox{\hyperlink{structrocr_1_1amd_1_1hsa_1_1loader_1_1CodeObjectReaderImpl_a188d5f0c6485eed58d4c3877e7332436}{Set\+File}} (\mbox{\hyperlink{group__common_gafed8ede11d6584c8a8973ca68ca5a7cc}{hsa\+\_\+file\+\_\+t}} \+\_\+code\+\_\+object\+\_\+file\+\_\+descriptor, size\+\_\+t \+\_\+code\+\_\+object\+\_\+offset=0, size\+\_\+t \+\_\+code\+\_\+object\+\_\+size=0)
+\item 
+\mbox{\hyperlink{group__status_gad755322e7ff95456520e8abdbe90d225}{hsa\+\_\+status\+\_\+t}} \mbox{\hyperlink{structrocr_1_1amd_1_1hsa_1_1loader_1_1CodeObjectReaderImpl_a97c2ec6f15c7da11db45b2274a3f3a17}{Set\+Memory}} (const void $\ast$\+\_\+code\+\_\+object\+\_\+memory, size\+\_\+t \+\_\+code\+\_\+object\+\_\+size)
+\item 
+const void $\ast$ \mbox{\hyperlink{structrocr_1_1amd_1_1hsa_1_1loader_1_1CodeObjectReaderImpl_afeed88a1d335c9fe3e940f1a85a110cc}{Get\+Code\+Object\+Memory}} () const
+\item 
+std\+::string \mbox{\hyperlink{structrocr_1_1amd_1_1hsa_1_1loader_1_1CodeObjectReaderImpl_a11457a77c2916208b5c305b781d2af4c}{Get\+Uri}} () const
+\end{DoxyCompactItemize}
+\doxysubsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static \mbox{\hyperlink{group__executable_ga99b23808ddf94561399f3a90e00c4ed0}{hsa\+\_\+code\+\_\+object\+\_\+reader\+\_\+t}} \mbox{\hyperlink{structrocr_1_1amd_1_1hsa_1_1loader_1_1CodeObjectReaderImpl_a8509fd8d01bd350e81da1260b967376b}{Handle}} (const \mbox{\hyperlink{structrocr_1_1amd_1_1hsa_1_1loader_1_1CodeObjectReaderImpl}{Code\+Object\+Reader\+Impl}} $\ast$object)
+\item 
+static \mbox{\hyperlink{structrocr_1_1amd_1_1hsa_1_1loader_1_1CodeObjectReaderImpl}{Code\+Object\+Reader\+Impl}} $\ast$ \mbox{\hyperlink{structrocr_1_1amd_1_1hsa_1_1loader_1_1CodeObjectReaderImpl_aac5b5de66dac58b05e2946ba7fe4e951}{Object}} (const \mbox{\hyperlink{group__executable_ga99b23808ddf94561399f3a90e00c4ed0}{hsa\+\_\+code\+\_\+object\+\_\+reader\+\_\+t}} \&handle)
+\end{DoxyCompactItemize}
+\doxysubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+const void $\ast$ \mbox{\hyperlink{structrocr_1_1amd_1_1hsa_1_1loader_1_1CodeObjectReaderImpl_aa4e355e755e69baf3603c0ce0a29569b}{code\+\_\+object\+\_\+memory}} \{nullptr\}
+\item 
+size\+\_\+t \mbox{\hyperlink{structrocr_1_1amd_1_1hsa_1_1loader_1_1CodeObjectReaderImpl_a9ff9c0e20a7f947e5ccf5599f7cd6948}{code\+\_\+object\+\_\+size}} \{0\}
+\item 
+std\+::string \mbox{\hyperlink{structrocr_1_1amd_1_1hsa_1_1loader_1_1CodeObjectReaderImpl_aa830b3f8b2c59c4e53727ea6bad2829c}{uri}} \{\}
+\item 
+bool \mbox{\hyperlink{structrocr_1_1amd_1_1hsa_1_1loader_1_1CodeObjectReaderImpl_a714dd7e28b798984a235843dc2c36520}{is\+\_\+mmap}} \{false\}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Code Object Reader Wrapper. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{structrocr_1_1amd_1_1hsa_1_1loader_1_1CodeObjectReaderImpl_aa207e656bd0f25d5f136f7d920f4e45a}\label{structrocr_1_1amd_1_1hsa_1_1loader_1_1CodeObjectReaderImpl_aa207e656bd0f25d5f136f7d920f4e45a}} 
+\index{rocr::amd::hsa::loader::CodeObjectReaderImpl@{rocr::amd::hsa::loader::CodeObjectReaderImpl}!CodeObjectReaderImpl@{CodeObjectReaderImpl}}
+\index{CodeObjectReaderImpl@{CodeObjectReaderImpl}!rocr::amd::hsa::loader::CodeObjectReaderImpl@{rocr::amd::hsa::loader::CodeObjectReaderImpl}}
+\doxysubsubsection{\texorpdfstring{CodeObjectReaderImpl()}{CodeObjectReaderImpl()}}
+{\footnotesize\ttfamily rocr\+::amd\+::hsa\+::loader\+::\+Code\+Object\+Reader\+Impl\+::\+Code\+Object\+Reader\+Impl (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Default constructor. 
+
+\mbox{\Hypertarget{structrocr_1_1amd_1_1hsa_1_1loader_1_1CodeObjectReaderImpl_abdf26d183db89da47561c2429c25f491}\label{structrocr_1_1amd_1_1hsa_1_1loader_1_1CodeObjectReaderImpl_abdf26d183db89da47561c2429c25f491}} 
+\index{rocr::amd::hsa::loader::CodeObjectReaderImpl@{rocr::amd::hsa::loader::CodeObjectReaderImpl}!````~CodeObjectReaderImpl@{$\sim$CodeObjectReaderImpl}}
+\index{````~CodeObjectReaderImpl@{$\sim$CodeObjectReaderImpl}!rocr::amd::hsa::loader::CodeObjectReaderImpl@{rocr::amd::hsa::loader::CodeObjectReaderImpl}}
+\doxysubsubsection{\texorpdfstring{$\sim$CodeObjectReaderImpl()}{~CodeObjectReaderImpl()}}
+{\footnotesize\ttfamily rocr\+::amd\+::hsa\+::loader\+::\+Code\+Object\+Reader\+Impl\+::$\sim$\+Code\+Object\+Reader\+Impl (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Default destructor. 
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{structrocr_1_1amd_1_1hsa_1_1loader_1_1CodeObjectReaderImpl_afeed88a1d335c9fe3e940f1a85a110cc}\label{structrocr_1_1amd_1_1hsa_1_1loader_1_1CodeObjectReaderImpl_afeed88a1d335c9fe3e940f1a85a110cc}} 
+\index{rocr::amd::hsa::loader::CodeObjectReaderImpl@{rocr::amd::hsa::loader::CodeObjectReaderImpl}!GetCodeObjectMemory@{GetCodeObjectMemory}}
+\index{GetCodeObjectMemory@{GetCodeObjectMemory}!rocr::amd::hsa::loader::CodeObjectReaderImpl@{rocr::amd::hsa::loader::CodeObjectReaderImpl}}
+\doxysubsubsection{\texorpdfstring{GetCodeObjectMemory()}{GetCodeObjectMemory()}}
+{\footnotesize\ttfamily const void$\ast$ rocr\+::amd\+::hsa\+::loader\+::\+Code\+Object\+Reader\+Impl\+::\+Get\+Code\+Object\+Memory (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{structrocr_1_1amd_1_1hsa_1_1loader_1_1CodeObjectReaderImpl_afeed88a1d335c9fe3e940f1a85a110cc_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{structrocr_1_1amd_1_1hsa_1_1loader_1_1CodeObjectReaderImpl_a11457a77c2916208b5c305b781d2af4c}\label{structrocr_1_1amd_1_1hsa_1_1loader_1_1CodeObjectReaderImpl_a11457a77c2916208b5c305b781d2af4c}} 
+\index{rocr::amd::hsa::loader::CodeObjectReaderImpl@{rocr::amd::hsa::loader::CodeObjectReaderImpl}!GetUri@{GetUri}}
+\index{GetUri@{GetUri}!rocr::amd::hsa::loader::CodeObjectReaderImpl@{rocr::amd::hsa::loader::CodeObjectReaderImpl}}
+\doxysubsubsection{\texorpdfstring{GetUri()}{GetUri()}}
+{\footnotesize\ttfamily std\+::string rocr\+::amd\+::hsa\+::loader\+::\+Code\+Object\+Reader\+Impl\+::\+Get\+Uri (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{structrocr_1_1amd_1_1hsa_1_1loader_1_1CodeObjectReaderImpl_a11457a77c2916208b5c305b781d2af4c_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{structrocr_1_1amd_1_1hsa_1_1loader_1_1CodeObjectReaderImpl_a8509fd8d01bd350e81da1260b967376b}\label{structrocr_1_1amd_1_1hsa_1_1loader_1_1CodeObjectReaderImpl_a8509fd8d01bd350e81da1260b967376b}} 
+\index{rocr::amd::hsa::loader::CodeObjectReaderImpl@{rocr::amd::hsa::loader::CodeObjectReaderImpl}!Handle@{Handle}}
+\index{Handle@{Handle}!rocr::amd::hsa::loader::CodeObjectReaderImpl@{rocr::amd::hsa::loader::CodeObjectReaderImpl}}
+\doxysubsubsection{\texorpdfstring{Handle()}{Handle()}}
+{\footnotesize\ttfamily static \mbox{\hyperlink{group__executable_ga99b23808ddf94561399f3a90e00c4ed0}{hsa\+\_\+code\+\_\+object\+\_\+reader\+\_\+t}} rocr\+::amd\+::hsa\+::loader\+::\+Code\+Object\+Reader\+Impl\+::\+Handle (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{structrocr_1_1amd_1_1hsa_1_1loader_1_1CodeObjectReaderImpl}{Code\+Object\+Reader\+Impl}} $\ast$}]{object }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+\begin{DoxyReturn}{Returns}
+Handle equivalent of {\ttfamily object}. 
+\end{DoxyReturn}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{structrocr_1_1amd_1_1hsa_1_1loader_1_1CodeObjectReaderImpl_a8509fd8d01bd350e81da1260b967376b_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{structrocr_1_1amd_1_1hsa_1_1loader_1_1CodeObjectReaderImpl_aac5b5de66dac58b05e2946ba7fe4e951}\label{structrocr_1_1amd_1_1hsa_1_1loader_1_1CodeObjectReaderImpl_aac5b5de66dac58b05e2946ba7fe4e951}} 
+\index{rocr::amd::hsa::loader::CodeObjectReaderImpl@{rocr::amd::hsa::loader::CodeObjectReaderImpl}!Object@{Object}}
+\index{Object@{Object}!rocr::amd::hsa::loader::CodeObjectReaderImpl@{rocr::amd::hsa::loader::CodeObjectReaderImpl}}
+\doxysubsubsection{\texorpdfstring{Object()}{Object()}}
+{\footnotesize\ttfamily static \mbox{\hyperlink{structrocr_1_1amd_1_1hsa_1_1loader_1_1CodeObjectReaderImpl}{Code\+Object\+Reader\+Impl}}$\ast$ rocr\+::amd\+::hsa\+::loader\+::\+Code\+Object\+Reader\+Impl\+::\+Object (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{group__executable_ga99b23808ddf94561399f3a90e00c4ed0}{hsa\+\_\+code\+\_\+object\+\_\+reader\+\_\+t}} \&}]{handle }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+\begin{DoxyReturn}{Returns}
+Object equivalent of {\ttfamily handle}. 
+\end{DoxyReturn}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{structrocr_1_1amd_1_1hsa_1_1loader_1_1CodeObjectReaderImpl_aac5b5de66dac58b05e2946ba7fe4e951_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{structrocr_1_1amd_1_1hsa_1_1loader_1_1CodeObjectReaderImpl_a188d5f0c6485eed58d4c3877e7332436}\label{structrocr_1_1amd_1_1hsa_1_1loader_1_1CodeObjectReaderImpl_a188d5f0c6485eed58d4c3877e7332436}} 
+\index{rocr::amd::hsa::loader::CodeObjectReaderImpl@{rocr::amd::hsa::loader::CodeObjectReaderImpl}!SetFile@{SetFile}}
+\index{SetFile@{SetFile}!rocr::amd::hsa::loader::CodeObjectReaderImpl@{rocr::amd::hsa::loader::CodeObjectReaderImpl}}
+\doxysubsubsection{\texorpdfstring{SetFile()}{SetFile()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{group__status_gad755322e7ff95456520e8abdbe90d225}{hsa\+\_\+status\+\_\+t}} rocr\+::amd\+::hsa\+::loader\+::\+Code\+Object\+Reader\+Impl\+::\+Set\+File (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{group__common_gafed8ede11d6584c8a8973ca68ca5a7cc}{hsa\+\_\+file\+\_\+t}}}]{\+\_\+code\+\_\+object\+\_\+file\+\_\+descriptor,  }\item[{size\+\_\+t}]{\+\_\+code\+\_\+object\+\_\+offset = {\ttfamily 0},  }\item[{size\+\_\+t}]{\+\_\+code\+\_\+object\+\_\+size = {\ttfamily 0} }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{structrocr_1_1amd_1_1hsa_1_1loader_1_1CodeObjectReaderImpl_a97c2ec6f15c7da11db45b2274a3f3a17}\label{structrocr_1_1amd_1_1hsa_1_1loader_1_1CodeObjectReaderImpl_a97c2ec6f15c7da11db45b2274a3f3a17}} 
+\index{rocr::amd::hsa::loader::CodeObjectReaderImpl@{rocr::amd::hsa::loader::CodeObjectReaderImpl}!SetMemory@{SetMemory}}
+\index{SetMemory@{SetMemory}!rocr::amd::hsa::loader::CodeObjectReaderImpl@{rocr::amd::hsa::loader::CodeObjectReaderImpl}}
+\doxysubsubsection{\texorpdfstring{SetMemory()}{SetMemory()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{group__status_gad755322e7ff95456520e8abdbe90d225}{hsa\+\_\+status\+\_\+t}} rocr\+::amd\+::hsa\+::loader\+::\+Code\+Object\+Reader\+Impl\+::\+Set\+Memory (\begin{DoxyParamCaption}\item[{const void $\ast$}]{\+\_\+code\+\_\+object\+\_\+memory,  }\item[{size\+\_\+t}]{\+\_\+code\+\_\+object\+\_\+size }\end{DoxyParamCaption})}
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=342pt]{structrocr_1_1amd_1_1hsa_1_1loader_1_1CodeObjectReaderImpl_a97c2ec6f15c7da11db45b2274a3f3a17_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{structrocr_1_1amd_1_1hsa_1_1loader_1_1CodeObjectReaderImpl_a97c2ec6f15c7da11db45b2274a3f3a17_icgraph}
+\end{center}
+\end{figure}
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{structrocr_1_1amd_1_1hsa_1_1loader_1_1CodeObjectReaderImpl_aa4e355e755e69baf3603c0ce0a29569b}\label{structrocr_1_1amd_1_1hsa_1_1loader_1_1CodeObjectReaderImpl_aa4e355e755e69baf3603c0ce0a29569b}} 
+\index{rocr::amd::hsa::loader::CodeObjectReaderImpl@{rocr::amd::hsa::loader::CodeObjectReaderImpl}!code\_object\_memory@{code\_object\_memory}}
+\index{code\_object\_memory@{code\_object\_memory}!rocr::amd::hsa::loader::CodeObjectReaderImpl@{rocr::amd::hsa::loader::CodeObjectReaderImpl}}
+\doxysubsubsection{\texorpdfstring{code\_object\_memory}{code\_object\_memory}}
+{\footnotesize\ttfamily const void$\ast$ rocr\+::amd\+::hsa\+::loader\+::\+Code\+Object\+Reader\+Impl\+::code\+\_\+object\+\_\+memory \{nullptr\}\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{structrocr_1_1amd_1_1hsa_1_1loader_1_1CodeObjectReaderImpl_a9ff9c0e20a7f947e5ccf5599f7cd6948}\label{structrocr_1_1amd_1_1hsa_1_1loader_1_1CodeObjectReaderImpl_a9ff9c0e20a7f947e5ccf5599f7cd6948}} 
+\index{rocr::amd::hsa::loader::CodeObjectReaderImpl@{rocr::amd::hsa::loader::CodeObjectReaderImpl}!code\_object\_size@{code\_object\_size}}
+\index{code\_object\_size@{code\_object\_size}!rocr::amd::hsa::loader::CodeObjectReaderImpl@{rocr::amd::hsa::loader::CodeObjectReaderImpl}}
+\doxysubsubsection{\texorpdfstring{code\_object\_size}{code\_object\_size}}
+{\footnotesize\ttfamily size\+\_\+t rocr\+::amd\+::hsa\+::loader\+::\+Code\+Object\+Reader\+Impl\+::code\+\_\+object\+\_\+size \{0\}\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{structrocr_1_1amd_1_1hsa_1_1loader_1_1CodeObjectReaderImpl_a714dd7e28b798984a235843dc2c36520}\label{structrocr_1_1amd_1_1hsa_1_1loader_1_1CodeObjectReaderImpl_a714dd7e28b798984a235843dc2c36520}} 
+\index{rocr::amd::hsa::loader::CodeObjectReaderImpl@{rocr::amd::hsa::loader::CodeObjectReaderImpl}!is\_mmap@{is\_mmap}}
+\index{is\_mmap@{is\_mmap}!rocr::amd::hsa::loader::CodeObjectReaderImpl@{rocr::amd::hsa::loader::CodeObjectReaderImpl}}
+\doxysubsubsection{\texorpdfstring{is\_mmap}{is\_mmap}}
+{\footnotesize\ttfamily bool rocr\+::amd\+::hsa\+::loader\+::\+Code\+Object\+Reader\+Impl\+::is\+\_\+mmap \{false\}\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{structrocr_1_1amd_1_1hsa_1_1loader_1_1CodeObjectReaderImpl_aa830b3f8b2c59c4e53727ea6bad2829c}\label{structrocr_1_1amd_1_1hsa_1_1loader_1_1CodeObjectReaderImpl_aa830b3f8b2c59c4e53727ea6bad2829c}} 
+\index{rocr::amd::hsa::loader::CodeObjectReaderImpl@{rocr::amd::hsa::loader::CodeObjectReaderImpl}!uri@{uri}}
+\index{uri@{uri}!rocr::amd::hsa::loader::CodeObjectReaderImpl@{rocr::amd::hsa::loader::CodeObjectReaderImpl}}
+\doxysubsubsection{\texorpdfstring{uri}{uri}}
+{\footnotesize\ttfamily std\+::string rocr\+::amd\+::hsa\+::loader\+::\+Code\+Object\+Reader\+Impl\+::uri \{\}\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+src/core/inc/\mbox{\hyperlink{amd__hsa__loader_8hpp}{amd\+\_\+hsa\+\_\+loader.\+hpp}}\item 
+src/core/runtime/\mbox{\hyperlink{amd__hsa__loader_8cpp}{amd\+\_\+hsa\+\_\+loader.\+cpp}}\end{DoxyCompactItemize}

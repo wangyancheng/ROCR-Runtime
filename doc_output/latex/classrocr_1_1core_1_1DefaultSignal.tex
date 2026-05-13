@@ -1,0 +1,137 @@
+\hypertarget{classrocr_1_1core_1_1DefaultSignal}{}\doxysection{rocr\+::core\+::Default\+Signal Class Reference}
+\label{classrocr_1_1core_1_1DefaultSignal}\index{rocr::core::DefaultSignal@{rocr::core::DefaultSignal}}
+
+
+Simple memory only signal using a new ABI block.  
+
+
+
+
+{\ttfamily \#include $<$default\+\_\+signal.\+h$>$}
+
+
+
+Inheritance diagram for rocr\+::core\+::Default\+Signal\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=346pt]{classrocr_1_1core_1_1DefaultSignal__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for rocr\+::core\+::Default\+Signal\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classrocr_1_1core_1_1DefaultSignal__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classrocr_1_1core_1_1DefaultSignal_ae3f3691af4294b66848ec09d054eb3dc}{Default\+Signal}} (\mbox{\hyperlink{group__signals_ga67ca2818879c9990e1b5f1b14ce7ed27}{hsa\+\_\+signal\+\_\+value\+\_\+t}} initial\+\_\+value, bool enable\+IPC=false)
+\begin{DoxyCompactList}\small\item\em See base class \mbox{\hyperlink{classrocr_1_1core_1_1Signal}{Signal}}. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static \+\_\+\+\_\+forceinline bool \mbox{\hyperlink{classrocr_1_1core_1_1DefaultSignal_a0b62efef5d9ab5cdd9c34ddebb1b67ae}{Is\+Type}} (\mbox{\hyperlink{classrocr_1_1core_1_1Signal}{Signal}} $\ast$ptr)
+\begin{DoxyCompactList}\small\item\em Determines if a Signal$\ast$ can be safely converted to Busy\+Wait\+Signal$\ast$ via static\+\_\+cast. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+bool \mbox{\hyperlink{classrocr_1_1core_1_1DefaultSignal_aff60860826e2573ddcc9bcbe354fc1ea}{\+\_\+\+IsA}} (\mbox{\hyperlink{classrocr_1_1core_1_1Signal_a72da3ee567e1cbb30a07292e8be69bc6}{rtti\+\_\+t}} id) const
+\begin{DoxyCompactList}\small\item\em Simple RTTI type checking helper Returns true if the object can be converted to the query type via static\+\_\+cast. Do not use directly. Use Is\+Type in the desired derived type instead. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classrocr_1_1core_1_1DefaultSignal_a5272a57571e60c3ff7ef5b449832c1f2}{DISALLOW\+\_\+\+COPY\+\_\+\+AND\+\_\+\+ASSIGN}} (\mbox{\hyperlink{classrocr_1_1core_1_1DefaultSignal}{Default\+Signal}})
+\end{DoxyCompactItemize}
+\doxysubsection*{Static Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+static int \mbox{\hyperlink{classrocr_1_1core_1_1DefaultSignal_a24dc46364af3bedeb7661e4efc61a7ea}{rtti\+\_\+id\+\_\+}} = 0
+\end{DoxyCompactItemize}
+\doxysubsection*{Additional Inherited Members}
+
+
+\doxysubsection{Detailed Description}
+Simple memory only signal using a new ABI block. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classrocr_1_1core_1_1DefaultSignal_ae3f3691af4294b66848ec09d054eb3dc}\label{classrocr_1_1core_1_1DefaultSignal_ae3f3691af4294b66848ec09d054eb3dc}} 
+\index{rocr::core::DefaultSignal@{rocr::core::DefaultSignal}!DefaultSignal@{DefaultSignal}}
+\index{DefaultSignal@{DefaultSignal}!rocr::core::DefaultSignal@{rocr::core::DefaultSignal}}
+\doxysubsubsection{\texorpdfstring{DefaultSignal()}{DefaultSignal()}}
+{\footnotesize\ttfamily rocr\+::core\+::\+Default\+Signal\+::\+Default\+Signal (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{group__signals_ga67ca2818879c9990e1b5f1b14ce7ed27}{hsa\+\_\+signal\+\_\+value\+\_\+t}}}]{initial\+\_\+value,  }\item[{bool}]{enable\+IPC = {\ttfamily false} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [explicit]}}
+
+
+
+See base class \mbox{\hyperlink{classrocr_1_1core_1_1Signal}{Signal}}. 
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classrocr_1_1core_1_1DefaultSignal_aff60860826e2573ddcc9bcbe354fc1ea}\label{classrocr_1_1core_1_1DefaultSignal_aff60860826e2573ddcc9bcbe354fc1ea}} 
+\index{rocr::core::DefaultSignal@{rocr::core::DefaultSignal}!\_IsA@{\_IsA}}
+\index{\_IsA@{\_IsA}!rocr::core::DefaultSignal@{rocr::core::DefaultSignal}}
+\doxysubsubsection{\texorpdfstring{\_IsA()}{\_IsA()}}
+{\footnotesize\ttfamily bool rocr\+::core\+::\+Default\+Signal\+::\+\_\+\+IsA (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classrocr_1_1core_1_1Signal_a72da3ee567e1cbb30a07292e8be69bc6}{rtti\+\_\+t}}}]{id }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [protected]}, {\ttfamily [virtual]}}
+
+
+
+Simple RTTI type checking helper Returns true if the object can be converted to the query type via static\+\_\+cast. Do not use directly. Use Is\+Type in the desired derived type instead. 
+
+
+
+Reimplemented from \mbox{\hyperlink{classrocr_1_1core_1_1BusyWaitSignal_a967b0e7476d16236ac54d5bf44cdb228}{rocr\+::core\+::\+Busy\+Wait\+Signal}}.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classrocr_1_1core_1_1DefaultSignal_aff60860826e2573ddcc9bcbe354fc1ea_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classrocr_1_1core_1_1DefaultSignal_a5272a57571e60c3ff7ef5b449832c1f2}\label{classrocr_1_1core_1_1DefaultSignal_a5272a57571e60c3ff7ef5b449832c1f2}} 
+\index{rocr::core::DefaultSignal@{rocr::core::DefaultSignal}!DISALLOW\_COPY\_AND\_ASSIGN@{DISALLOW\_COPY\_AND\_ASSIGN}}
+\index{DISALLOW\_COPY\_AND\_ASSIGN@{DISALLOW\_COPY\_AND\_ASSIGN}!rocr::core::DefaultSignal@{rocr::core::DefaultSignal}}
+\doxysubsubsection{\texorpdfstring{DISALLOW\_COPY\_AND\_ASSIGN()}{DISALLOW\_COPY\_AND\_ASSIGN()}}
+{\footnotesize\ttfamily rocr\+::core\+::\+Default\+Signal\+::\+DISALLOW\+\_\+\+COPY\+\_\+\+AND\+\_\+\+ASSIGN (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classrocr_1_1core_1_1DefaultSignal}{Default\+Signal}}}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classrocr_1_1core_1_1DefaultSignal_a0b62efef5d9ab5cdd9c34ddebb1b67ae}\label{classrocr_1_1core_1_1DefaultSignal_a0b62efef5d9ab5cdd9c34ddebb1b67ae}} 
+\index{rocr::core::DefaultSignal@{rocr::core::DefaultSignal}!IsType@{IsType}}
+\index{IsType@{IsType}!rocr::core::DefaultSignal@{rocr::core::DefaultSignal}}
+\doxysubsubsection{\texorpdfstring{IsType()}{IsType()}}
+{\footnotesize\ttfamily static \+\_\+\+\_\+forceinline bool rocr\+::core\+::\+Default\+Signal\+::\+Is\+Type (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classrocr_1_1core_1_1Signal}{Signal}} $\ast$}]{ptr }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+
+
+Determines if a Signal$\ast$ can be safely converted to Busy\+Wait\+Signal$\ast$ via static\+\_\+cast. 
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classrocr_1_1core_1_1DefaultSignal_a0b62efef5d9ab5cdd9c34ddebb1b67ae_cgraph}
+\end{center}
+\end{figure}
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{classrocr_1_1core_1_1DefaultSignal_a24dc46364af3bedeb7661e4efc61a7ea}\label{classrocr_1_1core_1_1DefaultSignal_a24dc46364af3bedeb7661e4efc61a7ea}} 
+\index{rocr::core::DefaultSignal@{rocr::core::DefaultSignal}!rtti\_id\_@{rtti\_id\_}}
+\index{rtti\_id\_@{rtti\_id\_}!rocr::core::DefaultSignal@{rocr::core::DefaultSignal}}
+\doxysubsubsection{\texorpdfstring{rtti\_id\_}{rtti\_id\_}}
+{\footnotesize\ttfamily int rocr\+::core\+::\+Default\+Signal\+::rtti\+\_\+id\+\_\+ = 0\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [private]}}
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+src/core/inc/\mbox{\hyperlink{default__signal_8h}{default\+\_\+signal.\+h}}\item 
+src/core/runtime/\mbox{\hyperlink{default__signal_8cpp}{default\+\_\+signal.\+cpp}}\end{DoxyCompactItemize}

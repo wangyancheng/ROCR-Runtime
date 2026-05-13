@@ -1,0 +1,420 @@
+\hypertarget{classrocr_1_1core_1_1InterceptQueue}{}\doxysection{rocr\+::core\+::Intercept\+Queue Class Reference}
+\label{classrocr_1_1core_1_1InterceptQueue}\index{rocr::core::InterceptQueue@{rocr::core::InterceptQueue}}
+
+
+{\ttfamily \#include $<$intercept\+\_\+queue.\+h$>$}
+
+
+
+Inheritance diagram for rocr\+::core\+::Intercept\+Queue\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classrocr_1_1core_1_1InterceptQueue__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for rocr\+::core\+::Intercept\+Queue\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classrocr_1_1core_1_1InterceptQueue__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classrocr_1_1core_1_1InterceptQueue_ae9039b8751a7a8989d5479025967804d}{Intercept\+Queue}} (std\+::unique\+\_\+ptr$<$ \mbox{\hyperlink{classrocr_1_1core_1_1Queue}{Queue}} $>$ \mbox{\hyperlink{classrocr_1_1core_1_1LocalQueue_ab74803630adc230051e757a1e3eaa617}{queue}})
+\item 
+\mbox{\hyperlink{classrocr_1_1core_1_1InterceptQueue_acbd9c78c9091165c8773c0c5ed86b8d7}{$\sim$\+Intercept\+Queue}} ()
+\item 
+void \mbox{\hyperlink{classrocr_1_1core_1_1InterceptQueue_a138b72909bf96028758935cd6a35bd12}{Add\+Interceptor}} (\mbox{\hyperlink{inc_2hsa__api__trace_8h_acb1a21c5319f0581a0eb74f78c20c348}{hsa\+\_\+amd\+\_\+queue\+\_\+intercept\+\_\+handler}} interceptor, void $\ast$data)
+\item 
+\mbox{\hyperlink{group__status_gad755322e7ff95456520e8abdbe90d225}{hsa\+\_\+status\+\_\+t}} \mbox{\hyperlink{classrocr_1_1core_1_1InterceptQueue_af5c3d6b562f78f6e41290aa6acf52021}{Inactivate}} () override
+\begin{DoxyCompactList}\small\item\em Inactivate the queue object. Once inactivate a queue cannot be used anymore and must be destroyed. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classrocr_1_1core_1_1InterceptQueue_a0fe30d884765a3ee2e3cb358cbef2aee}{Store\+Relaxed}} (\mbox{\hyperlink{group__signals_ga67ca2818879c9990e1b5f1b14ce7ed27}{hsa\+\_\+signal\+\_\+value\+\_\+t}} value) override
+\begin{DoxyCompactList}\small\item\em Update signal value using Relaxed semantics. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classrocr_1_1core_1_1InterceptQueue_a96c8ad97e35dd9e921c2733bd8441a52}{Store\+Release}} (\mbox{\hyperlink{group__signals_ga67ca2818879c9990e1b5f1b14ce7ed27}{hsa\+\_\+signal\+\_\+value\+\_\+t}} value) override
+\begin{DoxyCompactList}\small\item\em Update signal value using Release semantics. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static \+\_\+\+\_\+forceinline bool \mbox{\hyperlink{classrocr_1_1core_1_1InterceptQueue_a88a0e39e1d025cc26f0b8516a1ba29f1}{Is\+Type}} (\mbox{\hyperlink{classrocr_1_1core_1_1Signal}{core\+::\+Signal}} $\ast$\mbox{\hyperlink{classrocr_1_1core_1_1LocalSignal_a18914fb4f19bd8dd951b57235a81b0bf}{signal}})
+\item 
+static \+\_\+\+\_\+forceinline bool \mbox{\hyperlink{classrocr_1_1core_1_1InterceptQueue_a63a3db5f9fddef070e4b479b49ab9521}{Is\+Type}} (\mbox{\hyperlink{classrocr_1_1core_1_1Queue}{core\+::\+Queue}} $\ast$\mbox{\hyperlink{classrocr_1_1core_1_1LocalQueue_ab74803630adc230051e757a1e3eaa617}{queue}})
+\end{DoxyCompactItemize}
+\doxysubsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+bool \mbox{\hyperlink{classrocr_1_1core_1_1InterceptQueue_ac337e3857afc6e26f293b72fa1c8f275}{\+\_\+\+IsA}} (\mbox{\hyperlink{classrocr_1_1core_1_1Queue_a7852beb01a0e5ece387b10034f27478f}{Queue\+::rtti\+\_\+t}} \mbox{\hyperlink{classrocr_1_1core_1_1Checked_aaf728d54727b7e8cb7d2cf4438212a42}{id}}) const override
+\begin{DoxyCompactList}\small\item\em Simple RTTI type checking helper Returns true if the object can be converted to the query type via static\+\_\+cast. Do not use directly. Use Is\+Type in the desired derived type instead. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+bool \mbox{\hyperlink{classrocr_1_1core_1_1InterceptQueue_ad5ed783926631821cb01c6d74781a6bb}{Submit}} (const \mbox{\hyperlink{structrocr_1_1core_1_1AqlPacket}{Aql\+Packet}} $\ast$packets, uint64\+\_\+t count)
+\end{DoxyCompactItemize}
+\doxysubsection*{Static Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static bool \mbox{\hyperlink{classrocr_1_1core_1_1InterceptQueue_acbbf8411c96fb41cbcf7fab6e15e5924}{Handle\+Async\+Doorbell}} (\mbox{\hyperlink{group__signals_ga67ca2818879c9990e1b5f1b14ce7ed27}{hsa\+\_\+signal\+\_\+value\+\_\+t}} value, void $\ast$arg)
+\item 
+static void \mbox{\hyperlink{classrocr_1_1core_1_1InterceptQueue_aaf1c386acbfd4a33a7522b8c70c65257}{Packet\+Writer}} (const void $\ast$pkts, uint64\+\_\+t pkt\+\_\+count)
+\item 
+static void \mbox{\hyperlink{classrocr_1_1core_1_1InterceptQueue_a8c6fed97331d13fb84ef142ffff98b06}{Submit}} (const void $\ast$pkts, uint64\+\_\+t pkt\+\_\+count, uint64\+\_\+t user\+\_\+pkt\+\_\+index, void $\ast$data, \mbox{\hyperlink{inc_2hsa__api__trace_8h_a17da7688514181d0918ea51956d1c181}{hsa\+\_\+amd\+\_\+queue\+\_\+intercept\+\_\+packet\+\_\+writer}} writer)
+\end{DoxyCompactItemize}
+\doxysubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classrocr_1_1KernelMutex}{Kernel\+Mutex}} \mbox{\hyperlink{classrocr_1_1core_1_1InterceptQueue_a976347a629feb125ae559f932f0b13cb}{lock\+\_\+}}
+\item 
+uint64\+\_\+t \mbox{\hyperlink{classrocr_1_1core_1_1InterceptQueue_a1bdb3cdc8b373ea52990ec5a0c3c34fc}{next\+\_\+packet\+\_\+}}
+\item 
+std\+::vector$<$ \mbox{\hyperlink{structrocr_1_1core_1_1AqlPacket}{Aql\+Packet}} $>$ \mbox{\hyperlink{classrocr_1_1core_1_1InterceptQueue_a1214207e57fa2b398db1a951e0079508}{overflow\+\_\+}}
+\item 
+uint64\+\_\+t \mbox{\hyperlink{classrocr_1_1core_1_1InterceptQueue_ae0b00ee107a8ee3e18092979299cfb44}{retry\+\_\+index\+\_\+}}
+\item 
+\mbox{\hyperlink{classrocr_1_1core_1_1InterruptSignal}{Interrupt\+Signal}} $\ast$ \mbox{\hyperlink{classrocr_1_1core_1_1InterceptQueue_ad53d20c7e8cd7600c32b9e62fb426817}{async\+\_\+doorbell\+\_\+}}
+\item 
+std\+::atomic$<$ bool $>$ \mbox{\hyperlink{classrocr_1_1core_1_1InterceptQueue_a24b1a4dcfffc60a03e20453f81f6b863}{quit\+\_\+}}
+\item 
+std\+::atomic$<$ bool $>$ \mbox{\hyperlink{classrocr_1_1core_1_1InterceptQueue_a2574af7f7fdbb404c54928b9c42b03b9}{active\+\_\+}}
+\item 
+\mbox{\hyperlink{classrocr_1_1core_1_1SharedArray}{Shared\+Array}}$<$ \mbox{\hyperlink{structrocr_1_1core_1_1AqlPacket}{Aql\+Packet}}, 4096 $>$ \mbox{\hyperlink{classrocr_1_1core_1_1InterceptQueue_a084c0a8bbe647aad4662ead72b84c4fe}{buffer\+\_\+}}
+\item 
+std\+::vector$<$ std\+::pair$<$ \mbox{\hyperlink{classrocr_1_1AMD_1_1callback__t}{AMD\+::callback\+\_\+t}}$<$ \mbox{\hyperlink{inc_2hsa__api__trace_8h_acb1a21c5319f0581a0eb74f78c20c348}{hsa\+\_\+amd\+\_\+queue\+\_\+intercept\+\_\+handler}} $>$, void $\ast$ $>$ $>$ \mbox{\hyperlink{classrocr_1_1core_1_1InterceptQueue_ae084055d06ff5f629e15e3cc85ceb305}{interceptors}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Static Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+static const \mbox{\hyperlink{group__signals_ga67ca2818879c9990e1b5f1b14ce7ed27}{hsa\+\_\+signal\+\_\+value\+\_\+t}} \mbox{\hyperlink{classrocr_1_1core_1_1InterceptQueue_aa46ea378ddd50193487e085965897bc0}{DOORBELL\+\_\+\+MAX}} = 0x\+FFFFFFFFFFFFFFFFull
+\item 
+static int \mbox{\hyperlink{classrocr_1_1core_1_1InterceptQueue_abbd67a312a5fed243b974a467eb56c19}{rtti\+\_\+id\+\_\+}} = 0
+\end{DoxyCompactItemize}
+\doxysubsection*{Additional Inherited Members}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classrocr_1_1core_1_1InterceptQueue_ae9039b8751a7a8989d5479025967804d}\label{classrocr_1_1core_1_1InterceptQueue_ae9039b8751a7a8989d5479025967804d}} 
+\index{rocr::core::InterceptQueue@{rocr::core::InterceptQueue}!InterceptQueue@{InterceptQueue}}
+\index{InterceptQueue@{InterceptQueue}!rocr::core::InterceptQueue@{rocr::core::InterceptQueue}}
+\doxysubsubsection{\texorpdfstring{InterceptQueue()}{InterceptQueue()}}
+{\footnotesize\ttfamily rocr\+::core\+::\+Intercept\+Queue\+::\+Intercept\+Queue (\begin{DoxyParamCaption}\item[{std\+::unique\+\_\+ptr$<$ \mbox{\hyperlink{classrocr_1_1core_1_1Queue}{Queue}} $>$}]{queue }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [explicit]}}
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classrocr_1_1core_1_1InterceptQueue_ae9039b8751a7a8989d5479025967804d_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classrocr_1_1core_1_1InterceptQueue_acbd9c78c9091165c8773c0c5ed86b8d7}\label{classrocr_1_1core_1_1InterceptQueue_acbd9c78c9091165c8773c0c5ed86b8d7}} 
+\index{rocr::core::InterceptQueue@{rocr::core::InterceptQueue}!````~InterceptQueue@{$\sim$InterceptQueue}}
+\index{````~InterceptQueue@{$\sim$InterceptQueue}!rocr::core::InterceptQueue@{rocr::core::InterceptQueue}}
+\doxysubsubsection{\texorpdfstring{$\sim$InterceptQueue()}{~InterceptQueue()}}
+{\footnotesize\ttfamily rocr\+::core\+::\+Intercept\+Queue\+::$\sim$\+Intercept\+Queue (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classrocr_1_1core_1_1InterceptQueue_acbd9c78c9091165c8773c0c5ed86b8d7_cgraph}
+\end{center}
+\end{figure}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classrocr_1_1core_1_1InterceptQueue_ac337e3857afc6e26f293b72fa1c8f275}\label{classrocr_1_1core_1_1InterceptQueue_ac337e3857afc6e26f293b72fa1c8f275}} 
+\index{rocr::core::InterceptQueue@{rocr::core::InterceptQueue}!\_IsA@{\_IsA}}
+\index{\_IsA@{\_IsA}!rocr::core::InterceptQueue@{rocr::core::InterceptQueue}}
+\doxysubsubsection{\texorpdfstring{\_IsA()}{\_IsA()}}
+{\footnotesize\ttfamily bool rocr\+::core\+::\+Intercept\+Queue\+::\+\_\+\+IsA (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classrocr_1_1core_1_1Queue_a7852beb01a0e5ece387b10034f27478f}{Queue\+::rtti\+\_\+t}}}]{id }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}, {\ttfamily [protected]}, {\ttfamily [virtual]}}
+
+
+
+Simple RTTI type checking helper Returns true if the object can be converted to the query type via static\+\_\+cast. Do not use directly. Use Is\+Type in the desired derived type instead. 
+
+
+
+Implements \mbox{\hyperlink{classrocr_1_1core_1_1Signal_a6918573f0a2b353118566bdde8e096d7}{rocr\+::core\+::\+Signal}}.
+
+\mbox{\Hypertarget{classrocr_1_1core_1_1InterceptQueue_a138b72909bf96028758935cd6a35bd12}\label{classrocr_1_1core_1_1InterceptQueue_a138b72909bf96028758935cd6a35bd12}} 
+\index{rocr::core::InterceptQueue@{rocr::core::InterceptQueue}!AddInterceptor@{AddInterceptor}}
+\index{AddInterceptor@{AddInterceptor}!rocr::core::InterceptQueue@{rocr::core::InterceptQueue}}
+\doxysubsubsection{\texorpdfstring{AddInterceptor()}{AddInterceptor()}}
+{\footnotesize\ttfamily void rocr\+::core\+::\+Intercept\+Queue\+::\+Add\+Interceptor (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{inc_2hsa__api__trace_8h_acb1a21c5319f0581a0eb74f78c20c348}{hsa\+\_\+amd\+\_\+queue\+\_\+intercept\+\_\+handler}}}]{interceptor,  }\item[{void $\ast$}]{data }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classrocr_1_1core_1_1InterceptQueue_a138b72909bf96028758935cd6a35bd12_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classrocr_1_1core_1_1InterceptQueue_acbbf8411c96fb41cbcf7fab6e15e5924}\label{classrocr_1_1core_1_1InterceptQueue_acbbf8411c96fb41cbcf7fab6e15e5924}} 
+\index{rocr::core::InterceptQueue@{rocr::core::InterceptQueue}!HandleAsyncDoorbell@{HandleAsyncDoorbell}}
+\index{HandleAsyncDoorbell@{HandleAsyncDoorbell}!rocr::core::InterceptQueue@{rocr::core::InterceptQueue}}
+\doxysubsubsection{\texorpdfstring{HandleAsyncDoorbell()}{HandleAsyncDoorbell()}}
+{\footnotesize\ttfamily bool rocr\+::core\+::\+Intercept\+Queue\+::\+Handle\+Async\+Doorbell (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{group__signals_ga67ca2818879c9990e1b5f1b14ce7ed27}{hsa\+\_\+signal\+\_\+value\+\_\+t}}}]{value,  }\item[{void $\ast$}]{arg }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [private]}}
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classrocr_1_1core_1_1InterceptQueue_acbbf8411c96fb41cbcf7fab6e15e5924_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classrocr_1_1core_1_1InterceptQueue_acbbf8411c96fb41cbcf7fab6e15e5924_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classrocr_1_1core_1_1InterceptQueue_af5c3d6b562f78f6e41290aa6acf52021}\label{classrocr_1_1core_1_1InterceptQueue_af5c3d6b562f78f6e41290aa6acf52021}} 
+\index{rocr::core::InterceptQueue@{rocr::core::InterceptQueue}!Inactivate@{Inactivate}}
+\index{Inactivate@{Inactivate}!rocr::core::InterceptQueue@{rocr::core::InterceptQueue}}
+\doxysubsubsection{\texorpdfstring{Inactivate()}{Inactivate()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{group__status_gad755322e7ff95456520e8abdbe90d225}{hsa\+\_\+status\+\_\+t}} rocr\+::core\+::\+Intercept\+Queue\+::\+Inactivate (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Inactivate the queue object. Once inactivate a queue cannot be used anymore and must be destroyed. 
+
+\begin{DoxyReturn}{Returns}
+hsa\+\_\+status\+\_\+t Status of request 
+\end{DoxyReturn}
+
+
+Reimplemented from \mbox{\hyperlink{classrocr_1_1core_1_1QueueWrapper_a0261df0bec22503cd0302e6f674c9ca3}{rocr\+::core\+::\+Queue\+Wrapper}}.
+
+\mbox{\Hypertarget{classrocr_1_1core_1_1InterceptQueue_a63a3db5f9fddef070e4b479b49ab9521}\label{classrocr_1_1core_1_1InterceptQueue_a63a3db5f9fddef070e4b479b49ab9521}} 
+\index{rocr::core::InterceptQueue@{rocr::core::InterceptQueue}!IsType@{IsType}}
+\index{IsType@{IsType}!rocr::core::InterceptQueue@{rocr::core::InterceptQueue}}
+\doxysubsubsection{\texorpdfstring{IsType()}{IsType()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily static \+\_\+\+\_\+forceinline bool rocr\+::core\+::\+Intercept\+Queue\+::\+Is\+Type (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classrocr_1_1core_1_1Queue}{core\+::\+Queue}} $\ast$}]{queue }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classrocr_1_1core_1_1InterceptQueue_a63a3db5f9fddef070e4b479b49ab9521_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classrocr_1_1core_1_1InterceptQueue_a88a0e39e1d025cc26f0b8516a1ba29f1}\label{classrocr_1_1core_1_1InterceptQueue_a88a0e39e1d025cc26f0b8516a1ba29f1}} 
+\index{rocr::core::InterceptQueue@{rocr::core::InterceptQueue}!IsType@{IsType}}
+\index{IsType@{IsType}!rocr::core::InterceptQueue@{rocr::core::InterceptQueue}}
+\doxysubsubsection{\texorpdfstring{IsType()}{IsType()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily static \+\_\+\+\_\+forceinline bool rocr\+::core\+::\+Intercept\+Queue\+::\+Is\+Type (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classrocr_1_1core_1_1Signal}{core\+::\+Signal}} $\ast$}]{signal }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classrocr_1_1core_1_1InterceptQueue_a88a0e39e1d025cc26f0b8516a1ba29f1_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classrocr_1_1core_1_1InterceptQueue_a88a0e39e1d025cc26f0b8516a1ba29f1_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classrocr_1_1core_1_1InterceptQueue_aaf1c386acbfd4a33a7522b8c70c65257}\label{classrocr_1_1core_1_1InterceptQueue_aaf1c386acbfd4a33a7522b8c70c65257}} 
+\index{rocr::core::InterceptQueue@{rocr::core::InterceptQueue}!PacketWriter@{PacketWriter}}
+\index{PacketWriter@{PacketWriter}!rocr::core::InterceptQueue@{rocr::core::InterceptQueue}}
+\doxysubsubsection{\texorpdfstring{PacketWriter()}{PacketWriter()}}
+{\footnotesize\ttfamily void rocr\+::core\+::\+Intercept\+Queue\+::\+Packet\+Writer (\begin{DoxyParamCaption}\item[{const void $\ast$}]{pkts,  }\item[{uint64\+\_\+t}]{pkt\+\_\+count }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [private]}}
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classrocr_1_1core_1_1InterceptQueue_aaf1c386acbfd4a33a7522b8c70c65257_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classrocr_1_1core_1_1InterceptQueue_a0fe30d884765a3ee2e3cb358cbef2aee}\label{classrocr_1_1core_1_1InterceptQueue_a0fe30d884765a3ee2e3cb358cbef2aee}} 
+\index{rocr::core::InterceptQueue@{rocr::core::InterceptQueue}!StoreRelaxed@{StoreRelaxed}}
+\index{StoreRelaxed@{StoreRelaxed}!rocr::core::InterceptQueue@{rocr::core::InterceptQueue}}
+\doxysubsubsection{\texorpdfstring{StoreRelaxed()}{StoreRelaxed()}}
+{\footnotesize\ttfamily void rocr\+::core\+::\+Intercept\+Queue\+::\+Store\+Relaxed (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{group__signals_ga67ca2818879c9990e1b5f1b14ce7ed27}{hsa\+\_\+signal\+\_\+value\+\_\+t}}}]{value }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Update signal value using Relaxed semantics. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em value} & Value of signal to update with \\
+\hline
+\end{DoxyParams}
+
+
+Implements \mbox{\hyperlink{classrocr_1_1core_1_1Signal_a9c6fc8df6ed40dc6838099a9ea11a33b}{rocr\+::core\+::\+Signal}}.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classrocr_1_1core_1_1InterceptQueue_a0fe30d884765a3ee2e3cb358cbef2aee_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classrocr_1_1core_1_1InterceptQueue_a0fe30d884765a3ee2e3cb358cbef2aee_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classrocr_1_1core_1_1InterceptQueue_a96c8ad97e35dd9e921c2733bd8441a52}\label{classrocr_1_1core_1_1InterceptQueue_a96c8ad97e35dd9e921c2733bd8441a52}} 
+\index{rocr::core::InterceptQueue@{rocr::core::InterceptQueue}!StoreRelease@{StoreRelease}}
+\index{StoreRelease@{StoreRelease}!rocr::core::InterceptQueue@{rocr::core::InterceptQueue}}
+\doxysubsubsection{\texorpdfstring{StoreRelease()}{StoreRelease()}}
+{\footnotesize\ttfamily void rocr\+::core\+::\+Intercept\+Queue\+::\+Store\+Release (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{group__signals_ga67ca2818879c9990e1b5f1b14ce7ed27}{hsa\+\_\+signal\+\_\+value\+\_\+t}}}]{value }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Update signal value using Release semantics. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em value} & Value of signal to update with \\
+\hline
+\end{DoxyParams}
+
+
+Implements \mbox{\hyperlink{classrocr_1_1core_1_1Signal_a90026d695f31e3e9f79bdbf0ecfb78f7}{rocr\+::core\+::\+Signal}}.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classrocr_1_1core_1_1InterceptQueue_a96c8ad97e35dd9e921c2733bd8441a52_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classrocr_1_1core_1_1InterceptQueue_ad5ed783926631821cb01c6d74781a6bb}\label{classrocr_1_1core_1_1InterceptQueue_ad5ed783926631821cb01c6d74781a6bb}} 
+\index{rocr::core::InterceptQueue@{rocr::core::InterceptQueue}!Submit@{Submit}}
+\index{Submit@{Submit}!rocr::core::InterceptQueue@{rocr::core::InterceptQueue}}
+\doxysubsubsection{\texorpdfstring{Submit()}{Submit()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily bool rocr\+::core\+::\+Intercept\+Queue\+::\+Submit (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{structrocr_1_1core_1_1AqlPacket}{Aql\+Packet}} $\ast$}]{packets,  }\item[{uint64\+\_\+t}]{count }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classrocr_1_1core_1_1InterceptQueue_ad5ed783926631821cb01c6d74781a6bb_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classrocr_1_1core_1_1InterceptQueue_ad5ed783926631821cb01c6d74781a6bb_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classrocr_1_1core_1_1InterceptQueue_a8c6fed97331d13fb84ef142ffff98b06}\label{classrocr_1_1core_1_1InterceptQueue_a8c6fed97331d13fb84ef142ffff98b06}} 
+\index{rocr::core::InterceptQueue@{rocr::core::InterceptQueue}!Submit@{Submit}}
+\index{Submit@{Submit}!rocr::core::InterceptQueue@{rocr::core::InterceptQueue}}
+\doxysubsubsection{\texorpdfstring{Submit()}{Submit()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily void rocr\+::core\+::\+Intercept\+Queue\+::\+Submit (\begin{DoxyParamCaption}\item[{const void $\ast$}]{pkts,  }\item[{uint64\+\_\+t}]{pkt\+\_\+count,  }\item[{uint64\+\_\+t}]{user\+\_\+pkt\+\_\+index,  }\item[{void $\ast$}]{data,  }\item[{\mbox{\hyperlink{inc_2hsa__api__trace_8h_a17da7688514181d0918ea51956d1c181}{hsa\+\_\+amd\+\_\+queue\+\_\+intercept\+\_\+packet\+\_\+writer}}}]{writer }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [private]}}
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classrocr_1_1core_1_1InterceptQueue_a8c6fed97331d13fb84ef142ffff98b06_cgraph}
+\end{center}
+\end{figure}
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{classrocr_1_1core_1_1InterceptQueue_a2574af7f7fdbb404c54928b9c42b03b9}\label{classrocr_1_1core_1_1InterceptQueue_a2574af7f7fdbb404c54928b9c42b03b9}} 
+\index{rocr::core::InterceptQueue@{rocr::core::InterceptQueue}!active\_@{active\_}}
+\index{active\_@{active\_}!rocr::core::InterceptQueue@{rocr::core::InterceptQueue}}
+\doxysubsubsection{\texorpdfstring{active\_}{active\_}}
+{\footnotesize\ttfamily std\+::atomic$<$bool$>$ rocr\+::core\+::\+Intercept\+Queue\+::active\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classrocr_1_1core_1_1InterceptQueue_ad53d20c7e8cd7600c32b9e62fb426817}\label{classrocr_1_1core_1_1InterceptQueue_ad53d20c7e8cd7600c32b9e62fb426817}} 
+\index{rocr::core::InterceptQueue@{rocr::core::InterceptQueue}!async\_doorbell\_@{async\_doorbell\_}}
+\index{async\_doorbell\_@{async\_doorbell\_}!rocr::core::InterceptQueue@{rocr::core::InterceptQueue}}
+\doxysubsubsection{\texorpdfstring{async\_doorbell\_}{async\_doorbell\_}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classrocr_1_1core_1_1InterruptSignal}{Interrupt\+Signal}}$\ast$ rocr\+::core\+::\+Intercept\+Queue\+::async\+\_\+doorbell\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classrocr_1_1core_1_1InterceptQueue_a084c0a8bbe647aad4662ead72b84c4fe}\label{classrocr_1_1core_1_1InterceptQueue_a084c0a8bbe647aad4662ead72b84c4fe}} 
+\index{rocr::core::InterceptQueue@{rocr::core::InterceptQueue}!buffer\_@{buffer\_}}
+\index{buffer\_@{buffer\_}!rocr::core::InterceptQueue@{rocr::core::InterceptQueue}}
+\doxysubsubsection{\texorpdfstring{buffer\_}{buffer\_}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classrocr_1_1core_1_1SharedArray}{Shared\+Array}}$<$\mbox{\hyperlink{structrocr_1_1core_1_1AqlPacket}{Aql\+Packet}}, 4096$>$ rocr\+::core\+::\+Intercept\+Queue\+::buffer\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classrocr_1_1core_1_1InterceptQueue_aa46ea378ddd50193487e085965897bc0}\label{classrocr_1_1core_1_1InterceptQueue_aa46ea378ddd50193487e085965897bc0}} 
+\index{rocr::core::InterceptQueue@{rocr::core::InterceptQueue}!DOORBELL\_MAX@{DOORBELL\_MAX}}
+\index{DOORBELL\_MAX@{DOORBELL\_MAX}!rocr::core::InterceptQueue@{rocr::core::InterceptQueue}}
+\doxysubsubsection{\texorpdfstring{DOORBELL\_MAX}{DOORBELL\_MAX}}
+{\footnotesize\ttfamily const \mbox{\hyperlink{group__signals_ga67ca2818879c9990e1b5f1b14ce7ed27}{hsa\+\_\+signal\+\_\+value\+\_\+t}} rocr\+::core\+::\+Intercept\+Queue\+::\+DOORBELL\+\_\+\+MAX = 0x\+FFFFFFFFFFFFFFFFull\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [private]}}
+
+\mbox{\Hypertarget{classrocr_1_1core_1_1InterceptQueue_ae084055d06ff5f629e15e3cc85ceb305}\label{classrocr_1_1core_1_1InterceptQueue_ae084055d06ff5f629e15e3cc85ceb305}} 
+\index{rocr::core::InterceptQueue@{rocr::core::InterceptQueue}!interceptors@{interceptors}}
+\index{interceptors@{interceptors}!rocr::core::InterceptQueue@{rocr::core::InterceptQueue}}
+\doxysubsubsection{\texorpdfstring{interceptors}{interceptors}}
+{\footnotesize\ttfamily std\+::vector$<$std\+::pair$<$\mbox{\hyperlink{classrocr_1_1AMD_1_1callback__t}{AMD\+::callback\+\_\+t}}$<$\mbox{\hyperlink{inc_2hsa__api__trace_8h_acb1a21c5319f0581a0eb74f78c20c348}{hsa\+\_\+amd\+\_\+queue\+\_\+intercept\+\_\+handler}}$>$, void$\ast$$>$ $>$ rocr\+::core\+::\+Intercept\+Queue\+::interceptors\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classrocr_1_1core_1_1InterceptQueue_a976347a629feb125ae559f932f0b13cb}\label{classrocr_1_1core_1_1InterceptQueue_a976347a629feb125ae559f932f0b13cb}} 
+\index{rocr::core::InterceptQueue@{rocr::core::InterceptQueue}!lock\_@{lock\_}}
+\index{lock\_@{lock\_}!rocr::core::InterceptQueue@{rocr::core::InterceptQueue}}
+\doxysubsubsection{\texorpdfstring{lock\_}{lock\_}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classrocr_1_1KernelMutex}{Kernel\+Mutex}} rocr\+::core\+::\+Intercept\+Queue\+::lock\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classrocr_1_1core_1_1InterceptQueue_a1bdb3cdc8b373ea52990ec5a0c3c34fc}\label{classrocr_1_1core_1_1InterceptQueue_a1bdb3cdc8b373ea52990ec5a0c3c34fc}} 
+\index{rocr::core::InterceptQueue@{rocr::core::InterceptQueue}!next\_packet\_@{next\_packet\_}}
+\index{next\_packet\_@{next\_packet\_}!rocr::core::InterceptQueue@{rocr::core::InterceptQueue}}
+\doxysubsubsection{\texorpdfstring{next\_packet\_}{next\_packet\_}}
+{\footnotesize\ttfamily uint64\+\_\+t rocr\+::core\+::\+Intercept\+Queue\+::next\+\_\+packet\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classrocr_1_1core_1_1InterceptQueue_a1214207e57fa2b398db1a951e0079508}\label{classrocr_1_1core_1_1InterceptQueue_a1214207e57fa2b398db1a951e0079508}} 
+\index{rocr::core::InterceptQueue@{rocr::core::InterceptQueue}!overflow\_@{overflow\_}}
+\index{overflow\_@{overflow\_}!rocr::core::InterceptQueue@{rocr::core::InterceptQueue}}
+\doxysubsubsection{\texorpdfstring{overflow\_}{overflow\_}}
+{\footnotesize\ttfamily std\+::vector$<$\mbox{\hyperlink{structrocr_1_1core_1_1AqlPacket}{Aql\+Packet}}$>$ rocr\+::core\+::\+Intercept\+Queue\+::overflow\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classrocr_1_1core_1_1InterceptQueue_a24b1a4dcfffc60a03e20453f81f6b863}\label{classrocr_1_1core_1_1InterceptQueue_a24b1a4dcfffc60a03e20453f81f6b863}} 
+\index{rocr::core::InterceptQueue@{rocr::core::InterceptQueue}!quit\_@{quit\_}}
+\index{quit\_@{quit\_}!rocr::core::InterceptQueue@{rocr::core::InterceptQueue}}
+\doxysubsubsection{\texorpdfstring{quit\_}{quit\_}}
+{\footnotesize\ttfamily std\+::atomic$<$bool$>$ rocr\+::core\+::\+Intercept\+Queue\+::quit\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classrocr_1_1core_1_1InterceptQueue_ae0b00ee107a8ee3e18092979299cfb44}\label{classrocr_1_1core_1_1InterceptQueue_ae0b00ee107a8ee3e18092979299cfb44}} 
+\index{rocr::core::InterceptQueue@{rocr::core::InterceptQueue}!retry\_index\_@{retry\_index\_}}
+\index{retry\_index\_@{retry\_index\_}!rocr::core::InterceptQueue@{rocr::core::InterceptQueue}}
+\doxysubsubsection{\texorpdfstring{retry\_index\_}{retry\_index\_}}
+{\footnotesize\ttfamily uint64\+\_\+t rocr\+::core\+::\+Intercept\+Queue\+::retry\+\_\+index\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classrocr_1_1core_1_1InterceptQueue_abbd67a312a5fed243b974a467eb56c19}\label{classrocr_1_1core_1_1InterceptQueue_abbd67a312a5fed243b974a467eb56c19}} 
+\index{rocr::core::InterceptQueue@{rocr::core::InterceptQueue}!rtti\_id\_@{rtti\_id\_}}
+\index{rtti\_id\_@{rtti\_id\_}!rocr::core::InterceptQueue@{rocr::core::InterceptQueue}}
+\doxysubsubsection{\texorpdfstring{rtti\_id\_}{rtti\_id\_}}
+{\footnotesize\ttfamily int rocr\+::core\+::\+Intercept\+Queue\+::rtti\+\_\+id\+\_\+ = 0\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [private]}}
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+src/core/inc/\mbox{\hyperlink{intercept__queue_8h}{intercept\+\_\+queue.\+h}}\item 
+src/core/runtime/\mbox{\hyperlink{intercept__queue_8cpp}{intercept\+\_\+queue.\+cpp}}\end{DoxyCompactItemize}

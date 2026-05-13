@@ -1,0 +1,176 @@
+\hypertarget{classrocr_1_1timer_1_1accurate__clock}{}\doxysection{rocr\+::timer\+::accurate\+\_\+clock Class Reference}
+\label{classrocr_1_1timer_1_1accurate__clock}\index{rocr::timer::accurate\_clock@{rocr::timer::accurate\_clock}}
+
+
+{\ttfamily \#include $<$timer.\+h$>$}
+
+
+
+Collaboration diagram for rocr\+::timer\+::accurate\+\_\+clock\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=220pt]{classrocr_1_1timer_1_1accurate__clock__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class \mbox{\hyperlink{classrocr_1_1timer_1_1accurate__clock_1_1init}{init}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+typedef double \mbox{\hyperlink{classrocr_1_1timer_1_1accurate__clock_aa20634747141464af525f1f69a464ce6}{rep}}
+\item 
+typedef std\+::nano \mbox{\hyperlink{classrocr_1_1timer_1_1accurate__clock_ad7f23474fb944fdf753f9e375d1d12df}{period}}
+\item 
+typedef std\+::chrono\+::duration$<$ \mbox{\hyperlink{classrocr_1_1timer_1_1accurate__clock_aa20634747141464af525f1f69a464ce6}{rep}}, \mbox{\hyperlink{classrocr_1_1timer_1_1accurate__clock_ad7f23474fb944fdf753f9e375d1d12df}{period}} $>$ \mbox{\hyperlink{classrocr_1_1timer_1_1accurate__clock_a2809fe58b0c7aeaba9a5755ee035aac2}{duration}}
+\item 
+typedef std\+::chrono\+::time\+\_\+point$<$ \mbox{\hyperlink{classrocr_1_1timer_1_1accurate__clock}{accurate\+\_\+clock}} $>$ \mbox{\hyperlink{classrocr_1_1timer_1_1accurate__clock_a3d8efe54fe23ec4140b7c4a15c1647a9}{time\+\_\+point}}
+\item 
+typedef uint64\+\_\+t \mbox{\hyperlink{classrocr_1_1timer_1_1accurate__clock_a4e8cf4fb2d12bc4afc14938c7df07d2d}{raw\+\_\+rep}}
+\item 
+typedef uint64\+\_\+t \mbox{\hyperlink{classrocr_1_1timer_1_1accurate__clock_aa675ad4217d4a016e8b24b145c182a44}{raw\+\_\+frequency}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static \+\_\+\+\_\+forceinline \mbox{\hyperlink{classrocr_1_1timer_1_1accurate__clock_a3d8efe54fe23ec4140b7c4a15c1647a9}{time\+\_\+point}} \mbox{\hyperlink{classrocr_1_1timer_1_1accurate__clock_a24a4d7bd03c68a6f5f2691b5a0a0ed71}{now}} ()
+\item 
+static \+\_\+\+\_\+forceinline \mbox{\hyperlink{classrocr_1_1timer_1_1accurate__clock_a4e8cf4fb2d12bc4afc14938c7df07d2d}{raw\+\_\+rep}} \mbox{\hyperlink{classrocr_1_1timer_1_1accurate__clock_a3ed52b1785fa55a6e5615ecd0e81f970}{raw\+\_\+now}} ()
+\item 
+static \+\_\+\+\_\+forceinline \mbox{\hyperlink{classrocr_1_1timer_1_1accurate__clock_aa675ad4217d4a016e8b24b145c182a44}{raw\+\_\+frequency}} \mbox{\hyperlink{classrocr_1_1timer_1_1accurate__clock_a5f7e987a4dc84edfc17dbe2e6e726c56}{raw\+\_\+freq}} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Static Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+static const bool \mbox{\hyperlink{classrocr_1_1timer_1_1accurate__clock_ab38217f92571e93c0c47f49d3d551419}{is\+\_\+steady}} = true
+\end{DoxyCompactItemize}
+\doxysubsection*{Static Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+static double \mbox{\hyperlink{classrocr_1_1timer_1_1accurate__clock_a8fb1c83584a31bbb816a6a097683f400}{period\+\_\+ns}}
+\item 
+static \mbox{\hyperlink{classrocr_1_1timer_1_1accurate__clock_aa675ad4217d4a016e8b24b145c182a44}{raw\+\_\+frequency}} \mbox{\hyperlink{classrocr_1_1timer_1_1accurate__clock_ab9cca7b220b8742200cb166ee0811249}{freq}}
+\item 
+static \mbox{\hyperlink{classrocr_1_1timer_1_1accurate__clock_1_1init}{init}} \mbox{\hyperlink{classrocr_1_1timer_1_1accurate__clock_a88927ccfa024bd856030196e6884cf69}{accurate\+\_\+clock\+\_\+init}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Member Typedef Documentation}
+\mbox{\Hypertarget{classrocr_1_1timer_1_1accurate__clock_a2809fe58b0c7aeaba9a5755ee035aac2}\label{classrocr_1_1timer_1_1accurate__clock_a2809fe58b0c7aeaba9a5755ee035aac2}} 
+\index{rocr::timer::accurate\_clock@{rocr::timer::accurate\_clock}!duration@{duration}}
+\index{duration@{duration}!rocr::timer::accurate\_clock@{rocr::timer::accurate\_clock}}
+\doxysubsubsection{\texorpdfstring{duration}{duration}}
+{\footnotesize\ttfamily typedef std\+::chrono\+::duration$<$\mbox{\hyperlink{classrocr_1_1timer_1_1accurate__clock_aa20634747141464af525f1f69a464ce6}{rep}}, \mbox{\hyperlink{classrocr_1_1timer_1_1accurate__clock_ad7f23474fb944fdf753f9e375d1d12df}{period}}$>$ \mbox{\hyperlink{classrocr_1_1timer_1_1accurate__clock_a2809fe58b0c7aeaba9a5755ee035aac2}{rocr\+::timer\+::accurate\+\_\+clock\+::duration}}}
+
+\mbox{\Hypertarget{classrocr_1_1timer_1_1accurate__clock_ad7f23474fb944fdf753f9e375d1d12df}\label{classrocr_1_1timer_1_1accurate__clock_ad7f23474fb944fdf753f9e375d1d12df}} 
+\index{rocr::timer::accurate\_clock@{rocr::timer::accurate\_clock}!period@{period}}
+\index{period@{period}!rocr::timer::accurate\_clock@{rocr::timer::accurate\_clock}}
+\doxysubsubsection{\texorpdfstring{period}{period}}
+{\footnotesize\ttfamily typedef std\+::nano \mbox{\hyperlink{classrocr_1_1timer_1_1accurate__clock_ad7f23474fb944fdf753f9e375d1d12df}{rocr\+::timer\+::accurate\+\_\+clock\+::period}}}
+
+\mbox{\Hypertarget{classrocr_1_1timer_1_1accurate__clock_aa675ad4217d4a016e8b24b145c182a44}\label{classrocr_1_1timer_1_1accurate__clock_aa675ad4217d4a016e8b24b145c182a44}} 
+\index{rocr::timer::accurate\_clock@{rocr::timer::accurate\_clock}!raw\_frequency@{raw\_frequency}}
+\index{raw\_frequency@{raw\_frequency}!rocr::timer::accurate\_clock@{rocr::timer::accurate\_clock}}
+\doxysubsubsection{\texorpdfstring{raw\_frequency}{raw\_frequency}}
+{\footnotesize\ttfamily typedef uint64\+\_\+t \mbox{\hyperlink{classrocr_1_1timer_1_1accurate__clock_aa675ad4217d4a016e8b24b145c182a44}{rocr\+::timer\+::accurate\+\_\+clock\+::raw\+\_\+frequency}}}
+
+\mbox{\Hypertarget{classrocr_1_1timer_1_1accurate__clock_a4e8cf4fb2d12bc4afc14938c7df07d2d}\label{classrocr_1_1timer_1_1accurate__clock_a4e8cf4fb2d12bc4afc14938c7df07d2d}} 
+\index{rocr::timer::accurate\_clock@{rocr::timer::accurate\_clock}!raw\_rep@{raw\_rep}}
+\index{raw\_rep@{raw\_rep}!rocr::timer::accurate\_clock@{rocr::timer::accurate\_clock}}
+\doxysubsubsection{\texorpdfstring{raw\_rep}{raw\_rep}}
+{\footnotesize\ttfamily typedef uint64\+\_\+t \mbox{\hyperlink{classrocr_1_1timer_1_1accurate__clock_a4e8cf4fb2d12bc4afc14938c7df07d2d}{rocr\+::timer\+::accurate\+\_\+clock\+::raw\+\_\+rep}}}
+
+\mbox{\Hypertarget{classrocr_1_1timer_1_1accurate__clock_aa20634747141464af525f1f69a464ce6}\label{classrocr_1_1timer_1_1accurate__clock_aa20634747141464af525f1f69a464ce6}} 
+\index{rocr::timer::accurate\_clock@{rocr::timer::accurate\_clock}!rep@{rep}}
+\index{rep@{rep}!rocr::timer::accurate\_clock@{rocr::timer::accurate\_clock}}
+\doxysubsubsection{\texorpdfstring{rep}{rep}}
+{\footnotesize\ttfamily typedef double \mbox{\hyperlink{classrocr_1_1timer_1_1accurate__clock_aa20634747141464af525f1f69a464ce6}{rocr\+::timer\+::accurate\+\_\+clock\+::rep}}}
+
+\mbox{\Hypertarget{classrocr_1_1timer_1_1accurate__clock_a3d8efe54fe23ec4140b7c4a15c1647a9}\label{classrocr_1_1timer_1_1accurate__clock_a3d8efe54fe23ec4140b7c4a15c1647a9}} 
+\index{rocr::timer::accurate\_clock@{rocr::timer::accurate\_clock}!time\_point@{time\_point}}
+\index{time\_point@{time\_point}!rocr::timer::accurate\_clock@{rocr::timer::accurate\_clock}}
+\doxysubsubsection{\texorpdfstring{time\_point}{time\_point}}
+{\footnotesize\ttfamily typedef std\+::chrono\+::time\+\_\+point$<$\mbox{\hyperlink{classrocr_1_1timer_1_1accurate__clock}{accurate\+\_\+clock}}$>$ \mbox{\hyperlink{classrocr_1_1timer_1_1accurate__clock_a3d8efe54fe23ec4140b7c4a15c1647a9}{rocr\+::timer\+::accurate\+\_\+clock\+::time\+\_\+point}}}
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classrocr_1_1timer_1_1accurate__clock_a24a4d7bd03c68a6f5f2691b5a0a0ed71}\label{classrocr_1_1timer_1_1accurate__clock_a24a4d7bd03c68a6f5f2691b5a0a0ed71}} 
+\index{rocr::timer::accurate\_clock@{rocr::timer::accurate\_clock}!now@{now}}
+\index{now@{now}!rocr::timer::accurate\_clock@{rocr::timer::accurate\_clock}}
+\doxysubsubsection{\texorpdfstring{now()}{now()}}
+{\footnotesize\ttfamily static \+\_\+\+\_\+forceinline \mbox{\hyperlink{classrocr_1_1timer_1_1accurate__clock_a3d8efe54fe23ec4140b7c4a15c1647a9}{time\+\_\+point}} rocr\+::timer\+::accurate\+\_\+clock\+::now (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classrocr_1_1timer_1_1accurate__clock_a24a4d7bd03c68a6f5f2691b5a0a0ed71_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classrocr_1_1timer_1_1accurate__clock_a5f7e987a4dc84edfc17dbe2e6e726c56}\label{classrocr_1_1timer_1_1accurate__clock_a5f7e987a4dc84edfc17dbe2e6e726c56}} 
+\index{rocr::timer::accurate\_clock@{rocr::timer::accurate\_clock}!raw\_freq@{raw\_freq}}
+\index{raw\_freq@{raw\_freq}!rocr::timer::accurate\_clock@{rocr::timer::accurate\_clock}}
+\doxysubsubsection{\texorpdfstring{raw\_freq()}{raw\_freq()}}
+{\footnotesize\ttfamily static \+\_\+\+\_\+forceinline \mbox{\hyperlink{classrocr_1_1timer_1_1accurate__clock_aa675ad4217d4a016e8b24b145c182a44}{raw\+\_\+frequency}} rocr\+::timer\+::accurate\+\_\+clock\+::raw\+\_\+freq (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+\mbox{\Hypertarget{classrocr_1_1timer_1_1accurate__clock_a3ed52b1785fa55a6e5615ecd0e81f970}\label{classrocr_1_1timer_1_1accurate__clock_a3ed52b1785fa55a6e5615ecd0e81f970}} 
+\index{rocr::timer::accurate\_clock@{rocr::timer::accurate\_clock}!raw\_now@{raw\_now}}
+\index{raw\_now@{raw\_now}!rocr::timer::accurate\_clock@{rocr::timer::accurate\_clock}}
+\doxysubsubsection{\texorpdfstring{raw\_now()}{raw\_now()}}
+{\footnotesize\ttfamily static \+\_\+\+\_\+forceinline \mbox{\hyperlink{classrocr_1_1timer_1_1accurate__clock_a4e8cf4fb2d12bc4afc14938c7df07d2d}{raw\+\_\+rep}} rocr\+::timer\+::accurate\+\_\+clock\+::raw\+\_\+now (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classrocr_1_1timer_1_1accurate__clock_a3ed52b1785fa55a6e5615ecd0e81f970_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=324pt]{classrocr_1_1timer_1_1accurate__clock_a3ed52b1785fa55a6e5615ecd0e81f970_icgraph}
+\end{center}
+\end{figure}
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{classrocr_1_1timer_1_1accurate__clock_a88927ccfa024bd856030196e6884cf69}\label{classrocr_1_1timer_1_1accurate__clock_a88927ccfa024bd856030196e6884cf69}} 
+\index{rocr::timer::accurate\_clock@{rocr::timer::accurate\_clock}!accurate\_clock\_init@{accurate\_clock\_init}}
+\index{accurate\_clock\_init@{accurate\_clock\_init}!rocr::timer::accurate\_clock@{rocr::timer::accurate\_clock}}
+\doxysubsubsection{\texorpdfstring{accurate\_clock\_init}{accurate\_clock\_init}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classrocr_1_1timer_1_1accurate__clock_1_1init}{accurate\+\_\+clock\+::init}} rocr\+::timer\+::accurate\+\_\+clock\+::accurate\+\_\+clock\+\_\+init\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [private]}}
+
+\mbox{\Hypertarget{classrocr_1_1timer_1_1accurate__clock_ab9cca7b220b8742200cb166ee0811249}\label{classrocr_1_1timer_1_1accurate__clock_ab9cca7b220b8742200cb166ee0811249}} 
+\index{rocr::timer::accurate\_clock@{rocr::timer::accurate\_clock}!freq@{freq}}
+\index{freq@{freq}!rocr::timer::accurate\_clock@{rocr::timer::accurate\_clock}}
+\doxysubsubsection{\texorpdfstring{freq}{freq}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classrocr_1_1timer_1_1accurate__clock_aa675ad4217d4a016e8b24b145c182a44}{accurate\+\_\+clock\+::raw\+\_\+frequency}} rocr\+::timer\+::accurate\+\_\+clock\+::freq\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [private]}}
+
+\mbox{\Hypertarget{classrocr_1_1timer_1_1accurate__clock_ab38217f92571e93c0c47f49d3d551419}\label{classrocr_1_1timer_1_1accurate__clock_ab38217f92571e93c0c47f49d3d551419}} 
+\index{rocr::timer::accurate\_clock@{rocr::timer::accurate\_clock}!is\_steady@{is\_steady}}
+\index{is\_steady@{is\_steady}!rocr::timer::accurate\_clock@{rocr::timer::accurate\_clock}}
+\doxysubsubsection{\texorpdfstring{is\_steady}{is\_steady}}
+{\footnotesize\ttfamily const bool rocr\+::timer\+::accurate\+\_\+clock\+::is\+\_\+steady = true\hspace{0.3cm}{\ttfamily [static]}}
+
+\mbox{\Hypertarget{classrocr_1_1timer_1_1accurate__clock_a8fb1c83584a31bbb816a6a097683f400}\label{classrocr_1_1timer_1_1accurate__clock_a8fb1c83584a31bbb816a6a097683f400}} 
+\index{rocr::timer::accurate\_clock@{rocr::timer::accurate\_clock}!period\_ns@{period\_ns}}
+\index{period\_ns@{period\_ns}!rocr::timer::accurate\_clock@{rocr::timer::accurate\_clock}}
+\doxysubsubsection{\texorpdfstring{period\_ns}{period\_ns}}
+{\footnotesize\ttfamily double rocr\+::timer\+::accurate\+\_\+clock\+::period\+\_\+ns\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [private]}}
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+src/core/util/\mbox{\hyperlink{timer_8h}{timer.\+h}}\item 
+src/core/util/\mbox{\hyperlink{timer_8cpp}{timer.\+cpp}}\end{DoxyCompactItemize}

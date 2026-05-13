@@ -1,0 +1,476 @@
+\hypertarget{classrocr_1_1AMD_1_1BlitKernel}{}\doxysection{rocr\+::AMD\+::Blit\+Kernel Class Reference}
+\label{classrocr_1_1AMD_1_1BlitKernel}\index{rocr::AMD::BlitKernel@{rocr::AMD::BlitKernel}}
+
+
+{\ttfamily \#include $<$amd\+\_\+blit\+\_\+kernel.\+h$>$}
+
+
+
+Inheritance diagram for rocr\+::AMD\+::Blit\+Kernel\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=190pt]{classrocr_1_1AMD_1_1BlitKernel__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for rocr\+::AMD\+::Blit\+Kernel\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classrocr_1_1AMD_1_1BlitKernel__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{structrocr_1_1AMD_1_1BlitKernel_1_1BytesWritten}{Bytes\+Written}}
+\item 
+union \mbox{\hyperlink{unionrocr_1_1AMD_1_1BlitKernel_1_1KernelArgs}{Kernel\+Args}}
+\item 
+struct \mbox{\hyperlink{structrocr_1_1AMD_1_1BlitKernel_1_1KernelCode}{Kernel\+Code}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classrocr_1_1AMD_1_1BlitKernel_a0666391634867c37b4ab7841fe73b5ab}{Blit\+Kernel}} (\mbox{\hyperlink{classrocr_1_1core_1_1Queue}{core\+::\+Queue}} $\ast$queue)
+\item 
+virtual \mbox{\hyperlink{classrocr_1_1AMD_1_1BlitKernel_a5f3d7a40ce6ab1a05d538146245781c1}{$\sim$\+Blit\+Kernel}} () override
+\item 
+\mbox{\hyperlink{group__status_gad755322e7ff95456520e8abdbe90d225}{hsa\+\_\+status\+\_\+t}} \mbox{\hyperlink{classrocr_1_1AMD_1_1BlitKernel_aa03f201215333a9d2a5bc4d7ff03ccbd}{Initialize}} (const \mbox{\hyperlink{classrocr_1_1core_1_1Agent}{core\+::\+Agent}} \&agent)
+\begin{DoxyCompactList}\small\item\em Initialize a blit kernel object. \end{DoxyCompactList}\item 
+virtual \mbox{\hyperlink{group__status_gad755322e7ff95456520e8abdbe90d225}{hsa\+\_\+status\+\_\+t}} \mbox{\hyperlink{classrocr_1_1AMD_1_1BlitKernel_a863f654b0818e249dcc147b3e89a988f}{Destroy}} (const \mbox{\hyperlink{classrocr_1_1core_1_1Agent}{core\+::\+Agent}} \&agent) override
+\begin{DoxyCompactList}\small\item\em Marks the blit kernel object as invalid and uncouples its link with the underlying AQL kernel queue. Use of the blit object once it has been release is illegal and any behavior is indeterminate. \end{DoxyCompactList}\item 
+virtual \mbox{\hyperlink{group__status_gad755322e7ff95456520e8abdbe90d225}{hsa\+\_\+status\+\_\+t}} \mbox{\hyperlink{classrocr_1_1AMD_1_1BlitKernel_a16a967fdf34ab966edfd66acf007b9e9}{Submit\+Linear\+Copy\+Command}} (void $\ast$dst, const void $\ast$src, size\+\_\+t size) override
+\begin{DoxyCompactList}\small\item\em Submit an AQL packet to perform vector copy. The call is blocking until the command execution is finished. \end{DoxyCompactList}\item 
+virtual \mbox{\hyperlink{group__status_gad755322e7ff95456520e8abdbe90d225}{hsa\+\_\+status\+\_\+t}} \mbox{\hyperlink{classrocr_1_1AMD_1_1BlitKernel_ac7936b75214200cedb0502185cd34d8d}{Submit\+Linear\+Copy\+Command}} (void $\ast$dst, const void $\ast$src, size\+\_\+t size, std\+::vector$<$ \mbox{\hyperlink{classrocr_1_1core_1_1Signal}{core\+::\+Signal}} $\ast$ $>$ \&dep\+\_\+signals, \mbox{\hyperlink{classrocr_1_1core_1_1Signal}{core\+::\+Signal}} \&out\+\_\+signal) override
+\begin{DoxyCompactList}\small\item\em Submit a linear copy command to the the underlying compute device\textquotesingle{}s control block. The call is non blocking. The memory transfer will start after all dependent signals are satisfied. After the transfer is completed, the out signal will be decremented. \end{DoxyCompactList}\item 
+virtual \mbox{\hyperlink{group__status_gad755322e7ff95456520e8abdbe90d225}{hsa\+\_\+status\+\_\+t}} \mbox{\hyperlink{classrocr_1_1AMD_1_1BlitKernel_acc416c459d89b03318df4d82297d871b}{Submit\+Linear\+Fill\+Command}} (void $\ast$ptr, uint32\+\_\+t value, size\+\_\+t count) override
+\begin{DoxyCompactList}\small\item\em Submit an AQL packet to perform memory fill. The call is blocking until the command execution is finished. \end{DoxyCompactList}\item 
+virtual \mbox{\hyperlink{group__status_gad755322e7ff95456520e8abdbe90d225}{hsa\+\_\+status\+\_\+t}} \mbox{\hyperlink{classrocr_1_1AMD_1_1BlitKernel_aeea6067b4ad1d1843685fd531a210f4d}{Enable\+Profiling}} (bool enable) override
+\begin{DoxyCompactList}\small\item\em Enable profiling of the asynchronous copy command. The timestamp of each copy request will be stored in the completion signal structure. \end{DoxyCompactList}\item 
+virtual uint64\+\_\+t \mbox{\hyperlink{classrocr_1_1AMD_1_1BlitKernel_a9f84c112b7c9ca2fe9a83991d5174896}{Pending\+Bytes}} () override
+\end{DoxyCompactItemize}
+\doxysubsection*{Private Types}
+\begin{DoxyCompactItemize}
+\item 
+enum class \mbox{\hyperlink{classrocr_1_1AMD_1_1BlitKernel_a4f817f0485fb8da6f22f9415318eed64}{Kernel\+Type}} \{ \mbox{\hyperlink{classrocr_1_1AMD_1_1BlitKernel_a4f817f0485fb8da6f22f9415318eed64a3dfd748984a59ab922664bb2540f5784}{Copy\+Aligned}}
+, \mbox{\hyperlink{classrocr_1_1AMD_1_1BlitKernel_a4f817f0485fb8da6f22f9415318eed64a04dcc3e61d6a1be1990bcda9704d9faa}{Copy\+Misaligned}}
+, \mbox{\hyperlink{classrocr_1_1AMD_1_1BlitKernel_a4f817f0485fb8da6f22f9415318eed64adb3e3f51c9107e26c9bccf9a188ce2ed}{Fill}}
+ \}
+\begin{DoxyCompactList}\small\item\em AQL code object and size for each kernel. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+uint64\+\_\+t \mbox{\hyperlink{classrocr_1_1AMD_1_1BlitKernel_a4c6155ff49569d04475283b64f800f12}{Acquire\+Write\+Index}} (uint32\+\_\+t num\+\_\+packet)
+\item 
+void \mbox{\hyperlink{classrocr_1_1AMD_1_1BlitKernel_a02ce5772a413aab8f842445b02fa2a17}{Release\+Write\+Index}} (uint64\+\_\+t write\+\_\+index, uint32\+\_\+t num\+\_\+packet)
+\item 
+void \mbox{\hyperlink{classrocr_1_1AMD_1_1BlitKernel_afd5516e1fdc3727dbe2fbe1b0ecc2568}{Populate\+Queue}} (uint64\+\_\+t index, uint64\+\_\+t code\+\_\+handle, void $\ast$args, uint32\+\_\+t grid\+\_\+size\+\_\+x, \mbox{\hyperlink{group__signals_ga0003af605a660e7ef4f89aa555d3b3fc}{hsa\+\_\+signal\+\_\+t}} completion\+\_\+signal)
+\item 
+\mbox{\hyperlink{unionrocr_1_1AMD_1_1BlitKernel_1_1KernelArgs}{Kernel\+Args}} $\ast$ \mbox{\hyperlink{classrocr_1_1AMD_1_1BlitKernel_a9fc35b7439eda26e2fff9669e2f3bbcf}{Obtain\+Async\+Kernel\+Copy\+Arg}} ()
+\item 
+void \mbox{\hyperlink{classrocr_1_1AMD_1_1BlitKernel_ab75c288a8cd700ee70cb81ca4e47b547}{Record\+Blit\+History}} (uint64\+\_\+t size, uint64\+\_\+t index)
+\end{DoxyCompactItemize}
+\doxysubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+std\+::map$<$ \mbox{\hyperlink{classrocr_1_1AMD_1_1BlitKernel_a4f817f0485fb8da6f22f9415318eed64}{Kernel\+Type}}, \mbox{\hyperlink{structrocr_1_1AMD_1_1BlitKernel_1_1KernelCode}{Kernel\+Code}} $>$ \mbox{\hyperlink{classrocr_1_1AMD_1_1BlitKernel_a2fdfaf524659473439fa27de1ff7c139}{kernels\+\_\+}}
+\item 
+\mbox{\hyperlink{classrocr_1_1core_1_1Queue}{core\+::\+Queue}} $\ast$ \mbox{\hyperlink{classrocr_1_1AMD_1_1BlitKernel_a0dd9e4434b4e0ff51a09a7914ada4fba}{queue\+\_\+}}
+\begin{DoxyCompactList}\small\item\em AQL queue for submitting the vector copy kernel. \end{DoxyCompactList}\item 
+uint32\+\_\+t \mbox{\hyperlink{classrocr_1_1AMD_1_1BlitKernel_a271809bda71372ff71731ae728409985}{queue\+\_\+bitmask\+\_\+}}
+\item 
+\mbox{\hyperlink{unionrocr_1_1AMD_1_1BlitKernel_1_1KernelArgs}{Kernel\+Args}} $\ast$ \mbox{\hyperlink{classrocr_1_1AMD_1_1BlitKernel_acdd98c768d1438f1184789d94626a926}{kernarg\+\_\+async\+\_\+}}
+\begin{DoxyCompactList}\small\item\em Pointer to the kernel argument buffer. \end{DoxyCompactList}\item 
+uint32\+\_\+t \mbox{\hyperlink{classrocr_1_1AMD_1_1BlitKernel_a72b11249bd6aa1aa56ecab2f41722b54}{kernarg\+\_\+async\+\_\+mask\+\_\+}}
+\item 
+volatile uint32\+\_\+t \mbox{\hyperlink{classrocr_1_1AMD_1_1BlitKernel_a6d1d1b10210ec2ed091f8ed46f96b939}{kernarg\+\_\+async\+\_\+counter\+\_\+}}
+\item 
+\mbox{\hyperlink{group__signals_ga0003af605a660e7ef4f89aa555d3b3fc}{hsa\+\_\+signal\+\_\+t}} \mbox{\hyperlink{classrocr_1_1AMD_1_1BlitKernel_a33619218dd5a9a7e4f36a35ac0231e7f}{completion\+\_\+signal\+\_\+}}
+\begin{DoxyCompactList}\small\item\em Completion signal for every kernel dispatched. \end{DoxyCompactList}\item 
+std\+::vector$<$ \mbox{\hyperlink{structrocr_1_1AMD_1_1BlitKernel_1_1BytesWritten}{Bytes\+Written}} $>$ \mbox{\hyperlink{classrocr_1_1AMD_1_1BlitKernel_a8a9d55389774c1a8a6c5d9b566728158}{bytes\+\_\+written\+\_\+}}
+\item 
+uint64\+\_\+t \mbox{\hyperlink{classrocr_1_1AMD_1_1BlitKernel_a40ccdfa299dfb2fbd59bb4e92cf3ba5d}{bytes\+\_\+queued\+\_\+}}
+\begin{DoxyCompactList}\small\item\em Total bytes written by all commands issued. \end{DoxyCompactList}\item 
+uint64\+\_\+t \mbox{\hyperlink{classrocr_1_1AMD_1_1BlitKernel_aeb36cf2ac496afb02881c6c66c5a86f9}{last\+\_\+queued\+\_\+}}
+\begin{DoxyCompactList}\small\item\em Index where most recent blit operation queued. \end{DoxyCompactList}\item 
+std\+::mutex \mbox{\hyperlink{classrocr_1_1AMD_1_1BlitKernel_a325fbdd863d22bc4a19e4a387d1cb4fa}{reservation\+\_\+lock\+\_\+}}
+\begin{DoxyCompactList}\small\item\em Orders command indices and bytes\+\_\+queued\+\_\+ updates. \end{DoxyCompactList}\item 
+std\+::atomic$<$ uint64\+\_\+t $>$ \mbox{\hyperlink{classrocr_1_1AMD_1_1BlitKernel_a57ab7f98907f9a3c1d051502454d4920}{pending\+\_\+search\+\_\+index\+\_\+}}
+\begin{DoxyCompactList}\small\item\em Search resume index. \end{DoxyCompactList}\item 
+std\+::mutex \mbox{\hyperlink{classrocr_1_1AMD_1_1BlitKernel_a4ca42877f99daa5236d218efb320b5fd}{lock\+\_\+}}
+\begin{DoxyCompactList}\small\item\em Lock to synchronize access to kernarg\+\_\+ and completion\+\_\+signal\+\_\+. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{classrocr_1_1AMD_1_1BlitKernel_a2ca2bf4fa92fc9d69b135404caee0669}{num\+\_\+cus\+\_\+}}
+\begin{DoxyCompactList}\small\item\em Number of CUs on the underlying agent. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Member Enumeration Documentation}
+\mbox{\Hypertarget{classrocr_1_1AMD_1_1BlitKernel_a4f817f0485fb8da6f22f9415318eed64}\label{classrocr_1_1AMD_1_1BlitKernel_a4f817f0485fb8da6f22f9415318eed64}} 
+\index{rocr::AMD::BlitKernel@{rocr::AMD::BlitKernel}!KernelType@{KernelType}}
+\index{KernelType@{KernelType}!rocr::AMD::BlitKernel@{rocr::AMD::BlitKernel}}
+\doxysubsubsection{\texorpdfstring{KernelType}{KernelType}}
+{\footnotesize\ttfamily enum \mbox{\hyperlink{classrocr_1_1AMD_1_1BlitKernel_a4f817f0485fb8da6f22f9415318eed64}{rocr\+::\+AMD\+::\+Blit\+Kernel\+::\+Kernel\+Type}}\hspace{0.3cm}{\ttfamily [strong]}, {\ttfamily [private]}}
+
+
+
+AQL code object and size for each kernel. 
+
+\begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{CopyAligned@{CopyAligned}!rocr::AMD::BlitKernel@{rocr::AMD::BlitKernel}}\index{rocr::AMD::BlitKernel@{rocr::AMD::BlitKernel}!CopyAligned@{CopyAligned}}}\mbox{\Hypertarget{classrocr_1_1AMD_1_1BlitKernel_a4f817f0485fb8da6f22f9415318eed64a3dfd748984a59ab922664bb2540f5784}\label{classrocr_1_1AMD_1_1BlitKernel_a4f817f0485fb8da6f22f9415318eed64a3dfd748984a59ab922664bb2540f5784}} 
+Copy\+Aligned&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{CopyMisaligned@{CopyMisaligned}!rocr::AMD::BlitKernel@{rocr::AMD::BlitKernel}}\index{rocr::AMD::BlitKernel@{rocr::AMD::BlitKernel}!CopyMisaligned@{CopyMisaligned}}}\mbox{\Hypertarget{classrocr_1_1AMD_1_1BlitKernel_a4f817f0485fb8da6f22f9415318eed64a04dcc3e61d6a1be1990bcda9704d9faa}\label{classrocr_1_1AMD_1_1BlitKernel_a4f817f0485fb8da6f22f9415318eed64a04dcc3e61d6a1be1990bcda9704d9faa}} 
+Copy\+Misaligned&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Fill@{Fill}!rocr::AMD::BlitKernel@{rocr::AMD::BlitKernel}}\index{rocr::AMD::BlitKernel@{rocr::AMD::BlitKernel}!Fill@{Fill}}}\mbox{\Hypertarget{classrocr_1_1AMD_1_1BlitKernel_a4f817f0485fb8da6f22f9415318eed64adb3e3f51c9107e26c9bccf9a188ce2ed}\label{classrocr_1_1AMD_1_1BlitKernel_a4f817f0485fb8da6f22f9415318eed64adb3e3f51c9107e26c9bccf9a188ce2ed}} 
+Fill&\\
+\hline
+
+\end{DoxyEnumFields}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classrocr_1_1AMD_1_1BlitKernel_a0666391634867c37b4ab7841fe73b5ab}\label{classrocr_1_1AMD_1_1BlitKernel_a0666391634867c37b4ab7841fe73b5ab}} 
+\index{rocr::AMD::BlitKernel@{rocr::AMD::BlitKernel}!BlitKernel@{BlitKernel}}
+\index{BlitKernel@{BlitKernel}!rocr::AMD::BlitKernel@{rocr::AMD::BlitKernel}}
+\doxysubsubsection{\texorpdfstring{BlitKernel()}{BlitKernel()}}
+{\footnotesize\ttfamily rocr\+::\+AMD\+::\+Blit\+Kernel\+::\+Blit\+Kernel (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classrocr_1_1core_1_1Queue}{core\+::\+Queue}} $\ast$}]{queue }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [explicit]}}
+
+\mbox{\Hypertarget{classrocr_1_1AMD_1_1BlitKernel_a5f3d7a40ce6ab1a05d538146245781c1}\label{classrocr_1_1AMD_1_1BlitKernel_a5f3d7a40ce6ab1a05d538146245781c1}} 
+\index{rocr::AMD::BlitKernel@{rocr::AMD::BlitKernel}!````~BlitKernel@{$\sim$BlitKernel}}
+\index{````~BlitKernel@{$\sim$BlitKernel}!rocr::AMD::BlitKernel@{rocr::AMD::BlitKernel}}
+\doxysubsubsection{\texorpdfstring{$\sim$BlitKernel()}{~BlitKernel()}}
+{\footnotesize\ttfamily rocr\+::\+AMD\+::\+Blit\+Kernel\+::$\sim$\+Blit\+Kernel (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classrocr_1_1AMD_1_1BlitKernel_a4c6155ff49569d04475283b64f800f12}\label{classrocr_1_1AMD_1_1BlitKernel_a4c6155ff49569d04475283b64f800f12}} 
+\index{rocr::AMD::BlitKernel@{rocr::AMD::BlitKernel}!AcquireWriteIndex@{AcquireWriteIndex}}
+\index{AcquireWriteIndex@{AcquireWriteIndex}!rocr::AMD::BlitKernel@{rocr::AMD::BlitKernel}}
+\doxysubsubsection{\texorpdfstring{AcquireWriteIndex()}{AcquireWriteIndex()}}
+{\footnotesize\ttfamily uint64\+\_\+t rocr\+::\+AMD\+::\+Blit\+Kernel\+::\+Acquire\+Write\+Index (\begin{DoxyParamCaption}\item[{uint32\+\_\+t}]{num\+\_\+packet }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+Reserve a slot in the queue buffer. The call will wait until the queue buffer has a room. \mbox{\Hypertarget{classrocr_1_1AMD_1_1BlitKernel_a863f654b0818e249dcc147b3e89a988f}\label{classrocr_1_1AMD_1_1BlitKernel_a863f654b0818e249dcc147b3e89a988f}} 
+\index{rocr::AMD::BlitKernel@{rocr::AMD::BlitKernel}!Destroy@{Destroy}}
+\index{Destroy@{Destroy}!rocr::AMD::BlitKernel@{rocr::AMD::BlitKernel}}
+\doxysubsubsection{\texorpdfstring{Destroy()}{Destroy()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{group__status_gad755322e7ff95456520e8abdbe90d225}{hsa\+\_\+status\+\_\+t}} rocr\+::\+AMD\+::\+Blit\+Kernel\+::\+Destroy (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classrocr_1_1core_1_1Agent}{core\+::\+Agent}} \&}]{agent }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Marks the blit kernel object as invalid and uncouples its link with the underlying AQL kernel queue. Use of the blit object once it has been release is illegal and any behavior is indeterminate. 
+
+\begin{DoxyNote}{Note}
+\+: The call will block until all AQL packets have been executed.
+\end{DoxyNote}
+
+\begin{DoxyParams}{Parameters}
+{\em agent} & Agent passed to Initialize.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+hsa\+\_\+status\+\_\+t 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{classrocr_1_1core_1_1Blit_ad2007f050a453aaabc1227f0895f567f}{rocr\+::core\+::\+Blit}}.
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classrocr_1_1AMD_1_1BlitKernel_a863f654b0818e249dcc147b3e89a988f_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classrocr_1_1AMD_1_1BlitKernel_aeea6067b4ad1d1843685fd531a210f4d}\label{classrocr_1_1AMD_1_1BlitKernel_aeea6067b4ad1d1843685fd531a210f4d}} 
+\index{rocr::AMD::BlitKernel@{rocr::AMD::BlitKernel}!EnableProfiling@{EnableProfiling}}
+\index{EnableProfiling@{EnableProfiling}!rocr::AMD::BlitKernel@{rocr::AMD::BlitKernel}}
+\doxysubsubsection{\texorpdfstring{EnableProfiling()}{EnableProfiling()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{group__status_gad755322e7ff95456520e8abdbe90d225}{hsa\+\_\+status\+\_\+t}} rocr\+::\+AMD\+::\+Blit\+Kernel\+::\+Enable\+Profiling (\begin{DoxyParamCaption}\item[{bool}]{enable }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Enable profiling of the asynchronous copy command. The timestamp of each copy request will be stored in the completion signal structure. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em enable} & True to enable profiling. False to disable profiling.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+HSA\+\_\+\+STATUS\+\_\+\+SUCCESS if the request to enable/disable profiling is successful. 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{classrocr_1_1core_1_1Blit_acfaa5aa7f95d0720a49cad4e95ffffb9}{rocr\+::core\+::\+Blit}}.
+
+\mbox{\Hypertarget{classrocr_1_1AMD_1_1BlitKernel_aa03f201215333a9d2a5bc4d7ff03ccbd}\label{classrocr_1_1AMD_1_1BlitKernel_aa03f201215333a9d2a5bc4d7ff03ccbd}} 
+\index{rocr::AMD::BlitKernel@{rocr::AMD::BlitKernel}!Initialize@{Initialize}}
+\index{Initialize@{Initialize}!rocr::AMD::BlitKernel@{rocr::AMD::BlitKernel}}
+\doxysubsubsection{\texorpdfstring{Initialize()}{Initialize()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{group__status_gad755322e7ff95456520e8abdbe90d225}{hsa\+\_\+status\+\_\+t}} rocr\+::\+AMD\+::\+Blit\+Kernel\+::\+Initialize (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classrocr_1_1core_1_1Agent}{core\+::\+Agent}} \&}]{agent }\end{DoxyParamCaption})}
+
+
+
+Initialize a blit kernel object. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em agent} & Pointer to the agent that will execute the AQL packets.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+hsa\+\_\+status\+\_\+t 
+\end{DoxyReturn}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classrocr_1_1AMD_1_1BlitKernel_aa03f201215333a9d2a5bc4d7ff03ccbd_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classrocr_1_1AMD_1_1BlitKernel_a9fc35b7439eda26e2fff9669e2f3bbcf}\label{classrocr_1_1AMD_1_1BlitKernel_a9fc35b7439eda26e2fff9669e2f3bbcf}} 
+\index{rocr::AMD::BlitKernel@{rocr::AMD::BlitKernel}!ObtainAsyncKernelCopyArg@{ObtainAsyncKernelCopyArg}}
+\index{ObtainAsyncKernelCopyArg@{ObtainAsyncKernelCopyArg}!rocr::AMD::BlitKernel@{rocr::AMD::BlitKernel}}
+\doxysubsubsection{\texorpdfstring{ObtainAsyncKernelCopyArg()}{ObtainAsyncKernelCopyArg()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{unionrocr_1_1AMD_1_1BlitKernel_1_1KernelArgs}{Blit\+Kernel\+::\+Kernel\+Args}} $\ast$ rocr\+::\+AMD\+::\+Blit\+Kernel\+::\+Obtain\+Async\+Kernel\+Copy\+Arg (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classrocr_1_1AMD_1_1BlitKernel_a9f84c112b7c9ca2fe9a83991d5174896}\label{classrocr_1_1AMD_1_1BlitKernel_a9f84c112b7c9ca2fe9a83991d5174896}} 
+\index{rocr::AMD::BlitKernel@{rocr::AMD::BlitKernel}!PendingBytes@{PendingBytes}}
+\index{PendingBytes@{PendingBytes}!rocr::AMD::BlitKernel@{rocr::AMD::BlitKernel}}
+\doxysubsubsection{\texorpdfstring{PendingBytes()}{PendingBytes()}}
+{\footnotesize\ttfamily uint64\+\_\+t rocr\+::\+AMD\+::\+Blit\+Kernel\+::\+Pending\+Bytes (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+@\+Brief Reports the approximate number of remaining bytes to copy or fill. Any return of zero must be exact. 
+
+Implements \mbox{\hyperlink{classrocr_1_1core_1_1Blit_a15ad3362fcca65a5bb183e4eb02df785}{rocr\+::core\+::\+Blit}}.
+
+\mbox{\Hypertarget{classrocr_1_1AMD_1_1BlitKernel_afd5516e1fdc3727dbe2fbe1b0ecc2568}\label{classrocr_1_1AMD_1_1BlitKernel_afd5516e1fdc3727dbe2fbe1b0ecc2568}} 
+\index{rocr::AMD::BlitKernel@{rocr::AMD::BlitKernel}!PopulateQueue@{PopulateQueue}}
+\index{PopulateQueue@{PopulateQueue}!rocr::AMD::BlitKernel@{rocr::AMD::BlitKernel}}
+\doxysubsubsection{\texorpdfstring{PopulateQueue()}{PopulateQueue()}}
+{\footnotesize\ttfamily void rocr\+::\+AMD\+::\+Blit\+Kernel\+::\+Populate\+Queue (\begin{DoxyParamCaption}\item[{uint64\+\_\+t}]{index,  }\item[{uint64\+\_\+t}]{code\+\_\+handle,  }\item[{void $\ast$}]{args,  }\item[{uint32\+\_\+t}]{grid\+\_\+size\+\_\+x,  }\item[{\mbox{\hyperlink{group__signals_ga0003af605a660e7ef4f89aa555d3b3fc}{hsa\+\_\+signal\+\_\+t}}}]{completion\+\_\+signal }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classrocr_1_1AMD_1_1BlitKernel_ab75c288a8cd700ee70cb81ca4e47b547}\label{classrocr_1_1AMD_1_1BlitKernel_ab75c288a8cd700ee70cb81ca4e47b547}} 
+\index{rocr::AMD::BlitKernel@{rocr::AMD::BlitKernel}!RecordBlitHistory@{RecordBlitHistory}}
+\index{RecordBlitHistory@{RecordBlitHistory}!rocr::AMD::BlitKernel@{rocr::AMD::BlitKernel}}
+\doxysubsubsection{\texorpdfstring{RecordBlitHistory()}{RecordBlitHistory()}}
+{\footnotesize\ttfamily void rocr\+::\+AMD\+::\+Blit\+Kernel\+::\+Record\+Blit\+History (\begin{DoxyParamCaption}\item[{uint64\+\_\+t}]{size,  }\item[{uint64\+\_\+t}]{index }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classrocr_1_1AMD_1_1BlitKernel_a02ce5772a413aab8f842445b02fa2a17}\label{classrocr_1_1AMD_1_1BlitKernel_a02ce5772a413aab8f842445b02fa2a17}} 
+\index{rocr::AMD::BlitKernel@{rocr::AMD::BlitKernel}!ReleaseWriteIndex@{ReleaseWriteIndex}}
+\index{ReleaseWriteIndex@{ReleaseWriteIndex}!rocr::AMD::BlitKernel@{rocr::AMD::BlitKernel}}
+\doxysubsubsection{\texorpdfstring{ReleaseWriteIndex()}{ReleaseWriteIndex()}}
+{\footnotesize\ttfamily void rocr\+::\+AMD\+::\+Blit\+Kernel\+::\+Release\+Write\+Index (\begin{DoxyParamCaption}\item[{uint64\+\_\+t}]{write\+\_\+index,  }\item[{uint32\+\_\+t}]{num\+\_\+packet }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+Update the queue doorbell register with \+::write\+\_\+index. This function also serializes concurrent doorbell update to ensure that the packet processor doesn\textquotesingle{}t get invalid packet. \mbox{\Hypertarget{classrocr_1_1AMD_1_1BlitKernel_a16a967fdf34ab966edfd66acf007b9e9}\label{classrocr_1_1AMD_1_1BlitKernel_a16a967fdf34ab966edfd66acf007b9e9}} 
+\index{rocr::AMD::BlitKernel@{rocr::AMD::BlitKernel}!SubmitLinearCopyCommand@{SubmitLinearCopyCommand}}
+\index{SubmitLinearCopyCommand@{SubmitLinearCopyCommand}!rocr::AMD::BlitKernel@{rocr::AMD::BlitKernel}}
+\doxysubsubsection{\texorpdfstring{SubmitLinearCopyCommand()}{SubmitLinearCopyCommand()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{group__status_gad755322e7ff95456520e8abdbe90d225}{hsa\+\_\+status\+\_\+t}} rocr\+::\+AMD\+::\+Blit\+Kernel\+::\+Submit\+Linear\+Copy\+Command (\begin{DoxyParamCaption}\item[{void $\ast$}]{dst,  }\item[{const void $\ast$}]{src,  }\item[{size\+\_\+t}]{size }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Submit an AQL packet to perform vector copy. The call is blocking until the command execution is finished. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em dst} & Memory address of the copy destination. \\
+\hline
+{\em src} & Memory address of the copy source. \\
+\hline
+{\em size} & Size of the data to be copied. \\
+\hline
+\end{DoxyParams}
+
+
+Implements \mbox{\hyperlink{classrocr_1_1core_1_1Blit_a0220cb0a78cd3626060a62301193ea96}{rocr\+::core\+::\+Blit}}.
+
+\mbox{\Hypertarget{classrocr_1_1AMD_1_1BlitKernel_ac7936b75214200cedb0502185cd34d8d}\label{classrocr_1_1AMD_1_1BlitKernel_ac7936b75214200cedb0502185cd34d8d}} 
+\index{rocr::AMD::BlitKernel@{rocr::AMD::BlitKernel}!SubmitLinearCopyCommand@{SubmitLinearCopyCommand}}
+\index{SubmitLinearCopyCommand@{SubmitLinearCopyCommand}!rocr::AMD::BlitKernel@{rocr::AMD::BlitKernel}}
+\doxysubsubsection{\texorpdfstring{SubmitLinearCopyCommand()}{SubmitLinearCopyCommand()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{group__status_gad755322e7ff95456520e8abdbe90d225}{hsa\+\_\+status\+\_\+t}} rocr\+::\+AMD\+::\+Blit\+Kernel\+::\+Submit\+Linear\+Copy\+Command (\begin{DoxyParamCaption}\item[{void $\ast$}]{dst,  }\item[{const void $\ast$}]{src,  }\item[{size\+\_\+t}]{size,  }\item[{std\+::vector$<$ \mbox{\hyperlink{classrocr_1_1core_1_1Signal}{core\+::\+Signal}} $\ast$ $>$ \&}]{dep\+\_\+signals,  }\item[{\mbox{\hyperlink{classrocr_1_1core_1_1Signal}{core\+::\+Signal}} \&}]{out\+\_\+signal }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Submit a linear copy command to the the underlying compute device\textquotesingle{}s control block. The call is non blocking. The memory transfer will start after all dependent signals are satisfied. After the transfer is completed, the out signal will be decremented. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em dst} & Memory address of the copy destination. \\
+\hline
+{\em src} & Memory address of the copy source. \\
+\hline
+{\em size} & Size of the data to be copied. \\
+\hline
+{\em dep\+\_\+signals} & Arrays of dependent signal. \\
+\hline
+{\em out\+\_\+signal} & Output signal. \\
+\hline
+\end{DoxyParams}
+
+
+Implements \mbox{\hyperlink{classrocr_1_1core_1_1Blit_af966aecf9b06ecbe1e2d8eaabf6012b0}{rocr\+::core\+::\+Blit}}.
+
+\mbox{\Hypertarget{classrocr_1_1AMD_1_1BlitKernel_acc416c459d89b03318df4d82297d871b}\label{classrocr_1_1AMD_1_1BlitKernel_acc416c459d89b03318df4d82297d871b}} 
+\index{rocr::AMD::BlitKernel@{rocr::AMD::BlitKernel}!SubmitLinearFillCommand@{SubmitLinearFillCommand}}
+\index{SubmitLinearFillCommand@{SubmitLinearFillCommand}!rocr::AMD::BlitKernel@{rocr::AMD::BlitKernel}}
+\doxysubsubsection{\texorpdfstring{SubmitLinearFillCommand()}{SubmitLinearFillCommand()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{group__status_gad755322e7ff95456520e8abdbe90d225}{hsa\+\_\+status\+\_\+t}} rocr\+::\+AMD\+::\+Blit\+Kernel\+::\+Submit\+Linear\+Fill\+Command (\begin{DoxyParamCaption}\item[{void $\ast$}]{ptr,  }\item[{uint32\+\_\+t}]{value,  }\item[{size\+\_\+t}]{count }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Submit an AQL packet to perform memory fill. The call is blocking until the command execution is finished. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em ptr} & Memory address of the fill destination. \\
+\hline
+{\em value} & Value to be set. \\
+\hline
+{\em count} & Number of uint32\+\_\+t element to be set to the value. \\
+\hline
+\end{DoxyParams}
+
+
+Implements \mbox{\hyperlink{classrocr_1_1core_1_1Blit_a22a436a79221d0fc05b9cd24a74d87bf}{rocr\+::core\+::\+Blit}}.
+
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{classrocr_1_1AMD_1_1BlitKernel_a40ccdfa299dfb2fbd59bb4e92cf3ba5d}\label{classrocr_1_1AMD_1_1BlitKernel_a40ccdfa299dfb2fbd59bb4e92cf3ba5d}} 
+\index{rocr::AMD::BlitKernel@{rocr::AMD::BlitKernel}!bytes\_queued\_@{bytes\_queued\_}}
+\index{bytes\_queued\_@{bytes\_queued\_}!rocr::AMD::BlitKernel@{rocr::AMD::BlitKernel}}
+\doxysubsubsection{\texorpdfstring{bytes\_queued\_}{bytes\_queued\_}}
+{\footnotesize\ttfamily uint64\+\_\+t rocr\+::\+AMD\+::\+Blit\+Kernel\+::bytes\+\_\+queued\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Total bytes written by all commands issued. 
+
+\mbox{\Hypertarget{classrocr_1_1AMD_1_1BlitKernel_a8a9d55389774c1a8a6c5d9b566728158}\label{classrocr_1_1AMD_1_1BlitKernel_a8a9d55389774c1a8a6c5d9b566728158}} 
+\index{rocr::AMD::BlitKernel@{rocr::AMD::BlitKernel}!bytes\_written\_@{bytes\_written\_}}
+\index{bytes\_written\_@{bytes\_written\_}!rocr::AMD::BlitKernel@{rocr::AMD::BlitKernel}}
+\doxysubsubsection{\texorpdfstring{bytes\_written\_}{bytes\_written\_}}
+{\footnotesize\ttfamily std\+::vector$<$\mbox{\hyperlink{structrocr_1_1AMD_1_1BlitKernel_1_1BytesWritten}{Bytes\+Written}}$>$ rocr\+::\+AMD\+::\+Blit\+Kernel\+::bytes\+\_\+written\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
+
+Bytes moved by commands $<$ index. Any record\textquotesingle{}s byte value may be inexact by the size of concurrently issued operations. \mbox{\Hypertarget{classrocr_1_1AMD_1_1BlitKernel_a33619218dd5a9a7e4f36a35ac0231e7f}\label{classrocr_1_1AMD_1_1BlitKernel_a33619218dd5a9a7e4f36a35ac0231e7f}} 
+\index{rocr::AMD::BlitKernel@{rocr::AMD::BlitKernel}!completion\_signal\_@{completion\_signal\_}}
+\index{completion\_signal\_@{completion\_signal\_}!rocr::AMD::BlitKernel@{rocr::AMD::BlitKernel}}
+\doxysubsubsection{\texorpdfstring{completion\_signal\_}{completion\_signal\_}}
+{\footnotesize\ttfamily \mbox{\hyperlink{group__signals_ga0003af605a660e7ef4f89aa555d3b3fc}{hsa\+\_\+signal\+\_\+t}} rocr\+::\+AMD\+::\+Blit\+Kernel\+::completion\+\_\+signal\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Completion signal for every kernel dispatched. 
+
+\mbox{\Hypertarget{classrocr_1_1AMD_1_1BlitKernel_acdd98c768d1438f1184789d94626a926}\label{classrocr_1_1AMD_1_1BlitKernel_acdd98c768d1438f1184789d94626a926}} 
+\index{rocr::AMD::BlitKernel@{rocr::AMD::BlitKernel}!kernarg\_async\_@{kernarg\_async\_}}
+\index{kernarg\_async\_@{kernarg\_async\_}!rocr::AMD::BlitKernel@{rocr::AMD::BlitKernel}}
+\doxysubsubsection{\texorpdfstring{kernarg\_async\_}{kernarg\_async\_}}
+{\footnotesize\ttfamily \mbox{\hyperlink{unionrocr_1_1AMD_1_1BlitKernel_1_1KernelArgs}{Kernel\+Args}}$\ast$ rocr\+::\+AMD\+::\+Blit\+Kernel\+::kernarg\+\_\+async\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Pointer to the kernel argument buffer. 
+
+\mbox{\Hypertarget{classrocr_1_1AMD_1_1BlitKernel_a6d1d1b10210ec2ed091f8ed46f96b939}\label{classrocr_1_1AMD_1_1BlitKernel_a6d1d1b10210ec2ed091f8ed46f96b939}} 
+\index{rocr::AMD::BlitKernel@{rocr::AMD::BlitKernel}!kernarg\_async\_counter\_@{kernarg\_async\_counter\_}}
+\index{kernarg\_async\_counter\_@{kernarg\_async\_counter\_}!rocr::AMD::BlitKernel@{rocr::AMD::BlitKernel}}
+\doxysubsubsection{\texorpdfstring{kernarg\_async\_counter\_}{kernarg\_async\_counter\_}}
+{\footnotesize\ttfamily volatile uint32\+\_\+t rocr\+::\+AMD\+::\+Blit\+Kernel\+::kernarg\+\_\+async\+\_\+counter\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classrocr_1_1AMD_1_1BlitKernel_a72b11249bd6aa1aa56ecab2f41722b54}\label{classrocr_1_1AMD_1_1BlitKernel_a72b11249bd6aa1aa56ecab2f41722b54}} 
+\index{rocr::AMD::BlitKernel@{rocr::AMD::BlitKernel}!kernarg\_async\_mask\_@{kernarg\_async\_mask\_}}
+\index{kernarg\_async\_mask\_@{kernarg\_async\_mask\_}!rocr::AMD::BlitKernel@{rocr::AMD::BlitKernel}}
+\doxysubsubsection{\texorpdfstring{kernarg\_async\_mask\_}{kernarg\_async\_mask\_}}
+{\footnotesize\ttfamily uint32\+\_\+t rocr\+::\+AMD\+::\+Blit\+Kernel\+::kernarg\+\_\+async\+\_\+mask\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classrocr_1_1AMD_1_1BlitKernel_a2fdfaf524659473439fa27de1ff7c139}\label{classrocr_1_1AMD_1_1BlitKernel_a2fdfaf524659473439fa27de1ff7c139}} 
+\index{rocr::AMD::BlitKernel@{rocr::AMD::BlitKernel}!kernels\_@{kernels\_}}
+\index{kernels\_@{kernels\_}!rocr::AMD::BlitKernel@{rocr::AMD::BlitKernel}}
+\doxysubsubsection{\texorpdfstring{kernels\_}{kernels\_}}
+{\footnotesize\ttfamily std\+::map$<$\mbox{\hyperlink{classrocr_1_1AMD_1_1BlitKernel_a4f817f0485fb8da6f22f9415318eed64}{Kernel\+Type}}, \mbox{\hyperlink{structrocr_1_1AMD_1_1BlitKernel_1_1KernelCode}{Kernel\+Code}}$>$ rocr\+::\+AMD\+::\+Blit\+Kernel\+::kernels\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classrocr_1_1AMD_1_1BlitKernel_aeb36cf2ac496afb02881c6c66c5a86f9}\label{classrocr_1_1AMD_1_1BlitKernel_aeb36cf2ac496afb02881c6c66c5a86f9}} 
+\index{rocr::AMD::BlitKernel@{rocr::AMD::BlitKernel}!last\_queued\_@{last\_queued\_}}
+\index{last\_queued\_@{last\_queued\_}!rocr::AMD::BlitKernel@{rocr::AMD::BlitKernel}}
+\doxysubsubsection{\texorpdfstring{last\_queued\_}{last\_queued\_}}
+{\footnotesize\ttfamily uint64\+\_\+t rocr\+::\+AMD\+::\+Blit\+Kernel\+::last\+\_\+queued\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Index where most recent blit operation queued. 
+
+\mbox{\Hypertarget{classrocr_1_1AMD_1_1BlitKernel_a4ca42877f99daa5236d218efb320b5fd}\label{classrocr_1_1AMD_1_1BlitKernel_a4ca42877f99daa5236d218efb320b5fd}} 
+\index{rocr::AMD::BlitKernel@{rocr::AMD::BlitKernel}!lock\_@{lock\_}}
+\index{lock\_@{lock\_}!rocr::AMD::BlitKernel@{rocr::AMD::BlitKernel}}
+\doxysubsubsection{\texorpdfstring{lock\_}{lock\_}}
+{\footnotesize\ttfamily std\+::mutex rocr\+::\+AMD\+::\+Blit\+Kernel\+::lock\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Lock to synchronize access to kernarg\+\_\+ and completion\+\_\+signal\+\_\+. 
+
+\mbox{\Hypertarget{classrocr_1_1AMD_1_1BlitKernel_a2ca2bf4fa92fc9d69b135404caee0669}\label{classrocr_1_1AMD_1_1BlitKernel_a2ca2bf4fa92fc9d69b135404caee0669}} 
+\index{rocr::AMD::BlitKernel@{rocr::AMD::BlitKernel}!num\_cus\_@{num\_cus\_}}
+\index{num\_cus\_@{num\_cus\_}!rocr::AMD::BlitKernel@{rocr::AMD::BlitKernel}}
+\doxysubsubsection{\texorpdfstring{num\_cus\_}{num\_cus\_}}
+{\footnotesize\ttfamily int rocr\+::\+AMD\+::\+Blit\+Kernel\+::num\+\_\+cus\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Number of CUs on the underlying agent. 
+
+\mbox{\Hypertarget{classrocr_1_1AMD_1_1BlitKernel_a57ab7f98907f9a3c1d051502454d4920}\label{classrocr_1_1AMD_1_1BlitKernel_a57ab7f98907f9a3c1d051502454d4920}} 
+\index{rocr::AMD::BlitKernel@{rocr::AMD::BlitKernel}!pending\_search\_index\_@{pending\_search\_index\_}}
+\index{pending\_search\_index\_@{pending\_search\_index\_}!rocr::AMD::BlitKernel@{rocr::AMD::BlitKernel}}
+\doxysubsubsection{\texorpdfstring{pending\_search\_index\_}{pending\_search\_index\_}}
+{\footnotesize\ttfamily std\+::atomic$<$uint64\+\_\+t$>$ rocr\+::\+AMD\+::\+Blit\+Kernel\+::pending\+\_\+search\+\_\+index\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Search resume index. 
+
+\mbox{\Hypertarget{classrocr_1_1AMD_1_1BlitKernel_a0dd9e4434b4e0ff51a09a7914ada4fba}\label{classrocr_1_1AMD_1_1BlitKernel_a0dd9e4434b4e0ff51a09a7914ada4fba}} 
+\index{rocr::AMD::BlitKernel@{rocr::AMD::BlitKernel}!queue\_@{queue\_}}
+\index{queue\_@{queue\_}!rocr::AMD::BlitKernel@{rocr::AMD::BlitKernel}}
+\doxysubsubsection{\texorpdfstring{queue\_}{queue\_}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classrocr_1_1core_1_1Queue}{core\+::\+Queue}}$\ast$ rocr\+::\+AMD\+::\+Blit\+Kernel\+::queue\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+AQL queue for submitting the vector copy kernel. 
+
+\mbox{\Hypertarget{classrocr_1_1AMD_1_1BlitKernel_a271809bda71372ff71731ae728409985}\label{classrocr_1_1AMD_1_1BlitKernel_a271809bda71372ff71731ae728409985}} 
+\index{rocr::AMD::BlitKernel@{rocr::AMD::BlitKernel}!queue\_bitmask\_@{queue\_bitmask\_}}
+\index{queue\_bitmask\_@{queue\_bitmask\_}!rocr::AMD::BlitKernel@{rocr::AMD::BlitKernel}}
+\doxysubsubsection{\texorpdfstring{queue\_bitmask\_}{queue\_bitmask\_}}
+{\footnotesize\ttfamily uint32\+\_\+t rocr\+::\+AMD\+::\+Blit\+Kernel\+::queue\+\_\+bitmask\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classrocr_1_1AMD_1_1BlitKernel_a325fbdd863d22bc4a19e4a387d1cb4fa}\label{classrocr_1_1AMD_1_1BlitKernel_a325fbdd863d22bc4a19e4a387d1cb4fa}} 
+\index{rocr::AMD::BlitKernel@{rocr::AMD::BlitKernel}!reservation\_lock\_@{reservation\_lock\_}}
+\index{reservation\_lock\_@{reservation\_lock\_}!rocr::AMD::BlitKernel@{rocr::AMD::BlitKernel}}
+\doxysubsubsection{\texorpdfstring{reservation\_lock\_}{reservation\_lock\_}}
+{\footnotesize\ttfamily std\+::mutex rocr\+::\+AMD\+::\+Blit\+Kernel\+::reservation\+\_\+lock\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Orders command indices and bytes\+\_\+queued\+\_\+ updates. 
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+src/core/inc/\mbox{\hyperlink{amd__blit__kernel_8h}{amd\+\_\+blit\+\_\+kernel.\+h}}\item 
+src/core/runtime/\mbox{\hyperlink{amd__blit__kernel_8cpp}{amd\+\_\+blit\+\_\+kernel.\+cpp}}\end{DoxyCompactItemize}

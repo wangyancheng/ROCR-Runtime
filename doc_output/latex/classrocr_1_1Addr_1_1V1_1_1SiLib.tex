@@ -1,0 +1,2231 @@
+\hypertarget{classrocr_1_1Addr_1_1V1_1_1SiLib}{}\doxysection{rocr\+::Addr\+::V1\+::Si\+Lib Class Reference}
+\label{classrocr_1_1Addr_1_1V1_1_1SiLib}\index{rocr::Addr::V1::SiLib@{rocr::Addr::V1::SiLib}}
+
+
+This class is the SI specific address library function set.  
+
+
+
+
+{\ttfamily \#include $<$siaddrlib.\+h$>$}
+
+
+
+Inheritance diagram for rocr\+::Addr\+::V1\+::Si\+Lib\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=216pt]{classrocr_1_1Addr_1_1V1_1_1SiLib__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for rocr\+::Addr\+::V1\+::Si\+Lib\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classrocr_1_1Addr_1_1V1_1_1SiLib__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static \mbox{\hyperlink{classrocr_1_1Addr_1_1Lib}{Addr\+::\+Lib}} $\ast$ \mbox{\hyperlink{classrocr_1_1Addr_1_1V1_1_1SiLib_a57b34239549a33b387edb08f65bcadbf}{Create\+Obj}} (const \mbox{\hyperlink{structrocr_1_1Addr_1_1Client}{Client}} $\ast$p\+Client)
+\begin{DoxyCompactList}\small\item\em Creates \mbox{\hyperlink{classrocr_1_1Addr_1_1V1_1_1SiLib}{Si\+Lib}} object. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classrocr_1_1Addr_1_1V1_1_1SiLib_a9e639418e9ba2fbd022a8b7dd95b1552}{Si\+Lib}} (const \mbox{\hyperlink{structrocr_1_1Addr_1_1Client}{Client}} $\ast$p\+Client)
+\begin{DoxyCompactList}\small\item\em Constructor. \end{DoxyCompactList}\item 
+virtual \mbox{\hyperlink{classrocr_1_1Addr_1_1V1_1_1SiLib_aa8e0ef30ce630ce3888d69451d74f72f}{$\sim$\+Si\+Lib}} ()
+\begin{DoxyCompactList}\small\item\em Destructor. \end{DoxyCompactList}\item 
+virtual \mbox{\hyperlink{addrtypes_8h_a45468f108457c1977c8684dea3df88c7}{ADDR\+\_\+\+E\+\_\+\+RETURNCODE}} \mbox{\hyperlink{classrocr_1_1Addr_1_1V1_1_1SiLib_afbb66e7c7282e041137a6d8fbcf25574}{Hwl\+Compute\+Surface\+Info}} (const \mbox{\hyperlink{namespacerocr_aabe299f90f529964589111a303e92f63}{ADDR\+\_\+\+COMPUTE\+\_\+\+SURFACE\+\_\+\+INFO\+\_\+\+INPUT}} $\ast$p\+In, \mbox{\hyperlink{namespacerocr_af4aaf1d98a76006d4fca9a8c40fdd1d9}{ADDR\+\_\+\+COMPUTE\+\_\+\+SURFACE\+\_\+\+INFO\+\_\+\+OUTPUT}} $\ast$p\+Out) const
+\begin{DoxyCompactList}\small\item\em Entry of si\textquotesingle{}s Compute\+Surface\+Info. \end{DoxyCompactList}\item 
+virtual \mbox{\hyperlink{addrtypes_8h_a45468f108457c1977c8684dea3df88c7}{ADDR\+\_\+\+E\+\_\+\+RETURNCODE}} \mbox{\hyperlink{classrocr_1_1Addr_1_1V1_1_1SiLib_af946287ee5a42d9569a1140ef764158e}{Hwl\+Convert\+Tile\+Info\+To\+HW}} (const \mbox{\hyperlink{namespacerocr_a43d53d0c852446811165e411346d94e2}{ADDR\+\_\+\+CONVERT\+\_\+\+TILEINFOTOHW\+\_\+\+INPUT}} $\ast$p\+In, \mbox{\hyperlink{namespacerocr_a234ab06cbb34905ea2f15c850ffec2d2}{ADDR\+\_\+\+CONVERT\+\_\+\+TILEINFOTOHW\+\_\+\+OUTPUT}} $\ast$p\+Out) const
+\begin{DoxyCompactList}\small\item\em Entry of si\textquotesingle{}s Convert\+Tile\+Info\+To\+HW. \end{DoxyCompactList}\item 
+virtual \mbox{\hyperlink{addrtypes_8h_ac4116bb9a5e80b5cb845d4f2674c160f}{UINT\+\_\+64}} \mbox{\hyperlink{classrocr_1_1Addr_1_1V1_1_1SiLib_ad164f7e242297a9c32227ac7e35f8d63}{Hwl\+Compute\+Xmask\+Addr\+From\+Coord}} (\mbox{\hyperlink{addrtypes_8h_af5a2be58a28390f9a494538f34054637}{UINT\+\_\+32}} pitch, \mbox{\hyperlink{addrtypes_8h_af5a2be58a28390f9a494538f34054637}{UINT\+\_\+32}} height, \mbox{\hyperlink{addrtypes_8h_af5a2be58a28390f9a494538f34054637}{UINT\+\_\+32}} x, \mbox{\hyperlink{addrtypes_8h_af5a2be58a28390f9a494538f34054637}{UINT\+\_\+32}} y, \mbox{\hyperlink{addrtypes_8h_af5a2be58a28390f9a494538f34054637}{UINT\+\_\+32}} slice, \mbox{\hyperlink{addrtypes_8h_af5a2be58a28390f9a494538f34054637}{UINT\+\_\+32}} num\+Slices, \mbox{\hyperlink{addrtypes_8h_af5a2be58a28390f9a494538f34054637}{UINT\+\_\+32}} factor, \mbox{\hyperlink{addrtypes_8h_ac4225671b7e87c943146915461c9b2f4}{BOOL\+\_\+32}} is\+Linear, \mbox{\hyperlink{addrtypes_8h_ac4225671b7e87c943146915461c9b2f4}{BOOL\+\_\+32}} is\+Width8, \mbox{\hyperlink{addrtypes_8h_ac4225671b7e87c943146915461c9b2f4}{BOOL\+\_\+32}} is\+Height8, \mbox{\hyperlink{namespacerocr_a22dcb0c31be418f31f99d0311c45522c}{ADDR\+\_\+\+TILEINFO}} $\ast$p\+Tile\+Info, \mbox{\hyperlink{addrtypes_8h_af5a2be58a28390f9a494538f34054637}{UINT\+\_\+32}} $\ast$p\+Bit\+Position) const
+\begin{DoxyCompactList}\small\item\em Compute address from coordinates for htile/cmask. \end{DoxyCompactList}\item 
+virtual \mbox{\hyperlink{addrtypes_8h_a7927e087749615dae3114cc27b91c86d}{VOID}} \mbox{\hyperlink{classrocr_1_1Addr_1_1V1_1_1SiLib_adc25dc875d303aa27709935e419311a7}{Hwl\+Compute\+Xmask\+Coord\+From\+Addr}} (\mbox{\hyperlink{addrtypes_8h_ac4116bb9a5e80b5cb845d4f2674c160f}{UINT\+\_\+64}} addr, \mbox{\hyperlink{addrtypes_8h_af5a2be58a28390f9a494538f34054637}{UINT\+\_\+32}} bit\+Position, \mbox{\hyperlink{addrtypes_8h_af5a2be58a28390f9a494538f34054637}{UINT\+\_\+32}} pitch, \mbox{\hyperlink{addrtypes_8h_af5a2be58a28390f9a494538f34054637}{UINT\+\_\+32}} height, \mbox{\hyperlink{addrtypes_8h_af5a2be58a28390f9a494538f34054637}{UINT\+\_\+32}} num\+Slices, \mbox{\hyperlink{addrtypes_8h_af5a2be58a28390f9a494538f34054637}{UINT\+\_\+32}} factor, \mbox{\hyperlink{addrtypes_8h_ac4225671b7e87c943146915461c9b2f4}{BOOL\+\_\+32}} is\+Linear, \mbox{\hyperlink{addrtypes_8h_ac4225671b7e87c943146915461c9b2f4}{BOOL\+\_\+32}} is\+Width8, \mbox{\hyperlink{addrtypes_8h_ac4225671b7e87c943146915461c9b2f4}{BOOL\+\_\+32}} is\+Height8, \mbox{\hyperlink{namespacerocr_a22dcb0c31be418f31f99d0311c45522c}{ADDR\+\_\+\+TILEINFO}} $\ast$p\+Tile\+Info, \mbox{\hyperlink{addrtypes_8h_af5a2be58a28390f9a494538f34054637}{UINT\+\_\+32}} $\ast$pX, \mbox{\hyperlink{addrtypes_8h_af5a2be58a28390f9a494538f34054637}{UINT\+\_\+32}} $\ast$pY, \mbox{\hyperlink{addrtypes_8h_af5a2be58a28390f9a494538f34054637}{UINT\+\_\+32}} $\ast$p\+Slice) const
+\begin{DoxyCompactList}\small\item\em Compute the coord from an address of a cmask/htile. \end{DoxyCompactList}\item 
+virtual \mbox{\hyperlink{addrtypes_8h_a45468f108457c1977c8684dea3df88c7}{ADDR\+\_\+\+E\+\_\+\+RETURNCODE}} \mbox{\hyperlink{classrocr_1_1Addr_1_1V1_1_1SiLib_af43bfc6560dc2a7511faae190aa9368c}{Hwl\+Get\+Tile\+Index}} (const \mbox{\hyperlink{namespacerocr_ae5ddc3fd7b364c2b0aec73f1464d42e3}{ADDR\+\_\+\+GET\+\_\+\+TILEINDEX\+\_\+\+INPUT}} $\ast$p\+In, \mbox{\hyperlink{namespacerocr_a7d2b06938bd70794a397db7873adde20}{ADDR\+\_\+\+GET\+\_\+\+TILEINDEX\+\_\+\+OUTPUT}} $\ast$p\+Out) const
+\begin{DoxyCompactList}\small\item\em Return the virtual/real index for given mode/type/info. \end{DoxyCompactList}\item 
+virtual \mbox{\hyperlink{addrtypes_8h_ac4225671b7e87c943146915461c9b2f4}{BOOL\+\_\+32}} \mbox{\hyperlink{classrocr_1_1Addr_1_1V1_1_1SiLib_afe28465f7d72d4698e42d4d8330013b9}{Hwl\+Compute\+Mip\+Level}} (\mbox{\hyperlink{namespacerocr_aabe299f90f529964589111a303e92f63}{ADDR\+\_\+\+COMPUTE\+\_\+\+SURFACE\+\_\+\+INFO\+\_\+\+INPUT}} $\ast$p\+In) const
+\begin{DoxyCompactList}\small\item\em Compute Mip\+Level info (including level 0) \end{DoxyCompactList}\item 
+virtual \mbox{\hyperlink{namespacerocr_1_1Addr_a9baa6f324df4a9cb3c4a61f6e6af6b09}{Chip\+Family}} \mbox{\hyperlink{classrocr_1_1Addr_1_1V1_1_1SiLib_a788387021d9165536a6e9d11a0d84a60}{Hwl\+Convert\+Chip\+Family}} (\mbox{\hyperlink{addrtypes_8h_af5a2be58a28390f9a494538f34054637}{UINT\+\_\+32}} u\+Chip\+Family, \mbox{\hyperlink{addrtypes_8h_af5a2be58a28390f9a494538f34054637}{UINT\+\_\+32}} u\+Chip\+Revision)
+\begin{DoxyCompactList}\small\item\em Convert family\+ID defined in atiid.\+h to Chip\+Family and set m\+\_\+chip\+Family/m\+\_\+chip\+Revision. \end{DoxyCompactList}\item 
+virtual \mbox{\hyperlink{addrtypes_8h_ac4225671b7e87c943146915461c9b2f4}{BOOL\+\_\+32}} \mbox{\hyperlink{classrocr_1_1Addr_1_1V1_1_1SiLib_abdb7e12b7741f7d860f9ad5b15eb38f7}{Hwl\+Init\+Global\+Params}} (const \mbox{\hyperlink{namespacerocr_aa6951cc0839e1ebafba4f88da2c31c6d}{ADDR\+\_\+\+CREATE\+\_\+\+INPUT}} $\ast$p\+Create\+In)
+\begin{DoxyCompactList}\small\item\em Initializes global parameters. \end{DoxyCompactList}\item 
+virtual \mbox{\hyperlink{addrtypes_8h_a45468f108457c1977c8684dea3df88c7}{ADDR\+\_\+\+E\+\_\+\+RETURNCODE}} \mbox{\hyperlink{classrocr_1_1Addr_1_1V1_1_1SiLib_a8b9fabd88ed1b5eb8120db8cfb340bce}{Hwl\+Setup\+Tile\+Cfg}} (\mbox{\hyperlink{addrtypes_8h_af5a2be58a28390f9a494538f34054637}{UINT\+\_\+32}} bpp, \mbox{\hyperlink{addrtypes_8h_adacc69c9db3b9adfc072b838ebf2bb0e}{INT\+\_\+32}} index, \mbox{\hyperlink{addrtypes_8h_adacc69c9db3b9adfc072b838ebf2bb0e}{INT\+\_\+32}} macro\+Mode\+Index, \mbox{\hyperlink{namespacerocr_a22dcb0c31be418f31f99d0311c45522c}{ADDR\+\_\+\+TILEINFO}} $\ast$p\+Info, \mbox{\hyperlink{addrtypes_8h_a9dffa8321911d7791c03fe3a233a34e7}{Addr\+Tile\+Mode}} $\ast$p\+Mode=0, \mbox{\hyperlink{addrtypes_8h_a7dd4750472a9413e05a56dbb7e9692c7}{Addr\+Tile\+Type}} $\ast$p\+Type=0) const
+\begin{DoxyCompactList}\small\item\em Map tile index to tile setting. \end{DoxyCompactList}\item 
+virtual \mbox{\hyperlink{addrtypes_8h_a7927e087749615dae3114cc27b91c86d}{VOID}} \mbox{\hyperlink{classrocr_1_1Addr_1_1V1_1_1SiLib_aa3f9f5dd10efbc5c042ab45fb137de22}{Hwl\+Compute\+Tile\+Data\+Width\+And\+Height\+Linear}} (\mbox{\hyperlink{addrtypes_8h_af5a2be58a28390f9a494538f34054637}{UINT\+\_\+32}} $\ast$p\+Macro\+Width, \mbox{\hyperlink{addrtypes_8h_af5a2be58a28390f9a494538f34054637}{UINT\+\_\+32}} $\ast$p\+Macro\+Height, \mbox{\hyperlink{addrtypes_8h_af5a2be58a28390f9a494538f34054637}{UINT\+\_\+32}} bpp, \mbox{\hyperlink{namespacerocr_a22dcb0c31be418f31f99d0311c45522c}{ADDR\+\_\+\+TILEINFO}} $\ast$p\+Tile\+Info) const
+\begin{DoxyCompactList}\small\item\em Compute the squared cache shape for per-\/tile data (CMASK and HTILE) for linear layout. \end{DoxyCompactList}\item 
+virtual \mbox{\hyperlink{addrtypes_8h_ac4116bb9a5e80b5cb845d4f2674c160f}{UINT\+\_\+64}} \mbox{\hyperlink{classrocr_1_1Addr_1_1V1_1_1SiLib_af30b86be62f86c66cd0c15f2d80b3a08}{Hwl\+Compute\+Htile\+Bytes}} (\mbox{\hyperlink{addrtypes_8h_af5a2be58a28390f9a494538f34054637}{UINT\+\_\+32}} pitch, \mbox{\hyperlink{addrtypes_8h_af5a2be58a28390f9a494538f34054637}{UINT\+\_\+32}} height, \mbox{\hyperlink{addrtypes_8h_af5a2be58a28390f9a494538f34054637}{UINT\+\_\+32}} bpp, \mbox{\hyperlink{addrtypes_8h_ac4225671b7e87c943146915461c9b2f4}{BOOL\+\_\+32}} is\+Linear, \mbox{\hyperlink{addrtypes_8h_af5a2be58a28390f9a494538f34054637}{UINT\+\_\+32}} num\+Slices, \mbox{\hyperlink{addrtypes_8h_ac4116bb9a5e80b5cb845d4f2674c160f}{UINT\+\_\+64}} $\ast$p\+Slice\+Bytes, \mbox{\hyperlink{addrtypes_8h_af5a2be58a28390f9a494538f34054637}{UINT\+\_\+32}} base\+Align) const
+\begin{DoxyCompactList}\small\item\em Compute htile size in bytes. \end{DoxyCompactList}\item 
+virtual \mbox{\hyperlink{addrtypes_8h_a45468f108457c1977c8684dea3df88c7}{ADDR\+\_\+\+E\+\_\+\+RETURNCODE}} \mbox{\hyperlink{classrocr_1_1Addr_1_1V1_1_1SiLib_af13c1885594f1be4edeaea8aad985c28}{Compute\+Bank\+Equation}} (\mbox{\hyperlink{addrtypes_8h_af5a2be58a28390f9a494538f34054637}{UINT\+\_\+32}} log2\+Bytes\+PP, \mbox{\hyperlink{addrtypes_8h_af5a2be58a28390f9a494538f34054637}{UINT\+\_\+32}} threshX, \mbox{\hyperlink{addrtypes_8h_af5a2be58a28390f9a494538f34054637}{UINT\+\_\+32}} threshY, \mbox{\hyperlink{namespacerocr_a22dcb0c31be418f31f99d0311c45522c}{ADDR\+\_\+\+TILEINFO}} $\ast$p\+Tile\+Info, \mbox{\hyperlink{namespacerocr_a9d269a2f79e2b96962f79909f5e1643c}{ADDR\+\_\+\+EQUATION}} $\ast$p\+Equation) const
+\begin{DoxyCompactList}\small\item\em Compute bank equation. \end{DoxyCompactList}\item 
+virtual \mbox{\hyperlink{addrtypes_8h_a45468f108457c1977c8684dea3df88c7}{ADDR\+\_\+\+E\+\_\+\+RETURNCODE}} \mbox{\hyperlink{classrocr_1_1Addr_1_1V1_1_1SiLib_a25a4cb9c19f83949201ff0184046196a}{Compute\+Pipe\+Equation}} (\mbox{\hyperlink{addrtypes_8h_af5a2be58a28390f9a494538f34054637}{UINT\+\_\+32}} log2\+Bytes\+PP, \mbox{\hyperlink{addrtypes_8h_af5a2be58a28390f9a494538f34054637}{UINT\+\_\+32}} threshX, \mbox{\hyperlink{addrtypes_8h_af5a2be58a28390f9a494538f34054637}{UINT\+\_\+32}} threshY, \mbox{\hyperlink{namespacerocr_a22dcb0c31be418f31f99d0311c45522c}{ADDR\+\_\+\+TILEINFO}} $\ast$p\+Tile\+Info, \mbox{\hyperlink{namespacerocr_a9d269a2f79e2b96962f79909f5e1643c}{ADDR\+\_\+\+EQUATION}} $\ast$p\+Equation) const
+\begin{DoxyCompactList}\small\item\em Compute pipe equation. \end{DoxyCompactList}\item 
+virtual \mbox{\hyperlink{addrtypes_8h_af5a2be58a28390f9a494538f34054637}{UINT\+\_\+32}} \mbox{\hyperlink{classrocr_1_1Addr_1_1V1_1_1SiLib_a0501bd523178d6db4436e86d47eb7e8e}{Compute\+Pipe\+From\+Coord}} (\mbox{\hyperlink{addrtypes_8h_af5a2be58a28390f9a494538f34054637}{UINT\+\_\+32}} x, \mbox{\hyperlink{addrtypes_8h_af5a2be58a28390f9a494538f34054637}{UINT\+\_\+32}} y, \mbox{\hyperlink{addrtypes_8h_af5a2be58a28390f9a494538f34054637}{UINT\+\_\+32}} slice, \mbox{\hyperlink{addrtypes_8h_a9dffa8321911d7791c03fe3a233a34e7}{Addr\+Tile\+Mode}} tile\+Mode, \mbox{\hyperlink{addrtypes_8h_af5a2be58a28390f9a494538f34054637}{UINT\+\_\+32}} pipe\+Swizzle, \mbox{\hyperlink{addrtypes_8h_ac4225671b7e87c943146915461c9b2f4}{BOOL\+\_\+32}} ignore\+SE, \mbox{\hyperlink{namespacerocr_a22dcb0c31be418f31f99d0311c45522c}{ADDR\+\_\+\+TILEINFO}} $\ast$p\+Tile\+Info) const
+\begin{DoxyCompactList}\small\item\em Compute pipe number from coordinates. \end{DoxyCompactList}\item 
+virtual \mbox{\hyperlink{addrtypes_8h_af5a2be58a28390f9a494538f34054637}{UINT\+\_\+32}} \mbox{\hyperlink{classrocr_1_1Addr_1_1V1_1_1SiLib_afb52247719959e51ad160861d4e0679b}{Hwl\+Get\+Pipes}} (const \mbox{\hyperlink{namespacerocr_a22dcb0c31be418f31f99d0311c45522c}{ADDR\+\_\+\+TILEINFO}} $\ast$p\+Tile\+Info) const
+\begin{DoxyCompactList}\small\item\em Get number pipes. \end{DoxyCompactList}\item 
+virtual \mbox{\hyperlink{addrtypes_8h_af5a2be58a28390f9a494538f34054637}{UINT\+\_\+32}} \mbox{\hyperlink{classrocr_1_1Addr_1_1V1_1_1SiLib_a2d5c245a31e7cbb69ee683f602fcb504}{Hwl\+Pre\+Handle\+Base\+Lvl3x\+Pitch}} (const \mbox{\hyperlink{namespacerocr_aabe299f90f529964589111a303e92f63}{ADDR\+\_\+\+COMPUTE\+\_\+\+SURFACE\+\_\+\+INFO\+\_\+\+INPUT}} $\ast$p\+In, \mbox{\hyperlink{addrtypes_8h_af5a2be58a28390f9a494538f34054637}{UINT\+\_\+32}} exp\+Pitch) const
+\begin{DoxyCompactList}\small\item\em Pre-\/handler of 3x pitch (96 bit) adjustment. \end{DoxyCompactList}\item 
+virtual \mbox{\hyperlink{addrtypes_8h_af5a2be58a28390f9a494538f34054637}{UINT\+\_\+32}} \mbox{\hyperlink{classrocr_1_1Addr_1_1V1_1_1SiLib_adfa8a9853f5c49e6349261a2d28e9074}{Hwl\+Post\+Handle\+Base\+Lvl3x\+Pitch}} (const \mbox{\hyperlink{namespacerocr_aabe299f90f529964589111a303e92f63}{ADDR\+\_\+\+COMPUTE\+\_\+\+SURFACE\+\_\+\+INFO\+\_\+\+INPUT}} $\ast$p\+In, \mbox{\hyperlink{addrtypes_8h_af5a2be58a28390f9a494538f34054637}{UINT\+\_\+32}} exp\+Pitch) const
+\begin{DoxyCompactList}\small\item\em Post-\/handler of 3x pitch adjustment. \end{DoxyCompactList}\item 
+virtual \mbox{\hyperlink{addrtypes_8h_af5a2be58a28390f9a494538f34054637}{UINT\+\_\+32}} \mbox{\hyperlink{classrocr_1_1Addr_1_1V1_1_1SiLib_ac6d6278e53b39c4206d7c674335ecf8c}{Hwl\+Compute\+Xmask\+Coord\+YFrom8\+Pipe}} (\mbox{\hyperlink{addrtypes_8h_af5a2be58a28390f9a494538f34054637}{UINT\+\_\+32}} pipe, \mbox{\hyperlink{addrtypes_8h_af5a2be58a28390f9a494538f34054637}{UINT\+\_\+32}} x) const
+\begin{DoxyCompactList}\small\item\em Dummy function to finalize the inheritance. \end{DoxyCompactList}\item 
+virtual \mbox{\hyperlink{addrtypes_8h_a7927e087749615dae3114cc27b91c86d}{VOID}} \mbox{\hyperlink{classrocr_1_1Addr_1_1V1_1_1SiLib_af4e5358e9117ee3e26071a87f9f1b116}{Hwl\+Setup\+Tile\+Info}} (\mbox{\hyperlink{addrtypes_8h_a9dffa8321911d7791c03fe3a233a34e7}{Addr\+Tile\+Mode}} tile\+Mode, \mbox{\hyperlink{namespacerocr_ac2c13231249e1687b3bd1c434b92ba06}{ADDR\+\_\+\+SURFACE\+\_\+\+FLAGS}} flags, \mbox{\hyperlink{addrtypes_8h_af5a2be58a28390f9a494538f34054637}{UINT\+\_\+32}} bpp, \mbox{\hyperlink{addrtypes_8h_af5a2be58a28390f9a494538f34054637}{UINT\+\_\+32}} pitch, \mbox{\hyperlink{addrtypes_8h_af5a2be58a28390f9a494538f34054637}{UINT\+\_\+32}} height, \mbox{\hyperlink{addrtypes_8h_af5a2be58a28390f9a494538f34054637}{UINT\+\_\+32}} num\+Samples, \mbox{\hyperlink{namespacerocr_a22dcb0c31be418f31f99d0311c45522c}{ADDR\+\_\+\+TILEINFO}} $\ast$input\+Tile\+Info, \mbox{\hyperlink{namespacerocr_a22dcb0c31be418f31f99d0311c45522c}{ADDR\+\_\+\+TILEINFO}} $\ast$output\+Tile\+Info, \mbox{\hyperlink{addrtypes_8h_a7dd4750472a9413e05a56dbb7e9692c7}{Addr\+Tile\+Type}} in\+Tile\+Type, \mbox{\hyperlink{namespacerocr_af4aaf1d98a76006d4fca9a8c40fdd1d9}{ADDR\+\_\+\+COMPUTE\+\_\+\+SURFACE\+\_\+\+INFO\+\_\+\+OUTPUT}} $\ast$p\+Out) const
+\begin{DoxyCompactList}\small\item\em Setup default value of tile info for SI. \end{DoxyCompactList}\item 
+virtual \mbox{\hyperlink{addrtypes_8h_af5a2be58a28390f9a494538f34054637}{UINT\+\_\+32}} \mbox{\hyperlink{classrocr_1_1Addr_1_1V1_1_1SiLib_a0f8948a6a4f132c7ee4467f18b4aa834}{Hwl\+Get\+Pitch\+Alignment\+Micro\+Tiled}} (\mbox{\hyperlink{addrtypes_8h_a9dffa8321911d7791c03fe3a233a34e7}{Addr\+Tile\+Mode}} tile\+Mode, \mbox{\hyperlink{addrtypes_8h_af5a2be58a28390f9a494538f34054637}{UINT\+\_\+32}} bpp, \mbox{\hyperlink{namespacerocr_ac2c13231249e1687b3bd1c434b92ba06}{ADDR\+\_\+\+SURFACE\+\_\+\+FLAGS}} flags, \mbox{\hyperlink{addrtypes_8h_af5a2be58a28390f9a494538f34054637}{UINT\+\_\+32}} num\+Samples) const
+\begin{DoxyCompactList}\small\item\em Compute 1D tiled surface pitch alignment. \end{DoxyCompactList}\item 
+virtual \mbox{\hyperlink{addrtypes_8h_ac4116bb9a5e80b5cb845d4f2674c160f}{UINT\+\_\+64}} \mbox{\hyperlink{classrocr_1_1Addr_1_1V1_1_1SiLib_ae44d04c3c44de6316dac11eea0c7ea67}{Hwl\+Get\+Size\+Adjustment\+Micro\+Tiled}} (\mbox{\hyperlink{addrtypes_8h_af5a2be58a28390f9a494538f34054637}{UINT\+\_\+32}} thickness, \mbox{\hyperlink{addrtypes_8h_af5a2be58a28390f9a494538f34054637}{UINT\+\_\+32}} bpp, \mbox{\hyperlink{namespacerocr_ac2c13231249e1687b3bd1c434b92ba06}{ADDR\+\_\+\+SURFACE\+\_\+\+FLAGS}} flags, \mbox{\hyperlink{addrtypes_8h_af5a2be58a28390f9a494538f34054637}{UINT\+\_\+32}} num\+Samples, \mbox{\hyperlink{addrtypes_8h_af5a2be58a28390f9a494538f34054637}{UINT\+\_\+32}} base\+Align, \mbox{\hyperlink{addrtypes_8h_af5a2be58a28390f9a494538f34054637}{UINT\+\_\+32}} pitch\+Align, \mbox{\hyperlink{addrtypes_8h_af5a2be58a28390f9a494538f34054637}{UINT\+\_\+32}} $\ast$p\+Pitch, \mbox{\hyperlink{addrtypes_8h_af5a2be58a28390f9a494538f34054637}{UINT\+\_\+32}} $\ast$p\+Height) const
+\begin{DoxyCompactList}\small\item\em Adjust 1D tiled surface pitch and slice size. \end{DoxyCompactList}\item 
+virtual \mbox{\hyperlink{addrtypes_8h_a7927e087749615dae3114cc27b91c86d}{VOID}} \mbox{\hyperlink{classrocr_1_1Addr_1_1V1_1_1SiLib_ae1f55019ec006b995714888ca940eaab}{Hwl\+Check\+Last\+Macro\+Tiled\+Lvl}} (const \mbox{\hyperlink{namespacerocr_aabe299f90f529964589111a303e92f63}{ADDR\+\_\+\+COMPUTE\+\_\+\+SURFACE\+\_\+\+INFO\+\_\+\+INPUT}} $\ast$p\+In, \mbox{\hyperlink{namespacerocr_af4aaf1d98a76006d4fca9a8c40fdd1d9}{ADDR\+\_\+\+COMPUTE\+\_\+\+SURFACE\+\_\+\+INFO\+\_\+\+OUTPUT}} $\ast$p\+Out) const
+\begin{DoxyCompactList}\small\item\em Sets p\+Out-\/$>$last2\+DLevel to TRUE if it is. \end{DoxyCompactList}\item 
+virtual \mbox{\hyperlink{addrtypes_8h_ac4225671b7e87c943146915461c9b2f4}{BOOL\+\_\+32}} \mbox{\hyperlink{classrocr_1_1Addr_1_1V1_1_1SiLib_abc6db1346b53a644c4bfb17257ad58b8}{Hwl\+Tile\+Info\+Equal}} (const \mbox{\hyperlink{namespacerocr_a22dcb0c31be418f31f99d0311c45522c}{ADDR\+\_\+\+TILEINFO}} $\ast$p\+Left, const \mbox{\hyperlink{namespacerocr_a22dcb0c31be418f31f99d0311c45522c}{ADDR\+\_\+\+TILEINFO}} $\ast$p\+Right) const
+\begin{DoxyCompactList}\small\item\em Return TRUE if all field are equal. \end{DoxyCompactList}\item 
+virtual \mbox{\hyperlink{addrtypes_8h_a9dffa8321911d7791c03fe3a233a34e7}{Addr\+Tile\+Mode}} \mbox{\hyperlink{classrocr_1_1Addr_1_1V1_1_1SiLib_a20783e08b1e2e68f88565c8848726647}{Hwl\+Degrade\+Thick\+Tile\+Mode}} (\mbox{\hyperlink{addrtypes_8h_a9dffa8321911d7791c03fe3a233a34e7}{Addr\+Tile\+Mode}} base\+Tile\+Mode, \mbox{\hyperlink{addrtypes_8h_af5a2be58a28390f9a494538f34054637}{UINT\+\_\+32}} num\+Slices, \mbox{\hyperlink{addrtypes_8h_af5a2be58a28390f9a494538f34054637}{UINT\+\_\+32}} $\ast$p\+Bytes\+Per\+Tile) const
+\begin{DoxyCompactList}\small\item\em Degrades valid tile mode for thick modes if needed. \end{DoxyCompactList}\item 
+virtual \mbox{\hyperlink{addrtypes_8h_a7927e087749615dae3114cc27b91c86d}{VOID}} \mbox{\hyperlink{classrocr_1_1Addr_1_1V1_1_1SiLib_aefb7bb1209de2f84438533b684f666ae}{Hwl\+Override\+Tile\+Mode}} (\mbox{\hyperlink{namespacerocr_aabe299f90f529964589111a303e92f63}{ADDR\+\_\+\+COMPUTE\+\_\+\+SURFACE\+\_\+\+INFO\+\_\+\+INPUT}} $\ast$p\+In\+Out) const
+\begin{DoxyCompactList}\small\item\em Override tile modes (for PRT only, avoid client passes in an invalid PRT mode for SI. \end{DoxyCompactList}\item 
+virtual \mbox{\hyperlink{addrtypes_8h_a7927e087749615dae3114cc27b91c86d}{VOID}} \mbox{\hyperlink{classrocr_1_1Addr_1_1V1_1_1SiLib_a4d991ad019ecea827d0784cd52031973}{Hwl\+Optimize\+Tile\+Mode}} (\mbox{\hyperlink{namespacerocr_aabe299f90f529964589111a303e92f63}{ADDR\+\_\+\+COMPUTE\+\_\+\+SURFACE\+\_\+\+INFO\+\_\+\+INPUT}} $\ast$p\+In\+Out) const
+\begin{DoxyCompactList}\small\item\em Optimize tile mode on SI. \end{DoxyCompactList}\item 
+virtual \mbox{\hyperlink{addrtypes_8h_a7927e087749615dae3114cc27b91c86d}{VOID}} \mbox{\hyperlink{classrocr_1_1Addr_1_1V1_1_1SiLib_a9608b14b9e97f0d9a787cbb9144d1153}{Hwl\+Select\+Tile\+Mode}} (\mbox{\hyperlink{namespacerocr_aabe299f90f529964589111a303e92f63}{ADDR\+\_\+\+COMPUTE\+\_\+\+SURFACE\+\_\+\+INFO\+\_\+\+INPUT}} $\ast$p\+In\+Out) const
+\begin{DoxyCompactList}\small\item\em Select tile modes. \end{DoxyCompactList}\item 
+virtual \mbox{\hyperlink{addrtypes_8h_a7927e087749615dae3114cc27b91c86d}{VOID}} \mbox{\hyperlink{classrocr_1_1Addr_1_1V1_1_1SiLib_a9b65c7cf1fec781bf1a901dec7538293}{Hwl\+Set\+Prt\+Tile\+Mode}} (\mbox{\hyperlink{namespacerocr_aabe299f90f529964589111a303e92f63}{ADDR\+\_\+\+COMPUTE\+\_\+\+SURFACE\+\_\+\+INFO\+\_\+\+INPUT}} $\ast$p\+In\+Out) const
+\begin{DoxyCompactList}\small\item\em Overwrite tile setting to PRT. \end{DoxyCompactList}\item 
+virtual \mbox{\hyperlink{addrtypes_8h_ac4225671b7e87c943146915461c9b2f4}{BOOL\+\_\+32}} \mbox{\hyperlink{classrocr_1_1Addr_1_1V1_1_1SiLib_ab3a87b47147f9af4f91f31f0585758dd}{Hwl\+Sanity\+Check\+Macro\+Tiled}} (\mbox{\hyperlink{namespacerocr_a22dcb0c31be418f31f99d0311c45522c}{ADDR\+\_\+\+TILEINFO}} $\ast$p\+Tile\+Info) const
+\begin{DoxyCompactList}\small\item\em Pure virtual function to do extra sanity check. \end{DoxyCompactList}\item 
+virtual \mbox{\hyperlink{addrtypes_8h_af5a2be58a28390f9a494538f34054637}{UINT\+\_\+32}} \mbox{\hyperlink{classrocr_1_1Addr_1_1V1_1_1SiLib_a40ca4b5149e9fcdc5676953e2854ed7a}{Hwl\+Get\+Pitch\+Alignment\+Linear}} (\mbox{\hyperlink{addrtypes_8h_af5a2be58a28390f9a494538f34054637}{UINT\+\_\+32}} bpp, \mbox{\hyperlink{namespacerocr_ac2c13231249e1687b3bd1c434b92ba06}{ADDR\+\_\+\+SURFACE\+\_\+\+FLAGS}} flags) const
+\begin{DoxyCompactList}\small\item\em Get pitch alignment. \end{DoxyCompactList}\item 
+virtual \mbox{\hyperlink{addrtypes_8h_ac4116bb9a5e80b5cb845d4f2674c160f}{UINT\+\_\+64}} \mbox{\hyperlink{classrocr_1_1Addr_1_1V1_1_1SiLib_a2b804f1e7c0cdfacb56af8deae20aabc}{Hwl\+Get\+Size\+Adjustment\+Linear}} (\mbox{\hyperlink{addrtypes_8h_a9dffa8321911d7791c03fe3a233a34e7}{Addr\+Tile\+Mode}} tile\+Mode, \mbox{\hyperlink{addrtypes_8h_af5a2be58a28390f9a494538f34054637}{UINT\+\_\+32}} bpp, \mbox{\hyperlink{addrtypes_8h_af5a2be58a28390f9a494538f34054637}{UINT\+\_\+32}} num\+Samples, \mbox{\hyperlink{addrtypes_8h_af5a2be58a28390f9a494538f34054637}{UINT\+\_\+32}} base\+Align, \mbox{\hyperlink{addrtypes_8h_af5a2be58a28390f9a494538f34054637}{UINT\+\_\+32}} pitch\+Align, \mbox{\hyperlink{addrtypes_8h_af5a2be58a28390f9a494538f34054637}{UINT\+\_\+32}} $\ast$p\+Pitch, \mbox{\hyperlink{addrtypes_8h_af5a2be58a28390f9a494538f34054637}{UINT\+\_\+32}} $\ast$p\+Height, \mbox{\hyperlink{addrtypes_8h_af5a2be58a28390f9a494538f34054637}{UINT\+\_\+32}} $\ast$p\+Height\+Align) const
+\begin{DoxyCompactList}\small\item\em Adjust linear surface pitch and slice size. \end{DoxyCompactList}\item 
+virtual \mbox{\hyperlink{addrtypes_8h_a7927e087749615dae3114cc27b91c86d}{VOID}} \mbox{\hyperlink{classrocr_1_1Addr_1_1V1_1_1SiLib_a02a7d03874e96d65686a81e02ef008b1}{Hwl\+Compute\+Surface\+Coord2\+DFrom\+Bank\+Pipe}} (\mbox{\hyperlink{addrtypes_8h_a9dffa8321911d7791c03fe3a233a34e7}{Addr\+Tile\+Mode}} tile\+Mode, \mbox{\hyperlink{addrtypes_8h_af5a2be58a28390f9a494538f34054637}{UINT\+\_\+32}} $\ast$pX, \mbox{\hyperlink{addrtypes_8h_af5a2be58a28390f9a494538f34054637}{UINT\+\_\+32}} $\ast$pY, \mbox{\hyperlink{addrtypes_8h_af5a2be58a28390f9a494538f34054637}{UINT\+\_\+32}} slice, \mbox{\hyperlink{addrtypes_8h_af5a2be58a28390f9a494538f34054637}{UINT\+\_\+32}} bank, \mbox{\hyperlink{addrtypes_8h_af5a2be58a28390f9a494538f34054637}{UINT\+\_\+32}} pipe, \mbox{\hyperlink{addrtypes_8h_af5a2be58a28390f9a494538f34054637}{UINT\+\_\+32}} bank\+Swizzle, \mbox{\hyperlink{addrtypes_8h_af5a2be58a28390f9a494538f34054637}{UINT\+\_\+32}} pipe\+Swizzle, \mbox{\hyperlink{addrtypes_8h_af5a2be58a28390f9a494538f34054637}{UINT\+\_\+32}} tile\+Slices, \mbox{\hyperlink{addrtypes_8h_ac4225671b7e87c943146915461c9b2f4}{BOOL\+\_\+32}} ignore\+SE, \mbox{\hyperlink{namespacerocr_a22dcb0c31be418f31f99d0311c45522c}{ADDR\+\_\+\+TILEINFO}} $\ast$p\+Tile\+Info) const
+\begin{DoxyCompactList}\small\item\em Compute surface x,y coordinates from bank/pipe info. \end{DoxyCompactList}\item 
+virtual \mbox{\hyperlink{addrtypes_8h_af5a2be58a28390f9a494538f34054637}{UINT\+\_\+32}} \mbox{\hyperlink{classrocr_1_1Addr_1_1V1_1_1SiLib_a29f0120b117f8c71627e32cf4fd02c1a}{Hwl\+Pre\+Adjust\+Bank}} (\mbox{\hyperlink{addrtypes_8h_af5a2be58a28390f9a494538f34054637}{UINT\+\_\+32}} tileX, \mbox{\hyperlink{addrtypes_8h_af5a2be58a28390f9a494538f34054637}{UINT\+\_\+32}} bank, \mbox{\hyperlink{namespacerocr_a22dcb0c31be418f31f99d0311c45522c}{ADDR\+\_\+\+TILEINFO}} $\ast$p\+Tile\+Info) const
+\begin{DoxyCompactList}\small\item\em Adjust bank before calculating address acoording to bank/pipe. \end{DoxyCompactList}\item 
+virtual \mbox{\hyperlink{addrtypes_8h_adacc69c9db3b9adfc072b838ebf2bb0e}{INT\+\_\+32}} \mbox{\hyperlink{classrocr_1_1Addr_1_1V1_1_1SiLib_ace748f183a0737c825611aa03a124314}{Hwl\+Post\+Check\+Tile\+Index}} (const \mbox{\hyperlink{namespacerocr_a22dcb0c31be418f31f99d0311c45522c}{ADDR\+\_\+\+TILEINFO}} $\ast$p\+Info, \mbox{\hyperlink{addrtypes_8h_a9dffa8321911d7791c03fe3a233a34e7}{Addr\+Tile\+Mode}} mode, \mbox{\hyperlink{addrtypes_8h_a7dd4750472a9413e05a56dbb7e9692c7}{Addr\+Tile\+Type}} type, \mbox{\hyperlink{addrtypes_8h_a392e62da233ed3e2f7c3fd4f487a3896}{INT}} cur\+Index=\mbox{\hyperlink{namespacerocr_1_1Addr_1_1V1_a40e553b9c327f0c2959bd9f20ecc2426}{Tile\+Index\+Invalid}}) const
+\begin{DoxyCompactList}\small\item\em Map a tile setting to index if cur\+Index is invalid, otherwise check if cur\+Index matches tile mode/type/info and change the index if needed. \end{DoxyCompactList}\item 
+virtual \mbox{\hyperlink{addrtypes_8h_a7927e087749615dae3114cc27b91c86d}{VOID}} \mbox{\hyperlink{classrocr_1_1Addr_1_1V1_1_1SiLib_af7080231865f560cc05db0844231175c}{Hwl\+Fmask\+Pre\+Thunk\+Surf\+Info}} (const \mbox{\hyperlink{namespacerocr_a0161899bfcda042cc0abf6dcedbc06cf}{ADDR\+\_\+\+COMPUTE\+\_\+\+FMASK\+\_\+\+INFO\+\_\+\+INPUT}} $\ast$p\+Fmask\+In, const \mbox{\hyperlink{namespacerocr_a0cd42c483bd6dbd6209d16396e199344}{ADDR\+\_\+\+COMPUTE\+\_\+\+FMASK\+\_\+\+INFO\+\_\+\+OUTPUT}} $\ast$p\+Fmask\+Out, \mbox{\hyperlink{namespacerocr_aabe299f90f529964589111a303e92f63}{ADDR\+\_\+\+COMPUTE\+\_\+\+SURFACE\+\_\+\+INFO\+\_\+\+INPUT}} $\ast$p\+Surf\+In, \mbox{\hyperlink{namespacerocr_af4aaf1d98a76006d4fca9a8c40fdd1d9}{ADDR\+\_\+\+COMPUTE\+\_\+\+SURFACE\+\_\+\+INFO\+\_\+\+OUTPUT}} $\ast$p\+Surf\+Out) const
+\begin{DoxyCompactList}\small\item\em Some preparation before thunking a Compute\+Surface\+Info call for Fmask. \end{DoxyCompactList}\item 
+virtual \mbox{\hyperlink{addrtypes_8h_a7927e087749615dae3114cc27b91c86d}{VOID}} \mbox{\hyperlink{classrocr_1_1Addr_1_1V1_1_1SiLib_a2571dfeb96cd88a2fe478e14ad38c244}{Hwl\+Fmask\+Post\+Thunk\+Surf\+Info}} (const \mbox{\hyperlink{namespacerocr_af4aaf1d98a76006d4fca9a8c40fdd1d9}{ADDR\+\_\+\+COMPUTE\+\_\+\+SURFACE\+\_\+\+INFO\+\_\+\+OUTPUT}} $\ast$p\+Surf\+Out, \mbox{\hyperlink{namespacerocr_a0cd42c483bd6dbd6209d16396e199344}{ADDR\+\_\+\+COMPUTE\+\_\+\+FMASK\+\_\+\+INFO\+\_\+\+OUTPUT}} $\ast$p\+Fmask\+Out) const
+\begin{DoxyCompactList}\small\item\em Copy hwl extra field after calling thunked Compute\+Surface\+Info. \end{DoxyCompactList}\item 
+virtual \mbox{\hyperlink{addrtypes_8h_af5a2be58a28390f9a494538f34054637}{UINT\+\_\+32}} \mbox{\hyperlink{classrocr_1_1Addr_1_1V1_1_1SiLib_a7a8098a3e8d2bdbee0c95fcb87b6b4b2}{Hwl\+Compute\+Fmask\+Bits}} (const \mbox{\hyperlink{namespacerocr_a0161899bfcda042cc0abf6dcedbc06cf}{ADDR\+\_\+\+COMPUTE\+\_\+\+FMASK\+\_\+\+INFO\+\_\+\+INPUT}} $\ast$p\+In, \mbox{\hyperlink{addrtypes_8h_af5a2be58a28390f9a494538f34054637}{UINT\+\_\+32}} $\ast$p\+Num\+Samples) const
+\begin{DoxyCompactList}\small\item\em Computes fmask bits. \end{DoxyCompactList}\item 
+virtual \mbox{\hyperlink{addrtypes_8h_ac4225671b7e87c943146915461c9b2f4}{BOOL\+\_\+32}} \mbox{\hyperlink{classrocr_1_1Addr_1_1V1_1_1SiLib_adb089c3467fcd8525228c2197db6113c}{Hwl\+Reduce\+Bank\+Width\+Height}} (\mbox{\hyperlink{addrtypes_8h_af5a2be58a28390f9a494538f34054637}{UINT\+\_\+32}} tile\+Size, \mbox{\hyperlink{addrtypes_8h_af5a2be58a28390f9a494538f34054637}{UINT\+\_\+32}} bpp, \mbox{\hyperlink{namespacerocr_ac2c13231249e1687b3bd1c434b92ba06}{ADDR\+\_\+\+SURFACE\+\_\+\+FLAGS}} flags, \mbox{\hyperlink{addrtypes_8h_af5a2be58a28390f9a494538f34054637}{UINT\+\_\+32}} num\+Samples, \mbox{\hyperlink{addrtypes_8h_af5a2be58a28390f9a494538f34054637}{UINT\+\_\+32}} bank\+Height\+Align, \mbox{\hyperlink{addrtypes_8h_af5a2be58a28390f9a494538f34054637}{UINT\+\_\+32}} pipes, \mbox{\hyperlink{namespacerocr_a22dcb0c31be418f31f99d0311c45522c}{ADDR\+\_\+\+TILEINFO}} $\ast$p\+Tile\+Info) const
+\begin{DoxyCompactList}\small\item\em Additional checks, reduce bank\+Height/bank\+Width if needed and possible tile\+Size$\ast$\+BANK\+\_\+\+WIDTH$\ast$\+BANK\+\_\+\+HEIGHT $<$= ROW\+\_\+\+SIZE. \end{DoxyCompactList}\item 
+virtual \mbox{\hyperlink{addrtypes_8h_af5a2be58a28390f9a494538f34054637}{UINT\+\_\+32}} \mbox{\hyperlink{classrocr_1_1Addr_1_1V1_1_1SiLib_a4b83c25a840cf554b44312ccbfc5f1f9}{Hwl\+Compute\+Max\+Base\+Alignments}} () const
+\begin{DoxyCompactList}\small\item\em Gets maximum alignments. \end{DoxyCompactList}\item 
+virtual \mbox{\hyperlink{addrtypes_8h_af5a2be58a28390f9a494538f34054637}{UINT\+\_\+32}} \mbox{\hyperlink{classrocr_1_1Addr_1_1V1_1_1SiLib_abc5c6e86bbf637c1ee8422e79407c155}{Hwl\+Compute\+Max\+Meta\+Base\+Alignments}} () const
+\begin{DoxyCompactList}\small\item\em Gets maximum alignments for metadata. \end{DoxyCompactList}\item 
+virtual \mbox{\hyperlink{addrtypes_8h_a7927e087749615dae3114cc27b91c86d}{VOID}} \mbox{\hyperlink{classrocr_1_1Addr_1_1V1_1_1SiLib_a364503ba8d940781a0d815cabc875c99}{Hwl\+Compute\+Surface\+Alignments\+Macro\+Tiled}} (\mbox{\hyperlink{addrtypes_8h_a9dffa8321911d7791c03fe3a233a34e7}{Addr\+Tile\+Mode}} tile\+Mode, \mbox{\hyperlink{addrtypes_8h_af5a2be58a28390f9a494538f34054637}{UINT\+\_\+32}} bpp, \mbox{\hyperlink{namespacerocr_ac2c13231249e1687b3bd1c434b92ba06}{ADDR\+\_\+\+SURFACE\+\_\+\+FLAGS}} flags, \mbox{\hyperlink{addrtypes_8h_af5a2be58a28390f9a494538f34054637}{UINT\+\_\+32}} mip\+Level, \mbox{\hyperlink{addrtypes_8h_af5a2be58a28390f9a494538f34054637}{UINT\+\_\+32}} num\+Samples, \mbox{\hyperlink{namespacerocr_af4aaf1d98a76006d4fca9a8c40fdd1d9}{ADDR\+\_\+\+COMPUTE\+\_\+\+SURFACE\+\_\+\+INFO\+\_\+\+OUTPUT}} $\ast$p\+Out) const
+\begin{DoxyCompactList}\small\item\em Hardware layer function to compute alignment request for macro tile mode. \end{DoxyCompactList}\item 
+virtual \mbox{\hyperlink{addrtypes_8h_af5a2be58a28390f9a494538f34054637}{UINT\+\_\+32}} \mbox{\hyperlink{classrocr_1_1Addr_1_1V1_1_1SiLib_abc6ee720c24976545c3fda57fc2c413c}{Hwl\+Get\+Equation\+Table\+Info}} (const \mbox{\hyperlink{namespacerocr_a9d269a2f79e2b96962f79909f5e1643c}{ADDR\+\_\+\+EQUATION}} $\ast$$\ast$pp\+Equation\+Table) const
+\begin{DoxyCompactList}\small\item\em Get equation table pointer and number of equations. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{addrtypes_8h_ac4225671b7e87c943146915461c9b2f4}{BOOL\+\_\+32}} \mbox{\hyperlink{classrocr_1_1Addr_1_1V1_1_1SiLib_a65c961a3e9ca06a720689e5a05713eec}{Is\+Equation\+Supported}} (\mbox{\hyperlink{addrtypes_8h_af5a2be58a28390f9a494538f34054637}{UINT\+\_\+32}} bpp, \mbox{\hyperlink{structrocr_1_1Addr_1_1V1_1_1TileConfig}{Tile\+Config}} tile\+Config, \mbox{\hyperlink{addrtypes_8h_adacc69c9db3b9adfc072b838ebf2bb0e}{INT\+\_\+32}} tile\+Index, \mbox{\hyperlink{addrtypes_8h_af5a2be58a28390f9a494538f34054637}{UINT\+\_\+32}} element\+Bytes\+Log2) const
+\begin{DoxyCompactList}\small\item\em Check if it is supported for given bpp and tile config to generate a equation. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{addrtypes_8h_a7927e087749615dae3114cc27b91c86d}{VOID}} \mbox{\hyperlink{classrocr_1_1Addr_1_1V1_1_1SiLib_a5d556a8bbba626dad508edebd24a28af}{Compute\+Tile\+Coord\+From\+Pipe\+And\+Elem\+Idx}} (\mbox{\hyperlink{addrtypes_8h_af5a2be58a28390f9a494538f34054637}{UINT\+\_\+32}} elem\+Idx, \mbox{\hyperlink{addrtypes_8h_af5a2be58a28390f9a494538f34054637}{UINT\+\_\+32}} pipe, \mbox{\hyperlink{addrtypes_8h_a41b6c4d86868a354f041abb20c2ab4a4}{Addr\+Pipe\+Cfg}} pipe\+Cfg, \mbox{\hyperlink{addrtypes_8h_af5a2be58a28390f9a494538f34054637}{UINT\+\_\+32}} pitch\+In\+Macro\+Tile, \mbox{\hyperlink{addrtypes_8h_af5a2be58a28390f9a494538f34054637}{UINT\+\_\+32}} x, \mbox{\hyperlink{addrtypes_8h_af5a2be58a28390f9a494538f34054637}{UINT\+\_\+32}} y, \mbox{\hyperlink{addrtypes_8h_af5a2be58a28390f9a494538f34054637}{UINT\+\_\+32}} $\ast$pX, \mbox{\hyperlink{addrtypes_8h_af5a2be58a28390f9a494538f34054637}{UINT\+\_\+32}} $\ast$pY) const
+\begin{DoxyCompactList}\small\item\em Compute (x,y) of a tile within a macro tile from address. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{addrtypes_8h_af5a2be58a28390f9a494538f34054637}{UINT\+\_\+32}} \mbox{\hyperlink{classrocr_1_1Addr_1_1V1_1_1SiLib_ae3ee4bbe30f6012373212b1b97148717}{Tile\+Coord\+To\+Mask\+Element\+Index}} (\mbox{\hyperlink{addrtypes_8h_af5a2be58a28390f9a494538f34054637}{UINT\+\_\+32}} tx, \mbox{\hyperlink{addrtypes_8h_af5a2be58a28390f9a494538f34054637}{UINT\+\_\+32}} ty, \mbox{\hyperlink{addrtypes_8h_a41b6c4d86868a354f041abb20c2ab4a4}{Addr\+Pipe\+Cfg}} pipe\+Config, \mbox{\hyperlink{addrtypes_8h_af5a2be58a28390f9a494538f34054637}{UINT\+\_\+32}} $\ast$macro\+Shift, \mbox{\hyperlink{addrtypes_8h_af5a2be58a28390f9a494538f34054637}{UINT\+\_\+32}} $\ast$elem\+Idx\+Bits) const
+\begin{DoxyCompactList}\small\item\em Compute element index from coordinates in tiles. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{addrtypes_8h_ac4225671b7e87c943146915461c9b2f4}{BOOL\+\_\+32}} \mbox{\hyperlink{classrocr_1_1Addr_1_1V1_1_1SiLib_a94df68ed09ff0a64456ea9d1022ac808}{Decode\+Gb\+Regs}} (const \mbox{\hyperlink{namespacerocr_a2e064cc7acf2bffc02af9535dfad17e9}{ADDR\+\_\+\+REGISTER\+\_\+\+VALUE}} $\ast$p\+Reg\+Value)
+\begin{DoxyCompactList}\small\item\em Decodes \mbox{\hyperlink{unionGB__ADDR__CONFIG}{GB\+\_\+\+ADDR\+\_\+\+CONFIG}} and no\+Of\+Banks/no\+Of\+Ranks. \end{DoxyCompactList}\item 
+const \mbox{\hyperlink{structrocr_1_1Addr_1_1V1_1_1TileConfig}{Tile\+Config}} $\ast$ \mbox{\hyperlink{classrocr_1_1Addr_1_1V1_1_1SiLib_a6c5297a2f8485322d593bdda2173bdfd}{Get\+Tile\+Setting}} (\mbox{\hyperlink{addrtypes_8h_af5a2be58a28390f9a494538f34054637}{UINT\+\_\+32}} index) const
+\begin{DoxyCompactList}\small\item\em Get tile setting infos by index. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{addrtypes_8h_a7927e087749615dae3114cc27b91c86d}{VOID}} \mbox{\hyperlink{classrocr_1_1Addr_1_1V1_1_1SiLib_ada6a79e3a863649fae1608407ef7e2ab}{Init\+Equation\+Table}} ()
+\begin{DoxyCompactList}\small\item\em Initialize Equation table. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{addrtypes_8h_af5a2be58a28390f9a494538f34054637}{UINT\+\_\+32}} \mbox{\hyperlink{classrocr_1_1Addr_1_1V1_1_1SiLib_a11e23b8d26955e761db6d16751e54607}{Get\+Pipe\+Per\+Surf}} (\mbox{\hyperlink{addrtypes_8h_a41b6c4d86868a354f041abb20c2ab4a4}{Addr\+Pipe\+Cfg}} pipe\+Config) const
+\begin{DoxyCompactList}\small\item\em get pipe num base on inputing tileinfo-\/$>$pipeconfig \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{structrocr_1_1Addr_1_1V1_1_1TileConfig}{Tile\+Config}} \mbox{\hyperlink{classrocr_1_1Addr_1_1V1_1_1SiLib_adcea68d6cdbc77924d0c7d6b4c990196}{m\+\_\+tile\+Table}} \mbox{[}\mbox{\hyperlink{classrocr_1_1Addr_1_1V1_1_1SiLib_a09afb263d8dc74048a0469817a531c3d}{Tile\+Table\+Size}}\mbox{]}
+\item 
+\mbox{\hyperlink{addrtypes_8h_af5a2be58a28390f9a494538f34054637}{UINT\+\_\+32}} \mbox{\hyperlink{classrocr_1_1Addr_1_1V1_1_1SiLib_a99e71b637684cfa9254be5fd4867a0f4}{m\+\_\+no\+Of\+Entries}}
+\item 
+\mbox{\hyperlink{namespacerocr_a9d269a2f79e2b96962f79909f5e1643c}{ADDR\+\_\+\+EQUATION}} \mbox{\hyperlink{classrocr_1_1Addr_1_1V1_1_1SiLib_a024f3ae42cd44bbcdaf4a95f54ba0514}{m\+\_\+equation\+Table}} \mbox{[}\mbox{\hyperlink{classrocr_1_1Addr_1_1V1_1_1SiLib_ae5790749d77e98b03517022394319b14}{Equation\+Table\+Size}}\mbox{]}
+\item 
+\mbox{\hyperlink{addrtypes_8h_af5a2be58a28390f9a494538f34054637}{UINT\+\_\+32}} \mbox{\hyperlink{classrocr_1_1Addr_1_1V1_1_1SiLib_a3ba82023e6eaa103b490852c8f6414c9}{m\+\_\+num\+Macro\+Bits}} \mbox{[}\mbox{\hyperlink{classrocr_1_1Addr_1_1V1_1_1SiLib_ae5790749d77e98b03517022394319b14}{Equation\+Table\+Size}}\mbox{]}
+\item 
+\mbox{\hyperlink{addrtypes_8h_af5a2be58a28390f9a494538f34054637}{UINT\+\_\+32}} \mbox{\hyperlink{classrocr_1_1Addr_1_1V1_1_1SiLib_a4762968003aadcc873e6c1cef14bbc82}{m\+\_\+block\+Width}} \mbox{[}\mbox{\hyperlink{classrocr_1_1Addr_1_1V1_1_1SiLib_ae5790749d77e98b03517022394319b14}{Equation\+Table\+Size}}\mbox{]}
+\item 
+\mbox{\hyperlink{addrtypes_8h_af5a2be58a28390f9a494538f34054637}{UINT\+\_\+32}} \mbox{\hyperlink{classrocr_1_1Addr_1_1V1_1_1SiLib_a63d4055a2f7ff8e2e8083bf02bbbe6da}{m\+\_\+block\+Height}} \mbox{[}\mbox{\hyperlink{classrocr_1_1Addr_1_1V1_1_1SiLib_ae5790749d77e98b03517022394319b14}{Equation\+Table\+Size}}\mbox{]}
+\item 
+\mbox{\hyperlink{addrtypes_8h_af5a2be58a28390f9a494538f34054637}{UINT\+\_\+32}} \mbox{\hyperlink{classrocr_1_1Addr_1_1V1_1_1SiLib_a42281d28fa3a94c0e786f7f617242ad3}{m\+\_\+block\+Slices}} \mbox{[}\mbox{\hyperlink{classrocr_1_1Addr_1_1V1_1_1SiLib_ae5790749d77e98b03517022394319b14}{Equation\+Table\+Size}}\mbox{]}
+\item 
+\mbox{\hyperlink{addrtypes_8h_af5a2be58a28390f9a494538f34054637}{UINT\+\_\+32}} \mbox{\hyperlink{classrocr_1_1Addr_1_1V1_1_1SiLib_a86618e82f1f67a6f99f641af9ee0bab8}{m\+\_\+num\+Equations}}
+\item 
+\mbox{\hyperlink{addrtypes_8h_af5a2be58a28390f9a494538f34054637}{UINT\+\_\+32}} \mbox{\hyperlink{classrocr_1_1Addr_1_1V1_1_1SiLib_a0767575d39b86889e3f59f06f0dfd568}{m\+\_\+equation\+Lookup\+Table}} \mbox{[}\mbox{\hyperlink{classrocr_1_1Addr_1_1V1_1_1SiLib_a0ab4c2ca59ff4130b5f835b641184cf5}{Max\+Num\+Element\+Bytes}}\mbox{]}\mbox{[}\mbox{\hyperlink{classrocr_1_1Addr_1_1V1_1_1SiLib_a09afb263d8dc74048a0469817a531c3d}{Tile\+Table\+Size}}\mbox{]}
+\item 
+\mbox{\hyperlink{addrtypes_8h_af5a2be58a28390f9a494538f34054637}{UINT\+\_\+32}} \mbox{\hyperlink{classrocr_1_1Addr_1_1V1_1_1SiLib_a714c2aade376e40af4955ebbe192ff8f}{m\+\_\+uncompress\+Depth\+Eq\+Index}}
+\item 
+\mbox{\hyperlink{structrocr_1_1Addr_1_1V1_1_1SiChipSettings}{Si\+Chip\+Settings}} \mbox{\hyperlink{classrocr_1_1Addr_1_1V1_1_1SiLib_a2cbf728c12d7b23931b2bb3430ee85fa}{m\+\_\+settings}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Static Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+static const \mbox{\hyperlink{addrtypes_8h_af5a2be58a28390f9a494538f34054637}{UINT\+\_\+32}} \mbox{\hyperlink{classrocr_1_1Addr_1_1V1_1_1SiLib_a09afb263d8dc74048a0469817a531c3d}{Tile\+Table\+Size}} = 32
+\item 
+static const \mbox{\hyperlink{addrtypes_8h_af5a2be58a28390f9a494538f34054637}{UINT\+\_\+32}} \mbox{\hyperlink{classrocr_1_1Addr_1_1V1_1_1SiLib_a0ab4c2ca59ff4130b5f835b641184cf5}{Max\+Num\+Element\+Bytes}} = 5
+\item 
+static const \mbox{\hyperlink{addrtypes_8h_ac4225671b7e87c943146915461c9b2f4}{BOOL\+\_\+32}} \mbox{\hyperlink{classrocr_1_1Addr_1_1V1_1_1SiLib_a9b1e620504027725031a1dca0a7b8fd5}{m\+\_\+\+Equation\+Support}} \mbox{[}\mbox{\hyperlink{classrocr_1_1Addr_1_1V1_1_1SiLib_a09afb263d8dc74048a0469817a531c3d}{Tile\+Table\+Size}}\mbox{]}\mbox{[}\mbox{\hyperlink{classrocr_1_1Addr_1_1V1_1_1SiLib_a0ab4c2ca59ff4130b5f835b641184cf5}{Max\+Num\+Element\+Bytes}}\mbox{]}
+\item 
+static const \mbox{\hyperlink{addrtypes_8h_af5a2be58a28390f9a494538f34054637}{UINT\+\_\+32}} \mbox{\hyperlink{classrocr_1_1Addr_1_1V1_1_1SiLib_a2dae642a5e91f6d7dc2c46fd90be96e2}{Si\+Prt\+Tile\+Index\+Mask}}
+\item 
+static const \mbox{\hyperlink{addrtypes_8h_af5a2be58a28390f9a494538f34054637}{UINT\+\_\+32}} \mbox{\hyperlink{classrocr_1_1Addr_1_1V1_1_1SiLib_ae5790749d77e98b03517022394319b14}{Equation\+Table\+Size}} = (\mbox{\hyperlink{classrocr_1_1Addr_1_1V1_1_1SiLib_a0ab4c2ca59ff4130b5f835b641184cf5}{Max\+Num\+Element\+Bytes}} $\ast$ \mbox{\hyperlink{classrocr_1_1Addr_1_1V1_1_1SiLib_a09afb263d8dc74048a0469817a531c3d}{Tile\+Table\+Size}}) / 2
+\end{DoxyCompactItemize}
+\doxysubsection*{Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{addrtypes_8h_a7927e087749615dae3114cc27b91c86d}{VOID}} \mbox{\hyperlink{classrocr_1_1Addr_1_1V1_1_1SiLib_a2dbbd5dc11f598e3f30f0831d309c295}{Read\+Gb\+Tile\+Mode}} (\mbox{\hyperlink{addrtypes_8h_af5a2be58a28390f9a494538f34054637}{UINT\+\_\+32}} reg\+Value, \mbox{\hyperlink{structrocr_1_1Addr_1_1V1_1_1TileConfig}{Tile\+Config}} $\ast$p\+Cfg) const
+\begin{DoxyCompactList}\small\item\em Convert \mbox{\hyperlink{unionGB__TILE__MODE}{GB\+\_\+\+TILE\+\_\+\+MODE}} HW value to \mbox{\hyperlink{structrocr_1_1Addr_1_1V1_1_1TileConfig}{Tile\+Config}}. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{addrtypes_8h_ac4225671b7e87c943146915461c9b2f4}{BOOL\+\_\+32}} \mbox{\hyperlink{classrocr_1_1Addr_1_1V1_1_1SiLib_a08a047e78254259c8cfd76c2be211c9c}{Init\+Tile\+Setting\+Table}} (const \mbox{\hyperlink{addrtypes_8h_af5a2be58a28390f9a494538f34054637}{UINT\+\_\+32}} $\ast$p\+Setting, \mbox{\hyperlink{addrtypes_8h_af5a2be58a28390f9a494538f34054637}{UINT\+\_\+32}} no\+Of\+Entries)
+\begin{DoxyCompactList}\small\item\em Initialize the ADDR\+\_\+\+TILE\+\_\+\+CONFIG table. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Additional Inherited Members}
+
+
+\doxysubsection{Detailed Description}
+This class is the SI specific address library function set. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classrocr_1_1Addr_1_1V1_1_1SiLib_a9e639418e9ba2fbd022a8b7dd95b1552}\label{classrocr_1_1Addr_1_1V1_1_1SiLib_a9e639418e9ba2fbd022a8b7dd95b1552}} 
+\index{rocr::Addr::V1::SiLib@{rocr::Addr::V1::SiLib}!SiLib@{SiLib}}
+\index{SiLib@{SiLib}!rocr::Addr::V1::SiLib@{rocr::Addr::V1::SiLib}}
+\doxysubsubsection{\texorpdfstring{SiLib()}{SiLib()}}
+{\footnotesize\ttfamily rocr\+::\+Addr\+::\+V1\+::\+Si\+Lib\+::\+Si\+Lib (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{structrocr_1_1Addr_1_1Client}{Client}} $\ast$}]{p\+Client }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Constructor. 
+
+\mbox{\hyperlink{classrocr_1_1Addr_1_1V1_1_1SiLib_a9e639418e9ba2fbd022a8b7dd95b1552}{Si\+Lib\+::\+Si\+Lib}} Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classrocr_1_1Addr_1_1V1_1_1SiLib_a9e639418e9ba2fbd022a8b7dd95b1552_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classrocr_1_1Addr_1_1V1_1_1SiLib_aa8e0ef30ce630ce3888d69451d74f72f}\label{classrocr_1_1Addr_1_1V1_1_1SiLib_aa8e0ef30ce630ce3888d69451d74f72f}} 
+\index{rocr::Addr::V1::SiLib@{rocr::Addr::V1::SiLib}!````~SiLib@{$\sim$SiLib}}
+\index{````~SiLib@{$\sim$SiLib}!rocr::Addr::V1::SiLib@{rocr::Addr::V1::SiLib}}
+\doxysubsubsection{\texorpdfstring{$\sim$SiLib()}{~SiLib()}}
+{\footnotesize\ttfamily rocr\+::\+Addr\+::\+V1\+::\+Si\+Lib\+::$\sim$\+Si\+Lib (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [virtual]}}
+
+
+
+Destructor. 
+
+\mbox{\hyperlink{classrocr_1_1Addr_1_1V1_1_1SiLib_aa8e0ef30ce630ce3888d69451d74f72f}{Si\+Lib\+::$\sim$\+Si\+Lib}} 
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classrocr_1_1Addr_1_1V1_1_1SiLib_af13c1885594f1be4edeaea8aad985c28}\label{classrocr_1_1Addr_1_1V1_1_1SiLib_af13c1885594f1be4edeaea8aad985c28}} 
+\index{rocr::Addr::V1::SiLib@{rocr::Addr::V1::SiLib}!ComputeBankEquation@{ComputeBankEquation}}
+\index{ComputeBankEquation@{ComputeBankEquation}!rocr::Addr::V1::SiLib@{rocr::Addr::V1::SiLib}}
+\doxysubsubsection{\texorpdfstring{ComputeBankEquation()}{ComputeBankEquation()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{addrtypes_8h_a45468f108457c1977c8684dea3df88c7}{ADDR\+\_\+\+E\+\_\+\+RETURNCODE}} rocr\+::\+Addr\+::\+V1\+::\+Si\+Lib\+::\+Compute\+Bank\+Equation (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{addrtypes_8h_af5a2be58a28390f9a494538f34054637}{UINT\+\_\+32}}}]{log2\+Bytes\+PP,  }\item[{\mbox{\hyperlink{addrtypes_8h_af5a2be58a28390f9a494538f34054637}{UINT\+\_\+32}}}]{threshX,  }\item[{\mbox{\hyperlink{addrtypes_8h_af5a2be58a28390f9a494538f34054637}{UINT\+\_\+32}}}]{threshY,  }\item[{\mbox{\hyperlink{namespacerocr_a22dcb0c31be418f31f99d0311c45522c}{ADDR\+\_\+\+TILEINFO}} $\ast$}]{p\+Tile\+Info,  }\item[{\mbox{\hyperlink{namespacerocr_a9d269a2f79e2b96962f79909f5e1643c}{ADDR\+\_\+\+EQUATION}} $\ast$}]{p\+Equation }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [virtual]}}
+
+
+
+Compute bank equation. 
+
+\mbox{\hyperlink{classrocr_1_1Addr_1_1V1_1_1SiLib_af13c1885594f1be4edeaea8aad985c28}{Si\+Lib\+::\+Compute\+Bank\+Equation}}
+
+\begin{DoxyReturn}{Returns}
+If equation can be computed 
+\end{DoxyReturn}
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em log2\+Bytes\+PP} & log2 of bytes per pixel \\
+\hline
+\mbox{\texttt{ in}}  & {\em threshX} & threshold for x channel \\
+\hline
+\mbox{\texttt{ in}}  & {\em threshY} & threshold for y channel \\
+\hline
+\mbox{\texttt{ in}}  & {\em p\+Tile\+Info} & tile info \\
+\hline
+\mbox{\texttt{ out}}  & {\em p\+Equation} & bank equation \\
+\hline
+\end{DoxyParams}
+
+
+Reimplemented from \mbox{\hyperlink{classrocr_1_1Addr_1_1V1_1_1EgBasedLib_ac0caf5de6f853b2e1bec209f332388d4}{rocr\+::\+Addr\+::\+V1\+::\+Eg\+Based\+Lib}}.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classrocr_1_1Addr_1_1V1_1_1SiLib_af13c1885594f1be4edeaea8aad985c28_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classrocr_1_1Addr_1_1V1_1_1SiLib_a25a4cb9c19f83949201ff0184046196a}\label{classrocr_1_1Addr_1_1V1_1_1SiLib_a25a4cb9c19f83949201ff0184046196a}} 
+\index{rocr::Addr::V1::SiLib@{rocr::Addr::V1::SiLib}!ComputePipeEquation@{ComputePipeEquation}}
+\index{ComputePipeEquation@{ComputePipeEquation}!rocr::Addr::V1::SiLib@{rocr::Addr::V1::SiLib}}
+\doxysubsubsection{\texorpdfstring{ComputePipeEquation()}{ComputePipeEquation()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{addrtypes_8h_a45468f108457c1977c8684dea3df88c7}{ADDR\+\_\+\+E\+\_\+\+RETURNCODE}} rocr\+::\+Addr\+::\+V1\+::\+Si\+Lib\+::\+Compute\+Pipe\+Equation (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{addrtypes_8h_af5a2be58a28390f9a494538f34054637}{UINT\+\_\+32}}}]{log2\+Bytes\+PP,  }\item[{\mbox{\hyperlink{addrtypes_8h_af5a2be58a28390f9a494538f34054637}{UINT\+\_\+32}}}]{threshX,  }\item[{\mbox{\hyperlink{addrtypes_8h_af5a2be58a28390f9a494538f34054637}{UINT\+\_\+32}}}]{threshY,  }\item[{\mbox{\hyperlink{namespacerocr_a22dcb0c31be418f31f99d0311c45522c}{ADDR\+\_\+\+TILEINFO}} $\ast$}]{p\+Tile\+Info,  }\item[{\mbox{\hyperlink{namespacerocr_a9d269a2f79e2b96962f79909f5e1643c}{ADDR\+\_\+\+EQUATION}} $\ast$}]{p\+Equation }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [virtual]}}
+
+
+
+Compute pipe equation. 
+
+\mbox{\hyperlink{classrocr_1_1Addr_1_1V1_1_1SiLib_a25a4cb9c19f83949201ff0184046196a}{Si\+Lib\+::\+Compute\+Pipe\+Equation}}
+
+\begin{DoxyReturn}{Returns}
+If equation can be computed 
+\end{DoxyReturn}
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em log2\+Bytes\+PP} & Log2 of bytes per pixel \\
+\hline
+\mbox{\texttt{ in}}  & {\em threshX} & Threshold for X channel \\
+\hline
+\mbox{\texttt{ in}}  & {\em threshY} & Threshold for Y channel \\
+\hline
+\mbox{\texttt{ in}}  & {\em p\+Tile\+Info} & Tile info \\
+\hline
+\mbox{\texttt{ out}}  & {\em p\+Equation} & Pipe configure \\
+\hline
+\end{DoxyParams}
+
+
+Reimplemented from \mbox{\hyperlink{classrocr_1_1Addr_1_1V1_1_1Lib_a64817ab069c3de6bbb954ce956be6967}{rocr\+::\+Addr\+::\+V1\+::\+Lib}}.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classrocr_1_1Addr_1_1V1_1_1SiLib_a25a4cb9c19f83949201ff0184046196a_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classrocr_1_1Addr_1_1V1_1_1SiLib_a0501bd523178d6db4436e86d47eb7e8e}\label{classrocr_1_1Addr_1_1V1_1_1SiLib_a0501bd523178d6db4436e86d47eb7e8e}} 
+\index{rocr::Addr::V1::SiLib@{rocr::Addr::V1::SiLib}!ComputePipeFromCoord@{ComputePipeFromCoord}}
+\index{ComputePipeFromCoord@{ComputePipeFromCoord}!rocr::Addr::V1::SiLib@{rocr::Addr::V1::SiLib}}
+\doxysubsubsection{\texorpdfstring{ComputePipeFromCoord()}{ComputePipeFromCoord()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{addrtypes_8h_af5a2be58a28390f9a494538f34054637}{UINT\+\_\+32}} rocr\+::\+Addr\+::\+V1\+::\+Si\+Lib\+::\+Compute\+Pipe\+From\+Coord (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{addrtypes_8h_af5a2be58a28390f9a494538f34054637}{UINT\+\_\+32}}}]{x,  }\item[{\mbox{\hyperlink{addrtypes_8h_af5a2be58a28390f9a494538f34054637}{UINT\+\_\+32}}}]{y,  }\item[{\mbox{\hyperlink{addrtypes_8h_af5a2be58a28390f9a494538f34054637}{UINT\+\_\+32}}}]{slice,  }\item[{\mbox{\hyperlink{addrtypes_8h_a9dffa8321911d7791c03fe3a233a34e7}{Addr\+Tile\+Mode}}}]{tile\+Mode,  }\item[{\mbox{\hyperlink{addrtypes_8h_af5a2be58a28390f9a494538f34054637}{UINT\+\_\+32}}}]{pipe\+Swizzle,  }\item[{\mbox{\hyperlink{addrtypes_8h_ac4225671b7e87c943146915461c9b2f4}{BOOL\+\_\+32}}}]{ignore\+SE,  }\item[{\mbox{\hyperlink{namespacerocr_a22dcb0c31be418f31f99d0311c45522c}{ADDR\+\_\+\+TILEINFO}} $\ast$}]{p\+Tile\+Info }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [virtual]}}
+
+
+
+Compute pipe number from coordinates. 
+
+\mbox{\hyperlink{classrocr_1_1Addr_1_1V1_1_1SiLib_a0501bd523178d6db4436e86d47eb7e8e}{Si\+Lib\+::\+Compute\+Pipe\+From\+Coord}}
+
+\begin{DoxyReturn}{Returns}
+Pipe number 
+\end{DoxyReturn}
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em x} & x coordinate \\
+\hline
+\mbox{\texttt{ in}}  & {\em y} & y coordinate \\
+\hline
+\mbox{\texttt{ in}}  & {\em slice} & slice index \\
+\hline
+\mbox{\texttt{ in}}  & {\em tile\+Mode} & tile mode \\
+\hline
+\mbox{\texttt{ in}}  & {\em pipe\+Swizzle} & pipe swizzle \\
+\hline
+\mbox{\texttt{ in}}  & {\em ignore\+SE} & TRUE if shader engines are ignored \\
+\hline
+\mbox{\texttt{ in}}  & {\em p\+Tile\+Info} & Tile info \\
+\hline
+\end{DoxyParams}
+
+
+Implements \mbox{\hyperlink{classrocr_1_1Addr_1_1V1_1_1Lib_ab0c8bc47583e7a572fde7046ea240321}{rocr\+::\+Addr\+::\+V1\+::\+Lib}}.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=343pt]{classrocr_1_1Addr_1_1V1_1_1SiLib_a0501bd523178d6db4436e86d47eb7e8e_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classrocr_1_1Addr_1_1V1_1_1SiLib_a0501bd523178d6db4436e86d47eb7e8e_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classrocr_1_1Addr_1_1V1_1_1SiLib_a5d556a8bbba626dad508edebd24a28af}\label{classrocr_1_1Addr_1_1V1_1_1SiLib_a5d556a8bbba626dad508edebd24a28af}} 
+\index{rocr::Addr::V1::SiLib@{rocr::Addr::V1::SiLib}!ComputeTileCoordFromPipeAndElemIdx@{ComputeTileCoordFromPipeAndElemIdx}}
+\index{ComputeTileCoordFromPipeAndElemIdx@{ComputeTileCoordFromPipeAndElemIdx}!rocr::Addr::V1::SiLib@{rocr::Addr::V1::SiLib}}
+\doxysubsubsection{\texorpdfstring{ComputeTileCoordFromPipeAndElemIdx()}{ComputeTileCoordFromPipeAndElemIdx()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{addrtypes_8h_a7927e087749615dae3114cc27b91c86d}{VOID}} rocr\+::\+Addr\+::\+V1\+::\+Si\+Lib\+::\+Compute\+Tile\+Coord\+From\+Pipe\+And\+Elem\+Idx (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{addrtypes_8h_af5a2be58a28390f9a494538f34054637}{UINT\+\_\+32}}}]{elem\+Idx,  }\item[{\mbox{\hyperlink{addrtypes_8h_af5a2be58a28390f9a494538f34054637}{UINT\+\_\+32}}}]{pipe,  }\item[{\mbox{\hyperlink{addrtypes_8h_a41b6c4d86868a354f041abb20c2ab4a4}{Addr\+Pipe\+Cfg}}}]{pipe\+Cfg,  }\item[{\mbox{\hyperlink{addrtypes_8h_af5a2be58a28390f9a494538f34054637}{UINT\+\_\+32}}}]{pitch\+In\+Macro\+Tile,  }\item[{\mbox{\hyperlink{addrtypes_8h_af5a2be58a28390f9a494538f34054637}{UINT\+\_\+32}}}]{x,  }\item[{\mbox{\hyperlink{addrtypes_8h_af5a2be58a28390f9a494538f34054637}{UINT\+\_\+32}}}]{y,  }\item[{\mbox{\hyperlink{addrtypes_8h_af5a2be58a28390f9a494538f34054637}{UINT\+\_\+32}} $\ast$}]{pX,  }\item[{\mbox{\hyperlink{addrtypes_8h_af5a2be58a28390f9a494538f34054637}{UINT\+\_\+32}} $\ast$}]{pY }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Compute (x,y) of a tile within a macro tile from address. 
+
+\mbox{\hyperlink{classrocr_1_1Addr_1_1V1_1_1SiLib_a5d556a8bbba626dad508edebd24a28af}{Si\+Lib\+::\+Compute\+Tile\+Coord\+From\+Pipe\+And\+Elem\+Idx}}
+
+\begin{DoxyReturn}{Returns}
+Pipe number 
+\end{DoxyReturn}
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em elem\+Idx} & per pipe element index within a macro tile \\
+\hline
+\mbox{\texttt{ in}}  & {\em pipe} & pipe index \\
+\hline
+\mbox{\texttt{ in}}  & {\em pipe\+Cfg} & pipe config \\
+\hline
+\mbox{\texttt{ in}}  & {\em pitch\+In\+Macro\+Tile} & surface pitch in macro tile \\
+\hline
+\mbox{\texttt{ in}}  & {\em x} & x coordinate of the (0,0) tile in a macro tile \\
+\hline
+\mbox{\texttt{ in}}  & {\em y} & y coordinate of the (0,0) tile in a macro tile \\
+\hline
+\mbox{\texttt{ out}}  & {\em pX} & x coordinate \\
+\hline
+\mbox{\texttt{ out}}  & {\em pY} & y coordinate \\
+\hline
+\end{DoxyParams}
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classrocr_1_1Addr_1_1V1_1_1SiLib_a5d556a8bbba626dad508edebd24a28af_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classrocr_1_1Addr_1_1V1_1_1SiLib_a5d556a8bbba626dad508edebd24a28af_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classrocr_1_1Addr_1_1V1_1_1SiLib_a57b34239549a33b387edb08f65bcadbf}\label{classrocr_1_1Addr_1_1V1_1_1SiLib_a57b34239549a33b387edb08f65bcadbf}} 
+\index{rocr::Addr::V1::SiLib@{rocr::Addr::V1::SiLib}!CreateObj@{CreateObj}}
+\index{CreateObj@{CreateObj}!rocr::Addr::V1::SiLib@{rocr::Addr::V1::SiLib}}
+\doxysubsubsection{\texorpdfstring{CreateObj()}{CreateObj()}}
+{\footnotesize\ttfamily static \mbox{\hyperlink{classrocr_1_1Addr_1_1Lib}{Addr\+::\+Lib}}$\ast$ rocr\+::\+Addr\+::\+V1\+::\+Si\+Lib\+::\+Create\+Obj (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{structrocr_1_1Addr_1_1Client}{Client}} $\ast$}]{p\+Client }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+
+
+Creates \mbox{\hyperlink{classrocr_1_1Addr_1_1V1_1_1SiLib}{Si\+Lib}} object. 
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=326pt]{classrocr_1_1Addr_1_1V1_1_1SiLib_a57b34239549a33b387edb08f65bcadbf_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classrocr_1_1Addr_1_1V1_1_1SiLib_a57b34239549a33b387edb08f65bcadbf_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classrocr_1_1Addr_1_1V1_1_1SiLib_a94df68ed09ff0a64456ea9d1022ac808}\label{classrocr_1_1Addr_1_1V1_1_1SiLib_a94df68ed09ff0a64456ea9d1022ac808}} 
+\index{rocr::Addr::V1::SiLib@{rocr::Addr::V1::SiLib}!DecodeGbRegs@{DecodeGbRegs}}
+\index{DecodeGbRegs@{DecodeGbRegs}!rocr::Addr::V1::SiLib@{rocr::Addr::V1::SiLib}}
+\doxysubsubsection{\texorpdfstring{DecodeGbRegs()}{DecodeGbRegs()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{addrtypes_8h_ac4225671b7e87c943146915461c9b2f4}{BOOL\+\_\+32}} rocr\+::\+Addr\+::\+V1\+::\+Si\+Lib\+::\+Decode\+Gb\+Regs (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{namespacerocr_a2e064cc7acf2bffc02af9535dfad17e9}{ADDR\+\_\+\+REGISTER\+\_\+\+VALUE}} $\ast$}]{p\+Reg\+Value }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Decodes \mbox{\hyperlink{unionGB__ADDR__CONFIG}{GB\+\_\+\+ADDR\+\_\+\+CONFIG}} and no\+Of\+Banks/no\+Of\+Ranks. 
+
+\mbox{\hyperlink{classrocr_1_1Addr_1_1V1_1_1SiLib_a94df68ed09ff0a64456ea9d1022ac808}{Si\+Lib\+::\+Decode\+Gb\+Regs}}
+
+\begin{DoxyReturn}{Returns}
+TRUE if all settings are valid 
+\end{DoxyReturn}
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em p\+Reg\+Value} & create input \\
+\hline
+\end{DoxyParams}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=336pt]{classrocr_1_1Addr_1_1V1_1_1SiLib_a94df68ed09ff0a64456ea9d1022ac808_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classrocr_1_1Addr_1_1V1_1_1SiLib_a11e23b8d26955e761db6d16751e54607}\label{classrocr_1_1Addr_1_1V1_1_1SiLib_a11e23b8d26955e761db6d16751e54607}} 
+\index{rocr::Addr::V1::SiLib@{rocr::Addr::V1::SiLib}!GetPipePerSurf@{GetPipePerSurf}}
+\index{GetPipePerSurf@{GetPipePerSurf}!rocr::Addr::V1::SiLib@{rocr::Addr::V1::SiLib}}
+\doxysubsubsection{\texorpdfstring{GetPipePerSurf()}{GetPipePerSurf()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{addrtypes_8h_af5a2be58a28390f9a494538f34054637}{UINT\+\_\+32}} rocr\+::\+Addr\+::\+V1\+::\+Si\+Lib\+::\+Get\+Pipe\+Per\+Surf (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{addrtypes_8h_a41b6c4d86868a354f041abb20c2ab4a4}{Addr\+Pipe\+Cfg}}}]{pipe\+Config }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+get pipe num base on inputing tileinfo-\/$>$pipeconfig 
+
+\mbox{\hyperlink{classrocr_1_1Addr_1_1V1_1_1SiLib_a11e23b8d26955e761db6d16751e54607}{Si\+Lib\+::\+Get\+Pipe\+Per\+Surf}} \begin{DoxyReturn}{Returns}
+pipe number 
+\end{DoxyReturn}
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em pipe\+Config} & pipe config \\
+\hline
+\end{DoxyParams}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classrocr_1_1Addr_1_1V1_1_1SiLib_a11e23b8d26955e761db6d16751e54607_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classrocr_1_1Addr_1_1V1_1_1SiLib_a6c5297a2f8485322d593bdda2173bdfd}\label{classrocr_1_1Addr_1_1V1_1_1SiLib_a6c5297a2f8485322d593bdda2173bdfd}} 
+\index{rocr::Addr::V1::SiLib@{rocr::Addr::V1::SiLib}!GetTileSetting@{GetTileSetting}}
+\index{GetTileSetting@{GetTileSetting}!rocr::Addr::V1::SiLib@{rocr::Addr::V1::SiLib}}
+\doxysubsubsection{\texorpdfstring{GetTileSetting()}{GetTileSetting()}}
+{\footnotesize\ttfamily const \mbox{\hyperlink{structrocr_1_1Addr_1_1V1_1_1TileConfig}{Tile\+Config}} $\ast$ rocr\+::\+Addr\+::\+V1\+::\+Si\+Lib\+::\+Get\+Tile\+Setting (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{addrtypes_8h_af5a2be58a28390f9a494538f34054637}{UINT\+\_\+32}}}]{index }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Get tile setting infos by index. 
+
+Si\+Lib\+::\+Get\+Tile\+Settings
+
+\begin{DoxyReturn}{Returns}
+Tile setting info. 
+\end{DoxyReturn}
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em index} & Tile index \\
+\hline
+\end{DoxyParams}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=327pt]{classrocr_1_1Addr_1_1V1_1_1SiLib_a6c5297a2f8485322d593bdda2173bdfd_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classrocr_1_1Addr_1_1V1_1_1SiLib_ae1f55019ec006b995714888ca940eaab}\label{classrocr_1_1Addr_1_1V1_1_1SiLib_ae1f55019ec006b995714888ca940eaab}} 
+\index{rocr::Addr::V1::SiLib@{rocr::Addr::V1::SiLib}!HwlCheckLastMacroTiledLvl@{HwlCheckLastMacroTiledLvl}}
+\index{HwlCheckLastMacroTiledLvl@{HwlCheckLastMacroTiledLvl}!rocr::Addr::V1::SiLib@{rocr::Addr::V1::SiLib}}
+\doxysubsubsection{\texorpdfstring{HwlCheckLastMacroTiledLvl()}{HwlCheckLastMacroTiledLvl()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{addrtypes_8h_a7927e087749615dae3114cc27b91c86d}{VOID}} rocr\+::\+Addr\+::\+V1\+::\+Si\+Lib\+::\+Hwl\+Check\+Last\+Macro\+Tiled\+Lvl (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{namespacerocr_aabe299f90f529964589111a303e92f63}{ADDR\+\_\+\+COMPUTE\+\_\+\+SURFACE\+\_\+\+INFO\+\_\+\+INPUT}} $\ast$}]{p\+In,  }\item[{\mbox{\hyperlink{namespacerocr_af4aaf1d98a76006d4fca9a8c40fdd1d9}{ADDR\+\_\+\+COMPUTE\+\_\+\+SURFACE\+\_\+\+INFO\+\_\+\+OUTPUT}} $\ast$}]{p\+Out }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [virtual]}}
+
+
+
+Sets p\+Out-\/$>$last2\+DLevel to TRUE if it is. 
+
+\mbox{\hyperlink{classrocr_1_1Addr_1_1V1_1_1SiLib_ae1f55019ec006b995714888ca940eaab}{Si\+Lib\+::\+Hwl\+Check\+Last\+Macro\+Tiled\+Lvl}}
+
+\begin{DoxyNote}{Note}
+
+\end{DoxyNote}
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em p\+In} & Input structure \\
+\hline
+\mbox{\texttt{ in,out}}  & {\em p\+Out} & Output structure (used as input, too) \\
+\hline
+\end{DoxyParams}
+
+
+Implements \mbox{\hyperlink{classrocr_1_1Addr_1_1V1_1_1EgBasedLib_a8487651d5056a608c6e3106d4793724f}{rocr\+::\+Addr\+::\+V1\+::\+Eg\+Based\+Lib}}.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classrocr_1_1Addr_1_1V1_1_1SiLib_ae1f55019ec006b995714888ca940eaab_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classrocr_1_1Addr_1_1V1_1_1SiLib_a7a8098a3e8d2bdbee0c95fcb87b6b4b2}\label{classrocr_1_1Addr_1_1V1_1_1SiLib_a7a8098a3e8d2bdbee0c95fcb87b6b4b2}} 
+\index{rocr::Addr::V1::SiLib@{rocr::Addr::V1::SiLib}!HwlComputeFmaskBits@{HwlComputeFmaskBits}}
+\index{HwlComputeFmaskBits@{HwlComputeFmaskBits}!rocr::Addr::V1::SiLib@{rocr::Addr::V1::SiLib}}
+\doxysubsubsection{\texorpdfstring{HwlComputeFmaskBits()}{HwlComputeFmaskBits()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{addrtypes_8h_af5a2be58a28390f9a494538f34054637}{UINT\+\_\+32}} rocr\+::\+Addr\+::\+V1\+::\+Si\+Lib\+::\+Hwl\+Compute\+Fmask\+Bits (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{namespacerocr_a0161899bfcda042cc0abf6dcedbc06cf}{ADDR\+\_\+\+COMPUTE\+\_\+\+FMASK\+\_\+\+INFO\+\_\+\+INPUT}} $\ast$}]{p\+In,  }\item[{\mbox{\hyperlink{addrtypes_8h_af5a2be58a28390f9a494538f34054637}{UINT\+\_\+32}} $\ast$}]{p\+Num\+Samples }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [virtual]}}
+
+
+
+Computes fmask bits. 
+
+\mbox{\hyperlink{classrocr_1_1Addr_1_1V1_1_1SiLib_a7a8098a3e8d2bdbee0c95fcb87b6b4b2}{Si\+Lib\+::\+Hwl\+Compute\+Fmask\+Bits}} \begin{DoxyReturn}{Returns}
+Fmask bits 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{classrocr_1_1Addr_1_1V1_1_1Lib_a824cc9682cf1e3e810d5257140ea40de}{rocr\+::\+Addr\+::\+V1\+::\+Lib}}.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classrocr_1_1Addr_1_1V1_1_1SiLib_a7a8098a3e8d2bdbee0c95fcb87b6b4b2_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classrocr_1_1Addr_1_1V1_1_1SiLib_af30b86be62f86c66cd0c15f2d80b3a08}\label{classrocr_1_1Addr_1_1V1_1_1SiLib_af30b86be62f86c66cd0c15f2d80b3a08}} 
+\index{rocr::Addr::V1::SiLib@{rocr::Addr::V1::SiLib}!HwlComputeHtileBytes@{HwlComputeHtileBytes}}
+\index{HwlComputeHtileBytes@{HwlComputeHtileBytes}!rocr::Addr::V1::SiLib@{rocr::Addr::V1::SiLib}}
+\doxysubsubsection{\texorpdfstring{HwlComputeHtileBytes()}{HwlComputeHtileBytes()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{addrtypes_8h_ac4116bb9a5e80b5cb845d4f2674c160f}{UINT\+\_\+64}} rocr\+::\+Addr\+::\+V1\+::\+Si\+Lib\+::\+Hwl\+Compute\+Htile\+Bytes (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{addrtypes_8h_af5a2be58a28390f9a494538f34054637}{UINT\+\_\+32}}}]{pitch,  }\item[{\mbox{\hyperlink{addrtypes_8h_af5a2be58a28390f9a494538f34054637}{UINT\+\_\+32}}}]{height,  }\item[{\mbox{\hyperlink{addrtypes_8h_af5a2be58a28390f9a494538f34054637}{UINT\+\_\+32}}}]{bpp,  }\item[{\mbox{\hyperlink{addrtypes_8h_ac4225671b7e87c943146915461c9b2f4}{BOOL\+\_\+32}}}]{is\+Linear,  }\item[{\mbox{\hyperlink{addrtypes_8h_af5a2be58a28390f9a494538f34054637}{UINT\+\_\+32}}}]{num\+Slices,  }\item[{\mbox{\hyperlink{addrtypes_8h_ac4116bb9a5e80b5cb845d4f2674c160f}{UINT\+\_\+64}} $\ast$}]{p\+Slice\+Bytes,  }\item[{\mbox{\hyperlink{addrtypes_8h_af5a2be58a28390f9a494538f34054637}{UINT\+\_\+32}}}]{base\+Align }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [virtual]}}
+
+
+
+Compute htile size in bytes. 
+
+\mbox{\hyperlink{classrocr_1_1Addr_1_1V1_1_1SiLib_af30b86be62f86c66cd0c15f2d80b3a08}{Si\+Lib\+::\+Hwl\+Compute\+Htile\+Bytes}}
+
+\begin{DoxyReturn}{Returns}
+Htile size in bytes 
+\end{DoxyReturn}
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em pitch} & pitch \\
+\hline
+\mbox{\texttt{ in}}  & {\em height} & height \\
+\hline
+\mbox{\texttt{ in}}  & {\em bpp} & bits per pixel \\
+\hline
+\mbox{\texttt{ in}}  & {\em is\+Linear} & if it is linear mode \\
+\hline
+\mbox{\texttt{ in}}  & {\em num\+Slices} & number of slices \\
+\hline
+\mbox{\texttt{ out}}  & {\em p\+Slice\+Bytes} & bytes per slice \\
+\hline
+\mbox{\texttt{ in}}  & {\em base\+Align} & base alignments \\
+\hline
+\end{DoxyParams}
+
+
+Implements \mbox{\hyperlink{classrocr_1_1Addr_1_1V1_1_1Lib_a552ff3ff156df2f739a712bbc6f8fad9}{rocr\+::\+Addr\+::\+V1\+::\+Lib}}.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classrocr_1_1Addr_1_1V1_1_1SiLib_af30b86be62f86c66cd0c15f2d80b3a08_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classrocr_1_1Addr_1_1V1_1_1SiLib_a4b83c25a840cf554b44312ccbfc5f1f9}\label{classrocr_1_1Addr_1_1V1_1_1SiLib_a4b83c25a840cf554b44312ccbfc5f1f9}} 
+\index{rocr::Addr::V1::SiLib@{rocr::Addr::V1::SiLib}!HwlComputeMaxBaseAlignments@{HwlComputeMaxBaseAlignments}}
+\index{HwlComputeMaxBaseAlignments@{HwlComputeMaxBaseAlignments}!rocr::Addr::V1::SiLib@{rocr::Addr::V1::SiLib}}
+\doxysubsubsection{\texorpdfstring{HwlComputeMaxBaseAlignments()}{HwlComputeMaxBaseAlignments()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{addrtypes_8h_af5a2be58a28390f9a494538f34054637}{UINT\+\_\+32}} rocr\+::\+Addr\+::\+V1\+::\+Si\+Lib\+::\+Hwl\+Compute\+Max\+Base\+Alignments (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [virtual]}}
+
+
+
+Gets maximum alignments. 
+
+\mbox{\hyperlink{classrocr_1_1Addr_1_1V1_1_1SiLib_a4b83c25a840cf554b44312ccbfc5f1f9}{Si\+Lib\+::\+Hwl\+Compute\+Max\+Base\+Alignments}}
+
+\begin{DoxyReturn}{Returns}
+maximum alignments 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{classrocr_1_1Addr_1_1Lib_af7f043bf04ff32372f658c108c9b42f5}{rocr\+::\+Addr\+::\+Lib}}.
+
+
+
+Reimplemented in \mbox{\hyperlink{classrocr_1_1Addr_1_1V1_1_1CiLib_a8f9d929f4dcbdc03b4357e6179192511}{rocr\+::\+Addr\+::\+V1\+::\+Ci\+Lib}}.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classrocr_1_1Addr_1_1V1_1_1SiLib_a4b83c25a840cf554b44312ccbfc5f1f9_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classrocr_1_1Addr_1_1V1_1_1SiLib_abc5c6e86bbf637c1ee8422e79407c155}\label{classrocr_1_1Addr_1_1V1_1_1SiLib_abc5c6e86bbf637c1ee8422e79407c155}} 
+\index{rocr::Addr::V1::SiLib@{rocr::Addr::V1::SiLib}!HwlComputeMaxMetaBaseAlignments@{HwlComputeMaxMetaBaseAlignments}}
+\index{HwlComputeMaxMetaBaseAlignments@{HwlComputeMaxMetaBaseAlignments}!rocr::Addr::V1::SiLib@{rocr::Addr::V1::SiLib}}
+\doxysubsubsection{\texorpdfstring{HwlComputeMaxMetaBaseAlignments()}{HwlComputeMaxMetaBaseAlignments()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{addrtypes_8h_af5a2be58a28390f9a494538f34054637}{UINT\+\_\+32}} rocr\+::\+Addr\+::\+V1\+::\+Si\+Lib\+::\+Hwl\+Compute\+Max\+Meta\+Base\+Alignments (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [virtual]}}
+
+
+
+Gets maximum alignments for metadata. 
+
+\mbox{\hyperlink{classrocr_1_1Addr_1_1V1_1_1SiLib_abc5c6e86bbf637c1ee8422e79407c155}{Si\+Lib\+::\+Hwl\+Compute\+Max\+Meta\+Base\+Alignments}}
+
+\begin{DoxyReturn}{Returns}
+maximum alignments for metadata 
+\end{DoxyReturn}
+
+
+Reimplemented from \mbox{\hyperlink{classrocr_1_1Addr_1_1Lib_a4daace978b94bc7538469f8eb17730cd}{rocr\+::\+Addr\+::\+Lib}}.
+
+
+
+Reimplemented in \mbox{\hyperlink{classrocr_1_1Addr_1_1V1_1_1CiLib_ab207940ec776053b80b1a5d874a20f29}{rocr\+::\+Addr\+::\+V1\+::\+Ci\+Lib}}.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classrocr_1_1Addr_1_1V1_1_1SiLib_abc5c6e86bbf637c1ee8422e79407c155_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classrocr_1_1Addr_1_1V1_1_1SiLib_abc5c6e86bbf637c1ee8422e79407c155_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classrocr_1_1Addr_1_1V1_1_1SiLib_afe28465f7d72d4698e42d4d8330013b9}\label{classrocr_1_1Addr_1_1V1_1_1SiLib_afe28465f7d72d4698e42d4d8330013b9}} 
+\index{rocr::Addr::V1::SiLib@{rocr::Addr::V1::SiLib}!HwlComputeMipLevel@{HwlComputeMipLevel}}
+\index{HwlComputeMipLevel@{HwlComputeMipLevel}!rocr::Addr::V1::SiLib@{rocr::Addr::V1::SiLib}}
+\doxysubsubsection{\texorpdfstring{HwlComputeMipLevel()}{HwlComputeMipLevel()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{addrtypes_8h_ac4225671b7e87c943146915461c9b2f4}{BOOL\+\_\+32}} rocr\+::\+Addr\+::\+V1\+::\+Si\+Lib\+::\+Hwl\+Compute\+Mip\+Level (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{namespacerocr_aabe299f90f529964589111a303e92f63}{ADDR\+\_\+\+COMPUTE\+\_\+\+SURFACE\+\_\+\+INFO\+\_\+\+INPUT}} $\ast$}]{p\+In }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [virtual]}}
+
+
+
+Compute Mip\+Level info (including level 0) 
+
+\mbox{\hyperlink{classrocr_1_1Addr_1_1V1_1_1SiLib_afe28465f7d72d4698e42d4d8330013b9}{Si\+Lib\+::\+Hwl\+Compute\+Mip\+Level}} \begin{DoxyReturn}{Returns}
+TRUE if HWL\textquotesingle{}s handled 
+\end{DoxyReturn}
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in,out}}  & {\em p\+In} & Input structure \\
+\hline
+\end{DoxyParams}
+
+
+Implements \mbox{\hyperlink{classrocr_1_1Addr_1_1V1_1_1Lib_abf6007a2c815dd2957d63047d2497567}{rocr\+::\+Addr\+::\+V1\+::\+Lib}}.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=336pt]{classrocr_1_1Addr_1_1V1_1_1SiLib_afe28465f7d72d4698e42d4d8330013b9_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classrocr_1_1Addr_1_1V1_1_1SiLib_a364503ba8d940781a0d815cabc875c99}\label{classrocr_1_1Addr_1_1V1_1_1SiLib_a364503ba8d940781a0d815cabc875c99}} 
+\index{rocr::Addr::V1::SiLib@{rocr::Addr::V1::SiLib}!HwlComputeSurfaceAlignmentsMacroTiled@{HwlComputeSurfaceAlignmentsMacroTiled}}
+\index{HwlComputeSurfaceAlignmentsMacroTiled@{HwlComputeSurfaceAlignmentsMacroTiled}!rocr::Addr::V1::SiLib@{rocr::Addr::V1::SiLib}}
+\doxysubsubsection{\texorpdfstring{HwlComputeSurfaceAlignmentsMacroTiled()}{HwlComputeSurfaceAlignmentsMacroTiled()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{addrtypes_8h_a7927e087749615dae3114cc27b91c86d}{VOID}} rocr\+::\+Addr\+::\+V1\+::\+Si\+Lib\+::\+Hwl\+Compute\+Surface\+Alignments\+Macro\+Tiled (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{addrtypes_8h_a9dffa8321911d7791c03fe3a233a34e7}{Addr\+Tile\+Mode}}}]{tile\+Mode,  }\item[{\mbox{\hyperlink{addrtypes_8h_af5a2be58a28390f9a494538f34054637}{UINT\+\_\+32}}}]{bpp,  }\item[{\mbox{\hyperlink{namespacerocr_ac2c13231249e1687b3bd1c434b92ba06}{ADDR\+\_\+\+SURFACE\+\_\+\+FLAGS}}}]{flags,  }\item[{\mbox{\hyperlink{addrtypes_8h_af5a2be58a28390f9a494538f34054637}{UINT\+\_\+32}}}]{mip\+Level,  }\item[{\mbox{\hyperlink{addrtypes_8h_af5a2be58a28390f9a494538f34054637}{UINT\+\_\+32}}}]{num\+Samples,  }\item[{\mbox{\hyperlink{namespacerocr_af4aaf1d98a76006d4fca9a8c40fdd1d9}{ADDR\+\_\+\+COMPUTE\+\_\+\+SURFACE\+\_\+\+INFO\+\_\+\+OUTPUT}} $\ast$}]{p\+Out }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [virtual]}}
+
+
+
+Hardware layer function to compute alignment request for macro tile mode. 
+
+\mbox{\hyperlink{classrocr_1_1Addr_1_1V1_1_1SiLib_a364503ba8d940781a0d815cabc875c99}{Si\+Lib\+::\+Hwl\+Compute\+Surface\+Alignments\+Macro\+Tiled}}
+
+\begin{DoxyReturn}{Returns}
+N/A 
+\end{DoxyReturn}
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em tile\+Mode} & tile mode \\
+\hline
+\mbox{\texttt{ in}}  & {\em bpp} & bits per pixel \\
+\hline
+\mbox{\texttt{ in}}  & {\em flags} & surface flags \\
+\hline
+\mbox{\texttt{ in}}  & {\em mip\+Level} & mip level \\
+\hline
+\mbox{\texttt{ in}}  & {\em num\+Samples} & number of samples \\
+\hline
+\mbox{\texttt{ in,out}}  & {\em p\+Out} & Surface output \\
+\hline
+\end{DoxyParams}
+
+
+Reimplemented from \mbox{\hyperlink{classrocr_1_1Addr_1_1V1_1_1EgBasedLib_a39fb883f4b028a7e1d4a446cb4254849}{rocr\+::\+Addr\+::\+V1\+::\+Eg\+Based\+Lib}}.
+
+
+
+Reimplemented in \mbox{\hyperlink{classrocr_1_1Addr_1_1V1_1_1CiLib_a1f2332d491f82e3effac3f9b36386243}{rocr\+::\+Addr\+::\+V1\+::\+Ci\+Lib}}.
+
+\mbox{\Hypertarget{classrocr_1_1Addr_1_1V1_1_1SiLib_a02a7d03874e96d65686a81e02ef008b1}\label{classrocr_1_1Addr_1_1V1_1_1SiLib_a02a7d03874e96d65686a81e02ef008b1}} 
+\index{rocr::Addr::V1::SiLib@{rocr::Addr::V1::SiLib}!HwlComputeSurfaceCoord2DFromBankPipe@{HwlComputeSurfaceCoord2DFromBankPipe}}
+\index{HwlComputeSurfaceCoord2DFromBankPipe@{HwlComputeSurfaceCoord2DFromBankPipe}!rocr::Addr::V1::SiLib@{rocr::Addr::V1::SiLib}}
+\doxysubsubsection{\texorpdfstring{HwlComputeSurfaceCoord2DFromBankPipe()}{HwlComputeSurfaceCoord2DFromBankPipe()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{addrtypes_8h_a7927e087749615dae3114cc27b91c86d}{VOID}} rocr\+::\+Addr\+::\+V1\+::\+Si\+Lib\+::\+Hwl\+Compute\+Surface\+Coord2\+DFrom\+Bank\+Pipe (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{addrtypes_8h_a9dffa8321911d7791c03fe3a233a34e7}{Addr\+Tile\+Mode}}}]{tile\+Mode,  }\item[{\mbox{\hyperlink{addrtypes_8h_af5a2be58a28390f9a494538f34054637}{UINT\+\_\+32}} $\ast$}]{pX,  }\item[{\mbox{\hyperlink{addrtypes_8h_af5a2be58a28390f9a494538f34054637}{UINT\+\_\+32}} $\ast$}]{pY,  }\item[{\mbox{\hyperlink{addrtypes_8h_af5a2be58a28390f9a494538f34054637}{UINT\+\_\+32}}}]{slice,  }\item[{\mbox{\hyperlink{addrtypes_8h_af5a2be58a28390f9a494538f34054637}{UINT\+\_\+32}}}]{bank,  }\item[{\mbox{\hyperlink{addrtypes_8h_af5a2be58a28390f9a494538f34054637}{UINT\+\_\+32}}}]{pipe,  }\item[{\mbox{\hyperlink{addrtypes_8h_af5a2be58a28390f9a494538f34054637}{UINT\+\_\+32}}}]{bank\+Swizzle,  }\item[{\mbox{\hyperlink{addrtypes_8h_af5a2be58a28390f9a494538f34054637}{UINT\+\_\+32}}}]{pipe\+Swizzle,  }\item[{\mbox{\hyperlink{addrtypes_8h_af5a2be58a28390f9a494538f34054637}{UINT\+\_\+32}}}]{tile\+Slices,  }\item[{\mbox{\hyperlink{addrtypes_8h_ac4225671b7e87c943146915461c9b2f4}{BOOL\+\_\+32}}}]{ignore\+SE,  }\item[{\mbox{\hyperlink{namespacerocr_a22dcb0c31be418f31f99d0311c45522c}{ADDR\+\_\+\+TILEINFO}} $\ast$}]{p\+Tile\+Info }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [virtual]}}
+
+
+
+Compute surface x,y coordinates from bank/pipe info. 
+
+\mbox{\hyperlink{classrocr_1_1Addr_1_1V1_1_1SiLib_a02a7d03874e96d65686a81e02ef008b1}{Si\+Lib\+::\+Hwl\+Compute\+Surface\+Coord2\+DFrom\+Bank\+Pipe}}
+
+\begin{DoxyReturn}{Returns}
+N/A 
+\end{DoxyReturn}
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em tile\+Mode} & tile mode \\
+\hline
+\mbox{\texttt{ in,out}}  & {\em pX} & x coordinate \\
+\hline
+\mbox{\texttt{ in,out}}  & {\em pY} & y coordinate \\
+\hline
+\mbox{\texttt{ in}}  & {\em slice} & slice index \\
+\hline
+\mbox{\texttt{ in}}  & {\em bank} & bank number \\
+\hline
+\mbox{\texttt{ in}}  & {\em pipe} & pipe number \\
+\hline
+\mbox{\texttt{ in}}  & {\em bank\+Swizzle} & bank swizzle \\
+\hline
+\mbox{\texttt{ in}}  & {\em pipe\+Swizzle} & pipe swizzle \\
+\hline
+\mbox{\texttt{ in}}  & {\em tile\+Slices} & slices in a micro tile \\
+\hline
+\mbox{\texttt{ in}}  & {\em ignore\+SE} & TRUE if shader engines are ignored \\
+\hline
+\mbox{\texttt{ in}}  & {\em p\+Tile\+Info} & bank structure. $\ast$$\ast$\+All fields to be valid on entry$\ast$$\ast$ \\
+\hline
+\end{DoxyParams}
+
+
+Implements \mbox{\hyperlink{classrocr_1_1Addr_1_1V1_1_1EgBasedLib_ac12a842c7b2f17cb43c6c2379614be62}{rocr\+::\+Addr\+::\+V1\+::\+Eg\+Based\+Lib}}.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classrocr_1_1Addr_1_1V1_1_1SiLib_a02a7d03874e96d65686a81e02ef008b1_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classrocr_1_1Addr_1_1V1_1_1SiLib_afbb66e7c7282e041137a6d8fbcf25574}\label{classrocr_1_1Addr_1_1V1_1_1SiLib_afbb66e7c7282e041137a6d8fbcf25574}} 
+\index{rocr::Addr::V1::SiLib@{rocr::Addr::V1::SiLib}!HwlComputeSurfaceInfo@{HwlComputeSurfaceInfo}}
+\index{HwlComputeSurfaceInfo@{HwlComputeSurfaceInfo}!rocr::Addr::V1::SiLib@{rocr::Addr::V1::SiLib}}
+\doxysubsubsection{\texorpdfstring{HwlComputeSurfaceInfo()}{HwlComputeSurfaceInfo()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{addrtypes_8h_a45468f108457c1977c8684dea3df88c7}{ADDR\+\_\+\+E\+\_\+\+RETURNCODE}} rocr\+::\+Addr\+::\+V1\+::\+Si\+Lib\+::\+Hwl\+Compute\+Surface\+Info (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{namespacerocr_aabe299f90f529964589111a303e92f63}{ADDR\+\_\+\+COMPUTE\+\_\+\+SURFACE\+\_\+\+INFO\+\_\+\+INPUT}} $\ast$}]{p\+In,  }\item[{\mbox{\hyperlink{namespacerocr_af4aaf1d98a76006d4fca9a8c40fdd1d9}{ADDR\+\_\+\+COMPUTE\+\_\+\+SURFACE\+\_\+\+INFO\+\_\+\+OUTPUT}} $\ast$}]{p\+Out }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [virtual]}}
+
+
+
+Entry of si\textquotesingle{}s Compute\+Surface\+Info. 
+
+\mbox{\hyperlink{classrocr_1_1Addr_1_1V1_1_1SiLib_afbb66e7c7282e041137a6d8fbcf25574}{Si\+Lib\+::\+Hwl\+Compute\+Surface\+Info}}
+
+\begin{DoxyReturn}{Returns}
+ADDR\+\_\+\+E\+\_\+\+RETURNCODE 
+\end{DoxyReturn}
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em p\+In} & input structure \\
+\hline
+\mbox{\texttt{ out}}  & {\em p\+Out} & output structure \\
+\hline
+\end{DoxyParams}
+
+
+Reimplemented from \mbox{\hyperlink{classrocr_1_1Addr_1_1V1_1_1EgBasedLib_ab51117b7d3f2b5c755993516c172b9f4}{rocr\+::\+Addr\+::\+V1\+::\+Eg\+Based\+Lib}}.
+
+
+
+Reimplemented in \mbox{\hyperlink{classrocr_1_1Addr_1_1V1_1_1CiLib_af6654838dbef86aa8c4fcf17cd939c45}{rocr\+::\+Addr\+::\+V1\+::\+Ci\+Lib}}.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classrocr_1_1Addr_1_1V1_1_1SiLib_afbb66e7c7282e041137a6d8fbcf25574_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classrocr_1_1Addr_1_1V1_1_1SiLib_afbb66e7c7282e041137a6d8fbcf25574_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classrocr_1_1Addr_1_1V1_1_1SiLib_aa3f9f5dd10efbc5c042ab45fb137de22}\label{classrocr_1_1Addr_1_1V1_1_1SiLib_aa3f9f5dd10efbc5c042ab45fb137de22}} 
+\index{rocr::Addr::V1::SiLib@{rocr::Addr::V1::SiLib}!HwlComputeTileDataWidthAndHeightLinear@{HwlComputeTileDataWidthAndHeightLinear}}
+\index{HwlComputeTileDataWidthAndHeightLinear@{HwlComputeTileDataWidthAndHeightLinear}!rocr::Addr::V1::SiLib@{rocr::Addr::V1::SiLib}}
+\doxysubsubsection{\texorpdfstring{HwlComputeTileDataWidthAndHeightLinear()}{HwlComputeTileDataWidthAndHeightLinear()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{addrtypes_8h_a7927e087749615dae3114cc27b91c86d}{VOID}} rocr\+::\+Addr\+::\+V1\+::\+Si\+Lib\+::\+Hwl\+Compute\+Tile\+Data\+Width\+And\+Height\+Linear (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{addrtypes_8h_af5a2be58a28390f9a494538f34054637}{UINT\+\_\+32}} $\ast$}]{p\+Macro\+Width,  }\item[{\mbox{\hyperlink{addrtypes_8h_af5a2be58a28390f9a494538f34054637}{UINT\+\_\+32}} $\ast$}]{p\+Macro\+Height,  }\item[{\mbox{\hyperlink{addrtypes_8h_af5a2be58a28390f9a494538f34054637}{UINT\+\_\+32}}}]{bpp,  }\item[{\mbox{\hyperlink{namespacerocr_a22dcb0c31be418f31f99d0311c45522c}{ADDR\+\_\+\+TILEINFO}} $\ast$}]{p\+Tile\+Info }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [virtual]}}
+
+
+
+Compute the squared cache shape for per-\/tile data (CMASK and HTILE) for linear layout. 
+
+\mbox{\hyperlink{classrocr_1_1Addr_1_1V1_1_1SiLib_aa3f9f5dd10efbc5c042ab45fb137de22}{Si\+Lib\+::\+Hwl\+Compute\+Tile\+Data\+Width\+And\+Height\+Linear}}
+
+\begin{DoxyReturn}{Returns}
+N/A
+\end{DoxyReturn}
+\begin{DoxyNote}{Note}
+Macro\+Width and macro\+Height are measured in pixels 
+\end{DoxyNote}
+In linear mode, the htile or cmask buffer must be padded out to 4 tiles but for P8\+\_\+32x64\+\_\+32x32, it must be padded out to 8 tiles Actually there are more pipe configs which need 8-\/tile padding but SI family has a bug which is fixed in CI family
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ out}}  & {\em p\+Macro\+Width} & macro tile width \\
+\hline
+\mbox{\texttt{ out}}  & {\em p\+Macro\+Height} & macro tile height \\
+\hline
+\mbox{\texttt{ in}}  & {\em bpp} & bits per pixel \\
+\hline
+\mbox{\texttt{ in}}  & {\em p\+Tile\+Info} & tile info \\
+\hline
+\end{DoxyParams}
+
+
+Reimplemented from \mbox{\hyperlink{classrocr_1_1Addr_1_1V1_1_1Lib_abe6fdd4a4dd6888ce052c69f396c5d7c}{rocr\+::\+Addr\+::\+V1\+::\+Lib}}.
+
+
+
+Reimplemented in \mbox{\hyperlink{classrocr_1_1Addr_1_1V1_1_1CiLib_a0c597999ed4b93048af65129393aa2ba}{rocr\+::\+Addr\+::\+V1\+::\+Ci\+Lib}}.
+
+\mbox{\Hypertarget{classrocr_1_1Addr_1_1V1_1_1SiLib_ad164f7e242297a9c32227ac7e35f8d63}\label{classrocr_1_1Addr_1_1V1_1_1SiLib_ad164f7e242297a9c32227ac7e35f8d63}} 
+\index{rocr::Addr::V1::SiLib@{rocr::Addr::V1::SiLib}!HwlComputeXmaskAddrFromCoord@{HwlComputeXmaskAddrFromCoord}}
+\index{HwlComputeXmaskAddrFromCoord@{HwlComputeXmaskAddrFromCoord}!rocr::Addr::V1::SiLib@{rocr::Addr::V1::SiLib}}
+\doxysubsubsection{\texorpdfstring{HwlComputeXmaskAddrFromCoord()}{HwlComputeXmaskAddrFromCoord()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{addrtypes_8h_ac4116bb9a5e80b5cb845d4f2674c160f}{UINT\+\_\+64}} rocr\+::\+Addr\+::\+V1\+::\+Si\+Lib\+::\+Hwl\+Compute\+Xmask\+Addr\+From\+Coord (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{addrtypes_8h_af5a2be58a28390f9a494538f34054637}{UINT\+\_\+32}}}]{pitch,  }\item[{\mbox{\hyperlink{addrtypes_8h_af5a2be58a28390f9a494538f34054637}{UINT\+\_\+32}}}]{height,  }\item[{\mbox{\hyperlink{addrtypes_8h_af5a2be58a28390f9a494538f34054637}{UINT\+\_\+32}}}]{x,  }\item[{\mbox{\hyperlink{addrtypes_8h_af5a2be58a28390f9a494538f34054637}{UINT\+\_\+32}}}]{y,  }\item[{\mbox{\hyperlink{addrtypes_8h_af5a2be58a28390f9a494538f34054637}{UINT\+\_\+32}}}]{slice,  }\item[{\mbox{\hyperlink{addrtypes_8h_af5a2be58a28390f9a494538f34054637}{UINT\+\_\+32}}}]{num\+Slices,  }\item[{\mbox{\hyperlink{addrtypes_8h_af5a2be58a28390f9a494538f34054637}{UINT\+\_\+32}}}]{factor,  }\item[{\mbox{\hyperlink{addrtypes_8h_ac4225671b7e87c943146915461c9b2f4}{BOOL\+\_\+32}}}]{is\+Linear,  }\item[{\mbox{\hyperlink{addrtypes_8h_ac4225671b7e87c943146915461c9b2f4}{BOOL\+\_\+32}}}]{is\+Width8,  }\item[{\mbox{\hyperlink{addrtypes_8h_ac4225671b7e87c943146915461c9b2f4}{BOOL\+\_\+32}}}]{is\+Height8,  }\item[{\mbox{\hyperlink{namespacerocr_a22dcb0c31be418f31f99d0311c45522c}{ADDR\+\_\+\+TILEINFO}} $\ast$}]{p\+Tile\+Info,  }\item[{\mbox{\hyperlink{addrtypes_8h_af5a2be58a28390f9a494538f34054637}{UINT\+\_\+32}} $\ast$}]{p\+Bit\+Position }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [virtual]}}
+
+
+
+Compute address from coordinates for htile/cmask. 
+
+\mbox{\hyperlink{classrocr_1_1Addr_1_1V1_1_1SiLib_ad164f7e242297a9c32227ac7e35f8d63}{Si\+Lib\+::\+Hwl\+Compute\+Xmask\+Addr\+From\+Coord}}
+
+\begin{DoxyReturn}{Returns}
+Byte address 
+\end{DoxyReturn}
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em pitch} & pitch \\
+\hline
+\mbox{\texttt{ in}}  & {\em height} & height \\
+\hline
+\mbox{\texttt{ in}}  & {\em x} & x coord \\
+\hline
+\mbox{\texttt{ in}}  & {\em y} & y coord \\
+\hline
+\mbox{\texttt{ in}}  & {\em slice} & slice/depth index \\
+\hline
+\mbox{\texttt{ in}}  & {\em num\+Slices} & number of slices \\
+\hline
+\mbox{\texttt{ in}}  & {\em factor} & factor that indicates cmask(2) or htile(1) \\
+\hline
+\mbox{\texttt{ in}}  & {\em is\+Linear} & linear or tiled HTILE layout \\
+\hline
+\mbox{\texttt{ in}}  & {\em is\+Width8} & TRUE if width is 8, FALSE means 4. It\textquotesingle{}s register value \\
+\hline
+\mbox{\texttt{ in}}  & {\em is\+Height8} & TRUE if width is 8, FALSE means 4. It\textquotesingle{}s register value \\
+\hline
+\mbox{\texttt{ in}}  & {\em p\+Tile\+Info} & Tile info \\
+\hline
+\mbox{\texttt{ out}}  & {\em p\+Bit\+Position} & bit position inside a byte \\
+\hline
+\end{DoxyParams}
+
+
+Reimplemented from \mbox{\hyperlink{classrocr_1_1Addr_1_1V1_1_1Lib_ae59f2e2753c290f74242eb15c5ff9a46}{rocr\+::\+Addr\+::\+V1\+::\+Lib}}.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classrocr_1_1Addr_1_1V1_1_1SiLib_ad164f7e242297a9c32227ac7e35f8d63_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classrocr_1_1Addr_1_1V1_1_1SiLib_adc25dc875d303aa27709935e419311a7}\label{classrocr_1_1Addr_1_1V1_1_1SiLib_adc25dc875d303aa27709935e419311a7}} 
+\index{rocr::Addr::V1::SiLib@{rocr::Addr::V1::SiLib}!HwlComputeXmaskCoordFromAddr@{HwlComputeXmaskCoordFromAddr}}
+\index{HwlComputeXmaskCoordFromAddr@{HwlComputeXmaskCoordFromAddr}!rocr::Addr::V1::SiLib@{rocr::Addr::V1::SiLib}}
+\doxysubsubsection{\texorpdfstring{HwlComputeXmaskCoordFromAddr()}{HwlComputeXmaskCoordFromAddr()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{addrtypes_8h_a7927e087749615dae3114cc27b91c86d}{VOID}} rocr\+::\+Addr\+::\+V1\+::\+Si\+Lib\+::\+Hwl\+Compute\+Xmask\+Coord\+From\+Addr (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{addrtypes_8h_ac4116bb9a5e80b5cb845d4f2674c160f}{UINT\+\_\+64}}}]{addr,  }\item[{\mbox{\hyperlink{addrtypes_8h_af5a2be58a28390f9a494538f34054637}{UINT\+\_\+32}}}]{bit\+Position,  }\item[{\mbox{\hyperlink{addrtypes_8h_af5a2be58a28390f9a494538f34054637}{UINT\+\_\+32}}}]{pitch,  }\item[{\mbox{\hyperlink{addrtypes_8h_af5a2be58a28390f9a494538f34054637}{UINT\+\_\+32}}}]{height,  }\item[{\mbox{\hyperlink{addrtypes_8h_af5a2be58a28390f9a494538f34054637}{UINT\+\_\+32}}}]{num\+Slices,  }\item[{\mbox{\hyperlink{addrtypes_8h_af5a2be58a28390f9a494538f34054637}{UINT\+\_\+32}}}]{factor,  }\item[{\mbox{\hyperlink{addrtypes_8h_ac4225671b7e87c943146915461c9b2f4}{BOOL\+\_\+32}}}]{is\+Linear,  }\item[{\mbox{\hyperlink{addrtypes_8h_ac4225671b7e87c943146915461c9b2f4}{BOOL\+\_\+32}}}]{is\+Width8,  }\item[{\mbox{\hyperlink{addrtypes_8h_ac4225671b7e87c943146915461c9b2f4}{BOOL\+\_\+32}}}]{is\+Height8,  }\item[{\mbox{\hyperlink{namespacerocr_a22dcb0c31be418f31f99d0311c45522c}{ADDR\+\_\+\+TILEINFO}} $\ast$}]{p\+Tile\+Info,  }\item[{\mbox{\hyperlink{addrtypes_8h_af5a2be58a28390f9a494538f34054637}{UINT\+\_\+32}} $\ast$}]{pX,  }\item[{\mbox{\hyperlink{addrtypes_8h_af5a2be58a28390f9a494538f34054637}{UINT\+\_\+32}} $\ast$}]{pY,  }\item[{\mbox{\hyperlink{addrtypes_8h_af5a2be58a28390f9a494538f34054637}{UINT\+\_\+32}} $\ast$}]{p\+Slice }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [virtual]}}
+
+
+
+Compute the coord from an address of a cmask/htile. 
+
+\mbox{\hyperlink{classrocr_1_1Addr_1_1V1_1_1SiLib_adc25dc875d303aa27709935e419311a7}{Si\+Lib\+::\+Hwl\+Compute\+Xmask\+Coord\+From\+Addr}}
+
+\begin{DoxyReturn}{Returns}
+N/A
+\end{DoxyReturn}
+\begin{DoxyNote}{Note}
+This method is reused by htile, so rename to Xmask 
+\end{DoxyNote}
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em addr} & address \\
+\hline
+\mbox{\texttt{ in}}  & {\em bit\+Position} & bit\+Position in a byte \\
+\hline
+\mbox{\texttt{ in}}  & {\em pitch} & pitch \\
+\hline
+\mbox{\texttt{ in}}  & {\em height} & height \\
+\hline
+\mbox{\texttt{ in}}  & {\em num\+Slices} & number of slices \\
+\hline
+\mbox{\texttt{ in}}  & {\em factor} & factor that indicates cmask or htile \\
+\hline
+\mbox{\texttt{ in}}  & {\em is\+Linear} & linear or tiled HTILE layout \\
+\hline
+\mbox{\texttt{ in}}  & {\em is\+Width8} & Not used by SI \\
+\hline
+\mbox{\texttt{ in}}  & {\em is\+Height8} & Not used by SI \\
+\hline
+\mbox{\texttt{ in}}  & {\em p\+Tile\+Info} & Tile info \\
+\hline
+\mbox{\texttt{ out}}  & {\em pX} & x coord \\
+\hline
+\mbox{\texttt{ out}}  & {\em pY} & y coord \\
+\hline
+\mbox{\texttt{ out}}  & {\em p\+Slice} & slice index \\
+\hline
+\end{DoxyParams}
+
+
+Reimplemented from \mbox{\hyperlink{classrocr_1_1Addr_1_1V1_1_1Lib_ac857fc5f51568f0fc2f882a9c8cb02d6}{rocr\+::\+Addr\+::\+V1\+::\+Lib}}.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classrocr_1_1Addr_1_1V1_1_1SiLib_adc25dc875d303aa27709935e419311a7_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classrocr_1_1Addr_1_1V1_1_1SiLib_ac6d6278e53b39c4206d7c674335ecf8c}\label{classrocr_1_1Addr_1_1V1_1_1SiLib_ac6d6278e53b39c4206d7c674335ecf8c}} 
+\index{rocr::Addr::V1::SiLib@{rocr::Addr::V1::SiLib}!HwlComputeXmaskCoordYFrom8Pipe@{HwlComputeXmaskCoordYFrom8Pipe}}
+\index{HwlComputeXmaskCoordYFrom8Pipe@{HwlComputeXmaskCoordYFrom8Pipe}!rocr::Addr::V1::SiLib@{rocr::Addr::V1::SiLib}}
+\doxysubsubsection{\texorpdfstring{HwlComputeXmaskCoordYFrom8Pipe()}{HwlComputeXmaskCoordYFrom8Pipe()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{addrtypes_8h_af5a2be58a28390f9a494538f34054637}{UINT\+\_\+32}} rocr\+::\+Addr\+::\+V1\+::\+Si\+Lib\+::\+Hwl\+Compute\+Xmask\+Coord\+YFrom8\+Pipe (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{addrtypes_8h_af5a2be58a28390f9a494538f34054637}{UINT\+\_\+32}}}]{pipe,  }\item[{\mbox{\hyperlink{addrtypes_8h_af5a2be58a28390f9a494538f34054637}{UINT\+\_\+32}}}]{x }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [virtual]}}
+
+
+
+Dummy function to finalize the inheritance. 
+
+Compute the Y coord which will be added to Xmask Y coord.
+
+\mbox{\hyperlink{classrocr_1_1Addr_1_1V1_1_1SiLib_ac6d6278e53b39c4206d7c674335ecf8c}{Si\+Lib\+::\+Hwl\+Compute\+Xmask\+Coord\+YFrom8\+Pipe}}
+
+\begin{DoxyReturn}{Returns}
+Y coord 
+\end{DoxyReturn}
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em pipe} & pipe id \\
+\hline
+\mbox{\texttt{ in}}  & {\em x} & tile coord x, which is original x coord / 8 \\
+\hline
+\end{DoxyParams}
+
+
+Implements \mbox{\hyperlink{classrocr_1_1Addr_1_1V1_1_1Lib_a832f041d81de49396c110f1748977ceb}{rocr\+::\+Addr\+::\+V1\+::\+Lib}}.
+
+\mbox{\Hypertarget{classrocr_1_1Addr_1_1V1_1_1SiLib_a788387021d9165536a6e9d11a0d84a60}\label{classrocr_1_1Addr_1_1V1_1_1SiLib_a788387021d9165536a6e9d11a0d84a60}} 
+\index{rocr::Addr::V1::SiLib@{rocr::Addr::V1::SiLib}!HwlConvertChipFamily@{HwlConvertChipFamily}}
+\index{HwlConvertChipFamily@{HwlConvertChipFamily}!rocr::Addr::V1::SiLib@{rocr::Addr::V1::SiLib}}
+\doxysubsubsection{\texorpdfstring{HwlConvertChipFamily()}{HwlConvertChipFamily()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{namespacerocr_1_1Addr_a9baa6f324df4a9cb3c4a61f6e6af6b09}{Chip\+Family}} rocr\+::\+Addr\+::\+V1\+::\+Si\+Lib\+::\+Hwl\+Convert\+Chip\+Family (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{addrtypes_8h_af5a2be58a28390f9a494538f34054637}{UINT\+\_\+32}}}]{u\+Chip\+Family,  }\item[{\mbox{\hyperlink{addrtypes_8h_af5a2be58a28390f9a494538f34054637}{UINT\+\_\+32}}}]{u\+Chip\+Revision }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [virtual]}}
+
+
+
+Convert family\+ID defined in atiid.\+h to Chip\+Family and set m\+\_\+chip\+Family/m\+\_\+chip\+Revision. 
+
+\mbox{\hyperlink{classrocr_1_1Addr_1_1V1_1_1SiLib_a788387021d9165536a6e9d11a0d84a60}{Si\+Lib\+::\+Hwl\+Convert\+Chip\+Family}}
+
+\begin{DoxyReturn}{Returns}
+Chip\+Family 
+\end{DoxyReturn}
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em u\+Chip\+Family} & chip family defined in atiih.\+h \\
+\hline
+\mbox{\texttt{ in}}  & {\em u\+Chip\+Revision} & chip revision defined in \char`\"{}asic\+\_\+family\char`\"{}\+\_\+id.\+h \\
+\hline
+\end{DoxyParams}
+
+
+Implements \mbox{\hyperlink{classrocr_1_1Addr_1_1Lib_a7f69a936833e7004fb40bc87bdfba53b}{rocr\+::\+Addr\+::\+Lib}}.
+
+
+
+Reimplemented in \mbox{\hyperlink{classrocr_1_1Addr_1_1V1_1_1CiLib_a1b412b3192f14c26f207345ab292c888}{rocr\+::\+Addr\+::\+V1\+::\+Ci\+Lib}}.
+
+\mbox{\Hypertarget{classrocr_1_1Addr_1_1V1_1_1SiLib_af946287ee5a42d9569a1140ef764158e}\label{classrocr_1_1Addr_1_1V1_1_1SiLib_af946287ee5a42d9569a1140ef764158e}} 
+\index{rocr::Addr::V1::SiLib@{rocr::Addr::V1::SiLib}!HwlConvertTileInfoToHW@{HwlConvertTileInfoToHW}}
+\index{HwlConvertTileInfoToHW@{HwlConvertTileInfoToHW}!rocr::Addr::V1::SiLib@{rocr::Addr::V1::SiLib}}
+\doxysubsubsection{\texorpdfstring{HwlConvertTileInfoToHW()}{HwlConvertTileInfoToHW()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{addrtypes_8h_a45468f108457c1977c8684dea3df88c7}{ADDR\+\_\+\+E\+\_\+\+RETURNCODE}} rocr\+::\+Addr\+::\+V1\+::\+Si\+Lib\+::\+Hwl\+Convert\+Tile\+Info\+To\+HW (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{namespacerocr_a43d53d0c852446811165e411346d94e2}{ADDR\+\_\+\+CONVERT\+\_\+\+TILEINFOTOHW\+\_\+\+INPUT}} $\ast$}]{p\+In,  }\item[{\mbox{\hyperlink{namespacerocr_a234ab06cbb34905ea2f15c850ffec2d2}{ADDR\+\_\+\+CONVERT\+\_\+\+TILEINFOTOHW\+\_\+\+OUTPUT}} $\ast$}]{p\+Out }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [virtual]}}
+
+
+
+Entry of si\textquotesingle{}s Convert\+Tile\+Info\+To\+HW. 
+
+\mbox{\hyperlink{classrocr_1_1Addr_1_1V1_1_1SiLib_af946287ee5a42d9569a1140ef764158e}{Si\+Lib\+::\+Hwl\+Convert\+Tile\+Info\+To\+HW}} \begin{DoxyReturn}{Returns}
+ADDR\+\_\+\+E\+\_\+\+RETURNCODE 
+\end{DoxyReturn}
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em p\+In} & input structure \\
+\hline
+\mbox{\texttt{ out}}  & {\em p\+Out} & output structure \\
+\hline
+\end{DoxyParams}
+
+
+Reimplemented from \mbox{\hyperlink{classrocr_1_1Addr_1_1V1_1_1EgBasedLib_a58024dda6ec30ffc85b55987e7ad94f5}{rocr\+::\+Addr\+::\+V1\+::\+Eg\+Based\+Lib}}.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classrocr_1_1Addr_1_1V1_1_1SiLib_af946287ee5a42d9569a1140ef764158e_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classrocr_1_1Addr_1_1V1_1_1SiLib_a20783e08b1e2e68f88565c8848726647}\label{classrocr_1_1Addr_1_1V1_1_1SiLib_a20783e08b1e2e68f88565c8848726647}} 
+\index{rocr::Addr::V1::SiLib@{rocr::Addr::V1::SiLib}!HwlDegradeThickTileMode@{HwlDegradeThickTileMode}}
+\index{HwlDegradeThickTileMode@{HwlDegradeThickTileMode}!rocr::Addr::V1::SiLib@{rocr::Addr::V1::SiLib}}
+\doxysubsubsection{\texorpdfstring{HwlDegradeThickTileMode()}{HwlDegradeThickTileMode()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{addrtypes_8h_a9dffa8321911d7791c03fe3a233a34e7}{Addr\+Tile\+Mode}} rocr\+::\+Addr\+::\+V1\+::\+Si\+Lib\+::\+Hwl\+Degrade\+Thick\+Tile\+Mode (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{addrtypes_8h_a9dffa8321911d7791c03fe3a233a34e7}{Addr\+Tile\+Mode}}}]{base\+Tile\+Mode,  }\item[{\mbox{\hyperlink{addrtypes_8h_af5a2be58a28390f9a494538f34054637}{UINT\+\_\+32}}}]{num\+Slices,  }\item[{\mbox{\hyperlink{addrtypes_8h_af5a2be58a28390f9a494538f34054637}{UINT\+\_\+32}} $\ast$}]{p\+Bytes\+Per\+Tile }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [virtual]}}
+
+
+
+Degrades valid tile mode for thick modes if needed. 
+
+\mbox{\hyperlink{classrocr_1_1Addr_1_1V1_1_1SiLib_a20783e08b1e2e68f88565c8848726647}{Si\+Lib\+::\+Hwl\+Degrade\+Thick\+Tile\+Mode}}
+
+\begin{DoxyReturn}{Returns}
+Suitable tile mode 
+\end{DoxyReturn}
+
+\begin{DoxyParams}[1]{Parameters}
+ & {\em base\+Tile\+Mode} & base tile mode \\
+\hline
+ & {\em num\+Slices} & current number of slices \\
+\hline
+\mbox{\texttt{ in,out}}  & {\em p\+Bytes\+Per\+Tile} & pointer to bytes per slice \\
+\hline
+\end{DoxyParams}
+
+
+Reimplemented from \mbox{\hyperlink{classrocr_1_1Addr_1_1V1_1_1EgBasedLib_a2eda4211c440e258419fb6af7ec496c9}{rocr\+::\+Addr\+::\+V1\+::\+Eg\+Based\+Lib}}.
+
+
+
+Reimplemented in \mbox{\hyperlink{classrocr_1_1Addr_1_1V1_1_1CiLib_abc3adf836dcb9a2289114e1c453fc334}{rocr\+::\+Addr\+::\+V1\+::\+Ci\+Lib}}.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classrocr_1_1Addr_1_1V1_1_1SiLib_a20783e08b1e2e68f88565c8848726647_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classrocr_1_1Addr_1_1V1_1_1SiLib_a2571dfeb96cd88a2fe478e14ad38c244}\label{classrocr_1_1Addr_1_1V1_1_1SiLib_a2571dfeb96cd88a2fe478e14ad38c244}} 
+\index{rocr::Addr::V1::SiLib@{rocr::Addr::V1::SiLib}!HwlFmaskPostThunkSurfInfo@{HwlFmaskPostThunkSurfInfo}}
+\index{HwlFmaskPostThunkSurfInfo@{HwlFmaskPostThunkSurfInfo}!rocr::Addr::V1::SiLib@{rocr::Addr::V1::SiLib}}
+\doxysubsubsection{\texorpdfstring{HwlFmaskPostThunkSurfInfo()}{HwlFmaskPostThunkSurfInfo()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{addrtypes_8h_a7927e087749615dae3114cc27b91c86d}{VOID}} rocr\+::\+Addr\+::\+V1\+::\+Si\+Lib\+::\+Hwl\+Fmask\+Post\+Thunk\+Surf\+Info (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{namespacerocr_af4aaf1d98a76006d4fca9a8c40fdd1d9}{ADDR\+\_\+\+COMPUTE\+\_\+\+SURFACE\+\_\+\+INFO\+\_\+\+OUTPUT}} $\ast$}]{p\+Surf\+Out,  }\item[{\mbox{\hyperlink{namespacerocr_a0cd42c483bd6dbd6209d16396e199344}{ADDR\+\_\+\+COMPUTE\+\_\+\+FMASK\+\_\+\+INFO\+\_\+\+OUTPUT}} $\ast$}]{p\+Fmask\+Out }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [virtual]}}
+
+
+
+Copy hwl extra field after calling thunked Compute\+Surface\+Info. 
+
+\mbox{\hyperlink{classrocr_1_1Addr_1_1V1_1_1SiLib_a2571dfeb96cd88a2fe478e14ad38c244}{Si\+Lib\+::\+Hwl\+Fmask\+Post\+Thunk\+Surf\+Info}}
+
+\begin{DoxyReturn}{Returns}
+ADDR\+\_\+\+E\+\_\+\+RETURNCODE 
+\end{DoxyReturn}
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em p\+Surf\+Out} & Output of surface info \\
+\hline
+\mbox{\texttt{ out}}  & {\em p\+Fmask\+Out} & Output of fmask info \\
+\hline
+\end{DoxyParams}
+
+
+Reimplemented from \mbox{\hyperlink{classrocr_1_1Addr_1_1V1_1_1EgBasedLib_a26388ca428c4d9e7c2b8764d9b7ebc1b}{rocr\+::\+Addr\+::\+V1\+::\+Eg\+Based\+Lib}}.
+
+
+
+Reimplemented in \mbox{\hyperlink{classrocr_1_1Addr_1_1V1_1_1CiLib_afde02fd830ff55d562c146211b250d75}{rocr\+::\+Addr\+::\+V1\+::\+Ci\+Lib}}.
+
+\mbox{\Hypertarget{classrocr_1_1Addr_1_1V1_1_1SiLib_af7080231865f560cc05db0844231175c}\label{classrocr_1_1Addr_1_1V1_1_1SiLib_af7080231865f560cc05db0844231175c}} 
+\index{rocr::Addr::V1::SiLib@{rocr::Addr::V1::SiLib}!HwlFmaskPreThunkSurfInfo@{HwlFmaskPreThunkSurfInfo}}
+\index{HwlFmaskPreThunkSurfInfo@{HwlFmaskPreThunkSurfInfo}!rocr::Addr::V1::SiLib@{rocr::Addr::V1::SiLib}}
+\doxysubsubsection{\texorpdfstring{HwlFmaskPreThunkSurfInfo()}{HwlFmaskPreThunkSurfInfo()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{addrtypes_8h_a7927e087749615dae3114cc27b91c86d}{VOID}} rocr\+::\+Addr\+::\+V1\+::\+Si\+Lib\+::\+Hwl\+Fmask\+Pre\+Thunk\+Surf\+Info (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{namespacerocr_a0161899bfcda042cc0abf6dcedbc06cf}{ADDR\+\_\+\+COMPUTE\+\_\+\+FMASK\+\_\+\+INFO\+\_\+\+INPUT}} $\ast$}]{p\+Fmask\+In,  }\item[{const \mbox{\hyperlink{namespacerocr_a0cd42c483bd6dbd6209d16396e199344}{ADDR\+\_\+\+COMPUTE\+\_\+\+FMASK\+\_\+\+INFO\+\_\+\+OUTPUT}} $\ast$}]{p\+Fmask\+Out,  }\item[{\mbox{\hyperlink{namespacerocr_aabe299f90f529964589111a303e92f63}{ADDR\+\_\+\+COMPUTE\+\_\+\+SURFACE\+\_\+\+INFO\+\_\+\+INPUT}} $\ast$}]{p\+Surf\+In,  }\item[{\mbox{\hyperlink{namespacerocr_af4aaf1d98a76006d4fca9a8c40fdd1d9}{ADDR\+\_\+\+COMPUTE\+\_\+\+SURFACE\+\_\+\+INFO\+\_\+\+OUTPUT}} $\ast$}]{p\+Surf\+Out }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [virtual]}}
+
+
+
+Some preparation before thunking a Compute\+Surface\+Info call for Fmask. 
+
+\mbox{\hyperlink{classrocr_1_1Addr_1_1V1_1_1SiLib_af7080231865f560cc05db0844231175c}{Si\+Lib\+::\+Hwl\+Fmask\+Pre\+Thunk\+Surf\+Info}}
+
+\begin{DoxyReturn}{Returns}
+ADDR\+\_\+\+E\+\_\+\+RETURNCODE 
+\end{DoxyReturn}
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em p\+Fmask\+In} & Input of fmask info \\
+\hline
+\mbox{\texttt{ in}}  & {\em p\+Fmask\+Out} & Output of fmask info \\
+\hline
+\mbox{\texttt{ out}}  & {\em p\+Surf\+In} & Input of thunked surface info \\
+\hline
+\mbox{\texttt{ out}}  & {\em p\+Surf\+Out} & Output of thunked surface info \\
+\hline
+\end{DoxyParams}
+
+
+Reimplemented from \mbox{\hyperlink{classrocr_1_1Addr_1_1V1_1_1EgBasedLib_a8640fe5500d9cb4baa9a0e444669b8f2}{rocr\+::\+Addr\+::\+V1\+::\+Eg\+Based\+Lib}}.
+
+
+
+Reimplemented in \mbox{\hyperlink{classrocr_1_1Addr_1_1V1_1_1CiLib_a667a721cc45315dde4148413fa550017}{rocr\+::\+Addr\+::\+V1\+::\+Ci\+Lib}}.
+
+\mbox{\Hypertarget{classrocr_1_1Addr_1_1V1_1_1SiLib_abc6ee720c24976545c3fda57fc2c413c}\label{classrocr_1_1Addr_1_1V1_1_1SiLib_abc6ee720c24976545c3fda57fc2c413c}} 
+\index{rocr::Addr::V1::SiLib@{rocr::Addr::V1::SiLib}!HwlGetEquationTableInfo@{HwlGetEquationTableInfo}}
+\index{HwlGetEquationTableInfo@{HwlGetEquationTableInfo}!rocr::Addr::V1::SiLib@{rocr::Addr::V1::SiLib}}
+\doxysubsubsection{\texorpdfstring{HwlGetEquationTableInfo()}{HwlGetEquationTableInfo()}}
+{\footnotesize\ttfamily virtual \mbox{\hyperlink{addrtypes_8h_af5a2be58a28390f9a494538f34054637}{UINT\+\_\+32}} rocr\+::\+Addr\+::\+V1\+::\+Si\+Lib\+::\+Hwl\+Get\+Equation\+Table\+Info (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{namespacerocr_a9d269a2f79e2b96962f79909f5e1643c}{ADDR\+\_\+\+EQUATION}} $\ast$$\ast$}]{pp\+Equation\+Table }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [protected]}, {\ttfamily [virtual]}}
+
+
+
+Get equation table pointer and number of equations. 
+
+
+
+Reimplemented from \mbox{\hyperlink{classrocr_1_1Addr_1_1Lib_a1bd6bc7d3b82297b9f800eaf66ea371d}{rocr\+::\+Addr\+::\+Lib}}.
+
+\mbox{\Hypertarget{classrocr_1_1Addr_1_1V1_1_1SiLib_afb52247719959e51ad160861d4e0679b}\label{classrocr_1_1Addr_1_1V1_1_1SiLib_afb52247719959e51ad160861d4e0679b}} 
+\index{rocr::Addr::V1::SiLib@{rocr::Addr::V1::SiLib}!HwlGetPipes@{HwlGetPipes}}
+\index{HwlGetPipes@{HwlGetPipes}!rocr::Addr::V1::SiLib@{rocr::Addr::V1::SiLib}}
+\doxysubsubsection{\texorpdfstring{HwlGetPipes()}{HwlGetPipes()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{addrtypes_8h_af5a2be58a28390f9a494538f34054637}{UINT\+\_\+32}} rocr\+::\+Addr\+::\+V1\+::\+Si\+Lib\+::\+Hwl\+Get\+Pipes (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{namespacerocr_a22dcb0c31be418f31f99d0311c45522c}{ADDR\+\_\+\+TILEINFO}} $\ast$}]{p\+Tile\+Info }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [virtual]}}
+
+
+
+Get number pipes. 
+
+\mbox{\hyperlink{classrocr_1_1Addr_1_1V1_1_1SiLib_afb52247719959e51ad160861d4e0679b}{Si\+Lib\+::\+Hwl\+Get\+Pipes}}
+
+\begin{DoxyReturn}{Returns}
+num pipes 
+\end{DoxyReturn}
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em p\+Tile\+Info} & Tile info \\
+\hline
+\end{DoxyParams}
+
+
+Reimplemented from \mbox{\hyperlink{classrocr_1_1Addr_1_1V1_1_1Lib_a194683f19e51e0bfafa3a73ce01ca34d}{rocr\+::\+Addr\+::\+V1\+::\+Lib}}.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=326pt]{classrocr_1_1Addr_1_1V1_1_1SiLib_afb52247719959e51ad160861d4e0679b_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classrocr_1_1Addr_1_1V1_1_1SiLib_afb52247719959e51ad160861d4e0679b_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classrocr_1_1Addr_1_1V1_1_1SiLib_a40ca4b5149e9fcdc5676953e2854ed7a}\label{classrocr_1_1Addr_1_1V1_1_1SiLib_a40ca4b5149e9fcdc5676953e2854ed7a}} 
+\index{rocr::Addr::V1::SiLib@{rocr::Addr::V1::SiLib}!HwlGetPitchAlignmentLinear@{HwlGetPitchAlignmentLinear}}
+\index{HwlGetPitchAlignmentLinear@{HwlGetPitchAlignmentLinear}!rocr::Addr::V1::SiLib@{rocr::Addr::V1::SiLib}}
+\doxysubsubsection{\texorpdfstring{HwlGetPitchAlignmentLinear()}{HwlGetPitchAlignmentLinear()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{addrtypes_8h_af5a2be58a28390f9a494538f34054637}{UINT\+\_\+32}} rocr\+::\+Addr\+::\+V1\+::\+Si\+Lib\+::\+Hwl\+Get\+Pitch\+Alignment\+Linear (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{addrtypes_8h_af5a2be58a28390f9a494538f34054637}{UINT\+\_\+32}}}]{bpp,  }\item[{\mbox{\hyperlink{namespacerocr_ac2c13231249e1687b3bd1c434b92ba06}{ADDR\+\_\+\+SURFACE\+\_\+\+FLAGS}}}]{flags }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [virtual]}}
+
+
+
+Get pitch alignment. 
+
+\mbox{\hyperlink{classrocr_1_1Addr_1_1V1_1_1SiLib_a40ca4b5149e9fcdc5676953e2854ed7a}{Si\+Lib\+::\+Hwl\+Get\+Pitch\+Alignment\+Linear}} \begin{DoxyReturn}{Returns}
+pitch alignment 
+\end{DoxyReturn}
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em bpp} & bits per pixel \\
+\hline
+\mbox{\texttt{ in}}  & {\em flags} & surface flags \\
+\hline
+\end{DoxyParams}
+
+
+Implements \mbox{\hyperlink{classrocr_1_1Addr_1_1V1_1_1EgBasedLib_a2ef32366b98ffc33fcbc87beb20ffeb5}{rocr\+::\+Addr\+::\+V1\+::\+Eg\+Based\+Lib}}.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=348pt]{classrocr_1_1Addr_1_1V1_1_1SiLib_a40ca4b5149e9fcdc5676953e2854ed7a_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classrocr_1_1Addr_1_1V1_1_1SiLib_a0f8948a6a4f132c7ee4467f18b4aa834}\label{classrocr_1_1Addr_1_1V1_1_1SiLib_a0f8948a6a4f132c7ee4467f18b4aa834}} 
+\index{rocr::Addr::V1::SiLib@{rocr::Addr::V1::SiLib}!HwlGetPitchAlignmentMicroTiled@{HwlGetPitchAlignmentMicroTiled}}
+\index{HwlGetPitchAlignmentMicroTiled@{HwlGetPitchAlignmentMicroTiled}!rocr::Addr::V1::SiLib@{rocr::Addr::V1::SiLib}}
+\doxysubsubsection{\texorpdfstring{HwlGetPitchAlignmentMicroTiled()}{HwlGetPitchAlignmentMicroTiled()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{addrtypes_8h_af5a2be58a28390f9a494538f34054637}{UINT\+\_\+32}} rocr\+::\+Addr\+::\+V1\+::\+Si\+Lib\+::\+Hwl\+Get\+Pitch\+Alignment\+Micro\+Tiled (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{addrtypes_8h_a9dffa8321911d7791c03fe3a233a34e7}{Addr\+Tile\+Mode}}}]{tile\+Mode,  }\item[{\mbox{\hyperlink{addrtypes_8h_af5a2be58a28390f9a494538f34054637}{UINT\+\_\+32}}}]{bpp,  }\item[{\mbox{\hyperlink{namespacerocr_ac2c13231249e1687b3bd1c434b92ba06}{ADDR\+\_\+\+SURFACE\+\_\+\+FLAGS}}}]{flags,  }\item[{\mbox{\hyperlink{addrtypes_8h_af5a2be58a28390f9a494538f34054637}{UINT\+\_\+32}}}]{num\+Samples }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [virtual]}}
+
+
+
+Compute 1D tiled surface pitch alignment. 
+
+\mbox{\hyperlink{classrocr_1_1Addr_1_1V1_1_1SiLib_a0f8948a6a4f132c7ee4467f18b4aa834}{Si\+Lib\+::\+Hwl\+Get\+Pitch\+Alignment\+Micro\+Tiled}}
+
+\begin{DoxyReturn}{Returns}
+pitch alignment 
+\end{DoxyReturn}
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em tile\+Mode} & tile mode \\
+\hline
+\mbox{\texttt{ in}}  & {\em bpp} & bits per pixel \\
+\hline
+\mbox{\texttt{ in}}  & {\em flags} & surface flags \\
+\hline
+\mbox{\texttt{ in}}  & {\em num\+Samples} & number of samples \\
+\hline
+\end{DoxyParams}
+
+
+Reimplemented from \mbox{\hyperlink{classrocr_1_1Addr_1_1V1_1_1EgBasedLib_ad70cd57aeafe9abc4e13c6cb7e999355}{rocr\+::\+Addr\+::\+V1\+::\+Eg\+Based\+Lib}}.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classrocr_1_1Addr_1_1V1_1_1SiLib_a0f8948a6a4f132c7ee4467f18b4aa834_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classrocr_1_1Addr_1_1V1_1_1SiLib_a2b804f1e7c0cdfacb56af8deae20aabc}\label{classrocr_1_1Addr_1_1V1_1_1SiLib_a2b804f1e7c0cdfacb56af8deae20aabc}} 
+\index{rocr::Addr::V1::SiLib@{rocr::Addr::V1::SiLib}!HwlGetSizeAdjustmentLinear@{HwlGetSizeAdjustmentLinear}}
+\index{HwlGetSizeAdjustmentLinear@{HwlGetSizeAdjustmentLinear}!rocr::Addr::V1::SiLib@{rocr::Addr::V1::SiLib}}
+\doxysubsubsection{\texorpdfstring{HwlGetSizeAdjustmentLinear()}{HwlGetSizeAdjustmentLinear()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{addrtypes_8h_ac4116bb9a5e80b5cb845d4f2674c160f}{UINT\+\_\+64}} rocr\+::\+Addr\+::\+V1\+::\+Si\+Lib\+::\+Hwl\+Get\+Size\+Adjustment\+Linear (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{addrtypes_8h_a9dffa8321911d7791c03fe3a233a34e7}{Addr\+Tile\+Mode}}}]{tile\+Mode,  }\item[{\mbox{\hyperlink{addrtypes_8h_af5a2be58a28390f9a494538f34054637}{UINT\+\_\+32}}}]{bpp,  }\item[{\mbox{\hyperlink{addrtypes_8h_af5a2be58a28390f9a494538f34054637}{UINT\+\_\+32}}}]{num\+Samples,  }\item[{\mbox{\hyperlink{addrtypes_8h_af5a2be58a28390f9a494538f34054637}{UINT\+\_\+32}}}]{base\+Align,  }\item[{\mbox{\hyperlink{addrtypes_8h_af5a2be58a28390f9a494538f34054637}{UINT\+\_\+32}}}]{pitch\+Align,  }\item[{\mbox{\hyperlink{addrtypes_8h_af5a2be58a28390f9a494538f34054637}{UINT\+\_\+32}} $\ast$}]{p\+Pitch,  }\item[{\mbox{\hyperlink{addrtypes_8h_af5a2be58a28390f9a494538f34054637}{UINT\+\_\+32}} $\ast$}]{p\+Height,  }\item[{\mbox{\hyperlink{addrtypes_8h_af5a2be58a28390f9a494538f34054637}{UINT\+\_\+32}} $\ast$}]{p\+Height\+Align }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [virtual]}}
+
+
+
+Adjust linear surface pitch and slice size. 
+
+\mbox{\hyperlink{classrocr_1_1Addr_1_1V1_1_1SiLib_a2b804f1e7c0cdfacb56af8deae20aabc}{Si\+Lib\+::\+Hwl\+Get\+Size\+Adjustment\+Linear}}
+
+\begin{DoxyReturn}{Returns}
+Logical slice size in bytes 
+\end{DoxyReturn}
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em tile\+Mode} & tile mode \\
+\hline
+\mbox{\texttt{ in}}  & {\em bpp} & bits per pixel \\
+\hline
+\mbox{\texttt{ in}}  & {\em num\+Samples} & number of samples \\
+\hline
+\mbox{\texttt{ in}}  & {\em base\+Align} & base alignment \\
+\hline
+\mbox{\texttt{ in}}  & {\em pitch\+Align} & pitch alignment \\
+\hline
+\mbox{\texttt{ in,out}}  & {\em p\+Pitch} & pointer to pitch \\
+\hline
+\mbox{\texttt{ in,out}}  & {\em p\+Height} & pointer to height \\
+\hline
+\mbox{\texttt{ in,out}}  & {\em p\+Height\+Align} & pointer to height align \\
+\hline
+\end{DoxyParams}
+
+
+Implements \mbox{\hyperlink{classrocr_1_1Addr_1_1V1_1_1EgBasedLib_aea596e8f96c019e7fdc4ddd63fe9ea8e}{rocr\+::\+Addr\+::\+V1\+::\+Eg\+Based\+Lib}}.
+
+\mbox{\Hypertarget{classrocr_1_1Addr_1_1V1_1_1SiLib_ae44d04c3c44de6316dac11eea0c7ea67}\label{classrocr_1_1Addr_1_1V1_1_1SiLib_ae44d04c3c44de6316dac11eea0c7ea67}} 
+\index{rocr::Addr::V1::SiLib@{rocr::Addr::V1::SiLib}!HwlGetSizeAdjustmentMicroTiled@{HwlGetSizeAdjustmentMicroTiled}}
+\index{HwlGetSizeAdjustmentMicroTiled@{HwlGetSizeAdjustmentMicroTiled}!rocr::Addr::V1::SiLib@{rocr::Addr::V1::SiLib}}
+\doxysubsubsection{\texorpdfstring{HwlGetSizeAdjustmentMicroTiled()}{HwlGetSizeAdjustmentMicroTiled()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{addrtypes_8h_ac4116bb9a5e80b5cb845d4f2674c160f}{UINT\+\_\+64}} rocr\+::\+Addr\+::\+V1\+::\+Si\+Lib\+::\+Hwl\+Get\+Size\+Adjustment\+Micro\+Tiled (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{addrtypes_8h_af5a2be58a28390f9a494538f34054637}{UINT\+\_\+32}}}]{thickness,  }\item[{\mbox{\hyperlink{addrtypes_8h_af5a2be58a28390f9a494538f34054637}{UINT\+\_\+32}}}]{bpp,  }\item[{\mbox{\hyperlink{namespacerocr_ac2c13231249e1687b3bd1c434b92ba06}{ADDR\+\_\+\+SURFACE\+\_\+\+FLAGS}}}]{flags,  }\item[{\mbox{\hyperlink{addrtypes_8h_af5a2be58a28390f9a494538f34054637}{UINT\+\_\+32}}}]{num\+Samples,  }\item[{\mbox{\hyperlink{addrtypes_8h_af5a2be58a28390f9a494538f34054637}{UINT\+\_\+32}}}]{base\+Align,  }\item[{\mbox{\hyperlink{addrtypes_8h_af5a2be58a28390f9a494538f34054637}{UINT\+\_\+32}}}]{pitch\+Align,  }\item[{\mbox{\hyperlink{addrtypes_8h_af5a2be58a28390f9a494538f34054637}{UINT\+\_\+32}} $\ast$}]{p\+Pitch,  }\item[{\mbox{\hyperlink{addrtypes_8h_af5a2be58a28390f9a494538f34054637}{UINT\+\_\+32}} $\ast$}]{p\+Height }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [virtual]}}
+
+
+
+Adjust 1D tiled surface pitch and slice size. 
+
+\mbox{\hyperlink{classrocr_1_1Addr_1_1V1_1_1SiLib_ae44d04c3c44de6316dac11eea0c7ea67}{Si\+Lib\+::\+Hwl\+Get\+Size\+Adjustment\+Micro\+Tiled}}
+
+\begin{DoxyReturn}{Returns}
+Logical slice size in bytes 
+\end{DoxyReturn}
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em thickness} & thickness \\
+\hline
+\mbox{\texttt{ in}}  & {\em bpp} & bits per pixel \\
+\hline
+\mbox{\texttt{ in}}  & {\em flags} & surface flags \\
+\hline
+\mbox{\texttt{ in}}  & {\em num\+Samples} & number of samples \\
+\hline
+\mbox{\texttt{ in}}  & {\em base\+Align} & base alignment \\
+\hline
+\mbox{\texttt{ in}}  & {\em pitch\+Align} & pitch alignment \\
+\hline
+\mbox{\texttt{ in,out}}  & {\em p\+Pitch} & pointer to pitch \\
+\hline
+\mbox{\texttt{ in,out}}  & {\em p\+Height} & pointer to height \\
+\hline
+\end{DoxyParams}
+
+
+Reimplemented from \mbox{\hyperlink{classrocr_1_1Addr_1_1V1_1_1EgBasedLib_a395076314f3d3905cc63fed7a3863b9a}{rocr\+::\+Addr\+::\+V1\+::\+Eg\+Based\+Lib}}.
+
+\mbox{\Hypertarget{classrocr_1_1Addr_1_1V1_1_1SiLib_af43bfc6560dc2a7511faae190aa9368c}\label{classrocr_1_1Addr_1_1V1_1_1SiLib_af43bfc6560dc2a7511faae190aa9368c}} 
+\index{rocr::Addr::V1::SiLib@{rocr::Addr::V1::SiLib}!HwlGetTileIndex@{HwlGetTileIndex}}
+\index{HwlGetTileIndex@{HwlGetTileIndex}!rocr::Addr::V1::SiLib@{rocr::Addr::V1::SiLib}}
+\doxysubsubsection{\texorpdfstring{HwlGetTileIndex()}{HwlGetTileIndex()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{addrtypes_8h_a45468f108457c1977c8684dea3df88c7}{ADDR\+\_\+\+E\+\_\+\+RETURNCODE}} rocr\+::\+Addr\+::\+V1\+::\+Si\+Lib\+::\+Hwl\+Get\+Tile\+Index (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{namespacerocr_ae5ddc3fd7b364c2b0aec73f1464d42e3}{ADDR\+\_\+\+GET\+\_\+\+TILEINDEX\+\_\+\+INPUT}} $\ast$}]{p\+In,  }\item[{\mbox{\hyperlink{namespacerocr_a7d2b06938bd70794a397db7873adde20}{ADDR\+\_\+\+GET\+\_\+\+TILEINDEX\+\_\+\+OUTPUT}} $\ast$}]{p\+Out }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [virtual]}}
+
+
+
+Return the virtual/real index for given mode/type/info. 
+
+\mbox{\hyperlink{classrocr_1_1Addr_1_1V1_1_1SiLib_af43bfc6560dc2a7511faae190aa9368c}{Si\+Lib\+::\+Hwl\+Get\+Tile\+Index}}
+
+\begin{DoxyReturn}{Returns}
+ADDR\+\_\+\+OK if successful. 
+\end{DoxyReturn}
+
+
+Reimplemented from \mbox{\hyperlink{classrocr_1_1Addr_1_1V1_1_1Lib_a46e9d5f98b4deb31257e9062c65f4191}{rocr\+::\+Addr\+::\+V1\+::\+Lib}}.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classrocr_1_1Addr_1_1V1_1_1SiLib_af43bfc6560dc2a7511faae190aa9368c_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classrocr_1_1Addr_1_1V1_1_1SiLib_abdb7e12b7741f7d860f9ad5b15eb38f7}\label{classrocr_1_1Addr_1_1V1_1_1SiLib_abdb7e12b7741f7d860f9ad5b15eb38f7}} 
+\index{rocr::Addr::V1::SiLib@{rocr::Addr::V1::SiLib}!HwlInitGlobalParams@{HwlInitGlobalParams}}
+\index{HwlInitGlobalParams@{HwlInitGlobalParams}!rocr::Addr::V1::SiLib@{rocr::Addr::V1::SiLib}}
+\doxysubsubsection{\texorpdfstring{HwlInitGlobalParams()}{HwlInitGlobalParams()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{addrtypes_8h_ac4225671b7e87c943146915461c9b2f4}{BOOL\+\_\+32}} rocr\+::\+Addr\+::\+V1\+::\+Si\+Lib\+::\+Hwl\+Init\+Global\+Params (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{namespacerocr_aa6951cc0839e1ebafba4f88da2c31c6d}{ADDR\+\_\+\+CREATE\+\_\+\+INPUT}} $\ast$}]{p\+Create\+In }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [virtual]}}
+
+
+
+Initializes global parameters. 
+
+\mbox{\hyperlink{classrocr_1_1Addr_1_1V1_1_1SiLib_abdb7e12b7741f7d860f9ad5b15eb38f7}{Si\+Lib\+::\+Hwl\+Init\+Global\+Params}}
+
+\begin{DoxyReturn}{Returns}
+TRUE if all settings are valid 
+\end{DoxyReturn}
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em p\+Create\+In} & create input \\
+\hline
+\end{DoxyParams}
+
+
+Implements \mbox{\hyperlink{classrocr_1_1Addr_1_1Lib_a052b2f774e4067bfafaab518807c52d3}{rocr\+::\+Addr\+::\+Lib}}.
+
+
+
+Reimplemented in \mbox{\hyperlink{classrocr_1_1Addr_1_1V1_1_1CiLib_a75a60e9fc54cc091036230d1663a1288}{rocr\+::\+Addr\+::\+V1\+::\+Ci\+Lib}}.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classrocr_1_1Addr_1_1V1_1_1SiLib_abdb7e12b7741f7d860f9ad5b15eb38f7_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classrocr_1_1Addr_1_1V1_1_1SiLib_a4d991ad019ecea827d0784cd52031973}\label{classrocr_1_1Addr_1_1V1_1_1SiLib_a4d991ad019ecea827d0784cd52031973}} 
+\index{rocr::Addr::V1::SiLib@{rocr::Addr::V1::SiLib}!HwlOptimizeTileMode@{HwlOptimizeTileMode}}
+\index{HwlOptimizeTileMode@{HwlOptimizeTileMode}!rocr::Addr::V1::SiLib@{rocr::Addr::V1::SiLib}}
+\doxysubsubsection{\texorpdfstring{HwlOptimizeTileMode()}{HwlOptimizeTileMode()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{addrtypes_8h_a7927e087749615dae3114cc27b91c86d}{VOID}} rocr\+::\+Addr\+::\+V1\+::\+Si\+Lib\+::\+Hwl\+Optimize\+Tile\+Mode (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{namespacerocr_aabe299f90f529964589111a303e92f63}{ADDR\+\_\+\+COMPUTE\+\_\+\+SURFACE\+\_\+\+INFO\+\_\+\+INPUT}} $\ast$}]{p\+In\+Out }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [virtual]}}
+
+
+
+Optimize tile mode on SI. 
+
+\mbox{\hyperlink{classrocr_1_1Addr_1_1V1_1_1SiLib_a4d991ad019ecea827d0784cd52031973}{Si\+Lib\+::\+Hwl\+Optimize\+Tile\+Mode}}
+
+\begin{DoxyReturn}{Returns}
+N/A 
+\end{DoxyReturn}
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in,out}}  & {\em p\+In\+Out} & input output structure \\
+\hline
+\end{DoxyParams}
+
+
+Reimplemented from \mbox{\hyperlink{classrocr_1_1Addr_1_1V1_1_1Lib_a7d6175a12c57638e4e16432f40f0a4ea}{rocr\+::\+Addr\+::\+V1\+::\+Lib}}.
+
+
+
+Reimplemented in \mbox{\hyperlink{classrocr_1_1Addr_1_1V1_1_1CiLib_a3d64720fb63ad2710df6b891f83b04be}{rocr\+::\+Addr\+::\+V1\+::\+Ci\+Lib}}.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=331pt]{classrocr_1_1Addr_1_1V1_1_1SiLib_a4d991ad019ecea827d0784cd52031973_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classrocr_1_1Addr_1_1V1_1_1SiLib_aefb7bb1209de2f84438533b684f666ae}\label{classrocr_1_1Addr_1_1V1_1_1SiLib_aefb7bb1209de2f84438533b684f666ae}} 
+\index{rocr::Addr::V1::SiLib@{rocr::Addr::V1::SiLib}!HwlOverrideTileMode@{HwlOverrideTileMode}}
+\index{HwlOverrideTileMode@{HwlOverrideTileMode}!rocr::Addr::V1::SiLib@{rocr::Addr::V1::SiLib}}
+\doxysubsubsection{\texorpdfstring{HwlOverrideTileMode()}{HwlOverrideTileMode()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{addrtypes_8h_a7927e087749615dae3114cc27b91c86d}{VOID}} rocr\+::\+Addr\+::\+V1\+::\+Si\+Lib\+::\+Hwl\+Override\+Tile\+Mode (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{namespacerocr_aabe299f90f529964589111a303e92f63}{ADDR\+\_\+\+COMPUTE\+\_\+\+SURFACE\+\_\+\+INFO\+\_\+\+INPUT}} $\ast$}]{p\+In\+Out }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [virtual]}}
+
+
+
+Override tile modes (for PRT only, avoid client passes in an invalid PRT mode for SI. 
+
+\mbox{\hyperlink{classrocr_1_1Addr_1_1V1_1_1SiLib_aefb7bb1209de2f84438533b684f666ae}{Si\+Lib\+::\+Hwl\+Override\+Tile\+Mode}}
+
+\begin{DoxyReturn}{Returns}
+N/A 
+\end{DoxyReturn}
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in,out}}  & {\em p\+In\+Out} & input output structure \\
+\hline
+\end{DoxyParams}
+
+
+Reimplemented from \mbox{\hyperlink{classrocr_1_1Addr_1_1V1_1_1Lib_adacc868db0e6d72734743da349501608}{rocr\+::\+Addr\+::\+V1\+::\+Lib}}.
+
+
+
+Reimplemented in \mbox{\hyperlink{classrocr_1_1Addr_1_1V1_1_1CiLib_ad49ada70a01e77b87eb343838b6da8c7}{rocr\+::\+Addr\+::\+V1\+::\+Ci\+Lib}}.
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=339pt]{classrocr_1_1Addr_1_1V1_1_1SiLib_aefb7bb1209de2f84438533b684f666ae_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classrocr_1_1Addr_1_1V1_1_1SiLib_ace748f183a0737c825611aa03a124314}\label{classrocr_1_1Addr_1_1V1_1_1SiLib_ace748f183a0737c825611aa03a124314}} 
+\index{rocr::Addr::V1::SiLib@{rocr::Addr::V1::SiLib}!HwlPostCheckTileIndex@{HwlPostCheckTileIndex}}
+\index{HwlPostCheckTileIndex@{HwlPostCheckTileIndex}!rocr::Addr::V1::SiLib@{rocr::Addr::V1::SiLib}}
+\doxysubsubsection{\texorpdfstring{HwlPostCheckTileIndex()}{HwlPostCheckTileIndex()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{addrtypes_8h_adacc69c9db3b9adfc072b838ebf2bb0e}{INT\+\_\+32}} rocr\+::\+Addr\+::\+V1\+::\+Si\+Lib\+::\+Hwl\+Post\+Check\+Tile\+Index (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{namespacerocr_a22dcb0c31be418f31f99d0311c45522c}{ADDR\+\_\+\+TILEINFO}} $\ast$}]{p\+Info,  }\item[{\mbox{\hyperlink{addrtypes_8h_a9dffa8321911d7791c03fe3a233a34e7}{Addr\+Tile\+Mode}}}]{mode,  }\item[{\mbox{\hyperlink{addrtypes_8h_a7dd4750472a9413e05a56dbb7e9692c7}{Addr\+Tile\+Type}}}]{type,  }\item[{\mbox{\hyperlink{addrtypes_8h_a392e62da233ed3e2f7c3fd4f487a3896}{INT}}}]{cur\+Index = {\ttfamily \mbox{\hyperlink{namespacerocr_1_1Addr_1_1V1_a40e553b9c327f0c2959bd9f20ecc2426}{Tile\+Index\+Invalid}}} }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [virtual]}}
+
+
+
+Map a tile setting to index if cur\+Index is invalid, otherwise check if cur\+Index matches tile mode/type/info and change the index if needed. 
+
+\mbox{\hyperlink{classrocr_1_1Addr_1_1V1_1_1SiLib_ace748f183a0737c825611aa03a124314}{Si\+Lib\+::\+Hwl\+Post\+Check\+Tile\+Index}}
+
+\begin{DoxyReturn}{Returns}
+Tile index. 
+\end{DoxyReturn}
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em p\+Info} & Tile Info \\
+\hline
+\mbox{\texttt{ in}}  & {\em mode} & Tile mode \\
+\hline
+\mbox{\texttt{ in}}  & {\em type} & Tile type \\
+\hline
+\mbox{\texttt{ in}}  & {\em cur\+Index} & Current index assigned in Hwl\+Setup\+Tile\+Info \\
+\hline
+\end{DoxyParams}
+
+
+Reimplemented from \mbox{\hyperlink{classrocr_1_1Addr_1_1V1_1_1EgBasedLib_a3c14852c576d5354eef19960c14fd1a6}{rocr\+::\+Addr\+::\+V1\+::\+Eg\+Based\+Lib}}.
+
+
+
+Reimplemented in \mbox{\hyperlink{classrocr_1_1Addr_1_1V1_1_1CiLib_ae6eb6f79c300652af737dc34e9258bd7}{rocr\+::\+Addr\+::\+V1\+::\+Ci\+Lib}}.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classrocr_1_1Addr_1_1V1_1_1SiLib_ace748f183a0737c825611aa03a124314_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=349pt]{classrocr_1_1Addr_1_1V1_1_1SiLib_ace748f183a0737c825611aa03a124314_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classrocr_1_1Addr_1_1V1_1_1SiLib_adfa8a9853f5c49e6349261a2d28e9074}\label{classrocr_1_1Addr_1_1V1_1_1SiLib_adfa8a9853f5c49e6349261a2d28e9074}} 
+\index{rocr::Addr::V1::SiLib@{rocr::Addr::V1::SiLib}!HwlPostHandleBaseLvl3xPitch@{HwlPostHandleBaseLvl3xPitch}}
+\index{HwlPostHandleBaseLvl3xPitch@{HwlPostHandleBaseLvl3xPitch}!rocr::Addr::V1::SiLib@{rocr::Addr::V1::SiLib}}
+\doxysubsubsection{\texorpdfstring{HwlPostHandleBaseLvl3xPitch()}{HwlPostHandleBaseLvl3xPitch()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{addrtypes_8h_af5a2be58a28390f9a494538f34054637}{UINT\+\_\+32}} rocr\+::\+Addr\+::\+V1\+::\+Si\+Lib\+::\+Hwl\+Post\+Handle\+Base\+Lvl3x\+Pitch (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{namespacerocr_aabe299f90f529964589111a303e92f63}{ADDR\+\_\+\+COMPUTE\+\_\+\+SURFACE\+\_\+\+INFO\+\_\+\+INPUT}} $\ast$}]{p\+In,  }\item[{\mbox{\hyperlink{addrtypes_8h_af5a2be58a28390f9a494538f34054637}{UINT\+\_\+32}}}]{exp\+Pitch }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [virtual]}}
+
+
+
+Post-\/handler of 3x pitch adjustment. 
+
+\mbox{\hyperlink{classrocr_1_1Addr_1_1V1_1_1SiLib_adfa8a9853f5c49e6349261a2d28e9074}{Si\+Lib\+::\+Hwl\+Post\+Handle\+Base\+Lvl3x\+Pitch}}
+
+\begin{DoxyReturn}{Returns}
+Expected pitch 
+\end{DoxyReturn}
+\begin{DoxyNote}{Note}
+The pitch will be divided by 3 in the end so the value will look odd but h/w should be able to compute a correct pitch from it as h/w address library is doing the job.
+\end{DoxyNote}
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em p\+In} & input \\
+\hline
+\mbox{\texttt{ in}}  & {\em exp\+Pitch} & pitch \\
+\hline
+\end{DoxyParams}
+
+
+Reimplemented from \mbox{\hyperlink{classrocr_1_1Addr_1_1V1_1_1Lib_acadec202f0bb8649aa9c610db796f340}{rocr\+::\+Addr\+::\+V1\+::\+Lib}}.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classrocr_1_1Addr_1_1V1_1_1SiLib_adfa8a9853f5c49e6349261a2d28e9074_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classrocr_1_1Addr_1_1V1_1_1SiLib_a29f0120b117f8c71627e32cf4fd02c1a}\label{classrocr_1_1Addr_1_1V1_1_1SiLib_a29f0120b117f8c71627e32cf4fd02c1a}} 
+\index{rocr::Addr::V1::SiLib@{rocr::Addr::V1::SiLib}!HwlPreAdjustBank@{HwlPreAdjustBank}}
+\index{HwlPreAdjustBank@{HwlPreAdjustBank}!rocr::Addr::V1::SiLib@{rocr::Addr::V1::SiLib}}
+\doxysubsubsection{\texorpdfstring{HwlPreAdjustBank()}{HwlPreAdjustBank()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{addrtypes_8h_af5a2be58a28390f9a494538f34054637}{UINT\+\_\+32}} rocr\+::\+Addr\+::\+V1\+::\+Si\+Lib\+::\+Hwl\+Pre\+Adjust\+Bank (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{addrtypes_8h_af5a2be58a28390f9a494538f34054637}{UINT\+\_\+32}}}]{tileX,  }\item[{\mbox{\hyperlink{addrtypes_8h_af5a2be58a28390f9a494538f34054637}{UINT\+\_\+32}}}]{bank,  }\item[{\mbox{\hyperlink{namespacerocr_a22dcb0c31be418f31f99d0311c45522c}{ADDR\+\_\+\+TILEINFO}} $\ast$}]{p\+Tile\+Info }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [virtual]}}
+
+
+
+Adjust bank before calculating address acoording to bank/pipe. 
+
+\mbox{\hyperlink{classrocr_1_1Addr_1_1V1_1_1SiLib_a29f0120b117f8c71627e32cf4fd02c1a}{Si\+Lib\+::\+Hwl\+Pre\+Adjust\+Bank}}
+
+\begin{DoxyReturn}{Returns}
+Adjusted bank 
+\end{DoxyReturn}
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em tileX} & x coordinate in unit of tile \\
+\hline
+\mbox{\texttt{ in}}  & {\em bank} & bank \\
+\hline
+\mbox{\texttt{ in}}  & {\em p\+Tile\+Info} & tile info \\
+\hline
+\end{DoxyParams}
+
+
+Implements \mbox{\hyperlink{classrocr_1_1Addr_1_1V1_1_1EgBasedLib_a6a51865d7591fa1f934838f520b2fccf}{rocr\+::\+Addr\+::\+V1\+::\+Eg\+Based\+Lib}}.
+
+\mbox{\Hypertarget{classrocr_1_1Addr_1_1V1_1_1SiLib_a2d5c245a31e7cbb69ee683f602fcb504}\label{classrocr_1_1Addr_1_1V1_1_1SiLib_a2d5c245a31e7cbb69ee683f602fcb504}} 
+\index{rocr::Addr::V1::SiLib@{rocr::Addr::V1::SiLib}!HwlPreHandleBaseLvl3xPitch@{HwlPreHandleBaseLvl3xPitch}}
+\index{HwlPreHandleBaseLvl3xPitch@{HwlPreHandleBaseLvl3xPitch}!rocr::Addr::V1::SiLib@{rocr::Addr::V1::SiLib}}
+\doxysubsubsection{\texorpdfstring{HwlPreHandleBaseLvl3xPitch()}{HwlPreHandleBaseLvl3xPitch()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{addrtypes_8h_af5a2be58a28390f9a494538f34054637}{UINT\+\_\+32}} rocr\+::\+Addr\+::\+V1\+::\+Si\+Lib\+::\+Hwl\+Pre\+Handle\+Base\+Lvl3x\+Pitch (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{namespacerocr_aabe299f90f529964589111a303e92f63}{ADDR\+\_\+\+COMPUTE\+\_\+\+SURFACE\+\_\+\+INFO\+\_\+\+INPUT}} $\ast$}]{p\+In,  }\item[{\mbox{\hyperlink{addrtypes_8h_af5a2be58a28390f9a494538f34054637}{UINT\+\_\+32}}}]{exp\+Pitch }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [virtual]}}
+
+
+
+Pre-\/handler of 3x pitch (96 bit) adjustment. 
+
+\mbox{\hyperlink{classrocr_1_1Addr_1_1V1_1_1SiLib_a2d5c245a31e7cbb69ee683f602fcb504}{Si\+Lib\+::\+Hwl\+Pre\+Handle\+Base\+Lvl3x\+Pitch}}
+
+\begin{DoxyReturn}{Returns}
+Expected pitch 
+\end{DoxyReturn}
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em p\+In} & input \\
+\hline
+\mbox{\texttt{ in}}  & {\em exp\+Pitch} & pitch \\
+\hline
+\end{DoxyParams}
+
+
+Reimplemented from \mbox{\hyperlink{classrocr_1_1Addr_1_1V1_1_1Lib_aadcd9d140da03b311a08be122759d4ea}{rocr\+::\+Addr\+::\+V1\+::\+Lib}}.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classrocr_1_1Addr_1_1V1_1_1SiLib_a2d5c245a31e7cbb69ee683f602fcb504_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classrocr_1_1Addr_1_1V1_1_1SiLib_adb089c3467fcd8525228c2197db6113c}\label{classrocr_1_1Addr_1_1V1_1_1SiLib_adb089c3467fcd8525228c2197db6113c}} 
+\index{rocr::Addr::V1::SiLib@{rocr::Addr::V1::SiLib}!HwlReduceBankWidthHeight@{HwlReduceBankWidthHeight}}
+\index{HwlReduceBankWidthHeight@{HwlReduceBankWidthHeight}!rocr::Addr::V1::SiLib@{rocr::Addr::V1::SiLib}}
+\doxysubsubsection{\texorpdfstring{HwlReduceBankWidthHeight()}{HwlReduceBankWidthHeight()}}
+{\footnotesize\ttfamily virtual \mbox{\hyperlink{addrtypes_8h_ac4225671b7e87c943146915461c9b2f4}{BOOL\+\_\+32}} rocr\+::\+Addr\+::\+V1\+::\+Si\+Lib\+::\+Hwl\+Reduce\+Bank\+Width\+Height (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{addrtypes_8h_af5a2be58a28390f9a494538f34054637}{UINT\+\_\+32}}}]{tile\+Size,  }\item[{\mbox{\hyperlink{addrtypes_8h_af5a2be58a28390f9a494538f34054637}{UINT\+\_\+32}}}]{bpp,  }\item[{\mbox{\hyperlink{namespacerocr_ac2c13231249e1687b3bd1c434b92ba06}{ADDR\+\_\+\+SURFACE\+\_\+\+FLAGS}}}]{flags,  }\item[{\mbox{\hyperlink{addrtypes_8h_af5a2be58a28390f9a494538f34054637}{UINT\+\_\+32}}}]{num\+Samples,  }\item[{\mbox{\hyperlink{addrtypes_8h_af5a2be58a28390f9a494538f34054637}{UINT\+\_\+32}}}]{bank\+Height\+Align,  }\item[{\mbox{\hyperlink{addrtypes_8h_af5a2be58a28390f9a494538f34054637}{UINT\+\_\+32}}}]{pipes,  }\item[{\mbox{\hyperlink{namespacerocr_a22dcb0c31be418f31f99d0311c45522c}{ADDR\+\_\+\+TILEINFO}} $\ast$}]{p\+Tile\+Info }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [protected]}, {\ttfamily [virtual]}}
+
+
+
+Additional checks, reduce bank\+Height/bank\+Width if needed and possible tile\+Size$\ast$\+BANK\+\_\+\+WIDTH$\ast$\+BANK\+\_\+\+HEIGHT $<$= ROW\+\_\+\+SIZE. 
+
+\mbox{\hyperlink{classrocr_1_1Addr_1_1V1_1_1EgBasedLib_a8ee27ae85c55ac9ebbaa8125009b5fe7}{Eg\+Based\+Lib\+::\+Hwl\+Reduce\+Bank\+Width\+Height}}
+
+\begin{DoxyReturn}{Returns}
+TRUE if no error occurs 
+\end{DoxyReturn}
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em tile\+Size} & tile size \\
+\hline
+\mbox{\texttt{ in}}  & {\em bpp} & bits per pixel \\
+\hline
+\mbox{\texttt{ in}}  & {\em flags} & surface flags \\
+\hline
+\mbox{\texttt{ in}}  & {\em num\+Samples} & number of samples \\
+\hline
+\mbox{\texttt{ in}}  & {\em bank\+Height\+Align} & bank height alignment \\
+\hline
+\mbox{\texttt{ in}}  & {\em pipes} & pipes \\
+\hline
+\mbox{\texttt{ in,out}}  & {\em p\+Tile\+Info} & bank structure. \\
+\hline
+\end{DoxyParams}
+
+
+Reimplemented from \mbox{\hyperlink{classrocr_1_1Addr_1_1V1_1_1EgBasedLib_a8ee27ae85c55ac9ebbaa8125009b5fe7}{rocr\+::\+Addr\+::\+V1\+::\+Eg\+Based\+Lib}}.
+
+\mbox{\Hypertarget{classrocr_1_1Addr_1_1V1_1_1SiLib_ab3a87b47147f9af4f91f31f0585758dd}\label{classrocr_1_1Addr_1_1V1_1_1SiLib_ab3a87b47147f9af4f91f31f0585758dd}} 
+\index{rocr::Addr::V1::SiLib@{rocr::Addr::V1::SiLib}!HwlSanityCheckMacroTiled@{HwlSanityCheckMacroTiled}}
+\index{HwlSanityCheckMacroTiled@{HwlSanityCheckMacroTiled}!rocr::Addr::V1::SiLib@{rocr::Addr::V1::SiLib}}
+\doxysubsubsection{\texorpdfstring{HwlSanityCheckMacroTiled()}{HwlSanityCheckMacroTiled()}}
+{\footnotesize\ttfamily virtual \mbox{\hyperlink{addrtypes_8h_ac4225671b7e87c943146915461c9b2f4}{BOOL\+\_\+32}} rocr\+::\+Addr\+::\+V1\+::\+Si\+Lib\+::\+Hwl\+Sanity\+Check\+Macro\+Tiled (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{namespacerocr_a22dcb0c31be418f31f99d0311c45522c}{ADDR\+\_\+\+TILEINFO}} $\ast$}]{p\+Tile\+Info }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [protected]}, {\ttfamily [virtual]}}
+
+
+
+Pure virtual function to do extra sanity check. 
+
+
+
+Implements \mbox{\hyperlink{classrocr_1_1Addr_1_1V1_1_1EgBasedLib_a07bd6a2e73c0c0113aec7960ae1e519a}{rocr\+::\+Addr\+::\+V1\+::\+Eg\+Based\+Lib}}.
+
+\mbox{\Hypertarget{classrocr_1_1Addr_1_1V1_1_1SiLib_a9608b14b9e97f0d9a787cbb9144d1153}\label{classrocr_1_1Addr_1_1V1_1_1SiLib_a9608b14b9e97f0d9a787cbb9144d1153}} 
+\index{rocr::Addr::V1::SiLib@{rocr::Addr::V1::SiLib}!HwlSelectTileMode@{HwlSelectTileMode}}
+\index{HwlSelectTileMode@{HwlSelectTileMode}!rocr::Addr::V1::SiLib@{rocr::Addr::V1::SiLib}}
+\doxysubsubsection{\texorpdfstring{HwlSelectTileMode()}{HwlSelectTileMode()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{addrtypes_8h_a7927e087749615dae3114cc27b91c86d}{VOID}} rocr\+::\+Addr\+::\+V1\+::\+Si\+Lib\+::\+Hwl\+Select\+Tile\+Mode (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{namespacerocr_aabe299f90f529964589111a303e92f63}{ADDR\+\_\+\+COMPUTE\+\_\+\+SURFACE\+\_\+\+INFO\+\_\+\+INPUT}} $\ast$}]{p\+In\+Out }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [virtual]}}
+
+
+
+Select tile modes. 
+
+\mbox{\hyperlink{classrocr_1_1Addr_1_1V1_1_1SiLib_a9608b14b9e97f0d9a787cbb9144d1153}{Si\+Lib\+::\+Hwl\+Select\+Tile\+Mode}}
+
+\begin{DoxyReturn}{Returns}
+N/A 
+\end{DoxyReturn}
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in,out}}  & {\em p\+In\+Out} & input output structure \\
+\hline
+\end{DoxyParams}
+
+
+Reimplemented from \mbox{\hyperlink{classrocr_1_1Addr_1_1V1_1_1Lib_a099032e87918f0aaa39af7b8cbc842bb}{rocr\+::\+Addr\+::\+V1\+::\+Lib}}.
+
+
+
+Reimplemented in \mbox{\hyperlink{classrocr_1_1Addr_1_1V1_1_1CiLib_addd7b4251731e7fd5faf886b8a17b4aa}{rocr\+::\+Addr\+::\+V1\+::\+Ci\+Lib}}.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classrocr_1_1Addr_1_1V1_1_1SiLib_a9608b14b9e97f0d9a787cbb9144d1153_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classrocr_1_1Addr_1_1V1_1_1SiLib_a9b65c7cf1fec781bf1a901dec7538293}\label{classrocr_1_1Addr_1_1V1_1_1SiLib_a9b65c7cf1fec781bf1a901dec7538293}} 
+\index{rocr::Addr::V1::SiLib@{rocr::Addr::V1::SiLib}!HwlSetPrtTileMode@{HwlSetPrtTileMode}}
+\index{HwlSetPrtTileMode@{HwlSetPrtTileMode}!rocr::Addr::V1::SiLib@{rocr::Addr::V1::SiLib}}
+\doxysubsubsection{\texorpdfstring{HwlSetPrtTileMode()}{HwlSetPrtTileMode()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{addrtypes_8h_a7927e087749615dae3114cc27b91c86d}{VOID}} rocr\+::\+Addr\+::\+V1\+::\+Si\+Lib\+::\+Hwl\+Set\+Prt\+Tile\+Mode (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{namespacerocr_aabe299f90f529964589111a303e92f63}{ADDR\+\_\+\+COMPUTE\+\_\+\+SURFACE\+\_\+\+INFO\+\_\+\+INPUT}} $\ast$}]{p\+In\+Out }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [virtual]}}
+
+
+
+Overwrite tile setting to PRT. 
+
+Set prt tile modes.
+
+\mbox{\hyperlink{classrocr_1_1Addr_1_1V1_1_1SiLib_a9b65c7cf1fec781bf1a901dec7538293}{Si\+Lib\+::\+Hwl\+Set\+Prt\+Tile\+Mode}}
+
+\begin{DoxyReturn}{Returns}
+N/A 
+\end{DoxyReturn}
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in,out}}  & {\em p\+In\+Out} & input output structure \\
+\hline
+\end{DoxyParams}
+
+
+Reimplemented from \mbox{\hyperlink{classrocr_1_1Addr_1_1V1_1_1Lib_abceb56af29dfeaa0a5f380705d5f18f7}{rocr\+::\+Addr\+::\+V1\+::\+Lib}}.
+
+
+
+Reimplemented in \mbox{\hyperlink{classrocr_1_1Addr_1_1V1_1_1CiLib_a00c2d8eebc4bba2379d2c4c130739f2d}{rocr\+::\+Addr\+::\+V1\+::\+Ci\+Lib}}.
+
+\mbox{\Hypertarget{classrocr_1_1Addr_1_1V1_1_1SiLib_a8b9fabd88ed1b5eb8120db8cfb340bce}\label{classrocr_1_1Addr_1_1V1_1_1SiLib_a8b9fabd88ed1b5eb8120db8cfb340bce}} 
+\index{rocr::Addr::V1::SiLib@{rocr::Addr::V1::SiLib}!HwlSetupTileCfg@{HwlSetupTileCfg}}
+\index{HwlSetupTileCfg@{HwlSetupTileCfg}!rocr::Addr::V1::SiLib@{rocr::Addr::V1::SiLib}}
+\doxysubsubsection{\texorpdfstring{HwlSetupTileCfg()}{HwlSetupTileCfg()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{addrtypes_8h_a45468f108457c1977c8684dea3df88c7}{ADDR\+\_\+\+E\+\_\+\+RETURNCODE}} rocr\+::\+Addr\+::\+V1\+::\+Si\+Lib\+::\+Hwl\+Setup\+Tile\+Cfg (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{addrtypes_8h_af5a2be58a28390f9a494538f34054637}{UINT\+\_\+32}}}]{bpp,  }\item[{\mbox{\hyperlink{addrtypes_8h_adacc69c9db3b9adfc072b838ebf2bb0e}{INT\+\_\+32}}}]{index,  }\item[{\mbox{\hyperlink{addrtypes_8h_adacc69c9db3b9adfc072b838ebf2bb0e}{INT\+\_\+32}}}]{macro\+Mode\+Index,  }\item[{\mbox{\hyperlink{namespacerocr_a22dcb0c31be418f31f99d0311c45522c}{ADDR\+\_\+\+TILEINFO}} $\ast$}]{p\+Info,  }\item[{\mbox{\hyperlink{addrtypes_8h_a9dffa8321911d7791c03fe3a233a34e7}{Addr\+Tile\+Mode}} $\ast$}]{p\+Mode = {\ttfamily 0},  }\item[{\mbox{\hyperlink{addrtypes_8h_a7dd4750472a9413e05a56dbb7e9692c7}{Addr\+Tile\+Type}} $\ast$}]{p\+Type = {\ttfamily 0} }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [virtual]}}
+
+
+
+Map tile index to tile setting. 
+
+\mbox{\hyperlink{classrocr_1_1Addr_1_1V1_1_1SiLib_a8b9fabd88ed1b5eb8120db8cfb340bce}{Si\+Lib\+::\+Hwl\+Setup\+Tile\+Cfg}}
+
+\begin{DoxyReturn}{Returns}
+ADDR\+\_\+\+E\+\_\+\+RETURNCODE 
+\end{DoxyReturn}
+
+\begin{DoxyParams}[1]{Parameters}
+ & {\em bpp} & Bits per pixel \\
+\hline
+ & {\em index} & Tile index \\
+\hline
+ & {\em macro\+Mode\+Index} & Index in macro tile mode table(\+CI) \\
+\hline
+\mbox{\texttt{ out}}  & {\em p\+Info} & Tile Info \\
+\hline
+\mbox{\texttt{ out}}  & {\em p\+Mode} & Tile mode \\
+\hline
+\mbox{\texttt{ out}}  & {\em p\+Type} & Tile type \\
+\hline
+\end{DoxyParams}
+
+
+Reimplemented from \mbox{\hyperlink{classrocr_1_1Addr_1_1V1_1_1Lib_a607b66a6fcc6aca30aebf141a0260ddd}{rocr\+::\+Addr\+::\+V1\+::\+Lib}}.
+
+
+
+Reimplemented in \mbox{\hyperlink{classrocr_1_1Addr_1_1V1_1_1CiLib_ac0470f5691d3f4c089ad3d6ca1a4b735}{rocr\+::\+Addr\+::\+V1\+::\+Ci\+Lib}}.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=326pt]{classrocr_1_1Addr_1_1V1_1_1SiLib_a8b9fabd88ed1b5eb8120db8cfb340bce_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classrocr_1_1Addr_1_1V1_1_1SiLib_af4e5358e9117ee3e26071a87f9f1b116}\label{classrocr_1_1Addr_1_1V1_1_1SiLib_af4e5358e9117ee3e26071a87f9f1b116}} 
+\index{rocr::Addr::V1::SiLib@{rocr::Addr::V1::SiLib}!HwlSetupTileInfo@{HwlSetupTileInfo}}
+\index{HwlSetupTileInfo@{HwlSetupTileInfo}!rocr::Addr::V1::SiLib@{rocr::Addr::V1::SiLib}}
+\doxysubsubsection{\texorpdfstring{HwlSetupTileInfo()}{HwlSetupTileInfo()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{addrtypes_8h_a7927e087749615dae3114cc27b91c86d}{VOID}} rocr\+::\+Addr\+::\+V1\+::\+Si\+Lib\+::\+Hwl\+Setup\+Tile\+Info (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{addrtypes_8h_a9dffa8321911d7791c03fe3a233a34e7}{Addr\+Tile\+Mode}}}]{tile\+Mode,  }\item[{\mbox{\hyperlink{namespacerocr_ac2c13231249e1687b3bd1c434b92ba06}{ADDR\+\_\+\+SURFACE\+\_\+\+FLAGS}}}]{flags,  }\item[{\mbox{\hyperlink{addrtypes_8h_af5a2be58a28390f9a494538f34054637}{UINT\+\_\+32}}}]{bpp,  }\item[{\mbox{\hyperlink{addrtypes_8h_af5a2be58a28390f9a494538f34054637}{UINT\+\_\+32}}}]{pitch,  }\item[{\mbox{\hyperlink{addrtypes_8h_af5a2be58a28390f9a494538f34054637}{UINT\+\_\+32}}}]{height,  }\item[{\mbox{\hyperlink{addrtypes_8h_af5a2be58a28390f9a494538f34054637}{UINT\+\_\+32}}}]{num\+Samples,  }\item[{\mbox{\hyperlink{namespacerocr_a22dcb0c31be418f31f99d0311c45522c}{ADDR\+\_\+\+TILEINFO}} $\ast$}]{p\+Tile\+Info\+In,  }\item[{\mbox{\hyperlink{namespacerocr_a22dcb0c31be418f31f99d0311c45522c}{ADDR\+\_\+\+TILEINFO}} $\ast$}]{p\+Tile\+Info\+Out,  }\item[{\mbox{\hyperlink{addrtypes_8h_a7dd4750472a9413e05a56dbb7e9692c7}{Addr\+Tile\+Type}}}]{in\+Tile\+Type,  }\item[{\mbox{\hyperlink{namespacerocr_af4aaf1d98a76006d4fca9a8c40fdd1d9}{ADDR\+\_\+\+COMPUTE\+\_\+\+SURFACE\+\_\+\+INFO\+\_\+\+OUTPUT}} $\ast$}]{p\+Out }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [virtual]}}
+
+
+
+Setup default value of tile info for SI. 
+
+\mbox{\hyperlink{classrocr_1_1Addr_1_1V1_1_1SiLib_af4e5358e9117ee3e26071a87f9f1b116}{Si\+Lib\+::\+Hwl\+Setup\+Tile\+Info}} 
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em tile\+Mode} & Tile mode \\
+\hline
+\mbox{\texttt{ in}}  & {\em flags} & Surface type flags \\
+\hline
+\mbox{\texttt{ in}}  & {\em bpp} & Bits per pixel \\
+\hline
+\mbox{\texttt{ in}}  & {\em pitch} & Pitch in pixels \\
+\hline
+\mbox{\texttt{ in}}  & {\em height} & Height in pixels \\
+\hline
+\mbox{\texttt{ in}}  & {\em num\+Samples} & Number of samples \\
+\hline
+\mbox{\texttt{ in}}  & {\em p\+Tile\+Info\+In} & Tile info input\+: NULL for default \\
+\hline
+\mbox{\texttt{ out}}  & {\em p\+Tile\+Info\+Out} & Tile info output \\
+\hline
+\mbox{\texttt{ in}}  & {\em in\+Tile\+Type} & Tile type \\
+\hline
+\mbox{\texttt{ out}}  & {\em p\+Out} & Output \\
+\hline
+\end{DoxyParams}
+
+
+Implements \mbox{\hyperlink{classrocr_1_1Addr_1_1V1_1_1EgBasedLib_ad6131912f24015ef688cd67a9ec2f6bd}{rocr\+::\+Addr\+::\+V1\+::\+Eg\+Based\+Lib}}.
+
+
+
+Reimplemented in \mbox{\hyperlink{classrocr_1_1Addr_1_1V1_1_1CiLib_a70ca583ffd85ee97beea79d8137fdf6c}{rocr\+::\+Addr\+::\+V1\+::\+Ci\+Lib}}.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classrocr_1_1Addr_1_1V1_1_1SiLib_af4e5358e9117ee3e26071a87f9f1b116_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classrocr_1_1Addr_1_1V1_1_1SiLib_abc6db1346b53a644c4bfb17257ad58b8}\label{classrocr_1_1Addr_1_1V1_1_1SiLib_abc6db1346b53a644c4bfb17257ad58b8}} 
+\index{rocr::Addr::V1::SiLib@{rocr::Addr::V1::SiLib}!HwlTileInfoEqual@{HwlTileInfoEqual}}
+\index{HwlTileInfoEqual@{HwlTileInfoEqual}!rocr::Addr::V1::SiLib@{rocr::Addr::V1::SiLib}}
+\doxysubsubsection{\texorpdfstring{HwlTileInfoEqual()}{HwlTileInfoEqual()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{addrtypes_8h_ac4225671b7e87c943146915461c9b2f4}{BOOL\+\_\+32}} rocr\+::\+Addr\+::\+V1\+::\+Si\+Lib\+::\+Hwl\+Tile\+Info\+Equal (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{namespacerocr_a22dcb0c31be418f31f99d0311c45522c}{ADDR\+\_\+\+TILEINFO}} $\ast$}]{p\+Left,  }\item[{const \mbox{\hyperlink{namespacerocr_a22dcb0c31be418f31f99d0311c45522c}{ADDR\+\_\+\+TILEINFO}} $\ast$}]{p\+Right }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [virtual]}}
+
+
+
+Return TRUE if all field are equal. 
+
+\mbox{\hyperlink{classrocr_1_1Addr_1_1V1_1_1SiLib_abc6db1346b53a644c4bfb17257ad58b8}{Si\+Lib\+::\+Hwl\+Tile\+Info\+Equal}}
+
+\begin{DoxyNote}{Note}
+Only takes care of current HWL\textquotesingle{}s data 
+\end{DoxyNote}
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em p\+Left} & Left compare operand \\
+\hline
+\mbox{\texttt{ in}}  & {\em p\+Right} & Right compare operand \\
+\hline
+\end{DoxyParams}
+
+
+Reimplemented from \mbox{\hyperlink{classrocr_1_1Addr_1_1V1_1_1EgBasedLib_aecf4f1a41b538bacaf5f58425d176a76}{rocr\+::\+Addr\+::\+V1\+::\+Eg\+Based\+Lib}}.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classrocr_1_1Addr_1_1V1_1_1SiLib_abc6db1346b53a644c4bfb17257ad58b8_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classrocr_1_1Addr_1_1V1_1_1SiLib_abc6db1346b53a644c4bfb17257ad58b8_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classrocr_1_1Addr_1_1V1_1_1SiLib_ada6a79e3a863649fae1608407ef7e2ab}\label{classrocr_1_1Addr_1_1V1_1_1SiLib_ada6a79e3a863649fae1608407ef7e2ab}} 
+\index{rocr::Addr::V1::SiLib@{rocr::Addr::V1::SiLib}!InitEquationTable@{InitEquationTable}}
+\index{InitEquationTable@{InitEquationTable}!rocr::Addr::V1::SiLib@{rocr::Addr::V1::SiLib}}
+\doxysubsubsection{\texorpdfstring{InitEquationTable()}{InitEquationTable()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{addrtypes_8h_a7927e087749615dae3114cc27b91c86d}{VOID}} rocr\+::\+Addr\+::\+V1\+::\+Si\+Lib\+::\+Init\+Equation\+Table (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Initialize Equation table. 
+
+\mbox{\hyperlink{classrocr_1_1Addr_1_1V1_1_1SiLib_ada6a79e3a863649fae1608407ef7e2ab}{Si\+Lib\+::\+Init\+Equation\+Table}}
+
+\begin{DoxyReturn}{Returns}
+N/A 
+\end{DoxyReturn}
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classrocr_1_1Addr_1_1V1_1_1SiLib_ada6a79e3a863649fae1608407ef7e2ab_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=336pt]{classrocr_1_1Addr_1_1V1_1_1SiLib_ada6a79e3a863649fae1608407ef7e2ab_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classrocr_1_1Addr_1_1V1_1_1SiLib_a08a047e78254259c8cfd76c2be211c9c}\label{classrocr_1_1Addr_1_1V1_1_1SiLib_a08a047e78254259c8cfd76c2be211c9c}} 
+\index{rocr::Addr::V1::SiLib@{rocr::Addr::V1::SiLib}!InitTileSettingTable@{InitTileSettingTable}}
+\index{InitTileSettingTable@{InitTileSettingTable}!rocr::Addr::V1::SiLib@{rocr::Addr::V1::SiLib}}
+\doxysubsubsection{\texorpdfstring{InitTileSettingTable()}{InitTileSettingTable()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{addrtypes_8h_ac4225671b7e87c943146915461c9b2f4}{BOOL\+\_\+32}} rocr\+::\+Addr\+::\+V1\+::\+Si\+Lib\+::\+Init\+Tile\+Setting\+Table (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{addrtypes_8h_af5a2be58a28390f9a494538f34054637}{UINT\+\_\+32}} $\ast$}]{p\+Cfg,  }\item[{\mbox{\hyperlink{addrtypes_8h_af5a2be58a28390f9a494538f34054637}{UINT\+\_\+32}}}]{no\+Of\+Entries }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Initialize the ADDR\+\_\+\+TILE\+\_\+\+CONFIG table. 
+
+\mbox{\hyperlink{classrocr_1_1Addr_1_1V1_1_1SiLib_a08a047e78254259c8cfd76c2be211c9c}{Si\+Lib\+::\+Init\+Tile\+Setting\+Table}}
+
+\begin{DoxyReturn}{Returns}
+TRUE if tile table is correctly initialized 
+\end{DoxyReturn}
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em p\+Cfg} & Pointer to table of tile configs \\
+\hline
+\mbox{\texttt{ in}}  & {\em no\+Of\+Entries} & Numbe of entries in the table above \\
+\hline
+\end{DoxyParams}
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=327pt]{classrocr_1_1Addr_1_1V1_1_1SiLib_a08a047e78254259c8cfd76c2be211c9c_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=337pt]{classrocr_1_1Addr_1_1V1_1_1SiLib_a08a047e78254259c8cfd76c2be211c9c_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classrocr_1_1Addr_1_1V1_1_1SiLib_a65c961a3e9ca06a720689e5a05713eec}\label{classrocr_1_1Addr_1_1V1_1_1SiLib_a65c961a3e9ca06a720689e5a05713eec}} 
+\index{rocr::Addr::V1::SiLib@{rocr::Addr::V1::SiLib}!IsEquationSupported@{IsEquationSupported}}
+\index{IsEquationSupported@{IsEquationSupported}!rocr::Addr::V1::SiLib@{rocr::Addr::V1::SiLib}}
+\doxysubsubsection{\texorpdfstring{IsEquationSupported()}{IsEquationSupported()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{addrtypes_8h_ac4225671b7e87c943146915461c9b2f4}{BOOL\+\_\+32}} rocr\+::\+Addr\+::\+V1\+::\+Si\+Lib\+::\+Is\+Equation\+Supported (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{addrtypes_8h_af5a2be58a28390f9a494538f34054637}{UINT\+\_\+32}}}]{bpp,  }\item[{\mbox{\hyperlink{structrocr_1_1Addr_1_1V1_1_1TileConfig}{Tile\+Config}}}]{tile\+Config,  }\item[{\mbox{\hyperlink{addrtypes_8h_adacc69c9db3b9adfc072b838ebf2bb0e}{INT\+\_\+32}}}]{tile\+Index,  }\item[{\mbox{\hyperlink{addrtypes_8h_af5a2be58a28390f9a494538f34054637}{UINT\+\_\+32}}}]{element\+Bytes\+Log2 }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Check if it is supported for given bpp and tile config to generate a equation. 
+
+\mbox{\hyperlink{classrocr_1_1Addr_1_1V1_1_1SiLib_a65c961a3e9ca06a720689e5a05713eec}{Si\+Lib\+::\+Is\+Equation\+Supported}}
+
+\begin{DoxyReturn}{Returns}
+TRUE if supported 
+\end{DoxyReturn}
+
+\begin{DoxyParams}{Parameters}
+{\em bpp} & Bits per pixel \\
+\hline
+{\em tile\+Config} & Tile config \\
+\hline
+{\em tile\+Index} & Tile index \\
+\hline
+{\em element\+Bytes\+Log2} & Log2 of element bytes \\
+\hline
+\end{DoxyParams}
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=325pt]{classrocr_1_1Addr_1_1V1_1_1SiLib_a65c961a3e9ca06a720689e5a05713eec_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classrocr_1_1Addr_1_1V1_1_1SiLib_a65c961a3e9ca06a720689e5a05713eec_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classrocr_1_1Addr_1_1V1_1_1SiLib_a2dbbd5dc11f598e3f30f0831d309c295}\label{classrocr_1_1Addr_1_1V1_1_1SiLib_a2dbbd5dc11f598e3f30f0831d309c295}} 
+\index{rocr::Addr::V1::SiLib@{rocr::Addr::V1::SiLib}!ReadGbTileMode@{ReadGbTileMode}}
+\index{ReadGbTileMode@{ReadGbTileMode}!rocr::Addr::V1::SiLib@{rocr::Addr::V1::SiLib}}
+\doxysubsubsection{\texorpdfstring{ReadGbTileMode()}{ReadGbTileMode()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{addrtypes_8h_a7927e087749615dae3114cc27b91c86d}{VOID}} rocr\+::\+Addr\+::\+V1\+::\+Si\+Lib\+::\+Read\+Gb\+Tile\+Mode (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{addrtypes_8h_af5a2be58a28390f9a494538f34054637}{UINT\+\_\+32}}}]{reg\+Value,  }\item[{\mbox{\hyperlink{structrocr_1_1Addr_1_1V1_1_1TileConfig}{Tile\+Config}} $\ast$}]{p\+Cfg }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Convert \mbox{\hyperlink{unionGB__TILE__MODE}{GB\+\_\+\+TILE\+\_\+\+MODE}} HW value to \mbox{\hyperlink{structrocr_1_1Addr_1_1V1_1_1TileConfig}{Tile\+Config}}. 
+
+\mbox{\hyperlink{classrocr_1_1Addr_1_1V1_1_1SiLib_a2dbbd5dc11f598e3f30f0831d309c295}{Si\+Lib\+::\+Read\+Gb\+Tile\+Mode}}
+
+\begin{DoxyReturn}{Returns}
+NA. 
+\end{DoxyReturn}
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em reg\+Value} & \mbox{\hyperlink{unionGB__TILE__MODE}{GB\+\_\+\+TILE\+\_\+\+MODE}} register \\
+\hline
+\mbox{\texttt{ out}}  & {\em p\+Cfg} & output structure \\
+\hline
+\end{DoxyParams}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classrocr_1_1Addr_1_1V1_1_1SiLib_a2dbbd5dc11f598e3f30f0831d309c295_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classrocr_1_1Addr_1_1V1_1_1SiLib_ae3ee4bbe30f6012373212b1b97148717}\label{classrocr_1_1Addr_1_1V1_1_1SiLib_ae3ee4bbe30f6012373212b1b97148717}} 
+\index{rocr::Addr::V1::SiLib@{rocr::Addr::V1::SiLib}!TileCoordToMaskElementIndex@{TileCoordToMaskElementIndex}}
+\index{TileCoordToMaskElementIndex@{TileCoordToMaskElementIndex}!rocr::Addr::V1::SiLib@{rocr::Addr::V1::SiLib}}
+\doxysubsubsection{\texorpdfstring{TileCoordToMaskElementIndex()}{TileCoordToMaskElementIndex()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{addrtypes_8h_af5a2be58a28390f9a494538f34054637}{UINT\+\_\+32}} rocr\+::\+Addr\+::\+V1\+::\+Si\+Lib\+::\+Tile\+Coord\+To\+Mask\+Element\+Index (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{addrtypes_8h_af5a2be58a28390f9a494538f34054637}{UINT\+\_\+32}}}]{tx,  }\item[{\mbox{\hyperlink{addrtypes_8h_af5a2be58a28390f9a494538f34054637}{UINT\+\_\+32}}}]{ty,  }\item[{\mbox{\hyperlink{addrtypes_8h_a41b6c4d86868a354f041abb20c2ab4a4}{Addr\+Pipe\+Cfg}}}]{pipe\+Config,  }\item[{\mbox{\hyperlink{addrtypes_8h_af5a2be58a28390f9a494538f34054637}{UINT\+\_\+32}} $\ast$}]{macro\+Shift,  }\item[{\mbox{\hyperlink{addrtypes_8h_af5a2be58a28390f9a494538f34054637}{UINT\+\_\+32}} $\ast$}]{elem\+Idx\+Bits }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Compute element index from coordinates in tiles. 
+
+\mbox{\hyperlink{classrocr_1_1Addr_1_1V1_1_1SiLib_ae3ee4bbe30f6012373212b1b97148717}{Si\+Lib\+::\+Tile\+Coord\+To\+Mask\+Element\+Index}}
+
+\begin{DoxyReturn}{Returns}
+Element index 
+\end{DoxyReturn}
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em tx} & x coord, in Tiles \\
+\hline
+\mbox{\texttt{ in}}  & {\em ty} & y coord, in Tiles \\
+\hline
+\mbox{\texttt{ in}}  & {\em pipe\+Config} & pipe config \\
+\hline
+\mbox{\texttt{ out}}  & {\em macro\+Shift} & macro shift \\
+\hline
+\mbox{\texttt{ out}}  & {\em elem\+Idx\+Bits} & tile offset bits \\
+\hline
+\end{DoxyParams}
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classrocr_1_1Addr_1_1V1_1_1SiLib_ae3ee4bbe30f6012373212b1b97148717_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classrocr_1_1Addr_1_1V1_1_1SiLib_ae3ee4bbe30f6012373212b1b97148717_icgraph}
+\end{center}
+\end{figure}
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{classrocr_1_1Addr_1_1V1_1_1SiLib_ae5790749d77e98b03517022394319b14}\label{classrocr_1_1Addr_1_1V1_1_1SiLib_ae5790749d77e98b03517022394319b14}} 
+\index{rocr::Addr::V1::SiLib@{rocr::Addr::V1::SiLib}!EquationTableSize@{EquationTableSize}}
+\index{EquationTableSize@{EquationTableSize}!rocr::Addr::V1::SiLib@{rocr::Addr::V1::SiLib}}
+\doxysubsubsection{\texorpdfstring{EquationTableSize}{EquationTableSize}}
+{\footnotesize\ttfamily const \mbox{\hyperlink{addrtypes_8h_af5a2be58a28390f9a494538f34054637}{UINT\+\_\+32}} rocr\+::\+Addr\+::\+V1\+::\+Si\+Lib\+::\+Equation\+Table\+Size = (\mbox{\hyperlink{classrocr_1_1Addr_1_1V1_1_1SiLib_a0ab4c2ca59ff4130b5f835b641184cf5}{Max\+Num\+Element\+Bytes}} $\ast$ \mbox{\hyperlink{classrocr_1_1Addr_1_1V1_1_1SiLib_a09afb263d8dc74048a0469817a531c3d}{Tile\+Table\+Size}}) / 2\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [protected]}}
+
+\mbox{\Hypertarget{classrocr_1_1Addr_1_1V1_1_1SiLib_a63d4055a2f7ff8e2e8083bf02bbbe6da}\label{classrocr_1_1Addr_1_1V1_1_1SiLib_a63d4055a2f7ff8e2e8083bf02bbbe6da}} 
+\index{rocr::Addr::V1::SiLib@{rocr::Addr::V1::SiLib}!m\_blockHeight@{m\_blockHeight}}
+\index{m\_blockHeight@{m\_blockHeight}!rocr::Addr::V1::SiLib@{rocr::Addr::V1::SiLib}}
+\doxysubsubsection{\texorpdfstring{m\_blockHeight}{m\_blockHeight}}
+{\footnotesize\ttfamily \mbox{\hyperlink{addrtypes_8h_af5a2be58a28390f9a494538f34054637}{UINT\+\_\+32}} rocr\+::\+Addr\+::\+V1\+::\+Si\+Lib\+::m\+\_\+block\+Height\mbox{[}\mbox{\hyperlink{classrocr_1_1Addr_1_1V1_1_1SiLib_ae5790749d77e98b03517022394319b14}{Equation\+Table\+Size}}\mbox{]}\hspace{0.3cm}{\ttfamily [protected]}}
+
+\mbox{\Hypertarget{classrocr_1_1Addr_1_1V1_1_1SiLib_a42281d28fa3a94c0e786f7f617242ad3}\label{classrocr_1_1Addr_1_1V1_1_1SiLib_a42281d28fa3a94c0e786f7f617242ad3}} 
+\index{rocr::Addr::V1::SiLib@{rocr::Addr::V1::SiLib}!m\_blockSlices@{m\_blockSlices}}
+\index{m\_blockSlices@{m\_blockSlices}!rocr::Addr::V1::SiLib@{rocr::Addr::V1::SiLib}}
+\doxysubsubsection{\texorpdfstring{m\_blockSlices}{m\_blockSlices}}
+{\footnotesize\ttfamily \mbox{\hyperlink{addrtypes_8h_af5a2be58a28390f9a494538f34054637}{UINT\+\_\+32}} rocr\+::\+Addr\+::\+V1\+::\+Si\+Lib\+::m\+\_\+block\+Slices\mbox{[}\mbox{\hyperlink{classrocr_1_1Addr_1_1V1_1_1SiLib_ae5790749d77e98b03517022394319b14}{Equation\+Table\+Size}}\mbox{]}\hspace{0.3cm}{\ttfamily [protected]}}
+
+\mbox{\Hypertarget{classrocr_1_1Addr_1_1V1_1_1SiLib_a4762968003aadcc873e6c1cef14bbc82}\label{classrocr_1_1Addr_1_1V1_1_1SiLib_a4762968003aadcc873e6c1cef14bbc82}} 
+\index{rocr::Addr::V1::SiLib@{rocr::Addr::V1::SiLib}!m\_blockWidth@{m\_blockWidth}}
+\index{m\_blockWidth@{m\_blockWidth}!rocr::Addr::V1::SiLib@{rocr::Addr::V1::SiLib}}
+\doxysubsubsection{\texorpdfstring{m\_blockWidth}{m\_blockWidth}}
+{\footnotesize\ttfamily \mbox{\hyperlink{addrtypes_8h_af5a2be58a28390f9a494538f34054637}{UINT\+\_\+32}} rocr\+::\+Addr\+::\+V1\+::\+Si\+Lib\+::m\+\_\+block\+Width\mbox{[}\mbox{\hyperlink{classrocr_1_1Addr_1_1V1_1_1SiLib_ae5790749d77e98b03517022394319b14}{Equation\+Table\+Size}}\mbox{]}\hspace{0.3cm}{\ttfamily [protected]}}
+
+\mbox{\Hypertarget{classrocr_1_1Addr_1_1V1_1_1SiLib_a0767575d39b86889e3f59f06f0dfd568}\label{classrocr_1_1Addr_1_1V1_1_1SiLib_a0767575d39b86889e3f59f06f0dfd568}} 
+\index{rocr::Addr::V1::SiLib@{rocr::Addr::V1::SiLib}!m\_equationLookupTable@{m\_equationLookupTable}}
+\index{m\_equationLookupTable@{m\_equationLookupTable}!rocr::Addr::V1::SiLib@{rocr::Addr::V1::SiLib}}
+\doxysubsubsection{\texorpdfstring{m\_equationLookupTable}{m\_equationLookupTable}}
+{\footnotesize\ttfamily \mbox{\hyperlink{addrtypes_8h_af5a2be58a28390f9a494538f34054637}{UINT\+\_\+32}} rocr\+::\+Addr\+::\+V1\+::\+Si\+Lib\+::m\+\_\+equation\+Lookup\+Table\mbox{[}\mbox{\hyperlink{classrocr_1_1Addr_1_1V1_1_1SiLib_a0ab4c2ca59ff4130b5f835b641184cf5}{Max\+Num\+Element\+Bytes}}\mbox{]}\mbox{[}\mbox{\hyperlink{classrocr_1_1Addr_1_1V1_1_1SiLib_a09afb263d8dc74048a0469817a531c3d}{Tile\+Table\+Size}}\mbox{]}\hspace{0.3cm}{\ttfamily [protected]}}
+
+\mbox{\Hypertarget{classrocr_1_1Addr_1_1V1_1_1SiLib_a9b1e620504027725031a1dca0a7b8fd5}\label{classrocr_1_1Addr_1_1V1_1_1SiLib_a9b1e620504027725031a1dca0a7b8fd5}} 
+\index{rocr::Addr::V1::SiLib@{rocr::Addr::V1::SiLib}!m\_EquationSupport@{m\_EquationSupport}}
+\index{m\_EquationSupport@{m\_EquationSupport}!rocr::Addr::V1::SiLib@{rocr::Addr::V1::SiLib}}
+\doxysubsubsection{\texorpdfstring{m\_EquationSupport}{m\_EquationSupport}}
+{\footnotesize\ttfamily const \mbox{\hyperlink{addrtypes_8h_ac4225671b7e87c943146915461c9b2f4}{BOOL\+\_\+32}} rocr\+::\+Addr\+::\+V1\+::\+Si\+Lib\+::m\+\_\+\+Equation\+Support\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [protected]}}
+
+\mbox{\Hypertarget{classrocr_1_1Addr_1_1V1_1_1SiLib_a024f3ae42cd44bbcdaf4a95f54ba0514}\label{classrocr_1_1Addr_1_1V1_1_1SiLib_a024f3ae42cd44bbcdaf4a95f54ba0514}} 
+\index{rocr::Addr::V1::SiLib@{rocr::Addr::V1::SiLib}!m\_equationTable@{m\_equationTable}}
+\index{m\_equationTable@{m\_equationTable}!rocr::Addr::V1::SiLib@{rocr::Addr::V1::SiLib}}
+\doxysubsubsection{\texorpdfstring{m\_equationTable}{m\_equationTable}}
+{\footnotesize\ttfamily \mbox{\hyperlink{namespacerocr_a9d269a2f79e2b96962f79909f5e1643c}{ADDR\+\_\+\+EQUATION}} rocr\+::\+Addr\+::\+V1\+::\+Si\+Lib\+::m\+\_\+equation\+Table\mbox{[}\mbox{\hyperlink{classrocr_1_1Addr_1_1V1_1_1SiLib_ae5790749d77e98b03517022394319b14}{Equation\+Table\+Size}}\mbox{]}\hspace{0.3cm}{\ttfamily [protected]}}
+
+\mbox{\Hypertarget{classrocr_1_1Addr_1_1V1_1_1SiLib_a99e71b637684cfa9254be5fd4867a0f4}\label{classrocr_1_1Addr_1_1V1_1_1SiLib_a99e71b637684cfa9254be5fd4867a0f4}} 
+\index{rocr::Addr::V1::SiLib@{rocr::Addr::V1::SiLib}!m\_noOfEntries@{m\_noOfEntries}}
+\index{m\_noOfEntries@{m\_noOfEntries}!rocr::Addr::V1::SiLib@{rocr::Addr::V1::SiLib}}
+\doxysubsubsection{\texorpdfstring{m\_noOfEntries}{m\_noOfEntries}}
+{\footnotesize\ttfamily \mbox{\hyperlink{addrtypes_8h_af5a2be58a28390f9a494538f34054637}{UINT\+\_\+32}} rocr\+::\+Addr\+::\+V1\+::\+Si\+Lib\+::m\+\_\+no\+Of\+Entries\hspace{0.3cm}{\ttfamily [protected]}}
+
+\mbox{\Hypertarget{classrocr_1_1Addr_1_1V1_1_1SiLib_a86618e82f1f67a6f99f641af9ee0bab8}\label{classrocr_1_1Addr_1_1V1_1_1SiLib_a86618e82f1f67a6f99f641af9ee0bab8}} 
+\index{rocr::Addr::V1::SiLib@{rocr::Addr::V1::SiLib}!m\_numEquations@{m\_numEquations}}
+\index{m\_numEquations@{m\_numEquations}!rocr::Addr::V1::SiLib@{rocr::Addr::V1::SiLib}}
+\doxysubsubsection{\texorpdfstring{m\_numEquations}{m\_numEquations}}
+{\footnotesize\ttfamily \mbox{\hyperlink{addrtypes_8h_af5a2be58a28390f9a494538f34054637}{UINT\+\_\+32}} rocr\+::\+Addr\+::\+V1\+::\+Si\+Lib\+::m\+\_\+num\+Equations\hspace{0.3cm}{\ttfamily [protected]}}
+
+\mbox{\Hypertarget{classrocr_1_1Addr_1_1V1_1_1SiLib_a3ba82023e6eaa103b490852c8f6414c9}\label{classrocr_1_1Addr_1_1V1_1_1SiLib_a3ba82023e6eaa103b490852c8f6414c9}} 
+\index{rocr::Addr::V1::SiLib@{rocr::Addr::V1::SiLib}!m\_numMacroBits@{m\_numMacroBits}}
+\index{m\_numMacroBits@{m\_numMacroBits}!rocr::Addr::V1::SiLib@{rocr::Addr::V1::SiLib}}
+\doxysubsubsection{\texorpdfstring{m\_numMacroBits}{m\_numMacroBits}}
+{\footnotesize\ttfamily \mbox{\hyperlink{addrtypes_8h_af5a2be58a28390f9a494538f34054637}{UINT\+\_\+32}} rocr\+::\+Addr\+::\+V1\+::\+Si\+Lib\+::m\+\_\+num\+Macro\+Bits\mbox{[}\mbox{\hyperlink{classrocr_1_1Addr_1_1V1_1_1SiLib_ae5790749d77e98b03517022394319b14}{Equation\+Table\+Size}}\mbox{]}\hspace{0.3cm}{\ttfamily [protected]}}
+
+\mbox{\Hypertarget{classrocr_1_1Addr_1_1V1_1_1SiLib_a2cbf728c12d7b23931b2bb3430ee85fa}\label{classrocr_1_1Addr_1_1V1_1_1SiLib_a2cbf728c12d7b23931b2bb3430ee85fa}} 
+\index{rocr::Addr::V1::SiLib@{rocr::Addr::V1::SiLib}!m\_settings@{m\_settings}}
+\index{m\_settings@{m\_settings}!rocr::Addr::V1::SiLib@{rocr::Addr::V1::SiLib}}
+\doxysubsubsection{\texorpdfstring{m\_settings}{m\_settings}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structrocr_1_1Addr_1_1V1_1_1SiChipSettings}{Si\+Chip\+Settings}} rocr\+::\+Addr\+::\+V1\+::\+Si\+Lib\+::m\+\_\+settings\hspace{0.3cm}{\ttfamily [protected]}}
+
+\mbox{\Hypertarget{classrocr_1_1Addr_1_1V1_1_1SiLib_adcea68d6cdbc77924d0c7d6b4c990196}\label{classrocr_1_1Addr_1_1V1_1_1SiLib_adcea68d6cdbc77924d0c7d6b4c990196}} 
+\index{rocr::Addr::V1::SiLib@{rocr::Addr::V1::SiLib}!m\_tileTable@{m\_tileTable}}
+\index{m\_tileTable@{m\_tileTable}!rocr::Addr::V1::SiLib@{rocr::Addr::V1::SiLib}}
+\doxysubsubsection{\texorpdfstring{m\_tileTable}{m\_tileTable}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structrocr_1_1Addr_1_1V1_1_1TileConfig}{Tile\+Config}} rocr\+::\+Addr\+::\+V1\+::\+Si\+Lib\+::m\+\_\+tile\+Table\mbox{[}\mbox{\hyperlink{classrocr_1_1Addr_1_1V1_1_1SiLib_a09afb263d8dc74048a0469817a531c3d}{Tile\+Table\+Size}}\mbox{]}\hspace{0.3cm}{\ttfamily [protected]}}
+
+\mbox{\Hypertarget{classrocr_1_1Addr_1_1V1_1_1SiLib_a714c2aade376e40af4955ebbe192ff8f}\label{classrocr_1_1Addr_1_1V1_1_1SiLib_a714c2aade376e40af4955ebbe192ff8f}} 
+\index{rocr::Addr::V1::SiLib@{rocr::Addr::V1::SiLib}!m\_uncompressDepthEqIndex@{m\_uncompressDepthEqIndex}}
+\index{m\_uncompressDepthEqIndex@{m\_uncompressDepthEqIndex}!rocr::Addr::V1::SiLib@{rocr::Addr::V1::SiLib}}
+\doxysubsubsection{\texorpdfstring{m\_uncompressDepthEqIndex}{m\_uncompressDepthEqIndex}}
+{\footnotesize\ttfamily \mbox{\hyperlink{addrtypes_8h_af5a2be58a28390f9a494538f34054637}{UINT\+\_\+32}} rocr\+::\+Addr\+::\+V1\+::\+Si\+Lib\+::m\+\_\+uncompress\+Depth\+Eq\+Index\hspace{0.3cm}{\ttfamily [protected]}}
+
+\mbox{\Hypertarget{classrocr_1_1Addr_1_1V1_1_1SiLib_a0ab4c2ca59ff4130b5f835b641184cf5}\label{classrocr_1_1Addr_1_1V1_1_1SiLib_a0ab4c2ca59ff4130b5f835b641184cf5}} 
+\index{rocr::Addr::V1::SiLib@{rocr::Addr::V1::SiLib}!MaxNumElementBytes@{MaxNumElementBytes}}
+\index{MaxNumElementBytes@{MaxNumElementBytes}!rocr::Addr::V1::SiLib@{rocr::Addr::V1::SiLib}}
+\doxysubsubsection{\texorpdfstring{MaxNumElementBytes}{MaxNumElementBytes}}
+{\footnotesize\ttfamily const \mbox{\hyperlink{addrtypes_8h_af5a2be58a28390f9a494538f34054637}{UINT\+\_\+32}} rocr\+::\+Addr\+::\+V1\+::\+Si\+Lib\+::\+Max\+Num\+Element\+Bytes = 5\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [protected]}}
+
+\mbox{\Hypertarget{classrocr_1_1Addr_1_1V1_1_1SiLib_a2dae642a5e91f6d7dc2c46fd90be96e2}\label{classrocr_1_1Addr_1_1V1_1_1SiLib_a2dae642a5e91f6d7dc2c46fd90be96e2}} 
+\index{rocr::Addr::V1::SiLib@{rocr::Addr::V1::SiLib}!SiPrtTileIndexMask@{SiPrtTileIndexMask}}
+\index{SiPrtTileIndexMask@{SiPrtTileIndexMask}!rocr::Addr::V1::SiLib@{rocr::Addr::V1::SiLib}}
+\doxysubsubsection{\texorpdfstring{SiPrtTileIndexMask}{SiPrtTileIndexMask}}
+{\footnotesize\ttfamily const \mbox{\hyperlink{addrtypes_8h_af5a2be58a28390f9a494538f34054637}{UINT\+\_\+32}} rocr\+::\+Addr\+::\+V1\+::\+Si\+Lib\+::\+Si\+Prt\+Tile\+Index\+Mask\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [protected]}}
+
+{\bfseries Initial value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{= ((1 << 3)  | (1 << 5)  | (1 << 6)  | (1 << 7)  |}
+\DoxyCodeLine{                                                  (1 << 21) | (1 << 22) | (1 << 23) | (1 << 24) |}
+\DoxyCodeLine{                                                  (1 << 25) | (1 << 30))}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{classrocr_1_1Addr_1_1V1_1_1SiLib_a09afb263d8dc74048a0469817a531c3d}\label{classrocr_1_1Addr_1_1V1_1_1SiLib_a09afb263d8dc74048a0469817a531c3d}} 
+\index{rocr::Addr::V1::SiLib@{rocr::Addr::V1::SiLib}!TileTableSize@{TileTableSize}}
+\index{TileTableSize@{TileTableSize}!rocr::Addr::V1::SiLib@{rocr::Addr::V1::SiLib}}
+\doxysubsubsection{\texorpdfstring{TileTableSize}{TileTableSize}}
+{\footnotesize\ttfamily const \mbox{\hyperlink{addrtypes_8h_af5a2be58a28390f9a494538f34054637}{UINT\+\_\+32}} rocr\+::\+Addr\+::\+V1\+::\+Si\+Lib\+::\+Tile\+Table\+Size = 32\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [protected]}}
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+src/image/addrlib/src/r800/\mbox{\hyperlink{siaddrlib_8h}{siaddrlib.\+h}}\item 
+src/image/addrlib/src/r800/\mbox{\hyperlink{siaddrlib_8cpp}{siaddrlib.\+cpp}}\end{DoxyCompactItemize}

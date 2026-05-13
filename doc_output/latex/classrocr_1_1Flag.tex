@@ -1,0 +1,897 @@
+\hypertarget{classrocr_1_1Flag}{}\doxysection{rocr\+::Flag Class Reference}
+\label{classrocr_1_1Flag}\index{rocr::Flag@{rocr::Flag}}
+
+
+{\ttfamily \#include $<$flag.\+h$>$}
+
+\doxysubsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+enum \mbox{\hyperlink{classrocr_1_1Flag_a2af927512d069fb14afda44fcd227e68}{SDMA\+\_\+\+OVERRIDE}} \{ \mbox{\hyperlink{classrocr_1_1Flag_a2af927512d069fb14afda44fcd227e68a08bba2826fc7d3f3825245281876b336}{SDMA\+\_\+\+DISABLE}}
+, \mbox{\hyperlink{classrocr_1_1Flag_a2af927512d069fb14afda44fcd227e68a1e1af101b021ef4ced3d2300038e2d50}{SDMA\+\_\+\+ENABLE}}
+, \mbox{\hyperlink{classrocr_1_1Flag_a2af927512d069fb14afda44fcd227e68afd98825b891084e907c73a3076bba4d3}{SDMA\+\_\+\+DEFAULT}}
+ \}
+\item 
+enum \mbox{\hyperlink{classrocr_1_1Flag_a06a1fcf962f1e5466236816d0a7e55bf}{XNACK\+\_\+\+REQUEST}} \{ \mbox{\hyperlink{classrocr_1_1Flag_a06a1fcf962f1e5466236816d0a7e55bfad5ed65d28898f8251abd3903d5479308}{XNACK\+\_\+\+DISABLE}} = 0
+, \mbox{\hyperlink{classrocr_1_1Flag_a06a1fcf962f1e5466236816d0a7e55bfa882d46118880aae14ddb6123d53e257b}{XNACK\+\_\+\+ENABLE}} = 1
+, \mbox{\hyperlink{classrocr_1_1Flag_a06a1fcf962f1e5466236816d0a7e55bfa7bbb256bffebc739728692183d227afd}{XNACK\+\_\+\+UNCHANGED}} = 2
+ \}
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classrocr_1_1Flag_ab83c437ee14d2807633eaf68e75f0e14}{Flag}} ()
+\item 
+virtual \mbox{\hyperlink{classrocr_1_1Flag_a460fdcce696452c2582fc702577c3bca}{$\sim$\+Flag}} ()
+\item 
+void \mbox{\hyperlink{classrocr_1_1Flag_ab1b555cf4bcc5e2d74ae752c22956db0}{Refresh}} ()
+\item 
+void \mbox{\hyperlink{classrocr_1_1Flag_add8b449502f416815cfb3508c286524b}{parse\+\_\+masks}} (uint32\+\_\+t max\+Gpu, uint32\+\_\+t max\+CU)
+\item 
+bool \mbox{\hyperlink{classrocr_1_1Flag_a54581382007e67f51552f1a53618d014}{check\+\_\+flat\+\_\+scratch}} () const
+\item 
+bool \mbox{\hyperlink{classrocr_1_1Flag_a0d650f480ae7f47060e276790aeddb58}{enable\+\_\+vm\+\_\+fault\+\_\+message}} () const
+\item 
+bool \mbox{\hyperlink{classrocr_1_1Flag_ab3d37a8c9bad28821c12706386c1a5ff}{enable\+\_\+queue\+\_\+fault\+\_\+message}} () const
+\item 
+bool \mbox{\hyperlink{classrocr_1_1Flag_a3f79d7fae975ba53865a43881897e2fd}{enable\+\_\+interrupt}} () const
+\item 
+bool \mbox{\hyperlink{classrocr_1_1Flag_aa1e3658b4feeae016be40fc6964dd3fe}{enable\+\_\+sdma\+\_\+hdp\+\_\+flush}} () const
+\item 
+bool \mbox{\hyperlink{classrocr_1_1Flag_ac5e4ac03627ad136088decdc12404c30}{running\+\_\+valgrind}} () const
+\item 
+bool \mbox{\hyperlink{classrocr_1_1Flag_ab9c18cab5edf2c15323ea78707016f0f}{sdma\+\_\+wait\+\_\+idle}} () const
+\item 
+bool \mbox{\hyperlink{classrocr_1_1Flag_a5eedb5db5142a3beac8d15e19ae93888}{report\+\_\+tool\+\_\+load\+\_\+failures}} () const
+\item 
+bool \mbox{\hyperlink{classrocr_1_1Flag_ac9043a2dd66703e4cc0152320dcae66c}{disable\+\_\+fragment\+\_\+alloc}} () const
+\item 
+bool \mbox{\hyperlink{classrocr_1_1Flag_af1c2f018c3f0e8278c470f50f7b66552}{rev\+\_\+copy\+\_\+dir}} () const
+\item 
+bool \mbox{\hyperlink{classrocr_1_1Flag_ad25cc85cbd75e3046878ac24ee84f199}{fine\+\_\+grain\+\_\+pcie}} () const
+\item 
+bool \mbox{\hyperlink{classrocr_1_1Flag_ae534c96e9d092e98ce599d22c6c6991f}{no\+\_\+scratch\+\_\+reclaim}} () const
+\item 
+bool \mbox{\hyperlink{classrocr_1_1Flag_a6a80ad30a2eb60ba538b6b4e75458614}{no\+\_\+scratch\+\_\+thread\+\_\+limiter}} () const
+\item 
+\mbox{\hyperlink{classrocr_1_1Flag_a2af927512d069fb14afda44fcd227e68}{SDMA\+\_\+\+OVERRIDE}} \mbox{\hyperlink{classrocr_1_1Flag_a5091c7b487fcecd65a9e7e8d7e04189b}{enable\+\_\+sdma}} () const
+\item 
+std\+::string \mbox{\hyperlink{classrocr_1_1Flag_a5de001e66f891de77b28653582a33b50}{visible\+\_\+gpus}} () const
+\item 
+bool \mbox{\hyperlink{classrocr_1_1Flag_a31c50086e8d5f2d5f5c6bdd5d29d25bb}{filter\+\_\+visible\+\_\+gpus}} () const
+\item 
+uint32\+\_\+t \mbox{\hyperlink{classrocr_1_1Flag_a7155529ffd35e1b19b70b3682606f5ef}{max\+\_\+queues}} () const
+\item 
+size\+\_\+t \mbox{\hyperlink{classrocr_1_1Flag_a91a8a973ea0f93e134ca4eb1b412dd4a}{scratch\+\_\+mem\+\_\+size}} () const
+\item 
+size\+\_\+t \mbox{\hyperlink{classrocr_1_1Flag_a10a6a4cc958b5a0fee72c4d15e76ba87}{scratch\+\_\+single\+\_\+limit}} () const
+\item 
+std\+::string \mbox{\hyperlink{classrocr_1_1Flag_a9d0a21e10d37e82b149212ea0296ec37}{tools\+\_\+lib\+\_\+names}} () const
+\item 
+bool \mbox{\hyperlink{classrocr_1_1Flag_a9d2e7fa0b77a0cda2d62d72686053802}{disable\+\_\+image}} () const
+\item 
+bool \mbox{\hyperlink{classrocr_1_1Flag_af3c4364de4d4c9b5fd69e2be208e255a}{loader\+\_\+enable\+\_\+mmap\+\_\+uri}} () const
+\item 
+size\+\_\+t \mbox{\hyperlink{classrocr_1_1Flag_a82121cbeb92004ed8d69a425ba2218ae}{force\+\_\+sdma\+\_\+size}} () const
+\item 
+bool \mbox{\hyperlink{classrocr_1_1Flag_a78fa0d1a82c976da2b517af565ea884d}{check\+\_\+sramecc\+\_\+validity}} () const
+\item 
+bool \mbox{\hyperlink{classrocr_1_1Flag_a1481c40eb57a98c4ea3f66fbc28603d1}{override\+\_\+cpu\+\_\+affinity}} () const
+\item 
+bool \mbox{\hyperlink{classrocr_1_1Flag_ae6d493f1b268dfb6320af44a0b5b3c5b}{image\+\_\+print\+\_\+srd}} () const
+\item 
+bool \mbox{\hyperlink{classrocr_1_1Flag_ab0647c63ad1a8e58039ee81732c75bce}{check\+\_\+mwaitx}} (bool mwaitx\+\_\+supported)
+\item 
+\mbox{\hyperlink{classrocr_1_1Flag_a06a1fcf962f1e5466236816d0a7e55bf}{XNACK\+\_\+\+REQUEST}} \mbox{\hyperlink{classrocr_1_1Flag_a30800e16f41bdb5805ffa31919b0150f}{xnack}} () const
+\item 
+bool \mbox{\hyperlink{classrocr_1_1Flag_a8e8de13f01dcdec481f8d31a7adf7d3c}{debug}} () const
+\item 
+const std\+::vector$<$ uint32\+\_\+t $>$ \& \mbox{\hyperlink{classrocr_1_1Flag_aaf19c00fd9baea78a991b264c1f70770}{cu\+\_\+mask}} (uint32\+\_\+t gpu\+\_\+index) const
+\item 
+bool \mbox{\hyperlink{classrocr_1_1Flag_a69c8ce75dce0f1e2774d2f837ece59ae}{cu\+\_\+mask\+\_\+skip\+\_\+init}} () const
+\item 
+bool \mbox{\hyperlink{classrocr_1_1Flag_ab714006fb84a150081d193296eb6f306}{coop\+\_\+cu\+\_\+count}} () const
+\item 
+bool \mbox{\hyperlink{classrocr_1_1Flag_ac9b4f1f571986267c5518a760c1baa28}{discover\+\_\+copy\+\_\+agents}} () const
+\item 
+const std\+::string \& \mbox{\hyperlink{classrocr_1_1Flag_a6ab991f321f9a2cc837b811a9276b858}{svm\+\_\+profile}} () const
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+const size\+\_\+t \mbox{\hyperlink{classrocr_1_1Flag_a02379f64e16ce66c65a79efbf72d3f67}{DEFAULT\+\_\+\+SCRATCH\+\_\+\+SINGLE\+\_\+\+LIMIT}} = 146800640
+\end{DoxyCompactItemize}
+\doxysubsection*{Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{classrocr_1_1Flag_a6cd59fae60a9a58aa1bd8f07249d0f50}{parse\+\_\+masks}} (std\+::string \&args, uint32\+\_\+t max\+Gpu, uint32\+\_\+t max\+CU)
+\item 
+\mbox{\hyperlink{classrocr_1_1Flag_aa7bc9a934f1253ca29cfa862008e9fba}{DISALLOW\+\_\+\+COPY\+\_\+\+AND\+\_\+\+ASSIGN}} (\mbox{\hyperlink{classrocr_1_1Flag}{Flag}})
+\end{DoxyCompactItemize}
+\doxysubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+bool \mbox{\hyperlink{classrocr_1_1Flag_a6c7da494932ce04cf3ffaad638a0a5c0}{check\+\_\+flat\+\_\+scratch\+\_\+}}
+\item 
+bool \mbox{\hyperlink{classrocr_1_1Flag_adf4794f39d268c58d4febe202fad4045}{enable\+\_\+vm\+\_\+fault\+\_\+message\+\_\+}}
+\item 
+bool \mbox{\hyperlink{classrocr_1_1Flag_a1941a310629cfb2cc1ecd8288d9dcf97}{enable\+\_\+interrupt\+\_\+}}
+\item 
+bool \mbox{\hyperlink{classrocr_1_1Flag_a358b930d33e5e8577e412d79276a60a9}{enable\+\_\+sdma\+\_\+hdp\+\_\+flush\+\_\+}}
+\item 
+bool \mbox{\hyperlink{classrocr_1_1Flag_af501a197833b5e52d9a55f34fe9ddb2e}{running\+\_\+valgrind\+\_\+}}
+\item 
+bool \mbox{\hyperlink{classrocr_1_1Flag_ad86c88fb476ed7eadff939ea0e4a81e7}{sdma\+\_\+wait\+\_\+idle\+\_\+}}
+\item 
+bool \mbox{\hyperlink{classrocr_1_1Flag_ab4077d63b61740f8211aa3f9c1db489f}{enable\+\_\+queue\+\_\+fault\+\_\+message\+\_\+}}
+\item 
+bool \mbox{\hyperlink{classrocr_1_1Flag_a926c0bc03a9095afb082a16a1dab9848}{report\+\_\+tool\+\_\+load\+\_\+failures\+\_\+}}
+\item 
+bool \mbox{\hyperlink{classrocr_1_1Flag_a16bac0d7fa048028b65b956d663bb234}{disable\+\_\+fragment\+\_\+alloc\+\_\+}}
+\item 
+bool \mbox{\hyperlink{classrocr_1_1Flag_a60b36bdfad53bf6fe90ac9147366479e}{rev\+\_\+copy\+\_\+dir\+\_\+}}
+\item 
+bool \mbox{\hyperlink{classrocr_1_1Flag_a4076681ffe81b12f08b299cd8ab3bc80}{fine\+\_\+grain\+\_\+pcie\+\_\+}}
+\item 
+bool \mbox{\hyperlink{classrocr_1_1Flag_adfc15ad6608779438567897d4a0a8bd8}{no\+\_\+scratch\+\_\+reclaim\+\_\+}}
+\item 
+bool \mbox{\hyperlink{classrocr_1_1Flag_ac4b59cad5acdf1f702d0819b013c2dfe}{no\+\_\+scratch\+\_\+thread\+\_\+limit\+\_\+}}
+\item 
+bool \mbox{\hyperlink{classrocr_1_1Flag_a754a8166ad3382259f73180fc49f2d29}{disable\+\_\+image\+\_\+}}
+\item 
+bool \mbox{\hyperlink{classrocr_1_1Flag_a1571a4dd0a6c962f0cdaf52c701f6aeb}{loader\+\_\+enable\+\_\+mmap\+\_\+uri\+\_\+}}
+\item 
+bool \mbox{\hyperlink{classrocr_1_1Flag_a4adfb4ce5a755d82c1c3b3111b417d2d}{check\+\_\+sramecc\+\_\+validity\+\_\+}}
+\item 
+bool \mbox{\hyperlink{classrocr_1_1Flag_aa576a43ee6303be11e7a3cb96039d6b1}{debug\+\_\+}}
+\item 
+bool \mbox{\hyperlink{classrocr_1_1Flag_a983361079c398fdca32ef115735138ac}{cu\+\_\+mask\+\_\+skip\+\_\+init\+\_\+}}
+\item 
+bool \mbox{\hyperlink{classrocr_1_1Flag_ab83e21ac19d110ffd65ab51598e7da12}{coop\+\_\+cu\+\_\+count\+\_\+}}
+\item 
+bool \mbox{\hyperlink{classrocr_1_1Flag_aa0b7d9ae29ad700b5d5cc96c8dc0dcda}{discover\+\_\+copy\+\_\+agents\+\_\+}}
+\item 
+bool \mbox{\hyperlink{classrocr_1_1Flag_ab2c5b4ab8659529b8228287ba67bb934}{override\+\_\+cpu\+\_\+affinity\+\_\+}}
+\item 
+bool \mbox{\hyperlink{classrocr_1_1Flag_afe5230f666f6e4fbbb6c841fb9b8c31e}{image\+\_\+print\+\_\+srd\+\_\+}}
+\item 
+bool \mbox{\hyperlink{classrocr_1_1Flag_a0586edd3b0a3d65d56082f4db8603f66}{enable\+\_\+mwaitx\+\_\+}}
+\item 
+\mbox{\hyperlink{classrocr_1_1Flag_a2af927512d069fb14afda44fcd227e68}{SDMA\+\_\+\+OVERRIDE}} \mbox{\hyperlink{classrocr_1_1Flag_a23c60a89e157021299698f8f9e9e35aa}{enable\+\_\+sdma\+\_\+}}
+\item 
+bool \mbox{\hyperlink{classrocr_1_1Flag_a25a61ae3c365613601efb85802f30031}{filter\+\_\+visible\+\_\+gpus\+\_\+}}
+\item 
+std\+::string \mbox{\hyperlink{classrocr_1_1Flag_aa1562453c5fc108f2515298b1f05ff51}{visible\+\_\+gpus\+\_\+}}
+\item 
+uint32\+\_\+t \mbox{\hyperlink{classrocr_1_1Flag_acac4e7f61711f17588aee88d40f95e39}{max\+\_\+queues\+\_\+}}
+\item 
+size\+\_\+t \mbox{\hyperlink{classrocr_1_1Flag_a7a1d5e0eb434d1b22e5877b53755ce12}{scratch\+\_\+mem\+\_\+size\+\_\+}}
+\item 
+size\+\_\+t \mbox{\hyperlink{classrocr_1_1Flag_a1e50d67f9d0f500e8c307d4c8730661e}{scratch\+\_\+single\+\_\+limit\+\_\+}}
+\item 
+std\+::string \mbox{\hyperlink{classrocr_1_1Flag_ab390814a8cab7eb1d9ac6b4f55823c10}{tools\+\_\+lib\+\_\+names\+\_\+}}
+\item 
+std\+::string \mbox{\hyperlink{classrocr_1_1Flag_a6a23912dc7e298ac7eac8ccf7211e6d8}{svm\+\_\+profile\+\_\+}}
+\item 
+size\+\_\+t \mbox{\hyperlink{classrocr_1_1Flag_ad7e13e0022b0c02e0526ccdffc1e1a20}{force\+\_\+sdma\+\_\+size\+\_\+}}
+\item 
+\mbox{\hyperlink{classrocr_1_1Flag_a06a1fcf962f1e5466236816d0a7e55bf}{XNACK\+\_\+\+REQUEST}} \mbox{\hyperlink{classrocr_1_1Flag_a2379eb309dab2c8f594879702eb98641}{xnack\+\_\+}}
+\item 
+std\+::map$<$ uint32\+\_\+t, std\+::vector$<$ uint32\+\_\+t $>$ $>$ \mbox{\hyperlink{classrocr_1_1Flag_a2e28e080fe52c4df06d3db20d6d61f3a}{cu\+\_\+mask\+\_\+}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Member Enumeration Documentation}
+\mbox{\Hypertarget{classrocr_1_1Flag_a2af927512d069fb14afda44fcd227e68}\label{classrocr_1_1Flag_a2af927512d069fb14afda44fcd227e68}} 
+\index{rocr::Flag@{rocr::Flag}!SDMA\_OVERRIDE@{SDMA\_OVERRIDE}}
+\index{SDMA\_OVERRIDE@{SDMA\_OVERRIDE}!rocr::Flag@{rocr::Flag}}
+\doxysubsubsection{\texorpdfstring{SDMA\_OVERRIDE}{SDMA\_OVERRIDE}}
+{\footnotesize\ttfamily enum \mbox{\hyperlink{classrocr_1_1Flag_a2af927512d069fb14afda44fcd227e68}{rocr\+::\+Flag\+::\+SDMA\+\_\+\+OVERRIDE}}}
+
+\begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{SDMA\_DISABLE@{SDMA\_DISABLE}!rocr::Flag@{rocr::Flag}}\index{rocr::Flag@{rocr::Flag}!SDMA\_DISABLE@{SDMA\_DISABLE}}}\mbox{\Hypertarget{classrocr_1_1Flag_a2af927512d069fb14afda44fcd227e68a08bba2826fc7d3f3825245281876b336}\label{classrocr_1_1Flag_a2af927512d069fb14afda44fcd227e68a08bba2826fc7d3f3825245281876b336}} 
+SDMA\+\_\+\+DISABLE&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{SDMA\_ENABLE@{SDMA\_ENABLE}!rocr::Flag@{rocr::Flag}}\index{rocr::Flag@{rocr::Flag}!SDMA\_ENABLE@{SDMA\_ENABLE}}}\mbox{\Hypertarget{classrocr_1_1Flag_a2af927512d069fb14afda44fcd227e68a1e1af101b021ef4ced3d2300038e2d50}\label{classrocr_1_1Flag_a2af927512d069fb14afda44fcd227e68a1e1af101b021ef4ced3d2300038e2d50}} 
+SDMA\+\_\+\+ENABLE&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{SDMA\_DEFAULT@{SDMA\_DEFAULT}!rocr::Flag@{rocr::Flag}}\index{rocr::Flag@{rocr::Flag}!SDMA\_DEFAULT@{SDMA\_DEFAULT}}}\mbox{\Hypertarget{classrocr_1_1Flag_a2af927512d069fb14afda44fcd227e68afd98825b891084e907c73a3076bba4d3}\label{classrocr_1_1Flag_a2af927512d069fb14afda44fcd227e68afd98825b891084e907c73a3076bba4d3}} 
+SDMA\+\_\+\+DEFAULT&\\
+\hline
+
+\end{DoxyEnumFields}
+\mbox{\Hypertarget{classrocr_1_1Flag_a06a1fcf962f1e5466236816d0a7e55bf}\label{classrocr_1_1Flag_a06a1fcf962f1e5466236816d0a7e55bf}} 
+\index{rocr::Flag@{rocr::Flag}!XNACK\_REQUEST@{XNACK\_REQUEST}}
+\index{XNACK\_REQUEST@{XNACK\_REQUEST}!rocr::Flag@{rocr::Flag}}
+\doxysubsubsection{\texorpdfstring{XNACK\_REQUEST}{XNACK\_REQUEST}}
+{\footnotesize\ttfamily enum \mbox{\hyperlink{classrocr_1_1Flag_a06a1fcf962f1e5466236816d0a7e55bf}{rocr\+::\+Flag\+::\+XNACK\+\_\+\+REQUEST}}}
+
+\begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{XNACK\_DISABLE@{XNACK\_DISABLE}!rocr::Flag@{rocr::Flag}}\index{rocr::Flag@{rocr::Flag}!XNACK\_DISABLE@{XNACK\_DISABLE}}}\mbox{\Hypertarget{classrocr_1_1Flag_a06a1fcf962f1e5466236816d0a7e55bfad5ed65d28898f8251abd3903d5479308}\label{classrocr_1_1Flag_a06a1fcf962f1e5466236816d0a7e55bfad5ed65d28898f8251abd3903d5479308}} 
+XNACK\+\_\+\+DISABLE&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{XNACK\_ENABLE@{XNACK\_ENABLE}!rocr::Flag@{rocr::Flag}}\index{rocr::Flag@{rocr::Flag}!XNACK\_ENABLE@{XNACK\_ENABLE}}}\mbox{\Hypertarget{classrocr_1_1Flag_a06a1fcf962f1e5466236816d0a7e55bfa882d46118880aae14ddb6123d53e257b}\label{classrocr_1_1Flag_a06a1fcf962f1e5466236816d0a7e55bfa882d46118880aae14ddb6123d53e257b}} 
+XNACK\+\_\+\+ENABLE&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{XNACK\_UNCHANGED@{XNACK\_UNCHANGED}!rocr::Flag@{rocr::Flag}}\index{rocr::Flag@{rocr::Flag}!XNACK\_UNCHANGED@{XNACK\_UNCHANGED}}}\mbox{\Hypertarget{classrocr_1_1Flag_a06a1fcf962f1e5466236816d0a7e55bfa7bbb256bffebc739728692183d227afd}\label{classrocr_1_1Flag_a06a1fcf962f1e5466236816d0a7e55bfa7bbb256bffebc739728692183d227afd}} 
+XNACK\+\_\+\+UNCHANGED&\\
+\hline
+
+\end{DoxyEnumFields}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classrocr_1_1Flag_ab83c437ee14d2807633eaf68e75f0e14}\label{classrocr_1_1Flag_ab83c437ee14d2807633eaf68e75f0e14}} 
+\index{rocr::Flag@{rocr::Flag}!Flag@{Flag}}
+\index{Flag@{Flag}!rocr::Flag@{rocr::Flag}}
+\doxysubsubsection{\texorpdfstring{Flag()}{Flag()}}
+{\footnotesize\ttfamily rocr\+::\+Flag\+::\+Flag (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [explicit]}}
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classrocr_1_1Flag_ab83c437ee14d2807633eaf68e75f0e14_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classrocr_1_1Flag_a460fdcce696452c2582fc702577c3bca}\label{classrocr_1_1Flag_a460fdcce696452c2582fc702577c3bca}} 
+\index{rocr::Flag@{rocr::Flag}!````~Flag@{$\sim$Flag}}
+\index{````~Flag@{$\sim$Flag}!rocr::Flag@{rocr::Flag}}
+\doxysubsubsection{\texorpdfstring{$\sim$Flag()}{~Flag()}}
+{\footnotesize\ttfamily virtual rocr\+::\+Flag\+::$\sim$\+Flag (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classrocr_1_1Flag_a54581382007e67f51552f1a53618d014}\label{classrocr_1_1Flag_a54581382007e67f51552f1a53618d014}} 
+\index{rocr::Flag@{rocr::Flag}!check\_flat\_scratch@{check\_flat\_scratch}}
+\index{check\_flat\_scratch@{check\_flat\_scratch}!rocr::Flag@{rocr::Flag}}
+\doxysubsubsection{\texorpdfstring{check\_flat\_scratch()}{check\_flat\_scratch()}}
+{\footnotesize\ttfamily bool rocr\+::\+Flag\+::check\+\_\+flat\+\_\+scratch (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{classrocr_1_1Flag_ab0647c63ad1a8e58039ee81732c75bce}\label{classrocr_1_1Flag_ab0647c63ad1a8e58039ee81732c75bce}} 
+\index{rocr::Flag@{rocr::Flag}!check\_mwaitx@{check\_mwaitx}}
+\index{check\_mwaitx@{check\_mwaitx}!rocr::Flag@{rocr::Flag}}
+\doxysubsubsection{\texorpdfstring{check\_mwaitx()}{check\_mwaitx()}}
+{\footnotesize\ttfamily bool rocr\+::\+Flag\+::check\+\_\+mwaitx (\begin{DoxyParamCaption}\item[{bool}]{mwaitx\+\_\+supported }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classrocr_1_1Flag_ab0647c63ad1a8e58039ee81732c75bce_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classrocr_1_1Flag_a78fa0d1a82c976da2b517af565ea884d}\label{classrocr_1_1Flag_a78fa0d1a82c976da2b517af565ea884d}} 
+\index{rocr::Flag@{rocr::Flag}!check\_sramecc\_validity@{check\_sramecc\_validity}}
+\index{check\_sramecc\_validity@{check\_sramecc\_validity}!rocr::Flag@{rocr::Flag}}
+\doxysubsubsection{\texorpdfstring{check\_sramecc\_validity()}{check\_sramecc\_validity()}}
+{\footnotesize\ttfamily bool rocr\+::\+Flag\+::check\+\_\+sramecc\+\_\+validity (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classrocr_1_1Flag_a78fa0d1a82c976da2b517af565ea884d_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classrocr_1_1Flag_ab714006fb84a150081d193296eb6f306}\label{classrocr_1_1Flag_ab714006fb84a150081d193296eb6f306}} 
+\index{rocr::Flag@{rocr::Flag}!coop\_cu\_count@{coop\_cu\_count}}
+\index{coop\_cu\_count@{coop\_cu\_count}!rocr::Flag@{rocr::Flag}}
+\doxysubsubsection{\texorpdfstring{coop\_cu\_count()}{coop\_cu\_count()}}
+{\footnotesize\ttfamily bool rocr\+::\+Flag\+::coop\+\_\+cu\+\_\+count (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{classrocr_1_1Flag_aaf19c00fd9baea78a991b264c1f70770}\label{classrocr_1_1Flag_aaf19c00fd9baea78a991b264c1f70770}} 
+\index{rocr::Flag@{rocr::Flag}!cu\_mask@{cu\_mask}}
+\index{cu\_mask@{cu\_mask}!rocr::Flag@{rocr::Flag}}
+\doxysubsubsection{\texorpdfstring{cu\_mask()}{cu\_mask()}}
+{\footnotesize\ttfamily const std\+::vector$<$uint32\+\_\+t$>$\& rocr\+::\+Flag\+::cu\+\_\+mask (\begin{DoxyParamCaption}\item[{uint32\+\_\+t}]{gpu\+\_\+index }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classrocr_1_1Flag_aaf19c00fd9baea78a991b264c1f70770_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classrocr_1_1Flag_a69c8ce75dce0f1e2774d2f837ece59ae}\label{classrocr_1_1Flag_a69c8ce75dce0f1e2774d2f837ece59ae}} 
+\index{rocr::Flag@{rocr::Flag}!cu\_mask\_skip\_init@{cu\_mask\_skip\_init}}
+\index{cu\_mask\_skip\_init@{cu\_mask\_skip\_init}!rocr::Flag@{rocr::Flag}}
+\doxysubsubsection{\texorpdfstring{cu\_mask\_skip\_init()}{cu\_mask\_skip\_init()}}
+{\footnotesize\ttfamily bool rocr\+::\+Flag\+::cu\+\_\+mask\+\_\+skip\+\_\+init (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{classrocr_1_1Flag_a8e8de13f01dcdec481f8d31a7adf7d3c}\label{classrocr_1_1Flag_a8e8de13f01dcdec481f8d31a7adf7d3c}} 
+\index{rocr::Flag@{rocr::Flag}!debug@{debug}}
+\index{debug@{debug}!rocr::Flag@{rocr::Flag}}
+\doxysubsubsection{\texorpdfstring{debug()}{debug()}}
+{\footnotesize\ttfamily bool rocr\+::\+Flag\+::debug (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{classrocr_1_1Flag_ac9043a2dd66703e4cc0152320dcae66c}\label{classrocr_1_1Flag_ac9043a2dd66703e4cc0152320dcae66c}} 
+\index{rocr::Flag@{rocr::Flag}!disable\_fragment\_alloc@{disable\_fragment\_alloc}}
+\index{disable\_fragment\_alloc@{disable\_fragment\_alloc}!rocr::Flag@{rocr::Flag}}
+\doxysubsubsection{\texorpdfstring{disable\_fragment\_alloc()}{disable\_fragment\_alloc()}}
+{\footnotesize\ttfamily bool rocr\+::\+Flag\+::disable\+\_\+fragment\+\_\+alloc (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classrocr_1_1Flag_ac9043a2dd66703e4cc0152320dcae66c_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classrocr_1_1Flag_a9d2e7fa0b77a0cda2d62d72686053802}\label{classrocr_1_1Flag_a9d2e7fa0b77a0cda2d62d72686053802}} 
+\index{rocr::Flag@{rocr::Flag}!disable\_image@{disable\_image}}
+\index{disable\_image@{disable\_image}!rocr::Flag@{rocr::Flag}}
+\doxysubsubsection{\texorpdfstring{disable\_image()}{disable\_image()}}
+{\footnotesize\ttfamily bool rocr\+::\+Flag\+::disable\+\_\+image (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classrocr_1_1Flag_a9d2e7fa0b77a0cda2d62d72686053802_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classrocr_1_1Flag_aa7bc9a934f1253ca29cfa862008e9fba}\label{classrocr_1_1Flag_aa7bc9a934f1253ca29cfa862008e9fba}} 
+\index{rocr::Flag@{rocr::Flag}!DISALLOW\_COPY\_AND\_ASSIGN@{DISALLOW\_COPY\_AND\_ASSIGN}}
+\index{DISALLOW\_COPY\_AND\_ASSIGN@{DISALLOW\_COPY\_AND\_ASSIGN}!rocr::Flag@{rocr::Flag}}
+\doxysubsubsection{\texorpdfstring{DISALLOW\_COPY\_AND\_ASSIGN()}{DISALLOW\_COPY\_AND\_ASSIGN()}}
+{\footnotesize\ttfamily rocr\+::\+Flag\+::\+DISALLOW\+\_\+\+COPY\+\_\+\+AND\+\_\+\+ASSIGN (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classrocr_1_1Flag}{Flag}}}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classrocr_1_1Flag_ac9b4f1f571986267c5518a760c1baa28}\label{classrocr_1_1Flag_ac9b4f1f571986267c5518a760c1baa28}} 
+\index{rocr::Flag@{rocr::Flag}!discover\_copy\_agents@{discover\_copy\_agents}}
+\index{discover\_copy\_agents@{discover\_copy\_agents}!rocr::Flag@{rocr::Flag}}
+\doxysubsubsection{\texorpdfstring{discover\_copy\_agents()}{discover\_copy\_agents()}}
+{\footnotesize\ttfamily bool rocr\+::\+Flag\+::discover\+\_\+copy\+\_\+agents (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=318pt]{classrocr_1_1Flag_ac9b4f1f571986267c5518a760c1baa28_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classrocr_1_1Flag_a3f79d7fae975ba53865a43881897e2fd}\label{classrocr_1_1Flag_a3f79d7fae975ba53865a43881897e2fd}} 
+\index{rocr::Flag@{rocr::Flag}!enable\_interrupt@{enable\_interrupt}}
+\index{enable\_interrupt@{enable\_interrupt}!rocr::Flag@{rocr::Flag}}
+\doxysubsubsection{\texorpdfstring{enable\_interrupt()}{enable\_interrupt()}}
+{\footnotesize\ttfamily bool rocr\+::\+Flag\+::enable\+\_\+interrupt (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classrocr_1_1Flag_a3f79d7fae975ba53865a43881897e2fd_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classrocr_1_1Flag_ab3d37a8c9bad28821c12706386c1a5ff}\label{classrocr_1_1Flag_ab3d37a8c9bad28821c12706386c1a5ff}} 
+\index{rocr::Flag@{rocr::Flag}!enable\_queue\_fault\_message@{enable\_queue\_fault\_message}}
+\index{enable\_queue\_fault\_message@{enable\_queue\_fault\_message}!rocr::Flag@{rocr::Flag}}
+\doxysubsubsection{\texorpdfstring{enable\_queue\_fault\_message()}{enable\_queue\_fault\_message()}}
+{\footnotesize\ttfamily bool rocr\+::\+Flag\+::enable\+\_\+queue\+\_\+fault\+\_\+message (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{classrocr_1_1Flag_a5091c7b487fcecd65a9e7e8d7e04189b}\label{classrocr_1_1Flag_a5091c7b487fcecd65a9e7e8d7e04189b}} 
+\index{rocr::Flag@{rocr::Flag}!enable\_sdma@{enable\_sdma}}
+\index{enable\_sdma@{enable\_sdma}!rocr::Flag@{rocr::Flag}}
+\doxysubsubsection{\texorpdfstring{enable\_sdma()}{enable\_sdma()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classrocr_1_1Flag_a2af927512d069fb14afda44fcd227e68}{SDMA\+\_\+\+OVERRIDE}} rocr\+::\+Flag\+::enable\+\_\+sdma (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classrocr_1_1Flag_a5091c7b487fcecd65a9e7e8d7e04189b_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classrocr_1_1Flag_aa1e3658b4feeae016be40fc6964dd3fe}\label{classrocr_1_1Flag_aa1e3658b4feeae016be40fc6964dd3fe}} 
+\index{rocr::Flag@{rocr::Flag}!enable\_sdma\_hdp\_flush@{enable\_sdma\_hdp\_flush}}
+\index{enable\_sdma\_hdp\_flush@{enable\_sdma\_hdp\_flush}!rocr::Flag@{rocr::Flag}}
+\doxysubsubsection{\texorpdfstring{enable\_sdma\_hdp\_flush()}{enable\_sdma\_hdp\_flush()}}
+{\footnotesize\ttfamily bool rocr\+::\+Flag\+::enable\+\_\+sdma\+\_\+hdp\+\_\+flush (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{classrocr_1_1Flag_a0d650f480ae7f47060e276790aeddb58}\label{classrocr_1_1Flag_a0d650f480ae7f47060e276790aeddb58}} 
+\index{rocr::Flag@{rocr::Flag}!enable\_vm\_fault\_message@{enable\_vm\_fault\_message}}
+\index{enable\_vm\_fault\_message@{enable\_vm\_fault\_message}!rocr::Flag@{rocr::Flag}}
+\doxysubsubsection{\texorpdfstring{enable\_vm\_fault\_message()}{enable\_vm\_fault\_message()}}
+{\footnotesize\ttfamily bool rocr\+::\+Flag\+::enable\+\_\+vm\+\_\+fault\+\_\+message (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classrocr_1_1Flag_a0d650f480ae7f47060e276790aeddb58_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classrocr_1_1Flag_a31c50086e8d5f2d5f5c6bdd5d29d25bb}\label{classrocr_1_1Flag_a31c50086e8d5f2d5f5c6bdd5d29d25bb}} 
+\index{rocr::Flag@{rocr::Flag}!filter\_visible\_gpus@{filter\_visible\_gpus}}
+\index{filter\_visible\_gpus@{filter\_visible\_gpus}!rocr::Flag@{rocr::Flag}}
+\doxysubsubsection{\texorpdfstring{filter\_visible\_gpus()}{filter\_visible\_gpus()}}
+{\footnotesize\ttfamily bool rocr\+::\+Flag\+::filter\+\_\+visible\+\_\+gpus (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classrocr_1_1Flag_a31c50086e8d5f2d5f5c6bdd5d29d25bb_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classrocr_1_1Flag_ad25cc85cbd75e3046878ac24ee84f199}\label{classrocr_1_1Flag_ad25cc85cbd75e3046878ac24ee84f199}} 
+\index{rocr::Flag@{rocr::Flag}!fine\_grain\_pcie@{fine\_grain\_pcie}}
+\index{fine\_grain\_pcie@{fine\_grain\_pcie}!rocr::Flag@{rocr::Flag}}
+\doxysubsubsection{\texorpdfstring{fine\_grain\_pcie()}{fine\_grain\_pcie()}}
+{\footnotesize\ttfamily bool rocr\+::\+Flag\+::fine\+\_\+grain\+\_\+pcie (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classrocr_1_1Flag_ad25cc85cbd75e3046878ac24ee84f199_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classrocr_1_1Flag_a82121cbeb92004ed8d69a425ba2218ae}\label{classrocr_1_1Flag_a82121cbeb92004ed8d69a425ba2218ae}} 
+\index{rocr::Flag@{rocr::Flag}!force\_sdma\_size@{force\_sdma\_size}}
+\index{force\_sdma\_size@{force\_sdma\_size}!rocr::Flag@{rocr::Flag}}
+\doxysubsubsection{\texorpdfstring{force\_sdma\_size()}{force\_sdma\_size()}}
+{\footnotesize\ttfamily size\+\_\+t rocr\+::\+Flag\+::force\+\_\+sdma\+\_\+size (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{classrocr_1_1Flag_ae6d493f1b268dfb6320af44a0b5b3c5b}\label{classrocr_1_1Flag_ae6d493f1b268dfb6320af44a0b5b3c5b}} 
+\index{rocr::Flag@{rocr::Flag}!image\_print\_srd@{image\_print\_srd}}
+\index{image\_print\_srd@{image\_print\_srd}!rocr::Flag@{rocr::Flag}}
+\doxysubsubsection{\texorpdfstring{image\_print\_srd()}{image\_print\_srd()}}
+{\footnotesize\ttfamily bool rocr\+::\+Flag\+::image\+\_\+print\+\_\+srd (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{classrocr_1_1Flag_af3c4364de4d4c9b5fd69e2be208e255a}\label{classrocr_1_1Flag_af3c4364de4d4c9b5fd69e2be208e255a}} 
+\index{rocr::Flag@{rocr::Flag}!loader\_enable\_mmap\_uri@{loader\_enable\_mmap\_uri}}
+\index{loader\_enable\_mmap\_uri@{loader\_enable\_mmap\_uri}!rocr::Flag@{rocr::Flag}}
+\doxysubsubsection{\texorpdfstring{loader\_enable\_mmap\_uri()}{loader\_enable\_mmap\_uri()}}
+{\footnotesize\ttfamily bool rocr\+::\+Flag\+::loader\+\_\+enable\+\_\+mmap\+\_\+uri (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classrocr_1_1Flag_af3c4364de4d4c9b5fd69e2be208e255a_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classrocr_1_1Flag_a7155529ffd35e1b19b70b3682606f5ef}\label{classrocr_1_1Flag_a7155529ffd35e1b19b70b3682606f5ef}} 
+\index{rocr::Flag@{rocr::Flag}!max\_queues@{max\_queues}}
+\index{max\_queues@{max\_queues}!rocr::Flag@{rocr::Flag}}
+\doxysubsubsection{\texorpdfstring{max\_queues()}{max\_queues()}}
+{\footnotesize\ttfamily uint32\+\_\+t rocr\+::\+Flag\+::max\+\_\+queues (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{classrocr_1_1Flag_ae534c96e9d092e98ce599d22c6c6991f}\label{classrocr_1_1Flag_ae534c96e9d092e98ce599d22c6c6991f}} 
+\index{rocr::Flag@{rocr::Flag}!no\_scratch\_reclaim@{no\_scratch\_reclaim}}
+\index{no\_scratch\_reclaim@{no\_scratch\_reclaim}!rocr::Flag@{rocr::Flag}}
+\doxysubsubsection{\texorpdfstring{no\_scratch\_reclaim()}{no\_scratch\_reclaim()}}
+{\footnotesize\ttfamily bool rocr\+::\+Flag\+::no\+\_\+scratch\+\_\+reclaim (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classrocr_1_1Flag_ae534c96e9d092e98ce599d22c6c6991f_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classrocr_1_1Flag_a6a80ad30a2eb60ba538b6b4e75458614}\label{classrocr_1_1Flag_a6a80ad30a2eb60ba538b6b4e75458614}} 
+\index{rocr::Flag@{rocr::Flag}!no\_scratch\_thread\_limiter@{no\_scratch\_thread\_limiter}}
+\index{no\_scratch\_thread\_limiter@{no\_scratch\_thread\_limiter}!rocr::Flag@{rocr::Flag}}
+\doxysubsubsection{\texorpdfstring{no\_scratch\_thread\_limiter()}{no\_scratch\_thread\_limiter()}}
+{\footnotesize\ttfamily bool rocr\+::\+Flag\+::no\+\_\+scratch\+\_\+thread\+\_\+limiter (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classrocr_1_1Flag_a6a80ad30a2eb60ba538b6b4e75458614_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classrocr_1_1Flag_a1481c40eb57a98c4ea3f66fbc28603d1}\label{classrocr_1_1Flag_a1481c40eb57a98c4ea3f66fbc28603d1}} 
+\index{rocr::Flag@{rocr::Flag}!override\_cpu\_affinity@{override\_cpu\_affinity}}
+\index{override\_cpu\_affinity@{override\_cpu\_affinity}!rocr::Flag@{rocr::Flag}}
+\doxysubsubsection{\texorpdfstring{override\_cpu\_affinity()}{override\_cpu\_affinity()}}
+{\footnotesize\ttfamily bool rocr\+::\+Flag\+::override\+\_\+cpu\+\_\+affinity (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{classrocr_1_1Flag_a6cd59fae60a9a58aa1bd8f07249d0f50}\label{classrocr_1_1Flag_a6cd59fae60a9a58aa1bd8f07249d0f50}} 
+\index{rocr::Flag@{rocr::Flag}!parse\_masks@{parse\_masks}}
+\index{parse\_masks@{parse\_masks}!rocr::Flag@{rocr::Flag}}
+\doxysubsubsection{\texorpdfstring{parse\_masks()}{parse\_masks()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily void rocr\+::\+Flag\+::parse\+\_\+masks (\begin{DoxyParamCaption}\item[{std\+::string \&}]{args,  }\item[{uint32\+\_\+t}]{max\+Gpu,  }\item[{uint32\+\_\+t}]{max\+CU }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classrocr_1_1Flag_a6cd59fae60a9a58aa1bd8f07249d0f50_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classrocr_1_1Flag_add8b449502f416815cfb3508c286524b}\label{classrocr_1_1Flag_add8b449502f416815cfb3508c286524b}} 
+\index{rocr::Flag@{rocr::Flag}!parse\_masks@{parse\_masks}}
+\index{parse\_masks@{parse\_masks}!rocr::Flag@{rocr::Flag}}
+\doxysubsubsection{\texorpdfstring{parse\_masks()}{parse\_masks()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily void rocr\+::\+Flag\+::parse\+\_\+masks (\begin{DoxyParamCaption}\item[{uint32\+\_\+t}]{max\+Gpu,  }\item[{uint32\+\_\+t}]{max\+CU }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=341pt]{classrocr_1_1Flag_add8b449502f416815cfb3508c286524b_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classrocr_1_1Flag_ab1b555cf4bcc5e2d74ae752c22956db0}\label{classrocr_1_1Flag_ab1b555cf4bcc5e2d74ae752c22956db0}} 
+\index{rocr::Flag@{rocr::Flag}!Refresh@{Refresh}}
+\index{Refresh@{Refresh}!rocr::Flag@{rocr::Flag}}
+\doxysubsubsection{\texorpdfstring{Refresh()}{Refresh()}}
+{\footnotesize\ttfamily void rocr\+::\+Flag\+::\+Refresh (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=324pt]{classrocr_1_1Flag_ab1b555cf4bcc5e2d74ae752c22956db0_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classrocr_1_1Flag_ab1b555cf4bcc5e2d74ae752c22956db0_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classrocr_1_1Flag_a5eedb5db5142a3beac8d15e19ae93888}\label{classrocr_1_1Flag_a5eedb5db5142a3beac8d15e19ae93888}} 
+\index{rocr::Flag@{rocr::Flag}!report\_tool\_load\_failures@{report\_tool\_load\_failures}}
+\index{report\_tool\_load\_failures@{report\_tool\_load\_failures}!rocr::Flag@{rocr::Flag}}
+\doxysubsubsection{\texorpdfstring{report\_tool\_load\_failures()}{report\_tool\_load\_failures()}}
+{\footnotesize\ttfamily bool rocr\+::\+Flag\+::report\+\_\+tool\+\_\+load\+\_\+failures (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{classrocr_1_1Flag_af1c2f018c3f0e8278c470f50f7b66552}\label{classrocr_1_1Flag_af1c2f018c3f0e8278c470f50f7b66552}} 
+\index{rocr::Flag@{rocr::Flag}!rev\_copy\_dir@{rev\_copy\_dir}}
+\index{rev\_copy\_dir@{rev\_copy\_dir}!rocr::Flag@{rocr::Flag}}
+\doxysubsubsection{\texorpdfstring{rev\_copy\_dir()}{rev\_copy\_dir()}}
+{\footnotesize\ttfamily bool rocr\+::\+Flag\+::rev\+\_\+copy\+\_\+dir (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classrocr_1_1Flag_af1c2f018c3f0e8278c470f50f7b66552_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classrocr_1_1Flag_ac5e4ac03627ad136088decdc12404c30}\label{classrocr_1_1Flag_ac5e4ac03627ad136088decdc12404c30}} 
+\index{rocr::Flag@{rocr::Flag}!running\_valgrind@{running\_valgrind}}
+\index{running\_valgrind@{running\_valgrind}!rocr::Flag@{rocr::Flag}}
+\doxysubsubsection{\texorpdfstring{running\_valgrind()}{running\_valgrind()}}
+{\footnotesize\ttfamily bool rocr\+::\+Flag\+::running\+\_\+valgrind (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classrocr_1_1Flag_ac5e4ac03627ad136088decdc12404c30_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classrocr_1_1Flag_a91a8a973ea0f93e134ca4eb1b412dd4a}\label{classrocr_1_1Flag_a91a8a973ea0f93e134ca4eb1b412dd4a}} 
+\index{rocr::Flag@{rocr::Flag}!scratch\_mem\_size@{scratch\_mem\_size}}
+\index{scratch\_mem\_size@{scratch\_mem\_size}!rocr::Flag@{rocr::Flag}}
+\doxysubsubsection{\texorpdfstring{scratch\_mem\_size()}{scratch\_mem\_size()}}
+{\footnotesize\ttfamily size\+\_\+t rocr\+::\+Flag\+::scratch\+\_\+mem\+\_\+size (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classrocr_1_1Flag_a91a8a973ea0f93e134ca4eb1b412dd4a_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classrocr_1_1Flag_a10a6a4cc958b5a0fee72c4d15e76ba87}\label{classrocr_1_1Flag_a10a6a4cc958b5a0fee72c4d15e76ba87}} 
+\index{rocr::Flag@{rocr::Flag}!scratch\_single\_limit@{scratch\_single\_limit}}
+\index{scratch\_single\_limit@{scratch\_single\_limit}!rocr::Flag@{rocr::Flag}}
+\doxysubsubsection{\texorpdfstring{scratch\_single\_limit()}{scratch\_single\_limit()}}
+{\footnotesize\ttfamily size\+\_\+t rocr\+::\+Flag\+::scratch\+\_\+single\+\_\+limit (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classrocr_1_1Flag_a10a6a4cc958b5a0fee72c4d15e76ba87_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classrocr_1_1Flag_ab9c18cab5edf2c15323ea78707016f0f}\label{classrocr_1_1Flag_ab9c18cab5edf2c15323ea78707016f0f}} 
+\index{rocr::Flag@{rocr::Flag}!sdma\_wait\_idle@{sdma\_wait\_idle}}
+\index{sdma\_wait\_idle@{sdma\_wait\_idle}!rocr::Flag@{rocr::Flag}}
+\doxysubsubsection{\texorpdfstring{sdma\_wait\_idle()}{sdma\_wait\_idle()}}
+{\footnotesize\ttfamily bool rocr\+::\+Flag\+::sdma\+\_\+wait\+\_\+idle (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{classrocr_1_1Flag_a6ab991f321f9a2cc837b811a9276b858}\label{classrocr_1_1Flag_a6ab991f321f9a2cc837b811a9276b858}} 
+\index{rocr::Flag@{rocr::Flag}!svm\_profile@{svm\_profile}}
+\index{svm\_profile@{svm\_profile}!rocr::Flag@{rocr::Flag}}
+\doxysubsubsection{\texorpdfstring{svm\_profile()}{svm\_profile()}}
+{\footnotesize\ttfamily const std\+::string\& rocr\+::\+Flag\+::svm\+\_\+profile (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{classrocr_1_1Flag_a9d0a21e10d37e82b149212ea0296ec37}\label{classrocr_1_1Flag_a9d0a21e10d37e82b149212ea0296ec37}} 
+\index{rocr::Flag@{rocr::Flag}!tools\_lib\_names@{tools\_lib\_names}}
+\index{tools\_lib\_names@{tools\_lib\_names}!rocr::Flag@{rocr::Flag}}
+\doxysubsubsection{\texorpdfstring{tools\_lib\_names()}{tools\_lib\_names()}}
+{\footnotesize\ttfamily std\+::string rocr\+::\+Flag\+::tools\+\_\+lib\+\_\+names (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classrocr_1_1Flag_a9d0a21e10d37e82b149212ea0296ec37_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classrocr_1_1Flag_a5de001e66f891de77b28653582a33b50}\label{classrocr_1_1Flag_a5de001e66f891de77b28653582a33b50}} 
+\index{rocr::Flag@{rocr::Flag}!visible\_gpus@{visible\_gpus}}
+\index{visible\_gpus@{visible\_gpus}!rocr::Flag@{rocr::Flag}}
+\doxysubsubsection{\texorpdfstring{visible\_gpus()}{visible\_gpus()}}
+{\footnotesize\ttfamily std\+::string rocr\+::\+Flag\+::visible\+\_\+gpus (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classrocr_1_1Flag_a5de001e66f891de77b28653582a33b50_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classrocr_1_1Flag_a30800e16f41bdb5805ffa31919b0150f}\label{classrocr_1_1Flag_a30800e16f41bdb5805ffa31919b0150f}} 
+\index{rocr::Flag@{rocr::Flag}!xnack@{xnack}}
+\index{xnack@{xnack}!rocr::Flag@{rocr::Flag}}
+\doxysubsubsection{\texorpdfstring{xnack()}{xnack()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classrocr_1_1Flag_a06a1fcf962f1e5466236816d0a7e55bf}{XNACK\+\_\+\+REQUEST}} rocr\+::\+Flag\+::xnack (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classrocr_1_1Flag_a30800e16f41bdb5805ffa31919b0150f_icgraph}
+\end{center}
+\end{figure}
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{classrocr_1_1Flag_a6c7da494932ce04cf3ffaad638a0a5c0}\label{classrocr_1_1Flag_a6c7da494932ce04cf3ffaad638a0a5c0}} 
+\index{rocr::Flag@{rocr::Flag}!check\_flat\_scratch\_@{check\_flat\_scratch\_}}
+\index{check\_flat\_scratch\_@{check\_flat\_scratch\_}!rocr::Flag@{rocr::Flag}}
+\doxysubsubsection{\texorpdfstring{check\_flat\_scratch\_}{check\_flat\_scratch\_}}
+{\footnotesize\ttfamily bool rocr\+::\+Flag\+::check\+\_\+flat\+\_\+scratch\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classrocr_1_1Flag_a4adfb4ce5a755d82c1c3b3111b417d2d}\label{classrocr_1_1Flag_a4adfb4ce5a755d82c1c3b3111b417d2d}} 
+\index{rocr::Flag@{rocr::Flag}!check\_sramecc\_validity\_@{check\_sramecc\_validity\_}}
+\index{check\_sramecc\_validity\_@{check\_sramecc\_validity\_}!rocr::Flag@{rocr::Flag}}
+\doxysubsubsection{\texorpdfstring{check\_sramecc\_validity\_}{check\_sramecc\_validity\_}}
+{\footnotesize\ttfamily bool rocr\+::\+Flag\+::check\+\_\+sramecc\+\_\+validity\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classrocr_1_1Flag_ab83e21ac19d110ffd65ab51598e7da12}\label{classrocr_1_1Flag_ab83e21ac19d110ffd65ab51598e7da12}} 
+\index{rocr::Flag@{rocr::Flag}!coop\_cu\_count\_@{coop\_cu\_count\_}}
+\index{coop\_cu\_count\_@{coop\_cu\_count\_}!rocr::Flag@{rocr::Flag}}
+\doxysubsubsection{\texorpdfstring{coop\_cu\_count\_}{coop\_cu\_count\_}}
+{\footnotesize\ttfamily bool rocr\+::\+Flag\+::coop\+\_\+cu\+\_\+count\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classrocr_1_1Flag_a2e28e080fe52c4df06d3db20d6d61f3a}\label{classrocr_1_1Flag_a2e28e080fe52c4df06d3db20d6d61f3a}} 
+\index{rocr::Flag@{rocr::Flag}!cu\_mask\_@{cu\_mask\_}}
+\index{cu\_mask\_@{cu\_mask\_}!rocr::Flag@{rocr::Flag}}
+\doxysubsubsection{\texorpdfstring{cu\_mask\_}{cu\_mask\_}}
+{\footnotesize\ttfamily std\+::map$<$uint32\+\_\+t, std\+::vector$<$uint32\+\_\+t$>$ $>$ rocr\+::\+Flag\+::cu\+\_\+mask\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classrocr_1_1Flag_a983361079c398fdca32ef115735138ac}\label{classrocr_1_1Flag_a983361079c398fdca32ef115735138ac}} 
+\index{rocr::Flag@{rocr::Flag}!cu\_mask\_skip\_init\_@{cu\_mask\_skip\_init\_}}
+\index{cu\_mask\_skip\_init\_@{cu\_mask\_skip\_init\_}!rocr::Flag@{rocr::Flag}}
+\doxysubsubsection{\texorpdfstring{cu\_mask\_skip\_init\_}{cu\_mask\_skip\_init\_}}
+{\footnotesize\ttfamily bool rocr\+::\+Flag\+::cu\+\_\+mask\+\_\+skip\+\_\+init\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classrocr_1_1Flag_aa576a43ee6303be11e7a3cb96039d6b1}\label{classrocr_1_1Flag_aa576a43ee6303be11e7a3cb96039d6b1}} 
+\index{rocr::Flag@{rocr::Flag}!debug\_@{debug\_}}
+\index{debug\_@{debug\_}!rocr::Flag@{rocr::Flag}}
+\doxysubsubsection{\texorpdfstring{debug\_}{debug\_}}
+{\footnotesize\ttfamily bool rocr\+::\+Flag\+::debug\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classrocr_1_1Flag_a02379f64e16ce66c65a79efbf72d3f67}\label{classrocr_1_1Flag_a02379f64e16ce66c65a79efbf72d3f67}} 
+\index{rocr::Flag@{rocr::Flag}!DEFAULT\_SCRATCH\_SINGLE\_LIMIT@{DEFAULT\_SCRATCH\_SINGLE\_LIMIT}}
+\index{DEFAULT\_SCRATCH\_SINGLE\_LIMIT@{DEFAULT\_SCRATCH\_SINGLE\_LIMIT}!rocr::Flag@{rocr::Flag}}
+\doxysubsubsection{\texorpdfstring{DEFAULT\_SCRATCH\_SINGLE\_LIMIT}{DEFAULT\_SCRATCH\_SINGLE\_LIMIT}}
+{\footnotesize\ttfamily const size\+\_\+t rocr\+::\+Flag\+::\+DEFAULT\+\_\+\+SCRATCH\+\_\+\+SINGLE\+\_\+\+LIMIT = 146800640}
+
+\mbox{\Hypertarget{classrocr_1_1Flag_a16bac0d7fa048028b65b956d663bb234}\label{classrocr_1_1Flag_a16bac0d7fa048028b65b956d663bb234}} 
+\index{rocr::Flag@{rocr::Flag}!disable\_fragment\_alloc\_@{disable\_fragment\_alloc\_}}
+\index{disable\_fragment\_alloc\_@{disable\_fragment\_alloc\_}!rocr::Flag@{rocr::Flag}}
+\doxysubsubsection{\texorpdfstring{disable\_fragment\_alloc\_}{disable\_fragment\_alloc\_}}
+{\footnotesize\ttfamily bool rocr\+::\+Flag\+::disable\+\_\+fragment\+\_\+alloc\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classrocr_1_1Flag_a754a8166ad3382259f73180fc49f2d29}\label{classrocr_1_1Flag_a754a8166ad3382259f73180fc49f2d29}} 
+\index{rocr::Flag@{rocr::Flag}!disable\_image\_@{disable\_image\_}}
+\index{disable\_image\_@{disable\_image\_}!rocr::Flag@{rocr::Flag}}
+\doxysubsubsection{\texorpdfstring{disable\_image\_}{disable\_image\_}}
+{\footnotesize\ttfamily bool rocr\+::\+Flag\+::disable\+\_\+image\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classrocr_1_1Flag_aa0b7d9ae29ad700b5d5cc96c8dc0dcda}\label{classrocr_1_1Flag_aa0b7d9ae29ad700b5d5cc96c8dc0dcda}} 
+\index{rocr::Flag@{rocr::Flag}!discover\_copy\_agents\_@{discover\_copy\_agents\_}}
+\index{discover\_copy\_agents\_@{discover\_copy\_agents\_}!rocr::Flag@{rocr::Flag}}
+\doxysubsubsection{\texorpdfstring{discover\_copy\_agents\_}{discover\_copy\_agents\_}}
+{\footnotesize\ttfamily bool rocr\+::\+Flag\+::discover\+\_\+copy\+\_\+agents\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classrocr_1_1Flag_a1941a310629cfb2cc1ecd8288d9dcf97}\label{classrocr_1_1Flag_a1941a310629cfb2cc1ecd8288d9dcf97}} 
+\index{rocr::Flag@{rocr::Flag}!enable\_interrupt\_@{enable\_interrupt\_}}
+\index{enable\_interrupt\_@{enable\_interrupt\_}!rocr::Flag@{rocr::Flag}}
+\doxysubsubsection{\texorpdfstring{enable\_interrupt\_}{enable\_interrupt\_}}
+{\footnotesize\ttfamily bool rocr\+::\+Flag\+::enable\+\_\+interrupt\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classrocr_1_1Flag_a0586edd3b0a3d65d56082f4db8603f66}\label{classrocr_1_1Flag_a0586edd3b0a3d65d56082f4db8603f66}} 
+\index{rocr::Flag@{rocr::Flag}!enable\_mwaitx\_@{enable\_mwaitx\_}}
+\index{enable\_mwaitx\_@{enable\_mwaitx\_}!rocr::Flag@{rocr::Flag}}
+\doxysubsubsection{\texorpdfstring{enable\_mwaitx\_}{enable\_mwaitx\_}}
+{\footnotesize\ttfamily bool rocr\+::\+Flag\+::enable\+\_\+mwaitx\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classrocr_1_1Flag_ab4077d63b61740f8211aa3f9c1db489f}\label{classrocr_1_1Flag_ab4077d63b61740f8211aa3f9c1db489f}} 
+\index{rocr::Flag@{rocr::Flag}!enable\_queue\_fault\_message\_@{enable\_queue\_fault\_message\_}}
+\index{enable\_queue\_fault\_message\_@{enable\_queue\_fault\_message\_}!rocr::Flag@{rocr::Flag}}
+\doxysubsubsection{\texorpdfstring{enable\_queue\_fault\_message\_}{enable\_queue\_fault\_message\_}}
+{\footnotesize\ttfamily bool rocr\+::\+Flag\+::enable\+\_\+queue\+\_\+fault\+\_\+message\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classrocr_1_1Flag_a23c60a89e157021299698f8f9e9e35aa}\label{classrocr_1_1Flag_a23c60a89e157021299698f8f9e9e35aa}} 
+\index{rocr::Flag@{rocr::Flag}!enable\_sdma\_@{enable\_sdma\_}}
+\index{enable\_sdma\_@{enable\_sdma\_}!rocr::Flag@{rocr::Flag}}
+\doxysubsubsection{\texorpdfstring{enable\_sdma\_}{enable\_sdma\_}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classrocr_1_1Flag_a2af927512d069fb14afda44fcd227e68}{SDMA\+\_\+\+OVERRIDE}} rocr\+::\+Flag\+::enable\+\_\+sdma\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classrocr_1_1Flag_a358b930d33e5e8577e412d79276a60a9}\label{classrocr_1_1Flag_a358b930d33e5e8577e412d79276a60a9}} 
+\index{rocr::Flag@{rocr::Flag}!enable\_sdma\_hdp\_flush\_@{enable\_sdma\_hdp\_flush\_}}
+\index{enable\_sdma\_hdp\_flush\_@{enable\_sdma\_hdp\_flush\_}!rocr::Flag@{rocr::Flag}}
+\doxysubsubsection{\texorpdfstring{enable\_sdma\_hdp\_flush\_}{enable\_sdma\_hdp\_flush\_}}
+{\footnotesize\ttfamily bool rocr\+::\+Flag\+::enable\+\_\+sdma\+\_\+hdp\+\_\+flush\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classrocr_1_1Flag_adf4794f39d268c58d4febe202fad4045}\label{classrocr_1_1Flag_adf4794f39d268c58d4febe202fad4045}} 
+\index{rocr::Flag@{rocr::Flag}!enable\_vm\_fault\_message\_@{enable\_vm\_fault\_message\_}}
+\index{enable\_vm\_fault\_message\_@{enable\_vm\_fault\_message\_}!rocr::Flag@{rocr::Flag}}
+\doxysubsubsection{\texorpdfstring{enable\_vm\_fault\_message\_}{enable\_vm\_fault\_message\_}}
+{\footnotesize\ttfamily bool rocr\+::\+Flag\+::enable\+\_\+vm\+\_\+fault\+\_\+message\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classrocr_1_1Flag_a25a61ae3c365613601efb85802f30031}\label{classrocr_1_1Flag_a25a61ae3c365613601efb85802f30031}} 
+\index{rocr::Flag@{rocr::Flag}!filter\_visible\_gpus\_@{filter\_visible\_gpus\_}}
+\index{filter\_visible\_gpus\_@{filter\_visible\_gpus\_}!rocr::Flag@{rocr::Flag}}
+\doxysubsubsection{\texorpdfstring{filter\_visible\_gpus\_}{filter\_visible\_gpus\_}}
+{\footnotesize\ttfamily bool rocr\+::\+Flag\+::filter\+\_\+visible\+\_\+gpus\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classrocr_1_1Flag_a4076681ffe81b12f08b299cd8ab3bc80}\label{classrocr_1_1Flag_a4076681ffe81b12f08b299cd8ab3bc80}} 
+\index{rocr::Flag@{rocr::Flag}!fine\_grain\_pcie\_@{fine\_grain\_pcie\_}}
+\index{fine\_grain\_pcie\_@{fine\_grain\_pcie\_}!rocr::Flag@{rocr::Flag}}
+\doxysubsubsection{\texorpdfstring{fine\_grain\_pcie\_}{fine\_grain\_pcie\_}}
+{\footnotesize\ttfamily bool rocr\+::\+Flag\+::fine\+\_\+grain\+\_\+pcie\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classrocr_1_1Flag_ad7e13e0022b0c02e0526ccdffc1e1a20}\label{classrocr_1_1Flag_ad7e13e0022b0c02e0526ccdffc1e1a20}} 
+\index{rocr::Flag@{rocr::Flag}!force\_sdma\_size\_@{force\_sdma\_size\_}}
+\index{force\_sdma\_size\_@{force\_sdma\_size\_}!rocr::Flag@{rocr::Flag}}
+\doxysubsubsection{\texorpdfstring{force\_sdma\_size\_}{force\_sdma\_size\_}}
+{\footnotesize\ttfamily size\+\_\+t rocr\+::\+Flag\+::force\+\_\+sdma\+\_\+size\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classrocr_1_1Flag_afe5230f666f6e4fbbb6c841fb9b8c31e}\label{classrocr_1_1Flag_afe5230f666f6e4fbbb6c841fb9b8c31e}} 
+\index{rocr::Flag@{rocr::Flag}!image\_print\_srd\_@{image\_print\_srd\_}}
+\index{image\_print\_srd\_@{image\_print\_srd\_}!rocr::Flag@{rocr::Flag}}
+\doxysubsubsection{\texorpdfstring{image\_print\_srd\_}{image\_print\_srd\_}}
+{\footnotesize\ttfamily bool rocr\+::\+Flag\+::image\+\_\+print\+\_\+srd\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classrocr_1_1Flag_a1571a4dd0a6c962f0cdaf52c701f6aeb}\label{classrocr_1_1Flag_a1571a4dd0a6c962f0cdaf52c701f6aeb}} 
+\index{rocr::Flag@{rocr::Flag}!loader\_enable\_mmap\_uri\_@{loader\_enable\_mmap\_uri\_}}
+\index{loader\_enable\_mmap\_uri\_@{loader\_enable\_mmap\_uri\_}!rocr::Flag@{rocr::Flag}}
+\doxysubsubsection{\texorpdfstring{loader\_enable\_mmap\_uri\_}{loader\_enable\_mmap\_uri\_}}
+{\footnotesize\ttfamily bool rocr\+::\+Flag\+::loader\+\_\+enable\+\_\+mmap\+\_\+uri\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classrocr_1_1Flag_acac4e7f61711f17588aee88d40f95e39}\label{classrocr_1_1Flag_acac4e7f61711f17588aee88d40f95e39}} 
+\index{rocr::Flag@{rocr::Flag}!max\_queues\_@{max\_queues\_}}
+\index{max\_queues\_@{max\_queues\_}!rocr::Flag@{rocr::Flag}}
+\doxysubsubsection{\texorpdfstring{max\_queues\_}{max\_queues\_}}
+{\footnotesize\ttfamily uint32\+\_\+t rocr\+::\+Flag\+::max\+\_\+queues\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classrocr_1_1Flag_adfc15ad6608779438567897d4a0a8bd8}\label{classrocr_1_1Flag_adfc15ad6608779438567897d4a0a8bd8}} 
+\index{rocr::Flag@{rocr::Flag}!no\_scratch\_reclaim\_@{no\_scratch\_reclaim\_}}
+\index{no\_scratch\_reclaim\_@{no\_scratch\_reclaim\_}!rocr::Flag@{rocr::Flag}}
+\doxysubsubsection{\texorpdfstring{no\_scratch\_reclaim\_}{no\_scratch\_reclaim\_}}
+{\footnotesize\ttfamily bool rocr\+::\+Flag\+::no\+\_\+scratch\+\_\+reclaim\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classrocr_1_1Flag_ac4b59cad5acdf1f702d0819b013c2dfe}\label{classrocr_1_1Flag_ac4b59cad5acdf1f702d0819b013c2dfe}} 
+\index{rocr::Flag@{rocr::Flag}!no\_scratch\_thread\_limit\_@{no\_scratch\_thread\_limit\_}}
+\index{no\_scratch\_thread\_limit\_@{no\_scratch\_thread\_limit\_}!rocr::Flag@{rocr::Flag}}
+\doxysubsubsection{\texorpdfstring{no\_scratch\_thread\_limit\_}{no\_scratch\_thread\_limit\_}}
+{\footnotesize\ttfamily bool rocr\+::\+Flag\+::no\+\_\+scratch\+\_\+thread\+\_\+limit\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classrocr_1_1Flag_ab2c5b4ab8659529b8228287ba67bb934}\label{classrocr_1_1Flag_ab2c5b4ab8659529b8228287ba67bb934}} 
+\index{rocr::Flag@{rocr::Flag}!override\_cpu\_affinity\_@{override\_cpu\_affinity\_}}
+\index{override\_cpu\_affinity\_@{override\_cpu\_affinity\_}!rocr::Flag@{rocr::Flag}}
+\doxysubsubsection{\texorpdfstring{override\_cpu\_affinity\_}{override\_cpu\_affinity\_}}
+{\footnotesize\ttfamily bool rocr\+::\+Flag\+::override\+\_\+cpu\+\_\+affinity\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classrocr_1_1Flag_a926c0bc03a9095afb082a16a1dab9848}\label{classrocr_1_1Flag_a926c0bc03a9095afb082a16a1dab9848}} 
+\index{rocr::Flag@{rocr::Flag}!report\_tool\_load\_failures\_@{report\_tool\_load\_failures\_}}
+\index{report\_tool\_load\_failures\_@{report\_tool\_load\_failures\_}!rocr::Flag@{rocr::Flag}}
+\doxysubsubsection{\texorpdfstring{report\_tool\_load\_failures\_}{report\_tool\_load\_failures\_}}
+{\footnotesize\ttfamily bool rocr\+::\+Flag\+::report\+\_\+tool\+\_\+load\+\_\+failures\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classrocr_1_1Flag_a60b36bdfad53bf6fe90ac9147366479e}\label{classrocr_1_1Flag_a60b36bdfad53bf6fe90ac9147366479e}} 
+\index{rocr::Flag@{rocr::Flag}!rev\_copy\_dir\_@{rev\_copy\_dir\_}}
+\index{rev\_copy\_dir\_@{rev\_copy\_dir\_}!rocr::Flag@{rocr::Flag}}
+\doxysubsubsection{\texorpdfstring{rev\_copy\_dir\_}{rev\_copy\_dir\_}}
+{\footnotesize\ttfamily bool rocr\+::\+Flag\+::rev\+\_\+copy\+\_\+dir\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classrocr_1_1Flag_af501a197833b5e52d9a55f34fe9ddb2e}\label{classrocr_1_1Flag_af501a197833b5e52d9a55f34fe9ddb2e}} 
+\index{rocr::Flag@{rocr::Flag}!running\_valgrind\_@{running\_valgrind\_}}
+\index{running\_valgrind\_@{running\_valgrind\_}!rocr::Flag@{rocr::Flag}}
+\doxysubsubsection{\texorpdfstring{running\_valgrind\_}{running\_valgrind\_}}
+{\footnotesize\ttfamily bool rocr\+::\+Flag\+::running\+\_\+valgrind\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classrocr_1_1Flag_a7a1d5e0eb434d1b22e5877b53755ce12}\label{classrocr_1_1Flag_a7a1d5e0eb434d1b22e5877b53755ce12}} 
+\index{rocr::Flag@{rocr::Flag}!scratch\_mem\_size\_@{scratch\_mem\_size\_}}
+\index{scratch\_mem\_size\_@{scratch\_mem\_size\_}!rocr::Flag@{rocr::Flag}}
+\doxysubsubsection{\texorpdfstring{scratch\_mem\_size\_}{scratch\_mem\_size\_}}
+{\footnotesize\ttfamily size\+\_\+t rocr\+::\+Flag\+::scratch\+\_\+mem\+\_\+size\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classrocr_1_1Flag_a1e50d67f9d0f500e8c307d4c8730661e}\label{classrocr_1_1Flag_a1e50d67f9d0f500e8c307d4c8730661e}} 
+\index{rocr::Flag@{rocr::Flag}!scratch\_single\_limit\_@{scratch\_single\_limit\_}}
+\index{scratch\_single\_limit\_@{scratch\_single\_limit\_}!rocr::Flag@{rocr::Flag}}
+\doxysubsubsection{\texorpdfstring{scratch\_single\_limit\_}{scratch\_single\_limit\_}}
+{\footnotesize\ttfamily size\+\_\+t rocr\+::\+Flag\+::scratch\+\_\+single\+\_\+limit\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classrocr_1_1Flag_ad86c88fb476ed7eadff939ea0e4a81e7}\label{classrocr_1_1Flag_ad86c88fb476ed7eadff939ea0e4a81e7}} 
+\index{rocr::Flag@{rocr::Flag}!sdma\_wait\_idle\_@{sdma\_wait\_idle\_}}
+\index{sdma\_wait\_idle\_@{sdma\_wait\_idle\_}!rocr::Flag@{rocr::Flag}}
+\doxysubsubsection{\texorpdfstring{sdma\_wait\_idle\_}{sdma\_wait\_idle\_}}
+{\footnotesize\ttfamily bool rocr\+::\+Flag\+::sdma\+\_\+wait\+\_\+idle\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classrocr_1_1Flag_a6a23912dc7e298ac7eac8ccf7211e6d8}\label{classrocr_1_1Flag_a6a23912dc7e298ac7eac8ccf7211e6d8}} 
+\index{rocr::Flag@{rocr::Flag}!svm\_profile\_@{svm\_profile\_}}
+\index{svm\_profile\_@{svm\_profile\_}!rocr::Flag@{rocr::Flag}}
+\doxysubsubsection{\texorpdfstring{svm\_profile\_}{svm\_profile\_}}
+{\footnotesize\ttfamily std\+::string rocr\+::\+Flag\+::svm\+\_\+profile\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classrocr_1_1Flag_ab390814a8cab7eb1d9ac6b4f55823c10}\label{classrocr_1_1Flag_ab390814a8cab7eb1d9ac6b4f55823c10}} 
+\index{rocr::Flag@{rocr::Flag}!tools\_lib\_names\_@{tools\_lib\_names\_}}
+\index{tools\_lib\_names\_@{tools\_lib\_names\_}!rocr::Flag@{rocr::Flag}}
+\doxysubsubsection{\texorpdfstring{tools\_lib\_names\_}{tools\_lib\_names\_}}
+{\footnotesize\ttfamily std\+::string rocr\+::\+Flag\+::tools\+\_\+lib\+\_\+names\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classrocr_1_1Flag_aa1562453c5fc108f2515298b1f05ff51}\label{classrocr_1_1Flag_aa1562453c5fc108f2515298b1f05ff51}} 
+\index{rocr::Flag@{rocr::Flag}!visible\_gpus\_@{visible\_gpus\_}}
+\index{visible\_gpus\_@{visible\_gpus\_}!rocr::Flag@{rocr::Flag}}
+\doxysubsubsection{\texorpdfstring{visible\_gpus\_}{visible\_gpus\_}}
+{\footnotesize\ttfamily std\+::string rocr\+::\+Flag\+::visible\+\_\+gpus\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classrocr_1_1Flag_a2379eb309dab2c8f594879702eb98641}\label{classrocr_1_1Flag_a2379eb309dab2c8f594879702eb98641}} 
+\index{rocr::Flag@{rocr::Flag}!xnack\_@{xnack\_}}
+\index{xnack\_@{xnack\_}!rocr::Flag@{rocr::Flag}}
+\doxysubsubsection{\texorpdfstring{xnack\_}{xnack\_}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classrocr_1_1Flag_a06a1fcf962f1e5466236816d0a7e55bf}{XNACK\+\_\+\+REQUEST}} rocr\+::\+Flag\+::xnack\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+src/core/util/\mbox{\hyperlink{flag_8h}{flag.\+h}}\item 
+src/core/util/\mbox{\hyperlink{flag_8cpp}{flag.\+cpp}}\end{DoxyCompactItemize}

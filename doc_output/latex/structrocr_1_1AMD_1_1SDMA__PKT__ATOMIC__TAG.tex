@@ -1,0 +1,270 @@
+\hypertarget{structrocr_1_1AMD_1_1SDMA__PKT__ATOMIC__TAG}{}\doxysection{rocr\+::AMD\+::SDMA\+\_\+\+PKT\+\_\+\+ATOMIC\+\_\+\+TAG Struct Reference}
+\label{structrocr_1_1AMD_1_1SDMA__PKT__ATOMIC__TAG}\index{rocr::AMD::SDMA\_PKT\_ATOMIC\_TAG@{rocr::AMD::SDMA\_PKT\_ATOMIC\_TAG}}
+
+
+{\ttfamily \#include $<$sdma\+\_\+registers.\+h$>$}
+
+\doxysubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\begin{tabbing}
+xx\=xx\=xx\=xx\=xx\=xx\=xx\=xx\=xx\=\kill
+union \{\\
+\>struct \{\\
+\>\>unsigned int \mbox{\hyperlink{structrocr_1_1AMD_1_1SDMA__PKT__ATOMIC__TAG_acd6ae9c586e5d37e9344fcc00380a1ed}{op}}: 8\\
+\>\>unsigned int \mbox{\hyperlink{structrocr_1_1AMD_1_1SDMA__PKT__ATOMIC__TAG_a54d10038554f2419166eea570ea52f0c}{sub\_op}}: 8\\
+\>\>unsigned int \mbox{\hyperlink{structrocr_1_1AMD_1_1SDMA__PKT__ATOMIC__TAG_a3cba325f4b2f98ae9bf9080635a1c1d3}{l}}: 1\\
+\>\>unsigned int \mbox{\hyperlink{structrocr_1_1AMD_1_1SDMA__PKT__ATOMIC__TAG_a14bea32729ea01a8416bc620f2c5506b}{reserved\_0}}: 8\\
+\>\>unsigned int \mbox{\hyperlink{structrocr_1_1AMD_1_1SDMA__PKT__ATOMIC__TAG_ae73fd773d9e04593bd5081e3ab3c673d}{operation}}: 7\\
+\>\} \\
+\>unsigned int \mbox{\hyperlink{structrocr_1_1AMD_1_1SDMA__PKT__ATOMIC__TAG_a2a61e52c2abf5cbd462199cd4e9da272}{DW\_0\_DATA}}\\
+\} \mbox{\hyperlink{structrocr_1_1AMD_1_1SDMA__PKT__ATOMIC__TAG_a07767125d8bab1877246fd5bc04036ae}{HEADER\_UNION}}\\
+
+\end{tabbing}\item 
+\begin{tabbing}
+xx\=xx\=xx\=xx\=xx\=xx\=xx\=xx\=xx\=\kill
+union \{\\
+\>struct \{\\
+\>\>unsigned int \mbox{\hyperlink{structrocr_1_1AMD_1_1SDMA__PKT__ATOMIC__TAG_ae4113738afba64e89c53a88e2b6d6c7a}{addr\_31\_0}}: 32\\
+\>\} \\
+\>unsigned int \mbox{\hyperlink{structrocr_1_1AMD_1_1SDMA__PKT__ATOMIC__TAG_ac38c2dcfee5cffbef14fc142af363bda}{DW\_1\_DATA}}\\
+\} \mbox{\hyperlink{structrocr_1_1AMD_1_1SDMA__PKT__ATOMIC__TAG_a692131fafbe09e892fc097fdbb1032b7}{ADDR\_LO\_UNION}}\\
+
+\end{tabbing}\item 
+\begin{tabbing}
+xx\=xx\=xx\=xx\=xx\=xx\=xx\=xx\=xx\=\kill
+union \{\\
+\>struct \{\\
+\>\>unsigned int \mbox{\hyperlink{structrocr_1_1AMD_1_1SDMA__PKT__ATOMIC__TAG_a364fd9d3b72b2115812b424fac19f8ea}{addr\_63\_32}}: 32\\
+\>\} \\
+\>unsigned int \mbox{\hyperlink{structrocr_1_1AMD_1_1SDMA__PKT__ATOMIC__TAG_ae76a2151747557446f0d9bc26b8c1b1e}{DW\_2\_DATA}}\\
+\} \mbox{\hyperlink{structrocr_1_1AMD_1_1SDMA__PKT__ATOMIC__TAG_aade30e87688e2d095cd9cfcec1b45c9e}{ADDR\_HI\_UNION}}\\
+
+\end{tabbing}\item 
+\begin{tabbing}
+xx\=xx\=xx\=xx\=xx\=xx\=xx\=xx\=xx\=\kill
+union \{\\
+\>struct \{\\
+\>\>unsigned int \mbox{\hyperlink{structrocr_1_1AMD_1_1SDMA__PKT__ATOMIC__TAG_aa9515bc88d4f8d533c7e34a4b10fd58d}{src\_data\_31\_0}}: 32\\
+\>\} \\
+\>unsigned int \mbox{\hyperlink{structrocr_1_1AMD_1_1SDMA__PKT__ATOMIC__TAG_a64a4d765657e39f6a11c4f6ab567fa47}{DW\_3\_DATA}}\\
+\} \mbox{\hyperlink{structrocr_1_1AMD_1_1SDMA__PKT__ATOMIC__TAG_ab975612c63223f5229c95372a78eb13f}{SRC\_DATA\_LO\_UNION}}\\
+
+\end{tabbing}\item 
+\begin{tabbing}
+xx\=xx\=xx\=xx\=xx\=xx\=xx\=xx\=xx\=\kill
+union \{\\
+\>struct \{\\
+\>\>unsigned int \mbox{\hyperlink{structrocr_1_1AMD_1_1SDMA__PKT__ATOMIC__TAG_aff2a31d62fb0f4529e44a8ba5665eee6}{src\_data\_63\_32}}: 32\\
+\>\} \\
+\>unsigned int \mbox{\hyperlink{structrocr_1_1AMD_1_1SDMA__PKT__ATOMIC__TAG_acf654b22d6739da2ef63d781fc96fcc1}{DW\_4\_DATA}}\\
+\} \mbox{\hyperlink{structrocr_1_1AMD_1_1SDMA__PKT__ATOMIC__TAG_a8af7da01c11e70b2ed797704c98fbbf9}{SRC\_DATA\_HI\_UNION}}\\
+
+\end{tabbing}\item 
+\begin{tabbing}
+xx\=xx\=xx\=xx\=xx\=xx\=xx\=xx\=xx\=\kill
+union \{\\
+\>struct \{\\
+\>\>unsigned int \mbox{\hyperlink{structrocr_1_1AMD_1_1SDMA__PKT__ATOMIC__TAG_ade0956ea21111deeeab539ffe96ee80e}{cmp\_data\_31\_0}}: 32\\
+\>\} \\
+\>unsigned int \mbox{\hyperlink{structrocr_1_1AMD_1_1SDMA__PKT__ATOMIC__TAG_a0c99bf47fa241ae4849f5c3d03877f39}{DW\_5\_DATA}}\\
+\} \mbox{\hyperlink{structrocr_1_1AMD_1_1SDMA__PKT__ATOMIC__TAG_a79eb5ca6affe1eea0204f1cfe951d313}{CMP\_DATA\_LO\_UNION}}\\
+
+\end{tabbing}\item 
+\begin{tabbing}
+xx\=xx\=xx\=xx\=xx\=xx\=xx\=xx\=xx\=\kill
+union \{\\
+\>struct \{\\
+\>\>unsigned int \mbox{\hyperlink{structrocr_1_1AMD_1_1SDMA__PKT__ATOMIC__TAG_a8400918cf8852afa4d55e57b5ffd21d9}{cmp\_data\_63\_32}}: 32\\
+\>\} \\
+\>unsigned int \mbox{\hyperlink{structrocr_1_1AMD_1_1SDMA__PKT__ATOMIC__TAG_af1ac0355cab8594aa36d120b7a1ffe3c}{DW\_6\_DATA}}\\
+\} \mbox{\hyperlink{structrocr_1_1AMD_1_1SDMA__PKT__ATOMIC__TAG_a446a954ae7d68b09fc82acfe43e1b860}{CMP\_DATA\_HI\_UNION}}\\
+
+\end{tabbing}\item 
+\begin{tabbing}
+xx\=xx\=xx\=xx\=xx\=xx\=xx\=xx\=xx\=\kill
+union \{\\
+\>struct \{\\
+\>\>unsigned int \mbox{\hyperlink{structrocr_1_1AMD_1_1SDMA__PKT__ATOMIC__TAG_aeac3c6679904007eb5a2b839e2fe91e7}{loop\_interval}}: 13\\
+\>\>unsigned int \mbox{\hyperlink{structrocr_1_1AMD_1_1SDMA__PKT__ATOMIC__TAG_a14bea32729ea01a8416bc620f2c5506b}{reserved\_0}}: 19\\
+\>\} \\
+\>unsigned int \mbox{\hyperlink{structrocr_1_1AMD_1_1SDMA__PKT__ATOMIC__TAG_ac0e65c568a5641d572b5b4b04913e9c5}{DW\_7\_DATA}}\\
+\} \mbox{\hyperlink{structrocr_1_1AMD_1_1SDMA__PKT__ATOMIC__TAG_afc54b3d0493e0531a3bdd6f6079d3ce6}{LOOP\_UNION}}\\
+
+\end{tabbing}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{structrocr_1_1AMD_1_1SDMA__PKT__ATOMIC__TAG_ae4113738afba64e89c53a88e2b6d6c7a}\label{structrocr_1_1AMD_1_1SDMA__PKT__ATOMIC__TAG_ae4113738afba64e89c53a88e2b6d6c7a}} 
+\index{rocr::AMD::SDMA\_PKT\_ATOMIC\_TAG@{rocr::AMD::SDMA\_PKT\_ATOMIC\_TAG}!addr\_31\_0@{addr\_31\_0}}
+\index{addr\_31\_0@{addr\_31\_0}!rocr::AMD::SDMA\_PKT\_ATOMIC\_TAG@{rocr::AMD::SDMA\_PKT\_ATOMIC\_TAG}}
+\doxysubsubsection{\texorpdfstring{addr\_31\_0}{addr\_31\_0}}
+{\footnotesize\ttfamily unsigned int rocr\+::\+AMD\+::\+SDMA\+\_\+\+PKT\+\_\+\+ATOMIC\+\_\+\+TAG\+::addr\+\_\+31\+\_\+0}
+
+\mbox{\Hypertarget{structrocr_1_1AMD_1_1SDMA__PKT__ATOMIC__TAG_a364fd9d3b72b2115812b424fac19f8ea}\label{structrocr_1_1AMD_1_1SDMA__PKT__ATOMIC__TAG_a364fd9d3b72b2115812b424fac19f8ea}} 
+\index{rocr::AMD::SDMA\_PKT\_ATOMIC\_TAG@{rocr::AMD::SDMA\_PKT\_ATOMIC\_TAG}!addr\_63\_32@{addr\_63\_32}}
+\index{addr\_63\_32@{addr\_63\_32}!rocr::AMD::SDMA\_PKT\_ATOMIC\_TAG@{rocr::AMD::SDMA\_PKT\_ATOMIC\_TAG}}
+\doxysubsubsection{\texorpdfstring{addr\_63\_32}{addr\_63\_32}}
+{\footnotesize\ttfamily unsigned int rocr\+::\+AMD\+::\+SDMA\+\_\+\+PKT\+\_\+\+ATOMIC\+\_\+\+TAG\+::addr\+\_\+63\+\_\+32}
+
+\mbox{\Hypertarget{structrocr_1_1AMD_1_1SDMA__PKT__ATOMIC__TAG_aade30e87688e2d095cd9cfcec1b45c9e}\label{structrocr_1_1AMD_1_1SDMA__PKT__ATOMIC__TAG_aade30e87688e2d095cd9cfcec1b45c9e}} 
+\index{rocr::AMD::SDMA\_PKT\_ATOMIC\_TAG@{rocr::AMD::SDMA\_PKT\_ATOMIC\_TAG}!ADDR\_HI\_UNION@{ADDR\_HI\_UNION}}
+\index{ADDR\_HI\_UNION@{ADDR\_HI\_UNION}!rocr::AMD::SDMA\_PKT\_ATOMIC\_TAG@{rocr::AMD::SDMA\_PKT\_ATOMIC\_TAG}}
+\doxysubsubsection{\texorpdfstring{}{}}
+{\footnotesize\ttfamily union \{ ... \}  rocr\+::\+AMD\+::\+SDMA\+\_\+\+PKT\+\_\+\+ATOMIC\+\_\+\+TAG\+::\+ADDR\+\_\+\+HI\+\_\+\+UNION}
+
+\mbox{\Hypertarget{structrocr_1_1AMD_1_1SDMA__PKT__ATOMIC__TAG_a692131fafbe09e892fc097fdbb1032b7}\label{structrocr_1_1AMD_1_1SDMA__PKT__ATOMIC__TAG_a692131fafbe09e892fc097fdbb1032b7}} 
+\index{rocr::AMD::SDMA\_PKT\_ATOMIC\_TAG@{rocr::AMD::SDMA\_PKT\_ATOMIC\_TAG}!ADDR\_LO\_UNION@{ADDR\_LO\_UNION}}
+\index{ADDR\_LO\_UNION@{ADDR\_LO\_UNION}!rocr::AMD::SDMA\_PKT\_ATOMIC\_TAG@{rocr::AMD::SDMA\_PKT\_ATOMIC\_TAG}}
+\doxysubsubsection{\texorpdfstring{}{}}
+{\footnotesize\ttfamily union \{ ... \}  rocr\+::\+AMD\+::\+SDMA\+\_\+\+PKT\+\_\+\+ATOMIC\+\_\+\+TAG\+::\+ADDR\+\_\+\+LO\+\_\+\+UNION}
+
+\mbox{\Hypertarget{structrocr_1_1AMD_1_1SDMA__PKT__ATOMIC__TAG_ade0956ea21111deeeab539ffe96ee80e}\label{structrocr_1_1AMD_1_1SDMA__PKT__ATOMIC__TAG_ade0956ea21111deeeab539ffe96ee80e}} 
+\index{rocr::AMD::SDMA\_PKT\_ATOMIC\_TAG@{rocr::AMD::SDMA\_PKT\_ATOMIC\_TAG}!cmp\_data\_31\_0@{cmp\_data\_31\_0}}
+\index{cmp\_data\_31\_0@{cmp\_data\_31\_0}!rocr::AMD::SDMA\_PKT\_ATOMIC\_TAG@{rocr::AMD::SDMA\_PKT\_ATOMIC\_TAG}}
+\doxysubsubsection{\texorpdfstring{cmp\_data\_31\_0}{cmp\_data\_31\_0}}
+{\footnotesize\ttfamily unsigned int rocr\+::\+AMD\+::\+SDMA\+\_\+\+PKT\+\_\+\+ATOMIC\+\_\+\+TAG\+::cmp\+\_\+data\+\_\+31\+\_\+0}
+
+\mbox{\Hypertarget{structrocr_1_1AMD_1_1SDMA__PKT__ATOMIC__TAG_a8400918cf8852afa4d55e57b5ffd21d9}\label{structrocr_1_1AMD_1_1SDMA__PKT__ATOMIC__TAG_a8400918cf8852afa4d55e57b5ffd21d9}} 
+\index{rocr::AMD::SDMA\_PKT\_ATOMIC\_TAG@{rocr::AMD::SDMA\_PKT\_ATOMIC\_TAG}!cmp\_data\_63\_32@{cmp\_data\_63\_32}}
+\index{cmp\_data\_63\_32@{cmp\_data\_63\_32}!rocr::AMD::SDMA\_PKT\_ATOMIC\_TAG@{rocr::AMD::SDMA\_PKT\_ATOMIC\_TAG}}
+\doxysubsubsection{\texorpdfstring{cmp\_data\_63\_32}{cmp\_data\_63\_32}}
+{\footnotesize\ttfamily unsigned int rocr\+::\+AMD\+::\+SDMA\+\_\+\+PKT\+\_\+\+ATOMIC\+\_\+\+TAG\+::cmp\+\_\+data\+\_\+63\+\_\+32}
+
+\mbox{\Hypertarget{structrocr_1_1AMD_1_1SDMA__PKT__ATOMIC__TAG_a446a954ae7d68b09fc82acfe43e1b860}\label{structrocr_1_1AMD_1_1SDMA__PKT__ATOMIC__TAG_a446a954ae7d68b09fc82acfe43e1b860}} 
+\index{rocr::AMD::SDMA\_PKT\_ATOMIC\_TAG@{rocr::AMD::SDMA\_PKT\_ATOMIC\_TAG}!CMP\_DATA\_HI\_UNION@{CMP\_DATA\_HI\_UNION}}
+\index{CMP\_DATA\_HI\_UNION@{CMP\_DATA\_HI\_UNION}!rocr::AMD::SDMA\_PKT\_ATOMIC\_TAG@{rocr::AMD::SDMA\_PKT\_ATOMIC\_TAG}}
+\doxysubsubsection{\texorpdfstring{}{}}
+{\footnotesize\ttfamily union \{ ... \}  rocr\+::\+AMD\+::\+SDMA\+\_\+\+PKT\+\_\+\+ATOMIC\+\_\+\+TAG\+::\+CMP\+\_\+\+DATA\+\_\+\+HI\+\_\+\+UNION}
+
+\mbox{\Hypertarget{structrocr_1_1AMD_1_1SDMA__PKT__ATOMIC__TAG_a79eb5ca6affe1eea0204f1cfe951d313}\label{structrocr_1_1AMD_1_1SDMA__PKT__ATOMIC__TAG_a79eb5ca6affe1eea0204f1cfe951d313}} 
+\index{rocr::AMD::SDMA\_PKT\_ATOMIC\_TAG@{rocr::AMD::SDMA\_PKT\_ATOMIC\_TAG}!CMP\_DATA\_LO\_UNION@{CMP\_DATA\_LO\_UNION}}
+\index{CMP\_DATA\_LO\_UNION@{CMP\_DATA\_LO\_UNION}!rocr::AMD::SDMA\_PKT\_ATOMIC\_TAG@{rocr::AMD::SDMA\_PKT\_ATOMIC\_TAG}}
+\doxysubsubsection{\texorpdfstring{}{}}
+{\footnotesize\ttfamily union \{ ... \}  rocr\+::\+AMD\+::\+SDMA\+\_\+\+PKT\+\_\+\+ATOMIC\+\_\+\+TAG\+::\+CMP\+\_\+\+DATA\+\_\+\+LO\+\_\+\+UNION}
+
+\mbox{\Hypertarget{structrocr_1_1AMD_1_1SDMA__PKT__ATOMIC__TAG_a2a61e52c2abf5cbd462199cd4e9da272}\label{structrocr_1_1AMD_1_1SDMA__PKT__ATOMIC__TAG_a2a61e52c2abf5cbd462199cd4e9da272}} 
+\index{rocr::AMD::SDMA\_PKT\_ATOMIC\_TAG@{rocr::AMD::SDMA\_PKT\_ATOMIC\_TAG}!DW\_0\_DATA@{DW\_0\_DATA}}
+\index{DW\_0\_DATA@{DW\_0\_DATA}!rocr::AMD::SDMA\_PKT\_ATOMIC\_TAG@{rocr::AMD::SDMA\_PKT\_ATOMIC\_TAG}}
+\doxysubsubsection{\texorpdfstring{DW\_0\_DATA}{DW\_0\_DATA}}
+{\footnotesize\ttfamily unsigned int rocr\+::\+AMD\+::\+SDMA\+\_\+\+PKT\+\_\+\+ATOMIC\+\_\+\+TAG\+::\+DW\+\_\+0\+\_\+\+DATA}
+
+\mbox{\Hypertarget{structrocr_1_1AMD_1_1SDMA__PKT__ATOMIC__TAG_ac38c2dcfee5cffbef14fc142af363bda}\label{structrocr_1_1AMD_1_1SDMA__PKT__ATOMIC__TAG_ac38c2dcfee5cffbef14fc142af363bda}} 
+\index{rocr::AMD::SDMA\_PKT\_ATOMIC\_TAG@{rocr::AMD::SDMA\_PKT\_ATOMIC\_TAG}!DW\_1\_DATA@{DW\_1\_DATA}}
+\index{DW\_1\_DATA@{DW\_1\_DATA}!rocr::AMD::SDMA\_PKT\_ATOMIC\_TAG@{rocr::AMD::SDMA\_PKT\_ATOMIC\_TAG}}
+\doxysubsubsection{\texorpdfstring{DW\_1\_DATA}{DW\_1\_DATA}}
+{\footnotesize\ttfamily unsigned int rocr\+::\+AMD\+::\+SDMA\+\_\+\+PKT\+\_\+\+ATOMIC\+\_\+\+TAG\+::\+DW\+\_\+1\+\_\+\+DATA}
+
+\mbox{\Hypertarget{structrocr_1_1AMD_1_1SDMA__PKT__ATOMIC__TAG_ae76a2151747557446f0d9bc26b8c1b1e}\label{structrocr_1_1AMD_1_1SDMA__PKT__ATOMIC__TAG_ae76a2151747557446f0d9bc26b8c1b1e}} 
+\index{rocr::AMD::SDMA\_PKT\_ATOMIC\_TAG@{rocr::AMD::SDMA\_PKT\_ATOMIC\_TAG}!DW\_2\_DATA@{DW\_2\_DATA}}
+\index{DW\_2\_DATA@{DW\_2\_DATA}!rocr::AMD::SDMA\_PKT\_ATOMIC\_TAG@{rocr::AMD::SDMA\_PKT\_ATOMIC\_TAG}}
+\doxysubsubsection{\texorpdfstring{DW\_2\_DATA}{DW\_2\_DATA}}
+{\footnotesize\ttfamily unsigned int rocr\+::\+AMD\+::\+SDMA\+\_\+\+PKT\+\_\+\+ATOMIC\+\_\+\+TAG\+::\+DW\+\_\+2\+\_\+\+DATA}
+
+\mbox{\Hypertarget{structrocr_1_1AMD_1_1SDMA__PKT__ATOMIC__TAG_a64a4d765657e39f6a11c4f6ab567fa47}\label{structrocr_1_1AMD_1_1SDMA__PKT__ATOMIC__TAG_a64a4d765657e39f6a11c4f6ab567fa47}} 
+\index{rocr::AMD::SDMA\_PKT\_ATOMIC\_TAG@{rocr::AMD::SDMA\_PKT\_ATOMIC\_TAG}!DW\_3\_DATA@{DW\_3\_DATA}}
+\index{DW\_3\_DATA@{DW\_3\_DATA}!rocr::AMD::SDMA\_PKT\_ATOMIC\_TAG@{rocr::AMD::SDMA\_PKT\_ATOMIC\_TAG}}
+\doxysubsubsection{\texorpdfstring{DW\_3\_DATA}{DW\_3\_DATA}}
+{\footnotesize\ttfamily unsigned int rocr\+::\+AMD\+::\+SDMA\+\_\+\+PKT\+\_\+\+ATOMIC\+\_\+\+TAG\+::\+DW\+\_\+3\+\_\+\+DATA}
+
+\mbox{\Hypertarget{structrocr_1_1AMD_1_1SDMA__PKT__ATOMIC__TAG_acf654b22d6739da2ef63d781fc96fcc1}\label{structrocr_1_1AMD_1_1SDMA__PKT__ATOMIC__TAG_acf654b22d6739da2ef63d781fc96fcc1}} 
+\index{rocr::AMD::SDMA\_PKT\_ATOMIC\_TAG@{rocr::AMD::SDMA\_PKT\_ATOMIC\_TAG}!DW\_4\_DATA@{DW\_4\_DATA}}
+\index{DW\_4\_DATA@{DW\_4\_DATA}!rocr::AMD::SDMA\_PKT\_ATOMIC\_TAG@{rocr::AMD::SDMA\_PKT\_ATOMIC\_TAG}}
+\doxysubsubsection{\texorpdfstring{DW\_4\_DATA}{DW\_4\_DATA}}
+{\footnotesize\ttfamily unsigned int rocr\+::\+AMD\+::\+SDMA\+\_\+\+PKT\+\_\+\+ATOMIC\+\_\+\+TAG\+::\+DW\+\_\+4\+\_\+\+DATA}
+
+\mbox{\Hypertarget{structrocr_1_1AMD_1_1SDMA__PKT__ATOMIC__TAG_a0c99bf47fa241ae4849f5c3d03877f39}\label{structrocr_1_1AMD_1_1SDMA__PKT__ATOMIC__TAG_a0c99bf47fa241ae4849f5c3d03877f39}} 
+\index{rocr::AMD::SDMA\_PKT\_ATOMIC\_TAG@{rocr::AMD::SDMA\_PKT\_ATOMIC\_TAG}!DW\_5\_DATA@{DW\_5\_DATA}}
+\index{DW\_5\_DATA@{DW\_5\_DATA}!rocr::AMD::SDMA\_PKT\_ATOMIC\_TAG@{rocr::AMD::SDMA\_PKT\_ATOMIC\_TAG}}
+\doxysubsubsection{\texorpdfstring{DW\_5\_DATA}{DW\_5\_DATA}}
+{\footnotesize\ttfamily unsigned int rocr\+::\+AMD\+::\+SDMA\+\_\+\+PKT\+\_\+\+ATOMIC\+\_\+\+TAG\+::\+DW\+\_\+5\+\_\+\+DATA}
+
+\mbox{\Hypertarget{structrocr_1_1AMD_1_1SDMA__PKT__ATOMIC__TAG_af1ac0355cab8594aa36d120b7a1ffe3c}\label{structrocr_1_1AMD_1_1SDMA__PKT__ATOMIC__TAG_af1ac0355cab8594aa36d120b7a1ffe3c}} 
+\index{rocr::AMD::SDMA\_PKT\_ATOMIC\_TAG@{rocr::AMD::SDMA\_PKT\_ATOMIC\_TAG}!DW\_6\_DATA@{DW\_6\_DATA}}
+\index{DW\_6\_DATA@{DW\_6\_DATA}!rocr::AMD::SDMA\_PKT\_ATOMIC\_TAG@{rocr::AMD::SDMA\_PKT\_ATOMIC\_TAG}}
+\doxysubsubsection{\texorpdfstring{DW\_6\_DATA}{DW\_6\_DATA}}
+{\footnotesize\ttfamily unsigned int rocr\+::\+AMD\+::\+SDMA\+\_\+\+PKT\+\_\+\+ATOMIC\+\_\+\+TAG\+::\+DW\+\_\+6\+\_\+\+DATA}
+
+\mbox{\Hypertarget{structrocr_1_1AMD_1_1SDMA__PKT__ATOMIC__TAG_ac0e65c568a5641d572b5b4b04913e9c5}\label{structrocr_1_1AMD_1_1SDMA__PKT__ATOMIC__TAG_ac0e65c568a5641d572b5b4b04913e9c5}} 
+\index{rocr::AMD::SDMA\_PKT\_ATOMIC\_TAG@{rocr::AMD::SDMA\_PKT\_ATOMIC\_TAG}!DW\_7\_DATA@{DW\_7\_DATA}}
+\index{DW\_7\_DATA@{DW\_7\_DATA}!rocr::AMD::SDMA\_PKT\_ATOMIC\_TAG@{rocr::AMD::SDMA\_PKT\_ATOMIC\_TAG}}
+\doxysubsubsection{\texorpdfstring{DW\_7\_DATA}{DW\_7\_DATA}}
+{\footnotesize\ttfamily unsigned int rocr\+::\+AMD\+::\+SDMA\+\_\+\+PKT\+\_\+\+ATOMIC\+\_\+\+TAG\+::\+DW\+\_\+7\+\_\+\+DATA}
+
+\mbox{\Hypertarget{structrocr_1_1AMD_1_1SDMA__PKT__ATOMIC__TAG_a07767125d8bab1877246fd5bc04036ae}\label{structrocr_1_1AMD_1_1SDMA__PKT__ATOMIC__TAG_a07767125d8bab1877246fd5bc04036ae}} 
+\index{rocr::AMD::SDMA\_PKT\_ATOMIC\_TAG@{rocr::AMD::SDMA\_PKT\_ATOMIC\_TAG}!HEADER\_UNION@{HEADER\_UNION}}
+\index{HEADER\_UNION@{HEADER\_UNION}!rocr::AMD::SDMA\_PKT\_ATOMIC\_TAG@{rocr::AMD::SDMA\_PKT\_ATOMIC\_TAG}}
+\doxysubsubsection{\texorpdfstring{}{}}
+{\footnotesize\ttfamily union \{ ... \}  rocr\+::\+AMD\+::\+SDMA\+\_\+\+PKT\+\_\+\+ATOMIC\+\_\+\+TAG\+::\+HEADER\+\_\+\+UNION}
+
+\mbox{\Hypertarget{structrocr_1_1AMD_1_1SDMA__PKT__ATOMIC__TAG_a3cba325f4b2f98ae9bf9080635a1c1d3}\label{structrocr_1_1AMD_1_1SDMA__PKT__ATOMIC__TAG_a3cba325f4b2f98ae9bf9080635a1c1d3}} 
+\index{rocr::AMD::SDMA\_PKT\_ATOMIC\_TAG@{rocr::AMD::SDMA\_PKT\_ATOMIC\_TAG}!l@{l}}
+\index{l@{l}!rocr::AMD::SDMA\_PKT\_ATOMIC\_TAG@{rocr::AMD::SDMA\_PKT\_ATOMIC\_TAG}}
+\doxysubsubsection{\texorpdfstring{l}{l}}
+{\footnotesize\ttfamily unsigned int rocr\+::\+AMD\+::\+SDMA\+\_\+\+PKT\+\_\+\+ATOMIC\+\_\+\+TAG\+::l}
+
+\mbox{\Hypertarget{structrocr_1_1AMD_1_1SDMA__PKT__ATOMIC__TAG_aeac3c6679904007eb5a2b839e2fe91e7}\label{structrocr_1_1AMD_1_1SDMA__PKT__ATOMIC__TAG_aeac3c6679904007eb5a2b839e2fe91e7}} 
+\index{rocr::AMD::SDMA\_PKT\_ATOMIC\_TAG@{rocr::AMD::SDMA\_PKT\_ATOMIC\_TAG}!loop\_interval@{loop\_interval}}
+\index{loop\_interval@{loop\_interval}!rocr::AMD::SDMA\_PKT\_ATOMIC\_TAG@{rocr::AMD::SDMA\_PKT\_ATOMIC\_TAG}}
+\doxysubsubsection{\texorpdfstring{loop\_interval}{loop\_interval}}
+{\footnotesize\ttfamily unsigned int rocr\+::\+AMD\+::\+SDMA\+\_\+\+PKT\+\_\+\+ATOMIC\+\_\+\+TAG\+::loop\+\_\+interval}
+
+\mbox{\Hypertarget{structrocr_1_1AMD_1_1SDMA__PKT__ATOMIC__TAG_afc54b3d0493e0531a3bdd6f6079d3ce6}\label{structrocr_1_1AMD_1_1SDMA__PKT__ATOMIC__TAG_afc54b3d0493e0531a3bdd6f6079d3ce6}} 
+\index{rocr::AMD::SDMA\_PKT\_ATOMIC\_TAG@{rocr::AMD::SDMA\_PKT\_ATOMIC\_TAG}!LOOP\_UNION@{LOOP\_UNION}}
+\index{LOOP\_UNION@{LOOP\_UNION}!rocr::AMD::SDMA\_PKT\_ATOMIC\_TAG@{rocr::AMD::SDMA\_PKT\_ATOMIC\_TAG}}
+\doxysubsubsection{\texorpdfstring{}{}}
+{\footnotesize\ttfamily union \{ ... \}  rocr\+::\+AMD\+::\+SDMA\+\_\+\+PKT\+\_\+\+ATOMIC\+\_\+\+TAG\+::\+LOOP\+\_\+\+UNION}
+
+\mbox{\Hypertarget{structrocr_1_1AMD_1_1SDMA__PKT__ATOMIC__TAG_acd6ae9c586e5d37e9344fcc00380a1ed}\label{structrocr_1_1AMD_1_1SDMA__PKT__ATOMIC__TAG_acd6ae9c586e5d37e9344fcc00380a1ed}} 
+\index{rocr::AMD::SDMA\_PKT\_ATOMIC\_TAG@{rocr::AMD::SDMA\_PKT\_ATOMIC\_TAG}!op@{op}}
+\index{op@{op}!rocr::AMD::SDMA\_PKT\_ATOMIC\_TAG@{rocr::AMD::SDMA\_PKT\_ATOMIC\_TAG}}
+\doxysubsubsection{\texorpdfstring{op}{op}}
+{\footnotesize\ttfamily unsigned int rocr\+::\+AMD\+::\+SDMA\+\_\+\+PKT\+\_\+\+ATOMIC\+\_\+\+TAG\+::op}
+
+\mbox{\Hypertarget{structrocr_1_1AMD_1_1SDMA__PKT__ATOMIC__TAG_ae73fd773d9e04593bd5081e3ab3c673d}\label{structrocr_1_1AMD_1_1SDMA__PKT__ATOMIC__TAG_ae73fd773d9e04593bd5081e3ab3c673d}} 
+\index{rocr::AMD::SDMA\_PKT\_ATOMIC\_TAG@{rocr::AMD::SDMA\_PKT\_ATOMIC\_TAG}!operation@{operation}}
+\index{operation@{operation}!rocr::AMD::SDMA\_PKT\_ATOMIC\_TAG@{rocr::AMD::SDMA\_PKT\_ATOMIC\_TAG}}
+\doxysubsubsection{\texorpdfstring{operation}{operation}}
+{\footnotesize\ttfamily unsigned int rocr\+::\+AMD\+::\+SDMA\+\_\+\+PKT\+\_\+\+ATOMIC\+\_\+\+TAG\+::operation}
+
+\mbox{\Hypertarget{structrocr_1_1AMD_1_1SDMA__PKT__ATOMIC__TAG_a14bea32729ea01a8416bc620f2c5506b}\label{structrocr_1_1AMD_1_1SDMA__PKT__ATOMIC__TAG_a14bea32729ea01a8416bc620f2c5506b}} 
+\index{rocr::AMD::SDMA\_PKT\_ATOMIC\_TAG@{rocr::AMD::SDMA\_PKT\_ATOMIC\_TAG}!reserved\_0@{reserved\_0}}
+\index{reserved\_0@{reserved\_0}!rocr::AMD::SDMA\_PKT\_ATOMIC\_TAG@{rocr::AMD::SDMA\_PKT\_ATOMIC\_TAG}}
+\doxysubsubsection{\texorpdfstring{reserved\_0}{reserved\_0}}
+{\footnotesize\ttfamily unsigned int rocr\+::\+AMD\+::\+SDMA\+\_\+\+PKT\+\_\+\+ATOMIC\+\_\+\+TAG\+::reserved\+\_\+0}
+
+\mbox{\Hypertarget{structrocr_1_1AMD_1_1SDMA__PKT__ATOMIC__TAG_aa9515bc88d4f8d533c7e34a4b10fd58d}\label{structrocr_1_1AMD_1_1SDMA__PKT__ATOMIC__TAG_aa9515bc88d4f8d533c7e34a4b10fd58d}} 
+\index{rocr::AMD::SDMA\_PKT\_ATOMIC\_TAG@{rocr::AMD::SDMA\_PKT\_ATOMIC\_TAG}!src\_data\_31\_0@{src\_data\_31\_0}}
+\index{src\_data\_31\_0@{src\_data\_31\_0}!rocr::AMD::SDMA\_PKT\_ATOMIC\_TAG@{rocr::AMD::SDMA\_PKT\_ATOMIC\_TAG}}
+\doxysubsubsection{\texorpdfstring{src\_data\_31\_0}{src\_data\_31\_0}}
+{\footnotesize\ttfamily unsigned int rocr\+::\+AMD\+::\+SDMA\+\_\+\+PKT\+\_\+\+ATOMIC\+\_\+\+TAG\+::src\+\_\+data\+\_\+31\+\_\+0}
+
+\mbox{\Hypertarget{structrocr_1_1AMD_1_1SDMA__PKT__ATOMIC__TAG_aff2a31d62fb0f4529e44a8ba5665eee6}\label{structrocr_1_1AMD_1_1SDMA__PKT__ATOMIC__TAG_aff2a31d62fb0f4529e44a8ba5665eee6}} 
+\index{rocr::AMD::SDMA\_PKT\_ATOMIC\_TAG@{rocr::AMD::SDMA\_PKT\_ATOMIC\_TAG}!src\_data\_63\_32@{src\_data\_63\_32}}
+\index{src\_data\_63\_32@{src\_data\_63\_32}!rocr::AMD::SDMA\_PKT\_ATOMIC\_TAG@{rocr::AMD::SDMA\_PKT\_ATOMIC\_TAG}}
+\doxysubsubsection{\texorpdfstring{src\_data\_63\_32}{src\_data\_63\_32}}
+{\footnotesize\ttfamily unsigned int rocr\+::\+AMD\+::\+SDMA\+\_\+\+PKT\+\_\+\+ATOMIC\+\_\+\+TAG\+::src\+\_\+data\+\_\+63\+\_\+32}
+
+\mbox{\Hypertarget{structrocr_1_1AMD_1_1SDMA__PKT__ATOMIC__TAG_a8af7da01c11e70b2ed797704c98fbbf9}\label{structrocr_1_1AMD_1_1SDMA__PKT__ATOMIC__TAG_a8af7da01c11e70b2ed797704c98fbbf9}} 
+\index{rocr::AMD::SDMA\_PKT\_ATOMIC\_TAG@{rocr::AMD::SDMA\_PKT\_ATOMIC\_TAG}!SRC\_DATA\_HI\_UNION@{SRC\_DATA\_HI\_UNION}}
+\index{SRC\_DATA\_HI\_UNION@{SRC\_DATA\_HI\_UNION}!rocr::AMD::SDMA\_PKT\_ATOMIC\_TAG@{rocr::AMD::SDMA\_PKT\_ATOMIC\_TAG}}
+\doxysubsubsection{\texorpdfstring{}{}}
+{\footnotesize\ttfamily union \{ ... \}  rocr\+::\+AMD\+::\+SDMA\+\_\+\+PKT\+\_\+\+ATOMIC\+\_\+\+TAG\+::\+SRC\+\_\+\+DATA\+\_\+\+HI\+\_\+\+UNION}
+
+\mbox{\Hypertarget{structrocr_1_1AMD_1_1SDMA__PKT__ATOMIC__TAG_ab975612c63223f5229c95372a78eb13f}\label{structrocr_1_1AMD_1_1SDMA__PKT__ATOMIC__TAG_ab975612c63223f5229c95372a78eb13f}} 
+\index{rocr::AMD::SDMA\_PKT\_ATOMIC\_TAG@{rocr::AMD::SDMA\_PKT\_ATOMIC\_TAG}!SRC\_DATA\_LO\_UNION@{SRC\_DATA\_LO\_UNION}}
+\index{SRC\_DATA\_LO\_UNION@{SRC\_DATA\_LO\_UNION}!rocr::AMD::SDMA\_PKT\_ATOMIC\_TAG@{rocr::AMD::SDMA\_PKT\_ATOMIC\_TAG}}
+\doxysubsubsection{\texorpdfstring{}{}}
+{\footnotesize\ttfamily union \{ ... \}  rocr\+::\+AMD\+::\+SDMA\+\_\+\+PKT\+\_\+\+ATOMIC\+\_\+\+TAG\+::\+SRC\+\_\+\+DATA\+\_\+\+LO\+\_\+\+UNION}
+
+\mbox{\Hypertarget{structrocr_1_1AMD_1_1SDMA__PKT__ATOMIC__TAG_a54d10038554f2419166eea570ea52f0c}\label{structrocr_1_1AMD_1_1SDMA__PKT__ATOMIC__TAG_a54d10038554f2419166eea570ea52f0c}} 
+\index{rocr::AMD::SDMA\_PKT\_ATOMIC\_TAG@{rocr::AMD::SDMA\_PKT\_ATOMIC\_TAG}!sub\_op@{sub\_op}}
+\index{sub\_op@{sub\_op}!rocr::AMD::SDMA\_PKT\_ATOMIC\_TAG@{rocr::AMD::SDMA\_PKT\_ATOMIC\_TAG}}
+\doxysubsubsection{\texorpdfstring{sub\_op}{sub\_op}}
+{\footnotesize\ttfamily unsigned int rocr\+::\+AMD\+::\+SDMA\+\_\+\+PKT\+\_\+\+ATOMIC\+\_\+\+TAG\+::sub\+\_\+op}
+
+
+
+The documentation for this struct was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+src/core/inc/\mbox{\hyperlink{sdma__registers_8h}{sdma\+\_\+registers.\+h}}\end{DoxyCompactItemize}

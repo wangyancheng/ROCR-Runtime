@@ -1,0 +1,785 @@
+\hypertarget{classrocr_1_1core_1_1HostQueue}{}\doxysection{rocr\+::core\+::Host\+Queue Class Reference}
+\label{classrocr_1_1core_1_1HostQueue}\index{rocr::core::HostQueue@{rocr::core::HostQueue}}
+
+
+{\ttfamily \#include $<$host\+\_\+queue.\+h$>$}
+
+
+
+Inheritance diagram for rocr\+::core\+::Host\+Queue\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classrocr_1_1core_1_1HostQueue__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for rocr\+::core\+::Host\+Queue\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classrocr_1_1core_1_1HostQueue__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classrocr_1_1core_1_1HostQueue_a76d67034788348c15deb4227d1d6b588}{Host\+Queue}} (\mbox{\hyperlink{group__memory_ga9c649e7034e53233198aaa1b58e9d79b}{hsa\+\_\+region\+\_\+t}} region, uint32\+\_\+t ring\+\_\+size, \mbox{\hyperlink{group__queue_ga4ca8f732dfceaf6b88dcfeec168d82ae}{hsa\+\_\+queue\+\_\+type32\+\_\+t}} type, uint32\+\_\+t features, \mbox{\hyperlink{group__signals_ga0003af605a660e7ef4f89aa555d3b3fc}{hsa\+\_\+signal\+\_\+t}} doorbell\+\_\+signal)
+\item 
+\mbox{\hyperlink{classrocr_1_1core_1_1HostQueue_a7eb0de2952e2e16312bd3427688c718d}{$\sim$\+Host\+Queue}} ()
+\item 
+\mbox{\hyperlink{group__status_gad755322e7ff95456520e8abdbe90d225}{hsa\+\_\+status\+\_\+t}} \mbox{\hyperlink{classrocr_1_1core_1_1HostQueue_a970d6a8abf2c2ef68f33531e735c061d}{Inactivate}} () override
+\begin{DoxyCompactList}\small\item\em Inactivate the queue object. Once inactivate a queue cannot be used anymore and must be destroyed. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{group__status_gad755322e7ff95456520e8abdbe90d225}{hsa\+\_\+status\+\_\+t}} \mbox{\hyperlink{classrocr_1_1core_1_1HostQueue_ab34cb02bafb425eafa61ce78881ce08c}{Set\+Priority}} (HSA\+\_\+\+QUEUE\+\_\+\+PRIORITY priority) override
+\begin{DoxyCompactList}\small\item\em Change the scheduling priority of the queue. \end{DoxyCompactList}\item 
+uint64\+\_\+t \mbox{\hyperlink{classrocr_1_1core_1_1HostQueue_ac72f2eb31a4a7acd510c1d9609abb6a6}{Load\+Read\+Index\+Acquire}} () override
+\begin{DoxyCompactList}\small\item\em Reads the Read Index of \mbox{\hyperlink{classrocr_1_1core_1_1Queue}{Queue}} using Acquire semantics. \end{DoxyCompactList}\item 
+uint64\+\_\+t \mbox{\hyperlink{classrocr_1_1core_1_1HostQueue_a8a482d0473163e0291478f4c2cb2f55c}{Load\+Read\+Index\+Relaxed}} () override
+\begin{DoxyCompactList}\small\item\em Reads the Read Index of \mbox{\hyperlink{classrocr_1_1core_1_1Queue}{Queue}} using Relaxed semantics. \end{DoxyCompactList}\item 
+uint64\+\_\+t \mbox{\hyperlink{classrocr_1_1core_1_1HostQueue_ab1641c41e9c5cc243cbcf186444f6f13}{Load\+Write\+Index\+Acquire}} () override
+\begin{DoxyCompactList}\small\item\em Reads the Write Index of \mbox{\hyperlink{classrocr_1_1core_1_1Queue}{Queue}} using Acquire semantics. \end{DoxyCompactList}\item 
+uint64\+\_\+t \mbox{\hyperlink{classrocr_1_1core_1_1HostQueue_a62ebe679eba4f60182e407b6a31ccf50}{Load\+Write\+Index\+Relaxed}} () override
+\item 
+void \mbox{\hyperlink{classrocr_1_1core_1_1HostQueue_a329d9d4c2d829101a6a5d7e0209a0d38}{Store\+Read\+Index\+Relaxed}} (uint64\+\_\+t value) override
+\begin{DoxyCompactList}\small\item\em Updates the Read Index of \mbox{\hyperlink{classrocr_1_1core_1_1Queue}{Queue}} using Relaxed semantics. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classrocr_1_1core_1_1HostQueue_a5b46ab915862150be13db1ea5ddca143}{Store\+Read\+Index\+Release}} (uint64\+\_\+t value) override
+\begin{DoxyCompactList}\small\item\em Updates the Read Index of \mbox{\hyperlink{classrocr_1_1core_1_1Queue}{Queue}} using Release semantics. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classrocr_1_1core_1_1HostQueue_ae48bbcda494efe3a1e63bbfffe3adfaa}{Store\+Write\+Index\+Relaxed}} (uint64\+\_\+t value) override
+\begin{DoxyCompactList}\small\item\em Updates the Write Index of \mbox{\hyperlink{classrocr_1_1core_1_1Queue}{Queue}} using Relaxed semantics. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classrocr_1_1core_1_1HostQueue_a83732f97b5ace87587410310f3ebc436}{Store\+Write\+Index\+Release}} (uint64\+\_\+t value) override
+\begin{DoxyCompactList}\small\item\em Updates the Write Index of \mbox{\hyperlink{classrocr_1_1core_1_1Queue}{Queue}} using Release semantics. \end{DoxyCompactList}\item 
+uint64\+\_\+t \mbox{\hyperlink{classrocr_1_1core_1_1HostQueue_abebbf015828325283836f3a1af7a2c5d}{Cas\+Write\+Index\+Acq\+Rel}} (uint64\+\_\+t expected, uint64\+\_\+t value) override
+\begin{DoxyCompactList}\small\item\em Compares and swaps Write index using Acquire and Release semantics. \end{DoxyCompactList}\item 
+uint64\+\_\+t \mbox{\hyperlink{classrocr_1_1core_1_1HostQueue_a67d0b73bc4abf2920be2acaf66699e2b}{Cas\+Write\+Index\+Acquire}} (uint64\+\_\+t expected, uint64\+\_\+t value) override
+\begin{DoxyCompactList}\small\item\em Compares and swaps Write index using Acquire semantics. \end{DoxyCompactList}\item 
+uint64\+\_\+t \mbox{\hyperlink{classrocr_1_1core_1_1HostQueue_a3ad4157800ebf97ca61f480e9019c999}{Cas\+Write\+Index\+Relaxed}} (uint64\+\_\+t expected, uint64\+\_\+t value) override
+\begin{DoxyCompactList}\small\item\em Compares and swaps Write index using Relaxed semantics. \end{DoxyCompactList}\item 
+uint64\+\_\+t \mbox{\hyperlink{classrocr_1_1core_1_1HostQueue_ad14f406a5e476e4a7d5861b60128369a}{Cas\+Write\+Index\+Release}} (uint64\+\_\+t expected, uint64\+\_\+t value) override
+\begin{DoxyCompactList}\small\item\em Compares and swaps Write index using Release semantics. \end{DoxyCompactList}\item 
+uint64\+\_\+t \mbox{\hyperlink{classrocr_1_1core_1_1HostQueue_a32a6cad47971f8759db3c3db753d8dc7}{Add\+Write\+Index\+Acq\+Rel}} (uint64\+\_\+t value) override
+\begin{DoxyCompactList}\small\item\em Updates the Write index using Acquire and Release semantics. \end{DoxyCompactList}\item 
+uint64\+\_\+t \mbox{\hyperlink{classrocr_1_1core_1_1HostQueue_a81ead70ea03fdc0870c01bc294431e5e}{Add\+Write\+Index\+Acquire}} (uint64\+\_\+t value) override
+\begin{DoxyCompactList}\small\item\em Updates the Write index using Acquire semantics. \end{DoxyCompactList}\item 
+uint64\+\_\+t \mbox{\hyperlink{classrocr_1_1core_1_1HostQueue_ab9d642591f643b42ab05ddcca20b390f}{Add\+Write\+Index\+Relaxed}} (uint64\+\_\+t value) override
+\begin{DoxyCompactList}\small\item\em Updates the Write index using Relaxed semantics. \end{DoxyCompactList}\item 
+uint64\+\_\+t \mbox{\hyperlink{classrocr_1_1core_1_1HostQueue_aabcfb382d3948e142af62b7c5807c7a5}{Add\+Write\+Index\+Release}} (uint64\+\_\+t value) override
+\begin{DoxyCompactList}\small\item\em Updates the Write index using Release semantics. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{group__status_gad755322e7ff95456520e8abdbe90d225}{hsa\+\_\+status\+\_\+t}} \mbox{\hyperlink{classrocr_1_1core_1_1HostQueue_abd9ff178a3127bddc87f9e04c86a4f35}{Set\+CUMasking}} (uint32\+\_\+t num\+\_\+cu\+\_\+mask\+\_\+count, const uint32\+\_\+t $\ast$cu\+\_\+mask) override
+\begin{DoxyCompactList}\small\item\em Set CU Masking. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{group__status_gad755322e7ff95456520e8abdbe90d225}{hsa\+\_\+status\+\_\+t}} \mbox{\hyperlink{classrocr_1_1core_1_1HostQueue_adb23e6f40fa3313af6cd913f963ad47c}{Get\+CUMasking}} (uint32\+\_\+t num\+\_\+cu\+\_\+mask\+\_\+count, uint32\+\_\+t $\ast$cu\+\_\+mask) override
+\begin{DoxyCompactList}\small\item\em Get CU Masking. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classrocr_1_1core_1_1HostQueue_a608e2ee9467173a28df728b06da1b157}{Execute\+PM4}} (uint32\+\_\+t $\ast$cmd\+\_\+data, size\+\_\+t cmd\+\_\+size\+\_\+b) override
+\item 
+void $\ast$ \mbox{\hyperlink{classrocr_1_1core_1_1HostQueue_ac7cd65b5955cf78a683e46cd8316830f}{operator new}} (size\+\_\+t size)
+\item 
+void $\ast$ \mbox{\hyperlink{classrocr_1_1core_1_1HostQueue_ab0464a0d78bef634c7a3dec8ad795004}{operator new}} (size\+\_\+t size, void $\ast$ptr)
+\item 
+void \mbox{\hyperlink{classrocr_1_1core_1_1HostQueue_aafe759a1b04e806d538b0762b518413a}{operator delete}} (void $\ast$ptr)
+\item 
+void \mbox{\hyperlink{classrocr_1_1core_1_1HostQueue_a3f6b084592cc1280c9b79ee78b7f27e8}{operator delete}} (void $\ast$, void $\ast$)
+\end{DoxyCompactItemize}
+\doxysubsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static \+\_\+\+\_\+forceinline bool \mbox{\hyperlink{classrocr_1_1core_1_1HostQueue_a1f366607d83a3d36a6f90ab33497b54a}{Is\+Type}} (\mbox{\hyperlink{classrocr_1_1core_1_1Queue}{core\+::\+Queue}} $\ast$\mbox{\hyperlink{classrocr_1_1core_1_1LocalQueue_ab74803630adc230051e757a1e3eaa617}{queue}})
+\end{DoxyCompactItemize}
+\doxysubsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+bool \mbox{\hyperlink{classrocr_1_1core_1_1HostQueue_a40c95e5c2063c8db112e2ebddaf12834}{\+\_\+\+IsA}} (\mbox{\hyperlink{classrocr_1_1core_1_1Queue_a7852beb01a0e5ece387b10034f27478f}{Queue\+::rtti\+\_\+t}} \mbox{\hyperlink{classrocr_1_1core_1_1Checked_aaf728d54727b7e8cb7d2cf4438212a42}{id}}) const override
+\end{DoxyCompactItemize}
+\doxysubsection*{Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classrocr_1_1core_1_1HostQueue_a6f2e2dc62e660e19b2d5d4ab7cbc3746}{DISALLOW\+\_\+\+COPY\+\_\+\+AND\+\_\+\+ASSIGN}} (\mbox{\hyperlink{classrocr_1_1core_1_1HostQueue}{Host\+Queue}})
+\end{DoxyCompactItemize}
+\doxysubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+const uint32\+\_\+t \mbox{\hyperlink{classrocr_1_1core_1_1HostQueue_a1bd845563ee6ad107664b65e60b5a6a9}{size\+\_\+}}
+\item 
+void $\ast$ \mbox{\hyperlink{classrocr_1_1core_1_1HostQueue_a7b73c08d63252f232d78e59b1919a9e0}{ring\+\_\+}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Static Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+static int \mbox{\hyperlink{classrocr_1_1core_1_1HostQueue_ab237cf36a92b753829c39a53bc2f65e1}{rtti\+\_\+id\+\_\+}} = 0
+\item 
+static const size\+\_\+t \mbox{\hyperlink{classrocr_1_1core_1_1HostQueue_a82de336148eccdb1d87164de9e353515}{k\+Ring\+Alignment}} = 256
+\item 
+static std\+::atomic$<$ uint32\+\_\+t $>$ \mbox{\hyperlink{classrocr_1_1core_1_1HostQueue_a74d98a4518a0e3f1c4553d8feaf25944}{queue\+\_\+count\+\_\+}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Additional Inherited Members}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classrocr_1_1core_1_1HostQueue_a76d67034788348c15deb4227d1d6b588}\label{classrocr_1_1core_1_1HostQueue_a76d67034788348c15deb4227d1d6b588}} 
+\index{rocr::core::HostQueue@{rocr::core::HostQueue}!HostQueue@{HostQueue}}
+\index{HostQueue@{HostQueue}!rocr::core::HostQueue@{rocr::core::HostQueue}}
+\doxysubsubsection{\texorpdfstring{HostQueue()}{HostQueue()}}
+{\footnotesize\ttfamily rocr\+::core\+::\+Host\+Queue\+::\+Host\+Queue (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{group__memory_ga9c649e7034e53233198aaa1b58e9d79b}{hsa\+\_\+region\+\_\+t}}}]{region,  }\item[{uint32\+\_\+t}]{ring\+\_\+size,  }\item[{\mbox{\hyperlink{group__queue_ga4ca8f732dfceaf6b88dcfeec168d82ae}{hsa\+\_\+queue\+\_\+type32\+\_\+t}}}]{type,  }\item[{uint32\+\_\+t}]{features,  }\item[{\mbox{\hyperlink{group__signals_ga0003af605a660e7ef4f89aa555d3b3fc}{hsa\+\_\+signal\+\_\+t}}}]{doorbell\+\_\+signal }\end{DoxyParamCaption})}
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classrocr_1_1core_1_1HostQueue_a76d67034788348c15deb4227d1d6b588_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classrocr_1_1core_1_1HostQueue_a7eb0de2952e2e16312bd3427688c718d}\label{classrocr_1_1core_1_1HostQueue_a7eb0de2952e2e16312bd3427688c718d}} 
+\index{rocr::core::HostQueue@{rocr::core::HostQueue}!````~HostQueue@{$\sim$HostQueue}}
+\index{````~HostQueue@{$\sim$HostQueue}!rocr::core::HostQueue@{rocr::core::HostQueue}}
+\doxysubsubsection{\texorpdfstring{$\sim$HostQueue()}{~HostQueue()}}
+{\footnotesize\ttfamily rocr\+::core\+::\+Host\+Queue\+::$\sim$\+Host\+Queue (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classrocr_1_1core_1_1HostQueue_a7eb0de2952e2e16312bd3427688c718d_cgraph}
+\end{center}
+\end{figure}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classrocr_1_1core_1_1HostQueue_a40c95e5c2063c8db112e2ebddaf12834}\label{classrocr_1_1core_1_1HostQueue_a40c95e5c2063c8db112e2ebddaf12834}} 
+\index{rocr::core::HostQueue@{rocr::core::HostQueue}!\_IsA@{\_IsA}}
+\index{\_IsA@{\_IsA}!rocr::core::HostQueue@{rocr::core::HostQueue}}
+\doxysubsubsection{\texorpdfstring{\_IsA()}{\_IsA()}}
+{\footnotesize\ttfamily bool rocr\+::core\+::\+Host\+Queue\+::\+\_\+\+IsA (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classrocr_1_1core_1_1Queue_a7852beb01a0e5ece387b10034f27478f}{Queue\+::rtti\+\_\+t}}}]{id }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}, {\ttfamily [protected]}, {\ttfamily [virtual]}}
+
+
+
+Implements \mbox{\hyperlink{classrocr_1_1core_1_1Queue_ad1728f21b7d730cdc9548a2b0512589b}{rocr\+::core\+::\+Queue}}.
+
+\mbox{\Hypertarget{classrocr_1_1core_1_1HostQueue_a32a6cad47971f8759db3c3db753d8dc7}\label{classrocr_1_1core_1_1HostQueue_a32a6cad47971f8759db3c3db753d8dc7}} 
+\index{rocr::core::HostQueue@{rocr::core::HostQueue}!AddWriteIndexAcqRel@{AddWriteIndexAcqRel}}
+\index{AddWriteIndexAcqRel@{AddWriteIndexAcqRel}!rocr::core::HostQueue@{rocr::core::HostQueue}}
+\doxysubsubsection{\texorpdfstring{AddWriteIndexAcqRel()}{AddWriteIndexAcqRel()}}
+{\footnotesize\ttfamily uint64\+\_\+t rocr\+::core\+::\+Host\+Queue\+::\+Add\+Write\+Index\+Acq\+Rel (\begin{DoxyParamCaption}\item[{uint64\+\_\+t}]{value }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Updates the Write index using Acquire and Release semantics. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em value} & Value of new write index\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+uint64\+\_\+t Value of write index before the update 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{classrocr_1_1core_1_1Queue_aacd0aaf29d36d57e1b65860f374ad363}{rocr\+::core\+::\+Queue}}.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classrocr_1_1core_1_1HostQueue_a32a6cad47971f8759db3c3db753d8dc7_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classrocr_1_1core_1_1HostQueue_a81ead70ea03fdc0870c01bc294431e5e}\label{classrocr_1_1core_1_1HostQueue_a81ead70ea03fdc0870c01bc294431e5e}} 
+\index{rocr::core::HostQueue@{rocr::core::HostQueue}!AddWriteIndexAcquire@{AddWriteIndexAcquire}}
+\index{AddWriteIndexAcquire@{AddWriteIndexAcquire}!rocr::core::HostQueue@{rocr::core::HostQueue}}
+\doxysubsubsection{\texorpdfstring{AddWriteIndexAcquire()}{AddWriteIndexAcquire()}}
+{\footnotesize\ttfamily uint64\+\_\+t rocr\+::core\+::\+Host\+Queue\+::\+Add\+Write\+Index\+Acquire (\begin{DoxyParamCaption}\item[{uint64\+\_\+t}]{value }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Updates the Write index using Acquire semantics. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em value} & Value of new write index\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+uint64\+\_\+t Value of write index before the update 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{classrocr_1_1core_1_1Queue_aed931264bf545753d3f0a21ed8bf0216}{rocr\+::core\+::\+Queue}}.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classrocr_1_1core_1_1HostQueue_a81ead70ea03fdc0870c01bc294431e5e_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classrocr_1_1core_1_1HostQueue_ab9d642591f643b42ab05ddcca20b390f}\label{classrocr_1_1core_1_1HostQueue_ab9d642591f643b42ab05ddcca20b390f}} 
+\index{rocr::core::HostQueue@{rocr::core::HostQueue}!AddWriteIndexRelaxed@{AddWriteIndexRelaxed}}
+\index{AddWriteIndexRelaxed@{AddWriteIndexRelaxed}!rocr::core::HostQueue@{rocr::core::HostQueue}}
+\doxysubsubsection{\texorpdfstring{AddWriteIndexRelaxed()}{AddWriteIndexRelaxed()}}
+{\footnotesize\ttfamily uint64\+\_\+t rocr\+::core\+::\+Host\+Queue\+::\+Add\+Write\+Index\+Relaxed (\begin{DoxyParamCaption}\item[{uint64\+\_\+t}]{value }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Updates the Write index using Relaxed semantics. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em value} & Value of new write index\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+uint64\+\_\+t Value of write index before the update 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{classrocr_1_1core_1_1Queue_a1534ce8fad99019e5fd8f13c3cc8a957}{rocr\+::core\+::\+Queue}}.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classrocr_1_1core_1_1HostQueue_ab9d642591f643b42ab05ddcca20b390f_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classrocr_1_1core_1_1HostQueue_aabcfb382d3948e142af62b7c5807c7a5}\label{classrocr_1_1core_1_1HostQueue_aabcfb382d3948e142af62b7c5807c7a5}} 
+\index{rocr::core::HostQueue@{rocr::core::HostQueue}!AddWriteIndexRelease@{AddWriteIndexRelease}}
+\index{AddWriteIndexRelease@{AddWriteIndexRelease}!rocr::core::HostQueue@{rocr::core::HostQueue}}
+\doxysubsubsection{\texorpdfstring{AddWriteIndexRelease()}{AddWriteIndexRelease()}}
+{\footnotesize\ttfamily uint64\+\_\+t rocr\+::core\+::\+Host\+Queue\+::\+Add\+Write\+Index\+Release (\begin{DoxyParamCaption}\item[{uint64\+\_\+t}]{value }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Updates the Write index using Release semantics. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em value} & Value of new write index\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+uint64\+\_\+t Value of write index before the update 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{classrocr_1_1core_1_1Queue_aa647ee872f30c009af51076f4597bdd1}{rocr\+::core\+::\+Queue}}.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classrocr_1_1core_1_1HostQueue_aabcfb382d3948e142af62b7c5807c7a5_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classrocr_1_1core_1_1HostQueue_abebbf015828325283836f3a1af7a2c5d}\label{classrocr_1_1core_1_1HostQueue_abebbf015828325283836f3a1af7a2c5d}} 
+\index{rocr::core::HostQueue@{rocr::core::HostQueue}!CasWriteIndexAcqRel@{CasWriteIndexAcqRel}}
+\index{CasWriteIndexAcqRel@{CasWriteIndexAcqRel}!rocr::core::HostQueue@{rocr::core::HostQueue}}
+\doxysubsubsection{\texorpdfstring{CasWriteIndexAcqRel()}{CasWriteIndexAcqRel()}}
+{\footnotesize\ttfamily uint64\+\_\+t rocr\+::core\+::\+Host\+Queue\+::\+Cas\+Write\+Index\+Acq\+Rel (\begin{DoxyParamCaption}\item[{uint64\+\_\+t}]{expected,  }\item[{uint64\+\_\+t}]{value }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Compares and swaps Write index using Acquire and Release semantics. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em expected} & Current value of write index\\
+\hline
+{\em value} & Value of new write index\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+uint64\+\_\+t Value of write index before the update 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{classrocr_1_1core_1_1Queue_a2b3d73996a2aa224bab9bf605d6ddbbb}{rocr\+::core\+::\+Queue}}.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classrocr_1_1core_1_1HostQueue_abebbf015828325283836f3a1af7a2c5d_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classrocr_1_1core_1_1HostQueue_a67d0b73bc4abf2920be2acaf66699e2b}\label{classrocr_1_1core_1_1HostQueue_a67d0b73bc4abf2920be2acaf66699e2b}} 
+\index{rocr::core::HostQueue@{rocr::core::HostQueue}!CasWriteIndexAcquire@{CasWriteIndexAcquire}}
+\index{CasWriteIndexAcquire@{CasWriteIndexAcquire}!rocr::core::HostQueue@{rocr::core::HostQueue}}
+\doxysubsubsection{\texorpdfstring{CasWriteIndexAcquire()}{CasWriteIndexAcquire()}}
+{\footnotesize\ttfamily uint64\+\_\+t rocr\+::core\+::\+Host\+Queue\+::\+Cas\+Write\+Index\+Acquire (\begin{DoxyParamCaption}\item[{uint64\+\_\+t}]{expected,  }\item[{uint64\+\_\+t}]{value }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Compares and swaps Write index using Acquire semantics. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em expected} & Current value of write index\\
+\hline
+{\em value} & Value of new write index\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+uint64\+\_\+t Value of write index before the update 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{classrocr_1_1core_1_1Queue_af434e3b953e9644ac4497bed34d94105}{rocr\+::core\+::\+Queue}}.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classrocr_1_1core_1_1HostQueue_a67d0b73bc4abf2920be2acaf66699e2b_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classrocr_1_1core_1_1HostQueue_a3ad4157800ebf97ca61f480e9019c999}\label{classrocr_1_1core_1_1HostQueue_a3ad4157800ebf97ca61f480e9019c999}} 
+\index{rocr::core::HostQueue@{rocr::core::HostQueue}!CasWriteIndexRelaxed@{CasWriteIndexRelaxed}}
+\index{CasWriteIndexRelaxed@{CasWriteIndexRelaxed}!rocr::core::HostQueue@{rocr::core::HostQueue}}
+\doxysubsubsection{\texorpdfstring{CasWriteIndexRelaxed()}{CasWriteIndexRelaxed()}}
+{\footnotesize\ttfamily uint64\+\_\+t rocr\+::core\+::\+Host\+Queue\+::\+Cas\+Write\+Index\+Relaxed (\begin{DoxyParamCaption}\item[{uint64\+\_\+t}]{expected,  }\item[{uint64\+\_\+t}]{value }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Compares and swaps Write index using Relaxed semantics. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em expected} & Current value of write index\\
+\hline
+{\em value} & Value of new write index\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+uint64\+\_\+t Value of write index before the update 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{classrocr_1_1core_1_1Queue_a4598e8dbeffa919a8992cf873d1a7222}{rocr\+::core\+::\+Queue}}.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classrocr_1_1core_1_1HostQueue_a3ad4157800ebf97ca61f480e9019c999_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classrocr_1_1core_1_1HostQueue_ad14f406a5e476e4a7d5861b60128369a}\label{classrocr_1_1core_1_1HostQueue_ad14f406a5e476e4a7d5861b60128369a}} 
+\index{rocr::core::HostQueue@{rocr::core::HostQueue}!CasWriteIndexRelease@{CasWriteIndexRelease}}
+\index{CasWriteIndexRelease@{CasWriteIndexRelease}!rocr::core::HostQueue@{rocr::core::HostQueue}}
+\doxysubsubsection{\texorpdfstring{CasWriteIndexRelease()}{CasWriteIndexRelease()}}
+{\footnotesize\ttfamily uint64\+\_\+t rocr\+::core\+::\+Host\+Queue\+::\+Cas\+Write\+Index\+Release (\begin{DoxyParamCaption}\item[{uint64\+\_\+t}]{expected,  }\item[{uint64\+\_\+t}]{value }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Compares and swaps Write index using Release semantics. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em expected} & Current value of write index\\
+\hline
+{\em value} & Value of new write index\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+uint64\+\_\+t Value of write index before the update 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{classrocr_1_1core_1_1Queue_a9728aa41324ad5f05ef2174f67b1612c}{rocr\+::core\+::\+Queue}}.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classrocr_1_1core_1_1HostQueue_ad14f406a5e476e4a7d5861b60128369a_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classrocr_1_1core_1_1HostQueue_a6f2e2dc62e660e19b2d5d4ab7cbc3746}\label{classrocr_1_1core_1_1HostQueue_a6f2e2dc62e660e19b2d5d4ab7cbc3746}} 
+\index{rocr::core::HostQueue@{rocr::core::HostQueue}!DISALLOW\_COPY\_AND\_ASSIGN@{DISALLOW\_COPY\_AND\_ASSIGN}}
+\index{DISALLOW\_COPY\_AND\_ASSIGN@{DISALLOW\_COPY\_AND\_ASSIGN}!rocr::core::HostQueue@{rocr::core::HostQueue}}
+\doxysubsubsection{\texorpdfstring{DISALLOW\_COPY\_AND\_ASSIGN()}{DISALLOW\_COPY\_AND\_ASSIGN()}}
+{\footnotesize\ttfamily rocr\+::core\+::\+Host\+Queue\+::\+DISALLOW\+\_\+\+COPY\+\_\+\+AND\+\_\+\+ASSIGN (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classrocr_1_1core_1_1HostQueue}{Host\+Queue}}}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classrocr_1_1core_1_1HostQueue_a608e2ee9467173a28df728b06da1b157}\label{classrocr_1_1core_1_1HostQueue_a608e2ee9467173a28df728b06da1b157}} 
+\index{rocr::core::HostQueue@{rocr::core::HostQueue}!ExecutePM4@{ExecutePM4}}
+\index{ExecutePM4@{ExecutePM4}!rocr::core::HostQueue@{rocr::core::HostQueue}}
+\doxysubsubsection{\texorpdfstring{ExecutePM4()}{ExecutePM4()}}
+{\footnotesize\ttfamily void rocr\+::core\+::\+Host\+Queue\+::\+Execute\+PM4 (\begin{DoxyParamCaption}\item[{uint32\+\_\+t $\ast$}]{cmd\+\_\+data,  }\item[{size\+\_\+t}]{cmd\+\_\+size\+\_\+b }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Implements \mbox{\hyperlink{classrocr_1_1core_1_1Queue_a4c19e15ee0af0d3163d598ba6a96daa9}{rocr\+::core\+::\+Queue}}.
+
+\mbox{\Hypertarget{classrocr_1_1core_1_1HostQueue_adb23e6f40fa3313af6cd913f963ad47c}\label{classrocr_1_1core_1_1HostQueue_adb23e6f40fa3313af6cd913f963ad47c}} 
+\index{rocr::core::HostQueue@{rocr::core::HostQueue}!GetCUMasking@{GetCUMasking}}
+\index{GetCUMasking@{GetCUMasking}!rocr::core::HostQueue@{rocr::core::HostQueue}}
+\doxysubsubsection{\texorpdfstring{GetCUMasking()}{GetCUMasking()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{group__status_gad755322e7ff95456520e8abdbe90d225}{hsa\+\_\+status\+\_\+t}} rocr\+::core\+::\+Host\+Queue\+::\+Get\+CUMasking (\begin{DoxyParamCaption}\item[{uint32\+\_\+t}]{num\+\_\+cu\+\_\+mask\+\_\+count,  }\item[{uint32\+\_\+t $\ast$}]{cu\+\_\+mask }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Get CU Masking. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em num\+\_\+cu\+\_\+mask\+\_\+count} & size of mask bit array\\
+\hline
+{\em cu\+\_\+mask} & pointer to cu mask\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+hsa\+\_\+status\+\_\+t 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{classrocr_1_1core_1_1Queue_ae3f768ad2473b6c09213d03ebaa1f9db}{rocr\+::core\+::\+Queue}}.
+
+\mbox{\Hypertarget{classrocr_1_1core_1_1HostQueue_a970d6a8abf2c2ef68f33531e735c061d}\label{classrocr_1_1core_1_1HostQueue_a970d6a8abf2c2ef68f33531e735c061d}} 
+\index{rocr::core::HostQueue@{rocr::core::HostQueue}!Inactivate@{Inactivate}}
+\index{Inactivate@{Inactivate}!rocr::core::HostQueue@{rocr::core::HostQueue}}
+\doxysubsubsection{\texorpdfstring{Inactivate()}{Inactivate()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{group__status_gad755322e7ff95456520e8abdbe90d225}{hsa\+\_\+status\+\_\+t}} rocr\+::core\+::\+Host\+Queue\+::\+Inactivate (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Inactivate the queue object. Once inactivate a queue cannot be used anymore and must be destroyed. 
+
+\begin{DoxyReturn}{Returns}
+hsa\+\_\+status\+\_\+t Status of request 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{classrocr_1_1core_1_1Queue_a6f69e8583658ba5b2352125d286f839a}{rocr\+::core\+::\+Queue}}.
+
+\mbox{\Hypertarget{classrocr_1_1core_1_1HostQueue_a1f366607d83a3d36a6f90ab33497b54a}\label{classrocr_1_1core_1_1HostQueue_a1f366607d83a3d36a6f90ab33497b54a}} 
+\index{rocr::core::HostQueue@{rocr::core::HostQueue}!IsType@{IsType}}
+\index{IsType@{IsType}!rocr::core::HostQueue@{rocr::core::HostQueue}}
+\doxysubsubsection{\texorpdfstring{IsType()}{IsType()}}
+{\footnotesize\ttfamily static \+\_\+\+\_\+forceinline bool rocr\+::core\+::\+Host\+Queue\+::\+Is\+Type (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classrocr_1_1core_1_1Queue}{core\+::\+Queue}} $\ast$}]{queue }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=345pt]{classrocr_1_1core_1_1HostQueue_a1f366607d83a3d36a6f90ab33497b54a_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classrocr_1_1core_1_1HostQueue_ac72f2eb31a4a7acd510c1d9609abb6a6}\label{classrocr_1_1core_1_1HostQueue_ac72f2eb31a4a7acd510c1d9609abb6a6}} 
+\index{rocr::core::HostQueue@{rocr::core::HostQueue}!LoadReadIndexAcquire@{LoadReadIndexAcquire}}
+\index{LoadReadIndexAcquire@{LoadReadIndexAcquire}!rocr::core::HostQueue@{rocr::core::HostQueue}}
+\doxysubsubsection{\texorpdfstring{LoadReadIndexAcquire()}{LoadReadIndexAcquire()}}
+{\footnotesize\ttfamily uint64\+\_\+t rocr\+::core\+::\+Host\+Queue\+::\+Load\+Read\+Index\+Acquire (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Reads the Read Index of \mbox{\hyperlink{classrocr_1_1core_1_1Queue}{Queue}} using Acquire semantics. 
+
+\begin{DoxyReturn}{Returns}
+uint64\+\_\+t Value of Read index 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{classrocr_1_1core_1_1Queue_a243f8e1d28563513ab08b461bc8599dd}{rocr\+::core\+::\+Queue}}.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classrocr_1_1core_1_1HostQueue_ac72f2eb31a4a7acd510c1d9609abb6a6_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classrocr_1_1core_1_1HostQueue_a8a482d0473163e0291478f4c2cb2f55c}\label{classrocr_1_1core_1_1HostQueue_a8a482d0473163e0291478f4c2cb2f55c}} 
+\index{rocr::core::HostQueue@{rocr::core::HostQueue}!LoadReadIndexRelaxed@{LoadReadIndexRelaxed}}
+\index{LoadReadIndexRelaxed@{LoadReadIndexRelaxed}!rocr::core::HostQueue@{rocr::core::HostQueue}}
+\doxysubsubsection{\texorpdfstring{LoadReadIndexRelaxed()}{LoadReadIndexRelaxed()}}
+{\footnotesize\ttfamily uint64\+\_\+t rocr\+::core\+::\+Host\+Queue\+::\+Load\+Read\+Index\+Relaxed (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Reads the Read Index of \mbox{\hyperlink{classrocr_1_1core_1_1Queue}{Queue}} using Relaxed semantics. 
+
+\begin{DoxyReturn}{Returns}
+uint64\+\_\+t Value of Read index 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{classrocr_1_1core_1_1Queue_a6af92136b6c400f5543e9cb2754f7895}{rocr\+::core\+::\+Queue}}.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classrocr_1_1core_1_1HostQueue_a8a482d0473163e0291478f4c2cb2f55c_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classrocr_1_1core_1_1HostQueue_ab1641c41e9c5cc243cbcf186444f6f13}\label{classrocr_1_1core_1_1HostQueue_ab1641c41e9c5cc243cbcf186444f6f13}} 
+\index{rocr::core::HostQueue@{rocr::core::HostQueue}!LoadWriteIndexAcquire@{LoadWriteIndexAcquire}}
+\index{LoadWriteIndexAcquire@{LoadWriteIndexAcquire}!rocr::core::HostQueue@{rocr::core::HostQueue}}
+\doxysubsubsection{\texorpdfstring{LoadWriteIndexAcquire()}{LoadWriteIndexAcquire()}}
+{\footnotesize\ttfamily uint64\+\_\+t rocr\+::core\+::\+Host\+Queue\+::\+Load\+Write\+Index\+Acquire (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Reads the Write Index of \mbox{\hyperlink{classrocr_1_1core_1_1Queue}{Queue}} using Acquire semantics. 
+
+\begin{DoxyReturn}{Returns}
+uint64\+\_\+t Value of Write index 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{classrocr_1_1core_1_1Queue_a0b273d8cb34c367ce46ffe313f026bdd}{rocr\+::core\+::\+Queue}}.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classrocr_1_1core_1_1HostQueue_ab1641c41e9c5cc243cbcf186444f6f13_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classrocr_1_1core_1_1HostQueue_a62ebe679eba4f60182e407b6a31ccf50}\label{classrocr_1_1core_1_1HostQueue_a62ebe679eba4f60182e407b6a31ccf50}} 
+\index{rocr::core::HostQueue@{rocr::core::HostQueue}!LoadWriteIndexRelaxed@{LoadWriteIndexRelaxed}}
+\index{LoadWriteIndexRelaxed@{LoadWriteIndexRelaxed}!rocr::core::HostQueue@{rocr::core::HostQueue}}
+\doxysubsubsection{\texorpdfstring{LoadWriteIndexRelaxed()}{LoadWriteIndexRelaxed()}}
+{\footnotesize\ttfamily uint64\+\_\+t rocr\+::core\+::\+Host\+Queue\+::\+Load\+Write\+Index\+Relaxed (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}, {\ttfamily [virtual]}}
+
+Reads the Write Index of \mbox{\hyperlink{classrocr_1_1core_1_1Queue}{Queue}} using Relaxed semantics
+
+\begin{DoxyReturn}{Returns}
+uint64\+\_\+t Value of Write index 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{classrocr_1_1core_1_1Queue_a2927f38afcb3e93bd69139844613c952}{rocr\+::core\+::\+Queue}}.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classrocr_1_1core_1_1HostQueue_a62ebe679eba4f60182e407b6a31ccf50_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classrocr_1_1core_1_1HostQueue_a3f6b084592cc1280c9b79ee78b7f27e8}\label{classrocr_1_1core_1_1HostQueue_a3f6b084592cc1280c9b79ee78b7f27e8}} 
+\index{rocr::core::HostQueue@{rocr::core::HostQueue}!operator delete@{operator delete}}
+\index{operator delete@{operator delete}!rocr::core::HostQueue@{rocr::core::HostQueue}}
+\doxysubsubsection{\texorpdfstring{operator delete()}{operator delete()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily void rocr\+::core\+::\+Host\+Queue\+::operator delete (\begin{DoxyParamCaption}\item[{void $\ast$}]{,  }\item[{void $\ast$}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{classrocr_1_1core_1_1HostQueue_aafe759a1b04e806d538b0762b518413a}\label{classrocr_1_1core_1_1HostQueue_aafe759a1b04e806d538b0762b518413a}} 
+\index{rocr::core::HostQueue@{rocr::core::HostQueue}!operator delete@{operator delete}}
+\index{operator delete@{operator delete}!rocr::core::HostQueue@{rocr::core::HostQueue}}
+\doxysubsubsection{\texorpdfstring{operator delete()}{operator delete()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily void rocr\+::core\+::\+Host\+Queue\+::operator delete (\begin{DoxyParamCaption}\item[{void $\ast$}]{ptr }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{classrocr_1_1core_1_1HostQueue_ac7cd65b5955cf78a683e46cd8316830f}\label{classrocr_1_1core_1_1HostQueue_ac7cd65b5955cf78a683e46cd8316830f}} 
+\index{rocr::core::HostQueue@{rocr::core::HostQueue}!operator new@{operator new}}
+\index{operator new@{operator new}!rocr::core::HostQueue@{rocr::core::HostQueue}}
+\doxysubsubsection{\texorpdfstring{operator new()}{operator new()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily void$\ast$ rocr\+::core\+::\+Host\+Queue\+::operator new (\begin{DoxyParamCaption}\item[{size\+\_\+t}]{size }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{classrocr_1_1core_1_1HostQueue_ab0464a0d78bef634c7a3dec8ad795004}\label{classrocr_1_1core_1_1HostQueue_ab0464a0d78bef634c7a3dec8ad795004}} 
+\index{rocr::core::HostQueue@{rocr::core::HostQueue}!operator new@{operator new}}
+\index{operator new@{operator new}!rocr::core::HostQueue@{rocr::core::HostQueue}}
+\doxysubsubsection{\texorpdfstring{operator new()}{operator new()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily void$\ast$ rocr\+::core\+::\+Host\+Queue\+::operator new (\begin{DoxyParamCaption}\item[{size\+\_\+t}]{size,  }\item[{void $\ast$}]{ptr }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{classrocr_1_1core_1_1HostQueue_abd9ff178a3127bddc87f9e04c86a4f35}\label{classrocr_1_1core_1_1HostQueue_abd9ff178a3127bddc87f9e04c86a4f35}} 
+\index{rocr::core::HostQueue@{rocr::core::HostQueue}!SetCUMasking@{SetCUMasking}}
+\index{SetCUMasking@{SetCUMasking}!rocr::core::HostQueue@{rocr::core::HostQueue}}
+\doxysubsubsection{\texorpdfstring{SetCUMasking()}{SetCUMasking()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{group__status_gad755322e7ff95456520e8abdbe90d225}{hsa\+\_\+status\+\_\+t}} rocr\+::core\+::\+Host\+Queue\+::\+Set\+CUMasking (\begin{DoxyParamCaption}\item[{uint32\+\_\+t}]{num\+\_\+cu\+\_\+mask\+\_\+count,  }\item[{const uint32\+\_\+t $\ast$}]{cu\+\_\+mask }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Set CU Masking. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em num\+\_\+cu\+\_\+mask\+\_\+count} & size of mask bit array\\
+\hline
+{\em cu\+\_\+mask} & pointer to cu mask\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+hsa\+\_\+status\+\_\+t 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{classrocr_1_1core_1_1Queue_af03e3a102b38b3ec9368d3c267c1cfcc}{rocr\+::core\+::\+Queue}}.
+
+\mbox{\Hypertarget{classrocr_1_1core_1_1HostQueue_ab34cb02bafb425eafa61ce78881ce08c}\label{classrocr_1_1core_1_1HostQueue_ab34cb02bafb425eafa61ce78881ce08c}} 
+\index{rocr::core::HostQueue@{rocr::core::HostQueue}!SetPriority@{SetPriority}}
+\index{SetPriority@{SetPriority}!rocr::core::HostQueue@{rocr::core::HostQueue}}
+\doxysubsubsection{\texorpdfstring{SetPriority()}{SetPriority()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{group__status_gad755322e7ff95456520e8abdbe90d225}{hsa\+\_\+status\+\_\+t}} rocr\+::core\+::\+Host\+Queue\+::\+Set\+Priority (\begin{DoxyParamCaption}\item[{HSA\+\_\+\+QUEUE\+\_\+\+PRIORITY}]{priority }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Change the scheduling priority of the queue. 
+
+
+
+Implements \mbox{\hyperlink{classrocr_1_1core_1_1Queue_a04971316d1449cac40664e59e9538071}{rocr\+::core\+::\+Queue}}.
+
+\mbox{\Hypertarget{classrocr_1_1core_1_1HostQueue_a329d9d4c2d829101a6a5d7e0209a0d38}\label{classrocr_1_1core_1_1HostQueue_a329d9d4c2d829101a6a5d7e0209a0d38}} 
+\index{rocr::core::HostQueue@{rocr::core::HostQueue}!StoreReadIndexRelaxed@{StoreReadIndexRelaxed}}
+\index{StoreReadIndexRelaxed@{StoreReadIndexRelaxed}!rocr::core::HostQueue@{rocr::core::HostQueue}}
+\doxysubsubsection{\texorpdfstring{StoreReadIndexRelaxed()}{StoreReadIndexRelaxed()}}
+{\footnotesize\ttfamily void rocr\+::core\+::\+Host\+Queue\+::\+Store\+Read\+Index\+Relaxed (\begin{DoxyParamCaption}\item[{uint64\+\_\+t}]{value }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Updates the Read Index of \mbox{\hyperlink{classrocr_1_1core_1_1Queue}{Queue}} using Relaxed semantics. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em value} & New value of Read index to update \\
+\hline
+\end{DoxyParams}
+
+
+Implements \mbox{\hyperlink{classrocr_1_1core_1_1Queue_ad51e5d70cd973cd340f3a35b2c485f1c}{rocr\+::core\+::\+Queue}}.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classrocr_1_1core_1_1HostQueue_a329d9d4c2d829101a6a5d7e0209a0d38_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classrocr_1_1core_1_1HostQueue_a5b46ab915862150be13db1ea5ddca143}\label{classrocr_1_1core_1_1HostQueue_a5b46ab915862150be13db1ea5ddca143}} 
+\index{rocr::core::HostQueue@{rocr::core::HostQueue}!StoreReadIndexRelease@{StoreReadIndexRelease}}
+\index{StoreReadIndexRelease@{StoreReadIndexRelease}!rocr::core::HostQueue@{rocr::core::HostQueue}}
+\doxysubsubsection{\texorpdfstring{StoreReadIndexRelease()}{StoreReadIndexRelease()}}
+{\footnotesize\ttfamily void rocr\+::core\+::\+Host\+Queue\+::\+Store\+Read\+Index\+Release (\begin{DoxyParamCaption}\item[{uint64\+\_\+t}]{value }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Updates the Read Index of \mbox{\hyperlink{classrocr_1_1core_1_1Queue}{Queue}} using Release semantics. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em value} & New value of Read index to update \\
+\hline
+\end{DoxyParams}
+
+
+Implements \mbox{\hyperlink{classrocr_1_1core_1_1Queue_ae846f848ead70065b391f1122ebf71f3}{rocr\+::core\+::\+Queue}}.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classrocr_1_1core_1_1HostQueue_a5b46ab915862150be13db1ea5ddca143_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classrocr_1_1core_1_1HostQueue_ae48bbcda494efe3a1e63bbfffe3adfaa}\label{classrocr_1_1core_1_1HostQueue_ae48bbcda494efe3a1e63bbfffe3adfaa}} 
+\index{rocr::core::HostQueue@{rocr::core::HostQueue}!StoreWriteIndexRelaxed@{StoreWriteIndexRelaxed}}
+\index{StoreWriteIndexRelaxed@{StoreWriteIndexRelaxed}!rocr::core::HostQueue@{rocr::core::HostQueue}}
+\doxysubsubsection{\texorpdfstring{StoreWriteIndexRelaxed()}{StoreWriteIndexRelaxed()}}
+{\footnotesize\ttfamily void rocr\+::core\+::\+Host\+Queue\+::\+Store\+Write\+Index\+Relaxed (\begin{DoxyParamCaption}\item[{uint64\+\_\+t}]{value }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Updates the Write Index of \mbox{\hyperlink{classrocr_1_1core_1_1Queue}{Queue}} using Relaxed semantics. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em value} & New value of Write index to update \\
+\hline
+\end{DoxyParams}
+
+
+Implements \mbox{\hyperlink{classrocr_1_1core_1_1Queue_a619b453587f3013b1dd817ca6a865ce6}{rocr\+::core\+::\+Queue}}.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classrocr_1_1core_1_1HostQueue_ae48bbcda494efe3a1e63bbfffe3adfaa_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classrocr_1_1core_1_1HostQueue_a83732f97b5ace87587410310f3ebc436}\label{classrocr_1_1core_1_1HostQueue_a83732f97b5ace87587410310f3ebc436}} 
+\index{rocr::core::HostQueue@{rocr::core::HostQueue}!StoreWriteIndexRelease@{StoreWriteIndexRelease}}
+\index{StoreWriteIndexRelease@{StoreWriteIndexRelease}!rocr::core::HostQueue@{rocr::core::HostQueue}}
+\doxysubsubsection{\texorpdfstring{StoreWriteIndexRelease()}{StoreWriteIndexRelease()}}
+{\footnotesize\ttfamily void rocr\+::core\+::\+Host\+Queue\+::\+Store\+Write\+Index\+Release (\begin{DoxyParamCaption}\item[{uint64\+\_\+t}]{value }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Updates the Write Index of \mbox{\hyperlink{classrocr_1_1core_1_1Queue}{Queue}} using Release semantics. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em value} & New value of Write index to update \\
+\hline
+\end{DoxyParams}
+
+
+Implements \mbox{\hyperlink{classrocr_1_1core_1_1Queue_a5101fe558b3d4cfa54e4a8b49ae44b6c}{rocr\+::core\+::\+Queue}}.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classrocr_1_1core_1_1HostQueue_a83732f97b5ace87587410310f3ebc436_cgraph}
+\end{center}
+\end{figure}
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{classrocr_1_1core_1_1HostQueue_a82de336148eccdb1d87164de9e353515}\label{classrocr_1_1core_1_1HostQueue_a82de336148eccdb1d87164de9e353515}} 
+\index{rocr::core::HostQueue@{rocr::core::HostQueue}!kRingAlignment@{kRingAlignment}}
+\index{kRingAlignment@{kRingAlignment}!rocr::core::HostQueue@{rocr::core::HostQueue}}
+\doxysubsubsection{\texorpdfstring{kRingAlignment}{kRingAlignment}}
+{\footnotesize\ttfamily const size\+\_\+t rocr\+::core\+::\+Host\+Queue\+::k\+Ring\+Alignment = 256\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [private]}}
+
+\mbox{\Hypertarget{classrocr_1_1core_1_1HostQueue_a74d98a4518a0e3f1c4553d8feaf25944}\label{classrocr_1_1core_1_1HostQueue_a74d98a4518a0e3f1c4553d8feaf25944}} 
+\index{rocr::core::HostQueue@{rocr::core::HostQueue}!queue\_count\_@{queue\_count\_}}
+\index{queue\_count\_@{queue\_count\_}!rocr::core::HostQueue@{rocr::core::HostQueue}}
+\doxysubsubsection{\texorpdfstring{queue\_count\_}{queue\_count\_}}
+{\footnotesize\ttfamily std\+::atomic$<$ uint32\+\_\+t $>$ rocr\+::core\+::\+Host\+Queue\+::queue\+\_\+count\+\_\+\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [private]}}
+
+\mbox{\Hypertarget{classrocr_1_1core_1_1HostQueue_a7b73c08d63252f232d78e59b1919a9e0}\label{classrocr_1_1core_1_1HostQueue_a7b73c08d63252f232d78e59b1919a9e0}} 
+\index{rocr::core::HostQueue@{rocr::core::HostQueue}!ring\_@{ring\_}}
+\index{ring\_@{ring\_}!rocr::core::HostQueue@{rocr::core::HostQueue}}
+\doxysubsubsection{\texorpdfstring{ring\_}{ring\_}}
+{\footnotesize\ttfamily void$\ast$ rocr\+::core\+::\+Host\+Queue\+::ring\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classrocr_1_1core_1_1HostQueue_ab237cf36a92b753829c39a53bc2f65e1}\label{classrocr_1_1core_1_1HostQueue_ab237cf36a92b753829c39a53bc2f65e1}} 
+\index{rocr::core::HostQueue@{rocr::core::HostQueue}!rtti\_id\_@{rtti\_id\_}}
+\index{rtti\_id\_@{rtti\_id\_}!rocr::core::HostQueue@{rocr::core::HostQueue}}
+\doxysubsubsection{\texorpdfstring{rtti\_id\_}{rtti\_id\_}}
+{\footnotesize\ttfamily int rocr\+::core\+::\+Host\+Queue\+::rtti\+\_\+id\+\_\+ = 0\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [private]}}
+
+\mbox{\Hypertarget{classrocr_1_1core_1_1HostQueue_a1bd845563ee6ad107664b65e60b5a6a9}\label{classrocr_1_1core_1_1HostQueue_a1bd845563ee6ad107664b65e60b5a6a9}} 
+\index{rocr::core::HostQueue@{rocr::core::HostQueue}!size\_@{size\_}}
+\index{size\_@{size\_}!rocr::core::HostQueue@{rocr::core::HostQueue}}
+\doxysubsubsection{\texorpdfstring{size\_}{size\_}}
+{\footnotesize\ttfamily const uint32\+\_\+t rocr\+::core\+::\+Host\+Queue\+::size\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+src/core/inc/\mbox{\hyperlink{host__queue_8h}{host\+\_\+queue.\+h}}\item 
+src/core/runtime/\mbox{\hyperlink{host__queue_8cpp}{host\+\_\+queue.\+cpp}}\end{DoxyCompactItemize}

@@ -1,0 +1,621 @@
+\hypertarget{group__code-object}{}\doxysection{Code Objects (deprecated).}
+\label{group__code-object}\index{Code Objects (deprecated).@{Code Objects (deprecated).}}
+\doxysubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{structhsa__code__object__s}{hsa\+\_\+code\+\_\+object\+\_\+s}}
+\begin{DoxyCompactList}\small\item\em Struct containing an opaque handle to a code object, which contains ISA for finalized kernels and indirect functions together with information about the global or readonly segment variables they reference. \end{DoxyCompactList}\item 
+struct \mbox{\hyperlink{structhsa__callback__data__s}{hsa\+\_\+callback\+\_\+data\+\_\+s}}
+\begin{DoxyCompactList}\small\item\em Application data handle that is passed to the serialization and deserialization functions. \end{DoxyCompactList}\item 
+struct \mbox{\hyperlink{structhsa__code__symbol__s}{hsa\+\_\+code\+\_\+symbol\+\_\+s}}
+\begin{DoxyCompactList}\small\item\em Code object symbol handle. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+typedef struct \mbox{\hyperlink{structhsa__code__object__s}{hsa\+\_\+code\+\_\+object\+\_\+s}} \mbox{\hyperlink{group__code-object_gafae7c731c8bfc39b3050ef08ae8bb3e3}{hsa\+\_\+code\+\_\+object\+\_\+t}}
+\begin{DoxyCompactList}\small\item\em Struct containing an opaque handle to a code object, which contains ISA for finalized kernels and indirect functions together with information about the global or readonly segment variables they reference. \end{DoxyCompactList}\item 
+typedef struct \mbox{\hyperlink{structhsa__callback__data__s}{hsa\+\_\+callback\+\_\+data\+\_\+s}} \mbox{\hyperlink{group__code-object_gab551ffd46005748b7633a421c24e280f}{hsa\+\_\+callback\+\_\+data\+\_\+t}}
+\begin{DoxyCompactList}\small\item\em Application data handle that is passed to the serialization and deserialization functions. \end{DoxyCompactList}\item 
+typedef struct \mbox{\hyperlink{structhsa__code__symbol__s}{hsa\+\_\+code\+\_\+symbol\+\_\+s}} \mbox{\hyperlink{group__code-object_ga15ba4306d85031c1122c9f7804b97502}{hsa\+\_\+code\+\_\+symbol\+\_\+t}}
+\begin{DoxyCompactList}\small\item\em Code object symbol handle. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Enumerations}
+\begin{DoxyCompactItemize}
+\item 
+enum \mbox{\hyperlink{group__code-object_gaf769fe79f88bec884909567e6a941f06}{hsa\+\_\+code\+\_\+object\+\_\+type\+\_\+t}} \{ \mbox{\hyperlink{group__code-object_ggaf769fe79f88bec884909567e6a941f06a1a8d797f645fe947a3d7e44bef05f999}{HSA\+\_\+\+CODE\+\_\+\+OBJECT\+\_\+\+TYPE\+\_\+\+PROGRAM}} = 0
+ \}
+\begin{DoxyCompactList}\small\item\em Code object type. \end{DoxyCompactList}\item 
+enum \mbox{\hyperlink{group__code-object_ga2025ec20684a99297a1912de92b50575}{hsa\+\_\+code\+\_\+object\+\_\+info\+\_\+t}} \{ \newline
+\mbox{\hyperlink{group__code-object_gga2025ec20684a99297a1912de92b50575aae07446dcdf92b69edb3743f8459054e}{HSA\+\_\+\+CODE\+\_\+\+OBJECT\+\_\+\+INFO\+\_\+\+VERSION}} = 0
+, \mbox{\hyperlink{group__code-object_gga2025ec20684a99297a1912de92b50575a72f382733fcc2515463fac21c2f13f6c}{HSA\+\_\+\+CODE\+\_\+\+OBJECT\+\_\+\+INFO\+\_\+\+TYPE}} = 1
+, \mbox{\hyperlink{group__code-object_gga2025ec20684a99297a1912de92b50575ae127b6c3431ea1a89443f97d7fab7e53}{HSA\+\_\+\+CODE\+\_\+\+OBJECT\+\_\+\+INFO\+\_\+\+ISA}} = 2
+, \mbox{\hyperlink{group__code-object_gga2025ec20684a99297a1912de92b50575a3deaaa873044bcf65ff306c4563d49d5}{HSA\+\_\+\+CODE\+\_\+\+OBJECT\+\_\+\+INFO\+\_\+\+MACHINE\+\_\+\+MODEL}} = 3
+, \newline
+\mbox{\hyperlink{group__code-object_gga2025ec20684a99297a1912de92b50575ae9c8e3e81088dfc1d637e45baa010c6f}{HSA\+\_\+\+CODE\+\_\+\+OBJECT\+\_\+\+INFO\+\_\+\+PROFILE}} = 4
+, \mbox{\hyperlink{group__code-object_gga2025ec20684a99297a1912de92b50575a40d5cb59d78de0b2791bae6de76c3c92}{HSA\+\_\+\+CODE\+\_\+\+OBJECT\+\_\+\+INFO\+\_\+\+DEFAULT\+\_\+\+FLOAT\+\_\+\+ROUNDING\+\_\+\+MODE}} = 5
+ \}
+\begin{DoxyCompactList}\small\item\em Code object attributes. \end{DoxyCompactList}\item 
+enum \mbox{\hyperlink{group__code-object_gaded99609f1225ba3ed62328c7e1a3694}{hsa\+\_\+code\+\_\+symbol\+\_\+info\+\_\+t}} \{ \newline
+\mbox{\hyperlink{group__code-object_ggaded99609f1225ba3ed62328c7e1a3694a7432ef4a30aeccf408aa257496dbf354}{HSA\+\_\+\+CODE\+\_\+\+SYMBOL\+\_\+\+INFO\+\_\+\+TYPE}} = 0
+, \mbox{\hyperlink{group__code-object_ggaded99609f1225ba3ed62328c7e1a3694ab3a5d43c03060f1d1118f00f88f63885}{HSA\+\_\+\+CODE\+\_\+\+SYMBOL\+\_\+\+INFO\+\_\+\+NAME\+\_\+\+LENGTH}} = 1
+, \mbox{\hyperlink{group__code-object_ggaded99609f1225ba3ed62328c7e1a3694a4c59e37218060708503434ca2af6df5b}{HSA\+\_\+\+CODE\+\_\+\+SYMBOL\+\_\+\+INFO\+\_\+\+NAME}} = 2
+, \mbox{\hyperlink{group__code-object_ggaded99609f1225ba3ed62328c7e1a3694a19a4d6ab4dd53d51ad8dca20dcaaae2a}{HSA\+\_\+\+CODE\+\_\+\+SYMBOL\+\_\+\+INFO\+\_\+\+MODULE\+\_\+\+NAME\+\_\+\+LENGTH}} = 3
+, \newline
+\mbox{\hyperlink{group__code-object_ggaded99609f1225ba3ed62328c7e1a3694acdeacc2d88de153507b157df850c8d34}{HSA\+\_\+\+CODE\+\_\+\+SYMBOL\+\_\+\+INFO\+\_\+\+MODULE\+\_\+\+NAME}} = 4
+, \mbox{\hyperlink{group__code-object_ggaded99609f1225ba3ed62328c7e1a3694a31bf12114328b85aff24960b2144eb54}{HSA\+\_\+\+CODE\+\_\+\+SYMBOL\+\_\+\+INFO\+\_\+\+LINKAGE}} = 5
+, \mbox{\hyperlink{group__code-object_ggaded99609f1225ba3ed62328c7e1a3694ae6cc27d2cdc6631174d15504e734186d}{HSA\+\_\+\+CODE\+\_\+\+SYMBOL\+\_\+\+INFO\+\_\+\+IS\+\_\+\+DEFINITION}} = 17
+, \mbox{\hyperlink{group__code-object_ggaded99609f1225ba3ed62328c7e1a3694a22d4c6af18edc21289971543ac0cc217}{HSA\+\_\+\+CODE\+\_\+\+SYMBOL\+\_\+\+INFO\+\_\+\+VARIABLE\+\_\+\+ALLOCATION}} = 6
+, \newline
+\mbox{\hyperlink{group__code-object_ggaded99609f1225ba3ed62328c7e1a3694abb7e00d771642a81b50bf124d48c958b}{HSA\+\_\+\+CODE\+\_\+\+SYMBOL\+\_\+\+INFO\+\_\+\+VARIABLE\+\_\+\+SEGMENT}} = 7
+, \mbox{\hyperlink{group__code-object_ggaded99609f1225ba3ed62328c7e1a3694aa98d70cb9e0aefd8e0dd4e8bb38040ee}{HSA\+\_\+\+CODE\+\_\+\+SYMBOL\+\_\+\+INFO\+\_\+\+VARIABLE\+\_\+\+ALIGNMENT}} = 8
+, \mbox{\hyperlink{group__code-object_ggaded99609f1225ba3ed62328c7e1a3694a05900bfb488539bf04af7be230529f3e}{HSA\+\_\+\+CODE\+\_\+\+SYMBOL\+\_\+\+INFO\+\_\+\+VARIABLE\+\_\+\+SIZE}} = 9
+, \mbox{\hyperlink{group__code-object_ggaded99609f1225ba3ed62328c7e1a3694a5f8244951160c1f391d25c61bf8f0875}{HSA\+\_\+\+CODE\+\_\+\+SYMBOL\+\_\+\+INFO\+\_\+\+VARIABLE\+\_\+\+IS\+\_\+\+CONST}} = 10
+, \newline
+\mbox{\hyperlink{group__code-object_ggaded99609f1225ba3ed62328c7e1a3694a726e2e9506111550539829e5ae97013c}{HSA\+\_\+\+CODE\+\_\+\+SYMBOL\+\_\+\+INFO\+\_\+\+KERNEL\+\_\+\+KERNARG\+\_\+\+SEGMENT\+\_\+\+SIZE}} = 11
+, \mbox{\hyperlink{group__code-object_ggaded99609f1225ba3ed62328c7e1a3694a6c6ec6aea6065a45e69569aa73153d73}{HSA\+\_\+\+CODE\+\_\+\+SYMBOL\+\_\+\+INFO\+\_\+\+KERNEL\+\_\+\+KERNARG\+\_\+\+SEGMENT\+\_\+\+ALIGNMENT}} = 12
+, \mbox{\hyperlink{group__code-object_ggaded99609f1225ba3ed62328c7e1a3694a4902e8e583d06385e42500f86c68c5ee}{HSA\+\_\+\+CODE\+\_\+\+SYMBOL\+\_\+\+INFO\+\_\+\+KERNEL\+\_\+\+GROUP\+\_\+\+SEGMENT\+\_\+\+SIZE}} = 13
+, \mbox{\hyperlink{group__code-object_ggaded99609f1225ba3ed62328c7e1a3694abab702b3188b4195d176dceabcff1893}{HSA\+\_\+\+CODE\+\_\+\+SYMBOL\+\_\+\+INFO\+\_\+\+KERNEL\+\_\+\+PRIVATE\+\_\+\+SEGMENT\+\_\+\+SIZE}} = 14
+, \newline
+\mbox{\hyperlink{group__code-object_ggaded99609f1225ba3ed62328c7e1a3694ae4737bbd966ae562f17c2ef71af46fac}{HSA\+\_\+\+CODE\+\_\+\+SYMBOL\+\_\+\+INFO\+\_\+\+KERNEL\+\_\+\+DYNAMIC\+\_\+\+CALLSTACK}} = 15
+, \mbox{\hyperlink{group__code-object_ggaded99609f1225ba3ed62328c7e1a3694acbd96a8a68621ed99a02ada3f71cd8d2}{HSA\+\_\+\+CODE\+\_\+\+SYMBOL\+\_\+\+INFO\+\_\+\+KERNEL\+\_\+\+CALL\+\_\+\+CONVENTION}} = 18
+, \mbox{\hyperlink{group__code-object_ggaded99609f1225ba3ed62328c7e1a3694a77947182f183577d8af1bbc1d168042e}{HSA\+\_\+\+CODE\+\_\+\+SYMBOL\+\_\+\+INFO\+\_\+\+INDIRECT\+\_\+\+FUNCTION\+\_\+\+CALL\+\_\+\+CONVENTION}} = 16
+ \}
+\begin{DoxyCompactList}\small\item\em Code object symbol attributes. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{group__status_gad755322e7ff95456520e8abdbe90d225}{hsa\+\_\+status\+\_\+t}} \mbox{\hyperlink{inc_2hsa__ext__image_8h_a64216765b98b62ee87deb50fd2899836}{HSA\+\_\+\+API}} \mbox{\hyperlink{inc_2hsa_8h_a2321f8ca7d706cada4f617b191a478b0}{HSA\+\_\+\+DEPRECATED}} \mbox{\hyperlink{group__code-object_ga7819c76c55ddc508293d3c4158d85236}{hsa\+\_\+code\+\_\+object\+\_\+serialize}} (\mbox{\hyperlink{group__code-object_gafae7c731c8bfc39b3050ef08ae8bb3e3}{hsa\+\_\+code\+\_\+object\+\_\+t}} code\+\_\+object, \mbox{\hyperlink{group__status_gad755322e7ff95456520e8abdbe90d225}{hsa\+\_\+status\+\_\+t}}($\ast$alloc\+\_\+callback)(size\+\_\+t size, \mbox{\hyperlink{group__code-object_gab551ffd46005748b7633a421c24e280f}{hsa\+\_\+callback\+\_\+data\+\_\+t}} data, void $\ast$$\ast$address), \mbox{\hyperlink{group__code-object_gab551ffd46005748b7633a421c24e280f}{hsa\+\_\+callback\+\_\+data\+\_\+t}} callback\+\_\+data, const char $\ast$options, void $\ast$$\ast$serialized\+\_\+code\+\_\+object, size\+\_\+t $\ast$serialized\+\_\+code\+\_\+object\+\_\+size)
+\begin{DoxyCompactList}\small\item\em Serialize a code object. Can be used for offline finalization, install-\/time finalization, disk code caching, etc. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{group__status_gad755322e7ff95456520e8abdbe90d225}{hsa\+\_\+status\+\_\+t}} \mbox{\hyperlink{inc_2hsa__ext__image_8h_a64216765b98b62ee87deb50fd2899836}{HSA\+\_\+\+API}} \mbox{\hyperlink{inc_2hsa_8h_a2321f8ca7d706cada4f617b191a478b0}{HSA\+\_\+\+DEPRECATED}} \mbox{\hyperlink{group__code-object_ga5b4a20a2039fd8d542206894db185173}{hsa\+\_\+code\+\_\+object\+\_\+deserialize}} (void $\ast$serialized\+\_\+code\+\_\+object, size\+\_\+t serialized\+\_\+code\+\_\+object\+\_\+size, const char $\ast$options, \mbox{\hyperlink{group__code-object_gafae7c731c8bfc39b3050ef08ae8bb3e3}{hsa\+\_\+code\+\_\+object\+\_\+t}} $\ast$code\+\_\+object)
+\begin{DoxyCompactList}\small\item\em Deserialize a code object. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{group__status_gad755322e7ff95456520e8abdbe90d225}{hsa\+\_\+status\+\_\+t}} \mbox{\hyperlink{inc_2hsa__ext__image_8h_a64216765b98b62ee87deb50fd2899836}{HSA\+\_\+\+API}} \mbox{\hyperlink{inc_2hsa_8h_a2321f8ca7d706cada4f617b191a478b0}{HSA\+\_\+\+DEPRECATED}} \mbox{\hyperlink{group__code-object_gaa213e8f40d0c282a9e809c0dce9c7076}{hsa\+\_\+code\+\_\+object\+\_\+destroy}} (\mbox{\hyperlink{group__code-object_gafae7c731c8bfc39b3050ef08ae8bb3e3}{hsa\+\_\+code\+\_\+object\+\_\+t}} code\+\_\+object)
+\begin{DoxyCompactList}\small\item\em Destroy a code object. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{group__status_gad755322e7ff95456520e8abdbe90d225}{hsa\+\_\+status\+\_\+t}} \mbox{\hyperlink{inc_2hsa__ext__image_8h_a64216765b98b62ee87deb50fd2899836}{HSA\+\_\+\+API}} \mbox{\hyperlink{inc_2hsa_8h_a2321f8ca7d706cada4f617b191a478b0}{HSA\+\_\+\+DEPRECATED}} \mbox{\hyperlink{group__code-object_ga20be5aafc645814dfd098929c9043cf1}{hsa\+\_\+code\+\_\+object\+\_\+get\+\_\+info}} (\mbox{\hyperlink{group__code-object_gafae7c731c8bfc39b3050ef08ae8bb3e3}{hsa\+\_\+code\+\_\+object\+\_\+t}} code\+\_\+object, \mbox{\hyperlink{group__code-object_ga2025ec20684a99297a1912de92b50575}{hsa\+\_\+code\+\_\+object\+\_\+info\+\_\+t}} attribute, void $\ast$value)
+\begin{DoxyCompactList}\small\item\em Get the current value of an attribute for a given code object. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{group__status_gad755322e7ff95456520e8abdbe90d225}{hsa\+\_\+status\+\_\+t}} \mbox{\hyperlink{inc_2hsa__ext__image_8h_a64216765b98b62ee87deb50fd2899836}{HSA\+\_\+\+API}} \mbox{\hyperlink{inc_2hsa_8h_a2321f8ca7d706cada4f617b191a478b0}{HSA\+\_\+\+DEPRECATED}} \mbox{\hyperlink{group__code-object_gabf896a163cb3647a5172325221deb41b}{hsa\+\_\+executable\+\_\+load\+\_\+code\+\_\+object}} (\mbox{\hyperlink{group__executable_ga4a4281d636cb6048c4d7a015e1fa3baa}{hsa\+\_\+executable\+\_\+t}} executable, \mbox{\hyperlink{group__agentinfo_ga9ce217ef08e7d5e89c8e83ce7b6ef22b}{hsa\+\_\+agent\+\_\+t}} agent, \mbox{\hyperlink{group__code-object_gafae7c731c8bfc39b3050ef08ae8bb3e3}{hsa\+\_\+code\+\_\+object\+\_\+t}} code\+\_\+object, const char $\ast$options)
+\begin{DoxyCompactList}\small\item\em Load code object into the executable. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{group__status_gad755322e7ff95456520e8abdbe90d225}{hsa\+\_\+status\+\_\+t}} \mbox{\hyperlink{inc_2hsa__ext__image_8h_a64216765b98b62ee87deb50fd2899836}{HSA\+\_\+\+API}} \mbox{\hyperlink{inc_2hsa_8h_a2321f8ca7d706cada4f617b191a478b0}{HSA\+\_\+\+DEPRECATED}} \mbox{\hyperlink{group__code-object_ga0a52c838e8e43bb0f9760624af109a91}{hsa\+\_\+code\+\_\+object\+\_\+get\+\_\+symbol}} (\mbox{\hyperlink{group__code-object_gafae7c731c8bfc39b3050ef08ae8bb3e3}{hsa\+\_\+code\+\_\+object\+\_\+t}} code\+\_\+object, const char $\ast$symbol\+\_\+name, \mbox{\hyperlink{group__code-object_ga15ba4306d85031c1122c9f7804b97502}{hsa\+\_\+code\+\_\+symbol\+\_\+t}} $\ast$symbol)
+\begin{DoxyCompactList}\small\item\em Get the symbol handle within a code object for a given a symbol name. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{group__status_gad755322e7ff95456520e8abdbe90d225}{hsa\+\_\+status\+\_\+t}} \mbox{\hyperlink{inc_2hsa__ext__image_8h_a64216765b98b62ee87deb50fd2899836}{HSA\+\_\+\+API}} \mbox{\hyperlink{inc_2hsa_8h_a2321f8ca7d706cada4f617b191a478b0}{HSA\+\_\+\+DEPRECATED}} \mbox{\hyperlink{group__code-object_ga10a8f3d500757a85f04e691732a32ec4}{hsa\+\_\+code\+\_\+object\+\_\+get\+\_\+symbol\+\_\+from\+\_\+name}} (\mbox{\hyperlink{group__code-object_gafae7c731c8bfc39b3050ef08ae8bb3e3}{hsa\+\_\+code\+\_\+object\+\_\+t}} code\+\_\+object, const char $\ast$module\+\_\+name, const char $\ast$symbol\+\_\+name, \mbox{\hyperlink{group__code-object_ga15ba4306d85031c1122c9f7804b97502}{hsa\+\_\+code\+\_\+symbol\+\_\+t}} $\ast$symbol)
+\begin{DoxyCompactList}\small\item\em Get the symbol handle within a code object for a given a symbol name. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{group__status_gad755322e7ff95456520e8abdbe90d225}{hsa\+\_\+status\+\_\+t}} \mbox{\hyperlink{inc_2hsa__ext__image_8h_a64216765b98b62ee87deb50fd2899836}{HSA\+\_\+\+API}} \mbox{\hyperlink{inc_2hsa_8h_a2321f8ca7d706cada4f617b191a478b0}{HSA\+\_\+\+DEPRECATED}} \mbox{\hyperlink{group__code-object_ga755d1fcc5317cf1b93ba559c4b76b69d}{hsa\+\_\+code\+\_\+symbol\+\_\+get\+\_\+info}} (\mbox{\hyperlink{group__code-object_ga15ba4306d85031c1122c9f7804b97502}{hsa\+\_\+code\+\_\+symbol\+\_\+t}} code\+\_\+symbol, \mbox{\hyperlink{group__code-object_gaded99609f1225ba3ed62328c7e1a3694}{hsa\+\_\+code\+\_\+symbol\+\_\+info\+\_\+t}} attribute, void $\ast$value)
+\begin{DoxyCompactList}\small\item\em Get the current value of an attribute for a given code symbol. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{group__status_gad755322e7ff95456520e8abdbe90d225}{hsa\+\_\+status\+\_\+t}} \mbox{\hyperlink{inc_2hsa__ext__image_8h_a64216765b98b62ee87deb50fd2899836}{HSA\+\_\+\+API}} \mbox{\hyperlink{inc_2hsa_8h_a2321f8ca7d706cada4f617b191a478b0}{HSA\+\_\+\+DEPRECATED}} \mbox{\hyperlink{group__code-object_ga169ded05e38ae66cab5324e2d27489c4}{hsa\+\_\+code\+\_\+object\+\_\+iterate\+\_\+symbols}} (\mbox{\hyperlink{group__code-object_gafae7c731c8bfc39b3050ef08ae8bb3e3}{hsa\+\_\+code\+\_\+object\+\_\+t}} code\+\_\+object, \mbox{\hyperlink{group__status_gad755322e7ff95456520e8abdbe90d225}{hsa\+\_\+status\+\_\+t}}($\ast$callback)(\mbox{\hyperlink{group__code-object_gafae7c731c8bfc39b3050ef08ae8bb3e3}{hsa\+\_\+code\+\_\+object\+\_\+t}} code\+\_\+object, \mbox{\hyperlink{group__code-object_ga15ba4306d85031c1122c9f7804b97502}{hsa\+\_\+code\+\_\+symbol\+\_\+t}} symbol, void $\ast$data), void $\ast$data)
+\begin{DoxyCompactList}\small\item\em Iterate over the symbols in a code object, and invoke an application-\/defined callback on every iteration. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+
+
+\doxysubsection{Typedef Documentation}
+\mbox{\Hypertarget{group__code-object_gab551ffd46005748b7633a421c24e280f}\label{group__code-object_gab551ffd46005748b7633a421c24e280f}} 
+\index{Code Objects (deprecated).@{Code Objects (deprecated).}!hsa\_callback\_data\_t@{hsa\_callback\_data\_t}}
+\index{hsa\_callback\_data\_t@{hsa\_callback\_data\_t}!Code Objects (deprecated).@{Code Objects (deprecated).}}
+\doxysubsubsection{\texorpdfstring{hsa\_callback\_data\_t}{hsa\_callback\_data\_t}}
+{\footnotesize\ttfamily typedef struct \mbox{\hyperlink{structhsa__callback__data__s}{hsa\+\_\+callback\+\_\+data\+\_\+s}} \mbox{\hyperlink{group__code-object_gab551ffd46005748b7633a421c24e280f}{hsa\+\_\+callback\+\_\+data\+\_\+t}}}
+
+
+
+Application data handle that is passed to the serialization and deserialization functions. 
+
+\begin{DoxyRefDesc}{Deprecated}
+\item[\mbox{\hyperlink{deprecated__deprecated000045}{Deprecated}}]\end{DoxyRefDesc}
+\mbox{\Hypertarget{group__code-object_gafae7c731c8bfc39b3050ef08ae8bb3e3}\label{group__code-object_gafae7c731c8bfc39b3050ef08ae8bb3e3}} 
+\index{Code Objects (deprecated).@{Code Objects (deprecated).}!hsa\_code\_object\_t@{hsa\_code\_object\_t}}
+\index{hsa\_code\_object\_t@{hsa\_code\_object\_t}!Code Objects (deprecated).@{Code Objects (deprecated).}}
+\doxysubsubsection{\texorpdfstring{hsa\_code\_object\_t}{hsa\_code\_object\_t}}
+{\footnotesize\ttfamily typedef struct \mbox{\hyperlink{structhsa__code__object__s}{hsa\+\_\+code\+\_\+object\+\_\+s}} \mbox{\hyperlink{group__code-object_gafae7c731c8bfc39b3050ef08ae8bb3e3}{hsa\+\_\+code\+\_\+object\+\_\+t}}}
+
+
+
+Struct containing an opaque handle to a code object, which contains ISA for finalized kernels and indirect functions together with information about the global or readonly segment variables they reference. 
+
+\begin{DoxyRefDesc}{Deprecated}
+\item[\mbox{\hyperlink{deprecated__deprecated000044}{Deprecated}}]\end{DoxyRefDesc}
+\mbox{\Hypertarget{group__code-object_ga15ba4306d85031c1122c9f7804b97502}\label{group__code-object_ga15ba4306d85031c1122c9f7804b97502}} 
+\index{Code Objects (deprecated).@{Code Objects (deprecated).}!hsa\_code\_symbol\_t@{hsa\_code\_symbol\_t}}
+\index{hsa\_code\_symbol\_t@{hsa\_code\_symbol\_t}!Code Objects (deprecated).@{Code Objects (deprecated).}}
+\doxysubsubsection{\texorpdfstring{hsa\_code\_symbol\_t}{hsa\_code\_symbol\_t}}
+{\footnotesize\ttfamily typedef struct \mbox{\hyperlink{structhsa__code__symbol__s}{hsa\+\_\+code\+\_\+symbol\+\_\+s}} \mbox{\hyperlink{group__code-object_ga15ba4306d85031c1122c9f7804b97502}{hsa\+\_\+code\+\_\+symbol\+\_\+t}}}
+
+
+
+Code object symbol handle. 
+
+\begin{DoxyRefDesc}{Deprecated}
+\item[\mbox{\hyperlink{deprecated__deprecated000053}{Deprecated}}]\end{DoxyRefDesc}
+
+
+The lifetime of a code object symbol matches that of the code object associated with it. An operation on a symbol whose associated code object has been destroyed results in undefined behavior. 
+
+\doxysubsection{Enumeration Type Documentation}
+\mbox{\Hypertarget{group__code-object_ga2025ec20684a99297a1912de92b50575}\label{group__code-object_ga2025ec20684a99297a1912de92b50575}} 
+\index{Code Objects (deprecated).@{Code Objects (deprecated).}!hsa\_code\_object\_info\_t@{hsa\_code\_object\_info\_t}}
+\index{hsa\_code\_object\_info\_t@{hsa\_code\_object\_info\_t}!Code Objects (deprecated).@{Code Objects (deprecated).}}
+\doxysubsubsection{\texorpdfstring{hsa\_code\_object\_info\_t}{hsa\_code\_object\_info\_t}}
+{\footnotesize\ttfamily enum \mbox{\hyperlink{group__code-object_ga2025ec20684a99297a1912de92b50575}{hsa\+\_\+code\+\_\+object\+\_\+info\+\_\+t}}}
+
+
+
+Code object attributes. 
+
+\begin{DoxyRefDesc}{Deprecated}
+\item[\mbox{\hyperlink{deprecated__deprecated000050}{Deprecated}}]\end{DoxyRefDesc}
+\begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{HSA\_CODE\_OBJECT\_INFO\_VERSION@{HSA\_CODE\_OBJECT\_INFO\_VERSION}!Code Objects (deprecated).@{Code Objects (deprecated).}}\index{Code Objects (deprecated).@{Code Objects (deprecated).}!HSA\_CODE\_OBJECT\_INFO\_VERSION@{HSA\_CODE\_OBJECT\_INFO\_VERSION}}}\mbox{\Hypertarget{group__code-object_gga2025ec20684a99297a1912de92b50575aae07446dcdf92b69edb3743f8459054e}\label{group__code-object_gga2025ec20684a99297a1912de92b50575aae07446dcdf92b69edb3743f8459054e}} 
+HSA\+\_\+\+CODE\+\_\+\+OBJECT\+\_\+\+INFO\+\_\+\+VERSION&The version of the code object. The type of this attribute is a NUL-\/terminated char\mbox{[}64\mbox{]}. The name must be at most 63 characters long (not including the NUL terminator) and all array elements not used for the name must be NUL. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{HSA\_CODE\_OBJECT\_INFO\_TYPE@{HSA\_CODE\_OBJECT\_INFO\_TYPE}!Code Objects (deprecated).@{Code Objects (deprecated).}}\index{Code Objects (deprecated).@{Code Objects (deprecated).}!HSA\_CODE\_OBJECT\_INFO\_TYPE@{HSA\_CODE\_OBJECT\_INFO\_TYPE}}}\mbox{\Hypertarget{group__code-object_gga2025ec20684a99297a1912de92b50575a72f382733fcc2515463fac21c2f13f6c}\label{group__code-object_gga2025ec20684a99297a1912de92b50575a72f382733fcc2515463fac21c2f13f6c}} 
+HSA\+\_\+\+CODE\+\_\+\+OBJECT\+\_\+\+INFO\+\_\+\+TYPE&Type of code object. The type of this attribute is \mbox{\hyperlink{group__code-object_gaf769fe79f88bec884909567e6a941f06}{hsa\+\_\+code\+\_\+object\+\_\+type\+\_\+t}}. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{HSA\_CODE\_OBJECT\_INFO\_ISA@{HSA\_CODE\_OBJECT\_INFO\_ISA}!Code Objects (deprecated).@{Code Objects (deprecated).}}\index{Code Objects (deprecated).@{Code Objects (deprecated).}!HSA\_CODE\_OBJECT\_INFO\_ISA@{HSA\_CODE\_OBJECT\_INFO\_ISA}}}\mbox{\Hypertarget{group__code-object_gga2025ec20684a99297a1912de92b50575ae127b6c3431ea1a89443f97d7fab7e53}\label{group__code-object_gga2025ec20684a99297a1912de92b50575ae127b6c3431ea1a89443f97d7fab7e53}} 
+HSA\+\_\+\+CODE\+\_\+\+OBJECT\+\_\+\+INFO\+\_\+\+ISA&Instruction set architecture this code object is produced for. The type of this attribute is \mbox{\hyperlink{group__instruction-set-architecture_ga459b132d062bba98dd1870f38b6ab721}{hsa\+\_\+isa\+\_\+t}}. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{HSA\_CODE\_OBJECT\_INFO\_MACHINE\_MODEL@{HSA\_CODE\_OBJECT\_INFO\_MACHINE\_MODEL}!Code Objects (deprecated).@{Code Objects (deprecated).}}\index{Code Objects (deprecated).@{Code Objects (deprecated).}!HSA\_CODE\_OBJECT\_INFO\_MACHINE\_MODEL@{HSA\_CODE\_OBJECT\_INFO\_MACHINE\_MODEL}}}\mbox{\Hypertarget{group__code-object_gga2025ec20684a99297a1912de92b50575a3deaaa873044bcf65ff306c4563d49d5}\label{group__code-object_gga2025ec20684a99297a1912de92b50575a3deaaa873044bcf65ff306c4563d49d5}} 
+HSA\+\_\+\+CODE\+\_\+\+OBJECT\+\_\+\+INFO\+\_\+\+MACHINE\+\_\+\+MODEL&Machine model this code object is produced for. The type of this attribute is \mbox{\hyperlink{group__agentinfo_ga4d45919fd6f6e8dbb8ae2f4030870e11}{hsa\+\_\+machine\+\_\+model\+\_\+t}}. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{HSA\_CODE\_OBJECT\_INFO\_PROFILE@{HSA\_CODE\_OBJECT\_INFO\_PROFILE}!Code Objects (deprecated).@{Code Objects (deprecated).}}\index{Code Objects (deprecated).@{Code Objects (deprecated).}!HSA\_CODE\_OBJECT\_INFO\_PROFILE@{HSA\_CODE\_OBJECT\_INFO\_PROFILE}}}\mbox{\Hypertarget{group__code-object_gga2025ec20684a99297a1912de92b50575ae9c8e3e81088dfc1d637e45baa010c6f}\label{group__code-object_gga2025ec20684a99297a1912de92b50575ae9c8e3e81088dfc1d637e45baa010c6f}} 
+HSA\+\_\+\+CODE\+\_\+\+OBJECT\+\_\+\+INFO\+\_\+\+PROFILE&Profile this code object is produced for. The type of this attribute is \mbox{\hyperlink{group__agentinfo_gacafd4247e2a04cbe0ac0b3998c127532}{hsa\+\_\+profile\+\_\+t}}. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{HSA\_CODE\_OBJECT\_INFO\_DEFAULT\_FLOAT\_ROUNDING\_MODE@{HSA\_CODE\_OBJECT\_INFO\_DEFAULT\_FLOAT\_ROUNDING\_MODE}!Code Objects (deprecated).@{Code Objects (deprecated).}}\index{Code Objects (deprecated).@{Code Objects (deprecated).}!HSA\_CODE\_OBJECT\_INFO\_DEFAULT\_FLOAT\_ROUNDING\_MODE@{HSA\_CODE\_OBJECT\_INFO\_DEFAULT\_FLOAT\_ROUNDING\_MODE}}}\mbox{\Hypertarget{group__code-object_gga2025ec20684a99297a1912de92b50575a40d5cb59d78de0b2791bae6de76c3c92}\label{group__code-object_gga2025ec20684a99297a1912de92b50575a40d5cb59d78de0b2791bae6de76c3c92}} 
+HSA\+\_\+\+CODE\+\_\+\+OBJECT\+\_\+\+INFO\+\_\+\+DEFAULT\+\_\+\+FLOAT\+\_\+\+ROUNDING\+\_\+\+MODE&Default floating-\/point rounding mode used when the code object is produced. The type of this attribute is \mbox{\hyperlink{group__agentinfo_gaac56321e4596fe10a90b5bb3fedc4b73}{hsa\+\_\+default\+\_\+float\+\_\+rounding\+\_\+mode\+\_\+t}}. \\
+\hline
+
+\end{DoxyEnumFields}
+\mbox{\Hypertarget{group__code-object_gaf769fe79f88bec884909567e6a941f06}\label{group__code-object_gaf769fe79f88bec884909567e6a941f06}} 
+\index{Code Objects (deprecated).@{Code Objects (deprecated).}!hsa\_code\_object\_type\_t@{hsa\_code\_object\_type\_t}}
+\index{hsa\_code\_object\_type\_t@{hsa\_code\_object\_type\_t}!Code Objects (deprecated).@{Code Objects (deprecated).}}
+\doxysubsubsection{\texorpdfstring{hsa\_code\_object\_type\_t}{hsa\_code\_object\_type\_t}}
+{\footnotesize\ttfamily enum \mbox{\hyperlink{group__code-object_gaf769fe79f88bec884909567e6a941f06}{hsa\+\_\+code\+\_\+object\+\_\+type\+\_\+t}}}
+
+
+
+Code object type. 
+
+\begin{DoxyRefDesc}{Deprecated}
+\item[\mbox{\hyperlink{deprecated__deprecated000049}{Deprecated}}]\end{DoxyRefDesc}
+\begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{HSA\_CODE\_OBJECT\_TYPE\_PROGRAM@{HSA\_CODE\_OBJECT\_TYPE\_PROGRAM}!Code Objects (deprecated).@{Code Objects (deprecated).}}\index{Code Objects (deprecated).@{Code Objects (deprecated).}!HSA\_CODE\_OBJECT\_TYPE\_PROGRAM@{HSA\_CODE\_OBJECT\_TYPE\_PROGRAM}}}\mbox{\Hypertarget{group__code-object_ggaf769fe79f88bec884909567e6a941f06a1a8d797f645fe947a3d7e44bef05f999}\label{group__code-object_ggaf769fe79f88bec884909567e6a941f06a1a8d797f645fe947a3d7e44bef05f999}} 
+HSA\+\_\+\+CODE\+\_\+\+OBJECT\+\_\+\+TYPE\+\_\+\+PROGRAM&Produces code object that contains ISA for all kernels and indirect functions in HSA source. \\
+\hline
+
+\end{DoxyEnumFields}
+\mbox{\Hypertarget{group__code-object_gaded99609f1225ba3ed62328c7e1a3694}\label{group__code-object_gaded99609f1225ba3ed62328c7e1a3694}} 
+\index{Code Objects (deprecated).@{Code Objects (deprecated).}!hsa\_code\_symbol\_info\_t@{hsa\_code\_symbol\_info\_t}}
+\index{hsa\_code\_symbol\_info\_t@{hsa\_code\_symbol\_info\_t}!Code Objects (deprecated).@{Code Objects (deprecated).}}
+\doxysubsubsection{\texorpdfstring{hsa\_code\_symbol\_info\_t}{hsa\_code\_symbol\_info\_t}}
+{\footnotesize\ttfamily enum \mbox{\hyperlink{group__code-object_gaded99609f1225ba3ed62328c7e1a3694}{hsa\+\_\+code\+\_\+symbol\+\_\+info\+\_\+t}}}
+
+
+
+Code object symbol attributes. 
+
+\begin{DoxyRefDesc}{Deprecated}
+\item[\mbox{\hyperlink{deprecated__deprecated000056}{Deprecated}}]\end{DoxyRefDesc}
+\begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{HSA\_CODE\_SYMBOL\_INFO\_TYPE@{HSA\_CODE\_SYMBOL\_INFO\_TYPE}!Code Objects (deprecated).@{Code Objects (deprecated).}}\index{Code Objects (deprecated).@{Code Objects (deprecated).}!HSA\_CODE\_SYMBOL\_INFO\_TYPE@{HSA\_CODE\_SYMBOL\_INFO\_TYPE}}}\mbox{\Hypertarget{group__code-object_ggaded99609f1225ba3ed62328c7e1a3694a7432ef4a30aeccf408aa257496dbf354}\label{group__code-object_ggaded99609f1225ba3ed62328c7e1a3694a7432ef4a30aeccf408aa257496dbf354}} 
+HSA\+\_\+\+CODE\+\_\+\+SYMBOL\+\_\+\+INFO\+\_\+\+TYPE&The type of the symbol. The type of this attribute is \mbox{\hyperlink{group__executable_ga530ca6dcd35807946cd1dfb8202ff4be}{hsa\+\_\+symbol\+\_\+kind\+\_\+t}}. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{HSA\_CODE\_SYMBOL\_INFO\_NAME\_LENGTH@{HSA\_CODE\_SYMBOL\_INFO\_NAME\_LENGTH}!Code Objects (deprecated).@{Code Objects (deprecated).}}\index{Code Objects (deprecated).@{Code Objects (deprecated).}!HSA\_CODE\_SYMBOL\_INFO\_NAME\_LENGTH@{HSA\_CODE\_SYMBOL\_INFO\_NAME\_LENGTH}}}\mbox{\Hypertarget{group__code-object_ggaded99609f1225ba3ed62328c7e1a3694ab3a5d43c03060f1d1118f00f88f63885}\label{group__code-object_ggaded99609f1225ba3ed62328c7e1a3694ab3a5d43c03060f1d1118f00f88f63885}} 
+HSA\+\_\+\+CODE\+\_\+\+SYMBOL\+\_\+\+INFO\+\_\+\+NAME\+\_\+\+LENGTH&The length of the symbol name in bytes, not including the NUL terminator. The type of this attribute is uint32\+\_\+t. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{HSA\_CODE\_SYMBOL\_INFO\_NAME@{HSA\_CODE\_SYMBOL\_INFO\_NAME}!Code Objects (deprecated).@{Code Objects (deprecated).}}\index{Code Objects (deprecated).@{Code Objects (deprecated).}!HSA\_CODE\_SYMBOL\_INFO\_NAME@{HSA\_CODE\_SYMBOL\_INFO\_NAME}}}\mbox{\Hypertarget{group__code-object_ggaded99609f1225ba3ed62328c7e1a3694a4c59e37218060708503434ca2af6df5b}\label{group__code-object_ggaded99609f1225ba3ed62328c7e1a3694a4c59e37218060708503434ca2af6df5b}} 
+HSA\+\_\+\+CODE\+\_\+\+SYMBOL\+\_\+\+INFO\+\_\+\+NAME&The name of the symbol. The type of this attribute is character array with the length equal to the value of \mbox{\hyperlink{group__code-object_ggaded99609f1225ba3ed62328c7e1a3694ab3a5d43c03060f1d1118f00f88f63885}{HSA\+\_\+\+CODE\+\_\+\+SYMBOL\+\_\+\+INFO\+\_\+\+NAME\+\_\+\+LENGTH}} attribute. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{HSA\_CODE\_SYMBOL\_INFO\_MODULE\_NAME\_LENGTH@{HSA\_CODE\_SYMBOL\_INFO\_MODULE\_NAME\_LENGTH}!Code Objects (deprecated).@{Code Objects (deprecated).}}\index{Code Objects (deprecated).@{Code Objects (deprecated).}!HSA\_CODE\_SYMBOL\_INFO\_MODULE\_NAME\_LENGTH@{HSA\_CODE\_SYMBOL\_INFO\_MODULE\_NAME\_LENGTH}}}\mbox{\Hypertarget{group__code-object_ggaded99609f1225ba3ed62328c7e1a3694a19a4d6ab4dd53d51ad8dca20dcaaae2a}\label{group__code-object_ggaded99609f1225ba3ed62328c7e1a3694a19a4d6ab4dd53d51ad8dca20dcaaae2a}} 
+HSA\+\_\+\+CODE\+\_\+\+SYMBOL\+\_\+\+INFO\+\_\+\+MODULE\+\_\+\+NAME\+\_\+\+LENGTH&The length of the module name in bytes (not including the NUL terminator) to which this symbol belongs if this symbol has module linkage, otherwise 0 is returned. The type of this attribute is uint32\+\_\+t. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{HSA\_CODE\_SYMBOL\_INFO\_MODULE\_NAME@{HSA\_CODE\_SYMBOL\_INFO\_MODULE\_NAME}!Code Objects (deprecated).@{Code Objects (deprecated).}}\index{Code Objects (deprecated).@{Code Objects (deprecated).}!HSA\_CODE\_SYMBOL\_INFO\_MODULE\_NAME@{HSA\_CODE\_SYMBOL\_INFO\_MODULE\_NAME}}}\mbox{\Hypertarget{group__code-object_ggaded99609f1225ba3ed62328c7e1a3694acdeacc2d88de153507b157df850c8d34}\label{group__code-object_ggaded99609f1225ba3ed62328c7e1a3694acdeacc2d88de153507b157df850c8d34}} 
+HSA\+\_\+\+CODE\+\_\+\+SYMBOL\+\_\+\+INFO\+\_\+\+MODULE\+\_\+\+NAME&The module name to which this symbol belongs if this symbol has module linkage, otherwise an empty string is returned. The type of this attribute is character array with the length equal to the value of \mbox{\hyperlink{group__code-object_ggaded99609f1225ba3ed62328c7e1a3694a19a4d6ab4dd53d51ad8dca20dcaaae2a}{HSA\+\_\+\+CODE\+\_\+\+SYMBOL\+\_\+\+INFO\+\_\+\+MODULE\+\_\+\+NAME\+\_\+\+LENGTH}} attribute. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{HSA\_CODE\_SYMBOL\_INFO\_LINKAGE@{HSA\_CODE\_SYMBOL\_INFO\_LINKAGE}!Code Objects (deprecated).@{Code Objects (deprecated).}}\index{Code Objects (deprecated).@{Code Objects (deprecated).}!HSA\_CODE\_SYMBOL\_INFO\_LINKAGE@{HSA\_CODE\_SYMBOL\_INFO\_LINKAGE}}}\mbox{\Hypertarget{group__code-object_ggaded99609f1225ba3ed62328c7e1a3694a31bf12114328b85aff24960b2144eb54}\label{group__code-object_ggaded99609f1225ba3ed62328c7e1a3694a31bf12114328b85aff24960b2144eb54}} 
+HSA\+\_\+\+CODE\+\_\+\+SYMBOL\+\_\+\+INFO\+\_\+\+LINKAGE&The linkage kind of the symbol. The type of this attribute is \mbox{\hyperlink{group__executable_gaf2aba3b2a8dc8fe4faa91635520ca25c}{hsa\+\_\+symbol\+\_\+linkage\+\_\+t}}. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{HSA\_CODE\_SYMBOL\_INFO\_IS\_DEFINITION@{HSA\_CODE\_SYMBOL\_INFO\_IS\_DEFINITION}!Code Objects (deprecated).@{Code Objects (deprecated).}}\index{Code Objects (deprecated).@{Code Objects (deprecated).}!HSA\_CODE\_SYMBOL\_INFO\_IS\_DEFINITION@{HSA\_CODE\_SYMBOL\_INFO\_IS\_DEFINITION}}}\mbox{\Hypertarget{group__code-object_ggaded99609f1225ba3ed62328c7e1a3694ae6cc27d2cdc6631174d15504e734186d}\label{group__code-object_ggaded99609f1225ba3ed62328c7e1a3694ae6cc27d2cdc6631174d15504e734186d}} 
+HSA\+\_\+\+CODE\+\_\+\+SYMBOL\+\_\+\+INFO\+\_\+\+IS\+\_\+\+DEFINITION&Indicates whether the symbol corresponds to a definition. The type of this attribute is bool. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{HSA\_CODE\_SYMBOL\_INFO\_VARIABLE\_ALLOCATION@{HSA\_CODE\_SYMBOL\_INFO\_VARIABLE\_ALLOCATION}!Code Objects (deprecated).@{Code Objects (deprecated).}}\index{Code Objects (deprecated).@{Code Objects (deprecated).}!HSA\_CODE\_SYMBOL\_INFO\_VARIABLE\_ALLOCATION@{HSA\_CODE\_SYMBOL\_INFO\_VARIABLE\_ALLOCATION}}}\mbox{\Hypertarget{group__code-object_ggaded99609f1225ba3ed62328c7e1a3694a22d4c6af18edc21289971543ac0cc217}\label{group__code-object_ggaded99609f1225ba3ed62328c7e1a3694a22d4c6af18edc21289971543ac0cc217}} 
+HSA\+\_\+\+CODE\+\_\+\+SYMBOL\+\_\+\+INFO\+\_\+\+VARIABLE\+\_\+\+ALLOCATION&The allocation kind of the variable. The value of this attribute is undefined if the symbol is not a variable. The type of this attribute is \mbox{\hyperlink{group__executable_ga0fdb971a44d3e02d1bd5ff889624461a}{hsa\+\_\+variable\+\_\+allocation\+\_\+t}}. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{HSA\_CODE\_SYMBOL\_INFO\_VARIABLE\_SEGMENT@{HSA\_CODE\_SYMBOL\_INFO\_VARIABLE\_SEGMENT}!Code Objects (deprecated).@{Code Objects (deprecated).}}\index{Code Objects (deprecated).@{Code Objects (deprecated).}!HSA\_CODE\_SYMBOL\_INFO\_VARIABLE\_SEGMENT@{HSA\_CODE\_SYMBOL\_INFO\_VARIABLE\_SEGMENT}}}\mbox{\Hypertarget{group__code-object_ggaded99609f1225ba3ed62328c7e1a3694abb7e00d771642a81b50bf124d48c958b}\label{group__code-object_ggaded99609f1225ba3ed62328c7e1a3694abb7e00d771642a81b50bf124d48c958b}} 
+HSA\+\_\+\+CODE\+\_\+\+SYMBOL\+\_\+\+INFO\+\_\+\+VARIABLE\+\_\+\+SEGMENT&The segment kind of the variable. The value of this attribute is undefined if the symbol is not a variable. The type of this attribute is \mbox{\hyperlink{group__executable_ga7fb2a9fe278f7ab892eb158277e2dd8c}{hsa\+\_\+variable\+\_\+segment\+\_\+t}}. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{HSA\_CODE\_SYMBOL\_INFO\_VARIABLE\_ALIGNMENT@{HSA\_CODE\_SYMBOL\_INFO\_VARIABLE\_ALIGNMENT}!Code Objects (deprecated).@{Code Objects (deprecated).}}\index{Code Objects (deprecated).@{Code Objects (deprecated).}!HSA\_CODE\_SYMBOL\_INFO\_VARIABLE\_ALIGNMENT@{HSA\_CODE\_SYMBOL\_INFO\_VARIABLE\_ALIGNMENT}}}\mbox{\Hypertarget{group__code-object_ggaded99609f1225ba3ed62328c7e1a3694aa98d70cb9e0aefd8e0dd4e8bb38040ee}\label{group__code-object_ggaded99609f1225ba3ed62328c7e1a3694aa98d70cb9e0aefd8e0dd4e8bb38040ee}} 
+HSA\+\_\+\+CODE\+\_\+\+SYMBOL\+\_\+\+INFO\+\_\+\+VARIABLE\+\_\+\+ALIGNMENT&Alignment of the symbol in memory. The value of this attribute is undefined if the symbol is not a variable. The type of this attribute is uint32\+\_\+t.
+
+The current alignment of the variable in memory may be greater than the value specified in the source program variable declaration. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{HSA\_CODE\_SYMBOL\_INFO\_VARIABLE\_SIZE@{HSA\_CODE\_SYMBOL\_INFO\_VARIABLE\_SIZE}!Code Objects (deprecated).@{Code Objects (deprecated).}}\index{Code Objects (deprecated).@{Code Objects (deprecated).}!HSA\_CODE\_SYMBOL\_INFO\_VARIABLE\_SIZE@{HSA\_CODE\_SYMBOL\_INFO\_VARIABLE\_SIZE}}}\mbox{\Hypertarget{group__code-object_ggaded99609f1225ba3ed62328c7e1a3694a05900bfb488539bf04af7be230529f3e}\label{group__code-object_ggaded99609f1225ba3ed62328c7e1a3694a05900bfb488539bf04af7be230529f3e}} 
+HSA\+\_\+\+CODE\+\_\+\+SYMBOL\+\_\+\+INFO\+\_\+\+VARIABLE\+\_\+\+SIZE&Size of the variable. The value of this attribute is undefined if the symbol is not a variable. The type of this attribute is uint32\+\_\+t.
+
+A size of 0 is returned if the variable is an external variable and has an unknown dimension. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{HSA\_CODE\_SYMBOL\_INFO\_VARIABLE\_IS\_CONST@{HSA\_CODE\_SYMBOL\_INFO\_VARIABLE\_IS\_CONST}!Code Objects (deprecated).@{Code Objects (deprecated).}}\index{Code Objects (deprecated).@{Code Objects (deprecated).}!HSA\_CODE\_SYMBOL\_INFO\_VARIABLE\_IS\_CONST@{HSA\_CODE\_SYMBOL\_INFO\_VARIABLE\_IS\_CONST}}}\mbox{\Hypertarget{group__code-object_ggaded99609f1225ba3ed62328c7e1a3694a5f8244951160c1f391d25c61bf8f0875}\label{group__code-object_ggaded99609f1225ba3ed62328c7e1a3694a5f8244951160c1f391d25c61bf8f0875}} 
+HSA\+\_\+\+CODE\+\_\+\+SYMBOL\+\_\+\+INFO\+\_\+\+VARIABLE\+\_\+\+IS\+\_\+\+CONST&Indicates whether the variable is constant. The value of this attribute is undefined if the symbol is not a variable. The type of this attribute is bool. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{HSA\_CODE\_SYMBOL\_INFO\_KERNEL\_KERNARG\_SEGMENT\_SIZE@{HSA\_CODE\_SYMBOL\_INFO\_KERNEL\_KERNARG\_SEGMENT\_SIZE}!Code Objects (deprecated).@{Code Objects (deprecated).}}\index{Code Objects (deprecated).@{Code Objects (deprecated).}!HSA\_CODE\_SYMBOL\_INFO\_KERNEL\_KERNARG\_SEGMENT\_SIZE@{HSA\_CODE\_SYMBOL\_INFO\_KERNEL\_KERNARG\_SEGMENT\_SIZE}}}\mbox{\Hypertarget{group__code-object_ggaded99609f1225ba3ed62328c7e1a3694a726e2e9506111550539829e5ae97013c}\label{group__code-object_ggaded99609f1225ba3ed62328c7e1a3694a726e2e9506111550539829e5ae97013c}} 
+HSA\+\_\+\+CODE\+\_\+\+SYMBOL\+\_\+\+INFO\+\_\+\+KERNEL\+\_\+\+KERNARG\+\_\+\+SEGMENT\+\_\+\+SIZE&Size of kernarg segment memory that is required to hold the values of the kernel arguments, in bytes. Must be a multiple of 16. The value of this attribute is undefined if the symbol is not a kernel. The type of this attribute is uint32\+\_\+t. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{HSA\_CODE\_SYMBOL\_INFO\_KERNEL\_KERNARG\_SEGMENT\_ALIGNMENT@{HSA\_CODE\_SYMBOL\_INFO\_KERNEL\_KERNARG\_SEGMENT\_ALIGNMENT}!Code Objects (deprecated).@{Code Objects (deprecated).}}\index{Code Objects (deprecated).@{Code Objects (deprecated).}!HSA\_CODE\_SYMBOL\_INFO\_KERNEL\_KERNARG\_SEGMENT\_ALIGNMENT@{HSA\_CODE\_SYMBOL\_INFO\_KERNEL\_KERNARG\_SEGMENT\_ALIGNMENT}}}\mbox{\Hypertarget{group__code-object_ggaded99609f1225ba3ed62328c7e1a3694a6c6ec6aea6065a45e69569aa73153d73}\label{group__code-object_ggaded99609f1225ba3ed62328c7e1a3694a6c6ec6aea6065a45e69569aa73153d73}} 
+HSA\+\_\+\+CODE\+\_\+\+SYMBOL\+\_\+\+INFO\+\_\+\+KERNEL\+\_\+\+KERNARG\+\_\+\+SEGMENT\+\_\+\+ALIGNMENT&Alignment (in bytes) of the buffer used to pass arguments to the kernel, which is the maximum of 16 and the maximum alignment of any of the kernel arguments. The value of this attribute is undefined if the symbol is not a kernel. The type of this attribute is uint32\+\_\+t. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{HSA\_CODE\_SYMBOL\_INFO\_KERNEL\_GROUP\_SEGMENT\_SIZE@{HSA\_CODE\_SYMBOL\_INFO\_KERNEL\_GROUP\_SEGMENT\_SIZE}!Code Objects (deprecated).@{Code Objects (deprecated).}}\index{Code Objects (deprecated).@{Code Objects (deprecated).}!HSA\_CODE\_SYMBOL\_INFO\_KERNEL\_GROUP\_SEGMENT\_SIZE@{HSA\_CODE\_SYMBOL\_INFO\_KERNEL\_GROUP\_SEGMENT\_SIZE}}}\mbox{\Hypertarget{group__code-object_ggaded99609f1225ba3ed62328c7e1a3694a4902e8e583d06385e42500f86c68c5ee}\label{group__code-object_ggaded99609f1225ba3ed62328c7e1a3694a4902e8e583d06385e42500f86c68c5ee}} 
+HSA\+\_\+\+CODE\+\_\+\+SYMBOL\+\_\+\+INFO\+\_\+\+KERNEL\+\_\+\+GROUP\+\_\+\+SEGMENT\+\_\+\+SIZE&Size of static group segment memory required by the kernel (per work-\/group), in bytes. The value of this attribute is undefined if the symbol is not a kernel. The type of this attribute is uint32\+\_\+t.
+
+The reported amount does not include any dynamically allocated group segment memory that may be requested by the application when a kernel is dispatched. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{HSA\_CODE\_SYMBOL\_INFO\_KERNEL\_PRIVATE\_SEGMENT\_SIZE@{HSA\_CODE\_SYMBOL\_INFO\_KERNEL\_PRIVATE\_SEGMENT\_SIZE}!Code Objects (deprecated).@{Code Objects (deprecated).}}\index{Code Objects (deprecated).@{Code Objects (deprecated).}!HSA\_CODE\_SYMBOL\_INFO\_KERNEL\_PRIVATE\_SEGMENT\_SIZE@{HSA\_CODE\_SYMBOL\_INFO\_KERNEL\_PRIVATE\_SEGMENT\_SIZE}}}\mbox{\Hypertarget{group__code-object_ggaded99609f1225ba3ed62328c7e1a3694abab702b3188b4195d176dceabcff1893}\label{group__code-object_ggaded99609f1225ba3ed62328c7e1a3694abab702b3188b4195d176dceabcff1893}} 
+HSA\+\_\+\+CODE\+\_\+\+SYMBOL\+\_\+\+INFO\+\_\+\+KERNEL\+\_\+\+PRIVATE\+\_\+\+SEGMENT\+\_\+\+SIZE&Size of static private, spill, and arg segment memory required by this kernel (per work-\/item), in bytes. The value of this attribute is undefined if the symbol is not a kernel. The type of this attribute is uint32\+\_\+t.
+
+If the value of \mbox{\hyperlink{group__code-object_ggaded99609f1225ba3ed62328c7e1a3694ae4737bbd966ae562f17c2ef71af46fac}{HSA\+\_\+\+CODE\+\_\+\+SYMBOL\+\_\+\+INFO\+\_\+\+KERNEL\+\_\+\+DYNAMIC\+\_\+\+CALLSTACK}} is true, the kernel may use more private memory than the reported value, and the application must add the dynamic call stack usage to {\itshape private\+\_\+segment\+\_\+size} when populating a kernel dispatch packet. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{HSA\_CODE\_SYMBOL\_INFO\_KERNEL\_DYNAMIC\_CALLSTACK@{HSA\_CODE\_SYMBOL\_INFO\_KERNEL\_DYNAMIC\_CALLSTACK}!Code Objects (deprecated).@{Code Objects (deprecated).}}\index{Code Objects (deprecated).@{Code Objects (deprecated).}!HSA\_CODE\_SYMBOL\_INFO\_KERNEL\_DYNAMIC\_CALLSTACK@{HSA\_CODE\_SYMBOL\_INFO\_KERNEL\_DYNAMIC\_CALLSTACK}}}\mbox{\Hypertarget{group__code-object_ggaded99609f1225ba3ed62328c7e1a3694ae4737bbd966ae562f17c2ef71af46fac}\label{group__code-object_ggaded99609f1225ba3ed62328c7e1a3694ae4737bbd966ae562f17c2ef71af46fac}} 
+HSA\+\_\+\+CODE\+\_\+\+SYMBOL\+\_\+\+INFO\+\_\+\+KERNEL\+\_\+\+DYNAMIC\+\_\+\+CALLSTACK&Dynamic callstack flag. The value of this attribute is undefined if the symbol is not a kernel. The type of this attribute is bool.
+
+If this flag is set (the value is true), the kernel uses a dynamically sized call stack. This can happen if recursive calls, calls to indirect functions, or the HSAIL alloca instruction are present in the kernel. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{HSA\_CODE\_SYMBOL\_INFO\_KERNEL\_CALL\_CONVENTION@{HSA\_CODE\_SYMBOL\_INFO\_KERNEL\_CALL\_CONVENTION}!Code Objects (deprecated).@{Code Objects (deprecated).}}\index{Code Objects (deprecated).@{Code Objects (deprecated).}!HSA\_CODE\_SYMBOL\_INFO\_KERNEL\_CALL\_CONVENTION@{HSA\_CODE\_SYMBOL\_INFO\_KERNEL\_CALL\_CONVENTION}}}\mbox{\Hypertarget{group__code-object_ggaded99609f1225ba3ed62328c7e1a3694acbd96a8a68621ed99a02ada3f71cd8d2}\label{group__code-object_ggaded99609f1225ba3ed62328c7e1a3694acbd96a8a68621ed99a02ada3f71cd8d2}} 
+HSA\+\_\+\+CODE\+\_\+\+SYMBOL\+\_\+\+INFO\+\_\+\+KERNEL\+\_\+\+CALL\+\_\+\+CONVENTION&Call convention of the kernel. The value of this attribute is undefined if the symbol is not a kernel. The type of this attribute is uint32\+\_\+t. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{HSA\_CODE\_SYMBOL\_INFO\_INDIRECT\_FUNCTION\_CALL\_CONVENTION@{HSA\_CODE\_SYMBOL\_INFO\_INDIRECT\_FUNCTION\_CALL\_CONVENTION}!Code Objects (deprecated).@{Code Objects (deprecated).}}\index{Code Objects (deprecated).@{Code Objects (deprecated).}!HSA\_CODE\_SYMBOL\_INFO\_INDIRECT\_FUNCTION\_CALL\_CONVENTION@{HSA\_CODE\_SYMBOL\_INFO\_INDIRECT\_FUNCTION\_CALL\_CONVENTION}}}\mbox{\Hypertarget{group__code-object_ggaded99609f1225ba3ed62328c7e1a3694a77947182f183577d8af1bbc1d168042e}\label{group__code-object_ggaded99609f1225ba3ed62328c7e1a3694a77947182f183577d8af1bbc1d168042e}} 
+HSA\+\_\+\+CODE\+\_\+\+SYMBOL\+\_\+\+INFO\+\_\+\+INDIRECT\+\_\+\+FUNCTION\+\_\+\+CALL\+\_\+\+CONVENTION&Call convention of the indirect function. The value of this attribute is undefined if the symbol is not an indirect function. The type of this attribute is uint32\+\_\+t. \\
+\hline
+
+\end{DoxyEnumFields}
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{group__code-object_ga5b4a20a2039fd8d542206894db185173}\label{group__code-object_ga5b4a20a2039fd8d542206894db185173}} 
+\index{Code Objects (deprecated).@{Code Objects (deprecated).}!hsa\_code\_object\_deserialize@{hsa\_code\_object\_deserialize}}
+\index{hsa\_code\_object\_deserialize@{hsa\_code\_object\_deserialize}!Code Objects (deprecated).@{Code Objects (deprecated).}}
+\doxysubsubsection{\texorpdfstring{hsa\_code\_object\_deserialize()}{hsa\_code\_object\_deserialize()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{group__status_gad755322e7ff95456520e8abdbe90d225}{hsa\+\_\+status\+\_\+t}} \mbox{\hyperlink{inc_2hsa__ext__image_8h_a64216765b98b62ee87deb50fd2899836}{HSA\+\_\+\+API}} \mbox{\hyperlink{inc_2hsa_8h_a2321f8ca7d706cada4f617b191a478b0}{HSA\+\_\+\+DEPRECATED}} hsa\+\_\+code\+\_\+object\+\_\+deserialize (\begin{DoxyParamCaption}\item[{void $\ast$}]{serialized\+\_\+code\+\_\+object,  }\item[{size\+\_\+t}]{serialized\+\_\+code\+\_\+object\+\_\+size,  }\item[{const char $\ast$}]{options,  }\item[{\mbox{\hyperlink{group__code-object_gafae7c731c8bfc39b3050ef08ae8bb3e3}{hsa\+\_\+code\+\_\+object\+\_\+t}} $\ast$}]{code\+\_\+object }\end{DoxyParamCaption})}
+
+
+
+Deserialize a code object. 
+
+\begin{DoxyRefDesc}{Deprecated}
+\item[\mbox{\hyperlink{deprecated__deprecated000047}{Deprecated}}]\end{DoxyRefDesc}
+
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em serialized\+\_\+code\+\_\+object} & A serialized code object. Must not be NULL.\\
+\hline
+\mbox{\texttt{ in}}  & {\em serialized\+\_\+code\+\_\+object\+\_\+size} & The size (in bytes) of {\ttfamily serialized\+\_\+code\+\_\+object}. Must not be 0.\\
+\hline
+\mbox{\texttt{ in}}  & {\em options} & Standard and vendor-\/specific options. Unknown options are ignored. A standard option begins with the \char`\"{}-\/hsa\+\_\+\char`\"{} prefix. Options beginning with the \char`\"{}-\/hsa\+\_\+ext\+\_\+$<$extension\+\_\+name$>$\+\_\+\char`\"{} prefix are reserved for extensions. A vendor-\/specific option begins with the \char`\"{}-\/$<$vendor\+\_\+name$>$\+\_\+\char`\"{} prefix. Must be a NUL-\/terminated string. May be NULL.\\
+\hline
+\mbox{\texttt{ out}}  & {\em code\+\_\+object} & Memory location where the HSA runtime stores the deserialized code object.\\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em \mbox{\hyperlink{group__status_ggad755322e7ff95456520e8abdbe90d225ae382ea0c9c05cce5a60d0317375159cc}{HSA\+\_\+\+STATUS\+\_\+\+SUCCESS}}} & The function has been executed successfully.\\
+\hline
+{\em \mbox{\hyperlink{group__status_ggad755322e7ff95456520e8abdbe90d225a34ea59ade5bfce95eee935238a99f5b5}{HSA\+\_\+\+STATUS\+\_\+\+ERROR\+\_\+\+NOT\+\_\+\+INITIALIZED}}} & The HSA runtime has not been initialized.\\
+\hline
+{\em \mbox{\hyperlink{group__status_ggad755322e7ff95456520e8abdbe90d225a1a77fcf36d0d140874c4361ab093eff7}{HSA\+\_\+\+STATUS\+\_\+\+ERROR\+\_\+\+OUT\+\_\+\+OF\+\_\+\+RESOURCES}}} & The HSA runtime failed to allocate the required resources.\\
+\hline
+{\em \mbox{\hyperlink{group__status_ggad755322e7ff95456520e8abdbe90d225ac7d3651f75107d2a6a8ba3b25683c030}{HSA\+\_\+\+STATUS\+\_\+\+ERROR\+\_\+\+INVALID\+\_\+\+ARGUMENT}}} & {\ttfamily serialized\+\_\+code\+\_\+object}, or {\ttfamily code\+\_\+object} are NULL, or {\ttfamily serialized\+\_\+code\+\_\+object\+\_\+size} is 0. \\
+\hline
+\end{DoxyRetVals}
+\mbox{\Hypertarget{group__code-object_gaa213e8f40d0c282a9e809c0dce9c7076}\label{group__code-object_gaa213e8f40d0c282a9e809c0dce9c7076}} 
+\index{Code Objects (deprecated).@{Code Objects (deprecated).}!hsa\_code\_object\_destroy@{hsa\_code\_object\_destroy}}
+\index{hsa\_code\_object\_destroy@{hsa\_code\_object\_destroy}!Code Objects (deprecated).@{Code Objects (deprecated).}}
+\doxysubsubsection{\texorpdfstring{hsa\_code\_object\_destroy()}{hsa\_code\_object\_destroy()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{group__status_gad755322e7ff95456520e8abdbe90d225}{hsa\+\_\+status\+\_\+t}} \mbox{\hyperlink{inc_2hsa__ext__image_8h_a64216765b98b62ee87deb50fd2899836}{HSA\+\_\+\+API}} \mbox{\hyperlink{inc_2hsa_8h_a2321f8ca7d706cada4f617b191a478b0}{HSA\+\_\+\+DEPRECATED}} hsa\+\_\+code\+\_\+object\+\_\+destroy (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{group__code-object_gafae7c731c8bfc39b3050ef08ae8bb3e3}{hsa\+\_\+code\+\_\+object\+\_\+t}}}]{code\+\_\+object }\end{DoxyParamCaption})}
+
+
+
+Destroy a code object. 
+
+\begin{DoxyRefDesc}{Deprecated}
+\item[\mbox{\hyperlink{deprecated__deprecated000048}{Deprecated}}]\end{DoxyRefDesc}
+
+
+The lifetime of a code object must exceed that of any executable where it has been loaded. If an executable that loaded {\ttfamily code\+\_\+object} has not been destroyed, the behavior is undefined.
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em code\+\_\+object} & Code object. The handle becomes invalid after it has been destroyed.\\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em \mbox{\hyperlink{group__status_ggad755322e7ff95456520e8abdbe90d225ae382ea0c9c05cce5a60d0317375159cc}{HSA\+\_\+\+STATUS\+\_\+\+SUCCESS}}} & The function has been executed successfully.\\
+\hline
+{\em \mbox{\hyperlink{group__status_ggad755322e7ff95456520e8abdbe90d225a34ea59ade5bfce95eee935238a99f5b5}{HSA\+\_\+\+STATUS\+\_\+\+ERROR\+\_\+\+NOT\+\_\+\+INITIALIZED}}} & The HSA runtime has not been initialized.\\
+\hline
+{\em \mbox{\hyperlink{group__status_ggad755322e7ff95456520e8abdbe90d225a152d0a73aaefeeab32845d0d7a1e9952}{HSA\+\_\+\+STATUS\+\_\+\+ERROR\+\_\+\+INVALID\+\_\+\+CODE\+\_\+\+OBJECT}}} & {\ttfamily code\+\_\+object} is invalid. \\
+\hline
+\end{DoxyRetVals}
+\mbox{\Hypertarget{group__code-object_ga20be5aafc645814dfd098929c9043cf1}\label{group__code-object_ga20be5aafc645814dfd098929c9043cf1}} 
+\index{Code Objects (deprecated).@{Code Objects (deprecated).}!hsa\_code\_object\_get\_info@{hsa\_code\_object\_get\_info}}
+\index{hsa\_code\_object\_get\_info@{hsa\_code\_object\_get\_info}!Code Objects (deprecated).@{Code Objects (deprecated).}}
+\doxysubsubsection{\texorpdfstring{hsa\_code\_object\_get\_info()}{hsa\_code\_object\_get\_info()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{group__status_gad755322e7ff95456520e8abdbe90d225}{hsa\+\_\+status\+\_\+t}} \mbox{\hyperlink{inc_2hsa__ext__image_8h_a64216765b98b62ee87deb50fd2899836}{HSA\+\_\+\+API}} \mbox{\hyperlink{inc_2hsa_8h_a2321f8ca7d706cada4f617b191a478b0}{HSA\+\_\+\+DEPRECATED}} hsa\+\_\+code\+\_\+object\+\_\+get\+\_\+info (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{group__code-object_gafae7c731c8bfc39b3050ef08ae8bb3e3}{hsa\+\_\+code\+\_\+object\+\_\+t}}}]{code\+\_\+object,  }\item[{\mbox{\hyperlink{group__code-object_ga2025ec20684a99297a1912de92b50575}{hsa\+\_\+code\+\_\+object\+\_\+info\+\_\+t}}}]{attribute,  }\item[{void $\ast$}]{value }\end{DoxyParamCaption})}
+
+
+
+Get the current value of an attribute for a given code object. 
+
+\begin{DoxyRefDesc}{Deprecated}
+\item[\mbox{\hyperlink{deprecated__deprecated000051}{Deprecated}}]\end{DoxyRefDesc}
+
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em code\+\_\+object} & Code object.\\
+\hline
+\mbox{\texttt{ in}}  & {\em attribute} & Attribute to query.\\
+\hline
+\mbox{\texttt{ out}}  & {\em value} & Pointer to an application-\/allocated buffer where to store the value of the attribute. If the buffer passed by the application is not large enough to hold the value of {\ttfamily attribute}, the behavior is undefined.\\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em \mbox{\hyperlink{group__status_ggad755322e7ff95456520e8abdbe90d225ae382ea0c9c05cce5a60d0317375159cc}{HSA\+\_\+\+STATUS\+\_\+\+SUCCESS}}} & The function has been executed successfully.\\
+\hline
+{\em \mbox{\hyperlink{group__status_ggad755322e7ff95456520e8abdbe90d225a34ea59ade5bfce95eee935238a99f5b5}{HSA\+\_\+\+STATUS\+\_\+\+ERROR\+\_\+\+NOT\+\_\+\+INITIALIZED}}} & The HSA runtime has not been initialized.\\
+\hline
+{\em \mbox{\hyperlink{group__status_ggad755322e7ff95456520e8abdbe90d225a152d0a73aaefeeab32845d0d7a1e9952}{HSA\+\_\+\+STATUS\+\_\+\+ERROR\+\_\+\+INVALID\+\_\+\+CODE\+\_\+\+OBJECT}}} & {\ttfamily code\+\_\+object} is invalid.\\
+\hline
+{\em \mbox{\hyperlink{group__status_ggad755322e7ff95456520e8abdbe90d225ac7d3651f75107d2a6a8ba3b25683c030}{HSA\+\_\+\+STATUS\+\_\+\+ERROR\+\_\+\+INVALID\+\_\+\+ARGUMENT}}} & {\ttfamily attribute} is an invalid code object attribute, or {\ttfamily value} is NULL. \\
+\hline
+\end{DoxyRetVals}
+\mbox{\Hypertarget{group__code-object_ga0a52c838e8e43bb0f9760624af109a91}\label{group__code-object_ga0a52c838e8e43bb0f9760624af109a91}} 
+\index{Code Objects (deprecated).@{Code Objects (deprecated).}!hsa\_code\_object\_get\_symbol@{hsa\_code\_object\_get\_symbol}}
+\index{hsa\_code\_object\_get\_symbol@{hsa\_code\_object\_get\_symbol}!Code Objects (deprecated).@{Code Objects (deprecated).}}
+\doxysubsubsection{\texorpdfstring{hsa\_code\_object\_get\_symbol()}{hsa\_code\_object\_get\_symbol()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{group__status_gad755322e7ff95456520e8abdbe90d225}{hsa\+\_\+status\+\_\+t}} \mbox{\hyperlink{inc_2hsa__ext__image_8h_a64216765b98b62ee87deb50fd2899836}{HSA\+\_\+\+API}} \mbox{\hyperlink{inc_2hsa_8h_a2321f8ca7d706cada4f617b191a478b0}{HSA\+\_\+\+DEPRECATED}} hsa\+\_\+code\+\_\+object\+\_\+get\+\_\+symbol (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{group__code-object_gafae7c731c8bfc39b3050ef08ae8bb3e3}{hsa\+\_\+code\+\_\+object\+\_\+t}}}]{code\+\_\+object,  }\item[{const char $\ast$}]{symbol\+\_\+name,  }\item[{\mbox{\hyperlink{group__code-object_ga15ba4306d85031c1122c9f7804b97502}{hsa\+\_\+code\+\_\+symbol\+\_\+t}} $\ast$}]{symbol }\end{DoxyParamCaption})}
+
+
+
+Get the symbol handle within a code object for a given a symbol name. 
+
+\begin{DoxyRefDesc}{Deprecated}
+\item[\mbox{\hyperlink{deprecated__deprecated000054}{Deprecated}}]\end{DoxyRefDesc}
+
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em code\+\_\+object} & Code object.\\
+\hline
+\mbox{\texttt{ in}}  & {\em symbol\+\_\+name} & Symbol name.\\
+\hline
+\mbox{\texttt{ out}}  & {\em symbol} & Memory location where the HSA runtime stores the symbol handle.\\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em \mbox{\hyperlink{group__status_ggad755322e7ff95456520e8abdbe90d225ae382ea0c9c05cce5a60d0317375159cc}{HSA\+\_\+\+STATUS\+\_\+\+SUCCESS}}} & The function has been executed successfully.\\
+\hline
+{\em \mbox{\hyperlink{group__status_ggad755322e7ff95456520e8abdbe90d225a34ea59ade5bfce95eee935238a99f5b5}{HSA\+\_\+\+STATUS\+\_\+\+ERROR\+\_\+\+NOT\+\_\+\+INITIALIZED}}} & The HSA runtime has not been initialized.\\
+\hline
+{\em \mbox{\hyperlink{group__status_ggad755322e7ff95456520e8abdbe90d225a152d0a73aaefeeab32845d0d7a1e9952}{HSA\+\_\+\+STATUS\+\_\+\+ERROR\+\_\+\+INVALID\+\_\+\+CODE\+\_\+\+OBJECT}}} & {\ttfamily code\+\_\+object} is invalid.\\
+\hline
+{\em \mbox{\hyperlink{group__status_ggad755322e7ff95456520e8abdbe90d225a763aa9892acea9f7d145c0111247359c}{HSA\+\_\+\+STATUS\+\_\+\+ERROR\+\_\+\+INVALID\+\_\+\+SYMBOL\+\_\+\+NAME}}} & There is no symbol with a name that matches {\ttfamily symbol\+\_\+name}.\\
+\hline
+{\em \mbox{\hyperlink{group__status_ggad755322e7ff95456520e8abdbe90d225ac7d3651f75107d2a6a8ba3b25683c030}{HSA\+\_\+\+STATUS\+\_\+\+ERROR\+\_\+\+INVALID\+\_\+\+ARGUMENT}}} & {\ttfamily symbol\+\_\+name} is NULL, or {\ttfamily symbol} is NULL. \\
+\hline
+\end{DoxyRetVals}
+\mbox{\Hypertarget{group__code-object_ga10a8f3d500757a85f04e691732a32ec4}\label{group__code-object_ga10a8f3d500757a85f04e691732a32ec4}} 
+\index{Code Objects (deprecated).@{Code Objects (deprecated).}!hsa\_code\_object\_get\_symbol\_from\_name@{hsa\_code\_object\_get\_symbol\_from\_name}}
+\index{hsa\_code\_object\_get\_symbol\_from\_name@{hsa\_code\_object\_get\_symbol\_from\_name}!Code Objects (deprecated).@{Code Objects (deprecated).}}
+\doxysubsubsection{\texorpdfstring{hsa\_code\_object\_get\_symbol\_from\_name()}{hsa\_code\_object\_get\_symbol\_from\_name()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{group__status_gad755322e7ff95456520e8abdbe90d225}{hsa\+\_\+status\+\_\+t}} \mbox{\hyperlink{inc_2hsa__ext__image_8h_a64216765b98b62ee87deb50fd2899836}{HSA\+\_\+\+API}} \mbox{\hyperlink{inc_2hsa_8h_a2321f8ca7d706cada4f617b191a478b0}{HSA\+\_\+\+DEPRECATED}} hsa\+\_\+code\+\_\+object\+\_\+get\+\_\+symbol\+\_\+from\+\_\+name (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{group__code-object_gafae7c731c8bfc39b3050ef08ae8bb3e3}{hsa\+\_\+code\+\_\+object\+\_\+t}}}]{code\+\_\+object,  }\item[{const char $\ast$}]{module\+\_\+name,  }\item[{const char $\ast$}]{symbol\+\_\+name,  }\item[{\mbox{\hyperlink{group__code-object_ga15ba4306d85031c1122c9f7804b97502}{hsa\+\_\+code\+\_\+symbol\+\_\+t}} $\ast$}]{symbol }\end{DoxyParamCaption})}
+
+
+
+Get the symbol handle within a code object for a given a symbol name. 
+
+\begin{DoxyRefDesc}{Deprecated}
+\item[\mbox{\hyperlink{deprecated__deprecated000055}{Deprecated}}]\end{DoxyRefDesc}
+
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em code\+\_\+object} & Code object.\\
+\hline
+\mbox{\texttt{ in}}  & {\em module\+\_\+name} & Module name. Must be NULL if the symbol has program linkage.\\
+\hline
+\mbox{\texttt{ in}}  & {\em symbol\+\_\+name} & Symbol name.\\
+\hline
+\mbox{\texttt{ out}}  & {\em symbol} & Memory location where the HSA runtime stores the symbol handle.\\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em \mbox{\hyperlink{group__status_ggad755322e7ff95456520e8abdbe90d225ae382ea0c9c05cce5a60d0317375159cc}{HSA\+\_\+\+STATUS\+\_\+\+SUCCESS}}} & The function has been executed successfully.\\
+\hline
+{\em \mbox{\hyperlink{group__status_ggad755322e7ff95456520e8abdbe90d225a34ea59ade5bfce95eee935238a99f5b5}{HSA\+\_\+\+STATUS\+\_\+\+ERROR\+\_\+\+NOT\+\_\+\+INITIALIZED}}} & The HSA runtime has not been initialized.\\
+\hline
+{\em \mbox{\hyperlink{group__status_ggad755322e7ff95456520e8abdbe90d225a152d0a73aaefeeab32845d0d7a1e9952}{HSA\+\_\+\+STATUS\+\_\+\+ERROR\+\_\+\+INVALID\+\_\+\+CODE\+\_\+\+OBJECT}}} & {\ttfamily code\+\_\+object} is invalid.\\
+\hline
+{\em \mbox{\hyperlink{group__status_ggad755322e7ff95456520e8abdbe90d225a763aa9892acea9f7d145c0111247359c}{HSA\+\_\+\+STATUS\+\_\+\+ERROR\+\_\+\+INVALID\+\_\+\+SYMBOL\+\_\+\+NAME}}} & There is no symbol with a name that matches {\ttfamily symbol\+\_\+name}.\\
+\hline
+{\em \mbox{\hyperlink{group__status_ggad755322e7ff95456520e8abdbe90d225ac7d3651f75107d2a6a8ba3b25683c030}{HSA\+\_\+\+STATUS\+\_\+\+ERROR\+\_\+\+INVALID\+\_\+\+ARGUMENT}}} & {\ttfamily symbol\+\_\+name} is NULL, or {\ttfamily symbol} is NULL. \\
+\hline
+\end{DoxyRetVals}
+\mbox{\Hypertarget{group__code-object_ga169ded05e38ae66cab5324e2d27489c4}\label{group__code-object_ga169ded05e38ae66cab5324e2d27489c4}} 
+\index{Code Objects (deprecated).@{Code Objects (deprecated).}!hsa\_code\_object\_iterate\_symbols@{hsa\_code\_object\_iterate\_symbols}}
+\index{hsa\_code\_object\_iterate\_symbols@{hsa\_code\_object\_iterate\_symbols}!Code Objects (deprecated).@{Code Objects (deprecated).}}
+\doxysubsubsection{\texorpdfstring{hsa\_code\_object\_iterate\_symbols()}{hsa\_code\_object\_iterate\_symbols()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{group__status_gad755322e7ff95456520e8abdbe90d225}{hsa\+\_\+status\+\_\+t}} \mbox{\hyperlink{inc_2hsa__ext__image_8h_a64216765b98b62ee87deb50fd2899836}{HSA\+\_\+\+API}} \mbox{\hyperlink{inc_2hsa_8h_a2321f8ca7d706cada4f617b191a478b0}{HSA\+\_\+\+DEPRECATED}} hsa\+\_\+code\+\_\+object\+\_\+iterate\+\_\+symbols (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{group__code-object_gafae7c731c8bfc39b3050ef08ae8bb3e3}{hsa\+\_\+code\+\_\+object\+\_\+t}}}]{code\+\_\+object,  }\item[{\mbox{\hyperlink{group__status_gad755322e7ff95456520e8abdbe90d225}{hsa\+\_\+status\+\_\+t}}($\ast$)(\mbox{\hyperlink{group__code-object_gafae7c731c8bfc39b3050ef08ae8bb3e3}{hsa\+\_\+code\+\_\+object\+\_\+t}} code\+\_\+object, \mbox{\hyperlink{group__code-object_ga15ba4306d85031c1122c9f7804b97502}{hsa\+\_\+code\+\_\+symbol\+\_\+t}} symbol, void $\ast$data)}]{callback,  }\item[{void $\ast$}]{data }\end{DoxyParamCaption})}
+
+
+
+Iterate over the symbols in a code object, and invoke an application-\/defined callback on every iteration. 
+
+\begin{DoxyRefDesc}{Deprecated}
+\item[\mbox{\hyperlink{deprecated__deprecated000058}{Deprecated}}]\end{DoxyRefDesc}
+
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em code\+\_\+object} & Code object.\\
+\hline
+\mbox{\texttt{ in}}  & {\em callback} & Callback to be invoked once per code object symbol. The HSA runtime passes three arguments to the callback\+: the code object, a symbol, and the application data. If {\ttfamily callback} returns a status other than \mbox{\hyperlink{group__status_ggad755322e7ff95456520e8abdbe90d225ae382ea0c9c05cce5a60d0317375159cc}{HSA\+\_\+\+STATUS\+\_\+\+SUCCESS}} for a particular iteration, the traversal stops and \mbox{\hyperlink{group__code-object_ga169ded05e38ae66cab5324e2d27489c4}{hsa\+\_\+code\+\_\+object\+\_\+iterate\+\_\+symbols}} returns that status value.\\
+\hline
+\mbox{\texttt{ in}}  & {\em data} & Application data that is passed to {\ttfamily callback} on every iteration. May be NULL.\\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em \mbox{\hyperlink{group__status_ggad755322e7ff95456520e8abdbe90d225ae382ea0c9c05cce5a60d0317375159cc}{HSA\+\_\+\+STATUS\+\_\+\+SUCCESS}}} & The function has been executed successfully.\\
+\hline
+{\em \mbox{\hyperlink{group__status_ggad755322e7ff95456520e8abdbe90d225a34ea59ade5bfce95eee935238a99f5b5}{HSA\+\_\+\+STATUS\+\_\+\+ERROR\+\_\+\+NOT\+\_\+\+INITIALIZED}}} & The HSA runtime has not been initialized.\\
+\hline
+{\em \mbox{\hyperlink{group__status_ggad755322e7ff95456520e8abdbe90d225a152d0a73aaefeeab32845d0d7a1e9952}{HSA\+\_\+\+STATUS\+\_\+\+ERROR\+\_\+\+INVALID\+\_\+\+CODE\+\_\+\+OBJECT}}} & {\ttfamily code\+\_\+object} is invalid.\\
+\hline
+{\em \mbox{\hyperlink{group__status_ggad755322e7ff95456520e8abdbe90d225ac7d3651f75107d2a6a8ba3b25683c030}{HSA\+\_\+\+STATUS\+\_\+\+ERROR\+\_\+\+INVALID\+\_\+\+ARGUMENT}}} & {\ttfamily callback} is NULL. \\
+\hline
+\end{DoxyRetVals}
+\mbox{\Hypertarget{group__code-object_ga7819c76c55ddc508293d3c4158d85236}\label{group__code-object_ga7819c76c55ddc508293d3c4158d85236}} 
+\index{Code Objects (deprecated).@{Code Objects (deprecated).}!hsa\_code\_object\_serialize@{hsa\_code\_object\_serialize}}
+\index{hsa\_code\_object\_serialize@{hsa\_code\_object\_serialize}!Code Objects (deprecated).@{Code Objects (deprecated).}}
+\doxysubsubsection{\texorpdfstring{hsa\_code\_object\_serialize()}{hsa\_code\_object\_serialize()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{group__status_gad755322e7ff95456520e8abdbe90d225}{hsa\+\_\+status\+\_\+t}} \mbox{\hyperlink{inc_2hsa__ext__image_8h_a64216765b98b62ee87deb50fd2899836}{HSA\+\_\+\+API}} \mbox{\hyperlink{inc_2hsa_8h_a2321f8ca7d706cada4f617b191a478b0}{HSA\+\_\+\+DEPRECATED}} hsa\+\_\+code\+\_\+object\+\_\+serialize (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{group__code-object_gafae7c731c8bfc39b3050ef08ae8bb3e3}{hsa\+\_\+code\+\_\+object\+\_\+t}}}]{code\+\_\+object,  }\item[{\mbox{\hyperlink{group__status_gad755322e7ff95456520e8abdbe90d225}{hsa\+\_\+status\+\_\+t}}($\ast$)(size\+\_\+t size, \mbox{\hyperlink{group__code-object_gab551ffd46005748b7633a421c24e280f}{hsa\+\_\+callback\+\_\+data\+\_\+t}} data, void $\ast$$\ast$address)}]{alloc\+\_\+callback,  }\item[{\mbox{\hyperlink{group__code-object_gab551ffd46005748b7633a421c24e280f}{hsa\+\_\+callback\+\_\+data\+\_\+t}}}]{callback\+\_\+data,  }\item[{const char $\ast$}]{options,  }\item[{void $\ast$$\ast$}]{serialized\+\_\+code\+\_\+object,  }\item[{size\+\_\+t $\ast$}]{serialized\+\_\+code\+\_\+object\+\_\+size }\end{DoxyParamCaption})}
+
+
+
+Serialize a code object. Can be used for offline finalization, install-\/time finalization, disk code caching, etc. 
+
+\begin{DoxyRefDesc}{Deprecated}
+\item[\mbox{\hyperlink{deprecated__deprecated000046}{Deprecated}}]\end{DoxyRefDesc}
+
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em code\+\_\+object} & Code object.\\
+\hline
+\mbox{\texttt{ in}}  & {\em alloc\+\_\+callback} & Callback function for memory allocation. Must not be NULL. The HSA runtime passes three arguments to the callback\+: the allocation size, the application data, and a pointer to a memory location where the application stores the allocation result. The HSA runtime invokes {\ttfamily alloc\+\_\+callback} once to allocate a buffer that contains the serialized version of {\ttfamily code\+\_\+object}. If the callback returns a status code other than \mbox{\hyperlink{group__status_ggad755322e7ff95456520e8abdbe90d225ae382ea0c9c05cce5a60d0317375159cc}{HSA\+\_\+\+STATUS\+\_\+\+SUCCESS}}, this function returns the same code.\\
+\hline
+\mbox{\texttt{ in}}  & {\em callback\+\_\+data} & Application data that is passed to {\ttfamily alloc\+\_\+callback}. May be NULL.\\
+\hline
+\mbox{\texttt{ in}}  & {\em options} & Standard and vendor-\/specific options. Unknown options are ignored. A standard option begins with the \char`\"{}-\/hsa\+\_\+\char`\"{} prefix. Options beginning with the \char`\"{}-\/hsa\+\_\+ext\+\_\+$<$extension\+\_\+name$>$\+\_\+\char`\"{} prefix are reserved for extensions. A vendor-\/specific option begins with the \char`\"{}-\/$<$vendor\+\_\+name$>$\+\_\+\char`\"{} prefix. Must be a NUL-\/terminated string. May be NULL.\\
+\hline
+\mbox{\texttt{ out}}  & {\em serialized\+\_\+code\+\_\+object} & Memory location where the HSA runtime stores a pointer to the serialized code object. Must not be NULL.\\
+\hline
+\mbox{\texttt{ out}}  & {\em serialized\+\_\+code\+\_\+object\+\_\+size} & Memory location where the HSA runtime stores the size (in bytes) of {\ttfamily serialized\+\_\+code\+\_\+object}. The returned value matches the allocation size passed by the HSA runtime to {\ttfamily alloc\+\_\+callback}. Must not be NULL.\\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em \mbox{\hyperlink{group__status_ggad755322e7ff95456520e8abdbe90d225ae382ea0c9c05cce5a60d0317375159cc}{HSA\+\_\+\+STATUS\+\_\+\+SUCCESS}}} & The function has been executed successfully.\\
+\hline
+{\em \mbox{\hyperlink{group__status_ggad755322e7ff95456520e8abdbe90d225a34ea59ade5bfce95eee935238a99f5b5}{HSA\+\_\+\+STATUS\+\_\+\+ERROR\+\_\+\+NOT\+\_\+\+INITIALIZED}}} & The HSA runtime has not been initialized.\\
+\hline
+{\em \mbox{\hyperlink{group__status_ggad755322e7ff95456520e8abdbe90d225a1a77fcf36d0d140874c4361ab093eff7}{HSA\+\_\+\+STATUS\+\_\+\+ERROR\+\_\+\+OUT\+\_\+\+OF\+\_\+\+RESOURCES}}} & The HSA runtime failed to allocate the required resources.\\
+\hline
+{\em \mbox{\hyperlink{group__status_ggad755322e7ff95456520e8abdbe90d225a152d0a73aaefeeab32845d0d7a1e9952}{HSA\+\_\+\+STATUS\+\_\+\+ERROR\+\_\+\+INVALID\+\_\+\+CODE\+\_\+\+OBJECT}}} & {\ttfamily code\+\_\+object} is invalid.\\
+\hline
+{\em \mbox{\hyperlink{group__status_ggad755322e7ff95456520e8abdbe90d225ac7d3651f75107d2a6a8ba3b25683c030}{HSA\+\_\+\+STATUS\+\_\+\+ERROR\+\_\+\+INVALID\+\_\+\+ARGUMENT}}} & {\ttfamily alloc\+\_\+callback}, {\ttfamily serialized\+\_\+code\+\_\+object}, or {\ttfamily serialized\+\_\+code\+\_\+object\+\_\+size} are NULL. \\
+\hline
+\end{DoxyRetVals}
+\mbox{\Hypertarget{group__code-object_ga755d1fcc5317cf1b93ba559c4b76b69d}\label{group__code-object_ga755d1fcc5317cf1b93ba559c4b76b69d}} 
+\index{Code Objects (deprecated).@{Code Objects (deprecated).}!hsa\_code\_symbol\_get\_info@{hsa\_code\_symbol\_get\_info}}
+\index{hsa\_code\_symbol\_get\_info@{hsa\_code\_symbol\_get\_info}!Code Objects (deprecated).@{Code Objects (deprecated).}}
+\doxysubsubsection{\texorpdfstring{hsa\_code\_symbol\_get\_info()}{hsa\_code\_symbol\_get\_info()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{group__status_gad755322e7ff95456520e8abdbe90d225}{hsa\+\_\+status\+\_\+t}} \mbox{\hyperlink{inc_2hsa__ext__image_8h_a64216765b98b62ee87deb50fd2899836}{HSA\+\_\+\+API}} \mbox{\hyperlink{inc_2hsa_8h_a2321f8ca7d706cada4f617b191a478b0}{HSA\+\_\+\+DEPRECATED}} hsa\+\_\+code\+\_\+symbol\+\_\+get\+\_\+info (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{group__code-object_ga15ba4306d85031c1122c9f7804b97502}{hsa\+\_\+code\+\_\+symbol\+\_\+t}}}]{code\+\_\+symbol,  }\item[{\mbox{\hyperlink{group__code-object_gaded99609f1225ba3ed62328c7e1a3694}{hsa\+\_\+code\+\_\+symbol\+\_\+info\+\_\+t}}}]{attribute,  }\item[{void $\ast$}]{value }\end{DoxyParamCaption})}
+
+
+
+Get the current value of an attribute for a given code symbol. 
+
+\begin{DoxyRefDesc}{Deprecated}
+\item[\mbox{\hyperlink{deprecated__deprecated000057}{Deprecated}}]\end{DoxyRefDesc}
+
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em code\+\_\+symbol} & Code symbol.\\
+\hline
+\mbox{\texttt{ in}}  & {\em attribute} & Attribute to query.\\
+\hline
+\mbox{\texttt{ out}}  & {\em value} & Pointer to an application-\/allocated buffer where to store the value of the attribute. If the buffer passed by the application is not large enough to hold the value of {\ttfamily attribute}, the behavior is undefined.\\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em \mbox{\hyperlink{group__status_ggad755322e7ff95456520e8abdbe90d225ae382ea0c9c05cce5a60d0317375159cc}{HSA\+\_\+\+STATUS\+\_\+\+SUCCESS}}} & The function has been executed successfully.\\
+\hline
+{\em \mbox{\hyperlink{group__status_ggad755322e7ff95456520e8abdbe90d225a34ea59ade5bfce95eee935238a99f5b5}{HSA\+\_\+\+STATUS\+\_\+\+ERROR\+\_\+\+NOT\+\_\+\+INITIALIZED}}} & The HSA runtime has not been initialized.\\
+\hline
+{\em \mbox{\hyperlink{group__status_ggad755322e7ff95456520e8abdbe90d225a60262f8c37b2e374271d068625f6eed5}{HSA\+\_\+\+STATUS\+\_\+\+ERROR\+\_\+\+INVALID\+\_\+\+CODE\+\_\+\+SYMBOL}}} & The code symbol is invalid.\\
+\hline
+{\em \mbox{\hyperlink{group__status_ggad755322e7ff95456520e8abdbe90d225ac7d3651f75107d2a6a8ba3b25683c030}{HSA\+\_\+\+STATUS\+\_\+\+ERROR\+\_\+\+INVALID\+\_\+\+ARGUMENT}}} & {\ttfamily attribute} is an invalid code symbol attribute, or {\ttfamily value} is NULL. \\
+\hline
+\end{DoxyRetVals}
+\mbox{\Hypertarget{group__code-object_gabf896a163cb3647a5172325221deb41b}\label{group__code-object_gabf896a163cb3647a5172325221deb41b}} 
+\index{Code Objects (deprecated).@{Code Objects (deprecated).}!hsa\_executable\_load\_code\_object@{hsa\_executable\_load\_code\_object}}
+\index{hsa\_executable\_load\_code\_object@{hsa\_executable\_load\_code\_object}!Code Objects (deprecated).@{Code Objects (deprecated).}}
+\doxysubsubsection{\texorpdfstring{hsa\_executable\_load\_code\_object()}{hsa\_executable\_load\_code\_object()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{group__status_gad755322e7ff95456520e8abdbe90d225}{hsa\+\_\+status\+\_\+t}} \mbox{\hyperlink{inc_2hsa__ext__image_8h_a64216765b98b62ee87deb50fd2899836}{HSA\+\_\+\+API}} \mbox{\hyperlink{inc_2hsa_8h_a2321f8ca7d706cada4f617b191a478b0}{HSA\+\_\+\+DEPRECATED}} hsa\+\_\+executable\+\_\+load\+\_\+code\+\_\+object (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{group__executable_ga4a4281d636cb6048c4d7a015e1fa3baa}{hsa\+\_\+executable\+\_\+t}}}]{executable,  }\item[{\mbox{\hyperlink{group__agentinfo_ga9ce217ef08e7d5e89c8e83ce7b6ef22b}{hsa\+\_\+agent\+\_\+t}}}]{agent,  }\item[{\mbox{\hyperlink{group__code-object_gafae7c731c8bfc39b3050ef08ae8bb3e3}{hsa\+\_\+code\+\_\+object\+\_\+t}}}]{code\+\_\+object,  }\item[{const char $\ast$}]{options }\end{DoxyParamCaption})}
+
+
+
+Load code object into the executable. 
+
+\begin{DoxyRefDesc}{Deprecated}
+\item[\mbox{\hyperlink{deprecated__deprecated000052}{Deprecated}}]\end{DoxyRefDesc}
+
+
+Every global or readonly variable that is external must be defined before loading the code object. An internal global or readonly variable is allocated once the code object, that is being loaded, references this variable and this variable is not allocated.
+
+Any module linkage declaration must have been defined either by a define variable or by loading a code object that has a symbol with module linkage definition.
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em executable} & Executable.\\
+\hline
+\mbox{\texttt{ in}}  & {\em agent} & Agent to load code object for. The agent must support the default floating-\/point rounding mode used by {\ttfamily code\+\_\+object}.\\
+\hline
+\mbox{\texttt{ in}}  & {\em code\+\_\+object} & Code object to load. The lifetime of the code object must exceed that of the executable\+: if {\ttfamily code\+\_\+object} is destroyed before {\ttfamily executable}, the behavior is undefined.\\
+\hline
+\mbox{\texttt{ in}}  & {\em options} & Standard and vendor-\/specific options. Unknown options are ignored. A standard option begins with the \char`\"{}-\/hsa\+\_\+\char`\"{} prefix. Options beginning with the \char`\"{}-\/hsa\+\_\+ext\+\_\+$<$extension\+\_\+name$>$\+\_\+\char`\"{} prefix are reserved for extensions. A vendor-\/specific option begins with the \char`\"{}-\/$<$vendor\+\_\+name$>$\+\_\+\char`\"{} prefix. Must be a NUL-\/terminated string. May be NULL.\\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em \mbox{\hyperlink{group__status_ggad755322e7ff95456520e8abdbe90d225ae382ea0c9c05cce5a60d0317375159cc}{HSA\+\_\+\+STATUS\+\_\+\+SUCCESS}}} & The function has been executed successfully.\\
+\hline
+{\em \mbox{\hyperlink{group__status_ggad755322e7ff95456520e8abdbe90d225a34ea59ade5bfce95eee935238a99f5b5}{HSA\+\_\+\+STATUS\+\_\+\+ERROR\+\_\+\+NOT\+\_\+\+INITIALIZED}}} & The HSA runtime has not been initialized.\\
+\hline
+{\em \mbox{\hyperlink{group__status_ggad755322e7ff95456520e8abdbe90d225a1a77fcf36d0d140874c4361ab093eff7}{HSA\+\_\+\+STATUS\+\_\+\+ERROR\+\_\+\+OUT\+\_\+\+OF\+\_\+\+RESOURCES}}} & The HSA runtime failed to allocate the required resources.\\
+\hline
+{\em \mbox{\hyperlink{group__status_ggad755322e7ff95456520e8abdbe90d225ae2fcb63555ddbffb6048b7e044501151}{HSA\+\_\+\+STATUS\+\_\+\+ERROR\+\_\+\+INVALID\+\_\+\+EXECUTABLE}}} & The executable is invalid.\\
+\hline
+{\em \mbox{\hyperlink{group__status_ggad755322e7ff95456520e8abdbe90d225a3a5d835c109c2d0ad5b9c2771e133e5d}{HSA\+\_\+\+STATUS\+\_\+\+ERROR\+\_\+\+INVALID\+\_\+\+AGENT}}} & The agent is invalid.\\
+\hline
+{\em \mbox{\hyperlink{group__status_ggad755322e7ff95456520e8abdbe90d225a152d0a73aaefeeab32845d0d7a1e9952}{HSA\+\_\+\+STATUS\+\_\+\+ERROR\+\_\+\+INVALID\+\_\+\+CODE\+\_\+\+OBJECT}}} & {\ttfamily code\+\_\+object} is invalid.\\
+\hline
+{\em \mbox{\hyperlink{group__status_ggad755322e7ff95456520e8abdbe90d225a896bcafdb5c10c5802cf70083c3aeb8a}{HSA\+\_\+\+STATUS\+\_\+\+ERROR\+\_\+\+INCOMPATIBLE\+\_\+\+ARGUMENTS}}} & {\ttfamily agent} is not compatible with {\ttfamily code\+\_\+object} (for example, {\ttfamily agent} does not support the default floating-\/point rounding mode specified by {\ttfamily code\+\_\+object}), or {\ttfamily code\+\_\+object} is not compatible with {\ttfamily executable} (for example, {\ttfamily code\+\_\+object} and {\ttfamily executable} have different machine models or profiles).\\
+\hline
+{\em \mbox{\hyperlink{group__status_ggad755322e7ff95456520e8abdbe90d225a32f01e35216b0a6473cd248db77bf2be}{HSA\+\_\+\+STATUS\+\_\+\+ERROR\+\_\+\+FROZEN\+\_\+\+EXECUTABLE}}} & {\ttfamily executable} is frozen. \\
+\hline
+\end{DoxyRetVals}

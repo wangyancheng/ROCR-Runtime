@@ -1,0 +1,43 @@
+\hypertarget{queue_8h}{}\doxysection{src/core/inc/queue.h File Reference}
+\label{queue_8h}\index{src/core/inc/queue.h@{src/core/inc/queue.h}}
+{\ttfamily \#include $<$sstream$>$}\newline
+{\ttfamily \#include \char`\"{}core/common/shared.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}core/inc/checked.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}core/inc/memory\+\_\+region.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}core/util/utils.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}inc/amd\+\_\+hsa\+\_\+queue.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}hsakmt/hsakmt.\+h\char`\"{}}\newline
+Include dependency graph for queue.\+h\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{queue_8h__incl}
+\end{center}
+\end{figure}
+This graph shows which files directly or indirectly include this file\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{queue_8h__dep__incl}
+\end{center}
+\end{figure}
+\doxysubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{structrocr_1_1core_1_1AqlPacket}{rocr\+::core\+::\+Aql\+Packet}}
+\item 
+struct \mbox{\hyperlink{structrocr_1_1core_1_1SharedQueue}{rocr\+::core\+::\+Shared\+Queue}}
+\begin{DoxyCompactList}\small\item\em Helper structure to simplify conversion of amd\+\_\+queue\+\_\+t and \mbox{\hyperlink{classrocr_1_1core_1_1Queue}{core\+::\+Queue}} object. \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{classrocr_1_1core_1_1LocalQueue}{rocr\+::core\+::\+Local\+Queue}}
+\item 
+class \mbox{\hyperlink{classrocr_1_1core_1_1Queue}{rocr\+::core\+::\+Queue}}
+\begin{DoxyCompactList}\small\item\em Class \mbox{\hyperlink{classrocr_1_1core_1_1Queue}{Queue}} which encapsulate user mode queues and provides Api to access its Read, Write indices using Acquire, Release and Relaxed semantics. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Namespaces}
+\begin{DoxyCompactItemize}
+\item 
+ \mbox{\hyperlink{namespacerocr}{rocr}}
+\item 
+ \mbox{\hyperlink{namespacerocr_1_1core}{rocr\+::core}}
+\end{DoxyCompactItemize}

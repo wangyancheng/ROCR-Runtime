@@ -1,0 +1,1198 @@
+\hypertarget{group__executable}{}\doxysection{Executable}
+\label{group__executable}\index{Executable@{Executable}}
+\doxysubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{structhsa__code__object__reader__s}{hsa\+\_\+code\+\_\+object\+\_\+reader\+\_\+s}}
+\begin{DoxyCompactList}\small\item\em Code object reader handle. A code object reader is used to load a code object from file (when created using \mbox{\hyperlink{group__executable_gae502747a701d839d5cdb43688ec14954}{hsa\+\_\+code\+\_\+object\+\_\+reader\+\_\+create\+\_\+from\+\_\+file}}), or from memory (if created using \mbox{\hyperlink{group__executable_gaca50dd8855febc1e126c9300ce64ced7}{hsa\+\_\+code\+\_\+object\+\_\+reader\+\_\+create\+\_\+from\+\_\+memory}}). \end{DoxyCompactList}\item 
+struct \mbox{\hyperlink{structhsa__executable__s}{hsa\+\_\+executable\+\_\+s}}
+\begin{DoxyCompactList}\small\item\em Struct containing an opaque handle to an executable, which contains ISA for finalized kernels and indirect functions together with the allocated global or readonly segment variables they reference. \end{DoxyCompactList}\item 
+struct \mbox{\hyperlink{structhsa__loaded__code__object__s}{hsa\+\_\+loaded\+\_\+code\+\_\+object\+\_\+s}}
+\begin{DoxyCompactList}\small\item\em Loaded code object handle. \end{DoxyCompactList}\item 
+struct \mbox{\hyperlink{structhsa__executable__symbol__s}{hsa\+\_\+executable\+\_\+symbol\+\_\+s}}
+\begin{DoxyCompactList}\small\item\em Executable symbol handle. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+typedef struct \mbox{\hyperlink{structhsa__code__object__reader__s}{hsa\+\_\+code\+\_\+object\+\_\+reader\+\_\+s}} \mbox{\hyperlink{group__executable_ga99b23808ddf94561399f3a90e00c4ed0}{hsa\+\_\+code\+\_\+object\+\_\+reader\+\_\+t}}
+\begin{DoxyCompactList}\small\item\em Code object reader handle. A code object reader is used to load a code object from file (when created using \mbox{\hyperlink{group__executable_gae502747a701d839d5cdb43688ec14954}{hsa\+\_\+code\+\_\+object\+\_\+reader\+\_\+create\+\_\+from\+\_\+file}}), or from memory (if created using \mbox{\hyperlink{group__executable_gaca50dd8855febc1e126c9300ce64ced7}{hsa\+\_\+code\+\_\+object\+\_\+reader\+\_\+create\+\_\+from\+\_\+memory}}). \end{DoxyCompactList}\item 
+typedef struct \mbox{\hyperlink{structhsa__executable__s}{hsa\+\_\+executable\+\_\+s}} \mbox{\hyperlink{group__executable_ga4a4281d636cb6048c4d7a015e1fa3baa}{hsa\+\_\+executable\+\_\+t}}
+\begin{DoxyCompactList}\small\item\em Struct containing an opaque handle to an executable, which contains ISA for finalized kernels and indirect functions together with the allocated global or readonly segment variables they reference. \end{DoxyCompactList}\item 
+typedef struct \mbox{\hyperlink{structhsa__loaded__code__object__s}{hsa\+\_\+loaded\+\_\+code\+\_\+object\+\_\+s}} \mbox{\hyperlink{group__executable_ga352150abd29df5b8cfa891bd51d1d714}{hsa\+\_\+loaded\+\_\+code\+\_\+object\+\_\+t}}
+\begin{DoxyCompactList}\small\item\em Loaded code object handle. \end{DoxyCompactList}\item 
+typedef struct \mbox{\hyperlink{structhsa__executable__symbol__s}{hsa\+\_\+executable\+\_\+symbol\+\_\+s}} \mbox{\hyperlink{group__executable_gac6b342e0224ea2ddef549b3626e8ccc1}{hsa\+\_\+executable\+\_\+symbol\+\_\+t}}
+\begin{DoxyCompactList}\small\item\em Executable symbol handle. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Enumerations}
+\begin{DoxyCompactItemize}
+\item 
+enum \mbox{\hyperlink{group__executable_gaf31d2c00b44ef657f22fb12c21d7d352}{hsa\+\_\+executable\+\_\+state\+\_\+t}} \{ \mbox{\hyperlink{group__executable_ggaf31d2c00b44ef657f22fb12c21d7d352a7e851acbcb9d548bd22707efd59df201}{HSA\+\_\+\+EXECUTABLE\+\_\+\+STATE\+\_\+\+UNFROZEN}} = 0
+, \mbox{\hyperlink{group__executable_ggaf31d2c00b44ef657f22fb12c21d7d352a846a8f97eb27508f8d6e92eb77013ca0}{HSA\+\_\+\+EXECUTABLE\+\_\+\+STATE\+\_\+\+FROZEN}} = 1
+ \}
+\begin{DoxyCompactList}\small\item\em Executable state. \end{DoxyCompactList}\item 
+enum \mbox{\hyperlink{group__executable_ga1f9ab4ca027c77a2fff6deb096e8c298}{hsa\+\_\+executable\+\_\+info\+\_\+t}} \{ \mbox{\hyperlink{group__executable_gga1f9ab4ca027c77a2fff6deb096e8c298a99a87fcb0fb51c8ab2c3d17e4eba1caa}{HSA\+\_\+\+EXECUTABLE\+\_\+\+INFO\+\_\+\+PROFILE}} = 1
+, \mbox{\hyperlink{group__executable_gga1f9ab4ca027c77a2fff6deb096e8c298a52951f187dfd186a52a94c0edcbdbf21}{HSA\+\_\+\+EXECUTABLE\+\_\+\+INFO\+\_\+\+STATE}} = 2
+, \mbox{\hyperlink{group__executable_gga1f9ab4ca027c77a2fff6deb096e8c298a607f953764010314ca4b4a1494ccfa02}{HSA\+\_\+\+EXECUTABLE\+\_\+\+INFO\+\_\+\+DEFAULT\+\_\+\+FLOAT\+\_\+\+ROUNDING\+\_\+\+MODE}} = 3
+ \}
+\begin{DoxyCompactList}\small\item\em Executable attributes. \end{DoxyCompactList}\item 
+enum \mbox{\hyperlink{group__executable_ga530ca6dcd35807946cd1dfb8202ff4be}{hsa\+\_\+symbol\+\_\+kind\+\_\+t}} \{ \mbox{\hyperlink{group__executable_gga530ca6dcd35807946cd1dfb8202ff4beacc04031da695b235b7fe4fa00a862d6f}{HSA\+\_\+\+SYMBOL\+\_\+\+KIND\+\_\+\+VARIABLE}} = 0
+, \mbox{\hyperlink{group__executable_gga530ca6dcd35807946cd1dfb8202ff4beae3d075babaf66ac1f311e5e35168d345}{HSA\+\_\+\+SYMBOL\+\_\+\+KIND\+\_\+\+KERNEL}} = 1
+, \mbox{\hyperlink{group__executable_gga530ca6dcd35807946cd1dfb8202ff4bea65411686c1eb0583ad0e59b9eb960015}{HSA\+\_\+\+SYMBOL\+\_\+\+KIND\+\_\+\+INDIRECT\+\_\+\+FUNCTION}} = 2
+ \}
+\begin{DoxyCompactList}\small\item\em Symbol type. \end{DoxyCompactList}\item 
+enum \mbox{\hyperlink{group__executable_gaf2aba3b2a8dc8fe4faa91635520ca25c}{hsa\+\_\+symbol\+\_\+linkage\+\_\+t}} \{ \mbox{\hyperlink{group__executable_ggaf2aba3b2a8dc8fe4faa91635520ca25cab2f1829a346a5ffaff624a035156e8c4}{HSA\+\_\+\+SYMBOL\+\_\+\+LINKAGE\+\_\+\+MODULE}} = 0
+, \mbox{\hyperlink{group__executable_ggaf2aba3b2a8dc8fe4faa91635520ca25ca256c56358a3d944c89402b4053642d79}{HSA\+\_\+\+SYMBOL\+\_\+\+LINKAGE\+\_\+\+PROGRAM}} = 1
+ \}
+\begin{DoxyCompactList}\small\item\em Linkage type of a symbol. \end{DoxyCompactList}\item 
+enum \mbox{\hyperlink{group__executable_ga0fdb971a44d3e02d1bd5ff889624461a}{hsa\+\_\+variable\+\_\+allocation\+\_\+t}} \{ \mbox{\hyperlink{group__executable_gga0fdb971a44d3e02d1bd5ff889624461aa3efe707ede0ceb1a9c83ac975e3e1fa8}{HSA\+\_\+\+VARIABLE\+\_\+\+ALLOCATION\+\_\+\+AGENT}} = 0
+, \mbox{\hyperlink{group__executable_gga0fdb971a44d3e02d1bd5ff889624461aad852076420fdc3bf1d4c7a1659b9e465}{HSA\+\_\+\+VARIABLE\+\_\+\+ALLOCATION\+\_\+\+PROGRAM}} = 1
+ \}
+\begin{DoxyCompactList}\small\item\em Allocation type of a variable. \end{DoxyCompactList}\item 
+enum \mbox{\hyperlink{group__executable_ga7fb2a9fe278f7ab892eb158277e2dd8c}{hsa\+\_\+variable\+\_\+segment\+\_\+t}} \{ \mbox{\hyperlink{group__executable_gga7fb2a9fe278f7ab892eb158277e2dd8cadadf34601d994c7f0f6f272bc8164842}{HSA\+\_\+\+VARIABLE\+\_\+\+SEGMENT\+\_\+\+GLOBAL}} = 0
+, \mbox{\hyperlink{group__executable_gga7fb2a9fe278f7ab892eb158277e2dd8ca6b1398a2de064285ca5543a15d0419f9}{HSA\+\_\+\+VARIABLE\+\_\+\+SEGMENT\+\_\+\+READONLY}} = 1
+ \}
+\begin{DoxyCompactList}\small\item\em Memory segment associated with a variable. \end{DoxyCompactList}\item 
+enum \mbox{\hyperlink{group__executable_ga27e2e3a930764e3e7385e1ceded09706}{hsa\+\_\+executable\+\_\+symbol\+\_\+info\+\_\+t}} \{ \newline
+\mbox{\hyperlink{group__executable_gga27e2e3a930764e3e7385e1ceded09706a72af1d4b40a2365ec0b3ef5aa5d8cb85}{HSA\+\_\+\+EXECUTABLE\+\_\+\+SYMBOL\+\_\+\+INFO\+\_\+\+TYPE}} = 0
+, \mbox{\hyperlink{group__executable_gga27e2e3a930764e3e7385e1ceded09706a27b71c171231a26f8c4d27fdfc57dc0a}{HSA\+\_\+\+EXECUTABLE\+\_\+\+SYMBOL\+\_\+\+INFO\+\_\+\+NAME\+\_\+\+LENGTH}} = 1
+, \mbox{\hyperlink{group__executable_gga27e2e3a930764e3e7385e1ceded09706a92fd9813235a13632416965b571e2390}{HSA\+\_\+\+EXECUTABLE\+\_\+\+SYMBOL\+\_\+\+INFO\+\_\+\+NAME}} = 2
+, \mbox{\hyperlink{group__executable_gga27e2e3a930764e3e7385e1ceded09706a03bb272117f412f9a97f6f69a40193c3}{HSA\+\_\+\+EXECUTABLE\+\_\+\+SYMBOL\+\_\+\+INFO\+\_\+\+MODULE\+\_\+\+NAME\+\_\+\+LENGTH}} = 3
+, \newline
+\mbox{\hyperlink{group__executable_gga27e2e3a930764e3e7385e1ceded09706a0590dba27afbccac9dd8148bf3bf3d03}{HSA\+\_\+\+EXECUTABLE\+\_\+\+SYMBOL\+\_\+\+INFO\+\_\+\+MODULE\+\_\+\+NAME}} = 4
+, \mbox{\hyperlink{group__executable_gga27e2e3a930764e3e7385e1ceded09706a47f3db73bd7a19127a9827c976879fee}{HSA\+\_\+\+EXECUTABLE\+\_\+\+SYMBOL\+\_\+\+INFO\+\_\+\+AGENT}} = 20
+, \mbox{\hyperlink{group__executable_gga27e2e3a930764e3e7385e1ceded09706abbcb6d61e423c9726f1dc6beae08a045}{HSA\+\_\+\+EXECUTABLE\+\_\+\+SYMBOL\+\_\+\+INFO\+\_\+\+VARIABLE\+\_\+\+ADDRESS}} = 21
+, \mbox{\hyperlink{group__executable_gga27e2e3a930764e3e7385e1ceded09706ace25531535ed03bd77910d00eb5169a4}{HSA\+\_\+\+EXECUTABLE\+\_\+\+SYMBOL\+\_\+\+INFO\+\_\+\+LINKAGE}} = 5
+, \newline
+\mbox{\hyperlink{group__executable_gga27e2e3a930764e3e7385e1ceded09706a8d3c3e2425217495fd120dec5a3b60ee}{HSA\+\_\+\+EXECUTABLE\+\_\+\+SYMBOL\+\_\+\+INFO\+\_\+\+IS\+\_\+\+DEFINITION}} = 17
+, \mbox{\hyperlink{group__executable_gga27e2e3a930764e3e7385e1ceded09706a7321c11fe73af65d09ef2718de8d1068}{HSA\+\_\+\+EXECUTABLE\+\_\+\+SYMBOL\+\_\+\+INFO\+\_\+\+VARIABLE\+\_\+\+ALLOCATION}} = 6
+, \mbox{\hyperlink{group__executable_gga27e2e3a930764e3e7385e1ceded09706aa08f904d38d9ae932e16554353f40385}{HSA\+\_\+\+EXECUTABLE\+\_\+\+SYMBOL\+\_\+\+INFO\+\_\+\+VARIABLE\+\_\+\+SEGMENT}} = 7
+, \mbox{\hyperlink{group__executable_gga27e2e3a930764e3e7385e1ceded09706a36a2ab0fe14663431a18ddc0334bd9a6}{HSA\+\_\+\+EXECUTABLE\+\_\+\+SYMBOL\+\_\+\+INFO\+\_\+\+VARIABLE\+\_\+\+ALIGNMENT}} = 8
+, \newline
+\mbox{\hyperlink{group__executable_gga27e2e3a930764e3e7385e1ceded09706a060eddd4211e1537c84c26a3efabddb0}{HSA\+\_\+\+EXECUTABLE\+\_\+\+SYMBOL\+\_\+\+INFO\+\_\+\+VARIABLE\+\_\+\+SIZE}} = 9
+, \mbox{\hyperlink{group__executable_gga27e2e3a930764e3e7385e1ceded09706a966dac196eeca9f48f1554c5f60b410d}{HSA\+\_\+\+EXECUTABLE\+\_\+\+SYMBOL\+\_\+\+INFO\+\_\+\+VARIABLE\+\_\+\+IS\+\_\+\+CONST}} = 10
+, \mbox{\hyperlink{group__executable_gga27e2e3a930764e3e7385e1ceded09706a470a6121ba8c19a1ba9aba4938c323d2}{HSA\+\_\+\+EXECUTABLE\+\_\+\+SYMBOL\+\_\+\+INFO\+\_\+\+KERNEL\+\_\+\+OBJECT}} = 22
+, \mbox{\hyperlink{group__executable_gga27e2e3a930764e3e7385e1ceded09706a1ba9b07c04f6df7f4d75396d0aecd4a3}{HSA\+\_\+\+EXECUTABLE\+\_\+\+SYMBOL\+\_\+\+INFO\+\_\+\+KERNEL\+\_\+\+KERNARG\+\_\+\+SEGMENT\+\_\+\+SIZE}} = 11
+, \newline
+\mbox{\hyperlink{group__executable_gga27e2e3a930764e3e7385e1ceded09706a3f8d5fc87fafbab9aaf129396116f88a}{HSA\+\_\+\+EXECUTABLE\+\_\+\+SYMBOL\+\_\+\+INFO\+\_\+\+KERNEL\+\_\+\+KERNARG\+\_\+\+SEGMENT\+\_\+\+ALIGNMENT}} = 12
+, \mbox{\hyperlink{group__executable_gga27e2e3a930764e3e7385e1ceded09706a65504ccc292e39d9709f172b4a42fe2a}{HSA\+\_\+\+EXECUTABLE\+\_\+\+SYMBOL\+\_\+\+INFO\+\_\+\+KERNEL\+\_\+\+GROUP\+\_\+\+SEGMENT\+\_\+\+SIZE}} = 13
+, \mbox{\hyperlink{group__executable_gga27e2e3a930764e3e7385e1ceded09706ab9c46816411e68a3fd064e43b771e0a6}{HSA\+\_\+\+EXECUTABLE\+\_\+\+SYMBOL\+\_\+\+INFO\+\_\+\+KERNEL\+\_\+\+PRIVATE\+\_\+\+SEGMENT\+\_\+\+SIZE}} = 14
+, \mbox{\hyperlink{group__executable_gga27e2e3a930764e3e7385e1ceded09706a217c58ab4f593b30870cc267b07fa6f0}{HSA\+\_\+\+EXECUTABLE\+\_\+\+SYMBOL\+\_\+\+INFO\+\_\+\+KERNEL\+\_\+\+DYNAMIC\+\_\+\+CALLSTACK}} = 15
+, \newline
+\mbox{\hyperlink{group__executable_gga27e2e3a930764e3e7385e1ceded09706ad838cd6a28a6d03a29473b0c910dcfc0}{HSA\+\_\+\+EXECUTABLE\+\_\+\+SYMBOL\+\_\+\+INFO\+\_\+\+KERNEL\+\_\+\+CALL\+\_\+\+CONVENTION}} = 18
+, \mbox{\hyperlink{group__executable_gga27e2e3a930764e3e7385e1ceded09706ae8b992bd39eebf47cd14c14db568ff9b}{HSA\+\_\+\+EXECUTABLE\+\_\+\+SYMBOL\+\_\+\+INFO\+\_\+\+INDIRECT\+\_\+\+FUNCTION\+\_\+\+OBJECT}} = 23
+, \mbox{\hyperlink{group__executable_gga27e2e3a930764e3e7385e1ceded09706a1995d917f4839cd6a5e2dcb038d2e764}{HSA\+\_\+\+EXECUTABLE\+\_\+\+SYMBOL\+\_\+\+INFO\+\_\+\+INDIRECT\+\_\+\+FUNCTION\+\_\+\+CALL\+\_\+\+CONVENTION}} = 16
+ \}
+\begin{DoxyCompactList}\small\item\em Executable symbol attributes. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{group__status_gad755322e7ff95456520e8abdbe90d225}{hsa\+\_\+status\+\_\+t}} \mbox{\hyperlink{inc_2hsa__ext__image_8h_a64216765b98b62ee87deb50fd2899836}{HSA\+\_\+\+API}} \mbox{\hyperlink{group__executable_gae502747a701d839d5cdb43688ec14954}{hsa\+\_\+code\+\_\+object\+\_\+reader\+\_\+create\+\_\+from\+\_\+file}} (\mbox{\hyperlink{group__common_gafed8ede11d6584c8a8973ca68ca5a7cc}{hsa\+\_\+file\+\_\+t}} file, \mbox{\hyperlink{group__executable_ga99b23808ddf94561399f3a90e00c4ed0}{hsa\+\_\+code\+\_\+object\+\_\+reader\+\_\+t}} $\ast$code\+\_\+object\+\_\+reader)
+\begin{DoxyCompactList}\small\item\em Create a code object reader to operate on a file. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{group__status_gad755322e7ff95456520e8abdbe90d225}{hsa\+\_\+status\+\_\+t}} \mbox{\hyperlink{inc_2hsa__ext__image_8h_a64216765b98b62ee87deb50fd2899836}{HSA\+\_\+\+API}} \mbox{\hyperlink{group__executable_gaca50dd8855febc1e126c9300ce64ced7}{hsa\+\_\+code\+\_\+object\+\_\+reader\+\_\+create\+\_\+from\+\_\+memory}} (const void $\ast$code\+\_\+object, size\+\_\+t size, \mbox{\hyperlink{group__executable_ga99b23808ddf94561399f3a90e00c4ed0}{hsa\+\_\+code\+\_\+object\+\_\+reader\+\_\+t}} $\ast$code\+\_\+object\+\_\+reader)
+\begin{DoxyCompactList}\small\item\em Create a code object reader to operate on memory. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{group__status_gad755322e7ff95456520e8abdbe90d225}{hsa\+\_\+status\+\_\+t}} \mbox{\hyperlink{inc_2hsa__ext__image_8h_a64216765b98b62ee87deb50fd2899836}{HSA\+\_\+\+API}} \mbox{\hyperlink{group__executable_gae82fee6245f66df978c0f56aabfbc1aa}{hsa\+\_\+code\+\_\+object\+\_\+reader\+\_\+destroy}} (\mbox{\hyperlink{group__executable_ga99b23808ddf94561399f3a90e00c4ed0}{hsa\+\_\+code\+\_\+object\+\_\+reader\+\_\+t}} code\+\_\+object\+\_\+reader)
+\begin{DoxyCompactList}\small\item\em Destroy a code object reader. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{group__status_gad755322e7ff95456520e8abdbe90d225}{hsa\+\_\+status\+\_\+t}} \mbox{\hyperlink{inc_2hsa__ext__image_8h_a64216765b98b62ee87deb50fd2899836}{HSA\+\_\+\+API}} \mbox{\hyperlink{inc_2hsa_8h_a2321f8ca7d706cada4f617b191a478b0}{HSA\+\_\+\+DEPRECATED}} \mbox{\hyperlink{group__executable_ga5e6fd754f2c8e9e081466b30b2a6186c}{hsa\+\_\+executable\+\_\+create}} (\mbox{\hyperlink{group__agentinfo_gacafd4247e2a04cbe0ac0b3998c127532}{hsa\+\_\+profile\+\_\+t}} profile, \mbox{\hyperlink{group__executable_gaf31d2c00b44ef657f22fb12c21d7d352}{hsa\+\_\+executable\+\_\+state\+\_\+t}} executable\+\_\+state, const char $\ast$options, \mbox{\hyperlink{group__executable_ga4a4281d636cb6048c4d7a015e1fa3baa}{hsa\+\_\+executable\+\_\+t}} $\ast$executable)
+\begin{DoxyCompactList}\small\item\em Create an empty executable. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{group__status_gad755322e7ff95456520e8abdbe90d225}{hsa\+\_\+status\+\_\+t}} \mbox{\hyperlink{inc_2hsa__ext__image_8h_a64216765b98b62ee87deb50fd2899836}{HSA\+\_\+\+API}} \mbox{\hyperlink{group__executable_ga32e73083c72a2e43e7865d7e2e557b23}{hsa\+\_\+executable\+\_\+create\+\_\+alt}} (\mbox{\hyperlink{group__agentinfo_gacafd4247e2a04cbe0ac0b3998c127532}{hsa\+\_\+profile\+\_\+t}} profile, \mbox{\hyperlink{group__agentinfo_gaac56321e4596fe10a90b5bb3fedc4b73}{hsa\+\_\+default\+\_\+float\+\_\+rounding\+\_\+mode\+\_\+t}} default\+\_\+float\+\_\+rounding\+\_\+mode, const char $\ast$options, \mbox{\hyperlink{group__executable_ga4a4281d636cb6048c4d7a015e1fa3baa}{hsa\+\_\+executable\+\_\+t}} $\ast$executable)
+\begin{DoxyCompactList}\small\item\em Create an empty executable. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{group__status_gad755322e7ff95456520e8abdbe90d225}{hsa\+\_\+status\+\_\+t}} \mbox{\hyperlink{inc_2hsa__ext__image_8h_a64216765b98b62ee87deb50fd2899836}{HSA\+\_\+\+API}} \mbox{\hyperlink{group__executable_ga8ca804fd4f7d7cd75a510c16ed86e0de}{hsa\+\_\+executable\+\_\+destroy}} (\mbox{\hyperlink{group__executable_ga4a4281d636cb6048c4d7a015e1fa3baa}{hsa\+\_\+executable\+\_\+t}} executable)
+\begin{DoxyCompactList}\small\item\em Destroy an executable. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{group__status_gad755322e7ff95456520e8abdbe90d225}{hsa\+\_\+status\+\_\+t}} \mbox{\hyperlink{inc_2hsa__ext__image_8h_a64216765b98b62ee87deb50fd2899836}{HSA\+\_\+\+API}} \mbox{\hyperlink{group__executable_gaca5bd94d5624f2baee7390e79eb2c650}{hsa\+\_\+executable\+\_\+load\+\_\+program\+\_\+code\+\_\+object}} (\mbox{\hyperlink{group__executable_ga4a4281d636cb6048c4d7a015e1fa3baa}{hsa\+\_\+executable\+\_\+t}} executable, \mbox{\hyperlink{group__executable_ga99b23808ddf94561399f3a90e00c4ed0}{hsa\+\_\+code\+\_\+object\+\_\+reader\+\_\+t}} code\+\_\+object\+\_\+reader, const char $\ast$options, \mbox{\hyperlink{group__executable_ga352150abd29df5b8cfa891bd51d1d714}{hsa\+\_\+loaded\+\_\+code\+\_\+object\+\_\+t}} $\ast$loaded\+\_\+code\+\_\+object)
+\begin{DoxyCompactList}\small\item\em Load a program code object into an executable. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{group__status_gad755322e7ff95456520e8abdbe90d225}{hsa\+\_\+status\+\_\+t}} \mbox{\hyperlink{inc_2hsa__ext__image_8h_a64216765b98b62ee87deb50fd2899836}{HSA\+\_\+\+API}} \mbox{\hyperlink{group__executable_ga7bf8b4aebddead20a6dadb1f13a51f4d}{hsa\+\_\+executable\+\_\+load\+\_\+agent\+\_\+code\+\_\+object}} (\mbox{\hyperlink{group__executable_ga4a4281d636cb6048c4d7a015e1fa3baa}{hsa\+\_\+executable\+\_\+t}} executable, \mbox{\hyperlink{group__agentinfo_ga9ce217ef08e7d5e89c8e83ce7b6ef22b}{hsa\+\_\+agent\+\_\+t}} agent, \mbox{\hyperlink{group__executable_ga99b23808ddf94561399f3a90e00c4ed0}{hsa\+\_\+code\+\_\+object\+\_\+reader\+\_\+t}} code\+\_\+object\+\_\+reader, const char $\ast$options, \mbox{\hyperlink{group__executable_ga352150abd29df5b8cfa891bd51d1d714}{hsa\+\_\+loaded\+\_\+code\+\_\+object\+\_\+t}} $\ast$loaded\+\_\+code\+\_\+object)
+\begin{DoxyCompactList}\small\item\em Load an agent code object into an executable. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{group__status_gad755322e7ff95456520e8abdbe90d225}{hsa\+\_\+status\+\_\+t}} \mbox{\hyperlink{inc_2hsa__ext__image_8h_a64216765b98b62ee87deb50fd2899836}{HSA\+\_\+\+API}} \mbox{\hyperlink{group__executable_ga4864e1b34f8e9725ebdf86d9dc687227}{hsa\+\_\+executable\+\_\+freeze}} (\mbox{\hyperlink{group__executable_ga4a4281d636cb6048c4d7a015e1fa3baa}{hsa\+\_\+executable\+\_\+t}} executable, const char $\ast$options)
+\begin{DoxyCompactList}\small\item\em Freeze the executable. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{group__status_gad755322e7ff95456520e8abdbe90d225}{hsa\+\_\+status\+\_\+t}} \mbox{\hyperlink{inc_2hsa__ext__image_8h_a64216765b98b62ee87deb50fd2899836}{HSA\+\_\+\+API}} \mbox{\hyperlink{group__executable_ga1cc25701128006e3896279fc0c1d41ef}{hsa\+\_\+executable\+\_\+get\+\_\+info}} (\mbox{\hyperlink{group__executable_ga4a4281d636cb6048c4d7a015e1fa3baa}{hsa\+\_\+executable\+\_\+t}} executable, \mbox{\hyperlink{group__executable_ga1f9ab4ca027c77a2fff6deb096e8c298}{hsa\+\_\+executable\+\_\+info\+\_\+t}} attribute, void $\ast$value)
+\begin{DoxyCompactList}\small\item\em Get the current value of an attribute for a given executable. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{group__status_gad755322e7ff95456520e8abdbe90d225}{hsa\+\_\+status\+\_\+t}} \mbox{\hyperlink{inc_2hsa__ext__image_8h_a64216765b98b62ee87deb50fd2899836}{HSA\+\_\+\+API}} \mbox{\hyperlink{group__executable_ga7308e114ac094e39413cc08f163e7ed3}{hsa\+\_\+executable\+\_\+global\+\_\+variable\+\_\+define}} (\mbox{\hyperlink{group__executable_ga4a4281d636cb6048c4d7a015e1fa3baa}{hsa\+\_\+executable\+\_\+t}} executable, const char $\ast$variable\+\_\+name, void $\ast$address)
+\begin{DoxyCompactList}\small\item\em Define an external global variable with program allocation. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{group__status_gad755322e7ff95456520e8abdbe90d225}{hsa\+\_\+status\+\_\+t}} \mbox{\hyperlink{inc_2hsa__ext__image_8h_a64216765b98b62ee87deb50fd2899836}{HSA\+\_\+\+API}} \mbox{\hyperlink{group__executable_ga48d8669a8bbe540d9b5090e0ca333404}{hsa\+\_\+executable\+\_\+agent\+\_\+global\+\_\+variable\+\_\+define}} (\mbox{\hyperlink{group__executable_ga4a4281d636cb6048c4d7a015e1fa3baa}{hsa\+\_\+executable\+\_\+t}} executable, \mbox{\hyperlink{group__agentinfo_ga9ce217ef08e7d5e89c8e83ce7b6ef22b}{hsa\+\_\+agent\+\_\+t}} agent, const char $\ast$variable\+\_\+name, void $\ast$address)
+\begin{DoxyCompactList}\small\item\em Define an external global variable with agent allocation. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{group__status_gad755322e7ff95456520e8abdbe90d225}{hsa\+\_\+status\+\_\+t}} \mbox{\hyperlink{inc_2hsa__ext__image_8h_a64216765b98b62ee87deb50fd2899836}{HSA\+\_\+\+API}} \mbox{\hyperlink{group__executable_gad23e614f5241d32494fc45c081c89db3}{hsa\+\_\+executable\+\_\+readonly\+\_\+variable\+\_\+define}} (\mbox{\hyperlink{group__executable_ga4a4281d636cb6048c4d7a015e1fa3baa}{hsa\+\_\+executable\+\_\+t}} executable, \mbox{\hyperlink{group__agentinfo_ga9ce217ef08e7d5e89c8e83ce7b6ef22b}{hsa\+\_\+agent\+\_\+t}} agent, const char $\ast$variable\+\_\+name, void $\ast$address)
+\begin{DoxyCompactList}\small\item\em Define an external readonly variable. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{group__status_gad755322e7ff95456520e8abdbe90d225}{hsa\+\_\+status\+\_\+t}} \mbox{\hyperlink{inc_2hsa__ext__image_8h_a64216765b98b62ee87deb50fd2899836}{HSA\+\_\+\+API}} \mbox{\hyperlink{group__executable_ga639f1cd7a242471e3f28c128a0e45325}{hsa\+\_\+executable\+\_\+validate}} (\mbox{\hyperlink{group__executable_ga4a4281d636cb6048c4d7a015e1fa3baa}{hsa\+\_\+executable\+\_\+t}} executable, uint32\+\_\+t $\ast$result)
+\begin{DoxyCompactList}\small\item\em Validate an executable. Checks that all code objects have matching machine model, profile, and default floating-\/point rounding mode. Checks that all declarations have definitions. Checks declaration-\/definition compatibility (see the HSA Programming Reference Manual for compatibility rules). Invoking this function is equivalent to invoking \mbox{\hyperlink{group__executable_ga44c77b432a88e92c8df219221c16a675}{hsa\+\_\+executable\+\_\+validate\+\_\+alt}} with no options. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{group__status_gad755322e7ff95456520e8abdbe90d225}{hsa\+\_\+status\+\_\+t}} \mbox{\hyperlink{inc_2hsa__ext__image_8h_a64216765b98b62ee87deb50fd2899836}{HSA\+\_\+\+API}} \mbox{\hyperlink{group__executable_ga44c77b432a88e92c8df219221c16a675}{hsa\+\_\+executable\+\_\+validate\+\_\+alt}} (\mbox{\hyperlink{group__executable_ga4a4281d636cb6048c4d7a015e1fa3baa}{hsa\+\_\+executable\+\_\+t}} executable, const char $\ast$options, uint32\+\_\+t $\ast$result)
+\begin{DoxyCompactList}\small\item\em Validate an executable. Checks that all code objects have matching machine model, profile, and default floating-\/point rounding mode. Checks that all declarations have definitions. Checks declaration-\/definition compatibility (see the HSA Programming Reference Manual for compatibility rules). \end{DoxyCompactList}\item 
+\mbox{\hyperlink{group__status_gad755322e7ff95456520e8abdbe90d225}{hsa\+\_\+status\+\_\+t}} \mbox{\hyperlink{inc_2hsa__ext__image_8h_a64216765b98b62ee87deb50fd2899836}{HSA\+\_\+\+API}} \mbox{\hyperlink{inc_2hsa_8h_a2321f8ca7d706cada4f617b191a478b0}{HSA\+\_\+\+DEPRECATED}} \mbox{\hyperlink{group__executable_gad657530adc5247ef20f18a239f6cef89}{hsa\+\_\+executable\+\_\+get\+\_\+symbol}} (\mbox{\hyperlink{group__executable_ga4a4281d636cb6048c4d7a015e1fa3baa}{hsa\+\_\+executable\+\_\+t}} executable, const char $\ast$module\+\_\+name, const char $\ast$symbol\+\_\+name, \mbox{\hyperlink{group__agentinfo_ga9ce217ef08e7d5e89c8e83ce7b6ef22b}{hsa\+\_\+agent\+\_\+t}} agent, int32\+\_\+t call\+\_\+convention, \mbox{\hyperlink{group__executable_gac6b342e0224ea2ddef549b3626e8ccc1}{hsa\+\_\+executable\+\_\+symbol\+\_\+t}} $\ast$symbol)
+\begin{DoxyCompactList}\small\item\em Get the symbol handle for a given a symbol name. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{group__status_gad755322e7ff95456520e8abdbe90d225}{hsa\+\_\+status\+\_\+t}} \mbox{\hyperlink{inc_2hsa__ext__image_8h_a64216765b98b62ee87deb50fd2899836}{HSA\+\_\+\+API}} \mbox{\hyperlink{group__executable_ga4cd59c60a5686aff975142d6edcdc4b5}{hsa\+\_\+executable\+\_\+get\+\_\+symbol\+\_\+by\+\_\+name}} (\mbox{\hyperlink{group__executable_ga4a4281d636cb6048c4d7a015e1fa3baa}{hsa\+\_\+executable\+\_\+t}} executable, const char $\ast$symbol\+\_\+name, const \mbox{\hyperlink{group__agentinfo_ga9ce217ef08e7d5e89c8e83ce7b6ef22b}{hsa\+\_\+agent\+\_\+t}} $\ast$agent, \mbox{\hyperlink{group__executable_gac6b342e0224ea2ddef549b3626e8ccc1}{hsa\+\_\+executable\+\_\+symbol\+\_\+t}} $\ast$symbol)
+\begin{DoxyCompactList}\small\item\em Retrieve the symbol handle corresponding to a given a symbol name. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{group__status_gad755322e7ff95456520e8abdbe90d225}{hsa\+\_\+status\+\_\+t}} \mbox{\hyperlink{inc_2hsa__ext__image_8h_a64216765b98b62ee87deb50fd2899836}{HSA\+\_\+\+API}} \mbox{\hyperlink{group__executable_ga6ac1727a87b318abdaec6c62c1a86cf6}{hsa\+\_\+executable\+\_\+symbol\+\_\+get\+\_\+info}} (\mbox{\hyperlink{group__executable_gac6b342e0224ea2ddef549b3626e8ccc1}{hsa\+\_\+executable\+\_\+symbol\+\_\+t}} executable\+\_\+symbol, \mbox{\hyperlink{group__executable_ga27e2e3a930764e3e7385e1ceded09706}{hsa\+\_\+executable\+\_\+symbol\+\_\+info\+\_\+t}} attribute, void $\ast$value)
+\begin{DoxyCompactList}\small\item\em Get the current value of an attribute for a given executable symbol. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{group__status_gad755322e7ff95456520e8abdbe90d225}{hsa\+\_\+status\+\_\+t}} \mbox{\hyperlink{inc_2hsa__ext__image_8h_a64216765b98b62ee87deb50fd2899836}{HSA\+\_\+\+API}} \mbox{\hyperlink{inc_2hsa_8h_a2321f8ca7d706cada4f617b191a478b0}{HSA\+\_\+\+DEPRECATED}} \mbox{\hyperlink{group__executable_ga160fb0e09e435421eb06a24d69baa3c9}{hsa\+\_\+executable\+\_\+iterate\+\_\+symbols}} (\mbox{\hyperlink{group__executable_ga4a4281d636cb6048c4d7a015e1fa3baa}{hsa\+\_\+executable\+\_\+t}} executable, \mbox{\hyperlink{group__status_gad755322e7ff95456520e8abdbe90d225}{hsa\+\_\+status\+\_\+t}}($\ast$callback)(\mbox{\hyperlink{group__executable_ga4a4281d636cb6048c4d7a015e1fa3baa}{hsa\+\_\+executable\+\_\+t}} exec, \mbox{\hyperlink{group__executable_gac6b342e0224ea2ddef549b3626e8ccc1}{hsa\+\_\+executable\+\_\+symbol\+\_\+t}} symbol, void $\ast$data), void $\ast$data)
+\begin{DoxyCompactList}\small\item\em Iterate over the symbols in a executable, and invoke an application-\/defined callback on every iteration. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{group__status_gad755322e7ff95456520e8abdbe90d225}{hsa\+\_\+status\+\_\+t}} \mbox{\hyperlink{inc_2hsa__ext__image_8h_a64216765b98b62ee87deb50fd2899836}{HSA\+\_\+\+API}} \mbox{\hyperlink{group__executable_ga48ae4a0311eaa924c31c47162464c0a6}{hsa\+\_\+executable\+\_\+iterate\+\_\+agent\+\_\+symbols}} (\mbox{\hyperlink{group__executable_ga4a4281d636cb6048c4d7a015e1fa3baa}{hsa\+\_\+executable\+\_\+t}} executable, \mbox{\hyperlink{group__agentinfo_ga9ce217ef08e7d5e89c8e83ce7b6ef22b}{hsa\+\_\+agent\+\_\+t}} agent, \mbox{\hyperlink{group__status_gad755322e7ff95456520e8abdbe90d225}{hsa\+\_\+status\+\_\+t}}($\ast$callback)(\mbox{\hyperlink{group__executable_ga4a4281d636cb6048c4d7a015e1fa3baa}{hsa\+\_\+executable\+\_\+t}} exec, \mbox{\hyperlink{group__agentinfo_ga9ce217ef08e7d5e89c8e83ce7b6ef22b}{hsa\+\_\+agent\+\_\+t}} agent, \mbox{\hyperlink{group__executable_gac6b342e0224ea2ddef549b3626e8ccc1}{hsa\+\_\+executable\+\_\+symbol\+\_\+t}} symbol, void $\ast$data), void $\ast$data)
+\begin{DoxyCompactList}\small\item\em Iterate over the kernels, indirect functions, and agent allocation variables in an executable for a given agent, and invoke an application-\/ defined callback on every iteration. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{group__status_gad755322e7ff95456520e8abdbe90d225}{hsa\+\_\+status\+\_\+t}} \mbox{\hyperlink{inc_2hsa__ext__image_8h_a64216765b98b62ee87deb50fd2899836}{HSA\+\_\+\+API}} \mbox{\hyperlink{group__executable_gaef34248210f3e4c8a31ad7263ff5fa70}{hsa\+\_\+executable\+\_\+iterate\+\_\+program\+\_\+symbols}} (\mbox{\hyperlink{group__executable_ga4a4281d636cb6048c4d7a015e1fa3baa}{hsa\+\_\+executable\+\_\+t}} executable, \mbox{\hyperlink{group__status_gad755322e7ff95456520e8abdbe90d225}{hsa\+\_\+status\+\_\+t}}($\ast$callback)(\mbox{\hyperlink{group__executable_ga4a4281d636cb6048c4d7a015e1fa3baa}{hsa\+\_\+executable\+\_\+t}} exec, \mbox{\hyperlink{group__executable_gac6b342e0224ea2ddef549b3626e8ccc1}{hsa\+\_\+executable\+\_\+symbol\+\_\+t}} symbol, void $\ast$data), void $\ast$data)
+\begin{DoxyCompactList}\small\item\em Iterate over the program allocation variables in an executable, and invoke an application-\/defined callback on every iteration. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+
+
+\doxysubsection{Typedef Documentation}
+\mbox{\Hypertarget{group__executable_ga99b23808ddf94561399f3a90e00c4ed0}\label{group__executable_ga99b23808ddf94561399f3a90e00c4ed0}} 
+\index{Executable@{Executable}!hsa\_code\_object\_reader\_t@{hsa\_code\_object\_reader\_t}}
+\index{hsa\_code\_object\_reader\_t@{hsa\_code\_object\_reader\_t}!Executable@{Executable}}
+\doxysubsubsection{\texorpdfstring{hsa\_code\_object\_reader\_t}{hsa\_code\_object\_reader\_t}}
+{\footnotesize\ttfamily typedef struct \mbox{\hyperlink{structhsa__code__object__reader__s}{hsa\+\_\+code\+\_\+object\+\_\+reader\+\_\+s}} \mbox{\hyperlink{group__executable_ga99b23808ddf94561399f3a90e00c4ed0}{hsa\+\_\+code\+\_\+object\+\_\+reader\+\_\+t}}}
+
+
+
+Code object reader handle. A code object reader is used to load a code object from file (when created using \mbox{\hyperlink{group__executable_gae502747a701d839d5cdb43688ec14954}{hsa\+\_\+code\+\_\+object\+\_\+reader\+\_\+create\+\_\+from\+\_\+file}}), or from memory (if created using \mbox{\hyperlink{group__executable_gaca50dd8855febc1e126c9300ce64ced7}{hsa\+\_\+code\+\_\+object\+\_\+reader\+\_\+create\+\_\+from\+\_\+memory}}). 
+
+\mbox{\Hypertarget{group__executable_gac6b342e0224ea2ddef549b3626e8ccc1}\label{group__executable_gac6b342e0224ea2ddef549b3626e8ccc1}} 
+\index{Executable@{Executable}!hsa\_executable\_symbol\_t@{hsa\_executable\_symbol\_t}}
+\index{hsa\_executable\_symbol\_t@{hsa\_executable\_symbol\_t}!Executable@{Executable}}
+\doxysubsubsection{\texorpdfstring{hsa\_executable\_symbol\_t}{hsa\_executable\_symbol\_t}}
+{\footnotesize\ttfamily typedef struct \mbox{\hyperlink{structhsa__executable__symbol__s}{hsa\+\_\+executable\+\_\+symbol\+\_\+s}} \mbox{\hyperlink{group__executable_gac6b342e0224ea2ddef549b3626e8ccc1}{hsa\+\_\+executable\+\_\+symbol\+\_\+t}}}
+
+
+
+Executable symbol handle. 
+
+The lifetime of an executable object symbol matches that of the executable associated with it. An operation on a symbol whose associated executable has been destroyed results in undefined behavior. \mbox{\Hypertarget{group__executable_ga4a4281d636cb6048c4d7a015e1fa3baa}\label{group__executable_ga4a4281d636cb6048c4d7a015e1fa3baa}} 
+\index{Executable@{Executable}!hsa\_executable\_t@{hsa\_executable\_t}}
+\index{hsa\_executable\_t@{hsa\_executable\_t}!Executable@{Executable}}
+\doxysubsubsection{\texorpdfstring{hsa\_executable\_t}{hsa\_executable\_t}}
+{\footnotesize\ttfamily typedef struct \mbox{\hyperlink{structhsa__executable__s}{hsa\+\_\+executable\+\_\+s}} \mbox{\hyperlink{group__executable_ga4a4281d636cb6048c4d7a015e1fa3baa}{hsa\+\_\+executable\+\_\+t}}}
+
+
+
+Struct containing an opaque handle to an executable, which contains ISA for finalized kernels and indirect functions together with the allocated global or readonly segment variables they reference. 
+
+\mbox{\Hypertarget{group__executable_ga352150abd29df5b8cfa891bd51d1d714}\label{group__executable_ga352150abd29df5b8cfa891bd51d1d714}} 
+\index{Executable@{Executable}!hsa\_loaded\_code\_object\_t@{hsa\_loaded\_code\_object\_t}}
+\index{hsa\_loaded\_code\_object\_t@{hsa\_loaded\_code\_object\_t}!Executable@{Executable}}
+\doxysubsubsection{\texorpdfstring{hsa\_loaded\_code\_object\_t}{hsa\_loaded\_code\_object\_t}}
+{\footnotesize\ttfamily typedef struct \mbox{\hyperlink{structhsa__loaded__code__object__s}{hsa\+\_\+loaded\+\_\+code\+\_\+object\+\_\+s}} \mbox{\hyperlink{group__executable_ga352150abd29df5b8cfa891bd51d1d714}{hsa\+\_\+loaded\+\_\+code\+\_\+object\+\_\+t}}}
+
+
+
+Loaded code object handle. 
+
+
+
+\doxysubsection{Enumeration Type Documentation}
+\mbox{\Hypertarget{group__executable_ga1f9ab4ca027c77a2fff6deb096e8c298}\label{group__executable_ga1f9ab4ca027c77a2fff6deb096e8c298}} 
+\index{Executable@{Executable}!hsa\_executable\_info\_t@{hsa\_executable\_info\_t}}
+\index{hsa\_executable\_info\_t@{hsa\_executable\_info\_t}!Executable@{Executable}}
+\doxysubsubsection{\texorpdfstring{hsa\_executable\_info\_t}{hsa\_executable\_info\_t}}
+{\footnotesize\ttfamily enum \mbox{\hyperlink{group__executable_ga1f9ab4ca027c77a2fff6deb096e8c298}{hsa\+\_\+executable\+\_\+info\+\_\+t}}}
+
+
+
+Executable attributes. 
+
+\begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{HSA\_EXECUTABLE\_INFO\_PROFILE@{HSA\_EXECUTABLE\_INFO\_PROFILE}!Executable@{Executable}}\index{Executable@{Executable}!HSA\_EXECUTABLE\_INFO\_PROFILE@{HSA\_EXECUTABLE\_INFO\_PROFILE}}}\mbox{\Hypertarget{group__executable_gga1f9ab4ca027c77a2fff6deb096e8c298a99a87fcb0fb51c8ab2c3d17e4eba1caa}\label{group__executable_gga1f9ab4ca027c77a2fff6deb096e8c298a99a87fcb0fb51c8ab2c3d17e4eba1caa}} 
+HSA\+\_\+\+EXECUTABLE\+\_\+\+INFO\+\_\+\+PROFILE&Profile this executable is created for. The type of this attribute is \mbox{\hyperlink{group__agentinfo_gacafd4247e2a04cbe0ac0b3998c127532}{hsa\+\_\+profile\+\_\+t}}. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{HSA\_EXECUTABLE\_INFO\_STATE@{HSA\_EXECUTABLE\_INFO\_STATE}!Executable@{Executable}}\index{Executable@{Executable}!HSA\_EXECUTABLE\_INFO\_STATE@{HSA\_EXECUTABLE\_INFO\_STATE}}}\mbox{\Hypertarget{group__executable_gga1f9ab4ca027c77a2fff6deb096e8c298a52951f187dfd186a52a94c0edcbdbf21}\label{group__executable_gga1f9ab4ca027c77a2fff6deb096e8c298a52951f187dfd186a52a94c0edcbdbf21}} 
+HSA\+\_\+\+EXECUTABLE\+\_\+\+INFO\+\_\+\+STATE&Executable state. The type of this attribute is \mbox{\hyperlink{group__executable_gaf31d2c00b44ef657f22fb12c21d7d352}{hsa\+\_\+executable\+\_\+state\+\_\+t}}. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{HSA\_EXECUTABLE\_INFO\_DEFAULT\_FLOAT\_ROUNDING\_MODE@{HSA\_EXECUTABLE\_INFO\_DEFAULT\_FLOAT\_ROUNDING\_MODE}!Executable@{Executable}}\index{Executable@{Executable}!HSA\_EXECUTABLE\_INFO\_DEFAULT\_FLOAT\_ROUNDING\_MODE@{HSA\_EXECUTABLE\_INFO\_DEFAULT\_FLOAT\_ROUNDING\_MODE}}}\mbox{\Hypertarget{group__executable_gga1f9ab4ca027c77a2fff6deb096e8c298a607f953764010314ca4b4a1494ccfa02}\label{group__executable_gga1f9ab4ca027c77a2fff6deb096e8c298a607f953764010314ca4b4a1494ccfa02}} 
+HSA\+\_\+\+EXECUTABLE\+\_\+\+INFO\+\_\+\+DEFAULT\+\_\+\+FLOAT\+\_\+\+ROUNDING\+\_\+\+MODE&Default floating-\/point rounding mode specified when executable was created. The type of this attribute is \mbox{\hyperlink{group__agentinfo_gaac56321e4596fe10a90b5bb3fedc4b73}{hsa\+\_\+default\+\_\+float\+\_\+rounding\+\_\+mode\+\_\+t}}. \\
+\hline
+
+\end{DoxyEnumFields}
+\mbox{\Hypertarget{group__executable_gaf31d2c00b44ef657f22fb12c21d7d352}\label{group__executable_gaf31d2c00b44ef657f22fb12c21d7d352}} 
+\index{Executable@{Executable}!hsa\_executable\_state\_t@{hsa\_executable\_state\_t}}
+\index{hsa\_executable\_state\_t@{hsa\_executable\_state\_t}!Executable@{Executable}}
+\doxysubsubsection{\texorpdfstring{hsa\_executable\_state\_t}{hsa\_executable\_state\_t}}
+{\footnotesize\ttfamily enum \mbox{\hyperlink{group__executable_gaf31d2c00b44ef657f22fb12c21d7d352}{hsa\+\_\+executable\+\_\+state\+\_\+t}}}
+
+
+
+Executable state. 
+
+\begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{HSA\_EXECUTABLE\_STATE\_UNFROZEN@{HSA\_EXECUTABLE\_STATE\_UNFROZEN}!Executable@{Executable}}\index{Executable@{Executable}!HSA\_EXECUTABLE\_STATE\_UNFROZEN@{HSA\_EXECUTABLE\_STATE\_UNFROZEN}}}\mbox{\Hypertarget{group__executable_ggaf31d2c00b44ef657f22fb12c21d7d352a7e851acbcb9d548bd22707efd59df201}\label{group__executable_ggaf31d2c00b44ef657f22fb12c21d7d352a7e851acbcb9d548bd22707efd59df201}} 
+HSA\+\_\+\+EXECUTABLE\+\_\+\+STATE\+\_\+\+UNFROZEN&Executable state, which allows the user to load code objects and define external variables. Variable addresses, kernel code handles, and indirect function code handles are not available in query operations until the executable is frozen (zero always returned). \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{HSA\_EXECUTABLE\_STATE\_FROZEN@{HSA\_EXECUTABLE\_STATE\_FROZEN}!Executable@{Executable}}\index{Executable@{Executable}!HSA\_EXECUTABLE\_STATE\_FROZEN@{HSA\_EXECUTABLE\_STATE\_FROZEN}}}\mbox{\Hypertarget{group__executable_ggaf31d2c00b44ef657f22fb12c21d7d352a846a8f97eb27508f8d6e92eb77013ca0}\label{group__executable_ggaf31d2c00b44ef657f22fb12c21d7d352a846a8f97eb27508f8d6e92eb77013ca0}} 
+HSA\+\_\+\+EXECUTABLE\+\_\+\+STATE\+\_\+\+FROZEN&Executable state, which allows the user to query variable addresses, kernel code handles, and indirect function code handles using query operations. Loading new code objects, as well as defining external variables, is not allowed in this state. \\
+\hline
+
+\end{DoxyEnumFields}
+\mbox{\Hypertarget{group__executable_ga27e2e3a930764e3e7385e1ceded09706}\label{group__executable_ga27e2e3a930764e3e7385e1ceded09706}} 
+\index{Executable@{Executable}!hsa\_executable\_symbol\_info\_t@{hsa\_executable\_symbol\_info\_t}}
+\index{hsa\_executable\_symbol\_info\_t@{hsa\_executable\_symbol\_info\_t}!Executable@{Executable}}
+\doxysubsubsection{\texorpdfstring{hsa\_executable\_symbol\_info\_t}{hsa\_executable\_symbol\_info\_t}}
+{\footnotesize\ttfamily enum \mbox{\hyperlink{group__executable_ga27e2e3a930764e3e7385e1ceded09706}{hsa\+\_\+executable\+\_\+symbol\+\_\+info\+\_\+t}}}
+
+
+
+Executable symbol attributes. 
+
+\begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{HSA\_EXECUTABLE\_SYMBOL\_INFO\_TYPE@{HSA\_EXECUTABLE\_SYMBOL\_INFO\_TYPE}!Executable@{Executable}}\index{Executable@{Executable}!HSA\_EXECUTABLE\_SYMBOL\_INFO\_TYPE@{HSA\_EXECUTABLE\_SYMBOL\_INFO\_TYPE}}}\mbox{\Hypertarget{group__executable_gga27e2e3a930764e3e7385e1ceded09706a72af1d4b40a2365ec0b3ef5aa5d8cb85}\label{group__executable_gga27e2e3a930764e3e7385e1ceded09706a72af1d4b40a2365ec0b3ef5aa5d8cb85}} 
+HSA\+\_\+\+EXECUTABLE\+\_\+\+SYMBOL\+\_\+\+INFO\+\_\+\+TYPE&The kind of the symbol. The type of this attribute is \mbox{\hyperlink{group__executable_ga530ca6dcd35807946cd1dfb8202ff4be}{hsa\+\_\+symbol\+\_\+kind\+\_\+t}}. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{HSA\_EXECUTABLE\_SYMBOL\_INFO\_NAME\_LENGTH@{HSA\_EXECUTABLE\_SYMBOL\_INFO\_NAME\_LENGTH}!Executable@{Executable}}\index{Executable@{Executable}!HSA\_EXECUTABLE\_SYMBOL\_INFO\_NAME\_LENGTH@{HSA\_EXECUTABLE\_SYMBOL\_INFO\_NAME\_LENGTH}}}\mbox{\Hypertarget{group__executable_gga27e2e3a930764e3e7385e1ceded09706a27b71c171231a26f8c4d27fdfc57dc0a}\label{group__executable_gga27e2e3a930764e3e7385e1ceded09706a27b71c171231a26f8c4d27fdfc57dc0a}} 
+HSA\+\_\+\+EXECUTABLE\+\_\+\+SYMBOL\+\_\+\+INFO\+\_\+\+NAME\+\_\+\+LENGTH&The length of the symbol name in bytes, not including the NUL terminator. The type of this attribute is uint32\+\_\+t. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{HSA\_EXECUTABLE\_SYMBOL\_INFO\_NAME@{HSA\_EXECUTABLE\_SYMBOL\_INFO\_NAME}!Executable@{Executable}}\index{Executable@{Executable}!HSA\_EXECUTABLE\_SYMBOL\_INFO\_NAME@{HSA\_EXECUTABLE\_SYMBOL\_INFO\_NAME}}}\mbox{\Hypertarget{group__executable_gga27e2e3a930764e3e7385e1ceded09706a92fd9813235a13632416965b571e2390}\label{group__executable_gga27e2e3a930764e3e7385e1ceded09706a92fd9813235a13632416965b571e2390}} 
+HSA\+\_\+\+EXECUTABLE\+\_\+\+SYMBOL\+\_\+\+INFO\+\_\+\+NAME&The name of the symbol. The type of this attribute is character array with the length equal to the value of \mbox{\hyperlink{group__executable_gga27e2e3a930764e3e7385e1ceded09706a27b71c171231a26f8c4d27fdfc57dc0a}{HSA\+\_\+\+EXECUTABLE\+\_\+\+SYMBOL\+\_\+\+INFO\+\_\+\+NAME\+\_\+\+LENGTH}} attribute. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{HSA\_EXECUTABLE\_SYMBOL\_INFO\_MODULE\_NAME\_LENGTH@{HSA\_EXECUTABLE\_SYMBOL\_INFO\_MODULE\_NAME\_LENGTH}!Executable@{Executable}}\index{Executable@{Executable}!HSA\_EXECUTABLE\_SYMBOL\_INFO\_MODULE\_NAME\_LENGTH@{HSA\_EXECUTABLE\_SYMBOL\_INFO\_MODULE\_NAME\_LENGTH}}}\mbox{\Hypertarget{group__executable_gga27e2e3a930764e3e7385e1ceded09706a03bb272117f412f9a97f6f69a40193c3}\label{group__executable_gga27e2e3a930764e3e7385e1ceded09706a03bb272117f412f9a97f6f69a40193c3}} 
+HSA\+\_\+\+EXECUTABLE\+\_\+\+SYMBOL\+\_\+\+INFO\+\_\+\+MODULE\+\_\+\+NAME\+\_\+\+LENGTH&\begin{DoxyRefDesc}{Deprecated}
+\item[\mbox{\hyperlink{deprecated__deprecated000081}{Deprecated}}]\end{DoxyRefDesc}
+
+
+The length of the module name in bytes (not including the NUL terminator) to which this symbol belongs if this symbol has module linkage, otherwise 0 is returned. The type of this attribute is uint32\+\_\+t. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{HSA\_EXECUTABLE\_SYMBOL\_INFO\_MODULE\_NAME@{HSA\_EXECUTABLE\_SYMBOL\_INFO\_MODULE\_NAME}!Executable@{Executable}}\index{Executable@{Executable}!HSA\_EXECUTABLE\_SYMBOL\_INFO\_MODULE\_NAME@{HSA\_EXECUTABLE\_SYMBOL\_INFO\_MODULE\_NAME}}}\mbox{\Hypertarget{group__executable_gga27e2e3a930764e3e7385e1ceded09706a0590dba27afbccac9dd8148bf3bf3d03}\label{group__executable_gga27e2e3a930764e3e7385e1ceded09706a0590dba27afbccac9dd8148bf3bf3d03}} 
+HSA\+\_\+\+EXECUTABLE\+\_\+\+SYMBOL\+\_\+\+INFO\+\_\+\+MODULE\+\_\+\+NAME&\begin{DoxyRefDesc}{Deprecated}
+\item[\mbox{\hyperlink{deprecated__deprecated000082}{Deprecated}}]\end{DoxyRefDesc}
+
+
+The module name to which this symbol belongs if this symbol has module linkage, otherwise an empty string is returned. The type of this attribute is character array with the length equal to the value of \mbox{\hyperlink{group__executable_gga27e2e3a930764e3e7385e1ceded09706a03bb272117f412f9a97f6f69a40193c3}{HSA\+\_\+\+EXECUTABLE\+\_\+\+SYMBOL\+\_\+\+INFO\+\_\+\+MODULE\+\_\+\+NAME\+\_\+\+LENGTH}} attribute. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{HSA\_EXECUTABLE\_SYMBOL\_INFO\_AGENT@{HSA\_EXECUTABLE\_SYMBOL\_INFO\_AGENT}!Executable@{Executable}}\index{Executable@{Executable}!HSA\_EXECUTABLE\_SYMBOL\_INFO\_AGENT@{HSA\_EXECUTABLE\_SYMBOL\_INFO\_AGENT}}}\mbox{\Hypertarget{group__executable_gga27e2e3a930764e3e7385e1ceded09706a47f3db73bd7a19127a9827c976879fee}\label{group__executable_gga27e2e3a930764e3e7385e1ceded09706a47f3db73bd7a19127a9827c976879fee}} 
+HSA\+\_\+\+EXECUTABLE\+\_\+\+SYMBOL\+\_\+\+INFO\+\_\+\+AGENT&\begin{DoxyRefDesc}{Deprecated}
+\item[\mbox{\hyperlink{deprecated__deprecated000083}{Deprecated}}]\end{DoxyRefDesc}
+
+
+Agent associated with this symbol. If the symbol is a variable, the value of this attribute is only defined if \mbox{\hyperlink{group__executable_gga27e2e3a930764e3e7385e1ceded09706a7321c11fe73af65d09ef2718de8d1068}{HSA\+\_\+\+EXECUTABLE\+\_\+\+SYMBOL\+\_\+\+INFO\+\_\+\+VARIABLE\+\_\+\+ALLOCATION}} is \mbox{\hyperlink{group__executable_gga0fdb971a44d3e02d1bd5ff889624461aa3efe707ede0ceb1a9c83ac975e3e1fa8}{HSA\+\_\+\+VARIABLE\+\_\+\+ALLOCATION\+\_\+\+AGENT}}. The type of this attribute is hsa\+\_\+agent\+\_\+t. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{HSA\_EXECUTABLE\_SYMBOL\_INFO\_VARIABLE\_ADDRESS@{HSA\_EXECUTABLE\_SYMBOL\_INFO\_VARIABLE\_ADDRESS}!Executable@{Executable}}\index{Executable@{Executable}!HSA\_EXECUTABLE\_SYMBOL\_INFO\_VARIABLE\_ADDRESS@{HSA\_EXECUTABLE\_SYMBOL\_INFO\_VARIABLE\_ADDRESS}}}\mbox{\Hypertarget{group__executable_gga27e2e3a930764e3e7385e1ceded09706abbcb6d61e423c9726f1dc6beae08a045}\label{group__executable_gga27e2e3a930764e3e7385e1ceded09706abbcb6d61e423c9726f1dc6beae08a045}} 
+HSA\+\_\+\+EXECUTABLE\+\_\+\+SYMBOL\+\_\+\+INFO\+\_\+\+VARIABLE\+\_\+\+ADDRESS&The address of the variable. The value of this attribute is undefined if the symbol is not a variable. The type of this attribute is uint64\+\_\+t.
+
+If executable\textquotesingle{}s state is \mbox{\hyperlink{group__executable_ggaf31d2c00b44ef657f22fb12c21d7d352a7e851acbcb9d548bd22707efd59df201}{HSA\+\_\+\+EXECUTABLE\+\_\+\+STATE\+\_\+\+UNFROZEN}}, then 0 is returned. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{HSA\_EXECUTABLE\_SYMBOL\_INFO\_LINKAGE@{HSA\_EXECUTABLE\_SYMBOL\_INFO\_LINKAGE}!Executable@{Executable}}\index{Executable@{Executable}!HSA\_EXECUTABLE\_SYMBOL\_INFO\_LINKAGE@{HSA\_EXECUTABLE\_SYMBOL\_INFO\_LINKAGE}}}\mbox{\Hypertarget{group__executable_gga27e2e3a930764e3e7385e1ceded09706ace25531535ed03bd77910d00eb5169a4}\label{group__executable_gga27e2e3a930764e3e7385e1ceded09706ace25531535ed03bd77910d00eb5169a4}} 
+HSA\+\_\+\+EXECUTABLE\+\_\+\+SYMBOL\+\_\+\+INFO\+\_\+\+LINKAGE&The linkage kind of the symbol. The type of this attribute is \mbox{\hyperlink{group__executable_gaf2aba3b2a8dc8fe4faa91635520ca25c}{hsa\+\_\+symbol\+\_\+linkage\+\_\+t}}. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{HSA\_EXECUTABLE\_SYMBOL\_INFO\_IS\_DEFINITION@{HSA\_EXECUTABLE\_SYMBOL\_INFO\_IS\_DEFINITION}!Executable@{Executable}}\index{Executable@{Executable}!HSA\_EXECUTABLE\_SYMBOL\_INFO\_IS\_DEFINITION@{HSA\_EXECUTABLE\_SYMBOL\_INFO\_IS\_DEFINITION}}}\mbox{\Hypertarget{group__executable_gga27e2e3a930764e3e7385e1ceded09706a8d3c3e2425217495fd120dec5a3b60ee}\label{group__executable_gga27e2e3a930764e3e7385e1ceded09706a8d3c3e2425217495fd120dec5a3b60ee}} 
+HSA\+\_\+\+EXECUTABLE\+\_\+\+SYMBOL\+\_\+\+INFO\+\_\+\+IS\+\_\+\+DEFINITION&Indicates whether the symbol corresponds to a definition. The type of this attribute is bool. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{HSA\_EXECUTABLE\_SYMBOL\_INFO\_VARIABLE\_ALLOCATION@{HSA\_EXECUTABLE\_SYMBOL\_INFO\_VARIABLE\_ALLOCATION}!Executable@{Executable}}\index{Executable@{Executable}!HSA\_EXECUTABLE\_SYMBOL\_INFO\_VARIABLE\_ALLOCATION@{HSA\_EXECUTABLE\_SYMBOL\_INFO\_VARIABLE\_ALLOCATION}}}\mbox{\Hypertarget{group__executable_gga27e2e3a930764e3e7385e1ceded09706a7321c11fe73af65d09ef2718de8d1068}\label{group__executable_gga27e2e3a930764e3e7385e1ceded09706a7321c11fe73af65d09ef2718de8d1068}} 
+HSA\+\_\+\+EXECUTABLE\+\_\+\+SYMBOL\+\_\+\+INFO\+\_\+\+VARIABLE\+\_\+\+ALLOCATION&\begin{DoxyRefDesc}{Deprecated}
+\item[\mbox{\hyperlink{deprecated__deprecated000084}{Deprecated}}]\end{DoxyRefDesc}
+
+
+The allocation kind of the variable. The value of this attribute is undefined if the symbol is not a variable. The type of this attribute is \mbox{\hyperlink{group__executable_ga0fdb971a44d3e02d1bd5ff889624461a}{hsa\+\_\+variable\+\_\+allocation\+\_\+t}}. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{HSA\_EXECUTABLE\_SYMBOL\_INFO\_VARIABLE\_SEGMENT@{HSA\_EXECUTABLE\_SYMBOL\_INFO\_VARIABLE\_SEGMENT}!Executable@{Executable}}\index{Executable@{Executable}!HSA\_EXECUTABLE\_SYMBOL\_INFO\_VARIABLE\_SEGMENT@{HSA\_EXECUTABLE\_SYMBOL\_INFO\_VARIABLE\_SEGMENT}}}\mbox{\Hypertarget{group__executable_gga27e2e3a930764e3e7385e1ceded09706aa08f904d38d9ae932e16554353f40385}\label{group__executable_gga27e2e3a930764e3e7385e1ceded09706aa08f904d38d9ae932e16554353f40385}} 
+HSA\+\_\+\+EXECUTABLE\+\_\+\+SYMBOL\+\_\+\+INFO\+\_\+\+VARIABLE\+\_\+\+SEGMENT&\begin{DoxyRefDesc}{Deprecated}
+\item[\mbox{\hyperlink{deprecated__deprecated000085}{Deprecated}}]\end{DoxyRefDesc}
+
+
+The segment kind of the variable. The value of this attribute is undefined if the symbol is not a variable. The type of this attribute is \mbox{\hyperlink{group__executable_ga7fb2a9fe278f7ab892eb158277e2dd8c}{hsa\+\_\+variable\+\_\+segment\+\_\+t}}. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{HSA\_EXECUTABLE\_SYMBOL\_INFO\_VARIABLE\_ALIGNMENT@{HSA\_EXECUTABLE\_SYMBOL\_INFO\_VARIABLE\_ALIGNMENT}!Executable@{Executable}}\index{Executable@{Executable}!HSA\_EXECUTABLE\_SYMBOL\_INFO\_VARIABLE\_ALIGNMENT@{HSA\_EXECUTABLE\_SYMBOL\_INFO\_VARIABLE\_ALIGNMENT}}}\mbox{\Hypertarget{group__executable_gga27e2e3a930764e3e7385e1ceded09706a36a2ab0fe14663431a18ddc0334bd9a6}\label{group__executable_gga27e2e3a930764e3e7385e1ceded09706a36a2ab0fe14663431a18ddc0334bd9a6}} 
+HSA\+\_\+\+EXECUTABLE\+\_\+\+SYMBOL\+\_\+\+INFO\+\_\+\+VARIABLE\+\_\+\+ALIGNMENT&\begin{DoxyRefDesc}{Deprecated}
+\item[\mbox{\hyperlink{deprecated__deprecated000086}{Deprecated}}]\end{DoxyRefDesc}
+
+
+Alignment of the symbol in memory. The value of this attribute is undefined if the symbol is not a variable. The type of this attribute is uint32\+\_\+t.
+
+The current alignment of the variable in memory may be greater than the value specified in the source program variable declaration. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{HSA\_EXECUTABLE\_SYMBOL\_INFO\_VARIABLE\_SIZE@{HSA\_EXECUTABLE\_SYMBOL\_INFO\_VARIABLE\_SIZE}!Executable@{Executable}}\index{Executable@{Executable}!HSA\_EXECUTABLE\_SYMBOL\_INFO\_VARIABLE\_SIZE@{HSA\_EXECUTABLE\_SYMBOL\_INFO\_VARIABLE\_SIZE}}}\mbox{\Hypertarget{group__executable_gga27e2e3a930764e3e7385e1ceded09706a060eddd4211e1537c84c26a3efabddb0}\label{group__executable_gga27e2e3a930764e3e7385e1ceded09706a060eddd4211e1537c84c26a3efabddb0}} 
+HSA\+\_\+\+EXECUTABLE\+\_\+\+SYMBOL\+\_\+\+INFO\+\_\+\+VARIABLE\+\_\+\+SIZE&\begin{DoxyRefDesc}{Deprecated}
+\item[\mbox{\hyperlink{deprecated__deprecated000087}{Deprecated}}]\end{DoxyRefDesc}
+
+
+Size of the variable. The value of this attribute is undefined if the symbol is not a variable. The type of this attribute is uint32\+\_\+t.
+
+A value of 0 is returned if the variable is an external variable and has an unknown dimension. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{HSA\_EXECUTABLE\_SYMBOL\_INFO\_VARIABLE\_IS\_CONST@{HSA\_EXECUTABLE\_SYMBOL\_INFO\_VARIABLE\_IS\_CONST}!Executable@{Executable}}\index{Executable@{Executable}!HSA\_EXECUTABLE\_SYMBOL\_INFO\_VARIABLE\_IS\_CONST@{HSA\_EXECUTABLE\_SYMBOL\_INFO\_VARIABLE\_IS\_CONST}}}\mbox{\Hypertarget{group__executable_gga27e2e3a930764e3e7385e1ceded09706a966dac196eeca9f48f1554c5f60b410d}\label{group__executable_gga27e2e3a930764e3e7385e1ceded09706a966dac196eeca9f48f1554c5f60b410d}} 
+HSA\+\_\+\+EXECUTABLE\+\_\+\+SYMBOL\+\_\+\+INFO\+\_\+\+VARIABLE\+\_\+\+IS\+\_\+\+CONST&\begin{DoxyRefDesc}{Deprecated}
+\item[\mbox{\hyperlink{deprecated__deprecated000088}{Deprecated}}]\end{DoxyRefDesc}
+
+
+Indicates whether the variable is constant. The value of this attribute is undefined if the symbol is not a variable. The type of this attribute is bool. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{HSA\_EXECUTABLE\_SYMBOL\_INFO\_KERNEL\_OBJECT@{HSA\_EXECUTABLE\_SYMBOL\_INFO\_KERNEL\_OBJECT}!Executable@{Executable}}\index{Executable@{Executable}!HSA\_EXECUTABLE\_SYMBOL\_INFO\_KERNEL\_OBJECT@{HSA\_EXECUTABLE\_SYMBOL\_INFO\_KERNEL\_OBJECT}}}\mbox{\Hypertarget{group__executable_gga27e2e3a930764e3e7385e1ceded09706a470a6121ba8c19a1ba9aba4938c323d2}\label{group__executable_gga27e2e3a930764e3e7385e1ceded09706a470a6121ba8c19a1ba9aba4938c323d2}} 
+HSA\+\_\+\+EXECUTABLE\+\_\+\+SYMBOL\+\_\+\+INFO\+\_\+\+KERNEL\+\_\+\+OBJECT&Kernel object handle, used in the kernel dispatch packet. The value of this attribute is undefined if the symbol is not a kernel. The type of this attribute is uint64\+\_\+t.
+
+If the state of the executable is \mbox{\hyperlink{group__executable_ggaf31d2c00b44ef657f22fb12c21d7d352a7e851acbcb9d548bd22707efd59df201}{HSA\+\_\+\+EXECUTABLE\+\_\+\+STATE\+\_\+\+UNFROZEN}}, then 0 is returned. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{HSA\_EXECUTABLE\_SYMBOL\_INFO\_KERNEL\_KERNARG\_SEGMENT\_SIZE@{HSA\_EXECUTABLE\_SYMBOL\_INFO\_KERNEL\_KERNARG\_SEGMENT\_SIZE}!Executable@{Executable}}\index{Executable@{Executable}!HSA\_EXECUTABLE\_SYMBOL\_INFO\_KERNEL\_KERNARG\_SEGMENT\_SIZE@{HSA\_EXECUTABLE\_SYMBOL\_INFO\_KERNEL\_KERNARG\_SEGMENT\_SIZE}}}\mbox{\Hypertarget{group__executable_gga27e2e3a930764e3e7385e1ceded09706a1ba9b07c04f6df7f4d75396d0aecd4a3}\label{group__executable_gga27e2e3a930764e3e7385e1ceded09706a1ba9b07c04f6df7f4d75396d0aecd4a3}} 
+HSA\+\_\+\+EXECUTABLE\+\_\+\+SYMBOL\+\_\+\+INFO\+\_\+\+KERNEL\+\_\+\+KERNARG\+\_\+\+SEGMENT\+\_\+\+SIZE&Size of kernarg segment memory that is required to hold the values of the kernel arguments, in bytes. Must be a multiple of 16. The value of this attribute is undefined if the symbol is not a kernel. The type of this attribute is uint32\+\_\+t. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{HSA\_EXECUTABLE\_SYMBOL\_INFO\_KERNEL\_KERNARG\_SEGMENT\_ALIGNMENT@{HSA\_EXECUTABLE\_SYMBOL\_INFO\_KERNEL\_KERNARG\_SEGMENT\_ALIGNMENT}!Executable@{Executable}}\index{Executable@{Executable}!HSA\_EXECUTABLE\_SYMBOL\_INFO\_KERNEL\_KERNARG\_SEGMENT\_ALIGNMENT@{HSA\_EXECUTABLE\_SYMBOL\_INFO\_KERNEL\_KERNARG\_SEGMENT\_ALIGNMENT}}}\mbox{\Hypertarget{group__executable_gga27e2e3a930764e3e7385e1ceded09706a3f8d5fc87fafbab9aaf129396116f88a}\label{group__executable_gga27e2e3a930764e3e7385e1ceded09706a3f8d5fc87fafbab9aaf129396116f88a}} 
+HSA\+\_\+\+EXECUTABLE\+\_\+\+SYMBOL\+\_\+\+INFO\+\_\+\+KERNEL\+\_\+\+KERNARG\+\_\+\+SEGMENT\+\_\+\+ALIGNMENT&Alignment (in bytes) of the buffer used to pass arguments to the kernel, which is the maximum of 16 and the maximum alignment of any of the kernel arguments. The value of this attribute is undefined if the symbol is not a kernel. The type of this attribute is uint32\+\_\+t. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{HSA\_EXECUTABLE\_SYMBOL\_INFO\_KERNEL\_GROUP\_SEGMENT\_SIZE@{HSA\_EXECUTABLE\_SYMBOL\_INFO\_KERNEL\_GROUP\_SEGMENT\_SIZE}!Executable@{Executable}}\index{Executable@{Executable}!HSA\_EXECUTABLE\_SYMBOL\_INFO\_KERNEL\_GROUP\_SEGMENT\_SIZE@{HSA\_EXECUTABLE\_SYMBOL\_INFO\_KERNEL\_GROUP\_SEGMENT\_SIZE}}}\mbox{\Hypertarget{group__executable_gga27e2e3a930764e3e7385e1ceded09706a65504ccc292e39d9709f172b4a42fe2a}\label{group__executable_gga27e2e3a930764e3e7385e1ceded09706a65504ccc292e39d9709f172b4a42fe2a}} 
+HSA\+\_\+\+EXECUTABLE\+\_\+\+SYMBOL\+\_\+\+INFO\+\_\+\+KERNEL\+\_\+\+GROUP\+\_\+\+SEGMENT\+\_\+\+SIZE&Size of static group segment memory required by the kernel (per work-\/group), in bytes. The value of this attribute is undefined if the symbol is not a kernel. The type of this attribute is uint32\+\_\+t.
+
+The reported amount does not include any dynamically allocated group segment memory that may be requested by the application when a kernel is dispatched. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{HSA\_EXECUTABLE\_SYMBOL\_INFO\_KERNEL\_PRIVATE\_SEGMENT\_SIZE@{HSA\_EXECUTABLE\_SYMBOL\_INFO\_KERNEL\_PRIVATE\_SEGMENT\_SIZE}!Executable@{Executable}}\index{Executable@{Executable}!HSA\_EXECUTABLE\_SYMBOL\_INFO\_KERNEL\_PRIVATE\_SEGMENT\_SIZE@{HSA\_EXECUTABLE\_SYMBOL\_INFO\_KERNEL\_PRIVATE\_SEGMENT\_SIZE}}}\mbox{\Hypertarget{group__executable_gga27e2e3a930764e3e7385e1ceded09706ab9c46816411e68a3fd064e43b771e0a6}\label{group__executable_gga27e2e3a930764e3e7385e1ceded09706ab9c46816411e68a3fd064e43b771e0a6}} 
+HSA\+\_\+\+EXECUTABLE\+\_\+\+SYMBOL\+\_\+\+INFO\+\_\+\+KERNEL\+\_\+\+PRIVATE\+\_\+\+SEGMENT\+\_\+\+SIZE&Size of static private, spill, and arg segment memory required by this kernel (per work-\/item), in bytes. The value of this attribute is undefined if the symbol is not a kernel. The type of this attribute is uint32\+\_\+t.
+
+If the value of \mbox{\hyperlink{group__executable_gga27e2e3a930764e3e7385e1ceded09706a217c58ab4f593b30870cc267b07fa6f0}{HSA\+\_\+\+EXECUTABLE\+\_\+\+SYMBOL\+\_\+\+INFO\+\_\+\+KERNEL\+\_\+\+DYNAMIC\+\_\+\+CALLSTACK}} is true, the kernel may use more private memory than the reported value, and the application must add the dynamic call stack usage to {\itshape private\+\_\+segment\+\_\+size} when populating a kernel dispatch packet. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{HSA\_EXECUTABLE\_SYMBOL\_INFO\_KERNEL\_DYNAMIC\_CALLSTACK@{HSA\_EXECUTABLE\_SYMBOL\_INFO\_KERNEL\_DYNAMIC\_CALLSTACK}!Executable@{Executable}}\index{Executable@{Executable}!HSA\_EXECUTABLE\_SYMBOL\_INFO\_KERNEL\_DYNAMIC\_CALLSTACK@{HSA\_EXECUTABLE\_SYMBOL\_INFO\_KERNEL\_DYNAMIC\_CALLSTACK}}}\mbox{\Hypertarget{group__executable_gga27e2e3a930764e3e7385e1ceded09706a217c58ab4f593b30870cc267b07fa6f0}\label{group__executable_gga27e2e3a930764e3e7385e1ceded09706a217c58ab4f593b30870cc267b07fa6f0}} 
+HSA\+\_\+\+EXECUTABLE\+\_\+\+SYMBOL\+\_\+\+INFO\+\_\+\+KERNEL\+\_\+\+DYNAMIC\+\_\+\+CALLSTACK&Dynamic callstack flag. The value of this attribute is undefined if the symbol is not a kernel. The type of this attribute is bool.
+
+If this flag is set (the value is true), the kernel uses a dynamically sized call stack. This can happen if recursive calls, calls to indirect functions, or the HSAIL alloca instruction are present in the kernel. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{HSA\_EXECUTABLE\_SYMBOL\_INFO\_KERNEL\_CALL\_CONVENTION@{HSA\_EXECUTABLE\_SYMBOL\_INFO\_KERNEL\_CALL\_CONVENTION}!Executable@{Executable}}\index{Executable@{Executable}!HSA\_EXECUTABLE\_SYMBOL\_INFO\_KERNEL\_CALL\_CONVENTION@{HSA\_EXECUTABLE\_SYMBOL\_INFO\_KERNEL\_CALL\_CONVENTION}}}\mbox{\Hypertarget{group__executable_gga27e2e3a930764e3e7385e1ceded09706ad838cd6a28a6d03a29473b0c910dcfc0}\label{group__executable_gga27e2e3a930764e3e7385e1ceded09706ad838cd6a28a6d03a29473b0c910dcfc0}} 
+HSA\+\_\+\+EXECUTABLE\+\_\+\+SYMBOL\+\_\+\+INFO\+\_\+\+KERNEL\+\_\+\+CALL\+\_\+\+CONVENTION&\begin{DoxyRefDesc}{Deprecated}
+\item[\mbox{\hyperlink{deprecated__deprecated000089}{Deprecated}}]\end{DoxyRefDesc}
+
+
+Call convention of the kernel. The value of this attribute is undefined if the symbol is not a kernel. The type of this attribute is uint32\+\_\+t. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{HSA\_EXECUTABLE\_SYMBOL\_INFO\_INDIRECT\_FUNCTION\_OBJECT@{HSA\_EXECUTABLE\_SYMBOL\_INFO\_INDIRECT\_FUNCTION\_OBJECT}!Executable@{Executable}}\index{Executable@{Executable}!HSA\_EXECUTABLE\_SYMBOL\_INFO\_INDIRECT\_FUNCTION\_OBJECT@{HSA\_EXECUTABLE\_SYMBOL\_INFO\_INDIRECT\_FUNCTION\_OBJECT}}}\mbox{\Hypertarget{group__executable_gga27e2e3a930764e3e7385e1ceded09706ae8b992bd39eebf47cd14c14db568ff9b}\label{group__executable_gga27e2e3a930764e3e7385e1ceded09706ae8b992bd39eebf47cd14c14db568ff9b}} 
+HSA\+\_\+\+EXECUTABLE\+\_\+\+SYMBOL\+\_\+\+INFO\+\_\+\+INDIRECT\+\_\+\+FUNCTION\+\_\+\+OBJECT&Indirect function object handle. The value of this attribute is undefined if the symbol is not an indirect function, or the associated agent does not support the Full Profile. The type of this attribute depends on the machine model\+: the type is uint32\+\_\+t for small machine model, and uint64\+\_\+t for large model.
+
+If the state of the executable is \mbox{\hyperlink{group__executable_ggaf31d2c00b44ef657f22fb12c21d7d352a7e851acbcb9d548bd22707efd59df201}{HSA\+\_\+\+EXECUTABLE\+\_\+\+STATE\+\_\+\+UNFROZEN}}, then 0 is returned. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{HSA\_EXECUTABLE\_SYMBOL\_INFO\_INDIRECT\_FUNCTION\_CALL\_CONVENTION@{HSA\_EXECUTABLE\_SYMBOL\_INFO\_INDIRECT\_FUNCTION\_CALL\_CONVENTION}!Executable@{Executable}}\index{Executable@{Executable}!HSA\_EXECUTABLE\_SYMBOL\_INFO\_INDIRECT\_FUNCTION\_CALL\_CONVENTION@{HSA\_EXECUTABLE\_SYMBOL\_INFO\_INDIRECT\_FUNCTION\_CALL\_CONVENTION}}}\mbox{\Hypertarget{group__executable_gga27e2e3a930764e3e7385e1ceded09706a1995d917f4839cd6a5e2dcb038d2e764}\label{group__executable_gga27e2e3a930764e3e7385e1ceded09706a1995d917f4839cd6a5e2dcb038d2e764}} 
+HSA\+\_\+\+EXECUTABLE\+\_\+\+SYMBOL\+\_\+\+INFO\+\_\+\+INDIRECT\+\_\+\+FUNCTION\+\_\+\+CALL\+\_\+\+CONVENTION&\begin{DoxyRefDesc}{Deprecated}
+\item[\mbox{\hyperlink{deprecated__deprecated000090}{Deprecated}}]\end{DoxyRefDesc}
+
+
+Call convention of the indirect function. The value of this attribute is undefined if the symbol is not an indirect function, or the associated agent does not support the Full Profile. The type of this attribute is uint32\+\_\+t. \\
+\hline
+
+\end{DoxyEnumFields}
+\mbox{\Hypertarget{group__executable_ga530ca6dcd35807946cd1dfb8202ff4be}\label{group__executable_ga530ca6dcd35807946cd1dfb8202ff4be}} 
+\index{Executable@{Executable}!hsa\_symbol\_kind\_t@{hsa\_symbol\_kind\_t}}
+\index{hsa\_symbol\_kind\_t@{hsa\_symbol\_kind\_t}!Executable@{Executable}}
+\doxysubsubsection{\texorpdfstring{hsa\_symbol\_kind\_t}{hsa\_symbol\_kind\_t}}
+{\footnotesize\ttfamily enum \mbox{\hyperlink{group__executable_ga530ca6dcd35807946cd1dfb8202ff4be}{hsa\+\_\+symbol\+\_\+kind\+\_\+t}}}
+
+
+
+Symbol type. 
+
+\begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{HSA\_SYMBOL\_KIND\_VARIABLE@{HSA\_SYMBOL\_KIND\_VARIABLE}!Executable@{Executable}}\index{Executable@{Executable}!HSA\_SYMBOL\_KIND\_VARIABLE@{HSA\_SYMBOL\_KIND\_VARIABLE}}}\mbox{\Hypertarget{group__executable_gga530ca6dcd35807946cd1dfb8202ff4beacc04031da695b235b7fe4fa00a862d6f}\label{group__executable_gga530ca6dcd35807946cd1dfb8202ff4beacc04031da695b235b7fe4fa00a862d6f}} 
+HSA\+\_\+\+SYMBOL\+\_\+\+KIND\+\_\+\+VARIABLE&Variable. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{HSA\_SYMBOL\_KIND\_KERNEL@{HSA\_SYMBOL\_KIND\_KERNEL}!Executable@{Executable}}\index{Executable@{Executable}!HSA\_SYMBOL\_KIND\_KERNEL@{HSA\_SYMBOL\_KIND\_KERNEL}}}\mbox{\Hypertarget{group__executable_gga530ca6dcd35807946cd1dfb8202ff4beae3d075babaf66ac1f311e5e35168d345}\label{group__executable_gga530ca6dcd35807946cd1dfb8202ff4beae3d075babaf66ac1f311e5e35168d345}} 
+HSA\+\_\+\+SYMBOL\+\_\+\+KIND\+\_\+\+KERNEL&Kernel. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{HSA\_SYMBOL\_KIND\_INDIRECT\_FUNCTION@{HSA\_SYMBOL\_KIND\_INDIRECT\_FUNCTION}!Executable@{Executable}}\index{Executable@{Executable}!HSA\_SYMBOL\_KIND\_INDIRECT\_FUNCTION@{HSA\_SYMBOL\_KIND\_INDIRECT\_FUNCTION}}}\mbox{\Hypertarget{group__executable_gga530ca6dcd35807946cd1dfb8202ff4bea65411686c1eb0583ad0e59b9eb960015}\label{group__executable_gga530ca6dcd35807946cd1dfb8202ff4bea65411686c1eb0583ad0e59b9eb960015}} 
+HSA\+\_\+\+SYMBOL\+\_\+\+KIND\+\_\+\+INDIRECT\+\_\+\+FUNCTION&Indirect function. \\
+\hline
+
+\end{DoxyEnumFields}
+\mbox{\Hypertarget{group__executable_gaf2aba3b2a8dc8fe4faa91635520ca25c}\label{group__executable_gaf2aba3b2a8dc8fe4faa91635520ca25c}} 
+\index{Executable@{Executable}!hsa\_symbol\_linkage\_t@{hsa\_symbol\_linkage\_t}}
+\index{hsa\_symbol\_linkage\_t@{hsa\_symbol\_linkage\_t}!Executable@{Executable}}
+\doxysubsubsection{\texorpdfstring{hsa\_symbol\_linkage\_t}{hsa\_symbol\_linkage\_t}}
+{\footnotesize\ttfamily enum \mbox{\hyperlink{group__executable_gaf2aba3b2a8dc8fe4faa91635520ca25c}{hsa\+\_\+symbol\+\_\+linkage\+\_\+t}}}
+
+
+
+Linkage type of a symbol. 
+
+\begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{HSA\_SYMBOL\_LINKAGE\_MODULE@{HSA\_SYMBOL\_LINKAGE\_MODULE}!Executable@{Executable}}\index{Executable@{Executable}!HSA\_SYMBOL\_LINKAGE\_MODULE@{HSA\_SYMBOL\_LINKAGE\_MODULE}}}\mbox{\Hypertarget{group__executable_ggaf2aba3b2a8dc8fe4faa91635520ca25cab2f1829a346a5ffaff624a035156e8c4}\label{group__executable_ggaf2aba3b2a8dc8fe4faa91635520ca25cab2f1829a346a5ffaff624a035156e8c4}} 
+HSA\+\_\+\+SYMBOL\+\_\+\+LINKAGE\+\_\+\+MODULE&Module linkage. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{HSA\_SYMBOL\_LINKAGE\_PROGRAM@{HSA\_SYMBOL\_LINKAGE\_PROGRAM}!Executable@{Executable}}\index{Executable@{Executable}!HSA\_SYMBOL\_LINKAGE\_PROGRAM@{HSA\_SYMBOL\_LINKAGE\_PROGRAM}}}\mbox{\Hypertarget{group__executable_ggaf2aba3b2a8dc8fe4faa91635520ca25ca256c56358a3d944c89402b4053642d79}\label{group__executable_ggaf2aba3b2a8dc8fe4faa91635520ca25ca256c56358a3d944c89402b4053642d79}} 
+HSA\+\_\+\+SYMBOL\+\_\+\+LINKAGE\+\_\+\+PROGRAM&Program linkage. \\
+\hline
+
+\end{DoxyEnumFields}
+\mbox{\Hypertarget{group__executable_ga0fdb971a44d3e02d1bd5ff889624461a}\label{group__executable_ga0fdb971a44d3e02d1bd5ff889624461a}} 
+\index{Executable@{Executable}!hsa\_variable\_allocation\_t@{hsa\_variable\_allocation\_t}}
+\index{hsa\_variable\_allocation\_t@{hsa\_variable\_allocation\_t}!Executable@{Executable}}
+\doxysubsubsection{\texorpdfstring{hsa\_variable\_allocation\_t}{hsa\_variable\_allocation\_t}}
+{\footnotesize\ttfamily enum \mbox{\hyperlink{group__executable_ga0fdb971a44d3e02d1bd5ff889624461a}{hsa\+\_\+variable\+\_\+allocation\+\_\+t}}}
+
+
+
+Allocation type of a variable. 
+
+\begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{HSA\_VARIABLE\_ALLOCATION\_AGENT@{HSA\_VARIABLE\_ALLOCATION\_AGENT}!Executable@{Executable}}\index{Executable@{Executable}!HSA\_VARIABLE\_ALLOCATION\_AGENT@{HSA\_VARIABLE\_ALLOCATION\_AGENT}}}\mbox{\Hypertarget{group__executable_gga0fdb971a44d3e02d1bd5ff889624461aa3efe707ede0ceb1a9c83ac975e3e1fa8}\label{group__executable_gga0fdb971a44d3e02d1bd5ff889624461aa3efe707ede0ceb1a9c83ac975e3e1fa8}} 
+HSA\+\_\+\+VARIABLE\+\_\+\+ALLOCATION\+\_\+\+AGENT&Agent allocation. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{HSA\_VARIABLE\_ALLOCATION\_PROGRAM@{HSA\_VARIABLE\_ALLOCATION\_PROGRAM}!Executable@{Executable}}\index{Executable@{Executable}!HSA\_VARIABLE\_ALLOCATION\_PROGRAM@{HSA\_VARIABLE\_ALLOCATION\_PROGRAM}}}\mbox{\Hypertarget{group__executable_gga0fdb971a44d3e02d1bd5ff889624461aad852076420fdc3bf1d4c7a1659b9e465}\label{group__executable_gga0fdb971a44d3e02d1bd5ff889624461aad852076420fdc3bf1d4c7a1659b9e465}} 
+HSA\+\_\+\+VARIABLE\+\_\+\+ALLOCATION\+\_\+\+PROGRAM&Program allocation. \\
+\hline
+
+\end{DoxyEnumFields}
+\mbox{\Hypertarget{group__executable_ga7fb2a9fe278f7ab892eb158277e2dd8c}\label{group__executable_ga7fb2a9fe278f7ab892eb158277e2dd8c}} 
+\index{Executable@{Executable}!hsa\_variable\_segment\_t@{hsa\_variable\_segment\_t}}
+\index{hsa\_variable\_segment\_t@{hsa\_variable\_segment\_t}!Executable@{Executable}}
+\doxysubsubsection{\texorpdfstring{hsa\_variable\_segment\_t}{hsa\_variable\_segment\_t}}
+{\footnotesize\ttfamily enum \mbox{\hyperlink{group__executable_ga7fb2a9fe278f7ab892eb158277e2dd8c}{hsa\+\_\+variable\+\_\+segment\+\_\+t}}}
+
+
+
+Memory segment associated with a variable. 
+
+\begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{HSA\_VARIABLE\_SEGMENT\_GLOBAL@{HSA\_VARIABLE\_SEGMENT\_GLOBAL}!Executable@{Executable}}\index{Executable@{Executable}!HSA\_VARIABLE\_SEGMENT\_GLOBAL@{HSA\_VARIABLE\_SEGMENT\_GLOBAL}}}\mbox{\Hypertarget{group__executable_gga7fb2a9fe278f7ab892eb158277e2dd8cadadf34601d994c7f0f6f272bc8164842}\label{group__executable_gga7fb2a9fe278f7ab892eb158277e2dd8cadadf34601d994c7f0f6f272bc8164842}} 
+HSA\+\_\+\+VARIABLE\+\_\+\+SEGMENT\+\_\+\+GLOBAL&Global memory segment. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{HSA\_VARIABLE\_SEGMENT\_READONLY@{HSA\_VARIABLE\_SEGMENT\_READONLY}!Executable@{Executable}}\index{Executable@{Executable}!HSA\_VARIABLE\_SEGMENT\_READONLY@{HSA\_VARIABLE\_SEGMENT\_READONLY}}}\mbox{\Hypertarget{group__executable_gga7fb2a9fe278f7ab892eb158277e2dd8ca6b1398a2de064285ca5543a15d0419f9}\label{group__executable_gga7fb2a9fe278f7ab892eb158277e2dd8ca6b1398a2de064285ca5543a15d0419f9}} 
+HSA\+\_\+\+VARIABLE\+\_\+\+SEGMENT\+\_\+\+READONLY&Readonly memory segment. \\
+\hline
+
+\end{DoxyEnumFields}
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{group__executable_gae502747a701d839d5cdb43688ec14954}\label{group__executable_gae502747a701d839d5cdb43688ec14954}} 
+\index{Executable@{Executable}!hsa\_code\_object\_reader\_create\_from\_file@{hsa\_code\_object\_reader\_create\_from\_file}}
+\index{hsa\_code\_object\_reader\_create\_from\_file@{hsa\_code\_object\_reader\_create\_from\_file}!Executable@{Executable}}
+\doxysubsubsection{\texorpdfstring{hsa\_code\_object\_reader\_create\_from\_file()}{hsa\_code\_object\_reader\_create\_from\_file()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{group__status_gad755322e7ff95456520e8abdbe90d225}{hsa\+\_\+status\+\_\+t}} \mbox{\hyperlink{inc_2hsa__ext__image_8h_a64216765b98b62ee87deb50fd2899836}{HSA\+\_\+\+API}} hsa\+\_\+code\+\_\+object\+\_\+reader\+\_\+create\+\_\+from\+\_\+file (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{group__common_gafed8ede11d6584c8a8973ca68ca5a7cc}{hsa\+\_\+file\+\_\+t}}}]{file,  }\item[{\mbox{\hyperlink{group__executable_ga99b23808ddf94561399f3a90e00c4ed0}{hsa\+\_\+code\+\_\+object\+\_\+reader\+\_\+t}} $\ast$}]{code\+\_\+object\+\_\+reader }\end{DoxyParamCaption})}
+
+
+
+Create a code object reader to operate on a file. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em file} & File descriptor. The file must have been opened by application with at least read permissions prior calling this function. The file must contain a vendor-\/specific code object.\\
+\hline
+\end{DoxyParams}
+The file is owned and managed by the application; the lifetime of the file descriptor must exceed that of any associated code object reader.
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ out}}  & {\em code\+\_\+object\+\_\+reader} & Memory location to store the newly created code object reader handle. Must not be NULL.\\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em \mbox{\hyperlink{group__status_ggad755322e7ff95456520e8abdbe90d225ae382ea0c9c05cce5a60d0317375159cc}{HSA\+\_\+\+STATUS\+\_\+\+SUCCESS}}} & The function has been executed successfully.\\
+\hline
+{\em \mbox{\hyperlink{group__status_ggad755322e7ff95456520e8abdbe90d225a34ea59ade5bfce95eee935238a99f5b5}{HSA\+\_\+\+STATUS\+\_\+\+ERROR\+\_\+\+NOT\+\_\+\+INITIALIZED}}} & The HSA runtime has not been initialized.\\
+\hline
+{\em \mbox{\hyperlink{group__status_ggad755322e7ff95456520e8abdbe90d225a041d5163a93802756e6130e70810f2c3}{HSA\+\_\+\+STATUS\+\_\+\+ERROR\+\_\+\+INVALID\+\_\+\+FILE}}} & {\ttfamily file} is invalid.\\
+\hline
+{\em \mbox{\hyperlink{group__status_ggad755322e7ff95456520e8abdbe90d225a1a77fcf36d0d140874c4361ab093eff7}{HSA\+\_\+\+STATUS\+\_\+\+ERROR\+\_\+\+OUT\+\_\+\+OF\+\_\+\+RESOURCES}}} & The HSA runtime failed to allocate the required resources.\\
+\hline
+{\em \mbox{\hyperlink{group__status_ggad755322e7ff95456520e8abdbe90d225ac7d3651f75107d2a6a8ba3b25683c030}{HSA\+\_\+\+STATUS\+\_\+\+ERROR\+\_\+\+INVALID\+\_\+\+ARGUMENT}}} & {\ttfamily code\+\_\+object\+\_\+reader} is NULL. \\
+\hline
+\end{DoxyRetVals}
+\mbox{\Hypertarget{group__executable_gaca50dd8855febc1e126c9300ce64ced7}\label{group__executable_gaca50dd8855febc1e126c9300ce64ced7}} 
+\index{Executable@{Executable}!hsa\_code\_object\_reader\_create\_from\_memory@{hsa\_code\_object\_reader\_create\_from\_memory}}
+\index{hsa\_code\_object\_reader\_create\_from\_memory@{hsa\_code\_object\_reader\_create\_from\_memory}!Executable@{Executable}}
+\doxysubsubsection{\texorpdfstring{hsa\_code\_object\_reader\_create\_from\_memory()}{hsa\_code\_object\_reader\_create\_from\_memory()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{group__status_gad755322e7ff95456520e8abdbe90d225}{hsa\+\_\+status\+\_\+t}} \mbox{\hyperlink{inc_2hsa__ext__image_8h_a64216765b98b62ee87deb50fd2899836}{HSA\+\_\+\+API}} hsa\+\_\+code\+\_\+object\+\_\+reader\+\_\+create\+\_\+from\+\_\+memory (\begin{DoxyParamCaption}\item[{const void $\ast$}]{code\+\_\+object,  }\item[{size\+\_\+t}]{size,  }\item[{\mbox{\hyperlink{group__executable_ga99b23808ddf94561399f3a90e00c4ed0}{hsa\+\_\+code\+\_\+object\+\_\+reader\+\_\+t}} $\ast$}]{code\+\_\+object\+\_\+reader }\end{DoxyParamCaption})}
+
+
+
+Create a code object reader to operate on memory. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em code\+\_\+object} & Memory buffer that contains a vendor-\/specific code object. The buffer is owned and managed by the application; the lifetime of the buffer must exceed that of any associated code object reader.\\
+\hline
+\mbox{\texttt{ in}}  & {\em size} & Size of the buffer pointed to by {\ttfamily code\+\_\+object}. Must not be 0.\\
+\hline
+\mbox{\texttt{ out}}  & {\em code\+\_\+object\+\_\+reader} & Memory location to store newly created code object reader handle. Must not be NULL.\\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em \mbox{\hyperlink{group__status_ggad755322e7ff95456520e8abdbe90d225ae382ea0c9c05cce5a60d0317375159cc}{HSA\+\_\+\+STATUS\+\_\+\+SUCCESS}}} & The function has been executed successfully.\\
+\hline
+{\em \mbox{\hyperlink{group__status_ggad755322e7ff95456520e8abdbe90d225a34ea59ade5bfce95eee935238a99f5b5}{HSA\+\_\+\+STATUS\+\_\+\+ERROR\+\_\+\+NOT\+\_\+\+INITIALIZED}}} & The HSA runtime has not been initialized.\\
+\hline
+{\em \mbox{\hyperlink{group__status_ggad755322e7ff95456520e8abdbe90d225a1a77fcf36d0d140874c4361ab093eff7}{HSA\+\_\+\+STATUS\+\_\+\+ERROR\+\_\+\+OUT\+\_\+\+OF\+\_\+\+RESOURCES}}} & The HSA runtime failed to allocate the required resources.\\
+\hline
+{\em \mbox{\hyperlink{group__status_ggad755322e7ff95456520e8abdbe90d225ac7d3651f75107d2a6a8ba3b25683c030}{HSA\+\_\+\+STATUS\+\_\+\+ERROR\+\_\+\+INVALID\+\_\+\+ARGUMENT}}} & {\ttfamily code\+\_\+object} is NULL, {\ttfamily size} is zero, or {\ttfamily code\+\_\+object\+\_\+reader} is NULL. \\
+\hline
+\end{DoxyRetVals}
+\mbox{\Hypertarget{group__executable_gae82fee6245f66df978c0f56aabfbc1aa}\label{group__executable_gae82fee6245f66df978c0f56aabfbc1aa}} 
+\index{Executable@{Executable}!hsa\_code\_object\_reader\_destroy@{hsa\_code\_object\_reader\_destroy}}
+\index{hsa\_code\_object\_reader\_destroy@{hsa\_code\_object\_reader\_destroy}!Executable@{Executable}}
+\doxysubsubsection{\texorpdfstring{hsa\_code\_object\_reader\_destroy()}{hsa\_code\_object\_reader\_destroy()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{group__status_gad755322e7ff95456520e8abdbe90d225}{hsa\+\_\+status\+\_\+t}} \mbox{\hyperlink{inc_2hsa__ext__image_8h_a64216765b98b62ee87deb50fd2899836}{HSA\+\_\+\+API}} hsa\+\_\+code\+\_\+object\+\_\+reader\+\_\+destroy (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{group__executable_ga99b23808ddf94561399f3a90e00c4ed0}{hsa\+\_\+code\+\_\+object\+\_\+reader\+\_\+t}}}]{code\+\_\+object\+\_\+reader }\end{DoxyParamCaption})}
+
+
+
+Destroy a code object reader. 
+
+The code object reader handle becomes invalid after completion of this function. Any file or memory used to create the code object read is not closed, removed, or deallocated by this function.
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em code\+\_\+object\+\_\+reader} & Code object reader to destroy.\\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em \mbox{\hyperlink{group__status_ggad755322e7ff95456520e8abdbe90d225ae382ea0c9c05cce5a60d0317375159cc}{HSA\+\_\+\+STATUS\+\_\+\+SUCCESS}}} & The function has been executed successfully.\\
+\hline
+{\em \mbox{\hyperlink{group__status_ggad755322e7ff95456520e8abdbe90d225a34ea59ade5bfce95eee935238a99f5b5}{HSA\+\_\+\+STATUS\+\_\+\+ERROR\+\_\+\+NOT\+\_\+\+INITIALIZED}}} & The HSA runtime has not been initialized.\\
+\hline
+{\em \mbox{\hyperlink{group__status_ggad755322e7ff95456520e8abdbe90d225abf212e30cc0c2c2771471f60141a00fd}{HSA\+\_\+\+STATUS\+\_\+\+ERROR\+\_\+\+INVALID\+\_\+\+CODE\+\_\+\+OBJECT\+\_\+\+READER}}} & {\ttfamily code\+\_\+object\+\_\+reader} is invalid. \\
+\hline
+\end{DoxyRetVals}
+\mbox{\Hypertarget{group__executable_ga48d8669a8bbe540d9b5090e0ca333404}\label{group__executable_ga48d8669a8bbe540d9b5090e0ca333404}} 
+\index{Executable@{Executable}!hsa\_executable\_agent\_global\_variable\_define@{hsa\_executable\_agent\_global\_variable\_define}}
+\index{hsa\_executable\_agent\_global\_variable\_define@{hsa\_executable\_agent\_global\_variable\_define}!Executable@{Executable}}
+\doxysubsubsection{\texorpdfstring{hsa\_executable\_agent\_global\_variable\_define()}{hsa\_executable\_agent\_global\_variable\_define()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{group__status_gad755322e7ff95456520e8abdbe90d225}{hsa\+\_\+status\+\_\+t}} \mbox{\hyperlink{inc_2hsa__ext__image_8h_a64216765b98b62ee87deb50fd2899836}{HSA\+\_\+\+API}} hsa\+\_\+executable\+\_\+agent\+\_\+global\+\_\+variable\+\_\+define (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{group__executable_ga4a4281d636cb6048c4d7a015e1fa3baa}{hsa\+\_\+executable\+\_\+t}}}]{executable,  }\item[{\mbox{\hyperlink{group__agentinfo_ga9ce217ef08e7d5e89c8e83ce7b6ef22b}{hsa\+\_\+agent\+\_\+t}}}]{agent,  }\item[{const char $\ast$}]{variable\+\_\+name,  }\item[{void $\ast$}]{address }\end{DoxyParamCaption})}
+
+
+
+Define an external global variable with agent allocation. 
+
+This function allows the application to provide the definition of a variable in the global segment memory with agent allocation. The variable must be defined before loading a code object into an executable. In addition, code objects loaded must not define the variable.
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em executable} & Executable. Must not be in frozen state.\\
+\hline
+\mbox{\texttt{ in}}  & {\em agent} & Agent for which the variable is being defined.\\
+\hline
+\mbox{\texttt{ in}}  & {\em variable\+\_\+name} & Name of the variable. The Programmer\textquotesingle{}s Reference Manual describes the standard name mangling scheme.\\
+\hline
+\mbox{\texttt{ in}}  & {\em address} & Address where the variable is defined. This address must have been previously allocated using \mbox{\hyperlink{group__memory_ga39f7943b93aa2bb754726fc74d929426}{hsa\+\_\+memory\+\_\+allocate}} in a global region that is only visible to {\ttfamily agent}. The application cannot deallocate the buffer pointed by {\ttfamily address} before {\ttfamily executable} is destroyed.\\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em \mbox{\hyperlink{group__status_ggad755322e7ff95456520e8abdbe90d225ae382ea0c9c05cce5a60d0317375159cc}{HSA\+\_\+\+STATUS\+\_\+\+SUCCESS}}} & The function has been executed successfully.\\
+\hline
+{\em \mbox{\hyperlink{group__status_ggad755322e7ff95456520e8abdbe90d225a34ea59ade5bfce95eee935238a99f5b5}{HSA\+\_\+\+STATUS\+\_\+\+ERROR\+\_\+\+NOT\+\_\+\+INITIALIZED}}} & The HSA runtime has not been initialized.\\
+\hline
+{\em \mbox{\hyperlink{group__status_ggad755322e7ff95456520e8abdbe90d225a1a77fcf36d0d140874c4361ab093eff7}{HSA\+\_\+\+STATUS\+\_\+\+ERROR\+\_\+\+OUT\+\_\+\+OF\+\_\+\+RESOURCES}}} & The HSA runtime failed to allocate the required resources.\\
+\hline
+{\em \mbox{\hyperlink{group__status_ggad755322e7ff95456520e8abdbe90d225ae2fcb63555ddbffb6048b7e044501151}{HSA\+\_\+\+STATUS\+\_\+\+ERROR\+\_\+\+INVALID\+\_\+\+EXECUTABLE}}} & The executable is invalid.\\
+\hline
+{\em \mbox{\hyperlink{group__status_ggad755322e7ff95456520e8abdbe90d225a3a5d835c109c2d0ad5b9c2771e133e5d}{HSA\+\_\+\+STATUS\+\_\+\+ERROR\+\_\+\+INVALID\+\_\+\+AGENT}}} & {\ttfamily agent} is invalid.\\
+\hline
+{\em \mbox{\hyperlink{group__status_ggad755322e7ff95456520e8abdbe90d225abff93790fdc804ac87c2299c296cc598}{HSA\+\_\+\+STATUS\+\_\+\+ERROR\+\_\+\+VARIABLE\+\_\+\+ALREADY\+\_\+\+DEFINED}}} & The variable is already defined.\\
+\hline
+{\em \mbox{\hyperlink{group__status_ggad755322e7ff95456520e8abdbe90d225a763aa9892acea9f7d145c0111247359c}{HSA\+\_\+\+STATUS\+\_\+\+ERROR\+\_\+\+INVALID\+\_\+\+SYMBOL\+\_\+\+NAME}}} & There is no variable with the {\ttfamily variable\+\_\+name}.\\
+\hline
+{\em \mbox{\hyperlink{group__status_ggad755322e7ff95456520e8abdbe90d225a32f01e35216b0a6473cd248db77bf2be}{HSA\+\_\+\+STATUS\+\_\+\+ERROR\+\_\+\+FROZEN\+\_\+\+EXECUTABLE}}} & {\ttfamily executable} is frozen.\\
+\hline
+{\em \mbox{\hyperlink{group__status_ggad755322e7ff95456520e8abdbe90d225ac7d3651f75107d2a6a8ba3b25683c030}{HSA\+\_\+\+STATUS\+\_\+\+ERROR\+\_\+\+INVALID\+\_\+\+ARGUMENT}}} & {\ttfamily variable\+\_\+name} is NULL. \\
+\hline
+\end{DoxyRetVals}
+\mbox{\Hypertarget{group__executable_ga5e6fd754f2c8e9e081466b30b2a6186c}\label{group__executable_ga5e6fd754f2c8e9e081466b30b2a6186c}} 
+\index{Executable@{Executable}!hsa\_executable\_create@{hsa\_executable\_create}}
+\index{hsa\_executable\_create@{hsa\_executable\_create}!Executable@{Executable}}
+\doxysubsubsection{\texorpdfstring{hsa\_executable\_create()}{hsa\_executable\_create()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{group__status_gad755322e7ff95456520e8abdbe90d225}{hsa\+\_\+status\+\_\+t}} \mbox{\hyperlink{inc_2hsa__ext__image_8h_a64216765b98b62ee87deb50fd2899836}{HSA\+\_\+\+API}} \mbox{\hyperlink{inc_2hsa_8h_a2321f8ca7d706cada4f617b191a478b0}{HSA\+\_\+\+DEPRECATED}} hsa\+\_\+executable\+\_\+create (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{group__agentinfo_gacafd4247e2a04cbe0ac0b3998c127532}{hsa\+\_\+profile\+\_\+t}}}]{profile,  }\item[{\mbox{\hyperlink{group__executable_gaf31d2c00b44ef657f22fb12c21d7d352}{hsa\+\_\+executable\+\_\+state\+\_\+t}}}]{executable\+\_\+state,  }\item[{const char $\ast$}]{options,  }\item[{\mbox{\hyperlink{group__executable_ga4a4281d636cb6048c4d7a015e1fa3baa}{hsa\+\_\+executable\+\_\+t}} $\ast$}]{executable }\end{DoxyParamCaption})}
+
+
+
+Create an empty executable. 
+
+\begin{DoxyRefDesc}{Deprecated}
+\item[\mbox{\hyperlink{deprecated__deprecated000041}{Deprecated}}]Use \mbox{\hyperlink{group__executable_ga32e73083c72a2e43e7865d7e2e557b23}{hsa\+\_\+executable\+\_\+create\+\_\+alt}} instead, which allows the application to specify the default floating-\/point rounding mode of the executable and assumes an unfrozen initial state.\end{DoxyRefDesc}
+
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em profile} & Profile used in the executable.\\
+\hline
+\mbox{\texttt{ in}}  & {\em executable\+\_\+state} & Executable state. If the state is \mbox{\hyperlink{group__executable_ggaf31d2c00b44ef657f22fb12c21d7d352a846a8f97eb27508f8d6e92eb77013ca0}{HSA\+\_\+\+EXECUTABLE\+\_\+\+STATE\+\_\+\+FROZEN}}, the resulting executable is useless because no code objects can be loaded, and no variables can be defined.\\
+\hline
+\mbox{\texttt{ in}}  & {\em options} & Standard and vendor-\/specific options. Unknown options are ignored. A standard option begins with the \char`\"{}-\/hsa\+\_\+\char`\"{} prefix. Options beginning with the \char`\"{}-\/hsa\+\_\+ext\+\_\+$<$extension\+\_\+name$>$\+\_\+\char`\"{} prefix are reserved for extensions. A vendor-\/specific option begins with the \char`\"{}-\/$<$vendor\+\_\+name$>$\+\_\+\char`\"{} prefix. Must be a NUL-\/terminated string. May be NULL.\\
+\hline
+\mbox{\texttt{ out}}  & {\em executable} & Memory location where the HSA runtime stores the newly created executable handle.\\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em \mbox{\hyperlink{group__status_ggad755322e7ff95456520e8abdbe90d225ae382ea0c9c05cce5a60d0317375159cc}{HSA\+\_\+\+STATUS\+\_\+\+SUCCESS}}} & The function has been executed successfully.\\
+\hline
+{\em \mbox{\hyperlink{group__status_ggad755322e7ff95456520e8abdbe90d225a34ea59ade5bfce95eee935238a99f5b5}{HSA\+\_\+\+STATUS\+\_\+\+ERROR\+\_\+\+NOT\+\_\+\+INITIALIZED}}} & The HSA runtime has not been initialized.\\
+\hline
+{\em \mbox{\hyperlink{group__status_ggad755322e7ff95456520e8abdbe90d225a1a77fcf36d0d140874c4361ab093eff7}{HSA\+\_\+\+STATUS\+\_\+\+ERROR\+\_\+\+OUT\+\_\+\+OF\+\_\+\+RESOURCES}}} & The HSA runtime failed to allocate the required resources.\\
+\hline
+{\em \mbox{\hyperlink{group__status_ggad755322e7ff95456520e8abdbe90d225ac7d3651f75107d2a6a8ba3b25683c030}{HSA\+\_\+\+STATUS\+\_\+\+ERROR\+\_\+\+INVALID\+\_\+\+ARGUMENT}}} & {\ttfamily profile} is invalid, or {\ttfamily executable} is NULL. \\
+\hline
+\end{DoxyRetVals}
+\mbox{\Hypertarget{group__executable_ga32e73083c72a2e43e7865d7e2e557b23}\label{group__executable_ga32e73083c72a2e43e7865d7e2e557b23}} 
+\index{Executable@{Executable}!hsa\_executable\_create\_alt@{hsa\_executable\_create\_alt}}
+\index{hsa\_executable\_create\_alt@{hsa\_executable\_create\_alt}!Executable@{Executable}}
+\doxysubsubsection{\texorpdfstring{hsa\_executable\_create\_alt()}{hsa\_executable\_create\_alt()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{group__status_gad755322e7ff95456520e8abdbe90d225}{hsa\+\_\+status\+\_\+t}} \mbox{\hyperlink{inc_2hsa__ext__image_8h_a64216765b98b62ee87deb50fd2899836}{HSA\+\_\+\+API}} hsa\+\_\+executable\+\_\+create\+\_\+alt (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{group__agentinfo_gacafd4247e2a04cbe0ac0b3998c127532}{hsa\+\_\+profile\+\_\+t}}}]{profile,  }\item[{\mbox{\hyperlink{group__agentinfo_gaac56321e4596fe10a90b5bb3fedc4b73}{hsa\+\_\+default\+\_\+float\+\_\+rounding\+\_\+mode\+\_\+t}}}]{default\+\_\+float\+\_\+rounding\+\_\+mode,  }\item[{const char $\ast$}]{options,  }\item[{\mbox{\hyperlink{group__executable_ga4a4281d636cb6048c4d7a015e1fa3baa}{hsa\+\_\+executable\+\_\+t}} $\ast$}]{executable }\end{DoxyParamCaption})}
+
+
+
+Create an empty executable. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em profile} & Profile used in the executable.\\
+\hline
+\mbox{\texttt{ in}}  & {\em default\+\_\+float\+\_\+rounding\+\_\+mode} & Default floating-\/point rounding mode used in the executable. Allowed rounding modes are near and zero (default is not allowed).\\
+\hline
+\mbox{\texttt{ in}}  & {\em options} & Standard and vendor-\/specific options. Unknown options are ignored. A standard option begins with the \char`\"{}-\/hsa\+\_\+\char`\"{} prefix. Options beginning with the \char`\"{}-\/hsa\+\_\+ext\+\_\+$<$extension\+\_\+name$>$\+\_\+\char`\"{} prefix are reserved for extensions. A vendor-\/specific option begins with the \char`\"{}-\/$<$vendor\+\_\+name$>$\+\_\+\char`\"{} prefix. Must be a NUL-\/terminated string. May be NULL.\\
+\hline
+\mbox{\texttt{ out}}  & {\em executable} & Memory location where the HSA runtime stores newly created executable handle. The initial state of the executable is \mbox{\hyperlink{group__executable_ggaf31d2c00b44ef657f22fb12c21d7d352a7e851acbcb9d548bd22707efd59df201}{HSA\+\_\+\+EXECUTABLE\+\_\+\+STATE\+\_\+\+UNFROZEN}}.\\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em \mbox{\hyperlink{group__status_ggad755322e7ff95456520e8abdbe90d225ae382ea0c9c05cce5a60d0317375159cc}{HSA\+\_\+\+STATUS\+\_\+\+SUCCESS}}} & The function has been executed successfully.\\
+\hline
+{\em \mbox{\hyperlink{group__status_ggad755322e7ff95456520e8abdbe90d225a34ea59ade5bfce95eee935238a99f5b5}{HSA\+\_\+\+STATUS\+\_\+\+ERROR\+\_\+\+NOT\+\_\+\+INITIALIZED}}} & The HSA runtime has not been initialized.\\
+\hline
+{\em \mbox{\hyperlink{group__status_ggad755322e7ff95456520e8abdbe90d225a1a77fcf36d0d140874c4361ab093eff7}{HSA\+\_\+\+STATUS\+\_\+\+ERROR\+\_\+\+OUT\+\_\+\+OF\+\_\+\+RESOURCES}}} & The HSA runtime failed to allocate the required resources.\\
+\hline
+{\em \mbox{\hyperlink{group__status_ggad755322e7ff95456520e8abdbe90d225ac7d3651f75107d2a6a8ba3b25683c030}{HSA\+\_\+\+STATUS\+\_\+\+ERROR\+\_\+\+INVALID\+\_\+\+ARGUMENT}}} & {\ttfamily profile} is invalid, or {\ttfamily executable} is NULL. \\
+\hline
+\end{DoxyRetVals}
+\mbox{\Hypertarget{group__executable_ga8ca804fd4f7d7cd75a510c16ed86e0de}\label{group__executable_ga8ca804fd4f7d7cd75a510c16ed86e0de}} 
+\index{Executable@{Executable}!hsa\_executable\_destroy@{hsa\_executable\_destroy}}
+\index{hsa\_executable\_destroy@{hsa\_executable\_destroy}!Executable@{Executable}}
+\doxysubsubsection{\texorpdfstring{hsa\_executable\_destroy()}{hsa\_executable\_destroy()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{group__status_gad755322e7ff95456520e8abdbe90d225}{hsa\+\_\+status\+\_\+t}} \mbox{\hyperlink{inc_2hsa__ext__image_8h_a64216765b98b62ee87deb50fd2899836}{HSA\+\_\+\+API}} hsa\+\_\+executable\+\_\+destroy (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{group__executable_ga4a4281d636cb6048c4d7a015e1fa3baa}{hsa\+\_\+executable\+\_\+t}}}]{executable }\end{DoxyParamCaption})}
+
+
+
+Destroy an executable. 
+
+An executable handle becomes invalid after the executable has been destroyed. Code object handles that were loaded into this executable are still valid after the executable has been destroyed, and can be used as intended. Resources allocated outside and associated with this executable (such as external global or readonly variables) can be released after the executable has been destroyed.
+
+Executable should not be destroyed while kernels are in flight.
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em executable} & Executable.\\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em \mbox{\hyperlink{group__status_ggad755322e7ff95456520e8abdbe90d225ae382ea0c9c05cce5a60d0317375159cc}{HSA\+\_\+\+STATUS\+\_\+\+SUCCESS}}} & The function has been executed successfully.\\
+\hline
+{\em \mbox{\hyperlink{group__status_ggad755322e7ff95456520e8abdbe90d225a34ea59ade5bfce95eee935238a99f5b5}{HSA\+\_\+\+STATUS\+\_\+\+ERROR\+\_\+\+NOT\+\_\+\+INITIALIZED}}} & The HSA runtime has not been initialized.\\
+\hline
+{\em \mbox{\hyperlink{group__status_ggad755322e7ff95456520e8abdbe90d225ae2fcb63555ddbffb6048b7e044501151}{HSA\+\_\+\+STATUS\+\_\+\+ERROR\+\_\+\+INVALID\+\_\+\+EXECUTABLE}}} & The executable is invalid. \\
+\hline
+\end{DoxyRetVals}
+\mbox{\Hypertarget{group__executable_ga4864e1b34f8e9725ebdf86d9dc687227}\label{group__executable_ga4864e1b34f8e9725ebdf86d9dc687227}} 
+\index{Executable@{Executable}!hsa\_executable\_freeze@{hsa\_executable\_freeze}}
+\index{hsa\_executable\_freeze@{hsa\_executable\_freeze}!Executable@{Executable}}
+\doxysubsubsection{\texorpdfstring{hsa\_executable\_freeze()}{hsa\_executable\_freeze()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{group__status_gad755322e7ff95456520e8abdbe90d225}{hsa\+\_\+status\+\_\+t}} \mbox{\hyperlink{inc_2hsa__ext__image_8h_a64216765b98b62ee87deb50fd2899836}{HSA\+\_\+\+API}} hsa\+\_\+executable\+\_\+freeze (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{group__executable_ga4a4281d636cb6048c4d7a015e1fa3baa}{hsa\+\_\+executable\+\_\+t}}}]{executable,  }\item[{const char $\ast$}]{options }\end{DoxyParamCaption})}
+
+
+
+Freeze the executable. 
+
+No modifications to executable can be made after freezing\+: no code objects can be loaded to the executable, and no external variables can be defined. Freezing the executable does not prevent querying the executable\textquotesingle{}s attributes. The application must define all the external variables in an executable before freezing it.
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em executable} & Executable.\\
+\hline
+\mbox{\texttt{ in}}  & {\em options} & Standard and vendor-\/specific options. Unknown options are ignored. A standard option begins with the \char`\"{}-\/hsa\+\_\+\char`\"{} prefix. Options beginning with the \char`\"{}-\/hsa\+\_\+ext\+\_\+$<$extension\+\_\+name$>$\+\_\+\char`\"{} prefix are reserved for extensions. A vendor-\/specific option begins with the \char`\"{}-\/$<$vendor\+\_\+name$>$\+\_\+\char`\"{} prefix. Must be a NUL-\/terminated string. May be NULL.\\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em \mbox{\hyperlink{group__status_ggad755322e7ff95456520e8abdbe90d225ae382ea0c9c05cce5a60d0317375159cc}{HSA\+\_\+\+STATUS\+\_\+\+SUCCESS}}} & The function has been executed successfully.\\
+\hline
+{\em \mbox{\hyperlink{group__status_ggad755322e7ff95456520e8abdbe90d225a34ea59ade5bfce95eee935238a99f5b5}{HSA\+\_\+\+STATUS\+\_\+\+ERROR\+\_\+\+NOT\+\_\+\+INITIALIZED}}} & The HSA runtime has not been initialized.\\
+\hline
+{\em \mbox{\hyperlink{group__status_ggad755322e7ff95456520e8abdbe90d225ae2fcb63555ddbffb6048b7e044501151}{HSA\+\_\+\+STATUS\+\_\+\+ERROR\+\_\+\+INVALID\+\_\+\+EXECUTABLE}}} & The executable is invalid.\\
+\hline
+{\em \mbox{\hyperlink{group__status_ggad755322e7ff95456520e8abdbe90d225a4dc84f78ba6a7ac6e5ae26143c17701d}{HSA\+\_\+\+STATUS\+\_\+\+ERROR\+\_\+\+VARIABLE\+\_\+\+UNDEFINED}}} & One or more variables are undefined in the executable.\\
+\hline
+{\em \mbox{\hyperlink{group__status_ggad755322e7ff95456520e8abdbe90d225a32f01e35216b0a6473cd248db77bf2be}{HSA\+\_\+\+STATUS\+\_\+\+ERROR\+\_\+\+FROZEN\+\_\+\+EXECUTABLE}}} & {\ttfamily executable} is already frozen. \\
+\hline
+\end{DoxyRetVals}
+\mbox{\Hypertarget{group__executable_ga1cc25701128006e3896279fc0c1d41ef}\label{group__executable_ga1cc25701128006e3896279fc0c1d41ef}} 
+\index{Executable@{Executable}!hsa\_executable\_get\_info@{hsa\_executable\_get\_info}}
+\index{hsa\_executable\_get\_info@{hsa\_executable\_get\_info}!Executable@{Executable}}
+\doxysubsubsection{\texorpdfstring{hsa\_executable\_get\_info()}{hsa\_executable\_get\_info()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{group__status_gad755322e7ff95456520e8abdbe90d225}{hsa\+\_\+status\+\_\+t}} \mbox{\hyperlink{inc_2hsa__ext__image_8h_a64216765b98b62ee87deb50fd2899836}{HSA\+\_\+\+API}} hsa\+\_\+executable\+\_\+get\+\_\+info (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{group__executable_ga4a4281d636cb6048c4d7a015e1fa3baa}{hsa\+\_\+executable\+\_\+t}}}]{executable,  }\item[{\mbox{\hyperlink{group__executable_ga1f9ab4ca027c77a2fff6deb096e8c298}{hsa\+\_\+executable\+\_\+info\+\_\+t}}}]{attribute,  }\item[{void $\ast$}]{value }\end{DoxyParamCaption})}
+
+
+
+Get the current value of an attribute for a given executable. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em executable} & Executable.\\
+\hline
+\mbox{\texttt{ in}}  & {\em attribute} & Attribute to query.\\
+\hline
+\mbox{\texttt{ out}}  & {\em value} & Pointer to an application-\/allocated buffer where to store the value of the attribute. If the buffer passed by the application is not large enough to hold the value of {\ttfamily attribute}, the behavior is undefined.\\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em \mbox{\hyperlink{group__status_ggad755322e7ff95456520e8abdbe90d225ae382ea0c9c05cce5a60d0317375159cc}{HSA\+\_\+\+STATUS\+\_\+\+SUCCESS}}} & The function has been executed successfully.\\
+\hline
+{\em \mbox{\hyperlink{group__status_ggad755322e7ff95456520e8abdbe90d225a34ea59ade5bfce95eee935238a99f5b5}{HSA\+\_\+\+STATUS\+\_\+\+ERROR\+\_\+\+NOT\+\_\+\+INITIALIZED}}} & The HSA runtime has not been initialized.\\
+\hline
+{\em \mbox{\hyperlink{group__status_ggad755322e7ff95456520e8abdbe90d225ae2fcb63555ddbffb6048b7e044501151}{HSA\+\_\+\+STATUS\+\_\+\+ERROR\+\_\+\+INVALID\+\_\+\+EXECUTABLE}}} & The executable is invalid.\\
+\hline
+{\em \mbox{\hyperlink{group__status_ggad755322e7ff95456520e8abdbe90d225ac7d3651f75107d2a6a8ba3b25683c030}{HSA\+\_\+\+STATUS\+\_\+\+ERROR\+\_\+\+INVALID\+\_\+\+ARGUMENT}}} & {\ttfamily attribute} is an invalid executable attribute, or {\ttfamily value} is NULL. \\
+\hline
+\end{DoxyRetVals}
+\mbox{\Hypertarget{group__executable_gad657530adc5247ef20f18a239f6cef89}\label{group__executable_gad657530adc5247ef20f18a239f6cef89}} 
+\index{Executable@{Executable}!hsa\_executable\_get\_symbol@{hsa\_executable\_get\_symbol}}
+\index{hsa\_executable\_get\_symbol@{hsa\_executable\_get\_symbol}!Executable@{Executable}}
+\doxysubsubsection{\texorpdfstring{hsa\_executable\_get\_symbol()}{hsa\_executable\_get\_symbol()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{group__status_gad755322e7ff95456520e8abdbe90d225}{hsa\+\_\+status\+\_\+t}} \mbox{\hyperlink{inc_2hsa__ext__image_8h_a64216765b98b62ee87deb50fd2899836}{HSA\+\_\+\+API}} \mbox{\hyperlink{inc_2hsa_8h_a2321f8ca7d706cada4f617b191a478b0}{HSA\+\_\+\+DEPRECATED}} hsa\+\_\+executable\+\_\+get\+\_\+symbol (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{group__executable_ga4a4281d636cb6048c4d7a015e1fa3baa}{hsa\+\_\+executable\+\_\+t}}}]{executable,  }\item[{const char $\ast$}]{module\+\_\+name,  }\item[{const char $\ast$}]{symbol\+\_\+name,  }\item[{\mbox{\hyperlink{group__agentinfo_ga9ce217ef08e7d5e89c8e83ce7b6ef22b}{hsa\+\_\+agent\+\_\+t}}}]{agent,  }\item[{int32\+\_\+t}]{call\+\_\+convention,  }\item[{\mbox{\hyperlink{group__executable_gac6b342e0224ea2ddef549b3626e8ccc1}{hsa\+\_\+executable\+\_\+symbol\+\_\+t}} $\ast$}]{symbol }\end{DoxyParamCaption})}
+
+
+
+Get the symbol handle for a given a symbol name. 
+
+\begin{DoxyRefDesc}{Deprecated}
+\item[\mbox{\hyperlink{deprecated__deprecated000042}{Deprecated}}]Use \mbox{\hyperlink{group__executable_ga4cd59c60a5686aff975142d6edcdc4b5}{hsa\+\_\+executable\+\_\+get\+\_\+symbol\+\_\+by\+\_\+name}} instead.\end{DoxyRefDesc}
+
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em executable} & Executable.\\
+\hline
+\mbox{\texttt{ in}}  & {\em module\+\_\+name} & Module name. Must be NULL if the symbol has program linkage.\\
+\hline
+\mbox{\texttt{ in}}  & {\em symbol\+\_\+name} & Symbol name.\\
+\hline
+\mbox{\texttt{ in}}  & {\em agent} & Agent associated with the symbol. If the symbol is independent of any agent (for example, a variable with program allocation), this argument is ignored.\\
+\hline
+\mbox{\texttt{ in}}  & {\em call\+\_\+convention} & Call convention associated with the symbol. If the symbol does not correspond to an indirect function, this argument is ignored.\\
+\hline
+\mbox{\texttt{ out}}  & {\em symbol} & Memory location where the HSA runtime stores the symbol handle.\\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em \mbox{\hyperlink{group__status_ggad755322e7ff95456520e8abdbe90d225ae382ea0c9c05cce5a60d0317375159cc}{HSA\+\_\+\+STATUS\+\_\+\+SUCCESS}}} & The function has been executed successfully.\\
+\hline
+{\em \mbox{\hyperlink{group__status_ggad755322e7ff95456520e8abdbe90d225a34ea59ade5bfce95eee935238a99f5b5}{HSA\+\_\+\+STATUS\+\_\+\+ERROR\+\_\+\+NOT\+\_\+\+INITIALIZED}}} & The HSA runtime has not been initialized.\\
+\hline
+{\em \mbox{\hyperlink{group__status_ggad755322e7ff95456520e8abdbe90d225ae2fcb63555ddbffb6048b7e044501151}{HSA\+\_\+\+STATUS\+\_\+\+ERROR\+\_\+\+INVALID\+\_\+\+EXECUTABLE}}} & The executable is invalid.\\
+\hline
+{\em \mbox{\hyperlink{group__status_ggad755322e7ff95456520e8abdbe90d225a763aa9892acea9f7d145c0111247359c}{HSA\+\_\+\+STATUS\+\_\+\+ERROR\+\_\+\+INVALID\+\_\+\+SYMBOL\+\_\+\+NAME}}} & There is no symbol with a name that matches {\ttfamily symbol\+\_\+name}.\\
+\hline
+{\em \mbox{\hyperlink{group__status_ggad755322e7ff95456520e8abdbe90d225ac7d3651f75107d2a6a8ba3b25683c030}{HSA\+\_\+\+STATUS\+\_\+\+ERROR\+\_\+\+INVALID\+\_\+\+ARGUMENT}}} & {\ttfamily symbol\+\_\+name} is NULL, or {\ttfamily symbol} is NULL. \\
+\hline
+\end{DoxyRetVals}
+\mbox{\Hypertarget{group__executable_ga4cd59c60a5686aff975142d6edcdc4b5}\label{group__executable_ga4cd59c60a5686aff975142d6edcdc4b5}} 
+\index{Executable@{Executable}!hsa\_executable\_get\_symbol\_by\_name@{hsa\_executable\_get\_symbol\_by\_name}}
+\index{hsa\_executable\_get\_symbol\_by\_name@{hsa\_executable\_get\_symbol\_by\_name}!Executable@{Executable}}
+\doxysubsubsection{\texorpdfstring{hsa\_executable\_get\_symbol\_by\_name()}{hsa\_executable\_get\_symbol\_by\_name()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{group__status_gad755322e7ff95456520e8abdbe90d225}{hsa\+\_\+status\+\_\+t}} \mbox{\hyperlink{inc_2hsa__ext__image_8h_a64216765b98b62ee87deb50fd2899836}{HSA\+\_\+\+API}} hsa\+\_\+executable\+\_\+get\+\_\+symbol\+\_\+by\+\_\+name (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{group__executable_ga4a4281d636cb6048c4d7a015e1fa3baa}{hsa\+\_\+executable\+\_\+t}}}]{executable,  }\item[{const char $\ast$}]{symbol\+\_\+name,  }\item[{const \mbox{\hyperlink{group__agentinfo_ga9ce217ef08e7d5e89c8e83ce7b6ef22b}{hsa\+\_\+agent\+\_\+t}} $\ast$}]{agent,  }\item[{\mbox{\hyperlink{group__executable_gac6b342e0224ea2ddef549b3626e8ccc1}{hsa\+\_\+executable\+\_\+symbol\+\_\+t}} $\ast$}]{symbol }\end{DoxyParamCaption})}
+
+
+
+Retrieve the symbol handle corresponding to a given a symbol name. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em executable} & Executable.\\
+\hline
+\mbox{\texttt{ in}}  & {\em symbol\+\_\+name} & Symbol name. Must be a NUL-\/terminated character array. The Programmer\textquotesingle{}s Reference Manual describes the standard name mangling scheme.\\
+\hline
+\mbox{\texttt{ in}}  & {\em agent} & Pointer to the agent for which the symbol with the given name is defined. If the symbol corresponding to the given name has program allocation, {\ttfamily agent} must be NULL.\\
+\hline
+\mbox{\texttt{ out}}  & {\em symbol} & Memory location where the HSA runtime stores the symbol handle. Must not be NULL.\\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em \mbox{\hyperlink{group__status_ggad755322e7ff95456520e8abdbe90d225ae382ea0c9c05cce5a60d0317375159cc}{HSA\+\_\+\+STATUS\+\_\+\+SUCCESS}}} & The function has been executed successfully.\\
+\hline
+{\em \mbox{\hyperlink{group__status_ggad755322e7ff95456520e8abdbe90d225a34ea59ade5bfce95eee935238a99f5b5}{HSA\+\_\+\+STATUS\+\_\+\+ERROR\+\_\+\+NOT\+\_\+\+INITIALIZED}}} & The HSA runtime has not been initialized.\\
+\hline
+{\em \mbox{\hyperlink{group__status_ggad755322e7ff95456520e8abdbe90d225ae2fcb63555ddbffb6048b7e044501151}{HSA\+\_\+\+STATUS\+\_\+\+ERROR\+\_\+\+INVALID\+\_\+\+EXECUTABLE}}} & The executable is invalid.\\
+\hline
+{\em \mbox{\hyperlink{group__status_ggad755322e7ff95456520e8abdbe90d225a763aa9892acea9f7d145c0111247359c}{HSA\+\_\+\+STATUS\+\_\+\+ERROR\+\_\+\+INVALID\+\_\+\+SYMBOL\+\_\+\+NAME}}} & There is no symbol with a name that matches {\ttfamily symbol\+\_\+name}.\\
+\hline
+{\em \mbox{\hyperlink{group__status_ggad755322e7ff95456520e8abdbe90d225ac7d3651f75107d2a6a8ba3b25683c030}{HSA\+\_\+\+STATUS\+\_\+\+ERROR\+\_\+\+INVALID\+\_\+\+ARGUMENT}}} & {\ttfamily symbol\+\_\+name} is NULL, or {\ttfamily symbol} is NULL. \\
+\hline
+\end{DoxyRetVals}
+\mbox{\Hypertarget{group__executable_ga7308e114ac094e39413cc08f163e7ed3}\label{group__executable_ga7308e114ac094e39413cc08f163e7ed3}} 
+\index{Executable@{Executable}!hsa\_executable\_global\_variable\_define@{hsa\_executable\_global\_variable\_define}}
+\index{hsa\_executable\_global\_variable\_define@{hsa\_executable\_global\_variable\_define}!Executable@{Executable}}
+\doxysubsubsection{\texorpdfstring{hsa\_executable\_global\_variable\_define()}{hsa\_executable\_global\_variable\_define()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{group__status_gad755322e7ff95456520e8abdbe90d225}{hsa\+\_\+status\+\_\+t}} \mbox{\hyperlink{inc_2hsa__ext__image_8h_a64216765b98b62ee87deb50fd2899836}{HSA\+\_\+\+API}} hsa\+\_\+executable\+\_\+global\+\_\+variable\+\_\+define (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{group__executable_ga4a4281d636cb6048c4d7a015e1fa3baa}{hsa\+\_\+executable\+\_\+t}}}]{executable,  }\item[{const char $\ast$}]{variable\+\_\+name,  }\item[{void $\ast$}]{address }\end{DoxyParamCaption})}
+
+
+
+Define an external global variable with program allocation. 
+
+This function allows the application to provide the definition of a variable in the global segment memory with program allocation. The variable must be defined before loading a code object into an executable. In addition, code objects loaded must not define the variable.
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em executable} & Executable. Must not be in frozen state.\\
+\hline
+\mbox{\texttt{ in}}  & {\em variable\+\_\+name} & Name of the variable. The Programmer\textquotesingle{}s Reference Manual describes the standard name mangling scheme.\\
+\hline
+\mbox{\texttt{ in}}  & {\em address} & Address where the variable is defined. This address must be in global memory and can be read and written by any agent in the system. The application cannot deallocate the buffer pointed by {\ttfamily address} before {\ttfamily executable} is destroyed.\\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em \mbox{\hyperlink{group__status_ggad755322e7ff95456520e8abdbe90d225ae382ea0c9c05cce5a60d0317375159cc}{HSA\+\_\+\+STATUS\+\_\+\+SUCCESS}}} & The function has been executed successfully.\\
+\hline
+{\em \mbox{\hyperlink{group__status_ggad755322e7ff95456520e8abdbe90d225a34ea59ade5bfce95eee935238a99f5b5}{HSA\+\_\+\+STATUS\+\_\+\+ERROR\+\_\+\+NOT\+\_\+\+INITIALIZED}}} & The HSA runtime has not been initialized.\\
+\hline
+{\em \mbox{\hyperlink{group__status_ggad755322e7ff95456520e8abdbe90d225a1a77fcf36d0d140874c4361ab093eff7}{HSA\+\_\+\+STATUS\+\_\+\+ERROR\+\_\+\+OUT\+\_\+\+OF\+\_\+\+RESOURCES}}} & The HSA runtime failed to allocate the required resources.\\
+\hline
+{\em \mbox{\hyperlink{group__status_ggad755322e7ff95456520e8abdbe90d225ae2fcb63555ddbffb6048b7e044501151}{HSA\+\_\+\+STATUS\+\_\+\+ERROR\+\_\+\+INVALID\+\_\+\+EXECUTABLE}}} & The executable is invalid.\\
+\hline
+{\em \mbox{\hyperlink{group__status_ggad755322e7ff95456520e8abdbe90d225abff93790fdc804ac87c2299c296cc598}{HSA\+\_\+\+STATUS\+\_\+\+ERROR\+\_\+\+VARIABLE\+\_\+\+ALREADY\+\_\+\+DEFINED}}} & The variable is already defined.\\
+\hline
+{\em \mbox{\hyperlink{group__status_ggad755322e7ff95456520e8abdbe90d225a763aa9892acea9f7d145c0111247359c}{HSA\+\_\+\+STATUS\+\_\+\+ERROR\+\_\+\+INVALID\+\_\+\+SYMBOL\+\_\+\+NAME}}} & There is no variable with the {\ttfamily variable\+\_\+name}.\\
+\hline
+{\em \mbox{\hyperlink{group__status_ggad755322e7ff95456520e8abdbe90d225a32f01e35216b0a6473cd248db77bf2be}{HSA\+\_\+\+STATUS\+\_\+\+ERROR\+\_\+\+FROZEN\+\_\+\+EXECUTABLE}}} & {\ttfamily executable} is frozen.\\
+\hline
+{\em \mbox{\hyperlink{group__status_ggad755322e7ff95456520e8abdbe90d225ac7d3651f75107d2a6a8ba3b25683c030}{HSA\+\_\+\+STATUS\+\_\+\+ERROR\+\_\+\+INVALID\+\_\+\+ARGUMENT}}} & {\ttfamily variable\+\_\+name} is NULL. \\
+\hline
+\end{DoxyRetVals}
+\mbox{\Hypertarget{group__executable_ga48ae4a0311eaa924c31c47162464c0a6}\label{group__executable_ga48ae4a0311eaa924c31c47162464c0a6}} 
+\index{Executable@{Executable}!hsa\_executable\_iterate\_agent\_symbols@{hsa\_executable\_iterate\_agent\_symbols}}
+\index{hsa\_executable\_iterate\_agent\_symbols@{hsa\_executable\_iterate\_agent\_symbols}!Executable@{Executable}}
+\doxysubsubsection{\texorpdfstring{hsa\_executable\_iterate\_agent\_symbols()}{hsa\_executable\_iterate\_agent\_symbols()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{group__status_gad755322e7ff95456520e8abdbe90d225}{hsa\+\_\+status\+\_\+t}} \mbox{\hyperlink{inc_2hsa__ext__image_8h_a64216765b98b62ee87deb50fd2899836}{HSA\+\_\+\+API}} hsa\+\_\+executable\+\_\+iterate\+\_\+agent\+\_\+symbols (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{group__executable_ga4a4281d636cb6048c4d7a015e1fa3baa}{hsa\+\_\+executable\+\_\+t}}}]{executable,  }\item[{\mbox{\hyperlink{group__agentinfo_ga9ce217ef08e7d5e89c8e83ce7b6ef22b}{hsa\+\_\+agent\+\_\+t}}}]{agent,  }\item[{\mbox{\hyperlink{group__status_gad755322e7ff95456520e8abdbe90d225}{hsa\+\_\+status\+\_\+t}}($\ast$)(\mbox{\hyperlink{group__executable_ga4a4281d636cb6048c4d7a015e1fa3baa}{hsa\+\_\+executable\+\_\+t}} exec, \mbox{\hyperlink{group__agentinfo_ga9ce217ef08e7d5e89c8e83ce7b6ef22b}{hsa\+\_\+agent\+\_\+t}} agent, \mbox{\hyperlink{group__executable_gac6b342e0224ea2ddef549b3626e8ccc1}{hsa\+\_\+executable\+\_\+symbol\+\_\+t}} symbol, void $\ast$data)}]{callback,  }\item[{void $\ast$}]{data }\end{DoxyParamCaption})}
+
+
+
+Iterate over the kernels, indirect functions, and agent allocation variables in an executable for a given agent, and invoke an application-\/ defined callback on every iteration. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em executable} & Executable.\\
+\hline
+\mbox{\texttt{ in}}  & {\em agent} & Agent.\\
+\hline
+\mbox{\texttt{ in}}  & {\em callback} & Callback to be invoked once per executable symbol. The HSA runtime passes three arguments to the callback\+: the executable, a symbol, and the application data. If {\ttfamily callback} returns a status other than \mbox{\hyperlink{group__status_ggad755322e7ff95456520e8abdbe90d225ae382ea0c9c05cce5a60d0317375159cc}{HSA\+\_\+\+STATUS\+\_\+\+SUCCESS}} for a particular iteration, the traversal stops and \mbox{\hyperlink{group__executable_ga160fb0e09e435421eb06a24d69baa3c9}{hsa\+\_\+executable\+\_\+iterate\+\_\+symbols}} returns that status value.\\
+\hline
+\mbox{\texttt{ in}}  & {\em data} & Application data that is passed to {\ttfamily callback} on every iteration. May be NULL.\\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em \mbox{\hyperlink{group__status_ggad755322e7ff95456520e8abdbe90d225ae382ea0c9c05cce5a60d0317375159cc}{HSA\+\_\+\+STATUS\+\_\+\+SUCCESS}}} & The function has been executed successfully.\\
+\hline
+{\em \mbox{\hyperlink{group__status_ggad755322e7ff95456520e8abdbe90d225a34ea59ade5bfce95eee935238a99f5b5}{HSA\+\_\+\+STATUS\+\_\+\+ERROR\+\_\+\+NOT\+\_\+\+INITIALIZED}}} & The HSA runtime has not been initialized.\\
+\hline
+{\em \mbox{\hyperlink{group__status_ggad755322e7ff95456520e8abdbe90d225ae2fcb63555ddbffb6048b7e044501151}{HSA\+\_\+\+STATUS\+\_\+\+ERROR\+\_\+\+INVALID\+\_\+\+EXECUTABLE}}} & The executable is invalid.\\
+\hline
+{\em \mbox{\hyperlink{group__status_ggad755322e7ff95456520e8abdbe90d225ac7d3651f75107d2a6a8ba3b25683c030}{HSA\+\_\+\+STATUS\+\_\+\+ERROR\+\_\+\+INVALID\+\_\+\+ARGUMENT}}} & {\ttfamily callback} is NULL. \\
+\hline
+\end{DoxyRetVals}
+\mbox{\Hypertarget{group__executable_gaef34248210f3e4c8a31ad7263ff5fa70}\label{group__executable_gaef34248210f3e4c8a31ad7263ff5fa70}} 
+\index{Executable@{Executable}!hsa\_executable\_iterate\_program\_symbols@{hsa\_executable\_iterate\_program\_symbols}}
+\index{hsa\_executable\_iterate\_program\_symbols@{hsa\_executable\_iterate\_program\_symbols}!Executable@{Executable}}
+\doxysubsubsection{\texorpdfstring{hsa\_executable\_iterate\_program\_symbols()}{hsa\_executable\_iterate\_program\_symbols()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{group__status_gad755322e7ff95456520e8abdbe90d225}{hsa\+\_\+status\+\_\+t}} \mbox{\hyperlink{inc_2hsa__ext__image_8h_a64216765b98b62ee87deb50fd2899836}{HSA\+\_\+\+API}} hsa\+\_\+executable\+\_\+iterate\+\_\+program\+\_\+symbols (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{group__executable_ga4a4281d636cb6048c4d7a015e1fa3baa}{hsa\+\_\+executable\+\_\+t}}}]{executable,  }\item[{\mbox{\hyperlink{group__status_gad755322e7ff95456520e8abdbe90d225}{hsa\+\_\+status\+\_\+t}}($\ast$)(\mbox{\hyperlink{group__executable_ga4a4281d636cb6048c4d7a015e1fa3baa}{hsa\+\_\+executable\+\_\+t}} exec, \mbox{\hyperlink{group__executable_gac6b342e0224ea2ddef549b3626e8ccc1}{hsa\+\_\+executable\+\_\+symbol\+\_\+t}} symbol, void $\ast$data)}]{callback,  }\item[{void $\ast$}]{data }\end{DoxyParamCaption})}
+
+
+
+Iterate over the program allocation variables in an executable, and invoke an application-\/defined callback on every iteration. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em executable} & Executable.\\
+\hline
+\mbox{\texttt{ in}}  & {\em callback} & Callback to be invoked once per executable symbol. The HSA runtime passes three arguments to the callback\+: the executable, a symbol, and the application data. If {\ttfamily callback} returns a status other than \mbox{\hyperlink{group__status_ggad755322e7ff95456520e8abdbe90d225ae382ea0c9c05cce5a60d0317375159cc}{HSA\+\_\+\+STATUS\+\_\+\+SUCCESS}} for a particular iteration, the traversal stops and \mbox{\hyperlink{group__executable_ga160fb0e09e435421eb06a24d69baa3c9}{hsa\+\_\+executable\+\_\+iterate\+\_\+symbols}} returns that status value.\\
+\hline
+\mbox{\texttt{ in}}  & {\em data} & Application data that is passed to {\ttfamily callback} on every iteration. May be NULL.\\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em \mbox{\hyperlink{group__status_ggad755322e7ff95456520e8abdbe90d225ae382ea0c9c05cce5a60d0317375159cc}{HSA\+\_\+\+STATUS\+\_\+\+SUCCESS}}} & The function has been executed successfully.\\
+\hline
+{\em \mbox{\hyperlink{group__status_ggad755322e7ff95456520e8abdbe90d225a34ea59ade5bfce95eee935238a99f5b5}{HSA\+\_\+\+STATUS\+\_\+\+ERROR\+\_\+\+NOT\+\_\+\+INITIALIZED}}} & The HSA runtime has not been initialized.\\
+\hline
+{\em \mbox{\hyperlink{group__status_ggad755322e7ff95456520e8abdbe90d225ae2fcb63555ddbffb6048b7e044501151}{HSA\+\_\+\+STATUS\+\_\+\+ERROR\+\_\+\+INVALID\+\_\+\+EXECUTABLE}}} & The executable is invalid.\\
+\hline
+{\em \mbox{\hyperlink{group__status_ggad755322e7ff95456520e8abdbe90d225ac7d3651f75107d2a6a8ba3b25683c030}{HSA\+\_\+\+STATUS\+\_\+\+ERROR\+\_\+\+INVALID\+\_\+\+ARGUMENT}}} & {\ttfamily callback} is NULL. \\
+\hline
+\end{DoxyRetVals}
+\mbox{\Hypertarget{group__executable_ga160fb0e09e435421eb06a24d69baa3c9}\label{group__executable_ga160fb0e09e435421eb06a24d69baa3c9}} 
+\index{Executable@{Executable}!hsa\_executable\_iterate\_symbols@{hsa\_executable\_iterate\_symbols}}
+\index{hsa\_executable\_iterate\_symbols@{hsa\_executable\_iterate\_symbols}!Executable@{Executable}}
+\doxysubsubsection{\texorpdfstring{hsa\_executable\_iterate\_symbols()}{hsa\_executable\_iterate\_symbols()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{group__status_gad755322e7ff95456520e8abdbe90d225}{hsa\+\_\+status\+\_\+t}} \mbox{\hyperlink{inc_2hsa__ext__image_8h_a64216765b98b62ee87deb50fd2899836}{HSA\+\_\+\+API}} \mbox{\hyperlink{inc_2hsa_8h_a2321f8ca7d706cada4f617b191a478b0}{HSA\+\_\+\+DEPRECATED}} hsa\+\_\+executable\+\_\+iterate\+\_\+symbols (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{group__executable_ga4a4281d636cb6048c4d7a015e1fa3baa}{hsa\+\_\+executable\+\_\+t}}}]{executable,  }\item[{\mbox{\hyperlink{group__status_gad755322e7ff95456520e8abdbe90d225}{hsa\+\_\+status\+\_\+t}}($\ast$)(\mbox{\hyperlink{group__executable_ga4a4281d636cb6048c4d7a015e1fa3baa}{hsa\+\_\+executable\+\_\+t}} exec, \mbox{\hyperlink{group__executable_gac6b342e0224ea2ddef549b3626e8ccc1}{hsa\+\_\+executable\+\_\+symbol\+\_\+t}} symbol, void $\ast$data)}]{callback,  }\item[{void $\ast$}]{data }\end{DoxyParamCaption})}
+
+
+
+Iterate over the symbols in a executable, and invoke an application-\/defined callback on every iteration. 
+
+\begin{DoxyRefDesc}{Deprecated}
+\item[\mbox{\hyperlink{deprecated__deprecated000043}{Deprecated}}]\end{DoxyRefDesc}
+
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em executable} & Executable.\\
+\hline
+\mbox{\texttt{ in}}  & {\em callback} & Callback to be invoked once per executable symbol. The HSA runtime passes three arguments to the callback\+: the executable, a symbol, and the application data. If {\ttfamily callback} returns a status other than \mbox{\hyperlink{group__status_ggad755322e7ff95456520e8abdbe90d225ae382ea0c9c05cce5a60d0317375159cc}{HSA\+\_\+\+STATUS\+\_\+\+SUCCESS}} for a particular iteration, the traversal stops and \mbox{\hyperlink{group__executable_ga160fb0e09e435421eb06a24d69baa3c9}{hsa\+\_\+executable\+\_\+iterate\+\_\+symbols}} returns that status value.\\
+\hline
+\mbox{\texttt{ in}}  & {\em data} & Application data that is passed to {\ttfamily callback} on every iteration. May be NULL.\\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em \mbox{\hyperlink{group__status_ggad755322e7ff95456520e8abdbe90d225ae382ea0c9c05cce5a60d0317375159cc}{HSA\+\_\+\+STATUS\+\_\+\+SUCCESS}}} & The function has been executed successfully.\\
+\hline
+{\em \mbox{\hyperlink{group__status_ggad755322e7ff95456520e8abdbe90d225a34ea59ade5bfce95eee935238a99f5b5}{HSA\+\_\+\+STATUS\+\_\+\+ERROR\+\_\+\+NOT\+\_\+\+INITIALIZED}}} & The HSA runtime has not been initialized.\\
+\hline
+{\em \mbox{\hyperlink{group__status_ggad755322e7ff95456520e8abdbe90d225ae2fcb63555ddbffb6048b7e044501151}{HSA\+\_\+\+STATUS\+\_\+\+ERROR\+\_\+\+INVALID\+\_\+\+EXECUTABLE}}} & The executable is invalid.\\
+\hline
+{\em \mbox{\hyperlink{group__status_ggad755322e7ff95456520e8abdbe90d225ac7d3651f75107d2a6a8ba3b25683c030}{HSA\+\_\+\+STATUS\+\_\+\+ERROR\+\_\+\+INVALID\+\_\+\+ARGUMENT}}} & {\ttfamily callback} is NULL. \\
+\hline
+\end{DoxyRetVals}
+\mbox{\Hypertarget{group__executable_ga7bf8b4aebddead20a6dadb1f13a51f4d}\label{group__executable_ga7bf8b4aebddead20a6dadb1f13a51f4d}} 
+\index{Executable@{Executable}!hsa\_executable\_load\_agent\_code\_object@{hsa\_executable\_load\_agent\_code\_object}}
+\index{hsa\_executable\_load\_agent\_code\_object@{hsa\_executable\_load\_agent\_code\_object}!Executable@{Executable}}
+\doxysubsubsection{\texorpdfstring{hsa\_executable\_load\_agent\_code\_object()}{hsa\_executable\_load\_agent\_code\_object()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{group__status_gad755322e7ff95456520e8abdbe90d225}{hsa\+\_\+status\+\_\+t}} \mbox{\hyperlink{inc_2hsa__ext__image_8h_a64216765b98b62ee87deb50fd2899836}{HSA\+\_\+\+API}} hsa\+\_\+executable\+\_\+load\+\_\+agent\+\_\+code\+\_\+object (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{group__executable_ga4a4281d636cb6048c4d7a015e1fa3baa}{hsa\+\_\+executable\+\_\+t}}}]{executable,  }\item[{\mbox{\hyperlink{group__agentinfo_ga9ce217ef08e7d5e89c8e83ce7b6ef22b}{hsa\+\_\+agent\+\_\+t}}}]{agent,  }\item[{\mbox{\hyperlink{group__executable_ga99b23808ddf94561399f3a90e00c4ed0}{hsa\+\_\+code\+\_\+object\+\_\+reader\+\_\+t}}}]{code\+\_\+object\+\_\+reader,  }\item[{const char $\ast$}]{options,  }\item[{\mbox{\hyperlink{group__executable_ga352150abd29df5b8cfa891bd51d1d714}{hsa\+\_\+loaded\+\_\+code\+\_\+object\+\_\+t}} $\ast$}]{loaded\+\_\+code\+\_\+object }\end{DoxyParamCaption})}
+
+
+
+Load an agent code object into an executable. 
+
+The agent code object contains all defined agent allocation variables, functions, indirect functions, and kernels in a given program for a given instruction set architecture.
+
+Any module linkage declaration must have been defined either by a define variable or by loading a code object that has a symbol with module linkage definition.
+
+The default floating-\/point rounding mode of the code object associated with {\ttfamily code\+\_\+object\+\_\+reader} must match that of the executable (\mbox{\hyperlink{group__executable_gga1f9ab4ca027c77a2fff6deb096e8c298a607f953764010314ca4b4a1494ccfa02}{HSA\+\_\+\+EXECUTABLE\+\_\+\+INFO\+\_\+\+DEFAULT\+\_\+\+FLOAT\+\_\+\+ROUNDING\+\_\+\+MODE}}), or be default (in which case the value of \mbox{\hyperlink{group__executable_gga1f9ab4ca027c77a2fff6deb096e8c298a607f953764010314ca4b4a1494ccfa02}{HSA\+\_\+\+EXECUTABLE\+\_\+\+INFO\+\_\+\+DEFAULT\+\_\+\+FLOAT\+\_\+\+ROUNDING\+\_\+\+MODE}} is used). If the agent code object uses extensions, the implementation and the agent must support them for this operation to return successfully.
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em executable} & Executable.\\
+\hline
+\mbox{\texttt{ in}}  & {\em agent} & Agent to load code object for. A code object can be loaded into an executable at most once for a given agent. The instruction set architecture of the code object must be supported by the agent.\\
+\hline
+\mbox{\texttt{ in}}  & {\em code\+\_\+object\+\_\+reader} & A code object reader that holds the code object to load. If a code object reader is destroyed before all the associated executables are destroyed, the behavior is undefined.\\
+\hline
+\mbox{\texttt{ in}}  & {\em options} & Standard and vendor-\/specific options. Unknown options are ignored. A standard option begins with the \char`\"{}-\/hsa\+\_\+\char`\"{} prefix. Options beginning with the \char`\"{}-\/hsa\+\_\+ext\+\_\+$<$extension\+\_\+name$>$\+\_\+\char`\"{} prefix are reserved for extensions. A vendor-\/specific option begins with the \char`\"{}-\/$<$vendor\+\_\+name$>$\+\_\+\char`\"{} prefix. Must be a NUL-\/terminated string. May be NULL.\\
+\hline
+\mbox{\texttt{ out}}  & {\em loaded\+\_\+code\+\_\+object} & Pointer to a memory location where the HSA runtime stores the loaded code object handle. May be NULL.\\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em \mbox{\hyperlink{group__status_ggad755322e7ff95456520e8abdbe90d225ae382ea0c9c05cce5a60d0317375159cc}{HSA\+\_\+\+STATUS\+\_\+\+SUCCESS}}} & The function has been executed successfully.\\
+\hline
+{\em \mbox{\hyperlink{group__status_ggad755322e7ff95456520e8abdbe90d225a34ea59ade5bfce95eee935238a99f5b5}{HSA\+\_\+\+STATUS\+\_\+\+ERROR\+\_\+\+NOT\+\_\+\+INITIALIZED}}} & The HSA runtime has not been initialized.\\
+\hline
+{\em \mbox{\hyperlink{group__status_ggad755322e7ff95456520e8abdbe90d225a1a77fcf36d0d140874c4361ab093eff7}{HSA\+\_\+\+STATUS\+\_\+\+ERROR\+\_\+\+OUT\+\_\+\+OF\+\_\+\+RESOURCES}}} & The HSA runtime failed to allocate the required resources.\\
+\hline
+{\em \mbox{\hyperlink{group__status_ggad755322e7ff95456520e8abdbe90d225ae2fcb63555ddbffb6048b7e044501151}{HSA\+\_\+\+STATUS\+\_\+\+ERROR\+\_\+\+INVALID\+\_\+\+EXECUTABLE}}} & The executable is invalid.\\
+\hline
+{\em \mbox{\hyperlink{group__status_ggad755322e7ff95456520e8abdbe90d225a32f01e35216b0a6473cd248db77bf2be}{HSA\+\_\+\+STATUS\+\_\+\+ERROR\+\_\+\+FROZEN\+\_\+\+EXECUTABLE}}} & The executable is frozen.\\
+\hline
+{\em \mbox{\hyperlink{group__status_ggad755322e7ff95456520e8abdbe90d225a3a5d835c109c2d0ad5b9c2771e133e5d}{HSA\+\_\+\+STATUS\+\_\+\+ERROR\+\_\+\+INVALID\+\_\+\+AGENT}}} & The agent is invalid.\\
+\hline
+{\em \mbox{\hyperlink{group__status_ggad755322e7ff95456520e8abdbe90d225abf212e30cc0c2c2771471f60141a00fd}{HSA\+\_\+\+STATUS\+\_\+\+ERROR\+\_\+\+INVALID\+\_\+\+CODE\+\_\+\+OBJECT\+\_\+\+READER}}} & {\ttfamily code\+\_\+object\+\_\+reader} is invalid.\\
+\hline
+{\em \mbox{\hyperlink{group__status_ggad755322e7ff95456520e8abdbe90d225a896bcafdb5c10c5802cf70083c3aeb8a}{HSA\+\_\+\+STATUS\+\_\+\+ERROR\+\_\+\+INCOMPATIBLE\+\_\+\+ARGUMENTS}}} & The code object read by {\ttfamily code\+\_\+object\+\_\+reader} is not compatible with the agent (for example, the agent does not support the instruction set architecture of the code object), the executable (for example, there is a default floating-\/point mode mismatch between the two), or the implementation. \\
+\hline
+\end{DoxyRetVals}
+\mbox{\Hypertarget{group__executable_gaca5bd94d5624f2baee7390e79eb2c650}\label{group__executable_gaca5bd94d5624f2baee7390e79eb2c650}} 
+\index{Executable@{Executable}!hsa\_executable\_load\_program\_code\_object@{hsa\_executable\_load\_program\_code\_object}}
+\index{hsa\_executable\_load\_program\_code\_object@{hsa\_executable\_load\_program\_code\_object}!Executable@{Executable}}
+\doxysubsubsection{\texorpdfstring{hsa\_executable\_load\_program\_code\_object()}{hsa\_executable\_load\_program\_code\_object()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{group__status_gad755322e7ff95456520e8abdbe90d225}{hsa\+\_\+status\+\_\+t}} \mbox{\hyperlink{inc_2hsa__ext__image_8h_a64216765b98b62ee87deb50fd2899836}{HSA\+\_\+\+API}} hsa\+\_\+executable\+\_\+load\+\_\+program\+\_\+code\+\_\+object (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{group__executable_ga4a4281d636cb6048c4d7a015e1fa3baa}{hsa\+\_\+executable\+\_\+t}}}]{executable,  }\item[{\mbox{\hyperlink{group__executable_ga99b23808ddf94561399f3a90e00c4ed0}{hsa\+\_\+code\+\_\+object\+\_\+reader\+\_\+t}}}]{code\+\_\+object\+\_\+reader,  }\item[{const char $\ast$}]{options,  }\item[{\mbox{\hyperlink{group__executable_ga352150abd29df5b8cfa891bd51d1d714}{hsa\+\_\+loaded\+\_\+code\+\_\+object\+\_\+t}} $\ast$}]{loaded\+\_\+code\+\_\+object }\end{DoxyParamCaption})}
+
+
+
+Load a program code object into an executable. 
+
+A program code object contains information about resources that are accessible by all kernel agents that run the executable, and can be loaded at most once into an executable.
+
+If the program code object uses extensions, the implementation must support them for this operation to return successfully.
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em executable} & Executable.\\
+\hline
+\mbox{\texttt{ in}}  & {\em code\+\_\+object\+\_\+reader} & A code object reader that holds the program code object to load. If a code object reader is destroyed before all the associated executables are destroyed, the behavior is undefined.\\
+\hline
+\mbox{\texttt{ in}}  & {\em options} & Standard and vendor-\/specific options. Unknown options are ignored. A standard option begins with the \char`\"{}-\/hsa\+\_\+\char`\"{} prefix. Options beginning with the \char`\"{}-\/hsa\+\_\+ext\+\_\+$<$extension\+\_\+name$>$\+\_\+\char`\"{} prefix are reserved for extensions. A vendor-\/specific option begins with the \char`\"{}-\/$<$vendor\+\_\+name$>$\+\_\+\char`\"{} prefix. Must be a NUL-\/terminated string. May be NULL.\\
+\hline
+\mbox{\texttt{ out}}  & {\em loaded\+\_\+code\+\_\+object} & Pointer to a memory location where the HSA runtime stores the loaded code object handle. May be NULL.\\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em \mbox{\hyperlink{group__status_ggad755322e7ff95456520e8abdbe90d225ae382ea0c9c05cce5a60d0317375159cc}{HSA\+\_\+\+STATUS\+\_\+\+SUCCESS}}} & The function has been executed successfully.\\
+\hline
+{\em \mbox{\hyperlink{group__status_ggad755322e7ff95456520e8abdbe90d225a34ea59ade5bfce95eee935238a99f5b5}{HSA\+\_\+\+STATUS\+\_\+\+ERROR\+\_\+\+NOT\+\_\+\+INITIALIZED}}} & The HSA runtime has not been initialized.\\
+\hline
+{\em \mbox{\hyperlink{group__status_ggad755322e7ff95456520e8abdbe90d225a1a77fcf36d0d140874c4361ab093eff7}{HSA\+\_\+\+STATUS\+\_\+\+ERROR\+\_\+\+OUT\+\_\+\+OF\+\_\+\+RESOURCES}}} & The HSA runtime failed to allocate the required resources.\\
+\hline
+{\em \mbox{\hyperlink{group__status_ggad755322e7ff95456520e8abdbe90d225ae2fcb63555ddbffb6048b7e044501151}{HSA\+\_\+\+STATUS\+\_\+\+ERROR\+\_\+\+INVALID\+\_\+\+EXECUTABLE}}} & The executable is invalid.\\
+\hline
+{\em \mbox{\hyperlink{group__status_ggad755322e7ff95456520e8abdbe90d225a32f01e35216b0a6473cd248db77bf2be}{HSA\+\_\+\+STATUS\+\_\+\+ERROR\+\_\+\+FROZEN\+\_\+\+EXECUTABLE}}} & The executable is frozen.\\
+\hline
+{\em \mbox{\hyperlink{group__status_ggad755322e7ff95456520e8abdbe90d225abf212e30cc0c2c2771471f60141a00fd}{HSA\+\_\+\+STATUS\+\_\+\+ERROR\+\_\+\+INVALID\+\_\+\+CODE\+\_\+\+OBJECT\+\_\+\+READER}}} & {\ttfamily code\+\_\+object\+\_\+reader} is invalid.\\
+\hline
+{\em \mbox{\hyperlink{group__status_ggad755322e7ff95456520e8abdbe90d225a896bcafdb5c10c5802cf70083c3aeb8a}{HSA\+\_\+\+STATUS\+\_\+\+ERROR\+\_\+\+INCOMPATIBLE\+\_\+\+ARGUMENTS}}} & The program code object is not compatible with the executable or the implementation (for example, the code object uses an extension that is not supported by the implementation). \\
+\hline
+\end{DoxyRetVals}
+\mbox{\Hypertarget{group__executable_gad23e614f5241d32494fc45c081c89db3}\label{group__executable_gad23e614f5241d32494fc45c081c89db3}} 
+\index{Executable@{Executable}!hsa\_executable\_readonly\_variable\_define@{hsa\_executable\_readonly\_variable\_define}}
+\index{hsa\_executable\_readonly\_variable\_define@{hsa\_executable\_readonly\_variable\_define}!Executable@{Executable}}
+\doxysubsubsection{\texorpdfstring{hsa\_executable\_readonly\_variable\_define()}{hsa\_executable\_readonly\_variable\_define()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{group__status_gad755322e7ff95456520e8abdbe90d225}{hsa\+\_\+status\+\_\+t}} \mbox{\hyperlink{inc_2hsa__ext__image_8h_a64216765b98b62ee87deb50fd2899836}{HSA\+\_\+\+API}} hsa\+\_\+executable\+\_\+readonly\+\_\+variable\+\_\+define (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{group__executable_ga4a4281d636cb6048c4d7a015e1fa3baa}{hsa\+\_\+executable\+\_\+t}}}]{executable,  }\item[{\mbox{\hyperlink{group__agentinfo_ga9ce217ef08e7d5e89c8e83ce7b6ef22b}{hsa\+\_\+agent\+\_\+t}}}]{agent,  }\item[{const char $\ast$}]{variable\+\_\+name,  }\item[{void $\ast$}]{address }\end{DoxyParamCaption})}
+
+
+
+Define an external readonly variable. 
+
+This function allows the application to provide the definition of a variable in the readonly segment memory. The variable must be defined before loading a code object into an executable. In addition, code objects loaded must not define the variable.
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em executable} & Executable. Must not be in frozen state.\\
+\hline
+\mbox{\texttt{ in}}  & {\em agent} & Agent for which the variable is being defined.\\
+\hline
+\mbox{\texttt{ in}}  & {\em variable\+\_\+name} & Name of the variable. The Programmer\textquotesingle{}s Reference Manual describes the standard name mangling scheme.\\
+\hline
+\mbox{\texttt{ in}}  & {\em address} & Address where the variable is defined. This address must have been previously allocated using \mbox{\hyperlink{group__memory_ga39f7943b93aa2bb754726fc74d929426}{hsa\+\_\+memory\+\_\+allocate}} in a readonly region associated with {\ttfamily agent}. The application cannot deallocate the buffer pointed by {\ttfamily address} before {\ttfamily executable} is destroyed.\\
+\hline
+\mbox{\texttt{ in}}  & {\em address} & Address where the variable is defined. The buffer pointed by {\ttfamily address} is owned by the application, and cannot be deallocated before {\ttfamily executable} is destroyed.\\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em \mbox{\hyperlink{group__status_ggad755322e7ff95456520e8abdbe90d225ae382ea0c9c05cce5a60d0317375159cc}{HSA\+\_\+\+STATUS\+\_\+\+SUCCESS}}} & The function has been executed successfully.\\
+\hline
+{\em \mbox{\hyperlink{group__status_ggad755322e7ff95456520e8abdbe90d225a34ea59ade5bfce95eee935238a99f5b5}{HSA\+\_\+\+STATUS\+\_\+\+ERROR\+\_\+\+NOT\+\_\+\+INITIALIZED}}} & The HSA runtime has not been initialized.\\
+\hline
+{\em \mbox{\hyperlink{group__status_ggad755322e7ff95456520e8abdbe90d225a1a77fcf36d0d140874c4361ab093eff7}{HSA\+\_\+\+STATUS\+\_\+\+ERROR\+\_\+\+OUT\+\_\+\+OF\+\_\+\+RESOURCES}}} & The HSA runtime failed to allocate the required resources.\\
+\hline
+{\em \mbox{\hyperlink{group__status_ggad755322e7ff95456520e8abdbe90d225ae2fcb63555ddbffb6048b7e044501151}{HSA\+\_\+\+STATUS\+\_\+\+ERROR\+\_\+\+INVALID\+\_\+\+EXECUTABLE}}} & Executable is invalid.\\
+\hline
+{\em \mbox{\hyperlink{group__status_ggad755322e7ff95456520e8abdbe90d225a3a5d835c109c2d0ad5b9c2771e133e5d}{HSA\+\_\+\+STATUS\+\_\+\+ERROR\+\_\+\+INVALID\+\_\+\+AGENT}}} & {\ttfamily agent} is invalid.\\
+\hline
+{\em \mbox{\hyperlink{group__status_ggad755322e7ff95456520e8abdbe90d225abff93790fdc804ac87c2299c296cc598}{HSA\+\_\+\+STATUS\+\_\+\+ERROR\+\_\+\+VARIABLE\+\_\+\+ALREADY\+\_\+\+DEFINED}}} & The variable is already defined.\\
+\hline
+{\em \mbox{\hyperlink{group__status_ggad755322e7ff95456520e8abdbe90d225a763aa9892acea9f7d145c0111247359c}{HSA\+\_\+\+STATUS\+\_\+\+ERROR\+\_\+\+INVALID\+\_\+\+SYMBOL\+\_\+\+NAME}}} & There is no variable with the {\ttfamily variable\+\_\+name}.\\
+\hline
+{\em \mbox{\hyperlink{group__status_ggad755322e7ff95456520e8abdbe90d225a32f01e35216b0a6473cd248db77bf2be}{HSA\+\_\+\+STATUS\+\_\+\+ERROR\+\_\+\+FROZEN\+\_\+\+EXECUTABLE}}} & {\ttfamily executable} is frozen.\\
+\hline
+{\em \mbox{\hyperlink{group__status_ggad755322e7ff95456520e8abdbe90d225ac7d3651f75107d2a6a8ba3b25683c030}{HSA\+\_\+\+STATUS\+\_\+\+ERROR\+\_\+\+INVALID\+\_\+\+ARGUMENT}}} & {\ttfamily variable\+\_\+name} is NULL. \\
+\hline
+\end{DoxyRetVals}
+\mbox{\Hypertarget{group__executable_ga6ac1727a87b318abdaec6c62c1a86cf6}\label{group__executable_ga6ac1727a87b318abdaec6c62c1a86cf6}} 
+\index{Executable@{Executable}!hsa\_executable\_symbol\_get\_info@{hsa\_executable\_symbol\_get\_info}}
+\index{hsa\_executable\_symbol\_get\_info@{hsa\_executable\_symbol\_get\_info}!Executable@{Executable}}
+\doxysubsubsection{\texorpdfstring{hsa\_executable\_symbol\_get\_info()}{hsa\_executable\_symbol\_get\_info()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{group__status_gad755322e7ff95456520e8abdbe90d225}{hsa\+\_\+status\+\_\+t}} \mbox{\hyperlink{inc_2hsa__ext__image_8h_a64216765b98b62ee87deb50fd2899836}{HSA\+\_\+\+API}} hsa\+\_\+executable\+\_\+symbol\+\_\+get\+\_\+info (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{group__executable_gac6b342e0224ea2ddef549b3626e8ccc1}{hsa\+\_\+executable\+\_\+symbol\+\_\+t}}}]{executable\+\_\+symbol,  }\item[{\mbox{\hyperlink{group__executable_ga27e2e3a930764e3e7385e1ceded09706}{hsa\+\_\+executable\+\_\+symbol\+\_\+info\+\_\+t}}}]{attribute,  }\item[{void $\ast$}]{value }\end{DoxyParamCaption})}
+
+
+
+Get the current value of an attribute for a given executable symbol. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em executable\+\_\+symbol} & Executable symbol.\\
+\hline
+\mbox{\texttt{ in}}  & {\em attribute} & Attribute to query.\\
+\hline
+\mbox{\texttt{ out}}  & {\em value} & Pointer to an application-\/allocated buffer where to store the value of the attribute. If the buffer passed by the application is not large enough to hold the value of {\ttfamily attribute}, the behavior is undefined.\\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em \mbox{\hyperlink{group__status_ggad755322e7ff95456520e8abdbe90d225ae382ea0c9c05cce5a60d0317375159cc}{HSA\+\_\+\+STATUS\+\_\+\+SUCCESS}}} & The function has been executed successfully.\\
+\hline
+{\em \mbox{\hyperlink{group__status_ggad755322e7ff95456520e8abdbe90d225a34ea59ade5bfce95eee935238a99f5b5}{HSA\+\_\+\+STATUS\+\_\+\+ERROR\+\_\+\+NOT\+\_\+\+INITIALIZED}}} & The HSA runtime has not been initialized.\\
+\hline
+{\em \mbox{\hyperlink{group__status_ggad755322e7ff95456520e8abdbe90d225a1db2eecfbdb0ba426626ab7feb0d3719}{HSA\+\_\+\+STATUS\+\_\+\+ERROR\+\_\+\+INVALID\+\_\+\+EXECUTABLE\+\_\+\+SYMBOL}}} & The executable symbol is invalid.\\
+\hline
+{\em \mbox{\hyperlink{group__status_ggad755322e7ff95456520e8abdbe90d225ac7d3651f75107d2a6a8ba3b25683c030}{HSA\+\_\+\+STATUS\+\_\+\+ERROR\+\_\+\+INVALID\+\_\+\+ARGUMENT}}} & {\ttfamily attribute} is an invalid executable symbol attribute, or {\ttfamily value} is NULL. \\
+\hline
+\end{DoxyRetVals}
+\mbox{\Hypertarget{group__executable_ga639f1cd7a242471e3f28c128a0e45325}\label{group__executable_ga639f1cd7a242471e3f28c128a0e45325}} 
+\index{Executable@{Executable}!hsa\_executable\_validate@{hsa\_executable\_validate}}
+\index{hsa\_executable\_validate@{hsa\_executable\_validate}!Executable@{Executable}}
+\doxysubsubsection{\texorpdfstring{hsa\_executable\_validate()}{hsa\_executable\_validate()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{group__status_gad755322e7ff95456520e8abdbe90d225}{hsa\+\_\+status\+\_\+t}} \mbox{\hyperlink{inc_2hsa__ext__image_8h_a64216765b98b62ee87deb50fd2899836}{HSA\+\_\+\+API}} hsa\+\_\+executable\+\_\+validate (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{group__executable_ga4a4281d636cb6048c4d7a015e1fa3baa}{hsa\+\_\+executable\+\_\+t}}}]{executable,  }\item[{uint32\+\_\+t $\ast$}]{result }\end{DoxyParamCaption})}
+
+
+
+Validate an executable. Checks that all code objects have matching machine model, profile, and default floating-\/point rounding mode. Checks that all declarations have definitions. Checks declaration-\/definition compatibility (see the HSA Programming Reference Manual for compatibility rules). Invoking this function is equivalent to invoking \mbox{\hyperlink{group__executable_ga44c77b432a88e92c8df219221c16a675}{hsa\+\_\+executable\+\_\+validate\+\_\+alt}} with no options. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em executable} & Executable. Must be in frozen state.\\
+\hline
+\mbox{\texttt{ out}}  & {\em result} & Memory location where the HSA runtime stores the validation result. If the executable passes validation, the result is 0.\\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em \mbox{\hyperlink{group__status_ggad755322e7ff95456520e8abdbe90d225ae382ea0c9c05cce5a60d0317375159cc}{HSA\+\_\+\+STATUS\+\_\+\+SUCCESS}}} & The function has been executed successfully.\\
+\hline
+{\em \mbox{\hyperlink{group__status_ggad755322e7ff95456520e8abdbe90d225a34ea59ade5bfce95eee935238a99f5b5}{HSA\+\_\+\+STATUS\+\_\+\+ERROR\+\_\+\+NOT\+\_\+\+INITIALIZED}}} & The HSA runtime has not been initialized.\\
+\hline
+{\em \mbox{\hyperlink{group__status_ggad755322e7ff95456520e8abdbe90d225ae2fcb63555ddbffb6048b7e044501151}{HSA\+\_\+\+STATUS\+\_\+\+ERROR\+\_\+\+INVALID\+\_\+\+EXECUTABLE}}} & {\ttfamily executable} is invalid.\\
+\hline
+{\em \mbox{\hyperlink{group__status_ggad755322e7ff95456520e8abdbe90d225ac7d3651f75107d2a6a8ba3b25683c030}{HSA\+\_\+\+STATUS\+\_\+\+ERROR\+\_\+\+INVALID\+\_\+\+ARGUMENT}}} & {\ttfamily result} is NULL. \\
+\hline
+\end{DoxyRetVals}
+\mbox{\Hypertarget{group__executable_ga44c77b432a88e92c8df219221c16a675}\label{group__executable_ga44c77b432a88e92c8df219221c16a675}} 
+\index{Executable@{Executable}!hsa\_executable\_validate\_alt@{hsa\_executable\_validate\_alt}}
+\index{hsa\_executable\_validate\_alt@{hsa\_executable\_validate\_alt}!Executable@{Executable}}
+\doxysubsubsection{\texorpdfstring{hsa\_executable\_validate\_alt()}{hsa\_executable\_validate\_alt()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{group__status_gad755322e7ff95456520e8abdbe90d225}{hsa\+\_\+status\+\_\+t}} \mbox{\hyperlink{inc_2hsa__ext__image_8h_a64216765b98b62ee87deb50fd2899836}{HSA\+\_\+\+API}} hsa\+\_\+executable\+\_\+validate\+\_\+alt (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{group__executable_ga4a4281d636cb6048c4d7a015e1fa3baa}{hsa\+\_\+executable\+\_\+t}}}]{executable,  }\item[{const char $\ast$}]{options,  }\item[{uint32\+\_\+t $\ast$}]{result }\end{DoxyParamCaption})}
+
+
+
+Validate an executable. Checks that all code objects have matching machine model, profile, and default floating-\/point rounding mode. Checks that all declarations have definitions. Checks declaration-\/definition compatibility (see the HSA Programming Reference Manual for compatibility rules). 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em executable} & Executable. Must be in frozen state.\\
+\hline
+\mbox{\texttt{ in}}  & {\em options} & Standard and vendor-\/specific options. Unknown options are ignored. A standard option begins with the \char`\"{}-\/hsa\+\_\+\char`\"{} prefix. Options beginning with the \char`\"{}-\/hsa\+\_\+ext\+\_\+$<$extension\+\_\+name$>$\+\_\+\char`\"{} prefix are reserved for extensions. A vendor-\/specific option begins with the \char`\"{}-\/$<$vendor\+\_\+name$>$\+\_\+\char`\"{} prefix. Must be a NUL-\/terminated string. May be NULL.\\
+\hline
+\mbox{\texttt{ out}}  & {\em result} & Memory location where the HSA runtime stores the validation result. If the executable passes validation, the result is 0.\\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em \mbox{\hyperlink{group__status_ggad755322e7ff95456520e8abdbe90d225ae382ea0c9c05cce5a60d0317375159cc}{HSA\+\_\+\+STATUS\+\_\+\+SUCCESS}}} & The function has been executed successfully.\\
+\hline
+{\em \mbox{\hyperlink{group__status_ggad755322e7ff95456520e8abdbe90d225a34ea59ade5bfce95eee935238a99f5b5}{HSA\+\_\+\+STATUS\+\_\+\+ERROR\+\_\+\+NOT\+\_\+\+INITIALIZED}}} & The HSA runtime has not been initialized.\\
+\hline
+{\em \mbox{\hyperlink{group__status_ggad755322e7ff95456520e8abdbe90d225ae2fcb63555ddbffb6048b7e044501151}{HSA\+\_\+\+STATUS\+\_\+\+ERROR\+\_\+\+INVALID\+\_\+\+EXECUTABLE}}} & {\ttfamily executable} is invalid.\\
+\hline
+{\em \mbox{\hyperlink{group__status_ggad755322e7ff95456520e8abdbe90d225ac7d3651f75107d2a6a8ba3b25683c030}{HSA\+\_\+\+STATUS\+\_\+\+ERROR\+\_\+\+INVALID\+\_\+\+ARGUMENT}}} & {\ttfamily result} is NULL. \\
+\hline
+\end{DoxyRetVals}

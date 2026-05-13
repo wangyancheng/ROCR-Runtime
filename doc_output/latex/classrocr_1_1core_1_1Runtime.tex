@@ -1,0 +1,2162 @@
+\hypertarget{classrocr_1_1core_1_1Runtime}{}\doxysection{rocr\+::core\+::Runtime Class Reference}
+\label{classrocr_1_1core_1_1Runtime}\index{rocr::core::Runtime@{rocr::core::Runtime}}
+
+
+\mbox{\hyperlink{classrocr_1_1core_1_1Runtime}{Runtime}} class provides the following functions\+:  
+
+
+
+
+{\ttfamily \#include $<$runtime.\+h$>$}
+
+
+
+Collaboration diagram for rocr\+::core\+::Runtime\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classrocr_1_1core_1_1Runtime__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{structrocr_1_1core_1_1Runtime_1_1AllocationRegion}{Allocation\+Region}}
+\item 
+struct \mbox{\hyperlink{structrocr_1_1core_1_1Runtime_1_1AsyncEvents}{Async\+Events}}
+\item 
+struct \mbox{\hyperlink{structrocr_1_1core_1_1Runtime_1_1AsyncEventsControl}{Async\+Events\+Control}}
+\item 
+struct \mbox{\hyperlink{structrocr_1_1core_1_1Runtime_1_1KfdVersion__t}{Kfd\+Version\+\_\+t}}
+\item 
+struct \mbox{\hyperlink{structrocr_1_1core_1_1Runtime_1_1LinkInfo}{Link\+Info}}
+\begin{DoxyCompactList}\small\item\em Structure to describe connectivity between agents. \end{DoxyCompactList}\item 
+struct \mbox{\hyperlink{structrocr_1_1core_1_1Runtime_1_1PrefetchOp}{Prefetch\+Op}}
+\item 
+struct \mbox{\hyperlink{structrocr_1_1core_1_1Runtime_1_1PrefetchRange}{Prefetch\+Range}}
+\item 
+struct \mbox{\hyperlink{structrocr_1_1core_1_1Runtime_1_1PtrInfoBlockData}{Ptr\+Info\+Block\+Data}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{classrocr_1_1core_1_1Runtime_aeec10604323be77b834f3ef1002b8695}{Register\+Agent}} (\mbox{\hyperlink{classrocr_1_1core_1_1Agent}{Agent}} $\ast$agent, bool Enabled)
+\begin{DoxyCompactList}\small\item\em Insert agent into agent list \+::agents\+\_\+. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classrocr_1_1core_1_1Runtime_ad288be40f7324beb688a191dc6901b5c}{Destroy\+Agents}} ()
+\begin{DoxyCompactList}\small\item\em Delete all agent objects from \+::agents\+\_\+. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classrocr_1_1core_1_1Runtime_a40f6b0edf8c51052a93a0e6a9f910a51}{Set\+Link\+Count}} (size\+\_\+t num\+\_\+link)
+\begin{DoxyCompactList}\small\item\em Set the number of links connecting the agents in the platform. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classrocr_1_1core_1_1Runtime_ae450600428c34cfe40f23eaafac3231a}{Register\+Link\+Info}} (uint32\+\_\+t node\+\_\+id\+\_\+from, uint32\+\_\+t node\+\_\+id\+\_\+to, uint32\+\_\+t num\+\_\+hop, \mbox{\hyperlink{inc_2hsa__ext__amd_8h_a79fd286ef9fd726a850fe72ed262c6f7}{hsa\+\_\+amd\+\_\+memory\+\_\+pool\+\_\+link\+\_\+info\+\_\+t}} \&link\+\_\+info)
+\begin{DoxyCompactList}\small\item\em Register link information connecting {\ttfamily node\+\_\+id\+\_\+from} and {\ttfamily node\+\_\+id\+\_\+to}. \end{DoxyCompactList}\item 
+const \mbox{\hyperlink{structrocr_1_1core_1_1Runtime_1_1LinkInfo}{Link\+Info}} \mbox{\hyperlink{classrocr_1_1core_1_1Runtime_a62cf3befb994be3a24557ebda31c60ec}{Get\+Link\+Info}} (uint32\+\_\+t node\+\_\+id\+\_\+from, uint32\+\_\+t node\+\_\+id\+\_\+to)
+\begin{DoxyCompactList}\small\item\em Query link information between two nodes. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{group__status_gad755322e7ff95456520e8abdbe90d225}{hsa\+\_\+status\+\_\+t}} \mbox{\hyperlink{classrocr_1_1core_1_1Runtime_aaca1caae7ddd44e31ad9994bbbe4a1c8}{Iterate\+Agent}} (\mbox{\hyperlink{group__status_gad755322e7ff95456520e8abdbe90d225}{hsa\+\_\+status\+\_\+t}}($\ast$callback)(\mbox{\hyperlink{group__agentinfo_ga9ce217ef08e7d5e89c8e83ce7b6ef22b}{hsa\+\_\+agent\+\_\+t}} agent, void $\ast$data), void $\ast$data)
+\begin{DoxyCompactList}\small\item\em Invoke the user provided call back for each agent in the agent list. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{group__status_gad755322e7ff95456520e8abdbe90d225}{hsa\+\_\+status\+\_\+t}} \mbox{\hyperlink{classrocr_1_1core_1_1Runtime_a50af177d63357a9ea4643f5aa171a12c}{Allocate\+Memory}} (const \mbox{\hyperlink{classrocr_1_1core_1_1MemoryRegion}{Memory\+Region}} $\ast$region, size\+\_\+t size, \mbox{\hyperlink{classrocr_1_1core_1_1MemoryRegion_ac293b6bdc18d9f5d5f6ac3a12021cf0f}{Memory\+Region\+::\+Allocate\+Flags}} alloc\+\_\+flags, void $\ast$$\ast$address)
+\begin{DoxyCompactList}\small\item\em Allocate memory on a particular region. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{group__status_gad755322e7ff95456520e8abdbe90d225}{hsa\+\_\+status\+\_\+t}} \mbox{\hyperlink{classrocr_1_1core_1_1Runtime_a7c343f94ce229965170117b03c437e35}{Free\+Memory}} (void $\ast$ptr)
+\begin{DoxyCompactList}\small\item\em Free memory previously allocated with Allocate\+Memory. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{group__status_gad755322e7ff95456520e8abdbe90d225}{hsa\+\_\+status\+\_\+t}} \mbox{\hyperlink{classrocr_1_1core_1_1Runtime_aadf92a75f5db799296477f32a7b67fbb}{Register\+Release\+Notifier}} (void $\ast$ptr, \mbox{\hyperlink{inc_2hsa__ext__amd_8h_abab73f6a0f108b76677f8866a39a6eef}{hsa\+\_\+amd\+\_\+deallocation\+\_\+callback\+\_\+t}} callback, void $\ast$user\+\_\+data)
+\item 
+\mbox{\hyperlink{group__status_gad755322e7ff95456520e8abdbe90d225}{hsa\+\_\+status\+\_\+t}} \mbox{\hyperlink{classrocr_1_1core_1_1Runtime_abf01565f919a3736c1fe04594e22ee98}{Deregister\+Release\+Notifier}} (void $\ast$ptr, \mbox{\hyperlink{inc_2hsa__ext__amd_8h_abab73f6a0f108b76677f8866a39a6eef}{hsa\+\_\+amd\+\_\+deallocation\+\_\+callback\+\_\+t}} callback)
+\item 
+\mbox{\hyperlink{group__status_gad755322e7ff95456520e8abdbe90d225}{hsa\+\_\+status\+\_\+t}} \mbox{\hyperlink{classrocr_1_1core_1_1Runtime_a3edb46f9f3fbba39e63557c546490920}{Copy\+Memory}} (void $\ast$dst, const void $\ast$src, size\+\_\+t size)
+\begin{DoxyCompactList}\small\item\em Blocking memory copy from src to dst. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{group__status_gad755322e7ff95456520e8abdbe90d225}{hsa\+\_\+status\+\_\+t}} \mbox{\hyperlink{classrocr_1_1core_1_1Runtime_a6259d5e8ad10ab8b53ef57d03c076428}{Copy\+Memory}} (void $\ast$dst, \mbox{\hyperlink{classrocr_1_1core_1_1Agent}{core\+::\+Agent}} $\ast$dst\+\_\+agent, const void $\ast$src, \mbox{\hyperlink{classrocr_1_1core_1_1Agent}{core\+::\+Agent}} $\ast$src\+\_\+agent, size\+\_\+t size, std\+::vector$<$ \mbox{\hyperlink{classrocr_1_1core_1_1Signal}{core\+::\+Signal}} $\ast$ $>$ \&dep\+\_\+signals, \mbox{\hyperlink{classrocr_1_1core_1_1Signal}{core\+::\+Signal}} \&completion\+\_\+signal)
+\begin{DoxyCompactList}\small\item\em Non-\/blocking memory copy from src to dst. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{group__status_gad755322e7ff95456520e8abdbe90d225}{hsa\+\_\+status\+\_\+t}} \mbox{\hyperlink{classrocr_1_1core_1_1Runtime_ad963895dbbb6f404c9f9abb1da8ffd99}{Copy\+Memory\+On\+Engine}} (void $\ast$dst, \mbox{\hyperlink{classrocr_1_1core_1_1Agent}{core\+::\+Agent}} $\ast$dst\+\_\+agent, const void $\ast$src, \mbox{\hyperlink{classrocr_1_1core_1_1Agent}{core\+::\+Agent}} $\ast$src\+\_\+agent, size\+\_\+t size, std\+::vector$<$ \mbox{\hyperlink{classrocr_1_1core_1_1Signal}{core\+::\+Signal}} $\ast$ $>$ \&dep\+\_\+signals, \mbox{\hyperlink{classrocr_1_1core_1_1Signal}{core\+::\+Signal}} \&completion\+\_\+signal, \mbox{\hyperlink{inc_2hsa__ext__amd_8h_a74eea6e8894e4b9897ecaa529929fd69}{hsa\+\_\+amd\+\_\+sdma\+\_\+engine\+\_\+id\+\_\+t}} engine\+\_\+id, bool force\+\_\+copy\+\_\+on\+\_\+sdma)
+\begin{DoxyCompactList}\small\item\em Non-\/blocking memory copy from src to dst on engine\+\_\+id. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{group__status_gad755322e7ff95456520e8abdbe90d225}{hsa\+\_\+status\+\_\+t}} \mbox{\hyperlink{classrocr_1_1core_1_1Runtime_a0b0fa43ccd41a2a4ad3eb04932a1be4b}{Copy\+Memory\+Status}} (\mbox{\hyperlink{classrocr_1_1core_1_1Agent}{core\+::\+Agent}} $\ast$dst\+\_\+agent, \mbox{\hyperlink{classrocr_1_1core_1_1Agent}{core\+::\+Agent}} $\ast$src\+\_\+agent, uint32\+\_\+t $\ast$engine\+\_\+ids\+\_\+mask)
+\begin{DoxyCompactList}\small\item\em Return SDMA availability status for copy direction. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{group__status_gad755322e7ff95456520e8abdbe90d225}{hsa\+\_\+status\+\_\+t}} \mbox{\hyperlink{classrocr_1_1core_1_1Runtime_a816c7a4c0ba8810ab4a709a1576ddeb4}{Fill\+Memory}} (void $\ast$ptr, uint32\+\_\+t value, size\+\_\+t count)
+\begin{DoxyCompactList}\small\item\em Fill the first {\ttfamily count} of uint32\+\_\+t in ptr with value. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{group__status_gad755322e7ff95456520e8abdbe90d225}{hsa\+\_\+status\+\_\+t}} \mbox{\hyperlink{classrocr_1_1core_1_1Runtime_a05a4860b83f019c040bc6ec00d70f9ab}{Allow\+Access}} (uint32\+\_\+t num\+\_\+agents, const \mbox{\hyperlink{group__agentinfo_ga9ce217ef08e7d5e89c8e83ce7b6ef22b}{hsa\+\_\+agent\+\_\+t}} $\ast$agents, const void $\ast$ptr)
+\begin{DoxyCompactList}\small\item\em Set agents as the whitelist to access ptr. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{group__status_gad755322e7ff95456520e8abdbe90d225}{hsa\+\_\+status\+\_\+t}} \mbox{\hyperlink{classrocr_1_1core_1_1Runtime_aea135160c2930f58344cf1b92a33a859}{Get\+System\+Info}} (\mbox{\hyperlink{group__agentinfo_ga5358716e320ad8a78b78ef44d8783b0b}{hsa\+\_\+system\+\_\+info\+\_\+t}} attribute, void $\ast$value)
+\begin{DoxyCompactList}\small\item\em Query system information. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{group__status_gad755322e7ff95456520e8abdbe90d225}{hsa\+\_\+status\+\_\+t}} \mbox{\hyperlink{classrocr_1_1core_1_1Runtime_a6e0d6757e6a6e72958a8d946af41b1d4}{Set\+Async\+Signal\+Handler}} (\mbox{\hyperlink{group__signals_ga0003af605a660e7ef4f89aa555d3b3fc}{hsa\+\_\+signal\+\_\+t}} signal, \mbox{\hyperlink{group__signals_gab7190fcff48c6dbeded341389ed17c8d}{hsa\+\_\+signal\+\_\+condition\+\_\+t}} cond, \mbox{\hyperlink{group__signals_ga67ca2818879c9990e1b5f1b14ce7ed27}{hsa\+\_\+signal\+\_\+value\+\_\+t}} value, \mbox{\hyperlink{inc_2hsa__ext__amd_8h_ad52f140818ba83c11558d0c50e20bf2c}{hsa\+\_\+amd\+\_\+signal\+\_\+handler}} handler, void $\ast$arg)
+\begin{DoxyCompactList}\small\item\em Register a callback function {\ttfamily handler} that is associated with {\ttfamily signal} to asynchronous event monitor thread. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{group__status_gad755322e7ff95456520e8abdbe90d225}{hsa\+\_\+status\+\_\+t}} \mbox{\hyperlink{classrocr_1_1core_1_1Runtime_abaefc038041e6c8ba2a1215070c4e499}{Interop\+Map}} (uint32\+\_\+t num\+\_\+agents, \mbox{\hyperlink{classrocr_1_1core_1_1Agent}{Agent}} $\ast$$\ast$agents, int interop\+\_\+handle, uint32\+\_\+t flags, size\+\_\+t $\ast$size, void $\ast$$\ast$ptr, size\+\_\+t $\ast$metadata\+\_\+size, const void $\ast$$\ast$metadata)
+\item 
+\mbox{\hyperlink{group__status_gad755322e7ff95456520e8abdbe90d225}{hsa\+\_\+status\+\_\+t}} \mbox{\hyperlink{classrocr_1_1core_1_1Runtime_a74b1c1b0d2fe2a7b986b878f05c63c2e}{Interop\+Unmap}} (void $\ast$ptr)
+\item 
+\mbox{\hyperlink{group__status_gad755322e7ff95456520e8abdbe90d225}{hsa\+\_\+status\+\_\+t}} \mbox{\hyperlink{classrocr_1_1core_1_1Runtime_a99a0391c5f195e477631b483de94475e}{Ptr\+Info}} (const void $\ast$ptr, \mbox{\hyperlink{inc_2hsa__ext__amd_8h_a8b4736151eda8e9e0b3804a39294393c}{hsa\+\_\+amd\+\_\+pointer\+\_\+info\+\_\+t}} $\ast$info, void $\ast$($\ast$alloc)(size\+\_\+t), uint32\+\_\+t $\ast$num\+\_\+agents\+\_\+accessible, \mbox{\hyperlink{group__agentinfo_ga9ce217ef08e7d5e89c8e83ce7b6ef22b}{hsa\+\_\+agent\+\_\+t}} $\ast$$\ast$accessible, \mbox{\hyperlink{structrocr_1_1core_1_1Runtime_1_1PtrInfoBlockData}{Ptr\+Info\+Block\+Data}} $\ast$block\+\_\+info=nullptr)
+\item 
+\mbox{\hyperlink{group__status_gad755322e7ff95456520e8abdbe90d225}{hsa\+\_\+status\+\_\+t}} \mbox{\hyperlink{classrocr_1_1core_1_1Runtime_acaf0af0109a472629c3556b53b4b684c}{Set\+Ptr\+Info\+Data}} (const void $\ast$ptr, void $\ast$userptr)
+\item 
+\mbox{\hyperlink{group__status_gad755322e7ff95456520e8abdbe90d225}{hsa\+\_\+status\+\_\+t}} \mbox{\hyperlink{classrocr_1_1core_1_1Runtime_a81f3fb72e69767606ca13f842d50bf4f}{IPCCreate}} (void $\ast$ptr, size\+\_\+t len, \mbox{\hyperlink{inc_2hsa__ext__amd_8h_a25c9055f612cb0e755607fa1944cb250}{hsa\+\_\+amd\+\_\+ipc\+\_\+memory\+\_\+t}} $\ast$handle)
+\item 
+\mbox{\hyperlink{group__status_gad755322e7ff95456520e8abdbe90d225}{hsa\+\_\+status\+\_\+t}} \mbox{\hyperlink{classrocr_1_1core_1_1Runtime_aa589c7149f52256b5117d72cc230b3a1}{IPCAttach}} (const \mbox{\hyperlink{inc_2hsa__ext__amd_8h_a25c9055f612cb0e755607fa1944cb250}{hsa\+\_\+amd\+\_\+ipc\+\_\+memory\+\_\+t}} $\ast$handle, size\+\_\+t len, uint32\+\_\+t num\+\_\+agents, \mbox{\hyperlink{classrocr_1_1core_1_1Agent}{Agent}} $\ast$$\ast$mapping\+\_\+agents, void $\ast$$\ast$mapped\+\_\+ptr)
+\item 
+\mbox{\hyperlink{group__status_gad755322e7ff95456520e8abdbe90d225}{hsa\+\_\+status\+\_\+t}} \mbox{\hyperlink{classrocr_1_1core_1_1Runtime_ae3f74d2cfef9c5d93d8a2aa4168af4a5}{IPCDetach}} (void $\ast$ptr)
+\item 
+\mbox{\hyperlink{group__status_gad755322e7ff95456520e8abdbe90d225}{hsa\+\_\+status\+\_\+t}} \mbox{\hyperlink{classrocr_1_1core_1_1Runtime_ae4aafc236cfe3f409d501656b5211af5}{Set\+Svm\+Attrib}} (void $\ast$ptr, size\+\_\+t size, \mbox{\hyperlink{inc_2hsa__ext__amd_8h_ab507e41fd91d77c20f4d6208bcf3d824}{hsa\+\_\+amd\+\_\+svm\+\_\+attribute\+\_\+pair\+\_\+t}} $\ast$attribute\+\_\+list, size\+\_\+t attribute\+\_\+count)
+\item 
+\mbox{\hyperlink{group__status_gad755322e7ff95456520e8abdbe90d225}{hsa\+\_\+status\+\_\+t}} \mbox{\hyperlink{classrocr_1_1core_1_1Runtime_aeeaa1a3b8470715a936c8b4cd085b4ff}{Get\+Svm\+Attrib}} (void $\ast$ptr, size\+\_\+t size, \mbox{\hyperlink{inc_2hsa__ext__amd_8h_ab507e41fd91d77c20f4d6208bcf3d824}{hsa\+\_\+amd\+\_\+svm\+\_\+attribute\+\_\+pair\+\_\+t}} $\ast$attribute\+\_\+list, size\+\_\+t attribute\+\_\+count)
+\item 
+\mbox{\hyperlink{group__status_gad755322e7ff95456520e8abdbe90d225}{hsa\+\_\+status\+\_\+t}} \mbox{\hyperlink{classrocr_1_1core_1_1Runtime_a14f3577d8f7def9b25957f8fb27d0c59}{Svm\+Prefetch}} (void $\ast$ptr, size\+\_\+t size, \mbox{\hyperlink{group__agentinfo_ga9ce217ef08e7d5e89c8e83ce7b6ef22b}{hsa\+\_\+agent\+\_\+t}} agent, uint32\+\_\+t num\+\_\+dep\+\_\+signals, const \mbox{\hyperlink{group__signals_ga0003af605a660e7ef4f89aa555d3b3fc}{hsa\+\_\+signal\+\_\+t}} $\ast$dep\+\_\+signals, \mbox{\hyperlink{group__signals_ga0003af605a660e7ef4f89aa555d3b3fc}{hsa\+\_\+signal\+\_\+t}} completion\+\_\+signal)
+\item 
+\mbox{\hyperlink{group__status_gad755322e7ff95456520e8abdbe90d225}{hsa\+\_\+status\+\_\+t}} \mbox{\hyperlink{classrocr_1_1core_1_1Runtime_a98df11bbb93549b30ba7f80f6601ccdd}{Dma\+Buf\+Export}} (const void $\ast$ptr, size\+\_\+t size, int $\ast$dmabuf, uint64\+\_\+t $\ast$offset)
+\item 
+\mbox{\hyperlink{group__status_gad755322e7ff95456520e8abdbe90d225}{hsa\+\_\+status\+\_\+t}} \mbox{\hyperlink{classrocr_1_1core_1_1Runtime_a7760c5be51e9c1bf962bc72b20d6afa9}{Dma\+Buf\+Close}} (int dmabuf)
+\item 
+const std\+::vector$<$ \mbox{\hyperlink{classrocr_1_1core_1_1Agent}{Agent}} $\ast$ $>$ \& \mbox{\hyperlink{classrocr_1_1core_1_1Runtime_a385aa68342aab325340f844083a9f5a4}{cpu\+\_\+agents}} ()
+\item 
+const std\+::vector$<$ \mbox{\hyperlink{classrocr_1_1core_1_1Agent}{Agent}} $\ast$ $>$ \& \mbox{\hyperlink{classrocr_1_1core_1_1Runtime_a08a8ce19da9852184f8793d095621323}{gpu\+\_\+agents}} ()
+\item 
+const std\+::vector$<$ \mbox{\hyperlink{classrocr_1_1core_1_1Agent}{Agent}} $\ast$ $>$ \& \mbox{\hyperlink{classrocr_1_1core_1_1Runtime_a1ba8931b95b748cb00fc4c59c3edaa5f}{disabled\+\_\+gpu\+\_\+agents}} ()
+\item 
+const std\+::vector$<$ uint32\+\_\+t $>$ \& \mbox{\hyperlink{classrocr_1_1core_1_1Runtime_a42f1108c0cc159c26f4957408e9ceb84}{gpu\+\_\+ids}} ()
+\item 
+\mbox{\hyperlink{classrocr_1_1core_1_1Agent}{Agent}} $\ast$ \mbox{\hyperlink{classrocr_1_1core_1_1Runtime_a11d4f306bbe34c397ce61881dbf3e698}{agent\+\_\+by\+\_\+gpuid}} (uint32\+\_\+t gpuid)
+\item 
+\mbox{\hyperlink{classrocr_1_1core_1_1Agent}{Agent}} $\ast$ \mbox{\hyperlink{classrocr_1_1core_1_1Runtime_a9861d69e83b54e7dde481896c1346c32}{region\+\_\+gpu}} ()
+\item 
+const std\+::vector$<$ const \mbox{\hyperlink{classrocr_1_1core_1_1MemoryRegion}{Memory\+Region}} $\ast$ $>$ \& \mbox{\hyperlink{classrocr_1_1core_1_1Runtime_a09d82f24112bc499d8f1892756873a98}{system\+\_\+regions\+\_\+fine}} () const
+\item 
+const std\+::vector$<$ const \mbox{\hyperlink{classrocr_1_1core_1_1MemoryRegion}{Memory\+Region}} $\ast$ $>$ \& \mbox{\hyperlink{classrocr_1_1core_1_1Runtime_a5b77221ba61ccde51847b180147b0398}{system\+\_\+regions\+\_\+coarse}} () const
+\item 
+\mbox{\hyperlink{classrocr_1_1amd_1_1hsa_1_1loader_1_1Loader}{amd\+::hsa\+::loader\+::\+Loader}} $\ast$ \mbox{\hyperlink{classrocr_1_1core_1_1Runtime_aafc145fe4ee17d7753a2080cb2832d33}{loader}} ()
+\item 
+\mbox{\hyperlink{classrocr_1_1amd_1_1LoaderContext}{amd\+::\+Loader\+Context}} $\ast$ \mbox{\hyperlink{classrocr_1_1core_1_1Runtime_ac09e3dab01108b252b023ffd8ac22417}{loader\+\_\+context}} ()
+\item 
+\mbox{\hyperlink{classrocr_1_1amd_1_1hsa_1_1code_1_1AmdHsaCodeManager}{amd\+::hsa\+::code\+::\+Amd\+Hsa\+Code\+Manager}} $\ast$ \mbox{\hyperlink{classrocr_1_1core_1_1Runtime_acf05cd97dec3f32c5b1d4f94f53b28cd}{code\+\_\+manager}} ()
+\item 
+std\+::function$<$ void $\ast$(size\+\_\+t size, size\+\_\+t align, \mbox{\hyperlink{classrocr_1_1core_1_1MemoryRegion_ac293b6bdc18d9f5d5f6ac3a12021cf0f}{Memory\+Region\+::\+Allocate\+Flags}} flags)$>$ \& \mbox{\hyperlink{classrocr_1_1core_1_1Runtime_a1c96769391ff8f4a17cb8256f577f9e4}{system\+\_\+allocator}} ()
+\item 
+std\+::function$<$ void(void $\ast$)$>$ \& \mbox{\hyperlink{classrocr_1_1core_1_1Runtime_a6d535ddecc6173ed728baec9302e3084}{system\+\_\+deallocator}} ()
+\item 
+const \mbox{\hyperlink{classrocr_1_1Flag}{Flag}} \& \mbox{\hyperlink{classrocr_1_1core_1_1Runtime_a1d6edf2532fcdd96796a5e3355fe84e4}{flag}} () const
+\item 
+\mbox{\hyperlink{group__status_gad755322e7ff95456520e8abdbe90d225}{hsa\+\_\+status\+\_\+t}} \mbox{\hyperlink{classrocr_1_1core_1_1Runtime_aa069f49da7adfdc51d99f98820fc0d82}{Set\+Custom\+System\+Event\+Handler}} (\mbox{\hyperlink{inc_2hsa__ext__amd_8h_aeab5d0a9fd6807ecebf0b62e58c42e2e}{hsa\+\_\+amd\+\_\+system\+\_\+event\+\_\+callback\+\_\+t}} callback, void $\ast$data)
+\item 
+\mbox{\hyperlink{group__status_gad755322e7ff95456520e8abdbe90d225}{hsa\+\_\+status\+\_\+t}} \mbox{\hyperlink{classrocr_1_1core_1_1Runtime_a67d710ed2bf1d52942e8dd0a0a9395a1}{Set\+Internal\+Queue\+Create\+Notifier}} (\mbox{\hyperlink{inc_2hsa__api__trace_8h_aaeabee3afcec44007529028ae7b1e40b}{hsa\+\_\+amd\+\_\+runtime\+\_\+queue\+\_\+notifier}} callback, void $\ast$user\+\_\+data)
+\item 
+void \mbox{\hyperlink{classrocr_1_1core_1_1Runtime_a6689dc95a475756f9189aba0ca65f128}{Internal\+Queue\+Create\+Notify}} (const \mbox{\hyperlink{group__queue_ga9e74fdf8d39c8bc42508c534316185f8}{hsa\+\_\+queue\+\_\+t}} $\ast$queue, \mbox{\hyperlink{group__agentinfo_ga9ce217ef08e7d5e89c8e83ce7b6ef22b}{hsa\+\_\+agent\+\_\+t}} agent)
+\item 
+\mbox{\hyperlink{classrocr_1_1core_1_1SharedSignalPool__t}{Shared\+Signal\+Pool\+\_\+t}} $\ast$ \mbox{\hyperlink{classrocr_1_1core_1_1Runtime_ad8cc0c943f3757fa2a23690b95881d1f}{Get\+Shared\+Signal\+Pool}} ()
+\item 
+\mbox{\hyperlink{classrocr_1_1core_1_1InterruptSignal_1_1EventPool}{Interrupt\+Signal\+::\+Event\+Pool}} $\ast$ \mbox{\hyperlink{classrocr_1_1core_1_1Runtime_a2dec28fc72832fbcf9602b60e991a871}{Get\+Event\+Pool}} ()
+\item 
+uint64\+\_\+t \mbox{\hyperlink{classrocr_1_1core_1_1Runtime_a71a1c042032477399d8ada0a19f15176}{sys\+\_\+clock\+\_\+freq}} () const
+\item 
+void \mbox{\hyperlink{classrocr_1_1core_1_1Runtime_ab8d26fe85017ab34c10fb713600d180a}{Kfd\+Version}} (const Hsa\+Version\+Info \&version)
+\item 
+void \mbox{\hyperlink{classrocr_1_1core_1_1Runtime_a34bf434d1c3afc834811689f7c3a721c}{Kfd\+Version}} (bool exception\+\_\+debugging)
+\item 
+\mbox{\hyperlink{structrocr_1_1core_1_1Runtime_1_1KfdVersion__t}{Kfd\+Version\+\_\+t}} \mbox{\hyperlink{classrocr_1_1core_1_1Runtime_a891b0058ca4b6122b352f88241f290af}{Kfd\+Version}} () const
+\end{DoxyCompactItemize}
+\doxysubsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static \mbox{\hyperlink{group__status_gad755322e7ff95456520e8abdbe90d225}{hsa\+\_\+status\+\_\+t}} \mbox{\hyperlink{classrocr_1_1core_1_1Runtime_a3e2e9ca714df8c5893c34e6d8d77ddfc}{Acquire}} ()
+\begin{DoxyCompactList}\small\item\em Open connection to kernel driver and increment reference count. \end{DoxyCompactList}\item 
+static \mbox{\hyperlink{group__status_gad755322e7ff95456520e8abdbe90d225}{hsa\+\_\+status\+\_\+t}} \mbox{\hyperlink{classrocr_1_1core_1_1Runtime_ad53500b4c944225cf4582e0174674a21}{Release}} ()
+\begin{DoxyCompactList}\small\item\em Decrement reference count and close connection to kernel driver. \end{DoxyCompactList}\item 
+static bool \mbox{\hyperlink{classrocr_1_1core_1_1Runtime_aac23617d42624fb89a3fe1c86b302b42}{Is\+Open}} ()
+\begin{DoxyCompactList}\small\item\em Checks if connection to kernel driver is opened. \end{DoxyCompactList}\item 
+static bool \mbox{\hyperlink{classrocr_1_1core_1_1Runtime_a730a8a761d39254ae2fc3dcbc8580d88}{VMFault\+Handler}} (\mbox{\hyperlink{group__signals_ga67ca2818879c9990e1b5f1b14ce7ed27}{hsa\+\_\+signal\+\_\+value\+\_\+t}} val, void $\ast$arg)
+\item 
+static void \mbox{\hyperlink{classrocr_1_1core_1_1Runtime_a165a68b64f2db4458796c4edbdce4d11}{Print\+Memory\+Map\+Near}} (void $\ast$ptr)
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classrocr_1_1core_1_1ExtensionEntryPoints}{Extension\+Entry\+Points}} \mbox{\hyperlink{classrocr_1_1core_1_1Runtime_a94faa2d6c24497a85da0dd64d5c7898b}{extensions\+\_\+}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Static Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+static \mbox{\hyperlink{classrocr_1_1core_1_1Runtime}{Runtime}} $\ast$ \mbox{\hyperlink{classrocr_1_1core_1_1Runtime_abbaea995b8930cff6a0157901abcacd7}{runtime\+\_\+singleton\+\_\+}} = \mbox{\hyperlink{addrtypes_8h_a070d2ce7b6bb7e5c05602aa8c308d0c4}{NULL}}
+\begin{DoxyCompactList}\small\item\em Singleton object of the runtime. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Protected Types}
+\begin{DoxyCompactItemize}
+\item 
+typedef std\+::map$<$ uintptr\+\_\+t, \mbox{\hyperlink{structrocr_1_1core_1_1Runtime_1_1PrefetchRange}{Prefetch\+Range}} $>$ \mbox{\hyperlink{classrocr_1_1core_1_1Runtime_a7862fa4b6b2d6a47adad8e4ba59b02b7}{prefetch\+\_\+map\+\_\+t}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classrocr_1_1core_1_1Runtime_ab2488557bc99e7257639363358c17b57}{Runtime}} ()
+\item 
+\mbox{\hyperlink{classrocr_1_1core_1_1Runtime_a87cb4e739d3fd1f4ada872def3c97d48}{Runtime}} (const \mbox{\hyperlink{classrocr_1_1core_1_1Runtime}{Runtime}} \&)
+\item 
+\mbox{\hyperlink{classrocr_1_1core_1_1Runtime}{Runtime}} \& \mbox{\hyperlink{classrocr_1_1core_1_1Runtime_aa1c321b135dda7043764c234338108f3}{operator=}} (const \mbox{\hyperlink{classrocr_1_1core_1_1Runtime}{Runtime}} \&)
+\item 
+\mbox{\hyperlink{classrocr_1_1core_1_1Runtime_a31419c7711467aa021321589b5338175}{$\sim$\+Runtime}} ()
+\item 
+\mbox{\hyperlink{group__status_gad755322e7ff95456520e8abdbe90d225}{hsa\+\_\+status\+\_\+t}} \mbox{\hyperlink{classrocr_1_1core_1_1Runtime_a7ccaede760c2726a3195adff56043ead}{Load}} ()
+\begin{DoxyCompactList}\small\item\em Open connection to kernel driver. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classrocr_1_1core_1_1Runtime_a2b01b40b9c077b5b8bdaa05ca3a3f66f}{Unload}} ()
+\begin{DoxyCompactList}\small\item\em Close connection to kernel driver and cleanup resources. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classrocr_1_1core_1_1Runtime_a007051fc164da6d2adc572cdccd5ce9d}{Load\+Extensions}} ()
+\begin{DoxyCompactList}\small\item\em Dynamically load extension libraries (images, finalizer) and call On\+Load method on each loaded library. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classrocr_1_1core_1_1Runtime_a0435900c4d6662b7e5b1d284d7b4e154}{Unload\+Extensions}} ()
+\begin{DoxyCompactList}\small\item\em Call On\+Unload method on each extension library then close it. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classrocr_1_1core_1_1Runtime_a3bc39e7b4cc78d278cfcd1945a68f0d4}{Load\+Tools}} ()
+\begin{DoxyCompactList}\small\item\em Dynamically load tool libraries and call On\+Unload method on each loaded library. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classrocr_1_1core_1_1Runtime_a0b5be796af0c1a5e35cfd1a5f00196fa}{Unload\+Tools}} ()
+\begin{DoxyCompactList}\small\item\em Call On\+Unload method of each tool library. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classrocr_1_1core_1_1Runtime_a2f8463033c18fbe4182a1f5e4735f751}{Close\+Tools}} ()
+\begin{DoxyCompactList}\small\item\em Close tool libraries. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classrocr_1_1core_1_1Runtime_aedc803dc49b8a5833cd144b8de5908f2}{Bind\+Vm\+Fault\+Handler}} ()
+\item 
+std\+::vector$<$ std\+::pair$<$ \mbox{\hyperlink{classrocr_1_1AMD_1_1callback__t}{AMD\+::callback\+\_\+t}}$<$ \mbox{\hyperlink{inc_2hsa__ext__amd_8h_aeab5d0a9fd6807ecebf0b62e58c42e2e}{hsa\+\_\+amd\+\_\+system\+\_\+event\+\_\+callback\+\_\+t}} $>$, void $\ast$ $>$ $>$ \mbox{\hyperlink{classrocr_1_1core_1_1Runtime_a354cc2e663e1f08e0cbe9cb778522963}{Get\+System\+Event\+Handlers}} ()
+\item 
+uint32\+\_\+t \mbox{\hyperlink{classrocr_1_1core_1_1Runtime_a40269b7edf9b5ec072204c255ddaec5a}{Get\+Index\+Link\+Info}} (uint32\+\_\+t node\+\_\+id\+\_\+from, uint32\+\_\+t node\+\_\+id\+\_\+to)
+\begin{DoxyCompactList}\small\item\em Get the index of \+::link\+\_\+matrix\+\_\+. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classrocr_1_1core_1_1Agent}{Agent}} $\ast$ \mbox{\hyperlink{classrocr_1_1core_1_1Runtime_a15e593695f7e627b4e122bf4483169e2}{Get\+SVMPrefetch\+Agent}} (void $\ast$ptr, size\+\_\+t size)
+\begin{DoxyCompactList}\small\item\em Get most recently issued SVM prefetch agent for the range in question. \end{DoxyCompactList}\item 
+uint32\+\_\+t \mbox{\hyperlink{classrocr_1_1core_1_1Runtime_a321887767e5d797ec3a7fc97399f4ee6}{max\+\_\+node\+\_\+id}} () const
+\begin{DoxyCompactList}\small\item\em Get the highest used node id. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Static Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static void \mbox{\hyperlink{classrocr_1_1core_1_1Runtime_a34092f52e8033c22fce93de9278810e2}{Async\+Events\+Loop}} (void $\ast$)
+\end{DoxyCompactItemize}
+\doxysubsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classrocr_1_1KernelSharedMutex}{Kernel\+Shared\+Mutex}} \mbox{\hyperlink{classrocr_1_1core_1_1Runtime_a6d7a6c6193599f9b987b0905a68c51d5}{memory\+\_\+lock\+\_\+}}
+\item 
+std\+::vector$<$ \mbox{\hyperlink{namespacerocr_1_1os_a3be69e560dfb1309df3f4b0d1037bc2d}{os\+::\+Lib\+Handle}} $>$ \mbox{\hyperlink{classrocr_1_1core_1_1Runtime_a6c6cd3a95164b027fa114f317beb8460}{tool\+\_\+libs\+\_\+}}
+\item 
+std\+::vector$<$ \mbox{\hyperlink{classrocr_1_1core_1_1Agent}{Agent}} $\ast$ $>$ \mbox{\hyperlink{classrocr_1_1core_1_1Runtime_a401363dcd2992c6213685eb42175c9d2}{cpu\+\_\+agents\+\_\+}}
+\item 
+std\+::vector$<$ \mbox{\hyperlink{classrocr_1_1core_1_1Agent}{Agent}} $\ast$ $>$ \mbox{\hyperlink{classrocr_1_1core_1_1Runtime_a84d4b2cff3e9f9170aade246bec2932f}{gpu\+\_\+agents\+\_\+}}
+\item 
+std\+::vector$<$ \mbox{\hyperlink{classrocr_1_1core_1_1Agent}{Agent}} $\ast$ $>$ \mbox{\hyperlink{classrocr_1_1core_1_1Runtime_ac4dfb3ae7cb1443d56e3fd27a89878d9}{disabled\+\_\+gpu\+\_\+agents\+\_\+}}
+\item 
+std\+::map$<$ uint32\+\_\+t, std\+::vector$<$ \mbox{\hyperlink{classrocr_1_1core_1_1Agent}{Agent}} $\ast$ $>$ $>$ \mbox{\hyperlink{classrocr_1_1core_1_1Runtime_afaec0558ab737ade5f91de18db7d3cbd}{agents\+\_\+by\+\_\+node\+\_\+}}
+\item 
+std\+::map$<$ uint32\+\_\+t, \mbox{\hyperlink{classrocr_1_1core_1_1Agent}{Agent}} $\ast$ $>$ \mbox{\hyperlink{classrocr_1_1core_1_1Runtime_af724cdc14b5e9383b2fc18ae319f1615}{agents\+\_\+by\+\_\+gpuid\+\_\+}}
+\item 
+std\+::vector$<$ uint32\+\_\+t $>$ \mbox{\hyperlink{classrocr_1_1core_1_1Runtime_a907425f80e2adeda63b85111d261b325}{gpu\+\_\+ids\+\_\+}}
+\item 
+std\+::vector$<$ const \mbox{\hyperlink{classrocr_1_1core_1_1MemoryRegion}{Memory\+Region}} $\ast$ $>$ \mbox{\hyperlink{classrocr_1_1core_1_1Runtime_a34ac080483a81fdaa3c525e000a6adad}{system\+\_\+regions\+\_\+fine\+\_\+}}
+\item 
+std\+::vector$<$ const \mbox{\hyperlink{classrocr_1_1core_1_1MemoryRegion}{Memory\+Region}} $\ast$ $>$ \mbox{\hyperlink{classrocr_1_1core_1_1Runtime_a187f6811dfdfb42bed99ce32737fb781}{system\+\_\+regions\+\_\+coarse\+\_\+}}
+\item 
+std\+::vector$<$ \mbox{\hyperlink{structrocr_1_1core_1_1Runtime_1_1LinkInfo}{Link\+Info}} $>$ \mbox{\hyperlink{classrocr_1_1core_1_1Runtime_a7956390ee6ee504af1f5f54757cb8b1a}{link\+\_\+matrix\+\_\+}}
+\item 
+\mbox{\hyperlink{classrocr_1_1amd_1_1hsa_1_1loader_1_1Loader}{amd\+::hsa\+::loader\+::\+Loader}} $\ast$ \mbox{\hyperlink{classrocr_1_1core_1_1Runtime_abbe1099428ba518b7d66bc0f718c0d3b}{loader\+\_\+}}
+\item 
+\mbox{\hyperlink{classrocr_1_1amd_1_1LoaderContext}{amd\+::\+Loader\+Context}} \mbox{\hyperlink{classrocr_1_1core_1_1Runtime_abc68cfa886f53d078edfc06427e71524}{loader\+\_\+context\+\_\+}}
+\item 
+\mbox{\hyperlink{classrocr_1_1amd_1_1hsa_1_1code_1_1AmdHsaCodeManager}{amd\+::hsa\+::code\+::\+Amd\+Hsa\+Code\+Manager}} \mbox{\hyperlink{classrocr_1_1core_1_1Runtime_a46fcb70ffb7e893198ce0c8de7a732a8}{code\+\_\+manager\+\_\+}}
+\item 
+std\+::map$<$ const void $\ast$, \mbox{\hyperlink{structrocr_1_1core_1_1Runtime_1_1AllocationRegion}{Allocation\+Region}} $>$ \mbox{\hyperlink{classrocr_1_1core_1_1Runtime_a56fcf1d0d83cf19b988824ed69b82b18}{allocation\+\_\+map\+\_\+}}
+\item 
+\mbox{\hyperlink{classrocr_1_1KernelMutex}{Kernel\+Mutex}} \mbox{\hyperlink{classrocr_1_1core_1_1Runtime_af90fe92efb5437378d1d4b3a74f5f1c5}{prefetch\+\_\+lock\+\_\+}}
+\item 
+\mbox{\hyperlink{classrocr_1_1core_1_1Runtime_a7862fa4b6b2d6a47adad8e4ba59b02b7}{prefetch\+\_\+map\+\_\+t}} \mbox{\hyperlink{classrocr_1_1core_1_1Runtime_a7c142af4abb9f82663e3b5d72537d8f5}{prefetch\+\_\+map\+\_\+}}
+\item 
+std\+::function$<$ void $\ast$(size\+\_\+t size, size\+\_\+t align, \mbox{\hyperlink{classrocr_1_1core_1_1MemoryRegion_ac293b6bdc18d9f5d5f6ac3a12021cf0f}{Memory\+Region\+::\+Allocate\+Flags}} flags)$>$ \mbox{\hyperlink{classrocr_1_1core_1_1Runtime_a07b3b5413ad49a4d54b0e3b3c54701d5}{system\+\_\+allocator\+\_\+}}
+\item 
+std\+::function$<$ void(void $\ast$)$>$ \mbox{\hyperlink{classrocr_1_1core_1_1Runtime_a31ca3f55a4c663d55c56729e68a4f311}{system\+\_\+deallocator\+\_\+}}
+\item 
+\mbox{\hyperlink{classrocr_1_1core_1_1Agent}{Agent}} $\ast$ \mbox{\hyperlink{classrocr_1_1core_1_1Runtime_af8bc4b87201fe92de7a634da74d1d998}{region\+\_\+gpu\+\_\+}}
+\item 
+\mbox{\hyperlink{structrocr_1_1core_1_1Runtime_1_1AsyncEventsControl}{Async\+Events\+Control}} \mbox{\hyperlink{classrocr_1_1core_1_1Runtime_a9ab5b00bbd8391db6c991b8f90f99c2b}{async\+\_\+events\+\_\+control\+\_\+}}
+\item 
+\mbox{\hyperlink{structrocr_1_1core_1_1Runtime_1_1AsyncEvents}{Async\+Events}} \mbox{\hyperlink{classrocr_1_1core_1_1Runtime_aa27bcb5dc8366a1271d581c505cdd41c}{async\+\_\+events\+\_\+}}
+\item 
+\mbox{\hyperlink{structrocr_1_1core_1_1Runtime_1_1AsyncEvents}{Async\+Events}} \mbox{\hyperlink{classrocr_1_1core_1_1Runtime_a3c9b63236a5ff28c9a3c3f32bf35098a}{new\+\_\+async\+\_\+events\+\_\+}}
+\item 
+uint64\+\_\+t \mbox{\hyperlink{classrocr_1_1core_1_1Runtime_a897c7ef7110ac5dd0713647d38034fcc}{sys\+\_\+clock\+\_\+freq\+\_\+}}
+\item 
+size\+\_\+t \mbox{\hyperlink{classrocr_1_1core_1_1Runtime_a7faa3d861a955ea0e62ab741d4903dbf}{num\+\_\+nodes\+\_\+}}
+\item 
+Hsa\+Event $\ast$ \mbox{\hyperlink{classrocr_1_1core_1_1Runtime_adec7cc7eee6e59ad371829969d274f9a}{vm\+\_\+fault\+\_\+event\+\_\+}}
+\item 
+\mbox{\hyperlink{classrocr_1_1core_1_1Signal}{Signal}} $\ast$ \mbox{\hyperlink{classrocr_1_1core_1_1Runtime_a04e655381f57ffaf0fce0753e9b5b192}{vm\+\_\+fault\+\_\+signal\+\_\+}}
+\item 
+std\+::vector$<$ std\+::pair$<$ \mbox{\hyperlink{classrocr_1_1AMD_1_1callback__t}{AMD\+::callback\+\_\+t}}$<$ \mbox{\hyperlink{inc_2hsa__ext__amd_8h_aeab5d0a9fd6807ecebf0b62e58c42e2e}{hsa\+\_\+amd\+\_\+system\+\_\+event\+\_\+callback\+\_\+t}} $>$, void $\ast$ $>$ $>$ \mbox{\hyperlink{classrocr_1_1core_1_1Runtime_a6d47b70cb48d9a9841017c0423069e1d}{system\+\_\+event\+\_\+handlers\+\_\+}}
+\item 
+\mbox{\hyperlink{classrocr_1_1KernelMutex}{Kernel\+Mutex}} \mbox{\hyperlink{classrocr_1_1core_1_1Runtime_aac7137f39bc5371675d154e63e6b6777}{system\+\_\+event\+\_\+lock\+\_\+}}
+\item 
+\mbox{\hyperlink{classrocr_1_1AMD_1_1callback__t}{AMD\+::callback\+\_\+t}}$<$ \mbox{\hyperlink{inc_2hsa__api__trace_8h_aaeabee3afcec44007529028ae7b1e40b}{hsa\+\_\+amd\+\_\+runtime\+\_\+queue\+\_\+notifier}} $>$ \mbox{\hyperlink{classrocr_1_1core_1_1Runtime_abe6369d5840cdec549bf88ecbf6adb4f}{internal\+\_\+queue\+\_\+create\+\_\+notifier\+\_\+}}
+\item 
+void $\ast$ \mbox{\hyperlink{classrocr_1_1core_1_1Runtime_af1be01d7c3cba4ba5680409741d94a63}{internal\+\_\+queue\+\_\+create\+\_\+notifier\+\_\+user\+\_\+data\+\_\+}}
+\item 
+std\+::atomic$<$ uint32\+\_\+t $>$ \mbox{\hyperlink{classrocr_1_1core_1_1Runtime_a76e7444430cbe08876c48486bafe23b5}{ref\+\_\+count\+\_\+}}
+\item 
+\mbox{\hyperlink{classrocr_1_1Flag}{Flag}} \mbox{\hyperlink{classrocr_1_1core_1_1Runtime_a9b70366309d50e36a0ed66d8e0875769}{flag\+\_\+}}
+\item 
+\mbox{\hyperlink{classrocr_1_1core_1_1SharedSignalPool__t}{Shared\+Signal\+Pool\+\_\+t}} \mbox{\hyperlink{classrocr_1_1core_1_1Runtime_a43d08c6368b08f52276dce5b5441918c}{Shared\+Signal\+Pool}}
+\item 
+\mbox{\hyperlink{classrocr_1_1core_1_1InterruptSignal_1_1EventPool}{Interrupt\+Signal\+::\+Event\+Pool}} \mbox{\hyperlink{classrocr_1_1core_1_1Runtime_a1f6ff78ded2b1f290ea61e5d97d303d5}{Event\+Pool}}
+\item 
+\mbox{\hyperlink{structrocr_1_1core_1_1Runtime_1_1KfdVersion__t}{Kfd\+Version\+\_\+t}} \mbox{\hyperlink{classrocr_1_1core_1_1Runtime_a1561aced60492db7bdcfb8ee0e84eb40}{kfd\+\_\+version}}
+\item 
+std\+::unique\+\_\+ptr$<$ \mbox{\hyperlink{classrocr_1_1AMD_1_1SvmProfileControl}{AMD\+::\+Svm\+Profile\+Control}} $>$ \mbox{\hyperlink{classrocr_1_1core_1_1Runtime_ac3f2782dd3fb95708fdd5b0fef596e43}{svm\+\_\+profile\+\_\+}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Static Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+static \mbox{\hyperlink{classrocr_1_1KernelMutex}{Kernel\+Mutex}} \mbox{\hyperlink{classrocr_1_1core_1_1Runtime_aac273625e801db207f417e045952da01}{bootstrap\+\_\+lock\+\_\+}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Friends}
+\begin{DoxyCompactItemize}
+\item 
+class \mbox{\hyperlink{classrocr_1_1core_1_1Runtime_a56ad2a6f93cbd06e231578943678ada2}{AMD\+::\+Memory\+Region}}
+\item 
+class \mbox{\hyperlink{classrocr_1_1core_1_1Runtime_a64be3e12eef3fe51ef8a561df7f29d73}{Runtime\+Cleanup}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+\mbox{\hyperlink{classrocr_1_1core_1_1Runtime}{Runtime}} class provides the following functions\+: 
+
+
+\begin{DoxyItemize}
+\item open and close connection to kernel driver.
+\item load supported extension library (image and finalizer).
+\item load tools library.
+\item expose supported agents.
+\item allocate and free memory.
+\item memory copy and fill.
+\item grant access to memory (dgpu memory pool extension).
+\item maintain loader state.
+\item monitor asynchronous event from agent. 
+\end{DoxyItemize}
+
+\doxysubsection{Member Typedef Documentation}
+\mbox{\Hypertarget{classrocr_1_1core_1_1Runtime_a7862fa4b6b2d6a47adad8e4ba59b02b7}\label{classrocr_1_1core_1_1Runtime_a7862fa4b6b2d6a47adad8e4ba59b02b7}} 
+\index{rocr::core::Runtime@{rocr::core::Runtime}!prefetch\_map\_t@{prefetch\_map\_t}}
+\index{prefetch\_map\_t@{prefetch\_map\_t}!rocr::core::Runtime@{rocr::core::Runtime}}
+\doxysubsubsection{\texorpdfstring{prefetch\_map\_t}{prefetch\_map\_t}}
+{\footnotesize\ttfamily typedef std\+::map$<$uintptr\+\_\+t, \mbox{\hyperlink{structrocr_1_1core_1_1Runtime_1_1PrefetchRange}{Prefetch\+Range}}$>$ \mbox{\hyperlink{classrocr_1_1core_1_1Runtime_a7862fa4b6b2d6a47adad8e4ba59b02b7}{rocr\+::core\+::\+Runtime\+::prefetch\+\_\+map\+\_\+t}}\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classrocr_1_1core_1_1Runtime_ab2488557bc99e7257639363358c17b57}\label{classrocr_1_1core_1_1Runtime_ab2488557bc99e7257639363358c17b57}} 
+\index{rocr::core::Runtime@{rocr::core::Runtime}!Runtime@{Runtime}}
+\index{Runtime@{Runtime}!rocr::core::Runtime@{rocr::core::Runtime}}
+\doxysubsubsection{\texorpdfstring{Runtime()}{Runtime()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily rocr\+::core\+::\+Runtime\+::\+Runtime (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classrocr_1_1core_1_1Runtime_ab2488557bc99e7257639363358c17b57_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classrocr_1_1core_1_1Runtime_a87cb4e739d3fd1f4ada872def3c97d48}\label{classrocr_1_1core_1_1Runtime_a87cb4e739d3fd1f4ada872def3c97d48}} 
+\index{rocr::core::Runtime@{rocr::core::Runtime}!Runtime@{Runtime}}
+\index{Runtime@{Runtime}!rocr::core::Runtime@{rocr::core::Runtime}}
+\doxysubsubsection{\texorpdfstring{Runtime()}{Runtime()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily rocr\+::core\+::\+Runtime\+::\+Runtime (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classrocr_1_1core_1_1Runtime}{Runtime}} \&}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+\mbox{\Hypertarget{classrocr_1_1core_1_1Runtime_a31419c7711467aa021321589b5338175}\label{classrocr_1_1core_1_1Runtime_a31419c7711467aa021321589b5338175}} 
+\index{rocr::core::Runtime@{rocr::core::Runtime}!````~Runtime@{$\sim$Runtime}}
+\index{````~Runtime@{$\sim$Runtime}!rocr::core::Runtime@{rocr::core::Runtime}}
+\doxysubsubsection{\texorpdfstring{$\sim$Runtime()}{~Runtime()}}
+{\footnotesize\ttfamily rocr\+::core\+::\+Runtime\+::$\sim$\+Runtime (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [protected]}}
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classrocr_1_1core_1_1Runtime_a3e2e9ca714df8c5893c34e6d8d77ddfc}\label{classrocr_1_1core_1_1Runtime_a3e2e9ca714df8c5893c34e6d8d77ddfc}} 
+\index{rocr::core::Runtime@{rocr::core::Runtime}!Acquire@{Acquire}}
+\index{Acquire@{Acquire}!rocr::core::Runtime@{rocr::core::Runtime}}
+\doxysubsubsection{\texorpdfstring{Acquire()}{Acquire()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{group__status_gad755322e7ff95456520e8abdbe90d225}{hsa\+\_\+status\+\_\+t}} rocr\+::core\+::\+Runtime\+::\+Acquire (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Open connection to kernel driver and increment reference count. 
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=550pt]{classrocr_1_1core_1_1Runtime_a3e2e9ca714df8c5893c34e6d8d77ddfc_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classrocr_1_1core_1_1Runtime_a3e2e9ca714df8c5893c34e6d8d77ddfc_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classrocr_1_1core_1_1Runtime_a11d4f306bbe34c397ce61881dbf3e698}\label{classrocr_1_1core_1_1Runtime_a11d4f306bbe34c397ce61881dbf3e698}} 
+\index{rocr::core::Runtime@{rocr::core::Runtime}!agent\_by\_gpuid@{agent\_by\_gpuid}}
+\index{agent\_by\_gpuid@{agent\_by\_gpuid}!rocr::core::Runtime@{rocr::core::Runtime}}
+\doxysubsubsection{\texorpdfstring{agent\_by\_gpuid()}{agent\_by\_gpuid()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classrocr_1_1core_1_1Agent}{Agent}}$\ast$ rocr\+::core\+::\+Runtime\+::agent\+\_\+by\+\_\+gpuid (\begin{DoxyParamCaption}\item[{uint32\+\_\+t}]{gpuid }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classrocr_1_1core_1_1Runtime_a11d4f306bbe34c397ce61881dbf3e698_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classrocr_1_1core_1_1Runtime_a50af177d63357a9ea4643f5aa171a12c}\label{classrocr_1_1core_1_1Runtime_a50af177d63357a9ea4643f5aa171a12c}} 
+\index{rocr::core::Runtime@{rocr::core::Runtime}!AllocateMemory@{AllocateMemory}}
+\index{AllocateMemory@{AllocateMemory}!rocr::core::Runtime@{rocr::core::Runtime}}
+\doxysubsubsection{\texorpdfstring{AllocateMemory()}{AllocateMemory()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{group__status_gad755322e7ff95456520e8abdbe90d225}{hsa\+\_\+status\+\_\+t}} rocr\+::core\+::\+Runtime\+::\+Allocate\+Memory (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classrocr_1_1core_1_1MemoryRegion}{Memory\+Region}} $\ast$}]{region,  }\item[{size\+\_\+t}]{size,  }\item[{\mbox{\hyperlink{classrocr_1_1core_1_1MemoryRegion_ac293b6bdc18d9f5d5f6ac3a12021cf0f}{Memory\+Region\+::\+Allocate\+Flags}}}]{alloc\+\_\+flags,  }\item[{void $\ast$$\ast$}]{address }\end{DoxyParamCaption})}
+
+
+
+Allocate memory on a particular region. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em region} & Pointer to region object. \\
+\hline
+\mbox{\texttt{ in}}  & {\em size} & Allocation size in bytes. \\
+\hline
+\mbox{\texttt{ in}}  & {\em alloc\+\_\+flags} & Modifiers to pass to \mbox{\hyperlink{classrocr_1_1core_1_1MemoryRegion}{Memory\+Region}} allocator. \\
+\hline
+\mbox{\texttt{ out}}  & {\em address} & Pointer to store the allocation result.\\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em \mbox{\hyperlink{group__status_ggad755322e7ff95456520e8abdbe90d225ae382ea0c9c05cce5a60d0317375159cc}{HSA\+\_\+\+STATUS\+\_\+\+SUCCESS}}} & If allocation is successful. \\
+\hline
+\end{DoxyRetVals}
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=347pt]{classrocr_1_1core_1_1Runtime_a50af177d63357a9ea4643f5aa171a12c_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classrocr_1_1core_1_1Runtime_a50af177d63357a9ea4643f5aa171a12c_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classrocr_1_1core_1_1Runtime_a05a4860b83f019c040bc6ec00d70f9ab}\label{classrocr_1_1core_1_1Runtime_a05a4860b83f019c040bc6ec00d70f9ab}} 
+\index{rocr::core::Runtime@{rocr::core::Runtime}!AllowAccess@{AllowAccess}}
+\index{AllowAccess@{AllowAccess}!rocr::core::Runtime@{rocr::core::Runtime}}
+\doxysubsubsection{\texorpdfstring{AllowAccess()}{AllowAccess()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{group__status_gad755322e7ff95456520e8abdbe90d225}{hsa\+\_\+status\+\_\+t}} rocr\+::core\+::\+Runtime\+::\+Allow\+Access (\begin{DoxyParamCaption}\item[{uint32\+\_\+t}]{num\+\_\+agents,  }\item[{const \mbox{\hyperlink{group__agentinfo_ga9ce217ef08e7d5e89c8e83ce7b6ef22b}{hsa\+\_\+agent\+\_\+t}} $\ast$}]{agents,  }\item[{const void $\ast$}]{ptr }\end{DoxyParamCaption})}
+
+
+
+Set agents as the whitelist to access ptr. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em num\+\_\+agents} & The number of agent handles in {\ttfamily agents} array. \\
+\hline
+\mbox{\texttt{ in}}  & {\em agents} & \mbox{\hyperlink{classrocr_1_1core_1_1Agent}{Agent}} handle array. \\
+\hline
+\mbox{\texttt{ in}}  & {\em ptr} & Pointer of memory previously allocated via \mbox{\hyperlink{classrocr_1_1core_1_1Runtime_a50af177d63357a9ea4643f5aa171a12c}{core\+::\+Runtime\+::\+Allocate\+Memory}}.\\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em \mbox{\hyperlink{group__status_ggad755322e7ff95456520e8abdbe90d225ae382ea0c9c05cce5a60d0317375159cc}{HSA\+\_\+\+STATUS\+\_\+\+SUCCESS}}} & The whitelist has been configured successfully and all agents in the {\ttfamily agents} could start accessing {\ttfamily ptr}. \\
+\hline
+\end{DoxyRetVals}
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classrocr_1_1core_1_1Runtime_a05a4860b83f019c040bc6ec00d70f9ab_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classrocr_1_1core_1_1Runtime_a05a4860b83f019c040bc6ec00d70f9ab_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classrocr_1_1core_1_1Runtime_a34092f52e8033c22fce93de9278810e2}\label{classrocr_1_1core_1_1Runtime_a34092f52e8033c22fce93de9278810e2}} 
+\index{rocr::core::Runtime@{rocr::core::Runtime}!AsyncEventsLoop@{AsyncEventsLoop}}
+\index{AsyncEventsLoop@{AsyncEventsLoop}!rocr::core::Runtime@{rocr::core::Runtime}}
+\doxysubsubsection{\texorpdfstring{AsyncEventsLoop()}{AsyncEventsLoop()}}
+{\footnotesize\ttfamily void rocr\+::core\+::\+Runtime\+::\+Async\+Events\+Loop (\begin{DoxyParamCaption}\item[{void $\ast$}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [protected]}}
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classrocr_1_1core_1_1Runtime_a34092f52e8033c22fce93de9278810e2_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classrocr_1_1core_1_1Runtime_a34092f52e8033c22fce93de9278810e2_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classrocr_1_1core_1_1Runtime_aedc803dc49b8a5833cd144b8de5908f2}\label{classrocr_1_1core_1_1Runtime_aedc803dc49b8a5833cd144b8de5908f2}} 
+\index{rocr::core::Runtime@{rocr::core::Runtime}!BindVmFaultHandler@{BindVmFaultHandler}}
+\index{BindVmFaultHandler@{BindVmFaultHandler}!rocr::core::Runtime@{rocr::core::Runtime}}
+\doxysubsubsection{\texorpdfstring{BindVmFaultHandler()}{BindVmFaultHandler()}}
+{\footnotesize\ttfamily void rocr\+::core\+::\+Runtime\+::\+Bind\+Vm\+Fault\+Handler (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classrocr_1_1core_1_1Runtime_aedc803dc49b8a5833cd144b8de5908f2_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classrocr_1_1core_1_1Runtime_aedc803dc49b8a5833cd144b8de5908f2_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classrocr_1_1core_1_1Runtime_a2f8463033c18fbe4182a1f5e4735f751}\label{classrocr_1_1core_1_1Runtime_a2f8463033c18fbe4182a1f5e4735f751}} 
+\index{rocr::core::Runtime@{rocr::core::Runtime}!CloseTools@{CloseTools}}
+\index{CloseTools@{CloseTools}!rocr::core::Runtime@{rocr::core::Runtime}}
+\doxysubsubsection{\texorpdfstring{CloseTools()}{CloseTools()}}
+{\footnotesize\ttfamily void rocr\+::core\+::\+Runtime\+::\+Close\+Tools (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Close tool libraries. 
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=312pt]{classrocr_1_1core_1_1Runtime_a2f8463033c18fbe4182a1f5e4735f751_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classrocr_1_1core_1_1Runtime_a2f8463033c18fbe4182a1f5e4735f751_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classrocr_1_1core_1_1Runtime_acf05cd97dec3f32c5b1d4f94f53b28cd}\label{classrocr_1_1core_1_1Runtime_acf05cd97dec3f32c5b1d4f94f53b28cd}} 
+\index{rocr::core::Runtime@{rocr::core::Runtime}!code\_manager@{code\_manager}}
+\index{code\_manager@{code\_manager}!rocr::core::Runtime@{rocr::core::Runtime}}
+\doxysubsubsection{\texorpdfstring{code\_manager()}{code\_manager()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classrocr_1_1amd_1_1hsa_1_1code_1_1AmdHsaCodeManager}{amd\+::hsa\+::code\+::\+Amd\+Hsa\+Code\+Manager}}$\ast$ rocr\+::core\+::\+Runtime\+::code\+\_\+manager (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{classrocr_1_1core_1_1Runtime_a3edb46f9f3fbba39e63557c546490920}\label{classrocr_1_1core_1_1Runtime_a3edb46f9f3fbba39e63557c546490920}} 
+\index{rocr::core::Runtime@{rocr::core::Runtime}!CopyMemory@{CopyMemory}}
+\index{CopyMemory@{CopyMemory}!rocr::core::Runtime@{rocr::core::Runtime}}
+\doxysubsubsection{\texorpdfstring{CopyMemory()}{CopyMemory()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{group__status_gad755322e7ff95456520e8abdbe90d225}{hsa\+\_\+status\+\_\+t}} rocr\+::core\+::\+Runtime\+::\+Copy\+Memory (\begin{DoxyParamCaption}\item[{void $\ast$}]{dst,  }\item[{const void $\ast$}]{src,  }\item[{size\+\_\+t}]{size }\end{DoxyParamCaption})}
+
+
+
+Blocking memory copy from src to dst. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em dst} & Memory address of the destination. \\
+\hline
+\mbox{\texttt{ in}}  & {\em src} & Memory address of the source. \\
+\hline
+\mbox{\texttt{ in}}  & {\em size} & Copy size in bytes.\\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em \mbox{\hyperlink{group__status_ggad755322e7ff95456520e8abdbe90d225ae382ea0c9c05cce5a60d0317375159cc}{HSA\+\_\+\+STATUS\+\_\+\+SUCCESS}}} & if memory copy is successful and completed. \\
+\hline
+\end{DoxyRetVals}
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classrocr_1_1core_1_1Runtime_a3edb46f9f3fbba39e63557c546490920_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classrocr_1_1core_1_1Runtime_a3edb46f9f3fbba39e63557c546490920_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classrocr_1_1core_1_1Runtime_a6259d5e8ad10ab8b53ef57d03c076428}\label{classrocr_1_1core_1_1Runtime_a6259d5e8ad10ab8b53ef57d03c076428}} 
+\index{rocr::core::Runtime@{rocr::core::Runtime}!CopyMemory@{CopyMemory}}
+\index{CopyMemory@{CopyMemory}!rocr::core::Runtime@{rocr::core::Runtime}}
+\doxysubsubsection{\texorpdfstring{CopyMemory()}{CopyMemory()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{group__status_gad755322e7ff95456520e8abdbe90d225}{hsa\+\_\+status\+\_\+t}} rocr\+::core\+::\+Runtime\+::\+Copy\+Memory (\begin{DoxyParamCaption}\item[{void $\ast$}]{dst,  }\item[{\mbox{\hyperlink{classrocr_1_1core_1_1Agent}{core\+::\+Agent}} $\ast$}]{dst\+\_\+agent,  }\item[{const void $\ast$}]{src,  }\item[{\mbox{\hyperlink{classrocr_1_1core_1_1Agent}{core\+::\+Agent}} $\ast$}]{src\+\_\+agent,  }\item[{size\+\_\+t}]{size,  }\item[{std\+::vector$<$ \mbox{\hyperlink{classrocr_1_1core_1_1Signal}{core\+::\+Signal}} $\ast$ $>$ \&}]{dep\+\_\+signals,  }\item[{\mbox{\hyperlink{classrocr_1_1core_1_1Signal}{core\+::\+Signal}} \&}]{completion\+\_\+signal }\end{DoxyParamCaption})}
+
+
+
+Non-\/blocking memory copy from src to dst. 
+
+The memory copy will be performed after all signals in {\ttfamily dep\+\_\+signals} have value of 0. On completion {\ttfamily completion\+\_\+signal} will be decremented.
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em dst} & Memory address of the destination. \\
+\hline
+\mbox{\texttt{ in}}  & {\em dst\+\_\+agent} & \mbox{\hyperlink{classrocr_1_1core_1_1Agent}{Agent}} object associated with the destination. This agent should be able to access the destination and source. \\
+\hline
+\mbox{\texttt{ in}}  & {\em src} & Memory address of the source. \\
+\hline
+\mbox{\texttt{ in}}  & {\em src\+\_\+agent} & \mbox{\hyperlink{classrocr_1_1core_1_1Agent}{Agent}} object associated with the source. This agent should be able to access the destination and source. \\
+\hline
+\mbox{\texttt{ in}}  & {\em size} & Copy size in bytes. \\
+\hline
+\mbox{\texttt{ in}}  & {\em dep\+\_\+signals} & Array of signal dependency. \\
+\hline
+\mbox{\texttt{ in}}  & {\em completion\+\_\+signal} & Completion signal object.\\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em \mbox{\hyperlink{group__status_ggad755322e7ff95456520e8abdbe90d225ae382ea0c9c05cce5a60d0317375159cc}{HSA\+\_\+\+STATUS\+\_\+\+SUCCESS}}} & if copy command has been submitted successfully to the agent DMA queue. \\
+\hline
+\end{DoxyRetVals}
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classrocr_1_1core_1_1Runtime_a6259d5e8ad10ab8b53ef57d03c076428_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classrocr_1_1core_1_1Runtime_ad963895dbbb6f404c9f9abb1da8ffd99}\label{classrocr_1_1core_1_1Runtime_ad963895dbbb6f404c9f9abb1da8ffd99}} 
+\index{rocr::core::Runtime@{rocr::core::Runtime}!CopyMemoryOnEngine@{CopyMemoryOnEngine}}
+\index{CopyMemoryOnEngine@{CopyMemoryOnEngine}!rocr::core::Runtime@{rocr::core::Runtime}}
+\doxysubsubsection{\texorpdfstring{CopyMemoryOnEngine()}{CopyMemoryOnEngine()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{group__status_gad755322e7ff95456520e8abdbe90d225}{hsa\+\_\+status\+\_\+t}} rocr\+::core\+::\+Runtime\+::\+Copy\+Memory\+On\+Engine (\begin{DoxyParamCaption}\item[{void $\ast$}]{dst,  }\item[{\mbox{\hyperlink{classrocr_1_1core_1_1Agent}{core\+::\+Agent}} $\ast$}]{dst\+\_\+agent,  }\item[{const void $\ast$}]{src,  }\item[{\mbox{\hyperlink{classrocr_1_1core_1_1Agent}{core\+::\+Agent}} $\ast$}]{src\+\_\+agent,  }\item[{size\+\_\+t}]{size,  }\item[{std\+::vector$<$ \mbox{\hyperlink{classrocr_1_1core_1_1Signal}{core\+::\+Signal}} $\ast$ $>$ \&}]{dep\+\_\+signals,  }\item[{\mbox{\hyperlink{classrocr_1_1core_1_1Signal}{core\+::\+Signal}} \&}]{completion\+\_\+signal,  }\item[{\mbox{\hyperlink{inc_2hsa__ext__amd_8h_a74eea6e8894e4b9897ecaa529929fd69}{hsa\+\_\+amd\+\_\+sdma\+\_\+engine\+\_\+id\+\_\+t}}}]{engine\+\_\+id,  }\item[{bool}]{force\+\_\+copy\+\_\+on\+\_\+sdma }\end{DoxyParamCaption})}
+
+
+
+Non-\/blocking memory copy from src to dst on engine\+\_\+id. 
+
+All semantics and params are dentical to Copy\+Memory with the exception of engine\+\_\+id.
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em engine\+\_\+id} & Target engine to copy on.\\
+\hline
+\mbox{\texttt{ in}}  & {\em force\+\_\+copy\+\_\+on\+\_\+sdma} & By default, a blit kernel copy is used when dst\+\_\+agent == src\+\_\+agent. Setting this to true will force the copy over SDMA1.\\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em \mbox{\hyperlink{group__status_ggad755322e7ff95456520e8abdbe90d225ae382ea0c9c05cce5a60d0317375159cc}{HSA\+\_\+\+STATUS\+\_\+\+SUCCESS}}} & if copy command has been submitted successfully to the agent DMA queue. \\
+\hline
+\end{DoxyRetVals}
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=344pt]{classrocr_1_1core_1_1Runtime_ad963895dbbb6f404c9f9abb1da8ffd99_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classrocr_1_1core_1_1Runtime_ad963895dbbb6f404c9f9abb1da8ffd99_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classrocr_1_1core_1_1Runtime_a0b0fa43ccd41a2a4ad3eb04932a1be4b}\label{classrocr_1_1core_1_1Runtime_a0b0fa43ccd41a2a4ad3eb04932a1be4b}} 
+\index{rocr::core::Runtime@{rocr::core::Runtime}!CopyMemoryStatus@{CopyMemoryStatus}}
+\index{CopyMemoryStatus@{CopyMemoryStatus}!rocr::core::Runtime@{rocr::core::Runtime}}
+\doxysubsubsection{\texorpdfstring{CopyMemoryStatus()}{CopyMemoryStatus()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{group__status_gad755322e7ff95456520e8abdbe90d225}{hsa\+\_\+status\+\_\+t}} rocr\+::core\+::\+Runtime\+::\+Copy\+Memory\+Status (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classrocr_1_1core_1_1Agent}{core\+::\+Agent}} $\ast$}]{dst\+\_\+agent,  }\item[{\mbox{\hyperlink{classrocr_1_1core_1_1Agent}{core\+::\+Agent}} $\ast$}]{src\+\_\+agent,  }\item[{uint32\+\_\+t $\ast$}]{engine\+\_\+ids\+\_\+mask }\end{DoxyParamCaption})}
+
+
+
+Return SDMA availability status for copy direction. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em dst\+\_\+agent} & Destination agent. \\
+\hline
+\mbox{\texttt{ in}}  & {\em src\+\_\+agent} & Source agent. \\
+\hline
+\mbox{\texttt{ out}}  & {\em engine\+\_\+ids\+\_\+mask} & Mask of engine\+\_\+ids.\\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em HSA\+\_\+\+STATUS\+\_\+\+SUCCESS} & DMA engines are available \\
+\hline
+{\em HSA\+\_\+\+STATUS\+\_\+\+ERROR\+\_\+\+OUT\+\_\+\+OF\+\_\+\+RESOURCES} & DMA engines are not available \\
+\hline
+\end{DoxyRetVals}
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=321pt]{classrocr_1_1core_1_1Runtime_a0b0fa43ccd41a2a4ad3eb04932a1be4b_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classrocr_1_1core_1_1Runtime_a0b0fa43ccd41a2a4ad3eb04932a1be4b_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classrocr_1_1core_1_1Runtime_a385aa68342aab325340f844083a9f5a4}\label{classrocr_1_1core_1_1Runtime_a385aa68342aab325340f844083a9f5a4}} 
+\index{rocr::core::Runtime@{rocr::core::Runtime}!cpu\_agents@{cpu\_agents}}
+\index{cpu\_agents@{cpu\_agents}!rocr::core::Runtime@{rocr::core::Runtime}}
+\doxysubsubsection{\texorpdfstring{cpu\_agents()}{cpu\_agents()}}
+{\footnotesize\ttfamily const std\+::vector$<$\mbox{\hyperlink{classrocr_1_1core_1_1Agent}{Agent}}$\ast$$>$\& rocr\+::core\+::\+Runtime\+::cpu\+\_\+agents (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=324pt]{classrocr_1_1core_1_1Runtime_a385aa68342aab325340f844083a9f5a4_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classrocr_1_1core_1_1Runtime_abf01565f919a3736c1fe04594e22ee98}\label{classrocr_1_1core_1_1Runtime_abf01565f919a3736c1fe04594e22ee98}} 
+\index{rocr::core::Runtime@{rocr::core::Runtime}!DeregisterReleaseNotifier@{DeregisterReleaseNotifier}}
+\index{DeregisterReleaseNotifier@{DeregisterReleaseNotifier}!rocr::core::Runtime@{rocr::core::Runtime}}
+\doxysubsubsection{\texorpdfstring{DeregisterReleaseNotifier()}{DeregisterReleaseNotifier()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{group__status_gad755322e7ff95456520e8abdbe90d225}{hsa\+\_\+status\+\_\+t}} rocr\+::core\+::\+Runtime\+::\+Deregister\+Release\+Notifier (\begin{DoxyParamCaption}\item[{void $\ast$}]{ptr,  }\item[{\mbox{\hyperlink{inc_2hsa__ext__amd_8h_abab73f6a0f108b76677f8866a39a6eef}{hsa\+\_\+amd\+\_\+deallocation\+\_\+callback\+\_\+t}}}]{callback }\end{DoxyParamCaption})}
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classrocr_1_1core_1_1Runtime_abf01565f919a3736c1fe04594e22ee98_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classrocr_1_1core_1_1Runtime_ad288be40f7324beb688a191dc6901b5c}\label{classrocr_1_1core_1_1Runtime_ad288be40f7324beb688a191dc6901b5c}} 
+\index{rocr::core::Runtime@{rocr::core::Runtime}!DestroyAgents@{DestroyAgents}}
+\index{DestroyAgents@{DestroyAgents}!rocr::core::Runtime@{rocr::core::Runtime}}
+\doxysubsubsection{\texorpdfstring{DestroyAgents()}{DestroyAgents()}}
+{\footnotesize\ttfamily void rocr\+::core\+::\+Runtime\+::\+Destroy\+Agents (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Delete all agent objects from \+::agents\+\_\+. 
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classrocr_1_1core_1_1Runtime_ad288be40f7324beb688a191dc6901b5c_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classrocr_1_1core_1_1Runtime_a1ba8931b95b748cb00fc4c59c3edaa5f}\label{classrocr_1_1core_1_1Runtime_a1ba8931b95b748cb00fc4c59c3edaa5f}} 
+\index{rocr::core::Runtime@{rocr::core::Runtime}!disabled\_gpu\_agents@{disabled\_gpu\_agents}}
+\index{disabled\_gpu\_agents@{disabled\_gpu\_agents}!rocr::core::Runtime@{rocr::core::Runtime}}
+\doxysubsubsection{\texorpdfstring{disabled\_gpu\_agents()}{disabled\_gpu\_agents()}}
+{\footnotesize\ttfamily const std\+::vector$<$\mbox{\hyperlink{classrocr_1_1core_1_1Agent}{Agent}}$\ast$$>$\& rocr\+::core\+::\+Runtime\+::disabled\+\_\+gpu\+\_\+agents (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{classrocr_1_1core_1_1Runtime_a7760c5be51e9c1bf962bc72b20d6afa9}\label{classrocr_1_1core_1_1Runtime_a7760c5be51e9c1bf962bc72b20d6afa9}} 
+\index{rocr::core::Runtime@{rocr::core::Runtime}!DmaBufClose@{DmaBufClose}}
+\index{DmaBufClose@{DmaBufClose}!rocr::core::Runtime@{rocr::core::Runtime}}
+\doxysubsubsection{\texorpdfstring{DmaBufClose()}{DmaBufClose()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{group__status_gad755322e7ff95456520e8abdbe90d225}{hsa\+\_\+status\+\_\+t}} rocr\+::core\+::\+Runtime\+::\+Dma\+Buf\+Close (\begin{DoxyParamCaption}\item[{int}]{dmabuf }\end{DoxyParamCaption})}
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classrocr_1_1core_1_1Runtime_a7760c5be51e9c1bf962bc72b20d6afa9_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classrocr_1_1core_1_1Runtime_a98df11bbb93549b30ba7f80f6601ccdd}\label{classrocr_1_1core_1_1Runtime_a98df11bbb93549b30ba7f80f6601ccdd}} 
+\index{rocr::core::Runtime@{rocr::core::Runtime}!DmaBufExport@{DmaBufExport}}
+\index{DmaBufExport@{DmaBufExport}!rocr::core::Runtime@{rocr::core::Runtime}}
+\doxysubsubsection{\texorpdfstring{DmaBufExport()}{DmaBufExport()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{group__status_gad755322e7ff95456520e8abdbe90d225}{hsa\+\_\+status\+\_\+t}} rocr\+::core\+::\+Runtime\+::\+Dma\+Buf\+Export (\begin{DoxyParamCaption}\item[{const void $\ast$}]{ptr,  }\item[{size\+\_\+t}]{size,  }\item[{int $\ast$}]{dmabuf,  }\item[{uint64\+\_\+t $\ast$}]{offset }\end{DoxyParamCaption})}
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=342pt]{classrocr_1_1core_1_1Runtime_a98df11bbb93549b30ba7f80f6601ccdd_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classrocr_1_1core_1_1Runtime_a98df11bbb93549b30ba7f80f6601ccdd_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classrocr_1_1core_1_1Runtime_a816c7a4c0ba8810ab4a709a1576ddeb4}\label{classrocr_1_1core_1_1Runtime_a816c7a4c0ba8810ab4a709a1576ddeb4}} 
+\index{rocr::core::Runtime@{rocr::core::Runtime}!FillMemory@{FillMemory}}
+\index{FillMemory@{FillMemory}!rocr::core::Runtime@{rocr::core::Runtime}}
+\doxysubsubsection{\texorpdfstring{FillMemory()}{FillMemory()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{group__status_gad755322e7ff95456520e8abdbe90d225}{hsa\+\_\+status\+\_\+t}} rocr\+::core\+::\+Runtime\+::\+Fill\+Memory (\begin{DoxyParamCaption}\item[{void $\ast$}]{ptr,  }\item[{uint32\+\_\+t}]{value,  }\item[{size\+\_\+t}]{count }\end{DoxyParamCaption})}
+
+
+
+Fill the first {\ttfamily count} of uint32\+\_\+t in ptr with value. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em ptr} & Memory address to be filled. \\
+\hline
+\mbox{\texttt{ in}}  & {\em value} & The value/pattern that will be used to set {\ttfamily ptr}. \\
+\hline
+\mbox{\texttt{ in}}  & {\em count} & Number of uint32\+\_\+t element to be set.\\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em \mbox{\hyperlink{group__status_ggad755322e7ff95456520e8abdbe90d225ae382ea0c9c05cce5a60d0317375159cc}{HSA\+\_\+\+STATUS\+\_\+\+SUCCESS}}} & if memory fill is successful and completed. \\
+\hline
+\end{DoxyRetVals}
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classrocr_1_1core_1_1Runtime_a816c7a4c0ba8810ab4a709a1576ddeb4_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classrocr_1_1core_1_1Runtime_a816c7a4c0ba8810ab4a709a1576ddeb4_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classrocr_1_1core_1_1Runtime_a1d6edf2532fcdd96796a5e3355fe84e4}\label{classrocr_1_1core_1_1Runtime_a1d6edf2532fcdd96796a5e3355fe84e4}} 
+\index{rocr::core::Runtime@{rocr::core::Runtime}!flag@{flag}}
+\index{flag@{flag}!rocr::core::Runtime@{rocr::core::Runtime}}
+\doxysubsubsection{\texorpdfstring{flag()}{flag()}}
+{\footnotesize\ttfamily const \mbox{\hyperlink{classrocr_1_1Flag}{Flag}}\& rocr\+::core\+::\+Runtime\+::flag (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classrocr_1_1core_1_1Runtime_a1d6edf2532fcdd96796a5e3355fe84e4_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classrocr_1_1core_1_1Runtime_a7c343f94ce229965170117b03c437e35}\label{classrocr_1_1core_1_1Runtime_a7c343f94ce229965170117b03c437e35}} 
+\index{rocr::core::Runtime@{rocr::core::Runtime}!FreeMemory@{FreeMemory}}
+\index{FreeMemory@{FreeMemory}!rocr::core::Runtime@{rocr::core::Runtime}}
+\doxysubsubsection{\texorpdfstring{FreeMemory()}{FreeMemory()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{group__status_gad755322e7ff95456520e8abdbe90d225}{hsa\+\_\+status\+\_\+t}} rocr\+::core\+::\+Runtime\+::\+Free\+Memory (\begin{DoxyParamCaption}\item[{void $\ast$}]{ptr }\end{DoxyParamCaption})}
+
+
+
+Free memory previously allocated with Allocate\+Memory. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em ptr} & Address of the memory to be freed.\\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em \mbox{\hyperlink{group__status_ggad755322e7ff95456520e8abdbe90d225a60edf4d82e4703ff750ea38d619fea88}{HSA\+\_\+\+STATUS\+\_\+\+ERROR}}} & If {\ttfamily ptr} is not the address of previous allocation via \+::core\+::\+Runtime\+::\+Allocate\+Memory \\
+\hline
+{\em \mbox{\hyperlink{group__status_ggad755322e7ff95456520e8abdbe90d225ae382ea0c9c05cce5a60d0317375159cc}{HSA\+\_\+\+STATUS\+\_\+\+SUCCESS}}} & if {\ttfamily ptr} is successfully released. \\
+\hline
+\end{DoxyRetVals}
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=347pt]{classrocr_1_1core_1_1Runtime_a7c343f94ce229965170117b03c437e35_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classrocr_1_1core_1_1Runtime_a7c343f94ce229965170117b03c437e35_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classrocr_1_1core_1_1Runtime_a2dec28fc72832fbcf9602b60e991a871}\label{classrocr_1_1core_1_1Runtime_a2dec28fc72832fbcf9602b60e991a871}} 
+\index{rocr::core::Runtime@{rocr::core::Runtime}!GetEventPool@{GetEventPool}}
+\index{GetEventPool@{GetEventPool}!rocr::core::Runtime@{rocr::core::Runtime}}
+\doxysubsubsection{\texorpdfstring{GetEventPool()}{GetEventPool()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classrocr_1_1core_1_1InterruptSignal_1_1EventPool}{Interrupt\+Signal\+::\+Event\+Pool}}$\ast$ rocr\+::core\+::\+Runtime\+::\+Get\+Event\+Pool (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=344pt]{classrocr_1_1core_1_1Runtime_a2dec28fc72832fbcf9602b60e991a871_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classrocr_1_1core_1_1Runtime_a40269b7edf9b5ec072204c255ddaec5a}\label{classrocr_1_1core_1_1Runtime_a40269b7edf9b5ec072204c255ddaec5a}} 
+\index{rocr::core::Runtime@{rocr::core::Runtime}!GetIndexLinkInfo@{GetIndexLinkInfo}}
+\index{GetIndexLinkInfo@{GetIndexLinkInfo}!rocr::core::Runtime@{rocr::core::Runtime}}
+\doxysubsubsection{\texorpdfstring{GetIndexLinkInfo()}{GetIndexLinkInfo()}}
+{\footnotesize\ttfamily uint32\+\_\+t rocr\+::core\+::\+Runtime\+::\+Get\+Index\+Link\+Info (\begin{DoxyParamCaption}\item[{uint32\+\_\+t}]{node\+\_\+id\+\_\+from,  }\item[{uint32\+\_\+t}]{node\+\_\+id\+\_\+to }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Get the index of \+::link\+\_\+matrix\+\_\+. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em node\+\_\+id\+\_\+from} & Node id of the source node. \\
+\hline
+\mbox{\texttt{ in}}  & {\em node\+\_\+id\+\_\+to} & Node id of the destination node. \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em Index} & in \+::link\+\_\+matrix\+\_\+. \\
+\hline
+\end{DoxyRetVals}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classrocr_1_1core_1_1Runtime_a40269b7edf9b5ec072204c255ddaec5a_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classrocr_1_1core_1_1Runtime_a62cf3befb994be3a24557ebda31c60ec}\label{classrocr_1_1core_1_1Runtime_a62cf3befb994be3a24557ebda31c60ec}} 
+\index{rocr::core::Runtime@{rocr::core::Runtime}!GetLinkInfo@{GetLinkInfo}}
+\index{GetLinkInfo@{GetLinkInfo}!rocr::core::Runtime@{rocr::core::Runtime}}
+\doxysubsubsection{\texorpdfstring{GetLinkInfo()}{GetLinkInfo()}}
+{\footnotesize\ttfamily const \mbox{\hyperlink{structrocr_1_1core_1_1Runtime_1_1LinkInfo}{Runtime\+::\+Link\+Info}} rocr\+::core\+::\+Runtime\+::\+Get\+Link\+Info (\begin{DoxyParamCaption}\item[{uint32\+\_\+t}]{node\+\_\+id\+\_\+from,  }\item[{uint32\+\_\+t}]{node\+\_\+id\+\_\+to }\end{DoxyParamCaption})}
+
+
+
+Query link information between two nodes. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em node\+\_\+id\+\_\+from} & Node id of the source node. \\
+\hline
+\mbox{\texttt{ in}}  & {\em node\+\_\+id\+\_\+to} & Node id of the destination node. \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em The} & link information between source and destination nodes. \\
+\hline
+\end{DoxyRetVals}
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=318pt]{classrocr_1_1core_1_1Runtime_a62cf3befb994be3a24557ebda31c60ec_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classrocr_1_1core_1_1Runtime_a62cf3befb994be3a24557ebda31c60ec_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classrocr_1_1core_1_1Runtime_ad8cc0c943f3757fa2a23690b95881d1f}\label{classrocr_1_1core_1_1Runtime_ad8cc0c943f3757fa2a23690b95881d1f}} 
+\index{rocr::core::Runtime@{rocr::core::Runtime}!GetSharedSignalPool@{GetSharedSignalPool}}
+\index{GetSharedSignalPool@{GetSharedSignalPool}!rocr::core::Runtime@{rocr::core::Runtime}}
+\doxysubsubsection{\texorpdfstring{GetSharedSignalPool()}{GetSharedSignalPool()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classrocr_1_1core_1_1SharedSignalPool__t}{Shared\+Signal\+Pool\+\_\+t}}$\ast$ rocr\+::core\+::\+Runtime\+::\+Get\+Shared\+Signal\+Pool (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{classrocr_1_1core_1_1Runtime_aeeaa1a3b8470715a936c8b4cd085b4ff}\label{classrocr_1_1core_1_1Runtime_aeeaa1a3b8470715a936c8b4cd085b4ff}} 
+\index{rocr::core::Runtime@{rocr::core::Runtime}!GetSvmAttrib@{GetSvmAttrib}}
+\index{GetSvmAttrib@{GetSvmAttrib}!rocr::core::Runtime@{rocr::core::Runtime}}
+\doxysubsubsection{\texorpdfstring{GetSvmAttrib()}{GetSvmAttrib()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{group__status_gad755322e7ff95456520e8abdbe90d225}{hsa\+\_\+status\+\_\+t}} rocr\+::core\+::\+Runtime\+::\+Get\+Svm\+Attrib (\begin{DoxyParamCaption}\item[{void $\ast$}]{ptr,  }\item[{size\+\_\+t}]{size,  }\item[{\mbox{\hyperlink{inc_2hsa__ext__amd_8h_ab507e41fd91d77c20f4d6208bcf3d824}{hsa\+\_\+amd\+\_\+svm\+\_\+attribute\+\_\+pair\+\_\+t}} $\ast$}]{attribute\+\_\+list,  }\item[{size\+\_\+t}]{attribute\+\_\+count }\end{DoxyParamCaption})}
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classrocr_1_1core_1_1Runtime_aeeaa1a3b8470715a936c8b4cd085b4ff_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classrocr_1_1core_1_1Runtime_aeeaa1a3b8470715a936c8b4cd085b4ff_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classrocr_1_1core_1_1Runtime_a15e593695f7e627b4e122bf4483169e2}\label{classrocr_1_1core_1_1Runtime_a15e593695f7e627b4e122bf4483169e2}} 
+\index{rocr::core::Runtime@{rocr::core::Runtime}!GetSVMPrefetchAgent@{GetSVMPrefetchAgent}}
+\index{GetSVMPrefetchAgent@{GetSVMPrefetchAgent}!rocr::core::Runtime@{rocr::core::Runtime}}
+\doxysubsubsection{\texorpdfstring{GetSVMPrefetchAgent()}{GetSVMPrefetchAgent()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classrocr_1_1core_1_1Agent}{Agent}} $\ast$ rocr\+::core\+::\+Runtime\+::\+Get\+SVMPrefetch\+Agent (\begin{DoxyParamCaption}\item[{void $\ast$}]{ptr,  }\item[{size\+\_\+t}]{size }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Get most recently issued SVM prefetch agent for the range in question. 
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classrocr_1_1core_1_1Runtime_a15e593695f7e627b4e122bf4483169e2_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classrocr_1_1core_1_1Runtime_a15e593695f7e627b4e122bf4483169e2_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classrocr_1_1core_1_1Runtime_a354cc2e663e1f08e0cbe9cb778522963}\label{classrocr_1_1core_1_1Runtime_a354cc2e663e1f08e0cbe9cb778522963}} 
+\index{rocr::core::Runtime@{rocr::core::Runtime}!GetSystemEventHandlers@{GetSystemEventHandlers}}
+\index{GetSystemEventHandlers@{GetSystemEventHandlers}!rocr::core::Runtime@{rocr::core::Runtime}}
+\doxysubsubsection{\texorpdfstring{GetSystemEventHandlers()}{GetSystemEventHandlers()}}
+{\footnotesize\ttfamily std\+::vector$<$ std\+::pair$<$ \mbox{\hyperlink{classrocr_1_1AMD_1_1callback__t}{AMD\+::callback\+\_\+t}}$<$ \mbox{\hyperlink{inc_2hsa__ext__amd_8h_aeab5d0a9fd6807ecebf0b62e58c42e2e}{hsa\+\_\+amd\+\_\+system\+\_\+event\+\_\+callback\+\_\+t}} $>$, void $\ast$ $>$ $>$ rocr\+::core\+::\+Runtime\+::\+Get\+System\+Event\+Handlers (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classrocr_1_1core_1_1Runtime_a354cc2e663e1f08e0cbe9cb778522963_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classrocr_1_1core_1_1Runtime_aea135160c2930f58344cf1b92a33a859}\label{classrocr_1_1core_1_1Runtime_aea135160c2930f58344cf1b92a33a859}} 
+\index{rocr::core::Runtime@{rocr::core::Runtime}!GetSystemInfo@{GetSystemInfo}}
+\index{GetSystemInfo@{GetSystemInfo}!rocr::core::Runtime@{rocr::core::Runtime}}
+\doxysubsubsection{\texorpdfstring{GetSystemInfo()}{GetSystemInfo()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{group__status_gad755322e7ff95456520e8abdbe90d225}{hsa\+\_\+status\+\_\+t}} rocr\+::core\+::\+Runtime\+::\+Get\+System\+Info (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{group__agentinfo_ga5358716e320ad8a78b78ef44d8783b0b}{hsa\+\_\+system\+\_\+info\+\_\+t}}}]{attribute,  }\item[{void $\ast$}]{value }\end{DoxyParamCaption})}
+
+
+
+Query system information. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em attribute} & System info attribute to query. \\
+\hline
+\mbox{\texttt{ out}}  & {\em value} & Pointer to store the attribute value.\\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em HSA\+\_\+\+STATUS\+\_\+\+SUCCESS} & The attribute is valid and the {\ttfamily value} is set. \\
+\hline
+\end{DoxyRetVals}
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classrocr_1_1core_1_1Runtime_aea135160c2930f58344cf1b92a33a859_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classrocr_1_1core_1_1Runtime_aea135160c2930f58344cf1b92a33a859_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classrocr_1_1core_1_1Runtime_a08a8ce19da9852184f8793d095621323}\label{classrocr_1_1core_1_1Runtime_a08a8ce19da9852184f8793d095621323}} 
+\index{rocr::core::Runtime@{rocr::core::Runtime}!gpu\_agents@{gpu\_agents}}
+\index{gpu\_agents@{gpu\_agents}!rocr::core::Runtime@{rocr::core::Runtime}}
+\doxysubsubsection{\texorpdfstring{gpu\_agents()}{gpu\_agents()}}
+{\footnotesize\ttfamily const std\+::vector$<$\mbox{\hyperlink{classrocr_1_1core_1_1Agent}{Agent}}$\ast$$>$\& rocr\+::core\+::\+Runtime\+::gpu\+\_\+agents (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classrocr_1_1core_1_1Runtime_a08a8ce19da9852184f8793d095621323_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classrocr_1_1core_1_1Runtime_a42f1108c0cc159c26f4957408e9ceb84}\label{classrocr_1_1core_1_1Runtime_a42f1108c0cc159c26f4957408e9ceb84}} 
+\index{rocr::core::Runtime@{rocr::core::Runtime}!gpu\_ids@{gpu\_ids}}
+\index{gpu\_ids@{gpu\_ids}!rocr::core::Runtime@{rocr::core::Runtime}}
+\doxysubsubsection{\texorpdfstring{gpu\_ids()}{gpu\_ids()}}
+{\footnotesize\ttfamily const std\+::vector$<$uint32\+\_\+t$>$\& rocr\+::core\+::\+Runtime\+::gpu\+\_\+ids (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classrocr_1_1core_1_1Runtime_a42f1108c0cc159c26f4957408e9ceb84_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classrocr_1_1core_1_1Runtime_a6689dc95a475756f9189aba0ca65f128}\label{classrocr_1_1core_1_1Runtime_a6689dc95a475756f9189aba0ca65f128}} 
+\index{rocr::core::Runtime@{rocr::core::Runtime}!InternalQueueCreateNotify@{InternalQueueCreateNotify}}
+\index{InternalQueueCreateNotify@{InternalQueueCreateNotify}!rocr::core::Runtime@{rocr::core::Runtime}}
+\doxysubsubsection{\texorpdfstring{InternalQueueCreateNotify()}{InternalQueueCreateNotify()}}
+{\footnotesize\ttfamily void rocr\+::core\+::\+Runtime\+::\+Internal\+Queue\+Create\+Notify (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{group__queue_ga9e74fdf8d39c8bc42508c534316185f8}{hsa\+\_\+queue\+\_\+t}} $\ast$}]{queue,  }\item[{\mbox{\hyperlink{group__agentinfo_ga9ce217ef08e7d5e89c8e83ce7b6ef22b}{hsa\+\_\+agent\+\_\+t}}}]{agent }\end{DoxyParamCaption})}
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classrocr_1_1core_1_1Runtime_a6689dc95a475756f9189aba0ca65f128_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classrocr_1_1core_1_1Runtime_abaefc038041e6c8ba2a1215070c4e499}\label{classrocr_1_1core_1_1Runtime_abaefc038041e6c8ba2a1215070c4e499}} 
+\index{rocr::core::Runtime@{rocr::core::Runtime}!InteropMap@{InteropMap}}
+\index{InteropMap@{InteropMap}!rocr::core::Runtime@{rocr::core::Runtime}}
+\doxysubsubsection{\texorpdfstring{InteropMap()}{InteropMap()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{group__status_gad755322e7ff95456520e8abdbe90d225}{hsa\+\_\+status\+\_\+t}} rocr\+::core\+::\+Runtime\+::\+Interop\+Map (\begin{DoxyParamCaption}\item[{uint32\+\_\+t}]{num\+\_\+agents,  }\item[{\mbox{\hyperlink{classrocr_1_1core_1_1Agent}{Agent}} $\ast$$\ast$}]{agents,  }\item[{int}]{interop\+\_\+handle,  }\item[{uint32\+\_\+t}]{flags,  }\item[{size\+\_\+t $\ast$}]{size,  }\item[{void $\ast$$\ast$}]{ptr,  }\item[{size\+\_\+t $\ast$}]{metadata\+\_\+size,  }\item[{const void $\ast$$\ast$}]{metadata }\end{DoxyParamCaption})}
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classrocr_1_1core_1_1Runtime_abaefc038041e6c8ba2a1215070c4e499_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classrocr_1_1core_1_1Runtime_a74b1c1b0d2fe2a7b986b878f05c63c2e}\label{classrocr_1_1core_1_1Runtime_a74b1c1b0d2fe2a7b986b878f05c63c2e}} 
+\index{rocr::core::Runtime@{rocr::core::Runtime}!InteropUnmap@{InteropUnmap}}
+\index{InteropUnmap@{InteropUnmap}!rocr::core::Runtime@{rocr::core::Runtime}}
+\doxysubsubsection{\texorpdfstring{InteropUnmap()}{InteropUnmap()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{group__status_gad755322e7ff95456520e8abdbe90d225}{hsa\+\_\+status\+\_\+t}} rocr\+::core\+::\+Runtime\+::\+Interop\+Unmap (\begin{DoxyParamCaption}\item[{void $\ast$}]{ptr }\end{DoxyParamCaption})}
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classrocr_1_1core_1_1Runtime_a74b1c1b0d2fe2a7b986b878f05c63c2e_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classrocr_1_1core_1_1Runtime_aa589c7149f52256b5117d72cc230b3a1}\label{classrocr_1_1core_1_1Runtime_aa589c7149f52256b5117d72cc230b3a1}} 
+\index{rocr::core::Runtime@{rocr::core::Runtime}!IPCAttach@{IPCAttach}}
+\index{IPCAttach@{IPCAttach}!rocr::core::Runtime@{rocr::core::Runtime}}
+\doxysubsubsection{\texorpdfstring{IPCAttach()}{IPCAttach()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{group__status_gad755322e7ff95456520e8abdbe90d225}{hsa\+\_\+status\+\_\+t}} rocr\+::core\+::\+Runtime\+::\+IPCAttach (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{inc_2hsa__ext__amd_8h_a25c9055f612cb0e755607fa1944cb250}{hsa\+\_\+amd\+\_\+ipc\+\_\+memory\+\_\+t}} $\ast$}]{handle,  }\item[{size\+\_\+t}]{len,  }\item[{uint32\+\_\+t}]{num\+\_\+agents,  }\item[{\mbox{\hyperlink{classrocr_1_1core_1_1Agent}{Agent}} $\ast$$\ast$}]{mapping\+\_\+agents,  }\item[{void $\ast$$\ast$}]{mapped\+\_\+ptr }\end{DoxyParamCaption})}
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=272pt]{classrocr_1_1core_1_1Runtime_aa589c7149f52256b5117d72cc230b3a1_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classrocr_1_1core_1_1Runtime_aa589c7149f52256b5117d72cc230b3a1_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classrocr_1_1core_1_1Runtime_a81f3fb72e69767606ca13f842d50bf4f}\label{classrocr_1_1core_1_1Runtime_a81f3fb72e69767606ca13f842d50bf4f}} 
+\index{rocr::core::Runtime@{rocr::core::Runtime}!IPCCreate@{IPCCreate}}
+\index{IPCCreate@{IPCCreate}!rocr::core::Runtime@{rocr::core::Runtime}}
+\doxysubsubsection{\texorpdfstring{IPCCreate()}{IPCCreate()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{group__status_gad755322e7ff95456520e8abdbe90d225}{hsa\+\_\+status\+\_\+t}} rocr\+::core\+::\+Runtime\+::\+IPCCreate (\begin{DoxyParamCaption}\item[{void $\ast$}]{ptr,  }\item[{size\+\_\+t}]{len,  }\item[{\mbox{\hyperlink{inc_2hsa__ext__amd_8h_a25c9055f612cb0e755607fa1944cb250}{hsa\+\_\+amd\+\_\+ipc\+\_\+memory\+\_\+t}} $\ast$}]{handle }\end{DoxyParamCaption})}
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classrocr_1_1core_1_1Runtime_a81f3fb72e69767606ca13f842d50bf4f_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classrocr_1_1core_1_1Runtime_a81f3fb72e69767606ca13f842d50bf4f_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classrocr_1_1core_1_1Runtime_ae3f74d2cfef9c5d93d8a2aa4168af4a5}\label{classrocr_1_1core_1_1Runtime_ae3f74d2cfef9c5d93d8a2aa4168af4a5}} 
+\index{rocr::core::Runtime@{rocr::core::Runtime}!IPCDetach@{IPCDetach}}
+\index{IPCDetach@{IPCDetach}!rocr::core::Runtime@{rocr::core::Runtime}}
+\doxysubsubsection{\texorpdfstring{IPCDetach()}{IPCDetach()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{group__status_gad755322e7ff95456520e8abdbe90d225}{hsa\+\_\+status\+\_\+t}} rocr\+::core\+::\+Runtime\+::\+IPCDetach (\begin{DoxyParamCaption}\item[{void $\ast$}]{ptr }\end{DoxyParamCaption})}
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classrocr_1_1core_1_1Runtime_ae3f74d2cfef9c5d93d8a2aa4168af4a5_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classrocr_1_1core_1_1Runtime_ae3f74d2cfef9c5d93d8a2aa4168af4a5_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classrocr_1_1core_1_1Runtime_aac23617d42624fb89a3fe1c86b302b42}\label{classrocr_1_1core_1_1Runtime_aac23617d42624fb89a3fe1c86b302b42}} 
+\index{rocr::core::Runtime@{rocr::core::Runtime}!IsOpen@{IsOpen}}
+\index{IsOpen@{IsOpen}!rocr::core::Runtime@{rocr::core::Runtime}}
+\doxysubsubsection{\texorpdfstring{IsOpen()}{IsOpen()}}
+{\footnotesize\ttfamily bool rocr\+::core\+::\+Runtime\+::\+Is\+Open (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Checks if connection to kernel driver is opened. 
+
+
+\begin{DoxyRetVals}{Return values}
+{\em True} & if the connection to kernel driver is opened. \\
+\hline
+\end{DoxyRetVals}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classrocr_1_1core_1_1Runtime_aac23617d42624fb89a3fe1c86b302b42_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classrocr_1_1core_1_1Runtime_aaca1caae7ddd44e31ad9994bbbe4a1c8}\label{classrocr_1_1core_1_1Runtime_aaca1caae7ddd44e31ad9994bbbe4a1c8}} 
+\index{rocr::core::Runtime@{rocr::core::Runtime}!IterateAgent@{IterateAgent}}
+\index{IterateAgent@{IterateAgent}!rocr::core::Runtime@{rocr::core::Runtime}}
+\doxysubsubsection{\texorpdfstring{IterateAgent()}{IterateAgent()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{group__status_gad755322e7ff95456520e8abdbe90d225}{hsa\+\_\+status\+\_\+t}} rocr\+::core\+::\+Runtime\+::\+Iterate\+Agent (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{group__status_gad755322e7ff95456520e8abdbe90d225}{hsa\+\_\+status\+\_\+t}}($\ast$)(\mbox{\hyperlink{group__agentinfo_ga9ce217ef08e7d5e89c8e83ce7b6ef22b}{hsa\+\_\+agent\+\_\+t}} agent, void $\ast$data)}]{callback,  }\item[{void $\ast$}]{data }\end{DoxyParamCaption})}
+
+
+
+Invoke the user provided call back for each agent in the agent list. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em callback} & User provided callback function. \\
+\hline
+\mbox{\texttt{ in}}  & {\em data} & User provided pointer as input for {\ttfamily callback}.\\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em \mbox{\hyperlink{group__status_ggad755322e7ff95456520e8abdbe90d225ae382ea0c9c05cce5a60d0317375159cc}{HSA\+\_\+\+STATUS\+\_\+\+SUCCESS}}} & if the callback function for each traversed agent returns \mbox{\hyperlink{group__status_ggad755322e7ff95456520e8abdbe90d225ae382ea0c9c05cce5a60d0317375159cc}{HSA\+\_\+\+STATUS\+\_\+\+SUCCESS}}. \\
+\hline
+\end{DoxyRetVals}
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=312pt]{classrocr_1_1core_1_1Runtime_aaca1caae7ddd44e31ad9994bbbe4a1c8_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classrocr_1_1core_1_1Runtime_aaca1caae7ddd44e31ad9994bbbe4a1c8_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classrocr_1_1core_1_1Runtime_a891b0058ca4b6122b352f88241f290af}\label{classrocr_1_1core_1_1Runtime_a891b0058ca4b6122b352f88241f290af}} 
+\index{rocr::core::Runtime@{rocr::core::Runtime}!KfdVersion@{KfdVersion}}
+\index{KfdVersion@{KfdVersion}!rocr::core::Runtime@{rocr::core::Runtime}}
+\doxysubsubsection{\texorpdfstring{KfdVersion()}{KfdVersion()}\hspace{0.1cm}{\footnotesize\ttfamily [1/3]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structrocr_1_1core_1_1Runtime_1_1KfdVersion__t}{Kfd\+Version\+\_\+t}} rocr\+::core\+::\+Runtime\+::\+Kfd\+Version (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{classrocr_1_1core_1_1Runtime_a34bf434d1c3afc834811689f7c3a721c}\label{classrocr_1_1core_1_1Runtime_a34bf434d1c3afc834811689f7c3a721c}} 
+\index{rocr::core::Runtime@{rocr::core::Runtime}!KfdVersion@{KfdVersion}}
+\index{KfdVersion@{KfdVersion}!rocr::core::Runtime@{rocr::core::Runtime}}
+\doxysubsubsection{\texorpdfstring{KfdVersion()}{KfdVersion()}\hspace{0.1cm}{\footnotesize\ttfamily [2/3]}}
+{\footnotesize\ttfamily void rocr\+::core\+::\+Runtime\+::\+Kfd\+Version (\begin{DoxyParamCaption}\item[{bool}]{exception\+\_\+debugging }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{classrocr_1_1core_1_1Runtime_ab8d26fe85017ab34c10fb713600d180a}\label{classrocr_1_1core_1_1Runtime_ab8d26fe85017ab34c10fb713600d180a}} 
+\index{rocr::core::Runtime@{rocr::core::Runtime}!KfdVersion@{KfdVersion}}
+\index{KfdVersion@{KfdVersion}!rocr::core::Runtime@{rocr::core::Runtime}}
+\doxysubsubsection{\texorpdfstring{KfdVersion()}{KfdVersion()}\hspace{0.1cm}{\footnotesize\ttfamily [3/3]}}
+{\footnotesize\ttfamily void rocr\+::core\+::\+Runtime\+::\+Kfd\+Version (\begin{DoxyParamCaption}\item[{const Hsa\+Version\+Info \&}]{version }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classrocr_1_1core_1_1Runtime_ab8d26fe85017ab34c10fb713600d180a_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classrocr_1_1core_1_1Runtime_a7ccaede760c2726a3195adff56043ead}\label{classrocr_1_1core_1_1Runtime_a7ccaede760c2726a3195adff56043ead}} 
+\index{rocr::core::Runtime@{rocr::core::Runtime}!Load@{Load}}
+\index{Load@{Load}!rocr::core::Runtime@{rocr::core::Runtime}}
+\doxysubsubsection{\texorpdfstring{Load()}{Load()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{group__status_gad755322e7ff95456520e8abdbe90d225}{hsa\+\_\+status\+\_\+t}} rocr\+::core\+::\+Runtime\+::\+Load (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Open connection to kernel driver. 
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=550pt]{classrocr_1_1core_1_1Runtime_a7ccaede760c2726a3195adff56043ead_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classrocr_1_1core_1_1Runtime_a7ccaede760c2726a3195adff56043ead_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classrocr_1_1core_1_1Runtime_aafc145fe4ee17d7753a2080cb2832d33}\label{classrocr_1_1core_1_1Runtime_aafc145fe4ee17d7753a2080cb2832d33}} 
+\index{rocr::core::Runtime@{rocr::core::Runtime}!loader@{loader}}
+\index{loader@{loader}!rocr::core::Runtime@{rocr::core::Runtime}}
+\doxysubsubsection{\texorpdfstring{loader()}{loader()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classrocr_1_1amd_1_1hsa_1_1loader_1_1Loader}{amd\+::hsa\+::loader\+::\+Loader}}$\ast$ rocr\+::core\+::\+Runtime\+::loader (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classrocr_1_1core_1_1Runtime_aafc145fe4ee17d7753a2080cb2832d33_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classrocr_1_1core_1_1Runtime_ac09e3dab01108b252b023ffd8ac22417}\label{classrocr_1_1core_1_1Runtime_ac09e3dab01108b252b023ffd8ac22417}} 
+\index{rocr::core::Runtime@{rocr::core::Runtime}!loader\_context@{loader\_context}}
+\index{loader\_context@{loader\_context}!rocr::core::Runtime@{rocr::core::Runtime}}
+\doxysubsubsection{\texorpdfstring{loader\_context()}{loader\_context()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classrocr_1_1amd_1_1LoaderContext}{amd\+::\+Loader\+Context}}$\ast$ rocr\+::core\+::\+Runtime\+::loader\+\_\+context (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{classrocr_1_1core_1_1Runtime_a007051fc164da6d2adc572cdccd5ce9d}\label{classrocr_1_1core_1_1Runtime_a007051fc164da6d2adc572cdccd5ce9d}} 
+\index{rocr::core::Runtime@{rocr::core::Runtime}!LoadExtensions@{LoadExtensions}}
+\index{LoadExtensions@{LoadExtensions}!rocr::core::Runtime@{rocr::core::Runtime}}
+\doxysubsubsection{\texorpdfstring{LoadExtensions()}{LoadExtensions()}}
+{\footnotesize\ttfamily void rocr\+::core\+::\+Runtime\+::\+Load\+Extensions (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Dynamically load extension libraries (images, finalizer) and call On\+Load method on each loaded library. 
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classrocr_1_1core_1_1Runtime_a007051fc164da6d2adc572cdccd5ce9d_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classrocr_1_1core_1_1Runtime_a007051fc164da6d2adc572cdccd5ce9d_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classrocr_1_1core_1_1Runtime_a3bc39e7b4cc78d278cfcd1945a68f0d4}\label{classrocr_1_1core_1_1Runtime_a3bc39e7b4cc78d278cfcd1945a68f0d4}} 
+\index{rocr::core::Runtime@{rocr::core::Runtime}!LoadTools@{LoadTools}}
+\index{LoadTools@{LoadTools}!rocr::core::Runtime@{rocr::core::Runtime}}
+\doxysubsubsection{\texorpdfstring{LoadTools()}{LoadTools()}}
+{\footnotesize\ttfamily void rocr\+::core\+::\+Runtime\+::\+Load\+Tools (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Dynamically load tool libraries and call On\+Unload method on each loaded library. 
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classrocr_1_1core_1_1Runtime_a3bc39e7b4cc78d278cfcd1945a68f0d4_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classrocr_1_1core_1_1Runtime_a3bc39e7b4cc78d278cfcd1945a68f0d4_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classrocr_1_1core_1_1Runtime_a321887767e5d797ec3a7fc97399f4ee6}\label{classrocr_1_1core_1_1Runtime_a321887767e5d797ec3a7fc97399f4ee6}} 
+\index{rocr::core::Runtime@{rocr::core::Runtime}!max\_node\_id@{max\_node\_id}}
+\index{max\_node\_id@{max\_node\_id}!rocr::core::Runtime@{rocr::core::Runtime}}
+\doxysubsubsection{\texorpdfstring{max\_node\_id()}{max\_node\_id()}}
+{\footnotesize\ttfamily uint32\+\_\+t rocr\+::core\+::\+Runtime\+::max\+\_\+node\+\_\+id (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [protected]}}
+
+
+
+Get the highest used node id. 
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classrocr_1_1core_1_1Runtime_a321887767e5d797ec3a7fc97399f4ee6_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classrocr_1_1core_1_1Runtime_aa1c321b135dda7043764c234338108f3}\label{classrocr_1_1core_1_1Runtime_aa1c321b135dda7043764c234338108f3}} 
+\index{rocr::core::Runtime@{rocr::core::Runtime}!operator=@{operator=}}
+\index{operator=@{operator=}!rocr::core::Runtime@{rocr::core::Runtime}}
+\doxysubsubsection{\texorpdfstring{operator=()}{operator=()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classrocr_1_1core_1_1Runtime}{Runtime}}\& rocr\+::core\+::\+Runtime\+::operator= (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classrocr_1_1core_1_1Runtime}{Runtime}} \&}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+\mbox{\Hypertarget{classrocr_1_1core_1_1Runtime_a165a68b64f2db4458796c4edbdce4d11}\label{classrocr_1_1core_1_1Runtime_a165a68b64f2db4458796c4edbdce4d11}} 
+\index{rocr::core::Runtime@{rocr::core::Runtime}!PrintMemoryMapNear@{PrintMemoryMapNear}}
+\index{PrintMemoryMapNear@{PrintMemoryMapNear}!rocr::core::Runtime@{rocr::core::Runtime}}
+\doxysubsubsection{\texorpdfstring{PrintMemoryMapNear()}{PrintMemoryMapNear()}}
+{\footnotesize\ttfamily void rocr\+::core\+::\+Runtime\+::\+Print\+Memory\+Map\+Near (\begin{DoxyParamCaption}\item[{void $\ast$}]{ptr }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classrocr_1_1core_1_1Runtime_a165a68b64f2db4458796c4edbdce4d11_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classrocr_1_1core_1_1Runtime_a165a68b64f2db4458796c4edbdce4d11_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classrocr_1_1core_1_1Runtime_a99a0391c5f195e477631b483de94475e}\label{classrocr_1_1core_1_1Runtime_a99a0391c5f195e477631b483de94475e}} 
+\index{rocr::core::Runtime@{rocr::core::Runtime}!PtrInfo@{PtrInfo}}
+\index{PtrInfo@{PtrInfo}!rocr::core::Runtime@{rocr::core::Runtime}}
+\doxysubsubsection{\texorpdfstring{PtrInfo()}{PtrInfo()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{group__status_gad755322e7ff95456520e8abdbe90d225}{hsa\+\_\+status\+\_\+t}} rocr\+::core\+::\+Runtime\+::\+Ptr\+Info (\begin{DoxyParamCaption}\item[{const void $\ast$}]{ptr,  }\item[{\mbox{\hyperlink{inc_2hsa__ext__amd_8h_a8b4736151eda8e9e0b3804a39294393c}{hsa\+\_\+amd\+\_\+pointer\+\_\+info\+\_\+t}} $\ast$}]{info,  }\item[{void $\ast$($\ast$)(size\+\_\+t)}]{alloc,  }\item[{uint32\+\_\+t $\ast$}]{num\+\_\+agents\+\_\+accessible,  }\item[{\mbox{\hyperlink{group__agentinfo_ga9ce217ef08e7d5e89c8e83ce7b6ef22b}{hsa\+\_\+agent\+\_\+t}} $\ast$$\ast$}]{accessible,  }\item[{\mbox{\hyperlink{structrocr_1_1core_1_1Runtime_1_1PtrInfoBlockData}{Ptr\+Info\+Block\+Data}} $\ast$}]{block\+\_\+info = {\ttfamily nullptr} }\end{DoxyParamCaption})}
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=318pt]{classrocr_1_1core_1_1Runtime_a99a0391c5f195e477631b483de94475e_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classrocr_1_1core_1_1Runtime_a99a0391c5f195e477631b483de94475e_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classrocr_1_1core_1_1Runtime_a9861d69e83b54e7dde481896c1346c32}\label{classrocr_1_1core_1_1Runtime_a9861d69e83b54e7dde481896c1346c32}} 
+\index{rocr::core::Runtime@{rocr::core::Runtime}!region\_gpu@{region\_gpu}}
+\index{region\_gpu@{region\_gpu}!rocr::core::Runtime@{rocr::core::Runtime}}
+\doxysubsubsection{\texorpdfstring{region\_gpu()}{region\_gpu()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classrocr_1_1core_1_1Agent}{Agent}}$\ast$ rocr\+::core\+::\+Runtime\+::region\+\_\+gpu (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{classrocr_1_1core_1_1Runtime_aeec10604323be77b834f3ef1002b8695}\label{classrocr_1_1core_1_1Runtime_aeec10604323be77b834f3ef1002b8695}} 
+\index{rocr::core::Runtime@{rocr::core::Runtime}!RegisterAgent@{RegisterAgent}}
+\index{RegisterAgent@{RegisterAgent}!rocr::core::Runtime@{rocr::core::Runtime}}
+\doxysubsubsection{\texorpdfstring{RegisterAgent()}{RegisterAgent()}}
+{\footnotesize\ttfamily void rocr\+::core\+::\+Runtime\+::\+Register\+Agent (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classrocr_1_1core_1_1Agent}{Agent}} $\ast$}]{agent,  }\item[{bool}]{Enabled }\end{DoxyParamCaption})}
+
+
+
+Insert agent into agent list \+::agents\+\_\+. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em agent} & Pointer to the agent object. \\
+\hline
+\end{DoxyParams}
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classrocr_1_1core_1_1Runtime_aeec10604323be77b834f3ef1002b8695_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classrocr_1_1core_1_1Runtime_aeec10604323be77b834f3ef1002b8695_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classrocr_1_1core_1_1Runtime_ae450600428c34cfe40f23eaafac3231a}\label{classrocr_1_1core_1_1Runtime_ae450600428c34cfe40f23eaafac3231a}} 
+\index{rocr::core::Runtime@{rocr::core::Runtime}!RegisterLinkInfo@{RegisterLinkInfo}}
+\index{RegisterLinkInfo@{RegisterLinkInfo}!rocr::core::Runtime@{rocr::core::Runtime}}
+\doxysubsubsection{\texorpdfstring{RegisterLinkInfo()}{RegisterLinkInfo()}}
+{\footnotesize\ttfamily void rocr\+::core\+::\+Runtime\+::\+Register\+Link\+Info (\begin{DoxyParamCaption}\item[{uint32\+\_\+t}]{node\+\_\+id\+\_\+from,  }\item[{uint32\+\_\+t}]{node\+\_\+id\+\_\+to,  }\item[{uint32\+\_\+t}]{num\+\_\+hop,  }\item[{\mbox{\hyperlink{inc_2hsa__ext__amd_8h_a79fd286ef9fd726a850fe72ed262c6f7}{hsa\+\_\+amd\+\_\+memory\+\_\+pool\+\_\+link\+\_\+info\+\_\+t}} \&}]{link\+\_\+info }\end{DoxyParamCaption})}
+
+
+
+Register link information connecting {\ttfamily node\+\_\+id\+\_\+from} and {\ttfamily node\+\_\+id\+\_\+to}. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em node\+\_\+id\+\_\+from} & Node id of the source node. \\
+\hline
+\mbox{\texttt{ in}}  & {\em node\+\_\+id\+\_\+to} & Node id of the destination node. \\
+\hline
+\mbox{\texttt{ in}}  & {\em link\+\_\+info} & The link information between source and destination nodes. \\
+\hline
+\end{DoxyParams}
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=318pt]{classrocr_1_1core_1_1Runtime_ae450600428c34cfe40f23eaafac3231a_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classrocr_1_1core_1_1Runtime_ae450600428c34cfe40f23eaafac3231a_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classrocr_1_1core_1_1Runtime_aadf92a75f5db799296477f32a7b67fbb}\label{classrocr_1_1core_1_1Runtime_aadf92a75f5db799296477f32a7b67fbb}} 
+\index{rocr::core::Runtime@{rocr::core::Runtime}!RegisterReleaseNotifier@{RegisterReleaseNotifier}}
+\index{RegisterReleaseNotifier@{RegisterReleaseNotifier}!rocr::core::Runtime@{rocr::core::Runtime}}
+\doxysubsubsection{\texorpdfstring{RegisterReleaseNotifier()}{RegisterReleaseNotifier()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{group__status_gad755322e7ff95456520e8abdbe90d225}{hsa\+\_\+status\+\_\+t}} rocr\+::core\+::\+Runtime\+::\+Register\+Release\+Notifier (\begin{DoxyParamCaption}\item[{void $\ast$}]{ptr,  }\item[{\mbox{\hyperlink{inc_2hsa__ext__amd_8h_abab73f6a0f108b76677f8866a39a6eef}{hsa\+\_\+amd\+\_\+deallocation\+\_\+callback\+\_\+t}}}]{callback,  }\item[{void $\ast$}]{user\+\_\+data }\end{DoxyParamCaption})}
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classrocr_1_1core_1_1Runtime_aadf92a75f5db799296477f32a7b67fbb_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classrocr_1_1core_1_1Runtime_ad53500b4c944225cf4582e0174674a21}\label{classrocr_1_1core_1_1Runtime_ad53500b4c944225cf4582e0174674a21}} 
+\index{rocr::core::Runtime@{rocr::core::Runtime}!Release@{Release}}
+\index{Release@{Release}!rocr::core::Runtime@{rocr::core::Runtime}}
+\doxysubsubsection{\texorpdfstring{Release()}{Release()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{group__status_gad755322e7ff95456520e8abdbe90d225}{hsa\+\_\+status\+\_\+t}} rocr\+::core\+::\+Runtime\+::\+Release (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Decrement reference count and close connection to kernel driver. 
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classrocr_1_1core_1_1Runtime_ad53500b4c944225cf4582e0174674a21_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classrocr_1_1core_1_1Runtime_ad53500b4c944225cf4582e0174674a21_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classrocr_1_1core_1_1Runtime_a6e0d6757e6a6e72958a8d946af41b1d4}\label{classrocr_1_1core_1_1Runtime_a6e0d6757e6a6e72958a8d946af41b1d4}} 
+\index{rocr::core::Runtime@{rocr::core::Runtime}!SetAsyncSignalHandler@{SetAsyncSignalHandler}}
+\index{SetAsyncSignalHandler@{SetAsyncSignalHandler}!rocr::core::Runtime@{rocr::core::Runtime}}
+\doxysubsubsection{\texorpdfstring{SetAsyncSignalHandler()}{SetAsyncSignalHandler()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{group__status_gad755322e7ff95456520e8abdbe90d225}{hsa\+\_\+status\+\_\+t}} rocr\+::core\+::\+Runtime\+::\+Set\+Async\+Signal\+Handler (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{group__signals_ga0003af605a660e7ef4f89aa555d3b3fc}{hsa\+\_\+signal\+\_\+t}}}]{signal,  }\item[{\mbox{\hyperlink{group__signals_gab7190fcff48c6dbeded341389ed17c8d}{hsa\+\_\+signal\+\_\+condition\+\_\+t}}}]{cond,  }\item[{\mbox{\hyperlink{group__signals_ga67ca2818879c9990e1b5f1b14ce7ed27}{hsa\+\_\+signal\+\_\+value\+\_\+t}}}]{value,  }\item[{\mbox{\hyperlink{inc_2hsa__ext__amd_8h_ad52f140818ba83c11558d0c50e20bf2c}{hsa\+\_\+amd\+\_\+signal\+\_\+handler}}}]{handler,  }\item[{void $\ast$}]{arg }\end{DoxyParamCaption})}
+
+
+
+Register a callback function {\ttfamily handler} that is associated with {\ttfamily signal} to asynchronous event monitor thread. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em signal} & \mbox{\hyperlink{classrocr_1_1core_1_1Signal}{Signal}} handle associated with {\ttfamily handler}. \\
+\hline
+\mbox{\texttt{ in}}  & {\em cond} & The condition to execute the {\ttfamily handler}. \\
+\hline
+\mbox{\texttt{ in}}  & {\em value} & The value to compare with {\ttfamily signal} value. If the comparison satisfy {\ttfamily cond}, the {\ttfamily handler} will be called. \\
+\hline
+\mbox{\texttt{ in}}  & {\em arg} & Pointer to the argument that will be provided to {\ttfamily handler}.\\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em \mbox{\hyperlink{group__status_ggad755322e7ff95456520e8abdbe90d225ae382ea0c9c05cce5a60d0317375159cc}{HSA\+\_\+\+STATUS\+\_\+\+SUCCESS}}} & Registration is successful. \\
+\hline
+\end{DoxyRetVals}
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classrocr_1_1core_1_1Runtime_a6e0d6757e6a6e72958a8d946af41b1d4_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classrocr_1_1core_1_1Runtime_a6e0d6757e6a6e72958a8d946af41b1d4_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classrocr_1_1core_1_1Runtime_aa069f49da7adfdc51d99f98820fc0d82}\label{classrocr_1_1core_1_1Runtime_aa069f49da7adfdc51d99f98820fc0d82}} 
+\index{rocr::core::Runtime@{rocr::core::Runtime}!SetCustomSystemEventHandler@{SetCustomSystemEventHandler}}
+\index{SetCustomSystemEventHandler@{SetCustomSystemEventHandler}!rocr::core::Runtime@{rocr::core::Runtime}}
+\doxysubsubsection{\texorpdfstring{SetCustomSystemEventHandler()}{SetCustomSystemEventHandler()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{group__status_gad755322e7ff95456520e8abdbe90d225}{hsa\+\_\+status\+\_\+t}} rocr\+::core\+::\+Runtime\+::\+Set\+Custom\+System\+Event\+Handler (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{inc_2hsa__ext__amd_8h_aeab5d0a9fd6807ecebf0b62e58c42e2e}{hsa\+\_\+amd\+\_\+system\+\_\+event\+\_\+callback\+\_\+t}}}]{callback,  }\item[{void $\ast$}]{data }\end{DoxyParamCaption})}
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classrocr_1_1core_1_1Runtime_aa069f49da7adfdc51d99f98820fc0d82_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classrocr_1_1core_1_1Runtime_a67d710ed2bf1d52942e8dd0a0a9395a1}\label{classrocr_1_1core_1_1Runtime_a67d710ed2bf1d52942e8dd0a0a9395a1}} 
+\index{rocr::core::Runtime@{rocr::core::Runtime}!SetInternalQueueCreateNotifier@{SetInternalQueueCreateNotifier}}
+\index{SetInternalQueueCreateNotifier@{SetInternalQueueCreateNotifier}!rocr::core::Runtime@{rocr::core::Runtime}}
+\doxysubsubsection{\texorpdfstring{SetInternalQueueCreateNotifier()}{SetInternalQueueCreateNotifier()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{group__status_gad755322e7ff95456520e8abdbe90d225}{hsa\+\_\+status\+\_\+t}} rocr\+::core\+::\+Runtime\+::\+Set\+Internal\+Queue\+Create\+Notifier (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{inc_2hsa__api__trace_8h_aaeabee3afcec44007529028ae7b1e40b}{hsa\+\_\+amd\+\_\+runtime\+\_\+queue\+\_\+notifier}}}]{callback,  }\item[{void $\ast$}]{user\+\_\+data }\end{DoxyParamCaption})}
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classrocr_1_1core_1_1Runtime_a67d710ed2bf1d52942e8dd0a0a9395a1_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classrocr_1_1core_1_1Runtime_a40f6b0edf8c51052a93a0e6a9f910a51}\label{classrocr_1_1core_1_1Runtime_a40f6b0edf8c51052a93a0e6a9f910a51}} 
+\index{rocr::core::Runtime@{rocr::core::Runtime}!SetLinkCount@{SetLinkCount}}
+\index{SetLinkCount@{SetLinkCount}!rocr::core::Runtime@{rocr::core::Runtime}}
+\doxysubsubsection{\texorpdfstring{SetLinkCount()}{SetLinkCount()}}
+{\footnotesize\ttfamily void rocr\+::core\+::\+Runtime\+::\+Set\+Link\+Count (\begin{DoxyParamCaption}\item[{size\+\_\+t}]{num\+\_\+link }\end{DoxyParamCaption})}
+
+
+
+Set the number of links connecting the agents in the platform. 
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classrocr_1_1core_1_1Runtime_a40f6b0edf8c51052a93a0e6a9f910a51_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classrocr_1_1core_1_1Runtime_acaf0af0109a472629c3556b53b4b684c}\label{classrocr_1_1core_1_1Runtime_acaf0af0109a472629c3556b53b4b684c}} 
+\index{rocr::core::Runtime@{rocr::core::Runtime}!SetPtrInfoData@{SetPtrInfoData}}
+\index{SetPtrInfoData@{SetPtrInfoData}!rocr::core::Runtime@{rocr::core::Runtime}}
+\doxysubsubsection{\texorpdfstring{SetPtrInfoData()}{SetPtrInfoData()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{group__status_gad755322e7ff95456520e8abdbe90d225}{hsa\+\_\+status\+\_\+t}} rocr\+::core\+::\+Runtime\+::\+Set\+Ptr\+Info\+Data (\begin{DoxyParamCaption}\item[{const void $\ast$}]{ptr,  }\item[{void $\ast$}]{userptr }\end{DoxyParamCaption})}
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classrocr_1_1core_1_1Runtime_acaf0af0109a472629c3556b53b4b684c_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classrocr_1_1core_1_1Runtime_ae4aafc236cfe3f409d501656b5211af5}\label{classrocr_1_1core_1_1Runtime_ae4aafc236cfe3f409d501656b5211af5}} 
+\index{rocr::core::Runtime@{rocr::core::Runtime}!SetSvmAttrib@{SetSvmAttrib}}
+\index{SetSvmAttrib@{SetSvmAttrib}!rocr::core::Runtime@{rocr::core::Runtime}}
+\doxysubsubsection{\texorpdfstring{SetSvmAttrib()}{SetSvmAttrib()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{group__status_gad755322e7ff95456520e8abdbe90d225}{hsa\+\_\+status\+\_\+t}} rocr\+::core\+::\+Runtime\+::\+Set\+Svm\+Attrib (\begin{DoxyParamCaption}\item[{void $\ast$}]{ptr,  }\item[{size\+\_\+t}]{size,  }\item[{\mbox{\hyperlink{inc_2hsa__ext__amd_8h_ab507e41fd91d77c20f4d6208bcf3d824}{hsa\+\_\+amd\+\_\+svm\+\_\+attribute\+\_\+pair\+\_\+t}} $\ast$}]{attribute\+\_\+list,  }\item[{size\+\_\+t}]{attribute\+\_\+count }\end{DoxyParamCaption})}
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classrocr_1_1core_1_1Runtime_ae4aafc236cfe3f409d501656b5211af5_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classrocr_1_1core_1_1Runtime_ae4aafc236cfe3f409d501656b5211af5_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classrocr_1_1core_1_1Runtime_a14f3577d8f7def9b25957f8fb27d0c59}\label{classrocr_1_1core_1_1Runtime_a14f3577d8f7def9b25957f8fb27d0c59}} 
+\index{rocr::core::Runtime@{rocr::core::Runtime}!SvmPrefetch@{SvmPrefetch}}
+\index{SvmPrefetch@{SvmPrefetch}!rocr::core::Runtime@{rocr::core::Runtime}}
+\doxysubsubsection{\texorpdfstring{SvmPrefetch()}{SvmPrefetch()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{group__status_gad755322e7ff95456520e8abdbe90d225}{hsa\+\_\+status\+\_\+t}} rocr\+::core\+::\+Runtime\+::\+Svm\+Prefetch (\begin{DoxyParamCaption}\item[{void $\ast$}]{ptr,  }\item[{size\+\_\+t}]{size,  }\item[{\mbox{\hyperlink{group__agentinfo_ga9ce217ef08e7d5e89c8e83ce7b6ef22b}{hsa\+\_\+agent\+\_\+t}}}]{agent,  }\item[{uint32\+\_\+t}]{num\+\_\+dep\+\_\+signals,  }\item[{const \mbox{\hyperlink{group__signals_ga0003af605a660e7ef4f89aa555d3b3fc}{hsa\+\_\+signal\+\_\+t}} $\ast$}]{dep\+\_\+signals,  }\item[{\mbox{\hyperlink{group__signals_ga0003af605a660e7ef4f89aa555d3b3fc}{hsa\+\_\+signal\+\_\+t}}}]{completion\+\_\+signal }\end{DoxyParamCaption})}
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classrocr_1_1core_1_1Runtime_a14f3577d8f7def9b25957f8fb27d0c59_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classrocr_1_1core_1_1Runtime_a14f3577d8f7def9b25957f8fb27d0c59_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classrocr_1_1core_1_1Runtime_a71a1c042032477399d8ada0a19f15176}\label{classrocr_1_1core_1_1Runtime_a71a1c042032477399d8ada0a19f15176}} 
+\index{rocr::core::Runtime@{rocr::core::Runtime}!sys\_clock\_freq@{sys\_clock\_freq}}
+\index{sys\_clock\_freq@{sys\_clock\_freq}!rocr::core::Runtime@{rocr::core::Runtime}}
+\doxysubsubsection{\texorpdfstring{sys\_clock\_freq()}{sys\_clock\_freq()}}
+{\footnotesize\ttfamily uint64\+\_\+t rocr\+::core\+::\+Runtime\+::sys\+\_\+clock\+\_\+freq (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=328pt]{classrocr_1_1core_1_1Runtime_a71a1c042032477399d8ada0a19f15176_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classrocr_1_1core_1_1Runtime_a1c96769391ff8f4a17cb8256f577f9e4}\label{classrocr_1_1core_1_1Runtime_a1c96769391ff8f4a17cb8256f577f9e4}} 
+\index{rocr::core::Runtime@{rocr::core::Runtime}!system\_allocator@{system\_allocator}}
+\index{system\_allocator@{system\_allocator}!rocr::core::Runtime@{rocr::core::Runtime}}
+\doxysubsubsection{\texorpdfstring{system\_allocator()}{system\_allocator()}}
+{\footnotesize\ttfamily std\+::function$<$void$\ast$(size\+\_\+t size, size\+\_\+t align, \mbox{\hyperlink{classrocr_1_1core_1_1MemoryRegion_ac293b6bdc18d9f5d5f6ac3a12021cf0f}{Memory\+Region\+::\+Allocate\+Flags}} flags)$>$\& rocr\+::core\+::\+Runtime\+::system\+\_\+allocator (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{classrocr_1_1core_1_1Runtime_a6d535ddecc6173ed728baec9302e3084}\label{classrocr_1_1core_1_1Runtime_a6d535ddecc6173ed728baec9302e3084}} 
+\index{rocr::core::Runtime@{rocr::core::Runtime}!system\_deallocator@{system\_deallocator}}
+\index{system\_deallocator@{system\_deallocator}!rocr::core::Runtime@{rocr::core::Runtime}}
+\doxysubsubsection{\texorpdfstring{system\_deallocator()}{system\_deallocator()}}
+{\footnotesize\ttfamily std\+::function$<$void(void$\ast$)$>$\& rocr\+::core\+::\+Runtime\+::system\+\_\+deallocator (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{classrocr_1_1core_1_1Runtime_a5b77221ba61ccde51847b180147b0398}\label{classrocr_1_1core_1_1Runtime_a5b77221ba61ccde51847b180147b0398}} 
+\index{rocr::core::Runtime@{rocr::core::Runtime}!system\_regions\_coarse@{system\_regions\_coarse}}
+\index{system\_regions\_coarse@{system\_regions\_coarse}!rocr::core::Runtime@{rocr::core::Runtime}}
+\doxysubsubsection{\texorpdfstring{system\_regions\_coarse()}{system\_regions\_coarse()}}
+{\footnotesize\ttfamily const std\+::vector$<$const \mbox{\hyperlink{classrocr_1_1core_1_1MemoryRegion}{Memory\+Region}}$\ast$$>$\& rocr\+::core\+::\+Runtime\+::system\+\_\+regions\+\_\+coarse (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classrocr_1_1core_1_1Runtime_a5b77221ba61ccde51847b180147b0398_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classrocr_1_1core_1_1Runtime_a09d82f24112bc499d8f1892756873a98}\label{classrocr_1_1core_1_1Runtime_a09d82f24112bc499d8f1892756873a98}} 
+\index{rocr::core::Runtime@{rocr::core::Runtime}!system\_regions\_fine@{system\_regions\_fine}}
+\index{system\_regions\_fine@{system\_regions\_fine}!rocr::core::Runtime@{rocr::core::Runtime}}
+\doxysubsubsection{\texorpdfstring{system\_regions\_fine()}{system\_regions\_fine()}}
+{\footnotesize\ttfamily const std\+::vector$<$const \mbox{\hyperlink{classrocr_1_1core_1_1MemoryRegion}{Memory\+Region}}$\ast$$>$\& rocr\+::core\+::\+Runtime\+::system\+\_\+regions\+\_\+fine (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classrocr_1_1core_1_1Runtime_a09d82f24112bc499d8f1892756873a98_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classrocr_1_1core_1_1Runtime_a2b01b40b9c077b5b8bdaa05ca3a3f66f}\label{classrocr_1_1core_1_1Runtime_a2b01b40b9c077b5b8bdaa05ca3a3f66f}} 
+\index{rocr::core::Runtime@{rocr::core::Runtime}!Unload@{Unload}}
+\index{Unload@{Unload}!rocr::core::Runtime@{rocr::core::Runtime}}
+\doxysubsubsection{\texorpdfstring{Unload()}{Unload()}}
+{\footnotesize\ttfamily void rocr\+::core\+::\+Runtime\+::\+Unload (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Close connection to kernel driver and cleanup resources. 
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classrocr_1_1core_1_1Runtime_a2b01b40b9c077b5b8bdaa05ca3a3f66f_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classrocr_1_1core_1_1Runtime_a2b01b40b9c077b5b8bdaa05ca3a3f66f_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classrocr_1_1core_1_1Runtime_a0435900c4d6662b7e5b1d284d7b4e154}\label{classrocr_1_1core_1_1Runtime_a0435900c4d6662b7e5b1d284d7b4e154}} 
+\index{rocr::core::Runtime@{rocr::core::Runtime}!UnloadExtensions@{UnloadExtensions}}
+\index{UnloadExtensions@{UnloadExtensions}!rocr::core::Runtime@{rocr::core::Runtime}}
+\doxysubsubsection{\texorpdfstring{UnloadExtensions()}{UnloadExtensions()}}
+{\footnotesize\ttfamily void rocr\+::core\+::\+Runtime\+::\+Unload\+Extensions (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Call On\+Unload method on each extension library then close it. 
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classrocr_1_1core_1_1Runtime_a0435900c4d6662b7e5b1d284d7b4e154_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classrocr_1_1core_1_1Runtime_a0435900c4d6662b7e5b1d284d7b4e154_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classrocr_1_1core_1_1Runtime_a0b5be796af0c1a5e35cfd1a5f00196fa}\label{classrocr_1_1core_1_1Runtime_a0b5be796af0c1a5e35cfd1a5f00196fa}} 
+\index{rocr::core::Runtime@{rocr::core::Runtime}!UnloadTools@{UnloadTools}}
+\index{UnloadTools@{UnloadTools}!rocr::core::Runtime@{rocr::core::Runtime}}
+\doxysubsubsection{\texorpdfstring{UnloadTools()}{UnloadTools()}}
+{\footnotesize\ttfamily void rocr\+::core\+::\+Runtime\+::\+Unload\+Tools (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Call On\+Unload method of each tool library. 
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=550pt]{classrocr_1_1core_1_1Runtime_a0b5be796af0c1a5e35cfd1a5f00196fa_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classrocr_1_1core_1_1Runtime_a0b5be796af0c1a5e35cfd1a5f00196fa_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classrocr_1_1core_1_1Runtime_a730a8a761d39254ae2fc3dcbc8580d88}\label{classrocr_1_1core_1_1Runtime_a730a8a761d39254ae2fc3dcbc8580d88}} 
+\index{rocr::core::Runtime@{rocr::core::Runtime}!VMFaultHandler@{VMFaultHandler}}
+\index{VMFaultHandler@{VMFaultHandler}!rocr::core::Runtime@{rocr::core::Runtime}}
+\doxysubsubsection{\texorpdfstring{VMFaultHandler()}{VMFaultHandler()}}
+{\footnotesize\ttfamily bool rocr\+::core\+::\+Runtime\+::\+VMFault\+Handler (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{group__signals_ga67ca2818879c9990e1b5f1b14ce7ed27}{hsa\+\_\+signal\+\_\+value\+\_\+t}}}]{val,  }\item[{void $\ast$}]{arg }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classrocr_1_1core_1_1Runtime_a730a8a761d39254ae2fc3dcbc8580d88_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classrocr_1_1core_1_1Runtime_a730a8a761d39254ae2fc3dcbc8580d88_icgraph}
+\end{center}
+\end{figure}
+
+
+\doxysubsection{Friends And Related Function Documentation}
+\mbox{\Hypertarget{classrocr_1_1core_1_1Runtime_a56ad2a6f93cbd06e231578943678ada2}\label{classrocr_1_1core_1_1Runtime_a56ad2a6f93cbd06e231578943678ada2}} 
+\index{rocr::core::Runtime@{rocr::core::Runtime}!AMD::MemoryRegion@{AMD::MemoryRegion}}
+\index{AMD::MemoryRegion@{AMD::MemoryRegion}!rocr::core::Runtime@{rocr::core::Runtime}}
+\doxysubsubsection{\texorpdfstring{AMD::MemoryRegion}{AMD::MemoryRegion}}
+{\footnotesize\ttfamily friend class \mbox{\hyperlink{classrocr_1_1AMD_1_1MemoryRegion}{AMD\+::\+Memory\+Region}}\hspace{0.3cm}{\ttfamily [friend]}}
+
+\mbox{\Hypertarget{classrocr_1_1core_1_1Runtime_a64be3e12eef3fe51ef8a561df7f29d73}\label{classrocr_1_1core_1_1Runtime_a64be3e12eef3fe51ef8a561df7f29d73}} 
+\index{rocr::core::Runtime@{rocr::core::Runtime}!RuntimeCleanup@{RuntimeCleanup}}
+\index{RuntimeCleanup@{RuntimeCleanup}!rocr::core::Runtime@{rocr::core::Runtime}}
+\doxysubsubsection{\texorpdfstring{RuntimeCleanup}{RuntimeCleanup}}
+{\footnotesize\ttfamily friend class \mbox{\hyperlink{classrocr_1_1core_1_1RuntimeCleanup}{Runtime\+Cleanup}}\hspace{0.3cm}{\ttfamily [friend]}}
+
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{classrocr_1_1core_1_1Runtime_af724cdc14b5e9383b2fc18ae319f1615}\label{classrocr_1_1core_1_1Runtime_af724cdc14b5e9383b2fc18ae319f1615}} 
+\index{rocr::core::Runtime@{rocr::core::Runtime}!agents\_by\_gpuid\_@{agents\_by\_gpuid\_}}
+\index{agents\_by\_gpuid\_@{agents\_by\_gpuid\_}!rocr::core::Runtime@{rocr::core::Runtime}}
+\doxysubsubsection{\texorpdfstring{agents\_by\_gpuid\_}{agents\_by\_gpuid\_}}
+{\footnotesize\ttfamily std\+::map$<$uint32\+\_\+t, \mbox{\hyperlink{classrocr_1_1core_1_1Agent}{Agent}}$\ast$$>$ rocr\+::core\+::\+Runtime\+::agents\+\_\+by\+\_\+gpuid\+\_\+\hspace{0.3cm}{\ttfamily [protected]}}
+
+\mbox{\Hypertarget{classrocr_1_1core_1_1Runtime_afaec0558ab737ade5f91de18db7d3cbd}\label{classrocr_1_1core_1_1Runtime_afaec0558ab737ade5f91de18db7d3cbd}} 
+\index{rocr::core::Runtime@{rocr::core::Runtime}!agents\_by\_node\_@{agents\_by\_node\_}}
+\index{agents\_by\_node\_@{agents\_by\_node\_}!rocr::core::Runtime@{rocr::core::Runtime}}
+\doxysubsubsection{\texorpdfstring{agents\_by\_node\_}{agents\_by\_node\_}}
+{\footnotesize\ttfamily std\+::map$<$uint32\+\_\+t, std\+::vector$<$\mbox{\hyperlink{classrocr_1_1core_1_1Agent}{Agent}}$\ast$$>$ $>$ rocr\+::core\+::\+Runtime\+::agents\+\_\+by\+\_\+node\+\_\+\hspace{0.3cm}{\ttfamily [protected]}}
+
+\mbox{\Hypertarget{classrocr_1_1core_1_1Runtime_a56fcf1d0d83cf19b988824ed69b82b18}\label{classrocr_1_1core_1_1Runtime_a56fcf1d0d83cf19b988824ed69b82b18}} 
+\index{rocr::core::Runtime@{rocr::core::Runtime}!allocation\_map\_@{allocation\_map\_}}
+\index{allocation\_map\_@{allocation\_map\_}!rocr::core::Runtime@{rocr::core::Runtime}}
+\doxysubsubsection{\texorpdfstring{allocation\_map\_}{allocation\_map\_}}
+{\footnotesize\ttfamily std\+::map$<$const void$\ast$, \mbox{\hyperlink{structrocr_1_1core_1_1Runtime_1_1AllocationRegion}{Allocation\+Region}}$>$ rocr\+::core\+::\+Runtime\+::allocation\+\_\+map\+\_\+\hspace{0.3cm}{\ttfamily [protected]}}
+
+\mbox{\Hypertarget{classrocr_1_1core_1_1Runtime_aa27bcb5dc8366a1271d581c505cdd41c}\label{classrocr_1_1core_1_1Runtime_aa27bcb5dc8366a1271d581c505cdd41c}} 
+\index{rocr::core::Runtime@{rocr::core::Runtime}!async\_events\_@{async\_events\_}}
+\index{async\_events\_@{async\_events\_}!rocr::core::Runtime@{rocr::core::Runtime}}
+\doxysubsubsection{\texorpdfstring{async\_events\_}{async\_events\_}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structrocr_1_1core_1_1Runtime_1_1AsyncEvents}{Async\+Events}} rocr\+::core\+::\+Runtime\+::async\+\_\+events\+\_\+\hspace{0.3cm}{\ttfamily [protected]}}
+
+\mbox{\Hypertarget{classrocr_1_1core_1_1Runtime_a9ab5b00bbd8391db6c991b8f90f99c2b}\label{classrocr_1_1core_1_1Runtime_a9ab5b00bbd8391db6c991b8f90f99c2b}} 
+\index{rocr::core::Runtime@{rocr::core::Runtime}!async\_events\_control\_@{async\_events\_control\_}}
+\index{async\_events\_control\_@{async\_events\_control\_}!rocr::core::Runtime@{rocr::core::Runtime}}
+\doxysubsubsection{\texorpdfstring{async\_events\_control\_}{async\_events\_control\_}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structrocr_1_1core_1_1Runtime_1_1AsyncEventsControl}{Async\+Events\+Control}} rocr\+::core\+::\+Runtime\+::async\+\_\+events\+\_\+control\+\_\+\hspace{0.3cm}{\ttfamily [protected]}}
+
+\mbox{\Hypertarget{classrocr_1_1core_1_1Runtime_aac273625e801db207f417e045952da01}\label{classrocr_1_1core_1_1Runtime_aac273625e801db207f417e045952da01}} 
+\index{rocr::core::Runtime@{rocr::core::Runtime}!bootstrap\_lock\_@{bootstrap\_lock\_}}
+\index{bootstrap\_lock\_@{bootstrap\_lock\_}!rocr::core::Runtime@{rocr::core::Runtime}}
+\doxysubsubsection{\texorpdfstring{bootstrap\_lock\_}{bootstrap\_lock\_}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classrocr_1_1KernelMutex}{Kernel\+Mutex}} rocr\+::core\+::\+Runtime\+::bootstrap\+\_\+lock\+\_\+\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [protected]}}
+
+\mbox{\Hypertarget{classrocr_1_1core_1_1Runtime_a46fcb70ffb7e893198ce0c8de7a732a8}\label{classrocr_1_1core_1_1Runtime_a46fcb70ffb7e893198ce0c8de7a732a8}} 
+\index{rocr::core::Runtime@{rocr::core::Runtime}!code\_manager\_@{code\_manager\_}}
+\index{code\_manager\_@{code\_manager\_}!rocr::core::Runtime@{rocr::core::Runtime}}
+\doxysubsubsection{\texorpdfstring{code\_manager\_}{code\_manager\_}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classrocr_1_1amd_1_1hsa_1_1code_1_1AmdHsaCodeManager}{amd\+::hsa\+::code\+::\+Amd\+Hsa\+Code\+Manager}} rocr\+::core\+::\+Runtime\+::code\+\_\+manager\+\_\+\hspace{0.3cm}{\ttfamily [protected]}}
+
+\mbox{\Hypertarget{classrocr_1_1core_1_1Runtime_a401363dcd2992c6213685eb42175c9d2}\label{classrocr_1_1core_1_1Runtime_a401363dcd2992c6213685eb42175c9d2}} 
+\index{rocr::core::Runtime@{rocr::core::Runtime}!cpu\_agents\_@{cpu\_agents\_}}
+\index{cpu\_agents\_@{cpu\_agents\_}!rocr::core::Runtime@{rocr::core::Runtime}}
+\doxysubsubsection{\texorpdfstring{cpu\_agents\_}{cpu\_agents\_}}
+{\footnotesize\ttfamily std\+::vector$<$\mbox{\hyperlink{classrocr_1_1core_1_1Agent}{Agent}}$\ast$$>$ rocr\+::core\+::\+Runtime\+::cpu\+\_\+agents\+\_\+\hspace{0.3cm}{\ttfamily [protected]}}
+
+\mbox{\Hypertarget{classrocr_1_1core_1_1Runtime_ac4dfb3ae7cb1443d56e3fd27a89878d9}\label{classrocr_1_1core_1_1Runtime_ac4dfb3ae7cb1443d56e3fd27a89878d9}} 
+\index{rocr::core::Runtime@{rocr::core::Runtime}!disabled\_gpu\_agents\_@{disabled\_gpu\_agents\_}}
+\index{disabled\_gpu\_agents\_@{disabled\_gpu\_agents\_}!rocr::core::Runtime@{rocr::core::Runtime}}
+\doxysubsubsection{\texorpdfstring{disabled\_gpu\_agents\_}{disabled\_gpu\_agents\_}}
+{\footnotesize\ttfamily std\+::vector$<$\mbox{\hyperlink{classrocr_1_1core_1_1Agent}{Agent}}$\ast$$>$ rocr\+::core\+::\+Runtime\+::disabled\+\_\+gpu\+\_\+agents\+\_\+\hspace{0.3cm}{\ttfamily [protected]}}
+
+\mbox{\Hypertarget{classrocr_1_1core_1_1Runtime_a1f6ff78ded2b1f290ea61e5d97d303d5}\label{classrocr_1_1core_1_1Runtime_a1f6ff78ded2b1f290ea61e5d97d303d5}} 
+\index{rocr::core::Runtime@{rocr::core::Runtime}!EventPool@{EventPool}}
+\index{EventPool@{EventPool}!rocr::core::Runtime@{rocr::core::Runtime}}
+\doxysubsubsection{\texorpdfstring{EventPool}{EventPool}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classrocr_1_1core_1_1InterruptSignal_1_1EventPool}{Interrupt\+Signal\+::\+Event\+Pool}} rocr\+::core\+::\+Runtime\+::\+Event\+Pool\hspace{0.3cm}{\ttfamily [protected]}}
+
+\mbox{\Hypertarget{classrocr_1_1core_1_1Runtime_a94faa2d6c24497a85da0dd64d5c7898b}\label{classrocr_1_1core_1_1Runtime_a94faa2d6c24497a85da0dd64d5c7898b}} 
+\index{rocr::core::Runtime@{rocr::core::Runtime}!extensions\_@{extensions\_}}
+\index{extensions\_@{extensions\_}!rocr::core::Runtime@{rocr::core::Runtime}}
+\doxysubsubsection{\texorpdfstring{extensions\_}{extensions\_}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classrocr_1_1core_1_1ExtensionEntryPoints}{Extension\+Entry\+Points}} rocr\+::core\+::\+Runtime\+::extensions\+\_\+}
+
+\mbox{\Hypertarget{classrocr_1_1core_1_1Runtime_a9b70366309d50e36a0ed66d8e0875769}\label{classrocr_1_1core_1_1Runtime_a9b70366309d50e36a0ed66d8e0875769}} 
+\index{rocr::core::Runtime@{rocr::core::Runtime}!flag\_@{flag\_}}
+\index{flag\_@{flag\_}!rocr::core::Runtime@{rocr::core::Runtime}}
+\doxysubsubsection{\texorpdfstring{flag\_}{flag\_}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classrocr_1_1Flag}{Flag}} rocr\+::core\+::\+Runtime\+::flag\+\_\+\hspace{0.3cm}{\ttfamily [protected]}}
+
+\mbox{\Hypertarget{classrocr_1_1core_1_1Runtime_a84d4b2cff3e9f9170aade246bec2932f}\label{classrocr_1_1core_1_1Runtime_a84d4b2cff3e9f9170aade246bec2932f}} 
+\index{rocr::core::Runtime@{rocr::core::Runtime}!gpu\_agents\_@{gpu\_agents\_}}
+\index{gpu\_agents\_@{gpu\_agents\_}!rocr::core::Runtime@{rocr::core::Runtime}}
+\doxysubsubsection{\texorpdfstring{gpu\_agents\_}{gpu\_agents\_}}
+{\footnotesize\ttfamily std\+::vector$<$\mbox{\hyperlink{classrocr_1_1core_1_1Agent}{Agent}}$\ast$$>$ rocr\+::core\+::\+Runtime\+::gpu\+\_\+agents\+\_\+\hspace{0.3cm}{\ttfamily [protected]}}
+
+\mbox{\Hypertarget{classrocr_1_1core_1_1Runtime_a907425f80e2adeda63b85111d261b325}\label{classrocr_1_1core_1_1Runtime_a907425f80e2adeda63b85111d261b325}} 
+\index{rocr::core::Runtime@{rocr::core::Runtime}!gpu\_ids\_@{gpu\_ids\_}}
+\index{gpu\_ids\_@{gpu\_ids\_}!rocr::core::Runtime@{rocr::core::Runtime}}
+\doxysubsubsection{\texorpdfstring{gpu\_ids\_}{gpu\_ids\_}}
+{\footnotesize\ttfamily std\+::vector$<$uint32\+\_\+t$>$ rocr\+::core\+::\+Runtime\+::gpu\+\_\+ids\+\_\+\hspace{0.3cm}{\ttfamily [protected]}}
+
+\mbox{\Hypertarget{classrocr_1_1core_1_1Runtime_abe6369d5840cdec549bf88ecbf6adb4f}\label{classrocr_1_1core_1_1Runtime_abe6369d5840cdec549bf88ecbf6adb4f}} 
+\index{rocr::core::Runtime@{rocr::core::Runtime}!internal\_queue\_create\_notifier\_@{internal\_queue\_create\_notifier\_}}
+\index{internal\_queue\_create\_notifier\_@{internal\_queue\_create\_notifier\_}!rocr::core::Runtime@{rocr::core::Runtime}}
+\doxysubsubsection{\texorpdfstring{internal\_queue\_create\_notifier\_}{internal\_queue\_create\_notifier\_}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classrocr_1_1AMD_1_1callback__t}{AMD\+::callback\+\_\+t}}$<$\mbox{\hyperlink{inc_2hsa__api__trace_8h_aaeabee3afcec44007529028ae7b1e40b}{hsa\+\_\+amd\+\_\+runtime\+\_\+queue\+\_\+notifier}}$>$ rocr\+::core\+::\+Runtime\+::internal\+\_\+queue\+\_\+create\+\_\+notifier\+\_\+\hspace{0.3cm}{\ttfamily [protected]}}
+
+\mbox{\Hypertarget{classrocr_1_1core_1_1Runtime_af1be01d7c3cba4ba5680409741d94a63}\label{classrocr_1_1core_1_1Runtime_af1be01d7c3cba4ba5680409741d94a63}} 
+\index{rocr::core::Runtime@{rocr::core::Runtime}!internal\_queue\_create\_notifier\_user\_data\_@{internal\_queue\_create\_notifier\_user\_data\_}}
+\index{internal\_queue\_create\_notifier\_user\_data\_@{internal\_queue\_create\_notifier\_user\_data\_}!rocr::core::Runtime@{rocr::core::Runtime}}
+\doxysubsubsection{\texorpdfstring{internal\_queue\_create\_notifier\_user\_data\_}{internal\_queue\_create\_notifier\_user\_data\_}}
+{\footnotesize\ttfamily void$\ast$ rocr\+::core\+::\+Runtime\+::internal\+\_\+queue\+\_\+create\+\_\+notifier\+\_\+user\+\_\+data\+\_\+\hspace{0.3cm}{\ttfamily [protected]}}
+
+\mbox{\Hypertarget{classrocr_1_1core_1_1Runtime_a1561aced60492db7bdcfb8ee0e84eb40}\label{classrocr_1_1core_1_1Runtime_a1561aced60492db7bdcfb8ee0e84eb40}} 
+\index{rocr::core::Runtime@{rocr::core::Runtime}!kfd\_version@{kfd\_version}}
+\index{kfd\_version@{kfd\_version}!rocr::core::Runtime@{rocr::core::Runtime}}
+\doxysubsubsection{\texorpdfstring{kfd\_version}{kfd\_version}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structrocr_1_1core_1_1Runtime_1_1KfdVersion__t}{Kfd\+Version\+\_\+t}} rocr\+::core\+::\+Runtime\+::kfd\+\_\+version\hspace{0.3cm}{\ttfamily [protected]}}
+
+\mbox{\Hypertarget{classrocr_1_1core_1_1Runtime_a7956390ee6ee504af1f5f54757cb8b1a}\label{classrocr_1_1core_1_1Runtime_a7956390ee6ee504af1f5f54757cb8b1a}} 
+\index{rocr::core::Runtime@{rocr::core::Runtime}!link\_matrix\_@{link\_matrix\_}}
+\index{link\_matrix\_@{link\_matrix\_}!rocr::core::Runtime@{rocr::core::Runtime}}
+\doxysubsubsection{\texorpdfstring{link\_matrix\_}{link\_matrix\_}}
+{\footnotesize\ttfamily std\+::vector$<$\mbox{\hyperlink{structrocr_1_1core_1_1Runtime_1_1LinkInfo}{Link\+Info}}$>$ rocr\+::core\+::\+Runtime\+::link\+\_\+matrix\+\_\+\hspace{0.3cm}{\ttfamily [protected]}}
+
+\mbox{\Hypertarget{classrocr_1_1core_1_1Runtime_abbe1099428ba518b7d66bc0f718c0d3b}\label{classrocr_1_1core_1_1Runtime_abbe1099428ba518b7d66bc0f718c0d3b}} 
+\index{rocr::core::Runtime@{rocr::core::Runtime}!loader\_@{loader\_}}
+\index{loader\_@{loader\_}!rocr::core::Runtime@{rocr::core::Runtime}}
+\doxysubsubsection{\texorpdfstring{loader\_}{loader\_}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classrocr_1_1amd_1_1hsa_1_1loader_1_1Loader}{amd\+::hsa\+::loader\+::\+Loader}}$\ast$ rocr\+::core\+::\+Runtime\+::loader\+\_\+\hspace{0.3cm}{\ttfamily [protected]}}
+
+\mbox{\Hypertarget{classrocr_1_1core_1_1Runtime_abc68cfa886f53d078edfc06427e71524}\label{classrocr_1_1core_1_1Runtime_abc68cfa886f53d078edfc06427e71524}} 
+\index{rocr::core::Runtime@{rocr::core::Runtime}!loader\_context\_@{loader\_context\_}}
+\index{loader\_context\_@{loader\_context\_}!rocr::core::Runtime@{rocr::core::Runtime}}
+\doxysubsubsection{\texorpdfstring{loader\_context\_}{loader\_context\_}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classrocr_1_1amd_1_1LoaderContext}{amd\+::\+Loader\+Context}} rocr\+::core\+::\+Runtime\+::loader\+\_\+context\+\_\+\hspace{0.3cm}{\ttfamily [protected]}}
+
+\mbox{\Hypertarget{classrocr_1_1core_1_1Runtime_a6d7a6c6193599f9b987b0905a68c51d5}\label{classrocr_1_1core_1_1Runtime_a6d7a6c6193599f9b987b0905a68c51d5}} 
+\index{rocr::core::Runtime@{rocr::core::Runtime}!memory\_lock\_@{memory\_lock\_}}
+\index{memory\_lock\_@{memory\_lock\_}!rocr::core::Runtime@{rocr::core::Runtime}}
+\doxysubsubsection{\texorpdfstring{memory\_lock\_}{memory\_lock\_}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classrocr_1_1KernelSharedMutex}{Kernel\+Shared\+Mutex}} rocr\+::core\+::\+Runtime\+::memory\+\_\+lock\+\_\+\hspace{0.3cm}{\ttfamily [protected]}}
+
+\mbox{\Hypertarget{classrocr_1_1core_1_1Runtime_a3c9b63236a5ff28c9a3c3f32bf35098a}\label{classrocr_1_1core_1_1Runtime_a3c9b63236a5ff28c9a3c3f32bf35098a}} 
+\index{rocr::core::Runtime@{rocr::core::Runtime}!new\_async\_events\_@{new\_async\_events\_}}
+\index{new\_async\_events\_@{new\_async\_events\_}!rocr::core::Runtime@{rocr::core::Runtime}}
+\doxysubsubsection{\texorpdfstring{new\_async\_events\_}{new\_async\_events\_}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structrocr_1_1core_1_1Runtime_1_1AsyncEvents}{Async\+Events}} rocr\+::core\+::\+Runtime\+::new\+\_\+async\+\_\+events\+\_\+\hspace{0.3cm}{\ttfamily [protected]}}
+
+\mbox{\Hypertarget{classrocr_1_1core_1_1Runtime_a7faa3d861a955ea0e62ab741d4903dbf}\label{classrocr_1_1core_1_1Runtime_a7faa3d861a955ea0e62ab741d4903dbf}} 
+\index{rocr::core::Runtime@{rocr::core::Runtime}!num\_nodes\_@{num\_nodes\_}}
+\index{num\_nodes\_@{num\_nodes\_}!rocr::core::Runtime@{rocr::core::Runtime}}
+\doxysubsubsection{\texorpdfstring{num\_nodes\_}{num\_nodes\_}}
+{\footnotesize\ttfamily size\+\_\+t rocr\+::core\+::\+Runtime\+::num\+\_\+nodes\+\_\+\hspace{0.3cm}{\ttfamily [protected]}}
+
+\mbox{\Hypertarget{classrocr_1_1core_1_1Runtime_af90fe92efb5437378d1d4b3a74f5f1c5}\label{classrocr_1_1core_1_1Runtime_af90fe92efb5437378d1d4b3a74f5f1c5}} 
+\index{rocr::core::Runtime@{rocr::core::Runtime}!prefetch\_lock\_@{prefetch\_lock\_}}
+\index{prefetch\_lock\_@{prefetch\_lock\_}!rocr::core::Runtime@{rocr::core::Runtime}}
+\doxysubsubsection{\texorpdfstring{prefetch\_lock\_}{prefetch\_lock\_}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classrocr_1_1KernelMutex}{Kernel\+Mutex}} rocr\+::core\+::\+Runtime\+::prefetch\+\_\+lock\+\_\+\hspace{0.3cm}{\ttfamily [protected]}}
+
+\mbox{\Hypertarget{classrocr_1_1core_1_1Runtime_a7c142af4abb9f82663e3b5d72537d8f5}\label{classrocr_1_1core_1_1Runtime_a7c142af4abb9f82663e3b5d72537d8f5}} 
+\index{rocr::core::Runtime@{rocr::core::Runtime}!prefetch\_map\_@{prefetch\_map\_}}
+\index{prefetch\_map\_@{prefetch\_map\_}!rocr::core::Runtime@{rocr::core::Runtime}}
+\doxysubsubsection{\texorpdfstring{prefetch\_map\_}{prefetch\_map\_}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classrocr_1_1core_1_1Runtime_a7862fa4b6b2d6a47adad8e4ba59b02b7}{prefetch\+\_\+map\+\_\+t}} rocr\+::core\+::\+Runtime\+::prefetch\+\_\+map\+\_\+\hspace{0.3cm}{\ttfamily [protected]}}
+
+\mbox{\Hypertarget{classrocr_1_1core_1_1Runtime_a76e7444430cbe08876c48486bafe23b5}\label{classrocr_1_1core_1_1Runtime_a76e7444430cbe08876c48486bafe23b5}} 
+\index{rocr::core::Runtime@{rocr::core::Runtime}!ref\_count\_@{ref\_count\_}}
+\index{ref\_count\_@{ref\_count\_}!rocr::core::Runtime@{rocr::core::Runtime}}
+\doxysubsubsection{\texorpdfstring{ref\_count\_}{ref\_count\_}}
+{\footnotesize\ttfamily std\+::atomic$<$uint32\+\_\+t$>$ rocr\+::core\+::\+Runtime\+::ref\+\_\+count\+\_\+\hspace{0.3cm}{\ttfamily [protected]}}
+
+\mbox{\Hypertarget{classrocr_1_1core_1_1Runtime_af8bc4b87201fe92de7a634da74d1d998}\label{classrocr_1_1core_1_1Runtime_af8bc4b87201fe92de7a634da74d1d998}} 
+\index{rocr::core::Runtime@{rocr::core::Runtime}!region\_gpu\_@{region\_gpu\_}}
+\index{region\_gpu\_@{region\_gpu\_}!rocr::core::Runtime@{rocr::core::Runtime}}
+\doxysubsubsection{\texorpdfstring{region\_gpu\_}{region\_gpu\_}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classrocr_1_1core_1_1Agent}{Agent}}$\ast$ rocr\+::core\+::\+Runtime\+::region\+\_\+gpu\+\_\+\hspace{0.3cm}{\ttfamily [protected]}}
+
+\mbox{\Hypertarget{classrocr_1_1core_1_1Runtime_abbaea995b8930cff6a0157901abcacd7}\label{classrocr_1_1core_1_1Runtime_abbaea995b8930cff6a0157901abcacd7}} 
+\index{rocr::core::Runtime@{rocr::core::Runtime}!runtime\_singleton\_@{runtime\_singleton\_}}
+\index{runtime\_singleton\_@{runtime\_singleton\_}!rocr::core::Runtime@{rocr::core::Runtime}}
+\doxysubsubsection{\texorpdfstring{runtime\_singleton\_}{runtime\_singleton\_}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classrocr_1_1core_1_1Runtime}{Runtime}} $\ast$ rocr\+::core\+::\+Runtime\+::runtime\+\_\+singleton\+\_\+ = \mbox{\hyperlink{addrtypes_8h_a070d2ce7b6bb7e5c05602aa8c308d0c4}{NULL}}\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Singleton object of the runtime. 
+
+\mbox{\Hypertarget{classrocr_1_1core_1_1Runtime_a43d08c6368b08f52276dce5b5441918c}\label{classrocr_1_1core_1_1Runtime_a43d08c6368b08f52276dce5b5441918c}} 
+\index{rocr::core::Runtime@{rocr::core::Runtime}!SharedSignalPool@{SharedSignalPool}}
+\index{SharedSignalPool@{SharedSignalPool}!rocr::core::Runtime@{rocr::core::Runtime}}
+\doxysubsubsection{\texorpdfstring{SharedSignalPool}{SharedSignalPool}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classrocr_1_1core_1_1SharedSignalPool__t}{Shared\+Signal\+Pool\+\_\+t}} rocr\+::core\+::\+Runtime\+::\+Shared\+Signal\+Pool\hspace{0.3cm}{\ttfamily [protected]}}
+
+\mbox{\Hypertarget{classrocr_1_1core_1_1Runtime_ac3f2782dd3fb95708fdd5b0fef596e43}\label{classrocr_1_1core_1_1Runtime_ac3f2782dd3fb95708fdd5b0fef596e43}} 
+\index{rocr::core::Runtime@{rocr::core::Runtime}!svm\_profile\_@{svm\_profile\_}}
+\index{svm\_profile\_@{svm\_profile\_}!rocr::core::Runtime@{rocr::core::Runtime}}
+\doxysubsubsection{\texorpdfstring{svm\_profile\_}{svm\_profile\_}}
+{\footnotesize\ttfamily std\+::unique\+\_\+ptr$<$\mbox{\hyperlink{classrocr_1_1AMD_1_1SvmProfileControl}{AMD\+::\+Svm\+Profile\+Control}}$>$ rocr\+::core\+::\+Runtime\+::svm\+\_\+profile\+\_\+\hspace{0.3cm}{\ttfamily [protected]}}
+
+\mbox{\Hypertarget{classrocr_1_1core_1_1Runtime_a897c7ef7110ac5dd0713647d38034fcc}\label{classrocr_1_1core_1_1Runtime_a897c7ef7110ac5dd0713647d38034fcc}} 
+\index{rocr::core::Runtime@{rocr::core::Runtime}!sys\_clock\_freq\_@{sys\_clock\_freq\_}}
+\index{sys\_clock\_freq\_@{sys\_clock\_freq\_}!rocr::core::Runtime@{rocr::core::Runtime}}
+\doxysubsubsection{\texorpdfstring{sys\_clock\_freq\_}{sys\_clock\_freq\_}}
+{\footnotesize\ttfamily uint64\+\_\+t rocr\+::core\+::\+Runtime\+::sys\+\_\+clock\+\_\+freq\+\_\+\hspace{0.3cm}{\ttfamily [protected]}}
+
+\mbox{\Hypertarget{classrocr_1_1core_1_1Runtime_a07b3b5413ad49a4d54b0e3b3c54701d5}\label{classrocr_1_1core_1_1Runtime_a07b3b5413ad49a4d54b0e3b3c54701d5}} 
+\index{rocr::core::Runtime@{rocr::core::Runtime}!system\_allocator\_@{system\_allocator\_}}
+\index{system\_allocator\_@{system\_allocator\_}!rocr::core::Runtime@{rocr::core::Runtime}}
+\doxysubsubsection{\texorpdfstring{system\_allocator\_}{system\_allocator\_}}
+{\footnotesize\ttfamily std\+::function$<$void$\ast$(size\+\_\+t size, size\+\_\+t align, \mbox{\hyperlink{classrocr_1_1core_1_1MemoryRegion_ac293b6bdc18d9f5d5f6ac3a12021cf0f}{Memory\+Region\+::\+Allocate\+Flags}} flags)$>$ rocr\+::core\+::\+Runtime\+::system\+\_\+allocator\+\_\+\hspace{0.3cm}{\ttfamily [protected]}}
+
+\mbox{\Hypertarget{classrocr_1_1core_1_1Runtime_a31ca3f55a4c663d55c56729e68a4f311}\label{classrocr_1_1core_1_1Runtime_a31ca3f55a4c663d55c56729e68a4f311}} 
+\index{rocr::core::Runtime@{rocr::core::Runtime}!system\_deallocator\_@{system\_deallocator\_}}
+\index{system\_deallocator\_@{system\_deallocator\_}!rocr::core::Runtime@{rocr::core::Runtime}}
+\doxysubsubsection{\texorpdfstring{system\_deallocator\_}{system\_deallocator\_}}
+{\footnotesize\ttfamily std\+::function$<$void(void$\ast$)$>$ rocr\+::core\+::\+Runtime\+::system\+\_\+deallocator\+\_\+\hspace{0.3cm}{\ttfamily [protected]}}
+
+\mbox{\Hypertarget{classrocr_1_1core_1_1Runtime_a6d47b70cb48d9a9841017c0423069e1d}\label{classrocr_1_1core_1_1Runtime_a6d47b70cb48d9a9841017c0423069e1d}} 
+\index{rocr::core::Runtime@{rocr::core::Runtime}!system\_event\_handlers\_@{system\_event\_handlers\_}}
+\index{system\_event\_handlers\_@{system\_event\_handlers\_}!rocr::core::Runtime@{rocr::core::Runtime}}
+\doxysubsubsection{\texorpdfstring{system\_event\_handlers\_}{system\_event\_handlers\_}}
+{\footnotesize\ttfamily std\+::vector$<$std\+::pair$<$\mbox{\hyperlink{classrocr_1_1AMD_1_1callback__t}{AMD\+::callback\+\_\+t}}$<$\mbox{\hyperlink{inc_2hsa__ext__amd_8h_aeab5d0a9fd6807ecebf0b62e58c42e2e}{hsa\+\_\+amd\+\_\+system\+\_\+event\+\_\+callback\+\_\+t}}$>$, void$\ast$$>$ $>$ rocr\+::core\+::\+Runtime\+::system\+\_\+event\+\_\+handlers\+\_\+\hspace{0.3cm}{\ttfamily [protected]}}
+
+\mbox{\Hypertarget{classrocr_1_1core_1_1Runtime_aac7137f39bc5371675d154e63e6b6777}\label{classrocr_1_1core_1_1Runtime_aac7137f39bc5371675d154e63e6b6777}} 
+\index{rocr::core::Runtime@{rocr::core::Runtime}!system\_event\_lock\_@{system\_event\_lock\_}}
+\index{system\_event\_lock\_@{system\_event\_lock\_}!rocr::core::Runtime@{rocr::core::Runtime}}
+\doxysubsubsection{\texorpdfstring{system\_event\_lock\_}{system\_event\_lock\_}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classrocr_1_1KernelMutex}{Kernel\+Mutex}} rocr\+::core\+::\+Runtime\+::system\+\_\+event\+\_\+lock\+\_\+\hspace{0.3cm}{\ttfamily [protected]}}
+
+\mbox{\Hypertarget{classrocr_1_1core_1_1Runtime_a187f6811dfdfb42bed99ce32737fb781}\label{classrocr_1_1core_1_1Runtime_a187f6811dfdfb42bed99ce32737fb781}} 
+\index{rocr::core::Runtime@{rocr::core::Runtime}!system\_regions\_coarse\_@{system\_regions\_coarse\_}}
+\index{system\_regions\_coarse\_@{system\_regions\_coarse\_}!rocr::core::Runtime@{rocr::core::Runtime}}
+\doxysubsubsection{\texorpdfstring{system\_regions\_coarse\_}{system\_regions\_coarse\_}}
+{\footnotesize\ttfamily std\+::vector$<$const \mbox{\hyperlink{classrocr_1_1core_1_1MemoryRegion}{Memory\+Region}}$\ast$$>$ rocr\+::core\+::\+Runtime\+::system\+\_\+regions\+\_\+coarse\+\_\+\hspace{0.3cm}{\ttfamily [protected]}}
+
+\mbox{\Hypertarget{classrocr_1_1core_1_1Runtime_a34ac080483a81fdaa3c525e000a6adad}\label{classrocr_1_1core_1_1Runtime_a34ac080483a81fdaa3c525e000a6adad}} 
+\index{rocr::core::Runtime@{rocr::core::Runtime}!system\_regions\_fine\_@{system\_regions\_fine\_}}
+\index{system\_regions\_fine\_@{system\_regions\_fine\_}!rocr::core::Runtime@{rocr::core::Runtime}}
+\doxysubsubsection{\texorpdfstring{system\_regions\_fine\_}{system\_regions\_fine\_}}
+{\footnotesize\ttfamily std\+::vector$<$const \mbox{\hyperlink{classrocr_1_1core_1_1MemoryRegion}{Memory\+Region}}$\ast$$>$ rocr\+::core\+::\+Runtime\+::system\+\_\+regions\+\_\+fine\+\_\+\hspace{0.3cm}{\ttfamily [protected]}}
+
+\mbox{\Hypertarget{classrocr_1_1core_1_1Runtime_a6c6cd3a95164b027fa114f317beb8460}\label{classrocr_1_1core_1_1Runtime_a6c6cd3a95164b027fa114f317beb8460}} 
+\index{rocr::core::Runtime@{rocr::core::Runtime}!tool\_libs\_@{tool\_libs\_}}
+\index{tool\_libs\_@{tool\_libs\_}!rocr::core::Runtime@{rocr::core::Runtime}}
+\doxysubsubsection{\texorpdfstring{tool\_libs\_}{tool\_libs\_}}
+{\footnotesize\ttfamily std\+::vector$<$\mbox{\hyperlink{namespacerocr_1_1os_a3be69e560dfb1309df3f4b0d1037bc2d}{os\+::\+Lib\+Handle}}$>$ rocr\+::core\+::\+Runtime\+::tool\+\_\+libs\+\_\+\hspace{0.3cm}{\ttfamily [protected]}}
+
+\mbox{\Hypertarget{classrocr_1_1core_1_1Runtime_adec7cc7eee6e59ad371829969d274f9a}\label{classrocr_1_1core_1_1Runtime_adec7cc7eee6e59ad371829969d274f9a}} 
+\index{rocr::core::Runtime@{rocr::core::Runtime}!vm\_fault\_event\_@{vm\_fault\_event\_}}
+\index{vm\_fault\_event\_@{vm\_fault\_event\_}!rocr::core::Runtime@{rocr::core::Runtime}}
+\doxysubsubsection{\texorpdfstring{vm\_fault\_event\_}{vm\_fault\_event\_}}
+{\footnotesize\ttfamily Hsa\+Event$\ast$ rocr\+::core\+::\+Runtime\+::vm\+\_\+fault\+\_\+event\+\_\+\hspace{0.3cm}{\ttfamily [protected]}}
+
+\mbox{\Hypertarget{classrocr_1_1core_1_1Runtime_a04e655381f57ffaf0fce0753e9b5b192}\label{classrocr_1_1core_1_1Runtime_a04e655381f57ffaf0fce0753e9b5b192}} 
+\index{rocr::core::Runtime@{rocr::core::Runtime}!vm\_fault\_signal\_@{vm\_fault\_signal\_}}
+\index{vm\_fault\_signal\_@{vm\_fault\_signal\_}!rocr::core::Runtime@{rocr::core::Runtime}}
+\doxysubsubsection{\texorpdfstring{vm\_fault\_signal\_}{vm\_fault\_signal\_}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classrocr_1_1core_1_1Signal}{Signal}}$\ast$ rocr\+::core\+::\+Runtime\+::vm\+\_\+fault\+\_\+signal\+\_\+\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+src/core/inc/\mbox{\hyperlink{runtime_8h}{runtime.\+h}}\item 
+src/core/runtime/\mbox{\hyperlink{runtime_8cpp}{runtime.\+cpp}}\end{DoxyCompactItemize}

@@ -1,0 +1,818 @@
+\hypertarget{classrocr_1_1AMD_1_1MemoryRegion}{}\doxysection{rocr\+::AMD\+::Memory\+Region Class Reference}
+\label{classrocr_1_1AMD_1_1MemoryRegion}\index{rocr::AMD::MemoryRegion@{rocr::AMD::MemoryRegion}}
+
+
+{\ttfamily \#include $<$amd\+\_\+memory\+\_\+region.\+h$>$}
+
+
+
+Inheritance diagram for rocr\+::AMD\+::Memory\+Region\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=218pt]{classrocr_1_1AMD_1_1MemoryRegion__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for rocr\+::AMD\+::Memory\+Region\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classrocr_1_1AMD_1_1MemoryRegion__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class \mbox{\hyperlink{classrocr_1_1AMD_1_1MemoryRegion_1_1BlockAllocator}{Block\+Allocator}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classrocr_1_1AMD_1_1MemoryRegion_a313bc11bf71d3d3889a8da7fa324a364}{Memory\+Region}} (bool \mbox{\hyperlink{classrocr_1_1core_1_1MemoryRegion_a83f398f2ab808f0972d7a2cb2f588890}{fine\+\_\+grain}}, bool \mbox{\hyperlink{classrocr_1_1core_1_1MemoryRegion_a8cc2ffd44a726e0594946d6430c32ba4}{kernarg}}, bool \mbox{\hyperlink{classrocr_1_1core_1_1MemoryRegion_a66d52a58b600dda77ce783dbfeb5bca7}{full\+\_\+profile}}, \mbox{\hyperlink{classrocr_1_1core_1_1Agent}{core\+::\+Agent}} $\ast$\mbox{\hyperlink{classrocr_1_1core_1_1MemoryRegion_aada12cbf443fb16281347f155d9a8d4c}{owner}}, const Hsa\+Memory\+Properties \&mem\+\_\+props)
+\item 
+\mbox{\hyperlink{classrocr_1_1AMD_1_1MemoryRegion_ab29d47de7a5f50e3ae0acf326eef02b7}{$\sim$\+Memory\+Region}} ()
+\item 
+\mbox{\hyperlink{group__status_gad755322e7ff95456520e8abdbe90d225}{hsa\+\_\+status\+\_\+t}} \mbox{\hyperlink{classrocr_1_1AMD_1_1MemoryRegion_a657f95e30ad30c966883bc9b02f6c849}{Allocate}} (size\+\_\+t \&size, \mbox{\hyperlink{classrocr_1_1core_1_1MemoryRegion_ac293b6bdc18d9f5d5f6ac3a12021cf0f}{Allocate\+Flags}} alloc\+\_\+flags, void $\ast$$\ast$address) const
+\item 
+\mbox{\hyperlink{group__status_gad755322e7ff95456520e8abdbe90d225}{hsa\+\_\+status\+\_\+t}} \mbox{\hyperlink{classrocr_1_1AMD_1_1MemoryRegion_a42bc5394d3121b3966b4c2064f5a45ce}{Free}} (void $\ast$address, size\+\_\+t size) const
+\item 
+\mbox{\hyperlink{group__status_gad755322e7ff95456520e8abdbe90d225}{hsa\+\_\+status\+\_\+t}} \mbox{\hyperlink{classrocr_1_1AMD_1_1MemoryRegion_a4d0b65c205a02e19ac11613039938304}{IPCFragment\+Export}} (void $\ast$address) const
+\item 
+\mbox{\hyperlink{group__status_gad755322e7ff95456520e8abdbe90d225}{hsa\+\_\+status\+\_\+t}} \mbox{\hyperlink{classrocr_1_1AMD_1_1MemoryRegion_ad093dfd37c85a453060be98cd25de453}{Get\+Info}} (\mbox{\hyperlink{group__memory_gad35755078ff15f645c6c25e7f7ef2707}{hsa\+\_\+region\+\_\+info\+\_\+t}} attribute, void $\ast$value) const
+\item 
+\mbox{\hyperlink{group__status_gad755322e7ff95456520e8abdbe90d225}{hsa\+\_\+status\+\_\+t}} \mbox{\hyperlink{classrocr_1_1AMD_1_1MemoryRegion_ad759a7fc75bc7518f68b69507215b98c}{Get\+Pool\+Info}} (\mbox{\hyperlink{inc_2hsa__ext__amd_8h_a8e7013d1137d7a51b22d4f636fb59506}{hsa\+\_\+amd\+\_\+memory\+\_\+pool\+\_\+info\+\_\+t}} attribute, void $\ast$value) const
+\item 
+\mbox{\hyperlink{group__status_gad755322e7ff95456520e8abdbe90d225}{hsa\+\_\+status\+\_\+t}} \mbox{\hyperlink{classrocr_1_1AMD_1_1MemoryRegion_a8bb98818c2e09f3dac349185b84b6614}{Get\+Agent\+Pool\+Info}} (const \mbox{\hyperlink{classrocr_1_1core_1_1Agent}{core\+::\+Agent}} \&agent, \mbox{\hyperlink{inc_2hsa__ext__amd_8h_ac75d52a1f581da87965bf2936d1e0256}{hsa\+\_\+amd\+\_\+agent\+\_\+memory\+\_\+pool\+\_\+info\+\_\+t}} attribute, void $\ast$value) const
+\item 
+\mbox{\hyperlink{group__status_gad755322e7ff95456520e8abdbe90d225}{hsa\+\_\+status\+\_\+t}} \mbox{\hyperlink{classrocr_1_1AMD_1_1MemoryRegion_a93f5541c865659b691ce2aa0ef430302}{Allow\+Access}} (uint32\+\_\+t num\+\_\+agents, const \mbox{\hyperlink{group__agentinfo_ga9ce217ef08e7d5e89c8e83ce7b6ef22b}{hsa\+\_\+agent\+\_\+t}} $\ast$agents, const void $\ast$ptr, size\+\_\+t size) const
+\item 
+\mbox{\hyperlink{group__status_gad755322e7ff95456520e8abdbe90d225}{hsa\+\_\+status\+\_\+t}} \mbox{\hyperlink{classrocr_1_1AMD_1_1MemoryRegion_a4313cada1314bd24cb72f4a34a23183d}{Can\+Migrate}} (const \mbox{\hyperlink{classrocr_1_1AMD_1_1MemoryRegion}{Memory\+Region}} \&dst, bool \&result) const
+\item 
+\mbox{\hyperlink{group__status_gad755322e7ff95456520e8abdbe90d225}{hsa\+\_\+status\+\_\+t}} \mbox{\hyperlink{classrocr_1_1AMD_1_1MemoryRegion_a3940d9ffce627b1d696dd1fb9cc3136f}{Migrate}} (uint32\+\_\+t flag, const void $\ast$ptr) const
+\item 
+\mbox{\hyperlink{group__status_gad755322e7ff95456520e8abdbe90d225}{hsa\+\_\+status\+\_\+t}} \mbox{\hyperlink{classrocr_1_1AMD_1_1MemoryRegion_a38918b04efc87ece92a745f68d7959d4}{Lock}} (uint32\+\_\+t num\+\_\+agents, const \mbox{\hyperlink{group__agentinfo_ga9ce217ef08e7d5e89c8e83ce7b6ef22b}{hsa\+\_\+agent\+\_\+t}} $\ast$agents, void $\ast$host\+\_\+ptr, size\+\_\+t size, void $\ast$$\ast$agent\+\_\+ptr) const
+\item 
+\mbox{\hyperlink{group__status_gad755322e7ff95456520e8abdbe90d225}{hsa\+\_\+status\+\_\+t}} \mbox{\hyperlink{classrocr_1_1AMD_1_1MemoryRegion_a64e3ca65628cc234f35f650024d10a95}{Unlock}} (void $\ast$host\+\_\+ptr) const
+\item 
+HSAuint64 \mbox{\hyperlink{classrocr_1_1AMD_1_1MemoryRegion_a80637ff7bc4efbc13067e43ea7f48e69}{Get\+Base\+Address}} () const
+\item 
+HSAuint64 \mbox{\hyperlink{classrocr_1_1AMD_1_1MemoryRegion_a3c1316e2b214b0215608ef0a471099f3}{Get\+Physical\+Size}} () const
+\item 
+HSAuint64 \mbox{\hyperlink{classrocr_1_1AMD_1_1MemoryRegion_a67f4347c5c8dd1c44bdb43d887bb1329}{Get\+Virtual\+Size}} () const
+\item 
+\mbox{\hyperlink{group__status_gad755322e7ff95456520e8abdbe90d225}{hsa\+\_\+status\+\_\+t}} \mbox{\hyperlink{classrocr_1_1AMD_1_1MemoryRegion_ad67805a8fe78d7bbf92f9c773cdedf5f}{Assign\+Agent}} (void $\ast$ptr, size\+\_\+t size, const \mbox{\hyperlink{classrocr_1_1core_1_1Agent}{core\+::\+Agent}} \&agent, \mbox{\hyperlink{group__common_gacef73774a0af1d1df56fdcd9e04bb708}{hsa\+\_\+access\+\_\+permission\+\_\+t}} access) const
+\item 
+void \mbox{\hyperlink{classrocr_1_1AMD_1_1MemoryRegion_a53559b7090beab3f64390d7e83855156}{Trim}} () const
+\item 
+HSAuint64 \mbox{\hyperlink{classrocr_1_1AMD_1_1MemoryRegion_a176dc50dff16feca1ec810a8cd6ce073}{Get\+Cache\+Size}} () const
+\item 
+\+\_\+\+\_\+forceinline bool \mbox{\hyperlink{classrocr_1_1AMD_1_1MemoryRegion_ada380f3aa0ffc1590fe1b39507c2129c}{Is\+Local\+Memory}} () const
+\item 
+\+\_\+\+\_\+forceinline bool \mbox{\hyperlink{classrocr_1_1AMD_1_1MemoryRegion_af0791b180e7edb6313175e96a2a0af81}{Is\+Public}} () const
+\item 
+\+\_\+\+\_\+forceinline bool \mbox{\hyperlink{classrocr_1_1AMD_1_1MemoryRegion_aec3e5520cef0f3885ab09f9d0e6c7b4b}{Is\+System}} () const
+\item 
+\+\_\+\+\_\+forceinline bool \mbox{\hyperlink{classrocr_1_1AMD_1_1MemoryRegion_a209282094104f0ed6d3482db43e9ea8d}{Is\+LDS}} () const
+\item 
+\+\_\+\+\_\+forceinline bool \mbox{\hyperlink{classrocr_1_1AMD_1_1MemoryRegion_ae956d817532fbe88d225b5437438d69c}{Is\+GDS}} () const
+\item 
+\+\_\+\+\_\+forceinline bool \mbox{\hyperlink{classrocr_1_1AMD_1_1MemoryRegion_aa4285f79f03ac2c5bce64b4d3c879a25}{Is\+Scratch}} () const
+\item 
+\+\_\+\+\_\+forceinline uint32\+\_\+t \mbox{\hyperlink{classrocr_1_1AMD_1_1MemoryRegion_aae55219d35bbc29c3c4866849c665af4}{Bus\+Width}} () const
+\item 
+\+\_\+\+\_\+forceinline uint32\+\_\+t \mbox{\hyperlink{classrocr_1_1AMD_1_1MemoryRegion_afff3cdcc975c2d3bb7929ad6971281e9}{Max\+Mem\+Cloc}} () const
+\end{DoxyCompactItemize}
+\doxysubsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static \+\_\+\+\_\+forceinline \mbox{\hyperlink{group__memory_ga9c649e7034e53233198aaa1b58e9d79b}{hsa\+\_\+region\+\_\+t}} \mbox{\hyperlink{classrocr_1_1AMD_1_1MemoryRegion_a7a725c78f990928a6311a4630cebfe68}{Convert}} (\mbox{\hyperlink{classrocr_1_1AMD_1_1MemoryRegion}{Memory\+Region}} $\ast$region)
+\begin{DoxyCompactList}\small\item\em Convert this object into hsa\+\_\+region\+\_\+t. \end{DoxyCompactList}\item 
+static \+\_\+\+\_\+forceinline const \mbox{\hyperlink{group__memory_ga9c649e7034e53233198aaa1b58e9d79b}{hsa\+\_\+region\+\_\+t}} \mbox{\hyperlink{classrocr_1_1AMD_1_1MemoryRegion_aa581aa794a92dc9b8dc1da7dfdba420f}{Convert}} (const \mbox{\hyperlink{classrocr_1_1AMD_1_1MemoryRegion}{Memory\+Region}} $\ast$region)
+\item 
+static \+\_\+\+\_\+forceinline \mbox{\hyperlink{classrocr_1_1AMD_1_1MemoryRegion}{Memory\+Region}} $\ast$ \mbox{\hyperlink{classrocr_1_1AMD_1_1MemoryRegion_a802eadffef3dbb16bbb69aa6615e4b21}{Convert}} (\mbox{\hyperlink{group__memory_ga9c649e7034e53233198aaa1b58e9d79b}{hsa\+\_\+region\+\_\+t}} region)
+\begin{DoxyCompactList}\small\item\em Convert hsa\+\_\+region\+\_\+t into \mbox{\hyperlink{classrocr_1_1AMD_1_1MemoryRegion}{AMD\+::\+Memory\+Region}} $\ast$. \end{DoxyCompactList}\item 
+static void $\ast$ \mbox{\hyperlink{classrocr_1_1AMD_1_1MemoryRegion_a8fe8d9c6fee526cbc563aae180b7c21a}{Allocate\+Kfd\+Memory}} (const Hsa\+Mem\+Flags \&flag, HSAuint32 node\+\_\+id, size\+\_\+t size)
+\begin{DoxyCompactList}\small\item\em Allocate agent accessible memory (system / local memory). \end{DoxyCompactList}\item 
+static void \mbox{\hyperlink{classrocr_1_1AMD_1_1MemoryRegion_a0348e9e5924242a7203998bd0e7f5c42}{Free\+Kfd\+Memory}} (void $\ast$ptr, size\+\_\+t size)
+\begin{DoxyCompactList}\small\item\em Free agent accessible memory (system / local memory). \end{DoxyCompactList}\item 
+static bool \mbox{\hyperlink{classrocr_1_1AMD_1_1MemoryRegion_a944745e5c2a78a5c6fa07e6f8a125597}{Register\+Memory}} (void $\ast$ptr, size\+\_\+t size, const Hsa\+Mem\+Flags \&Mem\+Flags)
+\item 
+static void \mbox{\hyperlink{classrocr_1_1AMD_1_1MemoryRegion_a37c849be8e2114ce6c47a4f73176b744}{Deregister\+Memory}} (void $\ast$ptr)
+\item 
+static bool \mbox{\hyperlink{classrocr_1_1AMD_1_1MemoryRegion_ad5205d71ca4d30f49a298f935e329d82}{Make\+Kfd\+Memory\+Resident}} (size\+\_\+t num\+\_\+node, const uint32\+\_\+t $\ast$nodes, const void $\ast$ptr, size\+\_\+t size, uint64\+\_\+t $\ast$alternate\+\_\+va, Hsa\+Mem\+Map\+Flags map\+\_\+flag)
+\begin{DoxyCompactList}\small\item\em Pin memory. \end{DoxyCompactList}\item 
+static void \mbox{\hyperlink{classrocr_1_1AMD_1_1MemoryRegion_a3e189de1ba1524d65f6e6e19a74ded40}{Make\+Kfd\+Memory\+Unresident}} (const void $\ast$ptr)
+\begin{DoxyCompactList}\small\item\em Unpin memory. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{inc_2hsa__ext__amd_8h_aa4e03bb47a3f360e0cbedc22bae2b63b}{hsa\+\_\+amd\+\_\+memory\+\_\+pool\+\_\+access\+\_\+t}} \mbox{\hyperlink{classrocr_1_1AMD_1_1MemoryRegion_ade61c5391a10176c39030b8dc6ad69ce}{Get\+Access\+Info}} (const \mbox{\hyperlink{classrocr_1_1core_1_1Agent}{core\+::\+Agent}} \&agent, const \mbox{\hyperlink{structrocr_1_1core_1_1Runtime_1_1LinkInfo}{core\+::\+Runtime\+::\+Link\+Info}} \&link\+\_\+info) const
+\item 
+\mbox{\hyperlink{group__status_gad755322e7ff95456520e8abdbe90d225}{hsa\+\_\+status\+\_\+t}} \mbox{\hyperlink{classrocr_1_1AMD_1_1MemoryRegion_a44b974d5967fa4199985ae7d265892fb}{Allocate\+Impl}} (size\+\_\+t \&size, \mbox{\hyperlink{classrocr_1_1core_1_1MemoryRegion_ac293b6bdc18d9f5d5f6ac3a12021cf0f}{Allocate\+Flags}} alloc\+\_\+flags, void $\ast$$\ast$address) const
+\item 
+\mbox{\hyperlink{group__status_gad755322e7ff95456520e8abdbe90d225}{hsa\+\_\+status\+\_\+t}} \mbox{\hyperlink{classrocr_1_1AMD_1_1MemoryRegion_a335f6d5aafb8cde1fc377464dc530ab3}{Free\+Impl}} (void $\ast$address, size\+\_\+t size) const
+\end{DoxyCompactItemize}
+\doxysubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+const Hsa\+Memory\+Properties \mbox{\hyperlink{classrocr_1_1AMD_1_1MemoryRegion_a714296e1df144960d4b96783d323cd71}{mem\+\_\+props\+\_\+}}
+\item 
+Hsa\+Mem\+Flags \mbox{\hyperlink{classrocr_1_1AMD_1_1MemoryRegion_a5a072cc66e18aaeac87bdafdd9f73f89}{mem\+\_\+flag\+\_\+}}
+\item 
+Hsa\+Mem\+Map\+Flags \mbox{\hyperlink{classrocr_1_1AMD_1_1MemoryRegion_a1e6c96afcf2eb2b46a6dcf2a7c640a79}{map\+\_\+flag\+\_\+}}
+\item 
+size\+\_\+t \mbox{\hyperlink{classrocr_1_1AMD_1_1MemoryRegion_a6586d1f8ad629c550796d0f5ea1dfceb}{max\+\_\+single\+\_\+alloc\+\_\+size\+\_\+}}
+\item 
+HSAuint64 \mbox{\hyperlink{classrocr_1_1AMD_1_1MemoryRegion_a3c21681a98b6756c7c1bc3642f7fceaa}{virtual\+\_\+size\+\_\+}}
+\item 
+\mbox{\hyperlink{classrocr_1_1KernelMutex}{Kernel\+Mutex}} \mbox{\hyperlink{classrocr_1_1AMD_1_1MemoryRegion_aca504476abfdecaaf2b953c58ca5e51c}{access\+\_\+lock\+\_\+}}
+\item 
+\mbox{\hyperlink{classrocr_1_1SimpleHeap}{Simple\+Heap}}$<$ \mbox{\hyperlink{classrocr_1_1AMD_1_1MemoryRegion_1_1BlockAllocator}{Block\+Allocator}} $>$ \mbox{\hyperlink{classrocr_1_1AMD_1_1MemoryRegion_a0f9e4fae4e3ef5b9df09685176d039fb}{fragment\+\_\+allocator\+\_\+}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Static Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+static size\+\_\+t \mbox{\hyperlink{classrocr_1_1AMD_1_1MemoryRegion_a927f9b1512b03d6982c5974d60f8008a}{max\+\_\+sysmem\+\_\+alloc\+\_\+size\+\_\+}} = 0
+\item 
+static const size\+\_\+t \mbox{\hyperlink{classrocr_1_1AMD_1_1MemoryRegion_ae6eab2ce542d85bd3ec2768689cea240}{k\+Page\+Size\+\_\+}} = 4096
+\end{DoxyCompactItemize}
+\doxysubsection*{Additional Inherited Members}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classrocr_1_1AMD_1_1MemoryRegion_a313bc11bf71d3d3889a8da7fa324a364}\label{classrocr_1_1AMD_1_1MemoryRegion_a313bc11bf71d3d3889a8da7fa324a364}} 
+\index{rocr::AMD::MemoryRegion@{rocr::AMD::MemoryRegion}!MemoryRegion@{MemoryRegion}}
+\index{MemoryRegion@{MemoryRegion}!rocr::AMD::MemoryRegion@{rocr::AMD::MemoryRegion}}
+\doxysubsubsection{\texorpdfstring{MemoryRegion()}{MemoryRegion()}}
+{\footnotesize\ttfamily rocr\+::\+AMD\+::\+Memory\+Region\+::\+Memory\+Region (\begin{DoxyParamCaption}\item[{bool}]{fine\+\_\+grain,  }\item[{bool}]{kernarg,  }\item[{bool}]{full\+\_\+profile,  }\item[{\mbox{\hyperlink{classrocr_1_1core_1_1Agent}{core\+::\+Agent}} $\ast$}]{owner,  }\item[{const Hsa\+Memory\+Properties \&}]{mem\+\_\+props }\end{DoxyParamCaption})}
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classrocr_1_1AMD_1_1MemoryRegion_a313bc11bf71d3d3889a8da7fa324a364_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classrocr_1_1AMD_1_1MemoryRegion_ab29d47de7a5f50e3ae0acf326eef02b7}\label{classrocr_1_1AMD_1_1MemoryRegion_ab29d47de7a5f50e3ae0acf326eef02b7}} 
+\index{rocr::AMD::MemoryRegion@{rocr::AMD::MemoryRegion}!````~MemoryRegion@{$\sim$MemoryRegion}}
+\index{````~MemoryRegion@{$\sim$MemoryRegion}!rocr::AMD::MemoryRegion@{rocr::AMD::MemoryRegion}}
+\doxysubsubsection{\texorpdfstring{$\sim$MemoryRegion()}{~MemoryRegion()}}
+{\footnotesize\ttfamily rocr\+::\+AMD\+::\+Memory\+Region\+::$\sim$\+Memory\+Region (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Reimplemented from \mbox{\hyperlink{classrocr_1_1core_1_1MemoryRegion_a7e0228edcb736efc5ccf5f730865626b}{rocr\+::core\+::\+Memory\+Region}}.
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classrocr_1_1AMD_1_1MemoryRegion_a657f95e30ad30c966883bc9b02f6c849}\label{classrocr_1_1AMD_1_1MemoryRegion_a657f95e30ad30c966883bc9b02f6c849}} 
+\index{rocr::AMD::MemoryRegion@{rocr::AMD::MemoryRegion}!Allocate@{Allocate}}
+\index{Allocate@{Allocate}!rocr::AMD::MemoryRegion@{rocr::AMD::MemoryRegion}}
+\doxysubsubsection{\texorpdfstring{Allocate()}{Allocate()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{group__status_gad755322e7ff95456520e8abdbe90d225}{hsa\+\_\+status\+\_\+t}} rocr\+::\+AMD\+::\+Memory\+Region\+::\+Allocate (\begin{DoxyParamCaption}\item[{size\+\_\+t \&}]{size,  }\item[{\mbox{\hyperlink{classrocr_1_1core_1_1MemoryRegion_ac293b6bdc18d9f5d5f6ac3a12021cf0f}{Allocate\+Flags}}}]{alloc\+\_\+flags,  }\item[{void $\ast$$\ast$}]{address }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Implements \mbox{\hyperlink{classrocr_1_1core_1_1MemoryRegion_aedd7a9cd2fbe1b0f00126e9a083dbef6}{rocr\+::core\+::\+Memory\+Region}}.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classrocr_1_1AMD_1_1MemoryRegion_a657f95e30ad30c966883bc9b02f6c849_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classrocr_1_1AMD_1_1MemoryRegion_a44b974d5967fa4199985ae7d265892fb}\label{classrocr_1_1AMD_1_1MemoryRegion_a44b974d5967fa4199985ae7d265892fb}} 
+\index{rocr::AMD::MemoryRegion@{rocr::AMD::MemoryRegion}!AllocateImpl@{AllocateImpl}}
+\index{AllocateImpl@{AllocateImpl}!rocr::AMD::MemoryRegion@{rocr::AMD::MemoryRegion}}
+\doxysubsubsection{\texorpdfstring{AllocateImpl()}{AllocateImpl()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{group__status_gad755322e7ff95456520e8abdbe90d225}{hsa\+\_\+status\+\_\+t}} rocr\+::\+AMD\+::\+Memory\+Region\+::\+Allocate\+Impl (\begin{DoxyParamCaption}\item[{size\+\_\+t \&}]{size,  }\item[{\mbox{\hyperlink{classrocr_1_1core_1_1MemoryRegion_ac293b6bdc18d9f5d5f6ac3a12021cf0f}{Allocate\+Flags}}}]{alloc\+\_\+flags,  }\item[{void $\ast$$\ast$}]{address }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [private]}}
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classrocr_1_1AMD_1_1MemoryRegion_a44b974d5967fa4199985ae7d265892fb_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classrocr_1_1AMD_1_1MemoryRegion_a44b974d5967fa4199985ae7d265892fb_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classrocr_1_1AMD_1_1MemoryRegion_a8fe8d9c6fee526cbc563aae180b7c21a}\label{classrocr_1_1AMD_1_1MemoryRegion_a8fe8d9c6fee526cbc563aae180b7c21a}} 
+\index{rocr::AMD::MemoryRegion@{rocr::AMD::MemoryRegion}!AllocateKfdMemory@{AllocateKfdMemory}}
+\index{AllocateKfdMemory@{AllocateKfdMemory}!rocr::AMD::MemoryRegion@{rocr::AMD::MemoryRegion}}
+\doxysubsubsection{\texorpdfstring{AllocateKfdMemory()}{AllocateKfdMemory()}}
+{\footnotesize\ttfamily void $\ast$ rocr\+::\+AMD\+::\+Memory\+Region\+::\+Allocate\+Kfd\+Memory (\begin{DoxyParamCaption}\item[{const Hsa\+Mem\+Flags \&}]{flag,  }\item[{HSAuint32}]{node\+\_\+id,  }\item[{size\+\_\+t}]{size }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Allocate agent accessible memory (system / local memory). 
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classrocr_1_1AMD_1_1MemoryRegion_a8fe8d9c6fee526cbc563aae180b7c21a_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classrocr_1_1AMD_1_1MemoryRegion_a93f5541c865659b691ce2aa0ef430302}\label{classrocr_1_1AMD_1_1MemoryRegion_a93f5541c865659b691ce2aa0ef430302}} 
+\index{rocr::AMD::MemoryRegion@{rocr::AMD::MemoryRegion}!AllowAccess@{AllowAccess}}
+\index{AllowAccess@{AllowAccess}!rocr::AMD::MemoryRegion@{rocr::AMD::MemoryRegion}}
+\doxysubsubsection{\texorpdfstring{AllowAccess()}{AllowAccess()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{group__status_gad755322e7ff95456520e8abdbe90d225}{hsa\+\_\+status\+\_\+t}} rocr\+::\+AMD\+::\+Memory\+Region\+::\+Allow\+Access (\begin{DoxyParamCaption}\item[{uint32\+\_\+t}]{num\+\_\+agents,  }\item[{const \mbox{\hyperlink{group__agentinfo_ga9ce217ef08e7d5e89c8e83ce7b6ef22b}{hsa\+\_\+agent\+\_\+t}} $\ast$}]{agents,  }\item[{const void $\ast$}]{ptr,  }\item[{size\+\_\+t}]{size }\end{DoxyParamCaption}) const}
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classrocr_1_1AMD_1_1MemoryRegion_a93f5541c865659b691ce2aa0ef430302_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classrocr_1_1AMD_1_1MemoryRegion_a93f5541c865659b691ce2aa0ef430302_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classrocr_1_1AMD_1_1MemoryRegion_ad67805a8fe78d7bbf92f9c773cdedf5f}\label{classrocr_1_1AMD_1_1MemoryRegion_ad67805a8fe78d7bbf92f9c773cdedf5f}} 
+\index{rocr::AMD::MemoryRegion@{rocr::AMD::MemoryRegion}!AssignAgent@{AssignAgent}}
+\index{AssignAgent@{AssignAgent}!rocr::AMD::MemoryRegion@{rocr::AMD::MemoryRegion}}
+\doxysubsubsection{\texorpdfstring{AssignAgent()}{AssignAgent()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{group__status_gad755322e7ff95456520e8abdbe90d225}{hsa\+\_\+status\+\_\+t}} rocr\+::\+AMD\+::\+Memory\+Region\+::\+Assign\+Agent (\begin{DoxyParamCaption}\item[{void $\ast$}]{ptr,  }\item[{size\+\_\+t}]{size,  }\item[{const \mbox{\hyperlink{classrocr_1_1core_1_1Agent}{core\+::\+Agent}} \&}]{agent,  }\item[{\mbox{\hyperlink{group__common_gacef73774a0af1d1df56fdcd9e04bb708}{hsa\+\_\+access\+\_\+permission\+\_\+t}}}]{access }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Implements \mbox{\hyperlink{classrocr_1_1core_1_1MemoryRegion_a943ee29cac2db638d8a2b45f67601722}{rocr\+::core\+::\+Memory\+Region}}.
+
+\mbox{\Hypertarget{classrocr_1_1AMD_1_1MemoryRegion_aae55219d35bbc29c3c4866849c665af4}\label{classrocr_1_1AMD_1_1MemoryRegion_aae55219d35bbc29c3c4866849c665af4}} 
+\index{rocr::AMD::MemoryRegion@{rocr::AMD::MemoryRegion}!BusWidth@{BusWidth}}
+\index{BusWidth@{BusWidth}!rocr::AMD::MemoryRegion@{rocr::AMD::MemoryRegion}}
+\doxysubsubsection{\texorpdfstring{BusWidth()}{BusWidth()}}
+{\footnotesize\ttfamily \+\_\+\+\_\+forceinline uint32\+\_\+t rocr\+::\+AMD\+::\+Memory\+Region\+::\+Bus\+Width (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classrocr_1_1AMD_1_1MemoryRegion_aae55219d35bbc29c3c4866849c665af4_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classrocr_1_1AMD_1_1MemoryRegion_a4313cada1314bd24cb72f4a34a23183d}\label{classrocr_1_1AMD_1_1MemoryRegion_a4313cada1314bd24cb72f4a34a23183d}} 
+\index{rocr::AMD::MemoryRegion@{rocr::AMD::MemoryRegion}!CanMigrate@{CanMigrate}}
+\index{CanMigrate@{CanMigrate}!rocr::AMD::MemoryRegion@{rocr::AMD::MemoryRegion}}
+\doxysubsubsection{\texorpdfstring{CanMigrate()}{CanMigrate()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{group__status_gad755322e7ff95456520e8abdbe90d225}{hsa\+\_\+status\+\_\+t}} rocr\+::\+AMD\+::\+Memory\+Region\+::\+Can\+Migrate (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classrocr_1_1AMD_1_1MemoryRegion}{Memory\+Region}} \&}]{dst,  }\item[{bool \&}]{result }\end{DoxyParamCaption}) const}
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classrocr_1_1AMD_1_1MemoryRegion_a4313cada1314bd24cb72f4a34a23183d_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classrocr_1_1AMD_1_1MemoryRegion_aa581aa794a92dc9b8dc1da7dfdba420f}\label{classrocr_1_1AMD_1_1MemoryRegion_aa581aa794a92dc9b8dc1da7dfdba420f}} 
+\index{rocr::AMD::MemoryRegion@{rocr::AMD::MemoryRegion}!Convert@{Convert}}
+\index{Convert@{Convert}!rocr::AMD::MemoryRegion@{rocr::AMD::MemoryRegion}}
+\doxysubsubsection{\texorpdfstring{Convert()}{Convert()}\hspace{0.1cm}{\footnotesize\ttfamily [1/3]}}
+{\footnotesize\ttfamily static \+\_\+\+\_\+forceinline const \mbox{\hyperlink{group__memory_ga9c649e7034e53233198aaa1b58e9d79b}{hsa\+\_\+region\+\_\+t}} rocr\+::\+AMD\+::\+Memory\+Region\+::\+Convert (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classrocr_1_1AMD_1_1MemoryRegion}{Memory\+Region}} $\ast$}]{region }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+\mbox{\Hypertarget{classrocr_1_1AMD_1_1MemoryRegion_a802eadffef3dbb16bbb69aa6615e4b21}\label{classrocr_1_1AMD_1_1MemoryRegion_a802eadffef3dbb16bbb69aa6615e4b21}} 
+\index{rocr::AMD::MemoryRegion@{rocr::AMD::MemoryRegion}!Convert@{Convert}}
+\index{Convert@{Convert}!rocr::AMD::MemoryRegion@{rocr::AMD::MemoryRegion}}
+\doxysubsubsection{\texorpdfstring{Convert()}{Convert()}\hspace{0.1cm}{\footnotesize\ttfamily [2/3]}}
+{\footnotesize\ttfamily static \+\_\+\+\_\+forceinline \mbox{\hyperlink{classrocr_1_1AMD_1_1MemoryRegion}{Memory\+Region}}$\ast$ rocr\+::\+AMD\+::\+Memory\+Region\+::\+Convert (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{group__memory_ga9c649e7034e53233198aaa1b58e9d79b}{hsa\+\_\+region\+\_\+t}}}]{region }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+
+
+Convert hsa\+\_\+region\+\_\+t into \mbox{\hyperlink{classrocr_1_1AMD_1_1MemoryRegion}{AMD\+::\+Memory\+Region}} $\ast$. 
+
+\mbox{\Hypertarget{classrocr_1_1AMD_1_1MemoryRegion_a7a725c78f990928a6311a4630cebfe68}\label{classrocr_1_1AMD_1_1MemoryRegion_a7a725c78f990928a6311a4630cebfe68}} 
+\index{rocr::AMD::MemoryRegion@{rocr::AMD::MemoryRegion}!Convert@{Convert}}
+\index{Convert@{Convert}!rocr::AMD::MemoryRegion@{rocr::AMD::MemoryRegion}}
+\doxysubsubsection{\texorpdfstring{Convert()}{Convert()}\hspace{0.1cm}{\footnotesize\ttfamily [3/3]}}
+{\footnotesize\ttfamily static \+\_\+\+\_\+forceinline \mbox{\hyperlink{group__memory_ga9c649e7034e53233198aaa1b58e9d79b}{hsa\+\_\+region\+\_\+t}} rocr\+::\+AMD\+::\+Memory\+Region\+::\+Convert (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classrocr_1_1AMD_1_1MemoryRegion}{Memory\+Region}} $\ast$}]{region }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+
+
+Convert this object into hsa\+\_\+region\+\_\+t. 
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classrocr_1_1AMD_1_1MemoryRegion_a7a725c78f990928a6311a4630cebfe68_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classrocr_1_1AMD_1_1MemoryRegion_a37c849be8e2114ce6c47a4f73176b744}\label{classrocr_1_1AMD_1_1MemoryRegion_a37c849be8e2114ce6c47a4f73176b744}} 
+\index{rocr::AMD::MemoryRegion@{rocr::AMD::MemoryRegion}!DeregisterMemory@{DeregisterMemory}}
+\index{DeregisterMemory@{DeregisterMemory}!rocr::AMD::MemoryRegion@{rocr::AMD::MemoryRegion}}
+\doxysubsubsection{\texorpdfstring{DeregisterMemory()}{DeregisterMemory()}}
+{\footnotesize\ttfamily void rocr\+::\+AMD\+::\+Memory\+Region\+::\+Deregister\+Memory (\begin{DoxyParamCaption}\item[{void $\ast$}]{ptr }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classrocr_1_1AMD_1_1MemoryRegion_a37c849be8e2114ce6c47a4f73176b744_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classrocr_1_1AMD_1_1MemoryRegion_a42bc5394d3121b3966b4c2064f5a45ce}\label{classrocr_1_1AMD_1_1MemoryRegion_a42bc5394d3121b3966b4c2064f5a45ce}} 
+\index{rocr::AMD::MemoryRegion@{rocr::AMD::MemoryRegion}!Free@{Free}}
+\index{Free@{Free}!rocr::AMD::MemoryRegion@{rocr::AMD::MemoryRegion}}
+\doxysubsubsection{\texorpdfstring{Free()}{Free()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{group__status_gad755322e7ff95456520e8abdbe90d225}{hsa\+\_\+status\+\_\+t}} rocr\+::\+AMD\+::\+Memory\+Region\+::\+Free (\begin{DoxyParamCaption}\item[{void $\ast$}]{address,  }\item[{size\+\_\+t}]{size }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Implements \mbox{\hyperlink{classrocr_1_1core_1_1MemoryRegion_acb4a13042d631d178ca958d505bd33e1}{rocr\+::core\+::\+Memory\+Region}}.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classrocr_1_1AMD_1_1MemoryRegion_a42bc5394d3121b3966b4c2064f5a45ce_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classrocr_1_1AMD_1_1MemoryRegion_a335f6d5aafb8cde1fc377464dc530ab3}\label{classrocr_1_1AMD_1_1MemoryRegion_a335f6d5aafb8cde1fc377464dc530ab3}} 
+\index{rocr::AMD::MemoryRegion@{rocr::AMD::MemoryRegion}!FreeImpl@{FreeImpl}}
+\index{FreeImpl@{FreeImpl}!rocr::AMD::MemoryRegion@{rocr::AMD::MemoryRegion}}
+\doxysubsubsection{\texorpdfstring{FreeImpl()}{FreeImpl()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{group__status_gad755322e7ff95456520e8abdbe90d225}{hsa\+\_\+status\+\_\+t}} rocr\+::\+AMD\+::\+Memory\+Region\+::\+Free\+Impl (\begin{DoxyParamCaption}\item[{void $\ast$}]{address,  }\item[{size\+\_\+t}]{size }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [private]}}
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classrocr_1_1AMD_1_1MemoryRegion_a335f6d5aafb8cde1fc377464dc530ab3_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classrocr_1_1AMD_1_1MemoryRegion_a335f6d5aafb8cde1fc377464dc530ab3_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classrocr_1_1AMD_1_1MemoryRegion_a0348e9e5924242a7203998bd0e7f5c42}\label{classrocr_1_1AMD_1_1MemoryRegion_a0348e9e5924242a7203998bd0e7f5c42}} 
+\index{rocr::AMD::MemoryRegion@{rocr::AMD::MemoryRegion}!FreeKfdMemory@{FreeKfdMemory}}
+\index{FreeKfdMemory@{FreeKfdMemory}!rocr::AMD::MemoryRegion@{rocr::AMD::MemoryRegion}}
+\doxysubsubsection{\texorpdfstring{FreeKfdMemory()}{FreeKfdMemory()}}
+{\footnotesize\ttfamily void rocr\+::\+AMD\+::\+Memory\+Region\+::\+Free\+Kfd\+Memory (\begin{DoxyParamCaption}\item[{void $\ast$}]{ptr,  }\item[{size\+\_\+t}]{size }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Free agent accessible memory (system / local memory). 
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classrocr_1_1AMD_1_1MemoryRegion_a0348e9e5924242a7203998bd0e7f5c42_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classrocr_1_1AMD_1_1MemoryRegion_ade61c5391a10176c39030b8dc6ad69ce}\label{classrocr_1_1AMD_1_1MemoryRegion_ade61c5391a10176c39030b8dc6ad69ce}} 
+\index{rocr::AMD::MemoryRegion@{rocr::AMD::MemoryRegion}!GetAccessInfo@{GetAccessInfo}}
+\index{GetAccessInfo@{GetAccessInfo}!rocr::AMD::MemoryRegion@{rocr::AMD::MemoryRegion}}
+\doxysubsubsection{\texorpdfstring{GetAccessInfo()}{GetAccessInfo()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{inc_2hsa__ext__amd_8h_aa4e03bb47a3f360e0cbedc22bae2b63b}{hsa\+\_\+amd\+\_\+memory\+\_\+pool\+\_\+access\+\_\+t}} rocr\+::\+AMD\+::\+Memory\+Region\+::\+Get\+Access\+Info (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classrocr_1_1core_1_1Agent}{core\+::\+Agent}} \&}]{agent,  }\item[{const \mbox{\hyperlink{structrocr_1_1core_1_1Runtime_1_1LinkInfo}{core\+::\+Runtime\+::\+Link\+Info}} \&}]{link\+\_\+info }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [private]}}
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classrocr_1_1AMD_1_1MemoryRegion_ade61c5391a10176c39030b8dc6ad69ce_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classrocr_1_1AMD_1_1MemoryRegion_ade61c5391a10176c39030b8dc6ad69ce_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classrocr_1_1AMD_1_1MemoryRegion_a8bb98818c2e09f3dac349185b84b6614}\label{classrocr_1_1AMD_1_1MemoryRegion_a8bb98818c2e09f3dac349185b84b6614}} 
+\index{rocr::AMD::MemoryRegion@{rocr::AMD::MemoryRegion}!GetAgentPoolInfo@{GetAgentPoolInfo}}
+\index{GetAgentPoolInfo@{GetAgentPoolInfo}!rocr::AMD::MemoryRegion@{rocr::AMD::MemoryRegion}}
+\doxysubsubsection{\texorpdfstring{GetAgentPoolInfo()}{GetAgentPoolInfo()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{group__status_gad755322e7ff95456520e8abdbe90d225}{hsa\+\_\+status\+\_\+t}} rocr\+::\+AMD\+::\+Memory\+Region\+::\+Get\+Agent\+Pool\+Info (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classrocr_1_1core_1_1Agent}{core\+::\+Agent}} \&}]{agent,  }\item[{\mbox{\hyperlink{inc_2hsa__ext__amd_8h_ac75d52a1f581da87965bf2936d1e0256}{hsa\+\_\+amd\+\_\+agent\+\_\+memory\+\_\+pool\+\_\+info\+\_\+t}}}]{attribute,  }\item[{void $\ast$}]{value }\end{DoxyParamCaption}) const}
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classrocr_1_1AMD_1_1MemoryRegion_a8bb98818c2e09f3dac349185b84b6614_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classrocr_1_1AMD_1_1MemoryRegion_a8bb98818c2e09f3dac349185b84b6614_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classrocr_1_1AMD_1_1MemoryRegion_a80637ff7bc4efbc13067e43ea7f48e69}\label{classrocr_1_1AMD_1_1MemoryRegion_a80637ff7bc4efbc13067e43ea7f48e69}} 
+\index{rocr::AMD::MemoryRegion@{rocr::AMD::MemoryRegion}!GetBaseAddress@{GetBaseAddress}}
+\index{GetBaseAddress@{GetBaseAddress}!rocr::AMD::MemoryRegion@{rocr::AMD::MemoryRegion}}
+\doxysubsubsection{\texorpdfstring{GetBaseAddress()}{GetBaseAddress()}}
+{\footnotesize\ttfamily HSAuint64 rocr\+::\+AMD\+::\+Memory\+Region\+::\+Get\+Base\+Address (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classrocr_1_1AMD_1_1MemoryRegion_a80637ff7bc4efbc13067e43ea7f48e69_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classrocr_1_1AMD_1_1MemoryRegion_a176dc50dff16feca1ec810a8cd6ce073}\label{classrocr_1_1AMD_1_1MemoryRegion_a176dc50dff16feca1ec810a8cd6ce073}} 
+\index{rocr::AMD::MemoryRegion@{rocr::AMD::MemoryRegion}!GetCacheSize@{GetCacheSize}}
+\index{GetCacheSize@{GetCacheSize}!rocr::AMD::MemoryRegion@{rocr::AMD::MemoryRegion}}
+\doxysubsubsection{\texorpdfstring{GetCacheSize()}{GetCacheSize()}}
+{\footnotesize\ttfamily HSAuint64 rocr\+::\+AMD\+::\+Memory\+Region\+::\+Get\+Cache\+Size (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{classrocr_1_1AMD_1_1MemoryRegion_ad093dfd37c85a453060be98cd25de453}\label{classrocr_1_1AMD_1_1MemoryRegion_ad093dfd37c85a453060be98cd25de453}} 
+\index{rocr::AMD::MemoryRegion@{rocr::AMD::MemoryRegion}!GetInfo@{GetInfo}}
+\index{GetInfo@{GetInfo}!rocr::AMD::MemoryRegion@{rocr::AMD::MemoryRegion}}
+\doxysubsubsection{\texorpdfstring{GetInfo()}{GetInfo()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{group__status_gad755322e7ff95456520e8abdbe90d225}{hsa\+\_\+status\+\_\+t}} rocr\+::\+AMD\+::\+Memory\+Region\+::\+Get\+Info (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{group__memory_gad35755078ff15f645c6c25e7f7ef2707}{hsa\+\_\+region\+\_\+info\+\_\+t}}}]{attribute,  }\item[{void $\ast$}]{value }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Implements \mbox{\hyperlink{classrocr_1_1core_1_1MemoryRegion_a272e065dd537531c0bfe17499e32ffcb}{rocr\+::core\+::\+Memory\+Region}}.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classrocr_1_1AMD_1_1MemoryRegion_ad093dfd37c85a453060be98cd25de453_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classrocr_1_1AMD_1_1MemoryRegion_ad093dfd37c85a453060be98cd25de453_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classrocr_1_1AMD_1_1MemoryRegion_a3c1316e2b214b0215608ef0a471099f3}\label{classrocr_1_1AMD_1_1MemoryRegion_a3c1316e2b214b0215608ef0a471099f3}} 
+\index{rocr::AMD::MemoryRegion@{rocr::AMD::MemoryRegion}!GetPhysicalSize@{GetPhysicalSize}}
+\index{GetPhysicalSize@{GetPhysicalSize}!rocr::AMD::MemoryRegion@{rocr::AMD::MemoryRegion}}
+\doxysubsubsection{\texorpdfstring{GetPhysicalSize()}{GetPhysicalSize()}}
+{\footnotesize\ttfamily HSAuint64 rocr\+::\+AMD\+::\+Memory\+Region\+::\+Get\+Physical\+Size (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classrocr_1_1AMD_1_1MemoryRegion_a3c1316e2b214b0215608ef0a471099f3_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classrocr_1_1AMD_1_1MemoryRegion_ad759a7fc75bc7518f68b69507215b98c}\label{classrocr_1_1AMD_1_1MemoryRegion_ad759a7fc75bc7518f68b69507215b98c}} 
+\index{rocr::AMD::MemoryRegion@{rocr::AMD::MemoryRegion}!GetPoolInfo@{GetPoolInfo}}
+\index{GetPoolInfo@{GetPoolInfo}!rocr::AMD::MemoryRegion@{rocr::AMD::MemoryRegion}}
+\doxysubsubsection{\texorpdfstring{GetPoolInfo()}{GetPoolInfo()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{group__status_gad755322e7ff95456520e8abdbe90d225}{hsa\+\_\+status\+\_\+t}} rocr\+::\+AMD\+::\+Memory\+Region\+::\+Get\+Pool\+Info (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{inc_2hsa__ext__amd_8h_a8e7013d1137d7a51b22d4f636fb59506}{hsa\+\_\+amd\+\_\+memory\+\_\+pool\+\_\+info\+\_\+t}}}]{attribute,  }\item[{void $\ast$}]{value }\end{DoxyParamCaption}) const}
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classrocr_1_1AMD_1_1MemoryRegion_ad759a7fc75bc7518f68b69507215b98c_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classrocr_1_1AMD_1_1MemoryRegion_ad759a7fc75bc7518f68b69507215b98c_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classrocr_1_1AMD_1_1MemoryRegion_a67f4347c5c8dd1c44bdb43d887bb1329}\label{classrocr_1_1AMD_1_1MemoryRegion_a67f4347c5c8dd1c44bdb43d887bb1329}} 
+\index{rocr::AMD::MemoryRegion@{rocr::AMD::MemoryRegion}!GetVirtualSize@{GetVirtualSize}}
+\index{GetVirtualSize@{GetVirtualSize}!rocr::AMD::MemoryRegion@{rocr::AMD::MemoryRegion}}
+\doxysubsubsection{\texorpdfstring{GetVirtualSize()}{GetVirtualSize()}}
+{\footnotesize\ttfamily HSAuint64 rocr\+::\+AMD\+::\+Memory\+Region\+::\+Get\+Virtual\+Size (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classrocr_1_1AMD_1_1MemoryRegion_a67f4347c5c8dd1c44bdb43d887bb1329_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classrocr_1_1AMD_1_1MemoryRegion_a4d0b65c205a02e19ac11613039938304}\label{classrocr_1_1AMD_1_1MemoryRegion_a4d0b65c205a02e19ac11613039938304}} 
+\index{rocr::AMD::MemoryRegion@{rocr::AMD::MemoryRegion}!IPCFragmentExport@{IPCFragmentExport}}
+\index{IPCFragmentExport@{IPCFragmentExport}!rocr::AMD::MemoryRegion@{rocr::AMD::MemoryRegion}}
+\doxysubsubsection{\texorpdfstring{IPCFragmentExport()}{IPCFragmentExport()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{group__status_gad755322e7ff95456520e8abdbe90d225}{hsa\+\_\+status\+\_\+t}} rocr\+::\+AMD\+::\+Memory\+Region\+::\+IPCFragment\+Export (\begin{DoxyParamCaption}\item[{void $\ast$}]{address }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Implements \mbox{\hyperlink{classrocr_1_1core_1_1MemoryRegion_a810928193c82d9a2b3e1e6742f32e927}{rocr\+::core\+::\+Memory\+Region}}.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classrocr_1_1AMD_1_1MemoryRegion_a4d0b65c205a02e19ac11613039938304_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classrocr_1_1AMD_1_1MemoryRegion_ae956d817532fbe88d225b5437438d69c}\label{classrocr_1_1AMD_1_1MemoryRegion_ae956d817532fbe88d225b5437438d69c}} 
+\index{rocr::AMD::MemoryRegion@{rocr::AMD::MemoryRegion}!IsGDS@{IsGDS}}
+\index{IsGDS@{IsGDS}!rocr::AMD::MemoryRegion@{rocr::AMD::MemoryRegion}}
+\doxysubsubsection{\texorpdfstring{IsGDS()}{IsGDS()}}
+{\footnotesize\ttfamily \+\_\+\+\_\+forceinline bool rocr\+::\+AMD\+::\+Memory\+Region\+::\+Is\+GDS (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{classrocr_1_1AMD_1_1MemoryRegion_a209282094104f0ed6d3482db43e9ea8d}\label{classrocr_1_1AMD_1_1MemoryRegion_a209282094104f0ed6d3482db43e9ea8d}} 
+\index{rocr::AMD::MemoryRegion@{rocr::AMD::MemoryRegion}!IsLDS@{IsLDS}}
+\index{IsLDS@{IsLDS}!rocr::AMD::MemoryRegion@{rocr::AMD::MemoryRegion}}
+\doxysubsubsection{\texorpdfstring{IsLDS()}{IsLDS()}}
+{\footnotesize\ttfamily \+\_\+\+\_\+forceinline bool rocr\+::\+AMD\+::\+Memory\+Region\+::\+Is\+LDS (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classrocr_1_1AMD_1_1MemoryRegion_a209282094104f0ed6d3482db43e9ea8d_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classrocr_1_1AMD_1_1MemoryRegion_ada380f3aa0ffc1590fe1b39507c2129c}\label{classrocr_1_1AMD_1_1MemoryRegion_ada380f3aa0ffc1590fe1b39507c2129c}} 
+\index{rocr::AMD::MemoryRegion@{rocr::AMD::MemoryRegion}!IsLocalMemory@{IsLocalMemory}}
+\index{IsLocalMemory@{IsLocalMemory}!rocr::AMD::MemoryRegion@{rocr::AMD::MemoryRegion}}
+\doxysubsubsection{\texorpdfstring{IsLocalMemory()}{IsLocalMemory()}}
+{\footnotesize\ttfamily \+\_\+\+\_\+forceinline bool rocr\+::\+AMD\+::\+Memory\+Region\+::\+Is\+Local\+Memory (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classrocr_1_1AMD_1_1MemoryRegion_ada380f3aa0ffc1590fe1b39507c2129c_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classrocr_1_1AMD_1_1MemoryRegion_af0791b180e7edb6313175e96a2a0af81}\label{classrocr_1_1AMD_1_1MemoryRegion_af0791b180e7edb6313175e96a2a0af81}} 
+\index{rocr::AMD::MemoryRegion@{rocr::AMD::MemoryRegion}!IsPublic@{IsPublic}}
+\index{IsPublic@{IsPublic}!rocr::AMD::MemoryRegion@{rocr::AMD::MemoryRegion}}
+\doxysubsubsection{\texorpdfstring{IsPublic()}{IsPublic()}}
+{\footnotesize\ttfamily \+\_\+\+\_\+forceinline bool rocr\+::\+AMD\+::\+Memory\+Region\+::\+Is\+Public (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{classrocr_1_1AMD_1_1MemoryRegion_aa4285f79f03ac2c5bce64b4d3c879a25}\label{classrocr_1_1AMD_1_1MemoryRegion_aa4285f79f03ac2c5bce64b4d3c879a25}} 
+\index{rocr::AMD::MemoryRegion@{rocr::AMD::MemoryRegion}!IsScratch@{IsScratch}}
+\index{IsScratch@{IsScratch}!rocr::AMD::MemoryRegion@{rocr::AMD::MemoryRegion}}
+\doxysubsubsection{\texorpdfstring{IsScratch()}{IsScratch()}}
+{\footnotesize\ttfamily \+\_\+\+\_\+forceinline bool rocr\+::\+AMD\+::\+Memory\+Region\+::\+Is\+Scratch (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classrocr_1_1AMD_1_1MemoryRegion_aa4285f79f03ac2c5bce64b4d3c879a25_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classrocr_1_1AMD_1_1MemoryRegion_aec3e5520cef0f3885ab09f9d0e6c7b4b}\label{classrocr_1_1AMD_1_1MemoryRegion_aec3e5520cef0f3885ab09f9d0e6c7b4b}} 
+\index{rocr::AMD::MemoryRegion@{rocr::AMD::MemoryRegion}!IsSystem@{IsSystem}}
+\index{IsSystem@{IsSystem}!rocr::AMD::MemoryRegion@{rocr::AMD::MemoryRegion}}
+\doxysubsubsection{\texorpdfstring{IsSystem()}{IsSystem()}}
+{\footnotesize\ttfamily \+\_\+\+\_\+forceinline bool rocr\+::\+AMD\+::\+Memory\+Region\+::\+Is\+System (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classrocr_1_1AMD_1_1MemoryRegion_aec3e5520cef0f3885ab09f9d0e6c7b4b_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classrocr_1_1AMD_1_1MemoryRegion_a38918b04efc87ece92a745f68d7959d4}\label{classrocr_1_1AMD_1_1MemoryRegion_a38918b04efc87ece92a745f68d7959d4}} 
+\index{rocr::AMD::MemoryRegion@{rocr::AMD::MemoryRegion}!Lock@{Lock}}
+\index{Lock@{Lock}!rocr::AMD::MemoryRegion@{rocr::AMD::MemoryRegion}}
+\doxysubsubsection{\texorpdfstring{Lock()}{Lock()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{group__status_gad755322e7ff95456520e8abdbe90d225}{hsa\+\_\+status\+\_\+t}} rocr\+::\+AMD\+::\+Memory\+Region\+::\+Lock (\begin{DoxyParamCaption}\item[{uint32\+\_\+t}]{num\+\_\+agents,  }\item[{const \mbox{\hyperlink{group__agentinfo_ga9ce217ef08e7d5e89c8e83ce7b6ef22b}{hsa\+\_\+agent\+\_\+t}} $\ast$}]{agents,  }\item[{void $\ast$}]{host\+\_\+ptr,  }\item[{size\+\_\+t}]{size,  }\item[{void $\ast$$\ast$}]{agent\+\_\+ptr }\end{DoxyParamCaption}) const}
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classrocr_1_1AMD_1_1MemoryRegion_a38918b04efc87ece92a745f68d7959d4_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classrocr_1_1AMD_1_1MemoryRegion_a38918b04efc87ece92a745f68d7959d4_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classrocr_1_1AMD_1_1MemoryRegion_ad5205d71ca4d30f49a298f935e329d82}\label{classrocr_1_1AMD_1_1MemoryRegion_ad5205d71ca4d30f49a298f935e329d82}} 
+\index{rocr::AMD::MemoryRegion@{rocr::AMD::MemoryRegion}!MakeKfdMemoryResident@{MakeKfdMemoryResident}}
+\index{MakeKfdMemoryResident@{MakeKfdMemoryResident}!rocr::AMD::MemoryRegion@{rocr::AMD::MemoryRegion}}
+\doxysubsubsection{\texorpdfstring{MakeKfdMemoryResident()}{MakeKfdMemoryResident()}}
+{\footnotesize\ttfamily bool rocr\+::\+AMD\+::\+Memory\+Region\+::\+Make\+Kfd\+Memory\+Resident (\begin{DoxyParamCaption}\item[{size\+\_\+t}]{num\+\_\+node,  }\item[{const uint32\+\_\+t $\ast$}]{nodes,  }\item[{const void $\ast$}]{ptr,  }\item[{size\+\_\+t}]{size,  }\item[{uint64\+\_\+t $\ast$}]{alternate\+\_\+va,  }\item[{Hsa\+Mem\+Map\+Flags}]{map\+\_\+flag }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Pin memory. 
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classrocr_1_1AMD_1_1MemoryRegion_ad5205d71ca4d30f49a298f935e329d82_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classrocr_1_1AMD_1_1MemoryRegion_a3e189de1ba1524d65f6e6e19a74ded40}\label{classrocr_1_1AMD_1_1MemoryRegion_a3e189de1ba1524d65f6e6e19a74ded40}} 
+\index{rocr::AMD::MemoryRegion@{rocr::AMD::MemoryRegion}!MakeKfdMemoryUnresident@{MakeKfdMemoryUnresident}}
+\index{MakeKfdMemoryUnresident@{MakeKfdMemoryUnresident}!rocr::AMD::MemoryRegion@{rocr::AMD::MemoryRegion}}
+\doxysubsubsection{\texorpdfstring{MakeKfdMemoryUnresident()}{MakeKfdMemoryUnresident()}}
+{\footnotesize\ttfamily void rocr\+::\+AMD\+::\+Memory\+Region\+::\+Make\+Kfd\+Memory\+Unresident (\begin{DoxyParamCaption}\item[{const void $\ast$}]{ptr }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Unpin memory. 
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classrocr_1_1AMD_1_1MemoryRegion_a3e189de1ba1524d65f6e6e19a74ded40_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classrocr_1_1AMD_1_1MemoryRegion_afff3cdcc975c2d3bb7929ad6971281e9}\label{classrocr_1_1AMD_1_1MemoryRegion_afff3cdcc975c2d3bb7929ad6971281e9}} 
+\index{rocr::AMD::MemoryRegion@{rocr::AMD::MemoryRegion}!MaxMemCloc@{MaxMemCloc}}
+\index{MaxMemCloc@{MaxMemCloc}!rocr::AMD::MemoryRegion@{rocr::AMD::MemoryRegion}}
+\doxysubsubsection{\texorpdfstring{MaxMemCloc()}{MaxMemCloc()}}
+{\footnotesize\ttfamily \+\_\+\+\_\+forceinline uint32\+\_\+t rocr\+::\+AMD\+::\+Memory\+Region\+::\+Max\+Mem\+Cloc (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classrocr_1_1AMD_1_1MemoryRegion_afff3cdcc975c2d3bb7929ad6971281e9_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classrocr_1_1AMD_1_1MemoryRegion_a3940d9ffce627b1d696dd1fb9cc3136f}\label{classrocr_1_1AMD_1_1MemoryRegion_a3940d9ffce627b1d696dd1fb9cc3136f}} 
+\index{rocr::AMD::MemoryRegion@{rocr::AMD::MemoryRegion}!Migrate@{Migrate}}
+\index{Migrate@{Migrate}!rocr::AMD::MemoryRegion@{rocr::AMD::MemoryRegion}}
+\doxysubsubsection{\texorpdfstring{Migrate()}{Migrate()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{group__status_gad755322e7ff95456520e8abdbe90d225}{hsa\+\_\+status\+\_\+t}} rocr\+::\+AMD\+::\+Memory\+Region\+::\+Migrate (\begin{DoxyParamCaption}\item[{uint32\+\_\+t}]{flag,  }\item[{const void $\ast$}]{ptr }\end{DoxyParamCaption}) const}
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classrocr_1_1AMD_1_1MemoryRegion_a3940d9ffce627b1d696dd1fb9cc3136f_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classrocr_1_1AMD_1_1MemoryRegion_a944745e5c2a78a5c6fa07e6f8a125597}\label{classrocr_1_1AMD_1_1MemoryRegion_a944745e5c2a78a5c6fa07e6f8a125597}} 
+\index{rocr::AMD::MemoryRegion@{rocr::AMD::MemoryRegion}!RegisterMemory@{RegisterMemory}}
+\index{RegisterMemory@{RegisterMemory}!rocr::AMD::MemoryRegion@{rocr::AMD::MemoryRegion}}
+\doxysubsubsection{\texorpdfstring{RegisterMemory()}{RegisterMemory()}}
+{\footnotesize\ttfamily bool rocr\+::\+AMD\+::\+Memory\+Region\+::\+Register\+Memory (\begin{DoxyParamCaption}\item[{void $\ast$}]{ptr,  }\item[{size\+\_\+t}]{size,  }\item[{const Hsa\+Mem\+Flags \&}]{Mem\+Flags }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classrocr_1_1AMD_1_1MemoryRegion_a944745e5c2a78a5c6fa07e6f8a125597_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classrocr_1_1AMD_1_1MemoryRegion_a53559b7090beab3f64390d7e83855156}\label{classrocr_1_1AMD_1_1MemoryRegion_a53559b7090beab3f64390d7e83855156}} 
+\index{rocr::AMD::MemoryRegion@{rocr::AMD::MemoryRegion}!Trim@{Trim}}
+\index{Trim@{Trim}!rocr::AMD::MemoryRegion@{rocr::AMD::MemoryRegion}}
+\doxysubsubsection{\texorpdfstring{Trim()}{Trim()}}
+{\footnotesize\ttfamily void rocr\+::\+AMD\+::\+Memory\+Region\+::\+Trim (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Reimplemented from \mbox{\hyperlink{classrocr_1_1core_1_1MemoryRegion_afb734dd62d3f16a9ef4f8cd457babd35}{rocr\+::core\+::\+Memory\+Region}}.
+
+\mbox{\Hypertarget{classrocr_1_1AMD_1_1MemoryRegion_a64e3ca65628cc234f35f650024d10a95}\label{classrocr_1_1AMD_1_1MemoryRegion_a64e3ca65628cc234f35f650024d10a95}} 
+\index{rocr::AMD::MemoryRegion@{rocr::AMD::MemoryRegion}!Unlock@{Unlock}}
+\index{Unlock@{Unlock}!rocr::AMD::MemoryRegion@{rocr::AMD::MemoryRegion}}
+\doxysubsubsection{\texorpdfstring{Unlock()}{Unlock()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{group__status_gad755322e7ff95456520e8abdbe90d225}{hsa\+\_\+status\+\_\+t}} rocr\+::\+AMD\+::\+Memory\+Region\+::\+Unlock (\begin{DoxyParamCaption}\item[{void $\ast$}]{host\+\_\+ptr }\end{DoxyParamCaption}) const}
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classrocr_1_1AMD_1_1MemoryRegion_a64e3ca65628cc234f35f650024d10a95_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classrocr_1_1AMD_1_1MemoryRegion_a64e3ca65628cc234f35f650024d10a95_icgraph}
+\end{center}
+\end{figure}
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{classrocr_1_1AMD_1_1MemoryRegion_aca504476abfdecaaf2b953c58ca5e51c}\label{classrocr_1_1AMD_1_1MemoryRegion_aca504476abfdecaaf2b953c58ca5e51c}} 
+\index{rocr::AMD::MemoryRegion@{rocr::AMD::MemoryRegion}!access\_lock\_@{access\_lock\_}}
+\index{access\_lock\_@{access\_lock\_}!rocr::AMD::MemoryRegion@{rocr::AMD::MemoryRegion}}
+\doxysubsubsection{\texorpdfstring{access\_lock\_}{access\_lock\_}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classrocr_1_1KernelMutex}{Kernel\+Mutex}} rocr\+::\+AMD\+::\+Memory\+Region\+::access\+\_\+lock\+\_\+\hspace{0.3cm}{\ttfamily [mutable]}, {\ttfamily [private]}}
+
+\mbox{\Hypertarget{classrocr_1_1AMD_1_1MemoryRegion_a0f9e4fae4e3ef5b9df09685176d039fb}\label{classrocr_1_1AMD_1_1MemoryRegion_a0f9e4fae4e3ef5b9df09685176d039fb}} 
+\index{rocr::AMD::MemoryRegion@{rocr::AMD::MemoryRegion}!fragment\_allocator\_@{fragment\_allocator\_}}
+\index{fragment\_allocator\_@{fragment\_allocator\_}!rocr::AMD::MemoryRegion@{rocr::AMD::MemoryRegion}}
+\doxysubsubsection{\texorpdfstring{fragment\_allocator\_}{fragment\_allocator\_}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classrocr_1_1SimpleHeap}{Simple\+Heap}}$<$\mbox{\hyperlink{classrocr_1_1AMD_1_1MemoryRegion_1_1BlockAllocator}{Block\+Allocator}}$>$ rocr\+::\+AMD\+::\+Memory\+Region\+::fragment\+\_\+allocator\+\_\+\hspace{0.3cm}{\ttfamily [mutable]}, {\ttfamily [private]}}
+
+\mbox{\Hypertarget{classrocr_1_1AMD_1_1MemoryRegion_ae6eab2ce542d85bd3ec2768689cea240}\label{classrocr_1_1AMD_1_1MemoryRegion_ae6eab2ce542d85bd3ec2768689cea240}} 
+\index{rocr::AMD::MemoryRegion@{rocr::AMD::MemoryRegion}!kPageSize\_@{kPageSize\_}}
+\index{kPageSize\_@{kPageSize\_}!rocr::AMD::MemoryRegion@{rocr::AMD::MemoryRegion}}
+\doxysubsubsection{\texorpdfstring{kPageSize\_}{kPageSize\_}}
+{\footnotesize\ttfamily const size\+\_\+t rocr\+::\+AMD\+::\+Memory\+Region\+::k\+Page\+Size\+\_\+ = 4096\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [private]}}
+
+\mbox{\Hypertarget{classrocr_1_1AMD_1_1MemoryRegion_a1e6c96afcf2eb2b46a6dcf2a7c640a79}\label{classrocr_1_1AMD_1_1MemoryRegion_a1e6c96afcf2eb2b46a6dcf2a7c640a79}} 
+\index{rocr::AMD::MemoryRegion@{rocr::AMD::MemoryRegion}!map\_flag\_@{map\_flag\_}}
+\index{map\_flag\_@{map\_flag\_}!rocr::AMD::MemoryRegion@{rocr::AMD::MemoryRegion}}
+\doxysubsubsection{\texorpdfstring{map\_flag\_}{map\_flag\_}}
+{\footnotesize\ttfamily Hsa\+Mem\+Map\+Flags rocr\+::\+AMD\+::\+Memory\+Region\+::map\+\_\+flag\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classrocr_1_1AMD_1_1MemoryRegion_a6586d1f8ad629c550796d0f5ea1dfceb}\label{classrocr_1_1AMD_1_1MemoryRegion_a6586d1f8ad629c550796d0f5ea1dfceb}} 
+\index{rocr::AMD::MemoryRegion@{rocr::AMD::MemoryRegion}!max\_single\_alloc\_size\_@{max\_single\_alloc\_size\_}}
+\index{max\_single\_alloc\_size\_@{max\_single\_alloc\_size\_}!rocr::AMD::MemoryRegion@{rocr::AMD::MemoryRegion}}
+\doxysubsubsection{\texorpdfstring{max\_single\_alloc\_size\_}{max\_single\_alloc\_size\_}}
+{\footnotesize\ttfamily size\+\_\+t rocr\+::\+AMD\+::\+Memory\+Region\+::max\+\_\+single\+\_\+alloc\+\_\+size\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classrocr_1_1AMD_1_1MemoryRegion_a927f9b1512b03d6982c5974d60f8008a}\label{classrocr_1_1AMD_1_1MemoryRegion_a927f9b1512b03d6982c5974d60f8008a}} 
+\index{rocr::AMD::MemoryRegion@{rocr::AMD::MemoryRegion}!max\_sysmem\_alloc\_size\_@{max\_sysmem\_alloc\_size\_}}
+\index{max\_sysmem\_alloc\_size\_@{max\_sysmem\_alloc\_size\_}!rocr::AMD::MemoryRegion@{rocr::AMD::MemoryRegion}}
+\doxysubsubsection{\texorpdfstring{max\_sysmem\_alloc\_size\_}{max\_sysmem\_alloc\_size\_}}
+{\footnotesize\ttfamily size\+\_\+t rocr\+::\+AMD\+::\+Memory\+Region\+::max\+\_\+sysmem\+\_\+alloc\+\_\+size\+\_\+ = 0\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [private]}}
+
+\mbox{\Hypertarget{classrocr_1_1AMD_1_1MemoryRegion_a5a072cc66e18aaeac87bdafdd9f73f89}\label{classrocr_1_1AMD_1_1MemoryRegion_a5a072cc66e18aaeac87bdafdd9f73f89}} 
+\index{rocr::AMD::MemoryRegion@{rocr::AMD::MemoryRegion}!mem\_flag\_@{mem\_flag\_}}
+\index{mem\_flag\_@{mem\_flag\_}!rocr::AMD::MemoryRegion@{rocr::AMD::MemoryRegion}}
+\doxysubsubsection{\texorpdfstring{mem\_flag\_}{mem\_flag\_}}
+{\footnotesize\ttfamily Hsa\+Mem\+Flags rocr\+::\+AMD\+::\+Memory\+Region\+::mem\+\_\+flag\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classrocr_1_1AMD_1_1MemoryRegion_a714296e1df144960d4b96783d323cd71}\label{classrocr_1_1AMD_1_1MemoryRegion_a714296e1df144960d4b96783d323cd71}} 
+\index{rocr::AMD::MemoryRegion@{rocr::AMD::MemoryRegion}!mem\_props\_@{mem\_props\_}}
+\index{mem\_props\_@{mem\_props\_}!rocr::AMD::MemoryRegion@{rocr::AMD::MemoryRegion}}
+\doxysubsubsection{\texorpdfstring{mem\_props\_}{mem\_props\_}}
+{\footnotesize\ttfamily const Hsa\+Memory\+Properties rocr\+::\+AMD\+::\+Memory\+Region\+::mem\+\_\+props\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classrocr_1_1AMD_1_1MemoryRegion_a3c21681a98b6756c7c1bc3642f7fceaa}\label{classrocr_1_1AMD_1_1MemoryRegion_a3c21681a98b6756c7c1bc3642f7fceaa}} 
+\index{rocr::AMD::MemoryRegion@{rocr::AMD::MemoryRegion}!virtual\_size\_@{virtual\_size\_}}
+\index{virtual\_size\_@{virtual\_size\_}!rocr::AMD::MemoryRegion@{rocr::AMD::MemoryRegion}}
+\doxysubsubsection{\texorpdfstring{virtual\_size\_}{virtual\_size\_}}
+{\footnotesize\ttfamily HSAuint64 rocr\+::\+AMD\+::\+Memory\+Region\+::virtual\+\_\+size\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+src/core/inc/\mbox{\hyperlink{amd__memory__region_8h}{amd\+\_\+memory\+\_\+region.\+h}}\item 
+src/core/runtime/\mbox{\hyperlink{amd__memory__region_8cpp}{amd\+\_\+memory\+\_\+region.\+cpp}}\end{DoxyCompactItemize}

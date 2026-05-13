@@ -1,0 +1,37 @@
+\hypertarget{structhsa__amd__memory__pool__s}{}\doxysection{hsa\+\_\+amd\+\_\+memory\+\_\+pool\+\_\+s Struct Reference}
+\label{structhsa__amd__memory__pool__s}\index{hsa\_amd\_memory\_pool\_s@{hsa\_amd\_memory\_pool\_s}}
+
+
+A memory pool encapsulates physical storage on an agent along with a memory access model.  
+
+
+
+
+{\ttfamily \#include $<$hsa\+\_\+ext\+\_\+amd.\+h$>$}
+
+\doxysubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+uint64\+\_\+t \mbox{\hyperlink{structhsa__amd__memory__pool__s_a9cf94f7ef36eeb4cba2cd41aba3b8d6e}{handle}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+A memory pool encapsulates physical storage on an agent along with a memory access model. 
+
+A memory pool encapsulates a physical partition of an agent\textquotesingle{}s memory system along with a memory access model. Division of a single memory system into separate pools allows querying each partition\textquotesingle{}s access path properties (see \mbox{\hyperlink{inc_2hsa__ext__amd_8h_a1a839a4273411c5a1812f72d170fbdc8}{hsa\+\_\+amd\+\_\+agent\+\_\+memory\+\_\+pool\+\_\+get\+\_\+info}}). Allocations from a pool are preferentially bound to that pool\textquotesingle{}s physical partition. Binding to the pool\textquotesingle{}s preferential physical partition may not be possible or persistent depending on the system\textquotesingle{}s memory policy and/or state which is beyond the scope of HSA APIs.
+
+For example, a multi-\/node NUMA memory system may be represented by multiple pool\textquotesingle{}s with each pool providing size and access path information for the partition it represents. Allocations from a pool are preferentially bound to the pool\textquotesingle{}s partition (which in this example is a NUMA node) while following its memory access model. The actual placement may vary or migrate due to the system\textquotesingle{}s NUMA policy and state, which is beyond the scope of HSA APIs. 
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{structhsa__amd__memory__pool__s_a9cf94f7ef36eeb4cba2cd41aba3b8d6e}\label{structhsa__amd__memory__pool__s_a9cf94f7ef36eeb4cba2cd41aba3b8d6e}} 
+\index{hsa\_amd\_memory\_pool\_s@{hsa\_amd\_memory\_pool\_s}!handle@{handle}}
+\index{handle@{handle}!hsa\_amd\_memory\_pool\_s@{hsa\_amd\_memory\_pool\_s}}
+\doxysubsubsection{\texorpdfstring{handle}{handle}}
+{\footnotesize\ttfamily uint64\+\_\+t hsa\+\_\+amd\+\_\+memory\+\_\+pool\+\_\+s\+::handle}
+
+Opaque handle. 
+
+The documentation for this struct was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+src/inc/\mbox{\hyperlink{inc_2hsa__ext__amd_8h}{hsa\+\_\+ext\+\_\+amd.\+h}}\end{DoxyCompactItemize}
