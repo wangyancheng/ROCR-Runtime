@@ -355,6 +355,8 @@ typedef int hsa_file_t;
  *
  * @retval ::HSA_STATUS_ERROR_REFCOUNT_OVERFLOW The HSA runtime reference
  * count reaches INT32_MAX.
+ *
+ * @note 
  */
 hsa_status_t HSA_API hsa_init();
 
