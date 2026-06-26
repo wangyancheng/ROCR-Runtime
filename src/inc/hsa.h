@@ -356,7 +356,7 @@ typedef int hsa_file_t;
  * @retval ::HSA_STATUS_ERROR_REFCOUNT_OVERFLOW The HSA runtime reference
  * count reaches INT32_MAX.
  *
- * @note 
+ * @note 初始化 HSA 运行时：加载驱动、发现代理、初始化信号/队列/内存，必须第一个调用。
  */
 hsa_status_t HSA_API hsa_init();
 
@@ -1056,6 +1056,8 @@ typedef enum {
  *
  * @retval ::HSA_STATUS_ERROR_INVALID_ARGUMENT @p attribute is an invalid
  * agent attribute, or @p value is NULL.
+ *
+ * @note 获取给定代理的属性的当前值。
  */
 hsa_status_t HSA_API hsa_agent_get_info(
     hsa_agent_t agent,
@@ -1081,7 +1083,8 @@ hsa_status_t HSA_API hsa_agent_get_info(
  * initialized.
  *
  * @retval ::HSA_STATUS_ERROR_INVALID_ARGUMENT @p callback is NULL.
-*/
+ * @note 遍历可用代理，并在每次并在每次迭代时调用应用程序定义的回调。
+ */
 hsa_status_t HSA_API hsa_iterate_agents(
     hsa_status_t (*callback)(hsa_agent_t agent, void* data),
     void* data);

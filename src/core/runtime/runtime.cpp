@@ -96,19 +96,21 @@ hsa_status_t Runtime::Acquire() {
   // Check to see if HSA has been cleaned up (process exit)
   if (!loaded) return HSA_STATUS_ERROR_OUT_OF_RESOURCES;
 
-  ScopedAcquire<KernelMutex> boot(&bootstrap_lock_);
+  ScopedAcquire<KernelMutex> boot(&bootstrap_lock_);  //构造时自动获取（加锁）bootstrap_lock_ 互斥量，在销毁时自动释放（解锁）
 
-  if (runtime_singleton_ == NULL) {
+  //1. 如果 runtime_singleton_ 为空，则创建一个新的 Runtime 对象
+  if (runtime_singleton_ == NULL) {     //runtime_singleton_是Runtime类的静态成员变量，表示Runtime类的单例对象，如果为空，则创建一个新的Runtime对象
     runtime_singleton_ = new Runtime();
   }
 
-  if (runtime_singleton_->ref_count_ == INT32_MAX) {
+  if (runtime_singleton_->ref_count_ == INT32_MAX) {    //如果引用计数已经达到最大值，则返回错误码HSA_STATUS_ERROR_REFCOUNT_OVERFLOW
     return HSA_STATUS_ERROR_REFCOUNT_OVERFLOW;
   }
 
   runtime_singleton_->ref_count_++;
   MAKE_NAMED_SCOPE_GUARD(refGuard, [&]() { runtime_singleton_->ref_count_--; });
 
+  //2. 如果引用计数为1，则调用Load()函数加载运行时环境
   if (runtime_singleton_->ref_count_ == 1) {
     hsa_status_t status = runtime_singleton_->Load();
 
@@ -263,6 +265,12 @@ uint32_t Runtime::GetIndexLinkInfo(uint32_t node_id_from, uint32_t node_id_to) {
   return ((node_id_from * num_nodes_) + node_id_to);
 }
 
+/**
+ * Iterates over all agents in the runtime.
+ * @param callback The function to call for each agent.
+ * @param data User-defined data to pass to the callback.
+ * @return HSA_STATUS_SUCCESS if successful, otherwise an error code.
+ */
 hsa_status_t Runtime::IterateAgent(hsa_status_t (*callback)(hsa_agent_t agent,
                                                             void* data),
                                    void* data) {
@@ -1410,6 +1418,11 @@ Runtime::Runtime()
       ref_count_(0),
       kfd_version{0} {}
 
+/*
+ * Load the runtime and initialize the HSA API table.  This function is called
+ * once per process.  It is not thread safe and should be called before any other
+ * HSA API functions. 
+*/      
 hsa_status_t Runtime::Load() {
   os::cpuid_t cpuinfo;
 
@@ -1418,10 +1431,12 @@ hsa_status_t Runtime::Load() {
     fprintf(stderr, "Failed to parse CPUID\n");
   }
 
-  flag_.Refresh();
-  g_use_interrupt_wait = flag_.enable_interrupt();
-  g_use_mwaitx = flag_.check_mwaitx(cpuinfo.mwaitx);
+  //1. 读取CPU信息，刷新运行时标志。信号中断等待还是忙等待？
+  flag_.Refresh();      // Refresh the runtime flags from environment variables
+  g_use_interrupt_wait = flag_.enable_interrupt();    // Enable interrupt wait if the flag is set
+  g_use_mwaitx = flag_.check_mwaitx(cpuinfo.mwaitx);    // Check if mwaitx is supported by the CPU
 
+  //2. 打开系统的 /dev/kfd 设备文件，读取硬件拓扑（Topology）
   if (!AMD::Load()) {
     return HSA_STATUS_ERROR_OUT_OF_RESOURCES;
   }
@@ -1432,13 +1447,16 @@ hsa_status_t Runtime::Load() {
     if (sys_clock_freq_ < 100000) debug_warning("System clock resolution is low.");
   }
 
+  //3. 绑定虚拟内存故障处理程序
   BindVmFaultHandler();
 
+  //4. 创建加载器上下文和加载器对象
   loader_ = amd::hsa::loader::Loader::Create(&loader_context_);
 
   // Load extensions
   LoadExtensions();
 
+  //5.初始化每个GPU Scratch、Blit 与 Trap
   // Initialize per GPU scratch, blits, and trap handler
   for (core::Agent* agent : gpu_agents_) {
     hsa_status_t status =
@@ -1449,6 +1467,7 @@ hsa_status_t Runtime::Load() {
     }
   }
 
+  //6. 加载开发者分析工具（Tools Libraries）
   // Load tools libraries
   LoadTools();
 

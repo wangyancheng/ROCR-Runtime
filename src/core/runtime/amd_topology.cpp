@@ -75,13 +75,19 @@ static const uint kKfdVersionMinor = 99;
 // Return true if Xnack mode is ON or false if OFF. Xnack mode of a system is
 // orthogonal to devices that do not support Xnack mode. It is legal for a
 // system with Xnack ON to have devices that do not support Xnack functionality.
+/**
+ * 博弈并锁定当前 ROCm 系统的 XNACK（硬件级缺页异常重试）最终状态。
+ * 它直接决定了你的显卡接下来能否开启支持自动按需页迁移的统一共享内存（SVM / Managed Memory）。
+ */
 bool BindXnackMode() {
+  //1.捕获用户配置意愿（环境变量）
   // Get users' preference for Xnack mode of ROCm platform
   HSAint32 mode;
   mode = core::Runtime::runtime_singleton_->flag().xnack();
   bool config_xnack =
       (core::Runtime::runtime_singleton_->flag().xnack() != Flag::XNACK_REQUEST::XNACK_UNCHANGED);
 
+  //2. 强制向下推进行政指令
   // Indicate to driver users' preference for Xnack mode
   // Call to driver can fail and is a supported feature
   HSAKMT_STATUS status = HSAKMT_STATUS_ERROR;
@@ -92,12 +98,14 @@ bool BindXnackMode() {
     }
   }
 
+  //3. 顺从内核真实状态兜底
   // Get Xnack mode of devices bound by driver. This could happen
   // when a call to SET Xnack mode fails or user has no particular
   // preference
   status = hsaKmtGetXNACKMode((HSAint32*)&mode);
   if(status != HSAKMT_STATUS_SUCCESS) {
     debug_print("KFD does not support xnack mode query.\nROCr must assume xnack is disabled.\n");
+    //4. 极端失败安全降级
     return false;
   }
   return mode;
@@ -115,6 +123,15 @@ CpuAgent* DiscoverCpu(HSAuint32 node_id, HsaNodeProperties& node_prop) {
   return cpu;
 }
 
+/**
+ * 真正将一个底层的硬件物理节点“孵化”为 ROCR 运行时的 GpuAgent 对象。
+ * 期间它会重点拦截并纠正老旧 Linux 内核下特定 GPU 架构（如 gfx906 / gfx908）的 
+ * SRAMECC（内存纠错码）硬件兼容性挂钩（Quirks），最终将合法的 GPU 正式编入运行时的全局资源池。
+ * @param node_id The node id of the node to register.
+ * @param node_prop The properties of the node to register.
+ * @param xnack_mode The Xnack mode of the system.
+ * @param enabled The visibility of the Gpu node to user.
+ */
 GpuAgent* DiscoverGpu(HSAuint32 node_id, HsaNodeProperties& node_prop, bool xnack_mode,
                       bool enabled) {
   GpuAgent* gpu = nullptr;
@@ -123,11 +140,13 @@ GpuAgent* DiscoverGpu(HSAuint32 node_id, HsaNodeProperties& node_prop, bool xnac
       return nullptr;
   }
   try {
+    //1. 把当前硬件节点（GPU）实例化为 ROCR 运行时的 GpuAgent 对象
     gpu = new GpuAgent(node_id, node_prop, xnack_mode,
                        core::Runtime::runtime_singleton_->gpu_agents().size());
 
     const HsaVersionInfo& kfd_version = core::Runtime::runtime_singleton_->KfdVersion().version;
 
+    //2. 硬核纠偏老内核的 SRAMECC 漏洞 (Quirk 补丁)
     // Check for sramecc incompatibility due to sramecc not being reported correctly in kfd before
     // 1.4.
     if (gpu->isa()->IsSrameccSupported() && (kfd_version.KernelInterfaceMajorVersion <= 1 &&
@@ -154,6 +173,7 @@ GpuAgent* DiscoverGpu(HSAuint32 node_id, HsaNodeProperties& node_prop, bool xnac
       }
     }
   } catch (const hsa_exception& e) {
+    //3. 非法指令集（ISA）的安全拦截
     if(e.error_code() == HSA_STATUS_ERROR_INVALID_ISA) {
       ifdebug {
         if (!strIsEmpty(e.what())) debug_print("Warning: %s\n", e.what());
@@ -165,17 +185,27 @@ GpuAgent* DiscoverGpu(HSAuint32 node_id, HsaNodeProperties& node_prop, bool xnac
       throw;
     }
   }
+  //4. 如果用户要求可见，则启用 GPU 并登记到 ROCR 运行时的全局资源池
   if (enabled) gpu->Enable();
   core::Runtime::runtime_singleton_->RegisterAgent(gpu, enabled);
   return gpu;
 }
 
+/**
+ * 把当前硬件节点（CPU 或 GPU）与其他节点之间的物理连线关系（如 PCIe、xGMI 互联）彻底摸清，
+ * 翻译并登记到上层 ROCR 运行时的全局路由表里，从而决定节点之间能不能直接做 P2P 内存互拷或原子操作。
+ * 它是建立 GPU 间高速互联网络的关键纽带。
+ * 
+ * @param node_id The node id of the node to register.
+ * @param num_link The number of links connecting the node to other nodes.
+ */
 void RegisterLinkInfo(uint32_t node_id, uint32_t num_link) {
   // Register connectivity links for this agent to the runtime.
   if (num_link == 0) {
     return;
   }
 
+  //1. 从 Thunk 层抓取原始连线属性
   std::vector<HsaIoLinkProperties> links(num_link);
   if (HSAKMT_STATUS_SUCCESS !=
       hsaKmtGetNodeIoLinkProperties(node_id, num_link, &links[0])) {
@@ -185,7 +215,7 @@ void RegisterLinkInfo(uint32_t node_id, uint32_t num_link) {
   for (HsaIoLinkProperties io_link : links) {
     // Populate link info with thunk property.
     hsa_amd_memory_pool_link_info_t link_info = {0};
-
+    //2. 识别协议并赋予原子与一致性双翼
     switch (io_link.IoLinkType) {
       case HSA_IOLINKTYPE_HYPERTRANSPORT:
         link_info.link_type = HSA_AMD_LINK_INFO_TYPE_HYPERTRANSPORT;
@@ -220,6 +250,7 @@ void RegisterLinkInfo(uint32_t node_id, uint32_t num_link) {
         break;
     }
 
+    //3. 强行过滤禁止 P2P DMA 的死路
     // KFD is reporting wrong override status for XGMI.  Disallow override for bringup.
     if (io_link.Flags.ui32.Override == 1) {
       if (io_link.Flags.ui32.NoPeerToPeerDMA == 1) {
@@ -231,12 +262,14 @@ void RegisterLinkInfo(uint32_t node_id, uint32_t num_link) {
       link_info.coherent_support = (io_link.Flags.ui32.NonCoherent == 0);
     }
 
+    //4. 收割带宽、延迟与 NUMA 距离等性能指标
     link_info.max_bandwidth = io_link.MaximumBandwidth;
     link_info.max_latency = io_link.MaximumLatency;
     link_info.min_bandwidth = io_link.MinimumBandwidth;
     link_info.min_latency = io_link.MinimumLatency;
     link_info.numa_distance = io_link.Weight;
 
+    //5. 写入上层 ROCR 运行时总账本
     core::Runtime::runtime_singleton_->RegisterLinkInfo(
         io_link.NodeFrom, io_link.NodeTo, io_link.Weight, link_info);
   }
@@ -245,6 +278,14 @@ void RegisterLinkInfo(uint32_t node_id, uint32_t num_link) {
 /**
  * Process the list of Gpus that are surfaced to user
  */
+ /**
+  * 批量收割传入的 GPU 节点列表，拉取它们最底层的物理参数，
+  * 并在上层 ROCR 运行时中把它们正式“孵化”（实例化）为可调用的 GPU 代理对象（Agent），
+  * 同时锁死它们的可见性状态。
+  * @param gpu_list The list of Gpu nodes to surface to user.
+  * @param xnack_mode The Xnack mode of the system.
+  * @param enabled The visibility of the Gpu nodes to user.
+  */
 static void SurfaceGpuList(std::vector<int32_t>& gpu_list, bool xnack_mode, bool enabled) {
   // Process user visible Gpu devices
   int32_t invalidIdx = -1;
@@ -255,10 +296,12 @@ static void SurfaceGpuList(std::vector<int32_t>& gpu_list, bool xnack_mode, bool
       break;
     }
 
+    //1. 捞取节点最终物理规格
     // Obtain properties of the node
     HSAKMT_STATUS err_val = hsaKmtGetNodeProperties(gpu_list[idx], &node_prop);
     assert(err_val == HSAKMT_STATUS_SUCCESS && "Error in getting Node Properties");
 
+    //2. 实例化 GPU 代理对象
     // Instantiate a Gpu device. The IO links
     // of this node have already been registered
     assert((node_prop.NumFComputeCores != 0) && "Improper node used for GPU device discovery.");
@@ -279,6 +322,7 @@ void BuildTopology() {
     return;
   }
 
+  //1.校验驱动与确定等待策略
   // Disable KFD event support when using open source KFD
   if (kfd_version.KernelInterfaceMajorVersion == 1 &&
       kfd_version.KernelInterfaceMinorVersion == 0) {
@@ -287,15 +331,17 @@ void BuildTopology() {
 
   core::Runtime::runtime_singleton_->KfdVersion(kfd_version);
 
+  //2. 抓取系统节点总数
   HsaSystemProperties props;
-  hsaKmtReleaseSystemProperties();
+  hsaKmtReleaseSystemProperties();    //
 
-  if (hsaKmtAcquireSystemProperties(&props) != HSAKMT_STATUS_SUCCESS) {
+  if (hsaKmtAcquireSystemProperties(&props) != HSAKMT_STATUS_SUCCESS) {   
     return;
   }
 
   core::Runtime::runtime_singleton_->SetLinkCount(props.NumNodes);
 
+  //3. 解析显卡可见性控制
   // Query if env ROCR_VISIBLE_DEVICES is defined. If defined
   // determine number and order of GPU devices to be surfaced
   RvdFilter rvdFilter;
@@ -313,18 +359,21 @@ void BuildTopology() {
     }
   }
 
+  //4.遍历节点并绘制互联拓扑
   // Discover agents on every node in the platform.
   int32_t kfdIdx = 0;
   for (HSAuint32 node_id = 0; node_id < props.NumNodes; node_id++) {
     HsaNodeProperties node_prop = {0};
+    //4.1 获取节点的基本属性信息
     if (hsaKmtGetNodeProperties(node_id, &node_prop) != HSAKMT_STATUS_SUCCESS) {
       continue;
     }
-
+    //4.2 如果节点是 CPU，则实例化 CPU 代理对象
     // Instantiate a Cpu device
     const CpuAgent* cpu = DiscoverCpu(node_id, node_prop);
     assert(((node_prop.NumCPUCores == 0) || (cpu != nullptr)) && "CPU device failed discovery.");
 
+    //4.3 如果节点是 GPU，则实例化 GPU 代理对象，并根据 ROCR_VISIBLE_DEVICES 环境变量决定是否启用该 GPU
     // Current node is either a dGpu or Apu and might belong
     // to user visible list. Process node if present in usr
     // visible list, continue if not found
@@ -342,6 +391,7 @@ void BuildTopology() {
       kfdIdx++;
     }
 
+    //4.4 注册节点的 IO 链路信息（如 PCIe、XGMI 等）
     // Register IO links of node without regard to
     // it being visible to user or not. It is not
     // possible to access links of nodes that are
@@ -349,9 +399,11 @@ void BuildTopology() {
     RegisterLinkInfo(node_id, node_prop.NumIOLinks);
   }
 
+  //5. 绑定 XNACK 状态
   // Determine the Xnack mode to be bound for system
   bool xnack_mode = BindXnackMode();
 
+  //6.正式实例化 GPU 并应用计算掩码
   // Instantiate ROCr objects to encapsulate Gpu devices
   SurfaceGpuList(gpu_usr_list, xnack_mode, true);
   SurfaceGpuList(gpu_disabled, xnack_mode, false);
@@ -368,12 +420,14 @@ void BuildTopology() {
 }
 
 bool Load() {
+  //1.打开系统的 /dev/kfd 设备文件，读取硬件拓扑（Topology）
   // Open connection to kernel driver.
   if (hsaKmtOpenKFD() != HSAKMT_STATUS_SUCCESS) {
     return false;
   }
   MAKE_NAMED_SCOPE_GUARD(kfd, [&]() { hsaKmtCloseKFD(); });
 
+  //2. 建立硬件拓扑表（系统中有多少个GPU、CPU、内存、缓存等信息）
   // Build topology table.
   BuildTopology();
 
@@ -384,6 +438,7 @@ bool Load() {
   // BuildTopology will cause libhsakmt to destroyed cached copy because it calls
   // hsaKmtReleaseSystemProperties() at the beginning.
 
+  //3. 激活运行时调试器（如果需要）
   HSAKMT_STATUS err =
       hsaKmtRuntimeEnable(&_amdgpu_r_debug, core::Runtime::runtime_singleton_->flag().debug());
   if ((err != HSAKMT_STATUS_SUCCESS) && (err != HSAKMT_STATUS_NOT_SUPPORTED)) return false;
